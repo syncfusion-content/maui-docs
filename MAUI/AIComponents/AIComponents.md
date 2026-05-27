@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Interactive Controls | Syncfusion®
-description: Controls that support direct user interaction through gestures and actions, enabling manipulation of UI elements such as drag, swipe, and touch-based inputs.
+title: AI Components for .NET MAUI | Syncfusion®
+description: Explore Syncfusion® AI-powered controls for .NET MAUI to build intelligent, interactive, and productivity-focused applications.
 platform: maui
-control: Interactive Controls
+control: AI Components
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Interactive Controls for .NET MAUI
+# Syncfusion<sup>®</sup> AI Components for .NET MAUI
 
-Controls for direct user interaction.
+Syncfusion® AI components for .NET MAUI provide a range of intelligent controls designed to enhance desktop and mobile applications with advanced, AI-driven capabilities. These tools integrate seamlessly with modern AI services to deliver smart data processing, conversational experiences, predictive interactions, and automation, enabling developers to create more efficient and user-centric applications.
 
-## Interactive Controls
+## AI Controls
 
 <style>
 .form-card {
@@ -22,6 +22,7 @@ Controls for direct user interaction.
    background: white;
    box-sizing: border-box;
    transition: 0.3s ease;
+   cursor: pointer;
 }
 .form-card:hover {
    transform: translateY(-4px);
@@ -117,106 +118,68 @@ Controls for direct user interaction.
 }
 </style>
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 1 -->
-<div class="form-card">
+<div class="form-card" data-target="ai-assist-view">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/maui-aiassistview-getting-started.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Slider
-<a href="https://help.syncfusion.com/maui/slider/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">AI Assist View</a></h3>
 <div class="form-description">
-              The .NET MAUI Slider is an interactive UI control that enables users to select a value from a specified range. It offers multiple customization features, including numeric and date-time labels, tick marks, dividers, and tooltips.
+              Enables conversational interfaces with AI-powered chat interactions and contextual assistance.
 </div>
 </div>
 </div>
-<!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/maui-aiassistview-getting-started.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Range Slider
-<a href="https://help.syncfusion.com/maui/range-slider/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/smartdatagrid/overview">Smart DataGrid</a></h3>
 <div class="form-description">
-               The .NET MAUI Range Slider is an interactive UI control for selecting a range of values. Its rich features include numeric and date-time ranges, labels, ticks, dividers, and tooltips, enhancing both functionality and the user experience.
+               Provides intelligent data analysis with AI-driven insights, filtering, and automation.
 </div>
 </div>
 </div>
-<!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/dailycalories.webp"
+<img src="Images/maui-aiassistview-getting-started.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Range Selector
-<a href="https://help.syncfusion.com/maui/range-selector/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/smartscheduler/overview">Smart Scheduler</a></h3>
 <div class="form-description">
-                The .NET MAUI Range Selector is a highly interactive UI control for selecting a smaller range from a larger data set. It provides a rich set of features such as labels, ticks, dividers, step duration, overlays, and tooltips. It also supports adding any type of control as its content.
+               Simplifies event management using natural language input and AI-assisted scheduling.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/maui-aiassistview-getting-started.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/smarttexteditor/overview">Smart Text Editor</a></h3>
+<div class="form-description">
+                 Enhances typing with AI-powered autocomplete and contextual text suggestions.
 </div>
 </div>
 </div>
 
 </div>
-
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

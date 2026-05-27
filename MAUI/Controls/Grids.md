@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Conversational Experiences | Syncfusion®
-description: Controls that enable chat and conversational UIs, supporting messaging, dynamic responses, and AI-driven communication.
+title: Grid Controls | Syncfusion®
+description: Controls designed for managing and presenting data efficiently, including grids, sorting, filtering, and editing features for structured data handling.
 platform: maui
-control: Conversational Experiences
+control: Grid Controls
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Conversational Experiences for .NET MAUI
+# Syncfusion<sup>®</sup> Grid Controls for .NET MAUI
 
-Components for chat-based and conversational workflows that support threaded messages, attachments and bot interactions. These controls make it easy to build messaging UIs with accessibility and performance in mind.
+This category covers grids and data-handling controls for displaying, editing and synchronizing structured data. Use these controls when you need performance tabular views, grouping, sorting and data operations in MAUI apps.
 
-## Conversational Experiences
+## Grid Controls
 
 <style>
 .form-card {
@@ -117,73 +117,25 @@ Components for chat-based and conversational workflows that support threaded mes
 }
 </style>
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+<!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Chat
-<a href="https://help.syncfusion.com/maui/chat/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">DataGrid</a></h3>
 <div class="form-description">
-              The .NET MAUI Chat control, also known as conversational UI, provides a modern chat experience. It is a flexible control that displays conversations between two or more users in a fully customizable layout.
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI Assist View
-<a href="https://help.syncfusion.com/maui/aiassistview/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
 <div class="form-description">
-               The Syncfusion .NET MAUI AI AssistView control is a component designed to facilitate the integration of AI services into .NET MAUI applications. It provides an intuitive and user-friendly interface that allows developers to create applications that interact seamlessly with AI services.
+              The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view.
 </div>
 </div>
 </div>
 
 </div>
-
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

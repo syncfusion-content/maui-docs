@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Command & Actions Controls | Syncfusion®
-description: Controls that provide toolbars and command surfaces for organizing actions, improving command access and enhancing workflow efficiency.
+title: Project Management | Syncfusion®
+description: Components that support workflow and planning, helping users manage tasks, organize activities, and track progress efficiently in applications.
 platform: maui
-control: Commands and Action Controls
+control: Project Management
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Commands and Actions Controls for .NET MAUI
+# Syncfusion<sup>®</sup> Project Management for .NET MAUI
 
-Toolbars and command surfaces for invoking app-level and contextual actions. Use these controls to expose primary commands, organize actions, and provide keyboard or touch interactions.
+Components to model workflows, tasks and timelines for project and resource planning. These controls help teams visualize work, manage tasks and coordinate schedules within apps.
 
-## Commands and Actions Controls
+## Project Management
 
 <style>
 .form-card {
@@ -117,40 +117,27 @@ Toolbars and command surfaces for invoking app-level and contextual actions. Use
 }
 </style>
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+<!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Toolbar
-<a href="https://help.syncfusion.com/maui/toolbar/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Kanban Board</a></h3>
 <div class="form-description">
-              The .NET MAUI Toolbar (SfToolbar) control is a flexible UI control that provides configurable action items for seamless user interaction, enhancing application usability.
-</div>
+              Helps manage tasks visually by organizing them into columns representing different stages of a workflow.
 </div>
 </div>
 </div>
 
+</div>
+
 [Back to Controls Catalog](ControlsCatalog.md)
+<!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">
 &times;

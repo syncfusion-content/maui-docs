@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Scheduling & Dates Control | Syncfusion®
-description: Controls that provide calendar and scheduling functionalities, enabling users to view dates, manage events, and organize tasks efficiently within applications.
+title: Sliders | Syncfusion®
+description: Controls that support direct user interaction through gestures and actions, enabling manipulation of UI elements such as drag, swipe, and touch-based inputs.
 platform: maui
-control: Scheduling & Dates Control
+control: Sliders
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Scheduling and Dates Control for .NET MAUI
+# Syncfusion<sup>®</sup> Sliders for .NET MAUI
 
-Calendar and scheduling controls for appointments, availability and timeline coordination. These components provide day/week/month views, resource scheduling and interaction patterns for booking scenarios.
+Controls for direct user interaction.
 
-## Scheduling and Dates Control
+## Sliders
 
 <style>
 .form-card {
@@ -120,69 +120,54 @@ Calendar and scheduling controls for appointments, availability and timeline coo
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Calendar
-<a href="https://help.syncfusion.com/maui/calendar/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" >
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Slider</a></h3>
 <div class="form-description">
-              Displays dates in a calendar view, allowing users to select and view specific days.
+              This is an interactive UI control that enables users to select a value from a specified range. 
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Scheduler
-<a href="https://help.syncfusion.com/maui/scheduler/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" >
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Range Slider</a></h3>
 <div class="form-description">
-               Helps manage events and appointments by organizing them across days, weeks, or months.
+               The .NET MAUI Range Slider is an interactive UI control for selecting a range of values.
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Range Selector</a></h3>
+<div class="form-description">
+                It is a highly interactive UI control for selecting a smaller range from a larger data set.
 </div>
 </div>
 </div>
 
 </div>
+
 [Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">

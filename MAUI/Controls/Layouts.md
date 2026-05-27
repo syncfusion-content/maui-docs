@@ -1,17 +1,17 @@
 ---
 layout: post
-title: ControlsCatalog | Syncfusion®
-description: Controls catalog that displays grouped components as interactive cards with images, descriptions, and links for quick discovery.
+title: Layouts | Syncfusion®
+description: Layout and container components that organize UI elements, enabling responsive design, proper alignment, and efficient screen space usage.
 platform: maui
-control: Controls Catalog
+control: Layouts
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Controls Catalog for .NET MAUI
+# Syncfusion<sup>®</sup> Layouts for .NET MAUI
 
-This document provides a comprehensive collection of UI components organized into meaningful categories to help you build modern, interactive, and user-friendly .NET MAUI applications. Each category groups related controls, making it easier to explore, understand, and implement the right components for your app’s design and functionality needs.
+Container and layout primitives used to compose responsive and adaptive UI screens. These controls let you structure content, present overlays, and create polished, modular layouts for production apps.
 
-## Controls Catalog
+## Layouts
 
 <style>
 .form-card {
@@ -22,7 +22,6 @@ This document provides a comprehensive collection of UI components organized int
    background: white;
    box-sizing: border-box;
    transition: 0.3s ease;
-   cursor: pointer;
 }
 .form-card:hover {
    transform: translateY(-4px);
@@ -120,219 +119,161 @@ This document provides a comprehensive collection of UI components organized int
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Grids</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">BackDrop</a></h3>
 <div class="form-description">
-               Provides controls to display, organize, and manage large datasets efficiently.
+              The .NET MAUI Backdrop shows a front view with hidden options behind it.
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">ListView</a></h3>
+<div class="form-description">
+               It displays data as a scrollable list with customizable layouts and selection options. 
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Editors</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Popup</a></h3>
 <div class="form-description">
-               Offers a wide range of controls for collecting and validating user input.
+               The .NET MAUI Popup displays customizable messages or content in a pop-up window.
 </div>
 </div>
 </div>
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Navigation</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Text Input Layout</a></h3>
 <div class="form-description">
-              Enables smooth navigation across different sections of an application. 
+              The .NET MAUI Text Input Layout lets you enhance input fields with labels, icons, and helper messages.
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Sliders</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Expander</a></h3>
 <div class="form-description">
-               Provides controls that allow users to interact and adjust values dynamically. 
+               The Syncfusion .NET MAUI Expander lets users tap a header to expand or collapse content.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Conversational UI</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Accordion</a></h3>
 <div class="form-description">
-               Supports chat and messaging-based user interactions. 
+               The .NET MAUI Accordion lets users expand or collapse sections to show or hide content.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Data Visualisations</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Carousel</a></h3>
 <div class="form-description">
-              Visualizes data using various charts and graphical components.
-</div>
-</div>
-</div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Layouts</a></h3>
-<div class="form-description">
-               Provides containers to arrange and structure UI elements.
-</div>
-</div>
-</div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Notification</a></h3>
-<div class="form-description">
-              Displays system status and progress to users in real time.
-</div>
-</div>
-</div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Project Management</a></h3>
-<div class="form-description">
-              Helps organize and manage tasks visually.
+              The .NET MAUI Carousel lets users swipe through a set of views with optional visual effects.
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Toolbar</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Cards</a></h3>
 <div class="form-description">
-              Provides quick access to commonly used actions and commands. 
+               The Syncfusion .NET MAUI Cards shows swipeable cards one by one.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Calendars</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Parallax View</a></h3>
 <div class="form-description">
-                Manages date-based data, events, and scheduling features.
+               The .NET MAUI Parallax View makes the background move differently while scrolling.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Buttons</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Doc Layout</a></h3>
 <div class="form-description">
-              Includes controls for selecting options and triggering actions.
-</div>
-</div>
-</div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Visual Enhancements</a></h3>
-<div class="form-description">
-              Adds visual effects and styling to improve UI appearance.
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Viewer</a></h3>
-<div class="form-description">
-              Displays and renders different types of content within the app.
+              The .NET MAUI Dock Layout places items at the edges or fills the remaining space.
 </div>
 </div>
 </div>
 </div>
+
+[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

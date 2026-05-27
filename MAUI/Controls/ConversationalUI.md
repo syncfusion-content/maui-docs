@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Data Management Controls | Syncfusion®
-description: Controls designed for managing and presenting data efficiently, including grids, sorting, filtering, and editing features for structured data handling.
+title: Conversational Experiences | Syncfusion®
+description: Controls that enable chat and conversational UIs, supporting messaging, dynamic responses, and AI-driven communication.
 platform: maui
-control: Data Management Controls
+control: Conversational Experiences
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Data Management Controls for .NET MAUI
+# Syncfusion<sup>®</sup> Conversational Experiences for .NET MAUI
 
-This category covers grids and data-handling controls for displaying, editing and synchronizing structured data. Use these controls when you need performance tabular views, grouping, sorting and data operations in MAUI apps.
+Components for chat-based and conversational workflows that support threaded messages, attachments and bot interactions. These controls make it easy to build messaging UIs with accessibility and performance in mind.
 
-## Data Management Controls
+## Conversational Experiences
 
 <style>
 .form-card {
@@ -117,42 +117,24 @@ This category covers grids and data-handling controls for displaying, editing an
 }
 </style>
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">DataGrid
-<a href="https://help.syncfusion.com/maui/datagrid/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Chat</a></h3>
 <div class="form-description">
-              The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view. Its rich feature set includes different column types, sorting, autofitting for columns and rows, and styling for all elements.
+              The .NET MAUI Chat, also known as conversational UI, provides a modern chat experience.
 </div>
 </div>
 </div>
 
 </div>
 
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

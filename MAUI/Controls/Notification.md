@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Feedback & Status Indicators | Syncfusion®
+title: Notification | Syncfusion®
 description: Controls that display status and provide feedback to users, including indicators, alerts, progress updates, and notifications for better user awareness.
 platform: maui
-control: Feedback & Status Indicators
+control: Notification
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Feedbacks and Status Indicators for .NET MAUI
+# Syncfusion<sup>®</sup> Notification for .NET MAUI
 
 Controls that surface system status, feedback and progress to users. Use these components to communicate loading states, counts and step-based progress clearly and accessibly.
 
-## Feedbacks and Status Indicators
+## Notification
 
 <style>
 .form-card {
@@ -119,159 +119,79 @@ Controls that surface system status, feedback and progress to users. Use these c
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Badge View
-<a href="https://help.syncfusion.com/maui/badge-view/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Badge View</a></h3>
 <div class="form-description">
-              The .NET MAUI Badge View is a notification control that is used to notify users of new or unread messages, notifications, or status information. It can easily be integrated with controls like ListView, Tab View, and other container controls.
+              The .NET MAUI Badge View displays small notifications or status indicators on UI elements.
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Busy Indicator
-<a href="https://help.syncfusion.com/maui/busy-indicator/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Busy Indicator</a></h3>
 <div class="form-description">
-               The .NET MAUI Busy Indicator control (activity indicator) lets users know when their application is busy.
+               The .NET MAUI Busy Indicator control lets users know when their application is busy.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">ProgressBar
-<a href=""
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Progress Bar</a></h3>
 <div class="form-description">
-               The .NET MAUI ProgressBar is a control that shows task progress with customizable visuals. It has features to display progress in rectangular and circular shapes, determinate and indeterminate states, segments, smooth animation, customizable content, and define ranges with different colors.
+               The .NET MAUI ProgressBar shows task progress with customizable styles, shapes, and animations.
 </div>
 </div>
 </div>
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Step Progress Bar
-<a href="https://help.syncfusion.com/maui/stepprogressbar/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Step Progress Bar</a></h3>
 <div class="form-description">
-              The .NET MAUI Step Progress Bar is a control that displays progress through multiple steps in a process, such as order tracking or a user registration form. It’s customizable, with options for the shape and content of the steps, the progress bar color, and more.
+              The .NET MAUI Step Progress Bar shows progress across multiple steps with customizable appearance.
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">PullToRefresh
-<a href="https://help.syncfusion.com/maui/pull-to-refresh/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">PullToRefresh</a></h3>
 <div class="form-description">
-               The Syncfusion .NET MAUI Pull to Refresh control allows you to refresh the content displayed within it through a simple pull-to-refresh action. It has the ability to load various UI views in its pulling pane, enabling users to initiate the refresh by pulling down from the top of the view.
+               The Syncfusion .NET MAUI Pull to Refresh lets users refresh content by pulling down the screen.
 </div>
 </div>
 </div>

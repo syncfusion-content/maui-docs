@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Visual Enhancements | Syncfusion®
-description: Components that enhance user interfaces with visual effects and styling, improving appearance, depth, and overall presentation for a polished user experience.
+title: Buttons | Syncfusion®
+description: Controls that enable user interactions such as selecting options, toggling settings, and providing input for seamless and responsive UI experiences.
 platform: maui
-control: Visual Enhancements
+control: AI & Smart Experiences
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Visual Enhancements for .NET MAUI
+# Syncfusion<sup>®</sup> Buttons for .NET MAUI
+These .NET MAUI controls provide customizable, interactive UI elements that help users select options, display information, and enhance app experience with flexible layouts and visual states.
 
-Components that add visual polish and subtle enhancements to UI surfaces. Use these controls for avatars, shadows, blurs and other decorative or status-related visuals that improve perceived quality.
-
-## Visual Enhancements
+## Buttons
 
 <style>
 .form-card {
@@ -117,7 +116,6 @@ Components that add visual polish and subtle enhancements to UI surfaces. Use th
 }
 </style>
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/AllControl.png"
@@ -127,25 +125,9 @@ Components that add visual polish and subtle enhancements to UI surfaces. Use th
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Avatar View</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Button</a></h3>
 <div class="form-description">
-              Displays user profile images or initials in a compact and visually appealing format.
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/AllControl.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Effects View</a></h3>
-<div class="form-description">
-               Adds visual effects like shadows, gradients, or animations to enhance UI elements.
+              A .NET MAUI custom Button allows customizable icons, backgrounds and visual states for flexible UI styling.
 </div>
 </div>
 </div>
@@ -158,13 +140,72 @@ Components that add visual polish and subtle enhancements to UI surfaces. Use th
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Shimmer</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Checkbox</a></h3>
 <div class="form-description">
-               Shows a loading placeholder animation to indicate content is being loaded.
+               A .NET MAUI CheckBox lets users pick options and customize how it looks in different states.
 </div>
 </div>
 </div>
-
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Chips</a></h3>
+<div class="form-description">
+               .NET MAUI Chips shows items in small, clickable pieces that are easy to group and select.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Radio Button</a></h3>
+<div class="form-description">
+                A .NET MAUI Radio Button lets users select one option from a list with customizable appearance and states.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Segmented Control</a></h3>
+<div class="form-description">
+                A .NET MAUI Segmented Control lets users pick options from a row of buttons with text or icons.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Switch</a></h3>
+<div class="form-description">
+                A .NET MAUI Switch lets users turn an option on or off, with support for an optional indeterminate state and visual customization.
+</div>
+</div>
+</div>
 </div>
 <!-- Popup Modal -->
 <div id="imageModal">

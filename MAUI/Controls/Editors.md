@@ -1,18 +1,17 @@
 ---
 layout: post
-title: ControlsCatalog | Syncfusion®
-description: Controls catalog that displays grouped components as interactive cards with images, descriptions, and links for quick discovery.
+title: Editors | Syncfusion®
+description: Controls that collect user input through forms, including text fields, selections, and validation features to ensure accurate and efficient data entry.
 platform: maui
-control: Controls Catalog
+control: Editors
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Controls Catalog for .NET MAUI
+# Syncfusion<sup>®</sup> Editors for .NET MAUI
 
-This document provides a comprehensive collection of UI components organized into meaningful categories to help you build modern, interactive, and user-friendly .NET MAUI applications. Each category groups related controls, making it easier to explore, understand, and implement the right components for your app’s design and functionality needs.
+Form controls and editors used for collecting, validating and formatting user input. These controls include pickers, masked inputs and advanced form layouts to simplify data entry patterns.
 
-## Controls Catalog
-
+## Editors
 <style>
 .form-card {
    flex: 0 0 calc(33.33% - 14px);
@@ -22,7 +21,6 @@ This document provides a comprehensive collection of UI components organized int
    background: white;
    box-sizing: border-box;
    transition: 0.3s ease;
-   cursor: pointer;
 }
 .form-card:hover {
    transform: translateY(-4px);
@@ -120,219 +118,223 @@ This document provides a comprehensive collection of UI components organized int
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Grids</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Autocomplete</a></h3>
 <div class="form-description">
-               Provides controls to display, organize, and manage large datasets efficiently.
+              The .NET MAUI Autocomplete control is highly optimized to load and populate suggestions quickly.
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">ComboBox</a></h3>
+<div class="form-description">
+               Represents data as portions of a circle, such as pie or donut charts.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Editors</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Data form</a></h3>
 <div class="form-description">
-               Offers a wide range of controls for collecting and validating user input.
+               The .NET MAUI DataForm displays and edits data using customizable input fields with support for validation and flexible layouts.
 </div>
 </div>
 </div>
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Navigation</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Date Picker</a></h3>
 <div class="form-description">
-              Enables smooth navigation across different sections of an application. 
+              The .NET MAUI Date Picker is a fully customizable component that lets you easily select a date from a list of dates.
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Sliders</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Date Time Picker</a></h3>
 <div class="form-description">
-               Provides controls that allow users to interact and adjust values dynamically. 
+               The .NET MAUI Date Time Picker lets users select both date and time with customizable options.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Conversational UI</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Masked Entry</a></h3>
 <div class="form-description">
-               Supports chat and messaging-based user interactions. 
+               The .NET MAUI Masked Entry lets users enter data in a specific format using predefined input patterns.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Data Visualisations</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Numeric Entry</a></h3>
 <div class="form-description">
-              Visualizes data using various charts and graphical components.
-</div>
-</div>
-</div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Layouts</a></h3>
-<div class="form-description">
-               Provides containers to arrange and structure UI elements.
-</div>
-</div>
-</div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Notification</a></h3>
-<div class="form-description">
-              Displays system status and progress to users in real time.
-</div>
-</div>
-</div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Project Management</a></h3>
-<div class="form-description">
-              Helps organize and manage tasks visually.
+              The .NET MAUI Numeric Entry lets users enter numbers with limits like minimum and maximum values.
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Toolbar</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Picker</a></h3>
 <div class="form-description">
-              Provides quick access to commonly used actions and commands. 
+               The Syncfusion .NET MAUI Picker lets users choose items from a list with customizable layout and options.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Calendars</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Signature Pad</a></h3>
 <div class="form-description">
-                Manages date-based data, events, and scheduling features.
+              The .NET MAUI Signature Pad lets users draw and save smooth digital signatures as images.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Buttons</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Rating</a></h3>
 <div class="form-description">
-              Includes controls for selecting options and triggering actions.
-</div>
-</div>
-</div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Visual Enhancements</a></h3>
-<div class="form-description">
-              Adds visual effects and styling to improve UI appearance.
+              The .NET MAUI Rating control lets users choose a rating using stars, hearts, or custom symbols.
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Viewer</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Image Editor</a></h3>
 <div class="form-description">
-              Displays and renders different types of content within the app.
+               The .NET MAUI Image Editor lets users easily edit images by cropping, rotating, zooming, and applying filters.
 </div>
 </div>
 </div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
 </div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Time Picker</a></h3>
+<div class="form-description">
+               The Syncfusion .NET MAUI Time Picker lets users select a time with customizable format and layout.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Color Picker</a></h3>
+<div class="form-description">
+              The Syncfusion .NET MAUI Color Picker lets users choose colors from palettes or a color spectrum.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Rich Text Editor</a></h3>
+<div class="form-description">
+              The .NET MAUI Rich Text Editor lets users create and format text with options like bold and italics. 
+</div>
+</div>
+</div>
+
+</div>
+
+[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Viewer and Visual Enhancements | Syncfusion®
-description: Components that enhance UI elements with effects like shadows, blur, and styling to create a polished and visually engaging interface.
+title: Calendars | Syncfusion®
+description: Controls that provide calendar and scheduling functionalities, enabling users to view dates, manage events, and organize tasks efficiently within applications.
 platform: maui
-control: Viewer and Visual Enhancements
+control: Calendars
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Viewer and Visual Enhancements for .NET MAUI
+# Syncfusion<sup>®</sup> Calendars for .NET MAUI
 
-Controls that improve the visual appearance of UI elements by adding effects such as avatars, shadows, and blur. These components help create a more engaging and refined user interface by enhancing presentation, clarity, and visual appeal.
+Calendar and scheduling controls for appointments, availability and timeline coordination. These components provide day/week/month views, resource scheduling and interaction patterns for booking scenarios.
 
-## Viewer and Visual Enhancements
+## Calendars
 
 <style>
 .form-card {
@@ -127,14 +127,31 @@ Controls that improve the visual appearance of UI elements by adding effects suc
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Markdown Viewer</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Calendar</a></h3>
 <div class="form-description">
-              Displays user profile images or initials in a compact and visually appealing format.
+              Displays dates in a calendar view, allowing users to select and view specific days.
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Scheduler</a></h3>
+<div class="form-description">
+               Helps manage events and appointments by organizing them across days, weeks, or months.
 </div>
 </div>
 </div>
 
 </div>
+[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

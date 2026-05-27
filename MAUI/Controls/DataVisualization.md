@@ -1,17 +1,17 @@
 ---
 layout: post
-title: ControlsCatalog | Syncfusion®
-description: Controls catalog that displays grouped components as interactive cards with images, descriptions, and links for quick discovery.
+title: Charts & Data Insights | Syncfusion®
+description: Controls designed for data visualization, enabling the creation of interactive charts and graphical representations for better data analysis and insights.
 platform: maui
-control: Controls Catalog
+control: Charts & Data Insights
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Controls Catalog for .NET MAUI
+# Syncfusion<sup>®</sup> Charts and Data insights for .NET MAUI
 
-This document provides a comprehensive collection of UI components organized into meaningful categories to help you build modern, interactive, and user-friendly .NET MAUI applications. Each category groups related controls, making it easier to explore, understand, and implement the right components for your app’s design and functionality needs.
+Comprehensive charting and visualization controls for turning data into actionable insights. This collection includes charts, gauges and map visualizations designed for performance and customization in analytics scenarios.
 
-## Controls Catalog
+## Charts and Data Insights
 
 <style>
 .form-card {
@@ -22,7 +22,6 @@ This document provides a comprehensive collection of UI components organized int
    background: white;
    box-sizing: border-box;
    transition: 0.3s ease;
-   cursor: pointer;
 }
 .form-card:hover {
    transform: translateY(-4px);
@@ -120,219 +119,202 @@ This document provides a comprehensive collection of UI components organized int
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Grids</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Cartesian Charts</a></h3>
 <div class="form-description">
-               Provides controls to display, organize, and manage large datasets efficiently.
+              Displays data using X and Y axes for comparing values over time or categories.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Editors</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Circular Charts</a></h3>
 <div class="form-description">
-               Offers a wide range of controls for collecting and validating user input.
-</div>
-</div>
-</div>
-<!-- Card 1 -->
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Navigation</a></h3>
-<div class="form-description">
-              Enables smooth navigation across different sections of an application. 
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Sliders</a></h3>
-<div class="form-description">
-               Provides controls that allow users to interact and adjust values dynamically. 
+               Represents data as portions of a circle, such as pie or donut charts.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Conversational UI</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Funnel Charts</a></h3>
 <div class="form-description">
-               Supports chat and messaging-based user interactions. 
+               Shows data flow across stages, typically used in processes like sales pipelines.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Data Visualisations</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Pyramid Charts</a></h3>
 <div class="form-description">
-              Visualizes data using various charts and graphical components.
+              Visualizes hierarchical data in a pyramid shape, often used for comparisons.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Layouts</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Polar Charts</a></h3>
 <div class="form-description">
-               Provides containers to arrange and structure UI elements.
+               Displays data in a circular layout based on angles and radius values.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Notification</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Sunburst Charts</a></h3>
 <div class="form-description">
-              Displays system status and progress to users in real time.
+               It visualizes hierarchical data in a concentric circular layout.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Project Management</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Spark Charts</a></h3>
 <div class="form-description">
-              Helps organize and manage tasks visually.
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Toolbar</a></h3>
-<div class="form-description">
-              Provides quick access to commonly used actions and commands. 
+              .NET MAUI Spark Charts are compact charts that show trends and variations in data.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Calendars</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Radial Gauge</a></h3>
 <div class="form-description">
-                Manages date-based data, events, and scheduling features.
+               It is a multipurpose data visualization control that displays numerical values on a circular scale.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Buttons</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Linear Gauge</a></h3>
 <div class="form-description">
-              Includes controls for selecting options and triggering actions.
+              The .NET MAUI Linear Gauge displays numerical values on a horizontal or vertical linear scale.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Visual Enhancements</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Digital Gauge</a></h3>
 <div class="form-description">
-              Adds visual effects and styling to improve UI appearance.
+              This is data visualization component that displays alphanumeric characters in digital mode.
 </div>
 </div>
 </div>
-<!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Viewer</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Maps</a></h3>
 <div class="form-description">
-              Displays and renders different types of content within the app.
+               The .NET MAUI Maps displays statistical information for a geographical area.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Barcode Generator</a></h3>
+<div class="form-description">
+               The .NET MAUI Barcode Generator creates and displays machine-readable data using standard 1D and 2D barcode formats.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/AllControl.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">TreeMap</a></h3>
+<div class="form-description">
+              A .NET MAUI TreeMap shows hierarchical data as nested rectangles based on values.
 </div>
 </div>
 </div>
 </div>
+
+[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">
