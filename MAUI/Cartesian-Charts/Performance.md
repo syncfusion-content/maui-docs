@@ -18,11 +18,13 @@ When updating chart data dynamically—such as adding, removing, or modifying mu
 
 The chart provides suspension methods to batch multiple data changes and apply them in a single consolidated update:
 
-* **SuspendNotification** - Suspends the series from updating the data till ResumeNotification is called. It is specifically used when you need to append the collection of data.
+* **SuspendNotification** - Suspends the series from updating the data till ResumeNotification is called. It is specifically used when you need to append the collection of data to an individual series.
 
 * **ResumeNotification** - Processes the data that is added to the data source after the SuspendNotification is called.
 
-These methods can be called at both series level and chart level depending on the update scope.
+* **SuspendSeriesNotification** - Suspends all series in the chart from updating the data till ResumeSeriesNotification is called. It is specifically used when you need to append the collection of data to multiple series simultaneously.
+
+* **ResumeSeriesNotification** - Processes the data that is added to the data source after the SuspendSeriesNotification is called.
 
 ### Series-Level Suspend and Resume
 
@@ -72,7 +74,7 @@ series.ResumeNotification();
 
 ### Chart-Level Suspend and Resume
 
-Use `SuspendNotification` and `ResumeNotification` methods on the chart instance when updating data across multiple series simultaneously. This suspends all series in the chart from updating until `ResumeNotification` is called.
+Use `SuspendSeriesNotification` and `ResumeSeriesNotification` methods on the chart instance when updating data across multiple series simultaneously. This suspends all series in the chart from updating until `ResumeSeriesNotification` is called.
 
 {% tabs %}
 
@@ -101,8 +103,7 @@ Use `SuspendNotification` and `ResumeNotification` methods on the chart instance
 
 {% highlight c# %}
 
-chart.SuspendNotification();
-
+chart.SuspendSeriesNotification();
 
     for (int i = 0; i < 1000; i++)
     {
@@ -110,7 +111,7 @@ chart.SuspendNotification();
         viewModel.Data2.Add(new DataModel { XValue = i, YValue = GetValue2(i) });
     }
 
-chart.ResumeNotification();
+chart.ResumeSeriesNotification();
 
 {% endhighlight %}
 
