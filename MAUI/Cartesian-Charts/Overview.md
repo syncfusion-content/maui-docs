@@ -150,7 +150,7 @@ Explore further:
    cursor: pointer;
    font-weight: bold;
 }
-@keyframes zoomIn {
+@key frames zoomIn {
    from {
        transform: scale(0.9);
        opacity: 0;
@@ -206,7 +206,7 @@ Explore further:
 <!-- Card 2 -->
 <div class="form-card">
 <div class="form-content">
-<h3 class="form-title">Explore KBs
+<h3 class="form-title">Explore KB's
 <a href="https://support.syncfusion.com/kb/cross-platforms/category/76"
               target="_blank"
               class="source-icon"

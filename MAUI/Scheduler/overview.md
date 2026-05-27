@@ -81,7 +81,7 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) has nine differ
 ## Real‑World Scenarios
 
 - Corporate calendars for managing meetings and recurring events
-- Healthcare scheduling for appointments and time‑bound slots
+- Health care scheduling for appointments and time‑bound slots
 - Education timetables with weekly and monthly views
 - Project planning using timeline and agenda views for task tracking
 

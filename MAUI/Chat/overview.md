@@ -38,10 +38,10 @@ documentation: ug
 
 ## Real‑World Scenarios
 
-- Customer support chatbots for guided assistance
+- Customer support chat bots for guided assistance
 - Team collaboration tools with structured conversations
 - E‑commerce assistants for product queries and quick replies
-- Healthcare or booking apps with conversational scheduling and reminders
+- Health care or booking apps with conversational scheduling and reminders
 
 ## Related Controls
 

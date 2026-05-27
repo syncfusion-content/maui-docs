@@ -34,7 +34,7 @@ documentation: ug
 - Screen reader support, keyboard navigation, and high‑contrast themes for accessibility
 - Localization with right‑to‑left (RTL) layouts and culture‑specific formatting for text, dates, and numbers
 
-## Real-Worls Scenarios
+## Real-Worlds Scenarios
 
 - Product catalogs with grid layouts and filtering
 - Messaging apps using custom templates for chat bubbles
