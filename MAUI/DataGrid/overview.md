@@ -10,74 +10,293 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # .NET MAUI DataGrid (SfDataGrid) Overview
 
-The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
+- Create powerful, high-performance **tabular data experiences** in your **.NET MAUI applications** using the **Syncfusion DataGrid control (SfDataGrid)**.
 
-<img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
+- Designed for **scalability, interactivity, and flexibility**, it enables you to efficiently display, manage, and analyze large datasets across **mobile and desktop platforms**.
 
-**Key Features**
+    <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
 
-* **Data Binding** - Bind different types of data sources, including DataTable.
+## Control Highlights
 
-* **Column Types** - Show different data types in different types of columns. The following column types are supported: numeric, text, date, checkbox, image, combobox, picker and template. The template column is used to load any control in a column.
+- Display and manage large volumes of data efficiently  
+- Enable sorting, filtering, and grouping of data  
+- Allow in-place editing with multiple column types  
+- Provide interactive user experiences (drag, swipe, selection)  
+- Customize layouts and visuals based on application needs  
 
-* **Column Resizing** - Interactive support to adjust the width of columns.
+## Key features
 
-* **Column Drag and Drop** - Interactive support to drag and drop columns.
+- **Flexible Data Binding** to collections, tables, and MVVM sources
+- **Rich Column Types** including text, numeric, date, checkbox, image, combobox, picker, and template columns
+- **Data Operations** with sorting, filtering, grouping, summaries, and search
+- **Editing & Interaction** through in‑place editing, drag‑drop, swipe actions, and selection
+- **Performance & Virtualization** with paging, incremental loading, and smooth rendering for large datasets
+- **Advanced Views** such as master‑details, record templates, unbound rows, and unbound columns
+- **Styling & Customization** with conditional formatting, stacked headers, freeze panes, and theme support
+- **Export & Data Handling** including Excel/PDF export, clipboard operations, serialization, and deserialization  
 
-* **Row drag and drop** - Interaction support to drag and drop rows.
+## Globalization
 
-* **Swiping** - Interaction support to swipe the rows.
+- Screen reader support and keyboard navigation for accessibility
+- Right‑to‑left (RTL) layout and localization for global applications
 
-* **Editing** - Interactive support to edit with different column types.
+## Real‑World Scenarios
 
-* **Sorting** - Interactively sort one or more columns.
+- Business dashboards requiring clear tabular insights
+- Financial systems with grouping, summaries, and export options
+- Inventory management for handling large datasets efficiently
+- Analytics tools with dynamic filtering and real‑time updates
 
-* **Grouping** - Use user-interactive grouping to group one or more columns.
+## Related Controls
 
-* **Summaries** - Extensive support to show brief information about the individual data columns or groups of rows.
+- ListView for flexible collection display
+- Scheduler for calendar and appointment management
+- Charts for advanced data visualization
+- ComboBox for selection and input scenarios
 
-* **Filtering** - Programmatically filter data based on the criteria.
+## Next Step
 
-* **Data virtualization** – Support for different modes of data virtualization such as paging, incremental loading.
+Explore further:
 
-* **Selection** - Select one or more rows. Keyboard navigation is supported in Windows platform.
+- [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started)
+- [Styling Guide](https://help.syncfusion.com/maui/datagrid/styling)   
+- [Selection Guide](https://help.syncfusion.com/maui/datagrid/selection)
 
-* **Search** - Supports highlighting cell content and provides navigation functionalities.
+## Learning & Demos
 
-* **Master-Details View** – Supports displaying relational data using hierarchies.
+<style>
+.form-card {
+   flex: 0 0 calc(33.33% - 14px);
+   border: 1px solid #ddd;
+   border-radius: 12px;
+   overflow: hidden;
+   background: white;
+   box-sizing: border-box;
+   transition: 0.3s ease;
+}
+.form-card:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.form-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.form-image:hover {
+   transform: scale(1.02);
+}
+.form-content {
+   padding: 16px;
+}
+.form-title {
+   margin-top: 0px;
+   margin: 0 0 10px;
+   font-size: 20px;
+   font-weight: 600;
+   color: #000000;
+}
+.form-link {
+   color: #0078D4;
+   text-decoration: none;
+}
+.form-description {
+   margin-top: 14px;
+   font-size: 13px;
+   color: #000000;
+   line-height: 1.6;
+}
+.source-icon {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   background: #f3f4f6;
+   color: #0078D4;
+   text-decoration: none;
+   transition: 0.3s ease;
+   margin-top: 12px;
+}
+.source-icon:hover {
+   background: #0078D4;
+   color: white;
+}
+/* Popup Modal */
+#imageModal {
+   display: none;
+   position: fixed;
+   z-index: 9999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.85);
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   box-sizing: border-box;
+}
+#popupImage {
+   max-width: 90%;
+   max-height: 90%;
+   border-radius: 14px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+   animation: zoomIn 0.25s ease;
+}
+.close-popup {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   color: white;
+   font-size: 42px;
+   cursor: pointer;
+   font-weight: bold;
+}
+@key frames zoomIn {
+   from {
+       transform: scale(0.9);
+       opacity: 0;
+   }
+   to {
+       transform: scale(1);
+       opacity: 1;
+   }
+}
+@media(max-width:900px) {
+   .form-card {
+       flex: 0 0 calc(50% - 10px);
+   }
+}
+@media(max-width:600px) {
+   .form-card {
+       flex: 0 0 100%;
+   }
+}
+</style>
 
-* **Record Template View** - Supports customization of row presentation by defining templates for displaying additional information or complex layouts within the DataGrid.
-
-* **Column Sizing** - Set the width of columns with various sizing options. Columns can also be sized based on their content.
-
-* **Auto row height** - Set the height for rows based on the content of their cells.
-
-* **Freeze Panes** - Freeze the rows and columns, keeping them fixed in place while scrolling the grid.
-
-* **Styling** - Customize the appearance of cells and headers. Conditional styling is supported.
-
-* **Paging** - Support for loading data in segments when dealing with large volumes of data.
-
-* **Stacked Headers** - Extensive support to show multiple headers called stacked headers.
-
-* **Load More** -  Display an interactive view when the grid reaches its maximum or minimum offset while scrolling down or up. Tapping the interactive view triggers a command to add more data to the item source of the grid at runtime.
-
-* **Pull To Refresh** - Support allows users to load a subset of data when the DataGrid is pulled down.
-
-* **Serialization and Deserialization** – Supports the transfer of grid properties and settings between different instances, allowing for easy saving and loading of configurations.
-
-* **Clipboard Operations** – Supports standard clipboard functionalities, enabling the cutting, copying, and pasting of data within the DataGrid and across other applications.
-
-* **Exporting** - Support to export the data to Excel and PDF.
-
-* **Unbound column** - It allows adding additional columns that are not bound with data objects from the underlying data source.
-
-* **Unbound Row** - It allows adding rows at the top and bottom of the DataGrid which are not bound with data objects from the underlying data source.
-
-* **Theme** - Use a dark or light theme.
-
-* **Accessibility** - The DataGrid can easily be accessed by screen readers.
-
-* **Right to Left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
-
-N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.
+<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+<!-- Card 1 -->
+<div class="form-card">
+<div class="form-content">
+<h3 class="form-title">Explore Blogs
+<a href="https://www.syncfusion.com/blogs/category/net-maui"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    viewBox="0 0 16 16">
+<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
+                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
+                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
+                   c0-4.42-3.58-8-8-8z"/>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+              Read insights, tutorials, and developer journeys.
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="form-card">
+<div class="form-content">
+<h3 class="form-title">Explore KB's
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    viewBox="0 0 16 16">
+<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
+                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
+                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
+                   c0-4.42-3.58-8-8-8z"/>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               Find quick solutions and step‑by‑step guidance.
+</div>
+</div>
+</div>
+<!-- card 3 -->
+<div class="form-card">
+<div class="form-content">
+<h3 class="form-title">Feature Tour
+<a href="https://www.syncfusion.com/maui-controls/maui-datagrid"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    viewBox="0 0 16 16">
+<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
+                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
+                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
+                   c0-4.42-3.58-8-8-8z"/>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               Walk through highlights and core capabilities.
+</div>
+</div>
+</div>
+<!-- card 4 -->
+<div class="form-card">
+<div class="form-content">
+<h3 class="form-title">Showcase Demos
+<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    viewBox="0 0 16 16">
+<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
+                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
+                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
+                   c0-4.42-3.58-8-8-8z"/>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+                Discover polished real‑world app scenarios.
+</div>
+</div>
+</div>
