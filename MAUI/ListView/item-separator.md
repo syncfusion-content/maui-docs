@@ -17,25 +17,6 @@ The SfListView displays separators between items when the `ShowItemSeparator` pr
 
 Separators for group headers can be enabled using the `ShowGroupItemSeparator` property. Both item and group separators can be styled independently using their respective customization properties.
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ShowItemSeparator</td>
-      <td>Enables or disables separators between individual list items. <em>(Default: false)</em></td>
-    </tr>
-    <tr>
-      <td>ShowGroupItemSeparator</td>
-      <td>When enabled, draws a separator immediately after a group header to visually separate the header from its child items. <em>(Default: false)</em></td>
-    </tr>
-  </tbody>
-</table>
-
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2,3" %}
 <syncfusion:SfListView x:Name="listView"
@@ -74,10 +55,6 @@ After enabling separators, you can customize their appearance and behavior using
   </thead>
   <tbody>
     <tr>
-      <td>ShowItemSeparator</td>
-      <td>Enables or disables separators between individual list items. <em>(Default: false)</em></td>
-    </tr>
-    <tr>
       <td>ItemSeparatorColor</td>
       <td>Sets the color of the item separator line.</td>
     </tr>
@@ -88,10 +65,6 @@ After enabling separators, you can customize their appearance and behavior using
     <tr>
       <td>ItemSeparatorMargin</td>
       <td>Specifies the insets applied to the separator to align it with the item content. For vertical orientation, the left and right margin values are considered. For horizontal orientation, only the top and bottom margin values are applied to the separator line.</td>
-    </tr>
-    <tr>
-      <td>ShowGroupItemSeparator</td>
-      <td>When enabled, draws a separator immediately after a group header to visually separate the header from its child items.</td>
     </tr>
     <tr>
       <td>GroupItemSeparatorColor</td>
