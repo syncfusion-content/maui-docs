@@ -14,15 +14,15 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 - Designed for **scalability, interactivity, and flexibility**, it enables you to efficiently display, manage, and analyze large datasets across **mobile and desktop platforms**.
 
-    <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
+   <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
 
 ## Control Highlights
 
-- Display and manage large volumes of data efficiently  
-- Enable sorting, filtering, and grouping of data  
-- Allow in-place editing with multiple column types  
-- Provide interactive user experiences (drag, swipe, selection)  
-- Customize layouts and visuals based on application needs  
+- Display and manage large volumes of data efficiently with a **high‑performance DataGrid for .NET MAUI**
+- Enable advanced **sorting, filtering, and grouping** for improved data analysis
+- Allow seamless **in‑place editing** with a wide range of built‑in column types
+- Deliver rich, **interactive user experiences** using drag‑and‑drop, swipe actions, and flexible selection modes
+- Customize layouts, behaviors, and visuals to meet **enterprise and business application** requirements
 
 ## Key features
 
@@ -37,22 +37,22 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 ## Globalization
 
-- Screen reader support and keyboard navigation for accessibility
-- Right‑to‑left (RTL) layout and localization for global applications
+- Provide built‑in **accessibility support for .NET MAUI applications**, including screen reader compatibility and full keyboard navigation
+- Enable **right‑to‑left (RTL) layout support and localization**, making the DataGrid suitable for **globalized and multilingual applications**
 
 ## Real‑World Scenarios
 
-- Business dashboards requiring clear tabular insights
-- Financial systems with grouping, summaries, and export options
-- Inventory management for handling large datasets efficiently
-- Analytics tools with dynamic filtering and real‑time updates
+- Business dashboards requiring clear and structured **tabular data visualization**
+- Financial systems that rely on grouping, summaries, and **Excel or PDF export**
+- Inventory management applications handling **large datasets efficiently**
+- Analytics and reporting tools with **dynamic filtering and real‑time updates**
 
 ## Related Controls
 
-- ListView for flexible collection display
-- Scheduler for calendar and appointment management
-- Charts for advanced data visualization
-- ComboBox for selection and input scenarios
+- **ListView** for flexible and lightweight collection display
+- **Scheduler** for calendar, planning, and appointment management
+- **Charts** for advanced data visualization and analytics
+- **ComboBox** for efficient selection and data input scenarios
 
 ## Next Step
 
