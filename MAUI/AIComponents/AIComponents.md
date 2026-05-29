@@ -129,7 +129,7 @@ Syncfusion® AI components for .NET MAUI provide a range of intelligent controls
 <div class="form-content">
 <h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">AI Assist View</a></h3>
 <div class="form-description">
-              Enables conversational interfaces with AI-powered chat interactions and contextual assistance.
+              Provides AI-based chat interactions and helpful context-aware assistance.
 </div>
 </div>
 </div>

@@ -128,7 +128,7 @@ Components for chat-based and conversational workflows that support threaded mes
 <div class="form-content">
 <h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/chat/overview">Chat</a></h3>
 <div class="form-description">
-              The .NET MAUI Chat, also known as conversational UI, provides a modern chat experience.
+              The .NET MAUI Chat provides a simple and modern chat experience.
 </div>
 </div>
 </div>

@@ -216,7 +216,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href=" ">Spark Charts</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui-toolkit/spark-charts/overview">Spark Charts</a></h3>
 <div class="form-description">
               .NET MAUI Spark Charts are compact charts that show trends and variations in data.
 </div>

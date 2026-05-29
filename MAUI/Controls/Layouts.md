@@ -250,7 +250,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="">Parallax View</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/parallax-view/overview">Parallax View</a></h3>
 <div class="form-description">
                The .NET MAUI Parallax View makes the background move differently while scrolling.
 </div>

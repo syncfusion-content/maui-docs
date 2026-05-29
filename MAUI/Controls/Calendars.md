@@ -129,7 +129,7 @@ Calendar and scheduling controls for appointments, availability and timeline coo
 <div class="form-content">
 <h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/calendar/overview">Calendar</a></h3>
 <div class="form-description">
-              Displays dates in a calendar view, allowing users to select and view specific days.
+              Shows a calendar where users can view and select dates.
 </div>
 </div>
 </div>
@@ -145,7 +145,7 @@ Calendar and scheduling controls for appointments, availability and timeline coo
 <div class="form-content">
 <h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/scheduler/overview">Scheduler</a></h3>
 <div class="form-description">
-               Helps manage events and appointments by organizing them across days, weeks, or months.
+               Helps organize and manage events across days, weeks, or months.
 </div>
 </div>
 </div>
