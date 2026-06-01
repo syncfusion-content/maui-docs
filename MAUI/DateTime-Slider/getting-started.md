@@ -1,6 +1,6 @@
-﻿---
+---
 layout: post
-title: Getting started with .NET MAUI DateTime Slider control | Syncfusion®
+title: Getting started with .NET MAUI Slider control | Syncfusion®
 description: This section explains about the getting started with Syncfusion® MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
@@ -21,25 +21,24 @@ To quickly get started with the .NET MAUI DateTime Slider, watch this video.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
 
-
-### Step 1: Create a New .NET MAUI Project
+## Step 1: Create a New .NET MAUI Project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-### Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
@@ -74,7 +73,7 @@ namespace SliderGettingStarted
 
 {% endhighlight %}
 
-### Step 4: Add a Basic Datetime Slider
+## Step 4: Add a Basic Datetime Slider
 
 Import the [SfDateTimeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html?tabs=tabid-2) namespace and initialize the DateTime Slider as shown below.
 
@@ -129,21 +128,21 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
 
-### Step 1: Create a New .NET MAUI Project
+## Step 1: Create a New .NET MAUI Project
 
 1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-### Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Sliders` to install the Syncfusion<sup>®</sup> .NET MAUI Sliders package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
@@ -178,7 +177,7 @@ namespace SliderGettingStarted
 
 {% endhighlight %}
 
-### Step 4: Add a Basic Datetime Slider
+## Step 4: Add a Basic Datetime Slider
 
 Import the [SfDateTimeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html?tabs=tabid-2) namespace and initialize the DateTime Slider as shown below.
 
@@ -234,19 +233,19 @@ Before proceeding, ensure the following are set up:
 2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-### Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-### Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
@@ -281,7 +280,7 @@ namespace SliderGettingStarted
 
 {% endhighlight %}
 
-### Step 4: Add a Basic Datetime Slider
+## Step 4: Add a Basic Datetime Slider
 
 Import the [SfDateTimeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html?tabs=tabid-2) namespace and initialize the DateTime Slider as shown below.
 
@@ -330,7 +329,7 @@ namespace SliderGettingStarted
 
 ![Initialize slider](images/getting-started/initialize-slider.png)
 
-### Step 5: Enable labels
+## Step 5: Enable labels
 
 The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
@@ -361,7 +360,7 @@ slider.Interval = 2;
 
 ![Slider labels](images/getting-started/labels.png)
 
-### Step 6: Enable ticks
+## Step 6: Enable ticks
 
 The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 

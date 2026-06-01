@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with .NET MAUI TreeView Control | Syncfusion
 description: Learn here about getting started with the Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more.
@@ -12,13 +12,13 @@ documentation: ug
 This section guides you through setting up and configuring a [TreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) in your .NET MAUI application. Follow the steps below to add a basic TreeView to your project.
 
 ## Prerequisites
-Before proceeding, ensure the following are in place:
+
+Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
 
-
-### Step 1: Create a .NET MAUI project
+## Step 1: Create a .NET MAUI project
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -47,19 +47,19 @@ Before proceeding, ensure the following are set up:
 2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-### Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-### Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -92,7 +92,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
  
-### Step 4: Add a basic TreeView
+## Step 4: Add a basic TreeView
 
  1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
  2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
@@ -129,13 +129,13 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
  
-### Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView) and install the latest version.
  3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -168,7 +168,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
  
-### Step 4: Add a basic TreeView
+## Step 4: Add a basic TreeView
 
  1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
  2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
@@ -202,11 +202,11 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Step 5: Data population
+## Step 5: Data population
 
 TreeView can be populated either with the data source by using a [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) or by creating & adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
 
-#### Populating nodes without data source - unbound mode
+### Populating nodes without data source - unbound mode
 
 You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
 
@@ -288,7 +288,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-### Step 6: Running the application
+## Step 6: Running the application
 
 Press **F5** to build and run the application. Once compiled, the TreeView will be displayed with the data provided.
 
@@ -300,7 +300,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Populating nodes by data binding - bound mode
 
-#### Define the model
+### Define the model
 
 Create a simple data model as shown in the following code example, and save it as `FileManager.cs` file: 
 
@@ -358,7 +358,7 @@ public class FileManager : INotifyPropertyChanged
 
 N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0) interface in your model class.
 
-#### Define the view model
+### Define the view model
 
 Create a model repository class with `ImageNodeInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as `FileManagerViewModel.cs` file:
 
@@ -462,7 +462,7 @@ public class FileManagerViewModel
 {% endhighlight %}
 {% endtabs %}
 
-#### Bind the data source
+### Bind the data source
 
 Create a `ViewModel` instance and set it as the ListView's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -760,7 +760,7 @@ public class FileManagerViewModel
 {% endhighlight %}
 {% endtabs %}
 
-#### Bind to hierarchy property descriptor
+### Bind to hierarchy property descriptor
 
 You can create a tree view by binding the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) to the hierarchy property descriptors data source. To create a tree view using hierarchical data binding, set a hierarchical collection to the `ItemsSource` property, and then set the `TargetType` and [ChildPropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ChildPropertyName) property values in [HierarchyPropertyDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_HierarchyPropertyDescriptors) .
 

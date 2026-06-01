@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
-title: Getting Started with .NET MAUI Funnel Chart control | Syncfusion
-description: Learn here all about getting started with Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) control, its elements, and more.
+title: Getting Started with .NET MAUI Chart control | Syncfusion
+description: Learn here all about getting started with Syncfusion® .NET MAUI Chart (SfFunnelChart) control, its elements, and more.
 platform: maui
 control: SfFunnelChart
 documentation: ug
@@ -22,23 +22,22 @@ To get start quickly with our [.NET MAUI Funnel Chart](https://help.syncfusion.c
 
 Before proceeding, ensure that the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
-
-### Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-### Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Charts Package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Charts Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
@@ -75,7 +74,7 @@ namespace ChartGettingStarted
 {% endhighlight %}
 {% endtabs %} 
 
-### Step 4: Add .NET MAUI Funnel Chart
+## Step 4: Add .NET MAUI Funnel Chart
 
 1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
 2. Initialize [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html).
@@ -117,25 +116,25 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure that the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-### Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .NET MAUI project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-### Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Charts Package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Charts Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Charts` to install the Syncfusion<sup>®</sup> .NET MAUI Charts NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
@@ -172,7 +171,7 @@ namespace ChartGettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-### Step 4: Add .NET MAUI Funnel Chart
+## Step 4: Add .NET MAUI Funnel Chart
 
 1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
 2. Initialize [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html).
@@ -215,22 +214,22 @@ public partial class MainPage : ContentPage
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-### Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-### Step 2: Install the Syncfusion<sup>®</sup> MAUI Charts NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Charts NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
@@ -267,7 +266,7 @@ namespace ChartGettingStarted
 {% endhighlight %}
 {% endtabs %} 
 
-### Step 4: Add .NET MAUI Funnel Chart
+## Step 4: Add .NET MAUI Funnel Chart
 
 1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
 2. Initialize [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html).
@@ -305,7 +304,7 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-#### Initialize view model
+### Initialize view model
 
 Now, let us define a simple data model that represents a data point in the chart.
 
@@ -382,7 +381,7 @@ chart.BindingContext = viewModel;
 
 {% endtabs %} 
 
-#### Populate chart with data
+### Populate chart with data
 
 Binding `Data` to the funnel chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_ItemsSource) property from its BindingContext to create our own funnel chart.
 
@@ -411,7 +410,7 @@ this.Content = chart;
 
 {% endtabs %} 
 
-#### Add a title
+### Add a title
 
 The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set the title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of the funnel chart as follows.
 
@@ -442,7 +441,7 @@ this.Content = chart;
 
 {% endtabs %}  
 
-#### Enable the data labels
+### Enable the data labels
 
 The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_ShowDataLabels) property of the chart can be used to enable data labels to improve the readability of the funnel chart. The label visibility is set to `False` by default.
 
@@ -467,7 +466,7 @@ this.Content = chart;
 
 {% endtabs %} 
 
-#### Enable a legend
+### Enable a legend
 
 The legend provides information about the data point displayed in the funnel chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
 
@@ -495,7 +494,7 @@ this.Content = chart;
 
 {% endtabs %} 
 
-#### Enable Tooltip
+### Enable Tooltip
 
 Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting the chart [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_EnableTooltip) property as `true`.
 
