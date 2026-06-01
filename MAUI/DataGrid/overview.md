@@ -14,7 +14,7 @@ The [.NET MAUI DataGrid control](https://help.syncfusion.com/cr/maui/Syncfusion.
 
    <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
 
-## Business Use Cases
+## Business use cases
 
 - Business dashboards requiring clear and structured **tabular data visualization**.
 - Financial systems that rely on grouping, summaries, and **Excel or PDF export**.
@@ -59,13 +59,13 @@ The following table summarizes the globalization support available in the [SfDat
 </tr> 
 </table>
 
-## Related Controls
+## Related controls
 
 - **[Charts](https://help.syncfusion.com/maui/cartesian-charts/overview)** for advanced data visualization and analytics.
 - **[ListView](https://help.syncfusion.com/maui/listview/overview)** for flexible and lightweight collection display.
 - **[TreeMap](https://help.syncfusion.com/maui/treemap/overview)** for hierarchical or comparative visualization.
 
-## Next Step
+## Next step
 
 Explore further resources:
 
