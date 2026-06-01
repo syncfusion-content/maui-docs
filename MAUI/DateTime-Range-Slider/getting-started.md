@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Range Slider control | Syncfusion®
+title: Getting started with .NET MAUI DateTime Range Slider control | Syncfusion®
 description: This section explains about the getting started with Syncfusion® MAUI Range Slider (SfDateTimeRangeSlider) control.
 platform: maui
 control: SfDateTimeRangeSlider
