@@ -19,7 +19,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 ## Key features
 
 - **Flexible data binding** to collections, tables, and MVVM sources.
-- **Rich volume types** including text, numeric, date, checkbox, image, combobox, picker, and template columns.
+- **Rich column types** including text, numeric, date, checkbox, image, combobox, picker, and template columns.
 - **Data operations** with sorting, filtering, grouping, summaries, and search.
 - **Editing & interaction** through in‑place editing, drag‑drop, swipe actions, and selection.
 - **Performance & virtualization** with paging, incremental loading, and smooth rendering for large datasets.
@@ -29,15 +29,10 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 ## Globalization
 
-Syncfusion<sup>®</sup> .NET MAUI controls are designed to support global users by providing key globalization features such as Localization, Right‑To‑Left (RTL) layout, Time zone handling, Accessibility through screen readers and Keyboard navigation.
-
-The following table summarizes the globalization support available across all the Syncfusion<sup>®</sup> .NET MAUI controls.
-
-### Legend
+The following table summarizes the globalization support available in the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
 
 <img src="Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
 <img src="Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
@@ -77,9 +72,9 @@ The following table summarizes the globalization support available across all th
 Explore further resources:
 
 - [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started) - step‑by‑step guide to begin using the DataGrid.
-- [Styling Guide](https://help.syncfusion.com/maui/datagrid/styling) - learn how to customize appearance and themes.
-- [Selection Guide](https://help.syncfusion.com/maui/datagrid/selection) - manage row and cell selection effectively.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) – explore interactive demos and ready‑made UI examples.
+- [Data Binding](https://help.syncfusion.com/maui/datagrid/data-binding) - connect and display data efficiently.
+- [Column Types](https://help.syncfusion.com/maui/datagrid/column-types) - explore different column options for customization.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
 
 ## Learnings
 
@@ -94,6 +89,7 @@ Explore further resources:
    transition: 0.3s ease;
 }
 .form-card:hover {
+   text-decoration: none;
    transform: translateY(-4px);
    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
@@ -200,120 +196,47 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<div class="form-card">
-<div class="form-content">
-<h3 class="form-title">Explore Blogs
-<a href="https://www.syncfusion.com/blogs/category/net-maui"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    viewBox="0 0 32 32">
-<path d="M18.684326,11.112103L20.888334,13.315114 13.312324,20.888142 11.108316,18.68513z M7.8643327,10.378122L9.801342,12.317125 5.7623454,16.356142C2.6103413,19.508131,2.1483364,24.17215,4.7313409,26.755167L5.2443409,27.269177C7.8273454,29.851189,12.492317,29.388175,15.642338,26.238167L19.683317,22.197167 21.622311,24.137146 17.580324,28.175187C13.119331,32.636202,6.5353241,33.290198,2.8813372,29.634177L2.3673301,29.119191C-1.2896477,25.462164,-0.63764038,18.881146,3.8243294,14.419122z M23.060328,6.1310129E-05C25.357323,-0.0079345306,27.517323,0.76608578,29.11632,2.3660676L29.62932,2.8810842C33.287304,6.5371036,32.634289,13.120106,28.171314,17.582129L24.132319,21.62316 22.195309,19.684157 26.235312,15.64514C29.386309,12.493121,29.847307,7.8291011,27.265308,5.2450762L26.75231,4.7310972C24.170311,2.1490867,19.504334,2.6120705,16.354313,5.7620764L12.313333,9.8031077 10.375346,7.8641047 14.416327,3.8250882C16.926333,1.3150686,20.107328,0.011077993,23.060328,6.1310129E-05z" />
-</svg>
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
+    </div>
+  </div>
 </a>
-</h3>
-<div class="form-description">
-              Read insights, tutorials, and developer journeys.
-</div>
-</div>
-</div>
 <!-- Card 2 -->
-<div class="form-card">
-<div class="form-content">
-<h3 class="form-title">Explore KB's
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    viewBox="0 0 32 32">
-<path d="M18.684326,11.112103L20.888334,13.315114 13.312324,20.888142 11.108316,18.68513z M7.8643327,10.378122L9.801342,12.317125 5.7623454,16.356142C2.6103413,19.508131,2.1483364,24.17215,4.7313409,26.755167L5.2443409,27.269177C7.8273454,29.851189,12.492317,29.388175,15.642338,26.238167L19.683317,22.197167 21.622311,24.137146 17.580324,28.175187C13.119331,32.636202,6.5353241,33.290198,2.8813372,29.634177L2.3673301,29.119191C-1.2896477,25.462164,-0.63764038,18.881146,3.8243294,14.419122z M23.060328,6.1310129E-05C25.357323,-0.0079345306,27.517323,0.76608578,29.11632,2.3660676L29.62932,2.8810842C33.287304,6.5371036,32.634289,13.120106,28.171314,17.582129L24.132319,21.62316 22.195309,19.684157 26.235312,15.64514C29.386309,12.493121,29.847307,7.8291011,27.265308,5.2450762L26.75231,4.7310972C24.170311,2.1490867,19.504334,2.6120705,16.354313,5.7620764L12.313333,9.8031077 10.375346,7.8641047 14.416327,3.8250882C16.926333,1.3150686,20.107328,0.011077993,23.060328,6.1310129E-05z" />
-</svg>
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
 </a>
-</h3>
-<div class="form-description">
-               Find quick solutions and step‑by‑step guidance.
-</div>
-</div>
-</div>
-<!-- card 3 -->
-<div class="form-card">
-<div class="form-content">
-<h3 class="form-title">Feature Tour
-<a href="https://www.syncfusion.com/maui-controls/maui-datagrid"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    viewBox="0 0 32 32">
-<path d="M18.684326,11.112103L20.888334,13.315114 13.312324,20.888142 11.108316,18.68513z M7.8643327,10.378122L9.801342,12.317125 5.7623454,16.356142C2.6103413,19.508131,2.1483364,24.17215,4.7313409,26.755167L5.2443409,27.269177C7.8273454,29.851189,12.492317,29.388175,15.642338,26.238167L19.683317,22.197167 21.622311,24.137146 17.580324,28.175187C13.119331,32.636202,6.5353241,33.290198,2.8813372,29.634177L2.3673301,29.119191C-1.2896477,25.462164,-0.63764038,18.881146,3.8243294,14.419122z M23.060328,6.1310129E-05C25.357323,-0.0079345306,27.517323,0.76608578,29.11632,2.3660676L29.62932,2.8810842C33.287304,6.5371036,32.634289,13.120106,28.171314,17.582129L24.132319,21.62316 22.195309,19.684157 26.235312,15.64514C29.386309,12.493121,29.847307,7.8291011,27.265308,5.2450762L26.75231,4.7310972C24.170311,2.1490867,19.504334,2.6120705,16.354313,5.7620764L12.313333,9.8031077 10.375346,7.8641047 14.416327,3.8250882C16.926333,1.3150686,20.107328,0.011077993,23.060328,6.1310129E-05z" />
-</svg>
+<!-- Card 3 -->
+<a href="https://www.syncfusion.com/maui-controls/maui-datagrid" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Feature Tour</h3>
+    <div class="form-description">
+      Walk through highlights and core capabilities.
+    </div>
+  </div>
 </a>
-</h3>
-<div class="form-description">
-               Walk through highlights and core capabilities.
-</div>
-</div>
-</div>
-<!-- card 4 -->
-<div class="form-card">
-<div class="form-content">
-<h3 class="form-title">Showcase Samples
-<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
-</svg>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/maui-controls/maui-datagrid" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Showcase Samples</h3>
+    <div class="form-description">
+      Explore sample scenarios for real apps.
+    </div>
+  </div>
 </a>
-</h3>
-<div class="form-description">
-                Explore sample scenarios for real apps.
-</div>
-</div>
-</div>
-<!-- card 5 -->
-<div class="form-card">
-<div class="form-content">
-<h3 class="form-title">Tutorial Videos
-<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    viewBox="0 0 32 32">
-<path d="M18.684326,11.112103L20.888334,13.315114 13.312324,20.888142 11.108316,18.68513z M7.8643327,10.378122L9.801342,12.317125 5.7623454,16.356142C2.6103413,19.508131,2.1483364,24.17215,4.7313409,26.755167L5.2443409,27.269177C7.8273454,29.851189,12.492317,29.388175,15.642338,26.238167L19.683317,22.197167 21.622311,24.137146 17.580324,28.175187C13.119331,32.636202,6.5353241,33.290198,2.8813372,29.634177L2.3673301,29.119191C-1.2896477,25.462164,-0.63764038,18.881146,3.8243294,14.419122z M23.060328,6.1310129E-05C25.357323,-0.0079345306,27.517323,0.76608578,29.11632,2.3660676L29.62932,2.8810842C33.287304,6.5371036,32.634289,13.120106,28.171314,17.582129L24.132319,21.62316 22.195309,19.684157 26.235312,15.64514C29.386309,12.493121,29.847307,7.8291011,27.265308,5.2450762L26.75231,4.7310972C24.170311,2.1490867,19.504334,2.6120705,16.354313,5.7620764L12.313333,9.8031077 10.375346,7.8641047 14.416327,3.8250882C16.926333,1.3150686,20.107328,0.011077993,23.060328,6.1310129E-05z" />
-</svg>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/maui-controls/maui-datagrid" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Tutorial Videos</h3>
+    <div class="form-description">
+      Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
 </a>
-</h3>
-<div class="form-description">
-                Step‑by‑step guidance through video tutorials.
-</div>
-</div>
-</div>
