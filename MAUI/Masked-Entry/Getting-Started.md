@@ -215,7 +215,7 @@ Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 ### Step 5: Adding Mask to the Masked Entry
 
-### Initialize MaskedEntry control using simple mask
+#### Initialize MaskedEntry control using simple mask
 
 {% tabs %}
 {% highlight xaml %}
@@ -239,7 +239,7 @@ maskedEntry.Mask = "00/00/0000";
 
 ![Simple mask in .NET MAUI Masked Entry.](maskedentry_images/net-maui-masked-entry-simple-mask.png)
 
-### Initialize MaskedEntry control using RegEx mask
+#### Initialize MaskedEntry control using RegEx mask
 
 {% tabs %}
 {% highlight xaml %}

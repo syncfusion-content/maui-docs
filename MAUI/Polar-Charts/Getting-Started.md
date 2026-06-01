@@ -314,7 +314,7 @@ namespace ChartGettingStarted
 
 {% endtabcontents %}
 
-### Initialize view model
+#### Initialize view model
 
 Now, let us define a simple data model that represents a data point on the chart.
 
@@ -396,7 +396,7 @@ this.Content = chart;
 
 {% endtabs %} 
 
-### Initialize Chart axis
+#### Initialize Chart axis
 
 [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [PrimaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_PrimaryAxis) and [SecondaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_SecondaryAxis) properties of the chart are used to initialize the axis for the chart.
 
@@ -428,7 +428,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 {% endtabs %} 
 
-### Populate Chart with data
+#### Populate Chart with data
 
 To create a polar chart, you can add a [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html) to the polar chart [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) property of the chart, and  then bind the `PlantDetails` property of the above `PlantViewModel` to the `PolarLineSeries.ItemsSource` as follows.
 
@@ -500,7 +500,7 @@ this.Content = chart;
 
 {% endtabs %} 
 
-### Add a title
+#### Add a title
 
 The title of the chart provides quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set the title for the chart as follows.
 
@@ -532,7 +532,7 @@ this.Content = chart;
 
 {% endtabs %}  
 
-### Enable the data labels
+#### Enable the data labels
 
 The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series can be used to enable the data labels to enhance the readability of the chart. The label visibility is set to `False` by default.
 
@@ -561,7 +561,7 @@ this.Content = chart;
 
 {% endtabs %}  
 
-### Enable a legend
+#### Enable a legend
 
 The legend provides information about the data point displayed in the chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
 
@@ -641,7 +641,7 @@ this.Content = chart;
 
 {% endtabs %}  
 
-### Enable tooltip
+#### Enable tooltip
 
 Tooltips are used to display information about a segment when a user hovers over it. Enable the tooltip by setting the series [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property to true.
 

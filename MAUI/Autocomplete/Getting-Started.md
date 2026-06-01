@@ -76,7 +76,7 @@ namespace AutocompleteSample
 
 The .NET MAUI Autocomplete control can be configured entirely using C# code or XAML markup. The following steps explain how to create a [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) (SfAutocomplete) and configure its elements:
 
-### Adding the .NET MAUI Autocomplete control
+#### Adding the .NET MAUI Autocomplete control
 
 Step 1: Add the namespace as shown in the following code sample:
 
@@ -182,7 +182,7 @@ namespace AutocompleteSample
 
 The .NET MAUI Autocomplete control can be configured entirely using C# code or XAML markup. The following steps explain how to create a [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) (SfAutocomplete) and configure its elements:
 
-### Adding the .NET MAUI Autocomplete control
+#### Adding the .NET MAUI Autocomplete control
 
 Step 1: Add the namespace as shown in the following code sample:
 
@@ -287,7 +287,7 @@ namespace AutocompleteSample
 
 The .NET MAUI Autocomplete control can be configured entirely using C# code or XAML markup. The following steps explain how to create a [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) (SfAutocomplete) and configure its elements:
 
-### Adding the .NET MAUI Autocomplete control
+#### Adding the .NET MAUI Autocomplete control
 
 Step 1: Add the namespace as shown in the following code sample:
 

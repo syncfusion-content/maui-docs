@@ -79,7 +79,7 @@ namespace ComboBoxSample
 
 The .NET MAUI ComboBox control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI ComboBox (SfComboBox) and configure its elements:
 
-### Adding the .NET MAUI ComboBox control
+#### Adding the .NET MAUI ComboBox control
 
 Step 1: Add the namespace as shown in the following code sample:
 
@@ -187,7 +187,7 @@ namespace ComboBoxSample
 
 The .NET MAUI ComboBox control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI ComboBox (SfComboBox) and configure its elements:
 
-### Adding the .NET MAUI ComboBox control
+#### Adding the .NET MAUI ComboBox control
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
