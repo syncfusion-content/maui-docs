@@ -46,12 +46,12 @@ The following table summarizes the globalization support available in the [SfBac
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/avatar-view/overview">Avatar View</a></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><a href="/maui/backdrop/overview">Backdrop</a></td>
 <td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
 </tr> 
 </table> 
 
