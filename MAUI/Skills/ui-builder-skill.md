@@ -112,7 +112,7 @@ For details on supported deployment targets, refer to the [documentation](https:
 3. **Component Mapping** - Map intent to Syncfusion® MAUI controls and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - Design system (Material Design 3, or Custom theme). If no themes detected in the existing project, Material Design 3 is shown as the default option—proceed with this or change the theme as preferred.
+   - Design system (Material Design 3, or Custom theme). If no themes detected in the existing project, Material Design 3 is shown as the default option, proceed with this or change the theme as preferred.
    - Syncfusion theme (Material3)
    - Light and Dark Mode support
    - Platform-specific adaptations (iOS, Android, macOS, Windows)
