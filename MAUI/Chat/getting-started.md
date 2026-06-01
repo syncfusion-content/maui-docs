@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with .NET MAUI Chat Control | Syncfusion
 description: Learn here about getting started with the Syncfusion .NET MAUI Chat (SfChat) control, its elements and more.
@@ -21,22 +21,23 @@ To quickly get started with the .NET MAUI Chat, watch this video:
 ## Prerequisites
 Before proceeding, ensure the following are in place:
 
- 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
- 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2026 (v18.0.0 or later).
 
-## Step 1: Create a .NET MAUI project
+
+### Step 1: Create a .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
 3. Select the .NET framework version and click **Create.**
  
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
+### Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) and install the latest version.
  3. Ensure the necessary dependencies are installed correctly, and the project is restored.
  
-## Step 3: Register the handler
+### Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -70,7 +71,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a basic chat
+### Step 4: Add a basic chat
 
  1. To initialize the control, import the `Syncfusion.Maui.Chat` namespace into your code.
  2. Initialize [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html).
@@ -103,7 +104,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Define the view model
+### Step 5: Define the view model
 
 The `SfChat` control is data-bound and displays a collection of messages exchanged between users. Hence, messages should be created and bound to the control.
 
@@ -218,7 +219,7 @@ Create a simple message collection as shown in the following code example in a n
 {% endhighlight %}
 {% endtabs %}
 
-### Bind messages to chat 
+#### Bind messages to chat 
 
 Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -263,7 +264,7 @@ To load the messages to SfChat, bind the message collection to the [Messages](ht
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 6: Running the application
+### Step 6: Running the application
 
 Press **F5** to build and run the application. Once compiled, the Chat will be displayed with the data provided.
 
@@ -279,24 +280,24 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started
 ## Prerequisites
 Before proceeding, ensure the following are in place:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
 
-## Step 1: Create a new .NET MAUI project
+### Step 1: Create a new .NET MAUI project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
+### Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) and install the latest version.
  3. Ensure the necessary dependencies are installed correctly, and the project is restored.
  
-## Step 3: Register the handler
+### Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -330,7 +331,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a basic chat
+### Step 4: Add a basic chat
 
  1. To initialize the control, import the `Syncfusion.Maui.Chat` namespace into your code.
  2. Initialize [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html).
@@ -363,7 +364,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Define the view model
+### Step 5: Define the view model
 
 The `SfChat` control is data-bound and displays a collection of messages exchanged between users. Hence, messages should be created and bound to the control.
 
@@ -478,7 +479,7 @@ Create a simple message collection as shown in the following code example in a n
 {% endhighlight %}
 {% endtabs %}
 
-### Bind messages to chat 
+#### Bind messages to chat 
 
 Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -523,7 +524,7 @@ To load the messages to SfChat, bind the message collection to the [Messages](ht
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 6: Running the application
+### Step 6: Running the application
 
 Press **F5** to build and run the application. Once compiled, the Chat will be displayed with the data provided.
 
@@ -542,22 +543,22 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI project
+### Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
+### Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+### Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -591,7 +592,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a basic chat
+### Step 4: Add a basic chat
 
  1. To initialize the control, import the `Syncfusion.Maui.Chat` namespace into your code.
  2. Initialize [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html).
@@ -624,7 +625,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Define the view model
+### Step 5: Define the view model
 
 The `SfChat` control is data-bound and displays a collection of messages exchanged between users. Hence, messages should be created and bound to the control.
 

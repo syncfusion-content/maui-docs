@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with .NET MAUI TreeView Control | Syncfusion
 description: Learn here about getting started with the Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more.
@@ -14,10 +14,11 @@ This section guides you through setting up and configuring a [TreeView](https://
 ## Prerequisites
 Before proceeding, ensure the following are in place:
 
- 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
- 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2026 (v18.0.0 or later).
 
-## Step 1: Create a .NET MAUI project
+
+### Step 1: Create a .NET MAUI project
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -43,22 +44,22 @@ Before proceeding, ensure the following are in place:
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI project
+### Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+### Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+### Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -91,7 +92,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
  
-## Step 4: Add a basic TreeView
+### Step 4: Add a basic TreeView
 
  1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
  2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
@@ -128,13 +129,13 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
  
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+### Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView) and install the latest version.
  3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
+### Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -167,7 +168,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
  
-## Step 4: Add a basic TreeView
+### Step 4: Add a basic TreeView
 
  1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
  2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
@@ -201,7 +202,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Data population
+### Step 5: Data population
 
 TreeView can be populated either with the data source by using a [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) or by creating & adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
 
@@ -287,7 +288,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the application
+### Step 6: Running the application
 
 Press **F5** to build and run the application. Once compiled, the TreeView will be displayed with the data provided.
 
