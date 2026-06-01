@@ -175,10 +175,7 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
-
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
     <syncfusion:SfTreeView />
 </ContentPage>
 
@@ -186,7 +183,6 @@ namespace GettingStarted
 {% highlight c# hl_lines="9" %}
 
 using Syncfusion.Maui.TreeView;
-. . .
 
 public partial class MainPage : ContentPage
 {
@@ -220,23 +216,15 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
              xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
              x:Class="GettingStarted.MainPage">
     <ContentPage.Content>
-       <syncfusion:SfTreeView x:Name="treeView">
+       <syncfusion:SfTreeView x:Name="treeView" ExpandActionTarget="Node" FullRowSelect="True">
             <syncfusion:SfTreeView.Nodes>
-                <treeviewengine:TreeViewNode Content="Australia">
+                <treeviewengine:TreeViewNode Content="Australia" IsExpanded="True">
                     <treeviewengine:TreeViewNode.ChildNodes>
-                        <treeviewengine:TreeViewNode Content="New South Wales">
+                        <treeviewengine:TreeViewNode Content="New South Wales" IsExpanded="True">
                             <treeviewengine:TreeViewNode.ChildNodes>
-                                <treeviewengine:TreeViewNode Content="Sydney"/>
-                            </treeviewengine:TreeViewNode.ChildNodes>
-                        </treeviewengine:TreeViewNode>
-                    </treeviewengine:TreeViewNode.ChildNodes>
-                </treeviewengine:TreeViewNode>
-                <treeviewengine:TreeViewNode Content="United States of America">
-                    <treeviewengine:TreeViewNode.ChildNodes>
-                        <treeviewengine:TreeViewNode Content="New York"/>
-                        <treeviewengine:TreeViewNode Content="California">
-                            <treeviewengine:TreeViewNode.ChildNodes>
-                                <treeviewengine:TreeViewNode Content="San Francisco"/>
+                                <treeviewengine:TreeViewNode Content="Sydney" IsExpanded="True"/>
+                                <treeviewengine:TreeViewNode Content="Canberra" IsExpanded="True"/>
+                                <treeviewengine:TreeViewNode Content="Newcastle–Maitland" IsExpanded="True"/>
                             </treeviewengine:TreeViewNode.ChildNodes>
                         </treeviewengine:TreeViewNode>
                     </treeviewengine:TreeViewNode.ChildNodes>
@@ -265,19 +253,14 @@ namespace GettingStarted
 
             var australia = new TreeViewNode() { Content = "Australia" };
             var nsw = new TreeViewNode() { Content = "New South Wales" };
-            var sydney = new TreeViewNode() { Content = "Sydney" };
-            australia.ChildNodes.Add(nsw);
-            nsw.ChildNodes.Add(sydney);
- 
-            var usa = new TreeViewNode() { Content = "United States of America" };
-            var newYork = new TreeViewNode() { Content = "New York," };
-            var california = new TreeViewNode() { Content = "California" };
-            var sanFrancisco = new TreeViewNode() { Content = "San Francisco" };
-            usa.ChildNodes.Add(newYork);
-            usa.ChildNodes.Add(california);
-            California.ChildNodes.Add(sanFrancisco);
+            var sydney = new TreeViewNode{ Content = "Sydney", IsExpanded = true };
+            var canberra = new TreeViewNode{ Content = "Canberra",IsExpanded = true };
+            var newcastle = new TreeViewNode{ Content = "Newcastle–Maitland", IsExpanded = true};
+            newSouthWales.ChildNodes.Add(sydney);
+            newSouthWales.ChildNodes.Add(canberra);
+            newSouthWales.ChildNodes.Add(newcastle);
+            australia.ChildNodes.Add(newSouthWales);
             treeView.Nodes.Add(australia);
-            treeView.Nodes.Add(usa);
 
             this.Content = treeView;
         }
@@ -295,213 +278,4 @@ Here is the result of the previous codes,
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
-![.NET MAUI TreeView getting started UnBoundMode](Images/getting-started/maui-treeView-unboundMode.png)
-
-## Populating nodes by data binding - bound mode
-
-### Define the model
-
-Create a simple data model as shown in the following code example, and save it as `FileManager.cs` file: 
-
-{% tabs %}
-{% highlight c# tabtitle="FileManager.cs" %}
-public class FileManager : INotifyPropertyChanged
-{
-   private string itemName;
-   private ImageSource imageIcon;
-   private ObservableCollection<FileManager> subFiles;
-
-   public ObservableCollection<FileManager> SubFiles
-   {
-      get { return subFiles; }
-      set
-      {
-         subFiles = value;
-         RaisedOnPropertyChanged("SubFiles");
-      }
-   }
-
-   public string ItemName
-   {
-      get { return itemName; }
-      set
-      {
-         itemName = value;
-         RaisedOnPropertyChanged("ItemName");
-      }
-   }
- 
-   public ImageSource ImageIcon
-   {
-       get { return imageIcon; }
-       set
-       {
-          imageIcon = value;
-          RaisedOnPropertyChanged("ImageIcon");
-       }
-   }
-
-   public event PropertyChangedEventHandler PropertyChanged;
-
-   public void RaisedOnPropertyChanged(string propertyName)
-   {
-      if (PropertyChanged != null)
-      {
-         PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-      }
-   }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0) interface in your model class.
-
-### Define the view model
-
-Create a model repository class with `ImageNodeInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as `FileManagerViewModel.cs` file:
-
-{% tabs %}
-{% highlight c# tabtitle="FileManagerViewModel.cs" %}
-public class FileManagerViewModel
-{
-   private ObservableCollection<FileManager> imageNodeInfo;
-
-   public FileManagerViewModel()
-   {
-      GenerateSource();
-   }
-
-   public ObservableCollection<FileManager> ImageNodeInfo
-   {
-      get { return imageNodeInfo; }
-      set { this.imageNodeInfo = value; }
-   }
-
-   private void GenerateSource()
-   {
-      var nodeImageInfo = new ObservableCollection<FileManager>();
-      var doc = new FileManager() { ItemName = "Documents", ImageIcon = "folder.png" };
-      var download = new FileManager() { ItemName = "Downloads", ImageIcon = "folder.png" };
-      var mp3 = new FileManager() { ItemName = "Music", ImageIcon ="folder.png" };
-      var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = "folder.png" };
-      var video = new FileManager() { ItemName = "Videos", ImageIcon ="folder.png" };
-
-      var pollution = new FileManager() { ItemName = "Environmental Pollution.docx", ImageIcon = "word.png" };
-      var globalWarming = new FileManager() { ItemName = "Global Warming.ppt", ImageIcon = "ppt.png" };
-      var sanitation = new FileManager() { ItemName = "Sanitation.docx", ImageIcon = "word.png"};
-      var socialNetwork = new FileManager() { ItemName = "Social Network.pdf", ImageIcon ="pdfimage.png" };
-      var youthEmpower = new FileManager() { ItemName = "Youth Empowerment.pdf", ImageIcon = "pdfimage.png" };
-          
-      var tutorials = new FileManager() { ItemName = "Tutorials.zip", ImageIcon = "zip.png" };
-      var typeScript = new FileManager() { ItemName = "TypeScript.7z", ImageIcon ="zip.png" };
-      var uiGuide = new FileManager() { ItemName = "UI-Guide.pdf", ImageIcon = "pdfimage.png"};
-
-      var song = new FileManager() { ItemName = "Gouttes", ImageIcon = "audio.png" };
-
-      var camera = new FileManager() { ItemName = "Camera Roll", ImageIcon = "folder.png" };
-      var stone = new FileManager() { ItemName = "Stone.jpg", ImageIcon = "image.png" };
-      var wind = new FileManager() { ItemName = "Wind.jpg", ImageIcon = "image.png"};
-
-      var img0 = new FileManager() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = "people_circle23.png" };
-      var img1 = new FileManager() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = "people_circle2.png" };
-
-      var video1 = new FileManager() { ItemName = "Naturals.mp4", ImageIcon = "video.png" };
-      var video2 = new FileManager() { ItemName = "Wild.mpeg", ImageIcon = "video.png" };
-
-      doc.SubFiles = new ObservableCollection<FileManager>
-      {
-         pollution,
-         globalWarming,
-         sanitation,
-         socialNetwork,
-         youthEmpower
-      };
-
-      download.SubFiles = new ObservableCollection<FileManager>
-      {
-         tutorials,
-         TypeScript,
-         uiGuide
-      };
-
-      mp3.SubFiles = new ObservableCollection<FileManager>
-      {
-         song
-      };
-
-      pictures.SubFiles = new ObservableCollection<FileManager>
-      {
-         camera,
-         stone,
-         wind
-      };
-      
-      camera.SubFiles = new ObservableCollection<FileManager>
-      {
-         img0,
-         img1
-      };
-
-      video.SubFiles = new ObservableCollection<FileManager>
-      {
-         video1,
-         video2
-      };
-
-      nodeImageInfo.Add(doc);
-      nodeImageInfo.Add(download);
-      nodeImageInfo.Add(mp3);
-      nodeImageInfo.Add(pictures);
-      nodeImageInfo.Add(video);
-      imageNodeInfo = nodeImageInfo;
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Bind the data source
-
-Create a `ViewModel` instance and set it as the ListView's `BindingContext`. This enables property binding from `ViewModel` class.
-
-To populate the TreeView by binding the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) to a hierarchical data source. To create a tree view using data binding, set a hierarchical collection to the `ItemsSource` property. Then in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) and [ExpanderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderTemplate), set the child items collection to the `ItemsSource` property.
-
-I> ItemsSource is an alternative mechanism to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) for adding content into the TreeView control. You cannot set both ItemsSource and Nodes at the same time. When you use ItemsSource, nodes are created internally, but you cannot access them from the Nodes property.
-
-{% tabs %}
-{% highlight xaml hl_lines="11" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-             xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
-             x:Class="GettingStarted.MainPage">
-
-  <ContentPage.BindingContext>
-    <local:FileManagerViewModel x:Name="viewModel" />
-  </ContentPage.BindingContext>
-   <syncfusion:SfTreeView x:Name="treeView" 
-                   ItemsSource="{Binding ImageNodeInfo}" 
-                   ChildPropertyName="SubFiles"/>
-</ContentPage>
-{% endhighlight %}
-{% highlight c# hl_lines="12" %}
-using Syncfusion.Maui.TreeView;
-
-namespace GettingStarted;
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeView treeView = new SfTreeView();
-        FileManagerViewModel viewModel = new FileManagerViewModel();
-        treeView.ItemsSource = viewModel.ImageNodeInfo; 
-        treeView.ChildPropertyName = "SubFiles";
-        this.Content = treeView;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+![.NET MAUI TreeView getting started UnBoundMode](Images/getting-started/maui_treeview.png)
