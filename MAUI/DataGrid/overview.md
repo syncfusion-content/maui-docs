@@ -10,11 +10,16 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # .NET MAUI DataGrid (SfDataGrid) Overview
 
-- Create powerful, high-performance **tabular data experiences** in your **.NET MAUI applications** using the **Syncfusion DataGrid control ([SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html))**.
-
-- Designed for **scalability, interactivity, and flexibility**, it enables you to efficiently display, manage, and analyze large datasets across **mobile and desktop platforms**.
+The [.NET MAUI DataGrid control](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
    <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
+
+## Business Use Cases
+
+- Business dashboards requiring clear and structured **tabular data visualization**.
+- Financial systems that rely on grouping, summaries, and **Excel or PDF export**.
+- Inventory management applications handling **large datasets efficiently**.
+- Analytics and reporting tools with **dynamic filtering and real‑time updates**.
 
 ## Key features
 
@@ -29,11 +34,11 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
+The following table summarizes the globalization support available in the [SfDataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control.
 
-<img src="Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -46,20 +51,13 @@ The following table summarizes the globalization support available in the [SfDat
 </tr>
 <tr>
 <td><a href="/maui/datagrid/overview">DataGrid</a></td>
-<td align="center"><img src="Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
-
-## Real‑World Scenarios
-
-- Business dashboards requiring clear and structured **tabular data visualization**.
-- Financial systems that rely on grouping, summaries, and **Excel or PDF export**.
-- Inventory management applications handling **large datasets efficiently**.
-- Analytics and reporting tools with **dynamic filtering and real‑time updates**.
 
 ## Related Controls
 
