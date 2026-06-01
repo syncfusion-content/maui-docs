@@ -125,16 +125,38 @@ The `SfAIAssistView` control allows you to fully customize the suggestions appea
 {% highlight xaml hl_lines="13" %}
 
 <ContentPage.Resources>
-    <DataTemplate x:Key="suggestionTemplate">
-        <Grid>
-            ...
-        </Grid>
-    </DataTemplate>
+    <ResourceDictionary>
+        <DataTemplate x:Key="suggestionTemplate">
+                <Border WidthRequest="130"
+                    HeightRequest="85"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="#E6E8F5"
+                    Margin="2">
+
+                    <Grid>
+                        <Image Source="{Binding ImageSource}"
+                            Aspect="AspectFill" />
+
+                        <Border VerticalOptions="End"
+                            BackgroundColor="#CCFFFFFF"
+                            StrokeShape="RoundRectangle 10"
+                            Margin="2"
+                            Padding="2">
+
+                            <Label Text="{Binding Text}"
+                                FontSize="13"
+                                TextColor="Black"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Center" />
+                        </Border>
+                    </Grid>
+                </Border>
+            </DataTemplate>
+    </ResourceDictionary>
 </ContentPage.Resources>
 
 <ContentPage.Content>
     <assistView:SfAIAssistView x:Name="sfAIAssistView"
-                               AssistItems="{Binding AssistItems}"
                                Suggestions="{Binding Suggestions}"
                                SuggestionTemplate="{StaticResource suggestionTemplate}"
                                ShowHeader="True"/>
@@ -415,7 +437,7 @@ The `SfAIAssistView` control allows you to define the header text for each respo
 
         assistSuggestions.Items = suggestions;
 		
-		assistSuggestions.SuggestionHeaderText = "Related Topics";
+		responseItem.SuggestionHeaderText = "Related Topics";
 		
 		// Assign suggestions to response item.
 		responseItem.Suggestion = assistSuggestions;

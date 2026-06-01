@@ -60,7 +60,7 @@ public class ViewModel : INotifyPropertyChanged
     private async void ExecuteRequestCommand(object obj)
     {
         var request = (obj as Syncfusion.Maui.AIAssistView.RequestEventArgs).RequestItem;
-        await this.GetResult(request).ConfigureAwait(true);
+        await this.GetResult((AssistItem)request).ConfigureAwait(true);
     }
 
     private async Task GetResult(object inputQuery)
@@ -111,7 +111,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
     </ContentPage.BindingContext>
     <syncfusion:SfAIAssistView x:Name="assistView"
                                ItemsSource="{Binding AssistItemsCollection}"
-                               ItemsSourceConverter="{Binding converter}" />
+                               ItemsSourceConverter="{StaticResource converter}" />
 </ContentPage>
 {% endhighlight %}
  

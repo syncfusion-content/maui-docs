@@ -71,22 +71,66 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
 
  <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="headerTemplate">
-                <Grid RowDefinitions="45,30,Auto" RowSpacing="10" Padding="0,18,0,0">
-                    <Image  Source="aiassistview.png" HorizontalOptions="Center"/>                 
-                    <Label Padding="0,5,0,0" Text="Ask AI Anything!" HorizontalOptions="Center" Grid.Row="1" FontSize="16"/>
-                    <FlexLayout x:Name="headerlayout"
-                                BindableLayout.ItemsSource="{Binding HeaderInfoCollection}">
-                        ...
-                    </FlexLayout>
-                </Grid>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="headerTemplate">
+            <Grid RowDefinitions="Auto,30,Auto"
+              RowSpacing="2"
+              Padding="0,2,0,0">
+
+                <Image Source="aiassistview.png"
+                   HeightRequest="40"
+                   WidthRequest="40"
+                   HorizontalOptions="Center" />
+
+                <Label Grid.Row="1"
+                   Text="Ask AI Anything!"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Padding="0,5,0,0" />
+
+                <FlexLayout Grid.Row="2"
+                        Wrap="Wrap"
+                        JustifyContent="Center"
+                        AlignItems="Start"
+                        Margin="2"
+                        BindableLayout.ItemsSource="{Binding HeaderInfoCollection}">
+
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Border WidthRequest="130"
+                                HeightRequest="88"
+                                StrokeShape="RoundRectangle 10"
+                                BackgroundColor="#E6E8F5"
+                                Margin="2">
+
+                                <Grid>
+                                    <Image Source="{Binding Image}"
+                                       Aspect="AspectFill" />
+
+                                    <Border VerticalOptions="End"
+                                        BackgroundColor="#CCFFFFFF"
+                                        StrokeShape="RoundRectangle 10"
+                                        Margin="2"
+                                        Padding="2">
+
+                                        <Label Text="{Binding Title}"
+                                           FontSize="14"
+                                           HorizontalOptions="Center"
+                                           HorizontalTextAlignment="Center" />
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
 <ContentPage.Content>
       <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                 AssistItems="{Binding AssistItems}"
                                  ShowHeader="True"
                                  HeaderTemplate="{StaticResource headerTemplate}">
       </syncfusion:SfAIAssistView>
