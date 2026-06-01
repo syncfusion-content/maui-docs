@@ -221,7 +221,7 @@ Explore further resources:
   </div>
 </a>
 <!-- Card 4 -->
-<a href="https://www.syncfusion.com/maui-controls/maui-datagrid" class="form-card" target="_blank">
+<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
     <div class="form-description">
@@ -230,7 +230,7 @@ Explore further resources:
   </div>
 </a>
 <!-- Card 5 -->
-<a href="https://www.syncfusion.com/maui-controls/maui-datagrid" class="form-card" target="_blank">
+<a href="https://www.syncfusion.com/tutorial-videos/maui/datagrid" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
