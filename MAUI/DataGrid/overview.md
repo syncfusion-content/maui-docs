@@ -19,7 +19,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 ## Key features
 
 - **Flexible data binding** to collections, tables, and MVVM sources.
-- **Rich volumn types** including text, numeric, date, checkbox, image, combobox, picker, and template columns.
+- **Rich volume types** including text, numeric, date, checkbox, image, combobox, picker, and template columns.
 - **Data operations** with sorting, filtering, grouping, summaries, and search.
 - **Editing & interaction** through in‑place editing, drag‑drop, swipe actions, and selection.
 - **Performance & virtualization** with paging, incremental loading, and smooth rendering for large datasets.
