@@ -23,7 +23,7 @@ To get start quickly with our [.NET MAUI Circular Chart](https://help.syncfusion
 Before proceeding, ensure that the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
 
 
 ### Step 1: Create a new .NET MAUI project

@@ -25,7 +25,7 @@ To get start quickly with our .NET MAUI ImageEditor, you can check the below vid
 Before proceeding, ensure the following are setup:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
 
 
 ### Step 1: Create a New .NET MAUI Project
