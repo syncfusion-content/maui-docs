@@ -10,74 +10,231 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # .NET MAUI DataGrid (SfDataGrid) Overview
 
-The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
+The [.NET MAUI DataGrid control](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
-<img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
+   <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
 
-**Key Features**
+## Business use cases
 
-* **Data Binding** - Bind different types of data sources, including DataTable.
+- Business dashboards requiring clear and structured **tabular data visualization**.
+- Financial systems that rely on grouping, summaries, and **Excel or PDF export**.
+- Inventory management applications handling **large datasets efficiently**.
+- Analytics and reporting tools with **dynamic filtering and real‑time updates**.
 
-* **Column Types** - Show different data types in different types of columns. The following column types are supported: numeric, text, date, checkbox, image, combobox, picker and template. The template column is used to load any control in a column.
+## Key features
 
-* **Column Resizing** - Interactive support to adjust the width of columns.
+- **Flexible data binding** to collections, tables, and MVVM sources.
+- **Rich column types** including text, numeric, date, checkbox, image, combobox, picker, and template columns.
+- **Data operations** with sorting, filtering, grouping, summaries, and search.
+- **Editing & interaction** through in‑place editing, drag‑drop, swipe actions, and selection.
+- **Performance & virtualization** with paging, incremental loading, and smooth rendering for large datasets.
+- **Advanced views** such as master‑details, record templates, unbound rows, and unbound columns.
+- **Styling & customization** with conditional formatting, stacked headers, freeze panes, and theme support.
+- **Export & data handling** including Excel/PDF export, clipboard operations, serialization, and deserialization.
 
-* **Column Drag and Drop** - Interactive support to drag and drop columns.
+## Globalization
 
-* **Row drag and drop** - Interaction support to drag and drop rows.
+The following table summarizes the globalization support available in the [SfDataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control.
 
-* **Swiping** - Interaction support to swipe the rows.
+<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
-* **Editing** - Interactive support to edit with different column types.
+<table>
+<tr>
+<th align="center">Control</th>
+<th align="center">Localization</th>
+<th align="center">RTL</th>
+<th align="center">Time zone</th>
+<th align="center">Screen reader</th>
+<th align="center">Keyboard navigation</th>
+</tr>
+<tr>
+<td><a href="/maui/datagrid/overview">DataGrid</a></td>
+<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+</table>
 
-* **Sorting** - Interactively sort one or more columns.
+## Related controls
 
-* **Grouping** - Use user-interactive grouping to group one or more columns.
+- **[Charts](https://help.syncfusion.com/maui/cartesian-charts/overview)** for advanced data visualization and analytics.
+- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for flexible and lightweight collection display.
+- **[TreeMap](https://help.syncfusion.com/maui/treemap/overview)** for hierarchical or comparative visualization.
 
-* **Summaries** - Extensive support to show brief information about the individual data columns or groups of rows.
+## Next step
 
-* **Filtering** - Programmatically filter data based on the criteria.
+Explore further resources:
 
-* **Data virtualization** – Support for different modes of data virtualization such as paging, incremental loading.
+- [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started) - step‑by‑step guide to begin using the DataGrid.
+- [Data Binding](https://help.syncfusion.com/maui/datagrid/data-binding) - connect and display data efficiently.
+- [Column Types](https://help.syncfusion.com/maui/datagrid/column-types) - explore different column options for customization.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
 
-* **Selection** - Select one or more rows. Keyboard navigation is supported in Windows platform.
+## Learnings
 
-* **Search** - Supports highlighting cell content and provides navigation functionalities.
+<style>
+.form-card {
+   flex: 0 0 calc(33.33% - 14px);
+   border: 1px solid #ddd;
+   border-radius: 12px;
+   overflow: hidden;
+   background: white;
+   box-sizing: border-box;
+   transition: 0.3s ease;
+}
+.form-card:hover {
+   text-decoration: none;
+   transform: translateY(-4px);
+   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.form-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.form-image:hover {
+   transform: scale(1.02);
+}
+.form-content {
+   padding: 16px;
+}
+.form-title {
+   margin-top: 0px;
+   margin: 0 0 10px;
+   font-size: 20px;
+   font-weight: 600;
+   color: #000000;
+}
+.form-link {
+   color: #0078D4;
+   text-decoration: none;
+}
+.form-description {
+   margin-top: 14px;
+   font-size: 13px;
+   color: #000000;
+   line-height: 1.6;
+}
+.source-icon {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   background: #f3f4f6;
+   color: #0078D4;
+   text-decoration: none;
+   transition: 0.3s ease;
+   margin-top: 12px;
+}
+.source-icon:hover {
+   background: #0078D4;
+   color: white;
+}
+/* Popup Modal */
+#imageModal {
+   display: none;
+   position: fixed;
+   z-index: 9999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.85);
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   box-sizing: border-box;
+}
+#popupImage {
+   max-width: 90%;
+   max-height: 90%;
+   border-radius: 14px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+   animation: zoomIn 0.25s ease;
+}
+.close-popup {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   color: white;
+   font-size: 42px;
+   cursor: pointer;
+   font-weight: bold;
+}
+@key frames zoomIn {
+   from {
+       transform: scale(0.9);
+       opacity: 0;
+   }
+   to {
+       transform: scale(1);
+       opacity: 1;
+   }
+}
+@media(max-width:900px) {
+   .form-card {
+       flex: 0 0 calc(50% - 10px);
+   }
+}
+@media(max-width:600px) {
+   .form-card {
+       flex: 0 0 100%;
+   }
+}
+</style>
 
-* **Master-Details View** – Supports displaying relational data using hierarchies.
-
-* **Record Template View** - Supports customization of row presentation by defining templates for displaying additional information or complex layouts within the DataGrid.
-
-* **Column Sizing** - Set the width of columns with various sizing options. Columns can also be sized based on their content.
-
-* **Auto row height** - Set the height for rows based on the content of their cells.
-
-* **Freeze Panes** - Freeze the rows and columns, keeping them fixed in place while scrolling the grid.
-
-* **Styling** - Customize the appearance of cells and headers. Conditional styling is supported.
-
-* **Paging** - Support for loading data in segments when dealing with large volumes of data.
-
-* **Stacked Headers** - Extensive support to show multiple headers called stacked headers.
-
-* **Load More** -  Display an interactive view when the grid reaches its maximum or minimum offset while scrolling down or up. Tapping the interactive view triggers a command to add more data to the item source of the grid at runtime.
-
-* **Pull To Refresh** - Support allows users to load a subset of data when the DataGrid is pulled down.
-
-* **Serialization and Deserialization** – Supports the transfer of grid properties and settings between different instances, allowing for easy saving and loading of configurations.
-
-* **Clipboard Operations** – Supports standard clipboard functionalities, enabling the cutting, copying, and pasting of data within the DataGrid and across other applications.
-
-* **Exporting** - Support to export the data to Excel and PDF.
-
-* **Unbound column** - It allows adding additional columns that are not bound with data objects from the underlying data source.
-
-* **Unbound Row** - It allows adding rows at the top and bottom of the DataGrid which are not bound with data objects from the underlying data source.
-
-* **Theme** - Use a dark or light theme.
-
-* **Accessibility** - The DataGrid can easily be accessed by screen readers.
-
-* **Right to Left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
-
-N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.
+<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+<!-- Card 1 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
+    </div>
+  </div>
+</a>
+<!-- Card 2 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://www.syncfusion.com/maui-controls/maui-datagrid" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Feature Tour</h3>
+    <div class="form-description">
+      Walk through highlights and core capabilities.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Showcase Samples</h3>
+    <div class="form-description">
+      Explore sample scenarios for real apps.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/tutorial-videos/maui/datagrid" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Tutorial Videos</h3>
+    <div class="form-description">
+      Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
