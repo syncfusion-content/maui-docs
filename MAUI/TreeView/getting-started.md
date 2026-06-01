@@ -15,7 +15,7 @@ This section guides you through setting up and configuring a [TreeView](https://
 Before proceeding, ensure the following are in place:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
 
 
 ### Step 1: Create a .NET MAUI project
@@ -206,7 +206,7 @@ public partial class MainPage : ContentPage
 
 TreeView can be populated either with the data source by using a [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) or by creating & adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
 
-### Populating nodes without data source - unbound mode
+#### Populating nodes without data source - unbound mode
 
 You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
 
@@ -300,7 +300,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Populating nodes by data binding - bound mode
 
-### Define the model
+#### Define the model
 
 Create a simple data model as shown in the following code example, and save it as `FileManager.cs` file: 
 
@@ -358,7 +358,7 @@ public class FileManager : INotifyPropertyChanged
 
 N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0) interface in your model class.
 
-### Define the view model
+#### Define the view model
 
 Create a model repository class with `ImageNodeInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as `FileManagerViewModel.cs` file:
 
@@ -462,7 +462,7 @@ public class FileManagerViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Bind the data source
+#### Bind the data source
 
 Create a `ViewModel` instance and set it as the ListView's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -760,7 +760,7 @@ public class FileManagerViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Bind to hierarchy property descriptor
+#### Bind to hierarchy property descriptor
 
 You can create a tree view by binding the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) to the hierarchy property descriptors data source. To create a tree view using hierarchical data binding, set a hierarchical collection to the `ItemsSource` property, and then set the `TargetType` and [ChildPropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ChildPropertyName) property values in [HierarchyPropertyDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_HierarchyPropertyDescriptors) .
 
