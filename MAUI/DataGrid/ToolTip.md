@@ -254,6 +254,29 @@ The below image refers the `AlternateTemplate` which is applied through `ToolTip
 
 <img alt="Displaying AlternateTemplate for ToolTip in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector1.png" width="404"/>
 
+## ToolTipDelay
+
+You can control how long the grid waits before showing a tooltip using the `SfDataGrid.TooltipDelay` property. The value is specified in milliseconds and applies to hover delay on Windows and macOS only. On touch platforms (Android/iOS) tooltips are shown via long-press and `TooltipDelay` is not applicable.
+
+This will be helpful for other interactions (such as selection, context menu popups, etc.) to perform without any interference.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ShowToolTip="True"
+                       TooltipDelay="800" />
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid =  new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.ShowToolTip = true;
+dataGrid.TooltipDelay = 800; // delay in milliseconds (Windows/macOS)
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
 ## Events
 
 ### CellToolTipOpening event

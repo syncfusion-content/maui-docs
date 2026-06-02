@@ -1542,6 +1542,41 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 * `NullValue` - To set the null value when the numeric cell value is null, use the [DataGridNumericColumn.NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_NullValue) property.
 
+## DataGridPercentColumn
+
+`DataGridPercentColumn` is a specialized column for displaying and editing percentage values consistently across platforms. It supports two display modes, culture-aware formatting, numeric filtering, and serialization.
+
+The `PercentEditMode` property controls how values are interpreted and presented: use `PercentMode` to display values as percentages, or `DoubleMode` to treat the cell value as a plain numeric (double) value.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridPercentColumn MappingName="Discount"
+                                          HeaderText="Discount" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+
+dataGrid.Columns.Add(new DataGridPercentColumn()
+{
+    MappingName = "Discount",
+    HeaderText = "Discount"
+});
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGrid with Percent column" src="Images\column-types\maui-datagrid-percentage-column.png" width="404"/>
+
+The `DataGridPercentColumn` supports culture-aware parsing and formatting for percentage values. By default the percent operator (`%`) is used when displaying and parsing values; change this symbol using the `PercentSymbol` property to support alternate conventions.
+
 ## DataGridMultiColumnComboBoxColumn
 
 The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
