@@ -269,9 +269,7 @@ Import the [SfRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+<ContentPage xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
     <sliders:SfRangeSelector />
 </ContentPage>
 
@@ -311,42 +309,24 @@ The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeS
 
 {% highlight xaml %}
 
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+<ContentPage xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector"> 
     <ContentPage.BindingContext>
         <local:ViewModel />
     </ContentPage.BindingContext>
-
-    <sliders:SfRangeSelector Minimum="10"
-                             Maximum="20"
-                             RangeStart="13"
-                             RangeEnd="17">
+    <sliders:SfRangeSelector Minimum="10" Maximum="20" RangeStart="13" ShowLabels="True" ShowTicks="True"  MinorTicksPerInterval="1" RangeEnd="17">
         <charts:SfCartesianChart>
-
             <charts:SfCartesianChart.XAxes>
-                <charts:DateTimeAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
+                <charts:DateTimeAxis IsVisible="False" ShowMajorGridLines="False" />
             </charts:SfCartesianChart.XAxes>
-
             <charts:SfCartesianChart.YAxes>
-                <charts:NumericalAxis IsVisible="False"
-                                     ShowMajorGridLines="False" />
+                <charts:NumericalAxis IsVisible="False" ShowMajorGridLines="False" />
             </charts:SfCartesianChart.YAxes>
-
             <charts:SfCartesianChart.Series>
-                <charts:SplineAreaSeries ItemsSource="{Binding Source}"
-                                        XBindingPath="X"
-                                        YBindingPath="Y">
-                </charts:SplineAreaSeries>
-
-            </charts:SfCartesianChart.Series>
-        
+                <charts:SplineAreaSeries ItemsSource="{Binding Source}" XBindingPath="X" YBindingPath="Y"/>
+            </charts:SfCartesianChart.Series>     
         </charts:SfCartesianChart>
-    
     </sliders:SfRangeSelector>
 </ContentPage>
 
@@ -359,6 +339,9 @@ rangeSelector.Minimum = 10;
 rangeSelector.Maximum = 20;
 rangeSelector.RangeStart = 13;
 rangeSelector.RangeEnd = 17;
+rangeSelector.ShowLabels = true;
+rangeSelector.ShowTicks = true;
+rangeSelector.MinorTicksPerInterval = 1;
 SfCartesianChart chart = new SfCartesianChart();
 DateTimeAxis primaryAxis = new DateTimeAxis();
 chart.XAxes = primaryAxis;
@@ -374,209 +357,6 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector labels](images/getting-started/default-range-selector.png)
-
-
-## Enable labels
-
-The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfRangeSelector Minimum="0" 
-                             Maximum="10" 
-                             RangeStart="2" 
-                             RangeEnd="8"
-                             Interval="2" 
-                             ShowLabels="True">
-
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-
-    </sliders:SfRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 8;
-rangeSelector.Interval = 2;
-rangeSelector.ShowLabels = true;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector labels](images/getting-started/labels.png)
-
-## Enable ticks
-
-The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the Range Selector, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfRangeSelector Minimum="0" 
-                             Maximum="10" 
-                             RangeStart="2" 
-                             RangeEnd="8"                       
-                             Interval="2" 
-                             ShowLabels="True"
-                             ShowTicks="True" 
-                             MinorTicksPerInterval="1">
-        
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 8;
-rangeSelector.Interval = 2;
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
-rangeSelector.MinorTicksPerInterval = 1;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ![RangeSelector ticks](images/getting-started/ticks.png)
-
-## Inverse the Range Selector
-
-Invert the Range Selector using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfRangeSelector Minimum="0" 
-                             Maximum="10" 
-                             RangeStart="2" 
-                             RangeEnd="8"
-                             Interval="2"
-                             ShowLabels="True"
-                             ShowTicks="True" 
-                             MinorTicksPerInterval="1" 
-                             IsInversed="True">
-
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-
-    </sliders:SfRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 8;
-rangeSelector.Interval = 2;
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
-rangeSelector.MinorTicksPerInterval = 1;
-rangeSelector.IsInversed = true;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Inverse rangeselector](images/getting-started/slider-inverse.png)
-
-## Formatting labels
-
-Add prefix or suffix to the labels using the [NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_NumberFormat) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfRangeSelector Minimum="20" 
-                             Maximum="100" 
-                             RangeStart="40" 
-                             RangeEnd="80"
-                             Interval="20"
-                             ShowLabels="True"
-                             NumberFormat="$#" 
-                             ShowTicks="True">
-        
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfRangeSelector>
-</ContentPage> 
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 20;
-rangeSelector.Maximum = 100;
-rangeSelector.RangeStart = 40;
-rangeSelector.RangeEnd = 80;
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
-rangeSelector.Interval = 20;
-rangeSelector.NumberFormat = "$#";
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector label format](images/getting-started/label-format.png)
 
 N> You can refer to our [.NET MAUI Range Selector](https://www.syncfusion.com/maui-controls/maui-range-selector) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Range Selector Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders/SampleBrowser.Maui.Sliders/Samples/RangeSelector) that shows you how to render the Range Selector in .NET MAUI.

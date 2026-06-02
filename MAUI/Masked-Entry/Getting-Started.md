@@ -82,29 +82,15 @@ Step 1: Add the namespace as shown in the following code sample.
 
 	<xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
 
+    <editors:SfMaskedEntry x:Name="maskedentry" />
+
 {% endhighlight %}
 
 {% highlight c# %}
 
 	using Syncfusion.Maui.Inputs;
 
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 2: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<editors:SfMaskedEntry x:Name="maskedentry" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfMaskedEntry maskedEntry = new SfMaskedEntry();
+    SfMaskedEntry maskedEntry = new SfMaskedEntry();
 
 {% endhighlight %}
 
@@ -181,29 +167,15 @@ Step 2: Add the namespace as shown in the following code sample.
 
 	<xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
 
+    <editors:SfMaskedEntry x:Name="maskedentry" />
+
 {% endhighlight %}
 
 {% highlight c# %}
 
 	using Syncfusion.Maui.Inputs;
 
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<editors:SfMaskedEntry x:Name="maskedentry" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-        maskedEntry = new SfMaskedEntry();
+    maskedEntry = new SfMaskedEntry();
 
 {% endhighlight %}
 
@@ -219,10 +191,7 @@ Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="00/00/0000" />
+<editors:SfMaskedEntry WidthRequest="200" ClearButtonVisibility="WhileEditing" MaskType="Simple" Mask="00/00/0000" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -244,9 +213,9 @@ maskedEntry.Mask = "00/00/0000";
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="RegEx"
-                          Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
+                       ClearButtonVisibility="WhileEditing"
+                       MaskType="RegEx"
+                       Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -261,62 +230,6 @@ maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}";
 {% endtabs %}
 
 ![RegEx mask in .NET MAUI Masked Entry.](maskedentry_images/net-maui-masked-entry-regex-mask.png)
-
-## Setting the prompt character
-
-Every single mask displays a prompt character ('_') in the absence of your input. Customize this prompt character by using the [PromptChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PromptChar) property.
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="00/00/0000"
-                          PromptChar="#" />
-                          
-{% endhighlight %}
-{% highlight C# %}
-
-SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = 200;
-maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
-maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = "00/00/0000";
-maskedEntry.PromptChar = '#';
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI Masked Entry prompt character.](maskedentry_images/net-maui-masked-entry-prompt-char.png)
-
-## Setting the value
-
-The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Value) property sets the input value for the MaskedEntry control.
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="00/00/0000"
-                          Value="12/02/2022" />
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = 200;
-maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
-maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = "00/00/0000";
-maskedEntry.Value = "12/02/2022";
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI Masked Entry value.](maskedentry_images/net-maui-masked-entry-value.png)
 
 N> 
 Get the complete getting started sample from the [GitHub](https://github.com/SyncfusionExamples/maui-maskedentry-samples) link.

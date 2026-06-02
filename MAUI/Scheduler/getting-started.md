@@ -78,10 +78,7 @@ namespace GettingStarted
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
+<ContentPage xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
     <scheduler:SfScheduler />
 </ContentPage>
 
@@ -89,7 +86,6 @@ namespace GettingStarted
 {% highlight C# hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Scheduler;
-. . .
 
 public partial class MainPage : ContentPage
 {
@@ -185,10 +181,7 @@ namespace GettingStarted
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
+<ContentPage xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
     <scheduler:SfScheduler />
 </ContentPage>
 
@@ -196,7 +189,6 @@ namespace GettingStarted
 {% highlight C# hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Scheduler;
-. . .
 
 public partial class MainPage : ContentPage
 {
@@ -212,7 +204,8 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% endtabcontent %}
-{% endtabcontents %}
+
+{% tabcontent JetBrains Rider %}
 
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler NuGet Package
 
@@ -287,6 +280,10 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Change different scheduler views
 

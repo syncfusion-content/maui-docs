@@ -118,6 +118,34 @@ private void Button_Clicked(object sender, EventArgs e)
 
 N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
 
+## Set height and width to the Picker
+
+The SfPicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
+
+<picker:SfPicker x:Name="picker" 
+                 HeightRequest="280" 
+                 WidthRequest="300">
+</picker:SfPicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+
+SfPicker picker = new SfPicker()
+{
+    HeightRequest = 280,
+    WidthRequest = 300,
+};
+
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Set Picker height and width in .NET MAUI picker.](images/getting-started/maui-picker-height-and-width.png)
+
 ## Header customization
 
 SfPicker allows customizing background, text style.
@@ -201,6 +229,62 @@ The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endtabs %}
 
    ![Header divider color in .NET MAUI Picker.](images/custom-views/maui-picker-header-divider-color.png)
+
+### Set column header to the Picker items
+
+The SfPicker control allows you to add the column header text by setting the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderText) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html), and you need to add the column header height by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Height) property in the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html). Its text style and background color are customizable.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 7" %}
+
+<picker:SfPicker x:Name="picker">
+<picker:SfPicker.HeaderView>
+    <picker:PickerHeaderView Text="Select a color" Height="40" />
+</picker:SfPicker.HeaderView>
+
+<picker:SfPicker.Columns>
+    <picker:PickerColumn HeaderText="Colors" 
+                         ItemsSource="{Binding DataSource}" />
+</picker:SfPicker.Columns>
+
+<picker:SfPicker.ColumnHeaderView>
+    <picker:PickerColumnHeaderView Height="40" />
+</picker:SfPicker.ColumnHeaderView>
+</picker:SfPicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="14 21" %}
+
+ItemInfo itemInfo = new ItemInfo();
+SfPicker picker = new SfPicker()
+{
+    HeaderView = new PickerHeaderView()
+    {
+        Text = "Select a color",
+        Height = 40,
+    },
+
+    Columns = new ObservableCollection<PickerColumn>()
+    {
+        new PickerColumn()
+        {
+            HeaderText = "Colors",
+            ItemsSource = itemInfo.DataSource,
+        }
+    },
+
+    ColumnHeaderView = new PickerColumnHeaderView()
+    {
+        Height = 40,
+    },
+};
+
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Picker Column header view in .NET MAUI picker.](images/getting-started/maui-picker-column-header-view.png)
 
 ### Custom Header Appearance using Data template
 

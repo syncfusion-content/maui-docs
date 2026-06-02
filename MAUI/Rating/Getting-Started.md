@@ -73,7 +73,7 @@ namespace RatingSample
 
 ## Step 4: Add a Basic Rating
 
-Step 1: Add the namespace, as shown in the following code sample:
+Add the namespace, as shown in the following code sample:
 
 {% tabs %}
 
@@ -81,35 +81,21 @@ Step 1: Add the namespace, as shown in the following code sample:
 
 	<xmlns:rating="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
 
+    <rating:SfRating x:Name="rating" />
+
 {% endhighlight %}
 
 {% highlight c# %}
 
 	using Syncfusion.Maui.Inputs;
 
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 2: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<rating:SfRating x:Name="rating" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    this.Content = rating;
-} 
+    SfRating rating;
+    public MainPage()
+    {
+        InitializeComponent();
+        rating = new SfRating();
+        this.Content = rating;
+    } 
 
 {% endhighlight %}
 
@@ -186,35 +172,21 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 	<xmlns:rating="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
 
+    <rating:SfRating x:Name="rating" />
+
 {% endhighlight %}
 
 {% highlight c# %}
 
 	using Syncfusion.Maui.Inputs;
 
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<rating:SfRating x:Name="rating" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    this.Content = rating;
-} 
+    SfRating rating;
+    public MainPage()
+    {
+        InitializeComponent();
+        rating = new SfRating();
+        this.Content = rating;
+    } 
 
 {% endhighlight %}
 

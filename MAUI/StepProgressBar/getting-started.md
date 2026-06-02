@@ -296,14 +296,7 @@ You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pr
 
 public class ViewModel
 {
-    /// <summary>
-    /// The Step progress bar item collection.
-    /// </summary>
     private ObservableCollection<StepProgressBarItem> stepProgressItem;
-
-    /// <summary>
-    /// The Step progress bar item collection.
-    /// </summary>
     public ObservableCollection<StepProgressBarItem> StepProgressItem
     {
         get
@@ -374,29 +367,3 @@ this.Content = stepProgressBar;
 {% endtabs %}
 
 ![Getting started of .NET MAUI StepProgressBar](images/getting-started/maui-stepprogressbar-getting-started.gif)
-
-## ActiveStepIndex
-The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex) property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue) property is used to add the progress value of the currently active step within a sequence.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
-
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    ActiveStepIndex="3"
-                    ActiveStepProgressValue="40">
-</stepProgressBar:SfStepProgressBar>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfStepProgressBar stepProgressBar = new SfStepProgressBar()
-{
-    ActiveStepIndex = 3,
-    ActiveStepProgressValue = 40,
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-N> If `ActiveStepIndex` value is less than 0, first step will be marked as `NotStarted` step status. If `ActiveStepIndex` value is greater than the step count, all the steps will be marked as `Completed` step status.

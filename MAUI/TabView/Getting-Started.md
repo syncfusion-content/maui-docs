@@ -80,9 +80,7 @@ namespace TabViewGettingStarted
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
-            ...
-            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+<ContentPage xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
     </ContentPage.Content>  
@@ -176,9 +174,7 @@ namespace TabViewGettingStarted
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
-            ...
-            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+<ContentPage xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
     </ContentPage.Content>  
@@ -271,9 +267,7 @@ namespace TabViewGettingStarted
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
-            ...
-            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+<ContentPage xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
     </ContentPage.Content>  
@@ -313,18 +307,10 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
-. . .
-             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
-
+<ContentPage xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <tabView:SfTabView x:Name="tabView">
         <tabView:SfTabView.Items>
-            <tabView:SfTabItem Header="Call">
-                <tabView:SfTabItem.Content>
-                    <Grid BackgroundColor="Red" />
-                </tabView:SfTabItem.Content>
-            </tabView:SfTabItem>
-
+            <tabView:SfTabItem Header="Call"/>
             <tabView:SfTabItem Header="Favorites">
                 <tabView:SfTabItem.Content>
                     <CollectionView>
@@ -340,19 +326,13 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                     <Grid Margin="10,5" HeightRequest="40">
-                                        <Label
-                                            VerticalOptions="Start"
-                                            HorizontalOptions="Start"
-                                            TextColor="#666666"
-                                            FontSize="16"
-                                            Text="{Binding}"/>
+                                        <Label TextColor="#666666" FontSize="16" Text="{Binding}"/>
                                     </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
                 </tabView:SfTabItem.Content>
             </tabView:SfTabItem>
-
             <tabView:SfTabItem Header="Contacts">
                 <tabView:SfTabItem.Content>
                     <Grid BackgroundColor="Blue"/>
@@ -360,7 +340,6 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
             </tabView:SfTabItem>
         </tabView:SfTabView.Items>
     </tabView:SfTabView>
-
 </ContentPage>
 
 {% endhighlight %}
@@ -377,24 +356,12 @@ namespace TabViewGettingStarted
         {
             InitializeComponent ();
             var tabView = new SfTabView();
-
-            // First tab: Call
             var callTab = new SfTabItem { Header = "Call" };
-            callTab.Content = new Grid
-            {
-                BackgroundColor = Colors.Red
-            };
             tabView.Items.Add(callTab);
-
-            // Second tab: Favorites
             var favoritesTab = new SfTabItem { Header = "Favorites" };
             var collectionView = new CollectionView();
-
-            // Items source
             var itemsSource = new string[] { "James", "Richard", "Michael", "Alex", "Clara" };
             collectionView.ItemsSource = itemsSource;
-
-            // Item template
             collectionView.ItemTemplate = new DataTemplate(() =>
             {
                 var grid = new Grid
@@ -416,8 +383,6 @@ namespace TabViewGettingStarted
 
             favoritesTab.Content = collectionView;
             tabView.Items.Add(favoritesTab);
-
-            // Third tab: Contacts
             var contactsTab = new SfTabItem { Header = "Contacts" };
             contactsTab.Content = new Grid
             {
