@@ -37,6 +37,32 @@ this.Content = dataGrid;
 
 To hide a column interactively, set the `DataGridColumn.MinimumWidth` property to zero. Then, resize the column to a width less than zero.
 
+## Real-time column resizing
+The `DataGrid` allows the user to decide when column resizing should be applied during a resize gesture using the [ColumnResizeMode]() property. Users can resize the columns in real time by setting `ColumnResizeMode` to `OnMoved`.  The default value of this property is `OnTouchUp`.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid  x:Name = "dataGrid"
+                        AllowResizingColumns = "True"
+                        ColumnResizeMode="OnMoved"
+                        ItemsSource = "{Binding Orders}" />
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowResizingColumns = true;
+dataGrid.ColumnResizeMode = DataGridColumnResizeMode.OnMoved;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="maui-datagrid-column-resizing-OnMoved" src="Images\column-resizing\maui-datagrid-column-resizemode-OnMoved.gif" width="404" Height = "396"/>
+
 ## Resizing events
 
 Based on the requirements, resizing operations can be handled using the [SfDataGrid.ColumnResizing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnResizing) event. The `SfDataGrid.ColumnResizing` event is triggered while resizing a column and will continue to be triggered until the resizing operation is complete.
