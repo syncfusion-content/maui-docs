@@ -64,7 +64,8 @@ Explore further resources:
 
 - [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) - step-by-step guide to begin using the CheckBox control.  
 - [Customization](https://help.syncfusion.com/maui/checkbox/visual-customization) - customize appearance and behavior.  
-- [Visual States](https://help.syncfusion.com/maui/checkbox/visual-states) - configure visual states and interactions. 
+- [Visual States](https://help.syncfusion.com/maui/checkbox/visual-states) - configure visual states and interactions.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples. 
 
 ## Learnings
 

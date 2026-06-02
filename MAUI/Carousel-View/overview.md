@@ -64,6 +64,7 @@ Explore further resources:
 - [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) - step-by-step guide to begin using the Carousel control.
 - [Populating Data](https://help.syncfusion.com/maui/carousel-view/populating-data) - bind collections for dynamic item display.  
 - [LoadMore](https://help.syncfusion.com/maui/carousel-view/loadmore) - enable incremental loading for large datasets.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
 
 ## Learnings
 

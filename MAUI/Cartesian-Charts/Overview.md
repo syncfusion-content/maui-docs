@@ -67,6 +67,7 @@ Explore further resources:
 - [Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started) – step‑by‑step guide to begin using the Cartesian chart control.  
 - [Customization and Styling](https://help.syncfusion.com/maui/cartesian-charts/appearance) – learn how to configure chart appearance, style axes, gridlines, labels, legends, and apply themes for a polished look.  
 - Interactive Features ([Zooming](https://help.syncfusion.com/maui/cartesian-charts/zooming-and-panning), [Selection](https://help.syncfusion.com/maui/cartesian-charts/selection), [Tooltip](https://help.syncfusion.com/maui/cartesian-charts/tooltip)) – explore advanced interactions such as zooming and panning large datasets, selecting data points, and displaying tooltips for detailed insights.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
 
 ## Learnings
 

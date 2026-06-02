@@ -71,6 +71,7 @@ Explore further resources:
 - [Getting Started](https://help.syncfusion.com/maui/cards/getting-started) - step-by-step guide to begin using the Cards control.  
 - [Customization](https://help.syncfusion.com/maui/cards/customization) - configure appearance and behavior of cards.  
 - [Bindable Layout](https://help.syncfusion.com/maui/cards/bindablelayout) - bind card items to collections for dynamic, MVVM‑friendly rendering.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
 
 ## Learnings
 

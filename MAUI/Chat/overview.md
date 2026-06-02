@@ -68,6 +68,7 @@ Explore further:
 - [Getting Started](https://help.syncfusion.com/maui/chat/getting-started) – step‑by‑step guide to begin using the Chat control.  
 - [Styles Guide](https://help.syncfusion.com/maui/chat/styles) – learn how to customize message styles, editor appearance, and overall chat layout.  
 - [Suggestions](https://help.syncfusion.com/maui/chat/suggestions) – provide quick reply options to improve conversational flow and user interaction.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
 
 ## Learnings
 
