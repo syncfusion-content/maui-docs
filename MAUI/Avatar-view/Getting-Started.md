@@ -40,8 +40,7 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
+{% highlight C# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AvatarViewGettingStarted
@@ -135,8 +134,7 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
+{% highlight C# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AvatarViewGettingStarted
@@ -230,8 +228,7 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
+{% highlight C# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AvatarViewGettingStarted
@@ -301,7 +298,7 @@ namespace AvatarViewGettingStarted
 
 {% endtabcontents %}
 
-## Adding an image in .NET MAUI Avatar View
+## Step 4: Adding an image in .NET MAUI Avatar View
 
 You can add a custom image to display in the [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property. Set the [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentType) to `Custom.` To ensure the avatar image appears correctly, place the image in the `Resources/Images` directory.
 
@@ -361,7 +358,11 @@ namespace AvatarViewGettingStarted
 
 {% endtabs %}
 
-The following screenshot illustrates the result of the above code.
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the Avatar View will be displayed with the data provided.
+
+Here is the result of the previous codes,
 
 ![.NET MAUI Avatar View](GettingStarted_Images/Getting_Started_Sample.png) 
 

@@ -308,7 +308,11 @@ N> The [`Title`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.con
 
 The page header for the backdrop appears only when adding a backdrop as a child of the NavigationPage. To know more about it, refer to the [`header configuration`](https://help.syncfusion.com/maui/backdrop/header-configuration).
 
-## Add back layer content
+## Step 5: Define the Backdrop Page
+
+Configure the layout and content structure of the [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) by defining the back layer and front layer.
+
+### Add back layer content
 
 The back layer holds actionable content (navigation or filtration), which is relevant to the front layer. The back layer will either fill the entire background or occupy the background based on the content height.
 
@@ -362,7 +366,7 @@ this.BackLayer = new BackdropBackLayer
 
 {% endtabs %}
 
-## Add front layer content
+### Add front layer content
 The front layer always appears in front of the back layer. It is displayed to the full width and holds primary content.
 
 {% tabs %} 
@@ -391,48 +395,15 @@ this.FrontLayer = new BackdropFrontLayer()
 
 {% endtabs %}
 
-## Reveal and conceal the back layer
+## Step 6: Running the Application
 
-The following options are provided in the backdrop to reveal and conceal the back layer.
+Press **F5** to build and run the application. Once compiled, the Badge View will be displayed with the data provided.
 
-* **Programmatically** - Reveals the back layer by setting the [`IsBackLayerRevealed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_IsBackLayerRevealed) property to true. By default, it is set to false.
-* **Touch interaction** - Reveals the back layer by clicking the toolbar icon at the top-right corner of the navigation bar header. The Hamburger (or menu ) icon reveals, and the Close icon conceals the back layer. When adding the backdrop as a child of the Fly out Page, the Hamburger and Close icons will be replaced by expand (or down arrow) and collapse (or up arrow) icons respectively.
-* **Swipe or fling action** - Reveals the back layer by swipe or fling action on the front layer to the required direction. Swipe downwards to reveal, and swipe upwards to conceal the back layer.  The swipe or fling action will be handled only on the top of the front layer to the [`RevealedHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html#Syncfusion_Maui_Backdrop_BackdropFrontLayer_RevealedHeight).
-
-For more information about reveal height customization, please refer to this [`link`](https://help.syncfusion.com/maui/backdrop/reveal-height-customization).
+Here is the result of the previous codes,
 
 ![.NET Maui Backdrop reveal and conceal back layer](images/getting-started/reveal-conceal.gif)
 
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                         x:Class="BackdropGettingStarted.BackdropSamplePage"
-                         Title="Menu"
-                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
-                         IsBackLayerRevealed="True">
-
-</backdrop:SfBackdropPage>
- 
-{% endhighlight %}
-
-{% highlight C# %} 
-
-#region Constructor
-
-public BackdropSamplePage()
-{
-    this.IsBackLayerRevealed = true;
-}
-
-#endregion
-
-{% endhighlight %}
-
-{% endtabs %}
+Get the complete getting started sample from GitHub [link](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Backdrop-).
 
 N> 
-* Get the complete getting started sample from GitHub [link](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Backdrop-).
 * Refer to Syncfusion [.NET MAUI Backdrop](https://www.syncfusion.com/maui-controls/maui-backdrop) feature tour page for its groundbreaking feature representations.
