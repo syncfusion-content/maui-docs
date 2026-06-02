@@ -202,7 +202,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight c# hl_lines="1 17" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace GettingStarted
