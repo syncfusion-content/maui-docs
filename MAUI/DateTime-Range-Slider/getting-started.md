@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Range Slider control | Syncfusion®
+title: Getting started with DateTime Range Slider control | Syncfusion®
 description: This section explains about the getting started with Syncfusion® MAUI Range Slider (SfDateTimeRangeSlider) control.
 platform: maui
 control: SfDateTimeRangeSlider
@@ -22,7 +22,7 @@ To quickly get started with the .NET MAUI DateTime Range Slider, watch this vide
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
@@ -142,7 +142,7 @@ namespace RangeSlider
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
 
