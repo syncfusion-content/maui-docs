@@ -364,3 +364,35 @@ dataGrid.DefaultStyle.RowDragViewTextColor = Colors.Maroon;
 {% endtabs %}
 
 <img alt="Customization of row drag view" src="Images\rowdragdrop\maui-datagrid-dragindicator.gif" width="400"/>
+
+## Multi-Row Drag and Drop in MAUI DataGrid (SfDataGrid)
+
+The `SfDataGrid` control supports dragging and dropping multiple rows simultaneously. This functionality can be enabled by setting [SfDataGrid.AllowDraggingRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingRow) to `true`, [SfDataGrid.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) to `Multiple`, and [SfDataGrid.SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) to `Row` (the default value of SelectionUnit is Row).
+
+Once enabled, users can select the required rows and perform drag-and-drop operations in the same manner as standard row drag and drop.
+
+The multi-row drag-and-drop operation preserves the selection order. Upon dropping, the rows are arranged according to the order in which they were selected. During the drag operation, the number of selected rows is indicated through a badge view.
+
+N> The badge view is not displayed when a custom view is defined using the [SfDataGrid.RowDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_RowDragDropTemplate).
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowDraggingRow="True"
+                       SelectionMode="Multiple"
+                       SelectionUnit="Row">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowDraggingRow = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.SelectionUnit = DataGridSelectionUnit.Row;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGrid multi row drag and drop" src="Images\rowdragdrop\maui-datagrid-multi-dragging.gif" width="404">

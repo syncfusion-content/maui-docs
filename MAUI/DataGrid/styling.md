@@ -543,7 +543,7 @@ You can also customize the appearance of the highlighted column by setting the `
                                ItemsSource="{Binding Orders}"
                                AllowColumnHoverHighlighting="True">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle ColumnHoveredBackground="#ECE7E2"/>
+                <syncfusion:DataGridStyle ColumnHoveredBackground="#E0C375"/>
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
@@ -554,10 +554,12 @@ SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.AllowColumnHoverHighlighting = true;
-dataGrid.DefaultStyle.ColumnHoveredBackground = Color.FromArgb("#ECE7E2");
+dataGrid.DefaultStyle.ColumnHoveredBackground = Color.FromArgb("#E0C375");
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="Applying Column Hover Background Color in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-column-hover-background.gif" width="404">
 
 ## Applying Header Cell Hover Background Color
 
@@ -590,6 +592,10 @@ dataGrid.DefaultStyle.HeaderCellHoveredBackground = Color.FromArgb("#B1BFAC");
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
+
+N> When both Header Cell Hover and Column Hover are enabled, the Column Hover Background Color property will take precedence.
+
+<img alt="Applying Header Cell Hover Background Color in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-headercell-hover-background.gif" width="404">
 
 ## Changing the font style
 You can apply the style for header and row font attributes by using SfDataGrid.DefaultStyle.
