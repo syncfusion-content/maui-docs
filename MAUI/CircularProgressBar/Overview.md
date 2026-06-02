@@ -13,22 +13,200 @@ documentation: ug
 
 The .NET MAUI Circular ProgressBar shows the progress of a task with customizable visuals. It displaying the progress of a process in circular shapes, determinate and indeterminate states, segments, smooth animation, and with customizable content. You can also define ranges with different colors. 
 
-### Key features
+## Business use cases
 
-* **States** - Visualize the progress of a process in determinate and indeterminate states.  
+- Data-driven applications that require **visual representation of task completion or processing progress**.  
+- Dashboard applications that display **progress metrics and performance indicators in circular form**.  
+- Mobile apps that provide **loading feedback using animated circular progress indicators**.  
+- Business workflows that need **step-based or segmented progress tracking for better user clarity**.  
 
-* **Progress shape** - Visualize progress in a circular shape.
+## Key features
 
-* **Segments** - Progress can be divided into multiple segments to show a gradual progress.
+- **Progress states support** allows visualizing both determinate and indeterminate progress scenarios.  
+- **Circular visualization** enables presenting progress in a circular shape for compact and intuitive UI design.  
+- **Segmented progress support** allows dividing progress into multiple segments to represent gradual progression.  
+- **Color range customization** allows defining different colors for specific value ranges to enhance visibility.  
+- **Appearance customization** allows configuring track thickness, color, and corner radius styles.  
+- **Custom content support** allows displaying custom UI elements or text at the center of the progress indicator.  
+- **Angle customization** allows adjusting start and end angles for flexible circular layouts.  
 
-* **Color ranges** - Customize ranges with different colors.
+    ![Circular ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
-* **Appearance customization** - Customize the track thickness, color, and corner radius style. 
+## Related controls
 
-* **Customizable content** - Display custom content at the center of a circular progress bar.
+- **[Busy Indicator](https://help.syncfusion.com/maui/busyindicator/getting-started)** for displaying indeterminate loading states during operations.  
+- **[Progress Bar](https://help.syncfusion.com/maui/progressbar/getting-started)** for visualizing linear progress of tasks.  
 
-* **Angle** - Customize the angles of a circular progress bar.
+## Next steps
 
-![Circular ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+Explore further resources:
 
-N> Get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link.
+- [Getting Started](https://help.syncfusion.com/maui/circularprogressbar/getting-started) - step-by-step guide to begin using the Circular ProgressBar control.  
+- [States](https://help.syncfusion.com/maui/circularprogressbar/states) – learn determinate, indeterminate, and buffer modes to show progress clearly.  
+- [Customization](https://help.syncfusion.com/maui/circularprogressbar/appearance) – tweak colors, thickness, and styles to match 
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+
+## Learnings
+
+<style>
+.form-card {
+   flex: 0 0 calc(33.33% - 14px);
+   border: 1px solid #ddd;
+   border-radius: 12px;
+   overflow: hidden;
+   background: white;
+   box-sizing: border-box;
+   transition: 0.3s ease;
+}
+.form-card:hover {
+   text-decoration: none;
+   transform: translateY(-4px);
+   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.form-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.form-image:hover {
+   transform: scale(1.02);
+}
+.form-content {
+   padding: 16px;
+}
+.form-title {
+   margin-top: 0px;
+   margin: 0 0 10px;
+   font-size: 20px;
+   font-weight: 600;
+   color: #000000;
+}
+.form-link {
+   color: #0078D4;
+   text-decoration: none;
+}
+.form-description {
+   margin-top: 14px;
+   font-size: 13px;
+   color: #000000;
+   line-height: 1.6;
+}
+.source-icon {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   background: #f3f4f6;
+   color: #0078D4;
+   text-decoration: none;
+   transition: 0.3s ease;
+   margin-top: 12px;
+}
+.source-icon:hover {
+   background: #0078D4;
+   color: white;
+}
+/* Popup Modal */
+#imageModal {
+   display: none;
+   position: fixed;
+   z-index: 9999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.85);
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   box-sizing: border-box;
+}
+#popupImage {
+   max-width: 90%;
+   max-height: 90%;
+   border-radius: 14px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+   animation: zoomIn 0.25s ease;
+}
+.close-popup {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   color: white;
+   font-size: 42px;
+   cursor: pointer;
+   font-weight: bold;
+}
+@key frames zoomIn {
+   from {
+       transform: scale(0.9);
+       opacity: 0;
+   }
+   to {
+       transform: scale(1);
+       opacity: 1;
+   }
+}
+@media(max-width:900px) {
+   .form-card {
+       flex: 0 0 calc(50% - 10px);
+   }
+}
+@media(max-width:600px) {
+   .form-card {
+       flex: 0 0 100%;
+   }
+}
+</style>
+
+<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+<!-- Card 1 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
+    </div>
+  </div>
+</a>
+<!-- Card 2 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://www.syncfusion.com/maui-controls/maui-progressbar" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Feature Tour</h3>
+    <div class="form-description">
+      Walk through highlights and core capabilities.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/ProgressBar" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Showcase Samples</h3>
+    <div class="form-description">
+      Explore sample scenarios for real apps.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/tutorial-videos/maui/circular-progressbar" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Tutorial Videos</h3>
+    <div class="form-description">
+      Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
