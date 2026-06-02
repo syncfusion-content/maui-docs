@@ -298,7 +298,7 @@ namespace AvatarViewGettingStarted
 
 {% endtabcontents %}
 
-## Step 4: Adding an image in .NET MAUI Avatar View
+## Step 5: Adding an image in .NET MAUI Avatar View
 
 You can add a custom image to display in the [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property. Set the [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentType) to `Custom.` To ensure the avatar image appears correctly, place the image in the `Resources/Images` directory.
 
