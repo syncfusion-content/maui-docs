@@ -690,7 +690,8 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 - [Essential Studio UI Kit](https://help.syncfusion.com/maui/uikit/overview) - Access ready-to-use UI templates for your apps.
 
-- **Smart Components**:
+- **Smart Components**:  
+
   [Smart DataGrid](https://help.syncfusion.com/maui/smartdatagrid/overview) – Advanced data grid for managing and visualizing tabular data.  
   [Smart Scheduler](https://help.syncfusion.com/maui/smartscheduler/overview) – Schedule and manage events with calendar views.  
   [Smart Text Editor](https://help.syncfusion.com/maui/smarttexteditor/overview) – Rich text editing with advanced formatting options.
