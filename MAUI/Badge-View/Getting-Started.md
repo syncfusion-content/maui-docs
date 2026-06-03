@@ -297,7 +297,7 @@ namespace BadgeViewGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Define the badge view
+## Step 5: Define the Badge View
 
 Configure the badge notification by adding content and accessibility features to the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
 
@@ -433,7 +433,7 @@ public MainPage()
 
 ## Step 6: Running the Application
 
-Press **F5** to build and run the application. Once compiled, the Accordion will be displayed with the data provided.
+Press **F5** to build and run the application. Once compiled, the Badge View will be displayed with the data provided.
 
 Here is the result of the previous codes,
 

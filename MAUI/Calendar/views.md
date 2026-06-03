@@ -123,6 +123,31 @@ this.calendar.MonthView = new CalendarMonthView()
 
 ![Customize Week number Appearance in .NET MAUI Calendar.](images/views/net-maui-month-view-show-week-numbers-customize.png)
 
+## Change first day of week
+
+The Calendar control is rendered with `Sunday` as the first day of the week and it allows customization to change the first day of the week using the [FirstDayOfWeek](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_FirstDayOfWeek) property in month view.
+
+The following code explains how to show the Calendar with `Monday` as the first day of the week.
+
+{% tabs %}  
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar x:Name="calendar">
+    <calendar:SfCalendar.MonthView>
+        <calendar:CalendarMonthView FirstDayOfWeek="Monday"/>
+    </calendar:SfCalendar.MonthView>
+ </calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.calendar.MonthView.FirstDayOfWeek = DayOfWeek.Monday;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Change first day of week in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-first-day-of-week.png)
+
 
 ### Autofit
 Autofit dynamically adjusts the month row height based on the number of weeks in the current month. It is available only in the `Month view` when:
