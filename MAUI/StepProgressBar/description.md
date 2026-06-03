@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Description in .NET MAUI Step ProgressBar Control | Syncfusion<sup>&reg;</sup>
+title: Description in .NET MAUI Step ProgressBar Control | Syncfusion
 description: Learn here all about Description support in Syncfusion<sup>&reg;</sup> .NET MAUI Step ProgressBar (SfStepProgressBar) control and more.
 platform: maui
 control: SfStepProgressBar
