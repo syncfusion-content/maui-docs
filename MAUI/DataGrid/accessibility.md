@@ -185,7 +185,7 @@ The following screenshot illustrates the `AutomationId` values of pager buttons 
 
 <img alt="Automation Id format for DataPager in .NET MAUI DataGrid" src="Images\accessibility\maui-datagrid-datapager-automationid.png" width="404"/>
 
-The following code snippet demonstrates how to set the AutomationId for the datapager.
+The following code snippet demonstrates how to set the AutomationId for the data pager.
 
 {% tabs %}
 {% highlight xaml %}
@@ -234,7 +234,7 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the following code snippet to access the inner elements of the datapager from an automation script.
+Refer to the following code snippet to access the inner elements of the data pager from an automation script.
 
 {% tabs %}
 {% highlight c# %}

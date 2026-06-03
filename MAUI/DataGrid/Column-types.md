@@ -80,6 +80,18 @@ The following table describes the types of columns and their usage:
 <td>Use to display the IEnumerable data using [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) .</td>
 </tr>
 <tr>
+<td>{{'[DataGridTimePickerColumn]()'| markdownify }}</td>
+<td>{{'[DataGridTimePickerCellRenderer]()'| markdownify }}</td>
+<td>TimePicker</td>
+<td>To display the time span value.</td>
+</tr>
+<tr>
+<td>{{'[DataGridCheckBoxSelectorColumn]()'| markdownify }}</td>
+<td>{{'[DataGridCheckBoxSelectorCellRenderer]()'| markdownify }}</td>
+<td>CheckBoxSelector</td>
+<td>Selects or deselects rows based on the check box value, which is not bound with data object.</td>
+</tr>
+<tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridUnboundCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundCellRenderer.html)'| markdownify }}</td>
 <td>Unbound</td>
@@ -1810,6 +1822,84 @@ dataGrid.DefaultStyle = new DataGridStyle
 
 {% endhighlight %}
 {% endtabs %}
+
+## DataGridTimePickerColumn
+
+[DataGridTimePickerColumn]() is derived from `DataGridColumn`, and it displays column data as a time span. It hosts `SfTimePicker` element in editing mode.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTimePickerColumn HeaderText = "Delivery Time" 
+                                             MappingName = "DeliveryTime">
+        </syncfusion:DataGridTimePickerColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+
+var timePickerColumn = new DataGridTimePickerColumn()
+{
+    MappingName = "DeliveryTime",
+    HeaderText = "Delivery Time" 
+};
+
+dataGrid.Columns.Add(timePickerColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridTimePicker column in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-timepicker.png" width="404"/>
+
+### Null value support
+
+`DataGridTimePickerColumn` provides support to restrict or allow null values in columns based on [AllowNull]() property. Instead of displaying null values, you can display hint text using [NullValue]() property.
+
+The `NullValue` properties will not work when `AllowNull` is set to `false`.
+
+### Setting input value range
+
+You can restrict the input value to a specific range using [Minimum]() and [Maximum]() properties.
+
+### Data formatting
+
+You can format the time span values by setting the [Format]() property.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTimePickerColumn HeaderText = "Delivery Time" 
+                                             MappingName = "DeliveryTime"
+                                             Format = "hh\:mm">
+        </syncfusion:DataGridTimePickerColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+
+var timePickerColumn = new DataGridTimePickerColumn()
+{
+    MappingName = "DeliveryTime",
+    HeaderText = "Delivery Time",
+    Format = @"hh\:mm"
+};
+
+dataGrid.Columns.Add(timePickerColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridTimePicker column with Format in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-timepicker-format.png" width="404"/>
 
 ## DataGridCheckBoxSelectorColumn
 
