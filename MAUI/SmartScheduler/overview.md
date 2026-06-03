@@ -12,7 +12,7 @@ keywords : .net maui smartScheduler, maui smart scheduler, ai scheduling, natura
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI AI-Powered Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) combines the power of the Scheduler with AI-driven intent understanding. Users can create, update, delete, and explore appointments using plain language, reducing clicks and turning scheduling into a conversation. It respects current view context, resources, and availability, and can detect conflicts, find free time, and summarize schedules.
 
-<img src="images\overview\maui-smart-scheduler-overview.png" width="600" alt=".NET MAUI AI-Powered Scheduler." />
+<img src="images\overview\maui-smart-scheduler-overview.webp" width="600" alt=".NET MAUI AI-Powered Scheduler." />
 
 ## Key features
 
