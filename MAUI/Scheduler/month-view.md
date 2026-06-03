@@ -221,6 +221,104 @@ this.Content = scheduler;
 
 ![visible-weeks-count-in-maui-scheduler-month-view](images/month-view/weeks-visible-in-maui-scheduler.png)
 
+## Non working days in month view
+
+The scheduler allows you to define non-working days in the MonthView using the NonWorkingDays property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of NonWorkingdays property is “SchedulerMonthWeekDays.None” You can configure this property to include one or more days of the week.
+
+{% tabs %}  
+{% highlight XAML hl_lines="4" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday"/>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Month;
+scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
+this.Content = scheduler;
+
+{% endhighlight %}  
+{% endtabs %}
+
+### Show or Hide non working days in Month View
+
+The HideNonWorkingDays property is used to control the visibility of non-working days in the MonthView. •  When HideNonWorkingDays is false (default), the specified non-working days are displayed in the MonthView. When HideNonWorkingDays is true, the specified non-working days are hidden from the MonthView.
+
+{% tabs %}  
+{% highlight XAML hl_lines="4" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday" HideNonWorkingDays="True"/>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="4" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Month;
+scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
+scheduler.MonthView.HideNonWorkingDays = true;
+this.Content = scheduler;
+
+{% endhighlight %}  
+{% endtabs %}
+
+### Customize Non-Working Days in Month View
+
+Non-working days in the MonthView can be customized using the NonWorkingDaysBackground and NonWorkingDaysTextStyle properties of the SchedulerMonthCellStyle. These properties allow you to visually differentiate non-working days with custom background and text styles.
+
+{% tabs %}  
+{% highlight XAML hl_lines="4" %}
+
+<scheduler:SfScheduler x:Name="scheduler"
+                       View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday">
+            <scheduler:SchedulerMonthView.CellStyle>
+                <scheduler:SchedulerMonthCellStyle NonWorkingDaysBackground="LightGrey">
+                    <scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
+                        <scheduler:SchedulerTextStyle TextColor="Black" />
+                    </scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
+                </scheduler:SchedulerMonthCellStyle>
+            </scheduler:SchedulerMonthView.CellStyle>
+        </scheduler:SchedulerMonthView>
+    </scheduler:SfScheduler.MonthView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="4" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Month;
+scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
+
+SchedulerTextStyle nonWorkTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Black,
+    FontSize = 12,
+};
+
+SchedulerMonthCellStyle monthCellStyle = new SchedulerMonthCellStyle()
+{
+    NonWorkingDaysBackground = Brush.LightGrey,
+    NonWorkingDaysTextStyle = nonWorkTextStyle
+};
+
+scheduler.MonthView.CellStyle = monthCellStyle;
+this.Content = scheduler;
+
+{% endhighlight %}  
+{% endtabs %}
+
 ## View header
 
 You can customize the default appearance of view header in a month view by setting the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat), [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height), and [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
