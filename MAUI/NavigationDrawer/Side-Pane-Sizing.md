@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Sliding Panel Size in .NET MAUI Navigation Drawer | Syncfusion®
+title: Set Sliding Panel Size in .NET MAUI Navigation Drawer | Syncfusion®
 description: Learn about setting sliding panel size support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: MAUI
 control: SfNavigationDrawer
@@ -88,3 +88,48 @@ this.Content = navigationDrawer;
 {% endtabs %}
 
 ![DrawerWidth](Images/panel-size/navigation_drawer_pane_width.png)
+
+## Adjust drawer size
+
+The default position of the navigation pane is on the left. Change the drawer width to 250 using the [DrawerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerWidth) property.
+
+{% tabs %}
+{% highlight xaml %}
+
+<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings DrawerWidth="250"/>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+    <navigationDrawer:SfNavigationDrawer.ContentView>
+        <Grid/>
+    </navigationDrawer:SfNavigationDrawer.ContentView>
+</navigationDrawer:SfNavigationDrawer>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.NavigationDrawer;
+
+namespace NavigationDrawerGettingStarted;
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+		InitializeComponent();
+        SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+        Grid grid = new Grid();
+        navigationDrawer.ContentView = grid;
+        navigationDrawer.DrawerSettings = new DrawerSettings()
+        {
+            DrawerWidth = 250,
+        };
+        this.Content = navigationDrawer;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> To change the side of the navigation pane, utilize the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Position) property. Adjust the drawer height in the Top and Bottom positions using the [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeight) property.

@@ -118,6 +118,34 @@ private void Button_Clicked(object sender, EventArgs e)
 
 N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
 
+## Set height and width to the Picker
+
+The SfPicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
+
+<picker:SfPicker x:Name="picker" 
+                 HeightRequest="280" 
+                 WidthRequest="300">
+</picker:SfPicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+
+SfPicker picker = new SfPicker()
+{
+    HeightRequest = 280,
+    WidthRequest = 300,
+};
+
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Set Picker height and width in .NET MAUI picker.](images/getting-started/maui-picker-height-and-width.png)
+
 ## Header customization
 
 SfPicker allows customizing background, text style.
