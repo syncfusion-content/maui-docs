@@ -207,64 +207,36 @@ SfButton button = new SfButton();
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Button icon
-
-The button icon can be defined using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource) and [ShowIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon) properties of [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
-
-N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
+## Step 5: Define the Button
 
 {% tabs %}
+
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="SfButton" 
-                    Text="Button"
-                    TextColor="White" 
-                    ShowIcon="True" 
-                    ImageSource="button_Heart.png"/>
-
+<buttons:SfButton x:Name="button"
+                  Text="Button"
+                  TextColor="White">
+</buttons:SfButton>
+	
 {% endhighlight %}
-{% highlight c# %}
+
+{% highlight C# %}
 
 SfButton button = new SfButton();
 button.Text = "Button";
 button.TextColor = Colors.White;
-button.ImageSource = "button_Heart.png";
-button.ShowIcon = true;
 
 {% endhighlight %}
+
 {% endtabs %}
 
-![.NET MAUI Button with button icon.](images/getting-started/net-maui-button-with-icon.png)
+## Step 6: Running the Application
 
+Press **F5** to build and run the application. Once compiled, the Button will be displayed with the data provided.
 
-## Button background image
+Here is the result of the previous codes,
 
-The button background image can be defined using the [BackgroundImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource) property of [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
-
-{% tabs %}
-{% highlight xaml %}
-
-<buttons:SfButton x:Name="SfButton" 
-                    Text="Nature"
-                    FontAttributes="Bold" 
-                    BackgroundImageSource="button_background.png" 
-                    CornerRadius="10" 
-                    WidthRequest="150"/>
-
-{% endhighlight %}
-{% highlight c# %}
-
-SfButton button = new SfButton();
-button.Text = "Nature";
-button.FontAttributes = FontAttributes.Bold;
-button.BackgroundImageSource = "button_background.png";
-button.CornerRadius = 10;
-button.WidthRequest = 150;
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI Button with background image.](images/getting-started/net-maui-button-with-background-image.png)
+![.NET MAUI Button](images/customization-images/Button_textcolor.png)
 
 Find the complete getting started sample of the .NET MAUI Button from this [link.](https://github.com/SyncfusionExamples/maui-button-samples)
 
