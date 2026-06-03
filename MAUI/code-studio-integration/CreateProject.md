@@ -105,6 +105,8 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Mau
 ```
 For more information about this, refer [UG](https://help.syncfusion.com/maui/datagrid/overview)
 
+---
+
 ### Step 5 - Build and Run the Application
 
 1. Build the project.
