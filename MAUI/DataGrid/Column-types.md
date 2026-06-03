@@ -1811,6 +1811,140 @@ dataGrid.DefaultStyle = new DataGridStyle
 {% endhighlight %}
 {% endtabs %}
 
+## DataGridCheckBoxSelectorColumn
+
+`SfDataGrid` allows you to select or deselect individual rows through `SfCheckBox` using [DataGridCheckBoxSelectorColumn](), which is not bound to a data object from the underlying data source, and and it can be added like any other column. The selector column supports only row selection, and and selection in the selector column works based on the [SelectionMode]().
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding OrderInfoCollection}"
+                       SelectionMode = "Multiple">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName = "SelectorColumn"
+                                                   Width = "50">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 50
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+By default, a checkbox is displayed in the header of the selector column, which is used to select or deselect all rows in the datagrid.
+
+<img alt="DataGridCheckBoxSelector column in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector.png" width="404"/>
+
+### Text on column header
+
+You can display text instead of a checkbox in the header of the selector column by setting the [AllowCheckboxOnHeader]() property to `False`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding OrderInfoCollection}"
+                       SelectionMode = "Multiple">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName = "SelectorColumn"
+                                                   Width = "100"
+                                                   AllowCheckboxOnHeader = "False"
+                                                   HeaderText = "Selector">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 100,
+    AllowCheckboxOnHeader = false,
+    HeaderText = "Selector"
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridCheckBoxSelector column with AllowCheckboxOnHeader as false in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector-allowcheckboxonheader.png" width="404"/>
+
+### Canceling the check box state change
+The checkbox state change in the `DataGridCheckBoxSelectorColumn` can be canceled by setting [DataGridCheckboxSelectorCheckedEventArgs.Cancel]() to `true` in the [SfDataGrid.CheckboxSelectorChecked]() event. Additionally, the checkbox value can be modified by setting [DataGridCheckboxSelectorCheckedEventArgs.NewValue]() within the same event.
+
+Based on this, the selection state is not changed when `e.Cancel` is set to `true`, and the selection is applied according to the value specified in `e.NewValue`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding OrderInfoCollection}"
+                       SelectionMode = "Multiple"
+                       CheckboxSelectorChecked = "OnCellCheckBoxClick">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName = "SelectorColumn"
+                                                   Width = "50">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.CheckboxSelectorChecked += OnCellCheckBoxClick;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 50
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+void OnCellCheckBoxClick(object sender, DataGridCheckboxSelectorCheckedEventArgs e)
+{
+    if (e.RowIndex == 1)
+        e.Cancel = true;
+
+    else if (e.RowIndex == 2)
+        e.NewValue = CheckState.Checked;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Limitations
+
+The following are the limitations of `DataGridCheckBoxSelectorColumn`:
+
+* The Selector column does not support cell selection.
+* The Selector column does not support data operations such as sorting, filtering, and grouping.
+* The Selector column is excluded from operations such as printing and exporting.
+* The Selector column does not support the filter row.
+
 ## Row header
 
 The row header is a type of column that is placed as the first cell of each row and remains frozen. To enable the row header, set [SfDataGrid.ShowRowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowRowHeader) to `true` Additionally, the `SfDataGrid` allows you to customize the row header width using the [SfDataGrid.RowHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeaderWidth) property. The default value is `30.`
