@@ -1554,7 +1554,8 @@ The `PercentEditMode` property controls how values are interpreted and presented
                        ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridPercentColumn MappingName="Discount"
-                                          HeaderText="Discount" />
+                                          HeaderText="Discount"
+                                          PercentEditMode="DoubleMode" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -1567,7 +1568,8 @@ dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.Columns.Add(new DataGridPercentColumn()
 {
     MappingName = "Discount",
-    HeaderText = "Discount"
+    HeaderText = "Discount",
+    PercentEditMode = DataGridPercentEditMode.DoubleMode
 });
 this.Content = dataGrid;
 {% endhighlight %}

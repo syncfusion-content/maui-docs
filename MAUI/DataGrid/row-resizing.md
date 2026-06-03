@@ -12,7 +12,8 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The `SfDataGrid` supports interactive row resizing. When enabled, users can long-press the bottom edge of a row header to change that row's height. Resized heights are cached and preserved during scrolling.
 
-N> Row resizing requires `ShowRowHeader = true` and is false by default.
+N> 
+Row resizing requires `ShowRowHeader = true` and `ShowRowHeader` is false by default.
 
 ## Enable row resizing
 
@@ -38,7 +39,7 @@ this.Content = dataGrid;
 
 ## Row resize mode
 
-The `RowResizeMode` (type: `DataGridRowResizeMode`) determines when the requested height is applied during an interactive resize:
+The `RowResizeMode` determines when the requested height is applied during an interactive resize:
 
 - `OnTouchUp` — the new height is applied when the user releases the pointer (touch-up or mouse-up).
 - `OnMoved` — the new height is applied continuously as the resize indicator moves (live update).
@@ -68,9 +69,8 @@ this.Content = dataGrid;
 Use `SfDataGrid.RowResizing` to validate or cancel resizes. The event provides `DataGridRowResizingEventArgs` with these properties:
 
 - `RowIndex` — index of the row being resized
-- `RowIndex` — index of the row being resized
 - `RowData` — the underlying data item for the row
-- `NewValue` — requested row height (device-independent pixels)
+- `NewValue` — requested row height
 - `Cancel` — set to `true` to cancel the operation
 
 {% tabs %}

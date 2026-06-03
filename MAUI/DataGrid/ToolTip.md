@@ -258,7 +258,7 @@ The below image refers the `AlternateTemplate` which is applied through `ToolTip
 
 You can control how long the grid waits before showing a tooltip using the `SfDataGrid.TooltipDelay` property. The value is specified in milliseconds and applies to hover delay on Windows and macOS only. On touch platforms (Android/iOS) tooltips are shown via long-press and `TooltipDelay` is not applicable.
 
-This will be helpful for other interactions (such as selection, context menu popups, etc.) to perform without any interference.
+This will be helpful for other interactions (such as context menu popups, sorting, etc.) to perform without any interference.
 
 {% tabs %}
 {% highlight XAML %}
