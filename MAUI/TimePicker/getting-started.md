@@ -265,7 +265,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Picker;
 

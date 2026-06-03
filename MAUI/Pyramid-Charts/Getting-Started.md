@@ -334,7 +334,6 @@ Next, create a StageViewModel class and initialize a list of `StageModel` object
 public class StageViewModel
 {
     public List<StageModel> Data { get; set; }
-
     public StageViewModel()
     {
         Data = new List<StageModel>()

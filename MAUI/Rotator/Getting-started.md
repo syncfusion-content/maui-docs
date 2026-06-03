@@ -81,52 +81,23 @@ Step 1: Add the namespace as shown in the following code sample.
 
     xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
 
+    <ContentPage.Content>
+        <syncfusion:SfRotator x:Name="rotator" />	
+    </ContentPage.Content>
+
 {% endhighlight %}
 {% highlight c# %}
 
     using Syncfusion.Maui.Rotator;
 
-{% endhighlight %}
-{% endtabs %}
-
-Step 2: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="GettingStarted.Rotator">
-<ContentPage.Content>
-<syncfusion:SfRotator x:Name="rotator" />	
-</ContentPage.Content>
-</ContentPage>
-	
-{% endhighlight %}
-
-{% highlight C# %}		
-
-using Syncfusion.Maui.Rotator;
-
-namespace GettingStarted
-{
-public partial class RotatorControlPage : ContentPage
+    public RotatorControlPage()
     {
-        public RotatorControlPage()
-        {
-            InitializeComponent();
-            SfRotator rotator = new SfRotator();
-            this.Content = rotator;
-        }
+        InitializeComponent();
+        SfRotator rotator = new SfRotator();
+        this.Content = rotator;
     }
-}
-        
-{% endhighlight %}
 
+{% endhighlight %}
 {% endtabs %}
 
 {% endtabcontent %}
@@ -200,53 +171,23 @@ Step 2: Add the namespace as shown in the following code sample.
 
     xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
 
+    <ContentPage.Content>
+        <syncfusion:SfRotator x:Name="rotator" />	
+    </ContentPage.Content>
+
 {% endhighlight %}
 {% highlight c# %}
 
     using Syncfusion.Maui.Rotator;
 
-{% endhighlight %}
-{% endtabs %}
-
-
-Step 3: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="GettingStarted.Rotator">
-<ContentPage.Content>
-<syncfusion:SfRotator x:Name="rotator" />	
-</ContentPage.Content>
-</ContentPage>
-	
-{% endhighlight %}
-
-{% highlight C# %}		
-
-using Syncfusion.Maui.Rotator;
-
-namespace GettingStarted
-{
-public partial class RotatorControlPage : ContentPage
+    public RotatorControlPage()
     {
-        public RotatorControlPage()
-        {
-            InitializeComponent();
-            SfRotator rotator = new SfRotator();
-            this.Content = rotator;
-        }
+        InitializeComponent();
+        SfRotator rotator = new SfRotator();
+        this.Content = rotator;
     }
-}
-        
-{% endhighlight %}
 
+{% endhighlight %}
 {% endtabs %}
 
 {% endtabcontent %}

@@ -255,10 +255,7 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-<ContentPage   
-    . . .
-    xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
-
+<ContentPage xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
     <stepProgressBar:SfStepProgressBar />
 </ContentPage>
 
@@ -266,7 +263,6 @@ namespace GettingStarted
 {% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.ProgressBar;
-. . .
 
 public partial class MainPage : ContentPage
 {
@@ -333,7 +329,7 @@ The Step progressbar control allows you to bind item collection by setting the [
                     x:Name="stepProgress"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"                                        
-                    Orientation="Horizontal"                                                                                       
+                    Orientation="Horizontal"                                                                                      
                     LabelSpacing="12"
                     ActiveStepIndex="2"
                     ActiveStepProgressValue="60"

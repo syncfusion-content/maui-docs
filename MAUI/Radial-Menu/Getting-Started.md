@@ -352,7 +352,6 @@ namespace RadialMenuGettingStarted
 
 {% endtabs %}
 
-
 ![Getting started with .NET MAUI Radial Menu.](images/getting-started/maui-radialmenu-getting-started.png)
 
 N> You can find the getting started sample of .NET MAUI Radial Menu from this [link](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Radial-Menu).

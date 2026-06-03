@@ -278,9 +278,7 @@ Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slider
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+<ContentPage xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
     <Grid>
         <sliders:SfSlider />
     </Grid>
@@ -316,7 +314,7 @@ namespace SliderGettingStarted
 
 ![Initialize slider](images/getting-started/initialize-slider.png)
 
-## Slider Control
+## Initialization of Slider
 
 The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
