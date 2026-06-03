@@ -1232,4 +1232,6 @@ The following screenshot shows the output when an item is added at the specified
 
 ## See also 
 
-[How to create a grouped ListView in .NET MAUI (SfListView)](https://support.syncfusion.com/kb/article/11376/how-to-create-a-grouped-listview-in-net-maui-sflistview)
+- [Sorting in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/sorting)
+
+- [Filtering in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/filtering)

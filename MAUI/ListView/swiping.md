@@ -561,3 +561,11 @@ private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 {% endtabs %}
 
 Download entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-edit-the-item-through-swipe-view-in-.net-maui-listview).
+
+## See also 
+
+- [Item Re-ordering in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-drag-and-drop)
+
+- [Selection in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/selection)
+
+- [Tapped Events in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/working-with-sflistview)

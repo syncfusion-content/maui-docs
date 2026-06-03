@@ -557,4 +557,6 @@ public partial class MainPage : ContentPage
 
 ## See also 
 
-[How to change selected image in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11586/how-to-change-selected-image-in-net-maui-listview-sflistview)
+- [Item Re-ordering in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-drag-and-drop)
+
+- [Swiping in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/swiping)

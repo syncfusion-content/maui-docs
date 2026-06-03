@@ -263,4 +263,8 @@ private void ListView_Loaded(object sender, Syncfusion.Maui.ListView.ListViewLoa
 
 ## See also 
 
-[How to create an expandable ListView (SfListView) in .NET MAUI](https://support.syncfusion.com/kb/article/11583/how-to-create-an-expandable-listview-sflistview-in-net-maui)                                                                                                                                             
+- [Header and Footer in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/header-and-footer)
+
+- [Layouts in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/layouts)
+
+- [Scrolling in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/scrolling)
