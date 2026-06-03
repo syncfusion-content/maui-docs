@@ -74,7 +74,9 @@ public static class MauiProgram
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
+<ContentPage 
+    ...
+    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
     <treemap:SfTreeMap />
 </ContentPage>
 
@@ -158,7 +160,9 @@ public static class MauiProgram
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
+<ContentPage 
+    ...
+    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
     <treemap:SfTreeMap />
 </ContentPage>
 
@@ -244,7 +248,9 @@ public static class MauiProgram
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
+<ContentPage 
+    ...
+    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
     <treemap:SfTreeMap />
 </ContentPage>
 
