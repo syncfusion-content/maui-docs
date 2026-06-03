@@ -1435,3 +1435,80 @@ public MainPage()
 {% endtabs %}
 
 ![Auto Complete Suggestions style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-auto-complete-suggestion-item-style.png)
+
+## Time break styling
+
+To style the time break view based on its appearance, set values to the built-in keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelTextColor </td>
+<td> Text color of the time break label. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontSize </td>
+<td> Font size of the time break label. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontFamily </td>
+<td> Font family of the time break label. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontAttributes </td>
+<td> Font attributes of the time break label. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakSeparatorHeightRequest </td>
+<td> Height of the time break separator line. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakSeparatorBackground </td>
+<td> Background color of the time break separator line. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewTimeBreakLabelTextColor">Blue</Color>
+                <x:Double x:Key="SfAIAssistViewTimeBreakLabelFontSize">15</x:Double>
+                <x:String x:Key="SfAIAssistViewTimeBreakLabelFontFamily">OpenSansSemibold</x:String>
+                <FontAttributes x:Key="SfAIAssistViewTimeBreakLabelFontAttributes">Bold</FontAttributes>
+                <x:Double x:Key="SfAIAssistViewTimeBreakSeparatorHeightRequest">4</x:Double>
+                <Color x:Key="SfAIAssistViewTimeBreakSeparatorBackground">LightSkyBlue</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewTimeBreakLabelTextColor", Colors.Blue);
+    dictionary.Add("SfAIAssistViewTimeBreakLabelFontSize", 15.0);
+    dictionary.Add("SfAIAssistViewTimeBreakLabelFontFamily", "OpenSansSemibold");
+    dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemFontSize", 20.0);
+    dictionary.Add("SfAIAssistViewTimeBreakLabelFontAttributes", FontAttributes.Bold);
+    dictionary.Add("SfAIAssistViewTimeBreakSeparatorHeightRequest", 4.0);
+    dictionary.Add("SfAIAssistViewTimeBreakSeparatorBackground", Colors.LightSkyBlue);
+    this.Resources.Add(dictionary);
+    ....
+}
+
+{% endhighlight %}
+{% endtabs %}

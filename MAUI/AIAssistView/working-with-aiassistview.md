@@ -1388,3 +1388,214 @@ private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView
 
 {% endhighlight %}
 {% endtabs %}
+
+## Time break
+
+The `SfAIAssistView` control allows for organizing the `AssistItems` by their creation date and time, enabling users to identify request and responses chronologically. Set the `ShowTimeBreak` property to `true` to display the time break view.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowTimeBreak="True" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowTimeBreak = true;
+        this.Content = this.sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Time Break in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-time-break.png)
+
+### Time break customization
+
+The `SfAIAssistView` control allows you to fully customize the time break appearance using the `TimeBreakTemplate` property. This property lets you define a custom layout and style for the time break UI.
+
+{% tabs %}
+{% highlight xaml hl_lines="11" %}
+
+<ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="timeBreakTemplate">
+                ...
+            </DataTemplate>
+        </ResourceDictionary>
+</ContentPage.Resources>
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowTimeBreak="True"
+                           TimeBreakTemplate="{StaticResource timeBreakTemplate}" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="11" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowScrollToBottomButton = true;
+        this.sfAIAssistView.TimeBreakTemplate = this.CreateTimeBreakTemplate();
+        this.Content = this.sfAIAssistView;
+    }
+
+    private DataTemplate CreateTimeBreakTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Time Break Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-time-break-template.png)
+
+## Toast notification
+
+The `SfAIAssistView` control supports displaying toast notifications. These notifications appear as pop-up windows providing information during user interactions with the `SfAIAssistView`.
+
+![Toast Notification in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-toast-notification.png)
+
+### Restrict toast notification
+
+By default, toast notifications appear in the view. To prevent them from showing, use the `ToastOpening` event.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ToastOpening="assistView_ToastOpening" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="1" %}
+
+sfAIAssistView.ToastOpening += assistView_ToastOpening;
+
+private void assistView_ToastOpening(object sender, Syncfusion.Maui.AIAssistView.ToastNotificationEventArgs e)
+{
+   e.Cancel = true;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Editor Expansion
+
+The `SfAIAssistView` control allows for expanding the editor view based on its `MaximumHeightRequest` property. To enable editor expansion, set the `AllowEditorExpansion` property to `true`.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AllowEditorExpansion="True" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.RequestEditor.MaximumHeightRequest = 300;
+        this.sfAIAssistView.AllowEditorExpansion = true;
+        this.Content = this.sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Editor Expansion in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editor-expansion.png)
+
+N> The editor expansion button is only visible when the content reaches the third line of the editor.
+
+## Speech to text
+
+The `SfAIAssistView` control provides built-in voice input support through a microphone button in the editor. By default, the microphone view is visible. To hide it, set the `EnableVoiceInput` property to `false`.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           EnableVoiceInput="False" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.EnableVoiceInput = false;
+        this.Content = this.sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Speech to Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-speech-to-text.gif)
+
+## Text to speech
+
+The `SfAIAssistView` control provides built-in text-to-speech support for each response. This allows users to play, pause, and stop the text-to-speech functionality.
+
+![Text to Speech in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-text-to-speech.gif)
+
+## Disclaimer text
+
+The `SfAIAssistView` control supports displaying a disclaimer text below the editor. To display this text, assign a value to the `DisclaimerText` property.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           DisclaimerText="AI outputs may be inaccurate or inconsistent." />
+
+{% endhighlight %}
+{% highlight c# hl_lines="6" %}
+
+SfAIAssistView sfAIAssistView; 
+public MainPage() 
+{ 
+    InitializeComponent(); 
+    this.sfAIAssistView = new SfAIAssistView();
+    this.sfAIAssistView.DisclaimerText = "AI outputs may be inaccurate or inconsistent.";
+    this.Content = sfAIAssistView;
+} 
+
+{% endhighlight %}
+{% endtabs %}
+
+![Disclaimer Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-disclaimer-text.png)
