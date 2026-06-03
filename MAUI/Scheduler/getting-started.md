@@ -815,3 +815,23 @@ N> It is not applicable if the `View` is `Timeline Month` and it is applied only
 ![customize-the-week-number-text-style-in-maui-scheduler](images/getting-started/customize-the-week-number-text-style-in-maui-scheduler.png)
 
 N> You can refer to our [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Scheduler Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Scheduler) that shows you how to render the Scheduler in .NET MAUI.
+
+## Enable or disable swipe navigation 
+
+The EnableSwipeNavigation property controls whether users can navigate between views using swipe gestures or mouse drag interactions.By default, swipe navigation is enabled. Setting this property to false disables gesture-based navigation. When EnableSwipeNavigation is true (default), users can switch views by swiping or dragging.
+When EnableSwipeNavigation is false, swipe gestures are ignored.
+
+{% tabs %}  
+{% highlight XAML %}
+
+<scheduler:SfScheduler x:Name="scheduler" EnableSwipeNavigation="False"/>
+
+{% endhighlight %}
+{% highlight C# hl_lines="2" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.EnableSwipeNavigation = false;
+this.Content = scheduler;
+
+{% endhighlight %}  
+{% endtabs %}

@@ -203,6 +203,31 @@ this.Content = scheduler;
 
 ![Customize all day appointments height in days view](images/day-week-views/all-day-appointment-height-customization.png)
 
+## Display spanned appointments in time slots
+
+The AllowSpannedAppointmentsInTimeSlots property determines how appointments lasting more than 24 hours are rendered in Day, Week, and WorkWeek views. By default, multi-day appointments are shown in the all-day panel. When enabled, these appointments are displayed directly in the time-slot cells. When AllowSpannedAppointmentsInTimeSlots is false (default), multi-day appointments are displayed in the all-day area. When true, multi-day appointments are segmented and shown in the time-slot cells for each day.
+
+{% tabs %}
+{% highlight XAML hl_lines="4" %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Day">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView AllowSpannedAppointmentsInTimeSlots="True" />
+    </scheduler:SfScheduler.DaysView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Day;
+scheduler.DaysView.AllowSpannedAppointmentsInTimeSlots = true;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %} 
+
 ## Special time regions
 
 The user interaction such as selection and highlights specific regions of day, week, and workweek views can be restricted by adding the [TimeRegions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) property of the [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). Set the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `TimeRegions` to create a specialTimeRegion. Use the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TimeZone) property to set the specific timezone for start and end time of `TimeRegions.`
