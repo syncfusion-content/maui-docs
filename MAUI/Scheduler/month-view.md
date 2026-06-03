@@ -272,6 +272,8 @@ this.Content = scheduler;
 {% endhighlight %}  
 {% endtabs %}
 
+![Hide-non-working-days-in-month-view](images/month-view/hide-non-working-days-in-month-view.png)
+
 ### Customize Non-Working Days in Month View
 
 Non-working days in the MonthView can be customized using the NonWorkingDaysBackground and NonWorkingDaysTextStyle properties of the SchedulerMonthCellStyle. These properties allow you to visually differentiate non-working days with custom background and text styles.
@@ -318,6 +320,35 @@ this.Content = scheduler;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![Non-working-days-customization-in-month-view](images/month-view/customize-non-working-days-in-month-view.png)
+
+## Inline Appointment Support in Month View
+
+Appointments can be displayed inline within the MonthView using the ShowAppointmentsInline property.When ShowAppointmentsInline is false (default), appointments are not shown inline in the MonthView. When ShowAppointmentsInline is true, tapping a date cell displays all appointments for that date inline below the tapped row. This provides a quick way to view daily schedules without switching to another view. Inline appointments are rendered in a collection view, allowing customization of styles such as background, text color, and layout.
+
+{% tabs %}  
+{% highlight XAML hl_lines="4" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView ShowAppointmentsInline="True"/>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="4" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Month;
+scheduler.MonthView.ShowAppointmentsInline = true;
+this.Content = scheduler;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Inline-appointments-in-month-view](images/month-view/inline-appointments-in-month-view.png)
 
 ## View header
 
