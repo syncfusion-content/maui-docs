@@ -77,10 +77,8 @@ namespace RadioButtonGettingStarted
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-        <buttons:SfRadioButton x:Name="radioButton"/>     
+<ContentPage xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
 {% endhighlight %}
