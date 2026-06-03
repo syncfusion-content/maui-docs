@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Agent
+# Agent in .NET MAUI AI AssistView (SfAIAssistView)
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides an `Agent` feature that allows you to display a collection of agents in the view.
 
@@ -136,6 +136,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Agents in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-agentview.png)
+
 ### Selected agent
 
 The `SfAIAssistView` control supports setting a current agent using the `SelectedAgent` property. User can directly set the `SelectedAgent` in the `SfAIAssistView`, or user can select one from the editor by typing `@`, which reveals all available agents in the `Agents` collection.
@@ -164,6 +166,8 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
+![Selected Agents in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-selected-agent.png)
+
 ### Show selected agent in view
 
 The `SfAIAssistView` control supports showing the selected agent in the view. By default, the `SelectedAgent` is displayed. To hide the `SelectedAgent`, set the `ShowSelectedAgent` property to `false`.
@@ -188,6 +192,8 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+![Show Selected Agent in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-show-selected-agent.png)
 
 ### Agent view customization
 
@@ -236,3 +242,5 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![Agent Template in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-selected-agent-template.png)
