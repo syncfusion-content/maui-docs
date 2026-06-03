@@ -7,6 +7,8 @@ control: SfScheduler
 documentation: ug
 ---
 
+# Customization of .NET MAUI Scheduler
+
 ## Change first day of week
 
 The scheduler allows customization on the first day of the week with the [FirstDayOfWeek](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_FirstDayOfWeek) property. The Scheduler will default to `Sunday` as the first day of the week.

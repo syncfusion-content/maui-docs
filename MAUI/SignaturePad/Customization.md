@@ -7,6 +7,8 @@ control: SfSignaturePad
 documentation: ug
 ---
 
+# Customization of Signature Pad
+
 ## Customize signature stroke color
 
 Customize the stroke color of the SignaturePad control by using the [StrokeColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_StrokeColor) property. The default stroke color is **Colors.Black**.
