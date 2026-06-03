@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Range Selector control | Syncfusion®
+title: Getting started with .NET MAUI DateTime Range Selector | Syncfusion®
 description: This section explains about the getting started with Syncfusion® MAUI Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
