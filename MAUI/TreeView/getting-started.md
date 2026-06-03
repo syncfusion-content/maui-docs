@@ -244,7 +244,9 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+<ContentPage 
+    ...
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
     <syncfusion:SfTreeView />
 </ContentPage>
 
@@ -294,15 +296,19 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
                     <treeviewengine:TreeViewNode.ChildNodes>
                         <treeviewengine:TreeViewNode Content="New South Wales" IsExpanded="True">
                             <treeviewengine:TreeViewNode.ChildNodes>
-                                <treeviewengine:TreeViewNode Content="Sydney" IsExpanded="True"/>
-                                <treeviewengine:TreeViewNode Content="Canberra" IsExpanded="True"/>
-                                <treeviewengine:TreeViewNode Content="Newcastle–Maitland" IsExpanded="True"/>
-                            </treeviewengine:TreeViewNode.ChildNodes>
-                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Sydney" IsExpanded="True"/>
                     </treeviewengine:TreeViewNode.ChildNodes>
                 </treeviewengine:TreeViewNode>
-            </syncfusion:SfTreeView.Nodes>
-        </syncfusion:SfTreeView>
+                <treeviewengine:TreeViewNode Content="Victoria" IsExpanded="True">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="Melbourne" IsExpanded="True"/>
+                        <treeviewengine:TreeViewNode Content="Canada" IsExpanded="True"/>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+                </treeviewengine:TreeViewNode.ChildNodes>
+            </treeviewengine:TreeViewNode>
+        </syncfusion:SfTreeView.Nodes>
+    </syncfusion:SfTreeView>
     </ContentPage.Content>
 </ContentPage>
 

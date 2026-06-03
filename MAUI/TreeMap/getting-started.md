@@ -314,8 +314,11 @@ public class ViewModel
             new AirportDetails { State = "Ecuador", Count = 7 },
             new AirportDetails { State = "Chile", Count = 5 },
             new AirportDetails { State = "Peru", Count = 3 },             
-            new AirportDetails { State = "Falkland Islands", Count = 1 },
-            new AirportDetails { State = "French Guiana", Count = 1 },
+            new AirportDetails { State = "Falkland", Count = 1 },
+            new AirportDetails { State = "French", Count = 1 },
+            new AirportDetails { State = "German", Count = 3 },
+            new AirportDetails { State = "Islands", Count = 1 },
+            new AirportDetails { State = "Guiana", Count = 1 },
         };
     }
 

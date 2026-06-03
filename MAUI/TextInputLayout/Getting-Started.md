@@ -82,11 +82,7 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 
 {% highlight xaml %}
 
-	xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-
-	<inputLayout:SfTextInputLayout>
-   		<Entry />
-	</inputLayout:SfTextInputLayout>
+    xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 	
 {% endhighlight %}
 
@@ -94,8 +90,26 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 
     using Syncfusion.Maui.Core;
 
-	SfTextInputLayout inputLayout = new SfTextInputLayout();
-	inputLayout.Content = new Entry(); 
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 2: Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<inputLayout:SfTextInputLayout>
+   <Entry />
+</inputLayout:SfTextInputLayout>  
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+SfTextInputLayout inputLayout = new SfTextInputLayout();
+inputLayout.Content = new Entry(); 
 
 {% endhighlight %}
 
@@ -161,9 +175,6 @@ namespace TextInputLayoutSample
 
 {% endhighlight %}
 
-{% endtabcontent %}
-{% endtabcontents %}
-
 ## Step 4: Add a Basic TextInputLayout
 
 Step 1: Add the NuGet to the project as discussed in the above reference section.
@@ -177,10 +188,6 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 {% highlight xaml %}
 
     xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-
-	<inputLayout:SfTextInputLayout>
-   		<Entry />
-	</inputLayout:SfTextInputLayout>
 	
 {% endhighlight %}
 
@@ -188,42 +195,63 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 
     using Syncfusion.Maui.Core;
 
-	SfTextInputLayout inputLayout = new SfTextInputLayout();
-	inputLayout.Content = new Entry(); 
-
 {% endhighlight %}
 
 {% endtabs %}
 
-## Enabling password visibility toggle
-
-The password visibility toggle is used to show or hide the visibility of characters in the input view added to the control. You can enable this toggle by setting the [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_EnablePasswordVisibilityToggle) property to `true.`
+Step 3: Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
 
 {% tabs %} 
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout  Hint="Name" 
-                                EnablePasswordVisibilityToggle="true">
-    <Entry Text="1234"/>
+<inputLayout:SfTextInputLayout>
+   <Entry />
 </inputLayout:SfTextInputLayout>  
- 
+
 {% endhighlight %}
 
 {% highlight C# %} 
 
 SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Password";
-inputLayout.EnablePasswordVisibilityToggle = true;
-inputLayout.Content = new Entry() { Text = "1234" }; 
+inputLayout.Content = new Entry(); 
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Enable password toggling image](images/GettingStarted/PasswordGettingStarted.png)
+{% endtabcontent %}
+{% endtabcontents %}
 
-N> Password visibility toggle can be enabled only for [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
+## Adding hint
+
+Floating label for the text input layout can be added by setting the [Hint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Hint) property. Visibility of the hint can be collapsed by setting the [ShowHint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHint) property to `false.` By default, this property is set to `true.`
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<inputLayout:SfTextInputLayout Hint="Name">
+   <Entry />
+</inputLayout:SfTextInputLayout>  
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+SfTextInputLayout inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Name"; 
+inputLayout.Content = new Entry(); 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+When focusing on the input view, the hint label will be moved to the top position; it will be returned to the original position when proceeding further (on unfocused) without entering any value.
+
+Run the project, and check if you get the following output to ensure that the project has been appropriately configured to add the text input layout control.
+
+![Adding hint](images/GettingStarted/GettingStarted.png)
 
 You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/maui-textinputlayout-samples)
 
