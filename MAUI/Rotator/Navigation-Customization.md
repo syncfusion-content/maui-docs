@@ -13,7 +13,7 @@ The Rotator control supports customizing dots, thumbnails and navigation buttons
 
 ## Dots Customization
 
-In Dot Customization we can customise the  dots' stroke, selected and unselected dots' color.
+In Dot Customization we can customize the  dots' stroke, selected and unselected dots' color.
 
 ### DotsStroke Color
 
@@ -100,7 +100,7 @@ rotator.UnselectedDotColor = Color.Gray;
 
 ## Thumbnails Customization
 
-In Thumbnail Customization we can customise the  selected and unselected thumbnail's stroke.
+In Thumbnail Customization we can customize the  selected and unselected thumbnail's stroke.
 
 ### Selected Thumbnail Stroke
 
@@ -259,7 +259,7 @@ namespace Rotator
 
 ## Navigation Button Customization
 
-In Navigation Button Customization we can customise the  navigation button's icon and Background color.
+In Navigation Button Customization we can customize the  navigation button's icon and Background color.
 
 ### Navigation Button Icon Color
 

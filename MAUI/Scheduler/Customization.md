@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in .NET MAUI SfScheduler control | Syncfusion<sup>&reg;</sup>
+title: Customize .NET MAUI SfScheduler | Syncfusion®
 description: Learn here about Customization support with the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
 platform: maui
 control: SfScheduler
