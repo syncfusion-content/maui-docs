@@ -334,7 +334,6 @@ Next, create a StageViewModel class and initialize a list of `StageModel` object
 public class StageViewModel
 {
     public List<StageModel> Data { get; set; }
-
     public StageViewModel()
     {
         Data = new List<StageModel>()
@@ -359,11 +358,8 @@ N> Add the namespace of `StageViewModel` class to your XAML Page, if you prefer 
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
-
+<ContentPage xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:model="clr-namespace:ChartGettingStarted">
     <chart:SfPyramidChart>
         <chart:SfPyramidChart.BindingContext>
             <model:StageViewModel/>
@@ -388,142 +384,6 @@ this.Content = chart;
 
  Binding `Data` to the pyramid chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ItemsSource) property from its BindingContext to create our own pyramid chart.
 
-{% tabs %}   
-
-{% highlight xaml %}
-
-<chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                      XBindingPath="Name" 
-                      YBindingPath="Value"/>
-. . .            
-</chart:SfPyramidChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfPyramidChart chart = new SfPyramidChart();
-StageViewModel viewModel = new StageViewModel();
-chart.BindingContext = viewModel;
-chart.ItemsSource = viewModel.Data;
-chart.XBindingPath = "Name";
-chart.YBindingPath = "Value";
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-### Add a title
-
-The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set the title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of the pyramid chart as follows.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfPyramidChart>
-    <chart:SfPyramidChart.Title>
-        <Label Text="Pyramid Stages"/>
-    </chart:SfPyramidChart.Title>
-    . . .
-</chart:SfPyramidChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfPyramidChart chart = new SfPyramidChart();
-chart.Title = new Label()
-{
-    Text = "Pyramid Stages"
-};
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-### Enable the data labels
-
-The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ShowDataLabels) property of the chart can be used to enable data labels to improve the readability of the pyramid chart. The label visibility is set to `False` by default.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfPyramidChart ShowDataLabels="True">
-    . . .
-</chart:SfPyramidChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfPyramidChart chart = new SfPyramidChart();
-. . .
-chart.ShowDataLabels = true;
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-### Enable a legend
-
-The legend provides information about the data point displayed in the pyramid chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfPyramidChart>
-    . . .
-    <chart:SfPyramidChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfPyramidChart.Legend>
-</chart:SfPyramidChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfPyramidChart chart = new SfPyramidChart();
-. . .
-chart.Legend = new ChartLegend();
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-### Enable Tooltip
-
-Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting the chart [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_EnableTooltip) property as true.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfPyramidChart EnableTooltip="True">
-    . . .
-</chart:SfPyramidChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfPyramidChart chart = new SfPyramidChart();
-. . .
-chart.EnableTooltip = true;
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-The following code example gives you the complete code of above configurations.
-
 {% tabs %} 
 
 {% highlight xaml %}
@@ -534,37 +394,28 @@ The following code example gives you the complete code of above configurations.
     x:Class="ChartGettingStarted.MainPage"
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
     xmlns:model="clr-namespace:ChartGettingStarted">
-
     <chart:SfPyramidChart ItemsSource="{Binding Data}" 
                           ShowDataLabels="True" 
                           EnableTooltip="True"
                           XBindingPath="Name"         
                           YBindingPath="Value">
-
         <chart:SfPyramidChart.Title>
             <Label Text="Pyramid Stages"/>
         </chart:SfPyramidChart.Title>
-
         <chart:SfPyramidChart.BindingContext>
             <model:StageViewModel/>
         </chart:SfPyramidChart.BindingContext>
-
         <chart:SfPyramidChart.Legend>
             <chart:ChartLegend/>
         </chart:SfPyramidChart.Legend>
-
     </chart:SfPyramidChart>
-
 </ContentPage>
 
-
- 
 {% endhighlight %}
 
 {% highlight C# %}
 
 using Syncfusion.Maui.Charts;
-. . .
 public partial class MainPage : ContentPage
 {   
     public MainWindow()
@@ -577,7 +428,6 @@ public partial class MainPage : ContentPage
         chart.Legend = new ChartLegend();
         StageViewModel viewModel = new StageViewModel();
         chart.BindingContext = viewModel;
-
         chart.ItemsSource = viewModel.Data;
         chart.XBindingPath = "Name";
         chart.YBindingPath = "Value";
