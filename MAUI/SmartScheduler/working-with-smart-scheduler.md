@@ -52,7 +52,7 @@ The assist button appearance can be customized by using the [AssistButtonTemplat
          </Grid>
      </DataTemplate>
  </smartScheduler:SfSmartScheduler.AssistButtonTemplate>
- </scheduler:SfSmartScheduler>
+ </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -226,7 +226,7 @@ The assist view suggested prompts can be customized by using the [SuggestedPromp
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings >
-        <smartScheduler:SchedulerAssistViewSettings ShowAssistViewBanner="True" SuggestedPrompts="{Binding SuggestedPrompts}"/>
+        <smartScheduler:SchedulerAssistViewSettings SuggestedPrompts="{Binding SuggestedPrompts}"/>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
 </smartScheduler:SfSmartScheduler>
 
