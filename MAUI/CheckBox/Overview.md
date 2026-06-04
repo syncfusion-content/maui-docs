@@ -10,28 +10,28 @@ control: SfCheckBox
 
 The [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) is a selection control with UI customization features. It allows you to choose one or more options from a set and customize the appearance for different visual states using the Visual State Manager.
 
+   ![.NET MAUI CheckBox](Images/Getting-Started/overviewimage.jpg) 
+
 ## Business use cases
 
-- Form-based applications that require **multiple option selection such as preferences, filters, or settings**.  
-- Survey and questionnaire applications that collect **user responses through selectable choices**.  
-- Settings pages that allow users to **enable or disable features using simple selection controls**.  
-- Task management and productivity apps that use **checkboxes for checklists and to-do items**. 
+- Form-based applications that require multiple option selection such as preferences, filters, or settings. 
+- Survey and questionnaire applications that collect user responses through selectable choices. 
+- Settings pages that allow users to enable or disable features using simple selection controls. 
+- Task management and productivity apps that use checkboxes for checklists and to-do items.
 
 ## Key features
 
-- **Three-state support** allows handling checked, unchecked, and intermediate states for advanced selection scenarios.  
-- **Tap interaction support** allows users to easily select or clear the checkbox using touch input.  
-- **Appearance customization** allows configuring checkbox color, shape, and label text to match application design.  
-- **Visual state customization** allows modifying appearance for different states such as selected, unselected, and disabled using the Visual State Manager.  
-
-    ![.NET MAUI CheckBox](Images/Getting-Started/overviewimage.jpg) 
+- **Three-state support** allows handling checked, unchecked, and intermediate states for advanced selection scenarios.
+- **Tap interaction support** allows users to easily select or clear the checkbox using touch input.
+- **Appearance customization** allows configuring checkbox color, shape, and label text to match application design.
+- **Visual state customization** allows modifying appearance for different states such as selected, unselected, and disabled using the Visual State Manager.
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfCheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable  
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable  
 
 <table>
 <tr>
@@ -44,30 +44,30 @@ The following table summarizes the globalization support available in the [SfChe
 </tr>
 <tr>
 <td><a href="/maui/checkbox/overview">CheckBox</a></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
 ## Related controls
 
-- **[RadioButton](https://help.syncfusion.com/maui/radio-button/overview)** for handling single selection scenarios.  
-- **[Switch](https://help.syncfusion.com/maui/switch/overview)** for toggle-based on and off interactions.  
-- **[DataForm](https://help.syncfusion.com/maui/dataform/overview)** for integrating checkbox inputs within forms.  
+- [RadioButton](https://help.syncfusion.com/maui/radio-button/overview) for handling single selection scenarios.
+- [Switch](https://help.syncfusion.com/maui/switch/overview) for toggle-based on and off interactions.
+- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating checkbox inputs within forms. 
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) - step-by-step guide to begin using the CheckBox control.  
-- [Customization](https://help.syncfusion.com/maui/checkbox/visual-customization) - customize appearance and behavior.  
-- [Visual States](https://help.syncfusion.com/maui/checkbox/visual-states) - configure visual states and interactions.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples. 
+- [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) shows how to begin using the CheckBox control step by step.  
+- [Customization](https://help.syncfusion.com/maui/checkbox/visual-customization) shows how to customize appearance and behavior.  
+- [Visual States](https://help.syncfusion.com/maui/checkbox/visual-states) explains how to configure visual states and interactions.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -187,24 +187,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-checkbox" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -213,12 +195,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/checkbox" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

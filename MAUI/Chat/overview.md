@@ -11,32 +11,32 @@ documentation: ug
 
 The Syncfusion .NET MAUI Chat control offers a contemporary conversational chatbot experience, allowing for flexible customization of the layout to display conversations between two or more users.
 
-    ![overview in .NET MAUI SfChat](Images/maui-chat-overview.png)
+   ![overview in .NET MAUI SfChat](Images/maui-chat-overview.png)
+
+   ![.NET MAUI Chat Overview](Images/maui-chat-overview.png) 
 
 ## Business use cases
 
-- Messaging applications that require **real-time conversations and rich chat interfaces**.  
-- Customer support systems that provide **chat-based assistance and automated responses**.  
-- AI chatbot integrations that enable **interactive user engagement with intelligent replies**.  
-- Collaboration tools that involve **team communication and message history management**.
+- Messaging applications that require real-time conversations and rich chat interfaces.  
+- Customer support systems that provide chat-based assistance and automated responses.  
+- AI chatbot integrations that enable interactive user engagement with intelligent replies.  
+- Collaboration tools that involve team communication and message history management.
 
 ## Key features
 
-- **Rich Message Types** including text, images, cards, calendar, and hyperlinks
-- **Message Grouping** with time breaks for better readability
-- **Typing Indicators** to show real‑time user activity
-- **Quick Suggestions** for faster replies and reduced typing effort
-- **Load More Messages** to handle long chat histories smoothly 
-
-    ![.NET MAUI Chat Overview](Images/maui-chat-overview.png) 
+- **Rich message types** including text, images, cards, calendar, and hyperlinks.
+- **Message grouping** with time breaks for better readability.
+- **Typing indicators** to show real‑time user activity.
+- **Quick suggestions** for faster replies and reduced typing effort.
+- **Load more messages** to handle long chat histories smoothly.
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfChat](https://www.syncfusion.com/maui-controls/maui-chat) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable  
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable  
 
 <table>
 <tr>
@@ -49,28 +49,30 @@ The following table summarizes the globalization support available in the [SfCha
 </tr>
 <tr>
 <td><a href="/maui/chat/overview">Chat</a></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
 ## Related Controls
 
-- **[AIAssistView](https://help.syncfusion.com/maui/aiassistview/overview)** – integrate AI‑powered responses and conversational experiences into your app.  
+- [AIAssistView](https://help.syncfusion.com/maui/aiassistview/overview) enhance conversations with AI‑driven suggestions and guided responses. 
+- [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview) speed up message composition with predictive text input.
+- [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) provide flexible selection options within chat workflows.
 
-## Next Step
+## See Also
 
 Explore further:
 
-- [Getting Started](https://help.syncfusion.com/maui/chat/getting-started) – step‑by‑step guide to begin using the Chat control.  
-- [Styles Guide](https://help.syncfusion.com/maui/chat/styles) – learn how to customize message styles, editor appearance, and overall chat layout.  
-- [Suggestions](https://help.syncfusion.com/maui/chat/suggestions) – provide quick reply options to improve conversational flow and user interaction.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/chat/getting-started) shows how to begin using the Chat control step by step.
+- [Styles Guide](https://help.syncfusion.com/maui/chat/styles) shows how to customize message styles, editor appearance, and layout.
+- [Suggestions](https://help.syncfusion.com/maui/chat/suggestions) show how to provide quick reply options.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -190,24 +192,6 @@ Explore further:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-chat" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -216,7 +200,7 @@ Explore further:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Chat" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -225,12 +209,30 @@ Explore further:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/chat" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

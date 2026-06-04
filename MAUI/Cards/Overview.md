@@ -13,31 +13,31 @@ documentation : ug
 
 The new Cards control empowers you to generate either a removable card or a stack of cards, with only one card being visible initially, requires a swipe to reveal the subsequent card.
 
+   ![overview in MAUI SfCardLayout](images/maui-card-overview.gif)
+
 ## Business use cases
 
-- Mobile applications that require **swipe-based navigation for content browsing or recommendations**.  
-- E-commerce applications that display **product cards with interactive swipe actions**.  
-- Dashboard and productivity apps that use **card layouts for compact and organized data presentation**.  
-- Social or content apps that require **card stacking and gesture-based interactions for user engagement**.  
+- Mobile applications that require swipe-based navigation for content browsing or recommendations.
+- E-commerce applications that display product cards with interactive swipe actions.
+- Dashboard and productivity apps that use card layouts for compact and organized data presentation.
+- Social or content apps that require card stacking and gesture-based interactions for user engagement.
 
 ## Key features
 
-- **Removable card support** allows creating cards that can be dismissed through user interaction.  
-- **Swipe interaction** enables dismissing cards in left and right directions for intuitive navigation.  
-- **Appearance customization** allows configuring background, border width, border color, corner radius, indicator thickness, and indicator position.  
-- **Dismissal control** allows restricting or customizing when cards can be removed.  
-- **Card stack layout** allows displaying multiple cards in a stacked format with one visible at a time.  
-- **Multi-directional swipe support** enables dismissing and retrieving cards in left, right, top, and bottom directions.  
-- **Swiped card visibility control** allows handling how dismissed cards are displayed or restored.  
-
-    ![overview in MAUI SfCardLayout](images/maui-card-overview.gif)
+- **Removable card support** allows creating cards that can be dismissed through user interaction.
+- **Swipe interaction** enables dismissing cards in left and right directions for intuitive navigation.
+- **Appearance customization** allows configuring background, border width, border color, corner radius, indicator thickness, and indicator position.
+- **Dismissal control** allows restricting or customizing when cards can be removed.
+- **Card stack layout** allows displaying multiple cards in a stacked format with one visible at a time.
+- **Multi-directional swipe support** enables dismissing and retrieving cards in left, right, top, and bottom directions.
+- **Swiped card visibility control** allows handling how dismissed cards are displayed or restored.
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfCards](https://www.syncfusion.com/maui-controls/maui-cards) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -50,30 +50,30 @@ The following table summarizes the globalization support available in the [SfCar
 </tr>
 <tr>
 <td><a href="/maui/cards/overview">Cards</a></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 </tr> 
 </table>
 
 ## Related controls
 
-- **[Carousel-View](https://help.syncfusion.com/maui/carousel-view/overview)** for swipe-based item navigation using carousel layouts.  
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for displaying items in structured and scrollable lists.  
-- **[Accordion](https://help.syncfusion.com/maui/accordion/overview)** for organizing collapsible content sections.  
+- [Carousel-View](https://help.syncfusion.com/maui/carousel-view/overview) for swipe-based item navigation using carousel layouts.  
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying items in structured and scrollable lists.  
+- [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing collapsible content sections.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/cards/getting-started) - step-by-step guide to begin using the Cards control.  
-- [Customization](https://help.syncfusion.com/maui/cards/customization) - configure appearance and behavior of cards.  
-- [Bindable Layout](https://help.syncfusion.com/maui/cards/bindablelayout) - bind card items to collections for dynamic, MVVM‑friendly rendering.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/cards/getting-started) shows how to begin using the Cards control step by step.  
+- [Customization](https://help.syncfusion.com/maui/cards/customization) shows how to configure appearance and behavior of cards.
+- [Bindable Layout](https://help.syncfusion.com/maui/cards/bindablelayout) explains how to bind card items to collections.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -193,24 +193,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-cards" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -219,7 +201,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Cards" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -228,12 +210,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/cards" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

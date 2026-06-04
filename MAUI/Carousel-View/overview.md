@@ -15,10 +15,10 @@ The .NET MAUI Carousel control allows users to navigate through image data in an
 
 ## Business use cases
 
-- Image galleries and media applications that require **interactive browsing of visual content**.  
-- E-commerce applications that display **product previews using swipe-based navigation**.  
-- Mobile apps that use **banner sliders or featured content sections**.  
-- Dashboard applications that present **highlighted information in a compact and scrollable layout**.  
+- Image galleries and media applications that require interactive browsing of visual content.  
+- E-commerce applications that display product previews using swipe-based navigation.  
+- Mobile apps that use banner sliders or featured content sections.  
+- Dashboard applications that present highlighted information in a compact and scrollable layout.  
 
 ## Key features
 
@@ -28,10 +28,10 @@ The .NET MAUI Carousel control allows users to navigate through image data in an
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfCarousel](https://www.syncfusion.com/maui-controls/maui-cards) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -44,29 +44,30 @@ The following table summarizes the globalization support available in the [SfCar
 </tr>
 <tr>
 <td><a href="/maui/carousel-view/overview">Carousel</a></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 </tr>
 </table>
 
 ## Related controls
 
-- **[Cards](https://help.syncfusion.com/maui/cards/overview)** for implementing swipe-based card layouts.
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for displaying items in a structured list format. 
+- [Cards](https://help.syncfusion.com/maui/cards/overview) for implementing swipe-based card layouts.
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying items in a structured list format.
+- [Rotator](https://help.syncfusion.com/maui/rotator/overview) for cycle through items one at a time with navigation options.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) - step-by-step guide to begin using the Carousel control.
-- [Populating Data](https://help.syncfusion.com/maui/carousel-view/populating-data) - bind collections for dynamic item display.  
-- [LoadMore](https://help.syncfusion.com/maui/carousel-view/loadmore) - enable incremental loading for large datasets.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) shows how to begin using the Carousel control step by step.
+- [Populating Data](https://help.syncfusion.com/maui/carousel-view/populating-data) explains how to bind collections for dynamic item display.  
+- [LoadMore](https://help.syncfusion.com/maui/carousel-view/loadmore) shows how to enable incremental loading for large datasets.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -186,24 +187,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-carousel" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -212,7 +195,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Carousel" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -221,12 +204,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/carousel" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

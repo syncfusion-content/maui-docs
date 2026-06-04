@@ -10,30 +10,30 @@ keywords: .net maui sfCartesianChart overview,  introduction to sfCartesianChart
 
 # .NET MAUI Cartesian Chart Overview
 
-The .NET MAUI chart provides a perfect way to visualize data with a high level of user involvement that focuses on development, productivity, and simplicity of use. Chart also provides a wide variety of charting features that can be used to visualize large quantities of data, as well as flexibility in data binding and user customization.
+The [.NET MAUI Cartesian chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides a perfect way to visualize data with a high level of user involvement that focuses on development, productivity, and simplicity of use. Chart also provides a wide variety of charting features that can be used to visualize large quantities of data, as well as flexibility in data binding and user customization.
 
 ## Business use cases
 
-- Business dashboards that require **interactive data visualization with charts and graphs**.  
-- Financial and analytics applications that rely on **trend analysis and comparison of multiple datasets**.  
-- Reporting tools that display **large volumes of data in an easy-to-understand visual format**.  
-- Real-time monitoring applications that require **dynamic updates and interactive chart exploration**.
+- Business dashboards that require interactive data visualization with charts and graphs.  
+- Financial and analytics applications that rely on trend analysis and comparison of multiple datasets.  
+- Reporting tools that display large volumes of data in an easy-to-understand visual format.  
+- Real-time monitoring applications that require dynamic updates and interactive chart exploration.
 
 ## Key features
 
-- **Rich chart types** : Includes line, spline, column, bar, area, scatter, and combination series for diverse visualization needs.
-- **MVVM-Friendly data binding** : Supports property path binding, collection binding, and dynamic updates with seamless MVVM integration.
-- **Interactive exploration** : Provides zooming, panning, tooltips, selection, and trackball interaction for detailed data analysis.
-- **Multi-series visualization** : Enables comparison of multiple datasets and supports combining different chart types in a single view.
-- **Visual customization** : Offers styling options for axes, gridlines, labels, legends, markers, and themes to match application design.
+- **Rich chart types** include line, spline, column, bar, area, scatter, and combination series.
+- **MVVM-Friendly data binding** supports property path binding, collection binding, and dynamic updates.
+- **Interactive exploration** provides zooming, panning, tooltips, selection, and trackball interaction.
+- **Multi-series visualization** enables comparison of multiple datasets and supports combining different chart types.
+- **Visual customization** offers styling for axes, gridlines, labels, legends, markers, and themes.
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="globalization/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
 
 <table>
 <tr>
@@ -46,30 +46,30 @@ The following table summarizes the globalization support available in the [SfCar
 </tr>
 <tr>
 <td><a href="/maui/cartesian-charts/overview">Cartesian Charts</a></td>
-<td align="center"><img src="globalization/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="globalization/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr> 
 </table>
 
 ## Related controls
 
-- **[Circular Chart](https://help.syncfusion.com/maui/circular-charts/overview)** for proportional data visualization using pie, doughnut, and radial bar charts.
-- **[Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview)** for visualizing stages in a process or pipeline.
-- **[Pyramid Chart](https://help.syncfusion.com/maui/pyramid-charts/overview)** for hierarchical or comparative data representation.
+- [Circular Chart](https://help.syncfusion.com/maui/circular-charts/overview) for proportional data visualization using pie, doughnut, and radial bar charts.
+- [Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing stages in a process or pipeline.
+- [Pyramid Chart](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.
 
-## Next step
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started) – step‑by‑step guide to begin using the Cartesian chart control.  
-- [Customization and Styling](https://help.syncfusion.com/maui/cartesian-charts/appearance) – learn how to configure chart appearance, style axes, gridlines, labels, legends, and apply themes for a polished look.  
-- Interactive Features ([Zooming](https://help.syncfusion.com/maui/cartesian-charts/zooming-and-panning), [Selection](https://help.syncfusion.com/maui/cartesian-charts/selection), [Tooltip](https://help.syncfusion.com/maui/cartesian-charts/tooltip)) – explore advanced interactions such as zooming and panning large datasets, selecting data points, and displaying tooltips for detailed insights.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started) shows how to begin using the Cartesian chart control step by step.  
+- [Customization and Styling](https://help.syncfusion.com/maui/cartesian-charts/appearance) shows how to configure chart appearance, axes, gridlines, labels, legends, and themes.  
+- [Labels](https://help.syncfusion.com/maui/cartesian-charts/datalabels) display values directly on data points.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -189,24 +189,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-cartesian-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -215,7 +197,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/CartesianChart" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -224,12 +206,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/cartesian-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>
