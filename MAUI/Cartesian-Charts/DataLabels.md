@@ -286,3 +286,73 @@ this.Content = chart;
 {% endtabs %}
 
 ![Label template in MAUI Chart](DataLabel_images/maui_chart_data_label_template.png)
+
+## Data label tapped event in .NET MAUI Chart
+
+The `SfCartesianChart` provides support to handle interaction with data labels using the `DataLabelTapped` event. This event is triggered when a user taps on a data label in the chart series, enabling drill-down and interactive data exploration scenarios.
+
+### Define DataLabelTapped event
+
+You can handle the `DataLabelTapped` event by assigning a handler to the `SfCartesianChart`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart DataLabelTapped="OnDataLabelTapped">
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>
+
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Category"
+                        YBindingPath="Value"
+                        ShowDataLabels="True"/>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+private void OnDataLabelTapped(object sender, DataLabelTappedEventArgs e)
+{
+    var series = e.Series;
+    var dataIndex = e.DataIndex;
+    var dataItem = e.DataItem;
+    var tapPosition = e.Position;
+    var segment = e.Segment;
+
+    string title = "Data Label Details";
+    string message = $"Series: {series}\n" +
+                    $"Segement: {segment}\n" +
+                    $"Data Item: {dataItem}\n" +
+                    $"Data Index: {dataIndex }\n" +
+                    $"Tap Location: ({tapPosition.X:F0}, {tapPosition.Y:F0})";
+
+    // Display popup alert
+    await DisplayAlert(title, message, "OK");
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Event arguments
+
+The `DataLabelTappedEventArgs` provides information about the tapped data label.
+
+* `Series` - Gets the associated chart series.
+* `DataIndex` - Gets the zero-based index of the tapped data point in the series.
+* `DataItem` - Gets the original data object from the series ItemsSource.
+* `Position` - Gets the screen coordinates (X, Y) of the tap location in device-independent pixels.
+* `Segment` - Gets the chart segment associated with the data point. This value may be null.
+
+### Notes
+
+* The `DataLabelTapped` event will be triggered only when `ShowDataLabels` is set to `True`.
+
