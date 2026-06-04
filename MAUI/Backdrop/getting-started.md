@@ -433,8 +433,6 @@ public BackdropSamplePage()
 
 {% endtabs %}
 
-![.NET Maui Backdrop reveal and conceal back layer](images/getting-started/reveal-conceal.gif)
-
 ## Step 6: Running the Application
 
 Press **F5** to build and run the application. Once compiled, the Badge View will be displayed with the data provided.
