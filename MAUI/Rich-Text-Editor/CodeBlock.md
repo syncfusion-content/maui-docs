@@ -16,7 +16,7 @@ Code blocks are especially useful in applications that involve technical documen
 
 ## Insert code block
 
-You can insert a code block using the CodeBlock toolbar item available in the rich text editor toolbar.
+You can insert a code block using the `CodeBlock` toolbar item available in the rich text editor toolbar.
 
 ### Example
 

@@ -881,7 +881,7 @@ The .NET MAUI Maps control allows users to interact with markers. When a marker 
 
 The `MarkerSelectedCommand` property allows you to bind a command that is executed when a marker is selected. This eliminates the need for event handlers in code-behind and promotes clean architecture practices.
 
-You can also pass a custom parameter using the MarkerSelectedCommandParameter property. If no parameter is specified, the selected marker instance is passed to the command by default.
+You can also pass a custom parameter using the `MarkerSelectedCommandParameter` property. If no parameter is specified, the selected marker instance is passed to the command by default.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -903,7 +903,7 @@ You can also pass a custom parameter using the MarkerSelectedCommandParameter pr
  </map:SfMaps>
 
 {% endhighlight %}
-{% highlight %}
+{% highlight C# %}
 
 public class MapViewModel
 {

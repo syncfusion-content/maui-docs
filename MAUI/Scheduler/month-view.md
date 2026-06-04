@@ -438,9 +438,9 @@ The .NET MAUI SfScheduler provides support to customize the horizontal alignment
 
 By using the dedicated properties in SchedulerMonthView, you can align the date text to the left, center, or right of the month cell.
 
-#### Set date text alignment
+#### Set date horizontal alignment
 
-You can configure the date text alignment using the DateTextAlignment property of SchedulerMonthView.
+You can configure the date text alignment using the `DateHorizontalAlignment` property of SchedulerMonthView.
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}

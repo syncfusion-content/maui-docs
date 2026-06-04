@@ -681,17 +681,12 @@ N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-control
 
 ## Programmatic tooltip display in .NET MAUI Maps
 
-The SfMaps control in .NET MAUI allows you to display marker tooltips programmatically using the ShowTooltip method. This approach ensures reliable tooltip rendering without requiring manual delays during the initial load, as the control internally waits for the layout to complete.
+The .NET MAUI SfMaps allows you to display marker tooltips programmatically using the `ShowTooltip` method. The tooltip display duration is controlled using `MarkerTooltipSettings.Duration`, ensuring consistent behavior across all markers.
+
 You can trigger tooltips either:
 
 * Automatically when the page appears
 * Sequentially using a button click for multiple markers
-
-The tooltip display duration is controlled using MarkerTooltipSettings.Duration, ensuring consistent behavior across all markers.
-
-### Show tooltip programmatically
-
-You can display a tooltip for a specific marker using the `ShowTooltip` method.
 
 ### Example
 
@@ -709,36 +704,7 @@ You can display a tooltip for a specific marker using the `ShowTooltip` method.
                        ShapeStroke="DarkGrey" ShowMarkerTooltip="True" ShowShapeTooltip="True">
                 <map:MapShapeLayer.Markers>
                     <map:MapMarkerCollection>
-                        <map:MapMarker Latitude="-14.235004" x:Name="marker1"
-                               IconWidth="15"
-                               IconHeight="15"
-                               IconFill="#00ccff"
-                               IconType="Circle" 
-                               Longitude="-51.92528" />
-                        <map:MapMarker Latitude="51.16569" x:Name="marker2"
-                               IconWidth="15"
-                               IconHeight="15"
-                               IconFill="#00ccff"
-                               IconType="Circle" 
-                               Longitude="10.451526" />
-                        <map:MapMarker Latitude="-25.274398" x:Name="marker3"
-                               IconWidth="15"
-                               IconHeight="15"
-                               IconFill="#00ccff"
-                               IconType="Circle" 
-                               Longitude="133.775136" />
-                        <map:MapMarker Latitude="20.593684" x:Name="marker4"
-                               IconWidth="15"
-                               IconHeight="15"
-                               IconFill="#00ccff"
-                               IconType="Circle" 
-                               Longitude="78.96288" />
-                        <map:MapMarker Latitude="61.52401" x:Name="marker5"
-                               IconWidth="15"
-                               IconHeight="15"
-                               IconType="Circle"
-                               IconFill="#00ccff"
-                               Longitude="105.318756" />
+                       // use your MapMarkerCollection
                     </map:MapMarkerCollection>
                 </map:MapShapeLayer.Markers>
                 <map:MapShapeLayer.ShapeTooltipSettings>
@@ -759,11 +725,7 @@ You can display a tooltip for a specific marker using the `ShowTooltip` method.
 
      var markers = new List<MapMarker>
          {
-             marker1,
-             marker2,
-             marker3,
-             marker4,
-             marker5
+            // use your Marker List
          };
 
      foreach (var marker in markers)
