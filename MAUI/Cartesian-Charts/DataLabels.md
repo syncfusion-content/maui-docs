@@ -286,4 +286,3 @@ this.Content = chart;
 {% endtabs %}
 
 ![Label template in MAUI Chart](DataLabel_images/maui_chart_data_label_template.png)
-

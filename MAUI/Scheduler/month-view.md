@@ -432,7 +432,7 @@ schedule.MonthView.NavigationDirection = SchedulerMonthNavigationDirection.Verti
 
 The month cell appearance can be customized by using the  [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellStyle), and [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
-#### Date text alignment 
+#### Date horizontal alignment 
 
 The .NET MAUI SfScheduler provides support to customize the horizontal alignment of date text in the Month view cells. This allows developers to control how the date value is positioned within each cell, improving readability and aligning with custom UI requirements.
 
