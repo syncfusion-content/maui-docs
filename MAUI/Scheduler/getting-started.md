@@ -22,9 +22,8 @@ To quickly get started with the .NET MAUI Scheduler, watch this video.
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (18.0.0) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -111,10 +110,9 @@ public partial class MainPage : ContentPage
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio Code. 
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -203,8 +201,8 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -271,6 +269,7 @@ namespace GettingStarted
 {% highlight C# hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Scheduler;
+...
 
 public partial class MainPage : ContentPage
 {
@@ -287,27 +286,6 @@ public partial class MainPage : ContentPage
 
 {% endtabcontent %}
 {% endtabcontents %}
-
-## Change different scheduler views
-
-The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control provides nine different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_View) property. The control is assigned to the [Day](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerView.html#Syncfusion_Maui_Scheduler_SchedulerView_Day) view by default. The current date will be displayed initially for all the Scheduler views.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<scheduler:SfScheduler x:Name="scheduler" View="Month"/>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-this.Content = scheduler;
-
-{% endhighlight %}
-{% endtabs %}
-
-![change-different-scheduler-views-in-maui-scheduler](images/getting-started/change-different-scheduler-views-in-maui-scheduler.png)
 
 ## Appointments
 
