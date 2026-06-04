@@ -306,7 +306,7 @@ namespace BusyIndicatorGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Setting AnimationType in .NET MAUI Busy Indicator
+## Setting AnimationType in .NET MAUI Busy Indicator
 
 The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 
@@ -356,11 +356,7 @@ namespace BusyIndicatorGettingStarted
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Busy Indicator will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following gif image illustrates the result of the above code.
 
 ![CircularMaterial in .NET MAUI Busy Indicator.](images/gettingstarted/net-maui-busy-indicator-circular-material.gif){:width="144" height="138" loading="lazy"}
 

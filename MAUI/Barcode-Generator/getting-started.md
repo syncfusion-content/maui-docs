@@ -22,8 +22,8 @@ To get start quickly with our .NET MAUI Barcode Generator, you can check the bel
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (18.0.0) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -311,7 +311,7 @@ this.Content = barcode;
 
 N> The default symbology of SfBarcodeGenerator is [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html).
 
-## Step 5: Initialize QR Code symbology
+## Initialize QR Code symbology
 
 You can set the required symbology type to the barcode generator based on input value by initializing the [`Symbology`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_Symbology) property. In the following code sample, the QR code is set as the barcode symbology.
 
@@ -342,13 +342,43 @@ this.Content = barcode;
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Barcode Generator will be displayed with the data provided.
-
-Here is the result of the previous codes,
-
 ![.NET MAUI Barcode Generator Intialize QR Code Symbology](images/getting-started/maui-symbology-qrcode.png)
 
+## Display input value
+
+The provided input value can be displayed below the barcode by enabling the ShowText property of barcode as shown in the following code sample.
+
+{% tabs %}
+
+{% highlight xaml hl_lines="2" %}
+
+        <barcode:SfBarcodeGenerator Value="https://www.syncfusion.com/" 
+                                    ShowText="True" 
+                                    TextSpacing="15" 
+                                    HeightRequest="350" 
+                                    WidthRequest="350">
+            <barcode:SfBarcodeGenerator.Symbology>
+                <barcode:QRCode />
+            </barcode:SfBarcodeGenerator.Symbology>
+        </barcode:SfBarcodeGenerator>
+
+{% endhighlight %}
+
+{% highlight c# hl_lines="6" %}
+
+SfBarcodeGenerator barcode = new SfBarcodeGenerator();
+barcode.HeightRequest = 350;
+barcode.WidthRequest = 350;
+barcode.Value = "https://www.syncfusion.com/";
+barcode.Symbology = new QRCode();
+barcode.ShowText = true;
+barcode.TextSpacing = 15;
+this.Content = barcode;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Barcode Generator Display Input Value](images/getting-started/maui-display-input-value.png)
 
 N> You can refer to our [.NET MAUI Barcode Generator](https://www.syncfusion.com/maui-controls/maui-barcodes) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Barcode Generator example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Barcode) that shows you how to render the Barcode Generator in .NET MAUI.

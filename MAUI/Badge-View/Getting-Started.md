@@ -297,11 +297,8 @@ namespace BadgeViewGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Define the Badge View
 
-Configure the badge notification by adding content and accessibility features to the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
-
-### Adding a badge notification text
+## Adding a badge notification text
 
 Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
@@ -329,7 +326,7 @@ this.Content = badgeView;
 
 {% endtabs %}
 
-### Adding screen reader text
+## Adding screen reader text
 
 Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the badge. This is especially helpful for accessibility when the badge only contains an icon or when you want to provide a custom description.
 
@@ -360,7 +357,7 @@ Content = badgeView;
 
 {% endtabs %}
 
-### Adding a content
+## Adding a content
 
 An image, button, label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property. If you need to display a custom icon or image in the badge, ensure the image is included correctly in your project resources.
 
@@ -431,11 +428,7 @@ public MainPage()
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Badge View will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Badge View](getting-started_images/net_maui_badge_view_getting_started.png) 
 
