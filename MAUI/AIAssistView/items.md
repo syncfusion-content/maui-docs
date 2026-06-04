@@ -555,7 +555,7 @@ public class ViewModel : INotifyPropertyChanged
 
     ...
 
-    private void GenerateAssistItems()
+    private async void GenerateAssistItems()
     {
         AssistItem requestItem = new AssistItem()
         {
@@ -565,7 +565,7 @@ public class ViewModel : INotifyPropertyChanged
 
         this.AssistItems.Add(requestItem);
 
-        await GetResult(requestItem);
+        await GetResultAsync(requestItem);
     }
         
     private async Task GetResultAsync(AssistItem requestItem)

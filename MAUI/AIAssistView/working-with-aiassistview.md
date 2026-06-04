@@ -112,34 +112,6 @@ public class ViewModel : INotifyPropertyChanged
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
 
-### StopResponding text
-
-The `SfAIAssistView` control allows you to set custom text for the StopResponding view using the [StopRespondingText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingText) property.
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               StopRespondingText="Cancel Response"/>  
-
-{% endhighlight %} 
-
-{% highlight c# hl_lines="6" %} 
-
-SfAIAssistView sfAIAssistView; 
-public MainPage() 
-{ 
-    InitializeComponent(); 
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.StopRespondingText = "Cancel Response";
-    this.Content = sfAIAssistView; 
-} 
-
-{% endhighlight %}
-{% endtabs %}
-
-![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresondingtext.png)
-
 ### StopResponding UI customization
 
 The `SfAIAssistView` control allows you to fully customize the Stop Responding view appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding UI.
@@ -713,7 +685,7 @@ The `SfAIAssistView` control allows you to customize the request button icon by 
                            AssistItems="{Binding AssistItems}">
         <syncfusion:SfAIAssistView.RequestButtonIcon>
             <FontImageSource Glyph="&#xe809;"
-                             FontFamily="MauiMaterialAssets"
+                             FontFamily="MauiSampleFontIcon"
                              Color="Black" />
         </syncfusion:SfAIAssistView.RequestButtonIcon>
 </syncfusion:SfAIAssistView>
@@ -1232,7 +1204,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![ResponseItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-ResponseTemplate.png)
+![ResponseItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-ResponseTemplate.gif)
 
 ## Text selection
 The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
@@ -1309,7 +1281,25 @@ The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom 
 <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="scrollToBottomButtonTemplate">
-                ...
+                <Border Padding="10"
+                    BackgroundColor="#6C4EC2"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 25"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End">
+                        <HorizontalStackLayout Spacing="6"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center">
+                            <Image Source="down.png"
+                            WidthRequest="16"
+                            HeightRequest="16"
+                            VerticalOptions="Center" />
+                            <Label Text="New Response"
+                            FontSize="14"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                </Border>
             </DataTemplate>
         </ResourceDictionary>
 </ContentPage.Resources>
@@ -1335,12 +1325,51 @@ public partial class MainPage : ContentPage
         this.sfAIAssistView.ScrollToBottomButtonTemplate = this.CreateScrollToBottomButtonTemplate();
         this.Content = this.sfAIAssistView;
     }
-
+    
     private DataTemplate CreateScrollToBottomButtonTemplate()
     {
         return new DataTemplate(() =>
         {
-            ...
+            var border = new Border
+            {
+                Padding = new Thickness(10),
+                BackgroundColor = Color.FromArgb("#6C4EC2"),
+                StrokeThickness = 0,
+                StrokeShape = new RoundRectangle
+                {
+                    CornerRadius = new CornerRadius(25)
+                },
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.End
+            };
+
+            var layout = new HorizontalStackLayout
+            {
+                Spacing = 6,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            var image = new Image
+            {
+                Source = "down.png",
+                WidthRequest = 16,
+                HeightRequest = 16,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            var label = new Label
+            {
+                Text = "New Response",
+                FontSize = 14,
+                TextColor = Colors.White,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            layout.Children.Add(image);
+            layout.Children.Add(label);
+            border.Content = layout;
+            return border;
         });
     }
 }

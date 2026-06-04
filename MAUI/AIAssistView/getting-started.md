@@ -163,7 +163,7 @@ Next, create a view model class and initialize the collection of [AssistItem](ht
  
         AssistItem responseItem = new AssistItem()
         {
-            Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+            Text = "<b>Types of Listening</b><br>For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
             IsRequested = false, 
         };
  
@@ -391,7 +391,7 @@ Next, create a view model class and initialize the collection of [AssistItem](ht
  
         AssistItem responseItem = new AssistItem()
         {
-            Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+            Text = "<b>Types of Listening</b><br>For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
             IsRequested = false, 
         };
  
