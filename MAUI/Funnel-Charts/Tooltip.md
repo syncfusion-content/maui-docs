@@ -48,9 +48,6 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 * [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Duration) of type `int`, indicates the duration for displaying the tooltip.
 * [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Margin) of type `Thickness`, indicates the label's margin.
 * [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_TextColor) of type `Color`, indicates the color of the displayed text.
-* `Stroke` - Gets or sets the border color of the tooltip. This property helps to visually distinguish the tooltip from the chart background.
-* `StrokeWidth` - Gets or sets the thickness of the tooltip border. Setting a higher value results in a thicker and more prominent tooltip outline.
-* `UseSeriesFillColor` - Gets or sets a value indicating whether the tooltip should use the fill color of the associated series. When set to `true`, the tooltip appearance is synchronized with the series color for better visual consistency.
 
 {% tabs %}
 
