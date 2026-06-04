@@ -400,11 +400,7 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the application
-
-Press **F5** to build and run the application. Once compiled, the AI AssistView will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![AI AssistView control in .NET MAUI platform](images/maui-aiassistview-getting-started.png)
 

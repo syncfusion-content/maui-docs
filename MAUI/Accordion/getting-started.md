@@ -428,11 +428,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Accordion will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 <img alt="Defining the Accordion items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png" width="404" /> 
 
