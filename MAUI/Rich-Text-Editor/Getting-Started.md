@@ -74,30 +74,55 @@ namespace RichTextEditorSample
 
 ## Step 4: Add a Basic Rich Text Editor
 
-Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
 
     xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-    <Grid>
-        <rte:SfRichTextEditor />
-    </Grid>
-
 {% endhighlight %}
 {% highlight c# %}
 
     using Syncfusion.Maui.RichTextEditor;
 
-    public MainPage()
-    {
-        InitializeComponent();
-        SfRichTextEditor richTextEditor = new SfRichTextEditor();
-        this.Content = richTextEditor;
-    }
-
 {% endhighlight %}
+{% endtabs %}
+
+Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage ...
+             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+    <Grid>
+        <rte:SfRichTextEditor />
+    </Grid>
+</ContentPage>
+	
+{% endhighlight %}
+
+{% highlight C# %}		
+
+using Syncfusion.Maui.RichTextEditor;
+
+namespace RichTextEditorSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfRichTextEditor richTextEditor = new SfRichTextEditor();
+            this.Content = richTextEditor;
+        }
+    }
+}
+        
+{% endhighlight %}
+
 {% endtabs %}
 
 {% endtabcontent %}
@@ -162,30 +187,56 @@ namespace RichTextEditorSample
 
 ## Step 4: Add a Basic Rich Text Editor
 
-Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
 
     xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-    <Grid>
-        <rte:SfRichTextEditor />
-    </Grid>
-
 {% endhighlight %}
 {% highlight c# %}
 
     using Syncfusion.Maui.RichTextEditor;
 
-    public MainPage()
-    {
-        InitializeComponent();
-        SfRichTextEditor richTextEditor = new SfRichTextEditor();
-        this.Content = richTextEditor;
-    }
-
 {% endhighlight %}
+{% endtabs %}
+
+
+Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage ...
+             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+    <Grid>
+        <rte:SfRichTextEditor />
+    </Grid>
+</ContentPage>
+	
+{% endhighlight %}
+
+{% highlight C# %}		
+
+using Syncfusion.Maui.RichTextEditor;
+
+namespace RichTextEditorSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfRichTextEditor richTextEditor = new SfRichTextEditor();
+            this.Content = richTextEditor;
+        }
+    }
+}
+        
+{% endhighlight %}
+
 {% endtabs %}
 
 {% endtabcontent %}
@@ -251,34 +302,58 @@ namespace ChartGettingStarted
 
 ## Step 4: Add a Basic Rich Text Editor
 
-Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
 
     xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-    <Grid>
-        <rte:SfRichTextEditor />
-    </Grid>
-
 {% endhighlight %}
 {% highlight c# %}
 
     using Syncfusion.Maui.RichTextEditor;
 
-    public MainPage()
-    {
-        InitializeComponent();
-        SfRichTextEditor richTextEditor = new SfRichTextEditor();
-        this.Content = richTextEditor;
-    }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
+Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage ...
+             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+    <Grid>
+        <rte:SfRichTextEditor />
+    </Grid>
+</ContentPage>
+	
+{% endhighlight %}
+
+{% highlight C# %}		
+
+using Syncfusion.Maui.RichTextEditor;
+
+namespace RichTextEditorSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfRichTextEditor richTextEditor = new SfRichTextEditor();
+            this.Content = richTextEditor;
+        }
+    }
+}
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+{% endtabcontent %}
 {% endtabcontents %}
 
 ## Enable the Toolbar

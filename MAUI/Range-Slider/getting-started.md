@@ -256,43 +256,6 @@ Step 2: Add the namespace, as shown in the following code sample:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Initialize RangeSlider
-
-Import the [SfRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) namespace and initialize the range slider as shown below.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
-    <sliders:SfRangeSlider />
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Sliders;
-
-namespace RangeSlider
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfRangeSlider rangeSlider = new SfRangeSlider();
-            this.content = rangeSlider;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Initialize RangeSlider](images/getting-started/initialize-slider.png)
-
 ## Initialization of RangeSlider
 
 The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
