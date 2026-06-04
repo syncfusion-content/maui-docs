@@ -18,7 +18,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Barcode Generator](https://www.syncfus
 ## Business use cases
 
 - Retail and billing systems that require **barcode-based product identification and checkout processing**.  
-- Inventory management applications that depend on **efficient tracking of items using scannable codes**.  
+- Inventory management applications that depend on **efficient tracking of items using readable codes**.  
 - Logistics and shipment systems that rely on **barcode labeling for packages and deliveries**.  
 - Ticketing and access control solutions that use **QR codes or Data Matrix for validation and entry**.
 
@@ -47,7 +47,7 @@ The following table summarizes the globalization support available in the [SfBar
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/barcode-generator/overview">Barcode Genrator<a></td>
+<td><a href="/maui/barcode-generator/overview">Barcode Generator<a></td>
 <td align="center"><img src="Images/globalization/no-support.svg" alt="not" width="16" /></td>
 <td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
