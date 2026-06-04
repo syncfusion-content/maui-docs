@@ -29,6 +29,7 @@ public partial class MainPage : ContentPage
         var accordion = new SfAccordion();
         accordion.AnimationDuration = 150;
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,8 +51,9 @@ public partial class MainPage : ContentPage
         InitializeComponent();
 
         var accordion = new SfAccordion();
-        accordion.AnimationEasing = Syncfusion.Maui.Expander.ExpanderAnimationEasing.SinOut;
+        accordion.AnimationEasing = ExpanderAnimationEasing.SinOut;
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,6 +77,7 @@ public partial class MainPage : ContentPage
         var accordion = new SfAccordion();
         accordion.AutoScrollPosition = AccordionAutoScrollPosition.Top;
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,6 +88,36 @@ The `BringIntoView` method is used to bring a specific item into view by scrolli
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfAccordion x:Name="accordion">
+    <syncfusion:SfAccordion.Items>
+        <syncfusion:AccordionItem>
+            <syncfusion:AccordionItem.Header>
+                <Grid HeightRequest="48">
+                    <Label Text="Robin Rane"
+                           FontSize="14" />
+                </Grid>
+            </syncfusion:AccordionItem.Header>
+            <syncfusion:AccordionItem.Content>
+                <Grid RowDefinitions="Auto,Auto,Auto"
+                      ColumnDefinitions="120,*">
+                    <Image Source="emp_01.png"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           Grid.RowSpan="1"
+                           HeightRequest="100"
+                           WidthRequest="100" />
+                    <StackLayout Grid.Row="0"
+                                 Grid.Column="1"
+                                 Spacing="8">
+                        <Label Text="Position: Chairman"
+                               FontSize="12" />
+                        <Label Text="Organization: ABC Inc."
+                               FontSize="12" />
+                        <Label Text="Location: Boston"
+                               FontSize="12" />
+                    </StackLayout>
+                </Grid>
+            </syncfusion:AccordionItem.Content>
+        </syncfusion:AccordionItem>
         </syncfusion:AccordionItem>
         ..........................
     </syncfusion:SfAccordion.Items>

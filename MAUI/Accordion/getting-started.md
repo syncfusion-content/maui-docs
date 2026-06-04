@@ -314,6 +314,8 @@ N> When loading Label as direct children of `Header` or `Content` of `AccordionI
                 </Grid>
             </syncfusion:AccordionItem.Content>
         </syncfusion:AccordionItem>
+        </syncfusion:AccordionItem>
+        ..........................
     </syncfusion:SfAccordion.Items>
 </syncfusion:SfAccordion>
 {% endhighlight %}
