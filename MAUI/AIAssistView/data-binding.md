@@ -60,7 +60,7 @@ public class ViewModel : INotifyPropertyChanged
     private async void ExecuteRequestCommand(object obj)
     {
         var request = (obj as Syncfusion.Maui.AIAssistView.RequestEventArgs).RequestItem;
-        await this.GetResult(request).ConfigureAwait(true);
+        await this.GetResult((AssistItem)request).ConfigureAwait(true);
     }
 
     private async Task GetResult(object inputQuery)
@@ -111,7 +111,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
     </ContentPage.BindingContext>
     <syncfusion:SfAIAssistView x:Name="assistView"
                                ItemsSource="{Binding AssistItemsCollection}"
-                               ItemsSourceConverter="{Binding converter}" />
+                               ItemsSourceConverter="{StaticResource converter}" />
 </ContentPage>
 {% endhighlight %}
  
@@ -340,55 +340,3 @@ This converter must implement the [IAssistItemConverter](https://help.syncfusion
 N> The `Data` property in `AssistItem` holds a reference to the original data object which is used for data operations.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/custom-model-collection-in-.net-maui-aiassistview).
-
-## Bind the RequestCommand property
-
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to handle user requests by binding them to the [RequestCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestCommand) property. This command is triggered whenever the user sends a request in the assist view.
-
-{% tabs %}
-{% highlight xaml hl_lines="15" %}
-    
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                xmlns:local="clr-namespace:MauiAIAssistView.ViewModel"
-                x:Class="MauiAIAssistView.MainPage">
-
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>
-
-<ContentPage.Content>
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AssistItems="{Binding AssistItems}" 
-                               RequestCommand="{Binding AssistViewRequestCommand}"/>
-</ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# hl_lines="16" %}
-    
-using MauiAIAssistView.ViewModel;
-using Syncfusion.Maui.SfAIAssistView;
-
-namespace MauiAIAssistView
-{
-    public partial class MainPage : ContentPage
-    {
-        SfAIAssistView sfAIAssistView;
-        ViewModel viewModel;
-        public MainPage()
-        {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView();
-            viewModel = new ViewModel();
-            this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-            sfAIAssistView.SetBinding(SfAIAssistView.RequestCommandProperty, new Binding("AssistViewRequestCommand"));
-            this.Content = sfAIAssistView;
-        }       
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}

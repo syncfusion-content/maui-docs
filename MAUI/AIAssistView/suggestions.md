@@ -17,15 +17,14 @@ To get start quickly with suggestions in .NET MAUI AI AssistView, you can check 
 
 ## Common suggestions
 
-The `SfAIAssistView` control allows users to view a list of common suggestions to choose from. These suggestions offer recommendations, helpful tips, and guides for various tasks and topics.
-
-By providing assistance and encouraging the exploration of new ideas, the common suggestions feature is designed to make interactions more productive and enjoyable.
+The `SfAIAssistView` control provides a collection of common suggestions that users can quickly select. These suggestions offer recommended prompts, tips, and guidance for various tasks.
+This feature helps improve user interaction by providing quick access to useful inputs and encouraging efficient usage of the assist view.
 
 ### Displaying common suggestions
 
 Common Suggestions can be populated by creating list of [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) and assigning it to [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Suggestions) API. It will be displayed under the header as part of header view.
 
-#### View model
+#### Define the view model
 Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
 
 {% tabs %}
@@ -65,7 +64,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-#### Binding suggestions to SfAIAssistView
+#### Binding Suggestions to SfAIAssistView
 To populate the Suggestions, bind the item collection from its BindingContext to `SfAIAssistView.Suggestions` property.
 
 {% tabs %}
@@ -115,8 +114,6 @@ public partial class MainPage : ContentPage
 
 ![Suggestions in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestions-commonsuggestion.png)
 
-N> To view [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Suggestions), it is mandatory to set [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader) API to `true`.
-
 ### Suggestion customization
 
 The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the [SuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionTemplate) property. This property lets you define a custom layout and style for the suggestion items.
@@ -125,11 +122,34 @@ The `SfAIAssistView` control allows you to fully customize the suggestions appea
 {% highlight xaml hl_lines="13" %}
 
 <ContentPage.Resources>
-    <DataTemplate x:Key="suggestionTemplate">
-        <Grid>
-            ...
-        </Grid>
-    </DataTemplate>
+    <ResourceDictionary>
+        <DataTemplate x:Key="suggestionTemplate">
+                <Border WidthRequest="130"
+                    HeightRequest="85"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="#E6E8F5"
+                    Margin="2">
+
+                    <Grid>
+                        <Image Source="{Binding ImageSource}"
+                            Aspect="AspectFill" />
+
+                        <Border VerticalOptions="End"
+                            BackgroundColor="#CCFFFFFF"
+                            StrokeShape="RoundRectangle 10"
+                            Margin="2"
+                            Padding="2">
+
+                            <Label Text="{Binding Text}"
+                                FontSize="13"
+                                TextColor="Black"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Center" />
+                        </Border>
+                    </Grid>
+                </Border>
+            </DataTemplate>
+    </ResourceDictionary>
 </ContentPage.Resources>
 
 <ContentPage.Content>
@@ -176,7 +196,7 @@ public partial class MainPage : ContentPage
 
 ## ResponseItem suggestions
 
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control enables the display of a list of suggestions for users to select from. Suggestions are supported for all response item types in `SfAIAssistView`.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control allows displaying a list of suggestions for users to choose from. These suggestions are supported across all response item types in `SfAIAssistView`.
 
 ### Displaying ResponseItem suggestions
 
@@ -415,7 +435,7 @@ The `SfAIAssistView` control allows you to define the header text for each respo
 
         assistSuggestions.Items = suggestions;
 		
-		assistSuggestions.SuggestionHeaderText = "Related Topics";
+		responseItem.SuggestionHeaderText = "Related Topics";
 		
 		// Assign suggestions to response item.
 		responseItem.Suggestion = assistSuggestions;
