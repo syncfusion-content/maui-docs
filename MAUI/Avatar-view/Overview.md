@@ -15,26 +15,25 @@ The [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 ## Business use cases
 
-- User **profile images** in social or business apps.  
-- Chat or messaging interfaces showing **user identity**.  
-- Team or **group member displays** for collaboration apps.  
-- Notification icons with user **badges or status indicators**.  
+- User profile images in social or business apps.  
+- Chat or messaging interfaces showing user identity.  
+- Team or group member displays for collaboration apps.  
+- Notification icons with user badges or status indicators.  
 
 ## Key features
 
-- **Image and Initials Support** – display user avatars using profile images or fallback initials when images are unavailable.  
-- **Flexible View Customization** – customize size, background color, border (stroke), and corner radius to match your UI design.  
-- **Group View Support** – combine up to three images or initials within a single view to represent multiple users.  
-- **Visual Styles** – apply different appearance styles to suit various UI scenarios.  
-- **BadgeView Integration** – integrate with [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html) to display notifications or status indicators.
+- **Image and initials** displays user avatars using profile images or fallback initials.
+- **View** customizes size, background color, border, and corner radius.  
+- **Group view support** combines up to three images or initials within a single view.
+- **Visual styles** apply different appearance styles.  
+- **BadgeView** integrates with BadgeView to display notifications or status indicators.
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfAvatarView](https://www.syncfusion.com/maui-controls/maui-avatarview) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -47,30 +46,30 @@ The following table summarizes the globalization support available in the [SfAva
 </tr>
 <tr>
 <td><a href="/maui/avatar-view/overview">Avatar View</a></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
 ## Related controls
 
-- **[BadgeView](https://help.syncfusion.com/maui/badge-view/overview)** for displaying **notifications** or **status indicators** on avatars.  
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for presenting **user lists** with avatar support.  
-- **[Chat](https://help.syncfusion.com/maui/chat/overview)** for showing **user avatars** in conversations.  
+- [BadgeView](https://help.syncfusion.com/maui/badge-view/overview) for displaying notifications or status indicators on avatars.  
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting user lists with avatar support.  
+- [Chat](https://help.syncfusion.com/maui/chat/overview) for showing user avatars in conversations.  
 
-## Next step
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/avatar-view/getting-started) - step‑by‑step guide to begin using AvatarView.  
-- [Content Type](https://help.syncfusion.com/maui/avatar-view/content-type) - configure avatar content types such as images or initials.  
-- [Customization](https://help.syncfusion.com/maui/avatar-view/customization) - style and customize AvatarView for different UI needs.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.  
+- [Getting Started](https://help.syncfusion.com/maui/avatar-view/getting-started) shows how to begin using AvatarView step by step.  
+- [Content Type](https://help.syncfusion.com/maui/avatar-view/content-type) explains how to configure avatar content such as images or initials.  
+- [Customization](https://help.syncfusion.com/maui/avatar-view/customization) shows how to style and customize AvatarView. 
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.  
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -190,24 +189,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-avatarview" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -216,7 +197,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/AvatarView" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -225,12 +206,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/avatarview" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

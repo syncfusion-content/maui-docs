@@ -11,30 +11,29 @@ documentation: ug
 
 The **[.NET MAUI Backdrop](https://www.syncfusion.com/maui-controls/maui-backdrop)** page comprises two surfaces: a back layer and a front layer. The back layer holds actionable content (like navigation or filtration), which is relevant to the front layer.
 
+   ![BackdropPage control for .NET MAUI.](images/overview/net_maui_backdrop.gif)
+
 ## Business use cases
 
-- Navigation panels with contextual **menus** for streamlined app navigation.  
-- Search and **filtering panels** layered behind main content for efficient workflows.  
-- Dashboards with expandable **configuration panels** or control sections.  
-- Mobile apps requiring layered **UI layouts** for better space utilization.  
+- Navigation panels with contextual menus for streamlined app navigation.
+- Search and filtering panels layered behind main content for efficient workflows.
+- Dashboards with expandable configuration panels or control sections. 
+- Mobile apps requiring layered UI layouts for better space utilization.
 
 ## Key features
 
-- **Navigation Integration** – works seamlessly with `NavigationPage`, supporting toolbar customization and standard navigation behavior.  
-- **Adaptive Back Layer Height** – automatically adjusts the height of the back layer based on its content, with an option to expand fully.  
-- **Customizable Front Layer Shape** – supports both curved and flat edge styles with configurable corner radius.  
-- **Smooth Layer Animations** – provides fluid animations when revealing or hiding the back layer.  
-- **Custom Header Icons** – allows different icons for expanded and collapsed states of the front layer.  
-
-    ![BackdropPage control for .NET MAUI.](images/overview/net_maui_backdrop.gif)
+- **Navigation integration** works with NavigationPage and supports toolbar customization.  
+- **Adaptive back layer height** adjusts the height of the back layer based on its content and allows full expansion.  
+- **Customizable front layer shape** supports curved and flat edge styles with configurable corner radius.  
+- **Smooth layer animations** provide animations when revealing or hiding the back layer.  
+- **Custom header icons** allow different icons for expanded and collapsed states.
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfBackdropPage](https://www.syncfusion.com/maui-controls/maui-backdrop) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -47,29 +46,29 @@ The following table summarizes the globalization support available in the [SfBac
 </tr>
 <tr>
 <td><a href="/maui/backdrop/overview">Backdrop</a></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 </tr> 
 </table> 
 
 ## Related controls
 
-- **[NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage)** for providing **navigation structure** integrated with BackdropPage.
-- **[Accordion](https://help.syncfusion.com/maui/accordion/overview)** for organizing **collapsible content** within panels.
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for displaying **navigational options** or filter lists in the back layer.
+- [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage) for providing navigation structure integrated with BackdropPage.
+- [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing collapsible content within panels.
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying navigational options or filter lists in the back layer.
 
-## Next step
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/backdrop/getting-started) – step‑by‑step guide to begin using BackdropPage.
-- [Header Configuration](https://help.syncfusion.com/maui/backdrop/header-configuration) – configure headers and icons for different states.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/backdrop/getting-started) shows how to begin using BackdropPage step by step.
+- [Header Configuration](https://help.syncfusion.com/maui/backdrop/header-configuration) explains how to configure headers and icons for different states.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -189,24 +188,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-backdrop" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -215,7 +196,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Backdrop" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -224,12 +205,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/backdrop" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

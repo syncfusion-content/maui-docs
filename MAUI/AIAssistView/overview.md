@@ -9,29 +9,29 @@ documentation: ug
 
 # Overview of .NET MAUI AI AssistView (SfAIAssistView)
 
-The Syncfusion .NET MAUI AI AssistView control is a component for integrating AI services into .NET MAUI apps. It provides a user-friendly interface, making it easier for developers to create applications that interact with AI. AI AssistView enables developers can customize both appearance and functionality, allowing them to match their app's design and requirements. It simplifies the process of building intelligent, responsive applications by leveraging AI to improve the user experience.
+The Syncfusion [.NET MAUI AI AssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control is a component for integrating AI services into .NET MAUI apps. It provides a user-friendly interface, making it easier for developers to create applications that interact with AI. AI AssistView enables developers can customize both appearance and functionality, allowing them to match their app's design and requirements. It simplifies the process of building intelligent, responsive applications by leveraging AI to improve the user experience.
 
 ## Business use cases
 
-- AI **writing assistants** for generating and refining content.  
-- Customer support **bots** with guided responses and quick suggestions. 
-- Educational **tutors** delivering explanations, quizzes, and structured learning content.  
-- Business **productivity apps** integrating AI insights into workflows.  
+- AI writing assistants for generating and refining content.  
+- Customer support bots with guided responses and quick suggestions. 
+- Educational tutors delivering explanations, quizzes, and structured learning content.  
+- Business productivity apps integrating AI insights into workflows.  
 
 ## Key features
 
-- **Rich content types** – display AI responses as text, images, hyperlinks, or structured cards.  
-- **Flexible control templates** – define custom layouts and render any view or UI element.  
-- **Suggestions** – provide quick reply options to speed up interactions and improve flow. 
-- **Styling & appearance** – customize message styles, editor, and header for consistent UI. 
+- **Rich content types** display AI responses as text, images, hyperlinks, or structured cards.  
+- **Flexible control templates** define custom layouts and render any view or UI element.  
+- **Suggestions** provide quick reply options. 
+- **Styling & appearance** customize message styles, editor, and header. 
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfAIAssistView](https://www.syncfusion.com/maui-controls/maui-ai-assistview) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -44,30 +44,30 @@ The following table summarizes the globalization support available in the [SfAIA
 </tr>
 <tr>
 <td><a href="/maui/aiassistview/overview">AI AssistView</a></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
 ## Related controls
 
-- **[Chat](https://help.syncfusion.com/maui/chat/overview)** for conversational interfaces and **messaging**  
-- **[AutoComplete](https://help.syncfusion.com/maui/autocomplete/overview)** for predictive **text input** and **suggestions**  
-- **[ComboBox](https://help.syncfusion.com/maui/combobox/overview)** for flexible **selection** and **entry scenarios**  
+- [Chat](https://help.syncfusion.com/maui/chat/overview) for conversational interfaces and messaging.
+- [AutoComplete](https://help.syncfusion.com/maui/autocomplete/overview) for predictive text input and suggestions.
+- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for flexible selection and entry scenarios.
 
-## Next step
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/aiassistview/getting-started) - step‑by‑step guide to begin using the AI AssistView.  
-- [Data Binding](https://help.syncfusion.com/maui/aiassistview/data-binding) - connect and display assist items efficiently.  
-- [Assist Items](https://help.syncfusion.com/maui/aiassistview/items) - configure and customize AI responses.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/aiassistview/getting-started) shows how to begin using the AI AssistView step by step.  
+- [Data Binding](https://help.syncfusion.com/maui/aiassistview/data-binding) explains how to connect and display assist items.  
+- [Assist Items](https://help.syncfusion.com/maui/aiassistview/items) show how to configure and customize AI responses.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -187,24 +187,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-ai-assistview" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -213,7 +195,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/AIAssistView" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -222,12 +204,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/ai-assistview" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

@@ -15,24 +15,24 @@ The **[.NET MAUI Accordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 ## Business use cases
 
-- FAQ or help sections with collapsible **question‑answer visualization**.  
-- Form sections grouped into expandable **category layouts** for structured input.  
-- Mobile apps with limited screen space needing **compact, responsive UI design**.  
-- Product descriptions and detail sections with expandable **content presentation**.  
+- FAQ or help sections with collapsible question‑answer visualization.  
+- Form sections grouped into expandable category layouts for structured input.  
+- Mobile apps with limited screen space needing compact, responsive UI design.  
+- Product descriptions and detail sections with expandable content presentation.  
 
 ## Key features
 
-- **Data Binding** – Populate Accordion items by binding collections using [.NET MAUI BindableLayout](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/bindablelayout), making it easy to work with dynamic data.  
-- **Expand modes** – Supports single or multiple item expansion for flexible user interaction.  
-- **Animation support** – Smooth expand and collapse animations with customizable duration and easing for polished UI transitions. 
+- **Data binding** populates Accordion items by binding collections using .NET MAUI BindableLayout.  
+- **Expand modes** support single or multiple item expansion.  
+- **Animation support** provides smooth expand and collapse animations with customizable duration. 
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfAccordion](https://www.syncfusion.com/maui-controls/maui-accordion) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -45,30 +45,30 @@ The following table summarizes the globalization support available in the [SfAcc
 </tr>
 <tr>
 <td><a href="/maui/accordion/overview">Accordion</a></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr>
 </table>
 
 ## Related controls
 
-- **[SfExpander](https://help.syncfusion.com/maui/expander/overview)** for expanding and collapsing a single content section.
-- **[SfNavigationDrawer](https://help.syncfusion.com/maui/navigationdrawer/overview)** for slide‑in navigation panels and grouped menus.
-- **[SfTabView](https://help.syncfusion.com/maui/tabview/overview)** for organizing content into tabbed sections.
+- [SfExpander](https://help.syncfusion.com/maui/expander/overview) for expanding and collapsing a single content section.
+- [SfNavigationDrawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for slide‑in navigation panels and grouped menus.
+- [SfTabView](https://help.syncfusion.com/maui/tabview/overview) for organizing content into tabbed sections.
 
-## Next step
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/accordion/getting-started) - step‑by‑step guide to begin using the Accordion.
-- [Bindable Layout](https://help.syncfusion.com/maui/accordion/bindablelayout) - bind Accordion items to collections for dynamic content.
-- [Events](https://help.syncfusion.com/maui/accordion/events) - handle user interactions and customize behavior through event callbacks.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/accordion/getting-started) shows how to begin using the Accordion step by step.
+- [Bindable Layout](https://help.syncfusion.com/maui/accordion/bindablelayout) explains how to bind Accordion items to collections.
+- [Events](https://help.syncfusion.com/maui/accordion/events) show how to handle interactions and customize behavior.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -188,24 +188,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-accordion" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -214,7 +196,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Accordion" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -223,12 +205,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/accordion" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>
