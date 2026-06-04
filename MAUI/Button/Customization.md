@@ -311,27 +311,6 @@ button.CornerRadius = 20;
 
 The Image can be customized by its ShowIcon, ImageSource, ImageSize and ImageAlignment.
 
-### ShowIcon
-
-You can enable the Icon image using the [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon) property to know whether any image appears to the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
-
-{% tabs %}
-{% highlight xaml %}
-
-<buttons:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True">
-</buttons:SfButton>
-
-{% endhighlight %}
-{% highlight c# %}
-
-SfButton button = new SfButton();
-button.Text = "Button";
-button.ImageSource = "Heart.png";
-button.ShowIcon = True;
-
-{% endhighlight %}
-{% endtabs %}
-
 ### ImageSource
 
 The [`ImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource) property is used to customize the icon image of [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) by adding a custom image.
@@ -356,6 +335,27 @@ button.ShowIcon = True;
 {% endtabs %}
 
 ![SfButton with image with content](images/customization-images/Button_icon.png)
+
+### ShowIcon
+
+You can enable the Icon image using the [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon) property to know whether any image appears to the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
+
+{% tabs %}
+{% highlight xaml %}
+
+<buttons:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True">
+</buttons:SfButton>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfButton button = new SfButton();
+button.Text = "Button";
+button.ImageSource = "Heart.png";
+button.ShowIcon = True;
+
+{% endhighlight %}
+{% endtabs %}
 
 ### ImageSize
 
