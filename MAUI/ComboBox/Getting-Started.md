@@ -265,13 +265,6 @@ public class SocialMediaViewModel
         this.SocialMedias.Add(new SocialMedia() { Name = "Skype", ID = 4 });
         this.SocialMedias.Add(new SocialMedia() { Name = "Telegram", ID = 5 });
         this.SocialMedias.Add(new SocialMedia() { Name = "Televzr", ID = 6 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Tik Tok", ID = 7 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Tout", ID = 8 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Tumblr", ID = 9 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Twitter", ID = 10 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Vimeo", ID = 11 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "WhatsApp", ID = 12 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "YouTube", ID = 13 });
     }
 }
 
@@ -359,54 +352,16 @@ SfComboBox comboBox = new SfComboBox
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+## Step 5: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the ComboBox will be displayed with the data provided.
+
+Here is the result of the previous codes,
 
 ![.NET MAUI ComboBox populating using data binding](Images/GettingStarted/NonEditableMode.gif)
 
-N> When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain DisplayMemberPath binding
-
-## Editing
-
-The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports editable and non-editable modes to choose items. To enable the editing functionality, set the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property as `true.` The default value is `false.`
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
-                    HeightRequest="50"
-                    IsEditable="true"
-                    ItemsSource="{Binding SocialMedias}"
-                    DisplayMemberPath="Name"
-                    TextMemberPath="Name">
-</editors:SfComboBox>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-SfComboBox comboBox = new SfComboBox
-{
-    WidthRequest = 250,
-    HeightRequest = 50,
-    IsEditable = true,
-    ItemsSource = socialMediaViewModel.SocialMedias,
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name"
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-The following gif image illustrates the result of the above code:
-
-![.NET MAUI ComboBox choose item using editing](Images/GettingStarted/EditableMode.gif)
-
 You can find the complete getting started sample of .NET MAUI ComboBox from this [link.](https://github.com/SyncfusionExamples/maui-combobox-samples)
 
-## Text
-
-The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode. The default value of the **Text** property is **string.Empty**.
+N> When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain DisplayMemberPath binding
 
 N> You can refer to our [.NET MAUI ComboBox](https://www.syncfusion.com/maui-controls/maui-combobox) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ComboBox Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs/SampleBrowser.Maui.Inputs/Samples/ComboBox) that shows you how to render the ComboBox in .NET MAUI.

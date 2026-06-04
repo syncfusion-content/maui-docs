@@ -305,7 +305,11 @@ namespace ColorPickerGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-The following gif image illustrates the result of the above code.
+## Step 5: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the Color Picker will be displayed with the data provided.
+
+Here is the result of the previous codes,
 
 ![.NET MAUI Color Picker.](Images/Overview/ColorPicker.gif){:width="420" height="574" loading="lazy"}
 

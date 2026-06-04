@@ -45,6 +45,8 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox choose item using editing](Images/Editing/EditableMode.gif)
 
+N> The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode. The default value of the **Text** property is **string.Empty**.
+
 ## Non-editable ComboBox
 
 Non-editable mode prevents users from editing and instead allows them to select from the drop-down list.
