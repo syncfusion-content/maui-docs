@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of .NET MAUI TreeMap | Syncfusion<sup>&reg;</sup>
+title: Overview of .NET MAUI TreeMap | Syncfusion
 description: Learn about the introduction of Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap(STreeMap) control, its basic features, and the functionalities of treemap.
 platform: maui
 control: TreeMap (SfTreeMap)

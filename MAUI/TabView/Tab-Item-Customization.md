@@ -677,3 +677,25 @@ To disable the hover effect when the mouse pointer is over a [TabItem](https://h
 {% endhighlight %}
 
 {% endtabs %}
+
+### Select tab items programmatically
+
+To select the tab items programmatically, you can use the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property in SfTabView.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView SelectedIndex="1">
+     <tabView:SfTabItem />
+     <tabView:SfTabItem />
+     <tabView:SfTabItem />
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+SfTabView tabView = new SfTabView();
+tabView.SelectedIndex = 1;
+
+{% endhighlight %}
+
+{% endtabs %}

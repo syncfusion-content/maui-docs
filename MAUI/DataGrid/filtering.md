@@ -199,6 +199,9 @@ The .NET MAUI DataGrid (SfDataGrid) provides excel like filtering UI and also ad
                        AllowFiltering="True"/>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 this.dataGrid.AllowFiltering = true;
 {% endhighlight %}
 {% endtabs %}
@@ -280,9 +283,15 @@ SfDataGrid provide the following events to UI filtering.
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}" 
                        AllowFiltering="True"
-                       FilterChaning="dataGrid_FilterChanging"/>
+                       FilterChanging="dataGrid_FilterChanging"/>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterChanging += dataGrid_FilterChanging;
+
 private void dataGrid_FilterChanging(object sender, DataGridFilterChangingEventArgs e)
 {
 
@@ -301,7 +310,13 @@ private void dataGrid_FilterChanging(object sender, DataGridFilterChangingEventA
                        FilterChanged="dataGrid_FilterChanged"/>
 {% endhighlight %}
 {% highlight c# %}
-private void dataGrid1_FilterChanged(object sender, DataGridFilterChangedEventArgs e)
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterChanged += dataGrid_FilterChanged;
+
+private void dataGrid_FilterChanged(object sender, DataGridFilterChangedEventArgs e)
 {
 
 }
@@ -319,6 +334,11 @@ When the filter list items in filter view are being populated, the [FilterItemsP
                        FilterItemsPopulating="dataGrid_FilterItemsPopulating"/>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterItemsPopulating += dataGrid_FilterItemsPopulating;
 private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataGrid.DataGridFilterItemsPopulatingEventArgs e)
 {
 
@@ -337,6 +357,11 @@ private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataG
                        FilterItemsPopulated="dataGrid_FilterItemsPopulated"/>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterItemsPopulated += dataGrid_FilterItemsPopulated;
 private void dataGrid_FilterItemsPopulated(object sender, DataGridFilterItemsPopulatedEventArgs e)
 {
 
@@ -370,6 +395,16 @@ We can change the filter UI for all the columns in DataGrid by changing the `Fil
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
+{% highlight c# %}
+Style styles = new Style(typeof(DataGridFilterView));
+styles.Setters.Add(new Setter() { Property = DataGridFilterView.FilterModeProperty, Value = DataGridFilterMode.AdvancedFilter });
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterPopupStyle = styles;
+{% endhighlight %}
 {% endtabs %}
 
 <img alt="Filter mode as advanced filter" src="Images/filtering/maui-datagrid-filtering-filterMode-advanced.png" width="500"/>
@@ -388,6 +423,12 @@ Filter UI view can be changed for a particular column in DataGrid by changing th
 
 <syncfusion:DataGridTextColumn MappingName="OrderID"
                                 FilterPopupStyle="{StaticResource filterViewStyle}"/>
+{% endhighlight %}
+{% highlight c# %}
+Style styles = new Style(typeof(DataGridFilterView));
+styles.Setters.Add(new Setter() { Property = DataGridFilterView.FilterModeProperty, Value = DataGridFilterMode.CheckboxFilter });
+
+dataGrid.Columns["OrderID"].FilterPopupStyle = styles;
 {% endhighlight %}
 {% endtabs %}
 
@@ -427,6 +468,22 @@ Setting `FilterMode` to AdvancedFilter and [CanGenerateUniqueItems](https://help
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
+{% highlight c# %}
+Style style = new Style(typeof(DataGridFilterView))
+{
+    Setters = 
+    {
+        new Setter() {Property = DataGridFilterView.FilterModeProperty, Value = DataGridFilterMode.AdvancedFilter},
+        new Setter() {Property = DataGridFilterView.CanGenerateUniqueItemsProperty, Value = false}
+    }
+};
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterPopupStyle = style;
+{% endhighlight %}
 {% endtabs %}
 
 <img alt="loading performance in advanced filter" src="Images/filtering/maui-datagrid-filtering-canGenerateUniqueItems-false.png" width="500"/>
@@ -438,7 +495,7 @@ When we set `AllowBlankFilters` as `True`, Combobox options have Null and Not Nu
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn MappingName="OrderID" AllowBlankFilters="False">
+<syncfusion:DataGridTextColumn MappingName="OrderID" AllowBlankFilters="False"/>
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.Columns["OrderID"].AllowBlankFilters = false;
@@ -460,7 +517,7 @@ In this, Done button is displayed to close the filter popup instead of OK and Ca
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn MappingName="OrderID" ImmediateUpdateColumnFilter="True">
+<syncfusion:DataGridTextColumn MappingName="OrderID" ImmediateUpdateColumnFilter="True"/>
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.Columns["OrderID"].ImmediateUpdateColumnFilter = true;
@@ -483,7 +540,7 @@ The sort options in the filter popup will be enabled only when we set [SortingMo
 {% highlight XAML %}
 <ContentPage.Resources>
     <Style x:Key="filterViewStyle" TargetType="syncfusion:DataGridFilterView">
-        <Setter Property="SortOptionsVisiblity" Value="false"/>
+        <Setter Property="SortOptionsVisibility" Value="false"/>
     </Style>
 </ContentPage.Resources>
 
@@ -491,6 +548,17 @@ The sort options in the filter popup will be enabled only when we set [SortingMo
                        ItemsSource="{Binding OrderInfoCollection}" 
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
+{% endhighlight %}
+
+{% highlight c# %}
+Style styles = new Style(typeof(DataGridFilterView));
+styles.Setters.Add(new Setter() { Property = DataGridFilterView.SortOptionVisibilityProperty, Value = true });
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterPopupStyle = styles;
 {% endhighlight %}
 {% endtabs %}
 
@@ -505,7 +573,7 @@ dataGrid.FilterItemsPopulating += dataGrid_FilterItemsPopulating;
 
 private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataGrid.DataGridFilterItemsPopulatingEventArgs e)
 {
-    if (e.Column.MappingName == "Name")
+    if (e.Column.MappingName == "Customer")
     {
         e.FilterControl.AscendingSortString = "Sort ascending";
         e.FilterControl.DescendingSortString = "Sort descending";
@@ -533,6 +601,22 @@ You can customize the FilterPopup size using [FilterPopupHeight](https://help.sy
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
+{% highlight c# %}
+Style style = new Style(typeof(DataGridFilterView))
+{
+    Setters =
+    {
+        new Setter() {Property = DataGridFilterView.FilterPopupHeightProperty, Value = 500},
+        new Setter() {Property = DataGridFilterView.FilterPopupWidthProperty, Value = 360},
+    }
+};
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterPopupStyle = style;
+{% endhighlight %}
 {% endtabs %}
 
 <img src="Images/filtering/maui-datagrid-filtering-filterPopupSize.png" width="500" alt="Customize filter popup size">
@@ -550,6 +634,13 @@ The default color of the filter icon can be customized by setting the [DataGridS
                 <syncfusion:DataGridStyle FilterIconColor="DarkBlue" />
         </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.DefaultStyle.FilterIconColor = Colors.DarkBlue;
 {% endhighlight %}
 {% endtabs %}
 
@@ -569,6 +660,19 @@ The `SfDataGrid` uses an icon to open the filter popup in UI filtering. You can 
                 </DataTemplate>
         </syncfusion:SfDataGrid.FilterIconTemplate>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+var filterIconTemplate  = new DataTemplate(() =>
+{
+    var icon = new Image { Source="filter.png"}
+	return icon;
+});
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterIconTemplate = filterIconTemplate;
 {% endhighlight %}
 {% endtabs %}
 
@@ -591,7 +695,7 @@ When choosing a `FilterIconTemplate` as a DataTemplateSelector, you have the opt
 </ContentPage.Resources>
 
 <ContentPage.Content>
-<syncfusion:SfDataGrid ItemsSource="{Binding EmployeeDetails}"
+<syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
                             x:Name="dataGrid"
                             AllowFiltering="True"
                             >
@@ -617,7 +721,7 @@ public class FilterIconTemplateSelector : DataTemplateSelector
             return null;
         }
 
-        if (column.MappingName == "EmployeeID")
+        if (column.MappingName == "OrderID")
         {
             return IconTemplate1;
         }
@@ -641,7 +745,7 @@ You can apply these customizations by assigning a DataGridStyle instance to the 
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding EmployeeDetails}"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowFiltering="True">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle
@@ -653,13 +757,18 @@ You can apply these customizations by assigning a DataGridStyle instance to the 
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-   dataGrid.DefaultStyle = new DataGridStyle
-   {
-        FilterPopupIconColor= Colors.Maroon,
-        FilterPopupBackground= Colors.LightCyan,
-        FilterPopupOkButtonBackgroundColor= Colors.Purple,
-        FilterPopupCheckboxCheckedColor= Colors.ForestGreen,
-    };
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+
+dataGrid.DefaultStyle = new DataGridStyle
+{
+    FilterPopupIconColor= Colors.Maroon,
+    FilterPopupBackground= Colors.LightCyan,
+    FilterPopupOkButtonBackgroundColor= Colors.Purple,
+    FilterPopupCheckboxCheckedColor= Colors.ForestGreen,
+};
 {% endhighlight %}
 {% endtabs %}
 
@@ -677,115 +786,115 @@ Use the following `DataGridStyle` properties to customize the filter popup menu 
 <th>Description</th>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupBackground]()</td>
+<td>{{'[DataGridStyle.FilterPopupBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupBackground)'| markdownify }}</td>
 <td>Background color of the filter popup (Brush).</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupTextColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupTextColor)'| markdownify }}</td>
 <td>Text color used within the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupIconColor)'| markdownify }}</td>
 <td>Color for icons displayed in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupDisabledIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupDisabledIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupDisabledIconColor)'| markdownify }}</td>
 <td>Color of the clear-filter icon when it’s disabled in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupTopDividerColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupTopDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupTopDividerColor)'| markdownify }}</td>
 <td>Color of the top divider line in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupOkButtonBackgroundColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupOkButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupOkButtonBackgroundColor)'| markdownify }}</td>
 <td>Background color of the OK button in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupOkButtonTextColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupOkButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupOkButtonTextColor)'| markdownify }}</td>
 <td>Text color of the OK button in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupOkButtonDisabledColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupOkButtonDisabledColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupOkButtonDisabledColor)'| markdownify }}</td>
 <td>Color of the OK button when disabled in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCancelButtonBackgroundColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCancelButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCancelButtonBackgroundColor)'| markdownify }}</td>
 <td>Background color of the Cancel button in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCancelButtonTextColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCancelButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCancelButtonTextColor)'| markdownify }}</td>
 <td>Text color of the Cancel button in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupHeaderOkIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupHeaderOkIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupHeaderOkIconColor)'| markdownify }}</td>
 <td>Color of the OK icon in the popup in Mobile view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupHeaderCancelIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupHeaderCancelIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupHeaderCancelIconColor)'| markdownify }}</td>
 <td>Color of the Cancel/Close icon in the popup in Mobile view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupPlaceholderColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupPlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupPlaceholderColor)'| markdownify }}</td>
 <td>Placeholder color for search bar, entry, and combo boxes in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCheckboxCheckedColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCheckboxCheckedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCheckboxCheckedColor)'| markdownify }}</td>
 <td>Fill color of checkboxes when selected in Checkbox filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupSearchBarIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupSearchBarIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupSearchBarIconColor)'| markdownify }}</td>
 <td>Color of the search icon in the checkbox filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupSearchBarStroke]()</td>
+<td>{{'[DataGridStyle.FilterPopupSearchBarStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupSearchBarStroke)'| markdownify }}</td>
 <td>Border color of the search bar in the checkbox filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupNoMatchesTextColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupNoMatchesTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupNoMatchesTextColor)'| markdownify }}</td>
 <td>Text color of the “No matches” label in the checkbox filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupRadioButtonCheckedColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupRadioButtonCheckedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupRadioButtonCheckedColor)'| markdownify }}</td>
 <td>Color of checked And/Or radio buttons in Advanced filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupRadioButtonUncheckedColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupRadioButtonUncheckedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupRadioButtonUncheckedColor)'| markdownify }}</td>
 <td>Color of unchecked And/Or radio buttons in Advanced filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCaseSensitiveActiveColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCaseSensitiveActiveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCaseSensitiveActiveColor)'| markdownify }}</td>
 <td>Case-sensitive icon color when activated in Advanced text filters.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCaseSensitiveInactiveColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCaseSensitiveInactiveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCaseSensitiveInactiveColor)'| markdownify }}</td>
 <td>Case-sensitive icon color when inactive in Advanced text filters.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCaseSensitiveHoverColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCaseSensitiveHoverColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCaseSensitiveHoverColor)'| markdownify }}</td>
 <td>Background color when hovering the case-sensitive icon (Advanced text filters).</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCalendarIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCalendarIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCalendarIconColor)'| markdownify }}</td>
 <td>Calendar icon color for date pickers in Advanced date filters.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterDropdownIconColor]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterDropdownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterDropdownIconColor)'| markdownify }}</td>
 <td>Dropdown icon color used in the advanced filter header area.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterTypeDropdownIconColor]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterTypeDropdownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterTypeDropdownIconColor)'| markdownify }}</td>
 <td>Dropdown icon color of the filter type combo box in Advanced filter.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterValueDropdownIconColor]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterValueDropdownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterValueDropdownIconColor)'| markdownify }}</td>
 <td>Dropdown icon color of the filter value combo box in Advanced filter.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterTypeDropdownStroke]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterTypeDropdownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterTypeDropdownStroke)'| markdownify }}</td>
 <td>Border color of the filter type combo box (Advanced filter).</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterValueDropdownStroke]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterValueDropdownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterValueDropdownStroke)'| markdownify }}</td>
 <td>Border color of the filter value combo box (Advanced filter).</td>
 </tr>
 </table>

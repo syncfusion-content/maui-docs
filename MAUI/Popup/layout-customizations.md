@@ -662,7 +662,7 @@ public partial class MainPage : ContentPage
 
 ### Disable the overlay background in .NET MAUI Popup?
 
-Disable the overlay background by using the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `False`. The default value of the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) is `True`.
+Disable the overlay background by using the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `False`.Users can interact with the screen behind the popup.If you don’t want background interaction but also don’t want a visible overlay, keep [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `True` and set the overlay color to Transparent in the popup style. This blocks background input while showing no overlay on the screen.The default value of the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) is `True`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -688,6 +688,127 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![.NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-disable-overlay.png)
+
+### Display popup in Android native embedding?
+
+Enables showing `SfPopup` inside apps that embed MAUI content natively. Create the `SfPopup` by passing the current `Activity` and `IMauiContext`, convert the MAUI layout using ToPlatform, and set it as the Activity’s content.
+
+{% tabs %}
+{% highlight c# hl_lines="18 19 20 21 22 37 38" %}
+using Android.App;
+using Android.Content.PM;
+using Android.OS;
+using Microsoft.Maui.Controls.Embedding;
+using Microsoft.Maui.Platform;
+using Syncfusion.Maui.Core.Hosting;
+using Syncfusion.Maui.Popup;
+
+namespace AndroidApp
+{
+    [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
+    public class MainActivity : Activity
+    {
+        SfPopup? popup;
+        Microsoft.Maui.Controls.Button? button;
+        protected override void OnCreate(Bundle? savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            MauiAppBuilder builder = MauiApp.CreateBuilder();
+            builder.UseMauiEmbeddedApp<Microsoft.Maui.Controls.Application>();
+            builder.ConfigureSyncfusionCore();
+            MauiApp mauiApp = builder.Build();
+            MauiContext _mauiContext = new MauiContext(mauiApp.Services, this);
+            Microsoft.Maui.Controls.StackLayout views = new Microsoft.Maui.Controls.StackLayout();
+            views.HeightRequest = 700;
+            button = new Microsoft.Maui.Controls.Button();
+            button.Text = "Click";
+            button.HeightRequest = 50;
+            popup = new SfPopup(this, _mauiContext);
+            button.Clicked += (s, e) =>
+            {
+                popup.Show();
+            };
+            views.Children.Add(button);
+            views.Children.Add(popup);
+            // Convert MauiView to NativeView.
+            Android.Views.View nativeview = views.ToPlatform(_mauiContext);            
+            SetContentView(nativeview);
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Display popup in iOS native embedding?
+
+Allows showing `SfPopup` in an iOS app that embeds MAUI content natively. Create the popup using the native `UIWindow` and `MauiContext` in the `SceneDelegate`, convert the layout to a `UIView` using ToPlatform, and host it through the window’s `root controller`.
+
+{% tabs %}
+{% highlight c# hl_lines="27 28 29 30 31 32 51 52 53 54 56 57" %}
+using Foundation;
+using Microsoft.Maui.Controls.Embedding;
+using UIKit;
+using Syncfusion.Maui.Popup;
+using Syncfusion.Maui.Core.Hosting;
+using Microsoft.Maui.Platform;
+
+namespace iOSApp
+{
+    [Register("SceneDelegate")]
+    public class SceneDelegate : UIResponder, IUIWindowSceneDelegate
+    {
+        [Export("window")]
+        public UIWindow? Window { get; set; }
+
+        [Export("scene:willConnectToSession:options:")]
+
+        public void WillConnect(UIScene scene, UISceneSession session, UISceneConnectionOptions connectionOptions)
+        {
+            // Use this method to optionally configure and attach the UIWindow 'Window' to the provided UIWindowScene 'scene'.
+            // Since we are not using a storyboard, the 'Window' property needs to be initialized and attached to the scene.
+            // This delegate does not imply the connecting scene or session are new (see UIApplicationDelegate 'GetConfiguration' instead).
+            if (scene is UIWindowScene windowScene)
+            {
+                Window ??= new UIWindow(windowScene);
+
+                // Create a 'UIViewController' with a single 'UILabel'
+                var viewController = new UIViewController();
+
+                MauiAppBuilder builder = MauiApp.CreateBuilder();
+                builder.UseMauiEmbeddedApp<Microsoft.Maui.Controls.Application>();
+                builder.ConfigureSyncfusionCore();
+
+                MauiApp mauiApp = builder.Build();
+                MauiContext _mauiContext = new MauiContext(mauiApp.Services);
+
+                Microsoft.Maui.Controls.StackLayout views = new Microsoft.Maui.Controls.StackLayout();
+
+                var popup = new SfPopup(Window, _mauiContext);
+
+                var button = new Microsoft.Maui.Controls.Button();
+                button.Text = "Click";
+                button.HeightRequest = 50;
+                button.Clicked += (s, e) =>
+                {
+                    popup.Show();
+                };
+
+                views.Children.Add(button);
+                views.Children.Add(popup);
+
+                var nativeView = views.ToPlatform(_mauiContext);
+                nativeView.Frame = viewController.View!.Frame;
+                nativeView.BackgroundColor = UIColor.SystemBackground;
+                viewController.View.AddSubview(nativeView);
+
+                Window.RootViewController = viewController;
+                Window.MakeKeyAndVisible();
+            }
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ### Show listView as a popup
 

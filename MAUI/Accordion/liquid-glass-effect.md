@@ -32,11 +32,10 @@ To achieve a glass like background, set the `Background` property to `Transparen
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11 12 14 75" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="10 11 13 74" %}
 <Grid>
     <Grid.Background>
-        <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="0,1">
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="#0F4C75" Offset="0.0"/>
             <GradientStop Color="#3282B8" Offset="0.5"/>
             <GradientStop Color="#1B262C" Offset="1.0"/>
@@ -50,7 +49,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
             <syncfusion:SfAccordion.Items>
                 <syncfusion:AccordionItem>
                     <syncfusion:AccordionItem.Header>
-                        <Grid  HeightRequest="48">
+                        <Grid HeightRequest="48">
                             <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular"  FontSize="14" />
                         </Grid>
                     </syncfusion:AccordionItem.Header>
@@ -80,7 +79,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
                                         Grid.Column="0"
                                         Padding="0"
                                         Margin="0,0,0,7">
-                                    <Image  Source="emp_01.png" />
+                                    <Image Source="emp_01.png" />
                                 </Border>
                                 <Label Text="Position" Grid.Column="1" Grid.Row="0" Margin="6,0,0,0"/>
                                 <Label Text="Chairman" Grid.Row="0" Grid.Column="2"/>
@@ -270,9 +269,7 @@ var phoneIcon = new Label
     Text = "\ue700",
     FontSize = 16,
     Margin = new Thickness(0, 2, 2, 2),
-    FontFamily = DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#" :
-                    DeviceInfo.Platform == DevicePlatform.WinUI ? "AccordionFontIcons.ttf#AccordionFontIcons" :
-                    "AccordionFontIcons",
+    FontFamily = DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#" : DeviceInfo.Platform == DevicePlatform.WinUI ? "AccordionFontIcons.ttf#AccordionFontIcons" : "AccordionFontIcons",
     VerticalOptions = LayoutOptions.Center,
     VerticalTextAlignment = TextAlignment.Center
 };

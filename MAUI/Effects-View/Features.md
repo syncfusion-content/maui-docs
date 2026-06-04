@@ -89,3 +89,28 @@ Enabling the [ShouldIgnoreTouches](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% endtabs %}
 
+## AutoResetEffects
+
+The [AutoResetEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_AutoResetEffects) property controls whether certain visual effects are automatically reset based on touch interactions.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <syncEffectsView:SfEffectsView
+            AutoResetEffects="Highlight">
+    </syncEffectsView:SfEffectsView>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+var effectsView = new SfEffectsView
+{
+    AutoResetEffects = AutoResetEffects.Highlight,
+
+};
+
+{% endhighlight %}
+
+{% endtabs %}

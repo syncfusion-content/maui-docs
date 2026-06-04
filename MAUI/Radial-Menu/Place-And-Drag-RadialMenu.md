@@ -71,6 +71,31 @@ namespace RadialSample
 
 ![Dragging Radial Menu](images/placing-dragging/maui-radialmenu-dragging.png)
 
+## Rotation
+
+You can enable or disable the rotation behavior of the Radial Menu by using the [`EnableRotation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_EnableRotation) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+        <syncfusion:SfRadialMenu x:Name="radialMenu" 
+                                  EnableRotation ="False">
+        </syncfusion:SfRadialMenu>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                EnableRotation = false
+            };
+            this.Content = radialMenu;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Drag events
 
 [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html) provides an event for [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragBegin) that is triggered when the Radial Menu begins to be dragged.

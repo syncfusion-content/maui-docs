@@ -20,37 +20,34 @@ N>
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       AddNewRowPosition="Top"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None"
                        SelectionMode="Single"
                        NavigationMode="Cell"
                        AllowEditing="True"
-                       AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="#" 
-                                            MappingName="OrderID" />
-            <syncfusion:DataGridTextColumn  HeaderText="Customer ID" 
-                                            MappingName="CustomerID.CustomerID" />
-            <syncfusion:DataGridTextColumn  HeaderText="Ship City" 
-                                            MappingName="ShipCity" />
-            <syncfusion:DataGridTextColumn  HeaderText="Ship Country" 
-                                            MappingName="ShipCountry" />
+                       AddNewRowPosition="Top">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City"/>
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid.SelectionMode = DataGridSelectionMode.Single;
-        dataGrid.NavigationMode = DataGridNavigationMode.Cell;
-        dataGrid.AllowEditing = true;
-        dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
-    }
-}
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.AllowEditing = true;
+dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,29 +60,34 @@ The following code snippet demonstrates how to change the AddNewRow position to 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       AddNewRowPosition="Bottom"
-                       AddNewRowText="Click here to add new row in datagrid"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None"
                        SelectionMode="Single"
                        NavigationMode="Cell"
                        AllowEditing="True"
-                       AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       AddNewRowPosition="Bottom">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City"/>
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country" />
+    </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid.SelectionMode = DataGridSelectionMode.Single;
-        dataGrid.NavigationMode = DataGridNavigationMode.Cell;
-        dataGrid.AllowEditing = true;
-        dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Bottom;
-        dataGrid.AddNewRowText = "Click here to add new row in datagrid";
-    }
-}
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.AllowEditing = true;
+dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Bottom;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,28 +99,25 @@ SfDataGrid adds new data item from AddNewRow at the end of collection. When data
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
                        AddNewRowPosition="Top"
                        SelectionMode="Single"
                        NavigationMode="Cell"
                        AllowEditing="True"
-                       NewItemPlaceholderPosition="AtBeginning"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       NewItemPlaceholderPosition="AtBeginning">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid.SelectionMode = DataGridSelectionMode.Single;
-        dataGrid.NavigationMode = DataGridNavigationMode.Cell;
-        dataGrid.AllowEditing = true;
-        dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
-        dataGrid.NewItemPlaceholderPosition = Syncfusion.Maui.Data.NewItemPlaceholderPosition.AtBeginning;
-    }
-}
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.AllowEditing = true;
+dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+dataGrid.NewItemPlaceholderPosition = Syncfusion.Maui.Data.NewItemPlaceholderPosition.AtBeginning;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,29 +127,36 @@ You can change the default static string of AddNewRow in datagrid by using the [
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       AddNewRowPosition="Top"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None"
                        AddNewRowText="Click here to add new row in datagrid"
                        SelectionMode="Single"
                        NavigationMode="Cell"
                        AllowEditing="True"
-                       AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       AddNewRowPosition="Top">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City"/>
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country" />
+    </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid.SelectionMode = DataGridSelectionMode.Single;
-        dataGrid.NavigationMode = DataGridNavigationMode.Cell;
-        dataGrid.AllowEditing = true;
-        dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
-        dataGrid.AddNewRowText = "Click here to add new row in datagrid";
-    }
-}
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.AllowEditing = true;
+dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+dataGrid.AddNewRowText = "Click here to add new row in datagrid";
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,19 +168,19 @@ SfDataGrid allows you to set the default values for AddNewRow while initiating, 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       AddNewRowPosition="Top"
-                       AddNewRowInitiating="DataGrid_AddNewRowInitiating"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
                        SelectionMode="Single"
                        NavigationMode="Cell"
                        AllowEditing="True"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       AddNewRowPosition="Top"
+                       AddNewRowInitiating="DataGrid_AddNewRowInitiating">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.AddNewRowInitiating += DataGrid_AddNewRowInitiating;
+DataGrid.AddNewRowInitiating += DataGrid_AddNewRowInitiating;
 
-private void dataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowInitiatingEventArgs e)
+private void DataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowInitiatingEventArgs e)
 {
     var data = e.Object as OrderInfo;
     if(data != null)
@@ -193,28 +199,17 @@ SfDataGrid control does not initiate values for complex properties defined in th
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       AddNewRowPosition="Top"
-                       AutoGenerateColumnsMode="None"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
                        SelectionMode="Single"
                        NavigationMode="Cell"
                        AllowEditing="True"
-                       AddNewRowInitiating="DataGrid_AddNewRowInitiating"
-                       ItemsSource="{Binding OrderInfoCollection}">
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="#" 
-                                          MappingName="OrderID" />
-        <syncfusion:DataGridTextColumn  HeaderText="Customer ID" 
-                                        MappingName="CustomerID.CustomerID" />
-        <syncfusion:DataGridTextColumn  HeaderText="Ship City" 
-                                        MappingName="ShipCity" />
-        <syncfusion:DataGridTextColumn  HeaderText="Ship Country" 
-                                        MappingName="ShipCountry" />
-    </syncfusion:SfDataGrid.Columns>
+                       AddNewRowPosition="Top"
+                       AddNewRowInitiating="DataGrid_AddNewRowInitiating">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.AddNewRowInitiating += DataGrid_AddNewRowInitiating;
+DataGrid.AddNewRowInitiating += DataGrid_AddNewRowInitiating;
 
 private void DataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowInitiatingEventArgs e)
 {
@@ -222,7 +217,7 @@ private void DataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowIniti
     if(data != null)
     {
         data.OrderID = 101;
-        data.CustomerID = new CustomerInfo();
+        data.Customer = new CustomerInfo();
     }
 }
 {% endhighlight %}
@@ -238,13 +233,11 @@ You can commit or cancel the new record in AddNewRow by pressing the Enter and E
 {% highlight c# %}
 if (this.dataGrid.View.IsAddingNew)
 {
-    //Which end edit the current cell and revert the entered value.
-
+    // Which end edit the current cell and revert the entered value.
     if (this.dataGrid.CurrentCellManager.DataColumn.IsEditing)
         this.dataGrid.EndEdit();
 
     var addNewRowController = this.dataGrid.AddNewRowController;
-
     addNewRowController.CancelAddNew();
 }
 {% endhighlight %}
@@ -256,25 +249,24 @@ if (this.dataGrid.View.IsAddingNew)
 {% highlight c# %}
 if (this.dataGrid.View.IsAddingNew)
 {
-
     if (this.dataGrid.CurrentCellManager.DataColumn.IsEditing)
         this.dataGrid.EndEdit();
 
    RowColumnIndex rowColumnIndex = this.dataGrid.CurrentCellManager.RowColumnIndex;
 
-    //Process the commit operation in AddNewRow.
+    // Process the commit operation in AddNewRow.
     var addNewRowController = this.dataGrid.AddNewRowController;
     addNewRowController.CommitAddNew(dataGrid);
 
-    //Gets the row index of AddNewRow 
+    // Gets the row index of AddNewRow 
     rowColumnIndex.RowIndex = addNewRowController.GetAddNewRowIndex(dataGrid);
     this.dataGrid.SelectedRows.Clear();
 
-    //If the AddNewRowPosition is Top need to move the current cell to next row 
+    // If the AddNewRowPosition is Top need to move the current cell to next row 
     if (this.dataGrid.AddNewRowPosition == DataGridAddNewRowPosition.Top)
         rowColumnIndex.RowIndex = rowColumnIndex.RowIndex + 1;
 
-    //Which retains the current cell border in the row after canceling AddNewRow as you press ESC key operation.
+    // Which retains the current cell border in the row after canceling AddNewRow as you press ESC key operation.
     this.dataGrid.MoveCurrentCellTo(rowColumnIndex);
 }
 {% endhighlight %}
@@ -298,20 +290,20 @@ DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView]
 
 {% tabs %}
 {% highlight xaml %}
- <ContentPage.Resources>
-     <Style TargetType="syncfusion:DataGridAddNewRowView">
-         <Setter Property="Background"
-                 Value="#0074E3" />
-         <Setter Property="TextColor"
-                 Value="White" />
-         <Setter Property="FontAttributes"
-                 Value="Italic" />
-         <Setter Property="FontSize"
-                 Value="24" />
-         <Setter Property="FontFamily"
-                 Value="TimesNewRoman" />
-     </Style>
- </ContentPage.Resources>
+<ContentPage.Resources>
+    <Style TargetType="syncfusion:DataGridAddNewRowView">
+        <Setter Property="Background"
+                Value="#1976D2" />
+        <Setter Property="TextColor"
+                Value="White" />
+        <Setter Property="FontAttributes"
+                Value="Bold" />
+        <Setter Property="FontSize"
+                Value="16" />
+        <Setter Property="FontFamily"
+                Value="Segoe UI" />
+    </Style>
+</ContentPage.Resources>
 {% endhighlight %}
 {% endtabs %}
 
@@ -321,21 +313,20 @@ You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFami
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
                        AddNewRowPosition="Top"
                        SelectionUnit="Row"
                        SelectionMode="Single"
                        NavigationMode="Cell"
-                       AllowEditing="True"
-                       AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfoCollection}">
-     <syncfusion:SfDataGrid.DefaultStyle>
-         <syncfusion:DataGridStyle AddNewRowBackground="#0074E3"
+                       AllowEditing="True">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle  AddNewRowBackground="#1976D2"
                                    AddNewRowTextColor="White"
-                                   AddNewRowFontAttributes="Italic"
-                                   AddNewRowFontSize="24"
-                                   AddNewRowFontFamily="TimesNewRoman" />
-     </syncfusion:SfDataGrid.DefaultStyle>
+                                   AddNewRowFontAttributes="Bold"
+                                   AddNewRowFontSize="16"
+                                   AddNewRowFontFamily="Segoe UI" />
+    </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -348,47 +339,70 @@ You can enable the AddNewRow in `DetailsViewDataGrid` by specifying the position
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       AddNewRowPosition="Top"
-                       AutoGenerateRelations="False"
-                       SelectionMode="Single"
-                       NavigationMode="Cell"
-                       AllowEditing="True"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
                        AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       AllowEditing="True"
+                       AddNewRowPosition="Top"
+                       SelectionMode="Single"
+                       NavigationMode="Cell">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="#" 
-                                          MappingName="OrderID" />
-        <syncfusion:DataGridTextColumn  HeaderText="Customer ID" 
-                                        MappingName="CustomerID.CustomerID" />
-        <syncfusion:DataGridTextColumn  HeaderText="Ship City" 
-                                        MappingName="ShipCity" />
-        <syncfusion:DataGridTextColumn  HeaderText="Ship Country" 
-                                        MappingName="ShipCountry" />
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City" />
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country" />
     </syncfusion:SfDataGrid.Columns>
     <syncfusion:SfDataGrid.DetailsViewDefinition>
-    <syncfusion:DataGridViewDefinition RelationalColumn="Customers">
-        <syncfusion:DataGridViewDefinition.DataGrid>
-            <syncfusion:SfDataGrid x:Name="firstLevelNestedGrid"
-                                   AutoGenerateColumnsMode="None"
-                                   AddNewRowPosition="Top">
-                <syncfusion:SfDataGrid.Columns>
-                    <syncfusion:DataGridTextColumn MappingName="OrderID"
-                                                   HeaderText="Order ID"
-                                                   Format="#" />
-                    <syncfusion:DataGridTextColumn MappingName="Quantity"
-                                                   HeaderText="Quantity" />
-                    <syncfusion:DataGridTextColumn MappingName="Status"
-                                                   HeaderText="Status" />
-                </syncfusion:SfDataGrid.Columns>
-            </syncfusion:SfDataGrid>
-        </syncfusion:DataGridViewDefinition.DataGrid>
-    </syncfusion:DataGridViewDefinition>
-</syncfusion:SfDataGrid.DetailsViewDefinition>
+        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+            <syncfusion:DataGridViewDefinition.DataGrid>
+                <syncfusion:SfDataGrid x:Name="firstLevelNestedGrid"
+                                       AddNewRowPosition="Top">
+                    <syncfusion:SfDataGrid.Columns>
+                        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                                       HeaderText="Order ID" />
+                        <syncfusion:DataGridTextColumn MappingName="Quantity"
+                                                       HeaderText="Quantity" />
+                        <syncfusion:DataGridTextColumn MappingName="Status"
+                                                       HeaderText="Status" />
+                    </syncfusion:SfDataGrid.Columns>
+                </syncfusion:SfDataGrid>
+            </syncfusion:DataGridViewDefinition.DataGrid>
+        </syncfusion:DataGridViewDefinition>
+    </syncfusion:SfDataGrid.DetailsViewDefinition>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.firstLevelNestedGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+
+// Parent DataGrid
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+
+// Child (DetailsView) DataGrid
+SfDataGrid detailsGrid = new SfDataGrid();
+detailsGrid.AllowEditing = true;
+detailsGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+detailsGrid.NavigationMode = DataGridNavigationMode.Cell;
+detailsGrid.SelectionMode = DataGridSelectionMode.Single;
+
+// DetailsView definition
+DataGridViewDefinition viewDefinition = new DataGridViewDefinition();
+viewDefinition.RelationalColumn = "Orders";
+viewDefinition.DataGrid = detailsGrid;
+
+// Assign DetailsView to parent grid
+dataGrid.DetailsViewDefinition.Add(viewDefinition);
+
+// Set content
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -444,50 +458,71 @@ You can change the default static string of AddNewRow in details view grid by us
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowEditing="True"
                        AddNewRowPosition="Top"
                        SelectionMode="Single"
-                       NavigationMode="Cell"
-                       AllowEditing="True"
-                       AutoGenerateRelations="False"
-                       AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       NavigationMode="Cell">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="#" 
-                                          MappingName="OrderID" />
-        <syncfusion:DataGridTextColumn  HeaderText="Customer ID" 
-                                        MappingName="CustomerID.CustomerID" />
-        <syncfusion:DataGridTextColumn  HeaderText="Ship City" 
-                                        MappingName="ShipCity" />
-        <syncfusion:DataGridTextColumn  HeaderText="Ship Country" 
-                                        MappingName="ShipCountry" />
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City" />
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country" />
     </syncfusion:SfDataGrid.Columns>
     <syncfusion:SfDataGrid.DetailsViewDefinition>
-    <syncfusion:DataGridViewDefinition RelationalColumn="Customers">
-        <syncfusion:DataGridViewDefinition.DataGrid>
-            <syncfusion:SfDataGrid x:Name="firstLevelNestedGrid"
-                                   AddNewRowPosition="Top"
-                                   AddNewRowText="Click here to add new row in child grid"
-                                   AutoGenerateColumnsMode="None"
-                                   AddNewRowPosition="Top">
-                <syncfusion:SfDataGrid.Columns>
-                    <syncfusion:DataGridTextColumn MappingName="OrderID"
-                                                   HeaderText="Order ID"
-                                                   Format="#" />
-                    <syncfusion:DataGridTextColumn MappingName="Quantity"
-                                                   HeaderText="Quantity" />
-                    <syncfusion:DataGridTextColumn MappingName="Status"
-                                                   HeaderText="Status" />
-                </syncfusion:SfDataGrid.Columns>
-            </syncfusion:SfDataGrid>
-        </syncfusion:DataGridViewDefinition.DataGrid>
-    </syncfusion:DataGridViewDefinition>
-</syncfusion:SfDataGrid.DetailsViewDefinition>
+        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+            <syncfusion:DataGridViewDefinition.DataGrid>
+                <syncfusion:SfDataGrid x:Name="firstLevelNestedGrid"
+                                       AddNewRowText="Click here to add new row in child grid"
+                                       AddNewRowPosition="Top">
+                    <syncfusion:SfDataGrid.Columns>
+                        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                                       HeaderText="Order ID" />
+                        <syncfusion:DataGridTextColumn MappingName="Quantity"
+                                                       HeaderText="Quantity" />
+                        <syncfusion:DataGridTextColumn MappingName="Status"
+                                                       HeaderText="Status" />
+                    </syncfusion:SfDataGrid.Columns>
+                </syncfusion:SfDataGrid>
+            </syncfusion:DataGridViewDefinition.DataGrid>
+        </syncfusion:DataGridViewDefinition>
+    </syncfusion:SfDataGrid.DetailsViewDefinition>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.firstLevelNestedGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
-this.firstLevelNestedGrid.AddNewRowText = "Click here to add new row in child grid";
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+
+// Parent DataGrid
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+
+// Child (DetailsView) DataGrid
+SfDataGrid detailsGrid = new SfDataGrid();
+detailsGrid.AllowEditing = true;
+detailsGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+detailsGrid.NavigationMode = DataGridNavigationMode.Cell;
+detailsGrid.SelectionMode = DataGridSelectionMode.Single;
+detailsGrid.AddNewRowText="Click here to add new row in child grid";
+
+// DetailsView definition
+DataGridViewDefinition viewDefinition = new DataGridViewDefinition();
+viewDefinition.RelationalColumn = "Orders";
+viewDefinition.DataGrid = detailsGrid;
+
+// Assign DetailsView to parent grid
+dataGrid.DetailsViewDefinition.Add(viewDefinition);
+
+// Set content
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 

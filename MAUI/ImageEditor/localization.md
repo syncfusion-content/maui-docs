@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization in .NET MAUI Image Editor Control | Syncfusion<sup>&reg;</sup>
+title: Localization in .NET MAUI Image Editor Control | Syncfusion
 description: Learn about the localization feature in the Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor(SfImageEditor) control and more.
 platform: maui
 control: SfImageEditor

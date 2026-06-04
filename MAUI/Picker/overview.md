@@ -1,13 +1,11 @@
 ---
 layout: post
-title: About .NET MAUI Picker control | Syncfusion<sup>&reg;</sup>
+title: About .NET MAUI Picker control | Syncfusion
 description: Learn about the overview of Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control, its basic features, and picker functionalities.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
-
-> **Notice**: After **Volume 3 2025 (Mid of Sep 2025)**, feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Overview of .NET MAUI Picker (SfPicker)
 

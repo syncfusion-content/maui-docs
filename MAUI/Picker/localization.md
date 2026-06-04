@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+title: Localization with .NET MAUI Picker Control | Syncfusion
 description: Learn here all about localization with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker

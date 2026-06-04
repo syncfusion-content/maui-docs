@@ -175,7 +175,36 @@ public class ViewModel
 
 ![Gradient in MAUI Chart](Appearance_images/MAUI_polar_chart_gradient.png)
 
-## Plotting Area Customization:
+## Point Color Path
+
+The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:PolarLineSeries PointColorPath="PointColor"></chart:PolarLineSeries>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+PolarAreaSeries series = new PolarAreaSeries()
+{
+	PointColorPath="PointColor"
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![PointColorPath in MAUI Chart](Appearance_images/MAUI_polar_chart_pointcolorpath.png)
+
+N> The property is not applicable to the `PolarAreaSeries` type.
+
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
+
+## Plotting Area Customization
 
 [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 

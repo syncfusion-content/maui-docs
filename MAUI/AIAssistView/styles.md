@@ -1357,3 +1357,81 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+## AutoComplete suggestion item styling
+
+To style the autocomplete suggestion overlay view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionBackground </td>
+<td> Background color of the autocomplete suggestion overlay. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemBackground </td>
+<td> Background color of an item in the autocomplete suggestion overlay. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemTextColor </td>
+<td> Text color of an item in the autocomplete suggestion overlay. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemFontFamily </td>
+<td> Font family of an item in the autocomplete suggestion overlay. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemFontSize </td>
+<td> Font size of an item in the autocomplete suggestion overlay. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemFontAttributes </td>
+<td> Font attributes of an item in the autocomplete suggestion overlay. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewAutoCompleteSuggestionBackground">Orange</Color>
+                <Color x:Key="SfAIAssistViewAutoCompleteSuggestionItemBackground">LightSkyBlue</Color>
+                <Color x:Key="SfAIAssistViewAutoCompleteSuggestionItemTextColor">Green</Color>
+                <x:String x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontFamily">OpenSansSemibold</x:String>
+                <x:Double x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontSize">20</x:Double>
+                <FontAttributes x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontAttributes">Bold</FontAttributes>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewAutoCompleteSuggestionBackground", Colors.Orange);
+    dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemBackground", Colors.LightSkyBlue);
+    dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemTextColor", Colors.Green);
+    dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemFontFamily", "OpenSansSemibold");
+    dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemFontSize", 20.0);
+    dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemFontAttributes", FontAttributes.Bold);
+    this.Resources.Add(dictionary);
+    ....
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Auto Complete Suggestions style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-auto-complete-suggestion-item-style.png)

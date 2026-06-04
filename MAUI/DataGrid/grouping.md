@@ -25,12 +25,16 @@ You can enable data grouping in the SfDataGrid by setting the [SfDataGrid.AllowG
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding Orders}"
                        AllowGrouping="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,14 +55,18 @@ You can modify the GroupDropArea text by setting the [SfDataGrid.GroupDropAreaTe
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding Orders}"
                        GroupDropAreaText="Drag and drop the column here"
                        AllowGrouping="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
 dataGrid.GroupDropAreaText = "Drag and drop the column here";
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,14 +79,18 @@ Use the [SfDataGrid.GroupDropAreaHeight](https://help.syncfusion.com/cr/maui/Syn
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding Orders}"
                        GroupDropAreaHeight="100"
                        AllowGrouping="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
 dataGrid.GroupDropAreaHeight = 100;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,7 +111,7 @@ You can style the `GroupDropArea` using the following SfDataGrid properties:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding Orders}"
                        AllowGrouping="True">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle GroupDropAreaTextColor="Blue"
@@ -113,7 +125,11 @@ You can style the `GroupDropArea` using the following SfDataGrid properties:
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
+
 var defaultStyle = new DataGridStyle()
 {
     GroupDropAreaTextColor = Colors.Blue,
@@ -126,6 +142,8 @@ var defaultStyle = new DataGridStyle()
 };
 
 dataGrid.DefaultStyle = defaultStyle;
+
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -145,7 +163,7 @@ You can style the `GroupDropAreaItem` using the following SfDataGrid properties:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding Orders}"
                        AllowGrouping="True">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle GroupDropItemTextColor="Blue"
@@ -160,7 +178,10 @@ You can style the `GroupDropAreaItem` using the following SfDataGrid properties:
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
+
 var defaultStyle = new DataGridStyle()
 {
     GroupDropItemTextColor = Colors.Blue,
@@ -174,6 +195,8 @@ var defaultStyle = new DataGridStyle()
 };
 
 dataGrid.DefaultStyle = defaultStyle;
+
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -191,22 +214,27 @@ To apply column grouping, please refer to the following code example:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
-        <syncfusion:GroupColumnDescription ColumnName="Name" />
+        <syncfusion:GroupColumnDescription ColumnName="Customer" />
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-    dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
-    ColumnName = "Name",
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
+{
+    ColumnName = "Customer",
 });
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot shows the rendered output when grouping is applied:
 
-![DataGrid with grouping](Images\Grouping\maui-datagrid-single-grouping.png)
+<img alt="DataGrid with grouping" src="Images/Grouping/maui-datagrid-single-grouping.png" width="404"/>
 
 ### Clearing or removing a group
 
@@ -233,28 +261,36 @@ The SfDataGrid also allows to group the data against one or more columns using t
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
+                        ItemsSource="{Binding Orders}"
                         GroupingMode="Multiple">
                         
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
-        <syncfusion:GroupColumnDescription ColumnName="Name" />
-        <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+        <syncfusion:GroupColumnDescription ColumnName="Customer" />
+        <syncfusion:GroupColumnDescription ColumnName="City" />
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.GroupingMode = GroupingMode.Multiple;
+dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
+{
+    ColumnName = "Customer" 
+});
+dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
+{
+    ColumnName = "City" 
+});
 
-this.dataGrid.GroupingMode = GroupingMode.Multiple;
-    dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
-    ColumnName = "Name" });
-    dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
-    ColumnName = "ShipCity" });
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot shows the multi-grouping:
-![DataGrid with multi-column grouping](Images\Grouping\maui-datagrid-multiple-grouping.png)
+<img alt="DataGrid with multi-column grouping" src="Images/Grouping/maui-datagrid-multiple-grouping.png" width="404"/>
 
 ## Custom Grouping
 
@@ -285,21 +321,27 @@ To set a custom grouping converter for the group description that is added to gr
     </ContentPage.BindingContext>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrderInfoCollection}">
+                           ItemsSource="{Binding Orders}">
 
         <syncfusion:SfDataGrid.GroupColumnDescriptions>
             <syncfusion:GroupColumnDescription ColumnName="Freight"
-                                                Converter="{StaticResource groupConverter}" />
+                                               Converter="{StaticResource groupConverter}" />
         </syncfusion:SfDataGrid.GroupColumnDescriptions>
     </syncfusion:SfDataGrid>
 </ContentPage> 
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
+{
     ColumnName = "Freight",
     Converter = new GroupConverter()
 }); 
+
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -396,14 +438,14 @@ In custom grouping, you can sort all the inner records of each group by setting 
     </ContentPage.BindingContext>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrderInfoCollection}">
+                           ItemsSource="{Binding Orders}">
         <syncfusion:SfDataGrid.GroupColumnDescriptions>
             <syncfusion:GroupColumnDescription ColumnName="OrderID"
-                                                Converter="{StaticResource groupOrderNoConverter}"
-                                                SortGroupRecords="false" />
-            <syncfusion:GroupColumnDescription ColumnName="Price"
-                                                Converter="{StaticResource priceConverter}"
-                                                SortGroupRecords="True" />
+                                               Converter="{StaticResource groupOrderNoConverter}"
+                                               SortGroupRecords="True" />
+            <syncfusion:GroupColumnDescription ColumnName="UnitPrice"
+                                               Converter="{StaticResource priceConverter}"
+                                               SortGroupRecords="False" />
         </syncfusion:SfDataGrid.GroupColumnDescriptions>
     </syncfusion:SfDataGrid>
 </ContentPage>
@@ -425,19 +467,19 @@ dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
     SortGroupRecords = true
 });  
 			
-public class GroupOrderNoConvertor : IValueConverter
+public class GroupOrderNoConverter : IValueConverter
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-		var orderInfo = value as OrderInfo;
-        if (orderInfo.OrderID < 10)
-            return "<10";
-        if (orderInfo.OrderID >= 10 && orderInfo.OrderID < 15)
-            return "Between 10 To 15";
-        if (orderInfo.OrderID >= 15 && orderInfo.OrderID <= 20)
-            return "Between 15 To 20";
+        var orderInfo = value as OrderInfo;
+        if (orderInfo.OrderID < 10005)
+            return "<10005";
+        else if (orderInfo.OrderID >= 10005 && orderInfo.OrderID < 10010)
+            return "Between 10005 To 10010";
+        else if (orderInfo.OrderID >= 10010 && orderInfo.OrderID < 10015)
+            return "Between 10010 To 10015";
         else
-            return ">20";
+            return ">100015";
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -448,16 +490,18 @@ public class GroupOrderNoConvertor : IValueConverter
 
 public class PriceConverter : IValueConverter
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         var orderInfo = value as OrderInfo;
-        if (orderInfo.Price < 10)
-            return "<10";
-        if (orderInfo.Price >= 10 && orderInfo.Price < 16)
-            return "Between 10 To 15";
-        if (orderInfo.Price >= 15 && orderInfo.Price <= 20)
-            return "Between 15 To 20";
-        return ">20";
+
+        if (orderInfo.UnitPrice < 50)
+            return "<50";
+        else if (orderInfo.UnitPrice >= 50 && orderInfo.UnitPrice < 150)
+            return "Between 50 To 150";
+        else if (orderInfo.UnitPrice >= 150 && orderInfo.UnitPrice <= 250)
+            return "Between 150 To 250";
+        else
+            return ">250";
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -471,7 +515,7 @@ public class PriceConverter : IValueConverter
 
 As you can see in the below screenshot, the records are sorted based on the `OrderNo` column, since `SortGroupRecords` is set as `true` and it is not sorted further based on `Price` column since `SortGroupRecords` is set as `false`.
 
-![SfDataGrid with SortGroupRecords](Images\Grouping\maui-datagrid-sort-mode.png)
+<img alt="SfDataGrid with SortGroupRecords" src="Images/Grouping/maui-datagrid-sort-mode.png" width="404"/>
 
 ## Display based grouping using GroupMode property
 
@@ -494,8 +538,9 @@ orderID.Format = "#";
 {% endtabs %}
 
 The following screenshot shows a comparison between two group modes. `GroupMode.Value` on the Top and `GroupMode.Display` on the Bottom:
-![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-value.png)
-![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-display.png)
+
+<img alt="DataGrid with group mode value" src="Images/Grouping/maui-datagrid-mode-value.png" width="404"/>
+<img alt="DataGrid with group mode display" src="Images/Grouping/maui-datagrid-mode-display.png" width="404"/>
 
 ## Expand and Collapse Groups
 
@@ -506,11 +551,15 @@ To expand and collapse the groups at runtime, you can simply set the [SfDataGrid
 
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AllowGroupExpandCollapse="True"
-                        ItemsSource="{Binding OrderInfoCollection}" />
+                        ItemsSource="{Binding Orders}" />
                        
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.AllowGroupExpandCollapse = true;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.AllowGroupExpandCollapse = true;
+dataGrid.ItemsSource = viewModel.Orders;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -523,11 +572,15 @@ To expand all groups initially, set the [SfDataGrid.AutoExpandGroups](https://he
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoExpandGroups="True"
                         AllowGroupExpandCollapse="True"
-                        ItemsSource="{Binding OrderInfoCollection}" />
+                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.AutoExpandGroups = true;
-this.dataGrid.AllowGroupExpandCollapse = true;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.AutoExpandGroups = true;
+dataGrid.AllowGroupExpandCollapse = true;
+dataGrid.ItemsSource = viewModel.Orders;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -555,7 +608,7 @@ this.dataGrid.CollapseGroup(group);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with group expanding and collapsing](Images\Grouping\maui-datagrid-expand-specific-group.png)
+<img alt="DataGrid with group expanding and collapsing" src="Images/Grouping/maui-datagrid-expand-specific-group.png" width="404"/>
 
 ## Events
 
@@ -632,13 +685,17 @@ The width of indent column can be customized by the [IndentColumnWidth](https://
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
+                        ItemsSource="{Binding Orders}"
                         IndentColumnWidth="60" />
 {% endhighlight %}
 
 {% highlight c# %}
 
-this.dataGrid.IndentColumnWidth = 60;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.IndentColumnWidth = 60;
+this.Content = dataGrid;
 
 {% endhighlight %}
 {% endtabs %}
@@ -654,7 +711,7 @@ The following code snippet shows how to apply a background color to the indent c
 <ContentPage.Resources>
     <ResourceDictionary>
         <local:CellStyleConverter x:Key="cellStyleConverter" />
-        <Style  TargetType="syncfusion:DataGridIndentCell">
+        <Style TargetType="syncfusion:DataGridIndentCell">
             <Setter Property="Background"
                     Value="{Binding Source={RelativeSource Mode=Self}, 
                     Converter={StaticResource 
@@ -665,8 +722,8 @@ The following code snippet shows how to apply a background color to the indent c
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
-        <syncfusion:GroupColumnDescription ColumnName="Name" />
-        <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+        <syncfusion:GroupColumnDescription ColumnName="Customer" />
+        <syncfusion:GroupColumnDescription ColumnName="City" />
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
 </syncfusion:SfDataGrid>   
 {% endhighlight %}
@@ -692,7 +749,7 @@ public class CellStyleConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![SfDataGrid with IndentColumnBackgroundColor](Images\Grouping\maui-datagrid-indent-column-background-color.png)
+<img alt="SfDataGrid with IndentColumnBackgroundColor" src="Images/Grouping/maui-datagrid-indent-column-background-color.png" width="404"/>
 
 ### Customize grouped column visibility
 
@@ -703,11 +760,15 @@ The visibility of the grouped column can be customized by the [SfDataGrid.ShowCo
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoGenerateColumns="True"
-                        ItemsSource="{Binding OrderInfoCollection}"
+                        ItemsSource="{Binding Orders}"
                         ShowColumnWhenGrouped="False" />
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.ShowColumnWhenGrouped = false;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.ShowColumnWhenGrouped = false;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -722,7 +783,7 @@ The SfDataGrid uses an icon to indicate the expand and collapse state of groups.
 {% highlight xaml %}
 <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
                        HorizontalOptions="FillAndExpand"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding Orders}"
                        x:Name="dataGrid"
                        GroupingMode="Multiple"
                        AllowGroupExpandCollapse="True"
@@ -734,28 +795,41 @@ The SfDataGrid uses an icon to indicate the expand and collapse state of groups.
         </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
         
         <syncfusion:SfDataGrid.GroupColumnDescriptions>
-            <syncfusion:GroupColumnDescription ColumnName="Name" />
-            <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+            <syncfusion:GroupColumnDescription ColumnName="City" />
+            <syncfusion:GroupColumnDescription ColumnName="Customer" />            
         </syncfusion:SfDataGrid.GroupColumnDescriptions>
 </syncfusion:SfDataGrid>                           
 {% endhighlight %}
 
 {% highlight c# %}
-this.dataGrid.GroupingMode = GroupingMode.Multiple;
-this.dataGrid.AllowGroupExpandCollapse = true;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.GroupingMode = GroupingMode.Multiple;
+dataGrid.AllowGroupExpandCollapse = true;
+dataGrid.AutoGenerateColumnsMode = None;
+dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
+{
+    ColumnName = "City" 
+});
+dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
+{
+    ColumnName = "Customer" 
+});
 dataGrid.GroupExpandCollapseTemplate = new DataTemplate(() =>
-        {
-            var imageView1 = new Image()
-            {
-                Source = "downward_icon.png",
-                Aspect = Aspect.AspectFit,
-            };
-            return imageView1;
-        });
+{
+    var imageView1 = new Image()
+    {
+        Source = "downward_icon.png",
+        Aspect = Aspect.AspectFit,
+    };
+    return imageView1;
+});
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template](Images\Grouping\maui-datagrid-template.gif)
+<img alt="DataGrid with template" src="Images/Grouping/maui-datagrid-template.gif" width="404"/>
 
 #### Load group icon through template selector
 
@@ -765,20 +839,20 @@ When choosing a `GroupExpandCollapseTemplate` as a DataTemplateSelector, you hav
 
 {% highlight xaml %}
 <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"  
-                            HorizontalOptions="FillAndExpand"
-                            ItemsSource="{Binding OrderInfoCollection}"
-                            x:Name="dataGrid"
-                            GroupingMode="Multiple"
-                            AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None">
+                       HorizontalOptions="FillAndExpand"
+                       ItemsSource="{Binding Orders}"
+                       x:Name="dataGrid"
+                       GroupingMode="Multiple"
+                       AllowGroupExpandCollapse="True"
+                       AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <local:ExpandCollapseTemplate ExpandTemplate="{StaticResource ExpandIcon }"
-                                            CollapseTemplate="{StaticResource CollapseIcon}" />
+                                          CollapseTemplate="{StaticResource CollapseIcon}" />
         </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
         
         <syncfusion:SfDataGrid.GroupColumnDescriptions>
-            <syncfusion:GroupColumnDescription ColumnName="Name" />
-            <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+            <syncfusion:GroupColumnDescription ColumnName="City" />
+            <syncfusion:GroupColumnDescription ColumnName="Customer" />            
         </syncfusion:SfDataGrid.GroupColumnDescriptions>
 </syncfusion:SfDataGrid>                           
 {% endhighlight %}
@@ -806,7 +880,7 @@ public class ExpandCollapseTemplate : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template selector](Images\Grouping\maui-datagrid-template-selector.gif)
+<img alt="DataGrid with template selector" src="Images/Grouping/maui-datagrid-template-selector.gif" width="404"/>
 
 N>
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
@@ -819,12 +893,12 @@ The size of the group icon can be customized when the icon is loaded through `Gr
 
 {% highlight xaml %}
 <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
-                            HorizontalOptions="FillAndExpand"
-                            ItemsSource="{Binding OrderInfoCollection}"
-                            x:Name="dataGrid"
-                            GroupingMode="Multiple"
-                            AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None">
+                       HorizontalOptions="FillAndExpand"
+                       ItemsSource="{Binding Orders}"
+                       x:Name="dataGrid"
+                       GroupingMode="Multiple"
+                       AllowGroupExpandCollapse="True"
+                       AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <DataTemplate>
                 <Image Source="downward_icon.png" HeightRequest="20" WidthRequest="20"/>
@@ -832,26 +906,40 @@ The size of the group icon can be customized when the icon is loaded through `Gr
         </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
         
         <syncfusion:SfDataGrid.GroupColumnDescriptions>
-            <syncfusion:GroupColumnDescription ColumnName="ShipCountry" />
-            <syncfusion:GroupColumnDescription ColumnName="CustomerID" />
+            <syncfusion:GroupColumnDescription ColumnName="City" />
+            <syncfusion:GroupColumnDescription ColumnName="Customer" />            
         </syncfusion:SfDataGrid.GroupColumnDescriptions>
 </syncfusion:SfDataGrid>                           
 {% endhighlight %}
 
 {% highlight c# %}
-this.dataGrid.GroupingMode = GroupingMode.Multiple;
-this.dataGrid.AllowGroupExpandCollapse = true;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.GroupingMode = GroupingMode.Multiple;
+dataGrid.AllowGroupExpandCollapse = true;
+dataGrid.AutoGenerateColumnsMode = None;
+dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
+{
+    ColumnName = "City" 
+});
+dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
+{
+    ColumnName = "Customer" 
+});
+
 dataGrid.GroupExpandCollapseTemplate = new DataTemplate(() =>
-        {
-            var imageView1 = new Image()
-            {
-                Source = "downward_icon.png",
-                Aspect = Aspect.AspectFit,
-                HeightRequest = 20,
-                WidthRequest = 20,
-            };
-            return imageView1;
-        });
+{
+    var imageView1 = new Image()
+    {
+        Source = "downward_icon.png",
+        Aspect = Aspect.AspectFit,
+        HeightRequest = 20,
+        WidthRequest = 20,
+    };
+    return imageView1;
+});
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 

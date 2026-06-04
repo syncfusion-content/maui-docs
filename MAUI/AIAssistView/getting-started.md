@@ -11,6 +11,10 @@ documentation: ug
 
 This section guides you through setting up and configuring AI AssistView (SfAIAssistView) in your .NET MAUI application. Follow the steps below to add a basic AI AssistView to your project.
 
+To quickly get started with the .NET MAUI AI AssistView, watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=l_mW3Py0N3M" %}
+
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 

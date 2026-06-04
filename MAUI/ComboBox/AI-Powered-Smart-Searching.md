@@ -315,7 +315,7 @@ Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/
 
 The following image demonstrates the output of the above AI-based search using a custom filtering sample.
 
-![.NET MAUI Combobox With AI Smart Search.](Images/AISearch/ai_smart_search.png)
+![.NET MAUI Combobox With AI Smart Search.](Images/AISearch/ai_smart_search.gif)
 
 You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/Smart-AI-Searching-using-.NET-MAUI-ComboBox)
 
