@@ -607,6 +607,12 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
+## Step 5: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the Circular Chart will be displayed with the data provided.
+
+Here is the result of the previous codes,
+
 ![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.png)
 
 You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_CircularChart_MAUI).
