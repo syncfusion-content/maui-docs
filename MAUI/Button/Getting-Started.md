@@ -325,11 +325,7 @@ button.TextColor = Colors.White;
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Button will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Button](images/customization-images/Button_textcolor.png)
 

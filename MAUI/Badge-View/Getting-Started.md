@@ -433,11 +433,7 @@ public MainPage()
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Badge View will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Badge View](getting-started_images/net_maui_badge_view_getting_started.png) 
 
