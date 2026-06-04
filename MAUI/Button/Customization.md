@@ -209,6 +209,35 @@ N> When defining the background colors of the SfButton control, always use the `
 
 ![SfButton with background color](images/customization-images/Button_backgroundcolor.png)
 
+## Background image
+
+The button background image can be defined using the [BackgroundImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource) property of [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
+
+{% tabs %}
+{% highlight xaml %}
+
+<buttons:SfButton x:Name="SfButton" 
+                    Text="Nature"
+                    FontAttributes="Bold" 
+                    BackgroundImageSource="button_background.png" 
+                    CornerRadius="10" 
+                    WidthRequest="150"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfButton button = new SfButton();
+button.Text = "Nature";
+button.FontAttributes = FontAttributes.Bold;
+button.BackgroundImageSource = "button_background.png";
+button.CornerRadius = 10;
+button.WidthRequest = 150;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Button with background image.](images/getting-started/net-maui-button-with-background-image.png)
+
 ### Stroke
 
 The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Stroke) property is used to customize the color of border in [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
