@@ -83,6 +83,36 @@ this.Content = chart;
 
 {% endtabs %}
 
+### Add a title
+
+The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set the title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of the pyramid chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart>
+    <chart:SfPyramidChart.Title>
+        <Label Text="Pyramid Stages"/>
+    </chart:SfPyramidChart.Title>
+    . . .
+</chart:SfPyramidChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfPyramidChart chart = new SfPyramidChart();
+chart.Title = new Label()
+{
+    Text = "Pyramid Stages"
+};
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
+
 ## Customizing labels
 
 The appearance of the legend label can be customized using the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LabelStyle) property. 

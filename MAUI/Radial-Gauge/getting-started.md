@@ -92,32 +92,6 @@ using Syncfusion.Maui.Gauges;
 {% endhighlight %}
 
 {% endtabs %}
-
-{% endcapture %}
-
-{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
-
-### Initialize the SfRadialGauge control
-
-{% capture codesnippet2 %}
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<gauge:SfRadialGauge />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfRadialGauge sfRadialGauge = new SfRadialGauge();
-this.Content = sfRadialGauge;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endcapture %}
 
 {% endtabcontent %}
@@ -195,31 +169,6 @@ xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauge
 {% highlight c# %}
 
 using Syncfusion.Maui.Gauges;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% endcapture %}
-
-{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
-
-### Initialize the SfRadialGauge control
-
-{% capture codesnippet2 %}
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<gauge:SfRadialGauge />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfRadialGauge sfRadialGauge = new SfRadialGauge();
-this.Content = sfRadialGauge;
 
 {% endhighlight %}
 
@@ -332,13 +281,12 @@ this.Content = sfRadialGauge;
 {% endtabs %}
 
 {% endcapture %}
-
 {% endtabcontent %}
 {% endtabcontents %}
 
-{{ codesnippet2 | UnOrderList_Indent_Level_1 }} 
+## Step 5 - Load Radial Gauge Control
 
-The following code example gives you the complete code of Radial Gauge.
+Learn how to initialize the Syncfusion .NET MAUI SfRadialGauge control and configure its elements such as Axes, Ranges, Pointers, and Annotations to visualize data effectively.
 
 {% tabs %}
 

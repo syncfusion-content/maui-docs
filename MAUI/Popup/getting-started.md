@@ -99,65 +99,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Displaying popup
-
-Display a popup over your view by calling the [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method.
-
-Refer to the following code example for displaying popup using Button's Click event.
-
-{% tabs %}
-
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GettingStarted"
-			 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="GettingStarted.MainPage" 
-             Padding="0,40,0,0">
-     <StackLayout x:Name="mainLayout">
-       <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
-               VerticalOptions="Start" HorizontalOptions="Center"
-               Clicked="ClickToShowPopup_Clicked" />
-               <syncfusion:SfPopup x:Name="popup" />
-     </StackLayout>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
-namespace GettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-
-        private void ClickToShowPopup_Clicked(object sender, EventArgs e)
-        {
-            popup.Show();
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, click the button to open the Popup.
-
-Here is the result of the previous codes.
-
-![Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
-
-Download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).
-
 {% endtabcontent %}
+
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
@@ -244,64 +187,6 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
-
-## Step 5: Displaying popup
-
-Display a popup over your view by calling the [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method.
-
-Refer to the following code example for displaying popup using Button's Click event.
-
-{% tabs %}
-
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GettingStarted"
-			 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="GettingStarted.MainPage" 
-             Padding="0,40,0,0">
-     <StackLayout x:Name="mainLayout">
-       <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
-               VerticalOptions="Start" HorizontalOptions="Center"
-               Clicked="ClickToShowPopup_Clicked" />
-               <syncfusion:SfPopup x:Name="popup" />
-     </StackLayout>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
-namespace GettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-
-        private void ClickToShowPopup_Clicked(object sender, EventArgs e)
-        {
-            popup.Show();
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, click the button to open the Popup.
-
-Here is the result of the previous codes.
-
-![Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
-
-Download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).
 
 {% endtabcontent %}
 
@@ -390,3 +275,61 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 {% endtabcontent %}
 {% endtabcontents %}
+
+## Step 5: Displaying popup
+
+Display a popup over your view by calling the [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method.
+
+Refer to the following code example for displaying popup using Button's Click event.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GettingStarted"
+			 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="GettingStarted.MainPage" 
+             Padding="0,40,0,0">
+     <StackLayout x:Name="mainLayout">
+       <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
+               VerticalOptions="Start" HorizontalOptions="Center"
+               Clicked="ClickToShowPopup_Clicked" />
+               <syncfusion:SfPopup x:Name="popup" />
+     </StackLayout>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+namespace GettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+        {
+            popup.Show();
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, click the button to open the Popup.
+
+Here is the result of the previous codes.
+
+![Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
+
+Download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).

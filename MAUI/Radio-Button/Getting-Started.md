@@ -77,7 +77,9 @@ namespace RadioButtonGettingStarted
 
 {% highlight xaml %}
 
-<ContentPage xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+<ContentPage
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
@@ -167,9 +169,9 @@ namespace RadioButtonGettingStarted
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-        <buttons:SfRadioButton x:Name="radioButton"/>     
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
 {% endhighlight %}
@@ -257,9 +259,9 @@ namespace RadioButtonGettingStarted
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-        <buttons:SfRadioButton x:Name="radioButton"/>     
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
 {% endhighlight %}

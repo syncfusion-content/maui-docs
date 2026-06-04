@@ -307,7 +307,7 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-### Initialize view model
+## Step 5 - Initialize view model
 
 Now, let us define a simple data model that represents a data point in the chart.
 
@@ -380,7 +380,7 @@ this.Content = chart;
 
 {% endtabs %} 
 
-### Populate chart with data
+## Step 6 - Populate chart with data
 
  Binding `Data` to the pyramid chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ItemsSource) property from its BindingContext to create our own pyramid chart.
 
