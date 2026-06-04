@@ -77,7 +77,10 @@ Before proceeding, ensure the following are set up:
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+<ContentPage
+    ...        
+    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
     <StackLayout>
         <toolbar:SfToolbar />
     </StackLayout>
@@ -166,7 +169,10 @@ Before proceeding, ensure the following are set up:
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+<ContentPage
+    ...        
+    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
     <StackLayout>
         <toolbar:SfToolbar />
     </StackLayout>
@@ -254,7 +260,10 @@ Before proceeding, ensure the following are set up:
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+<ContentPage
+    ...        
+    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
     <StackLayout>
         <toolbar:SfToolbar />
     </StackLayout>
@@ -313,6 +322,7 @@ You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.
                     <FontImageSource Glyph="&#xE771;" FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
+            ....
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
 </ContentPage>
@@ -353,6 +363,7 @@ namespace ToolbarGettingStarted
                     ToolTipText = "Italic",
                     Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
                 },
+                ....
             };
             
             toolbar.Items = itemCollection;
@@ -365,7 +376,7 @@ namespace ToolbarGettingStarted
 
 {% endtabs %}
 
-![getting-started](images\toolbar-view.png)
+![getting-started](images/Icons.png)
 
 >Note: Please refer to the [link](https://help.syncfusion.com/maui/icons) to add the `MauiMaterialAssets` custom font. 
 

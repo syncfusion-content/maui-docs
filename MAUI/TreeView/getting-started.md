@@ -73,7 +73,10 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+
     <syncfusion:SfTreeView />
 </ContentPage>
 
@@ -244,9 +247,10 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 
-<ContentPage 
-    ...
+<ContentPage   
+    . . .
     xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+
     <syncfusion:SfTreeView />
 </ContentPage>
 
