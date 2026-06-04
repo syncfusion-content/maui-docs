@@ -1389,7 +1389,7 @@ private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView
 {% endhighlight %}
 {% endtabs %}
 
-## Time break
+## Enable time break in view
 
 The `SfAIAssistView` control allows for organizing the `AssistItems` by their creation date and time, enabling users to identify request and responses chronologically. Set the `ShowTimeBreak` property to `true` to display the time break view.
 
@@ -1471,13 +1471,13 @@ public partial class MainPage : ContentPage
 
 ![Time Break Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-time-break-template.png)
 
-## Toast notification
+## Show Toast notification in view
 
 The `SfAIAssistView` control supports displaying toast notifications. These notifications appear as pop-up windows providing information during user interactions with the `SfAIAssistView`.
 
 ![Toast Notification in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-toast-notification.png)
 
-### Restrict toast notification
+### Restrict toast notification in view
 
 By default, toast notifications appear in the view. To prevent them from showing, use the `ToastOpening` event.
 
@@ -1500,7 +1500,7 @@ private void assistView_ToastOpening(object sender, Syncfusion.Maui.AIAssistView
 {% endhighlight %}
 {% endtabs %}
 
-## Editor Expansion
+## Editor expansion button in view
 
 The `SfAIAssistView` control allows for expanding the editor view based on its `MaximumHeightRequest` property. To enable editor expansion, set the `AllowEditorExpansion` property to `true`.
 
@@ -1535,7 +1535,7 @@ public partial class MainPage : ContentPage
 
 N> The editor expansion button is only visible when the content reaches the third line of the editor.
 
-## Speech to text
+## Voice input support in SfAIAssistView
 
 The `SfAIAssistView` control provides built-in voice input support through a microphone button in the editor. By default, the microphone view is visible. To hide it, set the `EnableVoiceInput` property to `false`.
 
@@ -1567,7 +1567,7 @@ public partial class MainPage : ContentPage
 
 ![Speech to Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-speech-to-text.gif)
 
-## Text to speech
+## Text-to-speech support
 
 The `SfAIAssistView` control provides built-in text-to-speech support for each response. This allows users to play, pause, and stop the text-to-speech functionality.
 

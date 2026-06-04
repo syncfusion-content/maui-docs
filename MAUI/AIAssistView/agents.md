@@ -9,9 +9,9 @@ documentation: ug
 
 # Agent in .NET MAUI AI AssistView (SfAIAssistView)
 
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides an `Agent` feature that allows you to display a collection of agents in the view.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides an `Agent` feature that allows you to display a collection of agents in the view. Agents can be used in AI applications to handle specific tasks like writing assistance, image generation, and data analysis.
 
-### Binding data to the agent collection
+## Populating agent collection
 
 The `SfAIAssistView` control provides the `Agents` property to set the agents collection. Each item in the collection is of type `AssistAgent` and contains the following members:
 
@@ -20,7 +20,7 @@ The `SfAIAssistView` control provides the `Agents` property to set the agents co
 * `Instructions` : Determines the agent's behavior associated with AI.
 * `Icon` : Displays the agent's image.
 
-#### View model
+### Define the view model
 
 Create a simple view model as shown in the following code example and save it as `GettingStartedViewModel.cs`.
 
@@ -92,7 +92,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-#### Binding agent collection to SfAIAssistView
+### Binding agent collection to SfAIAssistView
 
 To populate the agent collection, bind the collection from its `BindingContext` to the `SfAIAssistView.Agents` property.
 
@@ -138,7 +138,7 @@ public partial class MainPage : ContentPage
 
 ![Agents in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-agentview.png)
 
-### Selected agent
+### Selecting an agent
 
 The `SfAIAssistView` control supports setting a current agent using the `SelectedAgent` property. User can directly set the `SelectedAgent` in the `SfAIAssistView`, or user can select one from the editor by typing `@`, which reveals all available agents in the `Agents` collection.
 
