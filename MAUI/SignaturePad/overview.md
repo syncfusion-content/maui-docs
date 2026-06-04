@@ -29,8 +29,8 @@ The .NET MAUI SignaturePad ([`SfSignaturePad`](https://www.syncfusion.com/maui-c
 
 The following table summarizes the globalization support available in the [SfSignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -43,11 +43,11 @@ The following table summarizes the globalization support available in the [SfSig
 </tr>
 <tr>
 <td><a href="/maui/signaturepad/overview">Signature Pad</a></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 </tr> 
 </table>
 

@@ -31,8 +31,8 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Segmented control (SfSegmentedControl)
 
 The following table summarizes the globalization support available in the [SfSegmented](https://www.syncfusion.com/maui-controls/maui-segmented-control) control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support     
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support     
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -45,11 +45,11 @@ The following table summarizes the globalization support available in the [SfSeg
 </tr>
 <tr>
 <td><a href="/maui/segmented-control/overview">Segmented Control</a></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
