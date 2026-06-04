@@ -308,11 +308,7 @@ this.Content = circularProgressBar;
 
 N> By default, the value of progress should be specified between 0 and 100. To determine the progress value between 0 and 1, set the Minimum property to 0 and the Maximum property to 1.
 
-## Step 5: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Circular ProgressBar will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Circular ProgressBar](images/getting-started/progress-bar.png)
 
