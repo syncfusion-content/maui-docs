@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Label in .NET MAUI TreeMap (STreeMap) Control | Syncfusion<sup>&reg;</sup>
-description: Learn here about Label in Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (STreeMap) control.
+title: Label in .NET MAUI STreeMap Control | Syncfusion®
+description: Learn how to use labels in the Syncfusion .NET MAUI TreeMap control to customize display text, improve readability, and enhance data visualization clarity.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
 
-# Add labels
+# Adding Labels in .NET MAUI TreeMap Control
 
 To display text for the leaf items, utilize the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property within the [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property allows you to specify the path to the data property containing the text you want to display.
 
