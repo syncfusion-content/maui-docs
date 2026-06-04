@@ -279,7 +279,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step  5 - Add picker items to the picker
+## Step  5: Add picker items to the picker
 
 The .NET MAUI Picker control is a data-bound control. Hence, you must create a data collection and bind it to the picker control.
 

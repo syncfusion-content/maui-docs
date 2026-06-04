@@ -309,7 +309,7 @@ namespace ChartGettingStarted
 
 {% endtabcontents %}
 
-### Initialize view model
+## Step 5: Initialize view model
 
 Now, let us define a simple data model that represents a data point on the chart.
 
@@ -385,7 +385,7 @@ this.Content = chart;
 
 {% endtabs %} 
 
-### Initialize Chart axis
+## Step 6: Initialize Chart axis
 
 [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [PrimaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_PrimaryAxis) and [SecondaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_SecondaryAxis) properties of the chart are used to initialize the axis for the chart.
 
@@ -417,7 +417,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 {% endtabs %} 
 
-### Populate Chart with data
+## Step 7: Populate Chart with data
 
 To create a polar chart, you can add a [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html) to the polar chart [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) property of the chart, and  then bind the `PlantDetails` property of the above `PlantViewModel` to the `PolarLineSeries.ItemsSource` as follows.
 
