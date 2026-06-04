@@ -255,3 +255,185 @@ scheduler.ContextMenuTextStyle = new SchedulerTextStyle()
 };
 {% endhighlight %}
 {% endtabs %}
+
+## Clipboard operations using context menu
+
+The Scheduler allows you to implement clipboard-like functionality using custom context menu commands to perform Copy, Cut, and Paste operations on appointments.
+
+The clipboard functionality works as follows:
+* **Copy** - The copy command creates a copy of the selected appointment and stores it temporarily.
+* **Cut** - The cut command stores a copy of the selected appointment and marks the original appointment for removal.
+* **Paste** - The paste command creates a new appointment at the selected scheduler cell while preserving the original appointment duration. When a cut operation is pasted the original appointment is removed and the appointment is moved to the new timeslot.
+
+### Adding Context Menu Items
+
+The AppointmentContextMenu can be used to display Copy and Cut actions for appointments, while the CellContextMenu can be used to display the paste action for scheduler cells.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7" %}
+<schedule:SfScheduler x:Name="Scheduler" 
+                      x:DataType="local:SchedulerClipboardViewModel"
+                      AppointmentsSource="{Binding Events}"
+                      AppointmentEditorMode="Add,Edit"
+                      DisplayDate="{Binding DisplayDate}"
+                      ShowDatePickerButton="True"
+                      AllowAppointmentDrag="False"
+                      AllowedViews="Day,Week,WorkWeek,Month"
+                      View="Month">
+    <schedule:SfScheduler.AppointmentContextMenu>
+        <schedule:MenuItemCollection>
+            <schedule:MenuItem Text="Copy"
+                               Command="{x:Static local:ClipboardCommands.Copy}"
+                               CommandParameter="{Binding}">
+                <schedule:MenuItem.Icon>
+                    <FontImageSource Glyph="&#xE7A0;"
+                                     FontFamily="MauiMaterialAssets"/>
+                </schedule:MenuItem.Icon>
+            </schedule:MenuItem>
+            <schedule:MenuItem Text="Cut"
+                               Command="{x:Static local:ClipboardCommands.Cut}"
+                               CommandParameter="{Binding}">
+                <schedule:MenuItem.Icon>
+                    <FontImageSource Glyph="&#xE7F1;"
+                                     FontFamily="MauiMaterialAssets"/>
+                </schedule:MenuItem.Icon>
+            </schedule:MenuItem>
+        </schedule:MenuItemCollection>
+    </schedule:SfScheduler.AppointmentContextMenu>
+    <schedule:SfScheduler.CellContextMenu>
+        <schedule:MenuItemCollection>
+            <schedule:MenuItem Text="Paste"
+                               Command="{x:Static local:ClipboardCommands.Paste}"
+                               CommandParameter="{Binding}">
+                <schedule:MenuItem.Icon>
+                    <FontImageSource Glyph="&#xE7F2;"
+                                     FontFamily="MauiMaterialAssets"/>
+                </schedule:MenuItem.Icon>
+            </schedule:MenuItem>
+        </schedule:MenuItemCollection>
+    </schedule:SfScheduler.CellContextMenu>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% endtabs %}
+
+### Custom Command Implementation
+
+The clipboard operations are implemented using a custom static class with ICommand.
+
+{% tabs %}
+{% highlight c# tabtitle="C#"%}
+public static class ClipboardCommands
+{
+    private static SchedulerAppointment? copiedAppointment { get; set; }
+
+    private static SchedulerAppointment? cutAppointment { get; set; }
+
+    private static bool isCutOperation = false;
+
+    public static ICommand Cut { get; } = new CutAppointmentCommand();
+
+    public static ICommand Copy { get; } = new CopyAppointmentCommand();
+
+    public static ICommand Paste { get; } = new PasteAppointmentCommand();
+
+    private static SchedulerAppointment GetClonedAppointment(SchedulerAppointment appointment)
+    {
+        return new SchedulerAppointment
+        {
+            StartTime = appointment.StartTime,
+            EndTime = appointment.EndTime,
+            Subject = appointment.Subject,
+            Notes = appointment.Notes,
+            IsAllDay = appointment.IsAllDay,
+            Location = appointment.Location,
+            RecurrenceRule = appointment.RecurrenceRule,
+            Background = appointment.Background,
+            ResourceIds = appointment.ResourceIds,
+        };
+    }
+
+    internal class CopyAppointmentCommand : ICommand
+    {
+        event EventHandler? ICommand.CanExecuteChanged
+        {
+            add { }
+            remove { }
+        }
+
+        bool ICommand.CanExecute(object? parameter)
+        {
+            return parameter is SchedulerContextMenuInfo info && info.Scheduler != null && info.Appointment != null;
+        }
+
+        void ICommand.Execute(object? parameter)
+        {
+            if (parameter is SchedulerContextMenuInfo info && info.Appointment != null)
+            {
+                isCutOperation = false;
+                cutAppointment = null;
+                copiedAppointment = GetClonedAppointment(info.Appointment);
+            }
+        }
+    }
+
+    internal class CutAppointmentCommand : ICommand
+    {
+        event EventHandler? ICommand.CanExecuteChanged
+        {
+            add { }
+            remove { }
+        }
+
+        bool ICommand.CanExecute(object? parameter)
+        {
+            return parameter is SchedulerContextMenuInfo info && info.Scheduler != null && info.Appointment != null;
+        }
+
+        void ICommand.Execute(object? parameter)
+        {
+            if (parameter is SchedulerContextMenuInfo info && info.Scheduler != null && info.Appointment != null)
+            {
+                isCutOperation = true;
+                cutAppointment = info.Appointment;
+                copiedAppointment = GetClonedAppointment(cutAppointment);
+            }
+        }
+    }
+
+    internal class PasteAppointmentCommand : ICommand
+    {
+        event EventHandler? ICommand.CanExecuteChanged
+        {
+            add { }
+            remove { }
+        }
+
+        bool ICommand.CanExecute(object? parameter)
+        {
+            return parameter is SchedulerContextMenuInfo info && info.Scheduler != null && copiedAppointment != null;
+        }
+
+        void ICommand.Execute(object? parameter)
+        {
+            if (parameter is not SchedulerContextMenuInfo info || info.Scheduler == null || copiedAppointment == null || info.Scheduler.AppointmentsSource is not ObservableCollection<SchedulerAppointment> appointments)
+            {
+                return;
+            }
+
+            if (isCutOperation && cutAppointment != null)
+            {
+                appointments.Remove(cutAppointment);
+                cutAppointment = null;
+                isCutOperation = false;
+            }
+
+            var newAppointment = GetClonedAppointment(copiedAppointment);
+            var duration = copiedAppointment.EndTime - copiedAppointment.StartTime;
+            newAppointment.StartTime = info.DateTime;
+            newAppointment.EndTime = info.DateTime.Add(duration);
+            appointments.Add(newAppointment);
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
