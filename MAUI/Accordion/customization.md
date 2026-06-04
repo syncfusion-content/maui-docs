@@ -19,17 +19,9 @@ The `SfAccordion` allows you to customize the expanding and collapsing duration 
                         AnimationDuration="150">
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        var accordion = new SfAccordion();
-        accordion.AnimationDuration = 150;
-    }
-}
+{% highlight c# hl_lines="2" %}
+var accordion = new SfAccordion();
+accordion.AnimationDuration = 150;
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,17 +35,9 @@ You can customize the rate of change of a parameter over time or the animation s
                         AnimationEasing="SinOut">
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        var accordion = new SfAccordion();
-        accordion.AnimationEasing = ExpanderAnimationEasing.SinOut;
-    }
-}
+{% highlight c# hl_lines="2" %}
+var accordion = new SfAccordion();
+accordion.AnimationEasing = ExpanderAnimationEasing.SinOut;
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,63 +51,15 @@ The `SfAccordion` allows you to customize the scroll position of the expanded ac
                         AutoScrollPosition="Top">
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        var accordion = new SfAccordion();
-        accordion.AutoScrollPosition = AccordionAutoScrollPosition.Top;
-    }
-}
+{% highlight c# hl_lines="2" %}
+var accordion = new SfAccordion();
+accordion.AutoScrollPosition = AccordionAutoScrollPosition.Top;
 {% endhighlight %}
 {% endtabs %}
 
 ## Bring an accordion item into view
 
 The `BringIntoView` method is used to bring a specific item into view by scrolling to it programmatically.
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfAccordion x:Name="accordion">
-    <syncfusion:SfAccordion.Items>
-        <syncfusion:AccordionItem>
-            <syncfusion:AccordionItem.Header>
-                <Grid HeightRequest="48">
-                    <Label Text="Robin Rane"
-                           FontSize="14" />
-                </Grid>
-            </syncfusion:AccordionItem.Header>
-            <syncfusion:AccordionItem.Content>
-                <Grid RowDefinitions="Auto,Auto,Auto"
-                      ColumnDefinitions="120,*">
-                    <Image Source="emp_01.png"
-                           Grid.Row="0"
-                           Grid.Column="0"
-                           Grid.RowSpan="1"
-                           HeightRequest="100"
-                           WidthRequest="100" />
-                    <StackLayout Grid.Row="0"
-                                 Grid.Column="1"
-                                 Spacing="8">
-                        <Label Text="Position: Chairman"
-                               FontSize="12" />
-                        <Label Text="Organization: ABC Inc."
-                               FontSize="12" />
-                        <Label Text="Location: Boston"
-                               FontSize="12" />
-                    </StackLayout>
-                </Grid>
-            </syncfusion:AccordionItem.Content>
-        </syncfusion:AccordionItem>
-        </syncfusion:AccordionItem>
-        ..........................
-    </syncfusion:SfAccordion.Items>
-</syncfusion:SfAccordion>
-{% endhighlight %}
-{% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
@@ -144,17 +80,9 @@ You can expand single or multiple items using the [ExpandMode](https://help.sync
                         ExpandMode="Multiple">
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        var accordion = new SfAccordion();
-        accordion.ExpandMode = AccordionExpandMode.Multiple;
-    }
-}
+{% highlight c# hl_lines="2" %}
+var accordion = new SfAccordion();
+accordion.ExpandMode = AccordionExpandMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
 
@@ -168,17 +96,9 @@ The `SfAccordion` allows you to customize the vertical spacing between the accor
                         ItemSpacing="6.0d">
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        var accordion = new SfAccordion();
-        accordion.ItemSpacing = 6.0d;
-    }
-}
+{% highlight c# hl_lines="2" %}
+var accordion = new SfAccordion();
+accordion.ItemSpacing = 6.0d;
 {% endhighlight %}
 {% endtabs %}
 
