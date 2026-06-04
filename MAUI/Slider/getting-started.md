@@ -22,9 +22,11 @@ To quickly get started with the .NET MAUI Slider, watch this video.
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
-
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
+1. Install .NET SDK
+  - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later must be installed.
+2. Set up a .NET MAUI Environment with Visual Studio. Supported Visual Studio Versions:
+  - Visual Studio 2022: Version 17.13 or later (e.g., 17.14.7) for .NET 9 development.
+  - Visual Studio 2026: Required for .NET 10 development.
 
 ## Step 1: Create a New .NET MAUI Project
 
