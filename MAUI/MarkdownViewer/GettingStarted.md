@@ -382,6 +382,12 @@ Used to define major sections within your Markdown content.
 
 N> For more details about binding Markdown content from various sources, refer to [MarkdownSources](https://help.syncfusion.com/maui/markdownviewer/databinding).
 
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the MarkdownViewer will be displayed with the data provided.
+
+Here is the result of the previous codes,
+
 ![Output of Markdown Viewer](Images/maui-markdown-viewer-gettingstarted.png)
 
 You can access a complete getting started sample [here](https://github.com/SyncfusionExamples/.NET_MAUI_Markdown_Viewer_GettingStarted).
