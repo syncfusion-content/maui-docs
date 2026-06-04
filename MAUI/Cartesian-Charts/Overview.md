@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Chart control | Syncfusion
+title: About .NET MAUI Cartesian Chart control | Syncfusion
 description: Learn here all about introduction of Syncfusion® .NET MAUI Chart (SfCartesianChart) control with key features and more.
 platform: maui
 control: SfCartesianChart
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui sfCartesianChart overview,  introduction to sfCartesianChart in .net maui, exploring sfCartesianChart in .net maui.
 ---
 
-# .NET MAUI Chart Overview
+# .NET MAUI Cartesian Chart Overview
 
 The .NET MAUI chart provides a perfect way to visualize data with a high level of user involvement that focuses on development, productivity, and simplicity of use. Chart also provides a wide variety of charting features that can be used to visualize large quantities of data, as well as flexibility in data binding and user customization.
 
