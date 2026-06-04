@@ -52,6 +52,48 @@ N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
+## RightTapped
+
+The RightTapped event occurs when a user performs a right-click action on scheduler elements in desktop platforms such as Windows or macOS. This event enables applications to implement context menus, secondary commands, and custom actions on appointments, cells, headers, and resource elements.
+
+* **sender** - The SfScheduler object where the right-click occurred
+
+The SchedulerRightTappedEventArgs provides information about the right-click interaction:
+
+* **Appointments** – Collection of appointments associated with the clicked element
+
+* **Date** – The date corresponding to the clicked cell or appointment
+
+* **Element** – The scheduler element interacted with (appointment, cell, header, resource, week number)
+
+* **Resource** – The resource associated with the clicked element (in resource views)
+
+* **WeekNumber** – The week number value (Not applicable in Timeline Month and AgendaView)
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       RightTapped="Scheduler_RightTapped" >
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+this.Scheduler.RightTapped += Scheduler_RightTapped;
+
+private void scheduler_RightTapped(object sender, SchedulerRightTappedEventArgs e)
+{
+    var element = e.Element;
+    var date = e.Date;
+    var resource = e.Resource;
+    var appointments = e.Appointments;
+    var weekNumber = e.WeekNumber;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## DoubleTapped
 
 Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped onto the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTapped) event occurs. Below is a list of the arguments:
