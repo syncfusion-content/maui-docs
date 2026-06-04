@@ -301,7 +301,7 @@ namespace GettingStarted
 
 ![Initialize RangeSelector](images/getting-started/initialize-slider.png)
 
-## Adding content to Range Selector
+## Step 5: Adding content to Range Selector
 
 The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_Content) property will add the content to the Range Selector. Add any control within the Range Selector with this property. In most cases, the [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) will be added as a content.
 

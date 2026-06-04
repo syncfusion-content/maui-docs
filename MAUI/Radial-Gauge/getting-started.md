@@ -75,13 +75,15 @@ namespace GettingStarted
 1. To initialize the control, import the `Syncfusion.Maui.Gauges` namespace into your code.
 2. Initialize [SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html).
 
-{% capture codesnippet1 %}
-
 {% tabs %}
 
 {% highlight xaml %}
 
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+<ContentPage
+            ...
+            xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges">
+    <gauge:SfRadialGauge />   
+</ContentPage>
 
 {% endhighlight %}
 
@@ -89,10 +91,15 @@ xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauge
 
 using Syncfusion.Maui.Gauges;
 
-{% endhighlight %}
+    public MainPage()
+    {
+        InitializeComponent();           
+        SfRadialGauge sfRadialGauge = new SfRadialGauge();
+        this.Content = sfRadialGauge;
+    }
 
+{% endhighlight %}
 {% endtabs %}
-{% endcapture %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -156,13 +163,15 @@ namespace GettingStarted
 1. To initialize the control, import the `Syncfusion.Maui.Gauges` namespace into your code.
 2. Initialize [SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html).
 
-{% capture codesnippet1 %}
-
 {% tabs %}
 
 {% highlight xaml %}
 
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+<ContentPage
+            ...
+            xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges">
+    <gauge:SfRadialGauge />   
+</ContentPage>
 
 {% endhighlight %}
 
@@ -170,11 +179,15 @@ xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauge
 
 using Syncfusion.Maui.Gauges;
 
+    public MainPage()
+    {
+        InitializeComponent();           
+        SfRadialGauge sfRadialGauge = new SfRadialGauge();
+        this.Content = sfRadialGauge;
+    }
+
 {% endhighlight %}
-
 {% endtabs %}
-
-{% endcapture %}
 
 {% endtabcontent %}
 
@@ -237,13 +250,15 @@ namespace GettingStarted
 1. To initialize the control, import the `Syncfusion.Maui.Gauges` namespace into your code.
 2. Initialize [SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html).
 
-{% capture codesnippet1 %}
-
 {% tabs %}
 
 {% highlight xaml %}
 
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+<ContentPage
+            ...
+            xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges">
+    <gauge:SfRadialGauge />   
+</ContentPage>
 
 {% endhighlight %}
 
@@ -251,36 +266,16 @@ xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauge
 
 using Syncfusion.Maui.Gauges;
 
-{% endhighlight %}
+    public MainPage()
+    {
+        InitializeComponent();           
+        SfRadialGauge sfRadialGauge = new SfRadialGauge();
+        this.Content = sfRadialGauge;
+    }
 
+{% endhighlight %}
 {% endtabs %}
 
-{% endcapture %}
-
-{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
-
-### Initialize the SfRadialGauge control
-
-{% capture codesnippet2 %}
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<gauge:SfRadialGauge />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfRadialGauge sfRadialGauge = new SfRadialGauge();
-this.Content = sfRadialGauge;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% endcapture %}
 {% endtabcontent %}
 {% endtabcontents %}
 

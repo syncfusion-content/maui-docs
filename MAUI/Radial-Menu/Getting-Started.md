@@ -271,7 +271,7 @@ namespace RadialMenuGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Adding Radial Menu with items
+## Step 5 - Adding Radial Menu with items
 
 {% tabs %}
 
