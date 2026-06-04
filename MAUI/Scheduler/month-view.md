@@ -445,15 +445,24 @@ You can configure the date text alignment using the `DateHorizontalAlignment` pr
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler DateHorizontalAlignment="Center"
-                       AppointmentDisplayMode="None" />
+    <scheduler:SfScheduler >
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView  DateHorizontalAlignment="Center"
+                                            AppointmentDisplayMode="None"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="31" %}
 
-var scheduler = new SfScheduler();
-scheduler.DateHorizontalAlignment = TextAlignment.Center;
-scheduler.AppointmentDisplayMode = AppointmentDisplayMode.None;
+SfScheduler scheduler = new SfScheduler();
+SchedulerMonthView monthView = new SchedulerMonthView
+{
+    DateHorizontalAlignment = HorizontalAlignment.Center,
+    AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.None
+};
+scheduler.MonthView = monthView;
+Content = scheduler;
 
 {% endhighlight %}  
 {% endtabs %}
