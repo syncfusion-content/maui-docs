@@ -287,3 +287,40 @@ this.Content = stackLayout;
 {% endtabs %}
 
 ![Slider track disabled state](images/track/track-disabled.png)
+
+## Orientation
+
+The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the Orientation property is **Horizontal**.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Orientation="Vertical"
+                          Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Orientation = SliderOrientation.Vertical;
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider orientation](images/getting-started/orientation.png)

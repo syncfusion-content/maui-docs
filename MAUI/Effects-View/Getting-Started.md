@@ -308,7 +308,7 @@ namespace EffectsViewGettingStarted
 {% endtabcontents %}
 
 
-## Adding a content
+## Step 5: Adding a content
 
 An image, label or any view can be added to the Effects View using the Content property.
 
@@ -344,6 +344,12 @@ An image, label or any view can be added to the Effects View using the Content p
 
 {% endhighlight %}
 {% endtabs %}
+
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the Effects View will be displayed with the data provided.
+
+Here is the result of the previous codes,
 
 ![Effects View initialization](Getting-Started_images/RippleEffect.gif)
 

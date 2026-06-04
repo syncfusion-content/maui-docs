@@ -111,31 +111,6 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-
-## Step 5: Display a value in .NET MAUI DigitalGauge
-
-In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) user can display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-   <gauge:SfDigitalGauge Text="SYNCFUSION"/> 
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-        SfDigitalGauge digitalGauge = new SfDigitalGauge();
-
-        digital.Text = "SYNCFUSION";
-
-        this.Content = digitalGauge;
- 
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -227,31 +202,6 @@ public partial class MainPage : ContentPage
 }
 
 
-{% endhighlight %}
-
-{% endtabs %}
-
-
-## Step 5: Display a value in .NET MAUI DigitalGauge
-
-In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) user can display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-   <gauge:SfDigitalGauge Text="SYNCFUSION"/> 
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-        SfDigitalGauge digitalGauge = new SfDigitalGauge();
-
-        digital.Text = "SYNCFUSION";
-
-        this.Content = digitalGauge;
- 
 {% endhighlight %}
 
 {% endtabs %}
@@ -353,6 +303,36 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 {% endtabcontent %}
 {% endtabcontents %}
+
+## Step 5: Display a value in .NET MAUI DigitalGauge
+
+In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) user can display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+   <gauge:SfDigitalGauge Text="SYNCFUSION"/> 
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+        SfDigitalGauge digitalGauge = new SfDigitalGauge();
+
+        digital.Text = "SYNCFUSION";
+
+        this.Content = digitalGauge;
+ 
+{% endhighlight %}
+
+{% endtabs %}
+
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the DigitalGauge will be displayed with the data provided.
+
+Here is the result of the previous codes,
 
 ![getting-started](Images\getting-started.png)
 

@@ -361,6 +361,12 @@ namespace DockLayoutGettingStarted
 {% endhighlight %}
 {% endtabs %}
 
+## Step 5: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the DockLayout will be displayed with the data provided.
+
+Here is the result of the previous codes,
+
 ![Output of DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 
 You can access a complete getting started sample from this [link.](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI)

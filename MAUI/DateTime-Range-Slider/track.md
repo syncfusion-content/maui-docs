@@ -302,3 +302,43 @@ this.Content = stackLayout;
 {% endtabs %}
 
 ![RangeSlider track disabled state](images/track/track-disabled.png)
+
+## Orientation
+
+The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_Orientation) property allows you to show the DateTime Range Slider in both horizontal and vertical directions. The default value of the Orientation property is **Horizontal**.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
+                               Maximum="2018-01-01" 
+                               RangeStart="2012-01-01" 
+                               RangeEnd="2016-01-01"
+                               ShowTicks="True" 
+                               ShowLabels="True"
+                               Interval="2" 
+                               MinorTicksPerInterval="1" 
+                               Orientation="Vertical">
+</sliders:SfDateTimeRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
+rangeSlider.Orientation = SliderOrientation.Vertical;
+rangeSlider.Minimum = new DateTime(2010, 01, 01);
+rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.Interval = 2;
+rangeSlider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeRangeSlider orientation](images/getting-started/orientation.png)
