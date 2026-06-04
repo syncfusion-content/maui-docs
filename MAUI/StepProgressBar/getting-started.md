@@ -285,7 +285,7 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-## Populating step progressbar items
+## Step 5: Populating step progressbar items
 
 You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
 

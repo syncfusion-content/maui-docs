@@ -312,7 +312,7 @@ namespace SunburstGettingStarted
 
 {% endtabcontents %}
 
-### Initialize View Model
+## Step 5: Initialize View Model
 
 Now, let us define a simple data model that represents a data point in the sunburst chart.
 
@@ -369,7 +369,9 @@ N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you 
 
 {% highlight xaml %} 
 
-<ContentPage xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+<ContentPage 
+             ...
+             xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
              xmlns:model="clr-namespace:SunburstGettingStarted">
     <ContentPage.BindingContext>
         <model:SunburstViewModel></model:SunburstViewModel>
@@ -386,7 +388,7 @@ this.BindingContext = new SunburstViewModel();
 
 {% endtabs %} 
 
-### Populate Sunburst Chart with Data
+## Step 6: Populate Sunburst Chart with Data
 
 Bind `DataSource` to the Sunburst chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ItemsSource) property from its BindingContext to create your Sunburst chart.
 Then, add the [SunburstHierarchicalLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstHierarchicalLevel.html) to [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Levels) collection. Each hierarchy level is formed based on the property specified in the [GroupMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstHierarchicalLevel.html#Syncfusion_Maui_SunburstChart_SunburstHierarchicalLevel_GroupMemberPath) property, and each arc segment size is calculated using the [ValueMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ValueMemberPath) property.
@@ -399,31 +401,25 @@ Then, add the [SunburstHierarchicalLevel](https://help.syncfusion.com/cr/maui/Sy
     . . .
     xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
     xmlns:model="clr-namespace:SunburstGettingStarted">
-
     <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
                               ShowLabels="True"  
                               EnableTooltip="True"
                               ValueMemberPath="EmployeesCount">
-
         <sunburst:SfSunburstChart.BindingContext>
             <model:SunburstViewModel/>
         </sunburst:SfSunburstChart.BindingContext>
-
         <sunburst:SfSunburstChart.Title>
             <Label Text="Employees Count"/>
         </sunburst:SfSunburstChart.Title>
-
         <sunburst:SfSunburstChart.Legend>
             <sunburst:SunburstLegend/>
         </sunburst:SfSunburstChart.Legend> 
-
         <sunburst:SfSunburstChart.Levels>
             <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
             <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
             <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
         </sunburst:SfSunburstChart.Levels>
     </sunburst:SfSunburstChart>
-
 </ContentPage>
  
 {% endhighlight %}
@@ -451,7 +447,6 @@ public partial class MainPage : ContentPage
         sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
         sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
         sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-
         sunburst.EnableTooltip = true;
         sunburst.ShowLabels = true;
         

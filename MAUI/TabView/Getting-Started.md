@@ -302,7 +302,7 @@ namespace TabViewGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Populate tab items in .NET MAUI Tab View
+## Step 5: Populate tab items in .NET MAUI Tab View
 
 Tab items can be added to the control using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 
