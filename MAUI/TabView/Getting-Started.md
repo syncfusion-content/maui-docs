@@ -80,7 +80,9 @@ namespace TabViewGettingStarted
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+<ContentPage 
+            ...
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
     </ContentPage.Content>  
@@ -174,7 +176,9 @@ namespace TabViewGettingStarted
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+<ContentPage 
+            ...
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
     </ContentPage.Content>  
@@ -267,7 +271,9 @@ namespace TabViewGettingStarted
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+<ContentPage 
+            ...
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
     </ContentPage.Content>  

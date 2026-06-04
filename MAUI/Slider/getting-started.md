@@ -278,7 +278,9 @@ Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slider
 
 {% highlight xaml %}
 
-<ContentPage xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
     <Grid>
         <sliders:SfSlider />
     </Grid>

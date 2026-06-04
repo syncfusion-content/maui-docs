@@ -74,10 +74,10 @@ Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-        <signaturePad:SfSignaturePad />
+<ContentPage 
+             ...
+             xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
+    <signaturePad:SfSignaturePad />
 </ContentPage>
 
 {% endhighlight %}
@@ -165,10 +165,10 @@ Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-        <signaturePad:SfSignaturePad />
+<ContentPage 
+             ...
+             xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
+    <signaturePad:SfSignaturePad />
 </ContentPage>
 
 {% endhighlight %}
@@ -256,7 +256,9 @@ Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<ContentPage xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
+<ContentPage 
+             ...
+             xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
     <signaturePad:SfSignaturePad />
 </ContentPage>
 
