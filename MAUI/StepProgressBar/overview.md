@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Step ProgressBar Control | Syncfusion
-description: Learn about the overview of Syncfusion<sup>&reg;</sup> .NET MAUI Step ProgressBar (SfStepProgressBar) control, its basic features, and step progressBar functionalities.
+description: Learn about the overview of Syncfusion<sup>&reg;</sup> .NET MAUI Step ProgressBar (SfStepProgressBar) control, basic features, and its functionalities.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
