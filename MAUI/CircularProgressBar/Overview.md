@@ -34,8 +34,7 @@ The .NET MAUI Circular ProgressBar shows the progress of a task with customizabl
 
 ## Related controls
 
-- **[Busy Indicator](https://help.syncfusion.com/maui/busyindicator/getting-started)** for displaying indeterminate loading states during operations.  
-- **[Progress Bar](https://help.syncfusion.com/maui/progressbar/getting-started)** for visualizing linear progress of tasks.  
+- **[Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview)** for displaying indeterminate loading states during operations.   
 
 ## Next steps
 
