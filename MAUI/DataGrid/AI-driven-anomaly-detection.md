@@ -263,6 +263,6 @@ private async Task GetAnomalyResponseAsync()
 
 {% endtabs %}
 
-![AI driven Smart Anomaly Detection .NET MAUI DataGrid](images/smart-ai-solutions/anamoly-detection.gif)
+![AI driven Smart Anomaly Detection .NET MAUI DataGrid](Images/smart-ai-solutions/anamoly-detection.gif)
 
 You can find the complete sample from this [link](https://github.com/SyncfusionExamples/MAUI-DataGrid-Features/tree/master/AI%20Demos/AnamolyDetection).
