@@ -78,7 +78,9 @@ namespace NavigationDrawerGettingStarted
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
+<ContentPage 
+            ...
+            xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
     <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationDrawer:SfNavigationDrawer.ContentView>
         <Grid/>
@@ -172,7 +174,9 @@ namespace NavigationDrawerGettingStarted
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
+<ContentPage 
+            ...
+            xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
     <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationDrawer:SfNavigationDrawer.ContentView>
         <Grid/>
@@ -265,7 +269,9 @@ namespace NavigationDrawerGettingStarted
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
+<ContentPage 
+            ...
+            xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
     <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationDrawer:SfNavigationDrawer.ContentView>
         <Grid/>
@@ -297,5 +303,112 @@ namespace NavigationDrawerGettingStarted
 
 {% endtabcontent %}
 {% endtabcontents %}
+
+## Step 5 - Add hamburger menu for toggling drawer
+
+Create an ImageButton and set the required image to the `Source` property. Ensure the image is placed in the `Resources/Images` directory. Subscribe to the Clicked event of the button and invoke the [ToggleDrawer()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method to toggle the drawer. Properly align the layout of [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) to position the hamburger icon at the top left, as demonstrated in the following code.
+
+{% tabs %}
+{% highlight xaml %}
+
+<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings DrawerWidth="250"/>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+    <navigationDrawer:SfNavigationDrawer.ContentView>
+        <Grid x:Name="mainContentView" RowDefinitions="Auto,*">
+            <HorizontalStackLayout>
+                <ImageButton x:Name="hamburgerButton"
+                             Source="hamburgericon.png"
+                             Clicked="hamburgerButton_Clicked"/>
+                <Label x:Name="headerLabel"  
+                   Text="Home" FontSize="16" 
+                   BackgroundColor="#6750A4"/>
+            </HorizontalStackLayout>
+            <Label Grid.Row="1" 
+              x:Name="contentLabel" 
+              Text="Content View" />
+        </Grid>
+    </navigationDrawer:SfNavigationDrawer.ContentView>
+</navigationDrawer:SfNavigationDrawer>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace NavigationDrawerGettingStarted;
+
+public partial class MainPage : ContentPage
+{
+    SfNavigationDrawer navigationDrawer;
+    Label contentLabel;
+	public MainPage()
+	{
+		InitializeComponent();
+        navigationDrawer = new SfNavigationDrawer();
+        Grid grid = new Grid()
+        {
+            RowDefinitions =
+            {
+                new RowDefinition {Height=new GridLength(1,GridUnitType.Auto)},
+                new RowDefinition(),
+            },
+        };
+
+        HorizontalStackLayout layout = new HorizontalStackLayout()
+        { 
+            Spacing = 10,
+            Padding = new Thickness(5,0,0,0),
+        };
+
+        var hamburgerButton = new ImageButton
+        {
+            Source = "hamburgericon.png",
+        };
+        hamburgerButton.Clicked += hamburgerButton_Clicked;
+
+        var label = new Label
+        {
+            Text = "Home",
+            FontSize = 16,
+            BackgroundColor = Color.FromArgb("#6750A4")
+        };
+        layout.Children.Add(hamburgerButton);
+        layout.Children.Add(label);
+
+        contentLabel = new Label
+        {
+            Text = "Content View",
+        };
+        
+        grid.SetRow(layout, 0);
+        grid.SetRow(contentLabel, 1);
+        grid.Children.Add(layout);
+        grid.Children.Add(contentLabel);
+        navigationDrawer.ContentView = grid;
+
+        navigationDrawer.DrawerSettings = new DrawerSettings()
+        {
+            DrawerWidth = 250,
+        };
+        this.Content = navigationDrawer;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+    private void hamburgerButton_Clicked(object sender, EventArgs e)
+    {
+        navigationDrawer.ToggleDrawer();
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![CustomView](Images/getting-started/getting_main_content.png)
 
 N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) for [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) upon initializing.

@@ -282,37 +282,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Set header to the Picker
-
-The SfPicker control allows you to add the header text by setting the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). To enable the header view by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_HeightProperty) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-
-<picker:SfPicker x:Name="picker">
-    <picker:SfPicker.HeaderView>
-        <picker:PickerHeaderView Text="Select a color" Height="40" />
-    </picker:SfPicker.HeaderView>
-</picker:SfPicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4 5" %}
-
-SfPicker picker = new SfPicker();
-picker.HeaderView = new PickerHeaderView()
-{
-    Text = "Select a color",
-    Height = 40,
-};
-
-this.Content = picker;
-
-{% endhighlight %}
-{% endtabs %}
-
-![Set Header view in .NET MAUI Picker.](images/getting-started/maui-picker-set-header-view.png)
-
-## Add picker items to the picker
+## Step  5 - Add picker items to the picker
 
 The .NET MAUI Picker control is a data-bound control. Hence, you must create a data collection and bind it to the picker control.
 
@@ -383,35 +353,5 @@ this.Content = picker;
 {% endtabs %}
 
 ![Picker items in .NET MAUI picker.](images/getting-started/maui-picker-items.png)
-
-## Set footer to the Picker
-
-In SfPicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected item. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-
-<picker:SfPicker x:Name="picker">
-    <picker:SfPicker.FooterView>
-        <picker:PickerFooterView ShowOkButton="True" Height="40" />
-    </picker:SfPicker.FooterView>
-</picker:SfPicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4 5" %}
-
-SfPicker picker = new SfPicker();
-picker.FooterView= new PickerFooterView()
-{  
-    ShowOkButton = true,
-    Height = 40,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-![Picker Footer view in .NET MAUI picker.](images/getting-started/maui-picker-footer-view.png)
 
 N> You can refer to our [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker) that shows you how to render and configure the Picker in .NET MAUI.
