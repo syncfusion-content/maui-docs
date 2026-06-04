@@ -280,7 +280,7 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-## Populate .NET MAUI TreeMap data source
+## Step 5: Populate .NET MAUI TreeMap data source
 
 Here are the steps to render treemap items using the .NET MAUI TreeMap control with respective data properties created in a data model class.
 
