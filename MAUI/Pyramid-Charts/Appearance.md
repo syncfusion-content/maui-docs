@@ -130,6 +130,35 @@ public class ViewModel
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_pyramid_chart_gradient.png)
 
+## Point Color Path
+
+The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart PointColorPath="PointColor"></chart:SfPyramidChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPyramidChart chart = new SfPyramidChart()
+{
+	PointColorPath = PointColor;
+}
+. . .
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![PointColorPath in MAUI Chart](Appearance_images/MAUI_Pyramid_pointcolorpath.png)
+
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
+
 ## Pyramid modes
 
 The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) allows you to render a chart in a linear or surface mode by using the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_Mode) property. In the [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PyramidMode.html#Syncfusion_Maui_Charts_PyramidMode_Linear) mode, the height of the pyramid segment is based on the y-value. In the [Surface](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PyramidMode.html#Syncfusion_Maui_Charts_PyramidMode_Surface) mode, the area of the pyramid segment is based on the y-value. By default, the Mode property is set to linear.

@@ -216,6 +216,6 @@ You can also provide a button or menu option for users to trigger data cleaning 
 
 The following image demonstrates the output of the above AI Powered data cleaning and preprocessing .NET MAUI chart.
 
-![Ai smart data processing in .NET MAUI Chart](Chart_Smart_component_images/dataprocessing.png)
+![Ai smart data processing in .NET MAUI Chart](Chart_Smart_component_images/dataprocessing.gif)
 
 For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/DataPreprocessing)
