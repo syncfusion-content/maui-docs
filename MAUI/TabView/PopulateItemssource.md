@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Tab View (SfTabView) Control | Syncfusion®
-description: Learn about the introduction of the Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
+title: Populate ItemsSource in .NET MAUI Tab View Control | Syncfusion®
+description: Learn about the populate itemssource of the Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
