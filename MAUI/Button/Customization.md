@@ -209,7 +209,7 @@ N> When defining the background colors of the SfButton control, always use the `
 
 ![SfButton with background color](images/customization-images/Button_backgroundcolor.png)
 
-## Background image
+### Background image
 
 The button background image can be defined using the [BackgroundImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource) property of [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
 
