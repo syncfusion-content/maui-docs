@@ -24,7 +24,7 @@ Popup layout allows you to display an alert message with customizable buttons or
 
 - **Flexible positioning** allows displaying the popup at any location on the screen.  
 - **Relative positioning** allows aligning the popup based on a target UI element.  
-- **Full-screen mode** allows displaying popup content across the entire screen for immersive experiences.  
+- **Full-screen mode** allows displaying popup content across the entire screen for engaging experiences.  
 - **Auto sizing** allows adjusting popup dimensions automatically based on loaded content.  
 - **Predefined layout** allows using built-in layouts such as single-button or two-button dialog styles.  
 - **Template** allows loading custom views for header, content, and footer using templates.  
