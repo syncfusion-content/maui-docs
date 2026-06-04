@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion® Avatar View Control for .NET MAUI
-description: Quickly learn about the .NET MAUI Avatar View control and its key features. 
+description: Quickly learn about the .NET MAUI Avatar View control and its key features.        
 platform: MAUI
 control: SfAvatarView
 documentation: UG
