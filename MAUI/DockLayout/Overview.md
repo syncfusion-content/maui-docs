@@ -30,8 +30,8 @@ The .NET MAUI [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 The following table summarizes the globalization support available in the [SfDockLayout](https://www.syncfusion.com/maui-controls/maui-docklayout) control.
 
-<img src="globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
-<img src="globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -44,11 +44,11 @@ The following table summarizes the globalization support available in the [SfDoc
 </tr>
 <tr>
 <td><a href="/maui/docklayout/overview">DockLayout</a></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 </tr> 
 </table>
 
