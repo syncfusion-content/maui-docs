@@ -33,8 +33,8 @@ The Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart is used to visualize hierar
 
 The following table summarizes the globalization support available in the [SfSunburstChart](https://www.syncfusion.com/maui-controls/maui-sunburst-charts) control.
 
-<img src="globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="globalization/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
 
 <table>
 <tr>
@@ -47,11 +47,11 @@ The following table summarizes the globalization support available in the [SfSun
 </tr>
 <tr>
 <td><a href="/maui/sunburstchart/overview">Sunburst Chart</a></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="globalization/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr> 
 </table>
 

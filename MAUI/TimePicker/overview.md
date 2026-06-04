@@ -59,7 +59,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control allows y
 
 The following table summarizes the globalization support available in the [SfTimePicker](https://www.syncfusion.com/maui-controls/maui-timepicker) control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 
 <table>
 <tr>
@@ -72,11 +72,11 @@ The following table summarizes the globalization support available in the [SfTim
 </tr>
 <tr>
 <td><a href="/maui/timepicker/overview">Time Picker</a></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
