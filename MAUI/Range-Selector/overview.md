@@ -31,9 +31,9 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Selector ([SfRangeSelector](https://
 
 The following table summarizes the globalization support available in the [SfRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector) control.
 
-<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable  
-<img src="Images/globalization/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable  
+<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
 
 <table>
 <tr>
@@ -46,11 +46,11 @@ The following table summarizes the globalization support available in the [SfRan
 </tr>
 <tr>
 <td><a href="/maui/range-selector/overview">Range Selector</a></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr> 
 </table>
 
