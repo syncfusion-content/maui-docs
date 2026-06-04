@@ -95,3 +95,44 @@ this.FrontLayer = new BackdropFrontLayer()
 {% endtabs %}
 
 ![.NET MAUI Backdrop reveal height customization](images/reveal-height/reveal-height.png)
+
+## Reveal and conceal the back layer
+
+The following options are provided in the backdrop to reveal and conceal the back layer.
+
+* **Programmatically** - Reveals the back layer by setting the [`IsBackLayerRevealed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_IsBackLayerRevealed) property to true. By default, it is set to false.
+* **Touch interaction** - Reveals the back layer by clicking the toolbar icon at the top-right corner of the navigation bar header. The Hamburger (or menu ) icon reveals, and the Close icon conceals the back layer. When adding the backdrop as a child of the Fly out Page, the Hamburger and Close icons will be replaced by expand (or down arrow) and collapse (or up arrow) icons respectively.
+* **Swipe or fling action** - Reveals the back layer by swipe or fling action on the front layer to the required direction. Swipe downwards to reveal, and swipe upwards to conceal the back layer.  The swipe or fling action will be handled only on the top of the front layer to the [`RevealedHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html#Syncfusion_Maui_Backdrop_BackdropFrontLayer_RevealedHeight).
+
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="BackdropGettingStarted.BackdropSamplePage"
+                         Title="Menu"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         IsBackLayerRevealed="True">
+
+</backdrop:SfBackdropPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %} 
+
+#region Constructor
+
+public BackdropSamplePage()
+{
+    this.IsBackLayerRevealed = true;
+}
+
+#endregion
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET Maui Backdrop reveal and conceal back layer](images/getting-started/reveal-conceal.gif)
