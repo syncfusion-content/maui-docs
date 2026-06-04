@@ -32,8 +32,8 @@ The [.NET MAUI MaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 The following table summarizes the globalization support available in the [SfMaskedEntry](https://www.syncfusion.com/maui-controls/maui-masked-entry) control.
 
-<img src="globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
-<img src="globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -46,11 +46,11 @@ The following table summarizes the globalization support available in the [SfMas
 </tr>
 <tr>
 <td><a href="/maui/masked-entry/overview">Masked Entry</a></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
