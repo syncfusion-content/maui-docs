@@ -644,7 +644,7 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-   ![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
+![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
 
 ## Selection View Customization
 
