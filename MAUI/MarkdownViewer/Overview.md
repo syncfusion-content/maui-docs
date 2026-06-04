@@ -13,7 +13,7 @@ The .NET MAUI [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 ## Business use cases
 
-- Applications that display **in-app documentation such as user guides and onboarding content**.  
+- Applications that display **in-app documentation such as User guides and Onboarding content**.  
 - Software products that present **release notes and feature updates in a structured and readable format**.  
 - Help and support modules that provide **FAQs, troubleshooting guides, and instructional content**.  
 - Content-driven applications that require **rendering external or dynamic Markdown-based data**.  
