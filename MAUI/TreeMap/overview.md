@@ -53,9 +53,9 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeMap](https://www.syncfusion.com/ma
 
 The following table summarizes the globalization support available in the [SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/globalization/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
 
 <table>
 <tr>
@@ -68,11 +68,11 @@ The following table summarizes the globalization support available in the [SfTre
 </tr>
 <tr>
 <td><a href="/maui/treemap/overview">TreeMap</a></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr> 
 </table>
 
