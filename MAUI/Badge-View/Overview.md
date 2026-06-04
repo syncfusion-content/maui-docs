@@ -11,30 +11,30 @@ documentation: UG
 
 # Overview of .NET MAUI Badge View (SfBadgeView)
 
-The .NET MAUI Badge View (SfBadgeView) is used to notify users of new or unread messages, notifications, or the status of various events within your application.
-
-## Business use cases
-
-- Messaging applications that display **unread message counts and notification badges**.  
-- E-commerce applications that highlight **cart item counts and order updates**.  
-- Dashboard applications that show **alerts, warnings, or status indicators**.  
-- Social and productivity apps that require **quick visual notification indicators**.  
-
-## Key features
-
-- **Flexible positioning** allows placing the badge around the target element to suit different UI layouts.  
-- **Predefined styles** provide built-in color options to quickly customize the badge appearance.  
-- **Animation support** enables adding visual effects to highlight updates and draw user attention.  
+The [.NET MAUI Badge View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html) (SfBadgeView) is used to notify users of new or unread messages, notifications, or the status of various events within your application.
 
 ![.NET MAUI Badge View](overview_images/net_maui_badge_view_overview.png)
 
+## Business use cases
+
+- Messaging applications that display unread message counts and notification badges.  
+- E-commerce applications that highlight cart item counts and order updates.  
+- Dashboard applications that show alerts, warnings, or status indicators.  
+- Social and productivity apps that require quick visual notification indicators.  
+
+## Key features
+
+- **Positioning** allows placing the badge around the target element to suit different UI layouts.  
+- **Predefined styles** provide built-in color options to quickly customize the badge appearance.  
+- **Animation support** enables adding visual effects to highlight updates and draw user attention.  
+
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfBadgeView](https://www.syncfusion.com/maui-controls/maui-datagrid) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -47,30 +47,30 @@ The following table summarizes the globalization support available in the [SfBad
 </tr>
 <tr>
 <td><a href="/maui/badge-view/overview">Badge View</a></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
 ## Related controls
 
-- **[AvatarView](https://help.syncfusion.com/maui/avatar-view/overview)** for displaying user profiles with badge indicators.  
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for presenting notification items in a structured format.  
-- **[Chat](https://help.syncfusion.com/maui/chat/overview)** for building messaging interfaces with unread message badges.  
+- [AvatarView](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with badge indicators.  
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting notification items in a structured format.  
+- [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message badges.  
 
-## Next step
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/badge-view/getting-started) - step-by-step guide to begin using the Badge View.  
-- [Badge Customization](https://help.syncfusion.com/maui/badge-view/badge-customization) - modify badge appearance and styles.  
-- [Animation](https://help.syncfusion.com/maui/badge-view/animation) - enhance UI with badge animation effects.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/badge-view/getting-started) shows how to begin using the Badge View step by step.  
+- [Badge Customization](https://help.syncfusion.com/maui/badge-view/badge-customization) shows how to modify badge appearance and styles.  
+- [Animation](https://help.syncfusion.com/maui/badge-view/animation) shows how to enhance UI with badge animation effects.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -190,24 +190,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-badge-view" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -216,7 +198,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/BadgeView" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -225,12 +207,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/badge-view" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

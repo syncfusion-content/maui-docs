@@ -15,10 +15,10 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) is a calendar control
 
 ## Business use cases
 
-- Booking and reservation applications that require **date selection and scheduling workflows**.  
-- Business applications that depend on **date-based filtering and data analysis**.  
-- Event management systems that require **navigation across months, years, and custom date ranges**.  
-- Form-based applications that need **single, multiple, or range date selection inputs**.  
+- Booking and reservation applications that require date selection and scheduling workflows.  
+- Business applications that depend on date-based filtering and data analysis.  
+- Event management systems that require navigation across months, years, and custom date ranges.  
+- Form-based applications that need single, multiple, or range date selection inputs.  
 
 ## Key features
 
@@ -64,9 +64,9 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) is a calendar control
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfCalendar](https://www.syncfusion.com/maui-controls/maui-calendar) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support 
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support 
 
 <table>
 <tr>
@@ -79,29 +79,29 @@ The following table summarizes the globalization support available in the [SfCal
 </tr>
 <tr>
 <td><a href="/maui/calendar/overview">Calendar</a></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr>
 </table>
 
 ## Related controls
 
-- **[DatePicker](https://help.syncfusion.com/maui/datepicker/overview)** for selecting and handling single date input scenarios.  
-- **[Scheduler](https://help.syncfusion.com/maui/scheduler/overview)** for managing appointments and scheduling workflows.  
-- **[DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview)** for selecting combined date and time values.
+- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting and handling single date input scenarios.  
+- [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for managing appointments and scheduling workflows.  
+- [DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting combined date and time values.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/calendar/getting-started) - step-by-step guide to begin using the Calendar control.  
-- [Selection modes](https://help.syncfusion.com/maui/calendar/selections) - configure different date selection behaviors.  
-- [Customization](https://help.syncfusion.com/maui/calendar/customizations) - modify appearance and interaction settings.  
+- [Getting Started](https://help.syncfusion.com/maui/calendar/getting-started) shows how to begin using the Calendar control step by step.  
+- [Selection modes](https://help.syncfusion.com/maui/calendar/selections) explain different date selection behaviors.  
+- [Customization](https://help.syncfusion.com/maui/calendar/customizations) shows how to modify appearance and interaction settings.  
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -221,24 +221,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-calendar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -247,7 +229,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Calendar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -256,12 +238,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/calendar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

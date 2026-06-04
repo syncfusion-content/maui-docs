@@ -9,14 +9,16 @@ documentation: ug
 
 # .NET MAUI Button (SfButton) Overview
 
-The .NET MAUI Button is a custom button control with UI customization. Set icons, background images, and corner edge radii and customize the appearance for different visual states using the visual state manager.
+The [.NET MAUI Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) is a custom button control with UI customization. Set icons, background images, and corner edge radii and customize the appearance for different visual states using the visual state manager.
+
+   ![Overview image of SfButton](Images/overview/Overview.png)
 
 ## Business use cases
 
-- Form-based applications that require **clear action buttons for submission, reset, or navigation**.  
-- E-commerce applications that use **call-to-action buttons such as add to cart or checkout**.  
-- Dashboard and business apps that provide **interactive controls for performing user actions**.  
-- Mobile applications that rely on **visually styled buttons for primary and secondary actions**.  
+- Form-based applications that require clear action buttons for submission, reset, or navigation.  
+- E-commerce applications that use call-to-action buttons such as add to cart or checkout.  
+- Dashboard and business apps that provide interactive controls for performing user actions.  
+- Mobile applications that rely on visually styled buttons for primary and secondary actions.  
 
 ## Key features
 
@@ -25,14 +27,12 @@ The .NET MAUI Button is a custom button control with UI customization. Set icons
 - **Custom content support** allows embedding text, images, or other UI elements inside the button.  
 - **Visual state customization** enables modifying appearance for different states such as normal, pressed, and disabled using the Visual State Manager.  
 
-    ![Overview image of SfButton](Images/overview/Overview.png)
-
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfButton](https://www.syncfusion.com/maui-controls/maui-button) control.
+The following table summarizes the globalization support available in this control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -45,30 +45,30 @@ The following table summarizes the globalization support available in the [SfBut
 </tr>
 <tr>
 <td><a href="/maui/button/overview">Button</a></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
 ## Related controls
 
-- **[Busy-Indicator](https://help.syncfusion.com/maui/busy-indicator/overview)** for displaying loading states after button interactions.
-- **[Badge-view](https://help.syncfusion.com/maui/badge-view/overview)** for showing notification indicators on buttons.  
-- **[TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview)** for combining input fields with action buttons.
+- [Busy-Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for displaying loading states after button interactions.
+- [Badge-view](https://help.syncfusion.com/maui/badge-view/overview) for showing notification indicators on buttons.
+- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for combining input fields with action buttons.
 
-## Next step
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/button/getting-started) - step-by-step guide to begin using the Button control.  
-- [Customization](https://help.syncfusion.com/maui/button/customization) - customize button appearance and styles.  
-- [Visual States](https://help.syncfusion.com/maui/button/visual-states) - configure visual states and interactions. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/button/getting-started) shows how to begin using the Button control step by step.  
+- [Customization](https://help.syncfusion.com/maui/button/customization) shows how to customize button appearance and styles.  
+- [Visual States](https://help.syncfusion.com/maui/button/visual-states) explains how to configure visual states and interactions. 
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -188,24 +188,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-button" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -214,7 +196,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -223,12 +205,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/button" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>
