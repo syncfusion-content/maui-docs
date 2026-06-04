@@ -29,8 +29,8 @@ Syncfusion® .NET MAUI Charts (SfCircularChart) is used to create the chart with
 
 The following table summarizes the globalization support available in the [SfCircularChart](https://www.syncfusion.com/maui-controls/maui-circular-charts) control.
  
-<img src="globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="globalization/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
 
 <table>
 <tr>
@@ -43,11 +43,11 @@ The following table summarizes the globalization support available in the [SfCir
 </tr>
 <tr>
 <td><a href="/maui/circular-charts/overview">Circular Charts</a></td>
-<td align="center"><img src="globalization/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="globalization/partial-support.svg" alt="partial-support" width="16" /></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="globalization/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr>
 </table>
 
