@@ -66,7 +66,7 @@ The following table summarizes the globalization support available in the [SfNum
 Explore further resources:
 
 - [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) - step-by-step guide to begin using the NumericEntry control.
-- [Featues](https://help.syncfusion.com/maui/numericentry/basic-features) - learn core capabilities like validation and culture support.
+- [Features](https://help.syncfusion.com/maui/numericentry/basic-features) - learn core capabilities like validation and culture support.
 - [Formatting](https://help.syncfusion.com/maui/numericentry/formatting) - configure numeric formats and display.    
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
 
