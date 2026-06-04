@@ -64,7 +64,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control allows y
 
 The following table summarizes the globalization support available in the [SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker) control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 
 <table>
 <tr>
@@ -77,11 +77,11 @@ The following table summarizes the globalization support available in the [SfDat
 </tr>
 <tr>
 <td><a href="/maui/datepicker/overview">DatePicker</a></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 

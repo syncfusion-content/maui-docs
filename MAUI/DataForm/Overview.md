@@ -31,9 +31,9 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control is used t
 
 The following table summarizes the globalization support available in the [SfDataForm](https://www.syncfusion.com/maui-controls/maui-dataform) control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -46,11 +46,11 @@ The following table summarizes the globalization support available in the [SfDat
 </tr>
 <tr>
 <td><a href="/maui/dataform/overview">DataForm</a></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr>
 </table>
 
