@@ -34,9 +34,9 @@ Popup layout allows you to display an alert message with customizable buttons or
 
 The following table summarizes the globalization support available in the [SfPopup](https://www.syncfusion.com/maui-controls/maui-popup) control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
-<img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
 
 <table>
 <tr>
@@ -49,11 +49,11 @@ The following table summarizes the globalization support available in the [SfPop
 </tr>
 <tr>
 <td><a href="/maui/popup/overview">Popup</a></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr>
 </table>
 
