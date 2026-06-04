@@ -163,58 +163,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}	
 
-### SfCardLayout
-
-Initialize a card layout with a card view using the provided code sample below.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1 3 4 5 15" %}
-
-<cards:SfCardLayout HeightRequest="500" BackgroundColor="#F0F0F0">
-
-    <cards:SfCardView CornerRadius="10">
-        <Label  Text="Peach" BackgroundColor="PeachPuff" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-    </cards:SfCardView>
-
-    <cards:SfCardView CornerRadius="10">
-        <Label  Text="MediumPurple" BackgroundColor="MediumPurple" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-    </cards:SfCardView>
-
-    <cards:SfCardView CornerRadius="10" >
-        <Label  Text="LightPink" BackgroundColor="LightPink" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-    </cards:SfCardView>
-
-</cards:SfCardLayout>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 12" %}
-
-using Syncfusion.Maui.Cards;
-. . .
-
-public partial class MainPage : ContentPage
-{
-	public MainPage()
-	{
-		InitializeComponent();
-		SfCardLayout cardLayout = new SfCardLayout();
-
-		//Add children for card layout 
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Peach", BackgroundColor = Colors.PeachPuff, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center }, CornerRadius = 15 });
-
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "MediumPurple", BackgroundColor = Colors.MediumPurple, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
-
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "LightPink", BackgroundColor = Colors.LightPink, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
-
-		this.Content = cardLayout;
-	}
-}
-
-{% endhighlight %}
-{% endtabs %}	
-
-![MAUI SfCardView image](images/maui-card-cardlayout.gif)
-
 ## Customization in CardView
 
 Customization of the border color, thickness, and card corner radius can be achieved by the following properties.

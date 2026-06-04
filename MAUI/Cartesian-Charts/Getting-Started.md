@@ -765,11 +765,7 @@ namespace ChartGettingStarted
 
 {% endtabs %}
 
-## Step 5: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Cartesian chart will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
 

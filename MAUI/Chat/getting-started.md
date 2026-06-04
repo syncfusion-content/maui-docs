@@ -449,11 +449,7 @@ To load the messages to SfChat, bind the message collection to the [Messages](ht
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 6: Running the application
-
-Press **F5** to build and run the application. Once compiled, the Chat will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![Chat control in .NET MAUI platform](images/getting-started/maui-chat-getting-started.png)
 

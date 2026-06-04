@@ -203,3 +203,127 @@ public MainPage()
 ![.NET MAUI CheckBox](Images/Getting-Started/selectalltoppings.png)
 
 N> When the [IsThreeState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property is set to `False` and [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is set to `null`, the CheckBox will be in unchecked state.
+
+## Change the CheckBox state
+
+The three visual states of [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) are: 
+
+* Checked
+* Unchecked
+* Indeterminate
+
+![.NET MAUI CheckBox](Images/Getting-Started/tristate.png) 
+
+You can change the state of the CheckBox using the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property of the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html). In the checked state, a tick mark is added to the visualization of the CheckBox.
+
+<table>
+<tr>
+<td>
+<b>State</b>
+</td>
+<td>
+<b>Property</b>
+</td>
+<td>
+<b>Value</b>
+</td>
+</tr>
+<tr>
+<td>
+checked
+</td>
+<td>
+IsChecked
+</td>
+<td>
+true
+</td>
+</tr>
+<tr>
+<td>
+unchecked
+</td>
+<td>
+IsChecked
+</td>
+<td>
+false
+</td>
+</tr>
+<tr>
+<td>
+indeterminate
+</td>
+<td>
+IsChecked
+</td>
+<td>
+null
+</td>
+</tr>
+</table>
+
+N> To report the indeterminate state for the CheckBox, set the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to true.
+
+The CheckBox can be used as a single or as a group. A single CheckBox is mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <buttons:SfCheckBox x:Name="checkBox" Text="I agree to the terms of services for this site" IsChecked="True"/> 
+
+{% endhighlight %}
+{% highlight c# %}
+
+    SfCheckBox checkBox = new SfCheckBox();
+    checkBox.Text = "I agree to the terms of services for this site";
+    checkBox.IsChecked = true;
+    this.Content = checkBox;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI CheckBox](Images/Getting-Started/termsandconditions.png)
+
+
+Multiple CheckBoxes can be used as a group for multi-select scenarios where a user selects one or more items from the choices that are not mutually exclusive.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <StackLayout Padding="20">
+        <Label x:Name="label" Text="Pizza Toppings" Margin="0,10"/>
+        <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
+        <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
+        <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
+        <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
+    </StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout() { Padding = 20 };
+    Label label = new Label();
+    label.Text = "Pizza Toppings";
+    label.Margin = new Thickness(0,10);
+    SfCheckBox pepperoni = new SfCheckBox();
+    pepperoni.Text = "Pepperoni";
+    SfCheckBox beef = new SfCheckBox();
+    beef.Text = "Beef";
+    beef.IsChecked = true;
+    SfCheckBox mushroom = new SfCheckBox();
+    mushroom.Text = "Mushrooms";
+    SfCheckBox onion = new SfCheckBox();
+    onion.Text = "Pepperoni";
+    onion.IsChecked = true;
+    stackLayout.Children.Add(label);
+    stackLayout.Children.Add(pepperoni);
+    stackLayout.Children.Add(beef);
+    stackLayout.Children.Add(mushroom);
+    stackLayout.Children.Add(onion);
+    this.Content = stackLayout;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI CheckBox](Images/Getting-Started/pizzatoppings.png)
