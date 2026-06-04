@@ -39,7 +39,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI History offers a collection of *
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin-top: 0px;
@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI History offers a collection of *
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/HistoryImages/transaction.webp"
+<img src="Images/HistoryImages/transaction.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -167,7 +167,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI History offers a collection of *
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/HistoryImages/myorders.webp"
+<img src="Images/HistoryImages/myorders.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

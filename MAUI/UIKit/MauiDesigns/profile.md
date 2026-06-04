@@ -2,7 +2,7 @@
 layout: post
 title: Essential® UI Kit for .NET MAUI Profile Designs | Syncfusion®
 description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Profile apps, compatible with Android, iOS, and UWP platforms.
-platform: maui
+platform: mauic:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.pngc:\Users\SriRadheshNagSubashS\OneDrive - Syncfusion\Pictures\Screenshots\Screenshot 2026-06-02 134749.png
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
@@ -39,7 +39,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin: 0 0 10px;
@@ -130,7 +130,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ProfileImages/authorprofile.webp"
+<img src="Images/ProfileImages/authorprofile.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -167,7 +167,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ProfileImages/contacts.webp"
+<img src="Images/ProfileImages/contacts.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -204,7 +204,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ProfileImages/chatprofile.webp"
+<img src="Images/ProfileImages/chatprofile.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -240,7 +240,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ProfileImages/master.webp"
+<img src="Images/ProfileImages/master.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -277,7 +277,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
 <!-- Card 5 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ProfileImages/healthprofile.webp"
+<img src="Images/ProfileImages/healthprofile.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

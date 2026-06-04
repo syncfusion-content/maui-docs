@@ -40,7 +40,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin-top: 0px;
@@ -132,7 +132,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ArticleImages/articledetail.webp"
+<img src="Images/ArticleImages/articledetail.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -169,7 +169,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ArticleImages/articleparallax.webp"
+<img src="Images/ArticleImages/articleparallax.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -206,7 +206,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ArticleImages/myarticle.webp"
+<img src="Images/ArticleImages/myarticle.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

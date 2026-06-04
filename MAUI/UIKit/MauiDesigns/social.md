@@ -39,7 +39,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+    padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin: 0 0 10px;
@@ -130,7 +130,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SocialImages/connections.webp"
+<img src="Images/SocialImages/connections.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -167,7 +167,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SocialImages/card.webp"
+<img src="Images/SocialImages/card.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -204,7 +204,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SocialImages/interest.webp"
+<img src="Images/SocialImages/interest.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -240,7 +240,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SocialImages/message.webp"
+<img src="Images/SocialImages/message.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

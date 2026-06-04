@@ -39,7 +39,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin-top: 0px;
@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/productdetail.webp"
+<img src="Images/DetailImages/productdetail.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -168,7 +168,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/articledetail.webp"
+<img src="Images/DetailImages/articledetail.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -205,7 +205,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/eventdetail.webp"
+<img src="Images/DetailImages/eventdetail.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -242,7 +242,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 4 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/datatable.webp"
+<img src="Images/DetailImages/datatable.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -279,7 +279,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 5 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/myaddress.webp"
+<img src="Images/DetailImages/myaddress.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -317,7 +317,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 6 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/roombooking.webp"
+<img src="Images/DetailImages/roombooking.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

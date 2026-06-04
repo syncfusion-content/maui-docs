@@ -29,9 +29,6 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 .form-image {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
    display: block;
    cursor: pointer;
    transition: 0.3s ease;
@@ -40,7 +37,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin: 0 0 10px;
@@ -131,7 +128,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TransactionImages/checkout.webp"
+<img src="Images/TransactionImages/checkout.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -168,7 +165,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TransactionImages/paymentsuccess.webp"
+<img src="Images/TransactionImages/paymentsuccess.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -205,7 +202,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TransactionImages/paymentfailure.webp"
+<img src="Images/TransactionImages/paymentfailure.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -241,7 +238,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TransactionImages/savedcards.webp"
+<img src="Images/TransactionImages/savedcards.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

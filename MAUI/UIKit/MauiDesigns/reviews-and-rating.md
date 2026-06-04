@@ -39,7 +39,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a colle
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin: 0 0 10px;
@@ -130,7 +130,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a colle
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ReviewImages/feedback.webp"
+<img src="Images/ReviewImages/feedback.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -166,7 +166,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a colle
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ReviewImages/review.webp"
+<img src="Images/ReviewImages/review.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

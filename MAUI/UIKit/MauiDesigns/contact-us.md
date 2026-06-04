@@ -40,7 +40,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Contact-Us offers a collection o
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin-top: 0px;
@@ -132,7 +132,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Contact-Us offers a collection o
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ContactusImages/contactus.webp"
+<img src="Images/ContactusImages/contactus.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

@@ -40,7 +40,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin: 0 0 10px;
@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NotificationImages/task.webp"
+<img src="Images/NotificationImages/task.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -168,7 +168,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NotificationImages/social.webp"
+<img src="Images/NotificationImages/social.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -205,7 +205,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NotificationImages/ecommerce.webp"
+<img src="Images/NotificationImages/ecommerce.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
