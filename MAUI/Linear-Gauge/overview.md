@@ -35,9 +35,9 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge is a data visualization contro
 
 The following table summarizes the globalization support available in the [SfLinearGauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) control.
 
-<img src="Images/globalization/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="Images/globalization/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
+<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
 
 <table>
 <tr>
@@ -50,11 +50,11 @@ The following table summarizes the globalization support available in the [SfLin
 </tr>
 <tr>
 <td><a href="/maui/linear-gauge/overview">Linear Gauge</a></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/globalization/partial-support.svg" alt="partial-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr>
 </table>
 
