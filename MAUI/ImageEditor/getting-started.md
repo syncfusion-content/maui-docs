@@ -290,7 +290,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Loading an image to image editor
+## Step 5: Loading an image to image editor
 
 The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property is used to load images from different sources:
 
@@ -442,6 +442,12 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the ImageEditor will be displayed with the data provided.
+
+Here is the result of the previous codes,
 
 ![GettingStarted in .NET Maui ImageEditor](images\getting-started\imageeditor-gettingstarted.png)
 

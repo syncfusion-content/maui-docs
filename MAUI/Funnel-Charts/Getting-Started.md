@@ -525,34 +525,25 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ChartGettingStarted.MainPage"
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
+<chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"
+                        ShowDataLabels="True" 
+                        EnableTooltip="True">
 
-    <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                         XBindingPath="XValue" 
-                         YBindingPath="YValue"
-                         ShowDataLabels="True" 
-                         EnableTooltip="True">
+    <chart:SfFunnelChart.Title>
+        <Label Text="School Admission"/>
+    </chart:SfFunnelChart.Title>
 
-        <chart:SfFunnelChart.Title>
-            <Label Text="School Admission"/>
-        </chart:SfFunnelChart.Title>
+    <chart:SfFunnelChart.BindingContext>
+        <model:AdmissionViewModel/>
+    </chart:SfFunnelChart.BindingContext>
 
-        <chart:SfFunnelChart.BindingContext>
-            <model:AdmissionViewModel/>
-        </chart:SfFunnelChart.BindingContext>
+    <chart:SfFunnelChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfFunnelChart.Legend>
 
-        <chart:SfFunnelChart.Legend>
-            <chart:ChartLegend/>
-        </chart:SfFunnelChart.Legend>
-
-    </chart:SfFunnelChart>
-
-</ContentPage>
+</chart:SfFunnelChart>
  
 {% endhighlight %}
 
@@ -585,6 +576,12 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 
 {% endtabs %}
+
+## Step 5: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the Funnel Chart will be displayed with the data provided.
+
+Here is the result of the previous codes,
 
 ![Funnel chart in .NET MAUI Chart](Getting-Started_Images/MAUI_funnel_chart.png)
 
