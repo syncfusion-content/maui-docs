@@ -1231,6 +1231,7 @@ The following screenshot shows the output when an item is added at the specified
 ![.NET MAUI ListView add an item at the specific index in a group](Images/grouping/net-maui-listview-add-an-item-at-the-specific-index.jpg)
 
 ## See also 
+- [How to create a grouped ListView in .NET MAUI (SfListView)](https://support.syncfusion.com/kb/article/11376/how-to-create-a-grouped-listview-in-net-maui-sflistview)
 
 - [Sorting in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/sorting)
 

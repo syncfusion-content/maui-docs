@@ -295,10 +295,6 @@ The following limitations should be noted when using the previous approaches:
 * When performing keyboard navigation, the view cannot be scrolled automatically while navigating out of view.
 * Touch action scrolling will be handled in all platforms, and `SfListView` scrolling will be handled by the parent `ScrollView`.
 
-### See Also
-
-- [Scrolling in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/scrolling)
-
 ## Rendering ListView when loading in different layouts
 
 The options are as follows:
@@ -357,8 +353,10 @@ private bool FilterDepartures(object obj)
 
 ## See also
 
+- [How to set the font size for .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11569/how-to-set-the-font-size-for-net-maui-listview-sflistview)
+
 - [Filtering in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/filtering)
 
 - [Selection in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/selection)
 
-- [Item Re-ordering in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-drag-and-drop)
+- [Scrolling in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/scrolling)

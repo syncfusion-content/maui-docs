@@ -170,6 +170,8 @@ The following screenshot shows the output rendered when the filtered items are s
 
 ## See also
 
+- [How to filter the items in .NET MAUI ListView (SfListview) using MVVM](https://www.syncfusion.com/kb/13060/)
+
 - [Grouping in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/grouping)
 
 - [Sorting in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/sorting)
