@@ -15,10 +15,10 @@ Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless expe
 ## Key Globalization Features
 
 - **Localization**  
-  Enable multilingual applications by adapting UI text, formats and content to different languages and cultures.
+  Enable multilingual applications by adapting UI text, formats, and content to different languages and cultures.
 
 - **Right-To-Left (RTL) Layout**  
-  Built-in support for RTL languages such as Arabic and Hebrew ensures proper layout mirroring and usability.
+  Built-in support for RTL languages, such as Arabic and Hebrew, ensures proper layout mirroring and usability.
 
 - **Time Zone Handling**  
   Accurately manage and display date/time values across different geographical time zones.
@@ -26,8 +26,8 @@ Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless expe
 - **Accessibility Support**  
   Improve usability for all users through:
 
-  - **Screen Reader** : Compatibility for visually impaired users  
-  - **Keyboard Navigation** : for enhanced interaction without a mouse
+  - **Screen Reader**: Compatibility for visually impaired users  
+  - **Keyboard Navigation**: Improved interaction without the need for a mouse.
 
 ## Globalization Support Across Controls
 
@@ -681,17 +681,3 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 </table>
-
-## See Also
-
-- [Licensing](https://help.syncfusion.com/maui/licensing/overview) - Guidance on Syncfusion .NET MAUI licensing.
-
-- [Future Release Plans](https://www.syncfusion.com/products/roadmap/maui-controls) - See upcoming features for .NET MAUI controls.
-
-- [Essential Studio UI Kit](https://help.syncfusion.com/maui/uikit/overview) - Access ready-to-use UI templates for your apps.
-
-- **Smart Components**:  
-
-  [Smart DataGrid](https://help.syncfusion.com/maui/smartdatagrid/overview) – Advanced data grid for managing and visualizing tabular data.  
-  [Smart Scheduler](https://help.syncfusion.com/maui/smartscheduler/overview) – Schedule and manage events with calendar views.  
-  [Smart Text Editor](https://help.syncfusion.com/maui/smarttexteditor/overview) – Rich text editing with advanced formatting options.
