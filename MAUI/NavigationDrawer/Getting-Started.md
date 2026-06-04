@@ -409,4 +409,164 @@ public partial class MainPage : ContentPage
 
 ![CustomView](Images/getting-started/getting_main_content.png)
 
+## Set CollectionView as DrawerContentView
+
+Create a CollectionView with items and set it as [DrawerContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView). 
+
+{% tabs %}
+{% highlight xaml %}
+
+<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings DrawerWidth="250"
+                                 DrawerHeaderHeight="160">
+            <navigationDrawer:DrawerSettings.DrawerHeaderView>
+                <Grid BackgroundColor="#6750A4" RowDefinitions="120,40">
+                    <Image Source="user.png"/>
+                    <Label Text="James Pollock" Grid.Row="1"/>
+                </Grid>
+            </navigationDrawer:DrawerSettings.DrawerHeaderView>
+            <navigationDrawer:DrawerSettings.DrawerContentView>
+                <CollectionView x:Name="collectionView" SelectionMode="Single"
+                  SelectionChanged="collectionView_SelectionChanged">
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Home</x:String>
+                            <x:String>Profile</x:String>
+                            ...
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemTemplate>
+                        <!--Load your Data Template -->
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </navigationDrawer:DrawerSettings.DrawerContentView>
+        </navigationDrawer:DrawerSettings>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+    <navigationDrawer:SfNavigationDrawer.ContentView>
+        <Grid x:Name="mainContentView" RowDefinitions="Auto,*">
+            <HorizontalStackLayout BackgroundColor="#6750A4" Spacing="10" Padding="5,0,0,0">
+                <ImageButton x:Name="hamburgerButton" Clicked="hamburgerButton_Clicked"/>
+                <Label x:Name="headerLabel" />
+            </HorizontalStackLayout>
+            <Label Grid.Row="1" x:Name="contentLabel" />
+        </Grid>
+    </navigationDrawer:SfNavigationDrawer.ContentView>
+</navigationDrawer:SfNavigationDrawer>
+
+{% endhighlight %}
+{% highlight c# %}
+
+namespace NavigationDrawerGettingStarted;
+
+public partial class MainPage : ContentPage
+{
+    SfNavigationDrawer navigationDrawer;
+    CollectionView collectionView;
+    Label headerLabel, contentLabel;
+
+    public MainPage()
+    {
+        navigationDrawer = new SfNavigationDrawer();
+        var drawerSettings = new DrawerSettings
+        {
+            DrawerWidth = 250,
+            DrawerHeaderHeight = 160
+        };
+
+        var headerGrid = new Grid
+        {
+            BackgroundColor = Color.FromArgb("#6750A4"),
+            RowDefinitions =
+            {
+                new RowDefinition { Height = 120 },
+                new RowDefinition { Height = 40 }
+            }
+        };
+
+        var userImage = new Image { Source = "user.png" };
+        var userLabel = new Label { Text = "James Pollock" };
+        Grid.SetRow(userLabel, 1);
+
+        headerGrid.Children.Add(userImage);
+        headerGrid.Children.Add(userLabel);
+
+        drawerSettings.DrawerHeaderView = headerGrid;
+        collectionView = new CollectionView
+        {
+            SelectionMode = SelectionMode.Single,
+            ItemsSource = new List<string>
+            {
+                "Home",
+                "Profile",
+                "Settings",
+                "About"
+            }
+        };
+        collectionView.SelectionChanged += CollectionView_SelectionChanged;
+
+        drawerSettings.DrawerContentView = collectionView;
+
+        navigationDrawer.DrawerSettings = drawerSettings;
+        var mainGrid = new Grid
+        {
+            RowDefinitions =
+            {
+                new RowDefinition { Height = GridLength.Auto },
+                new RowDefinition { Height = GridLength.Star }
+            }
+        };
+
+        var topBar = new HorizontalStackLayout
+        {
+            BackgroundColor = Color.FromArgb("#6750A4"),
+            Spacing = 10,
+            Padding = new Thickness(5, 0, 0, 0)
+        };
+
+        var hamburgerButton = new ImageButton();
+        hamburgerButton.Clicked += HamburgerButton_Clicked;
+
+        headerLabel = new Label();
+
+        topBar.Children.Add(hamburgerButton);
+        topBar.Children.Add(headerLabel);
+        contentLabel = new Label();
+        Grid.SetRow(contentLabel, 1);
+
+        mainGrid.Children.Add(topBar);
+        mainGrid.Children.Add(contentLabel);
+
+        navigationDrawer.ContentView = mainGrid;
+
+        Content = navigationDrawer;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+        private void hamburgerButton_Clicked(object sender, EventArgs e)
+        {
+            navigationDrawer.ToggleDrawer();
+        }
+
+        private void collectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.FirstOrDefault() is string selectedItem)
+            {
+                headerLabel.Text = selectedItem;
+                contentLabel.Text = $"{selectedItem} Content";
+                navigationDrawer.ToggleDrawer();
+            }
+        }
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Navigation Drawer](Images/getting-started/gettingstarted.png)
+
 N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) for [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) upon initializing.
