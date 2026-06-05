@@ -34,62 +34,6 @@ The SfPicker enables or disables the column header section by setting the SfPick
 
 ![Set Column header in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header.png)
 
-## Set column header to the Picker items
-
-The SfPicker control allows you to add the column header text by setting the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderText) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html), and you need to add the column header height by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Height) property in the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html). Its text style and background color are customizable.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 7" %}
-
-<picker:SfPicker x:Name="picker">
-<picker:SfPicker.HeaderView>
-    <picker:PickerHeaderView Text="Select a color" Height="40" />
-</picker:SfPicker.HeaderView>
-
-<picker:SfPicker.Columns>
-    <picker:PickerColumn HeaderText="Colors" 
-                         ItemsSource="{Binding DataSource}" />
-</picker:SfPicker.Columns>
-
-<picker:SfPicker.ColumnHeaderView>
-    <picker:PickerColumnHeaderView Height="40" />
-</picker:SfPicker.ColumnHeaderView>
-</picker:SfPicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="14 21" %}
-
-ItemInfo itemInfo = new ItemInfo();
-SfPicker picker = new SfPicker()
-{
-    HeaderView = new PickerHeaderView()
-    {
-        Text = "Select a color",
-        Height = 40,
-    },
-
-    Columns = new ObservableCollection<PickerColumn>()
-    {
-        new PickerColumn()
-        {
-            HeaderText = "Colors",
-            ItemsSource = itemInfo.DataSource,
-        }
-    },
-
-    ColumnHeaderView = new PickerColumnHeaderView()
-    {
-        Height = 40,
-    },
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-![Picker Column header view in .NET MAUI picker.](images/getting-started/maui-picker-column-header-view.png)
-
 ## Column header customization
 
 Enhancing Column Header with `Height`, `Text Style`, `Background`, and `DividerColor` Properties.

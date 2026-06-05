@@ -273,13 +273,11 @@ The title of the chart provides quick information to the user about the data bei
 
 {% highlight xaml %}
 
-<Grid>
-    <chart:SfPolarChart>
-        <chart:SfPolarChart.Title>
-            <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
-        </chart:SfPolarChart.Title> 
-    </chart:SfPolarChart>
-</Grid>
+<chart:SfPolarChart>
+    <chart:SfPolarChart.Title>
+        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
+    </chart:SfPolarChart.Title> 
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
