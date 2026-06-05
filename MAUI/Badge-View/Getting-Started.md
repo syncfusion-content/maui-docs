@@ -333,7 +333,8 @@ Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 {% highlight xaml %}
 
-<badgeView:SfBadgeView ScreenReaderText="20" />
+<badgeView:SfBadgeView ScreenReaderText="20" 
+                       BadgeText="20" />
 
 {% endhighlight %}
 
@@ -341,6 +342,7 @@ Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
    
 SfBadgeView badgeView = new SfBadgeView();
 badgeView.ScreenReaderText = "20";
+badgeView.BadgeText = "20";
 Content = badgeView;
 
 {% endhighlight %}
