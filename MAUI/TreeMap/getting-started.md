@@ -349,51 +349,70 @@ To populate the treemap items, utilize the [DataSource](https://help.syncfusion.
 Also, specify the path to the data property containing the text you want to display for the treemap leaf item using the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property of [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="2 4 5 6" %}
 
-<treemap:SfTreeMap x:Name="treeMap" x:DataType="local:ViewModel" DataSource="{Binding AirportDetails}" Grid.Row="1" Margin="8" RangeColorValuePath="Count" PrimaryValuePath="Count" ShowToolTip="True">
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="State" Spacing="0"/>
-    </treemap:SfTreeMap.LeafItemSettings>
+<treemap:SfTreeMap x:Name="treeMap"
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True" />
-    </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-
-{% highlight C# %}
+{% highlight C# hl_lines="2 3"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
-ViewModel viewModel = new ViewModel();
-treeMap.DataSource = viewModel.AirportDetails;
-treeMap.PrimaryValuePath = "Count";
-treeMap.RangeColorValuePath = "Count";
-treeMap.ShowToolTip = true;
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings()
-{
-    LabelPath = "State",
-    Spacing = 0
-};
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings()
-{
-    Brush = new SolidColorBrush(Colors.Orange)
-};
-treeMap.LegendSettings = new TreeMapLegendSettings()
-{
-    ShowLegend = true
-};
-
-Grid.SetRow(treeMap, 1);
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+this.Content = treeMap;
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![Getting Started with MAUI TreeMap ](images/getting-started/treemap-view.png)
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain treemap binding.
+
+## Add labels
+
+To display text for the leaf items, utilize the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property within the [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property allows you to specify the path to the data property containing the text you want to display.
+
+{% tabs %}
+{% highlight XAML hl_lines="7 8 9" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
+</treemap:SfTreeMap>
+
+{% endhighlight %}
+{% highlight C# hl_lines="5"  %}
+
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+this.Content = treeMap;
+
+{% endhighlight %}
+{% endtabs %}
+
+![getting-started-with-maui-tree-map](images/getting-started/treemap-view.png)
 
 N> This is applicable only when [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) is enabled.
 

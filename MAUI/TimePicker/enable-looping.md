@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Looping and Selection support in .NET MAUI Time Picker Control | Syncfusion®
+title: Looping and Selection support in .NET MAUI Time Picker | Syncfusion®
 description: Learn about looping and Selection support in Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control.
 platform: maui
 control: SfTimePicker
