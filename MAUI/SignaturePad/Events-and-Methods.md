@@ -96,3 +96,63 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 {% endtabs %}
 
 N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.
+
+## Saving the signature as an image
+
+Save the signature drawn in the SignaturePad as an [ImageSource](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method which can further be synchronized with your devices and documents that need your signature.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<signaturePad:SfSignaturePad x:Name="signaturePad" />
+<Button Text="Save"
+        Clicked="OnSaveButtonClicked" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSignaturePad signaturePad = new SfSignaturePad();
+Button saveButton = new Button();
+saveButton.Text="Save";
+saveButton.Clicked += OnSaveButtonClicked;
+
+private void OnSaveButtonClicked(object? sender, EventArgs e)
+{
+    ImageSource? source = signaturePad.ToImageSource();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Clear the existing signature in SignaturePad
+
+Clear the signature drawn in the SignaturePad using the [Clear()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_Clear) method as shown in the code snippet below:
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<signaturePad:SfSignaturePad x:Name="signaturePad" />
+<Button Text="Clear"
+        Clicked="OnClearButtonClicked" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSignaturePad signaturePad = new SfSignaturePad();
+Button clearButton = new Button();
+clearButton.Text = "Clear";
+clearButton.Clicked += OnClearButtonClicked;
+
+private void OnClearButtonClicked(object? sender, EventArgs e)
+{
+    signaturePad.Clear();
+}
+
+{% endhighlight %}
+
+{% endtabs %}

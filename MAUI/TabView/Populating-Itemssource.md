@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populate ItemsSource in .NET MAUI Tab View Control | Syncfusion®
+title: Populating ItemsSource in .NET MAUI Tab View Control | Syncfusion®
 description: Learn about the populate itemssource of the Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Populate ItemsSource
+# Populating ItemsSource
 
 Items can be added to the control using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsSource) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 

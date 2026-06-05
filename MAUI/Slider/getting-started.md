@@ -316,7 +316,7 @@ namespace SliderGettingStarted
 
 ![Initialize slider](images/getting-started/initialize-slider.png)
 
-## Initialization of Slider
+##  Add Label and Ticks
 
 The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 

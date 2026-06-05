@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend and Title in .NET MAUI Sunburst Chart control | Syncfusion
-description: Learn here all about Legend and Title in Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart control, its elements, and more.
+title: Legend in .NET MAUI Sunburst Chart control | Syncfusion
+description: Learn here all about Legend in Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart control, its elements, and more.
 platform: maui
 control: SfSunburstChart
 documentation: ug
 ---
 
-# Legend and Title in Sunburst Chart
+# Legend in .NET MAUI Sunburst Chart
 
 ## Enable a Legend
 
@@ -37,32 +37,3 @@ this.Content = sunburst;
 
 {% endtabs %} 
 
-## Add a Title
-The title of the sunburst chart provides quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Title) property is used to set title for the sunburst chart as follows.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<sunburst:SfSunburstChart>
-    <sunburst:SfSunburstChart.Title>
-        <Label Text="Employees Count"/>
-    </sunburst:SfSunburstChart.Title>
-    . . .
-</sunburst:SfSunburstChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSunburstChart sunburst = new SfSunburstChart();
-sunburst.Title = new Label()
-{
-    Text = "Employees Count"
-};
-
-this.Content = sunburst;
-
-{% endhighlight %}
-
-{% endtabs %}  
