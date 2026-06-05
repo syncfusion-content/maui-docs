@@ -11,6 +11,36 @@ documentation: ug
 
 The appearance of the [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
 
+## Add a title
+
+The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set the title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of the pyramid chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart>
+    <chart:SfPyramidChart.Title>
+        <Label Text="Pyramid Stages"/>
+    </chart:SfPyramidChart.Title>
+    . . .
+</chart:SfPyramidChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfPyramidChart chart = new SfPyramidChart();
+chart.Title = new Label()
+{
+    Text = "Pyramid Stages"
+};
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
+
 ## Custom PaletteBrushes
 
 The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) allows you to define your own brushes with preferred order by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PaletteBrushes) property, as shown in the code below.
