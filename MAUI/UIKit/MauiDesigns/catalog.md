@@ -35,7 +35,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
    transform: scale(1.02);
 }
 .catalog-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .catalog-title {
    margin-top: 0px;
@@ -126,8 +126,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/categorytile.webp"
-                class="catalog-image"
-                onclick="openImage(this.src, event)">
+                class="catalog-image">
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Category Tile Grid
@@ -162,7 +161,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/catalogtile.webp"
                 class="catalog-image"
-                onclick="openImage(this.src, event)">
+                >
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Product Catalog Tiles
@@ -197,7 +196,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/cataloglist.webp"
                 class="catalog-image"
-                onclick="openImage(this.src, event)">
+               >
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Product Catalog List
@@ -232,7 +231,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/articlelist.webp"
                 class="catalog-image"
-                onclick="openImage(this.src, event)">
+                >
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Article List View
@@ -267,7 +266,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/articletile.webp"
                 class="catalog-image"
-                onclick="openImage(this.src, event)">
+               >
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Featured Article Tile <a href="(https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/ArticleTilePage.xaml"
@@ -301,7 +300,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/producthome.webp"
                 class="catalog-image"
-                onclick="openImage(this.src, event)">
+                >
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Product Home
@@ -336,7 +335,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/eventlist.webp"
                 class="catalog-image"
-                onclick="openImage(this.src, event)">
+                >
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Event List View
@@ -371,7 +370,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/articlecard.webp"
                 class="catalog-image"
-                onclick="openImage(this.src, event)">
+                >
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Article Card Grid
@@ -406,7 +405,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/CatalogImages/travelplanner.webp"
                 class="catalog-image"
-                onclick="openImage(this.src, event)">
+                >
 </div>
 <div class="catalog-content">
 <h3 class="catalog-title">Travel Planner
@@ -444,17 +443,3 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 </span>
 <img id="popupImage">
 </div>
-<script>
-function openImage(src) {
-   document.getElementById("imageModal").style.display = "flex";
-   document.getElementById("popupImage").src = src;
-}
-function closeImage() {
-   document.getElementById("imageModal").style.display = "none";
-}
-document.getElementById("imageModal").addEventListener("click", function(e) {
-   if (e.target.id === "imageModal") {
-       closeImage();
-   }
-});
-</script>
