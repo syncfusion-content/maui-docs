@@ -441,6 +441,11 @@ line-height: 1;
     </a>
 </div>
 <div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/circularprogressbar/overview">
+        <span class="sf-home-icon sf-icon-busy-indicator"></span>Circular Progress Bar
+    </a>
+</div>
+<div class="controlanchorlink">
     <a target="_self" href="https://help.syncfusion.com/maui/stepprogressbar/overview">
         <span class="sf-home-icon sf-icon-step-progress-bar"></span>Step Progress Bar
     </a>
@@ -498,11 +503,6 @@ line-height: 1;
 <div class="controlanchorlink">
     <a href="https://help.syncfusion.com/maui/sunburstchart/overview">
         <span class="sf-home-icon sf-icon-sunburst-chart"></span>Sunburst Chart
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a href="https://help.syncfusion.com/maui-toolkit/spark-charts/getting-started">
-        <span class="sf-home-icon sf-icon-spark-chart"></span>Spark Charts
     </a>
 </div>
 <div class="controlanchorlink">
