@@ -491,7 +491,7 @@ line-height: 1;
     </a>
 </div>
 <div class="controlanchorlink">
-    <a href="https://help.syncfusion.com/maui/sparkchart/overview">
+    <a href="https://help.syncfusion.com/maui-toolkit/spark-charts/getting-started">
         <span class="sf-home-icon sf-icon-spark-chart"></span>Spark Charts
     </a>
 </div>
@@ -581,8 +581,8 @@ line-height: 1;
     </a>
 </div>
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/progressbar/overview">
-        <span class="sf-home-icon sf-icon-progress-bar"></span>Progress Bar
+    <a target="_self" href="https://help.syncfusion.com/maui/linearprogressbar/overview">
+        <span class="sf-home-icon sf-icon-progress-bar"></span>Linear Progress Bar
     </a>
 </div>
 <div class="controlanchorlink">
