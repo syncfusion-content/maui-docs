@@ -1539,6 +1539,56 @@ N> The editor expansion button is only visible when the content reaches the thir
 
 The `SfAIAssistView` control provides built-in voice input support through a microphone button in the editor. By default, the microphone view is visible. To hide it, set the `EnableVoiceInput` property to `false`.
 
+### Permission required for voice input
+
+For using voice input support, you need to grant permission for audio. 
+
+#### Android platform
+
+Provide audio permission within the `AndroidManifest.xml` file:
+
+{% tabs %}
+{% highlight xml %}
+
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+{% endhighlight %}
+{% endtabs %}
+
+### iOS and macOS platform
+
+Add the `NSMicrophoneUsageDescription` and `NSSpeechRecognitionUsageDescription` permissions to your `Info.plist` file:
+
+{% tabs %}
+{% highlight xml %}
+
+<key>NSSpeechRecognitionUsageDescription</key>
+<string>Recognize speech</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Use microphone to listen to your voice input</string>
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Windows platform
+
+Provide the `Microphone` capability for the application in the `Package.appxmanifest` file.
+
+{% tabs %}
+{% highlight xml %}
+
+<DeviceCapability Name="microphone"/>
+
+{% endhighlight %}
+{% endtabs %}
+
+##### Configure Speech Recognition
+
+Confirm that the following are enabled in your WinUI app:
+
+ - Online speech recognition: (Settings -> Privacy -> Privacy & Security) is enabled.
+ - Microphone: (Settings -> Privacy & Security -> Microphone) has the necessary permissions for the app.
+
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
 
@@ -1567,7 +1617,7 @@ public partial class MainPage : ContentPage
 
 ![Speech to Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-speech-to-text.gif)
 
-## Text-to-speech support
+## Text-to-speech support in SfAIAssistView
 
 The `SfAIAssistView` control provides built-in text-to-speech support for each response. This allows users to play, pause, and stop the text-to-speech functionality.
 
@@ -1575,7 +1625,7 @@ The `SfAIAssistView` control provides built-in text-to-speech support for each r
 
 ## Disclaimer text
 
-The `SfAIAssistView` control supports displaying a disclaimer text below the editor. To display this text, assign a value to the `DisclaimerText` property.
+The `SfAIAssistView` control supports displaying a note or suggestion text below the editor. To display this text, assign a value to the `DisclaimerText` property.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
