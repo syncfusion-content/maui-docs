@@ -333,37 +333,46 @@ The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeS
 {% tabs %}
 
 {% highlight xaml %}
-<ContentPage.BindingContext>
-    <local:ViewModel />
-</ContentPage.BindingContext>
 
-<sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                    Maximum="2018-01-01" 
-                                    RangeStart="2012-01-01" 
-                                    RangeEnd="2016-01-01">
-    <charts:SfCartesianChart>
-
-        <charts:SfCartesianChart.XAxes>
-            <charts:DateTimeAxis IsVisible="False"
-                                ShowMajorGridLines="False" />
-        </charts:SfCartesianChart.XAxes>
-
-        <charts:SfCartesianChart.YAxes>
-            <charts:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-        </charts:SfCartesianChart.YAxes>
-
-        <charts:SfCartesianChart.Series>
-            <charts:SplineAreaSeries ItemsSource="{Binding Source}"
-                                    XBindingPath="X"
-                                    YBindingPath="Y">
-            </charts:SplineAreaSeries>
-
-        </charts:SfCartesianChart.Series>
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
     
-    </charts:SfCartesianChart>
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
 
-</sliders:SfDateTimeRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
+        <charts:SfCartesianChart>
+
+            <charts:SfCartesianChart.XAxes>
+                <charts:DateTimeAxis IsVisible="False"
+                                    ShowMajorGridLines="False" />
+            </charts:SfCartesianChart.XAxes>
+
+            <charts:SfCartesianChart.YAxes>
+                <charts:NumericalAxis IsVisible="False"
+                                     ShowMajorGridLines="False" />
+            </charts:SfCartesianChart.YAxes>
+
+            <charts:SfCartesianChart.Series>
+                <charts:SplineAreaSeries ItemsSource="{Binding Source}"
+                                        XBindingPath="X"
+                                        YBindingPath="Y">
+                </charts:SplineAreaSeries>
+
+            </charts:SfCartesianChart.Series>
+        
+        </charts:SfCartesianChart>
+    
+    </sliders:SfDateTimeRangeSelector>
+</ContentPage>
+
 {% endhighlight %}
 
 {% highlight C# %}
@@ -394,10 +403,6 @@ this.Content = rangeSelector;
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the DateTime Range Selector will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following gif image illustrates the result of the above code.
 
 ![RangeSelector content](images/getting-started/default-range-selector.png)

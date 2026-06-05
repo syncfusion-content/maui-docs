@@ -287,11 +287,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Date Time Picker will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following gif image illustrates the result of the above code.
 
 ![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
 
