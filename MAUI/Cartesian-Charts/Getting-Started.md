@@ -536,6 +536,14 @@ The following code example gives you the complete code of above configurations.
 {% tabs %} 
 
 {% highlight xaml %}
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ChartGettingStarted.MainPage"
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:model="clr-namespace:ChartGettingStarted">
+
     <ContentPage.BindingContext>
         <model:PersonViewModel/>
     </ContentPage.BindingContext>
@@ -579,6 +587,8 @@ The following code example gives you the complete code of above configurations.
         </chart:ColumnSeries>
 
     </chart:SfCartesianChart>
+</ContentPage>
+
 {% endhighlight %}
 
 {% highlight C# %}
