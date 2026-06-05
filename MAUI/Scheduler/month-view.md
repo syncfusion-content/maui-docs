@@ -216,6 +216,8 @@ this.Content = scheduler;
 {% endhighlight %}  
 {% endtabs %}
 
+![Horizontal-date-text-alignment-in-month-view](images/month-view/horizontal-date-text-alignment-in-month-view.png)
+
 ## Number of weeks visible in the month view 
 
 The number of week visible in the month view can be changed by setting the [NumberOfVisibleWeeks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NumberOfVisibleWeeks) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). 
