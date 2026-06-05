@@ -454,90 +454,6 @@ this.Content = chart;
 
 {% endtabs %}  
 
-### Enable the data labels
-
-The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series can be used to enable data labels to improve the readability of the circular chart. The label visibility is set to `False` by default.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCircularChart>
-    . . .
-    <chart:PieSeries ShowDataLabels="True"/>
-</chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCircularChart chart = new SfCircularChart();
-. . .
-PieSeries series = new PieSeries();
-series.ShowDataLabels = true;
-chart.Series.Add(series);
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-### Enable a legend
-
-The legend provides information about the data point displayed in the circular chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCircularChart>
-    . . .
-    <chart:SfCircularChart.Legend>
-    	<chart:ChartLegend/>
-    </chart:SfCircularChart.Legend>
-</chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCircularChart chart = new SfCircularChart();
-. . .
-chart.Legend = new ChartLegend();
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-### Enable Tooltip
-
-Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting series [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property as true.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCircularChart>
-    . . .
-    <chart:PieSeries EnableTooltip="True"/>
-</chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCircularChart chart = new SfCircularChart();
-. . .
-PieSeries series = new PieSeries();
-series.EnableTooltip = true;
-chart.Series.Add(series);
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 The following code example gives you the complete code of above configurations.
 
 {% tabs %} 
@@ -606,6 +522,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 
 {% endtabs %}
+
+The following screenshot illustrates the result of the above code.
 
 ![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.png)
 
