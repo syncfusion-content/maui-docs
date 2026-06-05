@@ -15,6 +15,57 @@ The visual appearance of the CheckBox can be customized using `VisualStates`. Th
 * Unchecked
 * Intermediate
 
+You can change the state of the CheckBox using the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property of the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html). In the checked state, a tick mark is added to the visualization of the CheckBox.
+
+<table>
+<tr>
+<td>
+<b>State</b>
+</td>
+<td>
+<b>Property</b>
+</td>
+<td>
+<b>Value</b>
+</td>
+</tr>
+<tr>
+<td>
+checked
+</td>
+<td>
+IsChecked
+</td>
+<td>
+true
+</td>
+</tr>
+<tr>
+<td>
+unchecked
+</td>
+<td>
+IsChecked
+</td>
+<td>
+false
+</td>
+</tr>
+<tr>
+<td>
+indeterminate
+</td>
+<td>
+IsChecked
+</td>
+<td>
+null
+</td>
+</tr>
+</table>
+
+N> To report the indeterminate state for the CheckBox, set the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to true.
+
 {% tabs %}
 {% highlight xaml %}
 
