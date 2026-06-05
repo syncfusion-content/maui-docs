@@ -327,11 +327,7 @@ In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digita
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the DigitalGauge will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![getting-started](Images\getting-started.png)
 

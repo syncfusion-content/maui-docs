@@ -362,11 +362,7 @@ namespace DockLayoutGettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the DockLayout will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![Output of DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 
