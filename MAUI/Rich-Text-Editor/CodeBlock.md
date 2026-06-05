@@ -51,3 +51,4 @@ editor.ToolbarItems.Add(new RichTextToolbarItem
 
 {% endtabs %}
 
+![.NET MAUI Rich Text Editor Code Block](images/richtexteditor-code-block.png)

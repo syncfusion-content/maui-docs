@@ -432,41 +432,6 @@ schedule.MonthView.NavigationDirection = SchedulerMonthNavigationDirection.Verti
 
 The month cell appearance can be customized by using the  [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellStyle), and [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
-#### Date horizontal alignment 
-
-The .NET MAUI SfScheduler provides support to customize the horizontal alignment of date text in the Month view cells. This allows developers to control how the date value is positioned within each cell, improving readability and aligning with custom UI requirements.
-
-By using the dedicated properties in SchedulerMonthView, you can align the date text to the left, center, or right of the month cell.
-
-#### Set date horizontal alignment
-
-You can configure the date text alignment using the `DateHorizontalAlignment` property of SchedulerMonthView.
-
-{% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-    <scheduler:SfScheduler >
-        <scheduler:SfScheduler.MonthView>
-            <scheduler:SchedulerMonthView  DateHorizontalAlignment="Center"
-                                            AppointmentDisplayMode="None"/>
-        </scheduler:SfScheduler.MonthView>
-    </scheduler:SfScheduler>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="31" %}
-
-SfScheduler scheduler = new SfScheduler();
-SchedulerMonthView monthView = new SchedulerMonthView
-{
-    DateHorizontalAlignment = HorizontalAlignment.Center,
-    AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.None
-};
-scheduler.MonthView = monthView;
-Content = scheduler;
-
-{% endhighlight %}  
-{% endtabs %}
-
 #### Customize month cell appearance using text style
 
 By using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellStyle) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html), the month properties such as [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_Background), [TodayBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TodayBackground), [TrailingMonthBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TrailingMonthBackground), [LeadingMonthBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_LeadingMonthBackground), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TextStyle), [TrailingMonthTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TrailingMonthTextStyle), and [LeadingMonthTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_LeadingMonthTextStyle) can be customized.
