@@ -310,95 +310,9 @@ this.Content = linearProgressBar;
 
 N> By default, the value of progress should be specified between 0 and 100. To determine the progress value between 0 and 1, set the Minimum property to 0 and the Maximum property to 1.
 
-Run the project, and check if you get following output to make sure that the project has been configured properly to add the linear progress bar.
+The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Linear ProgressBar](images/getting-started/progress-bar.png)
-
-## Enabling indeterminate state
-
-When the progress of a task cannot be shown determinately, you can enable the indeterminate state using the [`IsIndeterminate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IsIndeterminate) property to know if any progress is happening in the background.
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<progressBar:SfLinearProgressBar IsIndeterminate="True"/>
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { IsIndeterminate = true };
-this.Content = linearProgressBar;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-![.NET MAUI Linear ProgressBar in indeterminate state](images/getting-started/linear-progressbar-indeterminate.gif)
-
-## Enable segments
-
-To visualize the progress of a multiple sequential task, split the linear progress bar into the multiple segments by defining the [`SegmentCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount) property as demonstrated in the following code sample.
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<progressBar:SfLinearProgressBar SegmentCount="4" Progress="75"/>
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { Progress = 75, SegmentCount = 4 };
-this.Content = linearProgressBar;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![.NET MAUI Linear ProgressBar visualized with multiple sequential task](images/getting-started/segment.png)
-
-## Apply colors
-
-Customize the color of the progress indicator and track by defining the [`ProgressFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill) and [`TrackFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill) properties, respectively.
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<progressBar:SfLinearProgressBar Progress="75" 
-                                 TrackFill="#33ffbe06" 
-                                 ProgressFill="#FFffbe06"/>
-
-<progressBar:SfLinearProgressBar Progress="75"  
-                                 TrackFill="#3351483a" 
-                                 ProgressFill="#FF51483a"/>
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar
-{
-    Progress = 75, 
-    TrackFill = new SolidColorBrush(Color.FromArgb("#33ffbe06")), 
-    ProgressFill = new SolidColorBrush(Color.FromArgb("#FFffbe06"))
-};
-
-SfLinearProgressBar sfLinearProgressBar = new SfLinearProgressBar
-{
-    Progress = 75, 
-    TrackFill = new SolidColorBrush(Color.FromArgb("#3351483a")), 
-    ProgressFill = new SolidColorBrush(Color.FromArgb("#FF51483a"))
-};
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-![.NET MAUI Linear ProgressBar with customized colors](images/getting-started/style.png)
 
 N> 
 * Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-) link.
