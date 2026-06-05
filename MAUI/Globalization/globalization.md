@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Syncfusion® Essential Studio® .NET MAUI
-description: Learn about localization, RTL layout, time zone handling, screen reader and keyboard navigation in Syncfusion® .NET MAUI controls.
+title: Globalization in Syncfusion® Essential Studio® .NET MAUI Controls
+description: Learn about localization, RTL layout, time zone handling, screen reader, and keyboard navigation in Syncfusion® .NET MAUI controls.
 platform: MAUI
 control: .NET MAUI
 documentation: UG
@@ -10,7 +10,7 @@ documentation: UG
 
 # Globalization Support in Syncfusion<sup>®</sup> .NET MAUI Controls
 
-Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless experiences for global users by supporting essential globalization and accessibility features. These capabilities help developers create applications that are culturally adaptable, linguistically flexible and accessible across diverse regions and user needs.
+Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless experiences for global users by supporting essential globalization and accessibility features. These capabilities help developers create applications that are culturally adaptable, linguistically flexible, and accessible across diverse regions and user needs.
 
 ## Key Globalization Features
 
