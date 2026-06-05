@@ -22,9 +22,10 @@ To get start quickly with our .NET MAUI Maps, you can check the below video.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are setup:
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (18.0.0).
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -121,10 +122,11 @@ this.Content = map;
 
 ## Prerequisites
 
-Before proceeding, ensure the following are setup:
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio Code. 
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -227,8 +229,8 @@ this.Content = map;
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -325,7 +327,7 @@ this.Content = map;
 
 {% endtabcontents %}
 
-## Set GeoJSON data or shapefile for shape layer from various source
+## Step 5: Set GeoJSON data or shapefile for shape layer from various source
 
 The [`Layer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer) in [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html) holds [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property of the [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) is of type [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) can be set as the .json source or shapefile.
 
@@ -494,314 +496,9 @@ public MainPage()
 
 {% endtabs %}
 
+The following screenshot illustrates the result of the above code.
+
 ![.NET MAUI Maps basic view.](images/getting-started/net-maui-map-basic-view.png)
-
-## Mapping the data source for shape layer
-
-The [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource) property accepts the collection values as input. The [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property refers to the data ID in [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource).
-
-The [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) property is similar to the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property. It refers to the column name in the data property of shape layers to identify the shape. When the values of the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property in the [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource) property and the values of [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) in the data property match, the associated object from the dataSource will be bound to the corresponding shape.
-
-{% tabs %}
-
-{% highlight XAML %}
-
-<map:SfMaps>
-    <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
-                           ShapeDataField="STATE_NAME"
-                           DataSource="{Binding Data}"        
-                           PrimaryValuePath="State"  />
-    </map:SfMaps.Layer>
-</map:SfMaps>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-public MainPage()
-{
-	InitializeComponent();
-	layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
-}
-
-public class ViewModel
-{
-    public ObservableCollection<Model> Data { get; set; }
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>();
-        Data.Add(new Model("New South Wales", "New\nSouth Wales", 1));
-        Data.Add(new Model("Queensland", "Queensland",2));
-        Data.Add(new Model("Northern Territory", "Northern\nTerritory",3));
-        Data.Add(new Model("Victoria", "Victoria",4));
-        Data.Add(new Model("Tasmania", "Tasmania",5));
-        Data.Add(new Model("Western Australia", "Western Australia",6));
-        Data.Add(new Model("South Australia", "South Australia",7));
-    }
-
-    public class Model
-    {
-        public string State { get; set; }
-        public string StateCode { get; set; }
-        public int ID { get; set; }
-        public Model(string state, string stateCode, int id)
-        {
-            State = state;
-            StateCode = stateCode;
-            ID = id;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N>
-* Refer to the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath), for mapping the data of the data source collection with the respective [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) in .json source.
-* Refer to the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings), for customizing the bubble.
-* Refer to the [`DataLabelSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataLabelSettings), for customizing the data label.
-* Refer to the [`ColorMappings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings), for customizing the shape colors.
-
-N> When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) binding.
-
-## Add shape layer maps elements
-
-Add the basic maps elements such as data labels, legend, and tooltip as shown in the below code snippet.
-
-* **[Data labels](https://help.syncfusion.com/maui/maps/data-labels)** - You can show data labels using the [`ShowDataLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowDataLabels) property and also, customize it using the [`DataLabelSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataLabelSettings) property.
-
-* **[Markers](https://help.syncfusion.com/maui/maps/markers)** - You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html), which is from the [`Markers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Markers) collection.
-
-* **[Legend](https://help.syncfusion.com/maui/maps/legend)** - You can enable legend using the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property. The legend's text is displayed based on the [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. It is possible to customize the legend text using the [`TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle) property.
-
-* **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** - You can enable tooltip for the shapes using the [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) property. It will be displayed when you interacts with the shapes i.e., while tapping in touch devices and hover in the mouse enabled devices.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<Grid>
-    <Grid.BindingContext>
-        <local:ViewModel />
-    </Grid.BindingContext>
-
-    <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer x:Name="layer"
-                               ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
-                               ShapeDataField="STATE_NAME"
-                               DataSource="{Binding Data}"
-                               PrimaryValuePath="State" 
-                               ShowDataLabels="True"
-                               ShowShapeTooltip="True"
-                               ShapeColorValuePath="ID">
-
-                <!--Set Data Label-->
-                <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings DataLabelPath="StateCode" />
-                </map:MapShapeLayer.DataLabelSettings>
-                
-                <!--Set Color mapping-->
-                <map:MapShapeLayer.ColorMappings>
-                    <map:EqualColorMapping Color="#d0b800"
-                                           Value="1"
-                                           Text="NSW" />
-                    <map:EqualColorMapping Color="#00d5cf"
-                                           Value="2"
-                                           Text="Queensland" />
-                    <map:EqualColorMapping Color="#cf4eee"
-                                           Value="3"
-                                           Text="Victoria" />
-                    <map:EqualColorMapping Color="#4f93d8"
-                                           Value="4"
-                                           Text="Tasmania" />
-                    <map:EqualColorMapping Color="#8b6adf"
-                                           Value="5"
-                                           Text="WA" />
-                    <map:EqualColorMapping Color="#7bff67"
-                                           Value="6"
-                                           Text="SA" />
-                    <map:EqualColorMapping Color="#ff4e42"
-                                           Value="7"
-                                           Text="NT" />
-                </map:MapShapeLayer.ColorMappings>
-
-                <!--Set Markers-->
-                <map:MapShapeLayer.Markers>
-                    <map:MapMarkerCollection>
-                        <map:MapMarker x:Name="Adelaide"
-                                       Latitude="-34.928497"
-                                       Longitude="138.600739" />
-                    </map:MapMarkerCollection>
-                </map:MapShapeLayer.Markers>
-                
-                <!--Set Legend-->
-                <map:MapShapeLayer.Legend>
-                    <map:MapLegend SourceType="Shape"
-                                   Placement="Bottom" />
-                </map:MapShapeLayer.Legend>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
-</Grid>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-public MainPage()
-{
-    InitializeComponent();
-    ViewModel viewModel = new ViewModel();
-    this.BindingContext = viewModel;
-    SfMaps maps = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
-    layer.DataSource = viewModel.Data;
-    layer.PrimaryValuePath = "State";
-    layer.ShapeDataField = "STATE_NAME";
-    layer.ShapeColorValuePath = "ID";
-    layer.ShowDataLabels = true;
-    layer.ShowShapeTooltip = true;
-
-    layer.DataLabelSettings = new MapDataLabelSettings()
-    {
-        DataLabelPath = "StateCode"
-    };
-
-    layer.ColorMappings = new ObservableCollection<ColorMapping>()
-    {
-        new EqualColorMapping
-		   {
-		      Color = Color.FromRgb(208,183,0),
-			  Value = "1",
-              Text="NSW"
-		   },
-        new EqualColorMapping
-		   { 
-		      Color = Color.FromRgb(0,213,207),
-		      Value = "2" ,
-			  Text="Queensland"
-		   },
-        new EqualColorMapping
-		   {
-		      Color = Color.FromRgb(207,78,238),
-			  Value = "3",
-              Text="Victoria"
-		   },
-        new EqualColorMapping
-		   {
-		      Color = Color.FromRgb(79,147,216),
-			  Value = "4",
-			  Text="Tasmania"
-		   },
-        new EqualColorMapping
-		   {
-		      Color = Color.FromRgb(139,106,223),
-			  Value = "5",
-			  Text="WA"
-		   },
-        new EqualColorMapping
-		   {
-		      Color = Color.FromRgb(123,255,103),
-			  Value = "6",
-			  Text="SA"
-		   },
-        new EqualColorMapping
-		   {
-		      Color = Color.FromRgb(255,78,66),
-			  Value = "7",
-			  Text="NT"
-		   },
-    };
-
-    MapMarker mapMarker = new MapMarker();
-    mapMarker.Latitude = -34.928497;
-    mapMarker.Longitude = 138.600739;
-    MapMarkerCollection mapMarkers =new MapMarkerCollection
-    {
-       mapMarker
-    };
-    layer.Markers = mapMarkers;
-
-    MapLegend legendSet = new MapLegend();
-    legendSet.SourceType = LegendSourceType.Shape;
-    legendSet.Placement = LegendPlacement.Bottom;
-    layer.Legend = legendSet;
-
-    maps.Layer = layer;
-    this.Content = maps;
-}
-
-public class ViewModel
-{
-    public ObservableCollection<Model> Data { get; set; }
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>();
-        Data.Add(new Model("New South Wales", "New\nSouth Wales", 1));
-        Data.Add(new Model("Queensland", "Queensland",2));
-        Data.Add(new Model("Northern Territory", "Northern\nTerritory",3));
-        Data.Add(new Model("Victoria", "Victoria",4));
-        Data.Add(new Model("Tasmania", "Tasmania",5));
-        Data.Add(new Model("Western Australia", "Western Australia",6));
-        Data.Add(new Model("South Australia", "South Australia",7));
-    }
-    
-    public class Model
-    {
-        public string State { get; set; }
-        public string StateCode { get; set; }
-        public int ID { get; set; }
-        public Model(string state, string stateCode, int id)
-        {
-            State = state;
-            StateCode = stateCode;
-            ID = id;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![.NET MAUI Maps getting started.](images/getting-started/net-maui-maps-getting-started.png)
-
-## Add tile layer
-
-The [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1) needs to be assign to the [`Layer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer) property in [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html?tabs=tabid-1). The URL of the providers must be set in the [`MapTileLayer.UrlTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_UrlTemplate) property.
-
-Kindly refer the [tile layer](https://help.syncfusion.com/maui/maps/tile-layer) section for more information.
-
-{% tabs %}
-
-{% highlight xaml %}
-
- <maps:SfMaps>
-    <maps:SfMaps.Layer>
-        <maps:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
-    </maps:SfMaps.Layer>
-</maps:SfMaps>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfMaps map = new SfMaps();
-MapTileLayer tileLayer = new MapTileLayer();
-tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-map.Layer = tileLayer;
-this.Content = map;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![.NET MAUI Maps with tile layer.](images/getting-started/net-maui-maps-with-tile-layer.png)
 
 N>
 * Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started) link.

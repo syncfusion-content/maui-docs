@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Range Selector control | Syncfusion®
+title: Getting started with DateTime Range Selector control | Syncfusion®
 description: This section explains about the getting started with Syncfusion® MAUI Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
@@ -21,10 +21,10 @@ To quickly get started with the .NET MAUI DateTime Range Selector, watch this vi
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New MAUI Project
 
@@ -123,9 +123,9 @@ namespace GettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -227,8 +227,8 @@ namespace GettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -326,7 +326,7 @@ namespace GettingStarted
 
 ![Initialize RangeSelector](images/getting-started/initialize-slider.png)
 
-## Adding content to the DateTime Range Selector
+## Step 5: Adding content to the DateTime Range Selector
 
 The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_Content) property will add the content to the DateTime Range Selector. Add any control within the DateTime Range Selector with this property. In most cases, the [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) will be added as a content.
 
@@ -403,211 +403,6 @@ this.Content = rangeSelector;
 
 {% endtabs %}
 
+The following gif image illustrates the result of the above code.
+
 ![RangeSelector content](images/getting-started/default-range-selector.png)
-
-
-## Enable labels
-
-The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which render on a given interval.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
-                                     RangeEnd="2016-01-01"
-                                     Interval="2" 
-                                     ShowLabels="True">
-
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-
-    </sliders:SfDateTimeRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2018, 01, 01);
-rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-rangeSelector.Interval = 2;
-rangeSelector.ShowLabel = true;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector labels](images/getting-started/labels.png)
-
-## Enable ticks
-
-The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the DateTime Range Selector while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
-                                     RangeEnd="2016-01-01"                      
-                                     Interval="2" 
-                                     ShowLabels="True"
-                                     ShowTicks="True" 
-                                     MinorTicksPerInterval="1">
-        
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfDateTimeRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2018, 01, 01);
-rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-rangeSelector.Interval = 2;
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
-rangeSelector.MinorTicksPerInterval = 1;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector ticks](images/getting-started/ticks.png)
-
-## Inverse the Range Selector
-
-Invert the DateTime Range Selector using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
-                                     RangeEnd="2016-01-01"
-                                     Interval="2"
-                                     ShowLabels="True"
-                                     ShowTicks="True" 
-                                     MinorTicksPerInterval="1" 
-                                     IsInversed="True">
-
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-
-    </sliders:SfDateTimeRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2018, 01, 01);
-rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-rangeSelector.Interval = 2;
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
-rangeSelector.MinorTicksPerInterval = 1;
-rangeSelector.IsInversed = true;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Inverse range selector](images/getting-started/slider-inverse.png)
-
-## Formatting labels
-
-Add prefix or suffix to the labels using the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2011-01-01"
-                                     RangeStart="2010-04-01"
-                                     RangeEnd="2010-10-01"
-                                     DateFormat="MMM"
-                                     IntervalType="Months"
-                                     ShowTicks="True"
-                                     MinorTicksPerInterval="1"
-                                     ShowLabels="True"
-                                     Interval="2">
-        
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfDateTimeRangeSelector>
-</ContentPage> 
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2011, 01, 01);
-rangeSelector.RangeStart = new DateTime(2010, 04, 01);
-rangeSelector.RangeEnd = new DateTime(2010, 10, 01);
-rangeSelector.ShowLabels = true;
-rangeSelector.Interval = 2;
-rangeSelector.ShowTicks = true;
-rangeSelector.MinorTicksPerInterval = 1;
-rangeSelector.DateFormat = "MMM";
-rangeSelector.IntervalType = SliderDateIntervalType.Months;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector label format](images/getting-started/label-format.png)

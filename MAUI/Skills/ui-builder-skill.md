@@ -33,7 +33,7 @@ Before installing MAUI UI Builder, ensure the following:
 ## Key Benefits
 
 ### **AI-Driven UI Generation**
-- Converts prompts into complete MAUI components—not just snippets.
+- Converts prompts into complete MAUI components, not just snippets.
 - Automatically selects appropriate Syncfusion® MAUI components and features.
 - Produces structured, maintainable C# code.
 
@@ -76,26 +76,12 @@ Use the APM CLI to install the MAUI UI Builder skill for your preferred environm
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
 
-// By default, it installs to the GitHub Copilot target
-
-apm install syncfusion/maui-ui-builder
+apm install syncfusion/maui-ui-builder -t copilot
 
 {% endhighlight %}
 {% highlight bash tabtitle="Cursor" %}
 
 apm install syncfusion/maui-ui-builder -t cursor
-
-{% endhighlight %}
-{% highlight bash tabtitle="Visual Studio" %}
-
-apm install syncfusion/maui-ui-builder -t copilot
-
-{% endhighlight %}
-{% highlight bash tabtitle="Code Studio" %}
-
-// For Code Studio, refer to the note below to configure the agent location explicitly to use it in the chat.
-
-apm install syncfusion/maui-ui-builder
 
 {% endhighlight %}
 {% highlight bash tabtitle="Codex" %}
@@ -121,20 +107,20 @@ For details on supported deployment targets, refer to the [documentation](https:
 
 ## How the Syncfusion® MAUI UI Builder Skill Works
 
-1. **Intent Analysis** — Parse the user's prompt to identify control types, layouts, and high-level UI structure intent.
-2. **Project Detection** — Automatically detects project framework, platform targets, package manager, and existing themes.
-3. **Component Mapping** — Map intent to Syncfusion® MAUI controls and required feature modules.
+1. **Intent Analysis** - Parse the user's prompt to identify control types, layouts, and high-level UI structure intent.
+2. **Project Detection** - Automatically detects project framework, platform targets, package manager, and existing themes.
+3. **Component Mapping** - Map intent to Syncfusion® MAUI controls and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - Design system (Material Design 3, or Custom theme). If no themes detected in the existing project, Material Design 3 is shown as the default option—proceed with this or change the theme as preferred.
+   - Design system (Material Design 3, or Custom theme). If no themes detected in the existing project, Material Design 3 is shown as the default option, proceed with this or change the theme as preferred.
    - Syncfusion theme (Material3)
    - Light and Dark Mode support
    - Platform-specific adaptations (iOS, Android, macOS, Windows)
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation** — Produce C# MAUI components, ViewModel classes, and XAML markup with proper data binding.
-6. **Dependency Management** — Recommend or install required Syncfusion® MAUI NuGet packages and peer dependencies.
-7. **Validation** — Run accessibility and basic security checks, request confirmation for changes.
-8. **Code Insertion** — Create files or patch existing files following MAUI project structure and conventions.
+5. **Code Generation** - Produce C# MAUI components, ViewModel classes, and XAML markup with proper data binding.
+6. **Dependency Management** - Recommend or install required Syncfusion® MAUI NuGet packages and peer dependencies.
+7. **Validation** - Run accessibility and basic security checks, request confirmation for changes.
+8. **Code Insertion** - Create files or patch existing files following MAUI project structure and conventions.
 
 Key enforcement points:
 
@@ -193,16 +179,16 @@ Any Skills-compatible agent that reads local skill files (Visual Studio, VS Code
 Yes. Supported agents automatically load relevant skills based on your query.
 
 **Can I customize the generated styles?**
-Yes — the skill supports choosing Material Design 3, or a custom theme; generated components include clear integration points for style adjustments.
+Yes, the skill supports choosing Material Design 3, or a custom theme; generated components include clear integration points for style adjustments.
 
 **Does it modify files automatically?**
 The skill proposes changes and requires confirmation for insertion; automatic NuGet package installation may be offered depending on agent permissions.
 
 **Can I generate components for specific platforms only?**
-Yes — you can specify platform targets (iOS, Android, macOS, Windows) in your prompt, and the skill will generate platform-appropriate code with conditional compilation where needed.
+Yes, you can specify platform targets (iOS, Android, macOS, Windows) in your prompt, and the skill will generate platform-appropriate code with conditional compilation where needed.
 
 **Does it support MVVM pattern?**
-Yes — the skill automatically generates ViewModels with proper INotifyPropertyChanged implementation, Command bindings, and data binding patterns aligned with MAUI best practices.
+Yes. The skill automatically generates ViewModels with proper INotifyPropertyChanged implementation, Command bindings, and data binding patterns aligned with MAUI best practices.
 
 ## See also
 
