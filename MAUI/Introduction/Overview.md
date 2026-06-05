@@ -366,25 +366,6 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-range-selector"></span>Range Selector
     </a>
 </div>
-<!--Miscellaneous-->
-<div>
-    <p class="category-topics">MISCELLANEOUS</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/avatar-view/overview">
-        <span class="sf-home-icon sf-icon-avatar"></span>Avatar View
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/effects-view/overview">
-        <span class="sf-home-icon sf-icon-effects-view"></span>Effects View
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/shimmer/overview">
-        <span class="sf-home-icon sf-icon-shimmer"></span>Shimmer
-    </a>
-</div>
 <!-- Layout -->
 <div>
     <p class="category-topics">LAYOUT</p>
@@ -438,6 +419,35 @@ line-height: 1;
 <div class="controlanchorlink">
     <a target="_self" href="https://help.syncfusion.com/maui/docklayout/overview">
         <span class="sf-home-icon sf-icon-doc-layout"></span>DockLayout
+    </a>
+</div>
+<!-- Notification -->
+<div>
+    <p class="category-topics">NOTIFICATION</p>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/badge-view/overview">
+        <span class="sf-home-icon sf-icon-badge"></span>Badge View
+    </a>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/busy-indicator/overview">
+        <span class="sf-home-icon sf-icon-busy-indicator"></span>Busy Indicator
+    </a>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/linearprogressbar/overview">
+        <span class="sf-home-icon sf-icon-progress-bar"></span>Linear Progress Bar
+    </a>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/stepprogressbar/overview">
+        <span class="sf-home-icon sf-icon-step-progress-bar"></span>Step Progress Bar
+    </a>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/pull-to-refresh/overview">
+        <span class="sf-home-icon sf-icon-pull-refresh"></span>Pull to Refresh
     </a>
 </div>
 <!-- Conversational UI -->
@@ -566,33 +576,23 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-markdown-viewer"></span>Markdown Viewer
     </a>
 </div>
-<!-- Notification -->
+<!--Miscellaneous-->
 <div>
-    <p class="category-topics">NOTIFICATION</p>
+    <p class="category-topics">MISCELLANEOUS</p>
 </div>
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/badge-view/overview">
-        <span class="sf-home-icon sf-icon-badge"></span>Badge View
+    <a target="_self" href="https://help.syncfusion.com/maui/avatar-view/overview">
+        <span class="sf-home-icon sf-icon-avatar"></span>Avatar View
     </a>
 </div>
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/busy-indicator/overview">
-        <span class="sf-home-icon sf-icon-busy-indicator"></span>Busy Indicator
+    <a target="_self" href="https://help.syncfusion.com/maui/effects-view/overview">
+        <span class="sf-home-icon sf-icon-effects-view"></span>Effects View
     </a>
 </div>
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/linearprogressbar/overview">
-        <span class="sf-home-icon sf-icon-progress-bar"></span>Linear Progress Bar
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/stepprogressbar/overview">
-        <span class="sf-home-icon sf-icon-step-progress-bar"></span>Step Progress Bar
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/pull-to-refresh/overview">
-        <span class="sf-home-icon sf-icon-pull-refresh"></span>Pull to Refresh
+    <a target="_self" href="https://help.syncfusion.com/maui/shimmer/overview">
+        <span class="sf-home-icon sf-icon-shimmer"></span>Shimmer
     </a>
 </div>
 </td>
