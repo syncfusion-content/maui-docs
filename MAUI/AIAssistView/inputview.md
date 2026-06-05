@@ -255,12 +255,7 @@ The `SfAIAssistView` control allows you to fully customize the Stop Responding v
     <ResourceDictionary>
         <DataTemplate x:Key="stopRespondingTemplate">
             <Grid>
-                <Label x:Name="label" 
-                       Text="&#xe70e;"
-                       FontFamily="MauiMaterialAssets"
-                       FontSize="24"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
+                ...
             </Grid>
         </DataTemplate>
     </ResourceDictionary>
@@ -291,18 +286,7 @@ public partial class MainPage : ContentPage
     {
         return new DataTemplate(() =>
         {
-            var grid = new Grid();
-            var label = new Label
-            {
-                Text = "\ue70e",
-                FontFamily = "MauiMaterialAssets",
-                FontSize = 24,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            };
-
-            grid.Children.Add(label);
-            return grid;
+            ...
         });
     }
 }
