@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI Expander control | Syncfusion
-description: Learn here all about Customization in Syncfusion .NET MAUI Expander (SfExpander) control and more.
+description: Learn here all about Customization in Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> .NET MAUI Expander (SfExpander) control and more.
 platform: MAUI
 control: SfExpander
 documentation: ug

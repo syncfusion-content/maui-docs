@@ -441,84 +441,6 @@ this.Content = chart;
 
 {% endtabs %}  
 
-### Enable the data labels
-
-The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_ShowDataLabels) property of the chart can be used to enable data labels to improve the readability of the funnel chart. The label visibility is set to `False` by default.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfFunnelChart ShowDataLabels="True">
-    . . .
-</chart:SfFunnelChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfFunnelChart chart = new SfFunnelChart();
-. . .
-chart.ShowDataLabels = true;
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-### Enable a legend
-
-The legend provides information about the data point displayed in the funnel chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfFunnelChart>
-    . . .
-    <chart:SfFunnelChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfFunnelChart.Legend>
-</chart:SfFunnelChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfFunnelChart chart = new SfFunnelChart();
-. . .
-chart.Legend = new ChartLegend();
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-### Enable Tooltip
-
-Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting the chart [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_EnableTooltip) property as `true`.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfFunnelChart EnableTooltip="True">
-    . . .
-</chart:SfFunnelChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfFunnelChart chart = new SfFunnelChart();
-. . .
-chart.EnableTooltip = true;
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 The following code example gives you the complete code of above configurations.
 
 {% tabs %} 
@@ -577,11 +499,7 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-## Step 5: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Funnel Chart will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![Funnel chart in .NET MAUI Chart](Getting-Started_Images/MAUI_funnel_chart.png)
 

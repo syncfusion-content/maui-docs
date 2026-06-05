@@ -536,11 +536,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Expander will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 <img alt="Defining the Header and Content" src="Images/maui-expander-with-gettingstarted.png" width="404" /> 
 
