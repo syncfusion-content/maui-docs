@@ -22,8 +22,9 @@ To get start quickly with our .NET MAUI Barcode Generator, you can check the bel
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (18.0.0) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -116,9 +117,10 @@ this.Content = barcode;
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio Code. 
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -215,8 +217,8 @@ this.Content = barcode;
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -342,43 +344,9 @@ this.Content = barcode;
 
 {% endtabs %}
 
+The following screenshot illustrates the result of the above code.
+
 ![.NET MAUI Barcode Generator Intialize QR Code Symbology](images/getting-started/maui-symbology-qrcode.png)
 
-## Display input value
-
-The provided input value can be displayed below the barcode by enabling the ShowText property of barcode as shown in the following code sample.
-
-{% tabs %}
-
-{% highlight xaml hl_lines="2" %}
-
-        <barcode:SfBarcodeGenerator Value="https://www.syncfusion.com/" 
-                                    ShowText="True" 
-                                    TextSpacing="15" 
-                                    HeightRequest="350" 
-                                    WidthRequest="350">
-            <barcode:SfBarcodeGenerator.Symbology>
-                <barcode:QRCode />
-            </barcode:SfBarcodeGenerator.Symbology>
-        </barcode:SfBarcodeGenerator>
-
-{% endhighlight %}
-
-{% highlight c# hl_lines="6" %}
-
-SfBarcodeGenerator barcode = new SfBarcodeGenerator();
-barcode.HeightRequest = 350;
-barcode.WidthRequest = 350;
-barcode.Value = "https://www.syncfusion.com/";
-barcode.Symbology = new QRCode();
-barcode.ShowText = true;
-barcode.TextSpacing = 15;
-this.Content = barcode;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![.NET MAUI Barcode Generator Display Input Value](images/getting-started/maui-display-input-value.png)
 
 N> You can refer to our [.NET MAUI Barcode Generator](https://www.syncfusion.com/maui-controls/maui-barcodes) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Barcode Generator example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Barcode) that shows you how to render the Barcode Generator in .NET MAUI.

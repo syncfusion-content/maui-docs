@@ -39,7 +39,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin-top: 0px;
