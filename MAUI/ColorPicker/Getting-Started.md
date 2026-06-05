@@ -305,7 +305,7 @@ namespace ColorPickerGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-The following screenshot illustrates the result of the above code.
+The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Color Picker.](Images/Overview/ColorPicker.gif){:width="420" height="574" loading="lazy"}
 

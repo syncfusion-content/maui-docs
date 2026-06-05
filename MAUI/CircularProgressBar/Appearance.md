@@ -39,46 +39,6 @@ this.Content = circularProgressBar;
 
 ![.NET MAUI Circular ProgressBar with angle customization](images/appearance/angle.png)
 
-## Apply colors
-
-Customize the color of the progress indicator and track by defining the [`ProgressFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill) and [`TrackFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill) properties, respectively.
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<progressBar:SfCircularProgressBar Progress="75" 
-                                   TrackFill="#33c15244" 
-                                   ProgressFill="#FFc15244"/>
-
-<progressBar:SfCircularProgressBar Progress="75" 
-                                   TrackFill="#3390a84e" 
-                                   ProgressFill="#FF90a84e"/>
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar
-{
-    Progress = 75, 
-    TrackFill = new SolidColorBrush(Color.FromArgb("#33c15244")), 
-    ProgressFill = new SolidColorBrush(Color.FromArgb("#FFc15244"))
-};
-
-SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar
-{
-    Progress = 75, 
-    TrackFill = new SolidColorBrush(Color.FromArgb("#3390a84e")), 
-    ProgressFill = new SolidColorBrush(Color.FromArgb("#FF90a84e"))
-};
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-![.NET MAUI Circular ProgressBar with customized colors](images/getting-started/style.png)
-
 ## Range colors
 
 Visualize multiple ranges with different colors mapped to each range to enhance the readability of progress.
