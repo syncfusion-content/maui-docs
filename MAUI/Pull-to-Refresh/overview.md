@@ -13,10 +13,10 @@ PullToRefresh is a refresh control that allows you to interact and refresh the v
 
 ## Business use cases
 
-- Mobile applications that require **refreshing list or grid data using pull gestures**.  
-- Social and content apps that update **feeds, messages, or notifications dynamically**.  
-- Dashboard applications that refresh **data points, metrics, or live information on demand**.  
-- Business and enterprise apps that allow users to **reload data efficiently without navigating away from the screen**.  
+- Mobile applications that require refreshing list or grid data using pull gestures.  
+- Social and content apps that update feeds, messages, or notifications dynamically.  
+- Dashboard applications that refresh data points, metrics, or live information on demand.  
+- Business and enterprise apps that allow users to reload data efficiently without navigating away from the screen.  
 
 ## Key features
 
@@ -27,7 +27,7 @@ PullToRefresh is a refresh control that allows you to interact and refresh the v
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfPullToRefresh](https://www.syncfusion.com/maui-controls/maui-pull-to-refresh) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -53,20 +53,20 @@ The following table summarizes the globalization support available in the [SfPul
 
 ## Related controls
 
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for displaying refreshable data in list-based layouts.
-- **[DataGrid](https://help.syncfusion.com/maui/datagrid/overview)** for refreshing tabular data with grid-based views.  
-- **[Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview)** for showing loading feedback during refresh operations.  
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying refreshable data in list-based layouts.
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for refreshing tabular data with grid-based views.  
+- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for showing loading feedback during refresh operations.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/pull-to-refresh/getting-started) - step-by-step guide to begin using the PullToRefresh control.  
-- [Customization](https://help.syncfusion.com/maui/pull-to-refresh/customization) - customize appearance and interaction behavior.
-- [MVVM](https://help.syncfusion.com/maui/pull-to-refresh/mvvm) - integrate cleanly with MVVM for data binding and commands.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/pull-to-refresh/getting-started) shows a step‑by‑step guide to begin using the PullToRefresh control.  
+- [Customization](https://help.syncfusion.com/maui/pull-to-refresh/customization) explains how to customize appearance and interaction behavior.  
+- [MVVM](https://help.syncfusion.com/maui/pull-to-refresh/mvvm) shows how to integrate cleanly with MVVM for data binding and commands.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -186,24 +186,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-pull-to-refresh" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -212,7 +194,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/PullToRefresh" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -221,12 +203,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/pull-to-refresh" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

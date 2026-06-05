@@ -13,10 +13,10 @@ The .NET MAUI Expander (SfExpander) is a layout control capable of loading any U
 
 ## Business use cases
 
-- Mobile and desktop applications that require **collapsible sections to manage large amounts of content efficiently**.  
-- Settings and configuration screens that organize options using **expandable groups for better usability**.  
-- Frequently asked questions (FAQ) pages that display **questions and answers using expandable layouts**.  
-- Data-driven applications that need **space optimization by showing details only when required**.  
+- Mobile and desktop applications that require collapsible sections to manage large amounts of content efficiently.  
+- Settings and configuration screens that organize options using expandable groups for better usability.  
+- Frequently asked questions (FAQ) pages that display questions and answers using expandable layouts.  
+- Data-driven applications that need space optimization by showing details only when required.  
 
 ## Key features
 
@@ -26,7 +26,7 @@ The .NET MAUI Expander (SfExpander) is a layout control capable of loading any U
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfExpander](https://www.syncfusion.com/maui-controls/maui-expander) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -52,18 +52,19 @@ The following table summarizes the globalization support available in the [SfExp
 
 ## Related controls
 
-- **[Accordion](https://help.syncfusion.com/maui/accordion/overview)** for managing multiple expandable sections in a grouped layout.  
-- **[Cards](https://help.syncfusion.com/maui/cards/overview)** for presenting content in expandable card-based layouts.
+- [Accordion](https://help.syncfusion.com/maui/accordion/overview) for managing multiple expandable sections in a grouped layout.  
+- [Cards](https://help.syncfusion.com/maui/cards/overview) for presenting content in expandable card-based layouts.
+- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/expander/getting-started) - step-by-step guide to begin using the Expander control.  
-- [Appearance](https://help.syncfusion.com/maui/expander/appearance) - customize header and content appearance.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/expander/getting-started) shows a step‑by‑step guide to begin using the Expander control.  
+- [Appearance](https://help.syncfusion.com/maui/expander/appearance) explains how to customize header and content appearance.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -183,24 +184,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-expander" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -209,7 +192,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Expander" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -218,12 +201,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/expander" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

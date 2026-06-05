@@ -11,12 +11,14 @@ documentation: ug
 
 The .NET MAUI [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) is a lightweight and efficient UI control that enables developers to render Markdown content with full formatting support. It provides a seamless way to display documentation, help content, release notes, and other rich text formats in both mobile and desktop applications.
 
+![.NET MAUI MarkdownViewer](Images/maui-markdown-viewer-overview.png)
+
 ## Business use cases
 
-- Applications that display **in-app documentation such as User guides and Onboarding content**.  
-- Software products that present **release notes and feature updates in a structured and readable format**.  
-- Help and support modules that provide **FAQs, troubleshooting guides, and instructional content**.  
-- Content-driven applications that require **rendering external or dynamic Markdown-based data**.  
+- Applications that display in-app documentation such as User guides and Onboarding content.  
+- Software products that present release notes and feature updates in a structured and readable format.  
+- Help and support modules that provide FAQs, troubleshooting guides, and instructional content.  
+- Content-driven applications that require rendering external or dynamic Markdown-based data.  
 
 ## Key features
 
@@ -25,11 +27,9 @@ The .NET MAUI [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.
 - **Smooth scrolling support** allows navigating large Markdown documents with a fluid user experience across devices.  
 - **Automatic link rendering support** allows handling hyperlinks for external navigation or internal app navigation. 
 
-![.NET MAUI MarkdownViewer](Images/maui-markdown-viewer-overview.png)
-
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfMarkdownViewer](https://www.syncfusion.com/maui-controls/maui-markdown-viewer) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
@@ -55,19 +55,20 @@ The following table summarizes the globalization support available in the [SfMar
 
 ## Related controls
 
-- **[RichTextEditor](https://help.syncfusion.com/maui/rich-text-editor/overview)** for editing rich text content within applications.
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for presenting structured content alongside Markdown views.  
+- [RichTextEditor](https://help.syncfusion.com/maui/rich-text-editor/overview) for editing rich text content within applications.
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting structured content alongside Markdown views. 
+- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for capturing and structuring input that can be used to create or update Markdown content.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/markdownviewer/gettingstarted) - step-by-step guide to begin using the MarkdownViewer control.  
-- [Data Binding](https://help.syncfusion.com/maui/markdownviewer/databinding) - bind markdown content from local files or data sources to display formatted text easily.  
-- [Customization](https://help.syncfusion.com/maui/markdownviewer/appearance) - customize appearance and behavior of the control.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/markdownviewer/gettingstarted) shows a step‑by‑step guide to begin using the MarkdownViewer control.  
+- [Data Binding](https://help.syncfusion.com/maui/markdownviewer/databinding) explains how to bind markdown content from local files or data sources to display formatted text easily.  
+- [Customization](https://help.syncfusion.com/maui/markdownviewer/appearance) helps customize appearance and behavior of the control.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -187,24 +188,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-markdown-viewer" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -213,7 +196,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/MarkdownViewer" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -222,12 +205,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/markdown-viewer" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

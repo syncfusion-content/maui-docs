@@ -11,12 +11,14 @@ documentation: ug
 
 The [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) for .NET MAUI provides an optimal way to scroll any control that implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface with a background element that translates more slowly than the foreground element. The SfParallaxView control binds the scroll position of a foreground element (such as a list) to a background element and moves the background element at a varying speed.
 
+   ![Overview image of Parallax View](ParallaxView_Images/maui_parallaxview_overview.gif)
+
 ## Business use cases
 
-- Mobile applications that require **modern UI experiences with smooth and interactive scrolling effects**.  
-- E-commerce and media apps that display **rich visual content using layered scrolling layouts**.  
-- Dashboard applications that enhance **user engagement with dynamic background animations**.  
-- Content-driven applications that require **improved visual storytelling using parallax effects**.  
+- Mobile applications that require modern UI experiences with smooth and interactive scrolling effects.  
+- E-commerce and media apps that display rich visual content using layered scrolling layouts.  
+- Dashboard applications that enhance user engagement with dynamic background animations.  
+- Content-driven applications that require improved visual storytelling using parallax effects.  
 
 ## Key features
 
@@ -25,11 +27,9 @@ The [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Paralla
 - **Scroll binding support** allows linking foreground elements such as ScrollView or ListView with background content.  
 - **Flexible integration support** allows using any control that implements the IParallaxView interface for advanced scenarios.
 
-   ![Overview image of Parallax View](ParallaxView_Images/maui_parallaxview_overview.gif)
-
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfParallaxView](https://www.syncfusion.com/maui-controls/maui-parallax-view) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -55,19 +55,20 @@ The following table summarizes the globalization support available in the [SfPar
 
 ## Related controls
 
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for creating scrollable data lists with rich layouts.
-- **[Cards](https://help.syncfusion.com/maui/cards/overview)** for designing content blocks that can be enhanced with parallax effects.
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for creating scrollable data lists with rich layouts.
+- [Cards](https://help.syncfusion.com/maui/cards/overview) for designing content blocks that can be enhanced with parallax effects.
+- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for creating layered front and back panels with depth-based UI interactions.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/parallax-view/getting-started) - step-by-step guide to begin using the Parallax View control.
-- [Customization](https://help.syncfusion.com/maui/parallax-view/customization) - customize appearance and parallax settings.
-- [Scrolling](https://help.syncfusion.com/maui/parallax-view/custom-controls) - configure scrolling behavior and effects.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/parallax-view/getting-started) shows a step‑by‑step guide to begin using the Parallax View control.  
+- [Customization](https://help.syncfusion.com/maui/parallax-view/customization) explains how to customize appearance and parallax settings.  
+- [Scrolling](https://help.syncfusion.com/maui/parallax-view/custom-controls) helps configure scrolling behavior and effects.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -187,24 +188,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-parallax-view" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -213,7 +196,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/ParallaxView" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -222,12 +205,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/parallax-view" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

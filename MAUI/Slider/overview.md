@@ -13,10 +13,10 @@ The Syncfusion<sup>®</sup> .NET MAUI Slider ([SfSlider](https://www.syncfusion.
 
 ## Business use cases
 
-- Applications that require **adjusting numeric values such as volume, brightness, or intensity using a slider**.  
-- Data-driven apps that allow users to **filter or refine results based on a selected value range**.  
-- Configuration panels that use **sliders for setting thresholds or tuning parameters**.  
-- Mobile applications that require **quick and intuitive value selection through touch interaction**.  
+- Applications that require adjusting numeric values such as volume, brightness, or intensity using a slider.  
+- Data-driven apps that allow users to filter or refine results based on a selected value range.  
+- Configuration panels that use sliders for setting thresholds or tuning parameters.  
+- Mobile applications that require quick and intuitive value selection through touch interaction.  
 
 ## Key features
 
@@ -29,20 +29,20 @@ The Syncfusion<sup>®</sup> .NET MAUI Slider ([SfSlider](https://www.syncfusion.
 
 ## Related controls
 
-- **[Range Slider](https://help.syncfusion.com/maui/range-slider/overview)** for selecting a range of values using slider-based interaction.
-- **[Range Selector](https://help.syncfusion.com/maui/range-selector/overview)** for advanced range selection with integrated content and visualization.
-- **[Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview)** for precise numeric input using text-based entry.
+- [Range Slider](https://help.syncfusion.com/maui/range-slider/overview) for selecting a range of values using slider-based interaction.
+- [Range Selector](https://help.syncfusion.com/maui/range-selector/overview) for advanced range selection with integrated content and visualization.
+- [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for precise numeric input using text-based entry.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/slider/getting-started) - step-by-step guide to begin using the Slider control.  
-- [Thumb & Overlay](https://help.syncfusion.com/maui/slider/thumb-and-overlay) - customize thumb and its overlay easy to see and simple to use.
-- [Labels](https://help.syncfusion.com/maui/slider/labels) - configure labels and interval display
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/slider/getting-started) shows a step‑by‑step guide to begin using the Slider control.  
+- [Thumb & Overlay](https://help.syncfusion.com/maui/slider/thumb-and-overlay) explains how to customize the thumb and its overlay to make it easy to see and simple to use.  
+- [Labels](https://help.syncfusion.com/maui/slider/labels) helps configure labels and interval display.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -162,24 +162,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-slider" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -188,7 +170,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -197,12 +179,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/slider" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

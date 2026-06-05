@@ -11,12 +11,14 @@ documentation: UG
 
 The advanced .NET Multi-platform App UI (MAUI) Tab View provides a simple and intuitive interface for tab navigation in both mobile and desktop applications. This allows users to explore and switch between different tabs efficiently.
 
+   ![.NET MAUI Tab View](images/TabView.png)
+
 ## Business use cases
 
-- Mobile and desktop applications that require **tab-based navigation to switch between multiple screens or sections**.  
-- Dashboard applications that organize **different data views such as reports, charts, or summaries into tabs**.  
-- Content-driven applications that display **categorized information within a single layout**.  
-- Business applications that require **efficient use of screen space by grouping related content into tabs**.  
+- Mobile and desktop applications that require tab-based navigation to switch between multiple screens or sections.  
+- Dashboard applications that organize different data views such as reports, charts, or summaries into tabs.  
+- Content-driven applications that display categorized information within a single layout.  
+- Business applications that require efficient use of screen space by grouping related content into tabs.  
 
 ## Key features
 
@@ -26,11 +28,9 @@ The advanced .NET Multi-platform App UI (MAUI) Tab View provides a simple and in
 - **Scrollable and fixed header** allows handling large numbers of tabs efficiently.  
 - **Text and image header** allows displaying icons and labels within tab headers for better usability.
 
-   ![.NET MAUI Tab View](images/TabView.png)
-
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfTabView](https://www.syncfusion.com/maui-controls/maui-tab-view) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -56,20 +56,20 @@ The following table summarizes the globalization support available in the [SfTab
 
 ## Related controls
 
-- **[Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview)** for organizing navigation using sliding panels.
-- **[Segmented Control](https://help.syncfusion.com/maui/segmented-control/overview)** for switching between limited options using segmented buttons.
-- **[Accordion](https://help.syncfusion.com/maui/accordion/overview)** for organizing content in expandable sections.
+- [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for organizing navigation using sliding panels.
+- [Segmented Control](https://help.syncfusion.com/maui/segmented-control/overview) for switching between limited options using segmented buttons.
+- [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing content in expandable sections.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) - step-by-step guide to begin using the Tab View control.
-- [Headers](https://help.syncfusion.com/maui/tabview/header-display-mode) - configure header placement and styles.
-- [Tab Bar Customization](https://help.syncfusion.com/maui/tabview/tab-bar-customization) - customize tab bar appearance and behavior.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) shows a step‑by‑step guide to begin using the Tab View control.  
+- [Headers](https://help.syncfusion.com/maui/tabview/header-display-mode) explains how to configure header placement and styles.  
+- [Tab Bar Customization](https://help.syncfusion.com/maui/tabview/tab-bar-customization) helps customize tab bar appearance and behavior.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -189,24 +189,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-tab-view" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -215,7 +197,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -224,12 +206,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/tab-view" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

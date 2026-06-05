@@ -16,65 +16,65 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) has nine differ
 
 ## Business use cases
 
-- Calendar and booking applications that require **managing appointments, meetings, and schedules efficiently**.  
-- Enterprise systems that track **employee schedules, tasks, and resource planning**.  
-- Health care and service applications that manage **appointments with recurrence and time-based availability**.  
-- Productivity and collaboration apps that display **events across multiple calendar views for better planning**. 
+- Calendar and booking applications that require managing appointments, meetings, and schedules efficiently.  
+- Enterprise systems that track employee schedules, tasks, and resource planning.  
+- Health care and service applications that manage appointments with recurrence and time-based availability.  
+- Productivity and collaboration apps that display events across multiple calendar views for better planning. 
 
 ## Key features
 
-- **Built‑in Views** : switch between Day, Week, WorkWeek, Month, Agenda, and Timeline views for flexible scheduling
+- **Built‑in views** switch between Day, Week, WorkWeek, Month, Agenda, and Timeline views for flexible scheduling
 
  ![built-in-views-in-maui-scheduler](images/overview/built-in-views-in-maui-scheduler.png)
 
-- **Appointments** : create and manage events with start/end time, subject, and notes
+- **Appointments** create and manage events with start/end time, subject, and notes
 
  ![appointment-events-in-maui-scheduler](images/overview/appointment-events-in-maui-scheduler.png)
 
-- **Recurrence Events** : schedule repeating events daily, weekly, monthly, or yearly with exceptions
+- **Recurrence events** schedule repeating events daily, weekly, monthly, or yearly with exceptions
 
  ![recurring-events-with-exceptions-dates-in-maui-scheduler](images/overview/recurring-events-with-exceptions-dates-in-maui-scheduler.png)
 
-- **Appointment Mapping** : bind custom data objects to appointments for seamless integration
+- **Appointment mapping** bind custom data objects to appointments for seamless integration
 
-- **Time Zone Support** : schedule across regions with automatic daylight saving adjustments
+- **Time zone support** schedule across regions with automatic daylight saving adjustments
 
-- **Agenda View** : view appointments in a simple list format grouped by week
+- **Agenda view** view appointments in a simple list format grouped by week
 
  ![agenda-view-events-in-maui-scheduler](images/overview/agenda-view-events-in-maui-scheduler.png)
 
-- **Timeline Month View** : display appointments horizontally across days for long‑term planning
+- **Timeline month view** display appointments horizontally across days for long‑term planning
 
  ![timeline-month-view-in-maui-scheduler](images/overview/timeline-month-view-in-maui-scheduler.png)
 
-- **First Day of the Week** : customize the start day (e.g., Monday or Sunday) to match regional preferences
+- **First day of the week** customize the start day (e.g., Monday or Sunday) to match regional preferences
 
  ![first-day-of-week-in-maui-scheduler](images/overview/first-day-of-week-in-maui-scheduler.png)
 
-- **Flexible Working Days** : define working and non‑working days for realistic business schedules
+- **Flexible working days** define working and non‑working days for realistic business schedules
 
-- **Date Range Limits** : restrict navigation to minimum and maximum dates for controlled scenarios
+- **Date range limits** restrict navigation to minimum and maximum dates for controlled scenarios
 
-- **Special Time Regions** : block or highlight unavailable slots such as holidays or breaks
+- **Special time regions** block or highlight unavailable slots such as holidays or breaks
 
  ![recurring-special-time-region-in-maui-scheduler](images/overview/recurring-special-time-region-in-maui-scheduler.png)
 
-- **Blackout Dates** : disable specific dates to prevent scheduling on restricted days
+- **Blackout dates** disable specific dates to prevent scheduling on restricted days
 
  ![selectable-day-predicate-or-blackout-dates-in-maui-scheduler](images/overview/selectable-day-predicate-or-blackout-dates-in-maui-scheduler.png)
 
-- **Hide Leading & Trailing Dates** : remove extra month dates for a cleaner calendar view
+- **Hide leading & Trailing dates** remove extra month dates for a cleaner calendar view
 
  ![hide-leading-and-trailing-dates-in-maui-scheduler](images/overview/hide-leading-and-trailing-dates-in-maui-scheduler.png)
 
-- **Custom Start & End Hours** : show only relevant time ranges by hiding unnecessary hours
+- **Custom start & End hours** show only relevant time ranges by hiding unnecessary hours
 
  ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png) 
 
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 
@@ -99,20 +99,20 @@ The following table summarizes the globalization support available in the [SfSch
 
 ## Related controls
 
-- **[Calendar](https://help.syncfusion.com/maui/calendar/overview)** for date navigation and selection using calendar UI.  
-- **[DataGrid](https://help.syncfusion.com/maui/datagrid/overview)** for managing and displaying appointment data in tables.  
-- **[Kanban](https://help.syncfusion.com/maui/kanban-board/overview)** for workflow-based task management views.  
+- [Calendar](https://help.syncfusion.com/maui/calendar/overview) for date navigation and selection using calendar UI.  
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing and displaying appointment data in tables.  
+- [Kanban](https://help.syncfusion.com/maui/kanban-board/overview) for workflow-based task management views.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/scheduler/getting-started) - step-by-step guide to begin using the Scheduler control.  
-- [Day Week Views](https://help.syncfusion.com/maui/scheduler/day-week-views) - switch between day and week layouts for flexible scheduling.
-- [Appointments](https://help.syncfusion.com/maui/scheduler/appointments) - manage appointments and data binding. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/scheduler/getting-started) shows a step‑by‑step guide to begin using the Scheduler control.  
+- [Day Week Views](https://help.syncfusion.com/maui/scheduler/day-week-views) explains how to switch between day and week layouts for flexible scheduling.  
+- [Appointments](https://help.syncfusion.com/maui/scheduler/appointments) helps manage appointments and data binding.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -232,24 +232,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-scheduler" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -258,7 +240,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Scheduler" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -267,12 +249,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/scheduler" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

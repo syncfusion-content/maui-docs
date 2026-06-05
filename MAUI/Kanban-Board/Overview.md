@@ -13,10 +13,10 @@ The .NET MAUI Kanban control is a highly interactive and customizable tool desig
 
 ## Business use cases
 
-- Project management applications that require **visual tracking of tasks across multiple workflow stages**.  
-- Agile development tools that support **Kanban-based planning and task organization**.  
-- Business workflow systems that manage **process stages such as pending, in progress, and completed**.  
-- Team collaboration applications that require **clear visibility of task status and progress**.  
+- Project management applications that require visual tracking of tasks across multiple workflow stages.  
+- Agile development tools that support Kanban-based planning and task organization.  
+- Business workflow systems that manage process stages such as pending, in progress, and completed.  
+- Team collaboration applications that require clear visibility of task status and progress.  
 
 ## Key features
 
@@ -28,7 +28,7 @@ The .NET MAUI Kanban control is a highly interactive and customizable tool desig
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfKanban](https://www.syncfusion.com/maui-controls/maui-kanban) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -54,19 +54,19 @@ The following table summarizes the globalization support available in the [SfKan
 
 ## Related controls
 
-- **[DataGrid](https://help.syncfusion.com/maui/datagrid/overview)** for managing structured task data in tabular format.  
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for displaying task lists in scrollable layouts.  
-- **[Scheduler](https://help.syncfusion.com/maui/scheduler/overview)** for managing timelines and scheduling tasks.  
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing structured task data in tabular format.  
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying task lists in scrollable layouts.  
+- [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for managing timelines and scheduling tasks.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/kanban-board/getting-started) - step-by-step guide to begin using the Kanban Board control.
-- [Columns](https://help.syncfusion.com/maui/kanban-board/column) - configure workflow stages and columns.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/kanban-board/getting-started) shows a step‑by‑step guide to begin using the Kanban Board control.  
+- [Columns](https://help.syncfusion.com/maui/kanban-board/column) explains how to configure workflow stages and columns.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -186,24 +186,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-kanban" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -212,7 +194,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Kanban" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -221,12 +203,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/kanban-board" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
     </div>
   </div>
 </a>

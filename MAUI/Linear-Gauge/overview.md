@@ -15,10 +15,10 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge is a data visualization contro
 
 ## Business use cases
 
-- Dashboard applications that display **performance metrics and progress values using linear indicators**.  
-- Industrial and monitoring systems that track **measurements such as temperature, pressure, or speed**.  
-- Business applications that visualize **target versus actual values with clear range indicators**.  
-- Data-driven apps that require **threshold-based representation for alerts and analysis**.  
+- Dashboard applications that display performance metrics and progress values using linear indicators.  
+- Industrial and monitoring systems that track measurements such as temperature, pressure, or speed.  
+- Business applications that visualize target versus actual values with clear range indicators.  
+- Data-driven apps that require threshold-based representation for alerts and analysis.  
 
 ## Key features
 
@@ -33,7 +33,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge is a data visualization contro
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfLinearGauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
@@ -63,17 +63,18 @@ The following table summarizes the globalization support available in the [SfLin
 
 - [Radial Gauge](https://help.syncfusion.com/maui/radial-gauge/overview) for visualizing values using circular gauge representation.  
 - [Circular ProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview) for representing progress with circular indicators.
+- [Linear ProgressBar](https://help.syncfusion.com/maui/linearprogressbar/overview) for displaying progress in a horizontal linear format.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started) - step-by-step guide to begin using the Linear Gauge control.
-- [Range](https://help.syncfusion.com/maui/linear-gauge/range) - configure ranges and scale visualization.  
-- [Pointers](https://help.syncfusion.com/maui/linear-gauge/pointers) - customize pointer types and behavior.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started) shows a step‑by‑step guide to begin using the Linear Gauge control.  
+- [Range](https://help.syncfusion.com/maui/linear-gauge/range) explains how to configure ranges and scale visualization.  
+- [Pointers](https://help.syncfusion.com/maui/linear-gauge/pointers) helps customize pointer types and behavior.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -193,24 +194,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-linear-gauge" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -219,7 +202,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Gauges" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -228,12 +211,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/linear-gauge" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

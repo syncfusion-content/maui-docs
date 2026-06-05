@@ -9,27 +9,27 @@ documentation: ug
  
 # Overview of .NET MAUI DataForm (SfDataForm)
 
-The Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control is used to create or edit data form such as login, reservation, contact, employee form and more based on the business purpose. 
+The Syncfusion<sup>&reg;</sup> [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) (SfDataForm) control is used to create or edit data form such as login, reservation, contact, employee form and more based on the business purpose. 
 
 ## Business use cases
 
-- Business applications that require **dynamic form generation for data entry such as employee, customer, or product forms**.  
-- Registration and login workflows that require **validated user input and structured form layouts**.  
-- Enterprise applications that handle **data editing and validation across multiple fields and sections**.  
-- Mobile and desktop apps that require **consistent and reusable form UI across platforms**.  
+- Business applications that require dynamic form generation for data entry such as employee, customer, or product forms.  
+- Registration and login workflows that require validated user input and structured form layouts.  
+- Enterprise applications that handle data editing and validation across multiple fields and sections.  
+- Mobile and desktop apps that require consistent and reusable form UI across platforms.  
 
 ## Key features
 
 - **Built-in editor support** allows using predefined editors such as text, password, multiline, combo box, autocomplete, date, time, checkbox, switch, and radio group based on data types.  
 - **Custom editor support** allows adding custom input controls when default editors do not meet specific requirements.  
-- **Validation support** allows validating user input and displaying messages to ensure accurate data entry.  
+- **Validation** allows validating user input and displaying messages to ensure accurate data entry.  
 - **Commit mode configuration** allows controlling when user input is committed to the underlying data object.  
 - **Flexible layout and grouping** allows arranging fields using linear or grid layouts and organizing them into logical sections.  
 - **Appearance customization** allows styling editors, labels, and group headers to match application themes.  
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfDataForm](https://www.syncfusion.com/maui-controls/maui-dataform) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
@@ -56,20 +56,20 @@ The following table summarizes the globalization support available in the [SfDat
 
 ## Related controls
 
-- **[ComboBox](https://help.syncfusion.com/maui/combobox/overview)** for providing dropdown-based selection in forms.  
-- **[DatePicker](https://help.syncfusion.com/maui/datepicker/overview)** for capturing date inputs within forms.  
-- **[TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview)** for enhancing input fields with labels and validation.  
+- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for providing dropdown-based selection in forms.  
+- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for capturing date inputs within forms.  
+- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/dataform/getting-started) - step-by-step guide to begin using the DataForm control.  
-- [Data Editors](https://help.syncfusion.com/maui/dataform/editors) - explore built-in and custom editor configurations.  
-- [Validation](https://help.syncfusion.com/maui/dataform/validation) - configure validation rules and behaviors. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/dataform/getting-started) shows a step‑by‑step guide to begin using the DataForm control.  
+- [Data Editors](https://help.syncfusion.com/maui/dataform/editors) explores built‑in and custom editor configurations.  
+- [Validation](https://help.syncfusion.com/maui/dataform/validation) explains how to configure validation rules and behaviors.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -189,24 +189,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-dataform" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -215,7 +197,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataForm" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -224,12 +206,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/dataform" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

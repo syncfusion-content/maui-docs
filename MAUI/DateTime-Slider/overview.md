@@ -9,14 +9,16 @@ documentation: ug
 
 # .NET MAUI DateTime Slider Overview
 
-The Syncfusion<sup>®</sup> .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values.
+- The Syncfusion<sup>®</sup> .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a lightweight, interactive control that makes choosing a date or time quickly.
+
+- Instead of typing values or navigating multiple pickers, users simply drag the slider thumb across a timeline to select the exact point they need.
 
 ## Business use cases
 
-- Data analysis applications that require **selection of a specific date or time value for filtering datasets**.  
-- Dashboard applications that allow users to **navigate through time-based data using a slider interface**.  
-- Scheduling applications that require **quick selection of a precise date or time point**.  
-- Configuration panels that use **single value sliders for adjusting time-based parameters**.  
+- Data analysis applications that require selection of a specific date or time value for filtering datasets.  
+- Dashboard applications that allow users to navigate through time-based data using a slider interface.  
+- Scheduling applications that require quick selection of a precise date or time point.  
+- Configuration panels that use single value sliders for adjusting time-based parameters.  
 
 ## Key features
 
@@ -29,7 +31,7 @@ The Syncfusion<sup>®</sup> .NET MAUI DateTime Slider ([SfDateTimeSlider](https:
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-datepicker) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 
@@ -54,20 +56,20 @@ The following table summarizes the globalization support available in the [SfDat
 
 ## Related controls
 
-- **[RangeSlider](https://help.syncfusion.com/maui/range-slider/overview)** for selecting ranges of values using slider-based interaction.  
-- **[RangeSelector](https://help.syncfusion.com/maui/range-selector/overview)** for advanced range selection with integrated content and visualization.  
-- **[DatePicker](https://help.syncfusion.com/maui/datepicker/overview)** for selecting individual dates using a picker interface.  
+- [RangeSlider](https://help.syncfusion.com/maui/range-slider/overview) for selecting ranges of values using slider-based interaction.  
+- [RangeSelector](https://help.syncfusion.com/maui/range-selector/overview) for advanced range selection with integrated content and visualization.  
+- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting individual dates using a picker interface.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/datetime-slider/getting-started) - step-by-step guide to begin using the DateTime Slider control.  
-- [Thumb & Overlay](https://help.syncfusion.com/maui/datetime-slider/thumb-and-overlay) - customize the slider thumb and its overlay to improve visibility and give users a clear handle for selecting values.  
-- [Labels](https://help.syncfusion.com/maui/datetime-slider/labels) - configure label formatting and interval display.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/datetime-slider/getting-started) shows a step‑by‑step guide to begin using the DateTime Slider control.  
+- [Thumb & Overlay](https://help.syncfusion.com/maui/datetime-slider/thumb-and-overlay) lets you customize the slider thumb and its overlay to improve visibility and give users a clear handle for selecting values.  
+- [Labels](https://help.syncfusion.com/maui/datetime-slider/labels) explains how to configure label formatting and interval display.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -187,11 +189,11 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+<a href="https://www.syncfusion.com/maui-controls/maui-datepicker" class="form-card" target="_blank">
   <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Feature Tour</h3>
     <div class="form-description">
-      Read insights, tutorials, and developer journeys.
+      Walk through highlights and core capabilities.
     </div>
   </div>
 </a>
@@ -205,11 +207,11 @@ Explore further resources:
   </div>
 </a>
 <!-- Card 3 -->
-<a href="https://www.syncfusion.com/maui-controls/maui-datepicker" class="form-card" target="_blank">
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
   <div class="form-content">
-    <h3 class="form-title">Feature Tour</h3>
+    <h3 class="form-title">Explore Blogs</h3>
     <div class="form-description">
-      Walk through highlights and core capabilities.
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

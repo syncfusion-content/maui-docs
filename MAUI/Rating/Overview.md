@@ -16,10 +16,10 @@ The Essential .NET MAUI Rating control provides the number of stars that represe
 
 ## Business use cases
 
-- E-commerce applications that collect **product ratings and user feedback using star-based inputs**.  
-- Media and entertainment apps that display **ratings for movies, songs, or content items**.  
-- Survey and feedback systems that require **simple and intuitive user rating inputs**.  
-- Business applications that measure **user satisfaction or performance ratings**.  
+- E-commerce applications that collect product ratings and user feedback using star-based inputs.  
+- Media and entertainment apps that display ratings for movies, songs, or content items.  
+- Survey and feedback systems that require simple and intuitive user rating inputs.  
+- Business applications that measure user satisfaction or performance ratings.  
 
 ## Key features
 
@@ -29,7 +29,7 @@ The Essential .NET MAUI Rating control provides the number of stars that represe
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfRating](https://www.syncfusion.com/maui-controls/maui-rating) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -55,20 +55,20 @@ The following table summarizes the globalization support available in the [SfRat
 
 ## Related controls
 
-- **[CheckBox](https://help.syncfusion.com/maui/checkbox/overview)** for collecting multiple selection inputs.
-- **[RadioButton](https://help.syncfusion.com/maui/radio-button/overview)** for handling single selection scenarios.
-- **[ComboBox](https://help.syncfusion.com/maui/checkbox/overview)** for dropdown-based user input.
+- [CheckBox](https://help.syncfusion.com/maui/checkbox/overview) for collecting multiple selection inputs.
+- [RadioButton](https://help.syncfusion.com/maui/radio-button/overview) for handling single selection scenarios.
+- [ComboBox](https://help.syncfusion.com/maui/checkbox/overview) for dropdown-based user input.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/rating/getting-started) - step-by-step guide to begin using the Rating control.
-- [Customization](https://help.syncfusion.com/maui/rating/appearance-customization) - customize rating appearance and behavior.
-- [Precision](https://help.syncfusion.com/maui/rating/precision-mode) - configure rating precision and value handling.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/rating/getting-started) shows a step‑by‑step guide to begin using the Rating control.  
+- [Customization](https://help.syncfusion.com/maui/rating/appearance-customization) explains how to customize rating appearance and behavior.  
+- [Precision](https://help.syncfusion.com/maui/rating/precision-mode) helps configure rating precision and value handling.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -188,24 +188,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-rating" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -214,12 +196,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/rating" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

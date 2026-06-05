@@ -15,10 +15,10 @@ Syncfusion [.NET MAUI AI-Powered Text Editor](https://www.syncfusion.com/maui-co
 
 ## Business use cases
 
-- Messaging and chat applications that require **predictive text suggestions for faster communication**.  
-- Content creation tools that support **AI-assisted writing and text completion**.  
-- Form-based applications that enhance **user input experience with intelligent suggestions**.  
-- Productivity applications that require **context-aware text entry with improved accuracy and speed**.  
+- Messaging and chat applications that require predictive text suggestions for faster communication.  
+- Content creation tools that support AI-assisted writing and text completion.  
+- Form-based applications that enhance user input experience with intelligent suggestions.  
+- Productivity applications that require context-aware text entry with improved accuracy and speed.  
 
 ## Key features
 
@@ -33,7 +33,7 @@ Syncfusion [.NET MAUI AI-Powered Text Editor](https://www.syncfusion.com/maui-co
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfSmartTextEditor](https://www.syncfusion.com/maui-controls/maui-smart-texteditor) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -59,20 +59,20 @@ The following table summarizes the globalization support available in the [SfSma
 
 ## Related controls
 
-- **[RichTextEditor](https://help.syncfusion.com/maui/rich-text-editor/overview)** for editing and formatting rich text content.
-- **[MarkDownViewer](https://help.syncfusion.com/maui/markdownviewer/overview)** for displaying formatted Markdown content.
-- **[TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview)** for enhancing input fields with labels and validation UI.
+- [RichTextEditor](https://help.syncfusion.com/maui/rich-text-editor/overview) for editing and formatting rich text content.
+- [MarkDownViewer](https://help.syncfusion.com/maui/markdownviewer/overview) for displaying formatted Markdown content.
+- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation UI.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/smarttexteditor/getting-started) - step-by-step guide to begin using the Smart Text Editor control.
-- [Suggestions](https://help.syncfusion.com/maui/smarttexteditor/suggestion-display-mode) - configure suggestion behavior and AI integration.
-- [Customization](https://help.syncfusion.com/maui/smarttexteditor/customization) - customize appearance and interaction settings.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/smarttexteditor/getting-started) shows a step‑by‑step guide to begin using the Smart Text Editor control.  
+- [Suggestions](https://help.syncfusion.com/maui/smarttexteditor/suggestion-display-mode) explains how to configure suggestion behavior and AI integration.  
+- [Customization](https://help.syncfusion.com/maui/smarttexteditor/customization) helps customize appearance and interaction settings.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -192,24 +192,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-smart-texteditor" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -218,12 +200,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
     <div class="form-description">
       Explore sample scenarios for real apps.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
     </div>
   </div>
 </a>

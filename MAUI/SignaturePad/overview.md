@@ -13,10 +13,10 @@ The .NET MAUI SignaturePad ([`SfSignaturePad`](https://www.syncfusion.com/maui-c
 
 ## Business use cases
 
-- Business applications that require **capturing user signatures for approvals, agreements, or confirmations**.  
-- Document management systems that support **digital signing and storing signed content as images**.  
-- Delivery and service apps that collect **customer acknowledgment signatures during transactions**.  
-- Forms-based applications that require **secure and convenient signature input for verification**.  
+- Business applications that require capturing user signatures for approvals, agreements, or confirmations.  
+- Document management systems that support digital signing and storing signed content as images.  
+- Delivery and service apps that collect customer acknowledgment signatures during transactions.  
+- Forms-based applications that require secure and convenient signature input for verification.  
 
 ## Key features
 
@@ -27,7 +27,7 @@ The .NET MAUI SignaturePad ([`SfSignaturePad`](https://www.syncfusion.com/maui-c
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfSignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -53,17 +53,18 @@ The following table summarizes the globalization support available in the [SfSig
 
 ## Related controls
 
-- **[Image Editor](https://help.syncfusion.com/maui/imageeditor/overview)** for editing and annotating images including saved signatures.   
-- **[DataForm](https://help.syncfusion.com/maui/dataform/overview)** for integrating signature inputs within form-based workflows.  
+- [Image Editor](https://help.syncfusion.com/maui/imageeditor/overview) for editing and annotating images including saved signatures.   
+- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating signature inputs within form-based workflows.
+- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) - step-by-step guide to begin using the SignaturePad control. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) shows a step‑by‑step guide to begin using the SignaturePad control.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -183,24 +184,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-signaturepad" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -209,7 +192,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -218,12 +201,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/signaturepad" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

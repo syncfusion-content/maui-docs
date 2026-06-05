@@ -11,12 +11,14 @@ documentation: ug
 
 The [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) control is a powerful data visualization component that displays statistical information for a geographical area. It has highly interactive and customizable features such as selection, tooltip, legends, markers, bubbles, and color mapping. Using the Maps control, you can generate maps for population density, sales, political boundaries, weather, elections, and routes.
 
+![.NET MAUI Maps layer overview.](images/overview/net-maui-maps-overview.png)
+
 ## Business use cases
 
-- Analytics applications that require **visualizing geographical data such as population density, sales distribution, or regional performance**.  
-- Logistics and tracking systems that display **locations, routes, and real-time movement on maps**.  
-- Business intelligence dashboards that use **map-based visualization for better decision-making insights**.  
-- Applications that require **location tagging and highlighting specific regions or points of interest**. 
+- Analytics applications that require visualizing geographical data such as population density, sales distribution, or regional performance.  
+- Logistics and tracking systems that display locations, routes, and real-time movement on maps.  
+- Business intelligence dashboards that use map-based visualization for better decision-making insights.  
+- Applications that require location tagging and highlighting specific regions or points of interest. 
 
 ## Key features
 
@@ -29,23 +31,22 @@ The [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) control
 - **[Colors](https://help.syncfusion.com/maui/maps/shape)** allows categorizing and styling regions based on underlying data values or ranges.
 - **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** allows displaying additional information for shapes, markers, and bubbles interactively.
 
-![.NET MAUI Maps layer overview.](images/overview/net-maui-maps-overview.png)
-
 ## Related controls
 
-- **[Treemap](https://help.syncfusion.com/maui/treemap/overview)** for displaying hierarchical and comparative data visualization.
-- **[DataGrid](https://help.syncfusion.com/maui/datagrid/overview)** for managing and presenting location-based data in tabular format.
+- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for displaying hierarchical and comparative data visualization.
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing and presenting location-based data in tabular format.
+- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing geographical or statistical data trends using interactive charts.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/maps/getting-started) - step-by-step guide to begin using the Maps control.  
-- [Vector Layers](https://help.syncfusion.com/maui/maps/vector-layers/line-layer) - add line, polygon, or point layers to visualize geographic data clearly.  
-- [Markers](https://help.syncfusion.com/maui/maps/markers) - add markers and customize location visualization.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/maps/getting-started) shows a step‑by‑step guide to begin using the Maps control.  
+- [Vector Layers](https://help.syncfusion.com/maui/maps/vector-layers/line-layer) lets you add line, polygon, or point layers to visualize geographic data clearly.  
+- [Markers](https://help.syncfusion.com/maui/maps/markers) explains how to add markers and customize location visualization.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -165,24 +166,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-maps" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -191,7 +174,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Maps" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -200,12 +183,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/maps" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

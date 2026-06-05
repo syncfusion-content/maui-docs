@@ -16,10 +16,10 @@ The .NET MAUI Smart DataGrid is an AI-assisted data grid control that enhances h
 
 ## Business use cases
 
-- Business intelligence applications that require **advanced data analysis through natural language interactions**.  
-- Enterprise systems that enable **users to explore and manipulate large datasets without technical expertise**.  
-- Dashboard applications that provide **intelligent filtering, grouping, and highlighting of data**.  
-- Data-driven applications that require **interactive and AI-powered insights for decision-making**.  
+- Business intelligence applications that require advanced data analysis through natural language interactions.  
+- Enterprise systems that enable users to explore and manipulate large datasets without technical expertise.  
+- Dashboard applications that provide intelligent filtering, grouping, and highlighting of data.  
+- Data-driven applications that require interactive and AI-powered insights for decision-making.  
 
 ## Key features
 
@@ -30,7 +30,7 @@ The .NET MAUI Smart DataGrid is an AI-assisted data grid control that enhances h
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfSmartDataGrid](https://www.syncfusion.com/maui-controls/maui-smart-datagrid) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
@@ -57,20 +57,20 @@ The following table summarizes the globalization support available in the [SfSma
 
 ## Related controls
 
-- **[DataGrid](https://help.syncfusion.com/maui/datagrid/overview)** for traditional data grid features and structured data handling.  
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for displaying data collections in list formats.  
-- **[Treemap](https://help.syncfusion.com/maui/treemap/overview)** for handling hierarchical data with expandable rows.  
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for traditional data grid features and structured data handling.  
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying data collections in list formats.  
+- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for handling hierarchical data with expandable rows.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/smartdatagrid/getting-started) - step-by-step guide to begin using the Smart DataGrid control.
-- [AI Features](https://help.syncfusion.com/maui/smartdatagrid/ai-powered-features) - explore AI-powered operations such as filtering and grouping.
-- [Customization](https://help.syncfusion.com/maui/smartdatagrid/customization) - customize grid behavior and appearance.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/smartdatagrid/getting-started) shows a step‑by‑step guide to begin using the Smart DataGrid control.  
+- [AI Features](https://help.syncfusion.com/maui/smartdatagrid/ai-powered-features) explores AI‑powered operations such as filtering and grouping.  
+- [Customization](https://help.syncfusion.com/maui/smartdatagrid/customization) explains how to customize grid behavior and appearance.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -190,24 +190,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-smart-datagrid" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -216,12 +198,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
     <div class="form-description">
       Explore sample scenarios for real apps.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

@@ -15,10 +15,10 @@ documentation: UG
 
 ## Business use cases
 
-- Mobile applications that require **compact and touch-friendly context menus for quick actions**.  
-- Design and drawing tools that use **radial menus for tool selection and commands**.  
-- Productivity applications that provide **shortcut actions in a circular layout for faster interaction**.  
-- Applications with limited screen space that require **efficient organization of multiple menu options**.  
+- Mobile applications that require compact and touch-friendly context menus for quick actions.  
+- Design and drawing tools that use radial menus for tool selection and commands.  
+- Productivity applications that provide shortcut actions in a circular layout for faster interaction.  
+- Applications with limited screen space that require efficient organization of multiple menu options.  
 
 ## Key features
 
@@ -31,19 +31,20 @@ documentation: UG
 
 ## Related controls
 
-- **[Button](https://help.syncfusion.com/maui/button/overview)** for triggering actions and commands in applications.  
-- **[Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview)** for organizing navigation options in a sliding panel.  
+- [Button](https://help.syncfusion.com/maui/button/overview) for triggering actions and commands in applications.  
+- [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for organizing navigation options in a sliding panel. 
+- [TabView](https://help.syncfusion.com/maui/tabview/overview) for organizing multiple actions or views.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) - step-by-step guide to begin using the Radial Menu control.
-- [Customization](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization) - customize layout and appearance of menu items.  
-- [Populating Items](https://help.syncfusion.com/maui/radial-menu/populating-items) - configure menu structure and hierarchy.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) shows a step‑by‑step guide to begin using the Radial Menu control.  
+- [Customization](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization) explains how to customize layout and appearance of menu items.  
+- [Populating Items](https://help.syncfusion.com/maui/radial-menu/populating-items) helps configure menu structure and hierarchy.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -163,24 +164,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-radial-menu" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -189,7 +172,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/RadialMenu" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -198,12 +181,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/radial-menu" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

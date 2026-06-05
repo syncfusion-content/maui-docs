@@ -13,10 +13,10 @@ Syncfusion .NET MAUI Shimmer (SfShimmer) control can increase an application's r
 
 ## Business use cases
 
-- Mobile applications that require **loading placeholders for lists, cards, or content-heavy screens**.  
-- Data-driven applications that display **temporary UI while data is fetched from services or APIs**.  
-- Dashboard applications that provide **visual feedback during data refresh or processing operations**.  
-- Content-driven apps that require **smooth transition between loading and loaded states**.  
+- Mobile applications that require loading placeholders for lists, cards, or content-heavy screens.  
+- Data-driven applications that display temporary UI while data is fetched from services or APIs.  
+- Dashboard applications that provide visual feedback during data refresh or processing operations.  
+- Content-driven apps that require smooth transition between loading and loaded states.  
 
 ## Key features
 
@@ -34,20 +34,20 @@ Syncfusion .NET MAUI Shimmer (SfShimmer) control can increase an application's r
 
 ## Related controls
 
-- **[Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview)** for displaying indeterminate loading indicators.  
-- **[ListView](https://help.syncfusion.com/maui/listview/overview)** for presenting data with loading placeholders.  
-- **[Cards](https://help.syncfusion.com/maui/cards/overview)** for designing content layouts that integrate shimmer effects.  
+- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for displaying indeterminate loading indicators.  
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting data with loading placeholders.  
+- [Cards](https://help.syncfusion.com/maui/cards/overview) for designing content layouts that integrate shimmer effects.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/shimmer/getting-started) - step-by-step guide to begin using the Shimmer control.  
-- [Customization](https://help.syncfusion.com/maui/shimmer/customization) - customize shimmer appearance and animations.  
-- [Views](https://help.syncfusion.com/maui/shimmer/built-in-views) - explore different shimmer view types and layouts.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/shimmer/getting-started) shows a step‑by‑step guide to begin using the Shimmer control.  
+- [Customization](https://help.syncfusion.com/maui/shimmer/customization) explains how to customize shimmer appearance and animations.  
+- [Views](https://help.syncfusion.com/maui/shimmer/built-in-views) explores different shimmer view types and layouts.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -167,24 +167,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-shimmer" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -193,7 +175,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Shimmer" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -202,12 +184,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/shimmer" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

@@ -15,10 +15,10 @@ The Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart is used to visualize hierar
 
 ## Business use cases
 
-- Business intelligence applications that require **visualizing hierarchical data such as organizational structures or product categories**.  
-- Financial and analytics dashboards that display **multi-level data distribution and contribution analysis**.  
-- Data-driven applications that require **comparative insights across parent and child categories**.  
-- Scientific and research applications that visualize **nested and hierarchical relationships in datasets**.  
+- Business intelligence applications that require visualizing hierarchical data such as organizational structures or product categories.
+- Financial and analytics dashboards that display multi-level data distribution and contribution analysis.
+- Data-driven applications that require comparative insights across parent and child categories.
+- Scientific and research applications that visualize nested and hierarchical relationships in datasets.  
 
 ## Key features
 
@@ -31,7 +31,7 @@ The Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart is used to visualize hierar
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfSunburstChart](https://www.syncfusion.com/maui-controls/maui-sunburst-charts) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
 <img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
@@ -57,20 +57,20 @@ The following table summarizes the globalization support available in the [SfSun
 
 ## Related controls
 
-- **[Treemap](https://help.syncfusion.com/maui/treemap/overview)** for visualizing hierarchical data using rectangular layouts.
-- **[Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview)** for representing proportional data using pie and doughnut charts.
-- **[Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview)** for visualizing tabular data trends and comparisons.
+- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for visualizing hierarchical data using rectangular layouts.
+- [Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview) for representing proportional data using pie and doughnut charts.
+- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing tabular data trends and comparisons.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/sunburstchart/getting-started) - step-by-step guide to begin using the Sunburst Chart control.
-- [Appearance](https://help.syncfusion.com/maui/sunburstchart/appearance) - customize chart appearance and styling.
-- [Labels](https://help.syncfusion.com/maui/sunburstchart/datalabels) - configure data labels and segment display.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/sunburstchart/getting-started) shows a step‑by‑step guide to begin using the Sunburst Chart control.  
+- [Appearance](https://help.syncfusion.com/maui/sunburstchart/appearance) explains how to customize chart appearance and styling.  
+- [Labels](https://help.syncfusion.com/maui/sunburstchart/datalabels) helps configure data labels and segment display.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -190,24 +190,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-sunburst-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -216,7 +198,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/SunburstChart" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -225,12 +207,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/sunburst-chart" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

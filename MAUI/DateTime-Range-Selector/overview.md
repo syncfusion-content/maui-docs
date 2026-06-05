@@ -9,14 +9,16 @@ documentation: ug
 
 # .NET MAUI DateTime Range Selector Overview
 
-The Syncfusion<sup>®</sup> .NET MAUI DateTime Range Selector ([SfDateTimeRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is a highly interactive UI control, allowing users to select a range of values within a minimum and maximum limit.
+- The Syncfusion<sup>®</sup> .NET MAUI DateTime Range Selector ([SfDateTimeRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is an interactive control that makes selecting a range of dates or times simple and clear.
+
+- Instead of manually entering values, users can drag two thumbs across a timeline to define both the start and end points within a minimum and maximum limit.
 
 ## Business use cases
 
-- Data analytics applications that require **filtering datasets based on selected date and time ranges**.  
-- Financial and reporting tools that depend on **range-based analysis of time-series data**.  
-- Dashboard applications that integrate **interactive range selection with charts and visual components**.  
-- Booking and scheduling systems that require **selecting start and end date-time values within defined limits**.  
+- Data analytics applications that require filtering datasets based on selected date and time ranges.  
+- Financial and reporting tools that depend on range-based analysis of time-series data.  
+- Dashboard applications that integrate interactive range selection with charts and visual components.  
+- Booking and scheduling systems that require selecting start and end date-time values within defined limits.  
 
 ## Key features
 
@@ -29,7 +31,7 @@ The Syncfusion<sup>®</sup> .NET MAUI DateTime Range Selector ([SfDateTimeRangeS
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfDateTimeRangeSelector](https://www.syncfusion.com/maui-controls/maui-datepicker) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 
@@ -54,19 +56,21 @@ The following table summarizes the globalization support available in the [SfDat
 
 ## Related controls
 
-- **[RangeSlider](https://help.syncfusion.com/maui/range-slider/overview)** for selecting numeric or date ranges using slider-based interaction.
-- **[DatePicker](https://help.syncfusion.com/maui/datepicker/overview)** for selecting single date values.  
+- [RangeSlider](https://help.syncfusion.com/maui/range-slider/overview) for selecting numeric or date ranges using slider-based interaction.
+- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting single date values.  
+- [DateTimeSlider](https://help.syncfusion.com/maui/datetime-slider/overview) for selecting date or time values interactively with a slider.
 
-## Next steps
+
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/datetime-range-selector/getting-started) - step-by-step guide to begin using the DateTime Range Selector control.  
-- [Track](https://help.syncfusion.com/maui/datetime-range-selector/track) - .  
-- [Thumb & Overlay](https://help.syncfusion.com/maui/datetime-range-selector/thumb-and-overlay) - .  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/datetime-range-selector/getting-started) shows a step‑by‑step guide to begin using the DateTime Range Selector control.  
+- [Track](https://help.syncfusion.com/maui/datetime-range-selector/track) represents the full selectable date/time range.  
+- [Thumb & Overlay](https://help.syncfusion.com/maui/datetime-range-selector/thumb-and-overlay) explains how thumbs select the range and overlay highlights the selected portion.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -186,20 +190,20 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
 <a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Explore KB's</h3>
     <div class="form-description">
       Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 2 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

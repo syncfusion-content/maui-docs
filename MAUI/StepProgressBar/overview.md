@@ -13,10 +13,10 @@ documentation: ug
 
 ## Business use cases
 
-- E-commerce applications that display **order tracking stages such as placed, shipped, and delivered**.  
-- Form-based applications that guide users through **multi-step processes such as registration or checkout flows**.  
-- Workflow systems that represent **progress through defined sequential stages**.  
-- Business applications that require **clear visualization of task completion status across steps**.  
+- E-commerce applications that display order tracking stages such as placed, shipped, and delivered.  
+- Form-based applications that guide users through multi-step processes such as registration or checkout flows.  
+- Workflow systems that represent progress through defined sequential stages.  
+- Business applications that require clear visualization of task completion status across steps.  
 
 ## Key features
 
@@ -35,7 +35,7 @@ documentation: ug
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfStepProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -61,19 +61,20 @@ The following table summarizes the globalization support available in the [SfSte
 
 ## Related controls
 
-- **[Linear ProgressBar](https://help.syncfusion.com/maui/linearprogressbar/overview)** for displaying continuous progress using a linear indicator.
-- **[Circular ProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview)** for representing progress using circular visuals. 
+- [Linear ProgressBar](https://help.syncfusion.com/maui/linearprogressbar/overview) for displaying continuous progress using a linear indicator.
+- [Circular ProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview) for representing progress using circular visuals. 
+- [TabView](https://help.syncfusion.com/maui/tabview/overview) for guiding users through multiple steps or stages using a structured, step-by-step interface.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/stepprogressbar/getting-started) - step-by-step guide to begin using the Step ProgressBar control.
-- [Customization](https://help.syncfusion.com/maui/stepprogressbar/customization) - customize appearance and step configuration.  
-- [Tooltip](https://help.syncfusion.com/maui/stepprogressbar/tooltip) - show helpful hints when hover.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/stepprogressbar/getting-started) shows a step‑by‑step guide to begin using the Step ProgressBar control.  
+- [Customization](https://help.syncfusion.com/maui/stepprogressbar/customization) explains how to customize appearance and step configuration.  
+- [Tooltip](https://help.syncfusion.com/maui/stepprogressbar/tooltip) helps show helpful hints when hovering.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -193,24 +194,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-stepprogressbar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -219,12 +202,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/step-progress-bar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>
