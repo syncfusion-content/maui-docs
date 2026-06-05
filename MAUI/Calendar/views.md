@@ -31,7 +31,7 @@ this.calendar.View = CalendarView.Month;
 
 ![Month view in .NET MAUI Calendar.](images/views/net-maui-month-view.png)
 
-### Change first day of week
+### First day of week
 
 The Calendar control is rendered with `Sunday` as the first day of the week and it allows customization to change the first day of the week using the [FirstDayOfWeek](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_FirstDayOfWeek) property in month view.
 
