@@ -39,7 +39,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI About Us offers a collection of 
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin-top: 0px;
@@ -248,9 +248,10 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI About Us offers a collection of 
 <img id="popupImage">
 </div>
 <script>
-function openImage(src) {
-   document.getElementById("imageModal").style.display = "flex";
-   document.getElementById("popupImage").src = src;
+function openImage(src, event) {
+    event.stopPropagation();
+    document.getElementById("imageModal").style.display = "flex";
+    document.getElementById("popupImage").src = src;
 }
 function closeImage() {
    document.getElementById("imageModal").style.display = "none";
