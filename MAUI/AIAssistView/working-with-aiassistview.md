@@ -565,8 +565,7 @@ Use these properties to control picker behavior:
 
 Developers can also customize the context menu by setting the `ActionButtons` collection. Adding, removing, or replacing items in `ActionButtons` lets you extend or replace the default `Attach files` action.
 
-#### XAML example
-
+{% tabs %}
 {% highlight xaml hl_lines="2 3 4 5" %}
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ShowActionButtons="True"
@@ -574,8 +573,6 @@ Developers can also customize the context menu by setting the `ActionButtons` co
                            PreventDuplicateAttachments="True"
                            AllowMultiplePick="True" />
 {% endhighlight %}
-
-#### C# example
 
 {% highlight c# hl_lines="10 11 12 13" %}
 using Syncfusion.Maui.AIAssistView;
@@ -595,6 +592,7 @@ public partial class MainPage : ContentPage
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 ![Attachment button in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-attachmentButton.gif)
 
