@@ -1099,3 +1099,11 @@ N> The BindingContext of the ItemTemplate is the corresponding underlying legend
 ![Legend template](images/legend/legend-template.png ){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+
+## See Also
+
+- [Data Labels in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/data-labels)  
+
+- [Tooltip in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/tooltip)  
+
+- [Shape Layer in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/shape)    

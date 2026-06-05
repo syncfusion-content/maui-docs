@@ -782,3 +782,11 @@ this.Content = maps;
 {% endtabs %}
 
 ![Arc dash array](images/arc-layer/arc_dash_array.png)
+
+## See Also 
+
+- [Shape sub-layer in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/shape-sublayer) 
+
+- [Line Layer in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/vector-layers/line-layer)
+
+- [Polyline Layer in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/vector-layers/polyline-layer)

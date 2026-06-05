@@ -162,4 +162,10 @@ private void Autocomplete_LoadMoreButtonTapped(object? sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+## See Also
 
+- [UI Customization in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+
+- [AutoSizing in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/autosizing)
+
+- [Searching and Filtering in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/searching-filtering)

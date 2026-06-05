@@ -404,3 +404,11 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Load more template in .NET MAUI Chat](images/load-more/maui-chat-load-more-template.gif)
+
+## See Also
+
+- [Scrolling in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/scrolling)
+
+- [Messages in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/messages)
+
+- [Data Binding in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/data-binding)

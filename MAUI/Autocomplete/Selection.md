@@ -569,3 +569,11 @@ autocomplete.Clear();
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Searching and Filtering in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/searching-filtering)
+
+- [Highlighting Matched Text in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/highlighting-matched-text)
+
+- [Basic Features in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/basic-features)

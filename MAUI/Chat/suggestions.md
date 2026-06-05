@@ -476,3 +476,11 @@ By default, when tapping or clicking the suggestion item, it will be sent as an 
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Messages in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/messages)
+
+- [Data Binding in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/data-binding)
+
+- [Typing Indicator in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/typing-indicator)

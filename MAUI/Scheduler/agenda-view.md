@@ -416,3 +416,12 @@ The Syncfusion .NET MAUI Scheduler allows users to customize the visual represen
 N>
 * By default, the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is set as the `BindingContext` for [AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_AppointmentTemplate) for both [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) and custom data object in `AppointmentsSource.`
 * The Custom data object can be bound in [AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_AppointmentTemplate) by using `SchedulerAppointment.DataItem.`
+
+
+## See Also
+
+- [Load on demand in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/load-on-demand)
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Date Navigation and Restriction in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/date-navigation-restriction)

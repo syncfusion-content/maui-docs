@@ -89,3 +89,11 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 ![NoResultsFoundTemplate](images/NoResultsFound/NoResultsFoundTemplate.png)
 
 N> By Default [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) is enabled we can restrict it by using [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) as Empty.
+
+## See Also
+
+- [UI Customization in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+
+- [Header and Footer in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/header-and-footer)
+
+- [Searching and Filtering in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/searching-filtering)

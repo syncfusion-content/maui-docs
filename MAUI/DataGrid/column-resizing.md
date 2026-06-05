@@ -188,3 +188,11 @@ this.Content = dataGrid;
 {% endtabs %}
 
 <img alt="maui-datagrid-column-resizing-indicator-color" src="Images\column-resizing\net-maui-datagrid-column-resizing-indicator-color.gif" width="404" Height = "396"/>
+
+## See Also
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Column Sizing in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/column-sizing) 
+
+- [Scrolling in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/scrolling)

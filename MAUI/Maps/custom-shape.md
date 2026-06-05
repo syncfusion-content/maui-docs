@@ -47,3 +47,11 @@ public MainPage()
 {% endtabs %}
 
 ![.NET MAUI Maps with custom shapes](images/custom-shape/maps_cartesian_view.png)
+
+## See Also
+
+- [Shape Layer in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/shape)  
+
+- [Data Labels in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/data-labels)  
+
+- [Tooltip in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/tooltip)   

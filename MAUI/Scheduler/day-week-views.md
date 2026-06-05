@@ -1018,3 +1018,11 @@ this.Scheduler.DaysView.TimeRulerTextStyle = timeRulerTextStyle;
 {% endtabs %}
 
 ![Customize time ruler text style in .NET MAUI Scheduler](images/day-week-views/customize-time-ruler-text-style-in-net-maui-scheduler.png)
+
+## See Also
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Appointments Drag-and-Drop in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/drag-and-drop-appointments)
+
+- [Date Navigation and Restriction in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/date-navigation-restriction)

@@ -2239,3 +2239,11 @@ You can add drop down icon to the incoming messages in `SfChat` by writing custo
 ![Drop down menu in .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-show-drop-down-menu-in-.net-maui-chat)
+
+## See Also
+
+- [Data Binding in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/data-binding)
+
+- [Time Break in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/time-break)
+
+- [Suggestions in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/suggestions)

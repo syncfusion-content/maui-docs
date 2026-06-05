@@ -96,3 +96,11 @@ It highlights the matching character that are present everywhere in the suggesti
 {% endtabs %}
 
 ![HighlightText Image](images/HighlightingText/multipleoccurrence.png)
+
+## See Also
+
+- [UI Customization in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+
+- [Selection in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/selection)
+
+- [Searching and Filtering in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/searching-filtering)

@@ -241,3 +241,11 @@ private void Scheduler_RecurringAppointmentBeginningEdit(object? sender, Recurri
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Appointment Drag and Drop in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/drag-and-drop-appointments)
+
+- [Appointment Resizing in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointment-resizing)

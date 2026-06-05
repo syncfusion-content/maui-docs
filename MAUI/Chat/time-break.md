@@ -195,4 +195,11 @@ The `Chat` control allows to load custom template for time break view using the 
 {% endtabs %}
 
 ![Time break template in .NET MAUI Chat](images/time-break/maui-chat-time-break-template.png)
-      
+
+## See Also
+
+- [Messages in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/messages)
+
+- [Data Binding in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/data-binding)
+
+- [Suggestions in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/suggestions)

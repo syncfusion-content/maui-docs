@@ -191,3 +191,11 @@ private void DataGrid_QueryRowHeight(object sender, DataGridQueryRowHeightEventA
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Styling in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/styling)
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Record Template View in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/record-template-view)

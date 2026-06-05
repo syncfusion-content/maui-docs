@@ -188,3 +188,11 @@ namespace GettingStarted
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Suggestions in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/suggestions)
+
+- [Messages in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/messages)
+
+- [Styling in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/styles)

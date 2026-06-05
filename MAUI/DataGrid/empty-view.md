@@ -209,3 +209,11 @@ public class FilterItem : BindableObject
 FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.
 
 <img src="Images/emptyview/emptyview-as-template.png" width="404" alt="DataGrid with EmptyView template">
+
+## See Also
+
+- [Data Binding in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/data-binding)
+
+- [Load More in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/load-more)
+
+- [Styling in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/styling)

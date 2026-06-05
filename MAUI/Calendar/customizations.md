@@ -958,3 +958,11 @@ this.calendar.CornerRadius = 15;
 
 N>
 The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
+
+## See Also
+
+- [Views in .NET MAUI Calendar](https://help.syncfusion.com/maui/calendar/views)
+
+- [Headers in .NET MAUI Calendar](https://help.syncfusion.com/maui/calendar/headers)
+
+- [Footer in .NET MAUI Calendar](https://help.syncfusion.com/maui/calendar/footer)

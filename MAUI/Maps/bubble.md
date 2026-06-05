@@ -492,3 +492,11 @@ public class Model
 ![Bubble customization](images/bubble/bubble-customization.png)
 
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Bubble example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+
+## See Also
+
+- [Shape Layer in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/shape)  
+
+- [Legend in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/legend) 
+
+- [Tooltip in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/tooltip)  

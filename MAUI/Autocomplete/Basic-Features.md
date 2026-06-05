@@ -51,3 +51,11 @@ For example, if the SfAutocomplete’s `AutomationId` is set to “Employee Auto
 The following screenshot illustrates the AutomationIds of inner elements.
 
 ![.NET MAUI Autocomplete AutomationId Image demonstration](Images/GettingStarted/AutoComplete_AutomationID.png)
+
+## See Also
+
+- [Selection in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/selection)
+
+- [Searching and Filtering in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/searching-filtering)
+
+- [Highlighting Matched Text in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/highlighting-matched-text)

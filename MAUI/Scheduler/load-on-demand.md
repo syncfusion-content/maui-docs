@@ -313,3 +313,11 @@ You can customize the busy indicator appearance by using the [BusyIndicatorTempl
 N>
 * The `BusyIndicatorTemplate` is applicable to only, when `ShowBusyIndicator` property is enabled.
 * The `BusyIndicatorTemplate` is also applicable for `QueryAppointments` and `QueryAppointmentsCommand` properties of the `SfScheduler.`
+
+## See Also
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Agenda View in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/agenda-view)
+
+- [Date Navigation and Restriction in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/date-navigation-restriction)

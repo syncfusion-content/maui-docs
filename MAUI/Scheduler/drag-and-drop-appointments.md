@@ -272,3 +272,11 @@ this.Scheduler.DragDropSettings.TimeIndicatorTextFormat = "hh:mm";
 {% endtabs %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/DragAndDropSample)
+
+## See Also
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Appointment Editor in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointment-editor)
+
+- [Appointment Resizing in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointment-resizing)

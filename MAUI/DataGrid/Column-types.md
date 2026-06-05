@@ -1898,3 +1898,10 @@ The SfDataGrid allows binding the view model property to the `HeaderTemplate` by
 
 <img alt="DataGrid with header template bind to view model" src="Images\column-types\maui-datagrid-header-template-view-model.png" width="404"/>
                 
+## See Also
+
+- [Data Binding in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/data-binding)
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Styling in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/styling)  

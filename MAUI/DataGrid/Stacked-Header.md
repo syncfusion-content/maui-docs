@@ -985,3 +985,11 @@ public MainPage()
 {% endtabs %}
 
 <img alt="Load template in stacked header rows" src="Images/stacked-headers/StackedHeaderWithTemplate.png" width="424"/>
+
+## See Also
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Freeze Panes in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/freeze-panes)
+
+- [Column Sizing in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/column-sizing) 
