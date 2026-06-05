@@ -496,83 +496,9 @@ public MainPage()
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Maps will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Maps basic view.](images/getting-started/net-maui-map-basic-view.png)
-
-## Mapping the data source for shape layer
-
-The [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource) property accepts the collection values as input. The [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property refers to the data ID in [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource).
-
-The [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) property is similar to the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property. It refers to the column name in the data property of shape layers to identify the shape. When the values of the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property in the [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource) property and the values of [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) in the data property match, the associated object from the dataSource will be bound to the corresponding shape.
-
-{% tabs %}
-
-{% highlight XAML %}
-
-<map:SfMaps>
-    <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
-                           ShapeDataField="STATE_NAME"
-                           DataSource="{Binding Data}"        
-                           PrimaryValuePath="State"  />
-    </map:SfMaps.Layer>
-</map:SfMaps>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-public MainPage()
-{
-	InitializeComponent();
-	layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
-}
-
-public class ViewModel
-{
-    public ObservableCollection<Model> Data { get; set; }
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>();
-        Data.Add(new Model("New South Wales", "New\nSouth Wales", 1));
-        Data.Add(new Model("Queensland", "Queensland",2));
-        Data.Add(new Model("Northern Territory", "Northern\nTerritory",3));
-        Data.Add(new Model("Victoria", "Victoria",4));
-        Data.Add(new Model("Tasmania", "Tasmania",5));
-        Data.Add(new Model("Western Australia", "Western Australia",6));
-        Data.Add(new Model("South Australia", "South Australia",7));
-    }
-
-    public class Model
-    {
-        public string State { get; set; }
-        public string StateCode { get; set; }
-        public int ID { get; set; }
-        public Model(string state, string stateCode, int id)
-        {
-            State = state;
-            StateCode = stateCode;
-            ID = id;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N>
-* Refer to the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath), for mapping the data of the data source collection with the respective [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) in .json source.
-* Refer to the [`ColorMappings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings), for customizing the shape colors.
-
-N>
-* When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) binding.
 
 N>
 * You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Maps) that shows you how to render the Maps in .NET MAUI.
