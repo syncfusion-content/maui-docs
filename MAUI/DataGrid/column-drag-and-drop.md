@@ -243,3 +243,11 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
     e.CanAutoScroll = false;
 }
 {% endhighlight %}
+
+## See Also
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Stacked Headers in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/stacked-header)
+
+- [Column Sizing in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/column-sizing)

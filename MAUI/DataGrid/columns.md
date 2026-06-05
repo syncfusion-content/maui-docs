@@ -471,3 +471,11 @@ this.Content = dataGrid;
 {% endtabs %}
 
 <img alt="Maui DataGrid Column Chooser" src="Images\columns/maui-datagrid-columnchooser.png" width="404"/>
+
+## See Also
+
+- [Data Binding in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/data-binding)
+
+- [Column Types in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/column-types)
+
+- [Column Sizing in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/column-sizing)  

@@ -373,3 +373,11 @@ The following limitations apply when using cell merging in the SfDataGrid:
 2. Cells in heterogeneous rows cannot be merged.
 3. Frozen rows and columns do not support cell merging.
 4. Swiping will not be enabled when a merged cell is applied.
+
+## See Also
+
+- [Data Binding in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/data-binding)
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Styling in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/styling)

@@ -150,3 +150,11 @@ The [AppointmentToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% endtabs %}
 
 ![Appointment-Tooltip-Template-in-.NET-MAUI-SfScheduler](images/appointment-tooltip/appointment-tooltip-template.png)
+
+## See Also
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Appointment Editor in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointment-editor)
+
+- [Appointment Drag and Drop in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/drag-and-drop-appointments)

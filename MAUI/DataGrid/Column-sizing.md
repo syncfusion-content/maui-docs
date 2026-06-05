@@ -335,3 +335,11 @@ this.Content = dataGrid;
 {% endtabs %}
 
 <img alt="maui-datagrid-customize-auto-width-calculation" src="Images\column-sizing\net-maui-datagrid-customize-column-width-calculation.gif" width="404" Height = "396"/>
+
+## See Also
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Column Types in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/column-types)
+
+- [Column Resizing in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/column-resizing)  

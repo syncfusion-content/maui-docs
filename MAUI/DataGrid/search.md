@@ -165,3 +165,11 @@ var records = this.dataGrid.SearchController.GetSearchRecords();
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Filtering in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/filtering)
+
+- [Data Binding in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/data-binding)
+
+- [Sorting in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/sorting)

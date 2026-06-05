@@ -125,3 +125,11 @@ The scheduler allows you to use the custom view as a selection view by using the
 {% endtabs %}
 
 ![customize-template-in-cell-selection-in-maui-scheduler](images/cell-selection/template-in-maui-scheduler.jpeg)
+
+## See Also
+
+- [Day and Week Views in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/day-week-views)
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Month View in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/month-view)

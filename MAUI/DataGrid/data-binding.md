@@ -361,3 +361,11 @@ private void Button_Clicked(object sender, EventArgs e)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Sorting in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/sorting)
+
+- [Filtering in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/filtering)  

@@ -327,3 +327,11 @@ The `SfChat` allows you to cancel the swipe programmatically by calling the [Res
    
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Messages in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/messages)
+
+- [Data Binding in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/data-binding)
+
+- [Events and Commands in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/events)

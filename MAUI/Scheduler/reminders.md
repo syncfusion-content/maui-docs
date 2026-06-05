@@ -426,3 +426,11 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 N>
 * [View scheduler appointment reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/SchedulerReminder)
 * [View business object reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/BusinessObject)
+
+## See Also
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Appointment Tooltip in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointment-tooltip)
+
+- [Appointment Editor in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointment-editor)

@@ -370,3 +370,11 @@ public class Model
 
 N>
 * Refer to the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings), for setting the bubble colors based on the specific value. You can also refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Shapes example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+
+## See Also
+
+- [Custom Shape in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/custom-shape)  
+
+- [Tooltip in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/tooltip)  
+
+- [Legend in .NET MAUI Maps](https://help.syncfusion.com/maui/maps/legend)  

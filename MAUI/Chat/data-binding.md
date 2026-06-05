@@ -209,3 +209,11 @@ Implementation of a custom message converter class with conversion logic to conv
 {% endtabs %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/convert-data-objects-to-messages-in-mvvm-in-.net-maui-chat)
+
+## See Also
+
+- [Time Break in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/time-break)
+
+- [Messages in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/messages)
+
+- [Load More in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/load-more)

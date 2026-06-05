@@ -204,3 +204,11 @@ this.Content = dataGrid;
 {% endtabs %}
 
 <img alt="maui-datagrid-freeze-panes-strokethickness" src="Images\freeze-panes\maui-datagrid-freeze-panes-strokethickness.png" width="404" Height = "396"/>
+
+## See Also
+
+- [Columns in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/columns)
+
+- [Stacked Header in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/stacked-header) 
+
+- [Scrolling in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/scrolling)

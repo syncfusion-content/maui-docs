@@ -956,3 +956,11 @@ this.Scheduler.TimelineView.TimeRulerTextStyle = timeRulerTextStyle;
 {% endtabs %}
 
 ![customize-time-ruler-text-style-in-maui-scheduler](images/timeline-views/customize-time-ruler-text-style-in-maui-scheduler.png)
+
+## See Also
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Resource View in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/resource-view)
+
+- [Date Navigation and Restriction in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/date-navigation-restriction)

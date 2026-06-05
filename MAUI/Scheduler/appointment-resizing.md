@@ -302,3 +302,11 @@ private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndE
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Appointment Drag and Drop in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/drag-and-drop-appointments)
+
+- [Appointment Editor in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointment-editor)

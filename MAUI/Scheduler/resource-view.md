@@ -1215,3 +1215,11 @@ public class ResourceViewViewModel : INotifyPropertyChanged
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Timeline views in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/timeline-views)
+
+- [Appointments in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/appointments)
+
+- [Date Navigation and Restriction in .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/date-navigation-restriction)

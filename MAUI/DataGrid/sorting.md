@@ -524,3 +524,11 @@ this.Content = dataGrid;
 
 
 <img alt="DataGrid with sort icon size" src="Images\sorting\maui-datagrid-sort-icon-size.png" width="404">
+
+## See Also
+
+- [Data Binding in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/data-binding)
+
+- [Filtering in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/filtering) 
+
+- [Grouping in .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/grouping)
