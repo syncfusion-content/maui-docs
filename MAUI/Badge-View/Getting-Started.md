@@ -357,7 +357,7 @@ An image, button, label or any view can be added to the Badge View using the [Co
 
 {% highlight xaml %}
 
-<badgeView:SfBadgeView BadgeText="20"
+<badgeView:SfBadgeView BadgeText="20"  
                        ScreenReaderText="20">
         <badgeView:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
@@ -368,9 +368,9 @@ An image, button, label or any view can be added to the Badge View using the [Co
 
 {% highlight c# %}
 	
-SfBadgeView badgeView = new SfBadgeView();
-badgeView.ScreenReaderText = "20";
-badgeView.BadgeText = "20";
+SfBadgeView badgeView = new SfBadgeView(); 
+badgeView.ScreenReaderText = "20"; 
+badgeView.BadgeText = "20"; 
 //Adding image to the content of the badge view.
 Button button = new Button();
 button.Text = "Primary";
