@@ -327,10 +327,7 @@ namespace SliderGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the DateTime Slider Selector will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![Initialize slider](images/getting-started/initialize-slider.png)
+

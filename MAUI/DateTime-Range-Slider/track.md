@@ -342,3 +342,43 @@ rangeSlider.MinorTicksPerInterval = 1;
 {% endtabs %}
 
 ![DateTimeRangeSlider orientation](images/getting-started/orientation.png)
+
+## Inverse the slider
+
+Invert the DateTime Range Slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the IsInversed property is **False**.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
+                               Maximum="2018-01-01" 
+                               RangeStart="2012-01-01" 
+                               RangeEnd="2016-01-01"
+                               Interval="2" 
+                               ShowTicks="True"
+                               ShowLabels="True"  
+                               MinorTicksPerInterval="1" 
+                               IsInversed="True">
+</sliders:SfDateTimeRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
+rangeSlider.Minimum = new DateTime(2010, 01, 01);
+rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.Interval = 2;
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.IsInversed = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Inverse range slider](images/getting-started/slider-inverse.png)
