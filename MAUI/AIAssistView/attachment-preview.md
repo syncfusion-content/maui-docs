@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-## Attachment Preview in EditorView
+# Attachment Preview in EditorView
 
 The `SfAIAssistView` allows you to add files and images as attachments in the editor using [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property. This feature lets you show the preview for attachments added in the editor. `Attachments` are added as [AssistAttachment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html) which has the following members:
 
@@ -94,7 +94,7 @@ internal class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Preview support in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-preview.gif)
+![Preview support in .NET MAUI AI AssistView](Images/attachment-preview/maui-aiassistview-preview.gif)
 
 ### Max Attachment Count
 

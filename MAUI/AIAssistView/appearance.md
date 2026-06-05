@@ -11,7 +11,7 @@ documentation: ug
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) allows customizing the appearance of conversation elements and provides an interactive chat-like interface for users.
 
 
-## Control template
+## Customizing AI AssistView with ControlTemplate
 
 The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
 
@@ -41,7 +41,7 @@ The `ControlTemplate` in AI AssistView allows you to define and reuse the visual
 {% endhighlight %}
 {% endtabs %}
 
-### Custom chat view
+### Customizing Chat View in AI AssistView
 
 The [CreateAssistChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CreateAssistChat) method allows for the customization of the chat view functionality within the AI AssistView control. By overriding this method, can create their own custom implementation of the chat view, allowing for greater control over the appearance and behavior of chat interactions. It provides the flexibility to modify how chat messages are displayed, how user interactions are handled. Here’s how to override the `CreateAssistChat` method to return a custom instance of [AssistViewChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistViewChat.html).
 
@@ -87,7 +87,7 @@ The `SfAIAssistView` allows you to edit a previously sent request. This feature 
 
 N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal the Edit icon. On mobile (Android, iOS), tap the request to show the Edit option.
 
-![Edit Option in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editoption.gif)
+![Edit Option in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-editoption.gif)
  
 ## Show ResponseLoader View
 
@@ -327,7 +327,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![RequestItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-RequestTemplate.png)
+![RequestItem Template in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-RequestTemplate.png)
 
 ### Response item template
 
@@ -500,7 +500,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![ResponseItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-ResponseTemplate.gif)
+![ResponseItem Template in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-ResponseTemplate.png)
 
 ## Text selection
 The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
@@ -532,4 +532,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Text Selection in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-textselection.gif)
+![Text Selection in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-textselection.gif)

@@ -7,6 +7,10 @@ control: SfAIAssistView
 documentation: ug
 ---
 
+# Scrolling in .NET MAUI AI AssistView 
+
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides features to manage scrolling efficiently. It includes a scroll-to-bottom button for quick navigation, supports customization through templates, and allows control over auto-scrolling and scroll events to enhance user experience.
+
 ## Scroll to bottom button
 
 The `SfAIAssistView` control provides an option to display a scroll-to-bottom button that helps users quickly navigate back to the latest responses when they have scrolled up in the AI conversation. To enable this, set the [ShowScrollToBottomButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowScrollToBottomButton) property to `true`.
@@ -38,7 +42,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll-To-Buttom in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottom.gif)
+![Scroll-To-Buttom in .NET MAUI AI AssistView](Images/scrolling/maui-aiassistview-scrolltobottom.gif)
 
 ### Scroll to bottom button customization
 
@@ -146,7 +150,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png Need to add Image)
+![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/scrolling/maui-aiassistview-scrolltobottomtemplate.png)
 
 ## Auto scroll control to bottom when new message is added
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # InputView Customization in .NET MAUI AI AssistView (SfAIAssistView)
 
-This section explains how to define and customize the inputview in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
+This section explains how to define and customize the InputView in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
 ## Editor
 ### EditorView template
@@ -74,7 +74,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
+![EditorView Template in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-editorviewtemplate.png)
 
 ### Editor customization
 The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.
@@ -97,7 +97,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img src="Images/working-with-aiassistview/maui-aiassitview-Editor-customization.png" width="444"/>
+<img src="Images/inputview/maui-aiassitview-Editor-customization.png" width="444"/>
 
 ### Accessing the editor in AssistView
 The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEditorView.html), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
@@ -202,7 +202,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Stop Responding in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresponding.gif)
+![Stop Responding in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-stopresponding.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
 
@@ -242,7 +242,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Stop Responding Icon in .NET MAUI AI AssistView](Need to add images)
+![Stop Responding Icon in .NET MAUI AI AssistView]()
 
 ### StopResponding UI customization
 
@@ -294,7 +294,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Stop Responding Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-stoprespondingtemplate.gif)
+![Stop Responding Template in .NET MAUI AI AssistView](Images/inputview/maui-aiassitview-stoprespondingtemplate.gif)
 
 
 ## Action buttons in the editor
@@ -392,7 +392,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %} 
 {% endtabs %}
 
-![Action Buttons in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-actionbuttons.gif)
+![Action Buttons in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-actionbuttons.gif)
 
 ### Action button customization
 
@@ -457,7 +457,7 @@ The editor action button and its popup are customizable beyond the `ActionButton
 {% endhighlight %}
 {% endtabs %}
 
-![Action button customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-actionbutton-customization.png)
+![Action button customization in .NET MAUI AI AssistView](Images/inputview/maui-aiassitview-actionbutton-customization.png)
 
 ## Request button customization
 
@@ -502,7 +502,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Request Button Icon in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-requestbutton.png)
+![Request Button Icon in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-requestbutton.png)
 
 ### Request button template
 
@@ -576,6 +576,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![SendButton Customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-SendButtonCustomization.png)
+![SendButton Customization in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-SendButtonCustomization.png)
 
 N> The [InputText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_InputText) is used to gets or sets the text of the editor in the `SfAIAssistView`.
