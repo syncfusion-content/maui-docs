@@ -34,10 +34,25 @@ Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless expe
 Below is a summary of globalization capabilities supported by Syncfusion<sup>®</sup> .NET MAUI controls:
 
 
-<img src="../Images/full-support.svg" alt="full-support" width="16" /> Full Support  
-<img src="../Images/partial-support.svg" alt="partial-support" width="16" /> Partial Support   
-<img src="../Images/no-support.svg" alt="no-support" width="16" /> No Support  
-<img src="../Images/not-applicable.svg" alt="not-applicable" width="16"/> Not Applicable
+<div>
+    <img src="../Images/full-support.svg" alt="full-support" width="16">
+    <span>Full Support</span>
+</div>
+
+<div>
+    <img src="../Images/partial-support.svg" alt="partial-support" width="16">
+    <span>Partial Support</span>
+</div>
+
+<div>
+    <img src="../Images/no-support.svg" alt="no-support" width="16">
+    <span>No Support</span>
+</div>
+
+<div>
+    <img src="../Images/not-applicable.svg" alt="not-applicable" width="16">
+    <span>Not Applicable</span>
+</div>
 
 <table>
 
@@ -690,10 +705,6 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 - [Essential Studio UI Kit for .NET MAUI](https://help.syncfusion.com/maui/uikit/overview)
 
-- **Smart Components in .NET MAUI**:  
+- [Syncfusion® Essential Studio® for .NET MAUI](https://help.syncfusion.com/maui/introduction/overview) 
 
-  [.NET MAUI Smart DataGrid](https://help.syncfusion.com/maui/smartdatagrid/overview)
-
-  [.NET MAUI Smart Scheduler](https://help.syncfusion.com/maui/smartscheduler/overview) 
-
-  [.NET MAUI Smart Text Editor](https://help.syncfusion.com/maui/smarttexteditor/overview)
+- [Applying Themes in MAUI Controls](https://help.syncfusion.com/maui/themes/themes)
