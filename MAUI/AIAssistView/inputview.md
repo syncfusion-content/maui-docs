@@ -242,8 +242,6 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Stop Responding Icon in .NET MAUI AI AssistView]()
-
 ### StopResponding UI customization
 
 The `SfAIAssistView` control allows you to fully customize the Stop Responding view appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding UI.
