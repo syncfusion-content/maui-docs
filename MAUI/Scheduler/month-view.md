@@ -193,6 +193,29 @@ this.Content = scheduler;
 
 ![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
 
+## Date text positioning in Month view
+
+The DateHorizontalAlignment property specifies how the date text is aligned horizontally within each cell of the scheduler’s [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. Its default value is Center, but you can set it to Left, Right or Justified to adjust the placement of the date numbers.
+
+{% tabs %}  
+{% highlight XAML hl_lines="4" %}
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView DateHorizontalAlignment="Left"/>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Month;
+scheduler.MonthView.DateHorizontalAlignment = HorizontalAlignment.Left;
+this.Content = scheduler;
+
+{% endhighlight %}  
+{% endtabs %}
+
 ## Number of weeks visible in the month view 
 
 The number of week visible in the month view can be changed by setting the [NumberOfVisibleWeeks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NumberOfVisibleWeeks) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). 
@@ -323,7 +346,7 @@ this.Content = scheduler;
 
 ![Non-working-days-customization-in-month-view](images/month-view/customize-non-working-days-in-month-view.png)
 
-## Inline Appointment Support in Month View
+## Inline Appointments in Month View
 
 Appointments can be displayed inline within the MonthView using the ShowAppointmentsInline property.When ShowAppointmentsInline is false (default), appointments are not shown inline in the MonthView. When ShowAppointmentsInline is true, tapping a date cell displays all appointments for that date inline below the tapped row. This provides a quick way to view daily schedules without switching to another view. Inline appointments are rendered in a collection view, allowing customization of styles such as background, text color, and layout.
 
@@ -349,6 +372,136 @@ this.Content = scheduler;
 {% endtabs %}
 
 ![Inline-appointments-in-month-view](images/month-view/inline-appointments-in-month-view.png)
+
+### Appointment time format in inline view
+
+The `TimeTextFormat` property in `MonthInlineViewStyle` defines the string format used to display appointment time value in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, appointment time is shown in the "hh:mm tt" format (12‑hour clock with AM/PM). 
+
+{% tabs %}  
+{% highlight XAML tabtitle="XAML" hl_lines="6" %}
+<schedule:SfScheduler x:Name="scheduler"
+                      View="Month">
+    <schedule:SfScheduler.MonthView>
+        <schedule:SchedulerMonthView ShowAppointmentsInline="True">
+            <schedule:SchedulerMonthView.MonthInlineViewStyle>
+                <schedule:MonthInlineViewStyle TimeTextFormat="HH:mm"/>
+            </schedule:SchedulerMonthView.MonthInlineViewStyle>
+        </schedule:SchedulerMonthView>
+    </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight C# tabtitle="C#" hl_lines="6" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.MonthView.ShowAppointmentsInline = true;
+scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
+{
+    TimeTextFormat = "HH:mm"
+};
+{% endhighlight %}   
+{% endtabs %}
+
+### Appointment height in inline view
+
+The `ItemHeight` property in `MonthInlineViewStyle` specifies the vertical height of each appointment item displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, each appointment item has a height of 50 units. You can increase or decrease this value to adjust how compact or spacious the inline appointment list appears.
+
+{% tabs %}  
+{% highlight XAML tabtitle="XAML" hl_lines="4" %}
+<schedule:SfScheduler x:Name="scheduler"
+                      View="Month">
+    <schedule:SfScheduler.MonthView>
+        <schedule:SchedulerMonthView ShowAppointmentsInline="True">
+            <schedule:SchedulerMonthView.MonthInlineViewStyle>
+                <schedule:MonthInlineViewStyle ItemHeight="70"/>
+            </schedule:SchedulerMonthView.MonthInlineViewStyle>
+        </schedule:SchedulerMonthView>
+    </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight C# tabtitle="C#" hl_lines="4" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.MonthView.ShowAppointmentsInline = true;
+scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
+{
+    ItemHeight="70"
+};
+{% endhighlight %}   
+{% endtabs %}
+
+### Inline appointments appearance
+
+#### Customize inline appointments appearance using TextStyle
+
+The `MonthInlineViewStyle` property allows you to customize the appearance of inline view in the scheduler’s Month view using the `Background` and `TextStyle` properties.
+
+{% tabs %}  
+{% highlight XAML tabtitle="XAML" hl_lines="4" %}
+<schedule:SfScheduler x:Name="scheduler"
+                      View="Month">
+    <schedule:SfScheduler.MonthView>
+        <schedule:SchedulerMonthView ShowAppointmentsInline="True">
+            <schedule:SchedulerMonthView.MonthInlineViewStyle>
+                <schedule:MonthInlineViewStyle Background="Yellow">
+                    <schedule:MonthInlineViewStyle.TextStyle>
+                        <schedule:SchedulerTextStyle TextColor="White"
+                                                     FontSize="14"/>
+                    </schedule:MonthInlineViewStyle.TextStyle>
+                </schedule:MonthInlineViewStyle>
+            </schedule:SchedulerMonthView.MonthInlineViewStyle>
+        </schedule:SchedulerMonthView>
+    </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight C# tabtitle="C#" hl_lines="4" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.MonthView.ShowAppointmentsInline = true;
+scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
+{
+    Background = Colors.Yellow,
+    TextStyle = new SchedulerTextStyle()
+    {
+        TextColor = Colors.White,
+        FontSize = 14,
+    }
+
+};
+{% endhighlight %}   
+{% endtabs %}
+
+#### Customize inline appointments appearance using DateTemplate
+
+The `MonthInlineViewItemTemplate` property allows you to define a custom DataTemplate to customize the appearance of appointment items displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
+
+{% tabs %}  
+{% highlight XAML hl_lines="4" %}
+<schedule:SfScheduler x:Name="scheduler"
+                      View="Month">
+    <schedule:SfScheduler.MonthView>
+        <schedule:SchedulerMonthView ShowAppointmentsInline="True">
+            <schedule:SchedulerMonthView.MonthInlineViewItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="DarkBlue"
+                            StrokeThickness="1"
+                            Margin="2">
+                        <StackLayout BackgroundColor="LightBlue"
+                                 Padding="5">
+                            <Label Text="{Binding Subject}"
+                               FontSize="14"
+                               TextColor="Black"/>
+                            <Label Text="{Binding StartTime, StringFormat='{}{0:hh:mm tt}'}"
+                               FontSize="12"
+                               TextColor="Black"/>
+                        </StackLayout>
+                    </Border>
+                </DataTemplate>
+            </schedule:SchedulerMonthView.MonthInlineViewItemTemplate>
+        </schedule:SchedulerMonthView>
+    </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+{% endhighlight %}  
+{% endtabs %}
 
 ## View header
 

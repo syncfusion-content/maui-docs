@@ -512,6 +512,30 @@ N>
 * The BindingContext of the `TimeRegionTemplate` is the `SchedulerTimeRegion.`
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
+### Display special time regions in TimelineMonth
+
+The `ShowMonthTimeRegions` property defines whether special time regions are displayed in the scheduler’s [TimelineMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_TimelineMonth) view.
+
+By default, the property is set to `false`, so time regions are hidden. Setting it to `true` makes the scheduler show the configured [SchedulerTimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) values within the `TimelineMonth` view.
+
+This property is only applicable when the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_View) is set to [TimelineMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_TimelineMonth).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="4" %}
+<scheduler:SfScheduler x:Name="scheduler"
+                      View="TimelineMonth">
+<scheduler:SfScheduler.TimelineView>
+    <scheduler:SchedulerTimelineView ShowMonthTimeRegions="True"/>
+</scheduler:SfScheduler.TimelineView>
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="3" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.TimelineView.ShowMonthTimeRegions = true;
+{% endhighlight %}
+{% endtabs %}
+
 ## Full screen scheduler
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval width can be adjusted based on screen width by changing the [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_TimeIntervalWidth) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) to `-1.` It will auto-fit the timeline day, timeline week and timeline work week views to the screen width.

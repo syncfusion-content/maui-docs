@@ -56,19 +56,19 @@ N>
 
 The RightTapped event occurs when a user performs a right-click action on scheduler elements in desktop platforms such as Windows or macOS. This event enables applications to implement context menus, secondary commands, and custom actions on appointments, cells, headers, and resource elements.
 
-* **sender** - The SfScheduler object where the right-click occurred
+* `sender` - The SfScheduler object where the right-click occurred
 
-The SchedulerRightTappedEventArgs provides information about the right-click interaction:
+The `SchedulerRightTappedEventArgs` provides information about the right-click interaction:
 
-* **Appointments** – Collection of appointments associated with the clicked element
+* `Appointments` – Collection of appointments associated with the clicked element
 
-* **Date** – The date corresponding to the clicked cell or appointment
+* `Date` – The date corresponding to the clicked cell or appointment
 
-* **Element** – The scheduler element interacted with (appointment, cell, header, resource, week number)
+* `Element` – The scheduler element interacted with (appointment, cell, header, resource, week number)
 
-* **Resource** – The resource associated with the clicked element (in resource views)
+* `Resource` – The resource associated with the clicked element (in resource views)
 
-* **WeekNumber** – The week number value (Not applicable in Timeline Month and AgendaView)
+* `WeekNumber` – The week number value (Not applicable in Timeline Month and AgendaView)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -91,6 +91,36 @@ private void scheduler_RightTapped(object sender, SchedulerRightTappedEventArgs 
     var weekNumber = e.WeekNumber;
 }
 
+{% endhighlight %}
+{% endtabs %}
+
+## MonthInlineAppointmentTapped
+
+The MonthInlineAppointmentTapped event is raised when a user taps on an appointment displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
+
+* `sender` - Refers to the SfScheduler instance that raised the event.
+
+This event provides details about the tapped appointment and the selected date through the `MonthInlineAppointmentTappedEventArgs`.
+
+* `Appointment`: Gets the tapped appointment. Returns null if the user taps an empty area.
+
+* `SelectedDate`: Gets the date of the month cell where the inline view was opened.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Month" 
+                       MonthInlineAppointmentTapped="Scheduler_MonthInlineAppointmentTapped" >
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 4 5" %}
+this.Scheduler.MonthInlineAppointmentTapped += Scheduler_MonthInlineAppointmentTapped;
+
+private void Scheduler_MonthInlineAppointmentTapped(object sender, MonthInlineAppointmentTappedEventArgs e)
+{
+    var appointment = e.Appointment;
+    var date = e.SelectedDate;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -287,6 +317,47 @@ public class SchedulerInteractionViewModel
 
 }
 
+{% endhighlight %}  
+{% endtabs %}
+
+### RightTappedCommand
+
+The `RightTappedCommand` will be triggered when you perform a right tap on the scheduler view in desktop platforms (Windows and macOS) and will pass the `SchedulerRightTappedEventArgs` as the parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Month"
+                       AllowedViews="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       RightTappedCommand="{Binding SchedulerRightTappedCommand}">
+    <scheduler:SfScheduler.BindingContext>
+        <local:SchedulerInteractionViewModel />
+    </scheduler:SfScheduler.BindingContext>
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+public class SchedulerInteractionViewModel
+{
+    public ICommand SchedulerRightTappedCommand { get; set; }
+
+    public SchedulerInteractionViewModel()
+    {
+        this.SchedulerRightTappedCommand = new Command<SchedulerRightTappedEventArgs>(ExecuteRightTapped, CanExecuteRightTapped);
+    }
+
+    private bool CanExecuteRightTapped(SchedulerRightTappedEventArgs arg)
+    {
+        return true;
+    }
+    private void ExecuteRightTapped(SchedulerRightTappedEventArgs obj)
+    {
+        var appointments = obj.Appointments;
+        var date = obj.Date;
+        var schedulerElement = obj.Element;
+        var resource = obj.Resource;
+        var weekNumber = obj.WeekNumber;
+    }
+}
 {% endhighlight %}  
 {% endtabs %}
 
