@@ -1631,3 +1631,11 @@ public SocialMediaViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+- [Header and Footer in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/header-and-footer)
+
+- [Highlighting Matched Text in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/highlighting-matched-text)
+
+- [AutoSizing in .NET MAUI Autocomplete](https://help.syncfusion.com/maui/autocomplete/autosizing)

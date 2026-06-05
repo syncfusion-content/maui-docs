@@ -361,3 +361,11 @@ To disable the ripple effect when clicking a `TreeViewItem`, set color value `Tr
 {% endtabs %}
 
 ![.NET MAUI TreeView with Animation](Images/appearance/maui-treeView-animation.gif)
+
+## See Also
+
+- [Item Height Customization in .NET MAUI Treeview](https://help.syncfusion.com/maui/treeview/item-height-customization)
+
+- [Checkbox in .NET MAUI Treeview](https://help.syncfusion.com/maui/treeview/checkbox)
+
+- [Selection in .NET MAUI Treeview](https://help.syncfusion.com/maui/treeview/selection)
