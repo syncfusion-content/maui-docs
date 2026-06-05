@@ -43,6 +43,10 @@ The CellContextMenu property of the Scheduler allows users to define a set of co
             <schedule:MenuItem Text="Add"
                                Command="{x:Static schedule:SchedulerCommands.Add}"
                                CommandParameter="{Binding}">
+                <schedule:MenuItem.Icon>
+                    <FontImageSource Glyph="&#xE70D;"
+                                     FontFamily="MauiMaterialAssets"/>
+                </schedule:MenuItem.Icon>
             </schedule:MenuItem>
         </schedule:MenuItemCollection>
     </schedule:SfScheduler.CellContextMenu>
@@ -59,10 +63,17 @@ scheduler.CellContextMenu = new MenuItemCollection()
         Text = "Add",
         Command = SchedulerCommands.Add,
         CommandParameter = new Binding("."),
+        Icon = new FontImageSource
+        {
+            FontFamily = "MauiMaterialAssets",
+            Glyph = "&#xE70D;",
+        }
     },
 };
 {% endhighlight %}
 {% endtabs %}
+
+![Context-menu-for-timeslot-cells-in-maui-scheduler](images/context-menu/context-menu-for-timeslot-cell.png)
 
 ## Context Menu for Appointments
 
@@ -138,96 +149,9 @@ scheduler.AppointmentContextMenu = new MenuItemCollection()
 {% endhighlight %}
 {% endtabs %}
 
+![Context-menu-for-appointments-in-maui-scheduler](images/context-menu/context-menu-for-appointments.png)
+
 N> The `SchedulerContextMenuInfo` object is set as the BindingContext for menu items.
-
-## Handle Context Menu Opening
-
-The Scheduler raises the `ContextMenuOpening` event when a context menu is about to be displayed. This event allows you to access the menu information or cancel the menu opening operation.
-
-The `SchedulerContextMenuOpeningEventArgs` class provides information about the context menu being opened.
-
-- **ContextMenu** – Gets the collection of menu items that will be displayed.
-- **MenuInfo** – Gets information about the scheduler element that invoked the context menu. Provides the following details - selected appointment, cell date and time, associated resource and scheduler instance.
-- **MenuType** – Gets the type of scheduler element (Appointment, SchedulerCell or AllDay) for which the context menu is opened.
-- **Cancel** – Specifies whether the context menu opening operation should be canceled. 
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      AppointmentEditorMode="Edit"
-                      View="Week"
-                      ContextMenuOpening="scheduler_ContextMenuOpening">
-    <schedule:SfScheduler.AppointmentContextMenu>
-        <schedule:MenuItemCollection>
-            <schedule:MenuItem Text="Edit"
-                               Command="{x:Static schedule:SchedulerCommands.Edit}"
-                               CommandParameter="{Binding}">
-                <schedule:MenuItem.Icon>
-                    <FontImageSource Glyph="&#xE710;"
-                                     FontFamily="MauiMaterialAssets"/>
-                </schedule:MenuItem.Icon>
-            </schedule:MenuItem>
-            <schedule:MenuItem Text="Delete"
-                               Command="{x:Static schedule:SchedulerCommands.Delete}"
-                               CommandParameter="{Binding}">
-                <schedule:MenuItem.Icon>
-                    <FontImageSource Glyph="&#xE70F;"
-                                     FontFamily="MauiMaterialAssets"/>
-                </schedule:MenuItem.Icon>
-            </schedule:MenuItem>
-        </schedule:MenuItemCollection>
-    </schedule:SfScheduler.AppointmentContextMenu>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4 6 8 9 10" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
-scheduler.AppointmentContextMenu = new MenuItemCollection()
-{
-    new Syncfusion.Maui.Scheduler.MenuItem
-    {
-        Text = "Edit",
-        Command = SchedulerCommands.Edit,
-        CommandParameter = new Binding("."),
-        Icon = new FontImageSource
-        {
-            FontFamily = "MauiMaterialAssets",
-            Glyph = "&#xE710;",
-            Color = Colors.Blue,
-            Size = 16
-
-        }
-    },
-
-    new Syncfusion.Maui.Scheduler.MenuItem
-    {
-        Text = "Delete",
-        Command = SchedulerCommands.Delete,
-        CommandParameter = new Binding("."),
-        Icon = new FontImageSource
-        {
-            FontFamily = "MauiMaterialAssets",
-            Glyph = "&#xE70F;",
-            Color = Colors.Blue,
-            Size = 16
-            
-        }
-    },
-};
-
-private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
-{
-    var contextMenu = e.ContextMenu;
-    var menuType = e.MenuType;
-    var menuInfo = e.MenuInfo;
-    var appointment = menuInfo?.Appointment;
-    var dateTime = menuInfo?.DateTime;
-    var resource = menuInfo?.Resource;
-    var scheduler = menuInfo?.Scheduler;
-}
-{% endhighlight %}
-{% endtabs %}
 
 ## Customize context menu appearance
 
@@ -253,6 +177,42 @@ scheduler.ContextMenuTextStyle = new SchedulerTextStyle()
     TextColor = Colors.Black,
     FontSize = 14,
 };
+{% endhighlight %}
+{% endtabs %}
+
+![Context-menu-customization-in-maui-scheduler](images/context-menu/customize-context-menu-using-textstyle.png)
+
+## Handle Context Menu Opening
+
+The Scheduler raises the `ContextMenuOpening` event when a context menu is about to be displayed. This event allows you to access the menu information or cancel the menu opening operation.
+
+The `SchedulerContextMenuOpeningEventArgs` class provides information about the context menu being opened.
+
+- **ContextMenu** – Gets the collection of menu items that will be displayed.
+- **MenuInfo** – Gets information about the scheduler element that invoked the context menu. Provides the following details - selected appointment, cell date and time, associated resource and scheduler instance.
+- **MenuType** – Gets the type of scheduler element (Appointment, SchedulerCell or AllDay) for which the context menu is opened.
+- **Cancel** – Specifies whether the context menu opening operation should be canceled. 
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+<schedule:SfScheduler x:Name="scheduler"
+                      View="Week"
+                      ContextMenuOpening="scheduler_ContextMenuOpening">
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="C#"%}
+this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening
+
+private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
+{
+    var contextMenu = e.ContextMenu;
+    var menuType = e.MenuType;
+    var menuInfo = e.MenuInfo;
+    var appointment = menuInfo?.Appointment;
+    var dateTime = menuInfo?.DateTime;
+    var resource = menuInfo?.Resource;
+    var scheduler = menuInfo?.Scheduler;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -318,7 +278,7 @@ The AppointmentContextMenu can be used to display Copy and Cut actions for appoi
 
 ### Custom Command Implementation
 
-The clipboard operations are implemented using a custom static class with ICommand.
+The clipboard operations are implemented using a custom class with ICommand.
 
 {% tabs %}
 {% highlight c# tabtitle="C#"%}
@@ -437,3 +397,5 @@ public static class ClipboardCommands
 }
 {% endhighlight %}
 {% endtabs %}
+
+![Clipboard-operations-using-context-menu-in-maui-scheduler](images/context-menu/clipboard-operations-using-context-menu.png)

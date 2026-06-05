@@ -536,6 +536,8 @@ scheduler.TimelineView.ShowMonthTimeRegions = true;
 {% endhighlight %}
 {% endtabs %}
 
+![Display-special-time-region-in-timeline-month-view-of-maui-scheduler](images/timeline-views/special-time-region-in-timeline-month-view.png)
+
 ## Full screen scheduler
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval width can be adjusted based on screen width by changing the [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_TimeIntervalWidth) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) to `-1.` It will auto-fit the timeline day, timeline week and timeline work week views to the screen width.

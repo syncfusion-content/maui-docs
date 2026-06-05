@@ -94,36 +94,6 @@ private void scheduler_RightTapped(object sender, SchedulerRightTappedEventArgs 
 {% endhighlight %}
 {% endtabs %}
 
-## MonthInlineAppointmentTapped
-
-The MonthInlineAppointmentTapped event is raised when a user taps on an appointment displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
-
-* `sender` - Refers to the SfScheduler instance that raised the event.
-
-This event provides details about the tapped appointment and the selected date through the `MonthInlineAppointmentTappedEventArgs`.
-
-* `Appointment`: Gets the tapped appointment. Returns null if the user taps an empty area.
-
-* `SelectedDate`: Gets the date of the month cell where the inline view was opened.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Month" 
-                       MonthInlineAppointmentTapped="Scheduler_MonthInlineAppointmentTapped" >
-</scheduler:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 4 5" %}
-this.Scheduler.MonthInlineAppointmentTapped += Scheduler_MonthInlineAppointmentTapped;
-
-private void Scheduler_MonthInlineAppointmentTapped(object sender, MonthInlineAppointmentTappedEventArgs e)
-{
-    var appointment = e.Appointment;
-    var date = e.SelectedDate;
-}
-{% endhighlight %}
-{% endtabs %}
-
 ## DoubleTapped
 
 Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped onto the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTapped) event occurs. Below is a list of the arguments:

@@ -401,6 +401,8 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 {% endhighlight %}   
 {% endtabs %}
 
+![Appointment-time-format-for-inline-appointments-in-month-view](images/month-view/customize-appointment-time-format-in-inline-view.png)
+
 ### Appointment height in inline view
 
 The `ItemHeight` property in `MonthInlineViewStyle` specifies the vertical height of each appointment item displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, each appointment item has a height of 50 units. You can increase or decrease this value to adjust how compact or spacious the inline appointment list appears.
@@ -428,6 +430,8 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 };
 {% endhighlight %}   
 {% endtabs %}
+
+![Item-height-customization-for-inline-appointments-in-month-view](images/month-view/customize-item-height-in-inline-view.png)
 
 ### Inline appointments appearance
 
@@ -470,6 +474,8 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 {% endhighlight %}   
 {% endtabs %}
 
+![Inline-appointments-customization-in-month-view-using-text-style](images/month-view/customize-inline-appointment-view-using-text-style.png)
+
 #### Customize inline appointments appearance using DateTemplate
 
 The `MonthInlineViewItemTemplate` property allows you to define a custom DataTemplate to customize the appearance of appointment items displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
@@ -501,6 +507,36 @@ The `MonthInlineViewItemTemplate` property allows you to define a custom DataTem
     </schedule:SfScheduler.MonthView>
 </schedule:SfScheduler>
 {% endhighlight %}  
+{% endtabs %}
+
+### MonthInlineAppointmentTapped
+
+The MonthInlineAppointmentTapped event is raised when a user taps on an appointment displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
+
+* `sender` - Refers to the SfScheduler instance that raised the event.
+
+This event provides details about the tapped appointment and the selected date through the `MonthInlineAppointmentTappedEventArgs`.
+
+* `Appointment`: Gets the tapped appointment. Returns null if the user taps an empty area.
+
+* `SelectedDate`: Gets the date of the month cell where the inline view was opened.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Month" 
+                       MonthInlineAppointmentTapped="Scheduler_MonthInlineAppointmentTapped" >
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+this.Scheduler.MonthInlineAppointmentTapped += Scheduler_MonthInlineAppointmentTapped;
+
+private void Scheduler_MonthInlineAppointmentTapped(object sender, MonthInlineAppointmentTappedEventArgs e)
+{
+    var appointment = e.Appointment;
+    var date = e.SelectedDate;
+}
+{% endhighlight %}
 {% endtabs %}
 
 ## View header
