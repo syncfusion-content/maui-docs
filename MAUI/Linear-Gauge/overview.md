@@ -15,21 +15,21 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge is a data visualization contro
 
 ## Business use cases
 
-- Dashboard applications that require **visual representation of performance metrics or progress values**.  
-- Industrial and monitoring systems that display **real-time measurements such as temperature, pressure, or speed**.  
-- Business applications that show **target vs actual values using gauge-based visualization**.  
-- Data-driven apps that require **range-based indicators for thresholds and alerts**.  
+- Dashboard applications that display **performance metrics and progress values using linear indicators**.  
+- Industrial and monitoring systems that track **measurements such as temperature, pressure, or speed**.  
+- Business applications that visualize **target versus actual values with clear range indicators**.  
+- Data-driven apps that require **threshold-based representation for alerts and analysis**.  
 
 ## Key features
 
-- **Orientation support** allows displaying the gauge in horizontal or vertical layouts based on UI requirements.  
-- **Customizable scale support** allows configuring thickness, edge styles, and reversing the scale direction.  
-- **Labels and ticks support** allows styling labels, major ticks, and minor ticks for better readability.  
-- **Range support** allows highlighting specific value ranges on the scale with different visual styles.  
-- **Pointer support** includes shape marker, content marker, and bar pointers to indicate values with customization options.  
-- **Mirror mode support** allows rendering gauge elements in a mirrored layout using the [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property.  
-- **Animation support** allows animating gauge elements when values change or during initial loading.  
-- **Interactive pointer movement** allows users to adjust values using drag or swipe gestures.  
+- **Orientation** allows displaying the gauge in horizontal or vertical layouts based on UI requirements.  
+- **Customizable scale** allows configuring thickness, edge styles, and reversing the scale direction.  
+- **Labels and ticks** allows styling labels, major ticks, and minor ticks for better readability.  
+- **Range support** allows highlighting value intervals on the scale with different visual styles.  
+- **Pointer support** allows using shape marker, content marker, and bar pointers to indicate values.  
+- **Mirror mode** allows rendering gauge elements in a mirrored layout for alternate visual representation.  
+- **Animation** allows animating gauge elements during load or value changes for better user experience.  
+- **Interactive pointer** allows adjusting values dynamically through drag or swipe gestures.  
 
 ## Globalization
 
@@ -37,6 +37,7 @@ The following table summarizes the globalization support available in the [SfLin
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
+<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable  
 <img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
 
 <table>
@@ -53,15 +54,15 @@ The following table summarizes the globalization support available in the [SfLin
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
-</tr>
+</tr> 
 </table>
 
 ## Related controls
 
-- **[CircularProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview)** for displaying circular progress indicators.
-- **[DigitalGauge](https://help.syncfusion.com/maui/digitalgauge/overview)** for representing values using digital segment displays.
+- [Radial Gauge](https://help.syncfusion.com/maui/radial-gauge/overview) for visualizing values using circular gauge representation.  
+- [Circular ProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview) for representing progress with circular indicators.
 
 ## Next steps
 
