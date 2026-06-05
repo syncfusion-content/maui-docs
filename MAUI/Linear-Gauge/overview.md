@@ -69,8 +69,9 @@ The following table summarizes the globalization support available in the [SfLin
 Explore further resources:
 
 - [Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started) - step-by-step guide to begin using the Linear Gauge control.
-- [Ranges](https://help.syncfusion.com/maui/linear-gauge/range) - configure ranges and scale visualization.  
-- [Pointers](https://help.syncfusion.com/maui/linear-gauge/pointers) - customize pointer types and behavior. 
+- [Range](https://help.syncfusion.com/maui/linear-gauge/range) - configure ranges and scale visualization.  
+- [Pointers](https://help.syncfusion.com/maui/linear-gauge/pointers) - customize pointer types and behavior.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
 
 ## Learnings
 
