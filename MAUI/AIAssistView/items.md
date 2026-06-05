@@ -21,8 +21,16 @@ documentation: ug
 <td>Specify the avatar and name of the user using {{'[Profile.Avatar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Profile.html#Syncfusion_Maui_AIAssistView_Profile_Avatar)'| markdownify }} and {{'[Profile.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Profile.html#Syncfusion_Maui_AIAssistView_Profile_Name)'| markdownify }} properties respectively.</td>
 </tr>
 <tr>
+<td>{{'[Data](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Data)'| markdownify }}</td>
+<td>Stores the original data of the item.</td>
+</tr>
+<tr>
 <td>{{'[DateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_DateTime)'| markdownify }}</td>
 <td>Displays the time when the item was sent or received.</td>
+</tr>
+<tr>
+<td>{{'[IsLiked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsLiked)'| markdownify }}</td>
+<td>Gets or sets the rating associated with the request item.</td>
 </tr>
 <tr>
 <td>{{'[RequestItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_RequestItem)'| markdownify }}</td>
