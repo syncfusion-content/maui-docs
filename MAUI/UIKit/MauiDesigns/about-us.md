@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI About Us offers a collection of 
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/AboutUsImages/simpleabout.png"
+<img src="Images/AboutUsImages/simpleabout.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

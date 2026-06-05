@@ -130,7 +130,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a colle
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ReviewImages/feedback.png"
+<img src="Images/ReviewImages/feedback.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -166,7 +166,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a colle
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ReviewImages/review.png"
+<img src="Images/ReviewImages/review.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

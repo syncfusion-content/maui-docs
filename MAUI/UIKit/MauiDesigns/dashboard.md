@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.png"
+<img src="Images/DashboardImages/stockoverview.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -168,7 +168,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.png"
+<img src="Images/DashboardImages/healthcare.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -205,7 +205,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/dailycalories.png"
+<img src="Images/DashboardImages/dailycalories.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -241,7 +241,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/dailytimeline.png"
+<img src="Images/DashboardImages/dailytimeline.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -278,7 +278,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
 <!-- Card 5 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/companyhistory.png"
+<img src="Images/DashboardImages/companyhistory.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -314,7 +314,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/mywallet.png"
+<img src="Images/DashboardImages/mywallet.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -350,7 +350,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/restaurant.png"
+<img src="Images/DashboardImages/restaurant.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

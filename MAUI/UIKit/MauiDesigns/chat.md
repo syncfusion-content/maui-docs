@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Chat offers a collection of **2 
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ChatImages/recentchat.png"
+<img src="Images/ChatImages/recentchat.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -167,7 +167,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Chat offers a collection of **2 
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ChatImages/conversation.png"
+<img src="Images/ChatImages/conversation.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

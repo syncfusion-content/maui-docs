@@ -130,7 +130,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SocialImages/connections.png"
+<img src="Images/SocialImages/connections.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -167,7 +167,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SocialImages/card.png"
+<img src="Images/SocialImages/card.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -204,7 +204,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SocialImages/interest.png"
+<img src="Images/SocialImages/interest.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -240,7 +240,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SocialImages/message.png"
+<img src="Images/SocialImages/message.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

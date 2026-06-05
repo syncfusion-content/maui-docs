@@ -128,7 +128,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TransactionImages/checkout.png"
+<img src="Images/TransactionImages/checkout.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -165,7 +165,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TransactionImages/paymentsuccess.png"
+<img src="Images/TransactionImages/paymentsuccess.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -202,7 +202,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TransactionImages/paymentfailure.png"
+<img src="Images/TransactionImages/paymentfailure.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -238,7 +238,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TransactionImages/savedcards.png"
+<img src="Images/TransactionImages/savedcards.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

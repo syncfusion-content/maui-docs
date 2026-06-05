@@ -132,7 +132,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/emptycart.png"
+<img src="Images/ErrorEmptyImages/emptycart.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -169,7 +169,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/locationdenied.png"
+<img src="Images/ErrorEmptyImages/locationdenied.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -206,7 +206,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/nocredits.png"
+<img src="Images/ErrorEmptyImages/nocredits.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -242,7 +242,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/nointernet.png"
+<img src="Images/ErrorEmptyImages/nointernet.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -279,7 +279,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 <!-- Card 5 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/noitem.png"
+<img src="Images/ErrorEmptyImages/noitem.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -315,7 +315,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/nophotos.png"
+<img src="Images/ErrorEmptyImages/nophotos.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -351,7 +351,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/notasks.png"
+<img src="Images/ErrorEmptyImages/notasks.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -387,7 +387,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/noenoughcredits.png"
+<img src="Images/ErrorEmptyImages/noenoughcredits.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -423,7 +423,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/novideos.png"
+<img src="Images/ErrorEmptyImages/novideos.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -459,7 +459,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/paymentfailed.png"
+<img src="Images/ErrorEmptyImages/paymentfailed.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -495,7 +495,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ErrorEmptyImages/wentwrong.png"
+<img src="Images/ErrorEmptyImages/wentwrong.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

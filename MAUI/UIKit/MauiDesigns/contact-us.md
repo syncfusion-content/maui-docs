@@ -132,7 +132,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Contact-Us offers a collection o
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ContactusImages/contactus.png"
+<img src="Images/ContactusImages/contactus.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

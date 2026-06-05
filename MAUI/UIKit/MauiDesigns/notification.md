@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NotificationImages/task.png"
+<img src="Images/NotificationImages/task.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -168,7 +168,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NotificationImages/social.png"
+<img src="Images/NotificationImages/social.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -205,7 +205,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NotificationImages/ecommerce.png"
+<img src="Images/NotificationImages/ecommerce.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

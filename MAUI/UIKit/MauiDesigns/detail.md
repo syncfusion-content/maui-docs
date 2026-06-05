@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/productdetail.png"
+<img src="Images/DetailImages/productdetail.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -168,7 +168,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/articledetail.png"
+<img src="Images/DetailImages/articledetail.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -205,7 +205,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/eventdetail.png"
+<img src="Images/DetailImages/eventdetail.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -242,7 +242,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 4 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/datatable.png"
+<img src="Images/DetailImages/datatable.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -279,7 +279,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 5 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/myaddress.png"
+<img src="Images/DetailImages/myaddress.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -317,7 +317,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 <!-- Card 6 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DetailImages/roombooking.png"
+<img src="Images/DetailImages/roombooking.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

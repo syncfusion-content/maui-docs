@@ -130,7 +130,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Onboarding offers a collection o
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/OnboardingImages/walkthrough.png"
+<img src="Images/OnboardingImages/walkthrough.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

@@ -125,7 +125,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 1 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/categorytile.png"
+<img src="Images/CatalogImages/categorytile.webp"
                 class="catalog-image">
 </div>
 <div class="catalog-content">
@@ -159,7 +159,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 2 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/catalogtile.png"
+<img src="Images/CatalogImages/catalogtile.webp"
                 class="catalog-image"
                 >
 </div>
@@ -194,7 +194,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 3 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/cataloglist.png"
+<img src="Images/CatalogImages/cataloglist.webp"
                 class="catalog-image"
                >
 </div>
@@ -229,7 +229,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 1 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/articlelist.png"
+<img src="Images/CatalogImages/articlelist.webp"
                 class="catalog-image"
                 >
 </div>
@@ -264,7 +264,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 2 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/articletile.png"
+<img src="Images/CatalogImages/articletile.webp"
                 class="catalog-image"
                >
 </div>
@@ -298,7 +298,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 3 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/producthome.png"
+<img src="Images/CatalogImages/producthome.webp"
                 class="catalog-image"
                 >
 </div>
@@ -333,7 +333,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 1 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/eventlist.png"
+<img src="Images/CatalogImages/eventlist.webp"
                 class="catalog-image"
                 >
 </div>
@@ -368,7 +368,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 2 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/articlecard.png"
+<img src="Images/CatalogImages/articlecard.webp"
                 class="catalog-image"
                 >
 </div>
@@ -403,7 +403,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
 <!-- Card 3 -->
 <div class="catalog-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/CatalogImages/travelplanner.png"
+<img src="Images/CatalogImages/travelplanner.webp"
                 class="catalog-image"
                 >
 </div>

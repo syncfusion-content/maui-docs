@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Bookmark offers a collection of 
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/BookmarkImages/wishlist.png"
+<img src="Images/BookmarkImages/wishlist.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -168,7 +168,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Bookmark offers a collection of 
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/BookmarkImages/cart.png"
+<img src="Images/BookmarkImages/cart.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -205,7 +205,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Bookmark offers a collection of 
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/BookmarkImages/articlebookmarks.png"
+<img src="Images/BookmarkImages/articlebookmarks.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/listcard.png"
+<img src="Images/NavigationImages/listcard.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -168,7 +168,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/tilecard.png"
+<img src="Images/NavigationImages/tilecard.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -205,7 +205,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/songs.png"
+<img src="Images/NavigationImages/songs.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -241,7 +241,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/faqs.png"
+<img src="Images/NavigationImages/faqs.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -278,7 +278,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 <!-- Card 5 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/contactlist.png"
+<img src="Images/NavigationImages/contactlist.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -314,7 +314,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/songplaylist.png"
+<img src="Images/NavigationImages/songplaylist.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -350,7 +350,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/movielist.png"
+<img src="Images/NavigationImages/movielist.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -386,7 +386,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/namelist.png"
+<img src="Images/NavigationImages/namelist.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -422,7 +422,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/restaurant.png"
+<img src="Images/NavigationImages/restaurant.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -458,7 +458,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/iconname.png"
+<img src="Images/NavigationImages/iconname.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -494,7 +494,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/suggestion.png"
+<img src="Images/NavigationImages/suggestion.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -530,7 +530,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/appusage.png"
+<img src="Images/NavigationImages/appusage.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -566,7 +566,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/documentlist.png"
+<img src="Images/NavigationImages/documentlist.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -602,7 +602,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/selectablename.png"
+<img src="Images/NavigationImages/selectablename.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -638,7 +638,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/moviespage.png"
+<img src="Images/NavigationImages/moviespage.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -674,7 +674,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/fileexplorer.png"
+<img src="Images/NavigationImages/fileexplorer.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -710,7 +710,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NavigationImages/explorergrid.png"
+<img src="Images/NavigationImages/explorergrid.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

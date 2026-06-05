@@ -131,7 +131,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI History offers a collection of *
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/HistoryImages/transaction.png"
+<img src="Images/HistoryImages/transaction.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -167,7 +167,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI History offers a collection of *
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/HistoryImages/myorders.png"
+<img src="Images/HistoryImages/myorders.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

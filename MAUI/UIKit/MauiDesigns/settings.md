@@ -130,7 +130,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Settings offers a collection of 
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SettingsImage/setting.png"
+<img src="Images/SettingsImage/setting.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -166,7 +166,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Settings offers a collection of 
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/SettingsImage/help.png"
+<img src="Images/SettingsImage/help.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

@@ -130,7 +130,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Tracking offers a collection of 
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/TrackingImages/delivery.png"
+<img src="Images/TrackingImages/delivery.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

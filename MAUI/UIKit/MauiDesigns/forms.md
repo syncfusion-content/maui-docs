@@ -123,7 +123,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/socialicon.png"
+<img src="Images/FormImages/socialicon.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -160,7 +160,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/login.png"
+<img src="Images/FormImages/login.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -197,7 +197,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/signup.png"
+<img src="Images/FormImages/signup.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -234,7 +234,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 4 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/resetpassword.png"
+<img src="Images/FormImages/resetpassword.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -271,7 +271,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 5 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/forgotpassword.png"
+<img src="Images/FormImages/forgotpassword.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -309,7 +309,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 6 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/tabbedlogin.png"
+<img src="Images/FormImages/tabbedlogin.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -346,7 +346,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 7 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/card.png"
+<img src="Images/FormImages/card.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -383,7 +383,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 8 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/addprofile.png"
+<img src="Images/FormImages/addprofile.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -420,7 +420,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
 <!-- Card 9 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/FormImages/registration.png"
+<img src="Images/FormImages/registration.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"

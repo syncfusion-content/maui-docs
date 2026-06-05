@@ -132,7 +132,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ArticleImages/articledetail.png"
+<img src="Images/ArticleImages/articledetail.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -169,7 +169,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ArticleImages/articleparallax.png"
+<img src="Images/ArticleImages/articleparallax.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
@@ -206,7 +206,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
 <!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/ArticleImages/myarticle.png"
+<img src="Images/ArticleImages/myarticle.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
