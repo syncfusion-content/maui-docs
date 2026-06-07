@@ -374,26 +374,22 @@ this.Content = scheduler;
 {% endtabs %}
 
 ## Show or Hide Empty Days 
-The HideEmptyDays property controls whether days without appointments are displayed in the AgendaView. This helps create a cleaner view by removing empty days, or ensures continuity by showing all days including those without scheduled events. By default, all days are shown in the AgendaView, even if they have no appointments. Setting this property to true hides empty days. When HideEmptyDays is false (default), all days are displayed in the AgendaView, including those without appointments.When HideEmptyDays is true, only days with appointments are shown, and empty days are hidden.
+The HideEmptyDays property controls the visibility of days without appointments in the AgendaView. By default, all days are displayed, including those that do not contain any appointments. Setting `HideEmptyDays` to `true` hides empty days and displays only dates that contain scheduled appointments, resulting in a more compact agenda view.
 
 {% tabs %}  
 {% highlight XAML hl_lines="4" %}
-
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Agenda">
     <scheduler:SfScheduler.AgendaView>
         <scheduler:SchedulerAgendaView HideEmptyDays="True"/>
     </scheduler:SfScheduler.MonthView>
 </scheduler:SfScheduler>
-
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
-
 SfScheduler scheduler = new SfScheduler();
 scheduler.View = SchedulerView.Agenda;
 scheduler.AgendaView.HideEmptyDays = true;
 this.Content = scheduler;
-
 {% endhighlight %}  
 {% endtabs %}
 

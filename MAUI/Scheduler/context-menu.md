@@ -10,7 +10,7 @@ keywords : .net maui scheduler, .net maui scheduler context menu, .net maui sche
 
 # Context Menu in .NET MAUI Scheduler (SfScheduler)
 
-The .NET MAUI Scheduler allows you to display customizable context menus for timeslot cells, month cells, all-day panels, and appointments.. Context menus provide quick access to common actions such as creating, editing, or deleting appointments without navigating away from the scheduler view. Context menus are displayed using the Scheduler's built-in context menu support and can be customized with user-defined or built-in commands.
+The .NET MAUI Scheduler supports customizable context menus for timeslot cells, month cells, all-day panels, and appointments. Context menus provide quick access to common actions such as creating, editing, or deleting appointments without navigating away from the scheduler view. Context menus are displayed using the Scheduler's built-in context menu support and can be customized with user-defined or built-in commands.
 
 The Scheduler displays context menus through the following interactions:
  
@@ -27,7 +27,7 @@ The Scheduler includes built-in commands that can be used directly in context me
 * **Edit** - Opens the selected appointment for editing.
 * **Delete** - Deletes the selected appointment.
  
-Appointment creation or editing through built-in commands is performed only when AppointmentEditorMode is set to Add or Edit.
+Built-in `Add` and `Edit` commands work only when the **AppointmentEditorMode** property includes the corresponding `Add` or `Edit` option.
 
 ## Context Menu for Timeslot Cells
 
@@ -151,11 +151,11 @@ scheduler.AppointmentContextMenu = new MenuItemCollection()
 
 ![Context-menu-for-appointments-in-maui-scheduler](images/context-menu/context-menu-for-appointments.png)
 
-N> The `SchedulerContextMenuInfo` object is set as the BindingContext for menu items.
+N> The BindingContext of each context menu item is set to a `SchedulerContextMenuInfo` object.
 
 ## Customize context menu appearance
 
-The scheduler allows you to customize the visual appearance of context menus to match the application's design.You can modify the background and text appearance of the context menu displayed for scheduler cells and appointment using the ContextMenuBackground and ContextMenuTextStyle properties.
+You can modify the background and text appearance of the context menu displayed for scheduler cells and appointment using the ContextMenuBackground and ContextMenuTextStyle properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7" %}
@@ -184,7 +184,7 @@ scheduler.ContextMenuTextStyle = new SchedulerTextStyle()
 
 ## Handle Context Menu Opening
 
-The Scheduler raises the `ContextMenuOpening` event when a context menu is about to be displayed. This event allows you to access the menu information or cancel the menu opening operation.
+The Scheduler raises the `ContextMenuOpening` event when a context menu is about to be displayed. This event provides access to the menu information and can be used to cancel the menu opening operation.
 
 The `SchedulerContextMenuOpeningEventArgs` class provides information about the context menu being opened.
 
@@ -216,9 +216,9 @@ private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpe
 {% endhighlight %}
 {% endtabs %}
 
-## Clipboard operations using context menu
+## Implement clipboard operations using context menu
 
-The Scheduler allows you to implement clipboard-like functionality using custom context menu commands to perform Copy, Cut, and Paste operations on appointments.
+Clipboard-like functionality can be implemneted using custom context menu commands for Copy, Cut, and Paste operations on appointments.
 
 The clipboard functionality works as follows:
 * **Copy** - The copy command creates a copy of the selected appointment and stores it temporarily.
@@ -278,7 +278,7 @@ The AppointmentContextMenu can be used to display Copy and Cut actions for appoi
 
 ### Custom Command Implementation
 
-The clipboard operations are implemented using a custom class with ICommand.
+The clipboard operations are implemented using custom commands that implement the ICommand interface.
 
 {% tabs %}
 {% highlight c# tabtitle="C#"%}
