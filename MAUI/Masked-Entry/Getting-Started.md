@@ -44,10 +44,6 @@ Before proceeding, ensure the following are in place:
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace MaskedEntrySample
@@ -141,10 +137,6 @@ Before proceeding, ensure the following are set up:
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace MaskedEntrySample
@@ -225,7 +217,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Popup NuGet Package
+## Step 2: Install the Syncfusion® MAUI Inputs NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
@@ -237,11 +229,7 @@ Before proceeding, ensure the following are set up:
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
+using Microsoft.Maui.Core.Hosting;
 
 namespace MaskedEntrySample
 {

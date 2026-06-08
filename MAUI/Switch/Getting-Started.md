@@ -94,7 +94,7 @@ using Syncfusion.Maui.Buttons;
 
 {% highlight xaml %}
 
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+<buttons:SfSwitch x:Name="sfSwitch" />
 
 {% endhighlight %}
 
@@ -190,7 +190,7 @@ using Syncfusion.Maui.Buttons;
 
 {% highlight xaml %}
 
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+<buttons:SfSwitch x:Name="sfSwitch" />
 
 {% endhighlight %}
 
@@ -282,7 +282,7 @@ using Syncfusion.Maui.Buttons;
 
 {% highlight xaml %}
 
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+<buttons:SfSwitch x:Name="sfSwitch" />
 
 {% endhighlight %}
 

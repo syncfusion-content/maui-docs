@@ -11,6 +11,37 @@ documentation: ug
 
 The appearance of the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
 
+## Add a title
+
+The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set the title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of the funnel chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfFunnelChart>
+    <chart:SfFunnelChart.Title>
+        <Label Text="School Admission"/>
+    </chart:SfFunnelChart.Title>
+    . . .
+</chart:SfFunnelChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfFunnelChart chart = new SfFunnelChart();
+chart.Title = new Label()
+{
+    Text = "School Admission"
+};
+. . .
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
+
 ## Custom PaletteBrushes
 
 The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) allows you to define your own brushes with preferred order by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_PaletteBrushes) property, as shown in the code below.

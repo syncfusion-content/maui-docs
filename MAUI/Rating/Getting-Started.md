@@ -43,10 +43,6 @@ Before proceeding, ensure the following are in place:
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace RatingSample
@@ -146,10 +142,6 @@ Before proceeding, ensure the following are in place:
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace RatingSample
@@ -247,10 +239,6 @@ Before proceeding, ensure the following are set up:
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace RatingSample
