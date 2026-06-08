@@ -290,3 +290,5 @@ namespace SignaturePadGettingStarted
 {% endtabcontents %}
 
 ![SignaturePad default](images/getting-started/default.png)
+
+N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.

@@ -95,12 +95,8 @@ Step 2: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="GettingStarted.Rotator">
+<ContentPage ...
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator">
 <ContentPage.Content>
 <syncfusion:SfRotator x:Name="rotator" />	
 </ContentPage.Content>
@@ -215,12 +211,8 @@ Step 3: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="GettingStarted.Rotator">
+<ContentPage ...
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator">
 <ContentPage.Content>
 <syncfusion:SfRotator x:Name="rotator" />	
 </ContentPage.Content>
@@ -247,6 +239,113 @@ public partial class RotatorControlPage : ContentPage
         
 {% endhighlight %}
 
+{% endtabs %}
+{% tabcontent JetBrains Rider %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI Rotator control
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample.
+
+{% tabs %}
+{% highlight xaml %}
+
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+
+{% endhighlight %}
+{% highlight c# %}
+
+    using Syncfusion.Maui.Rotator;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 3: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage ...
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator">
+<ContentPage.Content>
+<syncfusion:SfRotator x:Name="rotator" />	
+</ContentPage.Content>
+</ContentPage>
+	
+{% endhighlight %}
+
+{% highlight C# %}		
+
+using Syncfusion.Maui.Rotator;
+
+namespace GettingStarted
+{
+public partial class RotatorControlPage : ContentPage
+    {
+        public RotatorControlPage()
+        {
+            InitializeComponent();
+            SfRotator rotator = new SfRotator();
+            this.Content = rotator;
+        }
+    }
+}
+        
+{% endhighlight %}
 {% endtabs %}
 
 {% endtabcontent %}
@@ -300,195 +399,5 @@ namespace Rotator
 {% endtabs %}
 
 ![Rotator Items](images/RotatorItems.png)
- 
-## Setting Navigation Mode
-
-[SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) provides option to display the navigating items either in Thumbnail or Dots mode. The navigation mode for navigating the items can be decided using [NavigationStripMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="Rotator.Rotator">
-    <ContentPage.BindingContext>
-        <local:RotatorViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <syncfusion:SfRotator x:Name="rotator" 
-                        NavigationDelay="2000" 
-                        ItemsSource="{Binding ImageCollection}" 
-                        SelectedIndex="2"
-                        NavigationDirection="Horizontal"
-                        NavigationStripMode="Thumbnail" 
-                        BackgroundColor="#ececec"
-                        WidthRequest="550"
-                        HeightRequest="550">
-            <syncfusion:SfRotator.ItemTemplate>
-                <DataTemplate>
-                    <Image  Source="{Binding Image}"/>
-                </DataTemplate>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}	
-
-using Syncfusion.Maui.Core.Rotator;
-using Syncfusion.Maui.Rotator;
-
-namespace Rotator
-{
-    public partial class Rotator : ContentPage
-    {
-        public Rotator()
-        {
-            InitializeComponent ();
-            SfRotator rotator = new SfRotator();
-            var ImageCollection = new List<RotatorModel> {
-            new RotatorModel ("image1.png"),
-            new RotatorModel ("image2.png"),
-            new RotatorModel ("image3.png"),
-            new RotatorModel ("image4.png"),
-            new RotatorModel ("image5.png")
-            };
-            var itemTemplate = new DataTemplate(() =>
-            {
-                var grid = new Grid();
-                var nameLabel = new Image();
-                nameLabel.SetBinding(Image.SourceProperty, "Image");
-                grid.Children.Add(nameLabel);
-                return grid;
-            });
-            rotator.ItemTemplate = itemTemplate;
-            rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-            rotator.ItemsSource = ImageCollection;
-            this.Content = rotator;
-        }
-    }
-    public class RotatorModel
-    {
-        public RotatorModel(string imageString)
-        {
-            Image = imageString;
-        }
-        private String _image;
-        public String Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![NavigationStripMode](images/NavigationStripMode.png)
-
-## Customizing Position
-
-The placement position of navigation strip items such as [Thumbnail](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Thumbnail) or [Dots](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Dots) can be customized in [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1). This can be specified using [NavigationStripMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property.   
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="Rotator.Rotator">
-    <ContentPage.BindingContext>
-        <local:RotatorViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <syncfusion:SfRotator x:Name="rotator" 
-                        NavigationDelay="2000" 
-                        ItemsSource="{Binding ImageCollection}" 
-                        SelectedIndex="2"
-                        NavigationDirection="Horizontal"
-                        NavigationStripMode="Dots" 
-                        BackgroundColor="#ececec"
-                        NavigationStripPosition="Top"
-                        WidthRequest="550"
-                        HeightRequest="550">
-            <syncfusion:SfRotator.ItemTemplate>
-                <DataTemplate>
-                    <Image  Source="{Binding Image}"/>
-                </DataTemplate>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
-    </ContentPage.Content>
-</ContentPage>	
-
-{% endhighlight %}
-
-{% highlight C# %}	
-
-using Syncfusion.Maui.Core.Rotator;
-using Syncfusion.Maui.Rotator;
-
-namespace Rotator
-{
-    public partial class Rotator : ContentPage
-    {
-        public Rotator()
-        {
-            InitializeComponent ();
-            SfRotator rotator = new SfRotator();
-            var ImageCollection = new List<RotatorModel> {
-            new RotatorModel ("image1.png"),
-            new RotatorModel ("image2.png"),
-            new RotatorModel ("image3.png"),
-            new RotatorModel ("image4.png"),
-            new RotatorModel ("image5.png")
-            };
-            var itemTemplate = new DataTemplate(() =>
-            {
-                var grid = new Grid();
-                var nameLabel = new Image();
-                nameLabel.SetBinding(Image.SourceProperty, "Image");
-                grid.Children.Add(nameLabel);
-                return grid;
-            });
-            rotator.ItemTemplate = itemTemplate;
-            rotator.NavigationStripMode = NavigationStripMode.Dots;
-            rotator.NavigationStripPosition = NavigationStripPosition.Top;
-            rotator.WidthRequest=550;
-            rotator.HeightRequest=550;
-            rotator.ItemsSource = ImageCollection;
-            this.Content = rotator;
-        }
-    }
-    public class RotatorModel
-    {
-        public RotatorModel(string imageString)
-        {
-            Image = imageString;
-        }
-        private String _image;
-        public String Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
-    }
-}
-	
-{% endhighlight %}
-
-{% endtabs %}
-
-![NavigationStripPosition](images/NavigationStripPosition.png)
 
 N> You can find the getting started sample of .NET MAUI SfRotator from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)
