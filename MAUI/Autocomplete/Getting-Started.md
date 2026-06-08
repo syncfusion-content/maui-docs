@@ -400,7 +400,7 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autocomplete"
+<inputs:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250" 
                         HeightRequest = "50"
                         DisplayMemberPath = "Name"
