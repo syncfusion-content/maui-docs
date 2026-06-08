@@ -357,7 +357,18 @@ private static void ListenEnteredCommand(object obj)
 {% endtabs %}
 
 ### CellHovered event
-This event will be triggered when the mouse pointer hovers over a cell in the DataGrid. It uses [DataGridCellHoveredEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html) as its argument.
+The [CellHovered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_CellHovered) event is triggered when the mouse pointer hovers over a cell in the DataGrid. This event uses the [DataGridCellHoveredEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html) class as its argument.
+
+The `DataGridCellHoveredEventArgs` object exposes the following properties:
+
+| Property        | Description                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_RowColumnIndex) | Gets the row and column index of the hovered cell.                          |
+| [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_RowData)        | Gets the underlying data object for the row that contains the hovered cell. |
+| [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_Column)         | Gets the column associated with the hovered cell.                           |
+| [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_Point)          | Gets the location (coordinates) of the hovered cell.                        |
+| `CellValue`      | Gets the value contained in the hovered cell.                               |
+| `CellType`       | Gets the type of the hovered cell.                                          |
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

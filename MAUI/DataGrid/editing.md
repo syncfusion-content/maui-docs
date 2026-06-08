@@ -419,3 +419,408 @@ private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEd
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Undo and Redo an edit
+
+The SfDataGrid allows you to undo or redo edits by setting the [SfDataGrid.AllowUndoRedo]() to `true`. When set to true, `Ctrl + Z` in Windows and `Cmd + Z` in Mac Catalyst will undo an edit, while `Ctrl + Y` in Windows and `Cmd + Y` in Mac Catalyst will redo an edit. Refer to the following example to enable undo and redo actions:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowEditing="True"
+                       SelectionMode="Single"
+                       AllowUndoRedo="True">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AllowUndoRedo = true;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+### MaxUndoRedoActions
+
+The [SfDataGrid.MaxUndoRedoActions]() property allows users to adjust the number of undo and redo actions in the DataGrid. Refer to the following example to set `MaxUndoRedoActions`: 
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowEditing="True"
+                       SelectionMode="Single"
+                       AllowUndoRedo="True"
+                       MaxUndoRedoActions="10">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AllowUndoRedo = true;
+dataGrid.MaxUndoRedoActions = 10;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+### Undo Programmatically
+
+The [Undo]() method can be used to undo an edit in the DataGrid. To undo an edit using the `Undo` method, refer to the example below:
+
+{% tabs %}
+{% highlight xaml %}
+<Grid RowDefinitions="*,50">
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           Grid.Row="0"
+                           ItemsSource="{Binding Orders}"
+                           AllowEditing="True"
+                           SelectionMode="Single"
+                           AllowUndoRedo="True">
+    </syncfusion:SfDataGrid>
+    <Button Grid.Row="1"
+            Text="Undo"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="Button_Clicked"/>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AllowUndoRedo = true;
+
+Button button = new Button();
+button.Text = "Undo";
+button.HorizontalOptions = LayoutOptions.Center;
+button.VerticalOptions = LayoutOptions.Center;
+button.Clicked += Button_Clicked;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+grid.Children.Add(dataGrid);
+grid.Children.Add(button);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(button, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dataGrid.UndoRedoController.Undo();
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Redo Programmatically
+
+The [Redo]() method can be used to redo an edit in the DataGrid. To redo an edit using the `Redo` method, refer to the example below:
+
+{% tabs %}
+{% highlight xaml %}
+<Grid RowDefinitions="*,50">
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           Grid.Row="0"
+                           ItemsSource="{Binding Orders}"
+                           AllowEditing="True"
+                           SelectionMode="Single"
+                           AllowUndoRedo="True">
+    </syncfusion:SfDataGrid>
+    <Button Grid.Row="1"
+            Text="Redo"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="Button_Clicked"/>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AllowUndoRedo = true;
+
+Button button = new Button();
+button.Text = "Redo";
+button.HorizontalOptions = LayoutOptions.Center;
+button.VerticalOptions = LayoutOptions.Center;
+button.Clicked += Button_Clicked;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+grid.Children.Add(dataGrid);
+grid.Children.Add(button);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(button, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dataGrid.UndoRedoController.Redo();
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Clear History
+
+The [ClearHistory]() method can be used to clear the history of undo and redo stored in the respective stacks. To clear the history using the `ClearHistory` method, refer to the example below:
+
+{% tabs %}
+{% highlight xaml %}
+<Grid RowDefinitions="*,50">
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           Grid.Row="0"
+                           ItemsSource="{Binding Orders}"
+                           AllowEditing="True"
+                           SelectionMode="Single"
+                           AllowUndoRedo="True">
+    </syncfusion:SfDataGrid>
+    <Button Grid.Row="1"
+            Text="Clear History"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="Button_Clicked"/>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AllowUndoRedo = true;
+
+Button button = new Button();
+button.Text = "Clear History";
+button.HorizontalOptions = LayoutOptions.Center;
+button.VerticalOptions = LayoutOptions.Center;
+button.Clicked += Button_Clicked;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+grid.Children.Add(dataGrid);
+grid.Children.Add(button);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(button, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dataGrid.UndoRedoController.ClearHistory();
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Undo and Redo Count
+
+The number of undo and redo actions can be retrieved using [UndoCount]() and [RedoCount](). Refer to the code below to set `UndoCount` and `RedoCount`:
+
+{% tabs %}
+{% highlight xaml %}
+<Grid RowDefinitions="50,*" ColumnDefinitions="*,*">
+    <HorizontalStackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End">
+        <Label Text="Undo Count"
+               FontSize="16"
+               FontAttributes="Bold"
+               Margin="10,0"/>
+        <Label x:Name="undoCountLabel"
+               Text="{Binding Source={x:Reference dataGrid}, Path=UndoRedoController.UndoCount, StringFormat='{0}'}"
+               FontSize="16"
+               FontAttributes="Bold"
+               Margin="10,0"/>
+    </HorizontalStackLayout>
+    <HorizontalStackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start">
+        <Label Text="Redo Count"
+               FontSize="16"
+               FontAttributes="Bold"
+               Margin="10,0"/>
+        <Label x:Name="redoCountLabel"
+               Text="{Binding Source={x:Reference dataGrid}, Path=UndoRedoController.RedoCount, StringFormat='{0}'}"
+               FontSize="16"
+               FontAttributes="Bold"
+               Margin="10,0"/>
+    </HorizontalStackLayout>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           ItemsSource="{Binding Orders}"
+                           AllowEditing="True"
+                           SelectionMode="Single"
+                           AllowUndoRedo="True">
+    </syncfusion:SfDataGrid>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AllowUndoRedo = true;
+
+var undoLabelTitle = new Label();
+undoLabelTitle.Text = "Undo Count";
+undoLabelTitle.FontSize = 16;
+undoLabelTitle.FontAttributes = FontAttributes.Bold;
+undoLabelTitle.Margin = new Thickness(10, 0);
+
+var undoCountLabel = new Label();
+undoCountLabel.FontSize = 16;
+undoCountLabel.FontAttributes = FontAttributes.Bold;
+undoCountLabel.Margin = new Thickness(10, 0);
+undoCountLabel.SetBinding(Label.TextProperty, new Binding(path: "UndoRedoController.UndoCount", source: dataGrid, stringFormat: "{0}"));
+
+var undoLayout = new HorizontalStackLayout();
+undoLayout.VerticalOptions = LayoutOptions.Center;
+undoLayout.HorizontalOptions = LayoutOptions.End;
+undoLayout.Children.Add(undoLabelTitle);
+undoLayout.Children.Add(undoCountLabel);
+
+
+var redoLabelTitle = new Label();
+redoLabelTitle.Text = "Redo Count";
+redoLabelTitle.FontSize = 16;
+redoLabelTitle.FontAttributes = FontAttributes.Bold;
+redoLabelTitle.Margin = new Thickness(10, 0);
+
+var redoCountLabel = new Label();
+redoCountLabel.FontSize = 16;
+redoCountLabel.FontAttributes = FontAttributes.Bold;
+redoCountLabel.Margin = new Thickness(10, 0);
+redoCountLabel.SetBinding(Label.TextProperty, new Binding(path: "UndoRedoController.RedoCount", source: dataGrid, stringFormat: "{0}"));
+
+var redoLayout = new HorizontalStackLayout();
+redoLayout.VerticalOptions = LayoutOptions.Center;
+redoLayout.HorizontalOptions = LayoutOptions.Start;
+redoLayout.Children.Add(redoLabelTitle);
+redoLayout.Children.Add(redoCountLabel);
+
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+grid.Children.Add(dataGrid);
+grid.Children.Add(undoLayout);
+grid.Children.Add(redoLayout);
+grid.SetRow(undoLayout, 0);
+grid.SetColumn(undoLayout, 0);
+grid.SetRow(redoLayout, 0);
+grid.SetColumn(redoLayout, 1);
+grid.SetRow(dataGrid, 1);
+grid.SetColumnSpan(dataGrid, 2);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+### Events in Undo Redo
+
+#### Cell Undoing
+
+The [SfDataGrid.CellUndoing]() event occurs when the undo action is in progress for a cell. The [DataGridUndoRedoEventArgs]() has the following members that provide information for the `SfDataGrid.CellUndoing` event:
+
+ * [Cancel](): When this member is set to `true`, the event is canceled and the undo action for the cell does not occur.
+ * [RowIndex](): Gets the row index of the undoing cell in the DataGrid.
+ * [ColumnIndex](): Gets the column index of the undoing cell in the DataGrid.
+ * [Column](): Gets the column of the DataGrid.
+ * [OldValue](): Gets the old value of the undoing cell in the DataGrid.
+ * [NewValue](): Gets the new value of the undoing cell in the DataGrid.
+
+To hook the `SfDataGrid.CellUndoing` event, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowEditing="True"
+                       SelectionMode="Single"
+                       AllowUndoRedo="True"
+                       CellUndoing="DataGrid_CellUndoing">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AllowUndoRedo = true;
+dataGrid.CellUndoing += DataGrid_CellUndoing;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void DataGrid_CellUndoing(object sender, DataGridUndoRedoEventArgs e)
+{
+    if (e.ColumnIndex == 0)
+    {
+        e.Cancel = true;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Cell Redoing
+
+The [SfDataGrid.CellRedoing]() event occurs when the redo action is in progress for a cell. To hook the `SfDataGrid.CellRedoing` event, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowEditing="True"
+                       SelectionMode="Single"
+                       AllowUndoRedo="True"
+                       CellRedoing="DataGrid_CellRedoing">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.AllowUndoRedo = true;
+dataGrid.CellRedoing += DataGrid_CellRedoing;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void DataGrid_CellRedoing(object sender, DataGridUndoRedoEventArgs e)
+{
+    if (e.ColumnIndex == 0)
+    {
+        e.Cancel = true;
+    }
+}
+{% endhighlight %}
+{% endtabs %}

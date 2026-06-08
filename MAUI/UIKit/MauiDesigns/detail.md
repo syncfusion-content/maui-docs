@@ -39,7 +39,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin-top: 0px;
@@ -105,6 +105,16 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
    font-size: 42px;
    cursor: pointer;
    font-weight: bold;
+}
+@keyframes zoomIn {
+   from {
+       transform: scale(0.9);
+       opacity: 0;
+   }
+   to {
+       transform: scale(1);
+       opacity: 1;
+   }
 }
 @media(max-width:900px) {
    .form-card {
@@ -350,18 +360,3 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
 </span>
 <img id="popupImage">
 </div>
-<script>
-function openImage(src) {
-   document.getElementById("imageModal").style.display = "flex";
-   document.getElementById("popupImage").src = src;
-}
-function closeImage() {
-   document.getElementById("imageModal").style.display = "none";
-}
-/* Close when clicking outside image */
-document.getElementById("imageModal").addEventListener("click", function(e) {
-   if (e.target.id === "imageModal") {
-       closeImage();
-   }
-});
-</script>
