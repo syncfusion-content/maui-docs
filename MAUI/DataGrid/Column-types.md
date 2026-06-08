@@ -80,6 +80,18 @@ The following table describes the types of columns and their usage:
 <td>Use to display the IEnumerable data using [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) .</td>
 </tr>
 <tr>
+<td>{{'[DataGridTimePickerColumn]()'| markdownify }}</td>
+<td>{{'[DataGridTimePickerCellRenderer]()'| markdownify }}</td>
+<td>TimePicker</td>
+<td>To display the time span value.</td>
+</tr>
+<tr>
+<td>{{'[DataGridCheckBoxSelectorColumn]()'| markdownify }}</td>
+<td>{{'[DataGridCheckBoxSelectorCellRenderer]()'| markdownify }}</td>
+<td>CheckBoxSelector</td>
+<td>Selects or deselects rows based on the check box value, which is not bound with data object.</td>
+</tr>
+<tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridUnboundCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundCellRenderer.html)'| markdownify }}</td>
 <td>Unbound</td>
@@ -1810,6 +1822,219 @@ dataGrid.DefaultStyle = new DataGridStyle
 
 {% endhighlight %}
 {% endtabs %}
+
+## DataGridTimePickerColumn
+
+[DataGridTimePickerColumn]() is derived from `DataGridColumn` and displays column data as a time span. It hosts an `SfTimePicker` element in editing mode.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTimePickerColumn HeaderText="Delivery Time" 
+                                             MappingName="DeliveryTime">
+        </syncfusion:DataGridTimePickerColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+
+var timePickerColumn = new DataGridTimePickerColumn()
+{
+    MappingName = "DeliveryTime",
+    HeaderText = "Delivery Time"
+};
+
+dataGrid.Columns.Add(timePickerColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridTimePicker column in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-timepicker.png" width="404"/>
+
+### Null value support
+
+`DataGridTimePickerColumn` provides support to restrict or allow null values in columns based on the [AllowNull]() property. Instead of displaying null values, you can display hint text using the [NullValue]() property.
+
+The `NullValue` property will not work when `AllowNull` is set to `false`.
+
+### Setting input value range
+
+You can restrict the input value to a specific range using [Minimum]() and [Maximum]() properties.
+
+### Data formatting
+
+You can format the time span values by setting the [Format]() property.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTimePickerColumn HeaderText="Delivery Time" 
+                                             MappingName="DeliveryTime"
+                                             Format="hh\:mm">
+        </syncfusion:DataGridTimePickerColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+
+var timePickerColumn = new DataGridTimePickerColumn()
+{
+    MappingName = "DeliveryTime",
+    HeaderText = "Delivery Time",
+    Format = @"hh\:mm"
+};
+
+dataGrid.Columns.Add(timePickerColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridTimePicker column with Format in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-timepicker-format.png" width="404"/>
+
+## DataGridCheckBoxSelectorColumn
+
+`SfDataGrid` allows you to select or deselect individual rows through `SfCheckBox` using [DataGridCheckBoxSelectorColumn](), which is not bound to a data object from the underlying data source and can be added like any other column. The selector column supports only row selection, and selection in the selector column works based on the [SelectionMode]().
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="50">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 50
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+By default, a checkbox is displayed in the header of the selector column, which is used to select or deselect all rows in the datagrid.
+
+<img alt="DataGridCheckBoxSelector column in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector.png" width="404"/>
+
+### Text on column header
+
+You can display text instead of a checkbox in the header of the selector column by setting the [AllowCheckboxOnHeader]() property to `false`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="100"
+                                                   AllowCheckboxOnHeader="False"
+                                                   HeaderText="Selector">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 100,
+    AllowCheckboxOnHeader = false,
+    HeaderText = "Selector"
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridCheckBoxSelector column with AllowCheckboxOnHeader as false in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector-allowcheckboxonheader.png" width="404"/>
+
+### Canceling the checkbox state change
+
+The checkbox state change in the `DataGridCheckBoxSelectorColumn` can be canceled by setting [DataGridCheckboxSelectorCheckedEventArgs.Cancel]() to `true` in the [SfDataGrid.CheckboxSelectorChecked]() event. Additionally, the checkbox value can be modified by setting [DataGridCheckboxSelectorCheckedEventArgs.NewValue]() within the same event.
+
+Based on this, the selection state is not changed when `e.Cancel` is set to `true`, and the selection is applied according to the value specified in `e.NewValue`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple"
+                       CheckboxSelectorChecked="OnCellCheckBoxClick">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="50">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.CheckboxSelectorChecked += OnCellCheckBoxClick;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 50
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+void OnCellCheckBoxClick(object sender, DataGridCheckboxSelectorCheckedEventArgs e)
+{
+    if (e.RowIndex == 1)
+        e.Cancel = true;
+
+    else if (e.RowIndex == 2)
+        e.NewValue = CheckState.Checked;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Limitations
+
+The following are the limitations of `DataGridCheckBoxSelectorColumn`:
+
+* The Selector column does not support cell selection.
+* The Selector column does not support data operations such as sorting, filtering, and grouping.
+* The Selector column is excluded from operations such as printing and exporting.
+* The Selector column does not support the filter row.
 
 ## Row header
 
