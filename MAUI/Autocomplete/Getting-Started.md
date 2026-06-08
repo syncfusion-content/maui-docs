@@ -402,7 +402,7 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 <inputs:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250" 
-                        HeightRequest = "50"
+                        HeightRequest = "40"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
