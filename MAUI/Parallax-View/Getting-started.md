@@ -313,11 +313,6 @@ The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView
 
 The [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) represents the foreground view of the parallax view. The value of the Source should be a scrollable content or the view which implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface.
 
-Currently, the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) directly supports the following controls. Bind the control to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
-
-    1. ScrollView
-    2. Syncfusion<sup>®</sup> ListView
-
 The following code sample demonstrates how to bind the Syncfusion<sup>®</sup> ListView to the Source property.
 
 {% tabs %}

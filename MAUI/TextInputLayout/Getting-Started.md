@@ -85,7 +85,6 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
     xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 	
 {% endhighlight %}
-
 {% highlight c# %}
 
     using Syncfusion.Maui.Core;
@@ -105,7 +104,6 @@ Step 2: Add any input view control such as [Entry](https://learn.microsoft.com/e
 </inputLayout:SfTextInputLayout>  
 
 {% endhighlight %}
-
 {% highlight C# %} 
 
 SfTextInputLayout inputLayout = new SfTextInputLayout();
@@ -190,7 +188,6 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
     xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 	
 {% endhighlight %}
-
 {% highlight c# %}
 
     using Syncfusion.Maui.Core;
@@ -210,7 +207,6 @@ Step 3: Add any input view control such as [Entry](https://learn.microsoft.com/e
 </inputLayout:SfTextInputLayout>  
 
 {% endhighlight %}
-
 {% highlight C# %} 
 
 SfTextInputLayout inputLayout = new SfTextInputLayout();
@@ -289,7 +285,6 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
     xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 	
 {% endhighlight %}
-
 {% highlight c# %}
 
     using Syncfusion.Maui.Core;
@@ -309,7 +304,6 @@ Step 3: Add any input view control such as [Entry](https://learn.microsoft.com/e
 </inputLayout:SfTextInputLayout>  
 
 {% endhighlight %}
-
 {% highlight C# %} 
 
 SfTextInputLayout inputLayout = new SfTextInputLayout();
@@ -319,6 +313,7 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
+{% endtabcontent %}
 {% endtabcontents %}
 
 ## Adding hint
@@ -334,7 +329,6 @@ Floating label for the text input layout can be added by setting the [Hint](http
 </inputLayout:SfTextInputLayout>  
 
 {% endhighlight %}
-
 {% highlight C# %} 
 
 SfTextInputLayout inputLayout = new SfTextInputLayout();

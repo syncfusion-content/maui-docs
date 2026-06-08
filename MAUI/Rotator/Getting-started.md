@@ -240,6 +240,7 @@ public partial class RotatorControlPage : ContentPage
 {% endhighlight %}
 
 {% endtabs %}
+{% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
