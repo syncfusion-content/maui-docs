@@ -11,8 +11,7 @@ documentation: ug
 
 This section explains how to define and customize the InputView in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
-## Editor
-### EditorView template
+### EditorView customization
 
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the [EditorViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EditorViewTemplate) property. This property lets you define a custom layout and style for the editor.
 
@@ -76,7 +75,7 @@ public partial class MainPage : ContentPage
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-editorviewtemplate.png)
 
-### Editor customization
+### Customizing editor appearance using RequestEditor
 The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.
 
 {% tabs %}
@@ -101,7 +100,6 @@ public partial class MainPage : ContentPage
 
 ### Accessing the editor in AssistView
 The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEditorView.html), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
-
 
 ## StopResponding Button
 
@@ -206,7 +204,7 @@ public class ViewModel : INotifyPropertyChanged
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
 
-### StopResponding Icon
+### Customizing the StopResponding icon
 
 The `SfAIAssistView` control allows you to set a custom icon for the StopResponding button using the [StopRespondingIcon]() property.
 

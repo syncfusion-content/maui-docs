@@ -140,6 +140,205 @@ To handle the long-press action using commands (MVVM), bind the [ItemLongPressed
 {% endhighlight %}
 {% endtabs %}
 
+## ImageTapped Event and Command
+
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides built-in support for handling image interactions through the [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTapped) event and the [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTappedCommand).
+These are triggered whenever a user taps on an image within the control. The tapped image item is accessible through the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html), which includes the following member:
+
+ * [ImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ImageTappedEventArgs_ImageItem) : Refers to the tapped image item.
+
+### ImageTapped Event
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ImageTapped="sfAIAssistView_ImageTapped" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+      
+    sfAIAssistView.ImageTapped += SfAIAssistView_ImageTapped;
+
+    private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
+    {  
+       DisplayAlert("Image", " Tapped on image :" + e.ImageItem.Source, "Ok");                  
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### ImageTapped Command
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               ImageTappedCommand="{Binding TappedCommand}" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+
+    public class ViewModel : INotifyPropertyChanged
+    {
+        public Command<object> tappedCommand;
+
+        public ViewModel()
+        {
+            TappedCommand = new Command<object>(ImageTapped);
+        }
+        
+        public Command<object> TappedCommand
+        {
+            get { return tappedCommand; }
+            set { tappedCommand = value; }
+        }
+
+        private void ImageTapped(object obj)
+        {
+           var ImageTappedArgs = obj as ImageTappedEventArgs;
+           DisplayAlert("Image", " Tapped on Image item :" + ImageTappedArgs.ImageItem.Source, "Ok");                  
+        }    
+      
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## CardTapped Event and Command
+
+ The `SfAIAssistView` control provides built-in support for handling card interactions through the [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTapped) event and the [CardTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTappedCommand). These are triggered whenever a user taps on a card within the control. The tapped card item is accessible through the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html), which includes the following members:
+
+ * [Card](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Card) : Represents the selected card from the card collection.
+ * [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Action) : Holds the information about the selected action when a user taps a button on a card.
+ * [CardItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_CardItem) : Refers to the current assist view card item.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Handled) : Indicates whether the event is handled or not.
+
+### CardTapped Event
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               CardTapped="sfAIAssistView_CardTapped" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+      
+    sfAIAssistView.CardTapped += SfAIAssistView_CardTapped;
+
+    private void SfAIAssistView_CardTapped(object sender, CardTappedEventArgs e)
+    {  
+       DisplayAlert("Card", " Tapped on card :" + e.Card.Title, "Ok");                  
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### CardTapped Command
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               CardTappedCommand="{Binding TappedCommand}" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+
+    public class ViewModel : INotifyPropertyChanged
+    {
+        public Command<object> tappedCommand;
+
+        public ViewModel()
+        {
+            TappedCommand = new Command<object>(CardTapped);
+        }
+        
+        public Command<object> TappedCommand
+        {
+            get { return tappedCommand; }
+            set { tappedCommand = value; }
+        }
+
+        private void CardTapped(object obj)
+        {
+           var CardTappedArgs = obj as CardTappedEventArgs;
+           DisplayAlert("Card", " Tapped on Card item :" + CardTappedArgs.Card.Title, "Ok");                  
+        }    
+      
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## AttachmentTapped Event and Command
+
+The `SfAIAssistView` control provides built-in support for handling attachment interactions through the [AttachmentTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTapped) event and the [AttachmentTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTappedCommand). These are triggered whenever a user taps on an attachment in the preview.
+The tapped attachment item is accessible through the [AttachmentTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AttachmentTappedEventArgs.html), which includes the following member:
+ * [Attachment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AttachmentTappedEventArgs.html#Syncfusion_Maui_AIAssistView_AttachmentTappedEventArgs_Attachment) : Refers to the tapped attachment item.
+
+### AttachmentTapped Event
+
+The [AttachmentTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTapped) event is triggered when a preview attachment item is tapped.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                        AttachmentTapped="sfAIAssistView_AttachmentTapped" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+      
+sfAIAssistView.AttachmentTapped += SfAIAssistView_AttachmentTapped;
+
+private void SfAIAssistView_AttachmentTapped(object sender, AttachmentTappedEventArgs e)
+{  
+    DisplayAlert("Attachment", " Tapped on attachment :" + e.Attachment.FileName, "Ok");                  
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### AttachmentTapped Command
+
+The [AttachmentTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTappedCommand) is triggered when a preview attachment item is tapped.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                            AttachmentTappedCommand="{Binding TappedCommand}" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+
+public class ViewModel : INotifyPropertyChanged
+{
+    public Command<object> tappedCommand;
+
+    public ViewModel()
+    {
+        TappedCommand = new Command<object>(AttachmentTapped);
+    }
+    
+    public Command<object> TappedCommand
+    {
+        get { return tappedCommand; }
+        set { tappedCommand = value; }
+    }
+
+    private void AttachmentTapped(object obj)
+    {
+        var AttachmentTappedArgs = obj as AttachmentTappedEventArgs;
+        DisplayAlert("Attachment", " Tapped on Attachment item :" + AttachmentTappedArgs.Attachment.FileName, "Ok");                  
+    }      
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Request Event and Command
 
 The [Request](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Request) event and [RequestCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestCommand) are triggered when a request item is sent. The [RequestEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEventArgs.html) arguments provides the following details:
@@ -322,3 +521,67 @@ The [ItemRatingChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% endhighlight %}
 {% endtabs %}
+
+
+## Conversation Events and commands
+
+When a user selects a conversation item, the [ConversationItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTapped) event and [ConversationItemTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTappedCommand) are triggered, providing [ConversationItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
+
+ * [ConversationItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ConversationItemTappedEventArgs_ConversationItem) : The conversation item selected by the user.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ConversationItemTappedEventArgs_Handled) : A boolean indicating whether the selected conversation item is automatically visible in view. The default value is false.
+
+### ConversationItemTapped event
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                     ConversationItemTapped="OnConversationItemTapped"/>
+
+{% endhighlight %}
+{% highlight c# hl_lines="1" %}
+
+aiAssistView.ConversationItemTapped += OnConversationItemTapped;
+
+private void OnConversationItemTapped(object sender, ConversationItemTappedEventArgs e)
+{
+    // Handle the conversation item action
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### ConversationItemTappedCommand
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                     ConversationItemTappedCommand="{Binding ConversationItemTappedCommand}"/>
+
+{% endhighlight %}
+{% highlight c# hl_lines="4,7" %}
+
+public class AIAssistViewModel : INotifyPropertyChanged
+{
+    ...
+    public ICommand ConversationItemTappedCommand { get; }
+    ...
+
+    public AIAssistViewModel()
+    {
+        ...
+        this.ConversationItemTappedCommand = new Command<object>(OnConversationItemTapped);
+        ...
+    }
+
+    ...
+    private void OnConversationItemTapped(object obj)
+    {
+        // Handle the conversation item action
+    }
+    ...
+}
+
+{% endhighlight %}
+{% endtabs %} 

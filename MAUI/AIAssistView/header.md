@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to define and customize the header in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
-## Show/hide header
+## Controlling header display in SfAIAssistView
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to display a header using the [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader)  property. By default, the value of ShowHeader is `true`, so the header is displayed at the top of the assist view.
 If the ShowHeader property is set to `false`, the header will not be displayed.
@@ -36,8 +36,7 @@ If the ShowHeader property is set to `false`, the header will not be displayed.
 {% endhighlight %}
 {% endtabs %}
 
-
-## Header text
+## Customizing header text in SfAIAssistView
 
 The `SfAIAssistView` control allows you to customize the header text using the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_HeaderText) property.
 

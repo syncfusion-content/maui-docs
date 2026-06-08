@@ -89,9 +89,9 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 
 ![Edit Option in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-editoption.gif)
  
-## Show ResponseLoader View
+## Display Response Processing Indicator
 
-By Default, the response loader view will be enabled, and the default shimmer view will be displayed when the request is added. To disable it, set the [ShowResponseLoader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowResponseLoader) property to `false`.
+By default, a processing indicator is displayed when a request is added to indicate that the response is being generated. To disable it, set the [ShowResponseLoader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowResponseLoader) property to `false`
 
 {% tabs %}
 {% highlight xaml hl_lines="8" %}
@@ -126,17 +126,17 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Template customization
+## Customizing Request and Response item templates
 
 The `SfAIAssistView` facilitates the customization of both request and response item templates according to specific requirements. This feature enhances flexibility and provides a higher degree of control over the display of items.
 
 By utilizing the template selector, distinct templates can be assigned to all [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) or to a particular item, allowing for the independent customization of both request and response items. This capability is particularly beneficial when custom item types require different visual representations, offering precise control over the layout and presentation within the assist view.
 
-### Request item template
+### Defining the request item template
 
 A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Request view by setting the [RequestItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestItemTemplate) property.
 
-#### Data model
+#### Defining a custom AssistItem model
 
 {% tabs %}
 {% highlight c# tabtitle="FileAssistItem.cs" %}
@@ -184,7 +184,7 @@ public class FileAssistItem : AssistItem, INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-#### View model
+#### Defining the view model
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -245,7 +245,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-#### Data template selector
+#### Implementing a custom request template selector
 
 Create a custom class that inherits from [RequestItemTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestItemTemplateSelector.html), and override the [OnSelectTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestItemTemplateSelector.html#Syncfusion_Maui_AIAssistView_RequestItemTemplateSelector_OnSelectTemplate_System_Object_Microsoft_Maui_Controls_BindableObject_) method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
@@ -288,7 +288,7 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-#### Applying the data template selector
+#### Applying the request template selector
 
 {% tabs %}
 {% highlight xaml hl_lines="12" %}
@@ -329,11 +329,11 @@ public partial class MainPage : ContentPage
 
 ![RequestItem Template in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-RequestTemplate.png)
 
-### Response item template
+### Defining the response item template
 
 A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Response view by setting the [ResponseItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseItemTemplate) property.
 
-#### View model
+#### Defining the View Model
 
 {% tabs %}
 {% highlight c# %}
@@ -418,7 +418,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-#### Data template selector
+#### Implementing a custom response template selector
 
 Create a custom class that inherits from [ResponseItemTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseItemTemplateSelector.html), and override the [OnSelectTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseItemTemplateSelector.html#Syncfusion_Maui_AIAssistView_ResponseItemTemplateSelector_OnSelectTemplate_System_Object_Microsoft_Maui_Controls_BindableObject_) method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
@@ -461,7 +461,7 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-#### Applying the data template selector
+#### Applying the response template selector
 
 {% tabs %}
 {% highlight xaml hl_lines="12" %}
@@ -502,7 +502,7 @@ public partial class MainPage : ContentPage
 
 ![ResponseItem Template in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-ResponseTemplate.png)
 
-## Text selection
+## Text Selection in Request and Response messages
 The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
 By default, text selection is disabled. To enable it, set the [AllowTextSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AllowTextSelection) property to `true`.
 
@@ -533,3 +533,279 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Text Selection in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-textselection.gif)
+
+## Customizing request and response views in SfAIAssistView
+
+The `SfAIAssistView` allows you to customize specific parts of request and response items without changing the entire UI. You can apply styles, templates, or subclass these views to create custom visuals and behavior.
+
+The following views can be customized individually:
+
+### Request Views
+
+<table>
+<tr>
+<th> View </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> {{ '[RequestTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestTextView.html)'| markdownify }} </td>
+<td> Represents the user request text content. </td>
+</tr>
+<tr>
+<td> {{ '[RequestAssistImageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestAssistImageView.html)'| markdownify }} </td>
+<td> Represents the user request image content. </td>
+</tr>
+<tr>
+<td> {{ '[RequestHyperlinkUrlLabelView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestHyperlinkUrlLabelView.html)'| markdownify }} </td>
+<td> Represents the user request URL label area. </td>
+</tr>
+<tr>
+<td> {{ '[RequestHyperLinkDetailsViewFrameView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestHyperLinkDetailsViewFrameView.html)'| markdownify }} </td>
+<td> Represents the user request URL details/preview frame area. </td>
+</tr>
+<tr>
+<td> {{ '[RequestAttachmentsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestAttachmentsView.html)'| markdownify }} </td>
+<td> Represents the request attachments view. </td>
+</tr>
+<tr>
+<td> {{ '[RequestAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestAuthorView.html)'| markdownify }} </td>
+<td> Represents the request author name view. </td>
+</tr>
+<tr>
+<td> {{ '[RequestAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestAvatarView.html)'| markdownify }} </td>
+<td> Represents the request avatar view </td>
+</tr>
+<tr>
+<td> {{ '[RequestContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestContentView.html)'| markdownify }} </td>
+<td> Represents the request content view. </td>
+</tr>
+</table>
+
+### Response Views
+
+<table>
+<tr>
+<th> View </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> {{ '[ResponseTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseTextView.html)'| markdownify }} </td>
+<td> Represents the AI response text content. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseAssistImageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseAssistImageView.html)'| markdownify }} </td>
+<td> Represents the AI response image content. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseHyperlinkUrlLabelView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseHyperlinkUrlLabelView.html)'| markdownify }} </td>
+<td> Represents the AI response URL label area. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseHyperLinkDetailsViewFrameView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseHyperLinkDetailsViewFrameView.html)'| markdownify }} </td>
+<td> Represents the AI response URL details/preview frame area. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseCardView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseCardView.html)'| markdownify }} </td>
+<td> Represents the container for card-based AI responses. </td>
+</tr>
+<tr>
+<td> {{ '[CardItemView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardItemView.html)'| markdownify }} </td>
+<td> Represents a single card item within a response. </td>
+</tr>
+<tr>
+<td> {{ '[CardButtonView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardButtonView.html)'| markdownify }} </td>
+<td> Represents an action button inside a card item; exposes Title and Value bindable properties. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseAuthorView.html)'| markdownify }} </td>
+<td> Represents the response author name view. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseAvatarView.html)'| markdownify }} </td>
+<td> Represents the response avatar view. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseContentView.html)'| markdownify }} </td>
+<td> Represents the response content view. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseLoaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseLoaderView.html)'| markdownify }} </td>
+<td> Represents the response loading indicator view </td>
+</tr>
+<tr>
+<td> {{ '[ResponseSuggestionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseSuggestionView.html)'| markdownify }} </td>
+<td> Represents the response suggestion view. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseActionsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseActionsView.html)'| markdownify }} </td>
+<td> Represents the response action icons view. </td>
+</tr>
+<tr>
+<td> {{ '[ErrorMessageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ErrorMessageView.html)'| markdownify }} </td>
+<td> Represents the error message display view. </td>
+</tr>
+</table>
+
+### Common Views
+<table>
+<tr>
+<td> {{ '[RequestEditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEditorView.html)'| markdownify }} </td>
+<td> Represents the user request text editor </td>
+</tr>
+<tr>
+<td> {{ '[ResponseSuggestionList](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseSuggestionList.html)'| markdownify }} </td>
+<td> Represents the list of response suggestions.</td>
+</tr>
+<tr>
+<td> {{ '[SuggestionHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionHeaderView.html)'| markdownify }} </td>
+<td> Represents the header displayed above suggestions. </td>
+</tr>
+<td> {{ '[DisclaimerView]()'| markdownify }} </td>
+<td> </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml hl_lines="14 30" %}
+
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+    x:Class="MauiAIAssistView.MainPage">
+
+    <ContentPage.BindingContext>
+            <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Request text customization -->
+            <Style TargetType="syncfusion:RequestTextView">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Padding="8" BackgroundColor="{DynamicResource SecondaryContainer}">
+                                <Label
+                                    Text="{Binding Text}"
+                                    FontSize="13"
+                                    TextColor="{DynamicResource OnSecondaryContainer}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Response text customization -->
+            <Style TargetType="syncfusion:ResponseTextView">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Padding="10" BackgroundColor="{DynamicResource PrimaryContainer}">
+                                <Label
+                                    Text="{Binding Text}"
+                                    FontSize="13"
+                                    FontAttributes="Italic"
+                                    TextColor="{DynamicResource OnPrimaryContainer}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            ...
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <syncfusion:SfAIAssistView x:Name="AssistView"
+                                   AssistItems="{Binding AssistItems}" />
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# hl_lines="23 47" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+namespace MauiAIAssistView
+{
+    public partial class MainPage : ContentPage
+    {
+        SfAIAssistView assistView;
+        ViewModel viewModel;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            viewModel = new ViewModel();
+
+            assistView = new SfAIAssistView
+            {
+                AssistItems = viewModel.AssistItems;
+            };
+            
+            var resources = new ResourceDictionary();
+
+            // Request text customization
+            var requestTextStyle = new Style(typeof(RequestTextView))
+            {
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = RequestTextView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
+                        {
+                            var grid = new Grid { Padding = 8, BackgroundColor = Colors.Beige };
+                            var label = new Label
+                            {
+                                FontSize = 13,
+                                TextColor = Colors.Black
+                            };
+                            label.SetBinding(Label.TextProperty, "Text");
+                            grid.Children.Add(label);
+                            return grid;
+                        })
+                    }
+                }
+            };
+
+            // Response text customization 
+            var responseTextStyle = new Style(typeof(ResponseTextView))
+            {
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = ResponseTextView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
+                        {
+                            var grid = new Grid { Padding = 10, BackgroundColor = Colors.LightSkyBlue };
+                            var label = new Label
+                            {
+                                FontSize = 13,
+                                FontAttributes = FontAttributes.Italic,
+                                TextColor = Colors.White
+                            };
+                            label.SetBinding(Label.TextProperty, "Text");
+                            grid.Children.Add(label);
+                            return grid;
+                        })
+                    }
+                }
+            };
+
+            ...
+
+            resources.Add(requestTextStyle);
+            resources.Add(responseTextStyle);
+
+            this.Resources = resources;
+            this.Content = assistView;
+            this.BindingContext = viewModel;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}

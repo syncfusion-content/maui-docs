@@ -20,7 +20,7 @@ This feature helps users compose clearer and more effective prompts, making it e
 
 The `SfAIAssistView` control provides a set of properties under the [AutoSuggestionOverlay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AutoSuggestionOverlay) that enable you to customize the autocomplete overlay’s behavior, appearance, and interaction model to fit your application's needs.
 
-### AutoSuggestions
+### Configuring AutoSuggestions in SfAIAssistView
 
 The [AutoSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_AutoSuggestions) property displays a bound collection of `ISuggestion` items in the autocomplete overlay. Populate this collection in your ViewModel or code‑behind for dynamic, context‑aware suggestions.
 
@@ -69,7 +69,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 ![Auto Complete Suggestions in .NET MAUI AI AssistView](images/maui-aiassistview-auto-complete-suggestion.gif)
 
-### ItemSelectedCommand
+### Executing commands on suggestion selection 
 
 The [ItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_ItemSelectedCommand) property accepts an `ICommand` that runs when the user selects an item from the autocomplete overlay. The command receives the selected ISuggestion as its parameter.
 
@@ -106,7 +106,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-### AutoSuggestionTemplate
+### AutoSuggestions customization
 
 The [AutoSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_AutoSuggestionTemplate) property lets you customize the look and structure of each suggestion item shown in the autocomplete overlay.
 
@@ -162,7 +162,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### MinimumPrefixCharacters
+### Setting minimum characters for AutoSuggestions
 
 The [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_MinimumPrefixCharacters) sets the minimum number of typed characters required before displaying suggestions. The default is `1`.
 
@@ -189,7 +189,7 @@ this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
 {% endhighlight %}
 {% endtabs %}
 
-### SuggestionOpenDelay 
+### Configuring suggestion delay 
 
 The [SuggestionOpenDelay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_SuggestionOpenDelay) property sets the delay (in milliseconds) before the auto suggestion overlay opens after typing. This helps reduce unnecessary lookups during rapid typing. The default value is `200`.
 
@@ -216,7 +216,7 @@ this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
 {% endhighlight %}
 {% endtabs %}
 
-### CancelRequest
+### Controlling request submission behavior
 
 The [CancelRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_CancelRequest) property controls whether selecting a suggestion automatically submits it as a request. When set to `false`, the selected suggestion is sent immediately. When set to `true`, the text is inserted into the editor so the user can review or edit it before submitting. The default value is `true`.
 
@@ -243,7 +243,7 @@ this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
 {% endhighlight %}
 {% endtabs %}
 
-### IsOpen
+### Observing the AutoSuggestion overlay state 
 
 The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_IsOpen) property is a read‑only boolean that indicates whether the autocomplete overlay is currently visible. It is updated automatically by the control, and you can observe it to respond to changes in the overlay’s state.
 

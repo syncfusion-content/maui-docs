@@ -96,7 +96,7 @@ internal class ViewModel : INotifyPropertyChanged
 
 ![Preview support in .NET MAUI AI AssistView](Images/attachment-preview/maui-aiassistview-preview.gif)
 
-### Max Attachment Count
+### Setting the maximum number of attachments in SfAIAssistView
 
 The `SfAIAssistView` control allows you to control the number of attachments using the [MaxAttachmentCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_MaxAttachmentCount) property. This feature allows us to restrict the number of attachments that can be added to the `Attachments`. The default value is 10.
 
@@ -131,7 +131,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Attachment Item Template
+### Attachment preview customization
 
 The `SfAIAssistView` control allows you to customize the preview for the attachments by using the [AttachmentItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentItemTemplate) property. This property lets you define a custom layout for the attachment preview UI.
 

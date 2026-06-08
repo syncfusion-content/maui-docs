@@ -505,7 +505,7 @@ public class FileManagerViewModel
       download.SubFiles = new ObservableCollection<FileManager>
       {
          tutorials,
-         TypeScript,
+         typeScript,
          uiGuide
       };
 

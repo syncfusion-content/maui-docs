@@ -154,7 +154,7 @@ public partial class MainPage : ContentPage
 
 ![History in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-history.gif)
 
-### Conversation header text
+### Customizing conversation header text in SfAIAssistView 
 
 The `SfAIAssistView` control provides the [ConversationHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationHeaderText) API to set the header text for the conversation view. By default, this property is set to `string.Empty`.
 
@@ -181,7 +181,7 @@ public MainPage()
 
 ![Conversation Header Text in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-header-text.png)
 
-### Conversation empty view
+### Customizing the empty conversation view
 
 The [ConversationEmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationEmptyView) property can be set to a string or a custom view, which will be displayed when no conversation items are available in the control.
 
@@ -216,66 +216,3 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Conversation Empty View in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
-
-## Events and commands
-
-When a user selects a conversation item, the [ConversationItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTapped) event and [ConversationItemTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTappedCommand) are triggered, providing [ConversationItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
-
- * [ConversationItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ConversationItemTappedEventArgs_ConversationItem) : The conversation item selected by the user.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ConversationItemTappedEventArgs_Handled) : A boolean indicating whether the selected conversation item is automatically visible in view. The default value is false.
-
-### ConversationItemTapped event
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
-
-<syncfusion:SfAIAssistView x:Name="aiAssistView"
-                     ConversationItemTapped="OnConversationItemTapped"/>
-
-{% endhighlight %}
-{% highlight c# hl_lines="1" %}
-
-aiAssistView.ConversationItemTapped += OnConversationItemTapped;
-
-private void OnConversationItemTapped(object sender, ConversationItemTappedEventArgs e)
-{
-    // Handle the conversation item action
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### ConversationItemTappedCommand
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
-
-<syncfusion:SfAIAssistView x:Name="aiAssistView"
-                     ConversationItemTappedCommand="{Binding ConversationItemTappedCommand}"/>
-
-{% endhighlight %}
-{% highlight c# hl_lines="4,7" %}
-
-public class AIAssistViewModel : INotifyPropertyChanged
-{
-    ...
-    public ICommand ConversationItemTappedCommand { get; }
-    ...
-
-    public AIAssistViewModel()
-    {
-        ...
-        this.ConversationItemTappedCommand = new Command<object>(OnConversationItemTapped);
-        ...
-    }
-
-    ...
-    private void OnConversationItemTapped(object obj)
-    {
-        // Handle the conversation item action
-    }
-    ...
-}
-
-{% endhighlight %}
-{% endtabs %} 
