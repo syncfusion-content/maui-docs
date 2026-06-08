@@ -11,7 +11,7 @@ documentation: UG
 
 Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive suite of .NET MAUI components for building modern, cross-platform applications. It offers a wide range of high-performance, feature-rich controls such as Charts, DataGrid, Scheduler, Gauges, and Tab View. These controls help developers create visually appealing, responsive, and scalable applications with ease.
 
-![.NET MAUI banner preview.](Images/.net-maui-banner.png)
+<img src="Images/.net-maui-banner.webp" alt=".NET MAUI overview banner" />
 
 ## Supported Platforms
 
@@ -537,25 +537,14 @@ line-height: 1;
    transform: translateY(-4px);
    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
-.form-image {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   display: block;
-   cursor: pointer;
-   transition: 0.3s ease;
-}
-.form-image:hover {
-   transform: scale(1.02);
-}
-.form-content {
-   padding: 16px;
-}
+
 .form-title {
    margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
+   padding-left: 16px;
+   padding-top: 8px;
    color: #2072f5;
 }
 .form-link {
@@ -565,6 +554,9 @@ line-height: 1;
 .form-description {
    margin-top: 14px;
    font-size: 13px;
+   padding-left: 16px;
+   Padding-right: 16px;
+   Padding-bottom: 16px;
    color: #000000;
    line-height: 1.6;
 }
@@ -644,7 +636,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
     <div class="form-description">
-      Walk through highlights and core capabilities.
+      Get a quick overview of key features and capabilities to kickstart your journey.
     </div>
   </div>
 </a>
@@ -653,7 +645,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
     <div class="form-description">
-      Explore sample scenarios for real apps.
+      Explore real-world sample apps to see components in action and learn by example.
     </div>
   </div>
 </a>
@@ -662,7 +654,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
-      Step‑by‑step guidance through video tutorials.
+      Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
   </div>
 </a>
@@ -671,7 +663,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Explore KB's</h3>
     <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
+      Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
   </div>
 </a>
@@ -680,7 +672,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Explore Blogs</h3>
     <div class="form-description">
-      Read insights, tutorials, and developer journeys.
+      Discover in‑depth articles, use cases and expert insights from our developers.
     </div>
   </div>
 </a>
