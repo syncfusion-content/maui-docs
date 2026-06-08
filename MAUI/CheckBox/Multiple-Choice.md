@@ -180,7 +180,7 @@ public MainPage()
 
 ![.NET MAUI CheckBox](Images/Getting-Started/selectalltoppings.png)
 
-You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-CheckBox)
+You can download the  multiple choice with checkbox project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-CheckBox)
 
 ## See also 
 

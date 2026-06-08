@@ -49,7 +49,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace MaskedEntrySample
+namespace NumericEntrySample
 {
     public static class MauiProgram
     {
@@ -140,7 +140,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace MaskedEntrySample
+namespace NumericEntrySample
 {
     public static class MauiProgram
     {
@@ -214,7 +214,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Inputs NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
@@ -232,7 +232,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace MaskedEntrySample
+namespace NumericEntrySample
 {
     public static class MauiProgram
     {

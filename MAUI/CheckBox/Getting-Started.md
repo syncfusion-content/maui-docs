@@ -308,3 +308,5 @@ You can set the caption of the CheckBox using the [Text](https://help.syncfusion
 {% endtabs %}
 
 ![.NET MAUI CheckBox](Images/Getting-Started/simplecheckbox.png) 
+
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-CheckBox)

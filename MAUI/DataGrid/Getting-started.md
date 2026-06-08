@@ -437,6 +437,8 @@ Here is the result of the previous codes,
 
 <img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">
 
+You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
+
 ## Loading the SfDataGrid with customized height and width
 
 The SfDataGrid can be loaded with specific heights and widths inside different layouts using the `SfDataGrid.HeightRequest` and `SfDataGrid.WidthRequest` properties.
