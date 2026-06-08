@@ -120,6 +120,64 @@ private void ScrollToColumnIndex_Mothod(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+### Scrolling to the row
+You can scroll programmatically to a particular row using the [SfDataGrid.ScrollToRow]() method by passing the RowData.
+
+{% tabs %}
+{% highlight xaml %}
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Button Text="Scroll To Row"
+            Grid.Row="0"
+            Clicked="ScrollToRow_Mothod"/>
+
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           Grid.Row="1"
+                           ItemsSource="{Binding Orders}"/>
+</Grid>
+{% endhighlight %}
+{% highlight C# %}
+private void ScrollToRow_Mothod(object sender, EventArgs e)
+{
+    var row = viewModel.EmployeesDetails.FirstOrDefault(e => e.OrderID == "25");
+    dataGrid.ScrollToRow( row, ScrollToPosition.Start, true);
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Scrolling to the column
+You can scroll programmatically to a particular column using the [SfDataGrid.ScrollToColumn]() method by passing the DataGridColumn.
+
+{% tabs %}
+{% highlight xaml %}
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Button Text="Scroll To Column"
+            Grid.Row="0"
+            Clicked="ScrollToColumn_Mothod"/>
+
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           Grid.Row="1"
+                           ItemsSource="{Binding Orders}"/>
+</Grid>
+{% endhighlight %}
+{% highlight C# %}
+private void ScrollToColumn_Mothod(object sender, EventArgs e)
+{
+    var column = dataGrid.Columns.FirstOrDefault(col => col.MappingName == "UnitPrice");
+    dataGrid.ScrollToColumn(column, ScrollToPosition.Start, true);
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Scrolling mode
 
 The `SfDataGrid` allows you to customize three different scrolling modes using the [SfDataGrid.ScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollingMode) property. By default, the control scrolls content based on pixel values. The `ScrollingMode` property supports both vertical and horizontal scrolling. The available scrolling modes are:

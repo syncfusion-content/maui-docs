@@ -77,7 +77,13 @@ The following table describes the types of columns and their usage:
 <td>{{'[DataGridMultiColumnComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridMultiColumnComboBoxCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxCellRenderer.html)'| markdownify }}</td>
 <td>MultiColumnComboBox</td>
-<td>Use to display the IEnumerable data using [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) .</td>
+<td>Use to display the IEnumerable data using {{ '[SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html)'| markdownify }}</td>
+</tr>
+<tr>
+<td>{{'[DataGridCurrencyColumn]()'| markdownify }}</td>
+<td>{{'[DataGridCurrencyCellRenderer]()'| markdownify }}</td>
+<td>Currency</td>
+<td>To display and edit currency values in each row</td>
 </tr>
 <tr>
 <td>{{'[DataGridTimePickerColumn]()'| markdownify }}</td>
@@ -1859,6 +1865,74 @@ dataGrid.DefaultStyle = new DataGridStyle
 
 {% endhighlight %}
 {% endtabs %}
+
+## DataGridCurrencyColumn
+
+The `DataGridCurrencyColumn` inherits all the properties of the `DataGridColumn`. It displays numeric values with the currency symbol. To create a `DataGridCurrencyColumn`, define the column manually by adding the `DataGridCurrencyColumn` object to the `SfDataGrid.Columns` collection. The property corresponding to the column in the underlying collection must be a numeric type (int, double, float, etc.).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.BindingContext>
+    <local:ViewModel  x:Name ="viewModel"/>
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCurrencyColumn HeaderText="Unit Price"
+                                           MappingName="UnitPrice" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+DataGridCurrencyColumn currencyColumn = new DataGridCurrencyColumn()
+{
+    MappingName = "UnitPrice",
+    HeaderText = "Unit Price"
+};
+dataGrid.Columns.Add(currencyColumn);
+{% endhighlight %}
+{% endtabs %}
+
+### Currency Symbol
+
+By default, the currency symbol is displayed based on the current culture. You can customize the symbol using the [CurrencySymbol]() property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCurrencyColumn HeaderText="Unit Price"
+                                           MappingName="UnitPrice"
+                                           CurrencySymbol="€" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+DataGridCurrencyColumn currencyColumn = new DataGridCurrencyColumn()
+{
+    MappingName = "UnitPrice",
+    HeaderText = "Unit Price",
+    CurrencySymbol = "€"
+};
+dataGrid.Columns.Add(currencyColumn);
+{% endhighlight %}
+{% endtabs %}
+
+### Allow Null Value
+
+You can allow null values in the column by setting the [DataGridCurrencyColumn.AllowNullValue]() property to `true`.
+
+N> 
+The `AllowNullValue` property will work only when the underlying property type is nullable.
 
 ## DataGridTimePickerColumn
 
