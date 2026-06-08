@@ -74,10 +74,8 @@ namespace RadialMenuGettingStarted
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage
-    . . .    
-    xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-        <radialMenu:SfRadialMenu />
+<ContentPage xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
+    <radialMenu:SfRadialMenu />
 </ContentPage>
 
 {% endhighlight %}
@@ -162,10 +160,8 @@ namespace RadialMenuGettingStarted
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage
-    . . .    
-    xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-        <radialMenu:SfRadialMenu />
+<ContentPage xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
+    <radialMenu:SfRadialMenu />
 </ContentPage>
 
 {% endhighlight %}
@@ -248,10 +244,8 @@ namespace RadialMenuGettingStarted
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage
-    . . .    
-    xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-        <radialMenu:SfRadialMenu />
+<ContentPage xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
+    <radialMenu:SfRadialMenu />
 </ContentPage>
 
 {% endhighlight %}
@@ -277,31 +271,29 @@ namespace RadialMenuGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Adding Radial Menu with items
+## Step 5 - Adding Radial Menu with items
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-            ...
-             xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-        <radialMenu:SfRadialMenu x:Name="radialMenu" 
-                                CenterButtonText="Edit"
-                                CenterButtonFontSize="15">
-            <radialMenu:SfRadialMenu.Items>
-                <radialMenu:SfRadialMenuItem Text="Cut"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Copy"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Paste"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Crop"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Paint"
-                                            FontSize="15"/>
-            </radialMenu:SfRadialMenu.Items>
-        </radialMenu:SfRadialMenu>
+<ContentPage xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
+    <radialMenu:SfRadialMenu x:Name="radialMenu" 
+                             CenterButtonText="Edit"
+                             CenterButtonFontSize="15">
+        <radialMenu:SfRadialMenu.Items>
+            <radialMenu:SfRadialMenuItem Text="Cut"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Copy"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Paste"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Crop"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Paint"
+                                         FontSize="15"/>
+        </radialMenu:SfRadialMenu.Items>
+    </radialMenu:SfRadialMenu>
 </ContentPage>
 
 {% endhighlight %}
@@ -359,7 +351,6 @@ namespace RadialMenuGettingStarted
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ![Getting started with .NET MAUI Radial Menu.](images/getting-started/maui-radialmenu-getting-started.png)
 

@@ -77,8 +77,8 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 {% highlight XAML %}
 
 <ContentPage   
-            
-        xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+          ...  
+          xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
         <buttons:SfSegmentedControl />
 </ContentPage>
@@ -95,54 +95,6 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 5: Populating segmented items
-
-You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to populate the segmented items.
-
-{% tabs %}
-{% highlight XAML %}
-
-<ContentPage   
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <buttons:SfSegmentedControl x:Name="segmentedControl">
-        <buttons:SfSegmentedControl.ItemsSource>
-            <x:Array Type="{x:Type x:String}">
-                <x:String>Day</x:String>
-                <x:String>Week</x:String>
-                <x:String>Month</x:String>
-                <x:String>Year</x:String>
-            </x:Array>
-        </buttons:SfSegmentedControl.ItemsSource>
-    </buttons:SfSegmentedControl>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# %}
-
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        List<SfSegmentItem> itemList = new List<SfSegmentItem>
-        {
-            new SfSegmentItem() {Text = "Day"},
-            new SfSegmentItem() {Text = "Week"},
-            new SfSegmentItem() {Text = "Month"},
-            new SfSegmentItem() {Text = "Year"},
-        };
-        segmentedControl.ItemsSource = itemList;
         this.Content = segmentedControl;
     }
 }
@@ -239,56 +191,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Populating segmented items
-
-You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to populate the segmented items.
-
-{% tabs %}
-{% highlight XAML %}
-
-<ContentPage   
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <buttons:SfSegmentedControl x:Name="segmentedControl">
-        <buttons:SfSegmentedControl.ItemsSource>
-            <x:Array Type="{x:Type x:String}">
-                <x:String>Day</x:String>
-                <x:String>Week</x:String>
-                <x:String>Month</x:String>
-                <x:String>Year</x:String>
-            </x:Array>
-        </buttons:SfSegmentedControl.ItemsSource>
-    </buttons:SfSegmentedControl>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# %}
-
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        List<SfSegmentItem> itemList = new List<SfSegmentItem>
-        {
-            new SfSegmentItem() {Text = "Day"},
-            new SfSegmentItem() {Text = "Week"},
-            new SfSegmentItem() {Text = "Month"},
-            new SfSegmentItem() {Text = "Year"},
-        };
-        segmentedControl.ItemsSource = itemList;
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -350,7 +253,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 {% highlight XAML %}
 
 <ContentPage   
-            
+        ...   
         xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
         <buttons:SfSegmentedControl />
@@ -375,6 +278,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+{% endtabcontent %}
+{% endtabcontents %}
+
 ## Step 5: Populating segmented items
 
 You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to populate the segmented items.
@@ -383,7 +289,8 @@ You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Bu
 {% highlight XAML %}
 
 <ContentPage   
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+        ...
+        xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl">
         <buttons:SfSegmentedControl.ItemsSource>
             <x:Array Type="{x:Type x:String}">
@@ -422,9 +329,5 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 ![Getting started in .NET MAUI Segmented control.](images/getting-started/getting-started.png)

@@ -287,39 +287,9 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Date Time Picker header
+The following gif image illustrates the result of the above code.
 
-The [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) control provides the default header which shows the current selected date and selected time.
-
-## Set footer to the Date Time Picker
-
-In the SfDateTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date and time. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-
-<picker:SfDateTimePicker x:Name="picker">
-    <picker:SfDateTimePicker.FooterView>
-        <picker:PickerFooterView ShowOkButton="True" Height="40" />
-    </picker:SfDateTimePicker.FooterView>
-</picker:SfDateTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4 5" %}
-
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.FooterView= new PickerFooterView()
-{  
-    ShowOkButton = true,
-    Height = 40,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-   ![Set Footer view in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-footer-view.png)
+![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
 
 ## Set height and width to the Date Time Picker
 
@@ -343,51 +313,6 @@ SfDateTimePicker picker = new SfDateTimePicker()
 };
 
 this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-   ![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
-
-## Set selected date and selected time to the Date Time Picker
-
-The SfDateTimePicker control allows you to select the date and time by using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default value of the `SelectedDate` is the current date and time.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
-
-<picker:SfDateTimePicker x:Name="picker" 
-                         SelectedDate="9/7/2023 10:15:22">
-</picker:SfDateTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfDateTimePicker picker = new SfDateTimePicker()
-{
-    SelectedDate = new DateTime(2023, 09, 07, 10, 15, 22),
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-   ![Set selected date in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-selected-date.png)
-
-## Clear selection
-
-The .NET MAUI DateTimePicker provides clear selection support, allowing you to clear the selected date and time by setting the `SelectedDate` property to `null`.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<picker:SfDateTimePicker x:Name="picker" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-    this.Picker.SelectedDate = null;
 
 {% endhighlight %}  
 {% endtabs %}

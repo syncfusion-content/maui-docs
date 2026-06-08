@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Chart control  Syncfusion
+title: Appearance in .NET MAUI Polar Chart control  Syncfusion
 description: Learn here all about appearance customization in Syncfusion® .NET MAUI Chart (SfPolarChart), including its elements, and more.
 platform: maui
 control: SfPolarChart
@@ -264,3 +264,34 @@ this.Content = chart;
 {% endtabs %}
 
 ![Watermark in .NET MAUI Charts](Appearance_images/polar_water_mark.png)
+
+### Add a title
+
+The title of the chart provides quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set the title for the chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    <chart:SfPolarChart.Title>
+        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
+    </chart:SfPolarChart.Title> 
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfPolarChart chart = new SfPolarChart();
+chart.Title = new Label()
+{
+    Text = "Plant Analysis",
+    HorizontalTextAlignment = TextAlignment.Center
+};
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
+

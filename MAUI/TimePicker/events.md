@@ -225,8 +225,6 @@ private void OnTimePickerCancelButtonClicked(object sender, EventArgs e)
 
 {% endtabs %}
 
-## Commands
-
 ### SelectionChangedCommand
 
 The SfTimePicker includes a built-in event called `SelectionChanged` that is triggered whenever the selection index in the time picker changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectionChangedCommand), which passes the `TimePickerSelectionChangedEventArgs` as a parameter.

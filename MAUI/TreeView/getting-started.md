@@ -100,7 +100,6 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% endtabcontent %}
-
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
@@ -283,7 +282,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% endtabcontent %}
-{% endtabcontents %}
+{% endtabcontent %}
 
 ## Step 5: Data population
 
@@ -304,29 +303,25 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
              xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
              x:Class="GettingStarted.MainPage">
     <ContentPage.Content>
-       <syncfusion:SfTreeView x:Name="treeView">
+       <syncfusion:SfTreeView x:Name="treeView" ExpandActionTarget="Node" FullRowSelect="True">
             <syncfusion:SfTreeView.Nodes>
-                <treeviewengine:TreeViewNode Content="Australia">
+                <treeviewengine:TreeViewNode Content="Australia" IsExpanded="True">
                     <treeviewengine:TreeViewNode.ChildNodes>
-                        <treeviewengine:TreeViewNode Content="New South Wales">
+                        <treeviewengine:TreeViewNode Content="New South Wales" IsExpanded="True">
                             <treeviewengine:TreeViewNode.ChildNodes>
-                                <treeviewengine:TreeViewNode Content="Sydney"/>
-                            </treeviewengine:TreeViewNode.ChildNodes>
-                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Sydney" IsExpanded="True"/>
                     </treeviewengine:TreeViewNode.ChildNodes>
                 </treeviewengine:TreeViewNode>
-                <treeviewengine:TreeViewNode Content="United States of America">
+                <treeviewengine:TreeViewNode Content="Victoria" IsExpanded="True">
                     <treeviewengine:TreeViewNode.ChildNodes>
-                        <treeviewengine:TreeViewNode Content="New York"/>
-                        <treeviewengine:TreeViewNode Content="California">
-                            <treeviewengine:TreeViewNode.ChildNodes>
-                                <treeviewengine:TreeViewNode Content="San Francisco"/>
-                            </treeviewengine:TreeViewNode.ChildNodes>
-                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Melbourne" IsExpanded="True"/>
+                        <treeviewengine:TreeViewNode Content="Canada" IsExpanded="True"/>
                     </treeviewengine:TreeViewNode.ChildNodes>
                 </treeviewengine:TreeViewNode>
-            </syncfusion:SfTreeView.Nodes>
-        </syncfusion:SfTreeView>
+                </treeviewengine:TreeViewNode.ChildNodes>
+            </treeviewengine:TreeViewNode>
+        </syncfusion:SfTreeView.Nodes>
+    </syncfusion:SfTreeView>
     </ContentPage.Content>
 </ContentPage>
 
@@ -349,19 +344,14 @@ namespace GettingStarted
 
             var australia = new TreeViewNode() { Content = "Australia" };
             var nsw = new TreeViewNode() { Content = "New South Wales" };
-            var sydney = new TreeViewNode() { Content = "Sydney" };
-            australia.ChildNodes.Add(nsw);
-            nsw.ChildNodes.Add(sydney);
- 
-            var usa = new TreeViewNode() { Content = "United States of America" };
-            var newYork = new TreeViewNode() { Content = "New York," };
-            var california = new TreeViewNode() { Content = "California" };
-            var sanFrancisco = new TreeViewNode() { Content = "San Francisco" };
-            usa.ChildNodes.Add(newYork);
-            usa.ChildNodes.Add(california);
-            California.ChildNodes.Add(sanFrancisco);
+            var sydney = new TreeViewNode{ Content = "Sydney", IsExpanded = true };
+            var canberra = new TreeViewNode{ Content = "Canberra",IsExpanded = true };
+            var newcastle = new TreeViewNode{ Content = "Newcastle–Maitland", IsExpanded = true};
+            newSouthWales.ChildNodes.Add(sydney);
+            newSouthWales.ChildNodes.Add(canberra);
+            newSouthWales.ChildNodes.Add(newcastle);
+            australia.ChildNodes.Add(newSouthWales);
             treeView.Nodes.Add(australia);
-            treeView.Nodes.Add(usa);
 
             this.Content = treeView;
         }

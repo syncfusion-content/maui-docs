@@ -299,18 +299,15 @@ namespace BadgeViewGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-
-## Adding a badge notification text
+## Step 5: Adding a badge notification text
 
 Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
 {% tabs %}
 
 {% highlight xaml %}
-
-<badgeView:SfBadgeView>        
-    <badgeView:SfBadgeView BadgeText="20" />          
-</badgeView:SfBadgeView>
+       
+<badgeView:SfBadgeView BadgeText="20" />
 
 {% endhighlight %}
 
@@ -328,7 +325,7 @@ this.Content = badgeView;
 
 {% endtabs %}
 
-## Adding screen reader text
+## Step 6: Adding screen reader text
 
 Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the badge. This is especially helpful for accessibility when the badge only contains an icon or when you want to provide a custom description.
 
@@ -336,11 +333,8 @@ Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 {% highlight xaml %}
 
-<badgeView:SfBadgeView ScreenReaderText="20">
-    <badgeView:SfBadgeView.Content>
-        <Button Text="Primary" WidthRequest="120" HeightRequest="60"/>
-    </badgeView:SfBadgeView.Content>
-</badgeView:SfBadgeView>
+<badgeView:SfBadgeView ScreenReaderText="20" 
+                       BadgeText="20" />
 
 {% endhighlight %}
 
@@ -348,18 +342,14 @@ Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
    
 SfBadgeView badgeView = new SfBadgeView();
 badgeView.ScreenReaderText = "20";
-Button button = new Button();
-button.Text = "Primary";
-button.WidthRequest = 120;
-button.HeightRequest = 60;
-badgeView.Content = button;
+badgeView.BadgeText = "20";
 Content = badgeView;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Adding a content
+## Step 7: Adding a content
 
 An image, button, label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property. If you need to display a custom icon or image in the badge, ensure the image is included correctly in your project resources.
 
@@ -367,7 +357,8 @@ An image, button, label or any view can be added to the Badge View using the [Co
 
 {% highlight xaml %}
 
-<badgeView:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" >
+<badgeView:SfBadgeView BadgeText="20"  
+                       ScreenReaderText="20">
         <badgeView:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
         </badgeView:SfBadgeView.Content>
@@ -377,9 +368,9 @@ An image, button, label or any view can be added to the Badge View using the [Co
 
 {% highlight c# %}
 	
-SfBadgeView badgeView = new SfBadgeView();
-badgeView.HorizontalOptions = LayoutOptions.Center;
-badgeView.VerticalOptions = LayoutOptions.Center;
+SfBadgeView badgeView = new SfBadgeView(); 
+badgeView.ScreenReaderText = "20"; 
+badgeView.BadgeText = "20"; 
 //Adding image to the content of the badge view.
 Button button = new Button();
 button.Text = "Primary";
@@ -390,44 +381,6 @@ Content = badgeView;
 
 {% endhighlight %}
  
-{% endtabs %}
-
-The following code sample gives you the complete code for Badge View with badge notification types and text.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<badgeView:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20">
-        <badgeView:SfBadgeView.Content>
-            <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
-        </badgeView:SfBadgeView.Content>
-</badgeView:SfBadgeView>
-
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-public MainPage()
-{
-    InitializeComponent();
-    SfBadgeView badgeView = new SfBadgeView();
-    badgeView.HorizontalOptions = LayoutOptions.Center;
-    badgeView.VerticalOptions = LayoutOptions.Center;
-    badgeView.BadgeText = "20";
-
-    //Adding image to the content of the badge view.
-    Button button = new Button();
-    button.Text = "Primary";
-    button.WidthRequest = 120;
-    button.HeightRequest = 60;
-    badgeView.Content = button;
-    Content = badgeView;
-}
-
-{% endhighlight %}
-
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
