@@ -365,7 +365,7 @@ dataGrid.DefaultStyle.RowDragViewTextColor = Colors.Maroon;
 
 <img alt="Customization of row drag view" src="Images\rowdragdrop\maui-datagrid-dragindicator.gif" width="400"/>
 
-## Multi-Row Drag and Drop in MAUI DataGrid (SfDataGrid)
+## Multi-Row Drag and Drop
 
 The `SfDataGrid` control supports dragging and dropping multiple rows simultaneously. This functionality can be enabled by setting [SfDataGrid.AllowDraggingRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingRow) to `true`, [SfDataGrid.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) to `Multiple`, and [SfDataGrid.SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) to `Row` (the default value of SelectionUnit is Row).
 

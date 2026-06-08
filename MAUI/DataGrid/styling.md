@@ -531,7 +531,7 @@ this.Content = dataGrid;
 
 The column hover highlighting feature in `SfDataGrid` allows you to visually highlight an entire column when the mouse pointer is placed over it.
 
-To enable this feature, set the `AllowColumnHoverHighlighting` property to `true`. The default value is `false`.
+To enable this feature, set the `SfDataGrid.AllowColumnHoverHighlighting` property to `true`. The default value is `false`.
 
 You can also customize the appearance of the highlighted column by setting the `ColumnHoveredBackground` property in [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty).
 
@@ -565,7 +565,7 @@ this.Content = dataGrid;
 
 The header cell hover highlighting feature in `SfDataGrid` allows you to visually highlight a column header cell when the mouse pointer is placed over it.
 
-To enable this feature, set the `AllowHeaderCellHoverHighlighting` property to `true`. The default value is `false`.
+To enable this feature, set the `SfDataGrid.AllowHeaderCellHoverHighlighting` property to `true`. The default value is `false`.
 
 You can also customize the appearance of the hovered header cell by setting the `HeaderCellHoveredBackground` property in [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty).
 
