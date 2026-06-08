@@ -290,4 +290,30 @@ The following screenshot illustrates the result of the above code.
 
 ![Set Height and width in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-height-and-width.png)
 
+## Set height and width to the Date Picker
+
+The SfDatePicker control allows you to change the height and the width using the [HeightRequest] and [WidthRequest] properties in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines=" 2 3" %}
+
+<picker:SfDatePicker x:Name="picker" 
+                    HeightRequest="280" 
+                    WidthRequest="300">
+</picker:SfDatePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+
+SfDatePicker picker = new SfDatePicker()
+{
+    HeightRequest = 280,
+    WidthRequest = 300,
+};
+
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
 N> You can also explore our [.NET MAUI Date Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DatePicker) that shows you how to render the Date Picker in .NET MAUI.
