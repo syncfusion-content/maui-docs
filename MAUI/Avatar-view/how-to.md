@@ -7,9 +7,7 @@ control: SfAvatarView
 documentation: UG
 ---
 
-# How to Use Different States
-
-## Set Badge View to Avatar View
+# Set Badge View to Avatar View
 
 The .NET MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control supports integrating a [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) to notify users of new or unread messages, notifications, or any updates. Below is a demonstration of how to accomplish this setup within your application.
 
