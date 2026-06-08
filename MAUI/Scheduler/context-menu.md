@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in .NET MAUI Scheduler | Syncfusion
-description: Learn how to use the built-in context menu in the Syncfusion .NET MAUI Scheduler to perform actions on appointments, scheduler cells, and other scheduler elements through an interactive menu.
+description: Learn how to use the built-in context menu in the Syncfusion .NET MAUI Scheduler to perform actions on appointments, cells, and other elements.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -199,7 +199,7 @@ The `SchedulerContextMenuOpeningEventArgs` class provides information about the 
                       ContextMenuOpening="scheduler_ContextMenuOpening">
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 3 5 6 7 8 9 10 11"%}
+{% highlight c# tabtitle="C#" hl_lines="1 3 5 6 7 8 9 10 11" %}
 this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening
 
 private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
@@ -226,7 +226,7 @@ The `ContextMenuOpening` event can be used to prevent a context menu from being 
                       ContextMenuOpening="scheduler_ContextMenuOpening">
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 4"%}
+{% highlight c# tabtitle="C#" hl_lines="1 4" %}
 this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening
 
 private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
@@ -238,7 +238,7 @@ private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpe
 
 ## Implement clipboard operations using context menu
 
-Clipboard-like functionality can be implemneted using custom context menu commands for Copy, Cut, and Paste operations on appointments.
+Clipboard-like functionality can be implemented using custom context menu commands for Copy, Cut, and Paste operations on appointments.
 
 The clipboard functionality works as follows:
 * **Copy** - The copy command creates a copy of the selected appointment and stores it temporarily.
@@ -250,7 +250,7 @@ The clipboard functionality works as follows:
 The `AppointmentContextMenu` can be used to display Copy and Cut actions for appointments, while the CellContextMenu can be used to display the paste action for scheduler cells.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML"%}
+{% highlight xaml tabtitle="XAML" %}
 <schedule:SfScheduler x:Name="Scheduler" 
                       x:DataType="local:SchedulerClipboardViewModel"
                       AppointmentsSource="{Binding Events}"
@@ -301,7 +301,7 @@ The `AppointmentContextMenu` can be used to display Copy and Cut actions for app
 The clipboard operations are implemented using custom commands that implement the ICommand interface.
 
 {% tabs %}
-{% highlight c# tabtitle="C#"%}
+{% highlight c# tabtitle="C#" %}
 public static class ClipboardCommands
 {
     private static SchedulerAppointment? copiedAppointment { get; set; }
@@ -418,4 +418,4 @@ public static class ClipboardCommands
 {% endhighlight %}
 {% endtabs %}
 
-![Clipboard-operations-using-context-menu-in-maui-scheduler](images/context-menu/clipboard-operations-using-context-menu.png)
+![Clipboard-operations-using-context-menu-in-maui-scheduler](images/context-menu/clipboard-operations-using-context-menu.gif)

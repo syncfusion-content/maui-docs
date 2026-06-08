@@ -246,7 +246,7 @@ this.Content = scheduler;
 
 ## Non working days in month view
 
-The scheduler allows you to define non-working days in the Month view using the `NonWorkingDays` property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of NonWorkingdays property is “SchedulerMonthWeekDays.None” You can configure this property to include one or more days of the week.
+The scheduler allows you to define non-working days in the Month view using the `NonWorkingDays` property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of `NonWorkingdays` property is “SchedulerMonthWeekDays.None” You can configure this property to include one or more days of the week.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="4" %}
@@ -270,7 +270,7 @@ this.Content = scheduler;
 The `HideNonWorkingDays` property is used to control the visibility of non-working days in the MonthView. When `HideNonWorkingDays` is `false` (default), the specified non-working days are displayed in the MonthView. When `HideNonWorkingDays` is `true`, the specified non-working days are hidden from the MonthView.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="4"%}
+{% highlight XAML tabtitle="xaml" hl_lines="4" %}
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Month">
     <scheduler:SfScheduler.MonthView>
@@ -512,7 +512,7 @@ This event provides details about the tapped appointment and the selected date t
                        MonthInlineAppointmentTapped="Scheduler_MonthInlineAppointmentTapped" >
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 5 6"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 5 6" %}
 this.Scheduler.MonthInlineAppointmentTapped += Scheduler_MonthInlineAppointmentTapped;
 
 private void Scheduler_MonthInlineAppointmentTapped(object sender, MonthInlineAppointmentTappedEventArgs e)

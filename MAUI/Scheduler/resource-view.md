@@ -116,7 +116,6 @@ this.Scheduler.AppointmentsSource = appointment;
  
 In the day, week, and work week views, you can control whether dates are grouped under resources or resources are grouped under dates by using the [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
 
-
 ### Grouping by Resource
  
 The [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) is set to [`Resource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceGroupType.html#Syncfusion_Maui_Scheduler_SchedulerResourceGroupType_Resource) by default. In this mode, the scheduler arranges the dates under each resource.

@@ -301,7 +301,7 @@ The `RightTappedCommand` will be triggered when you perform a right tap on the s
     </scheduler:SfScheduler.BindingContext>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 15 17 18 19 20 21"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 15 17 18 19 20 21" %}
 public class SchedulerInteractionViewModel
 {
     public ICommand SchedulerRightTappedCommand { get; set; }
