@@ -307,7 +307,7 @@ namespace ParallaxViewGettingStarted
 
 {% endtabcontents %}
 
-## Step 5 - Add Content and Bind source to the parallax view
+## Step 5: Add Content and Bind source to the parallax view
 
 The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) represents the background view of a parallax view. Set any kind of view to the Content property, such as Image and StackLayout.
 
