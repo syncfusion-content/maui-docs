@@ -618,6 +618,34 @@ public class TimeTemplateSelector : DataTemplateSelector
 
 {% endtabs %}
 
+## Set height and width to the Time Picker
+
+The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+
+<picker:SfTimePicker x:Name="picker" 
+                    HeightRequest="280" 
+                    WidthRequest="300">
+</picker:SfTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+
+SfTimePicker picker = new SfTimePicker()
+{
+    HeightRequest = 280,
+    WidthRequest = 300,
+};
+
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
+
 ## Selection View Customization
 
 Customize the time picker selection view by using the `SelectionView` property of the `SfTimePicker`.

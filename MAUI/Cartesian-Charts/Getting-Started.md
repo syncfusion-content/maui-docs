@@ -21,10 +21,10 @@ To get start quickly with our [.NET MAUI Cartesian Chart](https://help.syncfusio
 
 ## Prerequisites
 
-Before proceeding, ensure that the following are set up:
+Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -118,11 +118,11 @@ namespace ChartGettingStarted
 
 ## Prerequisites
 
-Before proceeding, ensure that the following are set up:
+Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -220,8 +220,8 @@ namespace ChartGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -531,126 +531,6 @@ this.Content = chart;
 
 {% endtabs %}  
 
-### Enable the data labels
-
-The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-    . . . 
-    <chart:ColumnSeries ShowDataLabels="True"/>
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart()
-. . .
-ColumnSeries series = new ColumnSeries();
-series.ShowDataLabels = true;
-chart.Series.Add(series);
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-### Enable a legend
-
-The legend provides information about the data point displayed in the chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart >
-    . . .
-    <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfCartesianChart.Legend>
-    . . .
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart();
-chart.Legend = new ChartLegend (); 
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-N> Additionally, set label for each series using the `Label` property of chart series, which will be displayed in corresponding legend.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-    . . .
-    <chart:ColumnSeries ItemsSource="{Binding Data}"
-                        XBindingPath="Name" 
-                        YBindingPath="Height"
-                        Label="Height"/>
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart()
-. . .
-ColumnSeries series = new ColumnSeries (); 
-series.ItemsSource = (new PersonViewModel()).Data;
-series.XBindingPath = "Name"; 
-series.YBindingPath = "Height"; 
-series.Label = "Height";
-chart.Series.Add(series);
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-### Enable tooltip
-
-Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property to true.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-    ...
-    <chart:ColumnSeries EnableTooltip="True"/>
-    ...
-</chart:SfCartesianChart> 
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart()
-. . .
-ColumnSeries series = new ColumnSeries();
-series.EnableTooltip = true;
-chart.Series.Add(series);
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 The following code example gives you the complete code of above configurations.
 
 {% tabs %} 
@@ -708,7 +588,7 @@ The following code example gives you the complete code of above configurations.
 
     </chart:SfCartesianChart>
 </ContentPage>
- 
+
 {% endhighlight %}
 
 {% highlight C# %}
@@ -775,7 +655,7 @@ namespace ChartGettingStarted
 
 {% endtabs %}
 
-The following chart is created as a result of the previous codes.
+The following screenshot illustrates the result of the above code.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
 
