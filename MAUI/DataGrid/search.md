@@ -134,14 +134,14 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-#### Customize the Searchbar
+#### Customize the Search bar
 
-You can customize the `Searchbar` using the following `DataGridStyle` properties:
-- [SearchbarBackground](): Sets the background color of the search bar.
-- [SearchbarTextColor](): Sets the text color of the search bar.
-- [SearchbarTextFontSize](): Sets the font size of the search bar text.
-- [SearchbarTextFontFamily](): Sets the font family of the search bar text.
-- [SearchbarTextFontAttributes](): Sets the font attributes of the search bar text.
+You can customize the `SearchBar` using the following `DataGridStyle` properties:
+- [SearchBarBackground](): Sets the background color of the search bar.
+- [SearchBarTextColor](): Sets the text color of the search bar.
+- [SearchBarTextFontSize](): Sets the font size of the search bar text.
+- [SearchBarTextFontFamily](): Sets the font family of the search bar text.
+- [SearchBarTextFontAttributes](): Sets the font attributes of the search bar text.
 
 {% tabs %}
 {% highlight xaml %}
