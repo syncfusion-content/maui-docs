@@ -361,29 +361,28 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.BindingContext>
-        <local:SocialMediaViewModel />
-    </ContentPage.BindingContext>
+<inputs:SfAutocomplete.BindingContext>
+<local:SocialMediaViewModel />
+</inputs:SfAutocomplete.BindingContext>
 
-    <ContentPage.Content>
-        <!--Setting ItemsSource-->
-        <editors:SfAutocomplete x:Name="autocomplete" 
-                                WidthRequest="250"
-                                HeightRequest = "50"
-                                ItemsSource="{Binding SocialMedias}" />
-    </ContentPage.Content>
+<inputs:SfAutocomplete WidthRequest="250"
+                       HeightRequest = "40"
+                       ItemsSource="{Binding SocialMedias}">
+</inputs:SfAutocomplete>
+
 {% endhighlight %}
 
 {% highlight C# %}
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-this.BindingContext = socialMediaViewModel;
-SfAutocomplete autocomplete = new SfAutocomplete()
+SfAutocomplete  autocomplete = new SfAutocomplete
 {
     WidthRequest = 250,
-    HeightRequest = 50,
+    HeightRequest = 40,
+    BindingContext = socialMediaViewModel,
     ItemsSource = socialMediaViewModel.SocialMedias,
 };
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -411,13 +410,14 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
-SfAutocomplete autocomplete = new SfAutocomplete()
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfAutocomplete autocomplete = new SfAutocomplete
 {
     WidthRequest = 250,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
     ItemsSource = socialMediaViewModel.SocialMedias,
 };
 
