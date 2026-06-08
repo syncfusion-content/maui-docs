@@ -10,27 +10,6 @@ keywords : .net maui radio button, maui radio button, maui radio button group, m
 
 # Grouping in .NET MAUI Radio Button (SfRadioButton)
 
-## Setting caption
-
-The .NET MAUI Radio Button caption can be defined using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the Radio Button and is displayed next to it.
- 
-{% tabs %}
-{% highlight xaml %}
-
-    <buttons:SfRadioButton x:Name="radioButton" Text="Radio Button"/>
-
-{% endhighlight %}
-{% highlight c# %}
-
-    SfRadioButton radioButton = new SfRadioButton();
-    radioButton.Text = "Radio Button";
-    this.Content = radioButton;
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI Radio Button](Images/Getting-Started/radiobutton.png)
-
 ## GroupKey
 
 The [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_GroupKey) in [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) allows you to group a set of Radio Buttons present inside any layout. By grouping this way, you can select only one Radio Button per [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_GroupKey) at a time.

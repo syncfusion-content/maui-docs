@@ -88,6 +88,81 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ![SwipeDirection in MAUI SfCardLayout](images/maui-card-swipedirection.png)
 
+## SwipeToDismiss
+
+The [SwipeToDismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_SwipeToDismiss) property enables or disables the swiping feature in SfCardView.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
+
+<cards:SfCardView SwipeToDismiss="true">
+    <Label Text="SfCardView" Background="MediumPurple" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+</cards:SfCardView>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
+
+using Syncfusion.Maui.Cards;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfCardView cardView = new SfCardView();
+        cardView.SwipeToDismiss = true;
+
+        cardView.Content = new Label()
+        {
+            Text="SfCardView",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center,
+            BackgroundColor = Colors.MediumPurple
+        };
+        this.Content = cardView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}	
+
+N> This property will not work when adding the SfCardView as a child of SfCardLayout.
+
+![MAUI SfCardView image](images/maui-card-swiptodismiss.gif)
+
+## Dismiss the card programmatically
+
+The [IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_IsDismissed) property enables you to retrieve the view state of the card, and also provides the capability for the user to programmatically modify the card's view state.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
+
+<card:SfCardView IsDismissed="true">
+     <Label Text="SfCardView"/>
+</card:SfCardView>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
+
+using Syncfusion.Maui.Cards;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfCardView cardView = new SfCardView();
+        cardView.IsDismissed = true;
+        cardView.Content = new Label(){ Text="SfCardView" };
+        this.Content = cardView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}	
+
 ## Customization in CardView
 
 Customization of the border color, thickness, and card corner radius can be achieved by the following properties.
