@@ -362,6 +362,8 @@ namespace DockLayoutGettingStarted
 {% endhighlight %}
 {% endtabs %}
 
+The following screenshot illustrates the result of the above code.
+
 ![Output of DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 
 You can access a complete getting started sample from this [link.](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI)

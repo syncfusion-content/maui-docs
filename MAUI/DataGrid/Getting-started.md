@@ -372,20 +372,15 @@ public class OrderInfoRepository
 
     public void GenerateOrders()
     {
-        orderInfo.Add(new OrderInfo("1001", "Maria Anders", "Germany", "ALFKI", "Berlin"));
-        orderInfo.Add(new OrderInfo("1002", "Ana Trujillo", "Mexico", "ANATR", "Mexico D.F."));
-        orderInfo.Add(new OrderInfo("1003", "Ant Fuller", "Mexico", "ANTON", "Mexico D.F."));
-        orderInfo.Add(new OrderInfo("1004", "Thomas Hardy", "UK", "AROUT", "London"));
-        orderInfo.Add(new OrderInfo("1005", "Tim Adams", "Sweden", "BERGS", "London"));
-        orderInfo.Add(new OrderInfo("1006", "Hanna Moos", "Germany", "BLAUS", "Mannheim"));
-        orderInfo.Add(new OrderInfo("1007", "Andrew Fuller", "France", "BLONP", "Strasbourg"));
-        orderInfo.Add(new OrderInfo("1008", "Martin King", "Spain", "BOLID", "Madrid"));
-        orderInfo.Add(new OrderInfo("1009", "Lenny Lin", "France", "BONAP", "Marsiella"));
-        orderInfo.Add(new OrderInfo("1010", "John Carter", "Canada", "BOTTM", "Lenny Lin"));
-        orderInfo.Add(new OrderInfo("1011", "Laura King", "UK", "AROUT", "London"));
-        orderInfo.Add(new OrderInfo("1012", "Anne Wilson", "Germany", "BLAUS", "Mannheim"));
-        orderInfo.Add(new OrderInfo("1013", "Martin King", "France", "BLONP", "Strasbourg"));
-        orderInfo.Add(new OrderInfo("1014", "Gina Irene", "UK", "AROUT", "London"));
+        orderInfo.Add(new OrderInfo("1001", "Maria Anders", "Germany", "ALFKI", "Berlin"));
+        orderInfo.Add(new OrderInfo("1002", "Ana Trujillo", "Mexico", "ANATR", "Mexico D.F."));
+        orderInfo.Add(new OrderInfo("1003", "Ant Fuller", "Mexico", "ANTON", "Mexico D.F."));
+        orderInfo.Add(new OrderInfo("1004", "Thomas Hardy", "UK", "AROUT", "London"));
+        orderInfo.Add(new OrderInfo("1005", "Tim Adams", "Sweden", "BERGS", "London"));
+        orderInfo.Add(new OrderInfo("1006", "Hanna Moos", "Germany", "BLAUS", "Mannheim"));
+        orderInfo.Add(new OrderInfo("1007", "Andrew Fuller", "France", "BLONP", "Strasbourg"));
+        orderInfo.Add(new OrderInfo("1008", "Martin King", "Spain", "BOLID", "Madrid"));
+        orderInfo.Add(new OrderInfo("1009", "Lenny Lin", "France", "BONAP", "Marsiella"));
     }
 }
 {% endhighlight %}
@@ -401,36 +396,28 @@ The following code example binds the collection created in the previous step to 
 
 {% tabs %}
 {% highlight xaml %}
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-             xmlns:local="clr-namespace:GettingStarted"
-             x:Class="GettingStarted.MainPage">
+<ContentPage.BindingContext>
+    <local:OrderInfoRepository x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <ContentPage.BindingContext>
-        <local:OrderInfoRepository x:Name="viewModel" />
-    </ContentPage.BindingContext>
-
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrderInfoCollection}">
-            <syncfusion:SfDataGrid.Columns>
-                <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
-                                                    MappingName="OrderID" Width="150"/>
-                    <syncfusion:DataGridTextColumn  HeaderText="Customer"
-                                                    MappingName="Customer"
-                                                    Width="150" />
-                    <syncfusion:DataGridTextColumn  HeaderText="Ship City"
-                                                    MappingName="ShipCity"
-                                                    Width="150" />
-                    <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
-                                                    MappingName="ShipCountry"
-                                                    Width="150" />
-            </syncfusion:SfDataGrid.Columns>        
-        </syncfusion:SfDataGrid>
-    </ContentPage.Content>
-</ContentPage>
+<ContentPage.Content>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                            ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
+                                                MappingName="OrderID" Width="150"/>
+                <syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                                MappingName="Customer"
+                                                Width="150" />
+                <syncfusion:DataGridTextColumn  HeaderText="Ship City"
+                                                MappingName="ShipCity"
+                                                Width="150" />
+                <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                                MappingName="ShipCountry"
+                                                Width="150" />
+        </syncfusion:SfDataGrid.Columns>        
+    </syncfusion:SfDataGrid>
+</ContentPage.Content>
 {% endhighlight %}
 {% highlight c# %}
 OrderInfoRepository viewModel = new OrderInfoRepository();
@@ -450,97 +437,6 @@ Here is the result of the previous codes,
 
 <img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">
 
-You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
-
-## Defining columns
-
-By default, the SfDataGrid automatically creates columns for all the properties in the data source. The type of the column generated depends on the type of data in the column. When the columns are auto-generated, handle the [SfDataGrid.AutoGeneratingColumnMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsMode) mode to customize or cancel the columns before they are added to the columns collection in the SfDataGrid.
- 
-The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColumnsMode` property to 'None' and by adding the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) objects to the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnCollection.html) collection. This can be done from both XAML and code. The following code example illustrates this:
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-            ColumnWidthMode="Fill"
-            AutoGenerateColumnsMode="None"
-            ItemsSource="{Binding OrderInfoCollection}">
-
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTextColumn HeaderText="ID"
-                                   MappingName="OrderID"/>
-        <syncfusion:DataGridTextColumn HeaderText="Customer"
-                                   MappingName="CustomerID"/>
-        <syncfusion:DataGridTextColumn MappingName="Customer"/>
-        <syncfusion:DataGridTextColumn HeaderText="Country"
-                                   MappingName="ShipCountry"/>
-    </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
-OrderInfoRepository viewModel = new OrderInfoRepository();
-SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection;
-dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
-
-DataGridTextColumn orderIdColumn = new DataGridTextColumn ();
-orderIdColumn.MappingName = "OrderID";
-orderIdColumn.HeaderText = "ID";
-
-DataGridTextColumn customerIdColumn = new DataGridTextColumn();
-customerIdColumn.MappingName = "CustomerID";
-customerIdColumn.HeaderText = "Customer";
-
-DataGridTextColumn countryColumn = new DataGridTextColumn();
-countryColumn.MappingName = "ShipCountry";
-countryColumn.HeaderText = "Country";
-
-dataGrid.Columns.Add (orderIdColumn);
-dataGrid.Columns.Add (customerIdColumn);
-dataGrid.Columns.Add (countryColumn); 
-{% endhighlight %}
-{% endtabs %}
-
-## Sorting
-
-In the SfDataGrid, sorting can be done on its data by setting the [SfDataGrid.SortingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingMode) property to single, multiple, or none.
- 
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       SortingMode="Single" />
-{% endhighlight %}
-{% highlight c# %}
-OrderInfoRepository viewModel = new OrderInfoRepository();
-SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection;
-dataGrid.SortingMode = DataGridSortingMode.Single;
-{% endhighlight %}
-{% endtabs %}
-
-Run the application and touch the header cell to sort the data and the following output will be displayed:
- 
-<img src="Images\getting-started\net-maui-datagrid-basic-sorting.png" width="404" alt="Sorting in .NET MAUI DataGrid">
-
-Sorting can also be configured by adding the column to the [SfDataGrid.SortColumnDescriptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnDescriptions) collection as follows:
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid.SortColumnDescriptions>
-    <syncfusion:SortColumnDescription ColumnName="CustomerID" />
-</syncfusion:SfDataGrid.SortColumnDescriptions> 
-{% endhighlight %}
-{% highlight c# %}
-dataGrid.SortColumnDescriptions.Add(new SortColumnDescription() { ColumnName = "CustomerID" });
-{% endhighlight %}
-{% endtabs %}
-
-## Selection
-
-The SfDataGrid allows selecting the one row or more rows by setting the [SfDataGrid.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionMode) property. You can set the `SfDataGrid.SelectionMode` property to single, multiple, single deselect, or none. Information about the row or rows selected can be tracked using the [SfDataGrid.SelectedRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow) and [SfDataGrid.SelectedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows) properties.
-
-The selection operations can be handled with the help of the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanged) events of the SfDataGrid.
-
 ## Loading the SfDataGrid with customized height and width
 
 The SfDataGrid can be loaded with specific heights and widths inside different layouts using the `SfDataGrid.HeightRequest` and `SfDataGrid.WidthRequest` properties.
@@ -549,23 +445,16 @@ The following code example illustrates how this can be done:
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:local="clr-namespace:GettingStarted"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-             x:Class="GettingStarted.MainPage">
+<ContentPage.BindingContext>
+    <local:OrderInfoRepository x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <ContentPage.BindingContext>
-        <local:OrderInfoRepository x:Name="viewModel" />
-    </ContentPage.BindingContext>
-
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrderInfoCollection}"
-                            HeightRequest="290"
-                            WidthRequest="200"/>
-    </ContentPage.Content>
-</ContentPage>
+<ContentPage.Content>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding OrderInfoCollection}"
+                        HeightRequest="290"
+                        WidthRequest="200"/>
+</ContentPage.Content>
 {% endhighlight %}
 
 {% highlight c# %}

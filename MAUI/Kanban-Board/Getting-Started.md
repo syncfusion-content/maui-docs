@@ -324,7 +324,7 @@ namespace KanbanGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Populate .NET MAUI Kanban item source
+## Step 5: Populate .NET MAUI Kanban item source
 
 This section explains how to populate the .NET MAUI Kanban control's `ItemsSource` by creating and binding both default and custom task data models.
 
@@ -648,11 +648,14 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the Kanban Board will be displayed with the data provided.
+
+Here is the result of the previous codes,
+
 ![defining-columns-using-custom-modelin-maui-kanban](images/getting-started/defining-columns-using-custom-modelin-maui-kanban.png)
 
 N> When using a custom data model, the default card UI is not applicable. You must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property to render the card content appropriately.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI)
-
-## Running the Application
-Press **F5** to build and run the application. Once compiled, the Kanban board will display with the data provided.
