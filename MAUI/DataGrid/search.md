@@ -11,7 +11,8 @@ documentation: UG
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to search the data displayed within the datagrid. You can search the data using the built-in search UI support or using programmatic searching.
 
 ## UI Searching
-The `SfDataGrid` allows you to enable searching support by setting the [AllowSearching]() property to `true` in DataGrid. By enabling this property, the built-in search UI is displayed above the DataGrid. Using this built-in UI, users can easily search the data in the DataGrid.
+
+The `SfDataGrid` allows you to enable searching support by setting the [AllowSearching]() property to `true`. By enabling this property, the built-in search UI is displayed above the DataGrid, allowing users to easily search the data.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -35,8 +36,9 @@ dataGrid.AllowSearching = true;
 
 <img alt="DataGrid with build in Search UI" src="Images\search\maui-datagrid-built-in-searchUI.png" width="404"/>
 
-### Settings option
-The built-in search UI has a settings icon that has options for searching, such as filtering, pattern matching, and case sensitivity. You can hide this icon by setting the [DataGridSearchToolbarView.ShowMoreOptions]() as `false`.
+### Settings Option
+
+The built-in search UI has a settings icon that offers options for searching, such as filtering, pattern matching, and case sensitivity. You can hide this icon by setting the [DataGridSearchToolbarView.ShowMoreOptions]() property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -53,8 +55,9 @@ The built-in search UI has a settings icon that has options for searching, such 
 {% endhighlight %}
 {% endtabs %}
 
-### Navigation between the search results
-The navigation icons present in the built-in search bar allow users to navigate between the search results. You can change the visibility of the navigation icons using [DataGridSearchToolbarView.ShowNavigationButtons]() property.
+### Navigation Between Search Results
+
+The navigation icons present in the built-in search bar allow users to navigate between search results. You can change the visibility of the navigation icons using the [DataGridSearchToolbarView.ShowNavigationButtons]() property.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -71,8 +74,9 @@ The navigation icons present in the built-in search bar allow users to navigate 
 {% endhighlight %}
 {% endtabs %}
 
-### Clear search
-You can clear the search results in the DataGrid by using the clear icon in the search bar. You can hide the clear icon in the search bar by setting the [DataGridSearchToolbarView.ShowClearButton]() property as `false`.
+### Clear Search
+
+You can clear the search results by using the clear icon in the search bar. You can hide the clear icon by setting the [DataGridSearchToolbarView.ShowClearButton]() property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -92,10 +96,11 @@ You can clear the search results in the DataGrid by using the clear icon in the 
 ### Appearance
 
 #### Customize the SearchToolbarView
+
 You can customize the `DataGridSearchToolbarView` using the following `DataGridStyle` properties:
 - [SearchToolbarViewStroke](): Sets the border color of the SearchToolbarView.
-- [SearchToolbarViewStrokeThickness]():  Sets the border thickness of the SearchToolbarView.
-- [SearchToolbarViewBackground]():  Sets the background color of the SearchToolbarView.
+- [SearchToolbarViewStrokeThickness](): Sets the border thickness of the SearchToolbarView.
+- [SearchToolbarViewBackground](): Sets the background color of the SearchToolbarView.
 
 {% tabs %}
 {% highlight xaml %}
@@ -130,9 +135,10 @@ this.Content = dataGrid;
 {% endtabs %}
 
 #### Customize the Searchbar
+
 You can customize the `Searchbar` using the following `DataGridStyle` properties:
 - [SearchbarBackground](): Sets the background color of the search bar.
-- [SearchbarTextColor](): Sets the color to the text displayed in the search bar.
+- [SearchbarTextColor](): Sets the text color of the search bar.
 - [SearchbarTextFontSize](): Sets the font size of the search bar text.
 - [SearchbarTextFontFamily](): Sets the font family of the search bar text.
 - [SearchbarTextFontAttributes](): Sets the font attributes of the search bar text.
@@ -173,7 +179,8 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-## Programmatic searching
+## Programmatic Searching
+
 The `SfDataGrid` allows you to search the data using the [SearchController.Search](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_Search_System_String_) method.
 
 {% tabs %}
@@ -186,10 +193,9 @@ this.dataGrid.SearchController.Search(entry.Text);
 
 <img alt="DataGrid with Search Panel" src="Images\search\maui-datagrid-search.png" width="404"/>
 
-
 ### Filtering
 
-The filtering can be enabled for the search results by setting the [SearchController.AllowFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_AllowFiltering) property to true.
+Filtering can be enabled for the search results by setting the [SearchController.AllowFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_AllowFiltering) property to `true`.
 
 {% tabs %}
 {% highlight c# %}
@@ -202,8 +208,7 @@ this.dataGrid.SearchController.Search(entry.Text);
 
 <img alt="Enabling Filter based on Search in DataGrid" src="Images\search\maui-datagrid-search-filtering.png" width="404"/>
 
-
-You can search the data with the case-sensitivity by setting [SearchController.AllowCaseSensitive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_AllowCaseSensitive) property.
+You can search the data with case-sensitivity by setting the [SearchController.AllowCaseSensitive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_AllowCaseSensitive) property to `true`.
 
 {% tabs %}
 {% highlight c# %}
@@ -213,9 +218,9 @@ this.dataGrid.SearchController.AllowCaseSensitive = true;
 {% endhighlight %}
 {% endtabs %}
 
-### Search with pattern matching
+### Search with Pattern Matching
 
-You can customize the type of search for the `SearchController` by using the [SearchType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_SearchType) property. The available search types are: `StartsWith`, `Contains` and `EndsWith`. The below code snippet demonstrates how to set the search type as `StartsWith`.
+You can customize the type of search for the `SearchController` by using the [SearchType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_SearchType) property. The available search types are `StartsWith`, `Contains`, and `EndsWith`. The following code snippet demonstrates how to set the search type to `StartsWith`.
 
 {% tabs %}
 {% highlight c# %}
@@ -225,9 +230,9 @@ this.dataGrid.SearchController.SearchType = DataGridSearchType.StartsWith;
 {% endhighlight %}
 {% endtabs %}
 
-### Navigating cells based on search text
+### Navigating Cells Based on Search Text
 
-The SfDataGrid allows navigation between the search results programmatically using the [SearchController.FindNext](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_FindNext_System_String_) and [SearchController.FindPrevious](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_FindPrevious_System_String_) methods.
+The `SfDataGrid` allows navigation between search results programmatically using the [SearchController.FindNext](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_FindNext_System_String_) and [SearchController.FindPrevious](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_FindPrevious_System_String_) methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -242,7 +247,7 @@ this.dataGrid.SearchController.FindPrevious("SearchText");
 
 ### Clear Search
 
-The search can be cleared by using the [SearchController.ClearSearch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_ClearSearch) method.
+You can clear the search by using the [SearchController.ClearSearch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_ClearSearch) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -252,12 +257,12 @@ this.dataGrid.SearchController.ClearSearch();
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the appearance of highlight text
+## Customize the Appearance of Highlight Text
 
-You can apply the style to a text color, background color of a searched text, and search highlighted text by using [SearchTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchTextColor), [SearchTextBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchTextBackground), [SearchHighlightTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchHighlightTextColor), and [SearchHighlightTextBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchHighlightTextBackground) and you can also customize the background color of search-matched cells in DataGrid using the [SearchCellBackground]() property in `SfDataGrid.DefaultStyle`. 
+You can customize the appearance of searched text by using the [SearchTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchTextColor), [SearchTextBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchTextBackground), [SearchHighlightTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchHighlightTextColor), and [SearchHighlightTextBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchHighlightTextBackground) properties. You can also customize the background color of search-matched cells using the [SearchCellBackground]() property.
 
 {% tabs %}
-{% highlight Xaml %}
+{% highlight xaml %}
 
 <ContentPage.Content>
     <syncfusion:SfDataGrid ItemsSource="{Binding Orders}">
@@ -275,18 +280,18 @@ You can apply the style to a text color, background color of a searched text, an
 {% endtabs %}
 
 
-## Search customization
+## Search Customization
 
 The `SfDataGrid` processes search operations in the [DataGridSearchController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html) class. You can change the default search behaviors by creating a custom class that overrides the `DataGridSearchController` class and setting it to the `SfDataGrid.SearchController` property.
 
 {% tabs %}
 {% highlight c# %}
 
-this.dataGrid.SearchController = new CustomDataGridSearchController (this.datagrid);
-public class CustomDataGridSearchController  : DataGridSearchController
+this.dataGrid.SearchController = new CustomDataGridSearchController(this.dataGrid);
+public class CustomDataGridSearchController : DataGridSearchController
 {
-    public CustomDataGridSearchController(Syncfusion.Maui.DataGrid.SfDataGrid datagrid)
-        : base(datagrid)
+    public CustomDataGridSearchController(Syncfusion.Maui.DataGrid.SfDataGrid dataGrid)
+        : base(dataGrid)
     {
     }
 }
@@ -294,18 +299,18 @@ public class CustomDataGridSearchController  : DataGridSearchController
 {% endhighlight %}
 {% endtabs %}
 
-### Search only a specific column
+### Search Only a Specific Column
 
 You can search only a specific column by overriding the [SearchCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_SearchCell_Syncfusion_Maui_DataGrid_DataColumnBase_System_Object_System_Boolean_) method of the `DataGridSearchController`. In the `SearchCell` method, you can perform a search for the column you want to apply based on the `MappingName`.
 
-In the code below, all columns except the `CustomerID` column are excluded from the search.
+In the following code snippet, all columns except the `Customer` column are excluded from the search.
 
 {% tabs %}
 {% highlight c# %}
 
 public class CustomDataGridSearchController : DataGridSearchController
 {
-    public CustomDataGridSearchController(Syncfusion.Maui.DataGrid.SfDataGrid datagrid) : base(datagrid)
+    public CustomDataGridSearchController(Syncfusion.Maui.DataGrid.SfDataGrid dataGrid) : base(dataGrid)
     {
     }
     protected override bool SearchCell(DataColumnBase column, object record, bool ApplySearchHighlightBrush)
@@ -321,9 +326,9 @@ public class CustomDataGridSearchController : DataGridSearchController
 
 <img alt="DataGrid displays Search Text only in Selected Column" src="Images\search\maui-datagrid-search-selected-column.png" width="404"/>
 
-## Obtain the search records
+## Obtain the Search Records
 
-You can get the records by using the [GetSearchRecords](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_GetSearchRecords) method of the `DataGridSearchController`. This method returns a list of search records. The below code snippet demonstrates how to get the search records.
+You can get the records by using the [GetSearchRecords](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_GetSearchRecords) method of the `DataGridSearchController`. This method returns a list of search records. The following code snippet demonstrates how to get the search records.
 
 {% tabs %}
 {% highlight c# %}

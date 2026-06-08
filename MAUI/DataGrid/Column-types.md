@@ -1818,10 +1818,11 @@ dataGrid.DefaultStyle = new DataGridStyle
 {% endtabs %}
 
 ## DataGridCurrencyColumn
-The `DataGridCurrencyColumn` inherits all the properties of the `DataGridColumn`. It is used to display numeric value with the currency symbol. If you want to create a `DataGridCurrencyColumn`, define the column manually by adding the `DataGridCurrencyColumn` object to the `SfDataGrid.Columns` collection and the property corresponding to the column in the underlying collection must be a numeric type (int, double, float, etc.). 
+
+The `DataGridCurrencyColumn` inherits all the properties of the `DataGridColumn`. It displays numeric values with the currency symbol. To create a `DataGridCurrencyColumn`, define the column manually by adding the `DataGridCurrencyColumn` object to the `SfDataGrid.Columns` collection. The property corresponding to the column in the underlying collection must be a numeric type (int, double, float, etc.).
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.BindingContext>
     <local:ViewModel  x:Name ="viewModel"/>
 </ContentPage.BindingContext>
@@ -1830,60 +1831,59 @@ The `DataGridCurrencyColumn` inherits all the properties of the `DataGridColumn`
                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridCurrencyColumn HeaderText="Unit Price"
-                                          MappingName="UnitPrice" />
+                                           MappingName="UnitPrice" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 OrderInfoRepository viewModel = new OrderInfoRepository();
 SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 DataGridCurrencyColumn currencyColumn = new DataGridCurrencyColumn()
 {
     MappingName = "UnitPrice",
-    HeaderText = "Unit Price",
+    HeaderText = "Unit Price"
 };
 dataGrid.Columns.Add(currencyColumn);
 {% endhighlight %}
 {% endtabs %}
 
-### CurrencySymbol
+### Currency Symbol
 
-By default, the currency symbol will be displayed based on current culture. You can customize the symbol using [CurrencySymbol]() property.
+By default, the currency symbol is displayed based on the current culture. You can customize the symbol using the [CurrencySymbol]() property.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridCurrencyColumn HeaderText="Unit Price"
                                            MappingName="UnitPrice"
-                                           CurrencySymbol="€"/>
+                                           CurrencySymbol="€" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 DataGridCurrencyColumn currencyColumn = new DataGridCurrencyColumn()
 {
     MappingName = "UnitPrice",
     HeaderText = "Unit Price",
-    CurrencySymbol="€"
+    CurrencySymbol = "€"
 };
 dataGrid.Columns.Add(currencyColumn);
 {% endhighlight %}
 {% endtabs %}
 
-### Allow Null value
+### Allow Null Value
 
 You can allow null values in the column by setting the [DataGridCurrencyColumn.AllowNullValue]() property to `true`.
 
-N>
-The AllowNullValue will work only when the underlying property type is Nullable.
+N> 
+The `AllowNullValue` property will work only when the underlying property type is nullable.
 
 ## Row header
 

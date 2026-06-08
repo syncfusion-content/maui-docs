@@ -37,8 +37,14 @@ this.Content = dataGrid;
 
 To hide a column interactively, set the `DataGridColumn.MinimumWidth` property to zero. Then, resize the column to a width less than zero.
 
-## Real-time column resizing
-The `DataGrid` allows the user to decide when column resizing should be applied during a resize gesture using the [ColumnResizeMode]() property. Users can resize the columns in real time by setting `ColumnResizeMode` to `OnMoved`.  The default value of this property is `OnTouchUp`.
+## Resizing Modes
+
+The `SfDataGrid` allows two modes of resizing by setting the [SfDataGrid.ColumnResizeMode]() property. The resizing modes are as follows:
+
+* **OnMoved**: The resizing indicator is moved based on the touch point. The width of the column is updated as the resizing indicator moves.
+* **OnTouchUp**: The resizing indicator is moved based on the touch point. However, the width of the column is updated only on a touch up operation.
+
+N> The default resizing mode is `OnTouchUp`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -46,10 +52,10 @@ The `DataGrid` allows the user to decide when column resizing should be applied 
     <local:OrderInfoViewModel />
 </ContentPage.BindingContext>
 
-<syncfusion:SfDataGrid  x:Name = "dataGrid"
-                        AllowResizingColumns = "True"
-                        ColumnResizeMode="OnMoved"
-                        ItemsSource = "{Binding Orders}" />
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowResizingColumns="True"
+                       ColumnResizeMode="OnMoved"
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
