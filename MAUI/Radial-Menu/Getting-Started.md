@@ -277,7 +277,7 @@ namespace RadialMenuGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Adding Radial Menu with items
+## Step 5: Adding Radial Menu with items
 
 {% tabs %}
 
@@ -359,7 +359,6 @@ namespace RadialMenuGettingStarted
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ![Getting started with .NET MAUI Radial Menu.](images/getting-started/maui-radialmenu-getting-started.png)
 

@@ -260,7 +260,6 @@ namespace GettingStarted
 <ContentPage   
     . . .
     xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
     <picker:SfTimePicker />
 </ContentPage>
 
@@ -344,75 +343,4 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-   ![Set footer view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-footer-view.png)
-
-## Set height and width to the Time Picker
-
-The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<picker:SfTimePicker x:Name="picker" 
-                    HeightRequest="280" 
-                    WidthRequest="300">
-</picker:SfTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfTimePicker picker = new SfTimePicker()
-{
-    HeightRequest = 280,
-    WidthRequest = 300,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-   ![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
-
-## Set selected time to the Time Picker
-
-The SfTimePicker control allows you to select the time using the [SelectedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectedTime) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). The default value of the `SelectedTime` is the current time.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
-
-<picker:SfTimePicker x:Name="picker" 
-                     SelectedTime="07:22:01">
-</picker:SfTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
-
-SfTimePicker picker = new SfTimePicker()
-{
-    SelectedTime = new TimeSpan(07, 22, 01),
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-   ![Set Selected time in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-selected-time.png)
-
-## Clear selection
-
-The .NET MAUI TimePicker provides clear selection support, allowing you to clear the selected time by setting the `SelectedTime` property to `null`.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<picker:SfTimePicker x:Name="picker" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-    this.picker.SelectedTime = null;
-
-{% endhighlight %}  
-{% endtabs %}
+![Set footer view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-footer-view.png)
