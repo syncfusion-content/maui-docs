@@ -1825,15 +1825,15 @@ dataGrid.DefaultStyle = new DataGridStyle
 
 ## DataGridTimePickerColumn
 
-[DataGridTimePickerColumn]() is derived from `DataGridColumn`, and it displays column data as a time span. It hosts `SfTimePicker` element in editing mode.
+[DataGridTimePickerColumn]() is derived from `DataGridColumn` and displays column data as a time span. It hosts an `SfTimePicker` element in editing mode.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding OrderInfoCollection}">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTimePickerColumn HeaderText = "Delivery Time" 
-                                             MappingName = "DeliveryTime">
+        <syncfusion:DataGridTimePickerColumn HeaderText="Delivery Time" 
+                                             MappingName="DeliveryTime">
         </syncfusion:DataGridTimePickerColumn>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
@@ -1846,7 +1846,7 @@ dataGrid.ItemsSource = viewModel.Orders;
 var timePickerColumn = new DataGridTimePickerColumn()
 {
     MappingName = "DeliveryTime",
-    HeaderText = "Delivery Time" 
+    HeaderText = "Delivery Time"
 };
 
 dataGrid.Columns.Add(timePickerColumn);
@@ -1858,9 +1858,9 @@ this.Content = dataGrid;
 
 ### Null value support
 
-`DataGridTimePickerColumn` provides support to restrict or allow null values in columns based on [AllowNull]() property. Instead of displaying null values, you can display hint text using [NullValue]() property.
+`DataGridTimePickerColumn` provides support to restrict or allow null values in columns based on the [AllowNull]() property. Instead of displaying null values, you can display hint text using the [NullValue]() property.
 
-The `NullValue` properties will not work when `AllowNull` is set to `false`.
+The `NullValue` property will not work when `AllowNull` is set to `false`.
 
 ### Setting input value range
 
@@ -1872,12 +1872,12 @@ You can format the time span values by setting the [Format]() property.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding OrderInfoCollection}">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTimePickerColumn HeaderText = "Delivery Time" 
-                                             MappingName = "DeliveryTime"
-                                             Format = "hh\:mm">
+        <syncfusion:DataGridTimePickerColumn HeaderText="Delivery Time" 
+                                             MappingName="DeliveryTime"
+                                             Format="hh\:mm">
         </syncfusion:DataGridTimePickerColumn>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
@@ -1903,16 +1903,16 @@ this.Content = dataGrid;
 
 ## DataGridCheckBoxSelectorColumn
 
-`SfDataGrid` allows you to select or deselect individual rows through `SfCheckBox` using [DataGridCheckBoxSelectorColumn](), which is not bound to a data object from the underlying data source, and and it can be added like any other column. The selector column supports only row selection, and and selection in the selector column works based on the [SelectionMode]().
+`SfDataGrid` allows you to select or deselect individual rows through `SfCheckBox` using [DataGridCheckBoxSelectorColumn](), which is not bound to a data object from the underlying data source and can be added like any other column. The selector column supports only row selection, and selection in the selector column works based on the [SelectionMode]().
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding OrderInfoCollection}"
-                       SelectionMode = "Multiple">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridCheckBoxSelectorColumn MappingName = "SelectorColumn"
-                                                   Width = "50">
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="50">
         </syncfusion:DataGridCheckBoxSelectorColumn>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
@@ -1940,18 +1940,18 @@ By default, a checkbox is displayed in the header of the selector column, which 
 
 ### Text on column header
 
-You can display text instead of a checkbox in the header of the selector column by setting the [AllowCheckboxOnHeader]() property to `False`.
+You can display text instead of a checkbox in the header of the selector column by setting the [AllowCheckboxOnHeader]() property to `false`.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding OrderInfoCollection}"
-                       SelectionMode = "Multiple">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridCheckBoxSelectorColumn MappingName = "SelectorColumn"
-                                                   Width = "100"
-                                                   AllowCheckboxOnHeader = "False"
-                                                   HeaderText = "Selector">
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="100"
+                                                   AllowCheckboxOnHeader="False"
+                                                   HeaderText="Selector">
         </syncfusion:DataGridCheckBoxSelectorColumn>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
@@ -1977,20 +1977,21 @@ this.Content = dataGrid;
 
 <img alt="DataGridCheckBoxSelector column with AllowCheckboxOnHeader as false in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector-allowcheckboxonheader.png" width="404"/>
 
-### Canceling the check box state change
+### Canceling the checkbox state change
+
 The checkbox state change in the `DataGridCheckBoxSelectorColumn` can be canceled by setting [DataGridCheckboxSelectorCheckedEventArgs.Cancel]() to `true` in the [SfDataGrid.CheckboxSelectorChecked]() event. Additionally, the checkbox value can be modified by setting [DataGridCheckboxSelectorCheckedEventArgs.NewValue]() within the same event.
 
 Based on this, the selection state is not changed when `e.Cancel` is set to `true`, and the selection is applied according to the value specified in `e.NewValue`.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding OrderInfoCollection}"
-                       SelectionMode = "Multiple"
-                       CheckboxSelectorChecked = "OnCellCheckBoxClick">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple"
+                       CheckboxSelectorChecked="OnCellCheckBoxClick">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridCheckBoxSelectorColumn MappingName = "SelectorColumn"
-                                                   Width = "50">
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="50">
         </syncfusion:DataGridCheckBoxSelectorColumn>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>

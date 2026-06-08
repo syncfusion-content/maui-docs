@@ -14,7 +14,7 @@ SfDataGrid and SfDataPager provide built-in [AutomationId](https://learn.microso
 
 ## DataGrid
 
-The following table illustrates the predefined automation values set internally which can be used to identify SfDataGrid elements.
+The following table illustrates the predefined automation values that can be used to identify SfDataGrid elements.
 
 <table>
 <tr>
@@ -54,33 +54,27 @@ The following table illustrates the predefined automation values set internally 
 </tr>
 </table>
 
-The following screenshots illustrate the `AutomationId` values of grid cells, rows, and other inner elements in SfDataGrid.
-
-<img alt="Automation Id format for Row and Cell element in .NET MAUI DataGrid" src="Images\accessibility\maui-datagrid-automationid.png" width="404"/>
-
-<img alt="Automation Id format for LoadMoreView in .NET MAUI DataGrid" src="Images\accessibility\maui-datagrid-loadmore-automationid.png" width="404"/>
-
 The following code snippet demonstrates how to set the `AutomationId` to the datagrid.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding Orders}"
-                       AutomationId = "SfDataGrid"
-                       AllowGroupExpandCollapse = "True">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AutomationId="SfDataGrid"
+                       AllowGroupExpandCollapse="True">
 
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
-        <syncfusion:GroupColumnDescription ColumnName = "OrderID"/>
+        <syncfusion:GroupColumnDescription ColumnName="OrderID"/>
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
 
     <syncfusion:SfDataGrid.CaptionSummaryRow>
         <syncfusion:DataGridSummaryRow Title="Total Count of Order ID:{OrderID}"
-                                       ShowSummaryInRow = "True">
+                                       ShowSummaryInRow="True">
             <syncfusion:DataGridSummaryRow.SummaryColumns>
-                <syncfusion:DataGridSummaryColumn Name = "OrderID"
-                                                  MappingName = "OrderID"
-                                                  Format = "{}{Count}"
-                                                  SummaryType = "CountAggregate" />
+                <syncfusion:DataGridSummaryColumn Name="OrderID"
+                                                  MappingName="OrderID"
+                                                  Format="{}{Count}"
+                                                  SummaryType="CountAggregate" />
             </syncfusion:DataGridSummaryRow.SummaryColumns>
         </syncfusion:DataGridSummaryRow>
     </syncfusion:SfDataGrid.CaptionSummaryRow>
@@ -128,7 +122,6 @@ public void SfDataGrid_AutomationId()
     Thread.Sleep(200);
     cell.Click();
 
-
     // Expand/Collapse group
     driver.FindElement(
         MobileBy.AccessibilityId("SfDataGrid Row5")
@@ -149,7 +142,7 @@ public void SfDataGrid_AutomationId()
 
 ## DataPager
 
-The following table illustrates the predefined automation values set internally which can be used to identify the SfDataPager elements.
+The following table illustrates the predefined automation values that can be used to identify SfDataPager elements.
 
 <table>
 <tr>
@@ -181,32 +174,28 @@ Example: NumericButton3
 </tr>
 </table>
 
-The following screenshot illustrates the `AutomationId` values of pager buttons in SfDataPager.
-
-<img alt="Automation Id format for DataPager in .NET MAUI DataGrid" src="Images\accessibility\maui-datagrid-datapager-automationid.png" width="404"/>
-
 The following code snippet demonstrates how to set the AutomationId for the data pager.
 
 {% tabs %}
 {% highlight xaml %}
 <Grid>
     <Grid.RowDefinitions>
-        <RowDefinition Height = "*" />
-        <RowDefinition Height = "Auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
-    <Border Grid.Row = "1" Padding = "5">
-        <pager:SfDataPager x:Name = "dataPager"
-                           AutomationId = "SfDataPager"
-                           PageSize = "15" 
-                           NumericButtonCount = "10"
-                           Source = "{Binding Orders}">
+    <Border Grid.Row="1" Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                           AutomationId="SfDataPager"
+                           PageSize="15" 
+                           NumericButtonCount="10"
+                           Source="{Binding Orders}">
         </pager:SfDataPager>
     </Border>
-    <syncfusion:SfDataGrid x:Name = "dataGrid"
-                           Grid.Row = "0"
-                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           Grid.Row="0"
+                           ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
-</Grid>           
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataPager dataPager = new SfDataPager();
