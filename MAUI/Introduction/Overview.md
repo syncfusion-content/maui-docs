@@ -525,7 +525,6 @@ line-height: 1;
 .form-card {
    flex: 0 0 calc(33.33% - 14px);
    border: 1px solid #ddd;
-   background: ;
    border-radius: 12px;
    overflow: hidden;
    background: white;
