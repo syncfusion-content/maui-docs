@@ -54,7 +54,7 @@ N>
 
 ## RightTapped
 
-The RightTapped event occurs when a user performs a right-click action on scheduler elements in desktop platforms such as Windows or macOS. This event enables applications to implement context menus, secondary commands, and custom actions on appointments, cells, headers, and resource elements.
+The `RightTapped` event occurs when a user performs a right-click action on scheduler elements in desktop platforms such as **Windows** or **macOS**. 
 
 * `sender` - The SfScheduler object where the right-click occurred
 
@@ -68,18 +68,15 @@ The `SchedulerRightTappedEventArgs` provides information about the right-click i
 
 * `Resource` – The resource associated with the clicked element (in resource views)
 
-* `WeekNumber` – The week number value (Not applicable in Timeline Month and AgendaView)
+* `WeekNumber` – The week number value (Not applicable in `TimelineMonth` and `Agenda` views)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
 <scheduler:SfScheduler x:Name="Scheduler" 
                        RightTapped="Scheduler_RightTapped" >
 </scheduler:SfScheduler>
-
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 5 6 7 8" %}
 this.Scheduler.RightTapped += Scheduler_RightTapped;
 
 private void scheduler_RightTapped(object sender, SchedulerRightTappedEventArgs e)
@@ -90,7 +87,6 @@ private void scheduler_RightTapped(object sender, SchedulerRightTappedEventArgs 
     var appointments = e.Appointments;
     var weekNumber = e.WeekNumber;
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -298,14 +294,14 @@ The `RightTappedCommand` will be triggered when you perform a right tap on the s
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
-                       AllowedViews="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
                        RightTappedCommand="{Binding SchedulerRightTappedCommand}">
     <scheduler:SfScheduler.BindingContext>
         <local:SchedulerInteractionViewModel />
     </scheduler:SfScheduler.BindingContext>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 15 17 18 19 20 21"%}
 public class SchedulerInteractionViewModel
 {
     public ICommand SchedulerRightTappedCommand { get; set; }
@@ -319,6 +315,7 @@ public class SchedulerInteractionViewModel
     {
         return true;
     }
+
     private void ExecuteRightTapped(SchedulerRightTappedEventArgs obj)
     {
         var appointments = obj.Appointments;

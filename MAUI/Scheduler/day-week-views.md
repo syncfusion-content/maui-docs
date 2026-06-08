@@ -178,26 +178,22 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 
 ## Customize All-Day appointment height in Day, Week, and Work Week Views
 
-The AllDayAppointmentHeight property defines the vertical space allocated for each all-day appointment in the all-day panel.The AllDayAppointmentHeight property is used to customize the height of all-day appointments displayed in the all-day panel of the Day, Week, and WorkWeek views. This allows longer appointment content to be accommodated and improves visibility. Each all-day appointment is rendered with a default height of 19.
+The `AllDayAppointmentHeight` property specifies the height of all-day appointments displayed in the all-day panel of the Day, Week, and WorkWeek views. Increasing this value provides additional space for appointment content and can improve readability. By default, each all-day appointment is rendered with a height of 19.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
-
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Day">
     <scheduler:SfScheduler.DaysView>
         <scheduler:SchedulerDaysView AllDayAppointmentHeight="50" />
     </scheduler:SfScheduler.DaysView>
 </scheduler:SfScheduler>
-
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
-
 SfScheduler scheduler = new SfScheduler();
 scheduler.View = SchedulerView.Day;
 scheduler.DaysView.AllDayAppointmentHeight = 50;
 this.Content = scheduler;
-
 {% endhighlight %}
 {% endtabs %} 
 
@@ -205,26 +201,22 @@ this.Content = scheduler;
 
 ## Display spanned appointments in time slots
 
-The AllowSpannedAppointmentsInTimeSlots property determines how appointments lasting more than 24 hours are rendered in Day, Week, and WorkWeek views. By default, multi-day appointments are shown in the all-day panel. When enabled, these appointments are displayed directly in the time-slot cells. When AllowSpannedAppointmentsInTimeSlots is false (default), multi-day appointments are displayed in the all-day area. When true, multi-day appointments are segmented and shown in the time-slot cells for each day.
+The `AllowSpannedAppointmentsInTimeSlots` property determines whether appointments spanning more than 24 hours are displayed in the all-day panel or directly within the timeslot cells of the `Day`, `Week`, and `WorkWeek` views. By default, these appointments are rendered in the all-day panel. Setting `AllowSpannedAppointmentsInTimeSlots` to `true` displays spanned appointments within the corresponding time-slot cells.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
-
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Day">
     <scheduler:SfScheduler.DaysView>
         <scheduler:SchedulerDaysView AllowSpannedAppointmentsInTimeSlots="True" />
     </scheduler:SfScheduler.DaysView>
 </scheduler:SfScheduler>
-
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
-
 SfScheduler scheduler = new SfScheduler();
 scheduler.View = SchedulerView.Day;
 scheduler.DaysView.AllowSpannedAppointmentsInTimeSlots = true;
 this.Content = scheduler;
-
 {% endhighlight %}
 {% endtabs %} 
 

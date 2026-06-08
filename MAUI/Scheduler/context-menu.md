@@ -10,7 +10,7 @@ keywords : .net maui scheduler, .net maui scheduler context menu, .net maui sche
 
 # Context Menu in .NET MAUI Scheduler (SfScheduler)
 
-The .NET MAUI Scheduler supports customizable context menus for timeslot cells, month cells, all-day panels, and appointments. Context menus provide quick access to common actions such as creating, editing, or deleting appointments without navigating away from the scheduler view. Context menus are displayed using the Scheduler's built-in context menu support and can be customized with user-defined or built-in commands.
+The .NET MAUI Scheduler supports context menus for timeslot cells, month cells, all-day panels, and appointments. Context menus provide quick access to common actions such as creating, editing, or deleting appointments. The  Scheduler provides built-in commands that can be assigned to context menu items.
 
 The Scheduler displays context menus through the following interactions:
  
@@ -31,10 +31,10 @@ Built-in `Add` and `Edit` commands work only when the **AppointmentEditorMode** 
 
 ## Context Menu for Timeslot Cells
 
-The CellContextMenu property of the Scheduler allows users to define a set of context menu items that appear when the user performs a right tap or long press on a timeslot cell, month cell, or the all-day panel.
+The `CellContextMenu` property of the Scheduler allows users to define a set of context menu items that appear when the user performs a right tap or long press on a timeslot cell, month cell, or the all-day panel.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15" %}
 <schedule:SfScheduler x:Name="scheduler"
                       AppointmentEditorMode="Add,Edit"
                       View="Week">
@@ -52,7 +52,7 @@ The CellContextMenu property of the Scheduler allows users to define a set of co
     </schedule:SfScheduler.CellContextMenu>
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4 6 8 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="3 4 6 8 9 10 11 13 14" %}
 SfScheduler scheduler = new SfScheduler();
 scheduler.View = SchedulerView.Week;
 scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
@@ -77,10 +77,10 @@ scheduler.CellContextMenu = new MenuItemCollection()
 
 ## Context Menu for Appointments
 
-The AppointmentContextMenu property of the Scheduler enables users to define a set of context menu items that appear when the user performs a right tap or long press on an appointment.
+The `AppointmentContextMenu` property of the Scheduler enables users to define a set of context menu items that appear when the user performs a right tap or long press on an appointment.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27" %}
         <schedule:SfScheduler x:Name="scheduler"
                               AppointmentEditorMode="Edit"
                               View="Week">
@@ -110,7 +110,7 @@ The AppointmentContextMenu property of the Scheduler enables users to define a s
             </schedule:SfScheduler.AppointmentContextMenu>
         </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="6" %}
+{% highlight c# tabtitle="C#" hl_lines="3 4 6 8 9 10 11 13 14 15 16 20 22 23 24 25 26 27 28 29" %}
 SfScheduler scheduler = new SfScheduler();
 scheduler.View = SchedulerView.Week;
 scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
@@ -127,7 +127,6 @@ scheduler.AppointmentContextMenu = new MenuItemCollection()
             Glyph = "&#xE710;",
             Color = Colors.Blue,
             Size = 16
-
         }
     },
 
@@ -155,7 +154,7 @@ N> The BindingContext of each context menu item is set to a `SchedulerContextMen
 
 ## Customize context menu appearance
 
-You can modify the background and text appearance of the context menu displayed for scheduler cells and appointment using the ContextMenuBackground and ContextMenuTextStyle properties.
+You can modify the background and text appearance of the context menu displayed for scheduler cells and appointment using the `ContextMenuBackground` and `ContextMenuTextStyle` properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7" %}
@@ -200,7 +199,7 @@ The `SchedulerContextMenuOpeningEventArgs` class provides information about the 
                       ContextMenuOpening="scheduler_ContextMenuOpening">
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#"%}
+{% highlight c# tabtitle="C#" hl_lines="1 3 5 6 7 8 9 10 11"%}
 this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening
 
 private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
@@ -216,6 +215,27 @@ private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpe
 {% endhighlight %}
 {% endtabs %}
 
+### Cancel context menu opening
+
+The `ContextMenuOpening` event can be used to prevent a context menu from being displayed. To cancel the context menu opening operation, set the `Cancel` property of the `SchedulerContextMenuOpeningEventArgs` to `true`.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+<schedule:SfScheduler x:Name="scheduler"
+                      View="Week"
+                      ContextMenuOpening="scheduler_ContextMenuOpening">
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="1 4"%}
+this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening
+
+private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
+{
+    e.Cancel = true; // Cancel the context menu from opening
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Implement clipboard operations using context menu
 
 Clipboard-like functionality can be implemneted using custom context menu commands for Copy, Cut, and Paste operations on appointments.
@@ -227,10 +247,10 @@ The clipboard functionality works as follows:
 
 ### Adding Context Menu Items
 
-The AppointmentContextMenu can be used to display Copy and Cut actions for appointments, while the CellContextMenu can be used to display the paste action for scheduler cells.
+The `AppointmentContextMenu` can be used to display Copy and Cut actions for appointments, while the CellContextMenu can be used to display the paste action for scheduler cells.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7" %}
+{% highlight xaml tabtitle="XAML"%}
 <schedule:SfScheduler x:Name="Scheduler" 
                       x:DataType="local:SchedulerClipboardViewModel"
                       AppointmentsSource="{Binding Events}"

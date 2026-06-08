@@ -818,20 +818,16 @@ N> You can refer to our [.NET MAUI Scheduler](https://www.syncfusion.com/maui-co
 
 ## Enable or disable swipe navigation 
 
-The EnableSwipeNavigation property controls whether users can navigate between views using swipe gestures or mouse drag interactions.By default, swipe navigation is enabled. Setting this property to false disables gesture-based navigation. When EnableSwipeNavigation is true (default), users can switch views by swiping or dragging.
-When EnableSwipeNavigation is false, swipe gestures are ignored.
+The `EnableSwipeNavigation` property determines whether users can navigate between dates using the scheduler's built-in navigation interactions. By default, `EnableSwipeNavigation` is set to `true`, allowing users to navigate using swipe gestures and the navigation buttons in the scheduler header. Setting `EnableSwipeNavigation` to `false` disables these navigation interactions.
 
 {% tabs %}  
-{% highlight XAML %}
-
-<scheduler:SfScheduler x:Name="scheduler" EnableSwipeNavigation="False"/>
-
+{% highlight XAML tabtitle="xaml" hl_lines="2" %}
+<scheduler:SfScheduler x:Name="scheduler" 
+                       EnableSwipeNavigation="False"/>
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
-
+{% highlight C# tabtitle="c#" hl_lines="2" %}
 SfScheduler scheduler = new SfScheduler();
 scheduler.EnableSwipeNavigation = false;
 this.Content = scheduler;
-
 {% endhighlight %}  
 {% endtabs %}
