@@ -7,7 +7,7 @@ control: SfImageEditor
 documentation: ug
 ---
 
-# Learn here all about Working with .NET MAUI Image Editor (SfImageEditor)
+# Working with .NET MAUI Image Editor (SfImageEditor)
 
 ## Get the image stream
 
