@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Slider control | Syncfusion®
+title: Getting started with .NET MAUI DateTime Slider control | Syncfusion®
 description: This section explains about the getting started with Syncfusion® MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
@@ -21,10 +21,10 @@ To quickly get started with the .NET MAUI DateTime Slider, watch this video.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -124,9 +124,9 @@ namespace SliderGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -229,8 +229,8 @@ namespace SliderGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -327,187 +327,7 @@ namespace SliderGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
+The following screenshot illustrates the result of the above code.
+
 ![Initialize slider](images/getting-started/initialize-slider.png)
 
-## Step 5: Enable labels
-
-The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01"
-                          Maximum="2018-01-01"
-                          Value="2014-01-01"
-                          ShowLabels="True"
-                          Interval="2" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2018, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.ShowLabels = true;
-slider.Interval = 2;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider labels](images/getting-started/labels.png)
-
-## Step 6: Enable ticks
-
-The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01"
-                          Maximum="2018-01-01"
-                          Value="2014-01-01"
-                          ShowLabels="True"
-                          ShowTicks="True"
-                          Interval="2"
-                          MinorTicksPerInterval="1" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider()
-{
-    Minimum = new DateTime(2010, 01, 01),
-    Maximum = new DateTime(2018, 01, 01),
-    Value = new DateTime(2014, 01, 01),
-    Interval = 2,
-    ShowLabels = true,
-    ShowTicks = true,
-    MinorTicksPerInterval = 1,
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider ticks](images/getting-started/ticks.png)
-
-## Orientation
-
-The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the Orientation property is **Horizontal**.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Orientation="Vertical"
-                          Minimum="2010-01-01"
-                          Maximum="2018-01-01"
-                          Value="2014-01-01"
-                          ShowLabels="True"
-                          ShowTicks="True"
-                          Interval="2"
-                          MinorTicksPerInterval="1" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Orientation = SliderOrientation.Vertical;
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2018, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider orientation](images/getting-started/orientation.png)
-
-## Inverse the slider
-
-Invert the slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is **False**.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01"
-                          Maximum="2018-01-01"
-                          Value="2014-01-01"
-                          IsInversed="True"
-                          ShowLabels="True"
-                          ShowTicks="True"
-                          Interval="2"
-                          MinorTicksPerInterval="1" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2018, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.IsInversed = true;
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Inverse slider](images/getting-started/slider-inverse.png)
-
-## Formatting labels
-
-Add prefix or suffix to the labels using the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01"
-                          Maximum="2011-01-01"
-                          Value="2010-07-01"
-                          DateFormat="MMM"
-                          IntervalType="Months"
-                          ShowTicks="True"
-                          MinorTicksPerInterval="1"
-                          ShowLabels="True"
-                          Interval="2" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider()
-{
-    Minimum = new DateTime(2010, 01, 01),
-    Maximum = new DateTime(2011, 01, 01),
-    Value = new DateTime(2010, 07, 01),
-    Interval = 2,
-    ShowLabels = true,
-    ShowTicks = true,
-    MinorTicksPerInterval = 1,
-    DateFormat = "MMM",
-    IntervalType = SliderDateIntervalType.Months,
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider label format](images/getting-started/label-format.png)

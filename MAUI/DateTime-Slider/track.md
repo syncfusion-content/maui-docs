@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Track in .NET MAUI Slider control | Syncfusion®
+title: Track in .NET MAUI DateTime Slider control | Syncfusion®
 description: Learn here all about adding and customizing the slider track in .NET MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
@@ -287,3 +287,77 @@ this.Content = stackLayout;
 {% endtabs %}
 
 ![Slider track disabled state](images/track/track-disabled.png)
+
+## Orientation
+
+The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the Orientation property is **Horizontal**.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Orientation="Vertical"
+                          Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Orientation = SliderOrientation.Vertical;
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider orientation](images/getting-started/orientation.png)
+
+## Inverse the slider
+
+Invert the slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is **False**.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          IsInversed="True"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.IsInversed = true;
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Inverse slider](images/getting-started/slider-inverse.png)

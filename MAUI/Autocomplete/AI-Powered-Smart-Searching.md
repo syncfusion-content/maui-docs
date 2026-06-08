@@ -331,7 +331,7 @@ Applying custom filtering to the [Autocomplete](https://help.syncfusion.com/cr/m
 
 The following image demonstrates the output of the above AI-based search using a custom filtering sample.
 
-![.NET MAUI AutoComplete With AI Smart Search.](Images/AISmartSearch/ai_smart_search.png)
+![.NET MAUI AutoComplete With AI Smart Search.](Images/AISmartSearch/ai_smart_search.gif)
 
 You can find the complete sample from this [link](https://github.com/SyncfusionExamples/Smart-AI-Searching-using-.NET-MAUI-Autocomplete).
 
