@@ -21,7 +21,7 @@ To show tooltips:
 To enable tooltip for datagrid, set the [SfDataGrid.ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowToolTip) property to `true`. This will display tooltip containing cell content when users interact with the cells.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        ShowToolTip="True" />
@@ -48,7 +48,7 @@ public partial class MainPage : ContentPage
 You can enable tooltips for specific columns by setting the `DataGridColumn.ShowToolTip` property to `true` for the desired columns.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        ShowToolTip="True"
@@ -135,7 +135,7 @@ To change the tooltip's border appearance, use the Stroke and StrokeThickness pr
 * `StrokeThickness`: Defines the thickness of the tooltip border. 
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 <ContentPage.Resources>
     <Style TargetType="syncfusion:DataGridToolTipView">
         <Setter Property="Background" Value="AliceBlue" />
@@ -156,7 +156,7 @@ To change the tooltip's border appearance, use the Stroke and StrokeThickness pr
 You can apply basic tooltip styling using the DefaultStyle property of SfDataGrid. This method supports only background and text color customization.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        ShowToolTip="True">
@@ -175,7 +175,7 @@ You can apply basic tooltip styling using the DefaultStyle property of SfDataGri
 You can customize the appearance and content of tooltips by setting the [SfDataGrid.ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ToolTipTemplate) property.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid" 
                        ItemsSource="{Binding Orders}"
                        ShowToolTip="True">
@@ -195,7 +195,7 @@ You can customize the appearance and content of tooltips by setting the [SfDataG
 You can load different tooltip templates conditionally based on cell data by using a DataTemplateSelector with the `SfDataGrid.ToolTipTemplate` property.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="Default">
@@ -246,22 +246,22 @@ public class ToolTipTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-The below image refers the `DefaultTemplate` which is applied through `ToolTipTemplate`.
+The following image shows the `DefaultTemplate` which is applied through `ToolTipTemplate`.
 
 <img alt="Customizing ToolTip with ToolTipTemplateSelector in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector2.png"  width="404"/>
 
-The below image refers the `AlternateTemplate` which is applied through `ToolTipTemplate`.
+The following image shows the `AlternateTemplate` which is applied through `ToolTipTemplate`.
 
 <img alt="Displaying AlternateTemplate for ToolTip in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector1.png" width="404"/>
 
-## ToolTipDelay
+## ToolTip Delay
 
 You can control how long the grid waits before showing a tooltip using the `SfDataGrid.TooltipDelay` property. The value is specified in milliseconds and applies to hover delay on Windows and macOS only. On touch platforms (Android/iOS) tooltips are shown via long-press and `TooltipDelay` is not applicable.
 
 This will be helpful for other interactions (such as context menu popups, sorting, etc.) to perform without any interference.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        ShowToolTip="True"
@@ -290,7 +290,7 @@ The [CellToolTipOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
 * `Cancel`: Gets or sets a value indicating whether the tooltip should be displayed. Set to `true` to prevent the tooltip from showing.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        ShowToolTip="True"
