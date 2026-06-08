@@ -134,7 +134,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight c# hl_lines="6 22" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -224,7 +224,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight c# hl_lines="6 22" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -438,40 +438,6 @@ Here is the result of the previous codes,
 <img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">
 
 You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
-
-## Loading the SfDataGrid with customized height and width
-
-The SfDataGrid can be loaded with specific heights and widths inside different layouts using the `SfDataGrid.HeightRequest` and `SfDataGrid.WidthRequest` properties.
-
-The following code example illustrates how this can be done:
-
-{% tabs %}
-{% highlight xaml %}
-<ContentPage.BindingContext>
-    <local:OrderInfoRepository x:Name="viewModel" />
-</ContentPage.BindingContext>
-
-<ContentPage.Content>
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
-                        HeightRequest="290"
-                        WidthRequest="200"/>
-</ContentPage.Content>
-{% endhighlight %}
-
-{% highlight c# %}
-public MainPage()
-{
-    InitializeComponent();
-    OrderInfoRepository viewModel = new OrderInfoRepository();
-    SfDataGrid dataGrid = new SfDataGrid();
-    dataGrid.ItemsSource = viewModel.OrderInfoCollection;
-    dataGrid.HeightRequest = 290;
-    dataGrid.WidthRequest = 200;
-    this.Content = dataGrid;
-}
-{% endhighlight %}
-{% endtabs %}
 
 N> Set `HorizontalOptions` and `VerticalOptions` to grid accordingly. When the `SfDataGrid` doesn't obtain finite size from its parent to layout in the View, the predefined `MinimumHeightRequest` and `MinimumWidthRequest`, which is 300, will be acquired.
 
