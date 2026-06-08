@@ -32,7 +32,7 @@ The SfPicker enables or disables the column header section by setting the SfPick
 {% endhighlight %}
 {% endtabs %}
 
-   ![Set Column header in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header.png)
+![Set Column header in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header.png)
 
 ## Column header customization
 
@@ -118,7 +118,7 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 
    ![Column header divider color in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-divider-color.png)
 
-### Custom Column Header Appearance using Datatemplate
+### Custom Column Header Appearance using Data template
 
 You can customize the picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
