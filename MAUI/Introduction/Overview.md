@@ -11,38 +11,17 @@ documentation: UG
 
 Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive suite of .NET MAUI components for building modern, cross-platform applications. It offers a wide range of high-performance, feature-rich controls such as Charts, DataGrid, Scheduler, Gauges, and Tab View. These controls help developers create visually appealing, responsive, and scalable applications with ease.
 
-![.NET MAUI banner preview.](Images/.net-maui-banner.png){:width="900" height="500" loading="lazy" class="right-section-image" }
-
-
+![.NET MAUI banner preview.](Images/.net-maui-banner.png)
 
 ## Supported Platforms
 
-<table>
-    <thead>
-        <tr>
-            <th>Target Platform</th>
-            <th>Supported Version</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Android</td>
-            <td>5.0 (API 21) or higher</td>
-        </tr>
-        <tr>
-            <td>iOS</td>
-            <td>12.2 or higher</td>
-        </tr>
-        <tr>
-            <td>macOS (Mac Catalyst)</td>
-            <td>macOS 12 or higher</td>
-        </tr>
-        <tr>
-            <td>Windows</td>
-            <td>Windows 11 and Windows 10 version 1809 or higher (WinUI 3)</td>
-        </tr>
-    </tbody>
-</table>
+| Target Platform | Supported Version |
+|----------------|------------------|
+| Android        | 5.0 (API 21) or higher |
+| iOS            | 12.2 or higher |
+| macOS (Mac Catalyst) | macOS 12 or higher |
+| Windows        | Windows 11 and Windows 10 version 1809 or higher |
+
 
 ## Controls List
 
@@ -72,7 +51,7 @@ vertical-align: top;
     font-weight: 500 !important;
     border: 0 !important;
     line-height: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 0px;
 }
 .category {
@@ -185,9 +164,9 @@ line-height: 1;
 <col style="width: 25%">
 <col style="width: 25%">
 <col style="width: 25%">
-<col style="width: 25%">
 </colgroup>
 </tbody>
+
 <tr>
 <td>
 <!-- Smart Components -->
@@ -468,6 +447,8 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-pull-refresh"></span>Pull to Refresh
     </a>
 </div>
+</td>
+<td>
 <!-- Conversational UI -->
 <div>
     <p class="category-topics">CONVERSATIONAL UI</p>
@@ -482,8 +463,6 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-ai-assistance"></span>AI AssistView
     </a>
 </div>
-</td>
-<td>
 <!-- Data Visualization -->
 <div>
     <p class="category-topics">DATA VISUALIZATION</p>
@@ -589,6 +568,7 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-markdown-viewer"></span>Markdown Viewer
     </a>
 </div>
+
 <!--Miscellaneous-->
 <div>
     <p class="category-topics">MISCELLANEOUS</p>
@@ -610,6 +590,7 @@ line-height: 1;
 </div>
 </td>
 </tr>
+
 </table>
 
 
@@ -619,6 +600,7 @@ line-height: 1;
 .form-card {
    flex: 0 0 calc(33.33% - 14px);
    border: 1px solid #ddd;
+   background: ;
    border-radius: 12px;
    overflow: hidden;
    background: white;
@@ -782,19 +764,23 @@ line-height: 1;
 
 ## Support and feedback
 
-If you cannot find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://support.syncfusion.com/support/tickets/create).
+<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+<a href="https://support.syncfusion.com/support/tickets/create" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Support Ticket</h3>
+    <div class="form-description">
+       Need assistance? Submit a support ticket and our team will help you resolve your issue quickly.
+    </div>
+  </div>
+</a>
 
-If you do not find what you need, please make a request in our [feedback portal](https://www.syncfusion.com/feedback/maui).
-
-## See Also
-
-- [Getting Started with Syncfusion® .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/getting-started)
-
-- [Getting Started with Syncfusion® .NET MAUI Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/getting-started)
-
-- [Getting Started with Syncfusion® .NET MAUI ListView](https://help.syncfusion.com/maui/listview/getting-started)
-
-- [Getting Started with Syncfusion® .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/getting-started)
-
-- [Getting Started with Syncfusion® .NET MAUI Maps](https://help.syncfusion.com/maui/maps/getting-started)
+<a href="https://www.syncfusion.com/feedback/maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Feedback Portal</h3>
+    <div class="form-description">
+      Have a suggestion or feature request? Share your ideas in our Feedback Portal to help us improve.
+    </div>
+  </div>
+</a>
+</div>
 
