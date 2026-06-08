@@ -309,8 +309,4 @@ You can set the caption of the CheckBox using the [Text](https://help.syncfusion
 
 ![.NET MAUI CheckBox](Images/Getting-Started/simplecheckbox.png) 
 
-## See also 
-
-[How to achieve intermediate state in .NET MAUI CheckBox using MVVM?](https://support.syncfusion.com/kb/article/16162/how-to-achieve-intermediate-state-in-net-maui-checkbox-using-mvvm)
-
-[How to set intermediate state in the .NET MAUI CheckBox?](https://support.syncfusion.com/kb/article/14110/how-to-set-intermediate-state-in-the-net-maui-checkbox)
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-CheckBox)
