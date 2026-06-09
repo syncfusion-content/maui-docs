@@ -34,23 +34,23 @@ Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless expe
 Below is a summary of globalization capabilities supported by Syncfusion<sup>®</sup> .NET MAUI controls:
 
 
-<div>
-    <img src="../Images/full-support.svg" alt="full-support" width="16">
+<div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <img src="../Images/full-support.svg" alt="full-support" width="16" style="display:inline-block;">
     <span>Full Support</span>
 </div>
 
-<div>
-    <img src="../Images/partial-support.svg" alt="partial-support" width="16">
+<div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <img src="../Images/partial-support.svg" alt="partial-support" width="16" style="display:inline-block;">
     <span>Partial Support</span>
 </div>
 
-<div>
-    <img src="../Images/no-support.svg" alt="no-support" width="16">
+<div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <img src="../Images/no-support.svg" alt="no-support" width="16" style="display:inline-block;">
     <span>No Support</span>
 </div>
 
-<div>
-    <img src="../Images/not-applicable.svg" alt="not-applicable" width="16">
+<div style="display:flex; align-items:center; gap:8px;">
+    <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" style="display:inline-block;">
     <span>Not Applicable</span>
 </div>
 
@@ -66,39 +66,39 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/aiassistview/overview">AI AssistView</a></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /><br/></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><a href="/maui/aiassistview/overview">AI AssistView</a></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /><br/></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
 </tr> 
 
 <tr>
-<td><a href="/maui/accordion/overview">Accordion</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /><br/></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><a href="/maui/accordion/overview">Accordion</a></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /><br/></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
 </tr>
 
 <tr>
-<td><a href="/maui/autocomplete/overview">AutoComplete</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /><br/></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><a href="/maui/autocomplete/overview">AutoComplete</a></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /><br/></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
 </tr> 
 
 <tr>
-<td><a href="/maui/avatar-view/overview">Avatar View</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><a href="/maui/avatar-view/overview">Avatar View</a></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
 </tr> 
 
 <tr>
@@ -441,7 +441,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /><br/></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<tr>
+</tr>
 
 <tr>
 <td><a href="/maui/popup/overview">Popup</a></td>
@@ -695,16 +695,17 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /><br/></td>
 </tr> 
 
-</table>
+</table>  
 
-## See Also
 
-- [Syncfusion® Licensing in .NET MAUI](https://help.syncfusion.com/maui/licensing/overview)
+## See Also  
 
-- [Future Release Plans in .NET MAUI](https://www.syncfusion.com/products/roadmap/maui-controls)
+- [Syncfusion® Licensing in .NET MAUI](https://help.syncfusion.com/maui/licensing/overview)  
 
-- [Essential Studio UI Kit for .NET MAUI](https://help.syncfusion.com/maui/uikit/overview)
+- [Future Release Plans in .NET MAUI](https://www.syncfusion.com/products/roadmap/maui-controls)  
 
-- [Syncfusion® Essential Studio® for .NET MAUI](https://help.syncfusion.com/maui/introduction/overview) 
+- [Essential Studio UI Kit for .NET MAUI](https://help.syncfusion.com/maui/uikit/overview)  
 
-- [Applying Themes in MAUI Controls](https://help.syncfusion.com/maui/themes/themes)
+- [Syncfusion® Essential Studio® for .NET MAUI](https://help.syncfusion.com/maui/introduction/overview)  
+
+- [Applying Themes in MAUI Controls](https://help.syncfusion.com/maui/themes/themes)  
