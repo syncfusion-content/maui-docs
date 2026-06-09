@@ -38,27 +38,6 @@ Before proceeding, ensure the following are set up:
 2.  Search for [Syncfusion.Maui.DataGrid](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-Register the Syncfusion core handler in your MauiProgram.cs file to use Syncfusion controls. Make sure to add the namespace [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/).
-
-{% highlight c# %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Import the DataGrid namespace
-
-Add the following namespace in your XAML or C#.
-
-{% tabs %}
-{% highlight xaml tabtitle="xaml" %}
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-{% endhighlight %}
-{% highlight c# tabtitle="C#" %}
-using Syncfusion.Maui.DataGrid;
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -85,27 +64,6 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.DataGrid` to install the Syncfusion<sup>®</sup> .NET MAUI DataGrid package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-Register the Syncfusion core handler in your MauiProgram.cs file to use Syncfusion controls. Make sure to add the namespace [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/).
-
-{% highlight c# %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Import the DataGrid namespace
-
-Add the following namespace in your XAML or C#.
-
-{% tabs %}
-{% highlight xaml tabtitle="xaml" %}
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-{% endhighlight %}
-{% highlight c# tabtitle="C#" %}
-using Syncfusion.Maui.DataGrid;
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% tabcontent JetBrains Rider %}
@@ -130,6 +88,9 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.DataGrid](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
+{% endtabcontent %}
+{% endtabcontents %}
+
 ## Step 3: Register the handler
 
 Register the Syncfusion core handler in your MauiProgram.cs file to use Syncfusion controls. Make sure to add the namespace [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/).
@@ -150,9 +111,6 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Mau
 using Syncfusion.Maui.DataGrid;
 {% endhighlight %}
 {% endtabs %}
-
-{% endtabcontent %}
-{% endtabcontents %}
 
 ## Step 5: Define the View Model
 
