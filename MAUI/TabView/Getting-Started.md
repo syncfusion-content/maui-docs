@@ -41,7 +41,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
+{% highlight C# %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -132,7 +132,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
+{% highlight C# %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -221,7 +221,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
+{% highlight C# %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -299,9 +299,10 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
         xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <tabView:SfTabView x:Name="tabView">
         <tabView:SfTabView.Items>
-            <tabView:SfTabItem Header="Call"/>
+            <tabView:SfTabItem Header="Call">
+                <Grid BackgroundColor="Red" />
+            </tabView:SfTabItem>
             <tabView:SfTabItem Header="Favorites">
-                <tabView:SfTabItem.Content>
                     <CollectionView>
                         <CollectionView.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
@@ -315,17 +316,19 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                     <Grid Margin="10,5" HeightRequest="40">
-                                        <Label TextColor="#666666" FontSize="16" Text="{Binding}"/>
+                                        <Label
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="Start"
+                                            TextColor="#666666"
+                                            FontSize="16"
+                                            Text="{Binding}"/>
                                     </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                </tabView:SfTabItem.Content>
             </tabView:SfTabItem>
             <tabView:SfTabItem Header="Contacts">
-                <tabView:SfTabItem.Content>
                     <Grid BackgroundColor="Blue"/>
-                </tabView:SfTabItem.Content>
             </tabView:SfTabItem>
         </tabView:SfTabView.Items>
     </tabView:SfTabView>
@@ -390,7 +393,7 @@ namespace TabViewGettingStarted
 
 ![Getting started with .NET MAUI Tab View.](images/net-maui-tab-view-getting-started.png)
 
-N> You can download the demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewItemTemplateSample). You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
+N> You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewGettingStarted). You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
 
 ## See also 
 

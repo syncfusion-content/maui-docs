@@ -359,8 +359,6 @@ this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 
-You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/GettingStarted)
-
-N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain the binding between DataForm and DataObject.
+N> When publishing in AOT mode on iOS and macOS, ensure that [Preserve(AllMembers = true)] is added to the model class to maintain the binding between DataForm and DataObject. [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/GettingStarted)
 
 N> You can refer to our [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataForm example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataForm) that shows you how to render and configure the DataForm.

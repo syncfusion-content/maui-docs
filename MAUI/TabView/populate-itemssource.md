@@ -329,3 +329,5 @@ public class TabItemViewModel : INotifyPropertyChanged
 {% endtabs %}
 
 ![DataTemplateSelector in .NET MAUI Tab View.](images/DataTemplateSelector.png)
+
+N> You can download the demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewItemTemplateSample).

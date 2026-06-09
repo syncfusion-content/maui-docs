@@ -304,10 +304,8 @@ The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                 <gauge:SfLinearGauge.Ranges>
                     <gauge:LinearRange/>
                 </gauge:SfLinearGauge.Ranges>
-
                 <gauge:SfLinearGauge.MarkerPointers>
                     <gauge:LinearShapePointer Value="70"/>
-
                     <gauge:LinearContentPointer Value="80">
                         <gauge:LinearContentPointer.Content>
                             <Image Source="pin.png" HeightRequest="20" 
@@ -315,7 +313,6 @@ The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                         </gauge:LinearContentPointer.Content>
                     </gauge:LinearContentPointer>
                 </gauge:SfLinearGauge.MarkerPointers>
-
                 <gauge:SfLinearGauge.BarPointers>
                     <gauge:BarPointer Value = "60"/>
                 </gauge:SfLinearGauge.BarPointers>
@@ -349,12 +346,6 @@ The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% endhighlight %}
 
 {% endtabs %}
-
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Linear Gauge will be displayed with the data provided.
-
-Here is the result of the previous codes,
 
 ![.NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
 

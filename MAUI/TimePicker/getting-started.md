@@ -74,7 +74,7 @@ namespace GettingStarted
 2. Initialize [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -84,7 +84,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -175,7 +175,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -255,7 +255,7 @@ namespace GettingStarted
 2. Initialize [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -264,7 +264,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.Picker;
 . . .

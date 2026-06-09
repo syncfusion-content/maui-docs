@@ -323,7 +323,7 @@ The following screenshot illustrates the result of the above code.
 
 ![MAUI SfCardView image](images/maui-card-initial.png)
 
-## Step 5: Define the CardLayout
+## Step 5: Define the card layout
 
 Initialize a card layout with a card view using the provided code sample below.
 
