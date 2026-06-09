@@ -16,10 +16,10 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI AI-Powered Scheduler](https://help.syn
 
 ## Business use cases
 
-- Enterprise applications that require **intelligent scheduling with natural language input for faster task management**.  
-- Booking systems that support **resource-aware scheduling such as rooms, equipment, or personnel availability**.  
-- Productivity and calendar applications that provide **smart insights such as conflict detection and availability suggestions**.  
-- Business tools that require **automated scheduling assistance and summarization of appointments**.  
+- Enterprise applications that require intelligent scheduling with natural language input for faster task management.  
+- Booking systems that support resource-aware scheduling such as rooms, equipment, or personnel availability.  
+- Productivity and calendar applications that provide smart insights such as conflict detection and availability suggestions.  
+- Business tools that require automated scheduling assistance and summarization of appointments.  
 
 ## Key features
 
@@ -33,7 +33,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI AI-Powered Scheduler](https://help.syn
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfSmartScheduler](https://www.syncfusion.com/maui-controls/maui-smart-scheduler) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 
@@ -58,20 +58,20 @@ The following table summarizes the globalization support available in the [SfSma
 
 ## Related controls
 
-- **[Scheduler](https://help.syncfusion.com/maui/scheduler/overview)** for traditional scheduling and calendar-based appointment management.  
-- **[SmartDataGrid](https://help.syncfusion.com/maui/smartdatagrid/overview)** for AI-driven data analysis and interaction in tabular form.  
-- **[Calendar](https://help.syncfusion.com/maui/calendar/overview)** for basic date selection and navigation interfaces.  
+- [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for traditional scheduling and calendar-based appointment management.  
+- [SmartDataGrid](https://help.syncfusion.com/maui/smartdatagrid/overview) for AI-driven data analysis and interaction in tabular form.  
+- [Calendar](https://help.syncfusion.com/maui/calendar/overview) for basic date selection and navigation interfaces.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/smartscheduler/getting-started) - step-by-step guide to begin using the AI-Powered Scheduler control.  
-- [Smart Scheduler](https://help.syncfusion.com/maui/smartscheduler/working-with-smart-scheduler) - learn how AI helps auto‑schedule tasks and events.  
-- [Styles](https://help.syncfusion.com/maui/smartscheduler/styles) - customize look and feel to match your app design. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/smartscheduler/getting-started) shows a step‑by‑step guide to begin using the AI‑Powered Scheduler control.  
+- [Smart Scheduler](https://help.syncfusion.com/maui/smartscheduler/working-with-smart-scheduler) explains how AI helps auto‑schedule tasks and events.  
+- [Styles](https://help.syncfusion.com/maui/smartscheduler/styles) helps customize look and feel to match your app design.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -191,24 +191,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-smart-scheduler" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -217,7 +199,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -226,12 +208,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/smart-scheduler" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

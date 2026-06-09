@@ -15,10 +15,10 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeMap](https://www.syncfusion.com/ma
 
 ## Business use cases
 
-- Business intelligence applications that require **visualizing hierarchical data such as categories, subcategories, and performance metrics**.  
-- Financial dashboards that display **portfolio distribution, revenue contribution, or market segmentation**.  
-- Analytics applications that require **comparing proportional values across grouped datasets**.  
-- Data-driven applications that need **efficient visualization of large hierarchical datasets in a compact layout**.  
+- Business intelligence applications that require visualizing hierarchical data such as categories, subcategories, and performance metrics.  
+- Financial dashboards that display portfolio distribution, revenue contribution, or market segmentation.  
+- Analytics applications that require comparing proportional values across grouped datasets.  
+- Data-driven applications that need efficient visualization of large hierarchical datasets in a compact layout.  
   
 ## Key features 
  
@@ -51,7 +51,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeMap](https://www.syncfusion.com/ma
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
@@ -78,20 +78,20 @@ The following table summarizes the globalization support available in the [SfTre
 
 ## Related controls
 
-- **[Sunburst Chart](https://help.syncfusion.com/maui/sunburstchart/overview)** for visualizing hierarchical data using a radial layout.
-- **[Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview)** for analyzing data trends using axis-based charts.
-- **[Maps](https://help.syncfusion.com/maui/maps/overview)** for visualizing location-based hierarchical data.  
+- [Sunburst Chart](https://help.syncfusion.com/maui/sunburstchart/overview) for visualizing hierarchical data using a radial layout.
+- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for analyzing data trends using axis-based charts.
+- [Maps](https://help.syncfusion.com/maui/maps/overview) for visualizing location-based hierarchical data.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/treemap/getting-started) - step-by-step guide to begin using the TreeMap control.
-- [Layouts](https://help.syncfusion.com/maui/treemap/layouts) - configure layout types and data arrangement.  
-- [Drilldown](https://help.syncfusion.com/maui/treemap/drilldown) - Drilldown – dive into details by exploring data hierarchies step by step. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/treemap/getting-started) shows a step‑by‑step guide to begin using the TreeMap control.  
+- [Layouts](https://help.syncfusion.com/maui/treemap/layouts) explains how to configure layout types and data arrangement.  
+- [Drilldown](https://help.syncfusion.com/maui/treemap/drilldown) helps dive into details by exploring data hierarchies step by step.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.  
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -211,24 +211,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-tree-map" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -237,7 +219,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/TreeMap" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -246,12 +228,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/treemap" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

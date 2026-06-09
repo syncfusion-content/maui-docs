@@ -10,14 +10,16 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # .NET MAUI Color Picker (SfColorPicker) Overview
 
-The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) is a UI component that enables users to select a color from various color palettes or a spectrum. It is particularly useful in design, drawing, or customization scenarios within .NET MAUI applications.
+The [.NET MAUI Color Picker](https://www.syncfusion.com/maui-controls/maui-colorpicker) is a UI component that enables users to select a color from various color palettes or a spectrum. It is particularly useful in design, drawing, or customization scenarios within .NET MAUI applications.
+
+   ![.NET MAUI Color Picker](Images/Overview/Spectrum.png)
 
 ## Business use cases
 
-- Design and drawing applications that require **accurate color selection and customization tools**.  
-- Theme configuration systems that allow users to **personalize application appearance using color settings**.  
-- Data visualization tools that require **color selection for charts, indicators, and UI elements**.  
-- Form-based applications that allow users to **choose colors for preferences or customization settings**.  
+- Design and drawing applications that require accurate color selection and customization tools.  
+- Theme configuration systems that allow users to personalize application appearance using color settings.  
+- Data visualization tools that require color selection for charts, indicators, and UI elements.  
+- Form-based applications that allow users to choose colors for preferences or customization settings.  
 
 ## Key features
 
@@ -31,11 +33,9 @@ The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 - **Interaction control** allows enabling or disabling user interaction programmatically.  
 - **Inline mode support** allows embedding the color picker directly within the UI layout without requiring a popup.  
 
-    ![.NET MAUI Color Picker](Images/Overview/Spectrum.png)
-
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfColorPicker](https://www.syncfusion.com/maui-controls/maui-colorpicker) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
@@ -62,19 +62,20 @@ The following table summarizes the globalization support available in the [SfCol
 
 ## Related controls
 
-- **[Buttons](https://help.syncfusion.com/maui/button/overview)** for applying selected colors to interactive UI elements.  
-- **[Chips](https://help.syncfusion.com/maui/chips/overview)** for using selected colors in tags and category displays.    
+- [Buttons](https://help.syncfusion.com/maui/button/overview) for applying selected colors to interactive UI elements.  
+- [Chips](https://help.syncfusion.com/maui/chips/overview) for using selected colors in tags and category displays.  
+- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for picking values from a dropdown list with flexible selection.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) - step-by-step guide to begin using the Color Picker control. 
-- [Modes](https://help.syncfusion.com/maui/colorpicker/mode) - understand palette and spectrum selection modes.  
-- [Customization](https://help.syncfusion.com/maui/colorpicker/customization) - customize appearance and behavior of the control.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) shows a step‑by‑step guide to begin using the Color Picker control.  
+- [Modes](https://help.syncfusion.com/maui/colorpicker/mode) explains palette and spectrum selection modes.  
+- [Customization](https://help.syncfusion.com/maui/colorpicker/customization) helps customize appearance and behavior of the control.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -194,24 +195,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-colorpicker" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -220,12 +203,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/color-picker" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

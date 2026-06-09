@@ -9,14 +9,14 @@ documentation: ug
 
 # Overview of .NET MAUI Date Picker (SfDatePicker)
 
-Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control allows you to select a date and visualize its items inside a popup or a drop-down UI element. The Date Picker also enables you to set date ranges and formats and customize its dialog appearance by configuring its header, footer, and more.
+Syncfusion<sup>&reg;</sup> [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) (SfDatePicker) control allows you to select a date and visualize its items inside a popup or a drop-down UI element. The Date Picker also enables you to set date ranges and formats and customize its dialog appearance by configuring its header, footer, and more.
 
 ## Business use cases
 
-- Booking and reservation applications that require **date selection with validation and range restrictions**.  
-- Form-based applications that need **user-friendly date input for registration, scheduling, or data entry**.  
-- Business applications that use **date-based filtering and reporting workflows**.  
-- Mobile and desktop apps that require **consistent and customizable date selection UI across platforms**. 
+- Booking and reservation applications that require date selection with validation and range restrictions.  
+- Form-based applications that need user-friendly date input for registration, scheduling, or data entry.  
+- Business applications that use date-based filtering and reporting workflows.  
+- Mobile and desktop apps that require consistent and customizable date selection UI across platforms. 
 
 ## Key features
 
@@ -60,7 +60,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control allows y
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 
@@ -85,20 +85,20 @@ The following table summarizes the globalization support available in the [SfDat
 
 ## Related controls
 
-- **[DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview)** for selecting both date and time values.  
-- **[Calendar](https://help.syncfusion.com/maui/calendar/overview)** for navigating and selecting dates using full calendar views.  
-- **[DataForm](https://help.syncfusion.com/maui/dataform/overview)** for integrating date picker inputs within forms.  
+- [DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting both date and time values.  
+- [Calendar](https://help.syncfusion.com/maui/calendar/overview) for navigating and selecting dates using full calendar views.  
+- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating date picker inputs within forms.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/datepicker/getting-started) - step-by-step guide to begin using the Date Picker control.  
-- [Formatting](https://help.syncfusion.com/maui/datepicker/formatting) - configure how date values are displayed.  
-- [Customization](https://help.syncfusion.com/maui/datepicker/customizations) - modify appearance and interaction behavior. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/datepicker/getting-started) shows a step‑by‑step guide to begin using the Date Picker control.  
+- [Formatting](https://help.syncfusion.com/maui/datepicker/formatting) explains how to configure how date values are displayed.  
+- [Customization](https://help.syncfusion.com/maui/datepicker/customizations) helps modify appearance and interaction behavior.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -218,24 +218,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-datepicker" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -244,12 +226,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/date-picker" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

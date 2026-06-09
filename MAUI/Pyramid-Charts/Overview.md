@@ -13,10 +13,10 @@ Syncfusion® .NET MAUI Chart (SfPyramidChart) is used to create the beautiful py
 
 ## Business use cases
 
-- Business analytics applications that require **visualizing hierarchical data such as stages or levels in a process**.  
-- Sales and marketing dashboards that display **conversion rates and drop-off analysis across stages**.  
-- Reporting tools that present **proportional distribution of values in a structured pyramid layout**.  
-- Enterprise applications that require **clear visualization of contribution percentages within a dataset**.  
+- Business analytics applications that require visualizing hierarchical data such as stages or levels in a process.  
+- Sales and marketing dashboards that display conversion rates and drop-off analysis across stages.  
+- Reporting tools that present proportional distribution of values in a structured pyramid layout.  
+- Enterprise applications that require clear visualization of contribution percentages within a dataset.  
 
 ## Key features
 
@@ -27,7 +27,7 @@ Syncfusion® .NET MAUI Chart (SfPyramidChart) is used to create the beautiful py
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfPyramidChart](https://www.syncfusion.com/maui-controls/maui-pyramid-charts) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
 <img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
@@ -53,20 +53,20 @@ The following table summarizes the globalization support available in the [SfPyr
 
 ## Related controls
 
-- **[Funnel Charts](https://help.syncfusion.com/maui/funnel-charts/overview)** for visualizing process stages and conversion flows using funnel charts.  
-- **[Circular Charts](https://help.syncfusion.com/maui/cartesian-charts/overview)** for representing proportional data using pie and doughnut charts.  
-- **[Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** for visualizing data trends and comparisons using axis-based charts.  
+- [Funnel Charts](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing process stages and conversion flows using funnel charts.  
+- [Circular Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for representing proportional data using pie and doughnut charts.  
+- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/getting-started) for visualizing data trends and comparisons using axis-based charts.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/pyramid-charts/getting-started) - step-by-step guide to begin using the Pyramid Chart control.
-- [Customization](https://help.syncfusion.com/maui/pyramid-charts/appearance) - customize chart appearance and behavior.  
-- [Labels](https://help.syncfusion.com/maui/pyramid-charts/datalabels) - configure data labels and segment details. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/pyramid-charts/getting-started) shows a step‑by‑step guide to begin using the Pyramid Chart control.  
+- [Customization](https://help.syncfusion.com/maui/pyramid-charts/appearance) explains how to customize chart appearance and behavior.  
+- [Labels](https://help.syncfusion.com/maui/pyramid-charts/datalabels) helps configure data labels and segment details.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -186,24 +186,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-pyramid-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -212,7 +194,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/PyramidChart" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -221,12 +203,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/funnel-pyramid-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

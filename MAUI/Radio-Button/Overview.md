@@ -10,12 +10,14 @@ control: SfRadioButton
 
 The .NET MAUI Radio Button is a selection control that allows users to select one option from a set. The two states of the Radio Button are checked and unchecked.
 
+   ![.NET MAUI Radio Button](Images/Getting-Started/radiobuttonoverview.png)
+
 ## Business use cases
 
-- Form-based applications that require **single selection from multiple options such as gender, plan type, or preferences**.  
-- Survey and questionnaire systems that collect **user responses using exclusive selection inputs**.  
-- Settings pages that allow users to **choose one option from predefined configurations**.  
-- Business applications that require **clear and structured decision-based input controls**.  
+- Form-based applications that require single selection from multiple options such as gender, plan type, or preferences.  
+- Survey and questionnaire systems that collect user responses using exclusive selection inputs.  
+- Settings pages that allow users to choose one option from predefined configurations.  
+- Business applications that require clear and structured decision-based input controls.  
 
 ## Key features
 
@@ -24,11 +26,9 @@ The .NET MAUI Radio Button is a selection control that allows users to select on
 - **Appearance customization** allows modifying color and label text to match application themes.  
 - **Grouped behavior** allows logically grouping radio buttons for exclusive selection scenarios.  
 
-   ![.NET MAUI Radio Button](Images/Getting-Started/radiobuttonoverview.png)
-
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfRadioButton](https://www.syncfusion.com/maui-controls/maui-radio-button) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support    
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -54,20 +54,20 @@ The following table summarizes the globalization support available in the [SfRad
 
 ## Related controls
 
-- **[CheckBox](https://help.syncfusion.com/maui/checkbox/overview)** for handling multiple selection scenarios.  
-- **[Switch](https://help.syncfusion.com/maui/switch/overview)** for toggle-based on and off interactions.  
-- **[DataForm](https://help.syncfusion.com/maui/dataform/overview)** for integrating selection controls within forms.  
+- [CheckBox](https://help.syncfusion.com/maui/checkbox/overview) for handling multiple selection scenarios.  
+- [Switch](https://help.syncfusion.com/maui/switch/overview) for toggle-based on and off interactions.  
+- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating selection controls within forms.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/radio-button/getting-started) - step-by-step guide to begin using the Radio Button control.  
-- [Customization](https://help.syncfusion.com/maui/radio-button/visual-customization) - customize appearance and behavior.  
-- [Grouping](https://help.syncfusion.com/maui/radio-button/grouping) - configure grouping and selection logic.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/radio-button/getting-started) shows a step‑by‑step guide to begin using the Radio Button control.  
+- [Customization](https://help.syncfusion.com/maui/radio-button/visual-customization) explains how to customize appearance and behavior.  
+- [Grouping](https://help.syncfusion.com/maui/radio-button/grouping) helps configure grouping and selection logic.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -187,24 +187,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-radio-button" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -213,12 +195,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/radio-button" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

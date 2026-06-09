@@ -13,10 +13,10 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control allows y
 
 ## Business use cases
 
-- Scheduling applications that require **time selection for appointments, meetings, or reminders**.  
-- Booking systems that allow users to **choose available time slots efficiently**.  
-- Form-based applications that collect **time inputs such as start and end times**.  
-- Business applications that require **customizable time selection UI with validation and formatting**. 
+- Scheduling applications that require time selection for appointments, meetings, or reminders.  
+- Booking systems that allow users to choose available time slots efficiently.  
+- Form-based applications that collect time inputs such as start and end times.  
+- Business applications that require customizable time selection UI with validation and formatting. 
 
 ## Key features
 
@@ -55,7 +55,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control allows y
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfTimePicker](https://www.syncfusion.com/maui-controls/maui-timepicker) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 
@@ -80,20 +80,20 @@ The following table summarizes the globalization support available in the [SfTim
 
 ## Related controls
 
-- **[Date Picker](https://help.syncfusion.com/maui/datepicker/overview)** for selecting date values in applications.  
-- **[DateTime Picker](https://help.syncfusion.com/maui/datetimepicker/overview)** for selecting combined date and time values.  
-- **[Picker](https://help.syncfusion.com/maui/picker/overview)** for general-purpose item selection.  
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date values in applications.  
+- [DateTime Picker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting combined date and time values.  
+- [Picker](https://help.syncfusion.com/maui/picker/overview) for general-purpose item selection.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/timepicker/getting-started) - step-by-step guide to begin using the Time Picker control.
-- [Customization](https://help.syncfusion.com/maui/timepicker/customizations) - customize layout and appearance.
-- [Formatting](https://help.syncfusion.com/maui/timepicker/formatting) - configure time formats and intervals.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/timepicker/getting-started) shows a step‑by‑step guide to begin using the Time Picker control.  
+- [Customization](https://help.syncfusion.com/maui/timepicker/customizations) explains how to customize layout and appearance.  
+- [Formatting](https://help.syncfusion.com/maui/timepicker/formatting) helps configure time formats and intervals.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -213,24 +213,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-timepicker" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -239,7 +221,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -248,12 +230,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/time-picker" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

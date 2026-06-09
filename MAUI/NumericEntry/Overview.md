@@ -17,10 +17,10 @@ The [.NET MAUI NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 ## Business use cases
 
-- Financial applications that require **currency, percentage, or decimal value input with validation**.  
-- Form-based applications that collect **numeric data such as quantity, price, or measurements**.  
-- Business systems that enforce **accurate numeric input with formatting and validation rules**.  
-- Data-driven applications that require **increment and decrement functionality for numeric adjustments**.  
+- Financial applications that require currency, percentage, or decimal value input with validation.  
+- Form-based applications that collect numeric data such as quantity, price, or measurements.  
+- Business systems that enforce accurate numeric input with formatting and validation rules.  
+- Data-driven applications that require increment and decrement functionality for numeric adjustments.  
 
 ## Key features
 
@@ -32,7 +32,7 @@ The [.NET MAUI NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfNumericEntry](https://www.syncfusion.com/maui-controls/maui-numeric-entry) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -58,19 +58,20 @@ The following table summarizes the globalization support available in the [SfNum
 
 ## Related controls
 
-- **[ComboBox](https://help.syncfusion.com/maui/combobox/overview)** for selecting values from predefined lists.
-- **[MaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview)** for formatted and restricted input scenarios. 
+- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for selecting values from predefined lists.
+- [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) for formatted and restricted input scenarios.
+- [Slider](https://help.syncfusion.com/maui/slider/overview) for selecting numeric values interactively using a sliding control.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) - step-by-step guide to begin using the NumericEntry control.
-- [Features](https://help.syncfusion.com/maui/numericentry/basic-features) - learn core capabilities like validation and culture support.
-- [Formatting](https://help.syncfusion.com/maui/numericentry/formatting) - configure numeric formats and display.    
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) shows a step‑by‑step guide to begin using the NumericEntry control.  
+- [Features](https://help.syncfusion.com/maui/numericentry/basic-features) explains core capabilities like validation and culture support.  
+- [Formatting](https://help.syncfusion.com/maui/numericentry/formatting) helps configure numeric formats and display.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -190,24 +191,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-numeric-entry" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -216,7 +199,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/numeric-entry" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
@@ -225,4 +208,21 @@ Explore further resources:
     </div>
   </div>
 </a>
-
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
+    </div>
+  </div>
+</a>

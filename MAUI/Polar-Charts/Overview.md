@@ -13,10 +13,10 @@ The Syncfusion® .NET MAUI Polar Chart allows for the creation of visually stunn
 
 ## Business use cases
 
-- Analytical applications that require **comparison of multiple data points across categories using radar or spider charts**.  
-- Performance dashboards that display **multidimensional data such as KPIs, scores, or metrics**.  
-- Financial and business applications that track **relative values and distribution using angular visualization**.  
-- Scientific and research applications that require **visualizing cyclic or angular data patterns**.  
+- Analytical applications that require comparison of multiple data points across categories using radar or spider charts.  
+- Performance dashboards that display multidimensional data such as KPIs, scores, or metrics.  
+- Financial and business applications that track relative values and distribution using angular visualization.  
+- Scientific and research applications that require visualizing cyclic or angular data patterns.  
 
 ## Key features
 
@@ -28,7 +28,7 @@ The Syncfusion® .NET MAUI Polar Chart allows for the creation of visually stunn
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfPolarChart](https://www.syncfusion.com/maui-controls/maui-polar-charts) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
 <img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
@@ -54,20 +54,20 @@ The following table summarizes the globalization support available in the [SfPol
 
 ## Related controls
 
-- **[Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview)** for visualizing data using line, column, and bar charts.  
-- **[Circular Chart](https://help.syncfusion.com/maui/circular-charts/overview)** for representing proportional data using pie and doughnut charts.  
-- **[Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview)** for visualizing process stages and conversion flows.
+- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing data using line, column, and bar charts.  
+- [Circular Chart](https://help.syncfusion.com/maui/circular-charts/overview) for representing proportional data using pie and doughnut charts.  
+- [Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing process stages and conversion flows.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started) - step-by-step guide to begin using the Polar Chart control.
-- [Chart Types](https://help.syncfusion.com/maui/polar-charts/polararea) - explore different polar charts types.
-- [Customization](https://help.syncfusion.com/maui/polar-charts/appearance) - customize appearance and interaction settings.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started) shows a step‑by‑step guide to begin using the Polar Chart control.  
+- [Chart Types](https://help.syncfusion.com/maui/polar-charts/polararea) explores different polar chart types.  
+- [Customization](https://help.syncfusion.com/maui/polar-charts/appearance) explains how to customize appearance and interaction settings.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -187,24 +187,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-polar-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -213,7 +195,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/PolarChart" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -222,12 +204,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/polar-radar-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

@@ -11,12 +11,14 @@ documentation: ug
 
 The .NET MAUI Linear ProgressBar shows the progress of a task with custom visuals. It displays the progress of a process in rectangular shapes, determinate and indeterminate states, segments, and smooth animation. You can also define ranges with different colors.
 
+   ![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+
 ## Business use cases
 
-- Data-driven applications that require **visual representation of progress for operations such as loading, uploading, or processing**.  
-- Dashboard applications that display **progress indicators for tasks, goals, or performance metrics**.  
-- Mobile apps that provide **user feedback during background tasks or long-running operations**.  
-- Business workflows that track **step-based or staged progress using linear indicators**.  
+- Data-driven applications that require visual representation of progress for operations such as loading, uploading, or processing.
+- Dashboard applications that display progress indicators for tasks, goals, or performance metrics.  
+- Mobile apps that provide user feedback during background tasks or long-running operations.  
+- Business workflows that track step-based or staged progress using linear indicators.  
 
 ## Key features
 
@@ -24,25 +26,24 @@ The .NET MAUI Linear ProgressBar shows the progress of a task with custom visual
 - **Linear progress visualization** allows displaying progress in a rectangular bar format for clear readability.  
 - **Segmented progress support** allows dividing progress into multiple segments to represent gradual progression.  
 - **Color range customization** allows applying different colors to specific value ranges for better visibility.  
-- **Appearance customization** allows configuring track thickness, color, and corner radius styles.  
-
-    ![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+- **Appearance customization** allows configuring track thickness, color, and corner radius styles. 
 
 ## Related controls
 
-- **[CircularProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview) for displaying circular progress indicators.
-- **[BusyIndicator](https://help.syncfusion.com/maui/busy-indicator/overview) for showing indeterminate loading states.  
+- [CircularProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview) for displaying circular progress indicators.
+- [BusyIndicator](https://help.syncfusion.com/maui/busy-indicator/overview) for showing indeterminate loading states.
+- [Linear Gauge](https://help.syncfusion.com/maui/linear-gauge/overview) for visualizing values using a linear scale with markers and ranges.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/linearprogressbar/getting-started) - step-by-step guide to begin using the Linear ProgressBar control.  
-- [Appearance](https://help.syncfusion.com/maui/linearprogressbar/appearance) - customize appearance and behavior.  
-- [States](https://help.syncfusion.com/maui/linearprogressbar/states) - configure progress states and behavior. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/linearprogressbar/getting-started) shows a step‑by‑step guide to begin using the Linear ProgressBar control.  
+- [Appearance](https://help.syncfusion.com/maui/linearprogressbar/appearance) explains how to customize appearance and behavior.  
+- [States](https://help.syncfusion.com/maui/linearprogressbar/states) helps configure progress states and behavior.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -162,24 +163,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-progressbar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -188,7 +171,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/ProgressBar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -197,12 +180,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/linear-progressbar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

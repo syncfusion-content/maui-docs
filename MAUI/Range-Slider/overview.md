@@ -13,10 +13,10 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.
 
 ## Business use cases
 
-- Data-driven applications that require **filtering values such as price ranges, ratings, or quantities using a slider interface**.  
-- Dashboard applications that allow users to **adjust numeric ranges dynamically for data analysis and visualization**.  
-- E-commerce applications that provide **range-based filtering such as price, discount, or product attributes**.  
-- Configuration screens that require **setting minimum and maximum thresholds for numeric values**.  
+- Data-driven applications that require filtering values such as price ranges, ratings, or quantities using a slider interface.  
+- Dashboard applications that allow users to adjust numeric ranges dynamically for data analysis and visualization.  
+- E-commerce applications that provide range-based filtering such as price, discount, or product attributes.  
+- Configuration screens that require setting minimum and maximum thresholds for numeric values.  
 
 ## Key features
 
@@ -29,20 +29,20 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.
 
 ## Related controls
 
-- **[Range Selector](https://help.syncfusion.com/maui/range-selector/overview)** for selecting ranges with enhanced UI and content integration.
-- **[Slider](https://help.syncfusion.com/maui/slider/overview)** for selecting a single value from a numeric range.  
-- **[NumericEntry](https://help.syncfusion.com/maui/numericentry/overview)** for precise numeric value input and adjustments.
+- [Range Selector](https://help.syncfusion.com/maui/range-selector/overview) for selecting ranges with enhanced UI and content integration.
+- [Slider](https://help.syncfusion.com/maui/slider/overview) for selecting a single value from a numeric range.  
+- [NumericEntry](https://help.syncfusion.com/maui/numericentry/overview) for precise numeric value input and adjustments.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/range-slider/getting-started) - step-by-step guide to begin using the Range Slider control.
-- [Thumb & Overlay](https://help.syncfusion.com/maui/range-slider/thumb-and-overlay) - customize the thumb and its overlay for clear, user‑friendly selection.  
-- [Labels](https://help.syncfusion.com/maui/range-slider/labels) - configure labels and interval display.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/range-slider/getting-started) shows a step‑by‑step guide to begin using the Range Slider control.  
+- [Thumb & Overlay](https://help.syncfusion.com/maui/range-slider/thumb-and-overlay) explains how to customize the thumb and its overlay for clear, user‑friendly selection.  
+- [Labels](https://help.syncfusion.com/maui/range-slider/labels) helps configure labels and interval display.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -162,24 +162,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-range-slider" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -188,12 +170,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/range-slider" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 3 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

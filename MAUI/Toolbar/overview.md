@@ -13,10 +13,10 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Toolbar](https://help.syncfusion.com/c
 
 ## Business use cases
 
-- Applications that require **quick access to common actions such as save, edit, or navigation commands**.  
-- Productivity and editor apps that provide **toolbar-based command execution for user tasks**.  
-- Dashboard applications that expose **frequently used actions in a compact and accessible UI**.  
-- Business applications that require **organized command layouts with support for overflow and responsiveness**.  
+- Applications that require quick access to common actions such as save, edit, or navigation commands.  
+- Productivity and editor apps that provide toolbar-based command execution for user tasks.  
+- Dashboard applications that expose frequently used actions in a compact and accessible UI.  
+- Business applications that require organized command layouts with support for overflow and responsiveness.  
 
 ## Key features
 
@@ -34,7 +34,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Toolbar](https://help.syncfusion.com/c
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfToolbar](https://www.syncfusion.com/maui-controls/maui-toolbar) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -60,19 +60,20 @@ The following table summarizes the globalization support available in the [SfToo
 
 ## Related controls
 
-- **[Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview)** for organizing navigation and actions in a side panel.
-- **[TabView](https://help.syncfusion.com/maui/tabview/overview)** for grouping content and actions within tabbed interfaces.
+- [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for organizing navigation and actions in a side panel.
+- [TabView](https://help.syncfusion.com/maui/tabview/overview) for grouping content and actions within tabbed interfaces.
+- [Button](https://help.syncfusion.com/maui/button/overview) for triggering actions and commands.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/toolbar/getting-started) - step-by-step guide to begin using the Toolbar control.
-- [Toolbar Items](https://help.syncfusion.com/maui/toolbar/toolbar-items) - configure toolbar items and commands.
-- [Customization](https://help.syncfusion.com/maui/toolbar/customization) - customize layout and appearance.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/toolbar/getting-started) shows a step‑by‑step guide to begin using the Toolbar control.  
+- [Toolbar Items](https://help.syncfusion.com/maui/toolbar/toolbar-items) explains how to configure toolbar items and commands.  
+- [Customization](https://help.syncfusion.com/maui/toolbar/customization) helps customize layout and appearance.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -192,24 +193,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-toolbar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -218,7 +201,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Toolbar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -227,12 +210,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/toolbar" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

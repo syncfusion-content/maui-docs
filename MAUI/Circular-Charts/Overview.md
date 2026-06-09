@@ -9,14 +9,14 @@ documentation: ug
 
 # .NET MAUI Circular Chart Overview
 
-Syncfusion® .NET MAUI Charts (SfCircularChart) is used to create the chart with beautiful and enhanced UI visualization of data that are used in high-quality .NET MAUI applications.
+Syncfusion® [.NET MAUI Charts](https://www.syncfusion.com/maui-controls/maui-circular-charts) (SfCircularChart) is used to create the chart with beautiful and enhanced UI visualization of data that are used in high-quality .NET MAUI applications.
 
 ## Business use cases
 
-- Business dashboards that require **proportion-based data visualization using pie or doughnut charts**.  
-- Financial applications that display **distribution of expenses, revenue, or category-based data**.  
-- Analytics tools that present **comparative insights using percentage-based charts**.  
-- Reporting applications that require **easy-to-understand graphical representation of segmented data**.  
+- Business dashboards that require proportion-based data visualization using pie or doughnut charts.  
+- Financial applications that display distribution of expenses, revenue, or category-based data.  
+- Analytics tools that present comparative insights using percentage-based charts.  
+- Reporting applications that require easy-to-understand graphical representation of segmented data.  
 
 ## Key features
 
@@ -27,7 +27,7 @@ Syncfusion® .NET MAUI Charts (SfCircularChart) is used to create the chart with
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfCircularChart](https://www.syncfusion.com/maui-controls/maui-circular-charts) control.
+The following table summarizes the globalization support available in this control.
  
 <img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
 <img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
@@ -53,20 +53,20 @@ The following table summarizes the globalization support available in the [SfCir
 
 ## Related controls
 
-- **[Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview)** for trend analysis, comparisons, and multi‑series data visualization using X and Y axes.
-- **[Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview)** for visualizing stages in a process or pipeline.
-- **[Pyramid Chart](https://help.syncfusion.com/maui/pyramid-charts/overview)** for hierarchical or comparative data representation.  
+- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for trend analysis, comparisons, and multi‑series data visualization using X and Y axes.
+- [Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing stages in a process or pipeline.
+- [Pyramid Chart](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.  
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/circular-charts/getting-started) - step-by-step guide to begin using the Circular Chart control.  
-- [Pie Chart](https://help.syncfusion.com/maui/circular-charts/piechart) - create simple part‑to‑whole visualizations with clear category splits.  
-- [Doughnut Chart](https://help.syncfusion.com/maui/circular-charts/doughnutchart) - highlight proportions with a modern ring‑style chart for better readability.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/circular-charts/getting-started) shows a step‑by‑step guide to begin using the Circular Chart control.  
+- [Pie Chart](https://help.syncfusion.com/maui/circular-charts/piechart) creates simple part‑to‑whole visualizations with clear category splits.  
+- [Doughnut Chart](https://help.syncfusion.com/maui/circular-charts/doughnutchart) highlights proportions with a modern ring‑style chart for better readability.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -186,24 +186,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-circular-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -212,7 +194,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/CircularChart" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -221,12 +203,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/circular-charts" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>

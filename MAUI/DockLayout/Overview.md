@@ -11,24 +11,24 @@ documentation: ug
 
 The .NET MAUI [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) is a versatile and powerful layout control that enables developers to arrange and dock child elements in a defined area, providing a robust framework for designing complex user interfaces in both mobile and desktop applications.
 
+   ![.NET MAUI DockLayout](DockLayout-Images/maui-docklayout.png)
+
 ## Business use cases
 
-- Dashboard applications that require **structured layout arrangement with header, footer, and side panels**.  
-- Enterprise applications that use **multi-region layouts for navigation, content, and action panels**.  
-- Mobile and desktop applications that need **responsive layout behavior across different screen sizes and orientations**.  
-- Complex UI designs that require **precise placement of elements in docked positions for better usability**.  
+- Dashboard applications that require structured layout arrangement with header, footer, and side panels.  
+- Enterprise applications that use multi-region layouts for navigation, content, and action panels.  
+- Mobile and desktop applications that need responsive layout behavior across different screen sizes and orientations.  
+- Complex UI designs that require precise placement of elements in docked positions for better usability.  
 
 ## Key features
 
 - **Flexible docking support** allows placing child elements at top, bottom, left, right, or center positions within the layout.  
 - **Adaptive layout behavior** allows automatically adjusting layout structure based on screen size and orientation.  
-- **Custom spacing support** allows configuring horizontal and vertical spacing between docked elements for better layout control.  
-
-    ![.NET MAUI DockLayout](DockLayout-Images/maui-docklayout.png)
+- **Custom spacing support** allows configuring horizontal and vertical spacing between docked elements for better layout control.
 
 ## Globalization
 
-The following table summarizes the globalization support available in the [SfDockLayout](https://www.syncfusion.com/maui-controls/maui-docklayout) control.
+The following table summarizes the globalization support available in this control.
 
 <img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support   
 <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
@@ -54,17 +54,19 @@ The following table summarizes the globalization support available in the [SfDoc
 
 ## Related controls
  
-- **[BackdropPage](https://help.syncfusion.com/maui/backdrop/overview)** for creating layered layouts with front and back panels.  
+- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
+- [Accordion](https://help.syncfusion.com/maui/accordion/overview) for displaying vertically collapsible sections.
+- [Expander](https://help.syncfusion.com/maui/expander/overview) for creating single expandable/collapsible sections.
 
-## Next steps
+## See Also
 
 Explore further resources:
 
-- [Getting Started](https://help.syncfusion.com/maui/docklayout/getting-started-docklayout) - step-by-step guide to begin using the DockLayout control.
-- [Features](https://help.syncfusion.com/maui/docklayout/features) - dock elements to any side or center for clean, flexible layouts.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) - explore interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/docklayout/getting-started-docklayout) shows a step‑by‑step guide to begin using the DockLayout control.  
+- [Features](https://help.syncfusion.com/maui/docklayout/features) explains how to dock elements to any side or center for clean, flexible layouts.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
-## Learnings
+## Resources
 
 <style>
 .form-card {
@@ -184,24 +186,6 @@ Explore further resources:
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore Blogs</h3>
-    <div class="form-description">
-      Read insights, tutorials, and developer journeys.
-    </div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-    <h3 class="form-title">Explore KB's</h3>
-    <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
-    </div>
-  </div>
-</a>
-<!-- Card 3 -->
 <a href="https://www.syncfusion.com/maui-controls/maui-docklayout" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
@@ -210,7 +194,7 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 4 -->
+<!-- Card 2 -->
 <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/DockLayout" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
@@ -219,12 +203,30 @@ Explore further resources:
     </div>
   </div>
 </a>
-<!-- Card 5 -->
+<!-- Card 3 -->
 <a href="https://www.syncfusion.com/tutorial-videos/maui/docklayout" class="form-card" target="_blank">
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
       Step‑by‑step guidance through video tutorials.
+    </div>
+  </div>
+</a>
+<!-- Card 4 -->
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore KB's</h3>
+    <div class="form-description">
+      Find quick solutions and step‑by‑step guidance.
+    </div>
+  </div>
+</a>
+<!-- Card 5 -->
+<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Explore Blogs</h3>
+    <div class="form-description">
+      Read insights, tutorials, and developer journeys.
     </div>
   </div>
 </a>
