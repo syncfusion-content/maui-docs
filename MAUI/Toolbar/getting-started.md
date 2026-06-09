@@ -43,7 +43,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 
     using Syncfusion.Maui.Core.Hosting;
     public static class MauiProgram
@@ -136,7 +136,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 
     using Syncfusion.Maui.Core.Hosting;
     public static class MauiProgram
@@ -227,7 +227,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 
     using Syncfusion.Maui.Core.Hosting;
     public static class MauiProgram
@@ -257,7 +257,7 @@ Before proceeding, ensure the following are set up:
 1. To initialize the control, import the `Syncfusion.Maui.Toolbar` namespace into your code.
 2. Initialize [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html)
 {% tabs %}
-{% highlight XAML hl_lines="3 5" %}
+{% highlight XAML %}
 
 <ContentPage
     ...        
@@ -270,7 +270,7 @@ Before proceeding, ensure the following are set up:
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="1 9 10" %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Toolbar;
 . . .

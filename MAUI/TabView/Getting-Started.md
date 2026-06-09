@@ -41,7 +41,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
+{% highlight C# %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -132,7 +132,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
+{% highlight C# %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -221,7 +221,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="2 13" %}
+{% highlight C# %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -283,7 +283,7 @@ this.Content = tabView;
 {% endtabs %}
 
 {% endtabcontent %}
-{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 5: Populate tab items in .NET MAUI Tab View
 
@@ -294,12 +294,15 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+<ContentPage 
+        . . .
+        xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <tabView:SfTabView x:Name="tabView">
         <tabView:SfTabView.Items>
-            <tabView:SfTabItem Header="Call"/>
+            <tabView:SfTabItem Header="Call">
+                <Grid BackgroundColor="Red" />
+            </tabView:SfTabItem>
             <tabView:SfTabItem Header="Favorites">
-                <tabView:SfTabItem.Content>
                     <CollectionView>
                         <CollectionView.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
@@ -313,17 +316,19 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                     <Grid Margin="10,5" HeightRequest="40">
-                                        <Label TextColor="#666666" FontSize="16" Text="{Binding}"/>
+                                        <Label
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="Start"
+                                            TextColor="#666666"
+                                            FontSize="16"
+                                            Text="{Binding}"/>
                                     </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                </tabView:SfTabItem.Content>
             </tabView:SfTabItem>
             <tabView:SfTabItem Header="Contacts">
-                <tabView:SfTabItem.Content>
                     <Grid BackgroundColor="Blue"/>
-                </tabView:SfTabItem.Content>
             </tabView:SfTabItem>
         </tabView:SfTabView.Items>
     </tabView:SfTabView>
