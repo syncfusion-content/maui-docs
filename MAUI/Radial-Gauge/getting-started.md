@@ -279,7 +279,7 @@ using Syncfusion.Maui.Gauges;
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5 - Load Radial Gauge Control
+## Step 5: Load Radial Gauge Control
 
 Learn how to initialize the Syncfusion .NET MAUI SfRadialGauge control and configure its elements such as Axes, Ranges, Pointers, and Annotations to visualize data effectively.
 

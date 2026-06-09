@@ -307,7 +307,7 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-## Step 5 - Initialize view model
+## Step 5: Initialize view model
 
 Now, let us define a simple data model that represents a data point in the chart.
 
@@ -358,8 +358,10 @@ N> Add the namespace of `StageViewModel` class to your XAML Page, if you prefer 
 
 {% highlight xaml %}
 
-<ContentPage xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:model="clr-namespace:ChartGettingStarted">
+<ContentPage
+    . . .
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:model="clr-namespace:ChartGettingStarted">
     <chart:SfPyramidChart>
         <chart:SfPyramidChart.BindingContext>
             <model:StageViewModel/>
@@ -380,7 +382,7 @@ this.Content = chart;
 
 {% endtabs %} 
 
-## Step 6 - Populate chart with data
+## Step 6: Populate chart with data
 
  Binding `Data` to the pyramid chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ItemsSource) property from its BindingContext to create our own pyramid chart.
 

@@ -41,7 +41,7 @@ Before proceeding, ensure the following are set up:
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="1 12" %} 
+{% highlight c# %} 
 using Syncfusion.Maui.Core.Hosting;
 
 namespace SignaturePadGettingStarted
@@ -132,7 +132,7 @@ Before proceeding, ensure the following are set up:
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="1 12" %} 
+{% highlight c# %} 
 using Syncfusion.Maui.Core.Hosting;
 
 namespace SignaturePadGettingStarted
@@ -223,7 +223,7 @@ Before proceeding, ensure the following are set up:
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="1 12" %} 
+{% highlight c# %} 
 using Syncfusion.Maui.Core.Hosting;
 
 namespace SignaturePadGettingStarted
@@ -290,3 +290,5 @@ namespace SignaturePadGettingStarted
 {% endtabcontents %}
 
 ![SignaturePad default](images/getting-started/default.png)
+
+N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.

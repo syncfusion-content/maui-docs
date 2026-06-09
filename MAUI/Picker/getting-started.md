@@ -256,7 +256,9 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-<ContentPage xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+<ContentPage   
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <picker:SfPicker />
 </ContentPage>
 

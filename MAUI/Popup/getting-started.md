@@ -77,8 +77,9 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
-
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
     <syncfusion:SfPopup />
 </ContentPage>
 
@@ -165,8 +166,9 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
-
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
     <syncfusion:SfPopup />
 </ContentPage>
 
@@ -253,7 +255,9 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
     <syncfusion:SfPopup />
 </ContentPage>
 
