@@ -269,7 +269,9 @@ Import the [SfRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% highlight xaml %}
 
-<ContentPage xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+<ContentPage
+    . . .
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
     <sliders:SfRangeSelector />
 </ContentPage>
 
@@ -309,9 +311,11 @@ The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeS
 
 {% highlight xaml %}
 
-<ContentPage xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector"> 
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
     <ContentPage.BindingContext>
         <local:ViewModel />
     </ContentPage.BindingContext>

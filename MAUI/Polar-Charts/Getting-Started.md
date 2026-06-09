@@ -280,8 +280,12 @@ namespace ChartGettingStarted
 {% tabs %} 
 {% highlight xaml %}
 
-<ContentPage xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+<ContentPage
+    . . .    
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
     <chart:SfPolarChart/>
+
 </ContentPage>
 
 {% endhighlight %}
