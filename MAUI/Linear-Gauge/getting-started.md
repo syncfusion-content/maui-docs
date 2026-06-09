@@ -350,11 +350,7 @@ The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Linear Gauge will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
 
