@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Cartesian Chart control  Syncfusion
+title: Appearance in .NET MAUI Cartesian Chart control | Syncfusion
 description: Learn here all about appearance customization in .NET MAUI Chart (SfCartesianChart), its elements and more.
 platform: maui
 control: SfCartesianChart
@@ -10,6 +10,36 @@ keywords: .net maui cartesian chart appearance, .net maui chart appearance custo
 
 # Appearance in .NET MAUI Cartesian Chart
 The appearance of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) can be customized by using the predefined brushes, custom brushes and gradient, which allows to enrich the application.
+
+## Add a title
+
+The title of the chart provide quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set title for the chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Title>
+        <Label Text="Height Comparison"/>
+    </chart:SfCartesianChart.Title> 
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+chart.Title = new Label()
+{
+    Text = "Height Comparison"
+};
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
 
 ## Applying PaletteBrushes for Chart
 
