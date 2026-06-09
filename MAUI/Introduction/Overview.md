@@ -11,38 +11,17 @@ documentation: UG
 
 Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive suite of .NET MAUI components for building modern, cross-platform applications. It offers a wide range of high-performance, feature-rich controls such as Charts, DataGrid, Scheduler, Gauges, and Tab View. These controls help developers create visually appealing, responsive, and scalable applications with ease.
 
-![.NET MAUI banner preview.](Images/.net-maui-banner.png){:width="900" height="500" loading="lazy" class="right-section-image" }
-
-
+<img src="Images/.net-maui-banner.webp" alt=".NET MAUI overview banner" />
 
 ## Supported Platforms
 
-<table>
-    <thead>
-        <tr>
-            <th>Target Platform</th>
-            <th>Supported Version</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Android</td>
-            <td>5.0 (API 21) or higher</td>
-        </tr>
-        <tr>
-            <td>iOS</td>
-            <td>12.2 or higher</td>
-        </tr>
-        <tr>
-            <td>macOS (Mac Catalyst)</td>
-            <td>macOS 12 or higher</td>
-        </tr>
-        <tr>
-            <td>Windows</td>
-            <td>Windows 11 and Windows 10 version 1809 or higher (WinUI 3)</td>
-        </tr>
-    </tbody>
-</table>
+| Target Platform | Supported Version |
+|----------------|------------------|
+| Android        | 5.0 (API 21) or higher |
+| iOS            | 12.2 or higher |
+| macOS (Mac Catalyst) | macOS 12 or higher |
+| Windows        | Windows 11 and Windows 10 version 1809 or higher |
+
 
 ## Controls List
 
@@ -72,8 +51,8 @@ vertical-align: top;
     font-weight: 500 !important;
     border: 0 !important;
     line-height: 20px;
-    margin-top: 20px;
-    margin-bottom: 0px;
+    margin-top:  7px;
+    margin-bottom: 5px;
 }
 .category {
     font-size: 14px !important;
@@ -180,260 +159,189 @@ line-height: 1;
 </style>
 
 <table id="table">
-<tbody>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-</tbody>
-<tr>
+  <colgroup>
+    <col style="width: 25%">
+    <col style="width: 25%">
+    <col style="width: 25%">
+    <col style="width: 25%">
+  </colgroup>
+
+  <tr>
+
+<!-- COLUMN 1 -->
 <td>
-<!-- Smart Components -->
-<div>
-    <p class="category-topics">SMART COMPONENTS</p>
-</div>
+      <div><p class="category-topics">SMART COMPONENTS</p></div>
+
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/smartdatagrid/overview">
-        <span class="sf-home-icon sf-icon-smart-datagrid"></span>
-        Smart DataGrid
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/smartscheduler/overview">
-        <span class="sf-home-icon sf-icon-smart-scheduler"></span>
-        Smart Scheduler
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/smarttexteditor/overview">
-        <span class="sf-home-icon sf-icon-smart-text-editor"></span>
-        Smart Text Editor
-    </a>
-</div>
-<!--Grids-->
-<div>
-    <p class="category-topics">GRIDS</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/datagrid/overview">
-        <span class="sf-home-icon sf-icon-data-grid"></span>DataGrid
-    </a>
-</div>
-<!--Editors-->
-<div>
-    <p class="category-topics">EDITORS</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/autocomplete/overview">
-        <span class="sf-home-icon sf-icon-auto-complete"></span>AutoComplete
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/combobox/overview">
-        <span class="sf-home-icon sf-icon-combobox"></span>ComboBox
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/dataform/overview">
-        <span class="sf-home-icon sf-icon-data-form"></span>DataForm
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/datepicker/overview">
-        <span class="sf-home-icon sf-icon-date-picker"></span>Date Picker
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/datetimepicker/overview">
-        <span class="sf-home-icon sf-icon-date-time-picker"></span>Date Time Picker
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/masked-entry/overview">
-        <span class="sf-home-icon sf-icon-masked-entry"></span>Masked Entry
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/numericentry/overview">
-        <span class="sf-home-icon sf-icon-numeric-entry"></span>Numeric Entry
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/picker/overview">
-        <span class="sf-home-icon sf-icon-picker"></span>Picker
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/signaturepad/overview">
-        <span class="sf-home-icon sf-icon-signature-pad"></span>Signature Pad
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/rating/overview">
-        <span class="sf-home-icon sf-icon-rating"></span>Rating
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/imageeditor/overview">
-        <span class="sf-home-icon sf-icon-image-editor"></span>Image Editor
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/timepicker/overview">
-        <span class="sf-home-icon sf-icon-time-picker"></span>Time Picker
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/colorpicker/overview">
-        <span class="sf-home-icon sf-icon-color-picker"></span>Color Picker
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/rich-text-editor/overview">
-        <span class="sf-home-icon sf-icon-rich-text-editor"></span>Rich Text Editor
-    </a>
-</div>
-<!-- BUTTONS -->
-<div>
-    <p class="category-topics">BUTTONS</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/button/overview">
-        <span class="sf-home-icon sf-icon-button"></span>Button
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/checkbox/overview">
-        <span class="sf-home-icon sf-icon-checkbox"></span>CheckBox
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/chips/overview">
-        <span class="sf-home-icon sf-icon-chips"></span>Chips
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/radio-button/overview">
-        <span class="sf-home-icon sf-icon-radio-button"></span>Radio Button
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/segmented-control/overview">
-        <span class="sf-home-icon sf-icon-segmented-button"></span>Segmented Control
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/switch/overview">
-        <span class="sf-home-icon sf-icon-switch"></span>Switch
-    </a>
-</div>
-</td>
-<td>
-<!--Navigation-->
-<div>
-    <p class="category-topics">NAVIGATION</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/navigationdrawer/overview">
-        <span class="sf-home-icon sf-icon-navigation-drawer"></span>Navigation Drawer
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/radial-menu/overview">
-        <span class="sf-home-icon sf-icon-radial-menu"></span>Radial Menu
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/rotator/overview">
-        <span class="sf-home-icon sf-icon-rotator"></span>Rotator
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/tabview/overview">
-        <span class="sf-home-icon sf-icon-tabs"></span>Tab View
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/treeview/overview">
-        <span class="sf-home-icon sf-icon-tree-view"></span>TreeView
-    </a>
-</div>
-<!--Sliders-->
-<div>
-    <p class="category-topics">SLIDERS</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/slider/overview">
-        <span class="sf-home-icon sf-icon-slider"></span>Slider
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/range-slider/overview">
-        <span class="sf-home-icon sf-icon-range-slider"></span>Range Slider
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/range-selector/overview">
-        <span class="sf-home-icon sf-icon-range-selector"></span>Range Selector
-    </a>
-</div>
-<!-- Layout -->
-<div>
-    <p class="category-topics">LAYOUT</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/backdrop/overview">
-        <span class="sf-home-icon sf-icon-backdrop"></span>Backdrop
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/listview/overview">
-        <span class="sf-home-icon sf-icon-list-view"></span>ListView
-    </a>
+<a target="_self" href="https://help.syncfusion.com/maui/smartdatagrid/overview">
+    <span class="sf-home-icon sf-icon-smart-datagrid"></span>
+    Smart DataGrid
+</a>
 </div>
 
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/popup/overview">
-        <span class="sf-home-icon sf-icon-popup"></span>Popup
+<a target="_self" href="https://help.syncfusion.com/maui/smartscheduler/overview">
+    <span class="sf-home-icon sf-icon-smart-scheduler"></span>
+    Smart Scheduler
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/smarttexteditor/overview">
+    <span class="sf-home-icon sf-icon-smart-text-editor"></span>
+    Smart Text Editor
+</a>
+</div>
+
+<div><p class="category-topics">GRIDS</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/datagrid/overview">
+    <span class="sf-home-icon sf-icon-data-grid"></span>DataGrid
+</a>
+</div>
+
+<!-- Calendars -->
+<div>
+    <p class="category-topics">CALENDARS</p>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/scheduler/overview">
+        <span class="sf-home-icon sf-icon-scheduler"></span>Scheduler
     </a>
 </div>
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/textinputlayout/overview">
-        <span class="sf-home-icon sf-icon-text-input"></span>Text Input Layout
+    <a target="_self" href="https://help.syncfusion.com/maui/calendar/overview">
+        <span class="sf-home-icon sf-icon-calendars"></span>Calendar
     </a>
 </div>
+
+<div><p class="category-topics">EDITORS</p></div>
+
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/expander/overview">
-        <span class="sf-home-icon sf-icon-expander"></span>Expander
-    </a>
+<a target="_self" href="https://help.syncfusion.com/maui/autocomplete/overview">
+    <span class="sf-home-icon sf-icon-auto-complete"></span>AutoComplete
+</a>
 </div>
+
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/accordion/overview">
-        <span class="sf-home-icon sf-icon-accordion"></span>Accordion
-    </a>
+<a target="_self" href="https://help.syncfusion.com/maui/combobox/overview">
+    <span class="sf-home-icon sf-icon-combobox"></span>ComboBox
+</a>
 </div>
+
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/carousel-view/overview">
-        <span class="sf-home-icon sf-icon-carousel"></span>Carousel
-    </a>
+<a target="_self" href="https://help.syncfusion.com/maui/dataform/overview">
+    <span class="sf-home-icon sf-icon-data-form"></span>DataForm
+</a>
 </div>
+
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/cards/overview">
-        <span class="sf-home-icon sf-icon-cards"></span>Cards
-    </a>
+<a target="_self" href="https://help.syncfusion.com/maui/datepicker/overview">
+    <span class="sf-home-icon sf-icon-date-picker"></span>Date Picker
+</a>
 </div>
+
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/parallax-view/overview">
-        <span class="sf-home-icon sf-icon-parallax-view"></span>Parallax View
-    </a>
+<a target="_self" href="https://help.syncfusion.com/maui/datetimepicker/overview">
+    <span class="sf-home-icon sf-icon-date-time-picker"></span>Date Time Picker
+</a>
 </div>
+
 <div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/docklayout/overview">
-        <span class="sf-home-icon sf-icon-doc-layout"></span>DockLayout
-    </a>
+<a target="_self" href="https://help.syncfusion.com/maui/masked-entry/overview">
+    <span class="sf-home-icon sf-icon-masked-entry"></span>Masked Entry
+</a>
 </div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/numericentry/overview">
+    <span class="sf-home-icon sf-icon-numeric-entry"></span>Numeric Entry
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/picker/overview">
+    <span class="sf-home-icon sf-icon-picker"></span>Picker
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/signaturepad/overview">
+    <span class="sf-home-icon sf-icon-signature-pad"></span>Signature Pad
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/rating/overview">
+    <span class="sf-home-icon sf-icon-rating"></span>Rating
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/imageeditor/overview">
+    <span class="sf-home-icon sf-icon-image-editor"></span>Image Editor
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/timepicker/overview">
+    <span class="sf-home-icon sf-icon-time-picker"></span>Time Picker
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/colorpicker/overview">
+    <span class="sf-home-icon sf-icon-color-picker"></span>Color Picker
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/rich-text-editor/overview">
+    <span class="sf-home-icon sf-icon-rich-text-editor"></span>Rich Text Editor
+</a>
+</div>
+
+</td>
+
+<!-- COLUMN 2 -->
+<td>
+<div><p class="category-topics">BUTTONS</p></div>
+
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/button/overview"><span class="sf-home-icon sf-icon-button"></span>Button</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/checkbox/overview"><span class="sf-home-icon sf-icon-checkbox"></span>CheckBox</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/chips/overview"><span class="sf-home-icon sf-icon-chips"></span>Chips</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/radio-button/overview"><span class="sf-home-icon sf-icon-radio-button"></span>Radio Button</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/segmented-control/overview"><span class="sf-home-icon sf-icon-segmented-button"></span>Segmented Control</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/switch/overview"><span class="sf-home-icon sf-icon-switch"></span>Switch</a></div>
+
+<div><p class="category-topics">NAVIGATION</p></div>
+
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/navigationdrawer/overview"><span class="sf-home-icon sf-icon-navigation-drawer"></span>Navigation Drawer</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/radial-menu/overview"><span class="sf-home-icon sf-icon-radial-menu"></span>Radial Menu</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/rotator/overview"><span class="sf-home-icon sf-icon-rotator"></span>Rotator</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/tabview/overview"><span class="sf-home-icon sf-icon-tabs"></span>Tab View</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/treeview/overview"><span class="sf-home-icon sf-icon-tree-view"></span>TreeView</a></div>
+
+<div><p class="category-topics">LAYOUT</p></div>
+
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/backdrop/overview"><span class="sf-home-icon sf-icon-backdrop"></span>Backdrop</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/listview/overview"><span class="sf-home-icon sf-icon-list-view"></span>ListView</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/popup/overview"><span class="sf-home-icon sf-icon-popup"></span>Popup</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/textinputlayout/overview"><span class="sf-home-icon sf-icon-text-input"></span>Text Input Layout</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/expander/overview"><span class="sf-home-icon sf-icon-expander"></span>Expander</a></div>
+
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/accordion/overview"><span class="sf-home-icon sf-icon-accordion"></span>Accordion</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/carousel-view/overview"><span class="sf-home-icon sf-icon-carousel"></span>Carousel</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/cards/overview"><span class="sf-home-icon sf-icon-cards"></span>Cards</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/parallax-view/overview"><span class="sf-home-icon sf-icon-parallax-view"></span>Parallax View</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/docklayout/overview"><span class="sf-home-icon sf-icon-doc-layout"></span>DockLayout</a></div>
+</td>
+
+
+<!-- COLUMN 3 -->
+<td>
+
 <!-- Notification -->
 <div>
     <p class="category-topics">NOTIFICATION</p>
@@ -468,22 +376,7 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-pull-refresh"></span>Pull to Refresh
     </a>
 </div>
-<!-- Conversational UI -->
-<div>
-    <p class="category-topics">CONVERSATIONAL UI</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/chat/overview">
-        <span class="sf-home-icon sf-icon-chat"></span>Chat
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/aiassistview/overview">
-        <span class="sf-home-icon sf-icon-ai-assistance"></span>AI AssistView
-    </a>
-</div>
-</td>
-<td>
+
 <!-- Data Visualization -->
 <div>
     <p class="category-topics">DATA VISUALIZATION</p>
@@ -548,20 +441,17 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-tree-map"></span>TreeMap
     </a>
 </div>
-<!-- Calendars -->
-<div>
-    <p class="category-topics">CALENDARS</p>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/scheduler/overview">
-        <span class="sf-home-icon sf-icon-scheduler"></span>Scheduler
-    </a>
-</div>
-<div class="controlanchorlink">
-    <a target="_self" href="https://help.syncfusion.com/maui/calendar/overview">
-        <span class="sf-home-icon sf-icon-calendars"></span>Calendar
-    </a>
-</div>
+
+<div><p class="category-topics">SLIDERS</p></div>
+
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/slider/overview"><span class="sf-home-icon sf-icon-slider"></span>Slider</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/range-slider/overview"><span class="sf-home-icon sf-icon-range-slider"></span>Range Slider</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/range-selector/overview"><span class="sf-home-icon sf-icon-range-selector"></span>Range Selector</a></div>
+</td>
+
+<!-- COLUMN 4 -->
+<td>
+
 <!-- Project Management -->
 <div>
     <p class="category-topics">PROJECT MANAGEMENT</p>
@@ -608,7 +498,23 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-shimmer"></span>Shimmer
     </a>
 </div>
-</td>
+
+<!-- Conversational UI -->
+<div>
+    <p class="category-topics">CONVERSATIONAL UI</p>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/chat/overview">
+        <span class="sf-home-icon sf-icon-chat"></span>Chat
+    </a>
+</div>
+<div class="controlanchorlink">
+    <a target="_self" href="https://help.syncfusion.com/maui/aiassistview/overview">
+        <span class="sf-home-icon sf-icon-ai-assistance"></span>AI AssistView
+    </a>
+</div>
+
+
 </tr>
 </table>
 
@@ -630,26 +536,15 @@ line-height: 1;
    transform: translateY(-4px);
    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
-.form-image {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   display: block;
-   cursor: pointer;
-   transition: 0.3s ease;
-}
-.form-image:hover {
-   transform: scale(1.02);
-}
-.form-content {
-   padding: 16px;
-}
+
 .form-title {
    margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
-   color: #000000;
+   padding-left: 16px;
+   padding-top: 8px;
+   color: #2072f5;
 }
 .form-link {
    color: #0078D4;
@@ -658,6 +553,9 @@ line-height: 1;
 .form-description {
    margin-top: 14px;
    font-size: 13px;
+   padding-left: 16px;
+   Padding-right: 16px;
+   Padding-bottom: 16px;
    color: #000000;
    line-height: 1.6;
 }
@@ -737,7 +635,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Feature Tour</h3>
     <div class="form-description">
-      Walk through highlights and core capabilities.
+      Get a quick overview of key features and capabilities to kickstart your journey.
     </div>
   </div>
 </a>
@@ -746,7 +644,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Showcase Samples</h3>
     <div class="form-description">
-      Explore sample scenarios for real apps.
+      Explore real-world sample apps to see components in action and learn by example.
     </div>
   </div>
 </a>
@@ -755,7 +653,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Tutorial Videos</h3>
     <div class="form-description">
-      Step‑by‑step guidance through video tutorials.
+      Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
   </div>
 </a>
@@ -764,7 +662,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Explore KB's</h3>
     <div class="form-description">
-      Find quick solutions and step‑by‑step guidance.
+      Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
   </div>
 </a>
@@ -773,7 +671,7 @@ line-height: 1;
   <div class="form-content">
     <h3 class="form-title">Explore Blogs</h3>
     <div class="form-description">
-      Read insights, tutorials, and developer journeys.
+      Discover in‑depth articles, use cases and expert insights from our developers.
     </div>
   </div>
 </a>
@@ -782,19 +680,23 @@ line-height: 1;
 
 ## Support and feedback
 
-If you cannot find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://support.syncfusion.com/support/tickets/create).
+<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+<a href="https://support.syncfusion.com/support/tickets/create" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Support Ticket</h3>
+    <div class="form-description">
+       Need assistance? Submit a support ticket and our team will help you resolve your issue quickly.
+    </div>
+  </div>
+</a>
 
-If you do not find what you need, please make a request in our [feedback portal](https://www.syncfusion.com/feedback/maui).
-
-## See Also
-
-- [Getting Started with Syncfusion® .NET MAUI DataGrid](https://help.syncfusion.com/maui/datagrid/getting-started)
-
-- [Getting Started with Syncfusion® .NET MAUI Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/getting-started)
-
-- [Getting Started with Syncfusion® .NET MAUI ListView](https://help.syncfusion.com/maui/listview/getting-started)
-
-- [Getting Started with Syncfusion® .NET MAUI Scheduler](https://help.syncfusion.com/maui/scheduler/getting-started)
-
-- [Getting Started with Syncfusion® .NET MAUI Maps](https://help.syncfusion.com/maui/maps/getting-started)
+<a href="https://www.syncfusion.com/feedback/maui" class="form-card" target="_blank">
+  <div class="form-content">
+    <h3 class="form-title">Feedback Portal</h3>
+    <div class="form-description">
+      Have a suggestion or feature request? Share your ideas in our Feedback Portal to help us improve.
+    </div>
+  </div>
+</a>
+</div>
 
