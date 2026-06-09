@@ -366,7 +366,7 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
                        HeightRequest = "40"
                        ItemsSource="{Binding SocialMedias}">
     <inputs:SfAutocomplete.BindingContext>
-    <local:SocialMediaViewModel />
+        <local:SocialMediaViewModel />
     </inputs:SfAutocomplete.BindingContext>
 </inputs:SfAutocomplete>
 
@@ -406,7 +406,7 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
                        TextMemberPath = "Name"
                        ItemsSource="{Binding SocialMedias}">
     <inputs:SfAutocomplete.BindingContext>
-    <local:SocialMediaViewModel />
+        <local:SocialMediaViewModel />
     </inputs:SfAutocomplete.BindingContext>
 </inputs:SfAutocomplete>
 
