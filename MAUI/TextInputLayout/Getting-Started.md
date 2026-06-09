@@ -42,31 +42,30 @@ Before proceeding, ensure the following are in place:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
-{% highlight C# %}   
-using Microsoft.Maui;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace TextInputLayoutSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-  }
-}     
+            return builder.Build();
+        }      
+    }
+}   
 
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Add a Basic TextInputLayout
 
@@ -141,31 +140,30 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# %}   
-using Microsoft.Maui;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace TextInputLayoutSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-  }
-}     
+            return builder.Build();
+        }      
+    }
+}   
 
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Add a Basic TextInputLayout
 
@@ -236,31 +234,30 @@ inputLayout.Content = new Entry();
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# %}   
-using Microsoft.Maui;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace TextInputLayoutSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-  }
-}     
+            return builder.Build();
+        }      
+    }
+}   
 
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Add a Basic TextInputLayout
 

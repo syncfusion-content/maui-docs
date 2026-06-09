@@ -25,7 +25,6 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
     . . .
 </chart:SfPolarChart>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -38,6 +37,55 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+N> Additionally, set a label for each series using the `Label` property of the chart series, which will be displayed in the corresponding legend.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    . . .
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
+                            Label="Tree"/>
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
+                            Label="Weed"/>
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
+                            Label="Flower"/>
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfPolarChart chart = new SfPolarChart();
+. . .
+PolarLineSeries series1 = new PolarLineSeries(); 
+series1.ItemsSource = (new PlantViewModel()).PlantDetails;
+series1.XBindingPath = "Direction"; 
+series1.YBindingPath = "Tree"; 
+series1.Label = "Tree";
+
+PolarLineSeries series2 = new PolarLineSeries();
+series2.ItemsSource = (new PlantViewModel()).PlantDetails;
+series2.XBindingPath = "Direction";
+series2.YBindingPath = "Weed";
+series2.Label = "Weed";
+
+PolarLineSeries series3 = new PolarLineSeries();
+series3.ItemsSource = (new PlantViewModel()).PlantDetails;
+series3.XBindingPath = "Direction";
+series3.YBindingPath = "Flower";
+series3.Label = "Flower";
+
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+chart.Series.Add(series3);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
 
 ## Legend visibility
 The visibility of the chart legend can be controlled using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_IsVisible) property. By default, the IsVisible property is set to `true`.

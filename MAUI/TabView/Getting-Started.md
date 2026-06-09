@@ -41,8 +41,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# %}
-using Microsoft.Extensions.Logging;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace TabViewGettingStarted
@@ -61,11 +60,11 @@ namespace TabViewGettingStarted
             });
 
             return builder.Build();
-        }
+        }      
     }
-}
+}   
 
-{% endhighlight %} 
+{% endhighlight %}  
 
 ## Step 4: Add a basic Tab View
 
@@ -132,8 +131,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# %}
-using Microsoft.Extensions.Logging;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace TabViewGettingStarted
@@ -152,9 +150,9 @@ namespace TabViewGettingStarted
             });
 
             return builder.Build();
-        }
+        }      
     }
-}
+}   
 
 {% endhighlight %} 
 
@@ -221,8 +219,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# %}
-using Microsoft.Extensions.Logging;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace TabViewGettingStarted
@@ -241,9 +238,9 @@ namespace TabViewGettingStarted
             });
 
             return builder.Build();
-        }
+        }      
     }
-}
+}   
 
 {% endhighlight %} 
 
