@@ -1297,7 +1297,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll-To-Buttom in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottom.gif)
+![Scroll-To-Bottom in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottom.gif)
 
 ### Scroll to bottom button customization
 
@@ -1362,6 +1362,29 @@ By default, the `SfAIAssistView` control automatically scrolls to the bottom of 
                            CanAutoScrollToBottom="False" />
 
 {% endhighlight %}
+
+### AutoScrollBehavior
+
+The `SfAIAssistView` exposes an `AutoScrollBehavior` property of type `AssistViewScrollBehavior` that controls how the control anchors its scroll position when new messages or responses are added. The default behavior is `ScrollToLastResponse`.
+
+- `ScrollToLastResponse`: (default) the view scrolls to show the latest AI response.
+- `ScrollToLastRequest`: The view scrolls to show the latest AI request.
+
+You can set this property in XAML or code-behind to choose the desired scrolling semantics for your app.
+
+{% tabs %}
+{% highlight xaml hl_lines="1" %}
+<syncfusion:SfAIAssistView AutoScrollBehavior="ScrollToLastRequest"
+                           CanAutoScrollToBottom="True"
+                           AssistItems="{Binding AssistItems}" />
+{% endhighlight %}
+{% highlight c# hl_lines="1" %}
+this.sfAIAssistView.AutoScrollBehavior = AssistViewScrollBehavior.ScrollToLastRequest;
+{% endhighlight %}
+{% endtabs %}
+
+Using `AutoScrollBehavior` together with `CanAutoScrollToBottom` and handling the `Scrolled` event gives you full control over when and how the AssistView scrolls in response to new content.
+
 {% endtabs %}
 
 ## Scrolled Event
