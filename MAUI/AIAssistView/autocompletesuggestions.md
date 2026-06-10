@@ -71,7 +71,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 ### Category
 
-The `AssistSuggestion` class exposes a `Category` property that you can use to group autocomplete suggestions by category. Set `Category` when creating suggestions (for example, "FAQ", "Commands", or "Examples"). You can then present grouped suggestions.
+In Syncfusion .NET MAUI AI AssistView, the `AssistSuggestion` class exposes a `Category` property that you can use to group autocomplete suggestions by topic. Set `Category` when creating suggestions (for example, "FAQ", "Commands", or "Examples") so the overlay can present related items together.
 
 Example (setting categories in your ViewModel):
 
@@ -84,7 +84,7 @@ AutoCompleteSuggestions = new ObservableCollection<ISuggestion>()
 };
 {% endhighlight %}
 
-Using the `Category` property lets you organize suggestions and provide a richer UX (for example, showing category headers, grouping similar suggestions, or filtering suggestions by category).
+Using the `Category` property helps organize suggestions and creates a clearer experience by enabling grouped suggestions, category headers, and category-based filtering.
 
 ### ItemSelectedCommand
 

@@ -49,7 +49,7 @@ This section explains how to define and customize the toolbar in the [SfAIAssist
 
 ## Toolbar menu items
 
-You can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model. Example:
+In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model. Example:
 
 {% highlight xaml %}
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView">
@@ -60,13 +60,13 @@ You can provide toolbar menu items using the `ToolbarMenuOptions` collection on 
 </syncfusion:SfAIAssistView>
 {% endhighlight %}
 
-The items added to `ToolbarMenuOptions` will appear after clicking the toolbar menu option icon and invoke the bound commands when tapped.
+The items added to `ToolbarMenuOptions` appear when the toolbar menu icon is clicked and invoke the bound commands when tapped.
 
 ## Chat Modes
 
 ### New chat button
 
-The toolbar now includes a chat option that provides both New Chat. When clicked, it opens a new chat window where the user can start an entirely new session, while the previous session is preserved in the conversation history.
+The toolbar includes a chat option that provides New Chat. When clicked, it opens a new chat window so the user can start an entirely new session, while the previous session is preserved in the conversation history.
 
 ### Temporary Chat
 

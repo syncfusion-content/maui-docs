@@ -1297,7 +1297,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll-To-Buttom in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottom.gif)
+![Scroll-To-Bottom in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottom.gif)
 
 ### Scroll to bottom button customization
 
