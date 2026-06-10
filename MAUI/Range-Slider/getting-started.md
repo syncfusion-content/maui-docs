@@ -256,7 +256,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Initialization of RangeSlider
+## Step 5: Initialization of RangeSlider
 
 The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
