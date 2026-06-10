@@ -217,6 +217,36 @@ public partial class MainPage : ContentPage
 
 ![Conversation Empty View in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
 
+### Filter button
+
+After clicking the search button in the conversation history drawer, the conversation search view opens. It includes a filter button that allows users to filter conversations by date range.
+
+When opened, the filter presents the following date-range options to the user:
+
+- All
+- Today
+- Yesterday
+- Last 7 Days
+- Last 30 Days
+
+Use these options to quickly narrow the conversation history shown in the drawer.
+
+### More options (Pin, Rename, Delete)
+
+The conversation item shows a "More" option which opens a small options menu. The menu provides three actions:
+
+- **Pin**: Pins the selected conversation so it appears at the top of the conversation list.
+- **Rename**: Opens a rename popup containing an editor where you can change the conversation title. The popup has two actions: **Rename** (save) and **Cancel** (exit without saving). When **Rename** is clicked, the conversation item's title is updated with the entered text.
+- **Delete**: Opens a delete confirmation popup with two actions: **Delete** and **Cancel**. When **Delete** is clicked the selected conversation item is removed from the conversation history.
+
+### New chat and Incognito mode (in the conversation drawer)
+
+The conversation drawer now includes two additional options: **New Chat** and **Incognito (temporary chat)**.
+
+- **New Chat**: Tapping the New Chat control opens a fresh chat session. The previous chat session is preserved in the conversation history so users can switch back later. This is useful for starting a separate conversation without losing prior context.
+
+- **Incognito (Temporary Chat)**: Incognito mode provides a temporary, non-persistent chat surface. When enabled, requests made in this mode are not saved and will not appear in history.
+
 ## Events and commands
 
 When a user selects a conversation item, the [ConversationItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTapped) event and [ConversationItemTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTappedCommand) are triggered, providing [ConversationItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.

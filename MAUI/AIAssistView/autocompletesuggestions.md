@@ -69,6 +69,23 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 ![Auto Complete Suggestions in .NET MAUI AI AssistView](images/maui-aiassistview-auto-complete-suggestion.gif)
 
+### Category
+
+The `AssistSuggestion` class exposes a `Category` property that you can use to group autocomplete suggestions by category. Set `Category` when creating suggestions (for example, "FAQ", "Commands", or "Examples"). You can then present grouped suggestions.
+
+Example (setting categories in your ViewModel):
+
+{% highlight c# tabtitle="ViewModel.cs" %}
+AutoCompleteSuggestions = new ObservableCollection<ISuggestion>()
+{
+    new AssistSuggestion() { Text = "What is .NET MAUI?", Category = "FAQ" },
+    new AssistSuggestion() { Text = "How do I get started with AI AssistView?", Category = "GettingStarted" },
+    new AssistSuggestion() { Text = "Explain data binding in .NET MAUI", Category = "FAQ" },
+};
+{% endhighlight %}
+
+Using the `Category` property lets you organize suggestions and provide a richer UX (for example, showing category headers, grouping similar suggestions, or filtering suggestions by category).
+
 ### ItemSelectedCommand
 
 The [ItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_ItemSelectedCommand) property accepts an `ICommand` that runs when the user selects an item from the autocomplete overlay. The command receives the selected ISuggestion as its parameter.

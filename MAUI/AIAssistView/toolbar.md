@@ -47,6 +47,21 @@ This section explains how to define and customize the toolbar in the [SfAIAssist
 
 ![Toolbar in .NET MAUI AI AssistView](Images/toolbar/maui-aiassistview-toolbar.png)
 
+## Toolbar menu items
+
+You can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model. Example:
+
+{% highlight xaml %}
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.ToolbarMenuOptions>
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Settings" Icon="dotnet_bot.png" Command="{Binding TappedCommand}" />
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Help" Icon="dotnet_bot.png" Command="{Binding TappedCommand}" />
+    </syncfusion:SfAIAssistView.ToolbarMenuOptions>
+</syncfusion:SfAIAssistView>
+{% endhighlight %}
+
+The items added to `ToolbarMenuOptions` will appear after clicking the toolbar menu option icon and invoke the bound commands when tapped.
+
 ## Chat Modes
 
 ### New chat button
