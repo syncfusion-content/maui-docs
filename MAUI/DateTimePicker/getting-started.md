@@ -291,30 +291,4 @@ The following gif image illustrates the result of the above code.
 
 ![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
 
-## Set height and width to the Date Time Picker
-
-The SfDateTimePicker control allows you to change the height and width by using the `HeightRequest` and `WidthRequest` properties in the `SfDateTimePicker`.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
-
-<picker:SfDateTimePicker x:Name="picker" 
-                    HeightRequest="280" 
-                    WidthRequest="300">
-</picker:SfDateTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfDateTimePicker picker = new SfDateTimePicker()
-{
-    HeightRequest = 280,
-    WidthRequest = 300,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
 N> You can refer to our [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Date Time Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DateTimePicker/GettingStarted) that shows you how to render the Date Time Picker in .NET MAUI.

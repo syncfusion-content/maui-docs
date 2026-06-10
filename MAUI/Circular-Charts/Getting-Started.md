@@ -461,6 +461,8 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
+The following screenshot illustrates the result of the above code.
+
 ![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.png)
 
 You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_CircularChart_MAUI).

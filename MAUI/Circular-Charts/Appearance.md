@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Circular Chart control  Syncfusion
+title: Appearance in .NET MAUI Circular Chart control | Syncfusion
 description: Learn here all about appearance customization in .NET MAUI Chart (SfCircularChart), its elements and more.
 platform: maui
 control: SfCircularChart
@@ -11,7 +11,7 @@ documentation: ug
 
 The appearance of the [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
 
-### Add a title
+## Add a title
 
 The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of circular chart as follows.
 
@@ -164,7 +164,34 @@ public class ViewModel
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_pie_chart_gradient.png)
 
-## Plotting Area Customization:
+## Point Color Path
+
+The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:PieSeries PointColorPath="PointColor"></chart:PieSeries>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+PieSeries series = new PieSeries()
+{        
+   PointColorPath = "PointColor"       
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![PointColorPath in MAUI Chart](Appearance_images/MAUI_pie_chart_pointcolorpath.png)
+
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
+
+## Plotting Area Customization
 
 [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html?tabs=tabid-1) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 

@@ -292,9 +292,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Define the linear gauge
-
-The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) is a data visualization control that displays values along a linear scale.
+The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) is a data visualization control that displays values along a linear scale, with ranges highlighting value segments and pointers indicating specific values clearly.
 
 {% tabs %}
 
@@ -304,8 +302,10 @@ The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                 <gauge:SfLinearGauge.Ranges>
                     <gauge:LinearRange/>
                 </gauge:SfLinearGauge.Ranges>
+
                 <gauge:SfLinearGauge.MarkerPointers>
                     <gauge:LinearShapePointer Value="70"/>
+
                     <gauge:LinearContentPointer Value="80">
                         <gauge:LinearContentPointer.Content>
                             <Image Source="pin.png" HeightRequest="20" 
@@ -313,6 +313,7 @@ The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                         </gauge:LinearContentPointer.Content>
                     </gauge:LinearContentPointer>
                 </gauge:SfLinearGauge.MarkerPointers>
+
                 <gauge:SfLinearGauge.BarPointers>
                     <gauge:BarPointer Value = "60"/>
                 </gauge:SfLinearGauge.BarPointers>
@@ -346,6 +347,8 @@ The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% endhighlight %}
 
 {% endtabs %}
+
+The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
 

@@ -402,8 +402,8 @@ The following code example binds the previously created collection to the `SfLis
 </ContentPage>
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
-BookInfoRepository viewModel = new BookInfoRepository ();
-listView.ItemsSource = viewModel.BookInfo; 
+BookInfoRepository viewModel = new BookInfoRepository ();
+listView.ItemsSource = viewModel.BookInfo; 
 {% endhighlight %}
 {% endtabs %}
 
@@ -437,17 +437,17 @@ using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ListView;
 using System;
 
-namespace GettingStarted
+namespace GettingStarted
 {
-    public class MainPage : ContentPage
+    public class MainPage : ContentPage
     {       
-        public MainPage()
+        public MainPage()
         {
 		    InitializeComponent();
-            BookInfoRepository viewModel = new BookInfoRepository ();
-			SfListView listView = new SfListView();
+            BookInfoRepository viewModel = new BookInfoRepository ();
+			SfListView listView = new SfListView();
             listView.ItemSize = 100;
-            listView.ItemsSource = viewModel.BookInfo;
+            listView.ItemsSource = viewModel.BookInfo;
             listView.ItemTemplate = new DataTemplate(() => {
                 var grid = new Grid();
                 grid.RowDefinitions.Add(new RowDefinition());
@@ -464,7 +464,7 @@ namespace GettingStarted
 
                 return grid;
             });
-			this.Content = listView;
+			this.Content = listView;
         }
     }
 } 
