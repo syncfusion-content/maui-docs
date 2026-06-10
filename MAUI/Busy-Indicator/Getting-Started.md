@@ -355,7 +355,7 @@ namespace BusyIndicatorGettingStarted
 
 {% endtabs %}
 
-The following screenshot illustrates the result of the above code.
+The following gif image illustrates the result of the above code.
 
 ![CircularMaterial in .NET MAUI Busy Indicator.](images/gettingstarted/net-maui-busy-indicator-circular-material.gif){:width="144" height="138" loading="lazy"}
 
