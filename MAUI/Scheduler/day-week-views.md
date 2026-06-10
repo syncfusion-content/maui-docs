@@ -218,7 +218,9 @@ scheduler.View = SchedulerView.Week;
 scheduler.DaysView.AllowSpannedAppointmentsInTimeSlots = true;
 this.Content = scheduler;
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
+
+![Allow spanned appointments in timeslots in days view](images/day-week-views/allow-spanned-appointment-in-timeslot-in-days-view.png)
 
 ## Special time regions
 

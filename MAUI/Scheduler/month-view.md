@@ -300,9 +300,9 @@ Non-working days in the MonthView can be customized using the `NonWorkingDaysBac
     <scheduler:SfScheduler.MonthView>
         <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday">
             <scheduler:SchedulerMonthView.CellStyle>
-                <scheduler:SchedulerMonthCellStyle NonWorkingDaysBackground="LightGrey">
+                <scheduler:SchedulerMonthCellStyle NonWorkingDaysBackground="Azure">
                     <scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
-                        <scheduler:SchedulerTextStyle TextColor="Black" />
+                        <scheduler:SchedulerTextStyle TextColor="Black"     FontSize="12" />
                     </scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
                 </scheduler:SchedulerMonthCellStyle>
             </scheduler:SchedulerMonthView.CellStyle>
