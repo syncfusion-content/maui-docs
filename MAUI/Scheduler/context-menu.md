@@ -27,7 +27,7 @@ The Scheduler includes built-in commands that can be used directly in context me
 * **Edit** - Opens the selected appointment for editing.
 * **Delete** - Deletes the selected appointment.
  
-Built-in `Add` and `Edit` commands work only when the **AppointmentEditorMode** property includes the corresponding `Add` or `Edit` option.
+N> Built-in `Add` and `Edit` commands work only when the [AppointmentEditorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentEditorMode) property includes the corresponding `Add` or `Edit` option.
 
 ## Context Menu for Timeslot Cells
 
@@ -247,7 +247,7 @@ The clipboard functionality works as follows:
 
 ### Adding Context Menu Items
 
-The `AppointmentContextMenu` can be used to display Copy and Cut actions for appointments, while the CellContextMenu can be used to display the paste action for scheduler cells.
+The `AppointmentContextMenu` can be used to display Copy and Cut actions for appointments, while the `CellContextMenu` can be used to display the paste action for scheduler cells.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
