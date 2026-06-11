@@ -372,6 +372,7 @@ If you run the above sample with the TransitionMode as Push, the output will loo
 
 ![.NET MAUI PullToRefresh with DataGrid hosted with push transition mode.](Images/customization/net-maui-datagrid-push.gif)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh).
 
 ## Host .NET MAUI ListView as pullable content
 
@@ -636,5 +637,3 @@ Refer to the following code example in which a [SfCircularProgressBar](https://h
 {% endtabs %}
 
 ![.NET MAUI PullToRefresh view Template.](Images/customization/net-maui-template-slideontop.gif)
-
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh).

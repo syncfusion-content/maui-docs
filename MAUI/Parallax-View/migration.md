@@ -235,7 +235,3 @@ The following table illustrates the API migration for the parallax view:
 <td>ScrollContentSize</td>
 </tr>
 </table>
-
-## Support and feedback
-
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you don't find what you need, please request it from our [feedback portal](https://www.syncfusion.com/feedback/maui).

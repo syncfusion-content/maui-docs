@@ -349,43 +349,55 @@ You can style the elements of an outgoing message by setting values to the in-bu
 <th> Key </th>
 <th> Description </th>
 </tr>
+<tr>
 <td> SfChatOutgoingMessageTextColor </td>
 <td> Text color of outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageAuthorTextColor </td>
 <td> Text color of the author’s name in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageTimestampTextColor </td>
 <td> Text color of the timestamp in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatOutgoingMessageBackground </td>
 <td> Background color of the outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageFontFamily </td>
 <td> Font family of the outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageFontAttributes </td>
 <td> Font attributes of the outgoing message. </td>
 </tr>
 <tr>
 <td> sfChatOutgoingMessageFontSize </td>
 <td> Font size of the outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageAuthorFontFamily </td>
 <td> Font family of the author’s name in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageAuthorFontAttributes </td>
 <td> Font attributes of the author’s name in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageAuthorFontSize </td>
 <td> Font size of the author’s name in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageTimestampFontFamily </td>
 <td> Font family of the timestamp in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageTimestampFontAttributes </td>
 <td> Font attributes of the timestamp in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatOutgoingMessageTimestampFontSize </td>
 <td> Font size of the timestamp in an outgoing message. </td>
 </tr>

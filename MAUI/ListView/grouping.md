@@ -9,22 +9,22 @@ documentation: ug
 
 # Grouping in .NET MAUI ListView (SfListView)
 
-A group is a collection of items that belong to a specific category. When grouping is applied, the data is organized into different groups based on key values. Each group is identified by its [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Key), which allows you to access the underlying data in the group.
+A group is a collection of items that belong to a specific category. When grouping is applied, the data is organized into different groups based on key values. Each group is identified by its [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Key), which allows you to access the underlying data in the group.
 
 To get start quickly with grouping in .NET MAUI ListView, you can check on this video:
 <style>#MAUIListViewGroupingVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewGroupingVideoTutorial' src='https://www.youtube.com/embed/EzjBHeIPPw4'></iframe>
 
-N> When the ItemsSource is changed for a ListView, [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) will be cleared by default. If you want to retain grouping in the listview, you need to add `DataSource.GroupDescriptors` again after changing the ItemsSource.
+N> When the ItemsSource is changed for a ListView, [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_GroupDescriptors) will be cleared by default. If you want to retain grouping in the listview, you need to add `DataSource.GroupDescriptors` again after changing the ItemsSource.
 
-N> To update grouping for the newly added listview items at runtime, set the [listView.DataSource.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.LiveDataUpdateMode.html) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.LiveDataUpdateMode.html#Syncfusion_DataSource_LiveDataUpdateMode_AllowDataShaping). 
+N> To update grouping for the newly added listview items at runtime, set the [listView.DataSource.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.LiveDataUpdateMode.html) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.LiveDataUpdateMode.html#Syncfusion_Maui_DataSource_LiveDataUpdateMode_AllowDataShaping). 
 
 ## Programmatic grouping
 
-The SfListView allows programmatic grouping by defining the [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) object, and adding it into the [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) collection. The `GroupDescriptor` object holds the following properties:
+The SfListView allows programmatic grouping by defining the [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) object, and adding it into the [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_GroupDescriptors) collection. The `GroupDescriptor` object holds the following properties:
 
-* [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_PropertyName): Describes the name of the property to be grouped.
-* [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector): Describes selector to return the group key.
-* [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_Comparer): Describes comparer to be applied when sorting takes place.
+* [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_PropertyName): Describes the name of the property to be grouped.
+* [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_KeySelector): Describes selector to return the group key.
+* [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_Comparer): Describes comparer to be applied when sorting takes place.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7 8" %}
@@ -51,11 +51,11 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 
 ## Custom grouping
 
-ListView supports grouping the items based on custom logic for each [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector). The following topics explain how to achieve different custom grouping use cases with code examples.
+ListView supports grouping the items based on custom logic for each [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_KeySelector). The following topics explain how to achieve different custom grouping use cases with code examples.
 
 ### Grouping based on first character
 
-The SfListView supports grouping the items based on first character of the value assigned to the property name in [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector). 
+The SfListView supports grouping the items based on first character of the value assigned to the property name in [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_KeySelector). 
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 5 6 7 8" %}
@@ -125,7 +125,7 @@ The following screenshot shows grouping by ignoring case sensitivity.
 
 ### Custom sorting of groups
 
-The SfListView allows you to sort the groups based on custom logic applied to either the [SfListView.DataSource.GroupComparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupComparer) property or [GroupDescriptor.Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_Comparer) added to the `DataSource.GroupDescriptors` collection.
+The SfListView allows you to sort the groups based on custom logic applied to either the [SfListView.DataSource.GroupComparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_GroupComparer) property or [GroupDescriptor.Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_Comparer) added to the `DataSource.GroupDescriptors` collection.
 
 In custom group comparer, all the items present in a group compares each other based on the items count to each group sorted accordingly.
 
@@ -178,7 +178,7 @@ public class CustomGroupComparer : IComparer<GroupResult>
 
 ### Sorting the items within group
 
-Add [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) and [DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_SortDescriptors) with required properties to group and sort the items of the underlying collection.
+Add [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_GroupDescriptors) and [DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_SortDescriptors) with required properties to group and sort the items of the underlying collection.
 
 {% tabs %}
 {% highlight c# tabtitle="GroupingPage.cs" hl_lines="4" %}
@@ -278,7 +278,7 @@ The following screenshot shows grouping by property value sum.
 
 ### Displaying items count
 
-The total number of items in each group will be displayed in the group header by binding the [Count](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Count) property in the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate).
+The total number of items in each group will be displayed in the group header by binding the [Count](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Count) property in the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
@@ -356,7 +356,7 @@ The following screenshot shows the output when displaying items count at group h
 
 ## Multi-level grouping
 
-The SfListView supports multiple level grouping by adding multiple [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) objects to the [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) collection. The grouped items will be displayed in a hierarchical structure by customizing the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property. In the `GroupHeaderTemplate`, set the `Padding` property to the custom view to arrange the group header items and sub-group header items in the hierarchical structure.
+The SfListView supports multiple level grouping by adding multiple [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) objects to the [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_GroupDescriptors) collection. The grouped items will be displayed in a hierarchical structure by customizing the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property. In the `GroupHeaderTemplate`, set the `Padding` property to the custom view to arrange the group header items and sub-group header items in the hierarchical structure.
 
 N> Multi-level grouping is only applicable for `LinearLayout` in the SfListView.
 
@@ -671,7 +671,7 @@ listView.IsStickyGroupHeader = true;
 
 The User Interface (UI) for the group header items can be customized by using the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property.
 
-To customize the view for group header items and bind the [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Key) to it, follow the code example.
+To customize the view for group header items and bind the [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Key) to it, follow the code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
@@ -790,7 +790,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-You can switch the expand or collapse group icon based on [IsExpand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_IsExpand) property using the converter.
+You can switch the expand or collapse group icon based on [IsExpand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_IsExpand) property using the converter.
 
 {% tabs %}
 {% highlight c# tabtitle="BoolToImageConverter.cs" %}
@@ -1157,7 +1157,7 @@ The following screenshot shows the output when only one item in a group gets sel
 
 ### Add an item at the specific index in a group
 
-The SfListView allows adding an item at the specific index in a group by finding the group with the help of [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Key) value of the group.
+The SfListView allows adding an item at the specific index in a group by finding the group with the help of [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Key) value of the group.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

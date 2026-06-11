@@ -39,10 +39,10 @@ Following are the list of options available to show SfPopup at various positions
 <td>{{'[Show(bool)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_)'| markdownify }}</td>
 <td>Similar as <code>SfPopup.IsFullScreen</code> property.</td></tr>
 <tr>
-<td>{{'[SfPopup.Show(string title, string message)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_)'| markdownify }}</td>
+<td>{{'[SfPopup.Show(string title, string message)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_Int32_)'| markdownify }}</td>
 <td>Static method to show a popup with the title and message.</td></tr>
 <tr>
-<td>{{'[SfPopup.Show(string title, string message, string acceptText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_)'| markdownify }}</td>
+<td>{{'[SfPopup.Show(string title, string message, string acceptText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_System_Int32_)'| markdownify }}</td>
 <td>Static method to show a popup with the title, message and acceptText.</td></tr>
 </table>
 
@@ -304,7 +304,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ## Close the popup automatically after timeout
 
-To close a popup automatically after a specified delay, you can use the [AutoCloseDuration] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AutoCloseDuration) property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.
+To close a popup automatically after a specified delay, you can use the [AutoCloseDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AutoCloseDuration) property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -388,7 +388,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-The [Show(string title, string message, string acceptText, string declineText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_System_String_) static method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
+The [Show(string title, string message, string acceptText, string declineText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_System_String_System_Int32_) static method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

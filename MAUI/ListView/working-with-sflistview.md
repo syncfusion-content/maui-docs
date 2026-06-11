@@ -220,7 +220,7 @@ The .NET MAUI ListView (SfListView) has been built from the ground up with an op
  
 ## Scrolling ListView without virtualization
 
-The `SfListView` allows you to scroll by loading the entire collection of items inside the ScrollView and defining the total extend of its container to `HeightRequest` in the[Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event.
+The `SfListView` allows you to scroll by loading the entire collection of items inside the ScrollView and defining the total extend of its container to `HeightRequest` in the [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event.
 
 {% tabs %}
 {% highlight xaml %}
@@ -248,7 +248,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 
-When `SfListView` is in [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) as `Height`, the extend of the ListView will be updated only while scrolling. So you can resize the ListView in [VisualContainer]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html)) `PropertyChanged` method  as shown in the following code sample.
+When `SfListView` is in [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) as `Height`, the extend of the ListView will be updated only while scrolling. So you can resize the ListView in [VisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html) `PropertyChanged` method  as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
