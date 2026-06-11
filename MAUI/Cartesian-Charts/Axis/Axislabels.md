@@ -255,11 +255,9 @@ this.Content = chart;
 
 N> If the [LabelsIntersectAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsIntersectAction) is set to Wrap, we should set the width of the wrap using the [MaxWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_MaxWidth) property. We can align the wrapped axis label using the [WrappedLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_WrappedLabelAlignment) property.
 
-## Maximum number of labels per 100 pixels
+## Maximum Labels
 
-The `MaximumLabels` property in [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is an integer type property that is used to control the number of axis labels rendered for every 100 pixels of the chart axis. This feature limits and manages the density of axis labels per 100 pixels, ensuring that either the specified maximum is displayed or that label spacing is optimized to maintain readability.
-
-By default, a maximum of `3` labels are displayed per 100 pixels of axis. This ensures that the chart remains clean and readable without manual configuration. You can override this behavior by explicitly setting the MaximumLabels property to your desired density.
+The `MaximumLabels` property in [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is an integer type property that is used to control the number of axis labels rendered for every 100 pixels of the chart axis. By default, a maximum of `3` labels are displayed per 100 pixels of axis. You can override this behavior by explicitly setting the MaximumLabels property to your desired density.
 
 {% tabs %}
 
