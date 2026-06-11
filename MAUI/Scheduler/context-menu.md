@@ -10,7 +10,7 @@ keywords : .net maui scheduler, .net maui scheduler context menu, .net maui sche
 
 # Context Menu in .NET MAUI Scheduler (SfScheduler)
 
-The .NET MAUI Scheduler supports context menus for timeslot cells, month cells, all-day panels, and appointments. Context menus provide quick access to common actions such as creating, editing, or deleting appointments. The  Scheduler provides built-in commands that can be assigned to context menu items.
+The .NET MAUI Scheduler supports context menus for timeslot cells, month cells, all-day panels, and appointments. Context menus provide quick access to common actions such as creating, editing, or deleting appointments. The Scheduler provides built-in commands that can be assigned to context menu items.
 
 The Scheduler displays context menus through the following interactions:
  
