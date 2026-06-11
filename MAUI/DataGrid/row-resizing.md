@@ -40,8 +40,8 @@ this.Content = dataGrid;
 
 The `RowResizeMode` determines when the requested height is applied during an interactive resize:
 
-- `OnTouchUp` — the new height is applied when the user releases the pointer (touch-up or mouse-up).
-- `OnMoved` — the new height is applied continuously as the resize indicator moves (live update).
+- `OnTouchUp` - the new height is applied when the user releases the pointer (touch-up or mouse-up).
+- `OnMoved` - the new height is applied continuously as the resize indicator moves (live update).
 
 {% tabs %}
 {% highlight xaml %}
@@ -67,10 +67,10 @@ this.Content = dataGrid;
 
 Use `SfDataGrid.RowResizing` to validate or cancel resizes. The event provides `DataGridRowResizingEventArgs` with the following properties:
 
-- `RowIndex` — index of the row being resized
-- `RowData` — the underlying data item for the row
-- `NewValue` — requested row height
-- `Cancel` — set to `true` to cancel the operation
+- `RowIndex` - index of the row being resized
+- `RowData` - the underlying data item for the row
+- `NewValue` - requested row height
+- `Cancel` - set to `true` to cancel the operation
 
 {% tabs %}
 {% highlight xaml %}
