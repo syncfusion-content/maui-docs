@@ -300,7 +300,6 @@ public class AirportDetails
 {
     public string State { get; set; }
     public string Count { get; set; }
-    public int Event { get; set; }
 }
 
 {% endhighlight %}
