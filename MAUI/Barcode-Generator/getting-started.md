@@ -313,7 +313,7 @@ this.Content = barcode;
 
 N> The default symbology of SfBarcodeGenerator is [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html).
 
-## Initialize QR Code symbology
+## Step 5: Initialize QR Code symbology
 
 You can set the required symbology type to the barcode generator based on input value by initializing the [`Symbology`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_Symbology) property. In the following code sample, the QR code is set as the barcode symbology.
 
