@@ -262,5 +262,10 @@ private void ListView_Loaded(object sender, Syncfusion.Maui.ListView.ListViewLoa
  * Avoids `SfListView` inside the `SfListView`, if `SfListView.AutoFitMode` is `Height` or `DynamicHeight`. Because the inner `SfListView` does not return the actual measured size when measuring before layout the item.                 
 
 ## See also 
+- [How to create an expandable ListView (SfListView) in .NET MAUI](https://support.syncfusion.com/kb/article/11583/how-to-create-an-expandable-listview-sflistview-in-net-maui)
 
-[How to create an expandable ListView (SfListView) in .NET MAUI](https://support.syncfusion.com/kb/article/11583/how-to-create-an-expandable-listview-sflistview-in-net-maui)                                                                                                                                             
+- [Header and Footer in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/header-and-footer)
+
+- [Layouts in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/layouts)
+
+- [Scrolling in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/scrolling)

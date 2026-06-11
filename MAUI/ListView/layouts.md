@@ -85,4 +85,8 @@ public partial class GridLayoutPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-                                                                                                                                                                                    
+## See Also
+
+- [Item Re-ordering in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-drag-and-drop)
+
+- [Swiping in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/swiping)
