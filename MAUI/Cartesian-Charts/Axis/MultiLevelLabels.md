@@ -147,7 +147,7 @@ this.Content = chart;
 
 ![Multi-level labels on NumericalAxis in .NET MAUI Chart.](axis_images/multi_level_labels_numerical_axis.png)
 
-## Customizing Multi-Level Label Appearance
+## Customizing Label Appearance
 
 The appearance of multi-level labels can be customized using the [MultiLevelLabelStyle](#) property. The [MultiLevelLabelStyle](#) provides the following customization properties:
 
