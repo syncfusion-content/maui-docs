@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Performance in .NET MAUI Chart control | Syncfusion
-description: Learn about performance optimization using suspend and resume notifications in Syncfusion .NET MAUI Chart control.
+title: Performance in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn about performance optimization using suspend and resume notifications in Syncfusion .NET MAUI Cartesian Chart control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -14,17 +14,7 @@ The .NET MAUI Chart provides performance optimization techniques to efficiently 
 
 ## Deferred Real-Time Updates
 
-When updating chart data dynamically—such as adding, removing, or modifying multiple data points—each individual change triggers a complete chart refresh cycle. This can cause noticeable UI lag when dealing with bulk operations.
-
-The chart provides suspension methods to batch multiple data changes and apply them in a single consolidated update:
-
-* **SuspendNotification** - Suspends the series from updating the data till ResumeNotification is called. It is specifically used when you need to append the collection of data to an individual series.
-
-* **ResumeNotification** - Processes the data that is added to the data source after the SuspendNotification is called.
-
-* **SuspendSeriesNotification** - Suspends all series in the chart from updating the data till ResumeSeriesNotification is called. It is specifically used when you need to append the collection of data to multiple series simultaneously.
-
-* **ResumeSeriesNotification** - Processes the data that is added to the data source after the SuspendSeriesNotification is called.
+When performing bulk or real-time updates such as adding, removing, or modifying multiple data points, the chart refreshes for every change, which may impact performance. To optimize this, use chart-level or series-level suspend and resume notification methods to batch updates and reduce unnecessary refresh cycles based on your requirements.
 
 ### Series-Level Suspend and Resume
 
@@ -35,14 +25,7 @@ Use `SuspendNotification` and `ResumeNotification` methods on a specific series 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.XAxes>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.XAxes>
-
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.YAxes>
-
+    ...
     <chart:SfCartesianChart.Series>
         <chart:FastLineSeries x:Name="series"
                           ItemsSource="{Binding Data}"
@@ -81,14 +64,7 @@ Use `SuspendSeriesNotification` and `ResumeSeriesNotification` methods on the ch
 {% highlight xaml %}
 
 <chart:SfCartesianChart x:Name="chart">
-    <chart:SfCartesianChart.XAxes>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.XAxes>
-
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.YAxes>
-
+    ...
     <chart:SfCartesianChart.Series>
         <chart:FastLineSeries ItemsSource="{Binding Data1}"
                           XBindingPath="XValue"
@@ -116,4 +92,3 @@ chart.ResumeSeriesNotification();
 {% endhighlight %}
 
 {% endtabs %}
-
