@@ -29,9 +29,6 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 .form-image {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
    display: block;
    cursor: pointer;
    transition: 0.3s ease;
@@ -40,7 +37,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
    margin: 0 0 10px;
@@ -283,18 +280,3 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
 </span>
 <img id="popupImage">
 </div>
-<script>
-function openImage(src) {
-   document.getElementById("imageModal").style.display = "flex";
-   document.getElementById("popupImage").src = src;
-}
-function closeImage() {
-   document.getElementById("imageModal").style.display = "none";
-}
-/* Close when clicking outside image */
-document.getElementById("imageModal").addEventListener("click", function(e) {
-   if (e.target.id === "imageModal") {
-       closeImage();
-   }
-});
-</script>

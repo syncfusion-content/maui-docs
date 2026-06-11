@@ -41,12 +41,8 @@ Before proceeding, ensure the following are in place:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight c# %}
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace RatingSample
@@ -144,12 +140,8 @@ Before proceeding, ensure the following are in place:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight c# %}
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace RatingSample
@@ -219,91 +211,105 @@ public MainPage()
 {% endhighlight %}
 
 {% endtabs %}
+{% endtabcontent %}
+{% tabcontent JetBrains Rider %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
+## Step 1: Create a New MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Inputs NuGet Package
+
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# %}
+using Microsoft.Maui;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace RatingSample
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %} 
+
+## Step 4: Add a Basic Rating
+
+Step 1: Add the namespace, as shown in the following code sample:
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<xmlns:rating="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+	using Syncfusion.Maui.Inputs;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 2: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<rating:SfRating x:Name="rating" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRating rating;
+public MainPage()
+{
+    InitializeComponent();
+    rating = new SfRating();
+    this.Content = rating;
+} 
+
+{% endhighlight %}
+
+{% endtabs %}
 
 {% endtabcontent %}
 {% endtabcontents %}
-
-## Set Number of Rating Items
-
-The number of rating items to be displayed can be customized in the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. Users can create a rating application using 5 items as follows. The [ItemCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property is used to define the number of rating items.
-
-N> The default value of [ItemCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) is 5.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<rating:SfRating ItemCount="5" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.ItemCount = 5;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Set Value
-
-The display value can be set in the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control, which is selected among the items. The following code example shows the display value of three with five rating items. The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property is used to set display value.
-
-N> The default value of this property is 0.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<rating:SfRating Value="3" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.Value = 3;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Precision
-
-The [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control provides an option to rate the items in full, half, and exact values. This can be set using the [Precision](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Precision) property. By default, the precision mode is [Standard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<rating:SfRating Precision="Standard" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.Precision = Precision.Standard;
-}
-
-{% endhighlight%}
-
-{% endtabs %}
 
 ![SfRating Getting Started ](images/getting-started.png)
 

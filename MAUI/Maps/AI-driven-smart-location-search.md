@@ -393,4 +393,6 @@ private async Task GetRecommendationAsync(string userQuery)
 
 {% endtabs %}
 
+![AI driven Smart Location Search .NET MAUI Maps](images/smart-ai-solutions/ai-smart-location-search.gif)
+
 You can find the complete sample from this [link](https://github.com/SyncfusionExamples/Integrating-AI-Driven-Location-Search-into-.NET-MAUI-Maps).

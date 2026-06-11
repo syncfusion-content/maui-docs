@@ -658,6 +658,80 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+##  Load template view in the popup body
+
+Any view can be added as popup content by using the [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property to refresh it. Refer to the following code example in which a label is added as popup content. 
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GettingStarted"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="GettingStarted.MainPage" 
+             Padding="0,40,0,0">
+    <StackLayout>
+        <Button x:Name="clickToShowPopup"
+                Text="ClickToShowPopup"
+                VerticalOptions="Start"
+                HorizontalOptions="FillAndExpand"
+                Clicked="ClickToShowPopup_Clicked" />
+        <syncfusion:SfPopup x:Name="popup">
+            <syncfusion:SfPopup.ContentTemplate>
+                <DataTemplate>
+                    <Label Text="This is the Customized view for SfPopup"
+                           BackgroundColor="SkyBlue"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center" />
+                </DataTemplate>
+            </syncfusion:SfPopup.ContentTemplate>
+        </syncfusion:SfPopup>
+    </StackLayout>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
+using Syncfusion.Maui.Popup;
+
+namespace GettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        DataTemplate templateView;
+        Label popupContent;
+
+        public MainPage()
+        {
+            InitializeComponent();            
+            templateView = new DataTemplate(() =>
+            {
+                popupContent = new Label();
+                popupContent.Text = "This is the Customized view for SfPopup";
+                popupContent.BackgroundColor = Color.LightSkyBlue;
+                popupContent.HorizontalTextAlignment = TextAlignment.Center;
+                return popupContent;
+            });
+
+            // Adding ContentTemplate of the SfPopup
+            popup.ContentTemplate = templateView;
+        }
+
+        private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+        {
+            popup.Show();
+        }
+    } 
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Popup with custom content](Images/getting-started//maui-popup-with-custom-content.png)
+
 ## How to
 
 ### Disable the overlay background in .NET MAUI Popup?

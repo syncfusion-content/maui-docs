@@ -23,7 +23,7 @@ To quickly get started with the .NET MAUI Radial Menu, watch this video.
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -107,9 +107,9 @@ namespace RadialMenuGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Install the [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -195,9 +195,9 @@ namespace RadialMenuGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install the [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -277,89 +277,71 @@ namespace RadialMenuGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Adding Radial Menu with items
+## Step 5: Adding Radial Menu with items
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-            ...
-             xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-        <radialMenu:SfRadialMenu x:Name="radialMenu" 
-                                CenterButtonText="Edit"
-                                CenterButtonFontSize="15">
-            <radialMenu:SfRadialMenu.Items>
-                <radialMenu:SfRadialMenuItem Text="Cut"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Copy"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Paste"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Crop"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Paint"
-                                            FontSize="15"/>
-            </radialMenu:SfRadialMenu.Items>
-        </radialMenu:SfRadialMenu>
-</ContentPage>
+    <radialMenu:SfRadialMenu x:Name="radialMenu" 
+                             CenterButtonText="Edit"
+                             CenterButtonFontSize="15">
+        <radialMenu:SfRadialMenu.Items>
+            <radialMenu:SfRadialMenuItem Text="Cut"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Copy"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Paste"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Crop"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Paint"
+                                         FontSize="15"/>
+        </radialMenu:SfRadialMenu.Items>
+    </radialMenu:SfRadialMenu>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialMenuGettingStarted
-{
-    public partial class MainPage : ContentPage
+    SfRadialMenu radialMenu = new SfRadialMenu()
     {
-        public MainPage()
-        {
-            InitializeComponent();
+        CenterButtonText = "Edit",
+        CenterButtonFontSize = 15
+    };
 
-            SfRadialMenu radialMenu = new SfRadialMenu()
-            {
-                CenterButtonText = "Edit",
-                CenterButtonFontSize = 15
-            };
-
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection();
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Cut",
-                FontSize = 15
-            });
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Copy",
-                FontSize = 15
-            });
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Paste",
-                FontSize = 15
-            });
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Crop",
-                FontSize = 15
-            });
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Paint",
-                FontSize = 15
-            });
-            radialMenu.Items = itemCollection;
-            this.Content = radialMenu;
-        }
-    }
-}
+    RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection();
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Cut",
+        FontSize = 15
+    });
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Copy",
+        FontSize = 15
+    });
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Paste",
+        FontSize = 15
+    });
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Crop",
+        FontSize = 15
+    });
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Paint",
+        FontSize = 15
+    });
+    radialMenu.Items = itemCollection;
+    this.Content = radialMenu;
 
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ![Getting started with .NET MAUI Radial Menu.](images/getting-started/maui-radialmenu-getting-started.png)
 
