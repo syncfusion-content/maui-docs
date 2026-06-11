@@ -352,7 +352,7 @@ public partial class RotatorControlPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Add Rotator Items
+## Step 5: Add Rotator Items
 
 We can populate the rotator’s items by using any one of the following ways,
 

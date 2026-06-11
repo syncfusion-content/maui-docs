@@ -285,11 +285,11 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-## Step 5: Populating step progressbar items
+## Step 5: Create the viewmodel
 
 You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
 
-* Create a simple Observable Collection of the item for the step progressbar,
+Create a simple Observable Collection of the item for the step progressbar,
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -322,7 +322,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to step progressbar
+## Step 6: Bind the Collection to step progressbar
 
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property from the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). Bind item collection in both XAML and C#.
 
