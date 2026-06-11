@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization in .NET MAUI Date Time Picker Control | Syncfusion<sup>&reg;</sup>
+title: Localization in .NET MAUI Date Time Picker Control | Syncfusion
 description: Learn about localization support in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control.
 platform: maui
 control: SfDateTimePicker
