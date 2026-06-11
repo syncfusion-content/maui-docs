@@ -304,21 +304,21 @@ public class ViewModel : INotifyPropertyChanged
 
 ## Close the popup
 
-To close the popup programmatically, you can call either the [Dismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Dismiss) method or set the IsOpen property to false.
+To close the popup programmatically, you can call either the [Dismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Dismiss) method or set the `IsOpen` property to false.
 
 Refer to the following code example for dismissing popup.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 7" %}
     
-    private void ClickToDismissPopup_Clicked(object sender, EventArgs e)
-    {
-        // Dismiss SfPopup from the view.
-        sfPopup.Dismiss();
+private void ClickToDismissPopup_Clicked(object sender, EventArgs e)
+{
+    // Dismiss SfPopup from the view.
+    sfPopup.Dismiss();
 
-        // Or
-        sfPopup.IsOpen = false;
-    }
+    // Or
+    sfPopup.IsOpen = false;
+}
 {% endhighlight %} 
 {% endtabs %}
 

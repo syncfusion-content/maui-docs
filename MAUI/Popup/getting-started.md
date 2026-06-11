@@ -87,6 +87,7 @@ namespace GettingStarted
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Popup;
+. . .
 
 public partial class MainPage : ContentPage
 {
