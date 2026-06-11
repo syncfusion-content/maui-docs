@@ -404,7 +404,7 @@ Create a simple message collection as shown in the following code example in a n
 {% endhighlight %}
 {% endtabs %}
 
-### Bind messages to chat 
+## Step 6: Bind messages to chat
 
 Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This enables property binding from `ViewModel` class.
 

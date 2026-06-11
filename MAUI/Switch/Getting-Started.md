@@ -300,7 +300,7 @@ using Syncfusion.Maui.Buttons;
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Performing an action based on state
+## Step 5: Performing an action based on state
 
 You can switch between states in the .NET MAUI Switch control. When the state changes,the [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) and [StateChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html) events are triggered. These events allow you to perform specific actions depending on the current state of the Switch. The [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) event also allows you to cancel the transition to a new state if needed.
 

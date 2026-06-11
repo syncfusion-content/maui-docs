@@ -386,7 +386,7 @@ public class OrderInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-### Binding the ViewModel
+## Step 6: Binding the ViewModel
 
 Create a `ViewModel` instance and set it as the DataGrid's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -428,12 +428,6 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
-
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the datagrid will be displayed with the data provided.
-
-Here is the result of the previous codes,
 
 <img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">
 

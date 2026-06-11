@@ -327,7 +327,39 @@ namespace SliderGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-The following screenshot illustrates the result of the above code.
+## Step 5: Enable labels and ticks
 
-![Initialize slider](images/getting-started/initialize-slider.png)
+The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval. The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1,
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider ticks](images/getting-started/ticks.png)

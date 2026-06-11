@@ -328,12 +328,6 @@ namespace GettingStarted
 
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, click the button to open the Popup.
-
-Here is the result of the previous codes.
-
 ![Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
 
 Download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).
