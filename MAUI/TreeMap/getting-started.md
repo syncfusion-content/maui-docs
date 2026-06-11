@@ -75,10 +75,9 @@ public static class MauiProgram
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage
-    ...        
+<ContentPage 
+    ...
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-
     <treemap:SfTreeMap />
 </ContentPage>
 
@@ -87,7 +86,6 @@ public static class MauiProgram
 {% highlight C# hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.TreeMap;
-. . .
 
 public partial class MainPage : ContentPage
 {
@@ -164,10 +162,9 @@ public static class MauiProgram
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage
-    ...        
+<ContentPage 
+    ...
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-
     <treemap:SfTreeMap />
 </ContentPage>
 
@@ -253,10 +250,9 @@ public static class MauiProgram
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
-<ContentPage
-    ...        
+<ContentPage 
+    ...
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-
     <treemap:SfTreeMap />
 </ContentPage>
 
@@ -265,7 +261,6 @@ public static class MauiProgram
 {% highlight C# hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.TreeMap;
-. . .
 
 public partial class MainPage : ContentPage
 {
@@ -285,7 +280,7 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-## Populate .NET MAUI TreeMap data source
+## Step 5: Populate .NET MAUI TreeMap data source
 
 Here are the steps to render treemap items using the .NET MAUI TreeMap control with respective data properties created in a data model class.
 
@@ -299,13 +294,12 @@ Here are the steps to render treemap items using the .NET MAUI TreeMap control w
 Create a simple data model in a new class file as shown in the following example code.
 
 {% tabs %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight C# tabtitle="AirportDetails.cs" %}
 
-public class PopulationDetails
+public class AirportDetails
 {
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
+    public string State { get; set; }
+    public string Count { get; set; }
 }
 
 {% endhighlight %}
@@ -316,36 +310,26 @@ public class PopulationDetails
 Create a view model class to set values for the properties listed in the model class as shown in the following example code.
 
 {% tabs %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
-public class PopulationViewModel
+public class ViewModel
 {
-    public PopulationViewModel()
+    public ViewModel()
     {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+        this.AirportDetails = new ObservableCollection<AirportDetails>()
         {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+            new AirportDetails { State = "Ecuador", Count = 7 },
+            new AirportDetails { State = "Chile", Count = 5 },
+            new AirportDetails { State = "Peru", Count = 3 },             
+            new AirportDetails { State = "Falkland", Count = 1 },
+            new AirportDetails { State = "French", Count = 1 },
+            new AirportDetails { State = "German", Count = 3 },
+            new AirportDetails { State = "Islands", Count = 1 },
+            new AirportDetails { State = "Guiana", Count = 1 },
         };
     }
 
-    public ObservableCollection<PopulationDetails> PopulationDetails
+    public ObservableCollection<AirportDetails> AirportDetails
     {
         get;
         set;
@@ -392,7 +376,7 @@ this.Content = treeMap;
 
 N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain treemap binding.
 
-## Add labels
+## Step 6: Add labels
 
 To display text for the leaf items, utilize the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property within the [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property allows you to specify the path to the data property containing the text you want to display.
 
@@ -425,441 +409,8 @@ treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brus
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
-
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
-![getting-started-with-maui-tree-map](images/getting-started/getting-started-with-maui-tree-map.png)
+![getting-started-with-maui-tree-map](images/getting-started/treemap-view.png)
 
-## Applying leaf item brush settings
-
-The brush settings are used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: [UniformBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html), [RangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html), [DesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html), and [PaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html). Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the treemap.
-
-{% tabs %}
-{% highlight XAML hl_lines="11 12 13" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
-
-{% endhighlight %}
-
-{% highlight C# hl_lines="5" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationViewModel.cs" %}
-
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Applying group item brush settings
-
-The group items are colored using the [Brushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapPaletteBrushSettings_Brushes) property within the colors collection of [TreeMapPaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html) in the [GroupItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_GroupItemBrushSettings) of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
-
-{% tabs %}
-{% highlight XAML hl_lines="14 15 16 17 18 19 20 21" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.Levels>
-        <treemap:TreeMapLevel GroupPath="Continent"/>
-    </treemap:SfTreeMap.Levels>
-    <treemap:SfTreeMap.GroupItemBrushSettings>
-        <treemap:TreeMapPaletteBrushSettings>
-            <treemap:TreeMapPaletteBrushSettings.Brushes>
-                <SolidColorBrush>#003790</SolidColorBrush>
-                <SolidColorBrush>#FF8F00</SolidColorBrush>
-            </treemap:TreeMapPaletteBrushSettings.Brushes>
-        </treemap:TreeMapPaletteBrushSettings>
-    </treemap:SfTreeMap.GroupItemBrushSettings>
-</treemap:SfTreeMap>
-
-{% endhighlight %}
-
-{% highlight C# hl_lines="7 8 9 10 11 12 13 14" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent" });
-treeMap.GroupItemBrushSettings = new TreeMapPaletteBrushSettings()
-{
-    Brushes = new List<Brush>()
-    {
-        new SolidColorBrush(Color.FromArgb("#003790")),
-        new SolidColorBrush(Color.FromArgb("#FF8F00")),
-    }
-};
-
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationViewModel.cs" %}
-
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> This is applicable only when [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) is enabled.
-
-## Enable tooltip
-
-To enable the tooltip for the TreeMap control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
-
-{% tabs %}
-{% highlight XAML hl_lines="4" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
-
-{% endhighlight %}
-{% highlight C# hl_lines="5" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.PrimaryValuePath = "Population";
-treeMap.ShowToolTip = true;
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
-
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Enable legend
-
-To incorporate a legend for the TreeMap control, utilize the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) property within [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings). It is possible to customize the legend item’s color and text using the [LeafItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemBrushSettings) and [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings) properties of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
-
-{% tabs %}
-{% highlight XAML hl_lines="8 9 10" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True" />
-    </treemap:SfTreeMap.LegendSettings>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#F0A868" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#F3BC8B" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#F8D7B9" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
-
-{% endhighlight %}
-{% highlight C# hl_lines="6" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
-treeMap.LegendSettings.ShowLegend = true;
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
-{
-    RangeBrushes = new List<TreeMapRangeBrush>()
-    {
-        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#F0A868")) },
-        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#F3BC8B")) },
-        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#F8D7B9")) },
-    }
-};
-
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
-
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
- ![legend-in-maui-tree-map](images/getting-started/legend-in-maui-tree-map.png)
-
- N> You can refer to our [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI TreeMap Example](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/) that shows you how to render the TreeMap in .NET MAUI.
+N> You can refer to our [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI TreeMap Example](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/) that shows you how to render the TreeMap in .NET MAUI.

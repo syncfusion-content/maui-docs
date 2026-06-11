@@ -256,46 +256,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Initialize RangeSlider
-
-Import the [SfRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) namespace and initialize the range slider as shown below.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage
-    . . .
-    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
-    <sliders:SfRangeSlider />
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Sliders;
-
-namespace RangeSlider
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfRangeSlider rangeSlider = new SfRangeSlider();
-            this.content = rangeSlider;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Initialize RangeSlider](images/getting-started/initialize-slider.png)
-
-## Enable labels
+## Step 5: Initialization of RangeSlider
 
 The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
@@ -303,12 +264,7 @@ The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Ran
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0"
-                       Maximum="10"
-                       RangeStart="2"
-                       RangeEnd="8"
-                       Interval="2"
-                       ShowLabels="True" />
+<sliders:SfRangeSlider Minimum="0" Maximum="10" RangeStart="2" RangeEnd="8" Interval="2" ShowLabels="True" ShowTicks="True" MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
@@ -321,40 +277,6 @@ rangeSlider.RangeStart = 2;
 rangeSlider.RangeEnd = 8;
 rangeSlider.ShowLabels = true;
 rangeSlider.Interval = 2;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider labels](images/getting-started/labels.png)
-
-## Enable ticks
-
-The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Minimum="0"
-                       Maximum="10"
-                       RangeStart="2"
-                       RangeEnd="8"
-                       Interval="2"
-                       ShowLabels="True"
-                       ShowTicks="True"
-                       MinorTicksPerInterval="1" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 10;
-rangeSlider.RangeStart = 2;
-rangeSlider.RangeEnd = 8;
-rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
 rangeSlider.Interval = 2;
 rangeSlider.MinorTicksPerInterval = 1;
@@ -364,121 +286,5 @@ rangeSlider.MinorTicksPerInterval = 1;
 {% endtabs %}
 
 ![RangeSlider ticks](images/getting-started/ticks.png)
-
-## Orientation
-
-The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property allows you to show the range slider in both horizontal and vertical directions. The default value of the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property is **Horizontal**.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Minimum="0"
-                       Maximum="10"
-                       RangeStart="2"
-                       RangeEnd="8"
-                       ShowTicks="True"
-                       ShowLabels="True"
-                       Interval="2"
-                       MinorTicksPerInterval="1"
-                       Orientation="Vertical" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Orientation = SliderOrientation.Vertical;
-rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 10;
-rangeSlider.RangeStart = 2;
-rangeSlider.RangeEnd = 8;
-rangeSlider.ShowLabels = true;
-rangeSlider.ShowTicks = true;
-rangeSlider.Interval = 2;
-rangeSlider.MinorTicksPerInterval = 1;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider orientation](images/getting-started/orientation.png)
-
-## Inverse the slider
-
-Invert the range slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the IsInversed property is **False**.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Minimum="0"
-                       Maximum="10"
-                       RangeStart="2"
-                       RangeEnd="8"
-                       Interval="2"
-                       ShowTicks="True"
-                       ShowLabels="True"
-                       MinorTicksPerInterval="1"
-                       IsInversed="True" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 10;
-rangeSlider.RangeStart = 2;
-rangeSlider.RangeEnd = 8;
-rangeSlider.Interval = 2;
-rangeSlider.ShowLabels = true;
-rangeSlider.ShowTicks = true;
-rangeSlider.MinorTicksPerInterval = 1;
-rangeSlider.IsInversed = true;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Inverse range slider](images/getting-started/slider-inverse.png)
-
-## Formatting labels
-
-Add prefix or suffix to the labels using the [NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_NumberFormat) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Minimum="20"
-                       Maximum="100"
-                       RangeStart="40"
-                       RangeEnd="80"
-                       Interval="20"
-                       ShowLabels="True"
-                       NumberFormat="$#"
-                       ShowTicks="True" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Minimum = 20;
-rangeSlider.Maximum = 100;
-rangeSlider.RangeStart = 40;
-rangeSlider.RangeEnd = 80;
-rangeSlider.Interval = 20;
-rangeSlider.ShowLabels = true;
-rangeSlider.NumberFormat = "$##";
-rangeSlider.ShowTicks = true;
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider label format](images/getting-started/label-format.png)
 
 N> You can refer to our [.NET MAUI Range Slider](https://www.syncfusion.com/maui-controls/maui-range-slider) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Range Slider Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders/SampleBrowser.Maui.Sliders/Samples/RangeSlider) that shows you how to render the Range Slider in .NET MAUI.

@@ -11,6 +11,37 @@ documentation: ug
 
 The appearance of the [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) can be customized using properties such as Angle, Radius, Inner radius, and Stroke, which allow you to enhance the visual presentation of your application.
 
+## Add a Title
+The title of the sunburst chart provides quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Title) property is used to set title for the sunburst chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<sunburst:SfSunburstChart>
+    <sunburst:SfSunburstChart.Title>
+        <Label Text="Employees Count"/>
+    </sunburst:SfSunburstChart.Title>
+    . . .
+</sunburst:SfSunburstChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSunburstChart sunburst = new SfSunburstChart();
+sunburst.Title = new Label()
+{
+    Text = "Employees Count"
+};
+
+this.Content = sunburst;
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+
 ## Angle
 
 The start angle and end angle of the sunburst chart can be adjusted by using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EndAngle) properties.

@@ -314,7 +314,7 @@ namespace ChartGettingStarted
 
 {% endtabcontents %}
 
-### Initialize view model
+## Step 5: Initialize view model
 
 Now, let us define a simple data model that represents a data point in the chart.
 
@@ -389,7 +389,7 @@ this.BindingContext = new PersonViewModel();
 
 {% endtabs %} 
 
-### Initialize Chart axis
+## Step 6: Initialize Chart axis
 
 [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [XAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_XAxes) and [YAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_YAxes) collection of the chart is used to initialize the axis for the chart.
 
@@ -428,7 +428,7 @@ Run the project and check if you get following output to make sure you have conf
 
 ![Initializing axis for .NET MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.jpg)
 
-### Populate Chart with data
+## Step 7: Populate Chart with data
 
 As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `PersonViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
@@ -436,222 +436,6 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath)
  properties so that chart will fetch values from the respective properties in the data model to plot the series. 
-
-{% tabs %}   
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-    <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis>
-            <chart:CategoryAxis.Title>
-                <chart:ChartAxisTitle Text="Name"/>
-            </chart:CategoryAxis.Title>
-        </chart:CategoryAxis>
-    </chart:SfCartesianChart.XAxes>
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis>
-            <chart:NumericalAxis.Title>
-                <chart:ChartAxisTitle Text="Height(in cm)"/>
-            </chart:NumericalAxis.Title>
-        </chart:NumericalAxis>
-    </chart:SfCartesianChart.YAxes>
-
-    <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Name" 
-                        YBindingPath="Height"/>
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart();
-
-// Initializing primary axis
-CategoryAxis primaryAxis = new CategoryAxis();
-primaryAxis.Title = new ChartAxisTitle()
-{
-    Text = "Name",
-};
-chart.XAxes.Add(primaryAxis);
-
-//Initializing secondary Axis
-NumericalAxis secondaryAxis = new NumericalAxis();
-secondaryAxis.Title = new ChartAxisTitle
-{
-    Text= "Height(in cm)",
-};
-chart.YAxes.Add(secondaryAxis);
-
-//Initialize the two series for SfChart
-ColumnSeries series = new ColumnSeries();
-series.Label = "Height";
-series.ShowDataLabels = true;
-series.ItemsSource = (new PersonViewModel()).Data;
-series.XBindingPath = "Name";
-series.YBindingPath = "Height";
-
-//Adding Series to the Chart Series Collection
-chart.Series.Add(series);
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-### Add a title
-
-The title of the chart provide quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set title for the chart as follows.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-    <chart:SfCartesianChart.Title>
-        <Label Text="Height Comparison"/>
-    </chart:SfCartesianChart.Title> 
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart();
-chart.Title = new Label()
-{
-    Text = "Height Comparison"
-};
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-### Enable the data labels
-
-The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-    . . . 
-    <chart:ColumnSeries ShowDataLabels="True"/>
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart()
-. . .
-ColumnSeries series = new ColumnSeries();
-series.ShowDataLabels = true;
-chart.Series.Add(series);
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-### Enable a legend
-
-The legend provides information about the data point displayed in the chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart >
-    . . .
-    <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfCartesianChart.Legend>
-    . . .
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart();
-chart.Legend = new ChartLegend (); 
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-N> Additionally, set label for each series using the `Label` property of chart series, which will be displayed in corresponding legend.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-    . . .
-    <chart:ColumnSeries ItemsSource="{Binding Data}"
-                        XBindingPath="Name" 
-                        YBindingPath="Height"
-                        Label="Height"/>
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart()
-. . .
-ColumnSeries series = new ColumnSeries (); 
-series.ItemsSource = (new PersonViewModel()).Data;
-series.XBindingPath = "Name"; 
-series.YBindingPath = "Height"; 
-series.Label = "Height";
-chart.Series.Add(series);
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-### Enable tooltip
-
-Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property to true.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-    ...
-    <chart:ColumnSeries EnableTooltip="True"/>
-    ...
-</chart:SfCartesianChart> 
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart()
-. . .
-ColumnSeries series = new ColumnSeries();
-series.EnableTooltip = true;
-chart.Series.Add(series);
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-The following code example gives you the complete code of above configurations.
 
 {% tabs %} 
 
@@ -708,7 +492,7 @@ The following code example gives you the complete code of above configurations.
 
     </chart:SfCartesianChart>
 </ContentPage>
- 
+
 {% endhighlight %}
 
 {% highlight C# %}
@@ -775,7 +559,7 @@ namespace ChartGettingStarted
 
 {% endtabs %}
 
-The following chart is created as a result of the previous codes.
+The following screenshot illustrates the result of the above code.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
 
