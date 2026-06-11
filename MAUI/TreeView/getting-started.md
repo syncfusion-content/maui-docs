@@ -361,12 +361,6 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the application
-
-Press **F5** to build and run the application. Once compiled, the TreeView will be displayed with the data provided.
-
-Here is the result of the previous codes,
-
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
 ![.NET MAUI TreeView getting started UnBoundMode](Images/getting-started/maui_treeview.png)

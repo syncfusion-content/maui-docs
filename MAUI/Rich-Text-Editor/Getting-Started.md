@@ -356,7 +356,7 @@ namespace RichTextEditorSample
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Enable the Toolbar
+## Step 5: Enable the Toolbar
 
 The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides a comprehensive toolbar that allows users to format their content easily. You can enable it by setting the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ShowToolbar) property to `True`.
 

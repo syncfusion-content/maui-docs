@@ -403,6 +403,4 @@ this.Content = rangeSelector;
 
 {% endtabs %}
 
-The following gif image illustrates the result of the above code.
-
-![RangeSelector content](images/getting-started/default-range-selector.png)
+![RangeSelector ticks](images/getting-started/ticks.png)
