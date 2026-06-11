@@ -311,7 +311,7 @@ namespace DockLayoutGettingStarted
 
 {% endtabcontents %}
 
-### Set Dock Position for Child Views
+## Step 5: Set Dock Position for Child Views
 Inside the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control, child views can be arranged using the [Dock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_DockProperty) attached property. This property allows to dock elements to specific edges— `Top`, `Bottom`, `Left`, `Right`, or set to `None` to remain non-docked and fill the remaining space.
 
 {% tabs %}
@@ -361,6 +361,8 @@ namespace DockLayoutGettingStarted
 
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates the result of the above code.
 
 ![Output of DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 

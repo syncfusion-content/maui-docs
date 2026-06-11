@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Licensing FAQ – Get the License Key | Syncfusion<sup>®</sup>
+title: Licensing FAQ – Get the License Key | Syncfusion
 description: Learn about recommended places to register the Syncfusion<sup>®</sup> license key in your application.
 platform: MAUI
 control: Essential Studio<sup>®</sup>

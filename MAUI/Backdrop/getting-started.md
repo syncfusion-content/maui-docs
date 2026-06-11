@@ -303,11 +303,11 @@ public partial class BackdropSamplePage : SfBackdropPage
 
 N> The [`Title`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page.title?view=net-maui-6.0) and [`ToolBarItems`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page.toolbaritems?view=net-maui-6.0) properties of the [`Page`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page?view=net-maui-6.0) can be used to customize the appearance of the header.
 
-### Configure header
+## Step 5: Define the Backdrop Page
 
-The page header for the backdrop appears only when adding a backdrop as a child of the NavigationPage. To know more about it, refer to the [`header configuration`](https://help.syncfusion.com/maui/backdrop/header-configuration).
+Configure the layout and content structure of the [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) by defining the back layer and front layer.
 
-## Add back layer content
+### Add back layer content
 
 The back layer holds actionable content (navigation or filtration), which is relevant to the front layer. The back layer will either fill the entire background or occupy the background based on the content height.
 
@@ -361,7 +361,7 @@ this.BackLayer = new BackdropBackLayer
 
 {% endtabs %}
 
-## Add front layer content
+### Add front layer content
 The front layer always appears in front of the back layer. It is displayed to the full width and holds primary content.
 
 {% tabs %} 
@@ -390,7 +390,7 @@ this.FrontLayer = new BackdropFrontLayer()
 
 {% endtabs %}
 
-## Reveal and conceal the back layer
+### Reveal and conceal the back layer
 
 The following options are provided in the backdrop to reveal and conceal the back layer.
 
@@ -399,8 +399,6 @@ The following options are provided in the backdrop to reveal and conceal the bac
 * **Swipe or fling action** - Reveals the back layer by swipe or fling action on the front layer to the required direction. Swipe downwards to reveal, and swipe upwards to conceal the back layer.  The swipe or fling action will be handled only on the top of the front layer to the [`RevealedHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html#Syncfusion_Maui_Backdrop_BackdropFrontLayer_RevealedHeight).
 
 For more information about reveal height customization, please refer to this [`link`](https://help.syncfusion.com/maui/backdrop/reveal-height-customization).
-
-![.NET Maui Backdrop reveal and conceal back layer](images/getting-started/reveal-conceal.gif)
 
 {% tabs %} 
 
@@ -431,6 +429,10 @@ public BackdropSamplePage()
 {% endhighlight %}
 
 {% endtabs %}
+
+The following screenshot illustrates the result of the above code.
+
+![.NET Maui Backdrop reveal and conceal back layer](images/getting-started/reveal-conceal.gif)
 
 N> 
 * Get the complete getting started sample from GitHub [link](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Backdrop-).

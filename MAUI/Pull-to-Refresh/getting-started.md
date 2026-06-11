@@ -326,10 +326,6 @@ To show the progress indicator while updating the view, set [IsRefreshing](https
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, perform pull-to-refresh action on pullable content view to refresh the view.
-
 ![.NET MAUI PullToRefresh with slide on top transition mode](Images/getting-started//maui-pull-to-refresh-slideontop-mode.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-pull-to-refresh/tree/master).

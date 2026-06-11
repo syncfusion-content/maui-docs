@@ -42,35 +42,30 @@ Before proceeding, ensure the following are in place:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
-{% highlight c# hl_lines="6 17" %}   
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace TextInputLayoutSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-  }
-}     
+            return builder.Build();
+        }      
+    }
+}   
 
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Add a Basic TextInputLayout
 
@@ -145,35 +140,30 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}   
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace TextInputLayoutSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-  }
-}     
+            return builder.Build();
+        }      
+    }
+}   
 
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Add a Basic TextInputLayout
 
@@ -221,9 +211,102 @@ inputLayout.Content = new Entry();
 {% endtabs %}
 
 {% endtabcontent %}
+{% tabcontent JetBrains Rider %}
+
+## Prerequisites
+
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+## Step 1: Create a New .NET MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="1 12" %}
+using Syncfusion.Maui.Core.Hosting;
+
+namespace TextInputLayoutSample
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %} 
+
+## Step 4: Add a Basic TextInputLayout
+
+Step 1: Add the NuGet to the project as discussed in the above reference section.
+
+Step 2: Add the namespace as shown in the following code sample.
+
+Add the following namespace to add [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+	
+{% endhighlight %}
+
+{% highlight c# %}
+
+    using Syncfusion.Maui.Core;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 3: Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<inputLayout:SfTextInputLayout>
+   <Entry />
+</inputLayout:SfTextInputLayout>  
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+SfTextInputLayout inputLayout = new SfTextInputLayout();
+inputLayout.Content = new Entry(); 
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontents %}
 
-## Adding hint
+## Step 5: Adding hint
 
 Floating label for the text input layout can be added by setting the [Hint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Hint) property. Visibility of the hint can be collapsed by setting the [ShowHint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHint) property to `false.` By default, this property is set to `true.`
 
@@ -252,36 +335,6 @@ When focusing on the input view, the hint label will be moved to the top positio
 Run the project, and check if you get the following output to ensure that the project has been appropriately configured to add the text input layout control.
 
 ![Adding hint](images/GettingStarted/GettingStarted.png)
-
-## Enabling password visibility toggle
-
-The password visibility toggle is used to show or hide the visibility of characters in the input view added to the control. You can enable this toggle by setting the [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_EnablePasswordVisibilityToggle) property to `true.`
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<inputLayout:SfTextInputLayout  Hint="Name" 
-                                EnablePasswordVisibilityToggle="true">
-    <Entry Text="1234"/>
-</inputLayout:SfTextInputLayout>  
- 
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Password";
-inputLayout.EnablePasswordVisibilityToggle = true;
-inputLayout.Content = new Entry() { Text = "1234" }; 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Enable password toggling image](images/GettingStarted/PasswordGettingStarted.png)
-
-N> Password visibility toggle can be enabled only for [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
 
 You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/maui-textinputlayout-samples)
 

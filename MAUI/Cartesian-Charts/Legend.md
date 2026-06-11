@@ -44,6 +44,37 @@ this.Content = chart;
 
 {% endtabs %}
 
+N> Additionally, set label for each series using the `Label` property of chart series, which will be displayed in corresponding legend.
+
+{% tabs %} 
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Name" 
+                        YBindingPath="Height"
+                        Label="Height"/>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfCartesianChart chart = new SfCartesianChart()
+. . .
+ColumnSeries series = new ColumnSeries (); 
+series.ItemsSource = (new PersonViewModel()).Data;
+series.XBindingPath = "Name"; 
+series.YBindingPath = "Height"; 
+series.Label = "Height";
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
+
 ## Legend visibility
 The visibility of the chart legend can be controlled using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_IsVisible) property. By default, the IsVisible property is set to `true`.
 

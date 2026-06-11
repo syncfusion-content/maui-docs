@@ -41,12 +41,7 @@ Before proceeding, ensure the following are in place:
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AutocompleteSample
@@ -147,12 +142,7 @@ Before proceeding, ensure the following are set up:
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AutocompleteSample
@@ -252,12 +242,7 @@ Before proceeding, ensure the following are set up:
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AutocompleteSample
@@ -364,12 +349,6 @@ public class SocialMediaViewModel
         this.SocialMedias.Add(new SocialMedia() { Name = "Telegram", ID = 5 });
         this.SocialMedias.Add(new SocialMedia() { Name = "Televzr", ID = 6 });
         this.SocialMedias.Add(new SocialMedia() { Name = "Tik Tok", ID = 7 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Tout", ID = 8 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Tumblr", ID = 9 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Twitter", ID = 10 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "Vimeo", ID = 11 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "WhatsApp", ID = 12 });
-        this.SocialMedias.Add(new SocialMedia() { Name = "YouTube", ID = 13 });
     }
 }
 
@@ -383,38 +362,27 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
 {% tabs %}
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-             xmlns:local="clr-namespace:AutocompleteSample"             
-             x:Class="AutocompleteSample.MainPage">
-
-       <ContentPage.BindingContext>
-            <local:SocialMediaViewModel />
-       </ContentPage.BindingContext>
-
-       <ContentPage.Content>
-            <!--Setting ItemsSource-->
-            <editors:SfAutocomplete x:Name="autocomplete" 
-                                    WidthRequest="250"
-                                    HeightRequest = "50"
-                                    ItemsSource="{Binding SocialMedias}" />
-        </ContentPage.Content>
-</ContentPage>
+<inputs:SfAutocomplete WidthRequest="250"
+                       HeightRequest = "40"
+                       ItemsSource="{Binding SocialMedias}">
+    <inputs:SfAutocomplete.BindingContext>
+        <local:SocialMediaViewModel />
+    </inputs:SfAutocomplete.BindingContext>
+</inputs:SfAutocomplete>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-this.BindingContext = socialMediaViewModel;
-SfAutocomplete autocomplete = new SfAutocomplete()
+SfAutocomplete  autocomplete = new SfAutocomplete
 {
     WidthRequest = 250,
-    HeightRequest = 50,
+    HeightRequest = 40,
+    BindingContext = socialMediaViewModel,
     ItemsSource = socialMediaViewModel.SocialMedias,
 };
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -432,23 +400,27 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250" 
-                        HeightRequest = "50"
-                        DisplayMemberPath = "Name"
-                        TextMemberPath = "Name"
-                        ItemsSource="{Binding SocialMedias}" />
+<inputs:SfAutocomplete WidthRequest="250"
+                       HeightRequest = "40"
+                       DisplayMemberPath = "Name"
+                       TextMemberPath = "Name"
+                       ItemsSource="{Binding SocialMedias}">
+    <inputs:SfAutocomplete.BindingContext>
+        <local:SocialMediaViewModel />
+    </inputs:SfAutocomplete.BindingContext>
+</inputs:SfAutocomplete>
 
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
-SfAutocomplete autocomplete = new SfAutocomplete()
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfAutocomplete autocomplete = new SfAutocomplete
 {
     WidthRequest = 250,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
     ItemsSource = socialMediaViewModel.SocialMedias,
 };
 

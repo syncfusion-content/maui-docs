@@ -277,89 +277,71 @@ namespace RadialMenuGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Adding Radial Menu with items
+## Step 5: Adding Radial Menu with items
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-            ...
-             xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-        <radialMenu:SfRadialMenu x:Name="radialMenu" 
-                                CenterButtonText="Edit"
-                                CenterButtonFontSize="15">
-            <radialMenu:SfRadialMenu.Items>
-                <radialMenu:SfRadialMenuItem Text="Cut"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Copy"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Paste"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Crop"
-                                            FontSize="15"/>
-                <radialMenu:SfRadialMenuItem Text="Paint"
-                                            FontSize="15"/>
-            </radialMenu:SfRadialMenu.Items>
-        </radialMenu:SfRadialMenu>
-</ContentPage>
+    <radialMenu:SfRadialMenu x:Name="radialMenu" 
+                             CenterButtonText="Edit"
+                             CenterButtonFontSize="15">
+        <radialMenu:SfRadialMenu.Items>
+            <radialMenu:SfRadialMenuItem Text="Cut"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Copy"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Paste"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Crop"
+                                         FontSize="15"/>
+            <radialMenu:SfRadialMenuItem Text="Paint"
+                                         FontSize="15"/>
+        </radialMenu:SfRadialMenu.Items>
+    </radialMenu:SfRadialMenu>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialMenuGettingStarted
-{
-    public partial class MainPage : ContentPage
+    SfRadialMenu radialMenu = new SfRadialMenu()
     {
-        public MainPage()
-        {
-            InitializeComponent();
+        CenterButtonText = "Edit",
+        CenterButtonFontSize = 15
+    };
 
-            SfRadialMenu radialMenu = new SfRadialMenu()
-            {
-                CenterButtonText = "Edit",
-                CenterButtonFontSize = 15
-            };
-
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection();
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Cut",
-                FontSize = 15
-            });
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Copy",
-                FontSize = 15
-            });
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Paste",
-                FontSize = 15
-            });
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Crop",
-                FontSize = 15
-            });
-            itemCollection.Add(new SfRadialMenuItem()
-            {
-                Text = "Paint",
-                FontSize = 15
-            });
-            radialMenu.Items = itemCollection;
-            this.Content = radialMenu;
-        }
-    }
-}
+    RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection();
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Cut",
+        FontSize = 15
+    });
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Copy",
+        FontSize = 15
+    });
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Paste",
+        FontSize = 15
+    });
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Crop",
+        FontSize = 15
+    });
+    itemCollection.Add(new SfRadialMenuItem()
+    {
+        Text = "Paint",
+        FontSize = 15
+    });
+    radialMenu.Items = itemCollection;
+    this.Content = radialMenu;
 
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ![Getting started with .NET MAUI Radial Menu.](images/getting-started/maui-radialmenu-getting-started.png)
 
