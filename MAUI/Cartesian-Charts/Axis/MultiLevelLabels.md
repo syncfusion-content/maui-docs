@@ -162,25 +162,12 @@ The appearance of multi-level labels can be customized using the [MultiLevelLabe
 
 The [LabelStyle](#) property supports the following [ChartAxisLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html) customization options:
 
-* **FontAttributes** – Specifies the font style for the label text.  
-  Possible values:
-  - **None** – Default font style.
-  - **Bold** – Makes the label text bold.
-  - **Italic** – Makes the label text italic.
-
-* **FontSize** – Sets the size of the label text.  
-
-* **Margin** – Defines the space around the label text.  
-
-* **FontFamily** – Sets the font family for the label text.  
-
-* **TextColor** – Sets the color of the label text.  
-
-* **LabelAlignment** – Specifies the alignment of the label text within the label area.  
-  Possible values:
-  - **Center** – Centers the text.
-  - **Start** – Aligns the text to the start.
-  - **End** – Aligns the text to the end.
+* **FontAttributes** – Gets or sets the font style for the label text.
+* **FontSize** – Gets or sets the size of the label text.
+* **Margin** – Gets or sets the space around the label text.  
+* **FontFamily** – Gets or sets the font family for the label text.
+* **TextColor** – Gets or sets the color of the label text.
+* **LabelAlignment** – Gets or sets the alignment of the label text within the label area.
 
 ### Border Type
 
