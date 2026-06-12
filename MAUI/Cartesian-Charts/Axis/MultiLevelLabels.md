@@ -14,7 +14,7 @@ Multi-level labels allow you to display multiple hierarchy levels of labels on t
 
 ## Creating Multi-Level Labels
 
-Multi-level labels can be added to any axis in the .NET MAUI Cartesian Chart, such as [NumericalAxis](#), [CategoryAxis](#), [DateTimeAxis](#), [DateTimeCategoryAxis](#), or [LogarithmicAxis](#).
+Multi-level labels can be added to any axis in the .NET MAUI Cartesian Chart, such as [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html), [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html), [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html), [DateTimeCategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeCategoryAxis.html), or [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html).
 
 To add multi-level labels to an axis, use the [MultiLevelLabels](#) collection of the axis. Each multi-level label is defined using the following properties:
 
@@ -157,6 +157,30 @@ The appearance of multi-level labels can be customized using the [MultiLevelLabe
 | [BorderColor](#) | `Color` | Gets or sets the border color |
 | [BorderWidth](#) | `double` | Gets or sets the border width |
 | [LabelStyle](#) | `ChartAxisLabelStyle` | Gets or sets the text styling for the multi-level label |
+
+### Label Style
+
+The [LabelStyle](#) property supports the following [ChartAxisLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html) customization options:
+
+* **FontAttributes** – Specifies the font style for the label text.  
+  Possible values:
+  - **None** – Default font style.
+  - **Bold** – Makes the label text bold.
+  - **Italic** – Makes the label text italic.
+
+* **FontSize** – Sets the size of the label text.  
+
+* **Margin** – Defines the space around the label text.  
+
+* **FontFamily** – Sets the font family for the label text.  
+
+* **TextColor** – Sets the color of the label text.  
+
+* **LabelAlignment** – Specifies the alignment of the label text within the label area.  
+  Possible values:
+  - **Center** – Centers the text.
+  - **Start** – Aligns the text to the start.
+  - **End** – Aligns the text to the end.
 
 ### Border Type
 
