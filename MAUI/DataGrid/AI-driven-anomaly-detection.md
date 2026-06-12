@@ -98,7 +98,7 @@ The **AzureOpenAIService** class now offers a convenient way to interact with th
 
 ## Integrating AI-driven anomaly detection in .NET MAUI DataGrid
 
-To design an AI-powered anomaly detection UI using the `.NET MAUI DataGrid` control, you can style cells dynamically based on anomaly detection logic and visualize outliers in real-time. Before proceeding, please refer to the getting started documentation for the Syncfusion .NET MAUI DataGrid control.
+To design an AI-powered anomaly detection UI using the `.NET MAUI DataGrid` control, you can style cells dynamically based on anomaly detection logic and visualize outliers in real-time. Before proceeding, please refer to the getting started documentation for the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control.
 
 ### Step 1: Create the DataGrid layout
 
