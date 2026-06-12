@@ -119,10 +119,3 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
         }
     }
 {% endhighlight %}
-
-## Image preview support in SfAIAssistView
-
-The `SfAIAssistView` control provides built-in image preview support. When an image is associated with an `AssistImageItem` or an `AssistAttachmentItem`, tapping the image displays it in a preview view.
-This behavior is enabled by default and does not require additional configuration.
-
-![Image Preview support in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-image-preview.gif)

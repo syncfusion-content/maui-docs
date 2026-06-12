@@ -1649,3 +1649,10 @@ public MainPage()
 {% endtabs %}
 
 ![Disclaimer Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-disclaimer-text.png)
+
+## Image preview support in SfAIAssistView
+
+The `SfAIAssistView` control provides built-in image preview support. When an image is associated with an `AssistImageItem` or an `AssistAttachmentItem`, tapping the image displays it in a preview view.
+This behavior is enabled by default and does not require additional configuration.
+
+![Image Preview support in .NET MAUI AI AssistView](Images/working-with-aiassistview//maui-aiassistview-image-preview.gif)
