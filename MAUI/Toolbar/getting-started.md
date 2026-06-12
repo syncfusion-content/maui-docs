@@ -120,7 +120,7 @@ using Syncfusion.Maui.Toolbar;
 
 ## Step 5: Add Toolbar Component
 
-You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
+Initialize the `Toolbar` control and configure it to provide quick access to frequently used actions within your application. The Toolbar helps in organizing commands and improving user interaction. You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
  
 {% tabs %}
 
@@ -173,7 +173,7 @@ ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<
         ToolTipText = "Italic",
         Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
     },
-    // add more toolbar items
+    // Add more toolbar items
 };
             
 toolbar.Items = itemCollection;
