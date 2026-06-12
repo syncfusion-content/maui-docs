@@ -109,7 +109,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
 
 {% endhighlight %}
 {% highlight c# %}
