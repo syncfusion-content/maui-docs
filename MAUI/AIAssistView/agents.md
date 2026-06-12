@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Get Started with Agent in .NET MAUI AI AssistView (SfAIAssistView)?
+# Getting Started with Agent in .NET MAUI AI AssistView
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides an `Agent` feature that allows you to display a collection of agents in the view. Agents can be used in AI applications to handle specific tasks like writing assistance, image generation, and data analysis.
 
