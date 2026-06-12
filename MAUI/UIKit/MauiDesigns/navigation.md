@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Essential® UI Kit for .NET MAUI Navigation Designs | Syncfusion®
-description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Navigation apps.
+description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Navigation apps, compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Navigation Designs
+# Syncfusion<sup>®</sup> UI Kit for .NET MAUI Navigation Designs
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection of **17 screens**, designed to streamline your development process and elevate your application’s user experience. 
 
@@ -39,9 +39,10 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
    transform: scale(1.02);
 }
 .form-content {
-   padding: 16px;
+   padding: 0px 12px 20px 16px;
 }
 .form-title {
+   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -134,7 +135,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Navigation List Card
@@ -171,7 +172,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Navigation Tile Cards
@@ -208,7 +209,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title"> Songs List
@@ -244,7 +245,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">FAQs Accordion List
@@ -281,7 +282,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Contacts List
@@ -317,7 +318,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Songs Playlist
@@ -353,7 +354,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Movies Rating List
@@ -389,7 +390,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Names List
@@ -425,7 +426,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Restaurant Rating List
@@ -461,7 +462,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Icon Name List
@@ -497,7 +498,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Suggestions List
@@ -533,7 +534,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">App Usage Overview
@@ -569,7 +570,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Documents List
@@ -605,7 +606,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Selectable Names List
@@ -641,7 +642,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Movies Browse Page
@@ -677,7 +678,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">File Explorer List
@@ -713,7 +714,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">File Explorer Grid
@@ -751,18 +752,3 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Navigation offers a collection o
 </span>
 <img id="popupImage">
 </div>
-<script>
-function openImage(src) {
-   document.getElementById("imageModal").style.display = "flex";
-   document.getElementById("popupImage").src = src;
-}
-function closeImage() {
-   document.getElementById("imageModal").style.display = "none";
-}
-/* Close when clicking outside image */
-document.getElementById("imageModal").addEventListener("click", function(e) {
-   if (e.target.id === "imageModal") {
-       closeImage();
-   }
-});
-</script>

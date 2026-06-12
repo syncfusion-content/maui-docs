@@ -21,10 +21,10 @@ To quickly get started with the .NET MAUI Slider, watch this video.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -119,9 +119,9 @@ namespace SliderGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -219,8 +219,8 @@ namespace SliderGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -278,9 +278,9 @@ Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slider
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
     <Grid>
         <sliders:SfSlider />
     </Grid>
@@ -316,7 +316,7 @@ namespace SliderGettingStarted
 
 ![Initialize slider](images/getting-started/initialize-slider.png)
 
-## Enable labels
+## Step 5: Add Label and Ticks
 
 The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
@@ -327,43 +327,10 @@ The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Ran
 <sliders:SfSlider Minimum="0"
                   Maximum="10"
                   Value="5"
-                  ShowLabels="True"
-                  Interval="2" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider()
-{
-    Minimum = 0,
-    Maximum = 10,
-    Value = 5,
-    Interval = 2,
-    ShowLabels = true,
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider labels](images/getting-started/labels.png)
-
-## Enable ticks
-
-The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Minimum="0"
-                  Maximum="10"
-                  Value="5"
-                  Interval="2"
                   ShowTicks="True"
                   ShowLabels="True"
-                  MinorTicksPerInterval="1" />
+                  MinorTicksPerInterval="1"
+                  Interval="2" />
 
 {% endhighlight %}
 
@@ -385,123 +352,5 @@ SfSlider slider = new SfSlider()
 {% endtabs %}
 
 ![Slider ticks](images/getting-started/ticks.png)
-
-## Orientation
-
-The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property is `Horizontal`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Orientation="Vertical"
-                  Minimum="0"
-                  Maximum="10"
-                  Value="5"
-                  Interval="2"
-                  ShowLabels="True"
-                  ShowTicks="True"
-                  MinorTicksPerInterval="1" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider()
-{
-    Orientation = SliderOrientation.Vertical,
-    Minimum = 0,
-    Maximum = 10,
-    Value = 5,
-    Interval = 2,
-    ShowLabels = true,
-    ShowTicks = true,
-    MinorTicksPerInterval = 1
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider orientation](images/getting-started/orientation.png)
-
-## Inverse the slider
-
-Invert the slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Minimum="0"
-                  Maximum="10"
-                  Value="5"
-                  IsInversed="True"
-                  Interval="2"
-                  ShowTicks="True"
-                  ShowLabels="True"
-                  MinorTicksPerInterval="1" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider()
-{
-    Minimum = 0,
-    Maximum = 10,
-    Value = 5,
-    IsInversed = true,
-    Interval = 2,
-    ShowLabels = true,
-    ShowTicks = true,
-    MinorTicksPerInterval = 1
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Inverse slider](images/getting-started/slider-inverse.png)
-
-## Formatting labels
-
-Add prefix or suffix to the labels using the [NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_NumberFormat) property.
-
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Minimum="20"
-                  Maximum="100"
-                  Value="60"
-                  Interval="20"
-                  NumberFormat="$##"
-                  ShowLabels="True"
-                  ShowTicks="True"
-                  MinorTicksPerInterval="1" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider()
-{
-    Minimum = 20,
-    Maximum = 100,
-    Value = 60,
-    Interval = 20,
-    NumberFormat = "$##",
-    ShowLabels = true,
-    ShowTicks = true,
-    MinorTicksPerInterval = 1
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider label format](images/getting-started/label-format.png)
 
 N> You can refer to our [.NET MAUI Slider](https://www.syncfusion.com/maui-controls/maui-slider) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Slider Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders) that shows you how to render the Slider in .NET MAUI.

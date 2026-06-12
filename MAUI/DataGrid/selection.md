@@ -48,7 +48,8 @@ To get start quickly with perform selection in .NET MAUI DataGrid, you can check
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
 dataGrid.NavigationMode = DataGridNavigationMode.Cell;
@@ -265,7 +266,8 @@ Enable selecting rows or cells immediately when the primary mouse button is pres
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.SelectionMode = DataGridSelectionMode.Single;
 dataGrid.SelectionUnit = DataGridSelectionUnit.Row;
@@ -289,7 +291,8 @@ To disable selection on right-click, set [SfDataGrid.AllowSelectionOnSecondaryTa
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
 dataGrid.SelectionUnit = DataGridSelectionUnit.Row;
@@ -460,7 +463,8 @@ The `SfDataGrid` allows you to select multiple rows or cells by setting the `Sel
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
 dataGrid.NavigationMode = DataGridNavigationMode.Cell;
@@ -746,7 +750,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        dataGrid = new SfDataGrid();
+        SfDataGrid dataGrid = new SfDataGrid();
+		OrderInfoViewModel viewModel = new OrderInfoViewModel();
         dataGrid.ItemsSource = viewModel.Orders;
         dataGrid.SelectionMode  = DataGridSelectionMode.Multiple;
         dataGrid.DefaultStyle.SelectedRowTextColor = Colors.Black;
@@ -780,7 +785,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        dataGrid = new SfDataGrid();
+        SfDataGrid dataGrid = new SfDataGrid();
+		OrderInfoViewModel viewModel = new OrderInfoViewModel();
         dataGrid.ItemsSource = viewModel.Orders;
         dataGrid.SelectionMode  = DataGridSelectionMode.Single;
         dataGrid.DefaultStyle.CurrentCellBorderColor = Colors.Black;

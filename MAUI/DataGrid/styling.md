@@ -19,15 +19,15 @@ To get start quickly with apply styling .NET MAUI DataGrid, you can check on thi
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}">
-        <syncfusion:SfDataGrid.DefaultStyle>
-            <syncfusion:DataGridStyle HeaderRowBackground="#0074E3"
-                                      HeaderRowTextColor="White"
-                                      RowBackground="#AFD5FB"
-                                      RowTextColor="#212121"/>
-        </syncfusion:SfDataGrid.DefaultStyle>
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle HeaderRowBackground="#0074E3"
+                                  HeaderRowTextColor="White"
+                                  RowBackground="#AFD5FB"
+                                  RowTextColor="#212121"/>
+    </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 public partial class MainPage : ContentPage
@@ -67,9 +67,9 @@ You can write custom style for the properties in the `SfDataGrid.DefaultStyle` c
 </Application.Resources>
 {% endhighlight %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfDataGrid DefaultStyle="{StaticResource customStyle}"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid DefaultStyle="{StaticResource customStyle}"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,19 +78,19 @@ You can write custom style for the properties in the `SfDataGrid.DefaultStyle` c
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <syncfusion:DataGridStyle x:Key="customStyle"
-                                      RowBackground="LightBlue"
-                                      HeaderRowBackground="Blue"
-                                      RowTextColor="Black"
-                                      HeaderRowTextColor="White"/>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <syncfusion:DataGridStyle x:Key="customStyle"
+                                  RowBackground="LightBlue"
+                                  HeaderRowBackground="Blue"
+                                  RowTextColor="Black"
+                                  HeaderRowTextColor="White"/>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <syncfusion:SfDataGrid DefaultStyle="{StaticResource customStyle}"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid DefaultStyle="{StaticResource customStyle}"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,24 +105,24 @@ The record cells can be customized by the writing style for [DataGridCell](https
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <ContentPage.Resources>
-        <Style TargetType="syncfusion:DataGridCell">
-            <Setter Property="Background"
-                    Value="#AFD5FB"/>
-            <Setter Property="TextColor"
-                    Value="#212121"/>
-            <Setter Property="FontAttributes"
-                    Value="Italic"/>
-            <Setter Property="FontSize"
-                    Value="14"/>
-            <Setter Property="FontFamily"
-                    Value="TimesNewRoman"/>
-        </Style>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <Style TargetType="syncfusion:DataGridCell">
+        <Setter Property="Background"
+                Value="#AFD5FB"/>
+        <Setter Property="TextColor"
+                Value="#212121"/>
+        <Setter Property="FontAttributes"
+                Value="Italic"/>
+        <Setter Property="FontSize"
+                Value="14"/>
+        <Setter Property="FontFamily"
+                Value="TimesNewRoman"/>
+    </Style>
+</ContentPage.Resources>
 
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -185,16 +185,16 @@ The header row can be customized by the writing style for [DataGridHeaderRow](ht
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <ContentPage.Resources>
-        <Style TargetType="syncfusion:DataGridHeaderRow">
-            <Setter Property="Background"
-                    Value="#0074E3"/>
-        </Style>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <Style TargetType="syncfusion:DataGridHeaderRow">
+        <Setter Property="Background"
+                Value="#0074E3"/>
+    </Style>
+</ContentPage.Resources>
 
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -381,12 +381,12 @@ The row header can be customized by the writing style for `DataGridRowHeaderCell
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <ContentPage.Resources>
-        <Style TargetType="syncfusion:DataGridRowHeaderCell">
-            <Setter Property="Background"
-                    Value="LightSeaGreen"/>
-        </Style>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <Style TargetType="syncfusion:DataGridRowHeaderCell">
+        <Setter Property="Background"
+                Value="LightSeaGreen"/>
+    </Style>
+</ContentPage.Resources>
 {% endhighlight %}
 {% endtabs %}
 
@@ -526,6 +526,76 @@ dataGrid.DefaultStyle.RowHoveredBackground = Color.FromArgb("#AFD5FB");
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
+
+## Applying Column Hover Background Color
+
+The column hover highlighting feature in `SfDataGrid` allows you to visually highlight an entire column when the mouse pointer is placed over it.
+
+To enable this feature, set the `SfDataGrid.AllowColumnHoverHighlighting` property to `true`. The default value is `false`.
+
+You can also customize the appearance of the highlighted column by setting the `ColumnHoveredBackground` property in [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty).
+
+{% tabs %}
+{% highlight xaml hl_lines="5 7" %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding Orders}"
+                               AllowColumnHoverHighlighting="True">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle ColumnHoveredBackground="#E0C375"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# hl_lines="4 5" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowColumnHoverHighlighting = true;
+dataGrid.DefaultStyle.ColumnHoveredBackground = Color.FromArgb("#E0C375");
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Applying Column Hover Background Color in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-column-hover-background.gif" width="404">
+
+## Applying Header Cell Hover Background Color
+
+The header cell hover highlighting feature in `SfDataGrid` allows you to visually highlight a column header cell when the mouse pointer is placed over it.
+
+To enable this feature, set the `SfDataGrid.AllowHeaderCellHoverHighlighting` property to `true`. The default value is `false`.
+
+You can also customize the appearance of the hovered header cell by setting the `HeaderCellHoveredBackground` property in [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty).
+
+{% tabs %}
+{% highlight xaml hl_lines="5 7" %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding Orders}"
+                               AllowHeaderCellHoverHighlighting="True">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle HeaderCellHoveredBackground="#B1BFAC"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# hl_lines="4 5" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowHeaderCellHoverHighlighting = true;
+dataGrid.DefaultStyle.HeaderCellHoveredBackground = Color.FromArgb("#B1BFAC");
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+N> When both Header Cell Hover and Column Hover are enabled, the Column Hover Background Color property will take precedence.
+
+<img alt="Applying Header Cell Hover Background Color in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-headercell-hover-background.gif" width="404">
 
 ## Changing the font style
 You can apply the style for header and row font attributes by using SfDataGrid.DefaultStyle.
