@@ -89,23 +89,19 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" %}
-
+## Step 3: Register Syncfusion handler
+ 
+Make sure to add the namespace.
+ 
+{% highlight MauiProgram.cs %}
 using Syncfusion.Maui.Core.Hosting;
-            
-{% endhighlight %} 
-{% endtabs %}
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" %}
-
+{% endhighlight %}
+ 
+Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
+ 
+{% highlight MauiProgram.cs %}
 builder.ConfigureSyncfusionCore();
-            
-{% endhighlight %} 
-{% endtabs %}
+{% endhighlight %}
 
 ## Step 4: Create a data model for treemap 
 
