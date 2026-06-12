@@ -176,7 +176,7 @@ this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 
-You can download the DataGrid Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/GettingStarted)
+You can download the DataForm Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/GettingStarted)
 
 N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain the binding between DataForm and DataObject.
 
