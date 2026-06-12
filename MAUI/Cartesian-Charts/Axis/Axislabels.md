@@ -254,3 +254,55 @@ this.Content = chart;
 ![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_labels.png)
 
 N> If the [LabelsIntersectAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsIntersectAction) is set to Wrap, we should set the width of the wrap using the [MaxWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_MaxWidth) property. We can align the wrapped axis label using the [WrappedLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_WrappedLabelAlignment) property.
+
+## Event
+
+### AxisLabelTapped
+
+The `AxisLabelTapped` event occurs when a user taps on an axis label. The following properties are included in the event arguments:
+
+* `Axis` - Gets the associated axis where the label was tapped.
+* `AxisLabel` - Gets the `ChartAxisLabel` object, which contains details about the tapped label.
+* `Position` - Gets the screen coordinates (X, Y) of the tap location in device-independent pixels.
+
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart AxisLabelTapped="OnAxisLabelTapped">
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>
+
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Category"
+                        YBindingPath="Value"/>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+private async void OnAxisLabelTapped(object sender, AxisLabelTappedEventArgs e)
+{
+    var axis = e.Axis;
+    var axisLabel = e.AxisLabel;
+    var tapPosition = e.Position;
+
+    string message = $"Label: {axisLabel.Content}\n" +
+                     $"Position: {axisLabel.Position:F2}\n" +
+                     $"Axis: {axis.GetType().Name}\n" +
+                     $"Tap Location: ({tapPosition.X:F0}, {tapPosition.Y:F0})";
+
+   await DisplayAlert("Axis Label Details", message, "OK");
+}
+
+{% endhighlight %}
+
+{% endtabs %}
