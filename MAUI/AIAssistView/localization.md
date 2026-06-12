@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Localization in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Implement Localization in .NET MAUI SfAIAssistView?
 
 `Localization` is the process of translating the application resources into different languages for specific cultures. The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) can be localized by adding a `resource` file.
 
@@ -53,12 +53,12 @@ To localize the `AI AssistView` based on the `CurrentUICulture` using the `resou
 
    4. The culture name indicates the name of the language and country.
 
-   ![Shows the name of resource file to be added for .NET MAUI AI AssistView](images/localization/maui-aiassistview-shows-the-name-of-resource-file-to-be-added.png)
+   ![Syncfusion .NET MAUI SfAIAssistView resource file name for localization](images/localization/maui-aiassistview-shows-the-name-of-resource-file-to-be-added.png)
 
    5. Now, select `Add` option to add the resource file in the **Resources** folder.
 
-   ![Shows the added resource file for Spanish language in .NET MAUI AI AssistView](images/localization/maui-aiassistview-shows-the-added-resource-file-for-spanish-language.png)
+   ![Syncfusion .NET MAUI SfAIAssistView Spanish resource file for localization](images/localization/maui-aiassistview-shows-the-added-resource-file-for-spanish-language.png)
 
    6. Add the Name or Value pair in the Resource Designer of `SfAIAssistView.es.resx` file and change its corresponding value to corresponding culture.
 
-  ![Shows the added resource file name value pair in the resource designer in.NET MAUI AI AssistView](images/localization/maui-aiassistview-shows-the-added-resource-file-name-value-pair-in-the-resource-designer.png)
+  ![Syncfusion .NET MAUI SfAIAssistView resource designer name value pair for localization](images/localization/maui-aiassistview-shows-the-added-resource-file-name-value-pair-in-the-resource-designer.png)

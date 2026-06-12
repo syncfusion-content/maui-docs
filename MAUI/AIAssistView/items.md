@@ -7,7 +7,9 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Items in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Work with Items in .NET MAUI SfAIAssistView?
+
+Learn how to work with different item types in Syncfusion .NET MAUI [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html), including text, image, card, hyperlink, and attachment items.
 
 ## Configuring common settings for the AssistItem
 
@@ -21,19 +23,43 @@ documentation: ug
 <td>Specify the avatar and name of the user using {{'[Profile.Avatar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Profile.html#Syncfusion_Maui_AIAssistView_Profile_Avatar)'| markdownify }} and {{'[Profile.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Profile.html#Syncfusion_Maui_AIAssistView_Profile_Name)'| markdownify }} properties respectively.</td>
 </tr>
 <tr>
+<td>{{'[Data](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Data)'| markdownify }}</td>
+<td>Stores the original data of the item.</td>
+</tr>
+<tr>
 <td>{{'[DateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_DateTime)'| markdownify }}</td>
 <td>Displays the time when the item was sent or received.</td>
+</tr>
+<tr>
+<td>{{'[IsLiked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsLiked)'| markdownify }}</td>
+<td>Gets or sets the rating associated with the request item.</td>
+</tr>
+<tr>
+<td>{{'[IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested)'| markdownify }}</td>
+<td>Determines whether the assist item is a request or a response.</td>
 </tr>
 <tr>
 <td>{{'[RequestItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_RequestItem)'| markdownify }}</td>
 <td>Gets the data associated with the request sent by the user for which the response is generated.</td>
 </tr>
 <tr>
+<td>{{'[ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_ErrorMessage)'| markdownify }}</td>
+<td>Displays the error message for the assist item</td>
+</tr>
+<tr>
 <td>{{'[Suggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Suggestion)'| markdownify }}</td>
 <td>Displays list of {{'[AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html)'| markdownify }} as a response to a request.</td>
 </tr>
 <tr>
+<td>{{'[SuggestionHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_SuggestionHeaderText)'| markdownify }}</td>
+<td>Displays the header text above the suggestions list.</td>
+</tr>
+<tr>
 <td>{{'[ShowAssistItemFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_ShowAssistItemFooter)'| markdownify }}</td>
+<td>Determines whether the footer, which includes Copy, Retry, Like, Dislike, should be displayed for the assist item.</td>
+</tr>
+<tr>
+<td>{{'[Sources]()'| markdownify }}</td>
 <td>Determines whether the footer, which includes Copy, Retry, Like, Dislike, should be displayed for the assist item.</td>
 </tr>
 </table>
@@ -46,54 +72,32 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                xmlns:local="clr-namespace:MauiAIAssistView"             
-                x:Class="MauiAIAssistView.MainPage">
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
-
-        <ContentPage.Content>
-            <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                       AssistItems="{Binding AssistItems}"/>
-        </ContentPage.Content>
-    </ContentPage>
+<ContentPage.Content>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}"/>
+</ContentPage.Content>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    namespace MauiAIAssistView
-    {
-        public partial class MainPage : ContentPage
-        {
-            SfAiAssistView sfAIAssistView;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfAIAssistView = new SfAIAssistView();
-                this.viewModel = new ViewModel();
-                this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-                this.Content = sfAIAssistView;
-            }
-        }
-    }
+    SfAiAssistView sfAIAssistView = new SfAIAssistView();
+    ViewModel viewModel = new ViewModel();
+    this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
     
     public class ViewModel : INotifyPropertyChanged
     {
-
-       ...
 
         private void GenerateAssistItems()
         {
@@ -135,11 +139,10 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
 The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html) is used to send a [URL](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html#Syncfusion_Maui_AIAssistView_AssistHyperlinkItem_Url) as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
 
         private void GenerateAssistItems()
         {
@@ -170,7 +173,6 @@ The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
            this.AssistItems.Add(responseItem);
         }
 
-        ...
     } 
 
 {% endhighlight %}
@@ -181,11 +183,10 @@ The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
 The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html) is used to display an image as a item. Using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Source), [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Size), and [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Aspect) properties, you can display the desired image in the desired height and width as a item in the AI AssistView control.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
 
         private void GenerateAssistItems()
         {
@@ -217,71 +218,6 @@ The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
            this.AssistItems.Add(responseItem);
         }
 
-        ...
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## ImageTapped Event and Command
-
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control includes a built-in event called [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTapped) and a command named [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTappedCommand). These are triggered when an image is tapped. The tapped image item is accessible through the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html). The `ImageTappedEventArgs` has the following member:
-
- * [ImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ImageTappedEventArgs_ImageItem) : Refers to the tapped image item.
-
-### ImageTapped Event
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ImageTapped="sfAIAssistView_ImageTapped" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-      
-    sfAIAssistView.ImageTapped += SfAIAssistView_ImageTapped;
-
-    private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
-    {  
-       DisplayAlert("Image", " Tapped on image :" + e.ImageItem.Source, "Ok");                  
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-### ImageTapped Command
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               ImageTappedCommand="{Binding TappedCommand}" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
-
-    public class ViewModel : INotifyPropertyChanged
-    {
-        public Command<object> tappedCommand;
-
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(ImageTapped);
-        }
-        
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void ImageTapped(object obj)
-        {
-           var ImageTappedArgs = obj as ImageTappedEventArgs;
-           DisplayAlert("Image", " Tapped on Image item :" + ImageTappedArgs.ImageItem.Source, "Ok");                  
-        }    
-      
     }
 
 {% endhighlight %}
@@ -296,7 +232,7 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
+
         public ViewModel()
         {
             this.assistItems = new ObservableCollection<IAssistItem>();
@@ -355,74 +291,6 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
                 Cards = CardsCollection,
             });
         }
-        ...  
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## CardTapped Event and Command
-
-The `SfAIAssistView` control includes a built-in event called [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTapped) and a command named [CardTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTappedCommand). These are triggered when a card is tapped. The tapped card item is accessible through the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html). The `CardTappedEventArgs` has the following members:
-
- * [Card](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Card) : Represents the selected card from the card collection.
- * [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Action) : Holds the information about the selected action when a user taps a button on a card.
- * [CardItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_CardItem) : Refers to the current assist view card item.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Handled) : Indicates whether the event is handled or not.
-
-### CardTapped Event
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               CardTapped="sfAIAssistView_CardTapped" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-      
-    sfAIAssistView.CardTapped += SfAIAssistView_CardTapped;
-
-    private void SfAIAssistView_CardTapped(object sender, CardTappedEventArgs e)
-    {  
-       DisplayAlert("Card", " Tapped on card :" + e.Card.Title, "Ok");                  
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-### CardTapped Command
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               CardTappedCommand="{Binding TappedCommand}" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
-
-    public class ViewModel : INotifyPropertyChanged
-    {
-        public Command<object> tappedCommand;
-
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(CardTapped);
-        }
-        
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void CardTapped(object obj)
-        {
-           var CardTappedArgs = obj as CardTappedEventArgs;
-           DisplayAlert("Card", " Tapped on Card item :" + CardTappedArgs.Card.Title, "Ok");                  
-        }    
-      
     }
 
 {% endhighlight %}
@@ -437,8 +305,6 @@ The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.A
 
 public class ViewModel : INotifyPropertyChanged
 {
-    ...
-
     private async void GenerateAssistItems()
     {
         // Adding a user request as attachments 
@@ -469,75 +335,6 @@ public class ViewModel : INotifyPropertyChanged
         // Add the response item to the collection
         this.AssistItems.Add(responseItem);
     }
-
-    ...
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## AttachmentTapped Event and Command
-
-The `SfAIAssistView` control includes a built-in event and command to listen for tap interactions in the attachment preview. The tapped attachment item can be accessed through the [AttachmentTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AttachmentTappedEventArgs.html). The `AttachmentTappedEventArgs` has the following member:
-
- * [Attachment]() : Refers to the tapped attachment item.
-
-### AttachmentTapped Event
-
-The [AttachmentTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTapped) event is triggered when a preview attachment item is tapped.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                        AttachmentTapped="sfAIAssistView_AttachmentTapped" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-      
-sfAIAssistView.AttachmentTapped += SfAIAssistView_AttachmentTapped;
-
-private void SfAIAssistView_AttachmentTapped(object sender, AttachmentTappedEventArgs e)
-{  
-    DisplayAlert("Attachment", " Tapped on attachment :" + e.Attachment.FileName, "Ok");                  
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### AttachmentTapped Command
-
-The [AttachmentTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTappedCommand) is triggered when a preview attachment item is tapped.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
-
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                            AttachmentTappedCommand="{Binding TappedCommand}" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
-
-public class ViewModel : INotifyPropertyChanged
-{
-    public Command<object> tappedCommand;
-
-    public ViewModel()
-    {
-        TappedCommand = new Command<object>(AttachmentTapped);
-    }
-    
-    public Command<object> TappedCommand
-    {
-        get { return tappedCommand; }
-        set { tappedCommand = value; }
-    }
-
-    private void AttachmentTapped(object obj)
-    {
-        var AttachmentTappedArgs = obj as AttachmentTappedEventArgs;
-        DisplayAlert("Attachment", " Tapped on Attachment item :" + AttachmentTappedArgs.Attachment.FileName, "Ok");                  
-    }      
 }
 
 {% endhighlight %}
@@ -548,14 +345,12 @@ public class ViewModel : INotifyPropertyChanged
 The `SfAIAssistView` allows to display error responses by setting the error text to the [AssistItem.ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItem.html#Syncfusion_Maui_AIAssistView_IAssistItem_ErrorMessage) property, ensuring clear notification when an error occurs during AI interactions.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="36" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="34" %}
     
 public class ViewModel : INotifyPropertyChanged
 {
 
-    ...
-
-    private void GenerateAssistItems()
+    private async void GenerateAssistItems()
     {
         AssistItem requestItem = new AssistItem()
         {
@@ -565,7 +360,7 @@ public class ViewModel : INotifyPropertyChanged
 
         this.AssistItems.Add(requestItem);
 
-        await GetResult(requestItem);
+        await GetResultAsync(requestItem);
     }
         
     private async Task GetResultAsync(AssistItem requestItem)
@@ -596,7 +391,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Error message in .NET MAUI AI AssistView](images/maui-aiassistview-error-message.png)
+![Syncfusion .NET MAUI SfAIAssistView error message display](images/maui-aiassistview-error-message.png)
 
 ## Request and response item
  
@@ -631,218 +426,5 @@ These are messages generated by the AI in reply to a request. They are usually a
       IsRequested = false,
   };
  
-{% endhighlight %}
-{% endtabs %}
-
-## Customizable views
-
-The `SfAIAssistView` allows you to customize specific parts of request and response items without changing the entire UI. You can apply styles, templates, or subclass these views to create custom visuals and behavior.
-
-The following views can be customized individually:
-
-### Request Views
-
-<table>
-<tr>
-<th> View </th>
-<th> Description </th>
-</tr>
-<tr>
-<td> {{ '[RequestTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestTextView.html)'| markdownify }} </td>
-<td> Represents the user request text content. </td>
-</tr>
-<tr>
-<td> {{ '[RequestAssistImageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestAssistImageView.html)'| markdownify }} </td>
-<td> Represents the user request image content. </td>
-</tr>
-<tr>
-<td> {{ '[RequestHyperlinkUrlLabelView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestHyperlinkUrlLabelView.html)'| markdownify }} </td>
-<td> Represents the user request URL label area. </td>
-</tr>
-<tr>
-<td> {{ '[RequestHyperLinkDetailsViewFrameView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestHyperLinkDetailsViewFrameView.html)'| markdownify }} </td>
-<td> Represents the user request URL details/preview frame area. </td>
-</tr>
-</table>
-
-### Response Views
-
-<table>
-<tr>
-<th> View </th>
-<th> Description </th>
-</tr>
-<tr>
-<td> {{ '[ResponseTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseTextView.html)'| markdownify }} </td>
-<td> Represents the AI response text content. </td>
-</tr>
-<tr>
-<td> {{ '[ResponseAssistImageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseAssistImageView.html)'| markdownify }} </td>
-<td> Represents the AI response image content. </td>
-</tr>
-<tr>
-<td> {{ '[ResponseHyperlinkUrlLabelView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseHyperlinkUrlLabelView.html)'| markdownify }} </td>
-<td> Represents the AI response URL label area. </td>
-</tr>
-<tr>
-<td> {{ '[ResponseHyperLinkDetailsViewFrameView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseHyperLinkDetailsViewFrameView.html)'| markdownify }} </td>
-<td> Represents the AI response URL details/preview frame area. </td>
-</tr>
-<tr>
-<td> {{ '[ResponseCardView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseCardView.html)'| markdownify }} </td>
-<td> Represents the container for card-based AI responses. </td>
-</tr>
-<tr>
-<td> {{ '[CardItemView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardItemView.html)'| markdownify }} </td>
-<td> Represents a single card item within a response. </td>
-</tr>
-<tr>
-<td> {{ '[CardButtonView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardButtonView.html)'| markdownify }} </td>
-<td> Represents an action button inside a card item; exposes Title and Value bindable properties. </td>
-</tr>
-</table>
-
-{% tabs %}
-{% highlight xaml hl_lines="14 30" %}
-
-<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-    x:Class="MauiAIAssistView.MainPage">
-
-    <ContentPage.BindingContext>
-            <local:ViewModel/>
-    </ContentPage.BindingContext>
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <!-- Request text customization -->
-            <Style TargetType="syncfusion:RequestTextView">
-                <Setter Property="ControlTemplate">
-                    <Setter.Value>
-                        <ControlTemplate>
-                            <Grid Padding="8" BackgroundColor="{DynamicResource SecondaryContainer}">
-                                <Label
-                                    Text="{Binding Text}"
-                                    FontSize="13"
-                                    TextColor="{DynamicResource OnSecondaryContainer}" />
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-
-            <!-- Response text customization -->
-            <Style TargetType="syncfusion:ResponseTextView">
-                <Setter Property="ControlTemplate">
-                    <Setter.Value>
-                        <ControlTemplate>
-                            <Grid Padding="10" BackgroundColor="{DynamicResource PrimaryContainer}">
-                                <Label
-                                    Text="{Binding Text}"
-                                    FontSize="13"
-                                    FontAttributes="Italic"
-                                    TextColor="{DynamicResource OnPrimaryContainer}" />
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-            ...
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
-    <ContentPage.Content>
-        <syncfusion:SfAIAssistView x:Name="AssistView"
-                                   AssistItems="{Binding AssistItems}" />
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# hl_lines="23 47" %}
-
-using Syncfusion.Maui.AIAssistView;
-
-namespace MauiAIAssistView
-{
-    public partial class MainPage : ContentPage
-    {
-        SfAIAssistView assistView;
-        ViewModel viewModel;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            viewModel = new ViewModel();
-
-            assistView = new SfAIAssistView
-            {
-                AssistItems = viewModel.AssistItems;
-            };
-            
-            var resources = new ResourceDictionary();
-
-            // Request text customization
-            var requestTextStyle = new Style(typeof(RequestTextView))
-            {
-                Setters =
-                {
-                    new Setter
-                    {
-                        Property = RequestTextView.ControlTemplateProperty,
-                        Value = new ControlTemplate(() =>
-                        {
-                            var grid = new Grid { Padding = 8, BackgroundColor = Colors.Beige };
-                            var label = new Label
-                            {
-                                FontSize = 13,
-                                TextColor = Colors.Black
-                            };
-                            label.SetBinding(Label.TextProperty, "Text");
-                            grid.Children.Add(label);
-                            return grid;
-                        })
-                    }
-                }
-            };
-
-            // Response text customization 
-            var responseTextStyle = new Style(typeof(ResponseTextView))
-            {
-                Setters =
-                {
-                    new Setter
-                    {
-                        Property = ResponseTextView.ControlTemplateProperty,
-                        Value = new ControlTemplate(() =>
-                        {
-                            var grid = new Grid { Padding = 10, BackgroundColor = Colors.LightSkyBlue };
-                            var label = new Label
-                            {
-                                FontSize = 13,
-                                FontAttributes = FontAttributes.Italic,
-                                TextColor = Colors.White
-                            };
-                            label.SetBinding(Label.TextProperty, "Text");
-                            grid.Children.Add(label);
-                            return grid;
-                        })
-                    }
-                }
-            };
-
-            ...
-
-            resources.Add(requestTextStyle);
-            resources.Add(responseTextStyle);
-
-            this.Resources = resources;
-            this.Content = assistView;
-            this.BindingContext = viewModel;
-        }
-    }
-}
-
 {% endhighlight %}
 {% endtabs %}

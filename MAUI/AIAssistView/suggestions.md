@@ -7,9 +7,8 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Working with Suggestions in .NET MAUI AI AssistView (SfAIAssistView)
-
-This section explains how to use suggestions and its related operations in the `SfAIAssistView`.
+# How to Work with Suggestions in .NET MAUI SfAIAssistView?
+Learn how to use suggestions in Syncfusion .NET MAUI [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html)  to provide quick responses, enhance input experience, and improve user interaction.
 
 To get start quickly with suggestions in .NET MAUI AI AssistView, you can check on this video:
 
@@ -17,15 +16,14 @@ To get start quickly with suggestions in .NET MAUI AI AssistView, you can check 
 
 ## Common suggestions
 
-The `SfAIAssistView` control allows users to view a list of common suggestions to choose from. These suggestions offer recommendations, helpful tips, and guides for various tasks and topics.
-
-By providing assistance and encouraging the exploration of new ideas, the common suggestions feature is designed to make interactions more productive and enjoyable.
+The `SfAIAssistView` control provides a collection of common suggestions that users can quickly select. These suggestions offer recommended prompts, tips, and guidance for various tasks.
+This feature helps improve user interaction by providing quick access to useful inputs and encouraging efficient usage of the assist view.
 
 ### Displaying common suggestions
 
 Common Suggestions can be populated by creating list of [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) and assigning it to [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Suggestions) API. It will be displayed under the header as part of header view.
 
-#### View model
+#### Define the view model
 Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
 
 {% tabs %}
@@ -37,8 +35,6 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 	private ObservableCollection<ISuggestion> _suggestions;
 	public GettingStartedViewModal()
 	{
-    
-		...
 		this._suggestions = new ObservableCollection<ISuggestion>()
 		{
 			new AssistSuggestion() {Text = "Ownership", ImageSource="ownership.png"},
@@ -46,8 +42,6 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 			new AssistSuggestion() { Text = "Listening", ImageSource="listening.png"},
 			new AssistSuggestion() { Text = "Resilience", ImageSource="resilience.png"},
 		};
-		...
-    
 	}
 	
 	public ObservableCollection<ISuggestion> Suggestions
@@ -59,24 +53,16 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 			RaisePropertyChanged("Suggestions");
 		}
 	}
-	...
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Binding suggestions to SfAIAssistView
+#### Binding Suggestions to SfAIAssistView
 To populate the Suggestions, bind the item collection from its BindingContext to `SfAIAssistView.Suggestions` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="15" %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-             xmlns:local="clr-namespace:GettingStarted.ViewModel"            
-             x:Class="GettingStarted.MainPage">
+{% highlight xaml hl_lines="8" %}
 
     <ContentPage.BindingContext>
         <local:GettingStartedViewModal/>
@@ -89,33 +75,19 @@ To populate the Suggestions, bind the item collection from its BindingContext to
                                    ShowHeader="True"/>
     </ContentPage.Content>
 
-</ContentPage>
-  
-
 {% endhighlight %} 
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="4" %}
 
-public partial class MainPage : ContentPage 
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-        InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        this.sfAIAssistView.Suggestions = viewModal.Suggestions;
-        this.sfAIAssistView.ShowHeader = true;
-        this.Content = sfAIAssistView;
-    }
-}
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    GettingStartedViewModel viewModel = new GettingStartedViewModel();
+    sfAIAssistView.AssistItems = viewModel.AssistItems;
+    sfAIAssistView.Suggestions = viewModal.Suggestions;
+    sfAIAssistView.ShowHeader = true;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Suggestions in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestions-commonsuggestion.png)
-
-N> To view [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Suggestions), it is mandatory to set [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader) API to `true`.
+![Syncfusion .NET MAUI SfAIAssistView common suggestions display](Images/suggestions/maui-aiassistview-suggestions-commonsuggestion.png)
 
 ### Suggestion customization
 
@@ -125,11 +97,34 @@ The `SfAIAssistView` control allows you to fully customize the suggestions appea
 {% highlight xaml hl_lines="13" %}
 
 <ContentPage.Resources>
-    <DataTemplate x:Key="suggestionTemplate">
-        <Grid>
-            ...
-        </Grid>
-    </DataTemplate>
+    <ResourceDictionary>
+        <DataTemplate x:Key="suggestionTemplate">
+                <Border WidthRequest="130"
+                    HeightRequest="85"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="#E6E8F5"
+                    Margin="2">
+
+                    <Grid>
+                        <Image Source="{Binding ImageSource}"
+                            Aspect="AspectFill" />
+
+                        <Border VerticalOptions="End"
+                            BackgroundColor="#CCFFFFFF"
+                            StrokeShape="RoundRectangle 10"
+                            Margin="2"
+                            Padding="2">
+
+                            <Label Text="{Binding Text}"
+                                FontSize="13"
+                                TextColor="Black"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Center" />
+                        </Border>
+                    </Grid>
+                </Border>
+            </DataTemplate>
+    </ResourceDictionary>
 </ContentPage.Resources>
 
 <ContentPage.Content>
@@ -172,11 +167,11 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestions-commonsuggestiontemplate.png)
+![Syncfusion .NET MAUI SfAIAssistView suggestion template customization](Images/suggestions/maui-aiassistview-suggestions-commonsuggestiontemplate.png)
 
 ## ResponseItem suggestions
 
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control enables the display of a list of suggestions for users to select from. Suggestions are supported for all response item types in `SfAIAssistView`.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control allows displaying a list of suggestions for users to choose from. These suggestions are supported across all response item types in `SfAIAssistView`.
 
 ### Displaying ResponseItem suggestions
 
@@ -185,36 +180,16 @@ Suggestions are displayed by creating an instance of [AssistSuggestion](https://
 {% tabs %}
 {% highlight xaml %}
 
-  <?xml version="1.0" encoding="utf-8" ?>
-  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-               xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-               x:Class="MauiAIAssistView.MainPage">
-
-      <ContentPage.Content>
-             <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                        AssistItems="{Binding AssistItems}"/>
-	  <ContentPage.Content>	
-  </ContentPage>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-   namespace MauiAIAssistView
-   {
-         public partial class MainPage : ContentPage
-         {
-            public MainPage()
-            {
-              InitializeComponent();
-              SfAIAssistView sfAIAssistView = new SfAIAssistView();
-              SuggestionsViewModel viewModel = new SuggestionsViewModel();
-              this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-              this.Content = sfAIAssistView;
-             }
-         }
-    }  
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    SuggestionsViewModel viewModel = new SuggestionsViewModel();
+    sfAIAssistView.AssistItems = viewModel.AssistItems;
 
 {% endhighlight %}
 {% endtabs %}
@@ -415,7 +390,7 @@ The `SfAIAssistView` control allows you to define the header text for each respo
 
         assistSuggestions.Items = suggestions;
 		
-		assistSuggestions.SuggestionHeaderText = "Related Topics";
+		responseItem.SuggestionHeaderText = "Related Topics";
 		
 		// Assign suggestions to response item.
 		responseItem.Suggestion = assistSuggestions;
@@ -477,7 +452,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
+![Syncfusion .NET MAUI SfAIAssistView suggestion template customization](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
 
 ## Footer suggestions (Editor suggestions)
 
@@ -527,7 +502,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Footer Suggestions in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-footer-suggestions.png)
+![Syncfusion .NET MAUI SfAIAssistView footer suggestions display](Images/suggestions/maui-aiassistview-footer-suggestions.png)
 
 ## Event and Commands
 
@@ -559,21 +534,11 @@ By default, a suggestion is automatically sent as a request item immediately whe
 ### Using SuggestionItemSelectedCommand
 
 {% tabs %}
-{% highlight xaml hl_lines="11" %}
+{% highlight xaml hl_lines="3" %}
 
- <?xml version="1.0" encoding="utf-8" ?>
- <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-              xmlns:local="clr-namespace:MauiAIAssistView"             
-              x:Class="MauiAIAssistView.MainPage">
-
-        <ContentPage.Content>
-            <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
-                                       AssistItems="{Binding AssistItems}"
-                                       SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}" />
-        </ContentPage.Content>
- </ContentPage>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
+                               AssistItems="{Binding AssistItems}"
+                               SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}" />
 
 {% endhighlight %}
 {% endtabs %}

@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Styles in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Apply Styles in .NET MAUI SfAIAssistView?
 
 You can style the elements of the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control by creating resource dictionaries and assigning values to the in-built keys assigned for each individual element.
 
@@ -16,58 +16,35 @@ You can style the elements of the [SfAIAssistView](https://help.syncfusion.com/c
 To set a solid color as the background for [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html), assign a color to the `SfAssistView.Background` property. However, if you want the solid color to be applied to the control, also set the background as transparent, as shown in the below code sample.
 
 {% tabs %}
-{% highlight xaml hl_lines="18 27" %}
+{% highlight xaml hl_lines="10 18" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                 xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                 xmlns:local="clr-namespace:MauiAIAssistView"             
-                 x:Class="MauiAIAssistView.MainPage">
-
-        <ContentPage.BindingContext>
-            <local:ViewModel x:Name="viewModel"/>
-        </ContentPage.BindingContext>
+ <ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel"/>
+ </ContentPage.BindingContext>
         
-       <ContentPage.Resources>
-          <syncTheme:SyncfusionThemeDictionary>
-             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                 <ResourceDictionary>
-                     <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                     <Color x:Key="SfAIAssistViewBackground">transparent</Color>
-                 </ResourceDictionary>
-             </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-          </syncTheme:SyncfusionThemeDictionary>
-       </ContentPage.Resources>
+ <ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewBackground">transparent</Color>
+             </ResourceDictionary>
+         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
-        <ContentPage.Content>
-            <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                       AssistItems="{Binding AssistItems}"
-                                       Background="#94b6ec" />
-         </ContentPage.Content>
-
+ <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                            AssistItems="{Binding AssistItems}"
+                            Background="#94b6ec" />
       
-    </ContentPage>
-
 {% endhighlight %}
-{% highlight c# hl_lines="11" %}
+{% highlight c# hl_lines="4" %}
 
-    public partial class MainPage : ContentPage
-    {
-        SfAIAssistView sfAIAssistView;
-        ViewModel viewModel;      
-        public MainPage()
-        {
-            InitializeComponent();
-            this.sfAIAssistView = new SfAIAssistView ();
-            this.viewModel = new ViewModel();
-            this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-            sfAIAssistView .Background = Color.FromHex("#94b6ec");
-            this.Content = sfAIAssistView ;
-        }
-    }
-
+    SfAIAssistView sfAIAssistView = new SfAIAssistView ();
+    ViewModel.viewModel = new ViewModel();
+    sfAIAssistView.AssistItems = viewModel.AssistItems;
+    sfAIAssistView .Background = Color.FromHex("#94b6ec");
+      
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,16 +53,8 @@ To set a solid color as the background for [SfAIAssistView](https://help.syncfus
 To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistView.Background` to `Colors.Transparent` and place the image below the `SfAIAssistView` control.
 
 {% tabs %}
-{% highlight xaml hl_lines="26" %}
+{% highlight xaml hl_lines="18 21" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                 xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                 xmlns:local="clr-namespace:MauiAIAssistView"        
-                 x:Class="MauiAIAssistView.MainPage">
-
         <ContentPage.BindingContext>
             <local:ViewModel x:Name="viewModel"/>
         </ContentPage.BindingContext>
@@ -109,31 +78,20 @@ To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistV
                                            Background="Transparent" />   
             </Grid>
         </ContentPage.Content>
-    </ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="10 11 12" %}
 
-    public partial class MainPage : ContentPage
-    {
-        Grid grid = new Grid();
-        SfAIAssistView sfAIAssistView;
-        Image image = new Image();
-        ViewModel viewModel;
-        public MainPage()
-        {
-            this.InitializeComponent();
-            image.Source = "backgroundimage.jpg";
-            image.Aspect = Aspect.AspectFill;
-            grid.Children.Add(image);
-            this.sfAIAssistView = new SfAIAssistView();
-            this.sfAIAssistView.Background = Colors.Transparent;
-            this.viewModel = new ViewModel();
-            this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-            grid.Children.Add(sfAIAssistView);
-            this.Content = grid;
-        }
-    }
+    Grid grid = new Grid();
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    Image image = new Image();
+    ViewModel viewModel = new ViewModel();
+    image.Source = "backgroundimage.jpg";
+    image.Aspect = Aspect.AspectFill;
+    grid.Children.Add(image);
+    sfAIAssistView.Background = Colors.Transparent;
+    sfAIAssistView.AssistItems = viewModel.AssistItems;
+    grid.Children.Add(sfAIAssistView);
 
 {% endhighlight %}
 {% endtabs %}
@@ -143,21 +101,12 @@ To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistV
 To apply a gradient view as a background to the AI AssistView, set the `SfAIAssistView.Background` property to the desired gradient colors.
 
 {% tabs %}
-{% highlight xaml hl_lines="29 30" %}
-    
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                 xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                 xmlns:local="clr-namespace:MauiAIAssistView"        
-                 x:Class="MauiAIAssistView.MainPage">
+{% highlight xaml hl_lines="20 21" %}
 
         <ContentPage.BindingContext>
             <local:ViewModel x:Name="viewModel"/>
         </ContentPage.BindingContext>
         
-     
         <ContentPage.Resources>
           <syncTheme:SyncfusionThemeDictionary>
              <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
@@ -183,31 +132,20 @@ To apply a gradient view as a background to the AI AssistView, set the `SfAIAssi
                 </syncfusion:SfAIAssistView.Background>
             </syncfusion:SfAIAssistView>
         </ContentPage.Content>
-    </ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="12 18" %}
 
-    public partial class MainPage : ContentPage
-    {
-        SfAIAssistView sfAIAssistView;
-        ViewModel viewModel;
-        public MainPage()
-        {
-            InitializeComponent();
-            this.sfAIAssistView = new SfAIAssistView();
-            this.viewModel = new ViewModel();
-            this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-            LinearGradientBrush linearGradientBrush = new LinearGradientBrush();     
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SkyBlue, 0.0f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightCyan, 0.25f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
-            this.AIAssistView.Background = linearGradientBrush;
-            this.Content = sfAIAssistView;
-        }
-    }
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        ViewModel viewModel = new ViewModel();
+        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+        LinearGradientBrush linearGradientBrush = new LinearGradientBrush();     
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SkyBlue, 0.0f));
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightCyan, 0.25f));
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
+        sfAIAssistView.Background = linearGradientBrush;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1041,7 +979,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Stop responding style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-stopresponding.png)
+![Syncfusion .NET MAUI SfAIAssistView stop responding style customization](images/styles/maui-aiassistview-styles-stopresponding.png)
 
 ## Text selection styling
 
@@ -1089,7 +1027,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Text Selection style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-textselection.png)
+![Syncfusion .NET MAUI SfAIAssistView text selection style customization](Images/styles/maui-aiassistview-styles-textselection.png)
 
 ## Common suggestions styling
 
@@ -1180,7 +1118,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Common suggestion style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-commonsuggestion.png)
+![Syncfusion .NET MAUI SfAIAssistView common suggestion style customization](Images/styles/maui-aiassistview-styles-commonsuggestion.png)
 
 ## Scroll to bottom button style
 
@@ -1434,4 +1372,4 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Auto Complete Suggestions style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-auto-complete-suggestion-item-style.png)
+![Syncfusion .NET MAUI SfAIAssistView autocomplete suggestion item style](images/styles/maui-aiassistview-auto-complete-suggestion-item-style.png)

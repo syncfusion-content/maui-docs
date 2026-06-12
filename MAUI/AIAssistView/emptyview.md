@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Empty View in .NET MAUI AI AssistView
+# How to Customize Empty View in .NET MAUI SfAIAssistView?
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to display and customize the empty view content when no request or response has been added.
 
@@ -16,29 +16,20 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 The [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EmptyView) property can also be set to a string or a view, which will be displayed when no request or response is available to display in the control.
 
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
+{% highlight xaml hl_lines="3" %}
 
-   <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                              AssistItems="{Binding AssistItems}"
-                              EmptyView="Ask AI Anything">
-    </syncfusion:SfAIAssistView>
-</ContentPage>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                           AssistItems="{Binding AssistItems}"
+                           EmptyView="Ask AI Anything">
+</syncfusion:SfAIAssistView>
+
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    { 
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        sfAIAssistView.AssistItems = viewModel.AssistItems;
-        sfAIAssistView.EmptyView = "Ask AI Anything";
-        Content = sfAIAssistView;
-   }
-}
+{% highlight c# hl_lines="4" %}
+
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    GettingStartedViewModel viewModel = new GettingStartedViewModel();
+    sfAIAssistView.AssistItems = viewModel.AssistItems;
+    sfAIAssistView.EmptyView = "Ask AI Anything";
 
 {% endhighlight %}
 {% endtabs %}
@@ -48,9 +39,7 @@ public partial class MainPage : ContentPage
 The `SfAIAssistView` control allows you to fully customize the empty view appearance by using the [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EmptyViewTemplate) property. This property lets you define a custom layout and style for the `EmptyView`.
 
 {% tabs %}
-{% highlight xaml hl_lines="5 6" %}
-
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
+{% highlight xaml hl_lines="3 4" %}
 
  <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
                          AssistItems="{Binding AssistItems}"
@@ -80,7 +69,6 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
          </DataTemplate>
      </syncfusion:SfAIAssistView.EmptyViewTemplate>
  </syncfusion:SfAIAssistView>
-</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="9 13" %}
@@ -161,7 +149,7 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
 {% endtabs %}
 
 
-![EmptyView customization in .NET MAUI AI AssistView](Images/maui-aiassistview-emptyview-customization.png)
+![Syncfusion .NET MAUI SfAIAssistView empty view customization](Images/maui-aiassistview-emptyview-customization.png)
 
 N>
 * The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
