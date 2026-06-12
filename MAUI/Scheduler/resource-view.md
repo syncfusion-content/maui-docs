@@ -145,9 +145,9 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resou
 
 ![Resource Grouping By Resource in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-resource-in-days-view-in-net-maui-scheduler.png)
 
-### Month view
+#### Month view
 
-In [Month]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html)) View, grouping is supported only by Resource (ResourceGroupType="Resource"), where each resource is rendered with its own independent month calendar layout to clearly display appointments and availability; for example, if three resources defined, the view will show three distinct monthly calendars side by side, each containing only the appointments assigned to that specific resource.
+In [Month]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html)) View, grouping is supported only by Resource (ResourceGroupType="Resource"), where each resource is rendered with its own independent month calendar layout to clearly display appointments and availability; for example, if three resources are defined, the view will show three distinct monthly calendars side by side, each containing only the appointments assigned to that specific resource.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
