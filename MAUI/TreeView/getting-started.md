@@ -84,8 +84,6 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
 
@@ -93,6 +91,8 @@ using Syncfusion.Maui.Core.Hosting;
             
 {% endhighlight %} 
 {% endtabs %}
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
@@ -109,7 +109,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
 
 {% endhighlight %}
 {% highlight c# %}
@@ -119,11 +119,9 @@ using Syncfusion.Maui.TreeView;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Data population
+## Step 5: Add the TreeView Component
 
 TreeView can be populated either with the data source by using a [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) or by creating & adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
-
-### Populating nodes without data source - unbound mode
 
 You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
 
@@ -171,6 +169,6 @@ this.Content = treeView;
 {% endhighlight %}
 {% endtabs %}
 
-You can download the TreeView Getting Started sample from [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
-
 ![.NET MAUI TreeView getting started UnBoundMode](Images/getting-started/maui_treeview.png)
+
+You can download the TreeView Getting Started sample from [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
