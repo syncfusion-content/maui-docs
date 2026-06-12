@@ -7,11 +7,13 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Events and Commands in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Use Events and Commands in .NET MAUI SfAIAssistView?
+
+Learn how to handle events and use commands in Syncfusion .NET MAUI [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) to manage user interactions and customize chat behavior.
 
 ## ItemTapped Event and Command
 
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemTapped) and [ItemTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemTappedCommand) to respond when an item is tapped. The tapped item and its position are passed through the [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemTappedEventArgs.html). This argument provides the following details:
+The `SfAIAssistView` control provides the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemTapped) and [ItemTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemTappedCommand) to respond when an item is tapped. The tapped item and its position are passed through the [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemTappedEventArgs.html). This argument provides the following details:
 
  * [Item](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ItemTappedEventArgs_Item) : The tapped item within AI AssistView.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ItemTappedEventArgs_Position) : The touch position when the item was tapped.
@@ -382,12 +384,10 @@ To handle the request action using commands (MVVM), bind the [RequestCommand](ht
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
 
  public class ViewModel : INotifyPropertyChanged
  {
-     ...
-
     public ViewModel()
     {
         this.assistItems = new ObservableCollection<object>();
@@ -399,9 +399,6 @@ To handle the request action using commands (MVVM), bind the [RequestCommand](ht
         var request = (obj as Syncfusion.Maui.AIAssistView.RequestEventArgs).RequestItem;
         //logic for getting response from the AI
     }
-
-    ....
-
 }
 
 {% endhighlight %}
@@ -444,7 +441,6 @@ The [ItemCopyCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## ItemRetry Command
 
@@ -523,7 +519,84 @@ The [ItemRatingChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% endtabs %}
 
 
-## Conversation Events and commands
+### StopResponding Event and Command
+
+The `SfAIAssistView` control includes a built-in event called [StopResponding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopResponding) and a command named [StopRespondingCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingCommand). These are triggered when the `Stop Responding` button is clicked.
+To cancel the response using the `StopRespondingCommand` or `StopResponding` event, you can include logic to stop the ongoing response as shown below. 
+
+#### StopResponding Event
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           StopResponding="OnStopResponding" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+sfAIAssistView.StopResponding += OnStopResponding;
+
+private void OnStopResponding(object sender, EventArgs e)
+{
+   // Handle the Stop Responding action
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### StopResponding Command
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                           StopRespondingCommand="{Binding StopRespondingCommand}" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class ViewModel : INotifyPropertyChanged
+{
+    public ICommand StopRespondingCommand { get; set; }
+
+    public ViewModel()
+    {
+      AssistViewRequestCommand = new Command(ExecuteRequestCommand);
+      StopRespondingCommand = new Command(ExecuteStopResponding);
+    }
+
+    private void ExecuteStopResponding()
+    {
+        // logic to handle the Stop Responding action
+        this.CancelResponse = true;
+        AssistItem responseItem = new AssistItem() { Text = "You canceled the response" };
+        responseItem.ShowAssistItemFooter = false;
+        this.AssistItems.Add(responseItem);
+    } 
+        
+    private void ExecuteRequestCommand()
+    {
+        this.GetResult();
+    }
+
+    private void GetResult()
+    {
+        if (!CancelResponse)
+        {
+            // generating the response if it has not been canceled.
+        }  
+    }      
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Stop Responding in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-stopresponding.gif)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
+
+## Conversation Events and Commands
 
 When a user selects a conversation item, the [ConversationItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTapped) event and [ConversationItemTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTappedCommand) are triggered, providing [ConversationItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
 
@@ -560,27 +633,21 @@ private void OnConversationItemTapped(object sender, ConversationItemTappedEvent
                      ConversationItemTappedCommand="{Binding ConversationItemTappedCommand}"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="4,7" %}
+{% highlight c# hl_lines="7,10" %}
 
 public class AIAssistViewModel : INotifyPropertyChanged
 {
-    ...
     public ICommand ConversationItemTappedCommand { get; }
-    ...
 
     public AIAssistViewModel()
     {
-        ...
         this.ConversationItemTappedCommand = new Command<object>(OnConversationItemTapped);
-        ...
     }
 
-    ...
     private void OnConversationItemTapped(object obj)
     {
         // Handle the conversation item action
     }
-    ...
 }
 
 {% endhighlight %}

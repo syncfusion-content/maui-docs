@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Toolbar in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Customize Toolbar in .NET MAUI SfAIAssistView?
 
 This section explains how to define and customize the toolbar in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
@@ -29,23 +29,17 @@ This section explains how to define and customize the toolbar in the [SfAIAssist
     </syncfusion:SfAIAssistView>
 {% endhighlight %}
 
-{% highlight c# hl_lines="6,7,8" %}
+{% highlight c# hl_lines="2,3,4" %}
 
-    SfAIAssistView sfAIAssistView; 
-    public MainPage() 
-    { 
-        InitializeComponent(); 
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ToolbarTitle = "AI AssistView";
-        this.sfAIAssistView.ShowToolbar = true;
-        this.sfAIAssistView.ToolbarHeight = 50;
-        this.Content = sfAIAssistView; 
-     }
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.ToolbarTitle = "AI AssistView";
+    sfAIAssistView.ShowToolbar = true;
+    sfAIAssistView.ToolbarHeight = 50;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Toolbar in .NET MAUI AI AssistView](Images/toolbar/maui-aiassistview-toolbar.png)
+![Syncfusion .NET MAUI SfAIAssistView toolbar customization](Images/toolbar/maui-aiassistview-toolbar.png)
 
 ## Chat Modes
 
@@ -71,25 +65,16 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
                                TemporaryChatBannerText="This chat will not be saved" />
 {% endhighlight %}
 
-{% highlight c# hl_lines="8 9" %}
+{% highlight c# hl_lines="2 3" %}
 
-    public partial class MainPage : ContentPage
-    {
-        SfAIAssistView sfAIAssistView;
-        public MainPage()
-        {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.EnableTemporaryChat = true;
-            sfAIAssistView.TemporaryChatBannerText="This chat will not be saved";
-            this.Content = sfAIAssistView;
-        }
-    }
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.EnableTemporaryChat = true;
+    sfAIAssistView.TemporaryChatBannerText="This chat will not be saved";
 
 {% endhighlight %}
 {% endtabs %}
 
-![Temporary Chat Banner in .NET MAUI AI AssistView](Images/toolbar/maui-aiassistview-temporary-chat-banner.png)
+![Syncfusion .NET MAUI SfAIAssistView temporary chat banner](Images/toolbar/maui-aiassistview-temporary-chat-banner.png)
 
 ### Events for chat mode
 

@@ -7,7 +7,9 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# AutoComplete Suggestions in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Display AutoComplete Suggestions in .NET MAUI SfAIAssistView?
+
+Learn how to enable AutoComplete suggestions in Syncfusion .NET MAUI [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html)  to provide dynamic prompts and improve user input experience.
 
 ## Displaying AutoComplete suggestions
 
@@ -67,7 +69,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Auto Complete Suggestions in .NET MAUI AI AssistView](images/maui-aiassistview-auto-complete-suggestion.gif)
+![Syncfusion .NET MAUI SfAIAssistView autocomplete suggestions display](images/maui-aiassistview-auto-complete-suggestion.gif)
 
 ### Executing commands on suggestion selection 
 
@@ -115,7 +117,14 @@ The [AutoSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 <ContentPage.Resources>
     <DataTemplate x:Key="autoSuggestionTemplate">
-        ...
+        <Grid Padding="8"
+              Margin="4"
+              BackgroundColor="#F5F5F5">
+            <Label Text="{Binding Text}"
+                   FontSize="14"
+                   TextColor="Black"
+                   VerticalOptions="Center"/>
+        </Grid>
     </DataTemplate>
 </ContentPage.Resources>
 
@@ -154,7 +163,24 @@ public partial class MainPage : ContentPage
     {
         return new DataTemplate(() =>
         {
-           ...
+            var grid = new Grid
+            {
+                Padding = new Thickness(8),
+                Margin = new Thickness(4),
+                BackgroundColor = Color.FromArgb("#F5F5F5")
+            };
+
+            var label = new Label
+            {
+                FontSize = 14,
+                TextColor = Colors.Black,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            label.SetBinding(Label.TextProperty, "Text");
+            grid.Children.Add(label);
+            
+            return grid;
         });
     }
 }

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Attachment Preview in .NET MAUI AI AssistView control | Syncfusion
+title: .NET MAUI SfAIAssistView Attachment Preview in Editor | Syncfusion
 description: Learn here all about Attachment Preview support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Attachment Preview in EditorView
+# How to Preview Attachments in .NET MAUI SfAIAssistView Editor?
 
 The `SfAIAssistView` allows you to add files and images as attachments in the editor using [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property. This feature lets you show the preview for attachments added in the editor. `Attachments` are added as [AssistAttachment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html) which has the following members:
 
@@ -19,13 +19,11 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 * [FilePreviewIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FilePreviewIcon) : Displays the preview icon for the file.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight xaml hl_lines="2" %}
 
-<ContentPage.Content>
       <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
                                  Attachments = "{Binding Attachments}">
       </syncfusion:SfSfAIAssistView>
-</ContentPage.Content>
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -94,39 +92,28 @@ internal class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Preview support in .NET MAUI AI AssistView](Images/attachment-preview/maui-aiassistview-preview.gif)
+![Syncfusion .NET MAUI SfAIAssistView attachment preview in editor](Images/attachment-preview/maui-aiassistview-preview.gif)
 
 ### Setting the maximum number of attachments in SfAIAssistView
 
 The `SfAIAssistView` control allows you to control the number of attachments using the [MaxAttachmentCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_MaxAttachmentCount) property. This feature allows us to restrict the number of attachments that can be added to the `Attachments`. The default value is 10.
 
 {% tabs %}
-{% highlight xaml hl_lines="4" %}
+{% highlight xaml hl_lines="3" %}
 
-<ContentPage.Content>
       <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
                                  Attachments = "{Binding Attachments}"
                                  MaxAttachmentCount = 8>                 
       </syncfusion:SfSfAIAssistView>
-</ContentPage.Content>
 
 {% endhighlight %}
-{% highlight c# hl_lines="11" %}
+{% highlight c# hl_lines="5" %}
 
 using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        sfAIAssistView.Attachment = viewModel.Attachments;
-        sfAIAssistView.MaxAttachmentCount = 8;
-        this.Content = sfAIAssistView;
-    }
-}
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.Attachment = viewModel.Attachments;
+    sfAIAssistView.MaxAttachmentCount = 8;
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,8 +128,35 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key = "attachmentItemTemplate">
-            <Grid>
-                ...
+             <Grid Padding="8" ColumnSpacing="10">
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                 </Grid.ColumnDefinitions>
+
+                 <!-- File Icon -->
+                <Image WidthRequest="32" HeightRequest="32">
+                    <Image.Source>
+                        <FontImageSource Glyph="&#xe76c;"
+                               FontFamily="MauiMaterialAssets"
+                               Color="Black" />
+                    </Image.Source>
+                </Image>
+
+                 <!-- File Details -->
+                <StackLayout Grid.Column="1" Spacing="2">
+                   <!-- File Name -->
+                   <Label Text="{Binding FileName}"
+                          FontAttributes="Bold"
+                          FontSize="14"
+                          LineBreakMode="TailTruncation"/>
+
+                   <!-- File Size -->
+                   <Label Text="{Binding FileSize}"
+                          FontSize="12"
+                          TextColor="Gray"/>
+                </StackLayout>
             </Grid>
         </DataTemplate>
     </ResourceDictionary>
@@ -175,7 +189,61 @@ public partial class MainPage : ContentPage
     {
         return new DataTemplate(() =>
         {
-            ...
+            var grid = new Grid
+            {
+                Padding = new Thickness(8),
+                ColumnSpacing = 10,
+                ColumnDefinitions =
+                {
+                    new ColumnDefinition { Width = GridLength.Auto },
+                    new ColumnDefinition { Width = GridLength.Star },
+                    new ColumnDefinition { Width = GridLength.Auto }
+                }
+            };
+
+            var image = new Image
+            {
+                WidthRequest = 32,
+                HeightRequest = 32,
+                Source = new FontImageSource
+                {
+                    Glyph = "\ue76c", 
+                    FontFamily = "MauiMaterialAssets",
+                    Color = Colors.Black
+                }
+            };
+
+            var fileNameLabel = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                FontSize = 14,
+                LineBreakMode = LineBreakMode.TailTruncation
+            };
+
+            fileNameLabel.SetBinding(Label.TextProperty, "FileName");
+
+            var fileSizeLabel = new Label
+            {
+                FontSize = 12,
+                TextColor = Colors.Gray
+            };
+
+            fileSizeLabel.SetBinding(Label.TextProperty, "FileSize");
+
+            var detailsLayout = new StackLayout
+            {
+                Spacing = 2,
+                Children =
+                {
+                   fileNameLabel,
+                   fileSizeLabel
+                }
+            };
+
+            grid.Add(image, 0, 0);
+            grid.Add(detailsLayout, 1, 0);
+
+            return grid;
         });
     }
 }

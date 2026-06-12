@@ -7,8 +7,8 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Appearance in .NET MAUI AI AssistView (SfAIAssistView)
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) allows customizing the appearance of conversation elements and provides an interactive chat-like interface for users.
+# How to Customize Appearance in .NET MAUI SfAIAssistView?
+Learn how to customize conversation elements in [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) to build rich, interactive chat-style user interfaces.
 
 
 ## Customizing AI AssistView with ControlTemplate
@@ -16,10 +16,8 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
 
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
-
-<ContentPage.Content>
-    ...      
+{% highlight xaml hl_lines="3" %}
+ 
     <local:CustomAssistView x:Name="sfAIAssistView"
                             AssistItems="{Binding AssistMessages}">
         <local:CustomAssistView.ControlTemplate>
@@ -35,8 +33,6 @@ The `ControlTemplate` in AI AssistView allows you to define and reuse the visual
                 </ControlTemplate>
         </local:CustomAssistView.ControlTemplate>
     </local:CustomAssistView>
-            ...
-</ContentPage.Content>
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,41 +83,30 @@ The `SfAIAssistView` allows you to edit a previously sent request. This feature 
 
 N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal the Edit icon. On mobile (Android, iOS), tap the request to show the Edit option.
 
-![Edit Option in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-editoption.gif)
+![Syncfusion .NET MAUI SfAIAssistView edit option appearance](Images/appearance/maui-aiassistview-editoption.gif)
  
 ## Display Response Processing Indicator
 
 By default, a processing indicator is displayed when a request is added to indicate that the response is being generated. To disable it, set the [ShowResponseLoader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowResponseLoader) property to `false`
 
 {% tabs %}
-{% highlight xaml hl_lines="8" %}
+{% highlight xaml hl_lines="7" %}
 
 <ContentPage.BindingContext>
     <local:GettingStartedViewModel/>
 </ContentPage.BindingContext>
 
-<ContentPage.Content>
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                AssistItems="{Binding AssistItems}"
                                ShowResponseLoader="False"/>
-</ContentPage.Content>
 
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="4" %}
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-        InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        this.sfAIAssistView.ShowResponseLoader = false;
-        this.Content = sfAIAssistView;
-    }
-}
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    GettingStartedViewModel viewModel = new GettingStartedViewModel();
+    sfAIAssistView.AssistItems = viewModel.AssistItems;
+    sfAIAssistView.ShowResponseLoader = false;
 
 {% endhighlight %}
 {% endtabs %}
@@ -193,7 +178,6 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {
     private ObservableCollection<IAssistItem> assistItems;
 
-
     public GettingStartedViewModel()
     {
         this.assistItems = new ObservableCollection<IAssistItem>();
@@ -218,7 +202,6 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
     private async void GenerateAssistItems()
     {
-            
 
         FileAssistItem FileItem = new FileAssistItem()
         {
@@ -228,7 +211,6 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         };
 
         this.AssistItems.Add(FileItem);
-
 
         await Task.Delay(1000).ConfigureAwait(true);
 
@@ -260,7 +242,6 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
     {
         this.requestcustomtemplate = new DataTemplate(typeof(FileTemplate));
     }
-
 
     protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
     {
@@ -327,7 +308,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![RequestItem Template in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-RequestTemplate.png)
+![Syncfusion .NET MAUI SfAIAssistView request item template customization](Images/appearance/maui-aiassistview-RequestTemplate.png)
 
 ### Defining the response item template
 
@@ -377,7 +358,6 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
         // Add the request item to the collection
         this.AssistItems.Add(requestItem);
-
 
         await Task.Delay(1000).ConfigureAwait(true);
 
@@ -433,7 +413,6 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
     {
         this.reponsecustomtemplate = new DataTemplate(typeof(TimePickerTemplate));
     }
-
 
     protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
     {
@@ -500,7 +479,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![ResponseItem Template in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-ResponseTemplate.png)
+![Syncfusion .NET MAUI SfAIAssistView response item template customization](Images/appearance/maui-aiassistview-ResponseTemplate.png)
 
 ## Text Selection in Request and Response messages
 The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
@@ -513,26 +492,17 @@ By default, text selection is disabled. To enable it, set the [AllowTextSelectio
                            AllowTextSelection="True"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="4" %}
 
 using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.AllowTextSelection = true;
-            this.Content = sfAIAssistView;
-    }
-}
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.AllowTextSelection = true;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Text Selection in .NET MAUI AI AssistView](Images/appearance/maui-aiassistview-textselection.gif)
+![Syncfusion .NET MAUI SfAIAssistView text selection in request and response messages](Images/appearance/maui-aiassistview-textselection.gif)
 
 ## Customizing request and response views in SfAIAssistView
 
@@ -712,7 +682,6 @@ The following views can be customized individually:
                     </Setter.Value>
                 </Setter>
             </Style>
-            ...
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -794,8 +763,6 @@ namespace MauiAIAssistView
                     }
                 }
             };
-
-            ...
 
             resources.Add(requestTextStyle);
             resources.Add(responseTextStyle);

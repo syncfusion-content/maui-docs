@@ -7,9 +7,9 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# InputView Customization in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Customize InputView in .NET MAUI SfAIAssistView?
 
-This section explains how to define and customize the InputView in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
+Learn how to customize InputView in Syncfusion .NET MAUI [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) to enhance message input UI and improve user interaction in chat interfaces.
 
 ## Editor
 The Editor in `SfAIAssistView` is the input area where users compose and send their requests. It can be customized using templates or by modifying its properties programmatically.
@@ -19,14 +19,13 @@ The Editor in `SfAIAssistView` is the input area where users compose and send th
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the [EditorViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EditorViewTemplate) property. This property lets you define a custom layout and style for the editor.
 
 {% tabs %}
-{% highlight xaml hl_lines="13" %}
+{% highlight xaml hl_lines="12" %}
 
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="editorViewTemplate">
             <Grid>
                 <Editor x:Name="editor" Placeholder="Type Message...">
-                     ...
             </Grid>
         </DataTemplate>
     </ResourceDictionary>
@@ -64,8 +63,6 @@ public partial class MainPage : ContentPage
                 Placeholder = "Type Message...",
             };
 
-                .......
-
             grid.Children.Add(editor);
 
             return grid;
@@ -76,30 +73,23 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![EditorView Template in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-editorviewtemplate.png)
+![Syncfusion .NET MAUI SfAIAssistView editor view template customization](Images/inputview/maui-aiassistview-editorviewtemplate.png)
 
 ### Customizing editor appearance using RequestEditor
 The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.
 
 {% tabs %}
-{% highlight c# hl_lines="9" %}
+{% highlight c# hl_lines="4" %}
 
 using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.RequestEditor.PlaceholderColor = Colors.Red;
-    }
-}
+  sfAIAssistView = new SfAIAssistView();
+  sfAIAssistView.RequestEditor.PlaceholderColor = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
 
-<img src="Images/inputview/maui-aiassitview-Editor-customization.png" width="444"/>
+<img src="Images/inputview/maui-aiassitview-Editor-customization.png" alt="Syncfusion .NET MAUI SfAIAssistView editor customization" width="444"/>
 
 ### Accessing the editor in AssistView
 The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEditorView.html), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
@@ -116,96 +106,13 @@ By default, the StopResponding button is visible. To hide this button, set the  
                            EnableStopResponding="False"/>  
 
 {% endhighlight %} 
-{% highlight c# hl_lines="6" %}
+{% highlight c# hl_lines="2" %}
 
-SfAIAssistView sfAIAssistView; 
-public MainPage() 
-{ 
-    InitializeComponent(); 
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.EnableStopResponding = false;
-    this.Content = sfAIAssistView;
-} 
+SfAIAssistView sfAIAssistView = new SfAIAssistView();
+sfAIAssistView.EnableStopResponding = false;
 
 {% endhighlight %}
 {% endtabs %}
-
-### Event and Command
-
-The `SfAIAssistView` control includes a built-in event called [StopResponding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopResponding) and a command named [StopRespondingCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingCommand). These are triggered when the `Stop Responding` button is clicked.
-To cancel the response using the `StopRespondingCommand` or `StopResponding` event, you can include logic to stop the ongoing response as shown below. 
-
-#### StopResponding Event
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           StopResponding="OnStopResponding" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-sfAIAssistView.StopResponding += OnStopResponding;
-
-private void OnStopResponding(object sender, EventArgs e)
-{
-   // Handle the Stop Responding action
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### StopResponding Command
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                           StopRespondingCommand="{Binding StopRespondingCommand}" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" %}
-
-public class ViewModel : INotifyPropertyChanged
-{
-    public ICommand StopRespondingCommand { get; set; }
-
-    public ViewModel()
-    {
-      AssistViewRequestCommand = new Command(ExecuteRequestCommand);
-      StopRespondingCommand = new Command(ExecuteStopResponding);
-    }
-
-    private void ExecuteStopResponding()
-    {
-        // logic to handle the Stop Responding action
-        this.CancelResponse = true;
-        AssistItem responseItem = new AssistItem() { Text = "You canceled the response" };
-        responseItem.ShowAssistItemFooter = false;
-        this.AssistItems.Add(responseItem);
-    } 
-        
-    private void ExecuteRequestCommand()
-    {
-        this.GetResult();
-    }
-
-    private void GetResult()
-    {
-        if (!CancelResponse)
-        {
-            // generating the response if it has not been canceled.
-        }  
-    }      
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Stop Responding in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-stopresponding.gif)
-
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
 
 ### Customizing the StopResponding icon
 
@@ -225,20 +132,14 @@ The `SfAIAssistView` control allows you to set a custom icon for the StopRespond
 
 {% endhighlight %} 
 
-{% highlight c# hl_lines="6" %} 
+{% highlight c# hl_lines="2" %} 
 
-SfAIAssistView sfAIAssistView; 
-public MainPage() 
-{ 
-    InitializeComponent(); 
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.StopRespondingIcon = new FontImageSource()
-    {
-       FontFamily = "MauiMaterialAssets",
-       Glyph = "\ue70b",
-    };
-    this.Content = sfAIAssistView; 
-}
+SfAIAssistView sfAIAssistView = new SfAIAssistView();
+sfAIAssistView.StopRespondingIcon = new FontImageSource()
+{
+    FontFamily = "MauiMaterialAssets",
+    Glyph = "\ue70b",
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -293,8 +194,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Stop Responding Template in .NET MAUI AI AssistView](Images/inputview/maui-aiassitview-stoprespondingtemplate.gif)
-
+![Syncfusion .NET MAUI SfAIAssistView stop responding template customization](Images/inputview/maui-aiassitview-stoprespondingtemplate.gif)
 
 ## Action buttons in the editor
 
@@ -308,21 +208,12 @@ The `SfAIAssistView` can display a quick action icon inside the editor. To enabl
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="10" %} 
+{% highlight c# hl_lines="4" %} 
 
 using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage 
-{ 
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-        InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ShowActionButtons = true;
-        this.Content = sfAIAssistView;
-    }
-} 
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.ShowActionButtons = true;
 
 {% endhighlight %} 
 {% endtabs %}
@@ -354,44 +245,33 @@ Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIA
 
 using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage 
-{ 
-    SfAIAssistView sfAIAssistView;
-    ViewModel viewModel;
-    public MainPage()
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    ViewModel viewModel = new ViewModel();
+    sfAIAssistView.ShowActionButtons = true,
+    sfAIAssistView.AssistItems = this.viewModel.AssistItems,
+    sfAIAssistView.ActionButtons = new ObservableCollection<ActionButton>
     {
-        InitializeComponent();
-        this.viewModel = new ViewModel();
-        this.BindingContext = this.viewModel;
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ShowActionButtons = true,
-        this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
-        this.sfAIAssistView.ActionButtons = new ObservableCollection<ActionButton>
+        new ActionButton
         {
-            new ActionButton
-            {
-                BindingContext = this.viewModel,
-                Text = "Upload images",
-                Icon = ImageSource.FromFile("image.png"),
-                Command = this.viewModel.UploadCommand
-            },
-            new ActionButton
-            {
-                BindingContext = this.viewModel,
-                Text = "Search in web",
-                Icon = ImageSource.FromFile("web.png"),
-                Command = this.viewModel.SearchCommand
-            },
-        };
-
-        this.Content = sfAIAssistView;
-    }
-}
+            BindingContext = this.viewModel,
+            Text = "Upload images",
+            Icon = ImageSource.FromFile("image.png"),
+            Command = this.viewModel.UploadCommand
+        },
+          
+        new ActionButton
+        {
+            BindingContext = this.viewModel,
+            Text = "Search in web",
+            Icon = ImageSource.FromFile("web.png"),
+            Command = this.viewModel.SearchCommand
+        },
+     };
 
 {% endhighlight %} 
 {% endtabs %}
 
-![Action Buttons in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-actionbuttons.gif)
+![Syncfusion .NET MAUI SfAIAssistView action buttons in input view](Images/inputview/maui-aiassistview-actionbuttons.gif)
 
 ### Action button customization
 
@@ -401,7 +281,7 @@ The editor action button and its popup are customizable beyond the `ActionButton
 - **[ActionButtonPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtonPosition)**: Controls where the action icon appears in the input view. Use [ActionButtonPosition.Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButtonPosition.html#Syncfusion_Maui_AIAssistView_ActionButtonPosition_Start) or [ActionButtonPosition.End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButtonPosition.html#Syncfusion_Maui_AIAssistView_ActionButtonPosition_End) to place the icon at the leading or trailing edge.
 
 {% tabs %} 
-{% highlight xaml %}
+{% highlight xaml hl_lines="3 4" %}
 
 <syncfusion:SfAIAssistView
     ShowActionButtons="True"
@@ -415,48 +295,37 @@ The editor action button and its popup are customizable beyond the `ActionButton
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# hl_lines="4 5" %}
 
-    public partial class MainPage : ContentPage 
-    { 
-        SfAIAssistView sfAIAssistView;
-        ViewModel viewModel;
-        public MainPage()
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    ViewModel viewModel = new ViewModel();
+    sfAIAssistView.ShowActionButtons = true,
+    sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
+    sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start; // or   ActionButtonPosition.End,
+    sfAIAssistView.AssistItems = this.viewModel.AssistItems,
+    sfAIAssistView.ActionButtons = new ObservableCollection<ActionButton>
+    {
+        new ActionButton
         {
-            InitializeComponent();
-            this.viewModel = new ViewModel();
-            this.BindingContext = this.viewModel;
-            this.sfAIAssistView = new SfAIAssistView();
-            this.sfAIAssistView.ShowActionButtons = true,
-            this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
-            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start; // or   ActionButtonPosition.End,
-            this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
-            this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
-            {
-                new ActionButton
-                {
-                    BindingContext = this.viewModel;
-                    Text = "Attach",
-                    Icon = ImageSource.FromFile ("attach.png"),
-                    Command = viewModel.AttachCommand
-                },
-                new ActionButton
-                {
-                    BindingContext = this.viewModel;
-                    Text = "Search in web",
-                    Icon = ImageSource.FromFile ("format.png"),
-                    Command = this.viewModel.FormatCommand
-                },
-            };
+            BindingContext = this.viewModel;
+            Text = "Attach",
+            Icon = ImageSource.FromFile ("attach.png"),
+            Command = viewModel.AttachCommand
+        },
 
-            this.Content = sfAIAssistView;
-        }
-    }
+        new ActionButton
+        {
+            BindingContext = this.viewModel;
+            Text = "Search in web",
+            Icon = ImageSource.FromFile ("format.png"),
+            Command = this.viewModel.FormatCommand
+        },
+    };
 
 {% endhighlight %}
 {% endtabs %}
 
-![Action button customization in .NET MAUI AI AssistView](Images/inputview/maui-aiassitview-actionbutton-customization.png)
+![Syncfusion .NET MAUI SfAIAssistView action button customization in input view](Images/inputview/maui-aiassitview-actionbutton-customization.png)
 
 ## Request button customization
 
@@ -481,27 +350,18 @@ The `SfAIAssistView` control allows you to customize the request button icon by 
 
 using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.RequestButtonIcon = new FontImageSource
     {
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        sfAIAssistView.RequestButtonIcon = new FontImageSource
-        {
             Glyph = "\ue809;",
             FontFamily = "MauiMaterialAssets",
             Color = Colors.Green
-        };
-        this.Content = sfAIAssistView;
-    }
-}
+    };
 
 {% endhighlight %}
 {% endtabs %}
 
-![Request Button Icon in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-requestbutton.png)
+![Syncfusion .NET MAUI SfAIAssistView request button icon](Images/inputview/maui-aiassistview-requestbutton.png)
 
 ### Request button template
 
@@ -575,6 +435,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![SendButton Customization in .NET MAUI AI AssistView](Images/inputview/maui-aiassistview-SendButtonCustomization.png)
+![Syncfusion .NET MAUI SfAIAssistView send button customization](Images/inputview/maui-aiassistview-SendButtonCustomization.png)
 
 N> The [InputText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_InputText) is used to gets or sets the text of the editor in the `SfAIAssistView`.

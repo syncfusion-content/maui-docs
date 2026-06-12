@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Scrolling in .NET MAUI AI AssistView 
+# How to Work with Scrolling Features in .NET MAUI SfAIAssistView?
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides features to manage scrolling efficiently. It includes a scroll-to-bottom button for quick navigation, supports customization through templates, and allows control over auto-scrolling and scroll events to enhance user experience.
 
@@ -23,26 +23,17 @@ The `SfAIAssistView` control provides an option to display a scroll-to-bottom bu
                            ShowScrollToBottomButton="True" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="3" %}
 
 using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-        InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ShowScrollToBottomButton = true;
-        this.Content = sfAIAssistView;
-    }
-}
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.ShowScrollToBottomButton = true;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll-To-Buttom in .NET MAUI AI AssistView](Images/scrolling/maui-aiassistview-scrolltobottom.gif)
+![Syncfusion .NET MAUI SfAIAssistView scroll to bottom button](Images/scrolling/maui-aiassistview-scrolltobottom.gif)
 
 ### Scroll to bottom button customization
 
@@ -150,14 +141,14 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/scrolling/maui-aiassistview-scrolltobottomtemplate.png)
+![Syncfusion .NET MAUI SfAIAssistView scroll to bottom button template customization](Images/scrolling/maui-aiassistview-scrolltobottomtemplate.png)
 
 ## Auto scroll control to bottom when new message is added
 
 By default, the `SfAIAssistView` control automatically scrolls to the bottom of the conversation to display newly added messages. If you want to prevent this behavior and retain the current scroll position, you can disable auto‑scrolling by setting the [CanAutoScrollToBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CanAutoScrollToBottom) property to `false`.
 
 {% tabs %}
-{% highlight xaml hl_lines="16" %}
+{% highlight xaml hl_lines="3" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            AssistItems="{Binding AssistItems}"
@@ -173,7 +164,7 @@ The `SfAIAssistView` control comes with a built-in [Scrolled](https://help.syncf
 You can handle this event to control the auto-scroll behavior of the AssistView. For example, if the user manually scrolls up and is no longer at the bottom of the conversation, auto-scrolling can be disabled to prevent newly added messages from interrupting the user’s reading position.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="2"  %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            Scrolled="sfAIAssistView_Scrolled" />
@@ -181,7 +172,7 @@ You can handle this event to control the auto-scroll behavior of the AssistView.
 {% endhighlight %}
 {% highlight c# %}
 
- sfAIAssistView.Scrolled += sfAIAssistView_Scrolled;
+sfAIAssistView.Scrolled += sfAIAssistView_Scrolled;
 
 private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView.ScrolledEventArgs e)
 {

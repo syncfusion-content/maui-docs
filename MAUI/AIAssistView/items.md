@@ -7,7 +7,9 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Items in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Work with Items in .NET MAUI SfAIAssistView?
+
+Learn how to work with different item types in Syncfusion .NET MAUI [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html), including text, image, card, hyperlink, and attachment items.
 
 ## Configuring common settings for the AssistItem
 
@@ -70,54 +72,32 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                xmlns:local="clr-namespace:MauiAIAssistView"             
-                x:Class="MauiAIAssistView.MainPage">
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
-
-        <ContentPage.Content>
-            <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                       AssistItems="{Binding AssistItems}"/>
-        </ContentPage.Content>
-    </ContentPage>
+<ContentPage.Content>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}"/>
+</ContentPage.Content>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    namespace MauiAIAssistView
-    {
-        public partial class MainPage : ContentPage
-        {
-            SfAiAssistView sfAIAssistView;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfAIAssistView = new SfAIAssistView();
-                this.viewModel = new ViewModel();
-                this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-                this.Content = sfAIAssistView;
-            }
-        }
-    }
+    SfAiAssistView sfAIAssistView = new SfAIAssistView();
+    ViewModel viewModel = new ViewModel();
+    this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
     
     public class ViewModel : INotifyPropertyChanged
     {
-
-       ...
 
         private void GenerateAssistItems()
         {
@@ -159,11 +139,10 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
 The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html) is used to send a [URL](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html#Syncfusion_Maui_AIAssistView_AssistHyperlinkItem_Url) as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
 
         private void GenerateAssistItems()
         {
@@ -194,7 +173,6 @@ The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
            this.AssistItems.Add(responseItem);
         }
 
-        ...
     } 
 
 {% endhighlight %}
@@ -205,11 +183,10 @@ The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
 The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html) is used to display an image as a item. Using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Source), [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Size), and [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Aspect) properties, you can display the desired image in the desired height and width as a item in the AI AssistView control.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
 
         private void GenerateAssistItems()
         {
@@ -241,7 +218,6 @@ The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
            this.AssistItems.Add(responseItem);
         }
 
-        ...
     }
 
 {% endhighlight %}
@@ -256,7 +232,7 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
+
         public ViewModel()
         {
             this.assistItems = new ObservableCollection<IAssistItem>();
@@ -315,7 +291,6 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
                 Cards = CardsCollection,
             });
         }
-        ...  
     }
 
 {% endhighlight %}
@@ -330,8 +305,6 @@ The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.A
 
 public class ViewModel : INotifyPropertyChanged
 {
-    ...
-
     private async void GenerateAssistItems()
     {
         // Adding a user request as attachments 
@@ -362,8 +335,6 @@ public class ViewModel : INotifyPropertyChanged
         // Add the response item to the collection
         this.AssistItems.Add(responseItem);
     }
-
-    ...
 }
 
 {% endhighlight %}
@@ -374,12 +345,10 @@ public class ViewModel : INotifyPropertyChanged
 The `SfAIAssistView` allows to display error responses by setting the error text to the [AssistItem.ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItem.html#Syncfusion_Maui_AIAssistView_IAssistItem_ErrorMessage) property, ensuring clear notification when an error occurs during AI interactions.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="36" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="34" %}
     
 public class ViewModel : INotifyPropertyChanged
 {
-
-    ...
 
     private async void GenerateAssistItems()
     {
@@ -422,7 +391,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Error message in .NET MAUI AI AssistView](images/maui-aiassistview-error-message.png)
+![Syncfusion .NET MAUI SfAIAssistView error message display](images/maui-aiassistview-error-message.png)
 
 ## Request and response item
  
