@@ -394,6 +394,8 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
     var columnIndex = e.RowColumnIndex.ColumnIndex;
     var column = e.Column;
     var point = e.Point;
+    var cellValue = e.CellValue;
+    var cellType = e.CellType;
 }
 {% endhighlight %}
 {% endtabs %}
