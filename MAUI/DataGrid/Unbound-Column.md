@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Unbound column in MAUI DataGrid (SfDataGrid)
 
-The data grid allows adding additional columns that are not bound with data objects from the underlying data source.The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html) class.
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) allows adding additional columns that are not bound with data objects from the underlying data source.The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html) class.
 
 {% tabs %}
 {% highlight xaml %}
