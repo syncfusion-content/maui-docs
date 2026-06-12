@@ -11,6 +11,41 @@ documentation: ug
 
 A leaf item in the TreeMap represents a visualized data element. It does not contain child items but may have a parent item if levels are specified in the TreeMap control. It also allows you to customize the spacing between items, stroke color, stroke width, text style, and text format option in the TreeMap control.
 
+## Add labels
+
+To display text for the leaf items, utilize the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property within the [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property allows you to specify the path to the data property containing the text you want to display.
+
+{% tabs %}
+{% highlight XAML hl_lines="7 8 9" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
+</treemap:SfTreeMap>
+
+{% endhighlight %}
+{% highlight C# hl_lines="5"  %}
+
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+this.Content = treeMap;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Label path
 
 The [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property of [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) in [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) is used to display text for leaf items. This property enables you to specify the path to the data property containing the text you want to display.
