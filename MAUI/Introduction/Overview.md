@@ -3,7 +3,7 @@ layout: post
 title: Overview of Syncfusion® Essential Studio® .NET MAUI Products
 description: Basic overview of the list of available features on Syncfusion® .NET MAUI components and steps to use the guide.
 platform: MAUI
-control: Overview
+control: .NET MAUI
 documentation: UG
 ---
 
@@ -11,16 +11,36 @@ documentation: UG
 
 Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive suite of .NET MAUI components for building modern, cross-platform applications. It offers a wide range of high-performance, feature-rich controls such as Charts, DataGrid, Scheduler, Gauges, and Tab View. These controls help developers create visually appealing, responsive, and scalable applications with ease.
 
-<img src="Images/.net-maui-banner.webp" alt=".NET MAUI overview banner" />
+<img src="../Images/maui-banner.webp" alt=".NET MAUI banner" />
 
 ## Supported Platforms
 
-| Target Platform | Supported Version |
-|----------------|------------------|
-| Android        | 5.0 (API 21) or higher |
-| iOS            | 12.2 or higher |
-| macOS (Mac Catalyst) | macOS 12 or higher |
-| Windows        | Windows 11 and Windows 10 version 1809 or higher |
+<table class="platform-table">
+  <thead>
+    <tr>
+      <th>Target Platform</th>
+      <th>Supported Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Android</td>
+      <td>5.0 (API 21) or higher</td>
+    </tr>
+    <tr>
+      <td>iOS</td>
+      <td>12.2 or higher</td>
+    </tr>
+    <tr>
+      <td>macOS (Mac Catalyst)</td>
+      <td>macOS 12 or higher</td>
+    </tr>
+    <tr>
+      <td>Windows</td>
+      <td>Windows 11 and Windows 10 version 1809 or higher</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## Controls List
@@ -31,14 +51,12 @@ Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI is a compreh
 border:0 !important;
 line-height: 160% !important;
 }
-tr
-{
-border:0 !important;
+#table tr {
+  border:0 !important;
 }
-td
-{
-border:0 !important;
-vertical-align: top;
+#table td {
+  border:0 !important;
+  vertical-align: top;
 }
 .controlanchorlink {
     font-size: 14px !important;
@@ -166,11 +184,12 @@ line-height: 1;
     <col style="width: 25%">
   </colgroup>
 
-  <tr>
+<tr>
 
 <!-- COLUMN 1 -->
 <td>
-      <div><p class="category-topics">SMART COMPONENTS</p></div>
+
+<div><p class="category-topics">SMART COMPONENTS</p></div>
 
 <div class="controlanchorlink">
 <a target="_self" href="https://help.syncfusion.com/maui/smartdatagrid/overview">
@@ -513,11 +532,12 @@ line-height: 1;
         <span class="sf-home-icon sf-icon-ai-assistance"></span>AI AssistView
     </a>
 </div>
-
+</td>
 
 </tr>
 </table>
 
+<br>
 
 ## Additional resources
 
@@ -607,16 +627,6 @@ line-height: 1;
    cursor: pointer;
    font-weight: bold;
 }
-@key frames zoomIn {
-   from {
-       transform: scale(0.9);
-       opacity: 0;
-   }
-   to {
-       transform: scale(1);
-       opacity: 1;
-   }
-}
 @media(max-width:900px) {
    .form-card {
        flex: 0 0 calc(50% - 10px);
@@ -627,13 +637,14 @@ line-height: 1;
        flex: 0 0 100%;
    }
 }
+
 </style>
  
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
 <a href="https://www.syncfusion.com/maui-controls" class="form-card" target="_blank">
   <div class="form-content">
-    <h3 class="form-title">Feature Tour</h3>
+   <h3 class="form-title">Feature Tour</h3>
     <div class="form-description">
       Get a quick overview of key features and capabilities to kickstart your journey.
     </div>
