@@ -88,8 +88,6 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
-## Step 3: Register Syncfusion handler
  
 Make sure to add the namespace.
  
