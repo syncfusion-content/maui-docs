@@ -87,8 +87,6 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
 
@@ -96,6 +94,8 @@ using Syncfusion.Maui.Core.Hosting;
             
 {% endhighlight %} 
 {% endtabs %}
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
@@ -122,7 +122,7 @@ using Syncfusion.Maui.TimePicker;
 {% endhighlight %}
 {% endtabs %}
 
-## Set header to the Time Picker
+## Step 5: Add TimePicker Component
 
 The SfTimePicker control allows you to add the header text by setting the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). Enable the header view by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_HeightProperty) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
@@ -150,34 +150,4 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-   ![Set header view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-header-view.png)
-
-## Set footer to the Time Picker
-
-In the SfTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected time. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-
-<picker:SfTimePicker x:Name="picker">
-    <picker:SfTimePicker.FooterView>
-        <picker:PickerFooterView ShowOkButton="True" Height="40" />
-    </picker:SfTimePicker.FooterView>
-</picker:SfTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4 5" %}
-
-SfTimePicker picker = new SfTimePicker();
-picker.FooterView= new PickerFooterView()
-{  
-    ShowOkButton = true,
-    Height = 40,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-![Set footer view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-footer-view.png)
+![Set header view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-header-view.png)

@@ -89,8 +89,6 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
 
@@ -98,6 +96,8 @@ using Syncfusion.Maui.Core.Hosting;
             
 {% endhighlight %} 
 {% endtabs %}
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" %}
@@ -124,7 +124,7 @@ using Syncfusion.Maui.Toolbar;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Adding Toolbar items
+## Step 5: Add Toolbar Component
 
 You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
  
