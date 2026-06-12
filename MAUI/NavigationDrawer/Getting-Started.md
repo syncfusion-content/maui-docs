@@ -411,7 +411,7 @@ public partial class MainPage : ContentPage
 
 ![CustomView](Images/getting-started/getting_main_content.png)
 
-## Set CollectionView as DrawerContentView
+## Step 6: Add DrawerContentView
 
 Create a CollectionView with items and set it as [DrawerContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView). 
 

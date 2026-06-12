@@ -236,6 +236,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
+
 The following screenshot illustrates the result of the above code.
 
 <img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">

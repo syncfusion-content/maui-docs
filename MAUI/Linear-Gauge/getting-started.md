@@ -292,9 +292,9 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Define the linear gauge
+## Step 5: Add Pointers and Ranges
 
-The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) is a data visualization control that displays values along a linear scale.
+The [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) is a data visualization control that displays values along a linear scale, with ranges highlighting value segments and pointers indicating specific values clearly.
 
 {% tabs %}
 

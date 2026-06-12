@@ -379,7 +379,7 @@ public class BookInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-### Binding data to the listview
+## Step 6: Binding data to the listview
 
 Create a `ViewModel` instance and set it as the ListView's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -407,7 +407,7 @@ listView.ItemsSource = viewModel.BookInfo;
 {% endhighlight %}
 {% endtabs %}
 
-### Defining an item template
+## Step 7: Defining an item template
  
  By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  

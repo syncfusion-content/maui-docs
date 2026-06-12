@@ -276,11 +276,11 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the terminal in Rider and manually run: `dotnet restore`.
+2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the Handler
 
@@ -384,6 +384,40 @@ namespace RangeSlider
 
 {% endtabcontents %}
 
-The following screenshot illustrates the result of the above code.
+## Step 5: Add Labels and Ticks
 
-![Initialize DateTimeRangeSlider](images/getting-started/initialize-slider.png)
+The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which render at given intervals. The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
+                               Maximum="2018-01-01" 
+                               RangeStart="2012-01-01" 
+                               RangeEnd="2016-01-01"                       
+                               Interval="2" 
+                               ShowLabels="True"
+                               ShowTicks="True"
+                               MinorTicksPerInterval="1">
+</sliders:SfDateTimeRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
+rangeSlider.Minimum = new DateTime(2010, 01, 01);
+rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.Interval = 2;
+rangeSlider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeRangeSlider ticks](images/getting-started/ticks.png)

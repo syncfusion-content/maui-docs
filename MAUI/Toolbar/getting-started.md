@@ -295,7 +295,7 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-## Adding Toolbar items
+## Step 5: Adding Toolbar items
 
 You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
  

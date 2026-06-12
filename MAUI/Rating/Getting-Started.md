@@ -311,32 +311,6 @@ public MainPage()
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Precision
-
-The [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control provides an option to rate the items in full, half, and exact values. This can be set using the [Precision](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Precision) property. By default, the precision mode is [Standard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<rating:SfRating Precision="Standard" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.Precision = Precision.Standard;
-}
-
-{% endhighlight%}
-
-{% endtabs %}
-
 ![SfRating Getting Started ](images/getting-started.png)
 
 The complete Getting Started sample is available in this [link.](https://github.com/SyncfusionExamples/maui-rating-samples)
