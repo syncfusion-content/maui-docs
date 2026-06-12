@@ -872,3 +872,61 @@ public class CustomMarker1 : MapMarker
 ![Maps marker appearance customization](images/markers/marker_selector.png)
 
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Markers example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+
+### Marker selection
+
+The .NET MAUI Maps control allows users to interact with markers. When a marker is selected, developers can handle the interaction using command-based binding, enabling seamless integration with MVVM architecture.
+
+### Marker selected command
+
+The `MarkerSelectedCommand` property allows you to bind a command that is executed when a marker is selected. This eliminates the need for event handlers in code-behind and promotes clean architecture practices.
+
+You can also pass a custom parameter using the `MarkerSelectedCommandParameter` property. If no parameter is specified, the selected marker instance is passed to the command by default.
+
+{% tabs %}  
+{% highlight xaml %}
+
+ <map:SfMaps>
+     <map:SfMaps.Layer>
+         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                            MarkerSelectedCommand="{Binding MarkerSelectedCommand}"
+                            MarkerSelectedCommandParameter="{Binding SelectionContext}"
+                            ShapeStroke="DarkGrey">
+
+             <map:MapShapeLayer.Markers>
+                 <map:MapMarkerCollection>
+                                    ....
+                 </map:MapMarkerCollection>
+             </map:MapShapeLayer.Markers>
+         </map:MapShapeLayer>
+     </map:SfMaps.Layer>
+ </map:SfMaps>
+
+{% endhighlight %}
+{% highlight C# %}
+
+public class MapViewModel
+{
+    // Command for marker selection
+    public ICommand MarkerSelectedCommand { get; }
+
+    // Custom parameter (bound from XAML)
+    public string SelectionContext { get; set; }
+
+    public MapViewModel()
+    {
+        // Initialize parameter
+        SelectionContext = "Default Context";
+
+        // Initialize command
+        MarkerSelectedCommand = new Command<object>(OnMarkerSelected);
+    }
+
+    private void OnMarkerSelected(object parameter)
+    {
+        ....
+    }
+}
+
+{% endhighlight %}  
+{% endtabs %}

@@ -20,11 +20,9 @@ To get start quickly with our .NET MAUI Time Picker, you can check the below vid
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install .NET SDK
-  - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later must be installed.
-2. Set up a .NET MAUI Environment with Visual Studio. Supported Visual Studio Versions:
-  - Visual Studio 2022: Version 17.13 or later (e.g., 17.14.7) for .NET 9 development.
-  - Visual Studio 2026: Required for .NET 10 development.
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -76,7 +74,7 @@ namespace GettingStarted
 2. Initialize [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -86,7 +84,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -110,9 +108,10 @@ public partial class MainPage : ContentPage
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -176,7 +175,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -202,8 +201,8 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -256,17 +255,16 @@ namespace GettingStarted
 2. Initialize [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <ContentPage   
     . . .
     xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
     <picker:SfTimePicker />
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -345,75 +343,4 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-   ![Set footer view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-footer-view.png)
-
-## Set height and width to the Time Picker
-
-The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<picker:SfTimePicker x:Name="picker" 
-                    HeightRequest="280" 
-                    WidthRequest="300">
-</picker:SfTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfTimePicker picker = new SfTimePicker()
-{
-    HeightRequest = 280,
-    WidthRequest = 300,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-   ![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
-
-## Set selected time to the Time Picker
-
-The SfTimePicker control allows you to select the time using the [SelectedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectedTime) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). The default value of the `SelectedTime` is the current time.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
-
-<picker:SfTimePicker x:Name="picker" 
-                     SelectedTime="07:22:01">
-</picker:SfTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
-
-SfTimePicker picker = new SfTimePicker()
-{
-    SelectedTime = new TimeSpan(07, 22, 01),
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-   ![Set Selected time in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-selected-time.png)
-
-## Clear selection
-
-The .NET MAUI TimePicker provides clear selection support, allowing you to clear the selected time by setting the `SelectedTime` property to `null`.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<picker:SfTimePicker x:Name="picker" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-    this.picker.SelectedTime = null;
-
-{% endhighlight %}  
-{% endtabs %}
+![Set footer view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-footer-view.png)

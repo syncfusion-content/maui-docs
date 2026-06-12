@@ -20,8 +20,9 @@ To get start quickly with our .NET MAUI Step ProgressBar, you can check the belo
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (18.0.0).
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -107,9 +108,10 @@ public partial class MainPage : ContentPage
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio Code. 
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -199,8 +201,8 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -255,10 +257,9 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-<ContentPage   
-    . . .
-    xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
-
+<ContentPage 
+             ...
+             xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
     <stepProgressBar:SfStepProgressBar />
 </ContentPage>
 
@@ -266,7 +267,6 @@ namespace GettingStarted
 {% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.ProgressBar;
-. . .
 
 public partial class MainPage : ContentPage
 {
@@ -285,25 +285,18 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-## Populating step progressbar items
+## Step 5: Create the ViewModel
 
 You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
 
-* Create a simple Observable Collection of the item for the step progressbar,
+Create a simple Observable Collection of the item for the step progressbar,
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
 public class ViewModel
 {
-    /// <summary>
-    /// The Step progress bar item collection.
-    /// </summary>
     private ObservableCollection<StepProgressBarItem> stepProgressItem;
-
-    /// <summary>
-    /// The Step progress bar item collection.
-    /// </summary>
     public ObservableCollection<StepProgressBarItem> StepProgressItem
     {
         get
@@ -329,7 +322,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to step progressbar
+## Step 6: Bind the Collection to step progressbar
 
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property from the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). Bind item collection in both XAML and C#.
 
@@ -340,7 +333,7 @@ The Step progressbar control allows you to bind item collection by setting the [
                     x:Name="stepProgress"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"                                        
-                    Orientation="Horizontal"                                                                                       
+                    Orientation="Horizontal"                                                                                      
                     LabelSpacing="12"
                     ActiveStepIndex="2"
                     ActiveStepProgressValue="60"
@@ -374,29 +367,3 @@ this.Content = stepProgressBar;
 {% endtabs %}
 
 ![Getting started of .NET MAUI StepProgressBar](images/getting-started/maui-stepprogressbar-getting-started.gif)
-
-## ActiveStepIndex
-The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex) property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue) property is used to add the progress value of the currently active step within a sequence.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
-
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    ActiveStepIndex="3"
-                    ActiveStepProgressValue="40">
-</stepProgressBar:SfStepProgressBar>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfStepProgressBar stepProgressBar = new SfStepProgressBar()
-{
-    ActiveStepIndex = 3,
-    ActiveStepProgressValue = 40,
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-N> If `ActiveStepIndex` value is less than 0, first step will be marked as `NotStarted` step status. If `ActiveStepIndex` value is greater than the step count, all the steps will be marked as `Completed` step status.

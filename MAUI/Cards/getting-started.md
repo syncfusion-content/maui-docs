@@ -20,11 +20,9 @@ To get start quickly with our .NET MAUI Cards, you can check the below video.
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install .NET SDK
-  - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later must be installed.
-2. Set up a .NET MAUI Environment with Visual Studio. Supported Visual Studio Versions:
-  - Visual Studio 2022: Version 17.13 or later (e.g., 17.14.7) for .NET 9 development.
-  - Visual Studio 2026: Required for .NET 10 development.
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -121,9 +119,10 @@ public partial class MainPage : ContentPage
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio Code. 
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -224,8 +223,8 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -320,84 +319,11 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
+The following screenshot illustrates the result of the above code.
+
 ![MAUI SfCardView image](images/maui-card-initial.png)
 
-## SwipeToDismiss
-
-The [SwipeToDismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_SwipeToDismiss) property enables or disables the swiping feature in SfCardView.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
-
-<cards:SfCardView SwipeToDismiss="true">
-    <Label Text="SfCardView" Background="MediumPurple" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-</cards:SfCardView>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
-
-using Syncfusion.Maui.Cards;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfCardView cardView = new SfCardView();
-        cardView.SwipeToDismiss = true;
-
-        cardView.Content = new Label()
-        {
-            Text="SfCardView",
-            HorizontalTextAlignment = TextAlignment.Center,
-            VerticalTextAlignment = TextAlignment.Center,
-            BackgroundColor = Colors.MediumPurple
-        };
-        this.Content = cardView;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}	
-
-N> This property will not work when adding the SfCardView as a child of SfCardLayout.
-
-![MAUI SfCardView image](images/maui-card-swiptodismiss.gif)
-
-## Dismiss the card programmatically
-
-The [IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_IsDismissed) property enables you to retrieve the view state of the card, and also provides the capability for the user to programmatically modify the card's view state.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
-
-<card:SfCardView IsDismissed="true">
-     <Label Text="SfCardView"/>
-</card:SfCardView>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
-
-using Syncfusion.Maui.Cards;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfCardView cardView = new SfCardView();
-        cardView.IsDismissed = true;
-        cardView.Content = new Label(){ Text="SfCardView" };
-        this.Content = cardView;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}	
-
-### SfCardLayout
+## Step 5: Define the card layout
 
 Initialize a card layout with a card view using the provided code sample below.
 
@@ -447,6 +373,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}	
 
+The following screenshot illustrates the result of the above code.
+
 ![MAUI SfCardView image](images/maui-card-cardlayout.gif)
+
 
 N> You can refer to our [.NET MAUI Cards](https://www.syncfusion.com/maui-controls/maui-cards) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Cards Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Cards) that shows you how to render and configure the Cards in .NET MAUI.
