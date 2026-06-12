@@ -117,12 +117,14 @@ this.Scheduler.AppointmentsSource = appointment;
 In the Day, Week, WorkWeek, and Month views, you can control whether dates are grouped under resources or resources are grouped under dates by using the [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. 
 
 ### Grouping by Resource
- 
+
+#### Days view
+
 The [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) is set to [`Resource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceGroupType.html#Syncfusion_Maui_Scheduler_SchedulerResourceGroupType_Resource) by default. In this mode, the scheduler arranges the dates under each resource.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Day" AllowedViews="Day,Week,WorkWeek,Month">
+<schedule:SfScheduler x:Name="Scheduler" View="Day">
     <scheduler:SfScheduler.ResourceView>
         <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
     </scheduler:SfScheduler.ResourceView>
@@ -142,6 +144,8 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resou
 {% endtabs %}
 
 ![Resource Grouping By Resource in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-resource-in-days-view-in-net-maui-scheduler.png)
+
+### Month view
 
 In [Month]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html)) View, grouping is supported only by Resource (ResourceGroupType="Resource"), where each resource is rendered with its own independent month calendar layout to clearly display appointments and availability; for example, if three resources defined, the view will show three distinct monthly calendars side by side, each containing only the appointments assigned to that specific resource.
 
@@ -195,13 +199,53 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
 
 ![Resource Grouping By Date in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-date-in-days-view-in-net-maui-scheduler.png)
 
-N> In the `Month` view, **resource grouping by date is not supported**. When the `ResourceGroupType` is set to `Date` and the `View` is `Month`, the scheduler automatically renders resources by `ResourceGroupType` as `Resource` only.
+N> In the `Day`, `Week`, and `WorkWeek` views, **grouping resources by date is supported**. However, in the `Month` view, **grouping resources by date is not supported**. When the `ResourceGroupType` is set to `Date` while the `View` is `Month`, the scheduler automatically renders resources based on `ResourceGroupType` as `Resource` only.
 
 ## Adaptive resource grouping - Mobile
 
 On mobile platforms, the resource views for the Day, Week, WorkWeek, and Month views are grouped under an adaptive header.
 
+### Days view
+
+In Day view, resources are presented through an adaptive resource panel on mobile platforms.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day"/>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+var resources = new ObservableCollection<SchedulerResource>()
+{
+        new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+        new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+{% endhighlight %}
+{% endtabs %}
+
 ![Adaptive Header in Days View in .NET MAUI Scheduler](images/resource-view/adaptive-header-in-days-view.jpg)
+
+### Month view
+
+In Month view, resources are presented through an adaptive resource panel on mobile platforms.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Month"/>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+var resources = new ObservableCollection<SchedulerResource>()
+{
+        new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+        new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+{% endhighlight %}
+{% endtabs %}
 
 ![Adaptive Header in Month View in .NET MAUI Scheduler](images/resource-view/adaptive-header-in-month-view.jpg)
 
