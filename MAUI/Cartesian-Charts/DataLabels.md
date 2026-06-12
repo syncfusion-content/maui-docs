@@ -323,7 +323,7 @@ The `DataLabelTapped` event occurs when a user taps on a data label in a chart s
 
 {% highlight c# %}
 
-private async void OnDataLabelTapped(object sender, DataLabelTappedEventArgs e)
+private void OnDataLabelTapped(object sender, DataLabelTappedEventArgs e)
 {
     var series = e.Series;
     var dataIndex = e.DataIndex;
@@ -337,7 +337,7 @@ private async void OnDataLabelTapped(object sender, DataLabelTappedEventArgs e)
                      $"Data Index: {dataIndex}\n" +
                      $"Tap Location: ({tapPosition.X:F0}, {tapPosition.Y:F0})";
 
-    await DisplayAlert("Data Label Details", message, "OK");
+    DisplayAlertAsync("Data Label Details", message, "OK");
 }
 
 {% endhighlight %}

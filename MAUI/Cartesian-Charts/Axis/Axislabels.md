@@ -326,7 +326,7 @@ The `AxisLabelTapped` event occurs when a user taps on an axis label. The follow
 
 {% highlight c# %}
 
-private async void OnAxisLabelTapped(object sender, AxisLabelTappedEventArgs e)
+private void OnAxisLabelTapped(object sender, AxisLabelTappedEventArgs e)
 {
     var axis = e.Axis;
     var axisLabel = e.AxisLabel;
@@ -337,7 +337,7 @@ private async void OnAxisLabelTapped(object sender, AxisLabelTappedEventArgs e)
                      $"Axis: {axis.GetType().Name}\n" +
                      $"Tap Location: ({tapPosition.X:F0}, {tapPosition.Y:F0})";
 
-    await DisplayAlert("Axis Label Details", message, "OK");
+    DisplayAlertAsync("Axis Label Details", message, "OK");
 }
 
 {% endhighlight %}
