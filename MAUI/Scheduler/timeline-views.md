@@ -529,10 +529,26 @@ This property is only applicable when the [View](https://help.syncfusion.com/cr/
 </scheduler:SfScheduler.TimelineView>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 SfScheduler scheduler = new SfScheduler();
 scheduler.View = SchedulerView.Week;
+scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
 scheduler.TimelineView.ShowMonthTimeRegions = true;
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Holiday",
+        EnablePointerInteraction = false,
+    };
+
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
 {% endhighlight %}
 {% endtabs %}
 
