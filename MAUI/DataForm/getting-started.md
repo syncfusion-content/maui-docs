@@ -87,15 +87,15 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-Make sure to add the namespace [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/).
+Make sure to add the namespace.
 
-{% highlight c# %}
+{% highlight MauiProgram.cs %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %} 
 
 Register the Syncfusion core handler in your MauiProgram.cs file to use Syncfusion controls.
 
-{% highlight c# %}
+{% highlight MauiProgram.cs %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 
