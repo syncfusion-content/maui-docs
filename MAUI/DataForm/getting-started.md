@@ -93,7 +93,7 @@ Make sure to add the namespace.
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %} 
 
-Register the Syncfusion core handler in your MauiProgram.cs file to use Syncfusion controls.
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
 {% highlight MauiProgram.cs %}
 builder.ConfigureSyncfusionCore();
