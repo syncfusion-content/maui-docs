@@ -211,7 +211,7 @@ using Syncfusion.Maui.DataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the DataGrid component
+## Step 6: Add the DataGrid component
 
 Create a `ViewModel` instance and set it as the DataGrid's `BindingContext`. This enables property binding from `ViewModel` class.
 

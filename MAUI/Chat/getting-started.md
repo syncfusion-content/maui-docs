@@ -210,7 +210,7 @@ using Syncfusion.Maui.Chat;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the Chat component
+## Step 6: Add the Chat component
 
 Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This enables property binding from `ViewModel` class.
 
