@@ -91,28 +91,21 @@ Before proceeding, ensure the following are set up:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register the handler
+## Step 3: Register Syncfusion handler
 
-Register the Syncfusion core handler in your MauiProgram.cs file to use Syncfusion controls. Make sure to add the namespace [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/).
+Make sure to add the namespace [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/).
+
+{% highlight c# %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your MauiProgram.cs file to use Syncfusion controls.
 
 {% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 
-## Step 4: Import the DataGrid namespace
-
-Add the following namespace in your XAML or C#.
-
-{% tabs %}
-{% highlight xaml tabtitle="xaml" %}
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-{% endhighlight %}
-{% highlight c# tabtitle="C#" %}
-using Syncfusion.Maui.DataGrid;
-{% endhighlight %}
-{% endtabs %}
-
-## Step 5: Define the View Model
+## Step 4: Define Model and View Model
 
 ### Data Model
 
@@ -209,7 +202,20 @@ public class OrderInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-### Binding the ViewModel
+## Step 5: Import the DataGrid namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml tabtitle="xaml" %}
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.DataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+## Step 5: Add the DataGrid component
 
 Create a `ViewModel` instance and set it as the DataGrid's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -219,47 +225,25 @@ The following code example binds the collection created in the previous step to 
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage.BindingContext>
-    <local:OrderInfoRepository x:Name="viewModel" />
-</ContentPage.BindingContext>
-
-<ContentPage.Content>
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
-                                                MappingName="OrderID" Width="150"/>
-                <syncfusion:DataGridTextColumn  HeaderText="Customer"
-                                                MappingName="Customer"
-                                                Width="150" />
-                <syncfusion:DataGridTextColumn  HeaderText="Ship City"
-                                                MappingName="ShipCity"
-                                                Width="150" />
-                <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
-                                                MappingName="ShipCountry"
-                                                Width="150" />
-        </syncfusion:SfDataGrid.Columns>        
+                            ItemsSource="{Binding OrderInfoCollection}"> 
+        <syncfusion:SfDataGrid.BindingContext>
+            <local:OrderInfoRepository />
+        </syncfusion:SfDataGrid.BindingContext>
     </syncfusion:SfDataGrid>
-</ContentPage.Content>
 {% endhighlight %}
 {% highlight c# %}
 OrderInfoRepository viewModel = new OrderInfoRepository();
-
 SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.ItemsSource = viewModel.OrderInfoCollection; 
-
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the datagrid will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 <img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">
 
-You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
+You can download the DataGrid Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
 
 N> You can refer to our [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) that shows you how to render the DataGrid in .NET MAUI.
