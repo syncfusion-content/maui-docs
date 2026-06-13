@@ -748,7 +748,7 @@ option.StartPoint = new Syncfusion.Drawing.PointF(0, 500);
 
 ### Applying styles while exporting
 
-The SfDataGrid allows exporting data with the applied DefaultStyle by setting the [DataGridPdfExportingOption.CanApplyGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanApplyGridStyle) property to true. By default, the data will be exported without the DefaultStyle.
+The SfDataGrid allows exporting data with the applied `DefaultStyle` by setting the [DataGridPdfExportingOption.CanApplyGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanApplyGridStyle) property to `true`. By default, the data will be exported without the `DefaultStyle`.
 
 {% tabs %}
 {% highlight c# %}
