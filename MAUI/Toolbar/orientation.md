@@ -9,7 +9,7 @@ documentation: ug
 
 # Orientation in .NET MAUI Toolbar (SfToolbar)
 
-This his section covers support for horizontal and vertical layouts, allowing flexible arrangement via the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property . Default value is [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation).
+This his section covers support for horizontal and vertical layouts, allowing flexible arrangement via the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property . Default value is [Horizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation).
 
 ## Horizontal Toolbar
 
