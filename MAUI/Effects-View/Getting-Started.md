@@ -134,32 +134,106 @@ Initialize the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% tabs %}
 {% highlight xaml %}
 
-    <Border HorizontalOptions="Center" VerticalOptions="Center">
-        <Border.StrokeShape>
-            <RoundRectangle CornerRadius="18" />
-        </Border.StrokeShape>
-        <Border.Background>
-            <LinearGradientBrush EndPoint="1,0">
-                <GradientStop Color="#4E54C8" Offset="0.0" />
-                <GradientStop Color="#8F94FB" Offset="1.0" />
-            </LinearGradientBrush>
-        </Border.Background>
-        <effectsView:SfEffectsView>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="90" />
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Image Source="laura.png" Margin="7" VerticalOptions="Center"
-                               WidthRequest="72" HeightRequest="72" />
+<Border HorizontalOptions="Center" VerticalOptions="Center">
+    <Border.StrokeShape>
+        <RoundRectangle CornerRadius="18" />
+    </Border.StrokeShape>
+    <Border.Background>
+        <LinearGradientBrush EndPoint="1,0">
+            <GradientStop Color="#4E54C8" Offset="0.0" />
+            <GradientStop Color="#8F94FB" Offset="1.0" />
+        </LinearGradientBrush>
+    </Border.Background>
+    <effectsView:SfEffectsView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="laura.png" 
+                   Margin="7" 
+                   VerticalOptions="Center"
+                   WidthRequest="72" 
+                   HeightRequest="72" />
                 <StackLayout Grid.Column="1" VerticalOptions="Center">
                     <Label Text="Laura Steffi" Margin="10,0,10,0" FontSize="18" />
                     <Label Text="Data Science Analyst" Margin="10,0,10,0" FontSize="12"/>
                 </StackLayout>
-            </Grid>
+       </Grid>
         </effectsView:SfEffectsView>
     </Border>
+
+{% endhighlight %}
+{% highlight C# %}
+
+var border = new Border
+{
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    StrokeShape = new RoundRectangle
+    {
+        CornerRadius = 18
+    },
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 0),
+        GradientStops = new GradientStopCollection
+            {
+                new GradientStop(Color.FromArgb("#4E54C8"), 0.0f),
+                new GradientStop(Color.FromArgb("#8F94FB"), 1.0f)
+            }
+    }
+};
+
+    var grid = new Grid
+    {
+        ColumnDefinitions =
+        {
+            new ColumnDefinition { Width = 90 },
+            new ColumnDefinition { Width = GridLength.Star }
+        }
+    };
+
+    var image = new Image
+    {
+        Source = "laura.png",
+        Margin = new Thickness(7),
+        VerticalOptions = LayoutOptions.Center,
+        WidthRequest = 72,
+        HeightRequest = 72
+    };
+
+    var nameLabel = new Label
+    {
+        Text = "Laura Steffi",
+        Margin = new Thickness(10, 0),
+        FontSize = 18
+    };
+
+    var roleLabel = new Label
+    {
+        Text = "Data Science Analyst",
+        Margin = new Thickness(10, 0),
+        FontSize = 12
+    };
+
+    var stackLayout = new StackLayout
+    {
+        VerticalOptions = LayoutOptions.Center,
+        Children = { nameLabel, roleLabel }
+    };
+
+    grid.Add(image);
+    grid.Add(stackLayout, 1, 0);
+
+    var effectsView = new SfEffectsView
+    {
+        Content = grid
+    };
+
+    border.Content = effectsView;
+
+    Content = border;
 
 {% endhighlight %}
 {% endtabs %}

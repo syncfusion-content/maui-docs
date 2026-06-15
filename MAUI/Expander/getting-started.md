@@ -128,7 +128,7 @@ using Syncfusion.Maui.Expander;
 
 ## Step 5: Create a Expander component
 
-The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) is a layout control comprised of the Header and Content. Load any View in the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Header) and [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Content). Content visibility of the expander can be set by using the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_IsExpanded) property of the `Expander`. Users can expand or collapse the Content view by tapping the Header.
+Initialize the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html). which is a layout control that contains a Header and Content section. Load any View in the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Header) and [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Content). Content visibility of the expander can be set by using the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_IsExpanded) property of the `Expander`. Users can expand or collapse the Content view by tapping the Header.
 
 Here, the Grid with Labels is loaded in the Header and Content of the expander. 
 
@@ -166,30 +166,24 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
     </ScrollView>
 </ContentPage.Content>
 {% endhighlight %}
-{% highlight c# hl_lines="62 63 64 65 66 67" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        Title = "Invoice";
+{% highlight c# hl_lines="225 226 227 228 229 230" %}
 
-        Content = new ScrollView
+    Title = "Invoice";
+    Content = new ScrollView
+    {
+        Content = new StackLayout
         {
-            Content = new StackLayout
+            HorizontalOptions = LayoutOptions.Center,
+            Children =
             {
-                HorizontalOptions = LayoutOptions.Center,
-                Children =
-                {
-                    CreateInvoiceHeader(),
-                    CreateInvoiceDate(),
-                    CreateItems(),
-                    CreatePaymentDetails(),
-                    CreateAddress()
-                }
+                CreateInvoiceHeader(),
+                CreateInvoiceDate(),
+                CreateItems(),
+                CreatePaymentDetails(),
+                CreateAddress()
             }
-        };
-    }
+        }
+    };
 
     private SfExpander CreateExpander(bool expanded, string icon, string title, View content)
     {

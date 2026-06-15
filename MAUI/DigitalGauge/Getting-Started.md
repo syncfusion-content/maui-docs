@@ -123,14 +123,14 @@ xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauge
 {% endhighlight %}
 {% highlight c# %}
  
-using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Gauges;
  
 {% endhighlight %}
 {% endtabs %}
 
 ## Step 5: Display a value in DigitalGauge
 
-In [SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) user can display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
+Initialize the [SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) and display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
 
 {% tabs %}
 

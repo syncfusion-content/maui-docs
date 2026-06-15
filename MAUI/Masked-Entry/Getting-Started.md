@@ -135,7 +135,10 @@ using Syncfusion.Maui.Inputs;
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfMaskedEntry WidthRequest="200" ClearButtonVisibility="WhileEditing" MaskType="Simple" Mask="00/00/0000" />
+<editors:SfMaskedEntry WidthRequest="200" 
+                       ClearButtonVisibility="WhileEditing" 
+                       MaskType="Simple" 
+                       Mask="00/00/0000" />
 
 {% endhighlight %}
 {% highlight C# %}

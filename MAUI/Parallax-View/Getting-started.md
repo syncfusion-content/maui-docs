@@ -110,6 +110,41 @@ builder.ConfigureSyncfusionCore();
 
 {% endhighlight %} 
 
+## Step 4: Initialize the view model
+
+Now let us define simple data model and view model.
+
+public class Contacts
+{
+    public string Name { get; set; }
+    public string Author { get; set; }
+    public ImageSource ItemImage { get; set; }
+}
+
+public class ParallaxViewModel
+{
+    public ImageSource Image { get; set; }
+    public ObservableCollection<Contacts> Items { get; set; }
+    public ParallaxViewModel()
+    {
+        Assembly assembly = typeof(ParallaxViewModel).GetTypeInfo().Assembly;
+        Image = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);
+        Items = new ObservableCollection<Contacts>()
+        {
+            new Contacts() { Name = "Thriller", Author = "Michael Jackson" },
+            new Contacts() { Name = "Like a Prayer", Author = "Madonna" },
+            new Contacts() { Name = "When Doves Cry", Author = "Prince" },
+            new Contacts() { Name = "I Wanna Dance", Author = "Whitney Houston" },
+            new Contacts() { Name = "It's Gonna Be Me", Author = "N Sync"},
+            .....
+        };
+        for (int i = 0; i < Items.Count; i++)
+        {
+            Items[i].ItemImage = ImageSource.FromResource("ParallaxViewGettingStarted.parallax" + i + ".png", assembly);
+        }
+    }
+}
+
 ## Step 4: Import the Parallax View namespace
  
 Add the following namespace in your XAML or C#.
@@ -127,7 +162,7 @@ using Syncfusion.Maui.ParallaxView;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add Content and Bind source to the parallax view
+## Step 5: Add a parallax view component
 
 Initialize the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content), it represents the background view of a parallax view. Set any kind of view to the Content property, such as Image and StackLayout.
 
@@ -170,48 +205,74 @@ The following code sample demonstrates how to bind the Syncfusion<sup>®</sup> L
 
 {% highlight c# %}
 
-public partial class MainPage : ContentPage
+var listView = new SfListView
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        BindingContext = new ParallaxViewModel();
-    }
-}
+    ItemsSource = new Binding("Items")
+};
 
-public class ParallaxViewModel
+listView.ItemTemplate = new DataTemplate(() =>
 {
-    public ImageSource Image { get; set; }
-    public ObservableCollection<Contacts> Items { get; set; }
-    public ParallaxViewModel()
-    {
-        Assembly assembly = typeof(ParallaxViewModel).GetTypeInfo().Assembly;
-        Image = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);
-        Items = new ObservableCollection<Contacts>()
-        {
-            new Contacts() { Name = "Thriller", Author = "Michael Jackson" },
-            new Contacts() { Name = "Like a Prayer", Author = "Madonna" },
-            new Contacts() { Name = "When Doves Cry", Author = "Prince" },
-            new Contacts() { Name = "I Wanna Dance", Author = "Whitney Houston" },
-            new Contacts() { Name = "It's Gonna Be Me", Author = "N Sync"},
-            .....
-        };
-        for (int i = 0; i < Items.Count; i++)
-        {
-            Items[i].ItemImage = ImageSource.FromResource("ParallaxViewGettingStarted.parallax" + i + ".png", assembly);
-        }
-    }
-}
+    var grid = new Grid();
 
-public class Contacts
-{
-    public string Name { get; set; }
-    public string Author { get; set; }
-    public ImageSource ItemImage { get; set; }
-}
+    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.5, GridUnitType.Star) });
+    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+
+    var image = new Image
+    {
+        BackgroundColor = Colors.Transparent,
+        Aspect = Aspect.AspectFit
+    };
+    image.SetBinding(Image.SourceProperty, "ItemImage");
+
+    var nameLabel = new Label
+    {
+        TextColor = Colors.White,
+        HorizontalOptions = LayoutOptions.FillAndExpand
+    };
+    nameLabel.SetBinding(Label.TextProperty, "Name");
+
+    var authorLabel = new Label
+    {
+        TextColor = Colors.White,
+        HorizontalOptions = LayoutOptions.FillAndExpand
+    };
+    authorLabel.SetBinding(Label.TextProperty, "Author");
+
+    var stackLayout = new StackLayout
+    {
+        BackgroundColor = Colors.Transparent,
+        Children = { nameLabel, authorLabel }
+    };
+
+    grid.Add(image, 0, 0);
+    grid.Add(stackLayout, 1, 0);
+
+    return new ViewCell
+    {
+        View = grid
+    };
+});
+
+    var parallaxView = new SfParallaxView
+    {
+        Source = listView // link with ListView
+    };
+
+    var headerImage = new Image
+    {
+        BackgroundColor = Colors.Transparent,
+        Aspect = Aspect.AspectFill
+    };
+    headerImage.SetBinding(Image.SourceProperty, "Image");
+
+    parallaxView.Content = headerImage;
+    var rootGrid = new Grid();
+    rootGrid.Children.Add(parallaxView);
+    rootGrid.Children.Add(listView);
+
+    Content = rootGrid;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 T> The size of the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) view will automatically be stretched to the size of the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) view.

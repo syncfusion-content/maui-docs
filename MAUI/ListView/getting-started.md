@@ -237,7 +237,6 @@ listView.ItemsSource = viewModel.BookInfo;
  
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding BookInfo}"
                    ItemSize="100">
@@ -254,44 +253,29 @@ listView.ItemsSource = viewModel.BookInfo;
         </DataTemplate>
     </syncfusion:SfListView.ItemTemplate>
   </syncfusion:SfListView>
-</ContentPage>
 {% endhighlight %}
 {% highlight c# hl_lines="14" %}
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.ListView;
-using System;
+        BookInfoRepository viewModel = new BookInfoRepository ();
+		SfListView listView = new SfListView();
+        listView.ItemSize = 100;
+        listView.ItemsSource = viewModel.BookInfo;
+        
+        listView.ItemTemplate = new DataTemplate(() => {
+        var grid = new Grid();
+        grid.RowDefinitions.Add(new RowDefinition());
+        grid.RowDefinitions.Add(new RowDefinition());
+        var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
+        bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
+        var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
+        bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
+        grid.Children.Add(bookName);
+        grid.Children.Add(bookDescription);
+        grid.SetRow(bookName, 0);
+        grid.SetRow(bookDescription, 1);
+        return grid;
+        });
 
-namespace GettingStarted
-{
-    public class MainPage : ContentPage
-    {       
-        public MainPage()
-        {
-		    InitializeComponent();
-            BookInfoRepository viewModel = new BookInfoRepository ();
-			SfListView listView = new SfListView();
-            listView.ItemSize = 100;
-            listView.ItemsSource = viewModel.BookInfo;
-            listView.ItemTemplate = new DataTemplate(() => {
-                var grid = new Grid();
-                grid.RowDefinitions.Add(new RowDefinition());
-                grid.RowDefinitions.Add(new RowDefinition());
-                var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
-                bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
-                var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
-                bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
-
-                grid.Children.Add(bookName);
-                grid.Children.Add(bookDescription);
-                grid.SetRow(bookName, 0);
-                grid.SetRow(bookDescription, 1);
-
-                return grid;
-            });
-			this.Content = listView;
-        }
-    }
-} 
+		this.Content = listView;
 {% endhighlight %}
 {% endtabs %}
 

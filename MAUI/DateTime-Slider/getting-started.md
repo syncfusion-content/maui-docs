@@ -128,7 +128,7 @@ using Syncfusion.Maui.Sliders;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Create a Date Time Slider with labels and ticks
+## Step 5: Create a DateTime Slider with labels and ticks
 
 Initialize the [SfDateTimeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html?tabs=tabid-2%2Ctabid-1) and configure its visual elements using label and tick properties. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables labels to be displayed at specified intervals along the slider. The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property controls the visibility of major tick marks, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property defines the number of minor ticks displayed between each pair of major ticks.
 
