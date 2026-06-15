@@ -119,7 +119,7 @@ using Syncfusion.Maui.Toolbar;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add Toolbar Component
+## Step 5: Add the Toolbar Component
 
 Initialize the `Toolbar` control and configure it to provide quick access to frequently used actions within your application. The Toolbar helps in organizing commands and improving user interaction. You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
  

@@ -118,7 +118,7 @@ using Syncfusion.Maui.RichTextEditor;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add RichTextEditor component
+## Step 5: Add the RichTextEditor component
 
 The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides a comprehensive toolbar that allows users to format their content easily. You can enable it by setting the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ShowToolbar) property to `True`.
 
@@ -141,3 +141,5 @@ this.Content = richTextEditor;
 {% endtabs %}
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
+
+You can download the Rich Text Edito Getting Started sample from [here](https://github.com/SyncfusionExamples/maui-richtexteditor-samples/tree/master)

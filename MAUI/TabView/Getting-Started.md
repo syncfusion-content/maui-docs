@@ -202,7 +202,7 @@ this.Content = tabView;
 
 {% endtabs %}
 
-![Getting started with .NET MAUI Tab View.](images/net-maui-tab-view-getting-started.png)
+![Getting started with .NET MAUI Tab View.](images/tab-view-gettingstarted.png)
 
 N> You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewGettingStarted). You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
 

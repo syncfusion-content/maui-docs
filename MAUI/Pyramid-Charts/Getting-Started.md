@@ -147,7 +147,7 @@ public class StageViewModel
 {% endhighlight %} 
 {% endtabs %} 
 
-## Step 6: Add Pyramid Chart component
+## Step 6: Add the Pyramid Chart component
 
 Configure the `Pyramid Chart` component to visually represent data in a hierarchical, proportional format. It is commonly used to display stages in a process or categorical data with decreasing values. Binding `Data` to the pyramid chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ItemsSource) property from its BindingContext to create our own pyramid chart.
 

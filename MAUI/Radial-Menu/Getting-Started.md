@@ -118,7 +118,7 @@ using Syncfusion.Maui.RadialMenu;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add Radial Menu component
+## Step 5: Add the Radial Menu component
 
 Configure the `Radial Menu` component to provide a circular, gesture-friendly interface for accessing commands and actions. It helps improve user experience by offering quick and intuitive navigation.
 
@@ -183,6 +183,6 @@ this.Content = radialMenu;
 
 ![Getting started with .NET MAUI Radial Menu.](images/getting-started/maui-radialmenu-getting-started.png)
 
-You can download the TreeView Getting Started sammple from [here](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Radial-Menu).
+You can download the Radial Menu Getting Started sample from [here](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Radial-Menu).
 
 N> You can refer to our [.NET MAUI Radial Menu](https://www.syncfusion.com/maui-controls/maui-radial-menu) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Effects View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/RadialMenu) that shows you how to render the Effects View in .NET MAUI.

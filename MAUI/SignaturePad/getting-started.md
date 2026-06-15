@@ -118,7 +118,30 @@ using Syncfusion.Maui.SignaturePad;
 {% endhighlight %}
 {% endtabs %}
 
+## Step 5: Add the SignaturePad component
+
+Add the SignaturePad control to your XAML page and initialize it with basic properties.
+
+{% tabs %}
+{% highlight xaml %}
+
+<signaturePad:SfSignaturePad
+x:Name="signaturePad" />
+
+{% endhighlight %}
+{% highlight c# %}
+
+var signaturePad = new SfSignaturePad();
+Content = new StackLayout
+{
+    Children = { signaturePad }
+};
+
+{% endhighlight %}
+{% endtabs %}
 
 ![SignaturePad default](images/getting-started/default.png)
+
+You can download the SignaturePad Getting Started sample from [here](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-signature-pad)
 
 N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.

@@ -117,7 +117,7 @@ using Syncfusion.Maui.ProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Create the Model and ViewModel
+## Step 5: Create the ViewModel
 
 You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
 
@@ -162,10 +162,7 @@ The Step progressbar control allows you to bind item collection by setting the [
 {% highlight xaml tabtitle="XAML" hl_lines="10" %}
 
 <stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"                                        
-                    Orientation="Horizontal"                                                                                      
+                    x:Name="stepProgress"                                                                                     
                     LabelSpacing="12"
                     ActiveStepIndex="2"
                     ActiveStepProgressValue="60"
@@ -183,9 +180,6 @@ The Step progressbar control allows you to bind item collection by setting the [
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    VerticalOptions = LayoutOptions.Center,
-    HorizontalOptions = LayoutOptions.Center,
-    Orientation = StepProgressBarOrientation.Horizontal,
     LabelSpacing = 12,
     ActiveStepIndex = 2,
     ActiveStepProgressValue = 60,

@@ -113,7 +113,7 @@ using Syncfusion.Maui.PullToRefresh;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add PullToRefresh component
+## Step 5: Add the PullToRefresh component
 
 Configure the `PullToRefresh` component to enable you to refresh content interactively by performing a pull-down gesture. It enhances the user experience by providing a familiar and efficient way to update data. The [PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullableContent) view serves as the designated area where users can initiate the pull-to-refresh action, enabling them to refresh and update the content within the view.
 
@@ -151,7 +151,7 @@ private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
 
 ![.NET MAUI PullToRefresh with slide on top transition mode](Images/getting-started//maui-pull-to-refresh-slideontop-mode.gif)
 
-You can download the TreeView Getting Started sammple from [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-pull-to-refresh/tree/master)
+You can download the PullToRefresh Getting Started sample from [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-pull-to-refresh/tree/master)
 
 If we run the above sample with [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) set to [Push](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_Push), the output will be as shown in the following.
 

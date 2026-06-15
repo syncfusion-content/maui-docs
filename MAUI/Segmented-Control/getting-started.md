@@ -120,7 +120,7 @@ using Syncfusion.Maui.Buttons;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add Segmented Control
+## Step 5: Add the Segmented Control
 
 Initialize the `Segmented Control` and use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to populate the segmented items.
 

@@ -116,7 +116,7 @@ using Syncfusion.Maui.Popup;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add Popup component
+## Step 5: Add the Popup component
 
 Display a popup over your view by calling the [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method.
 

@@ -119,7 +119,7 @@ using Syncfusion.Maui.Rotator;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add Rotator component
+## Step 5: Add the Rotator component
 
 Initialize the `Rotator` control and we can populate the rotator’s items by using any one of the following ways,
 
@@ -159,4 +159,4 @@ public Rotator()
 
 ![Rotator Items](images/RotatorItems.png)
 
-You can download the Rotator Getting Started sammple from [here](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)
+You can download the Rotator Getting Started sample from [here](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)

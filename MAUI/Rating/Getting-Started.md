@@ -119,7 +119,7 @@ using Syncfusion.Maui.Inputs;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add Rating component
+## Step 5: Add the Rating component
 
 {% tabs %}
 {% highlight xaml %}
@@ -137,4 +137,4 @@ this.Content = rating;
 
 ![SfRating Getting Started ](images/getting-started.png)
 
-You can download the Rating Getting Started sammple from [here](https://github.com/SyncfusionExamples/maui-rating-samples)
+You can download the Rating Getting Started sample from [here](https://github.com/SyncfusionExamples/maui-rating-samples)

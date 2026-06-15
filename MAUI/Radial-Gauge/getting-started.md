@@ -165,51 +165,39 @@ Learn how to initialize the Syncfusion .NET MAUI SfRadialGauge control and confi
 
 {% highlight c# %}
 
-SfRadialGauge sfRadialGauge = new SfRadialGauge();
-
-RadialAxis radialAxis = new RadialAxis();
-radialAxis.Maximum = 150;
-sfRadialGauge.Axes.Add(radialAxis);
-
-GaugeRange gaugeRange1 = new GaugeRange();
-gaugeRange1.StartValue = 0;
-gaugeRange1.EndValue = 50;
-gaugeRange1.Background = new SolidColorBrush(Colors.Red);
-radialAxis.Ranges.Add(gaugeRange1);
-
-GaugeRange gaugeRange2 = new GaugeRange();
-gaugeRange2.StartValue = 50;
-gaugeRange2.EndValue = 100;
-gaugeRange2.Background = new SolidColorBrush(Colors.Orange);
-radialAxis.Ranges.Add(gaugeRange2);
-
-// Add more items
-
-NeedlePointer needlePointer = new NeedlePointer();
-needlePointer.Value = 90;
-radialAxis.Pointers.Add(needlePointer);
-
-GaugeAnnotation gaugeAnnotation = new GaugeAnnotation();
-gaugeAnnotation.DirectionUnit = AnnotationDirection.Angle;
-gaugeAnnotation.DirectionValue = 90;
-gaugeAnnotation.PositionFactor = 0.5;
-gaugeAnnotation.Content = new Label() 
+var gauge = new SfRadialGauge();
+var axis = new RadialAxis
 {
-    Text = "90", 
-    FontAttributes = FontAttributes.Bold, 
-    FontSize = 25,
-    TextColor = Colors.Black
+    Maximum = 150,
+    Interval = 10
 };
-radialAxis.Annotations.Add(gaugeAnnotation);
 
-this.Content = sfRadialGauge;
+axis.Ranges.Add(new RadialRange { StartValue = 0, EndValue = 50, Fill = Colors.Red });
+axis.Ranges.Add(new RadialRange { StartValue = 50, EndValue = 100, Fill = Colors.Orange });
+axis.Ranges.Add(new RadialRange { StartValue = 100, EndValue = 150, Fill = Colors.Green });
 
-{% endhighlight %}
+axis.Pointers.Add(new NeedlePointer { Value = 90 });
 
-{% endtabs %}
+var annotation = new GaugeAnnotation
+{
+    DirectionUnit = AnnotationDirection.Angle,
+    DirectionValue = 90,
+    PositionFactor = 0.5,
+    Content = new Label
+    {
+        Text = "90",
+        FontSize = 25,
+        FontAttributes = FontAttributes.Bold,
+        TextColor = Colors.Black
+    }
+};
 
-![MAUI Radial Gauge with Annotation](images/getting-started/maui-radial-gauge-with-annotation.png)
+axis.Annotations.Add(annotation);
+gauge.Axes.Add(axis);
+Content = gauge;
 
-You can download the TreeView Getting Started sammple from [here](https://github.com/SyncfusionExamples/MAUI-Radial-Gauge-Getting-Started-)
+![MAUI Radial Gauge with Annotation](images/getting-started/maui-radial-gauge-gettingstarted.png)
+
+You can download the Radial Gauge Getting Started sample from [here](https://github.com/SyncfusionExamples/MAUI-Radial-Gauge-Getting-Started-)
 
 N> You can refer to our [.NET MAUI Radial Gauge](https://www.syncfusion.com/maui-controls/maui-radial-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Radial Gauge Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Gauges/SampleBrowser.Maui.Gauges/Samples/RadialGauge) that shows you how to render the Radial Gauge in .NET MAUI.

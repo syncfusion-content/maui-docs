@@ -141,7 +141,6 @@ The [.NET MAUI Shimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shim
 shimmer = new SfShimmer()
 {
     Type = ShimmerType.CirclePersona,
-    IsActive = false,
     VerticalOptions = LayoutOptions.FillAndExpand,
     Content = new Label
     {

@@ -119,7 +119,7 @@ using Syncfusion.Maui.Sliders;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add RangeSlider component
+## Step 5: Add the RangeSlider component
 
 Configure the `RangeSlider` component to allow you to select a range of values within specified limits, providing a flexible and interactive input experience. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
