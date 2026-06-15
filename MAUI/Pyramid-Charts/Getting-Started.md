@@ -119,7 +119,7 @@ using Syncfusion.Maui.Charts;
 
 ## Step 5: Create Model and ViewModel
 
-Now, let us define a simple data model and viewmodel that represents a data point in the chart.
+Now, let us define a simple data Model and ViewModel that represents a data point in the chart.
 
 {% tabs %}  
 {% highlight c# %}

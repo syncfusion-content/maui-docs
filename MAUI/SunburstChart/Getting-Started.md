@@ -116,7 +116,7 @@ using Syncfusion.Maui.SunburstChart;
 
 ## Step 5: Create the Model and ViewModel
 
-Now, let us define a simple data model and viewmodel that represents a data point in the sunburst chart.
+Now, let us define a simple data Model and ViewModel that represents a data point in the sunburst chart.
 
 {% tabs %}  
 
@@ -214,4 +214,4 @@ this.Content = sunburst;
 
 ![Getting started sample in MAUI Sunburst Chart.](Getting_started_image/maui_getting_started_image.png)
 
-You can download the Sunburst Chart Getting Started sammple from [here](https://github.com/SyncfusionExamples/GettingStarted_SunburstChart_MAUI).
+You can download the Sunburst Chart Getting Started sample from [here](https://github.com/SyncfusionExamples/GettingStarted_SunburstChart_MAUI).
