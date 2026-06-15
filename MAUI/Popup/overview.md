@@ -32,9 +32,18 @@ Popup layout allows you to display an alert message with customizable buttons or
 
 The following table summarizes the globalization support available in this control.
 
-<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
-<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/full-support.svg" alt="full-support" width="16">
+    <span>Full Support</span>
+</div>
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/no-support.svg" alt="no-support" width="16">
+    <span>No Support</span>
+</div>
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto;">
+    <img src="../Images/not-applicable.svg" alt="not-applicable" width="16">
+    <span>Not Applicable</span>
+</div>
 
 <table>
 <tr>

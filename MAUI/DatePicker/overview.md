@@ -62,7 +62,10 @@ Syncfusion<sup>&reg;</sup> [.NET MAUI Date Picker](https://www.syncfusion.com/ma
 
 The following table summarizes the globalization support available in this control.
 
-<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/full-support.svg" alt="full-support" width="16">
+    <span>Full Support</span>
+</div>
 
 <table>
 <tr>

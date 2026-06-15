@@ -31,9 +31,10 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI DataForm](https://www.syncfusion.com/m
 
 The following table summarizes the globalization support available in this control.
 
-<img src="../Images/full-support.svg" alt="full-support" width="16" align="center"/> Full Support  
-<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" align="center"/> Not Applicable
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/full-support.svg" alt="full-support" width="16">
+    <span>Full Support</span>
+</div>
 
 <table>
 <tr>

@@ -29,8 +29,14 @@ Syncfusion® [.NET MAUI Charts](https://www.syncfusion.com/maui-controls/maui-ci
 
 The following table summarizes the globalization support available in this control.
  
-<img src="../Images/partial-support.svg" alt="partial-support" width="16" align="center" /> Partial Support   
-<img src="../Images/no-support.svg" alt="no-support" width="16" align="center"/> No Support  
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/partial-support.svg" alt="partial-support" width="16">
+    <span>Partial Support</span>
+</div>
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/no-support.svg" alt="no-support" width="16">
+    <span>No Support</span>
+</div>
 
 <table>
 <tr>
