@@ -362,4 +362,4 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> Looking for the full .NET MAUI Data Grid component overview, features, pricing, and documentation? Visit the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) page.
+N> Looking for the full .NET MAUI DataGrid component overview, features, pricing, and documentation? Visit the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) page.
