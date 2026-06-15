@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in .NET MAUI Chat Control | Syncfusion
-description: Learn here all about Data Binding support in Syncfusion .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Data Binding in .NET MAUI Chat Control | Syncfusion®
+description: Learn here all about Data Binding support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -16,95 +16,95 @@ Create the below collection of objects that must be converted to message collect
 {% tabs %}
 {% highlight c# tabtitle="Model.cs" %}
 
-    public class MessageModel
+public class MessageModel
+{
+    public MessageModel()
     {
-        public MessageModel()
-        {
-        }
-
-        public ChatSuggestions Suggestions { get; set; }
-        public Author User { get; set; }
-        public string Text { get; set; }
-
     }
+
+    public ChatSuggestions Suggestions { get; set; }
+    public Author User { get; set; }
+    public string Text { get; set; }
+
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    private Author currentAuthor;
+
+    ObservableCollection<MessageModel> messageCollection;
+
+    public ViewModel()
     {
-        private Author currentAuthor;
+        MessageModel messageModel = new MessageModel();
+        messageCollection = new ObservableCollection<MessageModel>();
+        currentAuthor = new Author() { Name = "Stevan" };
+        GenerateMessages();
+    }
 
-        ObservableCollection<MessageModel> messageCollection;
-
-        public ViewModel()
+    public ObservableCollection<MessageModel> MessageCollection
+    {
+        get
         {
-            MessageModel messageModel = new MessageModel();
-            messageCollection = new ObservableCollection<MessageModel>();
-            currentAuthor = new Author() { Name = "Stevan" };
-            GenerateMessages();
+            return messageCollection;
         }
 
-        public ObservableCollection<MessageModel> MessageCollection
+        set
         {
-            get
-            {
-                return messageCollection;
-            }
-
-            set
-            {
-                messageCollection = value;
-                RaisePropertyChanged("messageCollection");
-            }
-        }
-
-        public Author CurrentUser
-        {
-            get
-            {
-                return currentAuthor;
-            }
-            set
-            {
-                currentAuthor = value;
-                RaisePropertyChanged("CurrentUser");
-            }
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        public void RaisePropertyChanged(string propName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
-        }
-
-        private void GenerateMessages()
-        {
-            messageCollection.Add(new MessageModel()
-            {
-                User = currentAuthor,
-                Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
-            });
-
-            messageCollection.Add(new MessageModel()
-            {
-                User = new Author() { Name = "Andrea", Avatar = "peoplecircle16.png" },
-                Text = "Oh! That's great.",
-            });
-
-            messageCollection.Add(new MessageModel()
-            {
-                User = new Author() { Name = "Harrison", Avatar = "peoplecircle14.png" },
-                Text = "That is good news.",
-            });
+            messageCollection = value;
+            RaisePropertyChanged("messageCollection");
         }
     }
+
+    public Author CurrentUser
+    {
+        get
+        {
+            return currentAuthor;
+        }
+        set
+        {
+            currentAuthor = value;
+            RaisePropertyChanged("CurrentUser");
+        }
+    }
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    public void RaisePropertyChanged(string propName)
+    {
+        if (PropertyChanged != null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+    }
+
+    private void GenerateMessages()
+    {
+        messageCollection.Add(new MessageModel()
+        {
+            User = currentAuthor,
+            Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
+        });
+
+        messageCollection.Add(new MessageModel()
+        {
+            User = new Author() { Name = "Andrea", Avatar = "peoplecircle16.png" },
+            Text = "Oh! That's great.",
+        });
+
+        messageCollection.Add(new MessageModel()
+        {
+            User = new Author() { Name = "Harrison", Avatar = "peoplecircle14.png" },
+            Text = "That is good news.",
+        });
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,57 +113,57 @@ Now, bind the existing collection of data objects to the `SfChat.ItemsSource` pr
 {% tabs %}
 {% highlight xaml hl_lines="21 22" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.Resources>
-            <ResourceDictionary>
-                <local:MessageConverter x:Key="MessageConverter"/>
-            </ResourceDictionary>
-        </ContentPage.Resources>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:MessageConverter x:Key="MessageConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                    CurrentUser="{Binding CurrentUser}"
-                    ItemsSource="{Binding MessageCollection}"
-                    ItemsSourceConverter="{StaticResource MessageConverter}"/>
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                CurrentUser="{Binding CurrentUser}"
+                ItemsSource="{Binding MessageCollection}"
+                ItemsSourceConverter="{StaticResource MessageConverter}"/>
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="18 19" %}
     
-    using MauiChat.ViewModel;
-    using Syncfusion.Maui.Chat;
+using MauiChat.ViewModel;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        MessageConverter messageConverter;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            MessageConverter messageConverter;
-            public MainPage()
-            {
-                InitializeComponent();
-                sfChat = new SfChat();
-                messageConverter = new MessageConverter();
-                viewModel = new ViewModel();
-                sfChat.CurrentUser = viewModel.CurrentUser;
-                sfChat.ItemsSource = viewModel.MessageCollection;
-                sfChat.ItemsSourceConverter = messageConverter;
-                Content = sfChat;
-            }       
-        }
+            InitializeComponent();
+            sfChat = new SfChat();
+            messageConverter = new MessageConverter();
+            viewModel = new ViewModel();
+            sfChat.CurrentUser = viewModel.CurrentUser;
+            sfChat.ItemsSource = viewModel.MessageCollection;
+            sfChat.ItemsSourceConverter = messageConverter;
+            Content = sfChat;
+        }       
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -174,37 +174,37 @@ Implementation of a custom message converter class with conversion logic to conv
 {% tabs %}
 {% highlight c# tabtitle="Converter.cs" %}
 
-    public class MessageConverter : IChatMessageConverter
+public class MessageConverter : IChatMessageConverter
+{
+    public IMessage ConvertToChatMessage(object data, SfChat chat)
     {
-        public IMessage ConvertToChatMessage(object data, SfChat chat)
+        var message = new TextMessage();
+        var item = data as MessageModel;
+
+        message.Text = item.Text;
+        message.Author = item.User;
+        message.Data = item;
+        if (item.Suggestions != null)
         {
-            var message = new TextMessage();
-            var item = data as MessageModel;
-
-            message.Text = item.Text;
-            message.Author = item.User;
-            message.Data = item;
-            if (item.Suggestions != null)
-            {
-                message.Suggestions = item.Suggestions;
-            }
-            return message;
+            message.Suggestions = item.Suggestions;
         }
-
-        public object ConvertToData(object chatMessage, SfChat chat)
-        {
-            var message = new MessageModel();
-            var item = chatMessage as TextMessage;
-
-            message.Text = item.Text;
-            message.User = chat.CurrentUser;
-            if (message.Suggestions != null)
-            {
-                message.Suggestions = chat.Suggestions;
-            }
-            return message;
-        }
+        return message;
     }
+
+    public object ConvertToData(object chatMessage, SfChat chat)
+    {
+        var message = new MessageModel();
+        var item = chatMessage as TextMessage;
+
+        message.Text = item.Text;
+        message.User = chat.CurrentUser;
+        if (message.Suggestions != null)
+        {
+            message.Suggestions = chat.Suggestions;
+        }
+        return message;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 

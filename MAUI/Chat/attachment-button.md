@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Attachment button in .NET MAUI Chat control | Syncfusion
-description: Learn here all about Attachment button support in Syncfusion .NET MAUI Chat (SfChat) control, and more.
+title: Attachment button in .NET MAUI Chat control | Syncfusion®
+description: Learn here all about Attachment button support in Syncfusion® .NET MAUI Chat (SfChat) control, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -51,7 +51,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Attachment button in .NET MAUI Chat](images/attachment-button/maui-chat-attachment-button.png)
+![Attachment button in Syncfusion .NET MAUI Chat](images/attachment-button/maui-chat-attachment-button.png)
 
 ## Event and command
 
@@ -85,23 +85,23 @@ The [AttachmentButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
- public partial class MainPage : ContentPage
- {
-     public MainPage()
-     {
-         InitializeComponent();
-     }
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+    }
 
-     private void chat_AttachmentButtonClicked(object sender, EventArgs e)
-     {
-         this.chat.Messages.Add(new ImageMessage()
-         {
-             Source = "Car1.jpg",
-             Author = new Author() { Name = "Andrea", Avatar = "People_Circle23.png" },
-             Text = "Sports Car Type-1",
-         }) ;
-     }
- }
+    private void chat_AttachmentButtonClicked(object sender, EventArgs e)
+    {
+        this.chat.Messages.Add(new ImageMessage()
+        {
+            Source = "Car1.jpg",
+            Author = new Author() { Name = "Andrea", Avatar = "People_Circle23.png" },
+            Text = "Sports Car Type-1",
+        }) ;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -237,7 +237,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Custom attachment button in .NET MAUI Chat](images/attachment-button/maui-chat-custom-attachment-button.png)
+![Custom attachment button in Syncfusion .NET MAUI Chat](images/attachment-button/maui-chat-custom-attachment-button.png)
 
 ## Attach image from gallery in .NET MAUI Chat
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events and Commands in .NET MAUI Chat Control | Syncfusion
-description: Learn here all about Events and Commands support in Syncfusion .NET MAUI Chat (SfChat) control and more.
+title: Events and Commands in .NET MAUI Chat Control | Syncfusion®
+description: Learn here all about Events and Commands support in Syncfusion® .NET MAUI Chat (SfChat) control and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -18,18 +18,18 @@ The `SfChat` control includes a built-in event called [MessageTapped](https://he
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <sfChat:SfChat x:Name="sfChat"
-            MessageTapped="sfChat_MessageTapped" />
+<sfChat:SfChat x:Name="sfChat"
+        MessageTapped="sfChat_MessageTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
       
-    sfChat.MessageTapped += SfChat_MessageTapped;
+sfChat.MessageTapped += SfChat_MessageTapped;
 
-    private void sfChat_MessageTapped(object sender, MessageTappedEventArgs e)
-    {                    
-        DisplayAlert("Message", " Tapped on message :" + e.Message.Author.Name, "Ok");
-    }
+private void sfChat_MessageTapped(object sender, MessageTappedEventArgs e)
+{                    
+    DisplayAlert("Message", " Tapped on message :" + e.Message.Author.Name, "Ok");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -39,35 +39,35 @@ The `SfChat` control includes a built-in event called [MessageTapped](https://he
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
-    <sfChat:SfChat x:Name="sfChat"  
-            MessageTappedCommand="{Binding TappedCommand}" />
+<sfChat:SfChat x:Name="sfChat"  
+        MessageTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
-    public class ViewModel : INotifyPropertyChanged
-    {
-        public Command<object> tappedCommand;
+public class ViewModel : INotifyPropertyChanged
+{
+    public Command<object> tappedCommand;
 
-        public ViewModel()
-        {
-            // Assigning command action to ICommand type property
-            TappedCommand = new Command<object>(MessageTapped);
-        }
-        
-        // ICommand type property for binding with sfChat.MessageTappedCommand
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-        
-        private void MessageTapped(object args)
-        {
-            var MessageTappedArgs = obj as MessageTappedEventArgs;
-            DisplayAlert("Message", "Tapped on Message :" + MessageTappedArgs.Message.Author.Name, "Ok");
-        }
+    public ViewModel()
+    {
+        // Assigning command action to ICommand type property
+        TappedCommand = new Command<object>(MessageTapped);
     }
+    
+    // ICommand type property for binding with sfChat.MessageTappedCommand
+    public Command<object> TappedCommand
+    {
+        get { return tappedCommand; }
+        set { tappedCommand = value; }
+    }
+    
+    private void MessageTapped(object args)
+    {
+        var MessageTappedArgs = obj as MessageTappedEventArgs;
+        DisplayAlert("Message", "Tapped on Message :" + MessageTappedArgs.Message.Author.Name, "Ok");
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,18 +80,18 @@ The `SfChat` control includes built-in features like the [MessageDoubleTapped](h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
     
-    <sfChat:SfChat x:Name="sfChat"
-            MessageDoubleTapped="sfChat_MessageDoubleTapped" />
+<sfChat:SfChat x:Name="sfChat"
+        MessageDoubleTapped="sfChat_MessageDoubleTapped" />
         
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-    sfChat.MessageDoubleTapped += SfChat_MessageDoubleTapped;            
+sfChat.MessageDoubleTapped += SfChat_MessageDoubleTapped;            
 
-    private void sfChat_MessageDoubleTapped(object? sender, MessageDoubleTappedEventArgs e)
-    {
-        DisplayAlert("Message", " DoubleTapped on message :" + e.Message.Author.Name, "Ok");
-    }
+private void sfChat_MessageDoubleTapped(object? sender, MessageDoubleTappedEventArgs e)
+{
+    DisplayAlert("Message", " DoubleTapped on message :" + e.Message.Author.Name, "Ok");
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,35 +100,35 @@ The `SfChat` control includes built-in features like the [MessageDoubleTapped](h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
     
-    <sfChat:SfChat x:Name="sfChat"  
-            MessageDoubleTappedCommand="{Binding DoubleTappedCommand}" />
+<sfChat:SfChat x:Name="sfChat"  
+        MessageDoubleTappedCommand="{Binding DoubleTappedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
-    public class ViewModel : INotifyPropertyChanged
-    {
-        public Command<object> doubleTappedCommand;
+public class ViewModel : INotifyPropertyChanged
+{
+    public Command<object> doubleTappedCommand;
 
-        public ViewModel()
-        {
-            // Assigning command action to ICommand type property
-            DoubleTappedCommand = new Command<object>(MessageDoubleTapped);
-        }
-        
-        // ICommand type property for binding with sfChat.MessageDoubleTappedCommand
-        public Command<object> DoubleTappedCommand
-        {
-            get { return doubleTappedCommand; }
-            set { doubleTappedCommand = value; }
-        }
-        
-        private void MessageDoubleTapped(object obj)
-        {
-            var MessageDoubleTappedArgs= obj as MessageDoubleTappedEventArgs;
-            DisplayAlert("Message", "DoubleTapped on Message :" + MessageDoubleTappedArgs.Message.Author.Name, "Ok");
-        }
+    public ViewModel()
+    {
+        // Assigning command action to ICommand type property
+        DoubleTappedCommand = new Command<object>(MessageDoubleTapped);
     }
+    
+    // ICommand type property for binding with sfChat.MessageDoubleTappedCommand
+    public Command<object> DoubleTappedCommand
+    {
+        get { return doubleTappedCommand; }
+        set { doubleTappedCommand = value; }
+    }
+    
+    private void MessageDoubleTapped(object obj)
+    {
+        var MessageDoubleTappedArgs= obj as MessageDoubleTappedEventArgs;
+        DisplayAlert("Message", "DoubleTapped on Message :" + MessageDoubleTappedArgs.Message.Author.Name, "Ok");
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,18 +141,18 @@ The `SfChat` control has built-in features like the [MessageLongPressed](https:/
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <sfChat:SfChat x:Name="sfChat"
-            MessageLongPressed="sfChat_MessageLongPressed" />
+<sfChat:SfChat x:Name="sfChat"
+        MessageLongPressed="sfChat_MessageLongPressed" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
     
-    sfChat.MessageLongPressed += sfChat_MessageLongPressed;
+sfChat.MessageLongPressed += sfChat_MessageLongPressed;
 
-    private void sfChat_MessageLongPressed(object sender, MessageLongPressedEventArgs e)
-    {
-        DisplayAlert("Message", " LongPressed on message :" + e.Message.Author.Name, "Ok");
-    }
+private void sfChat_MessageLongPressed(object sender, MessageLongPressedEventArgs e)
+{
+    DisplayAlert("Message", " LongPressed on message :" + e.Message.Author.Name, "Ok");
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -161,34 +161,34 @@ The `SfChat` control has built-in features like the [MessageLongPressed](https:/
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
     
-    <sfChat:SfChat x:Name="sfChat"  
-            MessageLongPressedCommand ="{Binding LongPressedCommand }" />
+<sfChat:SfChat x:Name="sfChat"  
+        MessageLongPressedCommand ="{Binding LongPressedCommand }" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    public Command<object> longPressedCommand;
+
+    public ViewModel()
     {
-        public Command<object> longPressedCommand;
+        // Assigning command action to ICommand type property
+        LongPressedCommand = new Command<object>(MessageLongPressed);
+    }
 
-        public ViewModel()
-        {
-            // Assigning command action to ICommand type property
-            LongPressedCommand = new Command<object>(MessageLongPressed);
-        }
+    // ICommand type property for binding with sfChat.MessageLongPressedCommand
+    public Command<object> LongPressedCommand
+    {
+        get { return longPressedCommand; }
+        set { longPressedCommand = value; }
+    }
 
-        // ICommand type property for binding with sfChat.MessageLongPressedCommand
-        public Command<object> LongPressedCommand
-        {
-            get { return longPressedCommand; }
-            set { longPressedCommand = value; }
-        }
-
-        private void MessageLongPressed(object obj)
-        {
-            var MessageLongPressedArgs = obj as MessageLongPressedEventArgs;
-            DisplayAlert("Message", "LongPressed on Message :" + MessageLongPressedArgs.Message.Author.Name, "Ok");
-        }
-    }       
+    private void MessageLongPressed(object obj)
+    {
+        var MessageLongPressedArgs = obj as MessageLongPressedEventArgs;
+        DisplayAlert("Message", "LongPressed on Message :" + MessageLongPressedArgs.Message.Author.Name, "Ok");
+    }
+}       
 {% endhighlight %}
 {% endtabs %}

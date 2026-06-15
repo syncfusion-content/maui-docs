@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Load More in .NET MAUI Chat control  | Syncfusion
-description: Learn here all about Load More support in Syncfusion .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Load More in .NET MAUI Chat control | Syncfusion®
+description: Learn here all about Load More support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -145,7 +145,7 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Load more manually in .NET MAUI Chat](images/load-more/maui-chat-load-more-manual.gif)
+![Load more manually in Syncfusion .NET MAUI Chat](images/load-more/maui-chat-load-more-manual.gif)
 
 ## Load more automatically
 
@@ -184,102 +184,102 @@ N> When the `LoadMoreBehavior` is set to `Auto`, [IsLazyLoading](https://help.sy
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="3" %}
 public partial class LoadMoreViewModel : INotifyPropertyChanged
 {      
-        private LoadMoreOption loadMoreBehavior = LoadMoreOption.Auto;
+    private LoadMoreOption loadMoreBehavior = LoadMoreOption.Auto;
 
-        /// <summary>
-        /// Gets or sets the load more command of SfChat.
-        /// </summary>
-        public ICommand LoadMoreCommand { get; set; }
+    /// <summary>
+    /// Gets or sets the load more command of SfChat.
+    /// </summary>
+    public ICommand LoadMoreCommand { get; set; }
 
-        /// <summary>
-        /// Gets or sets the load more behavior of the chat control.
-        /// </summary>
-        public bool LoadMoreBehavior
+    /// <summary>
+    /// Gets or sets the load more behavior of the chat control.
+    /// </summary>
+    public bool LoadMoreBehavior
+    {
+        get { return this.loadMoreBehavior; }
+        set
         {
-            get { return this.loadMoreBehavior; }
-            set
-            {
-                this.loadMoreBehavior = value;
-                RaisePropertyChanged("LoadMoreBehavior");
-            }
+            this.loadMoreBehavior = value;
+            RaisePropertyChanged("LoadMoreBehavior");
         }
+    }
 
-        /// <summary>
-        /// Gets or sets the message conversation of SfChat.
-        /// </summary>
-        public ObservableCollection<object> Messages
+    /// <summary>
+    /// Gets or sets the message conversation of SfChat.
+    /// </summary>
+    public ObservableCollection<object> Messages
+    {
+        get{ return this.messages; }
+        set
         {
-            get{ return this.messages; }
-            set
-            {
-                this.messages = value;
-                RaisePropertyChanged("Messages");
-            }
+            this.messages = value;
+            RaisePropertyChanged("Messages");
         }
+    }
 
-        public LoadMoreViewModel()
+    public LoadMoreViewModel()
+    {
+        this.Messages = CreateMessages();
+        LoadMoreCommand = new Command<object>(LoadMoreItems, CanLoadMoreItems);
+    }
+
+    /// <summary>
+    /// Returns whether the load more command can execute.
+    /// </summary>        
+    private bool CanLoadMoreItems(object obj)
+    {
+        // If messages are still there in the old message collection, then execute the load more command.
+        if (this.OldMessages.Count > 0)
         {
-            this.Messages = CreateMessages();
-            LoadMoreCommand = new Command<object>(LoadMoreItems, CanLoadMoreItems);
-        }
-
-        /// <summary>
-        /// Returns whether the load more command can execute.
-        /// </summary>        
-        private bool CanLoadMoreItems(object obj)
-        {
-            // If messages are still there in the old message collection, then execute the load more command.
-            if (this.OldMessages.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                // Set the load more behavior of chat to none from auto to cancel the load more operation.
-                this.LoadMoreBehavior = LoadMoreOption.None;
-                return false;
-            }
-
             return true;
         }
-
-    
-        private async void LoadMoreItems(object obj)
+        else
         {
-            try
-            {
-                // Set is busy as true to show the busy indicator.
-                IsBusy = true;
-                await Task.Delay(3000);
-                LoadMoreMessages();
-            }
-            catch{ }
-            finally
-            {
-                // Set is busy as false to hide the busy indicator.
-                IsBusy = false;
-            }
+            // Set the load more behavior of chat to none from auto to cancel the load more operation.
+            this.LoadMoreBehavior = LoadMoreOption.None;
+            return false;
         }
 
-    
-        /// <summary>
-        /// Adds the next ten messages from the older messages of the conversation to see messages.
-        /// </summary>
-        private void LoadMoreMessages()
-        {        
-            for (int i = 1; i <= 10 ; i++)
-            {
-                var oldMessage = this.OldMessages[this.OldMessages.Count - 1];
-                this.Messages.Insert(0, oldMessage);
-                this.OldMessages.Remove(oldMessage);
-            }
+        return true;
+    }
+
+
+    private async void LoadMoreItems(object obj)
+    {
+        try
+        {
+            // Set is busy as true to show the busy indicator.
+            IsBusy = true;
+            await Task.Delay(3000);
+            LoadMoreMessages();
         }
+        catch{ }
+        finally
+        {
+            // Set is busy as false to hide the busy indicator.
+            IsBusy = false;
+        }
+    }
+
+
+    /// <summary>
+    /// Adds the next ten messages from the older messages of the conversation to see messages.
+    /// </summary>
+    private void LoadMoreMessages()
+    {        
+        for (int i = 1; i <= 10 ; i++)
+        {
+            var oldMessage = this.OldMessages[this.OldMessages.Count - 1];
+            this.Messages.Insert(0, oldMessage);
+            this.OldMessages.Remove(oldMessage);
+        }
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Load more automatically in .NET MAUI Chat](images/load-more/maui-chat-load-more-auto.gif)
+![Load more automatically in Syncfusion .NET MAUI Chat](images/load-more/maui-chat-load-more-auto.gif)
 
 ## Load more template
 
@@ -403,4 +403,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Load more template in .NET MAUI Chat](images/load-more/maui-chat-load-more-template.gif)
+![Load more template in Syncfusion .NET MAUI Chat](images/load-more/maui-chat-load-more-template.gif)

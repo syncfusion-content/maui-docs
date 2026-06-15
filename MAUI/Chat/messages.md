@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Messages in .NET MAUI Chat control | Syncfusion
-description: Learn here all about Message support in Syncfusion .NET Maui Chat (SfChat) control, its elements, and more.
+title: Messages in .NET MAUI Chat control | Syncfusion®
+description: Learn here all about Message support in Syncfusion® .NET Maui Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -29,113 +29,113 @@ The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfCha
 {% tabs %}
 {% highlight xaml hl_lines="15" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="15" %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.Content = sfChat;
         }
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
     
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<object> messages;
+    private Author currentUser;
+
+    public ViewModel()
     {
-        private ObservableCollection<object> messages;
-        private Author currentUser;
+        this.Messages = new ObservableCollection<object>();
+        this.CurrentUser = new Author() { Name = "Nancy" };
+        this.GenerateMessages();
+    }
 
-        public ViewModel()
+    public Author CurrentUser
+    {
+        get
         {
-            this.Messages = new ObservableCollection<object>();
-            this.CurrentUser = new Author() { Name = "Nancy" };
-            this.GenerateMessages();
+            return this.currentUser;
         }
-
-        public Author CurrentUser
+        set
         {
-            get
-            {
-                return this.currentUser;
-            }
-            set
-            {
-                this.currentUser = value;
-                RaisePropertyChanged("CurrentUser");
-            }
-        }
-
-        public ObservableCollection<object> Messages
-        {
-            get
-            {
-                return this.messages;
-            }
-            set
-            {
-                this.messages = value;
-            }
-        }  
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        
-        public void RaisePropertyChanged(string propName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
-        }    
-
-        private void GenerateMessages()
-        {
-            this.Messages.Add(new TextMessage()
-            {
-                Author = CurrentUser,
-                Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
-            });
+            this.currentUser = value;
+            RaisePropertyChanged("CurrentUser");
         }
     }
+
+    public ObservableCollection<object> Messages
+    {
+        get
+        {
+            return this.messages;
+        }
+        set
+        {
+            this.messages = value;
+        }
+    }  
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+    
+    public void RaisePropertyChanged(string propName)
+    {
+        if (PropertyChanged != null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+    }    
+
+    private void GenerateMessages()
+    {
+        this.Messages.Add(new TextMessage()
+        {
+            Author = CurrentUser,
+            Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
+        });
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Current user in .NET MAUI Chat](images/messages/maui-chat-current-user.png)
+![Current user in Syncfusion .NET MAUI Chat](images/messages/maui-chat-current-user.png)
 
 ## Text message
 
@@ -144,85 +144,85 @@ The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfCha
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.Content = sfChat;
         }
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
     
-        public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    private void GenerateMessages()
+    {
+        this.Messages.Add(new TextMessage()
         {
-            ...
-            private void GenerateMessages()
-            {
-                this.Messages.Add(new TextMessage()
-                {
-                    Author = CurrentUser,
-                    Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
-                });
-                this.Messages.Add(new TextMessage()
-                {
-                    Author = new Author() { Name = "Andrea",Avatar = "peoplecircle2.png" },
-                    Text = "Oh! That's great.",
-                });
-                this.Messages.Add(new TextMessage()
-                {
-                    Author = new Author() { Name = "Harrison",Avatar = "peoplecircle14.png" },
-                    Text = "That is good news.",
-                });
-                this.Messages.Add(new TextMessage()
-                {
-                    Author = new Author() { Name = "Margaret",Avatar = "peoplecircle7.png" },
-                    Text = "What kind of application is it, and when are we going to launch?",
-                });
-            }
-            ...
-        }
+            Author = CurrentUser,
+            Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
+        });
+        this.Messages.Add(new TextMessage()
+        {
+            Author = new Author() { Name = "Andrea",Avatar = "peoplecircle2.png" },
+            Text = "Oh! That's great.",
+        });
+        this.Messages.Add(new TextMessage()
+        {
+            Author = new Author() { Name = "Harrison",Avatar = "peoplecircle14.png" },
+            Text = "That is good news.",
+        });
+        this.Messages.Add(new TextMessage()
+        {
+            Author = new Author() { Name = "Margaret",Avatar = "peoplecircle7.png" },
+            Text = "What kind of application is it, and when are we going to launch?",
+        });
+    }
+    ...
+}
     
 {% endhighlight %}
 {% endtabs %}
 
-![Text message type in .NET MAUI Chat](images/messages/maui-chat-text-message.png)
+![Text message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-text-message.png)
 
 ## Date picker message
 
@@ -231,85 +231,85 @@ The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfCha
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}"
-                        SendMessage="sfChat_SendMessage" />
-        </ContentPage.Content>
-    </ContentPage>                        
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}"
+                    SendMessage="sfChat_SendMessage" />
+    </ContentPage.Content>
+</ContentPage>                        
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.SendMessage += this.SfChat_SendMessage;
-                this.Content = sfChat;
-            }
-
-            private void sfChat_SendMessage(object sender, SendMessageEventArgs e)
-            {
-                // Denotes the date selected from the date picker.
-                var selectedDate = e.Message.Text;
-            }  
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.SendMessage += this.SfChat_SendMessage;
+            this.Content = sfChat;
         }
-    } 
+
+        private void sfChat_SendMessage(object sender, SendMessageEventArgs e)
+        {
+            // Denotes the date selected from the date picker.
+            var selectedDate = e.Message.Text;
+        }  
+    }
+} 
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    private void GenerateMessages()
     {
-        ...
-        private void GenerateMessages()
+        this.Messages.Add(new TextMessage()
         {
-            this.Messages.Add(new TextMessage()
-            {
-                Author = CurrentUser,
-                Text = "Flight to USA",
-            });
+            Author = CurrentUser,
+            Text = "Flight to USA",
+        });
 
-            this.Messages.Add(new DatePickerMessage()
-            {
-                Author = new Author() { Name = "Travel Bot",Avatar = "flight.png" },
-                Text = "Select departure date",
-                SelectedDate = DateTime.Now
-            });
-        }
-        ...
+        this.Messages.Add(new DatePickerMessage()
+        {
+            Author = new Author() { Name = "Travel Bot",Avatar = "flight.png" },
+            Text = "Select departure date",
+            SelectedDate = DateTime.Now
+        });
     }
+    ...
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker message type in .NET MAUI Chat](images/messages/maui-chat-date-picker-message.png)
+![Date picker message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-date-picker-message.png)
 
 ## Time picker message
 
@@ -318,54 +318,54 @@ The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfCha
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}"
-                        SendMessage="sfChat_SendMessage" />
-        </ContentPage.Content>
-    </ContentPage>                                                 
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}"
+                    SendMessage="sfChat_SendMessage" />
+    </ContentPage.Content>
+</ContentPage>                                                 
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.SendMessage += this.SfChat_SendMessage;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.SendMessage += this.SfChat_SendMessage;
+            this.Content = sfChat;
+        }
 
-            private void sfChat_SendMessage(object sender, SendMessageEventArgs e)
-            {
-                // Denotes the time selected from the time picker.
-                var selectedTime =  e.Message.Text;
-            }
+        private void sfChat_SendMessage(object sender, SendMessageEventArgs e)
+        {
+            // Denotes the time selected from the time picker.
+            var selectedTime =  e.Message.Text;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -373,31 +373,31 @@ The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfCha
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    private void GenerateMessages()
     {
-        ...
-        private void GenerateMessages()
+        this.Messages.Add(new TextMessage()
         {
-            this.Messages.Add(new TextMessage()
-            {
-                Author = CurrentUser,
-                Text = "Consultation with Dr.Harry tomorrow.",
-            });
+            Author = CurrentUser,
+            Text = "Consultation with Dr.Harry tomorrow.",
+        });
 
-            this.Messages.Add(new TimePickerMessage()
-            {
-                Author = new Author() { Name = "Health care", Avatar = "Healthcare.png" },
-                Text = "Select a convenient time to meet Dr.Harry for a health check-up.",
-                // Time picker display time.
-                SelectedTime = new TimeSpan(8, 30, 00),
-            });
-        } 
-        ... 
-    }
+        this.Messages.Add(new TimePickerMessage()
+        {
+            Author = new Author() { Name = "Health care", Avatar = "Healthcare.png" },
+            Text = "Select a convenient time to meet Dr.Harry for a health check-up.",
+            // Time picker display time.
+            SelectedTime = new TimeSpan(8, 30, 00),
+        });
+    } 
+    ... 
+}
 {% endhighlight %}
 {% endtabs %}
 
-![Time picker message type in .NET MAUI Chat](images/messages/maui-chat-timepicker-message.png)
+![Time picker message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-timepicker-message.png)
 
 ## Calendar message
 
@@ -406,85 +406,85 @@ The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfCha
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}"
-                        SendMessage="sfChat_SendMessage" />
-        </ContentPage.Content>
-    </ContentPage> 
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}"
+                    SendMessage="sfChat_SendMessage" />
+    </ContentPage.Content>
+</ContentPage> 
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.SendMessage += this.SfChat_SendMessage;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.SendMessage += this.SfChat_SendMessage;
+            this.Content = sfChat;
+        }
 
-            private void sfChat_SendMessage(object sender, SendMessageEventArgs e)
-            {
-                // Denotes the date selected from the calendar.
-                var selectedDate = e.Message.Text;
-            }
+        private void sfChat_SendMessage(object sender, SendMessageEventArgs e)
+        {
+            // Denotes the date selected from the calendar.
+            var selectedDate = e.Message.Text;
         }
     }
+}
 {% endhighlight %}
 {% endtabs %}
  
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}          
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    private void GenerateMessages()
     {
-        ...
-        private void GenerateMessages()
+        this.Messages.Add(new TextMessage()
         {
-            this.Messages.Add(new TextMessage()
-            {
-                Author = CurrentUser,
-                Text = "Appointment with Dr.Harry.",
-            });
+            Author = CurrentUser,
+            Text = "Appointment with Dr.Harry.",
+        });
 
-            this.Messages.Add(new CalendarMessage()
-            {
-                Author = new Author() { Name = "Health care" },
-                Text = "Select convenient date to meet Dr.Harry for health check up.",
-                SelectedDate = DateTime.Now,
-            });
-        }
-        ...
+        this.Messages.Add(new CalendarMessage()
+        {
+            Author = new Author() { Name = "Health care" },
+            Text = "Select convenient date to meet Dr.Harry for health check up.",
+            SelectedDate = DateTime.Now,
+        });
     }
+    ...
+}
     
 {% endhighlight %}
 {% endtabs %}
 
-![Calendar message type in .NET MAUI Chat](images/messages/maui-chat-calender-message.png)
+![Calendar message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-calender-message.png)
 
 ## Hyperlink message
 
@@ -493,87 +493,87 @@ The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfCha
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.Content = sfChat;
         }
     }
+}
 {% endhighlight %}
 {% endtabs %}
  
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    private void GenerateMessages()
     {
-        ...
-        private void GenerateMessages()
+        this.Messages.Add(new TextMessage()
         {
-            this.Messages.Add(new TextMessage()
-            {
-                Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
-                Text = "We should develop this app in .NET Maui, since it provides native experience and performance.",
-            });
+            Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
+            Text = "We should develop this app in .NET Maui, since it provides native experience and performance.",
+        });
 
-            this.Messages.Add(new TextMessage()
-            {
-                Author = CurrentUser,
-                Text = "I haven't heard of .NET Maui. What's Maui?",
-            });
+        this.Messages.Add(new TextMessage()
+        {
+            Author = CurrentUser,
+            Text = "I haven't heard of .NET Maui. What's Maui?",
+        });
 
-            this.Messages.Add(new HyperlinkMessage()
-            {
-                Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
-                Text = "You can check out this link to get started",
-                Url = "https://dotnet.microsoft.com/en-us/apps/maui",
-            });
-            
-            this.Messages.Add(new TextMessage()
-            {
-                Author = new Author() { Name = "Andrea", Avatar = "peoplecircle7.png" },
-                Text = "That's great! I will look into it.",
-            });
-        }
-    }     
+        this.Messages.Add(new HyperlinkMessage()
+        {
+            Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
+            Text = "You can check out this link to get started",
+            Url = "https://dotnet.microsoft.com/en-us/apps/maui",
+        });
+        
+        this.Messages.Add(new TextMessage()
+        {
+            Author = new Author() { Name = "Andrea", Avatar = "peoplecircle7.png" },
+            Text = "That's great! I will look into it.",
+        });
+    }
+}     
 {% endhighlight %}
 {% endtabs %}
 
-![Hyperlink message type in .NET MAUI Chat](images/messages/maui-chat-hyperlink-message.png)
+![Hyperlink message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-hyperlink-message.png)
 
 ### Adding hyperlink message as an outgoing message
 
@@ -588,46 +588,46 @@ Unlike the other messages, the `HyperlinkMessage` can also be shown as an outgoi
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.Content = sfChat;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -635,40 +635,40 @@ Unlike the other messages, the `HyperlinkMessage` can also be shown as an outgoi
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="13" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    private void GenerateMessages()
     {
-        ...
-        private void GenerateMessages()
+        this.messages.Add(new TextMessage()
         {
-            this.messages.Add(new TextMessage()
-            {
-                Author = CurrentUser,
-                Text = "I was delighted to buy some sports cars, can you suggest some cars",
-                DateTime = DateTime.Now,
-            });
+            Author = CurrentUser,
+            Text = "I was delighted to buy some sports cars, can you suggest some cars",
+            DateTime = DateTime.Now,
+        });
 
-            this.Messages.Add(new ImageMessage()
-            {
-                Author = currentUser,
-                Aspect = Aspect.AspectFill,
-                Source = "car1.jpg",
-                DateTime = DateTime.Now,
+        this.Messages.Add(new ImageMessage()
+        {
+            Author = currentUser,
+            Aspect = Aspect.AspectFill,
+            Source = "car1.jpg",
+            DateTime = DateTime.Now,
 
-            });
-            this.Messages.Add(new ImageMessage()
-            {
-                Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
-                Aspect = Aspect.AspectFill,
-                Source = "car2.jpg",
-                DateTime = DateTime.Now,
-            });
-        }
-        ...
+        });
+        this.Messages.Add(new ImageMessage()
+        {
+            Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
+            Aspect = Aspect.AspectFill,
+            Source = "car2.jpg",
+            DateTime = DateTime.Now,
+        });
     }
+    ...
+}
 {% endhighlight %}
 {% endtabs %}
 
-![Image message type in .NET MAUI Chat](images/messages/maui-chat-image-message.png)
+![Image message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-image-message.png)
 
 ### Event and command
 
@@ -679,36 +679,36 @@ The `ImageMessage` comes with in-built [ImageTapped](https://help.syncfusion.com
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}" 
-                        ImageTapped="chat_ImageTapped"/>
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}" 
+                    ImageTapped="chat_ImageTapped"/>
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void sfChat_ImageTapped(object sender, ImageTappedEventArgs e)
+private void sfChat_ImageTapped(object sender, ImageTappedEventArgs e)
+{
+    // Check if a particular image message was tapped.
+    if (e.Message.Source == ImageSource.FromFile("car1.png"))
     {
-        // Check if a particular image message was tapped.
-        if (e.Message.Source == ImageSource.FromFile("car1.png"))
-        {
-            // Do desired actions like displaying the image in full screen.
-        }
+        // Do desired actions like displaying the image in full screen.
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -718,49 +718,49 @@ The `ImageMessage` comes with in-built [ImageTapped](https://help.syncfusion.com
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}" 
-                        ImageTappedCommand="{Binding ImageTappedCommand}"/>
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}" 
+                    ImageTappedCommand="{Binding ImageTappedCommand}"/>
+    </ContentPage.Content>
+</ContentPage>
 {% endhighlight %}
 
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    public ICommand ImageTappedCommand { get; set; }
+    ...
+    public ViewModel()
     {
-        public ICommand ImageTappedCommand { get; set; }
-        ...
-        public ViewModel()
-        {
-            this.messages = new ObservableCollection<object>();
-            this.CurrentUser = new Author() { Name = "Nancy" };
-            ImageTappedCommand = new Command<object>(ImageTapped);
-        }
-
-        private void ImageTapped(object args)
-        {
-            // Check if a particular image message was tapped.
-            if((args as ImageTappedEventArgs).Message.Source == ImageSource.FromFile("car1.png"))
-            {
-                // Do desired actions like displaying the image in full screen.
-            }
-        }
-        ...
+        this.messages = new ObservableCollection<object>();
+        this.CurrentUser = new Author() { Name = "Nancy" };
+        ImageTappedCommand = new Command<object>(ImageTapped);
     }
+
+    private void ImageTapped(object args)
+    {
+        // Check if a particular image message was tapped.
+        if((args as ImageTappedEventArgs).Message.Source == ImageSource.FromFile("car1.png"))
+        {
+            // Do desired actions like displaying the image in full screen.
+        }
+    }
+    ...
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -770,7 +770,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/display-tapped-
 
 Unlike the other messages, the `ImageMessage` can also be shown as an outgoing message. To add an ImageMessage as an outgoing message, just set the [ImageMessage.Author](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_Author) as [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser). You can also add an image message when clicking the attachment button, as shown here.
 
-![Outgoing Image message in .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
+![Outgoing Image message in Syncfusion .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
 
 ## Card message
 
@@ -785,122 +785,122 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 {% tabs %}
 {% highlight xaml %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.Content = sfChat;
         }
     }
+}
 {% endhighlight %}
 {% endtabs %}
  
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="54" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    public ViewModel()
     {
-        ...
-        public ViewModel()
-        {
-            this.Messages = new ObservableCollection<object>();
-            this.CurrentUser = new Author() { Name = "Nancy", Avatar = "peoplecircle16.png" };
-            this.GenerateCards();
-            this.GenerateMessages();
-        }
-
-        private void GenerateCards()
-        {
-            cardsCollection = new ObservableCollection<Card>();
-            Card card1 = new Card()
-            {
-                Title = "Miami",
-                Description = "Miami, officially the City of Miami, is the seat of Miami-Dade County and the cultural, economic and financial center of South Florida in the United States. The city covers an area of about 56 square miles between the Everglades to the west and Biscayne Bay to the east.",
-                Image = "miami.png",
-            };
-            card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miammi" });
-
-            Card card2 = new Card()
-            {
-                Title = "A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherman's Wharf, and its Chinatown district.",
-                Image = "sanfrancisco.png",
-            };
-            card2.Buttons.Add(new CardButton() { Title = "Choose", Value = "San Francisco" });
-
-            Card card3 = new Card()
-            {
-                Title = "Las Vegas",
-                Description = "Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife. The Las Vegas Valley as a whole serves as the leading financial, commercial, and cultural center for Nevada.",
-                Image = "lasvegas.png",
-            };
-            card3.Buttons.Add(new CardButton() { Title = "Choose", Value = "Las Vegas" });
-
-            Card card4 = new Card()
-            {
-                Title = "Dallas",
-                Description = "Dallas, a modern metropolis in north Texas, is a commercial and cultural hub of the region. The Downtown Sixth Floor Museum at Dealey Plaza commemorates the site of President John F. Kennedy's assassination in 1963. In the Arts District, the Dallas Museum of Art and the Crow Collection of Asian Art cover thousands of years of art. The sleek Nasher Sculpture Center showcases contemporary sculpture.",
-                Image = "dallas.png",
-            };
-            card4.Buttons.Add(new CardButton() { Title = "Choose", Value = "Dallas" });
-
-            this.CardsCollection.Add(card1);
-            this.CardsCollection.Add(card2);
-            this.CardsCollection.Add(card3);
-            this.CardsCollection.Add(card4);
-        }   
-        
-        private void GenerateMessages()
-        {
-            Messages.Add(new CardMessage()
-            {
-                Cards = CardsCollection,
-                Author = new Author(){Name="Stacy", Avatar= ImageSource.FromResource("Stacy.png")}
-            });
-        }
-        ...  
+        this.Messages = new ObservableCollection<object>();
+        this.CurrentUser = new Author() { Name = "Nancy", Avatar = "peoplecircle16.png" };
+        this.GenerateCards();
+        this.GenerateMessages();
     }
+
+    private void GenerateCards()
+    {
+        cardsCollection = new ObservableCollection<Card>();
+        Card card1 = new Card()
+        {
+            Title = "Miami",
+            Description = "Miami, officially the City of Miami, is the seat of Miami-Dade County and the cultural, economic and financial center of South Florida in the United States. The city covers an area of about 56 square miles between the Everglades to the west and Biscayne Bay to the east.",
+            Image = "miami.png",
+        };
+        card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miammi" });
+
+        Card card2 = new Card()
+        {
+            Title = "A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherman's Wharf, and its Chinatown district.",
+            Image = "sanfrancisco.png",
+        };
+        card2.Buttons.Add(new CardButton() { Title = "Choose", Value = "San Francisco" });
+
+        Card card3 = new Card()
+        {
+            Title = "Las Vegas",
+            Description = "Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife. The Las Vegas Valley as a whole serves as the leading financial, commercial, and cultural center for Nevada.",
+            Image = "lasvegas.png",
+        };
+        card3.Buttons.Add(new CardButton() { Title = "Choose", Value = "Las Vegas" });
+
+        Card card4 = new Card()
+        {
+            Title = "Dallas",
+            Description = "Dallas, a modern metropolis in north Texas, is a commercial and cultural hub of the region. The Downtown Sixth Floor Museum at Dealey Plaza commemorates the site of President John F. Kennedy's assassination in 1963. In the Arts District, the Dallas Museum of Art and the Crow Collection of Asian Art cover thousands of years of art. The sleek Nasher Sculpture Center showcases contemporary sculpture.",
+            Image = "dallas.png",
+        };
+        card4.Buttons.Add(new CardButton() { Title = "Choose", Value = "Dallas" });
+
+        this.CardsCollection.Add(card1);
+        this.CardsCollection.Add(card2);
+        this.CardsCollection.Add(card3);
+        this.CardsCollection.Add(card4);
+    }   
+    
+    private void GenerateMessages()
+    {
+        Messages.Add(new CardMessage()
+        {
+            Cards = CardsCollection,
+            Author = new Author(){Name="Stacy", Avatar= ImageSource.FromResource("Stacy.png")}
+        });
+    }
+    ...  
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 **Card message with button**
-![Card message type in .NET MAUI Chat](images/messages/maui-chat-card-message.png)
+![Card message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-card-message.png)
 
 **Card message without button**
-![Card message type without button in .NET MAUI Chat](images/messages/maui-chat-card-message-without-button.png)
+![Card message type without button in Syncfusion .NET MAUI Chat](images/messages/maui-chat-card-message-without-button.png)
 
 ### Event and Command
 
@@ -912,33 +912,33 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}"
-                        CardTapped="sfChat_CardTapped" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}"
+                    CardTapped="sfChat_CardTapped" />
+    </ContentPage.Content>
+</ContentPage>
    
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void sfChat_CardTapped(object sender, CardTappedEventArgs e)
-    {
-        e.Message.HideAfterSelection = false;           
-    }
-    
+private void sfChat_CardTapped(object sender, CardTappedEventArgs e)
+{
+    e.Message.HideAfterSelection = false;           
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -946,45 +946,45 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
-                        CurrentUser="{Binding CurrentUser}"
-                        CardCommand="{Binding CardTappedCommand}" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                          
+                    CurrentUser="{Binding CurrentUser}"
+                    CardCommand="{Binding CardTappedCommand}" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    public ViewModel()
     {
-        ...
-        public ViewModel()
-        {
-            this.Messages = new ObservableCollection<object>();
-            this.CurrentUser = new Author() { Name = "Nancy", Avatar = "peoplecircle16.png" };
-            this.GenerateCards();
-            this.GenerateMessages();
-            this.CardTappedCommand = new Command(CardTapped);
-        }
-        private void CardTapped(object obj)
-        {
-            (obj as CardTappedEventArgs).Handled = true;
-        }
-        ...
+        this.Messages = new ObservableCollection<object>();
+        this.CurrentUser = new Author() { Name = "Nancy", Avatar = "peoplecircle16.png" };
+        this.GenerateCards();
+        this.GenerateMessages();
+        this.CardTappedCommand = new Command(CardTapped);
     }
+    private void CardTapped(object obj)
+    {
+        (obj as CardTappedEventArgs).Handled = true;
+    }
+    ...
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1151,7 +1151,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![DeliveryState in .NET MAUI Chat](Images/messages/maui-chat-delivery-state.gif)
+![DeliveryState in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-delivery-state.gif)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/message-delivery-states-.net-maui-chat)
 
@@ -1222,7 +1222,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-![DeliveryState Customization in .NET MAUI Chat](Images/messages/maui-chat-delivery-state-customization.gif)
+![DeliveryState Customization in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-delivery-state-customization.gif)
 
 ## Pin message
 
@@ -1264,7 +1264,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-![Pin Message in .NET MAUI Chat](Images/messages/maui-chat-pin-message.gif)
+![Pin Message in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-pin-message.gif)
 
 N> 
 * The [`IMessage.IsPinned`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_IsPinned) property is used to mark a message as pinned during initial load.
@@ -1313,7 +1313,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-![Show Pin Message Container in .NET MAUI Chat](Images/messages/maui-chat-pin-message-show-container.png)
+![Show Pin Message Container in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-pin-message-show-container.png)
 
 ### Customizing pinned message view
 
@@ -1353,7 +1353,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Pin Message Container Height in .NET MAUI Chat](Images/messages/maui-chat-pin-message-container-height.png)
+![Pin Message Container Height in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-pin-message-container-height.png)
 
 #### Pinned message template
 
@@ -1406,7 +1406,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Pin Message Template in .NET MAUI Chat](Images/messages/maui-chat-pin-message-template.png)
+![Pin Message Template in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-pin-message-template.png)
 
 
 ### Events for pinned messages
@@ -1449,26 +1449,26 @@ We have loaded a custom template if the message's text contains a particular tex
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16" %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                sfChat = new SfChat();
-                viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.MessageTemplate = new ChatMessageTemplateSelector(sfChat);
-                this.Content = sfChat;
-            }       
-        }
-    }  
+            InitializeComponent();
+            sfChat = new SfChat();
+            viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.MessageTemplate = new ChatMessageTemplateSelector(sfChat);
+            this.Content = sfChat;
+        }       
+    }
+}  
 
 {% endhighlight %}
 {% endtabs %}
@@ -1476,59 +1476,59 @@ We have loaded a custom template if the message's text contains a particular tex
 {% tabs %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
 
-    public class ChatMessageTemplateSelector : DataTemplateSelector
+public class ChatMessageTemplateSelector : DataTemplateSelector
+{
+    private readonly DataTemplate incomingDataTemplate;
+    private readonly DataTemplate outgoingDataTemplate;
+    private readonly DataTemplate ratingDataTemplate;
+    private SfChat sfChat;
+
+    public ChatMessageTemplateSelector()
+    {   
+    }
+    
+    public ChatMessageTemplateSelector(SfChat sfChat)
     {
-        private readonly DataTemplate incomingDataTemplate;
-        private readonly DataTemplate outgoingDataTemplate;
-        private readonly DataTemplate ratingDataTemplate;
-        private SfChat sfChat;
+        this.sfChat = sfChat;
+        this.incomingDataTemplate = new DataTemplate(typeof(IncomingMessageTemplate));
+        this.outgoingDataTemplate = new DataTemplate(typeof(OutgoingMessageTemplate));
+        this.ratingDataTemplate = new DataTemplate(typeof(RatingTemplate));
+    }
+    
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var message = item as IMessage;
+        if (message == null)
+            return null;
 
-        public ChatMessageTemplateSelector()
-        {   
-        }
-        
-        public ChatMessageTemplateSelector(SfChat sfChat)
+        if (message.Author == sfChat.CurrentUser)
         {
-            this.sfChat = sfChat;
-            this.incomingDataTemplate = new DataTemplate(typeof(IncomingMessageTemplate));
-            this.outgoingDataTemplate = new DataTemplate(typeof(OutgoingMessageTemplate));
-            this.ratingDataTemplate = new DataTemplate(typeof(RatingTemplate));
+            return outgoingDataTemplate;
         }
-        
-        protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+        else
         {
-            var message = item as IMessage;
-            if (message == null)
-                return null;
-
-            if (message.Author == sfChat.CurrentUser)
+            if (item as ITextMessage != null)
             {
-                return outgoingDataTemplate;
-            }
-            else
-            {
-                if (item as ITextMessage != null)
+                if ((item as ITextMessage).Text == "How would you rate your interaction with our travel bot?")
                 {
-                    if ((item as ITextMessage).Text == "How would you rate your interaction with our travel bot?")
-                    {
-                        return ratingDataTemplate;
-                    }
-                    else
-                    {
-                        return incomingDataTemplate;
-                    }
+                    return ratingDataTemplate;
                 }
                 else
                 {
-                    return null;
+                    return incomingDataTemplate;
                 }
+            }
+            else
+            {
+                return null;
             }
         }
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
-![Message template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
+![Message template in Syncfusion .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
 ### Using ChatMessageTemplateSelector for custom templates
 
@@ -1539,47 +1539,47 @@ Create a custom class that extends [ChatMessageTemplateSelector](https://help.sy
 
 public class MessageTemplateSelector : ChatMessageTemplateSelector
 {
-        private readonly DataTemplate customOutgoingMessageTemplate;
-        private readonly DataTemplate customIncomingMessageTemplate;
-        private SfChat sfChat;
+    private readonly DataTemplate customOutgoingMessageTemplate;
+    private readonly DataTemplate customIncomingMessageTemplate;
+    private SfChat sfChat;
 
-        public MessageTemplateSelector(SfChat sfChat) : base(sfChat)
+    public MessageTemplateSelector(SfChat sfChat) : base(sfChat)
+    {
+        this.sfChat = sfChat;
+        this.customOutgoingMessageTemplate = new DataTemplate(typeof(OutgoingMessageTemplate));
+        this.customIncomingMessageTemplate = new DataTemplate(typeof(IncomingMessageTemplate));
+    }
+
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+    {
+        var message = item! as IMessage;
+        if (message == null)
         {
-            this.sfChat = sfChat;
-            this.customOutgoingMessageTemplate = new DataTemplate(typeof(OutgoingMessageTemplate));
-            this.customIncomingMessageTemplate = new DataTemplate(typeof(IncomingMessageTemplate));
+            return null;
         }
-
-        protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+        if (item as ITextMessage != null)
         {
-            var message = item! as IMessage;
-            if (message == null)
+            if (message.Author == sfChat.CurrentUser && (item as ITextMessage)!.Text == "Thank you")
             {
-                return null;
+                return customOutgoingMessageTemplate;
             }
-            if (item as ITextMessage != null)
+            else if ((item as ITextMessage)!.Text == "How would you rate your interaction with our travel bot?")
             {
-                if (message.Author == sfChat.CurrentUser && (item as ITextMessage)!.Text == "Thank you")
-                {
-                    return customOutgoingMessageTemplate;
-                }
-                else if ((item as ITextMessage)!.Text == "How would you rate your interaction with our travel bot?")
-                {
-                    return customIncomingMessageTemplate;
-                }
-                else
-                {
-                    // Returns the default incoming or outgoing message templates based on the type of message.
-                    return base.OnSelectTemplate(item, container);
-                }
+                return customIncomingMessageTemplate;
             }
             else
             {
-                return null;
+                // Returns the default incoming or outgoing message templates based on the type of message.
+                return base.OnSelectTemplate(item, container);
             }
+        }
+        else
+        {
+            return null;
         }
     }
 }
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -1667,82 +1667,82 @@ using Syncfusion.Maui.Chat;
 
 namespace MauiChat
 
-    public partial class ContentViews : ContentPage
+public partial class ContentViews : ContentPage
+{
+    SfChat sfChat;
+    ViewModel viewModel;
+
+    public ContentViews()
     {
-        SfChat sfChat;
-        ViewModel viewModel;
+        InitializeComponent();
 
-        public ContentViews()
+        viewModel = new ViewModel();
+        sfChat = new SfChat
         {
-            InitializeComponent();
+            Messages = viewModel.Messages,
+            CurrentUser = viewModel.CurrentUser
+        };
 
-            viewModel = new ViewModel();
-            sfChat = new SfChat
+        Resources = new ResourceDictionary();
+
+        var incomingStyle = new Style(typeof(IncomingMessageContentView))
+        {
+            Setters =
             {
-                Messages = viewModel.Messages,
-                CurrentUser = viewModel.CurrentUser
-            };
-
-            Resources = new ResourceDictionary();
-
-            var incomingStyle = new Style(typeof(IncomingMessageContentView))
-            {
-                Setters =
+                new Setter
                 {
-                    new Setter
+                    Property = IncomingMessageContentView.ControlTemplateProperty,
+                    Value = new ControlTemplate(() =>
                     {
-                        Property = IncomingMessageContentView.ControlTemplateProperty,
-                        Value = new ControlTemplate(() =>
+                        var grid = new Grid();
+                        var label = new Label
                         {
-                            var grid = new Grid();
-                            var label = new Label
-                            {
-                                Padding = new Thickness(10),
-                                BackgroundColor = Colors.LightGoldenrodYellow,
-                                FontSize = 12,
-                                FontAttributes = FontAttributes.Italic
-                            };
-                            label.SetBinding(Label.TextProperty, "Text");
-                            grid.Children.Add(label);
-                            return grid;
-                        })
-                    }
+                            Padding = new Thickness(10),
+                            BackgroundColor = Colors.LightGoldenrodYellow,
+                            FontSize = 12,
+                            FontAttributes = FontAttributes.Italic
+                        };
+                        label.SetBinding(Label.TextProperty, "Text");
+                        grid.Children.Add(label);
+                        return grid;
+                    })
                 }
-            };
+            }
+        };
 
-            var outgoingStyle = new Style(typeof(OutgoingMessageContentView))
+        var outgoingStyle = new Style(typeof(OutgoingMessageContentView))
+        {
+            Setters =
             {
-                Setters =
+                new Setter
                 {
-                    new Setter
+                    Property = OutgoingMessageContentView.ControlTemplateProperty,
+                    Value = new ControlTemplate(() =>
                     {
-                        Property = OutgoingMessageContentView.ControlTemplateProperty,
-                        Value = new ControlTemplate(() =>
+                        var grid = new Grid();
+                        var label = new Label
                         {
-                            var grid = new Grid();
-                            var label = new Label
-                            {
-                                Padding = new Thickness(10, 10, 10, 40),
-                                FontSize = 12,
-                                BackgroundColor = Colors.LightGoldenrodYellow,
-                                FontAttributes = FontAttributes.Italic
-                            };
-                            label.SetBinding(Label.TextProperty, "Text");
-                            grid.Children.Add(label);
-                            return grid;
-                        })
-                    }
+                            Padding = new Thickness(10, 10, 10, 40),
+                            FontSize = 12,
+                            BackgroundColor = Colors.LightGoldenrodYellow,
+                            FontAttributes = FontAttributes.Italic
+                        };
+                        label.SetBinding(Label.TextProperty, "Text");
+                        grid.Children.Add(label);
+                        return grid;
+                    })
                 }
-            };
-            ...
+            }
+        };
+        ...
 
-            Resources.Add(incomingStyle);
-            Resources.Add(outgoingStyle);
+        Resources.Add(incomingStyle);
+        Resources.Add(outgoingStyle);
 
-            Content = sfChat;
-            BindingContext = viewModel;
-        }
+        Content = sfChat;
+        BindingContext = viewModel;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1754,52 +1754,52 @@ namespace MauiChat
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            MessageSpacing="24" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}"
+                        MessageSpacing="24" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="16" %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.MessageSpacing = 24;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.MessageSpacing = 24;
+            this.Content = sfChat;
         }
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
-![Message spacing in .NET MAUI Chat](images/messages/maui-chat-message-spacing.png)
+![Message spacing in Syncfusion .NET MAUI Chat](images/messages/maui-chat-message-spacing.png)
 
 ## Sending message
 
@@ -1814,31 +1814,31 @@ The newly added message can be canceled from sending in the `SendMessage` event 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16" %}
  
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.SendMessage += this.SfChat_SendMessage;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.SendMessage += this.SfChat_SendMessage;
+            this.Content = sfChat;
+        }
 
-            private void SfChat_SendMessage(object? sender, SendMessageEventArgs e)
-            {
-                e.Handled = true;
-            }
+        private void SfChat_SendMessage(object? sender, SendMessageEventArgs e)
+        {
+            e.Handled = true;
         }
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1847,66 +1847,66 @@ The newly added message can be canceled from sending in the `SendMessage` event 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            SendMessageCommand="{Binding SendMessageCommand}" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}"
+                        SendMessageCommand="{Binding SendMessageCommand}" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+    private ICommand sendMessageCommand;
+    
+    public ViewModel()
     {
-        ...
-        private ICommand sendMessageCommand;
-        
-        public ViewModel()
-        {
-            SendMessageCommand = new SendMessageCommandExt();
-        }
-
-        public ICommand SendMessageCommand
-        {
-            get
-            {
-                return this.sendMessageCommand;
-            }
-            set
-            {
-                this.sendMessageCommand = value;
-                RaisePropertyChanged("SendMessageCommand");
-            }
-        }
-        ...
+        SendMessageCommand = new SendMessageCommandExt();
     }
-    public class SendMessageCommandExt : ICommand
+
+    public ICommand SendMessageCommand
     {
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
+        get
         {
-            return true;
+            return this.sendMessageCommand;
         }
-
-        public void Execute(object parameter)
+        set
         {
-            (parameter as SendMessageEventArgs).Handled = true;
+            this.sendMessageCommand = value;
+            RaisePropertyChanged("SendMessageCommand");
         }
     }
+    ...
+}
+public class SendMessageCommandExt : ICommand
+{
+    public event EventHandler CanExecuteChanged;
+
+    public bool CanExecute(object parameter)
+    {
+        return true;
+    }
+
+    public void Execute(object parameter)
+    {
+        (parameter as SendMessageEventArgs).Handled = true;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1918,24 +1918,24 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            ShowKeyboardAlways="False" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}"
+                        ShowKeyboardAlways="False" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1947,24 +1947,24 @@ By default, users can input multi-line messages by adding new lines in the edito
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            AllowMultilineInput="False" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}"
+                        AllowMultilineInput="False" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1978,25 +1978,25 @@ By default, the author’s name and avatar are not shown for outgoing messages s
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            ShowOutgoingMessageAvatar="True"
-                            ShowOutgoingMessageAuthorName="True" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}"
+                        ShowOutgoingMessageAvatar="True"
+                        ShowOutgoingMessageAuthorName="True" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -2008,29 +2008,29 @@ By default, the author’s name and avatar are displayed for the incoming messag
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            ShowIncomingMessageAuthorName="False"
-                            ShowIncomingMessageAvatar="False" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}"
+                        ShowIncomingMessageAuthorName="False"
+                        ShowIncomingMessageAvatar="False" />
+    </ContentPage.Content>
+</ContentPage>
 {% endhighlight %}
 {% endtabs %}
 
-![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
+![Hide incoming avatar and author visibility in Syncfusion .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
 N> In SfChat, when no avatar image is set, the author's initials are shown automatically based on their name.
 
@@ -2041,11 +2041,11 @@ The `SfChat` allows you specify the format in which timestamps are shown for out
 {% tabs %}
 {% highlight xaml hl_lines="4 5" %}
 
-    <sfchat:SfChat x:Name="SfChat"              
-                   Messages="{Binding Messages}"     
-                   CurrentUser="{Binding CurrentUser}"
-                   IncomingMessageTimestampFormat="hh:mm tt"
-                   OutgoingMessageTimestampFormat="hh:mm tt" />
+<sfchat:SfChat x:Name="SfChat"              
+                Messages="{Binding Messages}"     
+                CurrentUser="{Binding CurrentUser}"
+                IncomingMessageTimestampFormat="hh:mm tt"
+                OutgoingMessageTimestampFormat="hh:mm tt" />
 {% endhighlight %}
 {% highlight c# hl_lines="2 3" %}
   SfChat sfChat = new SfChat();
@@ -2054,7 +2054,7 @@ The `SfChat` allows you specify the format in which timestamps are shown for out
 {% endhighlight %}
 {% endtabs %}
 
-![MessageTimeStampFormat in .NET MAUI Chat](images/messages/maui-chat-messagetimestampformat.png)
+![MessageTimeStampFormat in Syncfusion .NET MAUI Chat](images/messages/maui-chat-messagetimestampformat.png)
 
 ## Customize the shape of the message
 
@@ -2063,52 +2063,52 @@ The `SfChat` allows to change the shape of the messages by using the [MessageSha
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            MessageShape="DualTearDrop" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}"
+                        MessageShape="DualTearDrop" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="16" %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.MessageShape = MessageShape.DualTearDrop;
-                this.Content = sfChat;
-            }       
-        }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.MessageShape = MessageShape.DualTearDrop;
+            this.Content = sfChat;
+        }       
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
-![Message shape in .NET MAUI Chat](images/messages/maui-chat-message-shape.png)
+![Message shape in Syncfusion .NET MAUI Chat](images/messages/maui-chat-message-shape.png)
 
 ## Hide the message input view
 
@@ -2117,48 +2117,48 @@ The `SfChat` allows to hide the message input view (editor) by setting `false` t
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            ShowMessageInputView="False" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"                          
+                        CurrentUser="{Binding CurrentUser}"
+                        ShowMessageInputView="False" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="16" %}
 
-    using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
         {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfChat = new SfChat();
-                this.viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.ShowMessageInputView = false;
-                this.Content = sfChat;
-            }
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.ShowMessageInputView = false;
+            this.Content = sfChat;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -2171,11 +2171,11 @@ In the provided code example, we've set up a custom template to display a securi
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    sfChat = new SfChat();
-    this.sfChat.Messages = viewModel.Messages;
-    this.sfChat.CurrentUser = viewModel.CurrentUser;
-    this.sfChat.MessageTemplate = new CustomMessageTemplateSelector(this.sfChat);
-    this.Content = sfChat;
+sfChat = new SfChat();
+this.sfChat.Messages = viewModel.Messages;
+this.sfChat.CurrentUser = viewModel.CurrentUser;
+this.sfChat.MessageTemplate = new CustomMessageTemplateSelector(this.sfChat);
+this.Content = sfChat;
 
 {% endhighlight %}
 {% endtabs %}
@@ -2183,44 +2183,44 @@ In the provided code example, we've set up a custom template to display a securi
 {% tabs %}
 {% highlight c# tabtitle="MessageTemplateSelector.cs" %}
 
-    public class MessageTemplateSelector : ChatMessageTemplateSelector
+public class MessageTemplateSelector : ChatMessageTemplateSelector
+{
+    private readonly DataTemplate customMessageTemplate;
+
+    public MessageTemplateSelector(SfChat sfChat):base(sfChat)
     {
-        private readonly DataTemplate customMessageTemplate;
+        this.customMessageTemplate = new DataTemplate(typeof(CustomMessageTemplate));
+    }
 
-        public MessageTemplateSelector(SfChat sfChat):base(sfChat)
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var message = item as IMessage;
+        if (message == null)
         {
-            this.customMessageTemplate = new DataTemplate(typeof(CustomMessageTemplate));
+            return null;
         }
-
-        protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+        
+        if (item as ITextMessage != null)
         {
-            var message = item as IMessage;
-            if (message == null)
+            if ((item as ITextMessage).Author == null)
             {
-                return null;
-            }
-            
-            if (item as ITextMessage != null)
-            {
-                if ((item as ITextMessage).Author == null)
-                {
-                    return customMessageTemplate;
-                }
-                else
-                {
-                    return base.OnSelectTemplate(item,container);
-                }
+                return customMessageTemplate;
             }
             else
             {
-                return null;
+                return base.OnSelectTemplate(item,container);
             }
         }
+        else
+        {
+            return null;
+        }
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
-![Sytem generated message in .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
+![Sytem generated message in Syncfusion .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
 
@@ -2228,7 +2228,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generate
 
 You can assign unique color to each user in a group chat by writing converter and custom control templates to [OutgoingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageAuthorView.html) and [IncomingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageAuthorView.html) using `TargetStyle`.
 
-![Unique color to each user in .NET MAUI Chat](images/messages/maui-chat-assign-color-each-user.png)
+![Unique color to each user in Syncfusion .NET MAUI Chat](images/messages/maui-chat-assign-color-each-user.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-assign-color-each-user-in-.net-maui-chat)
 
@@ -2236,6 +2236,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-assign-c
 
 You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageContentView.html) using `TargetStyle`. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview), you can display the drop down menu by using platform specific customization.
 
-![Drop down menu in .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
+![Drop down menu in Syncfusion .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-show-drop-down-menu-in-.net-maui-chat)

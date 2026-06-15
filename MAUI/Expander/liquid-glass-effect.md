@@ -530,7 +530,7 @@ this.Content = root;
 
 This The following screenshot illustrates SfDataGrid within SfGlassEffectView.
 
-<img alt="MAUI Expander with liquid glass support" src="Images/liquid-glass-effect/maui-expander-liquid-glass-effect.png" Width="404" />   
+<img alt="Syncfusion MAUI Expander with liquid glass support" src="Images/liquid-glass-effect/maui-expander-liquid-glass-effect.png" Width="404" />   
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.

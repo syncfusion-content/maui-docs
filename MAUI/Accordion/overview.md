@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Accordion control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Accordion (SfAccordion) control, its elements and more.
+title: About .NET MAUI Accordion control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Accordion (SfAccordion) control, its elements and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug

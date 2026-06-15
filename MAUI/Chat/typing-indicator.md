@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Typing indicator in .NET MAUI Chat control | Syncfusion
+title: Typing indicator in .NET MAUI Chat control | Syncfusion®
 description: Learn here all about Typing indicator support in .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
@@ -63,68 +63,68 @@ namespace GettingStarted
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    public class TypeIndicatorViewModel : INotifyPropertyChanged
+public class TypeIndicatorViewModel : INotifyPropertyChanged
+{
+    /// <summary>
+    /// Indicates the typing indicator visibility. 
+    /// </summary>
+    private bool showTypingIndicator;
+
+    /// <summary>
+    /// Chat typing indicator.
+    /// </summary>
+    private ChatTypingIndicator typingIndicator;
+
+    public TypeIndicatorViewModel()
     {
-        /// <summary>
-        /// Indicates the typing indicator visibility. 
-        /// </summary>
-        private bool showTypingIndicator;
-
-        /// <summary>
-        /// Chat typing indicator.
-        /// </summary>
-        private ChatTypingIndicator typingIndicator;
-
-        public TypeIndicatorViewModel()
-        {
-            this.Messages = new ObservableCollection<object>();
-            this.TypingIndicator = new ChatTypingIndicator();
-            this.TypingIndicator.Authors.Add(new Author() { Name = "Harrison"});
-            this.TypingIndicator.AvatarViewType = AvatarViewType.Image;
-            this.TypingIndicator.Text = "Harrison is typing...";
-            this.ShowTypingIndicator = true;
-            this.CurrentUser = new Author() { Name = "Nancy" };
-            this.GenerateMessages();
-        }
-
-        /// <summary>
-        /// Gets or sets the Chat typing indicator value.
-        /// </summary>
-        public ChatTypingIndicator TypingIndicator
-        {
-            get
-            {
-                return this.typingIndicator;
-            }
-            private set
-            {
-                this.typingIndicator = value;
-                RaisePropertyChanged("TypingIndicator");
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the value indicating whether the typing indicator is visible or not.
-        /// </summary>
-        public bool ShowTypingIndicator
-        {
-            get
-            {
-                return this.showTypingIndicator;
-            }
-            set
-            {
-                this.showTypingIndicator = value;
-                RaisePropertyChanged("ShowTypingIndicator");
-            }
-        }
-        ...
+        this.Messages = new ObservableCollection<object>();
+        this.TypingIndicator = new ChatTypingIndicator();
+        this.TypingIndicator.Authors.Add(new Author() { Name = "Harrison"});
+        this.TypingIndicator.AvatarViewType = AvatarViewType.Image;
+        this.TypingIndicator.Text = "Harrison is typing...";
+        this.ShowTypingIndicator = true;
+        this.CurrentUser = new Author() { Name = "Nancy" };
+        this.GenerateMessages();
     }
+
+    /// <summary>
+    /// Gets or sets the Chat typing indicator value.
+    /// </summary>
+    public ChatTypingIndicator TypingIndicator
+    {
+        get
+        {
+            return this.typingIndicator;
+        }
+        private set
+        {
+            this.typingIndicator = value;
+            RaisePropertyChanged("TypingIndicator");
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the value indicating whether the typing indicator is visible or not.
+    /// </summary>
+    public bool ShowTypingIndicator
+    {
+        get
+        {
+            return this.showTypingIndicator;
+        }
+        set
+        {
+            this.showTypingIndicator = value;
+            RaisePropertyChanged("ShowTypingIndicator");
+        }
+    }
+    ...
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Typing indicator with image in .NET MAUI Chat](images/typing-indicator/maui-chat-typing-indicator.png)
+![Typing indicator with image in Syncfusion .NET MAUI Chat](images/typing-indicator/maui-chat-typing-indicator.png)
 
 N> The `SfChat` allows customizing the height of the typing indicator using the [TypingIndicatorViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TypingIndicatorViewHeight) property.
 
@@ -140,7 +140,7 @@ public class TypingIndicatorViewModel : INotifyPropertyChanged
     public TypingIndicatorViewModel()
     {
         this.TypingIndicator = new ChatTypingIndicator();
-        this.TypingIndicator.Authors.Add(new Author() { Name = "Harrison", Avatar = "People_Circle14.png" }        
+        this.TypingIndicator.Authors.Add(new Author() { Name = "Harrison", Avatar = "People_Circle14.png" });       
         this.TypingIndicator.AvatarViewType = AvatarViewType.Text;
         this.TypingIndicator.Text = "Harrison is typing...";
         this.ShowTypingIndicator = true;
@@ -151,7 +151,7 @@ public class TypingIndicatorViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Typing indicator with text in .NET MAUI Chat](images/typing-indicator/maui-chat-typing-indicator-text.png)
+![Typing indicator with text in Syncfusion .NET MAUI Chat](images/typing-indicator/maui-chat-typing-indicator-text.png)
 
 ## Notifications when user start/stop typing
  

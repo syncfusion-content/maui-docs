@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Expander control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Expander (SfExpander) control, its elements and more.
+title: About .NET MAUI Expander control | Syncfusionv®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Expander (SfExpander) control, its elements and more.
 platform: MAUI
 control: SfExpander
 documentation: ug

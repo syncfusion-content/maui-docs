@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BindableLayout | Accordion for .NET MAUI | Syncfusion
+title: BindableLayout | Accordion for .NET MAUI | Syncfusion®
 description: This section describes how to bind AccordionItem to .NET MAUI Accordion (SfAccordion) using BindableLayout.
 platform: MAUI
 control: SfAccordion
@@ -306,7 +306,7 @@ BindableLayout.SetItemsSource(accordion, viewModel.Employees);
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Defining the Accordion items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png" width="404" /> 
+<img alt="Defining the Syncfusion Maui Accordion items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png" width="404" /> 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/binding-items-using-bindable-layout-in-.net-maui-accordion).
 

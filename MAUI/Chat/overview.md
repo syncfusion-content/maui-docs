@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Chat Control | Syncfusion
-description: Learn here all about Introduction of the Syncfusion .NET MAUI Chat (SfChat) control, its elements, and more.
+title: About .NET MAUI Chat Control | Syncfusion®
+description: Learn here all about Introduction of the Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: Chat
 documentation: ug
@@ -20,4 +20,4 @@ The Syncfusion® .NET MAUI Chat control offers a contemporary conversational cha
 * `Load More` : Enables the loading of past messages as users scroll through the chat history.
 * `Styling` : Customize the appearance of incoming and outgoing messages.
 
-![overview in .NET MAUI SfChat](Images/maui-chat-overview.png)
+![overview in Syncfusion .NET MAUI SfChat](Images/maui-chat-overview.png)
