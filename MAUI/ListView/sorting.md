@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Sorting support in Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
+title: Sorting in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Sorting support in Syncfusion® .NET MAUI ListView (SfListView) control, its elements and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -125,7 +125,7 @@ public class CustomSortComparer : IComparer<object>
 
 You can download the entire sample code from the [github](https://github.com/SyncfusionExamples/custom-sorting-.net-maui-listview).
 
-![.NET MAUI ListView custom sorting](Images/sorting/net-maui-listview-custom-sorting.jpg)
+![Syncfusion .NET MAUI ListView custom sorting](Images/sorting/net-maui-listview-custom-sorting.jpg)
 
 ## Sort the items on header tapped
 
@@ -247,7 +247,7 @@ this.listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 
 The following screenshot shows the output when items are sorted by year. Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/sorting-and-grouping-.net-maui-listview)
 
-![.NET MAUI ListView sorting with grouping by year](Images/sorting/net-maui-listview-with-grouping-by-year.jpg)
+![Syncfusion .NET MAUI ListView sorting with grouping by year](Images/sorting/net-maui-listview-with-grouping-by-year.jpg)
 
 ## Sorting with grouping by month and year
 
@@ -301,4 +301,4 @@ public partial class MainPage : ContentPage
 
 The following screenshot shows the output when items are sorted by month and year.
 
-![.NET MAUI ListView sorting with grouping by month and year](Images/sorting/net-maui-listview-sorting-with-grouping-by-year.jpg)
+![Syncfusion .NET MAUI ListView sorting with grouping by month and year](Images/sorting/net-maui-listview-sorting-with-grouping-by-year.jpg)

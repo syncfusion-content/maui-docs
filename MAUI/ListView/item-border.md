@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Item Border Customization in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Item Border Customization support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Item Border Customization in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Item Border Customization support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -69,7 +69,7 @@ listView.ShowItemBorder = true;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Border Example](Images/item-border/maui-listview-item-border-example.jpg)
+![Syncfusion .NET MAUI ListView Border Example](Images/item-border/maui-listview-item-border-example.jpg)
 
 ## Border Customization
 
@@ -110,7 +110,7 @@ listView.ItemBorderRadius = new CornerRadius(20,0,0,20);
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Border Example](Images/item-border/maui-listview-border-customization.jpg)
+![Syncfusion .NET MAUI ListView Border Example](Images/item-border/maui-listview-border-customization.jpg)
 
 ## Limitations
 

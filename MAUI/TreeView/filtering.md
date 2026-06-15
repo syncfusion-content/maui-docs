@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about Filtering support in Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements, and more.
+title: Filtering in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here about Filtering support in Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements, and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -80,7 +80,7 @@ You can bind the `FilterText` property to a property in your ViewModel for MVVM 
 {% endhighlight %}
 {% endtabs %}
 
-![Filtering in .NET MAUI TreeView](Images/filtering//maui-treeview-filtering.gif)
+![Filtering in Syncfusion .NET MAUI TreeView](Images/filtering//maui-treeview-filtering.gif)
 
 ## FilterPath and FilterPaths
 

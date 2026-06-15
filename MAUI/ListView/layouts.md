@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layouts in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Layouts support in Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
+title: Layouts in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Layouts support in Syncfusion® .NET MAUI ListView (SfListView) control, its elements and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -32,7 +32,7 @@ listView.ItemsLayout = new LinearLayout();
 {% endhighlight%}
 {% endtabs %}
 
-![MAUI ListView linear layout](Images/layouts/maui-listview-linear-layout.jpg)
+![Syncfusion .NET MAUI ListView linear layout](Images/layouts/maui-listview-linear-layout.jpg)
 
 
 ## Grid Layout
@@ -60,7 +60,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 2 };
 {% endhighlight%}
 {% endtabs %}
 
-![MAUI ListView grid layout](Images/layouts/maui-listview-grid-layout.jpg)
+![Syncfusion .NET MAUI ListView grid layout](Images/layouts/maui-listview-grid-layout.jpg)
 
 
 ## Change span count based on screen size

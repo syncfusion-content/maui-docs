@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with ListView in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Working with ListView support in Syncfusion .NET MAUI ListView control and more.
+title: Working with ListView in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Working with ListView support in Syncfusion® .NET MAUI ListView control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -107,12 +107,12 @@ The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListVi
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    listView.ItemRightTapped += ListView_ItemRightTapped;
+listView.ItemRightTapped += ListView_ItemRightTapped;
 
-    private void ListView_ItemRightTapped(object sender, Syncfusion.Maui.ListView.ItemRightTappedEventArgs e)
-    {
-        DisplayAlert("Item RightTapped", "ListView item right tapped", "Close");
-    }
+private void ListView_ItemRightTapped(object sender, Syncfusion.Maui.ListView.ItemRightTappedEventArgs e)
+{
+    DisplayAlert("Item RightTapped", "ListView item right tapped", "Close");
+}
 
 {% endhighlight %}
 {% endtabs %}

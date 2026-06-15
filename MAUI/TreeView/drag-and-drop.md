@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and drop in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Drag and drop support in the Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Drag and drop in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here all about Drag and drop support in the Syncfusion® .NET MAUI TreeView (SfTreeView) control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -13,7 +13,7 @@ The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.Sf
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
 <ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
-  <syncfusion:SfTreeView x:Name="treeView" 
+  <treeView:SfTreeView x:Name="treeView" 
                          ItemsSource="{Binding Folders}"
                          AllowDragging="True" />
 </ContentPage>
@@ -27,7 +27,7 @@ treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
 
 While dropping, the dragged items can be added above, below, or as a child of the target item, depending on the position of the drag indicator.
 
-![Drag and drop](Images/drag-and-drop/drag-and-drop.gif)
+![Drag and drop](Images/drag-and-drop/maui-treeview-drag-and-drop.gif)
 
 N> The drag and drop operation is not supported when Load on Demand is enabled.
 
@@ -41,7 +41,7 @@ By defining the [DragItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusio
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
-  <syncfusion:SfTreeView x:Name="treeView" 
+    <treeView:SfTreeView x:Name="treeView" 
                          ItemsSource="{Binding Folders}"
                          AllowDragging="True" >
         <treeView:SfTreeView.DragItemTemplate>
@@ -140,7 +140,7 @@ treeView.DragItemTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-![Drag item view customization](Images/drag-and-drop/drag-view-customization.gif)
+![Drag item view customization](Images/drag-and-drop/maui-treeview-drag-view-customization.gif)
 
 N> View sample in [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-drag-item-view).
 
@@ -173,7 +173,7 @@ treeView.AutoScroller.ScrollMargin = 20;
 {% endhighlight %}
 {% endtabs %}
 
-![Auto scroll](Images/drag-and-drop/auto-scroll.gif)
+![Auto scroll](Images/drag-and-drop/maui-treeview-auto-scroll.gif)
 
 ### Auto scroll interval
 
@@ -225,7 +225,7 @@ treeView.DragAndDropController.CanAutoExpand = true;
 {% endhighlight %}
 {% endtabs %}
 
-![Enable Auto Expand](Images/drag-and-drop/enable-auto-expand.gif)
+![Enable Auto Expand](Images/drag-and-drop/maui-treeview-enable-auto-expand.gif)
 
 ### Auto expand delay
 

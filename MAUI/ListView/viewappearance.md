@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Appearance support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Appearance in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Appearance support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -99,7 +99,7 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Data Template Selector](Images/appearance/maui-listview-applying-the-data-template-selector.jpg)
+![Syncfusion .NET MAUI ListView Data Template Selector](Images/appearance/maui-listview-applying-the-data-template-selector.jpg)
 
 ## Setting DisplayMemberPath
  
@@ -130,7 +130,7 @@ listView.Orientation = ItemsLayoutOrientation.Horizontal;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI Horizontal ListView](Images/appearance/maui-listview-horizontal-view.gif)
+![Syncfusion .NET MAUI Horizontal ListView](Images/appearance/maui-listview-horizontal-view.gif)
 
 ### Navigate across views (like TabView)
 
@@ -206,7 +206,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Navigate across views](Images/appearance/maui-listview-navigate-across-views.jpg)
+![Syncfusion .NET MAUI ListView Navigate across views](Images/appearance/maui-listview-navigate-across-views.jpg)
 
 ## Horizontal list inside vertical list
 
@@ -280,7 +280,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Horizontal list inside the vertical list](Images/appearance/maui-listview-horizontal-list-inside-vertical-list.jpg)
+![Syncfusion .NET MAUI ListView Horizontal list inside the vertical list](Images/appearance/maui-listview-horizontal-list-inside-vertical-list.jpg)
 
 ## Item size
 
@@ -308,7 +308,7 @@ listView.ItemSpacing = new Thickness(5, 0, 0, 0)
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Item Spacing](Images/appearance/maui-listview-item-spacing.jpg)
+![Syncfusion .NET MAUI ListView Item Spacing](Images/appearance/maui-listview-item-spacing.jpg)
 
 ## Alternate row styling
 
@@ -382,7 +382,7 @@ public class IndexToColorConverter : IValueConverter
 }
 {% endhighlight %}
 
-![MAUI ListView Alternate row styling](Images/appearance/maui-listview-alternate-row-styling.jpg)
+![Syncfusion .NET MAUI ListView Alternate row styling](Images/appearance/maui-listview-alternate-row-styling.jpg)
 
 ## Rounded corner on items
 
@@ -441,7 +441,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Rounded corner on items](Images/appearance/maui-listview-rounded-corner-on-items.jpg)
+![Syncfusion .NET MAUI ListView Rounded corner on items](Images/appearance/maui-listview-rounded-corner-on-items.jpg)
 
 ## Drop shadow effect on items
 
@@ -509,7 +509,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
+![Syncfusion .NET MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
 
 ## Visual State Manager
 
@@ -885,7 +885,7 @@ internal class SfListViewAccordionBehavior : Behavior<ContentPage>
 
 The `IsVisible` model property, which is bound to the second template, will be enabled when the item is tapped and disabled when the item is tapped again.
 
-![MAUI ListView Accordion view](Images/appearance/maui-listview-accordion-view.jpg)
+![Syncfusion .NET MAUI ListView Accordion view](Images/appearance/maui-listview-accordion-view.jpg)
 
 ## Item animation on appearing
 
@@ -962,7 +962,7 @@ public class ListViewItemExt : ListViewItem
 
 Here `FadeTo` animation is applied for [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html), when comes in the view. 
 
-![MAUI Extension of ListViewItem](Images/appearance/maui-listview-extension-of-listview-item.gif)
+![Syncfusion .NET MAUI Extension of ListViewItem](Images/appearance/maui-listview-extension-of-listview-item.gif)
 
 ### Right to left(RTL)
 
@@ -981,7 +981,7 @@ this.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Right to Left](Images/appearance/maui-listview-right-to-left.jpg)
+![Syncfusion .NET MAUI ListView Right to Left](Images/appearance/maui-listview-right-to-left.jpg)
 
 ### Limitations
 

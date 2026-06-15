@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Grouping support in Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
+title: Grouping in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Grouping support in Syncfusion® .NET MAUI ListView (SfListView) control, its elements and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -74,7 +74,7 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 
 The following screenshot shows the output when grouping based on first character.
 
-![.NET MAUI ListView grouping based on first character](Images/grouping/net-maui-listview-grouping-based-on-first-character.jpg)
+![Syncfusion .NET MAUI ListView grouping based on first character](Images/grouping/net-maui-listview-grouping-based-on-first-character.jpg)
 
 ### Grouping based on more than one property in the data object
 
@@ -96,7 +96,7 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 
 The following screenshot shows the output when grouping based on more than one property .
 
-![.NET MAUI ListView grouping based on more than one property](Images/grouping/net-maui-listview-grouping-based-on-more-than-one-property.jpg)
+![Syncfusion .NET MAUI ListView grouping based on more than one property](Images/grouping/net-maui-listview-grouping-based-on-more-than-one-property.jpg)
 
 ### Grouping by ignoring case-sensitivity
 
@@ -117,7 +117,7 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 
 The following screenshot shows grouping by ignoring case sensitivity. 
 
-![.NET MAUI ListView grouping by ignoring case sensitivity](Images/grouping/net-maui-listview-grouping-by-ignoring-case-sensitivity.jpg)
+![Syncfusion .NET MAUI ListView grouping by ignoring case sensitivity](Images/grouping/net-maui-listview-grouping-by-ignoring-case-sensitivity.jpg)
 
 ## Sorting the groups
 
@@ -274,7 +274,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 
 The following screenshot shows grouping by property value sum.
 
-![.NET MAUI ListView aggregate summary](Images/grouping/net-maui-listview-aggregate-summary.jpg)
+![Syncfusion .NET MAUI ListView aggregate summary](Images/grouping/net-maui-listview-aggregate-summary.jpg)
 
 ### Displaying items count
 
@@ -352,7 +352,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
  
 The following screenshot shows the output when displaying items count at group header. 
 
-![.NET MAUI ListView displaying items count](Images/grouping/net-maui-listview-displaying-items-count.jpg)
+![Syncfusion .NET MAUI ListView displaying items count](Images/grouping/net-maui-listview-displaying-items-count.jpg)
 
 ## Multi-level grouping
 
@@ -449,7 +449,7 @@ public class GroupHeaderConverter : IValueConverter
 
 The following screenshot shows the output for multi-level grouping.
 
-![.NET MAUI ListView multi level grouping](Images/grouping/net-maui-listview-multi-grouping.jpg)
+![Syncfusion .NET MAUI ListView multi level grouping](Images/grouping/net-maui-listview-multi-grouping.jpg)
 
 ## Group expand and collapse
 
@@ -467,7 +467,7 @@ listView.AllowGroupExpandCollapse = true;
 
 The following screenshot shows the output when the groups are collapsed.
 
-![.NET MAUI ListView allow group expand and collapse](Images/grouping/net-maui-listview-allow-group-expand-collapse.jpg)
+![Syncfusion .NET MAUI ListView allow group expand and collapse](Images/grouping/net-maui-listview-allow-group-expand-collapse.jpg)
 
 ### Programmatic expand and collapse
 
@@ -540,7 +540,7 @@ private void ListView_GroupExpanding(object sender, GroupExpandCollapseChangingE
 
 The following screenshot shows the output when one group is expanded state.
 
-![.NET MAUI ListView keep only one group in expanded state](Images/grouping/net-maui-listview-only-one-group-in-expand-state.jpg)
+![Syncfusion .NET MAUI ListView keep only one group in expanded state](Images/grouping/net-maui-listview-only-one-group-in-expand-state.jpg)
 
 ### Expand groups while grouping
 
@@ -711,7 +711,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 
 The following screenshot shows the output when the groups header appearance is customized by key.
 
-![.NET MAUI ListView appearence customization](Images/grouping/net-maui-listview-appearence-customization.jpg)
+![Syncfusion .NET MAUI ListView appearence customization](Images/grouping/net-maui-listview-appearence-customization.jpg)
 
 ### Expand and collapse icon in group header
 
@@ -814,7 +814,7 @@ public class BoolToImageConverter : IValueConverter
 
 The following screenshot shows the output when grouping with expand collapse icon in group header. 
 
-![.NET MAUI ListView expand and collapse icon in group header](Images/grouping/net-maui-listview-expand-and-collapse-icon.jpg)
+![Syncfusion .NET MAUI ListView expand and collapse icon in group header](Images/grouping/net-maui-listview-expand-and-collapse-icon.jpg)
 
 ### Height customization
 
@@ -987,7 +987,7 @@ private void RefreshGroupHeader(GroupResult group)
 
 The following screenshot shows the output when checking items in group header. 
 
-![.NET MAUI ListView checkbox in group header](Images/grouping/net-maui-listview-checkbox-in-group-header.jpg)
+![Syncfusion .NET MAUI ListView checkbox in group header](Images/grouping/net-maui-listview-checkbox-in-group-header.jpg)
 
 ### Changing group header appearance when expanding
 
@@ -1066,7 +1066,7 @@ The following screenshot shows the output when group header appearance is change
 
 N> The binding context for `GroupHeaderTemplate` is `GroupResult`. 
 
-![.NET MAUI ListView changing group header appearence when expanding](Images/grouping/net-maui-listview-changing-group-header-appearence-when-expanding.jpg)
+![Syncfusion .NET MAUI ListView changing group header appearence when expanding](Images/grouping/net-maui-listview-changing-group-header-appearence-when-expanding.jpg)
 
 ### Providing Indentation for GroupHeader items
 
@@ -1153,7 +1153,7 @@ if (selectedItems.Count > 0)
 
 The following screenshot shows the output when only one item in a group gets selected. 
 
-![.NET MAUI ListView allow to select only one item in a group at a time](Images/grouping/net-maui-listview-allow-to-select-only-one-group-at-a-time.jpg)
+![Syncfusion .NET MAUI ListView allow to select only one item in a group at a time](Images/grouping/net-maui-listview-allow-to-select-only-one-group-at-a-time.jpg)
 
 ### Add an item at the specific index in a group
 
@@ -1228,7 +1228,7 @@ internal void InsertItemInGroup(List<object> items, object Item, int InsertAt)
 
 The following screenshot shows the output when an item is added at the specified index.
 
-![.NET MAUI ListView add an item at the specific index in a group](Images/grouping/net-maui-listview-add-an-item-at-the-specific-index.jpg)
+![Syncfusion .NET MAUI ListView add an item at the specific index in a group](Images/grouping/net-maui-listview-add-an-item-at-the-specific-index.jpg)
 
 ## See also 
 

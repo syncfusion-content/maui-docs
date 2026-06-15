@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with TreeView in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about Working with TreeView support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Working with TreeView in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here about Working with TreeView support in Syncfusion® .NET MAUI TreeView (SfTreeView) control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -88,16 +88,16 @@ The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeVi
 {% tabs %}
 {% highlight xaml %}
       
-    <syncfusion:SfTreeView x:Name = "treeView" ItemRightTapped = "TreeView_ItemRightTapped" />
+<syncfusion:SfTreeView x:Name = "treeView" ItemRightTapped = "TreeView_ItemRightTapped" />
 {% endhighlight %}
 {% highlight c# %}
 
-    treeView.ItemRightTapped += TreeView_ItemRightTapped;
+treeView.ItemRightTapped += TreeView_ItemRightTapped;
 
-    private void TreeView_ItemRightTapped(object sender, ItemRightTappedEventArgs e)
-    {
-        DisplayAlert("Item RightTapped", "TreeView item right tapped", "Close");
-    }
+private void TreeView_ItemRightTapped(object sender, ItemRightTappedEventArgs e)
+{
+    DisplayAlert("Item RightTapped", "TreeView item right tapped", "Close");
+}
 
 {% endhighlight %}
 {% endtabs %}

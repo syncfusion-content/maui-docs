@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Animations in .NET MAUI Popup Control | Syncfusion
-description: Learn here all about Popup Animations support in the Syncfusion .NET MAUI Popup (SfPopup) control and more.
+title: Popup Animations in .NET MAUI Popup Control | Syncfusion®
+description: Learn here all about Popup Animations support in the Syncfusion® .NET MAUI Popup (SfPopup) control and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -49,7 +49,7 @@ public MainPage()
 
 {% endtabs %}
 
-![.NET MAUI Popup with zoom animation](Images/popup-animation//zoom-animation.gif)
+![Syncfusion .NET MAUI Popup with zoom animation](Images/popup-animation//maui-popup-zoom-animation.gif)
 
 ### Fade 
 
@@ -76,7 +76,7 @@ public MainPage()
 
 {% endtabs %}
 
-![.NET MAUI Popup with fade animation](Images/popup-animation//fade-animation.gif)
+![Syncfusion .NET MAUI Popup with fade animation](Images/popup-animation//maui-popup-fade-animation.gif)
 
 ### SlideOnLeft 
 
@@ -103,7 +103,7 @@ public MainPage()
 
 {% endtabs %}
 
-![.NET MAUI Popup with slide on left animation](Images/popup-animation//slideonleft-animation.gif)
+![Syncfusion .NET MAUI Popup with slide on left animation](Images/popup-animation//maui-popup-slideonleft-animation.gif)
 
 ### SlideOnRight
 
@@ -130,7 +130,7 @@ public MainPage()
 
 {% endtabs %}
 
-![.NET MAUI Popup with slide on right animation](Images/popup-animation//slideonright-animation.gif)
+![Syncfusion .NET MAUI Popup with slide on right animation](Images/popup-animation//maui-popup-slideonright-animation.gif)
 
 ### SlideOnTop 
 
@@ -158,7 +158,7 @@ public MainPage()
 {% endtabs %}
 
 
-![.NET MAUI Popup with slide on top animation](Images/popup-animation//slideontop-animation.gif)
+![Syncfusion .NET MAUI Popup with slide on top animation](Images/popup-animation//maui-popup-slideontop-animation.gif)
 
 ### SlideOnBottom
 
@@ -185,7 +185,7 @@ public MainPage()
 
 {% endtabs %}
 
-![.NET MAUI Popup with slide on bottom animation](Images/popup-animation//slideonbottom-animation.gif)
+![Syncfusion .NET MAUI Popup with slide on bottom animation](Images/popup-animation//maui-popup-slideonbottom-animation.gif)
 
 ### None
 

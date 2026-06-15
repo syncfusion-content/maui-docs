@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Features in .NET MAUI DockLayout Control | Syncfusion
+title: Features in .NET MAUI DockLayout Control | Syncfusion®
 description: Learn about features in the Syncfusion® .NET MAUI DockLayout (SfDockLayout) control, including spacing and child expansion behavior.
 platform: MAUI
 control: SfDockLayout
@@ -31,7 +31,7 @@ dockLayout.Children.Add(new Label() { Text = "None", WidthRequest = 45 });
 
 {% endtabs %}
 
-![.NET MAUI DockLayout Last Child not Expanded](DockLayout-Images/maui-docklayout-lastchild-alignment.png)
+![Syncfusion .NET MAUI DockLayout Last Child not Expanded](DockLayout-Images/maui-docklayout-lastchild-alignment.png)
 
 ## Spacing
 Customize the spacing between child elements using the [HorizontalSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_VerticalSpacing) properties.The default value for both is 0.
@@ -59,7 +59,7 @@ SfDockLayout dockLayout = new SfDockLayout()
 {% endtabs %}
 
 
-![Output of DockLayout with Spacing](DockLayout-Images/maui-docklayout-spacing.png)
+![Output of Syncfusion .NET MAUI DockLayout with Spacing](DockLayout-Images/maui-docklayout-spacing.png)
 
 ## GetDock
 The [GetDock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_GetDock_Microsoft_Maui_Controls_BindableObject_) method retrieves the docking position for a specified view within the layout.
@@ -145,4 +145,4 @@ SfDockLayout dockLayout = new SfDockLayout()
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Docklayout with RTL support](DockLayout-Images/maui-docklayout-right-to-left.png)
+![Syncfusion .NET MAUI Docklayout with RTL support](DockLayout-Images/maui-docklayout-right-to-left.png)

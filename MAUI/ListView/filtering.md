@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Filtering support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Filtering in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Filtering support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -90,9 +90,7 @@ private bool FilterContacts(object obj)
 {% endtabs %}
 
 The following screenshot shows the output rendered when the items are filtered:
-![MAUI ListView Filtering](Images/filtering/maui-listview-filtering-items.png)
-
-
+![Syncfusion .NET MAUI ListView Filtering](Images/filtering/maui-listview-filtering-items.png)
 
 ### Filter based on multiple criteria
 
@@ -166,7 +164,7 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 {% endtabs %}
 
 The following screenshot shows the output rendered when the filtered items are sorted:
-![MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sorting-filtered-items.png)
+![Syncfusion .NET MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sorting-filtered-items.png)
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Sorting support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
+title: Sorting in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here all about Sorting support in Syncfusion® .NET MAUI TreeView (SfTreeView) Control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -59,7 +59,7 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic sorting in .NET MAUI TreeView](images/sorting/maui-treeView-programmatic-sorting.gif)
+![Programmatic sorting in Syncfusion .NET MAUI TreeView](images/sorting/maui-treeView-programmatic-sorting.gif)
 
 N> It is mandatory to specify the `PropertyName` of `SortDescriptor` in programmatic sorting.
 

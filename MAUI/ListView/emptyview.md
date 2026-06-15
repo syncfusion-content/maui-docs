@@ -1,7 +1,7 @@
 ---
 layout: post
-title: EmptyView in .NET MAUI ListView control | Syncfusion
-description: Learn here all about EmptyView support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: EmptyView in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about EmptyView support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -79,7 +79,7 @@ listView.EmptyView = stackLayout;
 
 N> View displayed by the `EmptyView` can be a single view or a view that contains multiple child views.
 
-![EmptyView in .NET MAUI ListView](Images/emptyview/maui-listview-emptyview.jpg)
+![EmptyView in Syncfusion .NET MAUI ListView](Images/emptyview/maui-listview-emptyview.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-display-a-view-when-.net-maui-listview-has-no-items).
 
@@ -153,7 +153,7 @@ public class FilterItem : BindableObject
 
 FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.  
 
-![EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-emptyviewtemplate.jpg)
+![EmptyView Template in Syncfusion .NET MAUI ListView](Images/emptyview/maui-listview-emptyviewtemplate.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-appearance-of-empty-view-using-empty-view-template-in-.net-maui-listview).
 
@@ -224,9 +224,9 @@ private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![SingleView EmptyView in .NET MAUI ListView](Images/emptyview/maui-listview-singleview-emptyview.jpg)
+![SingleView EmptyView in Syncfusion .NET MAUI ListView](Images/emptyview/maui-listview-singleview-emptyview.jpg)
 
-![MultiView EmptyView in .NET MAUI ListView](Images/emptyview/maui-listview-multiview-emptyview.jpg)
+![MultiView EmptyView in Syncfusion .NET MAUI ListView](Images/emptyview/maui-listview-multiview-emptyview.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-at-run-time-in-.net-maui-listview).
 
@@ -314,8 +314,8 @@ public class EmptyViewDataTemplateSelector : Microsoft.Maui.Controls.DataTemplat
 
 Template for `EmptyView` is set to AdvancedTemplate when SearchBar.Text.Count() is greater than 10. Otherwise, set it to BasicTemplate.
 
-![SingleView EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-singleview-emptyview-template.jpg)
+![SingleView EmptyView Template in Syncfusion .NET MAUI ListView](Images/emptyview/maui-listview-singleview-emptyview-template.jpg)
 
-![MultiView EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-multiview-emptyview-template.jpg)
+![MultiView EmptyView Template in Syncfusion .NET MAUI ListView](Images/emptyview/maui-listview-multiview-emptyview-template.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-template-at-run-time-in-.net-maui-listview).

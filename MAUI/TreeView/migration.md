@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin SfTreeView to .NET MAUI SfTreeView | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin TreeView to Syncfusion .NET MAUI TreeView control and more.
+title: Migrate from Xamarin SfTreeView to .NET MAUI SfTreeView | Syncfusion®
+description: Learn here all about Migrating from Syncfusion® Xamarin TreeView to Syncfusion® .NET MAUI TreeView control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -93,9 +93,3 @@ To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-u
 <td>{{'[ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemLongPress)'| markdownify }}</td>
 <td>Occurs when the TreeViewItem's ContentView is long pressed.</td></tr>
 </table> 
-
-## Upcoming features
-
-  * Animation
-  * Checkbox
-  * LoadOnDemand

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in .NET MAUI SfListView control | Syncfusion
-description: Learn here all about Localization feature of Syncfusion .NET MAUI ListView (SfListView) control and its elements, and more.
+title: Localization in .NET MAUI SfListView control | Syncfusion®
+description: Learn here all about Localization feature of Syncfusion® .NET MAUI ListView (SfListView) control and its elements, and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -18,23 +18,23 @@ Application culture can be changed by setting the `CurrentUICulture` in the `App
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 12 13" %}
 
-      using Syncfusion.Maui.ListView;
-      using System.Globalization;
-      using System.Resources;
+using Syncfusion.Maui.ListView;
+using System.Globalization;
+using System.Resources;
 
-      namespace MauiListView
+namespace MauiListView
+{
+   public partial class App : Application
+   {
+      public App()
       {
-         public partial class App : Application
-         {
-            public App()
-            {
-                  InitializeComponent();             
-                  CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");   
-                  SfListViewResources.ResourceManager = new ResourceManager("MauiListView.Resources.SfListView", Application.Current!.GetType().Assembly);
-                  MainPage = new MainPage();
-            }
-         }
+            InitializeComponent();             
+            CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");   
+            SfListViewResources.ResourceManager = new ResourceManager("MauiListView.Resources.SfListView", Application.Current!.GetType().Assembly);
+            MainPage = new MainPage();
       }
+   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,5 +63,5 @@ To localize the `ListView` based on the `CurrentUICulture` using the `resource` 
 
    ![Shows the added resource file name value pair in the resource designer in.NET MAUI ListView](images/localization/maui-listview-shows-the-added-resource-file-name-value-pair-in-the-resource-designer.png)
 
-   ![Localized content in .NET MAUI ListView](images/localization/maui-listview-with-localized-content.png)
+   ![Localized content in Syncfusion .NET MAUI ListView](images/localization/maui-listview-with-localized-content.png)
 
