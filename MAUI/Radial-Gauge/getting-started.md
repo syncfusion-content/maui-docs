@@ -196,6 +196,9 @@ axis.Annotations.Add(annotation);
 gauge.Axes.Add(axis);
 Content = gauge;
 
+{% endhighlight %}
+{% endtabs %}
+
 ![MAUI Radial Gauge with Annotation](images/getting-started/maui-radial-gauge-gettingstarted.png)
 
 You can download the Radial Gauge Getting Started sample from [here](https://github.com/SyncfusionExamples/MAUI-Radial-Gauge-Getting-Started-)
