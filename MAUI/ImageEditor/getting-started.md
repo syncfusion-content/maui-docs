@@ -129,7 +129,7 @@ using Syncfusion.Maui.ImageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Loading an image to image editor
+## Step 5: Add a image editor component
 
 Initialize the [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) and load the images from different sources using [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property.
 
@@ -142,28 +142,15 @@ To load an image from a local path. The following code shows adding an image to 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
 
-<ContentPage 
-            . . .
-            <imageEditor:SfImageEditor Source="D:\images\image.jpeg"/>
-
-</ContentPage>
+    <imageEditor:SfImageEditor Source="D:\images\image.jpeg"/>
 
 {% endhighlight %}
 {% highlight C# hl_lines="9 10 11" %}
 
-using Syncfusion.Maui.ImageEditor;
-namespace SyncfusionImageEditor;
+    SfImageEditor imageEditor = new SfImageEditor();
+    imageEditor.Source = ImageSource.FromFile("D:\\images\\image.jpeg");
+    this.content = imageEditor;
 
-public partial class MainPage : ContentPage
-{
-	public MainPage()
-	{
-        InitializeComponent();
-        SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source = ImageSource.FromFile("D:\\images\\image.jpeg");
-        this.content = imageEditor;
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -174,28 +161,15 @@ To load an image from a remote URI, you can use the following code example.
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage 
-            . . .
-            <imageEditor:SfImageEditor Source="https://dummyimage.com/300x200/000/fff.png"/>
-
-</ContentPage>
+    <imageEditor:SfImageEditor Source="https://dummyimage.com/300x200/000/fff.png"/>
 
 {% endhighlight %}
 {% highlight C#  %}
 
-using Syncfusion.Maui.ImageEditor;
-namespace SyncfusionImageEditor;
+    SfImageEditor imageEditor = new SfImageEditor();
+    imageEditor.Source = ImageSource.FromUri(new Uri("https://dummyimage.com/300x200/000/fff.png"));
+    this.content = imageEditor;
 
-public partial class MainPage : ContentPage
-{
-	public MainPage()
-	{
-        InitializeComponent();
-        SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source = ImageSource.FromUri(new Uri("https://dummyimage.com/300x200/000/fff.png"));
-        this.content = imageEditor;
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -232,28 +206,15 @@ The following code shows adding an image to the image editor control.
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage 
-            . . .
-            <imageEditor:SfImageEditor Source="image.jpeg"/>
-
-</ContentPage>
+    <imageEditor:SfImageEditor Source="image.jpeg"/>
 
 {% endhighlight %}
 {% highlight C#  %}
 
-using Syncfusion.Maui.ImageEditor;
-namespace SyncfusionImageEditor;
+    SfImageEditor imageEditor = new SfImageEditor();
+    imageEditor.Source =  ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
+    this.content = imageEditor;
 
-public partial class MainPage : ContentPage
-{
-	public MainPage()
-	{
-        InitializeComponent();
-        SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source =  ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
-        this.content = imageEditor;
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -264,21 +225,13 @@ To load an image from a byte array, use the provided code example for stream-bas
 {% tabs %}
 {% highlight C#  %}
 
-using Syncfusion.Maui.ImageEditor;
 using System.Reflection;
-namespace SyncfusionImageEditor;
 
-public partial class MainPage : ContentPage
-{
-	public MainPage()
-	{
-        InitializeComponent();
-        SfImageEditor imageEditor = new SfImageEditor();
-        Assembly assembly = Assembly.GetExecutingAssembly();
-        imageEditor.Source = ImageSource.FromStream(() => assembly.GetManifestResourceStream("MyProject.Resources.Images.image.jpeg"))
-        this.content = imageEditor;
-    }
-}
+SfImageEditor imageEditor = new SfImageEditor();
+Assembly assembly = Assembly.GetExecutingAssembly();
+imageEditor.Source = ImageSource.FromStream(() => assembly.GetManifestResourceStream("MyProject.Resources.Images.image.jpeg"))
+this.content = imageEditor;
+
 {% endhighlight %}
 {% endtabs %}
 

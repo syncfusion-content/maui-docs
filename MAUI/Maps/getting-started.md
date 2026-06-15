@@ -129,11 +129,13 @@ using Syncfusion.Maui.Maps;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Set GeoJSON data or shapefile for shape layer from various source
+## Step 5: Add a Maps component
 
 Initialize the [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html) and add a [`Layer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer) collection  which contains [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) elements. The actual geographical rendering is done in the each [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property of the [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) is of type [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) can be set as the .json source or shapefile.
 
 I> The Mercator projection is the default projection in the maps.
+
+### Set GeoJSON data or shapefile for shape layer from various source
 
 The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property is used to load shapes from different sources:
 
@@ -144,25 +146,7 @@ The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.Ma
 
 ### Loading a local file
 
-SfMaps provides support to load the json data or shapefile from local path. 
-
-{% tabs %}
-
-{% highlight c# %}
-
-public MainPage()
-{
-    InitializeComponent();
-    SfMaps map = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
-    map.Layer = layer;
-    this.Content = map;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
+`SfMaps` provides support to load the json data or shapefile from local path. 
 
 The [`MapSource.FromFile`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) method requires a string argument, and returns a new [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html) object that reads the data from the shape source file. There's also an implicit conversion operator that enables the filename to be specified as a string argument to the [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property
 
@@ -180,15 +164,11 @@ The [`MapSource.FromFile`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.M
 
 {% highlight c# %}
 
-public MainPage()
-{
-    InitializeComponent();
-    SfMaps map = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
-    map.Layer = layer;
-    this.Content = map;
-}
+SfMaps map = new SfMaps();
+MapShapeLayer layer = new MapShapeLayer();
+layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
+map.Layer = layer;
+this.Content = map;
 
 {% endhighlight %}
 
@@ -197,24 +177,6 @@ public MainPage()
 ### Load a remote file
 
 SfMaps provides support to load the json data or shapefile from the uri.
-
-{% tabs %}
-
-{% highlight c# %}
-
-public MainPage()
-{
-    InitializeComponent();
-    SfMaps map = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-    map.Layer = layer;
-    this.Content = map;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
 
 The [`MapSource.FromUri`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) method requires a Uri argument, and returns a new [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html) object that reads the shape source from the Uri. There's also an implicit conversion for string-based URIs.
 
@@ -232,15 +194,11 @@ The [`MapSource.FromUri`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 {% highlight c# %}
 
-public MainPage()
-{
-    InitializeComponent();
-    SfMaps map = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-    map.Layer = layer;
-    this.Content = map;
-}
+SfMaps map = new SfMaps();
+MapShapeLayer layer = new MapShapeLayer();
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+map.Layer = layer;
+this.Content = map;
 
 {% endhighlight %}
 
@@ -260,15 +218,11 @@ N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/suppo
 
 {% highlight c# %}
 
-public MainPage()
-{
-    InitializeComponent();
-    SfMaps map = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
-    map.Layer = layer;
-    this.Content = map;
-}
+SfMaps map = new SfMaps();
+MapShapeLayer layer = new MapShapeLayer();
+layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+map.Layer = layer;
+this.Content = map;
 
 {% endhighlight %}
 
@@ -282,17 +236,13 @@ SfMaps provides support to load the json data or shapefile as bytes from stream.
 
 {% highlight C# %}
 
-public MainPage()
-{
-    InitializeComponent();
-    SfMaps map = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
-    var jsonStream = assembly?.GetManifestResourceStream("MyProject.Assets.australia.json");
-    layer.ShapesSource = MapSource.FromStream(jsonStream);
-    map.Layer = layer;
-    this.Content = map;
-}
+SfMaps map = new SfMaps();
+MapShapeLayer layer = new MapShapeLayer();
+Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
+var jsonStream = assembly?.GetManifestResourceStream("MyProject.Assets.australia.json");
+layer.ShapesSource = MapSource.FromStream(jsonStream);
+map.Layer = layer;
+this.Content = map;
 
 {% endhighlight %}
 

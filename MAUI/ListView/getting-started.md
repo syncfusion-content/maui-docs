@@ -110,7 +110,7 @@ builder.ConfigureSyncfusionCore();
 
 {% endhighlight %} 
 
-## Step 5: Define the model and view model
+## Step 4: Define the model and view model
 
 ### Data Model
 
@@ -198,7 +198,7 @@ public class BookInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Import the ListView namespace
+## Step 5: Import the ListView namespace
  
 Add the following namespace in your XAML or C#.
  
@@ -215,25 +215,9 @@ using Syncfusion.Maui.ListView;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add a ListView and binding the data
+## Step 6: Add a ListView with an item template
 
-Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) and use the `ItemsSource` property to bind and display a collection of data.
-
-{% tabs %}
-{% highlight xaml %}
-   <syncfusion:SfListView x:Name="listView" 
-                   ItemsSource="{Binding BookInfo}" />
-{% endhighlight %}
-
-{% highlight c# %}
-BookInfoRepository viewModel = new BookInfoRepository ();
-listView.ItemsSource = viewModel.BookInfo; 
-{% endhighlight %}
-{% endtabs %}
-
-## Step 6: Defining an item template
- 
- By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
+Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) and use the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to bind and display a collection of data. By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -259,7 +243,7 @@ listView.ItemsSource = viewModel.BookInfo;
 		SfListView listView = new SfListView();
         listView.ItemSize = 100;
         listView.ItemsSource = viewModel.BookInfo;
-        
+
         listView.ItemTemplate = new DataTemplate(() => {
         var grid = new Grid();
         grid.RowDefinitions.Add(new RowDefinition());
