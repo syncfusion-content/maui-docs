@@ -19,98 +19,24 @@ To get started quickly with our .NET MAUI Parallax View, you can check the below
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
-
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Click **Next**.
-3. Select the .NET framework version and click **Create**.
+2. Name the project and choose a location. Then, click **Next.**
+3. Select the .NET framework version and click **Create.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Parallax View Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
-1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ParallaxView](https://www.nuget.org/packages/Syncfusion.Maui.ParallaxView/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
-
-using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ParallaxViewGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Parallax View
-
-1. To initialize the control, import the `Syncfusion.Maui.ParallaxView` namespace.
-2. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:parallaxView="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
-    <Grid>
-        <parallaxView:SfParallaxView/>
-    </Grid>
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.ParallaxView;
-namespace ParallaxViewGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();  
-            Grid grid = new Grid();         
-            SfParallaxView parallaxView = new SfParallaxView(); 
-            grid.Children.Add(parallaxView);
-            this.Content = grid;
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
-
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
@@ -121,94 +47,20 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a .NET MAUI project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Parallax View Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.ParallaxView` to install the Syncfusion<sup>®</sup> .NET MAUI ParallaxView NuGet package.
-4. To ensure all dependencies are installed, run `dotnet restore`.
-
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
-
-using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ParallaxViewGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Parallax View
-
-1. To initialize the control, import the `Syncfusion.Maui.ParallaxView` namespace.
-2. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:parallaxView="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
-    <Grid>
-        <parallaxView:SfParallaxView/>
-    </Grid>
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.ParallaxView;
-namespace ParallaxViewGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();  
-            Grid grid = new Grid();         
-            SfParallaxView parallaxView = new SfParallaxView(); 
-            grid.Children.Add(parallaxView);
-            this.Content = grid;
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.ParallaxView](https://www.nuget.org/packages/Syncfusion.Maui.ParallaxView/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -219,97 +71,65 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI ParallaxView NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ParallaxView](https://www.nuget.org/packages/Syncfusion.Maui.ParallaxView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+{% endtabcontent %}
+{% endtabcontents %}
 
-Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
+## Step 3: Register Syncfusion handler
 
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
+To enable Syncfusion components in your .NET MAUI application, you need to register the Syncfusion core handler.
 
-using Microsoft.Extensions.Logging;
+### Add the Required Namespace
+
+First, include the Syncfusion core hosting namespace in your MauiProgram.cs file:
+
+{% highlight MauiProgram.cs %}
+
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ParallaxViewGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+{% endhighlight %} 
 
-            return builder.Build();
-        }
-    }
-}
+### Register the Syncfusion Handler
 
-{% endhighlight %}
-{% endtabs %} 
+Next, register the Syncfusion handler inside the MauiProgram.cs file's CreateMauiApp method. 
 
-## Step 4: Add .NET MAUI Parallax View
+{% highlight MauiProgram.cs %}
 
-1. To initialize the control, import the `Syncfusion.Maui.ParallaxView` namespace.
-2. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
+builder.ConfigureSyncfusionCore();
 
-{% tabs %} 
+{% endhighlight %} 
+
+## Step 4: Import the Parallax View namespace
+ 
+Add the following namespace in your XAML or C#.
+ 
+{% tabs %}
 {% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:parallaxView="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
-    <Grid>
-        <parallaxView:SfParallaxView/>
-    </Grid>
-</ContentPage>
-
+ 
+xmlns:parallaxView="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView"
+ 
 {% endhighlight %}
-
-{% highlight C# %}
-
+{% highlight c# %}
+ 
 using Syncfusion.Maui.ParallaxView;
-namespace ParallaxViewGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();  
-            Grid grid = new Grid();         
-            SfParallaxView parallaxView = new SfParallaxView(); 
-            grid.Children.Add(parallaxView);
-            this.Content = grid;
-        }
-    }   
-}
-
+ 
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
-
-{% endtabcontents %}
-
 ## Step 5: Add Content and Bind source to the parallax view
 
-The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) represents the background view of a parallax view. Set any kind of view to the Content property, such as Image and StackLayout.
+Initialize the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content), it represents the background view of a parallax view. Set any kind of view to the Content property, such as Image and StackLayout.
 
 The [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) represents the foreground view of the parallax view. The value of the Source should be a scrollable content or the view which implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface.
 
@@ -319,37 +139,32 @@ The following code sample demonstrates how to bind the Syncfusion<sup>®</sup> L
 
 {% highlight xaml %}
 
-<ContentPage xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView"
-    xmlns:list="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
-    <ContentPage.Content>
-        <Grid>
-            <parallax:SfParallaxView Source="{x:Reference Name = listview}" x:Name="parallaxview" >
-                <parallax:SfParallaxView.Content>
-                    <Image BackgroundColor="Transparent" Source="{Binding Image}" Aspect="AspectFill" />
-                </parallax:SfParallaxView.Content>
-            </parallax:SfParallaxView> 
-            <list:SfListView x:Name="listview" ItemsSource="{Binding Items}">
-                <list:SfListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.5*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Image BackgroundColor="Transparent" Source="{Binding ItemImage}" Grid.Column="0" Aspect="AspectFit" />
-                                <StackLayout BackgroundColor="Transparent" Grid.Column="1">
-                                    <Label HorizontalOptions="FillAndExpand" TextColor="White" Text="{Binding Name}"/>
-                                    <Label HorizontalOptions="FillAndExpand" Text="{Binding Author}" TextColor="White"/>
-                                </StackLayout>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </list:SfListView.ItemTemplate>
-            </list:SfListView>
-        </Grid>
-    </ContentPage.Content>	
-</ContentPage>
+<Grid>
+    <parallax:SfParallaxView Source="{x:Reference Name = listview}" x:Name="parallaxview" >
+        <parallax:SfParallaxView.Content>
+            <Image BackgroundColor="Transparent" Source="{Binding Image}" Aspect="AspectFill" />
+        </parallax:SfParallaxView.Content>
+    </parallax:SfParallaxView> 
+        <list:SfListView x:Name="listview" ItemsSource="{Binding Items}">
+            <list:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image BackgroundColor="Transparent" Source="{Binding ItemImage}" Grid.Column="0" Aspect="AspectFit" />
+                            <StackLayout BackgroundColor="Transparent" Grid.Column="1">
+                                <Label HorizontalOptions="FillAndExpand" TextColor="White" Text="{Binding Name}"/>
+                                <Label HorizontalOptions="FillAndExpand" Text="{Binding Author}" TextColor="White"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </list:SfListView.ItemTemplate>
+        </list:SfListView>
+</Grid>
 
 {% endhighlight %}
 

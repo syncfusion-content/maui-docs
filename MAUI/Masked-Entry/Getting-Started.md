@@ -111,7 +111,7 @@ builder.ConfigureSyncfusionCore();
 
 {% endhighlight %} 
 
-## Step 4: Import the MarkdownViewer namespace
+## Step 4: Import the Masked Entry namespace
  
 Add the following namespace in your XAML or C#.
  
