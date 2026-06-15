@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Description in .NET MAUI Step ProgressBar Control | Syncfusion<sup>&reg;</sup>
+title: Description in .NET MAUI Step ProgressBar Control | Syncfusion
 description: Learn here all about Description support in Syncfusion<sup>&reg;</sup> .NET MAUI Step ProgressBar (SfStepProgressBar) control and more.
 platform: maui
 control: SfStepProgressBar
@@ -9,6 +9,32 @@ documentation: ug
 
 # Description in .NET MAUI StepProgressBar (Step Progress Bar)
 Each step in a multi-step process has a different operation. To display information about a step's status can be shown on either side. A primary description will be on the right or bottom of the step, and a secondary description will be on the left or top of the step.
+
+## ActiveStepIndex
+The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex) property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue) property is used to add the progress value of the currently active step within a sequence.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
+
+<stepProgressBar:SfStepProgressBar
+                    x:Name="stepProgress"
+                    ActiveStepIndex="3"
+                    ActiveStepProgressValue="40">
+</stepProgressBar:SfStepProgressBar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+
+SfStepProgressBar stepProgressBar = new SfStepProgressBar()
+{
+    ActiveStepIndex = 3,
+    ActiveStepProgressValue = 40,
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+N> If `ActiveStepIndex` value is less than 0, first step will be marked as `NotStarted` step status. If `ActiveStepIndex` value is greater than the step count, all the steps will be marked as `Completed` step status.
 
 ## Text 
 The primary and secondary descriptions for a step view can be set using the [PrimaryText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_PrimaryText) and [SecondaryText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_SecondaryText) properties, as demonstrated in the following code example.

@@ -20,10 +20,10 @@ To get start quickly with our [.NET MAUI Rich Text Editor](https://help.syncfusi
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New MAUI Project
 
@@ -95,11 +95,8 @@ Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
-             x:Class="RichTextEditorSample.MainPage">
+<ContentPage ...
+             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
     <Grid>
         <rte:SfRichTextEditor />
     </Grid>
@@ -135,9 +132,9 @@ namespace RichTextEditorSample
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -212,11 +209,8 @@ Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
-             x:Class="RichTextEditorSample.MainPage">
+<ContentPage ...
+             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
     <Grid>
         <rte:SfRichTextEditor />
     </Grid>
@@ -253,8 +247,8 @@ namespace RichTextEditorSample
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -329,11 +323,8 @@ Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
-             x:Class="RichTextEditorSample.MainPage">
+<ContentPage ...
+             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
     <Grid>
         <rte:SfRichTextEditor />
     </Grid>
@@ -363,7 +354,6 @@ namespace RichTextEditorSample
 {% endtabs %}
 
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 ## Enable the Toolbar
@@ -389,49 +379,3 @@ this.Content = richTextEditor;
 {% endtabs %}
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
-
-## Customize Toolbar Items
-
-By default, the toolbar shows a predefined set of items. You can customize which items are displayed by populating the [ToolbarItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToolbarItems) collection.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<rte:SfRichTextEditor ShowToolbar="True">
-    <rte:SfRichTextEditor.ToolbarItems>
-        <rte:RichTextToolbarItem Type="Bold" />
-        <rte:RichTextToolbarItem Type="Italic" />
-        <rte:RichTextToolbarItem Type="Underline" />
-        <rte:RichTextToolbarItem Type="Separator" />
-        <rte:RichTextToolbarItem Type="NumberList" />
-        <rte:RichTextToolbarItem Type="BulletList" />
-        <rte:RichTextToolbarItem Type="Separator" />
-        <rte:RichTextToolbarItem Type="Hyperlink" />
-        <rte:RichTextToolbarItem Type="Image" />
-    </rte:SfRichTextEditor.ToolbarItems>
-</rte:SfRichTextEditor>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRichTextEditor richTextEditor = new SfRichTextEditor();
-ShowToolbar = true;
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.Bold });
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.Italic });
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.Underline });
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.Separator });
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.NumberList });
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.BulletList });
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.Separator });
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.Hyperlink });
-richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolbarOptions.Image });
-this.Content = richTextEditor;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N> You can find the getting started sample of .NET MAUI SfRichTextEditor from this [link](https://github.com/SyncfusionExamples/maui-richtexteditor-samples).
-

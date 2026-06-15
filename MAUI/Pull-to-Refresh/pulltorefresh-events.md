@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI PullToRefresh control | Syncfusion
-description: Learn about Events support in the Syncfusion .NET MAUI PullToRefresh (SfPullToRefresh) control and more.
+title: Events in .NET MAUI PullToRefresh control | Syncfusion®
+description: Learn about Events support in the Syncfusion® .NET MAUI PullToRefresh (SfPullToRefresh) control and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
@@ -27,19 +27,19 @@ The [Pulling](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
-                                PullingEvent="OnPullToRefreshPulling" />
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+                            PullingEvent="OnPullToRefreshPulling" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-    pullToRefresh.Pulling += OnPullToRefreshPulling;
+pullToRefresh.Pulling += OnPullToRefreshPulling;
 
-    private void OnPullToRefreshPulling(object sender, PullingEventArgs args)
-    {
-        args.Cancel = false;
-        var progress = args.Progress;
-    }
+private void OnPullToRefreshPulling(object sender, PullingEventArgs args)
+{
+    args.Cancel = false;
+    var progress = args.Progress;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -51,20 +51,20 @@ The [Refreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefre
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
-                                Refreshing="OnPullToRefreshRefreshing" />
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+                            Refreshing="OnPullToRefreshRefreshing" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-    pullToRefresh.Refreshing += OnPullToRefreshRefreshing;
-   
-    private async void OnPullToRefreshRefreshing(object sender, EventArgs args)
-    {
-        pullToRefresh.IsRefreshing = true;
-        await Task.Delay(2000);
-        pullToRefresh.IsRefreshing = false;
-    }
+pullToRefresh.Refreshing += OnPullToRefreshRefreshing;
+
+private async void OnPullToRefreshRefreshing(object sender, EventArgs args)
+{
+    pullToRefresh.IsRefreshing = true;
+    await Task.Delay(2000);
+    pullToRefresh.IsRefreshing = false;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -76,17 +76,17 @@ The [Refreshed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefres
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfPullToRefresh x:Name=" pullToRefresh" 
-                                Refreshed="OnPullToRefreshRefreshed" />
+<syncfusion:SfPullToRefresh x:Name=" pullToRefresh" 
+                            Refreshed="OnPullToRefreshRefreshed" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-    pullToRefresh.Refreshed += OnPullToRefreshRefreshed;
-    
-    private void OnPullToRefreshRefreshed(object sender , EventArgs args)
-    {
-    }
+pullToRefresh.Refreshed += OnPullToRefreshRefreshed;
+
+private void OnPullToRefreshRefreshed(object sender , EventArgs args)
+{
+}
 
 {% endhighlight %}
 {% endtabs %}

@@ -62,6 +62,34 @@ rating.ItemCount = 4;
 {% endtabs %}
 
 ![Set number of rating items](images/item-count.png)
+
+## Set Value
+
+The display value can be set in the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control, which is selected among the items. The following code example shows the display value of three with five rating items. The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property is used to set display value.
+
+N> The default value of this property is 0.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<rating:SfRating Value="3" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRating rating;
+public MainPage()
+{
+    InitializeComponent();
+    rating = new SfRating();
+    rating.Value = 3;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
  
 ## Set Space between Items
 
