@@ -140,6 +140,8 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Barcode Generator Intialize Barcode](images/getting-started/maui-intialize-barcode.png)
 
+You can download the Barcode Generator Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-barcode-generator)
+
 N> The default symbology of SfBarcodeGenerator is [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html).
 
 N> You can refer to our [.NET MAUI Barcode Generator](https://www.syncfusion.com/maui-controls/maui-barcodes) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Barcode Generator example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Barcode) that shows you how to render the Barcode Generator in .NET MAUI.

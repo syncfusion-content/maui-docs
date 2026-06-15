@@ -191,6 +191,12 @@ SfAutocomplete autocomplete = new SfAutocomplete
 {% endhighlight %}
 {% endtabs %}
 
+The following image illustrates the output:
+
+![.NET MAUI Autocomplete](Images/GettingStarted/SingleSelection.gif)
+
+You can download the Autocomplete Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-autocomplete-control)
+
 N> Set the BindingContext of your page to an instance of SocialMediaViewModel. This allows you to bind the properties of SocialMediaViewModel to the Autocomplete control.
 
 N> When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain DisplayMemberPath binding
