@@ -33,29 +33,29 @@ Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless expe
 
 Below is a summary of globalization capabilities supported by Syncfusion<sup>®</sup> .NET MAUI controls:
 
-
-<div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-    <img src="../Images/full-support.svg" alt="full-support" width="16" style="display:inline-block;">
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/full-support.svg" alt="full-support" width="16">
     <span>Full Support</span>
 </div>
 
-<div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-    <img src="../Images/partial-support.svg" alt="partial-support" width="16" style="display:inline-block;">
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/partial-support.svg" alt="partial-support" width="16">
     <span>Partial Support</span>
 </div>
 
-<div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-    <img src="../Images/no-support.svg" alt="no-support" width="16" style="display:inline-block;">
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto; margin-bottom:6px;">
+    <img src="../Images/no-support.svg" alt="no-support" width="16">
     <span>No Support</span>
 </div>
 
-<div style="display:flex; align-items:center; gap:8px;">
-    <img src="../Images/not-applicable.svg" alt="not-applicable" width="16" style="display:inline-block;">
+<div style="display:flex; align-items:center; justify-content:flex-start; gap:8px; width:auto;">
+    <img src="../Images/not-applicable.svg" alt="not-applicable" width="16">
     <span>Not Applicable</span>
 </div>
 
-<table>
+<br>
 
+<table>
 <tr>
   <th>Control</th>
   <th>Localization</th>
@@ -120,13 +120,13 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/barcode-generator/overview">Barcode Generator<a></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /><br/></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /><br/></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /><br/></td>
-</tr> 
+  <td><a href="/maui/barcode-generator/overview">Barcode Generator</a></td>
+  <td><img src="../Images/no-support.svg" alt="no-support" width="16" /><br/></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/no-support.svg" alt="no-support" width="16" /><br/></td>
+  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+  <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /><br/></td>
+</tr>
 
 <tr>
 <td><a href="/maui/busy-indicator/overview">Busy Indicator</a></td>
@@ -481,8 +481,8 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 <tr>
 <td><a href="/maui/radial-menu/overview">Radial Menu</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td><td>
-<img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /><br/></td>
@@ -696,6 +696,9 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 </table>  
+
+<br>
+
 
 
 ## See Also  
