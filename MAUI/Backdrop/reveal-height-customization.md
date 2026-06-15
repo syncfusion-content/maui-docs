@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reveal height customization of Syncfusion<sup>&reg;</sup> Backdrop Page | Syncfusion<sup>&reg;</sup>
+title: Reveal height customization of Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop Page | Syncfusion<sup>&reg;</sup>
 description: Learn here all about how to configure and customize the reveal height in the Syncfusion<sup>&reg;</sup> backdrop page control.
 platform: MAUI
 control: SfBackdropPage
