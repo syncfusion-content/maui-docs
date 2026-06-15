@@ -130,7 +130,7 @@ using Syncfusion.Maui.Inputs;
 
 ## Step 5: Adding Mask to the Masked Entry
 
-### Initialize MaskedEntry control using simple mask
+Initialize the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) and set its `MaskType` property to define a mask format
 
 {% tabs %}
 {% highlight xaml %}
@@ -153,30 +153,6 @@ maskedEntry.Mask = "00/00/0000";
 {% endtabs %}
 
 ![Simple mask in .NET MAUI Masked Entry.](maskedentry_images/net-maui-masked-entry-simple-mask.png)
-
-### Initialize MaskedEntry control using RegEx mask
-
-{% tabs %}
-{% highlight xaml %}
-
-<editors:SfMaskedEntry WidthRequest="200"
-                       ClearButtonVisibility="WhileEditing"
-                       MaskType="RegEx"
-                       Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = 200;
-maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
-maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
-maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}";
-
-{% endhighlight %}
-{% endtabs %}
-
-![RegEx mask in .NET MAUI Masked Entry.](maskedentry_images/net-maui-masked-entry-regex-mask.png)
 
 N> 
 Get the complete getting started sample from the [GitHub](https://github.com/SyncfusionExamples/maui-maskedentry-samples) link.
