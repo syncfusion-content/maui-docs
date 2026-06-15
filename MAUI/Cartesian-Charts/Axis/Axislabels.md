@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui chart axis labels, axis labels customization .net maui, syncfusion maui chart axis labels, cartesian chart axis labels maui, customize axis labels .net maui chart, .net maui chart labels per 100 pixels.
 ---
 
-# Axis labels in .NET MAUI Chart
+# Axis labels in .NET MAUI Cartesian Chart
 
 Axis labels are used to show the units or measures or category value of axis to visualize the data user friendly. It will be generated based on the range and the values binded to [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) or [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties of series.
 
@@ -292,3 +292,54 @@ The `MaximumLabels` property in [ChartAxis](https://help.syncfusion.com/cr/maui/
 ![Maximum Labels in .NET MAUI SfCartesianChart.](axis_images/maui_chart_axis_maximum_labels.png)
 
 N> `MaximumLabels` only applies during automatic interval calculation. It will have no effect if the `Interval` property is manually set on the axis.
+
+## Event
+
+### AxisLabelTapped
+
+The `AxisLabelTapped` event occurs when a user taps on an axis label. The following properties are included in the event arguments:
+
+* `Axis` - Gets the associated axis where the label was tapped.
+* `AxisLabel` - Gets the `ChartAxisLabel` object, which contains details about the tapped label.
+* `Position` - Gets the screen coordinates (X, Y) of the tap location in device-independent pixels.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart AxisLabelTapped="OnAxisLabelTapped">
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>
+
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Category"
+                        YBindingPath="Value"/>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+private void OnAxisLabelTapped(object sender, AxisLabelTappedEventArgs e)
+{
+    var axis = e.Axis;
+    var axisLabel = e.AxisLabel;
+    var tapPosition = e.Position;
+
+    string message = $"Label: {axisLabel.Content}\n" +
+                     $"Position: {axisLabel.Position:F2}\n" +
+                     $"Axis: {axis.GetType().Name}\n" +
+                     $"Tap Location: ({tapPosition.X:F0}, {tapPosition.Y:F0})";
+
+    DisplayAlertAsync("Axis Label Details", message, "OK");
+}
+
+{% endhighlight %}
+
+{% endtabs %}

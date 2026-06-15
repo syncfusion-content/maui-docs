@@ -49,6 +49,9 @@ The appearance of the tooltip can be customized using the following properties:
 * [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_Duration) of type `int`, specifies how long the tooltip should be displayed (in milliseconds).
 * [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_Margin) of type `Thickness`, specifies the margin around the tooltip content.
 * [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_TextColor) of type `Color`, specifies the color of the tooltip text.
+* `Stroke` - Gets or sets the border color of the tooltip.
+* `StrokeWidth` - Gets or sets the thickness of the tooltip border.
+* `UseSeriesFillColor` - Gets or sets a value indicating whether the tooltip background should use the fill color of the associated series. When set to `true`, the tooltip adopts the series color as its background.
 
 {% tabs %}
 
