@@ -32,73 +32,6 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram 
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            builder.ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %} 
-{% endtabs %}
- 
-## Step 4: Add a basic TreeView
-
- 1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
- 2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
-
-{% tabs %}
-{% highlight xaml hl_lines="5" %}
-
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
-
-    <syncfusion:SfTreeView />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# hl_lines="9" %}
-
-using Syncfusion.Maui.TreeView;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeView treeView = new SfTreeView();
-        this.Content = treeView;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -123,75 +56,7 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram 
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            builder.ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %} 
-{% endtabs %}
- 
-## Step 4: Add a basic TreeView
-
- 1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
- 2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
-
-{% tabs %}
-{% highlight xaml hl_lines="5" %}
-
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
-
-    <syncfusion:SfTreeView />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# hl_lines="9" %}
-
-using Syncfusion.Maui.TreeView;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeView treeView = new SfTreeView();
-        this.Content = treeView;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -214,81 +79,43 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+{% endtabcontent %}
+{% endtabcontents %}
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram 
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            builder.ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %} 
-{% endtabs %}
+## Step 3: Register Syncfusion handler
  
-## Step 4: Add a basic TreeView
+Make sure to add the namespace.
+ 
+{% highlight MauiProgram.cs %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %}
+ 
+Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
+ 
+{% highlight MauiProgram.cs %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %}
+ 
+## Step 4: Import the TreeView namespace
 
- 1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
- 2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
+Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
+{% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
-
-    <syncfusion:SfTreeView />
-</ContentPage>
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
 
 {% endhighlight %}
-{% highlight c# hl_lines="9" %}
+{% highlight c# %}
 
 using Syncfusion.Maui.TreeView;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeView treeView = new SfTreeView();
-        this.Content = treeView;
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
-{% endtabcontent %}
+## Step 5: Add the TreeView Component
 
-## Step 5: Data population
-
-TreeView can be populated either with the data source by using a [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) or by creating & adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
-
-### Populating nodes without data source - unbound mode
+Initialize the `TreeView` control and configure its properties to display hierarchical data in an organized and interactive structure. TreeView can be populated either with the data source by using a [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) or by creating & adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
 
 You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
 
@@ -297,76 +124,45 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-             xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
-             x:Class="GettingStarted.MainPage">
-    <ContentPage.Content>
-       <syncfusion:SfTreeView x:Name="treeView" ExpandActionTarget="Node" FullRowSelect="True">
-            <syncfusion:SfTreeView.Nodes>
-                <treeviewengine:TreeViewNode Content="Australia" IsExpanded="True">
+<syncfusion:SfTreeView x:Name="treeView" ExpandActionTarget="Node" FullRowSelect="True">
+    <syncfusion:SfTreeView.Nodes>
+        <treeviewengine:TreeViewNode Content="Australia" IsExpanded="True">
+            <treeviewengine:TreeViewNode.ChildNodes>
+                <treeviewengine:TreeViewNode Content="New South Wales" IsExpanded="True">
                     <treeviewengine:TreeViewNode.ChildNodes>
-                        <treeviewengine:TreeViewNode Content="New South Wales" IsExpanded="True">
-                            <treeviewengine:TreeViewNode.ChildNodes>
-                        <treeviewengine:TreeViewNode Content="Sydney" IsExpanded="True"/>
-                    </treeviewengine:TreeViewNode.ChildNodes>
-                </treeviewengine:TreeViewNode>
+                <treeviewengine:TreeViewNode Content="Sydney" IsExpanded="True"/>
+            </treeviewengine:TreeViewNode.ChildNodes>
+            </treeviewengine:TreeViewNode>
                 <treeviewengine:TreeViewNode Content="Victoria" IsExpanded="True">
                     <treeviewengine:TreeViewNode.ChildNodes>
                         <treeviewengine:TreeViewNode Content="Melbourne" IsExpanded="True"/>
                         <treeviewengine:TreeViewNode Content="Canada" IsExpanded="True"/>
                     </treeviewengine:TreeViewNode.ChildNodes>
                 </treeviewengine:TreeViewNode>
-                </treeviewengine:TreeViewNode.ChildNodes>
-            </treeviewengine:TreeViewNode>
-        </syncfusion:SfTreeView.Nodes>
-    </syncfusion:SfTreeView>
-    </ContentPage.Content>
-</ContentPage>
+            </treeviewengine:TreeViewNode.ChildNodes>
+        </treeviewengine:TreeViewNode>
+    </syncfusion:SfTreeView.Nodes>
+</syncfusion:SfTreeView>
 
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.TreeView;
-using Syncfusion.TreeView.Engine;
-using System;
-
-namespace GettingStarted
-{
-    public class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTreeView treeView = new SfTreeView();
-
-            var australia = new TreeViewNode() { Content = "Australia" };
-            var nsw = new TreeViewNode() { Content = "New South Wales" };
-            var sydney = new TreeViewNode{ Content = "Sydney", IsExpanded = true };
-            var canberra = new TreeViewNode{ Content = "Canberra",IsExpanded = true };
-            var newcastle = new TreeViewNode{ Content = "Newcastle–Maitland", IsExpanded = true};
-            newSouthWales.ChildNodes.Add(sydney);
-            newSouthWales.ChildNodes.Add(canberra);
-            newSouthWales.ChildNodes.Add(newcastle);
-            australia.ChildNodes.Add(newSouthWales);
-            treeView.Nodes.Add(australia);
-
-            this.Content = treeView;
-        }
-    }
-}
+SfTreeView treeView = new SfTreeView();
+var australia = new TreeViewNode() { Content = "Australia" };
+var nsw = new TreeViewNode() { Content = "New South Wales" };
+var sydney = new TreeViewNode{ Content = "Sydney", IsExpanded = true };
+var canberra = new TreeViewNode{ Content = "Canberra",IsExpanded = true };
+var newcastle = new TreeViewNode{ Content = "Newcastle–Maitland", IsExpanded = true};
+newSouthWales.ChildNodes.Add(sydney);
+newSouthWales.ChildNodes.Add(canberra);
+newSouthWales.ChildNodes.Add(newcastle);
+australia.ChildNodes.Add(newSouthWales);
+treeView.Nodes.Add(australia);
+this.Content = treeView;
 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the application
-
-Press **F5** to build and run the application. Once compiled, the TreeView will be displayed with the data provided.
-
-Here is the result of the previous codes,
-
-Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
-
 ![.NET MAUI TreeView getting started UnBoundMode](Images/getting-started/maui_treeview.png)
+
+You can download the TreeView Getting Started sample from [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).

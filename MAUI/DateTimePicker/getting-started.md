@@ -37,72 +37,6 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Date time picker control
-
-1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
-2. Initialize [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
-    <picker:SfDateTimePicker />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Picker;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        this.Content = picker;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -128,72 +62,6 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Picker` to install the Syncfusion<sup>®</sup> .NET MAUI Picker NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Date time picker control
-
-1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
-2. Initialize [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
-    <picker:SfDateTimePicker />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Picker;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        this.Content = picker;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% tabcontent JetBrains Rider %}
@@ -218,103 +86,52 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Date time picker control
-
-1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
-2. Initialize [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
-    <picker:SfDateTimePicker />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Picker;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        this.Content = picker;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 {% endtabcontents %}
+
+## Step 3: Register Syncfusion handler
+
+Make sure to add the namespace.
+
+{% highlight MauiProgram.cs %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight MauiProgram.cs %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %}
+
+## Step 4: Import the DateTimepicker namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml tabtitle="xaml" %}
+xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Picker;
+{% endhighlight %}
+{% endtabs %}
+
+## Step 5: Add the DateTimepicker component
+
+Create an instance of DateTimepicker and add it to your page.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+    <picker:SfDateTimePicker />
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+    SfDateTimePicker picker = new SfDateTimePicker();
+    this.Content = picker;
+{% endhighlight %}
+{% endtabs %}
 
 The following gif image illustrates the result of the above code.
 
 ![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
-
-## Set height and width to the Date Time Picker
-
-The SfDateTimePicker control allows you to change the height and width by using the `HeightRequest` and `WidthRequest` properties in the `SfDateTimePicker`.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
-
-<picker:SfDateTimePicker x:Name="picker" 
-                    HeightRequest="280" 
-                    WidthRequest="300">
-</picker:SfDateTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfDateTimePicker picker = new SfDateTimePicker()
-{
-    HeightRequest = 280,
-    WidthRequest = 300,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
 
 N> You can refer to our [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Date Time Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DateTimePicker/GettingStarted) that shows you how to render the Date Time Picker in .NET MAUI.
