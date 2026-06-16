@@ -15,7 +15,6 @@ This section explains how to populate the sunburst chart with data, a title, dat
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
-
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
@@ -33,83 +32,7 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.SunburstChart](https://www.nuget.org/packages/Syncfusion.Maui.SunburstChart/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace SunburstGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Sunburst Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.SunburstChart` namespace.
-2. Initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
-
-    <sunburst:SfSunburstChart/>
-
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.SunburstChart;
-
-namespace SunburstGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();           
-            SfSunburstChart sunburst = new SfSunburstChart();
-            this.Content = sunburst;
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
@@ -134,83 +57,7 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.SunburstChart` to install the Syncfusion<sup>®</sup> .NET MAUI SunburstChart NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace SunburstGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Sunburst Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.SunburstChart` namespace.
-2. Initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
-
-    <sunburst:SfSunburstChart/>
-
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.SunburstChart;
-
-namespace SunburstGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();           
-            SfSunburstChart sunburst = new SfSunburstChart();
-            this.Content = sunburst;
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -233,88 +80,43 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.SunburstChart](https://www.nuget.org/packages/Syncfusion.Maui.SunburstChart/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+{% endtabcontent %}
+{% endtabcontents %}
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace SunburstGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Sunburst Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.SunburstChart` namespace.
-2. Initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
-
-    <sunburst:SfSunburstChart/>
-
-</ContentPage>
+## Step 3: Register Syncfusion handler
  
+Make sure to add the namespace.
+ 
+{% highlight MauiProgram.cs %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %}
+ 
+Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
+ 
+{% highlight MauiProgram.cs %}
+builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 
-{% highlight C# %}
+## Step 4: Import SunburstChart namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+
+{% endhighlight %}
+{% highlight c# %}
 
 using Syncfusion.Maui.SunburstChart;
-
-namespace SunburstGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();           
-            SfSunburstChart sunburst = new SfSunburstChart();
-            this.Content = sunburst;
-        }
-    }   
-}
 
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
+## Step 5: Create the Model and ViewModel
 
-{% endtabcontents %}
-
-## Step 5: Initialize View Model
-
-Now, let us define a simple data model that represents a data point in the sunburst chart.
+Now, let us define a simple data Model and ViewModel that represents a data point in the sunburst chart.
 
 {% tabs %}  
 
@@ -327,16 +129,6 @@ public class SunburstModel
     public double EmployeesCount { get; set; }
     public string Country { get; set; }
 }
-
-{% endhighlight %} 
-
-{% endtabs %} 
-
-Next, create a view model class and initialize a list of `SunburstModel` objects as follows.
-
-{% tabs %}  
-
-{% highlight c# %}
 
 public class SunburstViewModel
 {
@@ -352,7 +144,7 @@ public class SunburstViewModel
             new SunburstModel ( "India", "Technical", "Developers",  125 ),
             new SunburstModel ( "Germany", "Sales", "Executive",  30 ),
             new SunburstModel ( "Germany", "Sales", "Analyst",  40 ),
-            ....
+            // Add more items
         };
     }    
 }
@@ -365,46 +157,19 @@ Set the `SunburstViewModel` instance as the `BindingContext` of your page to bin
 
 N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
-{% tabs %} 
+## Step 6: Add the Sunburst Chart component
 
-{% highlight xaml %} 
-
-<ContentPage 
-             ...
-             xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-             xmlns:model="clr-namespace:SunburstGettingStarted">
-    <ContentPage.BindingContext>
-        <model:SunburstViewModel></model:SunburstViewModel>
-    </ContentPage.BindingContext>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-this.BindingContext = new SunburstViewModel();
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-## Step 6: Populate Sunburst Chart with Data
-
-Bind `DataSource` to the Sunburst chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ItemsSource) property from its BindingContext to create your Sunburst chart.
+Initialize the `SunburstChart` control and bind `DataSource` to the Sunburst chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ItemsSource) property from its BindingContext to create your Sunburst chart.
 Then, add the [SunburstHierarchicalLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstHierarchicalLevel.html) to [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Levels) collection. Each hierarchy level is formed based on the property specified in the [GroupMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstHierarchicalLevel.html#Syncfusion_Maui_SunburstChart_SunburstHierarchicalLevel_GroupMemberPath) property, and each arc segment size is calculated using the [ValueMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ValueMemberPath) property.
 
 {% tabs %} 
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-    xmlns:model="clr-namespace:SunburstGettingStarted">
-    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                              ShowLabels="True"  
-                              EnableTooltip="True"
-                              ValueMemberPath="EmployeesCount">
+<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                          ShowLabels="True"  
+                          EnableTooltip="True"
+                          ValueMemberPath="EmployeesCount">
         <sunburst:SfSunburstChart.BindingContext>
             <model:SunburstViewModel/>
         </sunburst:SfSunburstChart.BindingContext>
@@ -420,39 +185,28 @@ Then, add the [SunburstHierarchicalLevel](https://help.syncfusion.com/cr/maui/Sy
             <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
         </sunburst:SfSunburstChart.Levels>
     </sunburst:SfSunburstChart>
-</ContentPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.SunburstChart;
-. . .
-public partial class MainPage : ContentPage
-{   
-    public MainPage()
-    {
-        SfSunburstChart sunburst = new SfSunburstChart();
+SfSunburstChart sunburst = new SfSunburstChart();
 
-        sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
-        sunburst.ValueMemberPath = "EmployeesCount";
+sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
+sunburst.ValueMemberPath = "EmployeesCount";
+sunburst.Title = new Label
+{
+    Text = "Employees Count"
+};
 
-        sunburst.Title = new Label
-        {
-            Text = "Employees Count"
-        };
-
-        sunburst.Legend = new SunburstLegend();
-
-        sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-        sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-        sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-        sunburst.EnableTooltip = true;
-        sunburst.ShowLabels = true;
+sunburst.Legend = new SunburstLegend();
+sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
+sunburst.EnableTooltip = true;
+sunburst.ShowLabels = true;
         
-        this.Content = sunburst;
-    }
-}
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -460,4 +214,4 @@ public partial class MainPage : ContentPage
 
 ![Getting started sample in MAUI Sunburst Chart.](Getting_started_image/maui_getting_started_image.png)
 
-Find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_SunburstChart_MAUI).
+You can download the Sunburst Chart Getting Started sample from [here](https://github.com/SyncfusionExamples/GettingStarted_SunburstChart_MAUI).
