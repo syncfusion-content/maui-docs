@@ -38,79 +38,6 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Barcode](https://www.nuget.org/packages/Syncfusion.Maui.Barcode/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Barcode generator 
-
-1. To initialize the control, import the `Syncfusion.Maui.Barcode` namespace into your code.
-2. Initialize [SfBarcodeGenerator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    xmlns:barcode="clr-namespace:Syncfusion.Maui.Barcode;assembly=Syncfusion.Maui.Barcode"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-    using Syncfusion.Maui.Barcode;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% tabs %}
-
-{% highlight xaml hl_lines="1" %}
-
-<barcode:SfBarcodeGenerator Value="http://www.syncfusion.com" 
-                            HeightRequest="150"/>
-
-{% endhighlight %}
-
-{% highlight c# hl_lines="1" %}
-
-SfBarcodeGenerator barcode = new SfBarcodeGenerator();
-barcode.HeightRequest = 150;
-barcode.Value = "http://www.syncfusion.com";
-this.Content = barcode;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -136,81 +63,7 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Barcode` to install the Syncfusion<sup>®</sup> .NET MAUI Barcode NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Barcode generator 
-
-1. To initialize the control, import the `Syncfusion.Maui.Barcode` namespace into your code.
-2. Initialize [SfBarcodeGenerator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    xmlns:barcode="clr-namespace:Syncfusion.Maui.Barcode;assembly=Syncfusion.Maui.Barcode"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-    using Syncfusion.Maui.Barcode;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% tabs %}
-
-{% highlight xaml hl_lines="1" %}
-
-<barcode:SfBarcodeGenerator Value="http://www.syncfusion.com" 
-                            HeightRequest="150"/>
-
-{% endhighlight %}
-
-{% highlight c# hl_lines="1" %}
-
-SfBarcodeGenerator barcode = new SfBarcodeGenerator();
-barcode.HeightRequest = 150;
-barcode.Value = "http://www.syncfusion.com";
-this.Content = barcode;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -233,120 +86,62 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Barcode](https://www.nuget.org/packages/Syncfusion.Maui.Barcode/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Barcode generator 
-
-1. To initialize the control, import the `Syncfusion.Maui.Barcode` namespace into your code.
-2. Initialize [SfBarcodeGenerator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    xmlns:barcode="clr-namespace:Syncfusion.Maui.Barcode;assembly=Syncfusion.Maui.Barcode"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-    using Syncfusion.Maui.Barcode;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% tabs %}
-
-{% highlight xaml hl_lines="1" %}
-
-<barcode:SfBarcodeGenerator Value="http://www.syncfusion.com" 
-                            HeightRequest="150"/>
-
-{% endhighlight %}
-
-{% highlight c# hl_lines="1" %}
-
-SfBarcodeGenerator barcode = new SfBarcodeGenerator();
-barcode.HeightRequest = 150;
-barcode.Value = "http://www.syncfusion.com";
-this.Content = barcode;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
 {% endtabcontents %}
 
-![.NET MAUI Barcode Generator Intialize Barcode](images/getting-started/maui-intialize-barcode.png)
+## Step 3: Register Syncfusion handler
 
-N> The default symbology of SfBarcodeGenerator is [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html).
+Make sure to add the namespace.
 
-## Step 5: Initialize QR Code symbology
+{% highlight MauiProgram.cs %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
 
-You can set the required symbology type to the barcode generator based on input value by initializing the [`Symbology`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_Symbology) property. In the following code sample, the QR code is set as the barcode symbology.
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight MauiProgram.cs %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Import the Barcode Generator namespace
+
+Add the following namespace in your XAML or C#.
 
 {% tabs %}
+{% highlight xaml tabtitle="xaml" %}
+xmlns:barcode="clr-namespace:Syncfusion.Maui.Barcode;assembly=Syncfusion.Maui.Barcode"
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Barcode;
+{% endhighlight %}
+{% endtabs %}
 
-{% highlight xaml hl_lines="5" %}
+## Step 5: Add the Barcode Generator component 
 
-        <barcode:SfBarcodeGenerator Value="https://www.syncfusion.com/" 
-                                    HeightRequest="350" 
-                                    WidthRequest="350">
-            <barcode:SfBarcodeGenerator.Symbology>
-                <barcode:QRCode />
-            </barcode:SfBarcodeGenerator.Symbology>
-        </barcode:SfBarcodeGenerator>
+Create an instance for the Barcode generator control, and add it as content.
+
+{% tabs %}
+{% highlight xaml %}
+
+<barcode:SfBarcodeGenerator HeightRequest="150"/>
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="5" %}
+{% highlight c# %}
 
 SfBarcodeGenerator barcode = new SfBarcodeGenerator();
-barcode.HeightRequest = 350;
-barcode.WidthRequest = 350;
-barcode.Value = "https://www.syncfusion.com/";
-barcode.Symbology = new QRCode();
+barcode.HeightRequest = 150;
 this.Content = barcode;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI Barcode Generator Intialize QR Code Symbology](images/getting-started/maui-symbology-qrcode.png)
+![.NET MAUI Barcode Generator Intialize Barcode](images/getting-started/maui-intialize-barcode.png)
 
+You can download the Barcode Generator Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-barcode-generator)
+
+N> The default symbology of SfBarcodeGenerator is [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html).
 
 N> You can refer to our [.NET MAUI Barcode Generator](https://www.syncfusion.com/maui-controls/maui-barcodes) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Barcode Generator example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Barcode) that shows you how to render the Barcode Generator in .NET MAUI.
