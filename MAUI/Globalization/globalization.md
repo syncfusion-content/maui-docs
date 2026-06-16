@@ -33,7 +33,6 @@ Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless expe
 
 Below is a summary of globalization capabilities supported by Syncfusion<sup>®</sup> .NET MAUI controls:
 
-
 <style>
 #legend
 {
@@ -45,40 +44,43 @@ border:0 !important;
 #legend td {
   border:0 !important;
   vertical-align: top;
+  text-align: left;
+  display: flex;
+  gap: 8px; 
+  padding: 4px;
 }
 </style>
 
 <table id="legend" style="border-collapse:collapse;">
-    <tr style="border:0;">
-        <td style="border:0; display:flex; align-items:center; gap:8px; padding:4px;">
+    <tr>
+        <td>
             <img src="../Images/full-support.svg" alt="full-support" width="16">
             <span>Full Support</span>
         </td>
     </tr>
 
   <tr>
-      <td style="border:0; display:flex; align-items:center; gap:8px; padding:4px;">
+      <td>
           <img src="../Images/partial-support.svg" alt="partial-support" width="16">
           <span>Partial Support</span>
       </td>
   </tr>
 
   <tr>
-      <td style="border:0; display:flex; align-items:center; gap:8px; padding:4px;">
+      <td>
           <img src="../Images/no-support.svg" alt="no-support" width="16">
           <span>No Support</span>
       </td>
   </tr>
 
   <tr>
-      <td style="border:0; display:flex; align-items:center; gap:8px; padding:4px;">
+      <td>
           <img src="../Images/not-applicable.svg" alt="not-applicable" width="16">
           <span>Not Applicable</span>
       </td>
   </tr>
 </table>
 
-<style>
 
 <style>
 #table {
@@ -108,7 +110,6 @@ border:0 !important;
   margin: 0 auto;
 }
 </style>
-
 
 <table id="table">
 <tr>
