@@ -35,7 +35,7 @@ N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whet
 
      ![CreateNewWizard](images/SyncfusionTemplate.png)
 
-4. After launching the Syncfusion<sup>®</sup> .NET MAUI Template Studio, a configuration wizard will appear to help you set up your application. You can then choose from the available Syncfusion<sup>®</sup> .NET MAUI components and add the ones you need to your project. 
+4. After launching the Syncfusion<sup>®</sup> .NET MAUI Template Studio, a configuration wizard will appear to help you set up your application. You can then choose from the available .NET MAUI components and add the ones you need to your project. 
 
     ![Controls Section](images/ControlsTab.png)
 

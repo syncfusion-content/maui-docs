@@ -12,7 +12,7 @@ keywords: .net maui chart AI data cleaning, maui chart data, .net maui chart dat
 
 Raw datasets often contain missing values, outliers, or noise that can distort visualizations and analysis. This is common in web traffic data, which may have gaps or spikes. Before visualizing such data, it’s essential to clean it.
 
-This guide shows how to use Azure OpenAI to clean and preprocessing e-commerce website traffic data, then visualize the results using [Syncfusion .NET MAUI Charts](https://help.syncfusion.com/maui/cartesian-charts/getting-started).
+This guide shows how to use Azure OpenAI to clean and preprocessing e-commerce website traffic data, then visualize the results using [.NET MAUI Charts](https://help.syncfusion.com/maui/cartesian-charts/getting-started).
 
 ## Integrating Azure OpenAI for cleaning and preprocessing the data
 
@@ -91,7 +91,7 @@ var response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
 
 You can use this approach for any time-series or tabular data that needs preprocessing before visualization.
 
-### 3. Implement the Syncfusion .NET MAUI chart to disply data.
+### 3. Implement the .NET MAUI Charts to disply data.
 
 Define classes to represent your website traffic data and manage both raw and cleaned datasets.This structure allows you to easily bind both raw and cleaned data to your chart.
 

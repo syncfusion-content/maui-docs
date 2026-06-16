@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Syncfusion<sup>®</sup> .NET MAUI component in the .NET MAUI application
 
-The Syncfusion<sup>®</sup> .NET MAUI Code Sample Utility for Visual Studio Code provides ready-to-use samples for easily inserting Syncfusion<sup>®</sup> .NET MAUI components with various features into the XAML editor of your .NET MAUI application.
+The Syncfusion<sup>®</sup> .NET MAUI Code Sample Utility for Visual Studio Code provides ready-to-use samples for easily inserting .NET MAUI components with various features into the XAML editor of your .NET MAUI application.
 
 N> The Syncfusion<sup>®</sup> .NET MAUI code sample is available from Essential Studio<sup>®</sup> 2024 Volume 1 (`v25.1.35`) onwards.
 
@@ -21,7 +21,7 @@ The following instructions outline the process of using the Syncfusion<sup>®</s
 
 2.	Open the XAML file you require and position the cursor where you want to add the Syncfusion<sup>®</sup> component.
 
-3.	To access Syncfusion<sup>®</sup> .NET MAUI components with various features, type the **sf** word in the specified format.
+3.	To access .NET MAUI components with various features, type the **sf** word in the specified format.
 
 ```
 sf<Syncfusion® component name>-<Syncfusion® component feature>

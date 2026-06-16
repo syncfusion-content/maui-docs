@@ -83,14 +83,14 @@ The Syncfusion .NET MAUI DataGrid delivers flexible, efficient data tables for h
 
 ### Charts
 
-The Syncfusion .NET MAUI Chart suite offers versatile, high-performance charts for mobile and desktop with multiple series types and interactions.
+The .NET MAUI Charts suite offers versatile, high-performance charts for mobile and desktop with multiple series types and interactions.
 
 {% promptcards %}
 {% promptcard Local and Remote Data %}
-#SyncfusionMAUIAssistant How do I bind both local and remote data sources to a Syncfusion .NET MAUI Chart?
+#SyncfusionMAUIAssistant How do I bind both local and remote data sources to a .NET MAUI Charts?
 {% endpromptcard %}
 {% promptcard Chart Types Overview %}
-#SyncfusionMAUIAssistant What chart types are available in the Syncfusion .NET MAUI Chart and how to configure them?
+#SyncfusionMAUIAssistant What chart types are available in the .NET MAUI Charts and how to configure them?
 {% endpromptcard %}
 {% promptcard Markers and Data Labels %}
 #SyncfusionMAUIAssistant How can I display markers and data labels on a line chart in .NET MAUI?
@@ -99,7 +99,7 @@ The Syncfusion .NET MAUI Chart suite offers versatile, high-performance charts f
 #SyncfusionMAUIAssistant Add custom annotations to highlight specific data points in a .NET MAUI chart.
 {% endpromptcard %}
 {% promptcard Export to Image %}
-#SyncfusionMAUIAssistant How do I export a Syncfusion .NET MAUI Chart to image format?
+#SyncfusionMAUIAssistant How do I export a .NET MAUI Charts to image format?
 {% endpromptcard %}
 {% promptcard Axes and Multiple Axes %}
 #SyncfusionMAUIAssistant Configure CategoryAxis, NumericalAxis, DateTimeAxis, and add a secondary Y-axis with series mapped to it.
