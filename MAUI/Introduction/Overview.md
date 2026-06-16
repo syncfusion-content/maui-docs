@@ -671,7 +671,7 @@ line-height: 1;
 </div>
 <div class="form-description">Quick overview of key features to get started.</div>
 <div class="explore-link">
-Explore tour
+Explore Features
   <span class="card-icon card-arrow"></span>
 </div>
   </div>
