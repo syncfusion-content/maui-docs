@@ -166,3 +166,5 @@ rangeSlider.MinorTicksPerInterval = 1;
 {% endtabs %}
 
 ![DateTimeRangeSlider ticks](images/getting-started/ticks.png)
+
+You can access a complete getting started sample from this [link](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-range-slider).
