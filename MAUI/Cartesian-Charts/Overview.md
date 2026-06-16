@@ -12,6 +12,8 @@ keywords: .net maui sfCartesianChart overview,  introduction to sfCartesianChart
 
 The [.NET MAUI Cartesian chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides a perfect way to visualize data with a high level of user involvement that focuses on development, productivity, and simplicity of use. Chart also provides a wide variety of charting features that can be used to visualize large quantities of data, as well as flexibility in data binding and user customization.
 
+![.NET MAUI cartesian chart overview ](Overview_Images/cartesian_chart.png)
+
 ## Business use cases
 
 - Business dashboards that require interactive data visualization with charts and graphs.  
