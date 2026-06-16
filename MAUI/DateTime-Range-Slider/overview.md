@@ -13,6 +13,9 @@ documentation: ug
 
 - Instead of manually entering values, users can drag two thumbs across a timeline to define both the start and end points.
 
+![.NET MAUI datetime range slider overview ](images/overview/datetime_range_slider_overview.png)
+
+
 ## Business use cases
 
 - Data analytics applications that require filtering datasets using a selected date and time range.  

@@ -11,6 +11,8 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) (SfDataForm) control is used to create or edit data form such as login, reservation, contact, employee form and more based on the business purpose. 
 
+![.NET MAUI dataform overview ](images/overview/dataform_overview.png)
+
 ## Business use cases
 
 - Business applications that require dynamic form generation for data entry such as employee, customer, or product forms.  
