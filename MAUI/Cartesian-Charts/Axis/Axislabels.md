@@ -21,7 +21,7 @@ The [LabelsPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    ...
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
@@ -30,7 +30,6 @@ The [LabelsPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
         <chart:NumericalAxis LabelsPosition="Inside"/>
     </chart:SfCartesianChart.YAxes>
 </chart:SfCartesianChart>
-
 
 {% endhighlight %}
 
@@ -63,7 +62,7 @@ The [LabelRotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    ...
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis LabelRotation="90"/>
     </chart:SfCartesianChart.XAxes>
@@ -74,7 +73,7 @@ The [LabelRotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+...
 CategoryAxis primaryAxis = new CategoryAxis()
 {
     LabelRotation = 90
@@ -122,7 +121,7 @@ Chart axis provides support to customize the rendering position of the edge labe
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    ...
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
     </chart:SfCartesianChart.XAxes>
@@ -133,7 +132,7 @@ Chart axis provides support to customize the rendering position of the edge labe
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . . 
+...
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
@@ -161,7 +160,7 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    ...
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="AlwaysVisible"/>
     </chart:SfCartesianChart.XAxes>
@@ -172,7 +171,7 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+...
 NumericalAxis primaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
@@ -194,7 +193,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    ...
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
     </chart:SfCartesianChart.XAxes>
@@ -205,7 +204,7 @@ this.Content = chart;
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+...
 NumericalAxis primaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
@@ -227,9 +226,9 @@ Axis labels may overlap with each other based on chart dimensions and label size
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    ...
     <chart:SfCartesianChart.XAxes>
-       <chart:CategoryAxis LabelsIntersectAction="MultipleRows"/>
+        <chart:CategoryAxis LabelsIntersectAction="MultipleRows"/>
     </chart:SfCartesianChart.XAxes>
 </chart:SfCartesianChart>
 
@@ -238,20 +237,20 @@ Axis labels may overlap with each other based on chart dimensions and label size
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+...
 CategoryAxis primaryAxis = new CategoryAxis()
 {
-    LabelsIntersectAction = AxisLabelsIntersectAction.MultipleRows,
+    LabelsIntersectAction = AxisLabelsIntersectAction.MultipleRows
 };
 chart.XAxes.Add(primaryAxis);
 
 this.Content = chart;
- 
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_labels.png)
+![Smart axis label support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_labels.png)
 
 N> If the [LabelsIntersectAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsIntersectAction) is set to Wrap, we should set the width of the wrap using the [MaxWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_MaxWidth) property. We can align the wrapped axis label using the [WrappedLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_WrappedLabelAlignment) property.
 
@@ -263,27 +262,27 @@ The `MaximumLabels` property in [ChartAxis](https://help.syncfusion.com/cr/maui/
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis MaximumLabels="5" />
-        </chart:SfCartesianChart.YAxes>
-    . . .
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    ...
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis MaximumLabels="5" />
+    </chart:SfCartesianChart.YAxes>
+    ...
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis axis = new()
-    {
-        MaximumLabels = 5,
-    };
-    chart.YAxes.Add(axis);
-    . . .
-    this.Content = chart;
+SfCartesianChart chart = new SfCartesianChart();
+...
+NumericalAxis axis = new()
+{
+    MaximumLabels = 5
+};
+chart.YAxes.Add(axis);
+...
+this.Content = chart;
 
 {% endhighlight %}
 

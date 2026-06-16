@@ -21,23 +21,21 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
+    <chart:SfCartesianChart.XAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.XAxes>
 
-   <chart:SfCartesianChart.XAxes>
-       <chart:NumericalAxis/>
-   </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.YAxes>
 
-   <chart:SfCartesianChart.YAxes>
-       <chart:NumericalAxis/>
-   </chart:SfCartesianChart.YAxes>
+    <chart:FastScatterSeries ItemsSource="{Binding Data1}"
+                            XBindingPath="XValue"
+                            YBindingPath="YValue" />
 
-   <chart:FastScatterSeries ItemsSource="{Binding Data1}" 
-                       XBindingPath="XValue" 
-                       YBindingPath="YValue" />
-
-   <chart:FastScatterSeries ItemsSource="{Binding Data2}" 
-                       XBindingPath="XValue" 
-                       YBindingPath="YValue" />
-
+    <chart:FastScatterSeries ItemsSource="{Binding Data2}"
+                            XBindingPath="XValue"
+                            YBindingPath="YValue" />
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -54,16 +52,16 @@ chart.YAxes.Add(secondaryAxis);
 
 FastScatterSeries scatterSeries1 = new FastScatterSeries
 {
-   ItemsSource = new ViewModel().Data1,
-   XBindingPath = "XValue",
-   YBindingPath = "YValue",
+    ItemsSource = new ViewModel().Data1,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
 };
 
 FastScatterSeries scatterSeries2 = new FastScatterSeries
 {
-   ItemsSource = new ViewModel().Data2,
-   XBindingPath = "XValue",
-   YBindingPath = "XValue",
+    ItemsSource = new ViewModel().Data2,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
 };
 
 chart.Series.Add(scatterSeries1);
