@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Rich Text Editor control | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
+description: Learn here about getting started with .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
 control: Rich Text Editor
 documentation: ug
@@ -147,7 +147,7 @@ Before proceeding, ensure the following are set up:
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.RichTextEditor` to install the Syncfusion .NET MAUI Rich Text Editor package.
+3. Run the command `dotnet add package Syncfusion.Maui.RichTextEditor` to install the .NET MAUI Rich Text Editor package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the Handler
@@ -379,3 +379,5 @@ this.Content = richTextEditor;
 {% endtabs %}
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
+
+N> Looking for the full .NET MAUI Rich Text Editor component overview, features, pricing, and documentation? Visit the [.NET MAUI Rich Text Editor](https://help.syncfusion.com/maui/rich-text-editor/getting-started) page.

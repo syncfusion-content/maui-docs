@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Rich Text Editor control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
+description: Learn here all about introduction of .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
 control: Rich Text Editor
 documentation: ug
@@ -23,3 +23,5 @@ The .NET MAUI Rich Text Editor provides a simple yet powerful editor interface t
 * `Copy, paste, and cut` - Features built-in clipboard operations for user convenience.
 * `Undo and redo` - Provides robust undo and redo history for user-friendly editing.
 * `Localization and accessibility` - Supports right-to-left layouts and accessibility features.
+
+N> Looking for the full .NET MAUI Rich Text Editor component overview, features, pricing, and documentation? Visit the [.NET MAUI Rich Text Editor](https://help.syncfusion.com/maui/rich-text-editor/overview) page.

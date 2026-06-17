@@ -371,3 +371,5 @@ private void OnEditorUnfocused(object sender, EventArgs e)
 }
 {% endhighlight %}
 {% endtabs %}
+
+N> Looking for the full .NET MAUI Rich Text Editor component overview, features, pricing, and documentation? Visit the [.NET MAUI Rich Text Editor](https://help.syncfusion.com/maui/rich-text-editor/advanced-features) page.
