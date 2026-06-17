@@ -197,7 +197,7 @@ Create a simple message collection as shown in the following code example in a n
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Import the DataGrid namespace
+## Step 5: Import the Chat namespace
 
 Add the following namespace in your XAML or C#.
 
