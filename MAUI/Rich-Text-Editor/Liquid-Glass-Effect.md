@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liquid Glass Effect on .NET MAUI RichTextEditor control | Syncfusion®
-description: Learn here all about how to enable cupertino theme for Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
+description: Learn here all about how to enable cupertino theme for .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
 control: SfRichTextEditor
 documentation: ug

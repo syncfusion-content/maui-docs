@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Table Insertion in .NET MAUI Rich Text Editor | Syncfusion®
-description: Learn how to insert and format tables in the Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control.
+description: Learn how to insert and format tables in the .NET MAUI Rich Text Editor (SfRichTextEditor) control.
 platform: maui 
 control: Rich Text Editor
 documentation: ug
