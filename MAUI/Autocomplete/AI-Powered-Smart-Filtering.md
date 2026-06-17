@@ -345,6 +345,6 @@ The following image demonstrates the output of the above AI-based filter using a
 
 ![.NET MAUI AutoComplete With AI Smart filter.](Images/AISmartFilter/ai_smart_filter_autocomplete)
 
-You can find the complete sample from this [link]().
+You can find the complete sample from this [link]().  
 
 By combining a powerful AI-driven online filter with a robust you can create a truly smart and reliable filter experience in your .NET MAUI applications.
