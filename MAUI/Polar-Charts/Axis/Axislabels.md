@@ -22,19 +22,18 @@ N> This is only applicable to the secondary axis of Polar chart.
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    ...
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis LabelsPosition="Inside"/>
     </chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
-
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+...
 NumericalAxis axis = new NumericalAxis()
 {
     LabelsPosition = AxisElementPosition.Inside
@@ -81,7 +80,7 @@ The chart axis supports customizing the rendering position of the edge labels us
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    ...
     <chart:SfPolarChart.SecondaryAxis>
         <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
     </chart:SfPolarChart.SecondaryAxis>
@@ -92,7 +91,7 @@ The chart axis supports customizing the rendering position of the edge labels us
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . . 
+...
 DateTimeAxis secondaryAxis = new DateTimeAxis()
 {
     EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
@@ -120,7 +119,7 @@ The `AlwaysVisible` option in [EdgeLabelsVisibilityMode](https://help.syncfusion
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    ...
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="AlwaysVisible"/>
     </chart:SfPolarChart.SecondaryAxis>
@@ -131,7 +130,7 @@ The `AlwaysVisible` option in [EdgeLabelsVisibilityMode](https://help.syncfusion
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+...
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
@@ -153,7 +152,7 @@ The `Visible` option is used to display the edge labels irrespective of the auto
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    ...
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
     </chart:SfPolarChart.SecondaryAxis>
@@ -164,7 +163,7 @@ The `Visible` option is used to display the edge labels irrespective of the auto
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+...
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
