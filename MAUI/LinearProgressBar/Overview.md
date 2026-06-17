@@ -242,7 +242,7 @@ Explore tour
       Find solutions, guides, and troubleshooting tips.
     </div>
     <div class="explore-link">
-Explore KBs
+Explore KB's
   <span class="card-icon card-arrow"></span>
 </div>
   </div>
