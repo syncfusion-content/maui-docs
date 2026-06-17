@@ -89,18 +89,18 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
- 
+
 Make sure to add the namespace.
- 
-{% highlight MauiProgram.cs %}
+
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %}
- 
-Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
- 
-{% highlight MauiProgram.cs %}
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Import Radial Gauge namespace
 
@@ -201,6 +201,6 @@ Content = gauge;
 
 ![MAUI Radial Gauge with Annotation](images/getting-started/maui-radial-gauge-gettingstarted.png)
 
-You can download the Radial Gauge Getting Started sample from [here](https://github.com/SyncfusionExamples/MAUI-Radial-Gauge-Getting-Started-)
+You can download the Radial Gauge Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/MAUI-Radial-Gauge-Getting-Started-)
 
 N> You can refer to our [.NET MAUI Radial Gauge](https://www.syncfusion.com/maui-controls/maui-radial-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Radial Gauge Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Gauges/SampleBrowser.Maui.Gauges/Samples/RadialGauge) that shows you how to render the Radial Gauge in .NET MAUI.

@@ -88,28 +88,18 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-To enable Syncfusion components in your .NET MAUI application, you need to register the Syncfusion core handler.
+Make sure to add the namespace.
 
-### Add the Required Namespace
-
-First, include the Syncfusion core hosting namespace in your MauiProgram.cs file:
-
-{% highlight MauiProgram.cs %}
-
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-
 {% endhighlight %} 
 
-### Register the Syncfusion Handler
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-Next, register the Syncfusion handler inside the MauiProgram.cs file's CreateMauiApp method. 
-
-{% highlight MauiProgram.cs %}
-
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-
 {% endhighlight %} 
- 
+
 ## Step 4: Import the Effects View namespace
  
 Add the following namespace in your XAML or C#.
@@ -242,7 +232,7 @@ The following screenshot illustrates the result of the above code.
 
 ![Effects View initialization](Getting-Started_images/RippleEffect.gif)
 
-You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-EffectsView)
+You can download the EffectsView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-EffectsView)
 
 N> You can refer to our [.NET MAUI Effects View](https://www.syncfusion.com/maui-controls/maui-effects-view) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Effects View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/EffectsView) that shows you how to render the Effects View in .NET MAUI.
 

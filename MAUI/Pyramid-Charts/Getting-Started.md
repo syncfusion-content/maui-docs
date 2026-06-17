@@ -87,37 +87,20 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
- 
+
 Make sure to add the namespace.
- 
-{% highlight MauiProgram.cs %}
+
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %}
- 
-Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
- 
-{% highlight MauiProgram.cs %}
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}
+{% endhighlight %} 
 
-## Step 4: Import Pyramid Chart namespace
-
-Add the following namespace in your XAML or C#.
-
-{% tabs %}
-{% highlight xaml %}
-
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Charts;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 5: Create Model and ViewModel
+## Step 4: Create Model and ViewModel
 
 Now, let us define a simple data Model and ViewModel that represents a data point in the chart.
 
@@ -146,6 +129,23 @@ public class StageViewModel
 }
 {% endhighlight %} 
 {% endtabs %} 
+
+## Step 5: Import Pyramid Chart namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.Charts;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 6: Add the Pyramid Chart component
 
@@ -196,4 +196,4 @@ this.Content = chart;
 
 ![Pyramid chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pyramid_chart.png)
 
-You can download the Pyramid Charts Getting Started sample from [here](https://github.com/SyncfusionExamples/GettingStarted_PyramidChart_MAUI).
+You can download the Pyramid Charts Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_PyramidChart_MAUI).

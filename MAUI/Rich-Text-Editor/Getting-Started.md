@@ -88,18 +88,18 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
- 
+
 Make sure to add the namespace.
- 
-{% highlight MauiProgram.cs %}
+
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %}
- 
-Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
- 
-{% highlight MauiProgram.cs %}
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Import RichTextEditor namespace
 
@@ -142,4 +142,4 @@ this.Content = richTextEditor;
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
 
-You can download the Rich Text Editor Getting Started sample from [here](https://github.com/SyncfusionExamples/maui-richtexteditor-samples/tree/master)
+You can download the Rich Text Editor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-richtexteditor-samples/tree/master)

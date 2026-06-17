@@ -84,37 +84,21 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
- 
+
 Make sure to add the namespace.
- 
-{% highlight MauiProgram.cs %}
+
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %}
- 
-Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
- 
-{% highlight MauiProgram.cs %}
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}
+{% endhighlight %} 
 
-## Step 4: Import SunburstChart namespace
 
-Add the following namespace in your XAML or C#.
-
-{% tabs %}
-{% highlight xaml %}
-
-xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.SunburstChart;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 5: Create the Model and ViewModel
+## Step 4: Create the Model and ViewModel
 
 Now, let us define a simple data Model and ViewModel that represents a data point in the sunburst chart.
 
@@ -156,6 +140,23 @@ public class SunburstViewModel
 Set the `SunburstViewModel` instance as the `BindingContext` of your page to bind the `SunburstViewModel` properties to the chart.
 
 N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
+
+## Step 5: Import SunburstChart namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.SunburstChart;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 6: Add the Sunburst Chart component
 
@@ -214,4 +215,4 @@ this.Content = sunburst;
 
 ![Getting started sample in MAUI Sunburst Chart.](Getting_started_image/maui_getting_started_image.png)
 
-You can download the Sunburst Chart Getting Started sample from [here](https://github.com/SyncfusionExamples/GettingStarted_SunburstChart_MAUI).
+You can download the Sunburst Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_SunburstChart_MAUI).

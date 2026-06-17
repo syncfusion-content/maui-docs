@@ -92,13 +92,13 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
-{% highlight MauiProgram.cs %}
+{% highlight csharp  %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %} 
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-{% highlight MauiProgram.cs %}
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 
@@ -281,9 +281,8 @@ The following screenshot illustrates the result of the above code.
 
 <img alt="Defining the Accordion items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png"/> 
 
-You can download accordion sample for .NET MAUI [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
+You can download accordion sample for .NET MAUI [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 
 N> When adding the template control inside the `Grid` with a height set to `Auto`, the child element will not receive the height changes at runtime. Since the `SfAccordion` is a template-based control, the default height value cannot be determined. Therefore, it is recommended to provide the `HorizontalOptions` and `VerticalOptions` as `FillAndExpand` options for the control.
-
 
 N> You can refer to our [.NET MAUI Accordion](https://www.syncfusion.com/maui-controls/maui-accordion) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Accordion Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Accordion) that shows you how to render and configure the Accordion in .NET MAUI.

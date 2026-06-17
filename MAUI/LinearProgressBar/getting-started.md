@@ -89,26 +89,16 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-To enable Syncfusion components in your .NET MAUI application, you need to register the Syncfusion core handler.
+Make sure to add the namespace.
 
-### Add the Required Namespace
-
-First, include the Syncfusion core hosting namespace in your MauiProgram.cs file:
-
-{% highlight MauiProgram.cs %}
-
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-
 {% endhighlight %} 
 
-### Register the Syncfusion Handler
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-Next, register the Syncfusion handler inside the MauiProgram.cs file's CreateMauiApp method. 
-
-{% highlight MauiProgram.cs %}
-
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-
 {% endhighlight %} 
 
 ## Step 4: Import the ProgressBar namespace
@@ -156,6 +146,7 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Linear ProgressBar](images/getting-started/progress-bar.png)
 
+You can download the Linear Gauge Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-)
+
 N> 
-* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-) link.
 * Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.

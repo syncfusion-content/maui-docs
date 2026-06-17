@@ -89,18 +89,18 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
- 
+
 Make sure to add the namespace.
- 
-{% highlight MauiProgram.cs %}
+
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %}
- 
-Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
- 
-{% highlight MauiProgram.cs %}
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Import Switch namespace
 
@@ -156,6 +156,6 @@ private void OnSwitchStateChanged(object sender, SwitchStateChangedEventArgs e)
 
 {% endtabs %}
 
-You can download the Switch Getting Started sample from [here](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch/tree/master/SwitchGettingStarted)
+You can download the Switch Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch/tree/master/SwitchGettingStarted)
 
 N> Find the complete getting started sample of the .NET MAUI Switch from this [link](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch). Refer to our [.NET MAUI Switch](https://www.syncfusion.com/maui-controls/maui-switch) feature tour page for its groundbreaking feature representations. Explore our [.NET MAUI Switch example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons/SampleBrowser.Maui.Buttons/Samples/Switch) for rendering the .NET MAUI Switch.

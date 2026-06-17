@@ -93,15 +93,15 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
-{% highlight MauiProgram.cs %}
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %} 
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-{% highlight MauiProgram.cs %}
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Step 4: Import the DateTimepicker namespace
 
@@ -133,5 +133,7 @@ Create an instance of DateTimepicker and add it to your page.
 The following gif image illustrates the result of the above code.
 
 ![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
+
+You can download the DateTimePicker Getting Started sample from [GitHub]()
 
 N> You can refer to our [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Date Time Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DateTimePicker/GettingStarted) that shows you how to render the Date Time Picker in .NET MAUI.
