@@ -11,6 +11,8 @@ documentation: ug
 
 Syncfusion<sup>&reg;</sup> [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) (SfStepProgressBar) control allows you to displays progress through multiple steps in a process, such as order tracking or a user registration form. It's customizable, with options for step shape, content, progress bar color, and more.
 
+  ![Overview of .NET MAUI StepProgressBar](images/overview/maui-stepprogressbar-overview.gif)
+
 ## Business use cases
 
 - E-commerce applications that display order tracking stages such as placed, shipped, and delivered.  
@@ -30,8 +32,6 @@ Syncfusion<sup>&reg;</sup> [.NET MAUI Step ProgressBar](https://www.syncfusion.c
 - **Shape customization** allows configuring step shapes such as circle or square.  
 - **Image support** allows displaying images within step indicators for enhanced visualization.  
 - **Appearance customization** allows modifying colors, sizes, animations, and layout for better UI consistency. 
-
-![Overview of .NET MAUI StepProgressBar](images/overview/maui-stepprogressbar-overview.gif)
 
 ## Globalization
 
