@@ -38,72 +38,6 @@ Before proceeding, ensure the following are set up:
 2.  Search for [Syncfusion.Maui.DataGrid](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 22" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram 
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            builder.ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %} 
-
-## Step 4: Add a Basic DataGrid
-
-1. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
-2. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
-
-    <syncfusion:SfDataGrid />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-using Syncfusion.Maui.DataGrid;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDataGrid dataGrid = new SfDataGrid();
-        this.Content = dataGrid;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -130,72 +64,6 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.DataGrid` to install the Syncfusion<sup>®</sup> .NET MAUI DataGrid package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 22" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram 
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            builder.ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %} 
- 
-## Step 4: Add a Basic DataGrid
-
-1. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
-2. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
-
-    <syncfusion:SfDataGrid />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-using Syncfusion.Maui.DataGrid;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDataGrid dataGrid = new SfDataGrid();
-        this.Content = dataGrid;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
 {% endtabcontent %}
 
 {% tabcontent JetBrains Rider %}
@@ -220,76 +88,24 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.DataGrid](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 22" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram 
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            builder.ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %} 
-
-## Step 4: Add a Basic DataGrid
-
-1. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
-2. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
-
-    <syncfusion:SfDataGrid />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-using Syncfusion.Maui.DataGrid;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDataGrid dataGrid = new SfDataGrid();
-        this.Content = dataGrid;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Define the View Model
+## Step 3: Register Syncfusion handler
+
+Make sure to add the namespace.
+
+{% highlight MauiProgram.cs %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight MauiProgram.cs %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Define Model and View Model
 
 ### Data Model
 
@@ -310,25 +126,21 @@ public class OrderInfo
         get { return orderID; }
         set { this.orderID = value; }
     }
-
     public string CustomerID
     {
         get { return customerID; }
         set { this.customerID = value; }
     }
-
     public string ShipCountry
     {
         get { return shipCountry; }
         set { this.shipCountry = value; }
     }
-
     public string Customer
     {
         get { return this.customer; }
         set { this.customer = value; }
     }
-
     public string ShipCity
     {
         get { return shipCity; }
@@ -386,7 +198,20 @@ public class OrderInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-### Binding the ViewModel
+## Step 5: Import the DataGrid namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml tabtitle="xaml" %}
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.DataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+## Step 6: Add the DataGrid component
 
 Create a `ViewModel` instance and set it as the DataGrid's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -396,47 +221,26 @@ The following code example binds the collection created in the previous step to 
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage.BindingContext>
-    <local:OrderInfoRepository x:Name="viewModel" />
-</ContentPage.BindingContext>
-
-<ContentPage.Content>
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
-                                                MappingName="OrderID" Width="150"/>
-                <syncfusion:DataGridTextColumn  HeaderText="Customer"
-                                                MappingName="Customer"
-                                                Width="150" />
-                <syncfusion:DataGridTextColumn  HeaderText="Ship City"
-                                                MappingName="ShipCity"
-                                                Width="150" />
-                <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
-                                                MappingName="ShipCountry"
-                                                Width="150" />
-        </syncfusion:SfDataGrid.Columns>        
+                            ItemsSource="{Binding OrderInfoCollection}"> 
+        <syncfusion:SfDataGrid.BindingContext>
+            <local:OrderInfoRepository />
+        </syncfusion:SfDataGrid.BindingContext>
     </syncfusion:SfDataGrid>
-</ContentPage.Content>
 {% endhighlight %}
 {% highlight c# %}
 OrderInfoRepository viewModel = new OrderInfoRepository();
-
 SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.ItemsSource = viewModel.OrderInfoCollection; 
-
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the Application
 
-Press **F5** to build and run the application. Once compiled, the datagrid will be displayed with the data provided.
-
-Here is the result of the previous codes,
+The following screenshot illustrates the result of the above code.
 
 <img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">
 
-You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
+You can download the DataGrid Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
 
 N> You can refer to our [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) that shows you how to render the DataGrid in .NET MAUI.

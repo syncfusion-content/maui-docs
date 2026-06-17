@@ -373,6 +373,28 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
+## Show or Hide Empty Days 
+The HideEmptyDays property controls the visibility of days without appointments in the AgendaView. By default, all days are displayed, including those that do not contain any appointments. Setting `HideEmptyDays` to `true` hides empty days and displays only dates that contain scheduled appointments, resulting in a more compact agenda view.
+
+{% tabs %}  
+{% highlight XAML hl_lines="4" %}
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Agenda">
+    <scheduler:SfScheduler.AgendaView>
+        <scheduler:SchedulerAgendaView HideEmptyDays="True"/>
+    </scheduler:SfScheduler.MonthView>
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Agenda;
+scheduler.AgendaView.HideEmptyDays = true;
+this.Content = scheduler;
+{% endhighlight %}  
+{% endtabs %}
+
+![Hide-days-without-appointment-in-agenda-view-in-Maui-Scheduler](images/agenda-view/hide-empty-days-in-agenda-view.png)
+
 ## Agenda appointment template 
 
 The Syncfusion .NET MAUI Scheduler allows users to customize the visual representation of agenda appointments by defining data templates, enhancing usability within the application. Users can customize the appointment text, icon, image, or view based on their needs and appointment details.

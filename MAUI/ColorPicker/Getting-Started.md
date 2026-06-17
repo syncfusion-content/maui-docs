@@ -34,79 +34,6 @@ Before proceeding, ensure the following are set up:
 2.  Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ColorPickerGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore() 
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}     
-
-{% endhighlight %} 
-
-## Step 4: Add a basic Color Picker
-
-1. To initialize the control, import the Inputs namespace.
-
-2. Initialize the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-            ...
-            xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
-
-    <ContentPage.Content> 
-        <inputs:SfColorPicker x:Name="colorPicker"/>
-    </ContentPage.Content>
-
-</ContentPage>
-	
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
-
-namespace ColorPickerGettingStarted   
-{  
-	public partial class MainPage : ContentPage                  
-	{ 
-		public MainPage()   
-		{   
-			InitializeComponent();       
-			SfColorPicker colorPicker = new SfColorPicker();
-            Content = colorPicker;
-		}  
-	}  
-}  
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -132,79 +59,6 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Inputs` to install the Syncfusion<sup>®</sup> .NET MAUI Inputs package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ColorPickerGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore() 
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}     
-
-{% endhighlight %} 
-
-## Step 4: Add a basic Color Picker
-
-1. To initialize the control, import the Inputs namespace.
-
-2. Initialize the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-            ...
-            xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
-    
-    <ContentPage.Content> 
-        <inputs:SfColorPicker x:Name="colorPicker"/>
-    </ContentPage.Content>
-
-</ContentPage>
-	
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
-
-namespace ColorPickerGettingStarted   
-{  
-	public partial class MainPage : ContentPage                  
-	{ 
-		public MainPage()   
-		{   
-			InitializeComponent();       
-			SfColorPicker colorPicker = new SfColorPicker();
-            Content = colorPicker;   
-		}  
-	}
-}  
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% tabcontent JetBrains Rider %}
@@ -229,86 +83,57 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the terminal in Rider and manually run: `dotnet restore`.
 
-## Step 3: Register the handler
+{% endtabcontent %}
+{% endtabcontents %}
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
+## Step 3: Register Syncfusion handler
 
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
+Make sure to add the namespace.
+
+{% highlight MauiProgram.cs %}
 using Syncfusion.Maui.Core.Hosting;
-
-namespace ColorPickerGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore() 
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}     
-
 {% endhighlight %} 
 
-## Step 4: Add a basic Color Picker
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-1. To initialize the control, import the Inputs namespace.
+{% highlight MauiProgram.cs %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
 
-2. Initialize the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html).
+## Step 4: Import the Color Picker namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml tabtitle="xaml" %}
+xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Inputs;
+{% endhighlight %}
+{% endtabs %}
+
+## Step 5: Add the Color Picker component
+
+Create an instance of the Color Picker and initialize it as follows:
 
 {% tabs %}
 
 {% highlight xaml %}
-
-<ContentPage 
-            ...
-            xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
-
-    <ContentPage.Content> 
-        <inputs:SfColorPicker />
-    </ContentPage.Content>
-
-</ContentPage>
-	
+    <inputs:SfColorPicker />
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
-
-namespace ColorPickerGettingStarted   
-{  
-	public partial class MainPage : ContentPage                  
-	{ 
-		public MainPage()   
-		{   
-			InitializeComponent();       
-			SfColorPicker colorPicker = new SfColorPicker();
-            Content = colorPicker;
-		}  
-	}  
-}  
-
+    SfColorPicker colorPicker = new SfColorPicker();
+    Content = colorPicker;
 {% endhighlight %}
 
 {% endtabs %}
-
-{% endtabcontent %}
-{% endtabcontents %}
 
 The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Color Picker.](Images/Overview/ColorPicker.gif){:width="420" height="574" loading="lazy"}
 
-You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-ColorPicker)
+You can download the Color Picker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-ColorPicker)
 
 N> You can refer to our [.NET MAUI Color Picker](https://www.syncfusion.com/maui-controls/maui-colorpicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Color Picker example](https://github.com/SyncfusionExamples/maui-color-picker-samples) that shows you how to render the Color Picker in .NET MAUI.
