@@ -343,7 +343,7 @@ Applying custom filtering to the [Autocomplete](https://help.syncfusion.com/cr/m
 
 The following image demonstrates the output of the above AI-based filter using a custom filtering sample.
 
-![.NET MAUI AutoComplete With AI Smart filter.](Images/AISmartFilter/ai_smart_filter_autocomplete)
+![.NET MAUI AutoComplete With AI Smart filter.](Images/AISmartFilter/ai_smart_filter_autocomplete.gif)
 
 You can find the complete sample from this [link]().  
 
