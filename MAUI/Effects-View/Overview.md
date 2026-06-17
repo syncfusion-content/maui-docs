@@ -11,6 +11,8 @@ documentation: UG
 
 The Effects View is a container control that provides modern effects such as ripple, selection, scaling, and rotation. Users can render these effects through touch interactions like touch down, touch up, long press, and by utilizing the available APIs.
 
+![.NET MAUI effects view overview ](Overview_images/EffectsView_Syncfusion.gif)
+
 ## Business use cases
 
 - Mobile applications that require interactive touch feedback for buttons, cards, or list items.  

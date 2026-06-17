@@ -13,6 +13,8 @@ documentation: ug
 
 - Instead of typing values or navigating multiple pickers, users simply drag the slider thumb across a timeline to select the exact point they need.
 
+![.NET MAUI datetime slider overview ](images/overview/datetime_slider_overview.png)
+
 ## Business use cases
 
 - Data analysis applications that require selection of a specific date or time value for filtering datasets.  

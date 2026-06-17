@@ -11,6 +11,8 @@ documentation: ug
 
 Popup layout allows you to display an alert message with customizable buttons or load any desired view inside a popup. It provides options to fully customize the popup with custom header, body, and footer capabilities, allowing you to display important information precisely how users want to.
 
+![.NET MAUI popup overview ](Images/overview/popup_overview.png)
+
 ## Business use cases
 
 - Applications that require displaying alerts, confirmations, or notifications to users.  

@@ -11,6 +11,8 @@ documentation: ug
 
 The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider)) is a highly interactive UI control, allowing users to select a range values within a minimum and maximum limit. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
 
+![.NET MAUI range slider overview ](images/overview/range_slider_overview.png)
+
 ## Business use cases
 
 - Data-driven applications that require filtering values such as price ranges, ratings, or quantities using a slider interface.  

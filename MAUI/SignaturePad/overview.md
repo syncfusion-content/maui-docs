@@ -11,6 +11,8 @@ documentation: ug
 
 The .NET MAUI SignaturePad ([`SfSignaturePad`](https://www.syncfusion.com/maui-controls/maui-signaturepad)) is an interactive UI control, allowing users to capture smooth and realistic signatures. It also allows you to save signatures as images and synchronize them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this SignaturePad control.
 
+![.NET MAUI signature pad overview ](Images/overview/default.jpg)
+
 ## Business use cases
 
 - Business applications that require capturing user signatures for approvals, agreements, or confirmations.  

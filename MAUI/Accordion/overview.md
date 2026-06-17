@@ -11,6 +11,8 @@ documentation: ug
 
 The **[.NET MAUI Accordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html)** (SfAccordion) offers a vertically collapsible panel with stacked headers, allowing the expansion or collapse of one or multiple items simultaneously.
 
+![.NET MAUI accordion overview ](Images/overview_images/accordion_overview.png)
+
 ## Business use cases
 
 - FAQ or help sections with collapsible question‑answer visualization.  

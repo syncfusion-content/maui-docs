@@ -11,6 +11,8 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Segmented control (SfSegmentedControl)](https://www.syncfusion.com/maui-controls/maui-segmented-control) provides options from a linear set of segments containing text, an icon, or both. Each segment is a discrete button, allowing you to select choices in a user-friendly manner.
 
+![.NET MAUI segmented control overview ](images/overview/segment_overview.png)
+
 ## Business use cases
 
 - Applications that require quick switching between views such as list, grid, or chart layouts.  

@@ -11,6 +11,8 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 The [Syncfusion .NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control is used to display alphanumeric characters in digital (LED display) mode. This control displays a range of values that use characters in combination with numbers.
 
+![.NET MAUI digital gauge overview ](Images/digitalgauge_overview.png)
+
 ## Business use cases
 
 - Dashboard applications that display numeric values such as counters, timers, or measurements in LED format.  

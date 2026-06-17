@@ -13,6 +13,8 @@ documentation: ug
 
 - Instead of manually entering values, users can drag two thumbs across a timeline to define both the start and end points within a minimum and maximum limit.
 
+![.NET MAUI datetime range selector overview ](images/overview/datetime_range_selector.png)
+
 ## Business use cases
 
 - Data analytics applications that require filtering datasets based on selected date and time ranges.  
