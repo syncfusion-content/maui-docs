@@ -312,38 +312,19 @@ Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/
 
 {% tabs %}
 {% highlight xaml %}
-
-<ContentPage.BindingContext>
-    <local:ComboBoxViewModel x:Name="viewModel"/>
-</ContentPage.BindingContext>
-<ContentPage.Content>
-    <VerticalStackLayout Spacing="10"
-                         Margin="0,50,0,0"
-                         WidthRequest="303"
-                         HorizontalOptions="Center"
-                         VerticalOptions="Start">
-        <Label Text="AI ComboBox Control"
-               FontFamily="Roboto-Medium"  
-               FontSize="16"
-               TextColor="{AppThemeBinding Light='#1C1B1F' , Dark='#E6E1E5'}"
-               HorizontalOptions="Center"/>
-        <syncfusion:SfTextInputLayout Hint="Choose Food Item"
-                                      Margin="0,10,0,0"
-                                      ContainerType="Outlined"
-                                      WidthRequest="300"
-                                      ContainerBackground="Transparent">
-            <editors:SfComboBox x:Name="combobox" 
-                                DropDownPlacement="Bottom"
-                                MaxDropDownHeight="200"
-                                IsEditable="True"
-                                TextSearchMode="StartsWith"
-                                IsFilteringEnabled="True"
-                                DisplayMemberPath="Name"
-                                TextMemberPath="Name"
-                                ItemsSource="{Binding Foods}">
-            </editors:SfComboBox>
-        </syncfusion:SfTextInputLayout>
-    </VerticalStackLayout>
+    <editors:SfComboBox x:Name="combobox" 
+                        DropDownPlacement="Bottom"
+                        MaxDropDownHeight="200"
+                        IsEditable="True"
+                        TextSearchMode="StartsWith"
+                        IsFilteringEnabled="True"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        ItemsSource="{Binding Foods}">
+        <editors:SfComboBox.FilterBehavior>
+            <local:ComboBoxCustomFilter/>
+        </editors:SfComboBox.FilterBehavior>
+    </editors:SfComboBox>
 </ContentPage.Content>
 
 {% endhighlight %}
