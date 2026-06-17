@@ -335,6 +335,6 @@ The following image demonstrates the output of the above AI-based filter using a
 
 ![.NET MAUI Combobox With AI Smart filter.](Images/AIFilter/ai_smart_filter.gif)
 
-You can find the complete sample from this [link.]()
+You can find the complete sample from this [link.]()  
 
 By combining a powerful AI-driven online filter with a robust you can create a truly smart and reliable filter experience in your .NET MAUI applications.
