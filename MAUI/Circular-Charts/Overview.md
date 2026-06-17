@@ -12,6 +12,7 @@ documentation: ug
 Syncfusion® [.NET MAUI Charts](https://www.syncfusion.com/maui-controls/maui-circular-charts) (SfCircularChart) is used to create the chart with beautiful and enhanced UI visualization of data that are used in high-quality .NET MAUI applications.
 
 ![.NET MAUI circular chart overview ](OverView_Images/circular-chart_overview.png)
+
 ## Business use cases
 
 - Business dashboards that require proportion-based data visualization using pie or doughnut charts.  
@@ -24,7 +25,8 @@ Syncfusion® [.NET MAUI Charts](https://www.syncfusion.com/maui-controls/maui-ci
 - **Circular chart types** support pie and doughnut series to represent data in intuitive and visually distinct formats.  
 - **User interaction support** includes selection, tooltip, and explode features to improve data exploration and usability.  
 - **Legend support** provides additional information about data points and helps users interpret chart values.  
-- **Dynamic data updates** allow updating the chart in real time or lazily based on changing data sources.  
+- **Dynamic data updates** allow updating the chart in real time or lazily based on changing data sources. 
+- **RadialBar chart** displays values using circular bars, making proportional comparisons visually clear and distinctive.
 
 ## Globalization
 
@@ -71,6 +73,7 @@ Explore further resources:
 - [Getting Started](https://help.syncfusion.com/maui/circular-charts/getting-started) shows a step‑by‑step guide to begin using the Circular Chart control.  
 - [Pie Chart](https://help.syncfusion.com/maui/circular-charts/piechart) creates simple part‑to‑whole visualizations with clear category splits.  
 - [Doughnut Chart](https://help.syncfusion.com/maui/circular-charts/doughnutchart) highlights proportions with a modern ring‑style chart for better readability.  
+- [RadialBar Chart](https://help.syncfusion.com/maui/circular-charts/radialbarchart) displays values in a circular bar style, making comparisons visually clear and engaging.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
 ## Additional Resources
@@ -260,19 +263,19 @@ Explore tour
   </div>
 </a>
 <!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<a href="https://support.syncfusion.com/kb/cross-platforms/section/1222" class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
     </div>
     <div class="explore-link">
-Explore KB's
+Explore KBs
   <span class="card-icon card-arrow"></span>
 </div>
   </div>
@@ -284,7 +287,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.

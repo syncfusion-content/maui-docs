@@ -68,8 +68,8 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Linear Gauge](https://help.syncfusion.com/maui/linear-gauge/overview) for displaying values along a linear scale. 
-- [Circular ProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview) for visualizing progress using circular indicators.
-- [Linear ProgressBar](https://help.syncfusion.com/maui/linearprogressbar/overview) for representing progress in a simple linear format.
+- [CircularChart](https://help.syncfusion.com/maui/circular-charts/overview) for visualizing proportional data using circular charts.   
+- [Digital Gauge](https://help.syncfusion.com/maui/digitalgauge/overview) for displaying numeric or character values using segmented digital display styles. 
 
 ## See Also
 
@@ -267,19 +267,19 @@ Explore tour
   </div>
 </a>
 <!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<a href="https://support.syncfusion.com/kb/cross-platforms/section/1223" class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
     </div>
     <div class="explore-link">
-Explore KB's
+Explore KBs
   <span class="card-icon card-arrow"></span>
 </div>
   </div>
@@ -291,7 +291,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.

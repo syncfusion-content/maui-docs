@@ -26,6 +26,10 @@ The [.NET MAUI Cartesian chart](https://help.syncfusion.com/cr/maui/Syncfusion.M
 - **Rich chart types** include line, spline, column, bar, area, scatter, and combination series.
 - **MVVM-Friendly data binding** supports property path binding, collection binding, and dynamic updates.
 - **Interactive exploration** provides zooming, panning, tooltips, selection, and trackball interaction.
+- **Plot bands** highlight specific ranges on the chart to emphasize thresholds or target values.
+- **Trendlines** show statistical trends and patterns across data points for better analysis.
+- **Chart export** supports saving charts as images or documents for sharing and reporting purposes.
+- **Annotations** allow adding custom text, shapes, or markers to highlight important information on the chart.
 - **Multi-series visualization** enables comparison of multiple datasets and supports combining different chart types.
 - **Visual customization** offers styling for axes, gridlines, labels, legends, markers, and themes.
 
@@ -78,6 +82,8 @@ Explore further resources:
 - [Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started) shows how to begin using the Cartesian chart control step by step.  
 - [Customization and Styling](https://help.syncfusion.com/maui/cartesian-charts/appearance) shows how to configure chart appearance, axes, gridlines, labels, legends, and themes.  
 - [Labels](https://help.syncfusion.com/maui/cartesian-charts/datalabels) display values directly on data points.
+- [Zooming & Panning](https://help.syncfusion.com/maui/cartesian-charts/zooming-and-panning) provides interactive navigation to focus on specific ranges and move across large datasets smoothly.
+- [Annotation](https://help.syncfusion.com/maui/cartesian-charts/annotation) adds custom text, shapes, or markers to highlight important areas or notes within the chart.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Additional Resources
@@ -267,19 +273,19 @@ Explore tour
   </div>
 </a>
 <!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<a href="https://support.syncfusion.com/kb/cross-platforms/section/1226" class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
     </div>
     <div class="explore-link">
-Explore KB's
+Explore KBs
   <span class="card-icon card-arrow"></span>
 </div>
   </div>
@@ -291,7 +297,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.

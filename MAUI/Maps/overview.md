@@ -22,13 +22,13 @@ The [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) control
 
 ## Key features
 
-- **[Shape layer](https://help.syncfusion.com/maui/maps/getting-started#add-shape-layer-maps-elements)** allows visualizing geographical regions using GeoJSON or shapefile data.
+- **[Shape layer](https://help.syncfusion.com/maui/maps/shape)** allows visualizing geographical regions using GeoJSON or shapefile data.
 - **[Data labels](https://help.syncfusion.com/maui/maps/data-labels)** allows displaying names or information for map shapes with intelligent layout handling.
 - **[Markers](https://help.syncfusion.com/maui/maps/markers)** allows placing symbols or custom UI elements at specific latitude and longitude locations.
 - **[Bubbles](https://help.syncfusion.com/maui/maps/bubble)** allows representing data values using varying sizes and colors of bubbles.
 - **[Shape selection](https://help.syncfusion.com/maui/maps/selection)** allows highlighting specific regions and handling selection interactions.
 - **[Legend](https://help.syncfusion.com/maui/maps/legend)** allows explaining the data representation used in the map for better understanding.
-- **[Colors](https://help.syncfusion.com/maui/maps/shape)** allows categorizing and styling regions based on underlying data values or ranges.
+- **[Colors](https://help.syncfusion.com/maui/maps/shape#shape-color)** allows categorizing and styling regions based on underlying data values or ranges.
 - **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** allows displaying additional information for shapes, markers, and bubbles interactively.
 
 ## Related controls
@@ -43,7 +43,6 @@ Explore further resources:
 
 - [Getting Started](https://help.syncfusion.com/maui/maps/getting-started) shows a step‑by‑step guide to begin using the Maps control.  
 - [Vector Layers](https://help.syncfusion.com/maui/maps/vector-layers/line-layer) lets you add line, polygon, or point layers to visualize geographic data clearly.  
-- [Markers](https://help.syncfusion.com/maui/maps/markers) explains how to add markers and customize location visualization.  
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
 ## Additional Resources
@@ -233,19 +232,19 @@ Explore tour
   </div>
 </a>
 <!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<a href="https://support.syncfusion.com/kb/cross-platforms/section/1224" class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
     </div>
     <div class="explore-link">
-Explore KB's
+Explore KBs
   <span class="card-icon card-arrow"></span>
 </div>
   </div>
@@ -257,7 +256,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.

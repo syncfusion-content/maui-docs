@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Step ProgressBar (SfStepProgressBar)
 
-[Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar)](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) control allows you to displays progress through multiple steps in a process, such as order tracking or a user registration form. It's customizable, with options for step shape, content, progress bar color, and more.
+Syncfusion<sup>&reg;</sup> [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) (SfStepProgressBar) control allows you to displays progress through multiple steps in a process, such as order tracking or a user registration form. It's customizable, with options for step shape, content, progress bar color, and more.
 
 ## Business use cases
 
@@ -251,19 +251,19 @@ Explore tour
   </div>
 </a>
 <!-- Card 3 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<a href="https://support.syncfusion.com/kb/cross-platforms/section/1414" class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
     </div>
     <div class="explore-link">
-Explore KB's
+Explore KBs
   <span class="card-icon card-arrow"></span>
 </div>
   </div>
@@ -275,7 +275,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.
