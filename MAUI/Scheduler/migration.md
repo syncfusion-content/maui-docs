@@ -610,7 +610,7 @@ Appointments.Add(new SchedulerAppointment()
     Background = Brush.LightSkyBlue,
 });
 	
-//Adding the scheduler appointment collection to the AppointmentsSource of the .NET MAUI Scheduler.
+//Adding the scheduler appointment collection to the AppointmentsSource of the [.NET MAUI Scheduler](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler).
 scheduler.AppointmentsSource = Appointments;
 this.Content = scheduler;	
 	

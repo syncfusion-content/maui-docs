@@ -63,3 +63,5 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) has nine differ
  * **Custom start and end hours**: The event scheduler timeslot view can be displayed with specific time durations by hiding the unwanted hours.
 
  ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
+
+ N> Looking for the full .NET MAUI Scheduler component overview, features, pricing, and documentation? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler) page.

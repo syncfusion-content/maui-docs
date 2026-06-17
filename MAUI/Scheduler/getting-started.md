@@ -12,7 +12,7 @@ keywords : .net maui scheduler, .net maui horizontal scheduler, maui appointment
 
 This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario. Follow the steps below to add a .NET Scheduler control to your project.
 
-To quickly get started with the .NET MAUI Scheduler, watch this video.
+To quickly get started with the [.NET MAUI Scheduler](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler), watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=Io2ElO8ORSQ" %}
 
@@ -326,6 +326,6 @@ this.scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted). Looking for the full .NET MAUI Scheduler component overview, features, pricing, and documentation? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler) page.
 
 ![adding-scheduler-appointments-in-maui-scheduler](images/getting-started/adding-scheduler-appointments-in-maui-scheduler.png)
