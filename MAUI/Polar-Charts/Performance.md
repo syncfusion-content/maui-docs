@@ -7,7 +7,7 @@ control: SfPolarChart
 documentation: ug
 ---
 
-## Performance in .NET MAUI Charts
+# Performance in .NET MAUI Charts
 
 * If your underlying data object implements `INotifyPropertyChanged`, you can enable the `ListenPropertyChange` property on the series to make the chart listen to the property changes of your data objects.
 
