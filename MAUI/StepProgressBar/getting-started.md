@@ -87,37 +87,20 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
- 
+
 Make sure to add the namespace.
- 
-{% highlight MauiProgram.cs %}
+
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %}
- 
-Register the Syncfusion core handler in your CreateMauiApp method of `MauiProgram.cs` file to use Syncfusion controls.
- 
-{% highlight MauiProgram.cs %}
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}
+{% endhighlight %} 
 
-## Step 4: Import Step ProgressBar namespace
-
-Add the following namespace in your XAML or C#.
-
-{% tabs %}
-{% highlight xaml %}
-
-xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
-
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.ProgressBar;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 5: Create the ViewModel
+## Step 4: Create the ViewModel
 
 You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
 
@@ -150,6 +133,23 @@ public class ViewModel
         stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered" });
     }
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 5: Import Step ProgressBar namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 {% endhighlight %}
 {% endtabs %}
@@ -193,3 +193,5 @@ this.Content = stepProgressBar;
 {% endtabs %}
 
 ![Getting started of .NET MAUI StepProgressBar](images/getting-started/maui-stepprogressbar-getting-started.gif)
+
+You can download the Step ProgressBar Getting Started sample from [GitHub]()

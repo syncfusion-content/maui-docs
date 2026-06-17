@@ -90,26 +90,16 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-To enable Syncfusion components in your .NET MAUI application, you need to register the Syncfusion core handler.
+Make sure to add the namespace.
 
-### Add the Required Namespace
-
-First, include the Syncfusion core hosting namespace in your MauiProgram.cs file:
-
-{% highlight MauiProgram.cs %}
-
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-
 {% endhighlight %} 
 
-### Register the Syncfusion Handler
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-Next, register the Syncfusion handler inside the MauiProgram.cs file's CreateMauiApp method. 
-
-{% highlight MauiProgram.cs %}
-
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-
 {% endhighlight %} 
 
 ## Step 4: Import the Maps namespace
@@ -252,6 +242,7 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Maps basic view.](images/getting-started/net-maui-map-basic-view.png)
 
+You can download the ListView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started)
+
 N>
-* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started) link.
 * You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Maps) that shows you how to render the Maps in .NET MAUI.

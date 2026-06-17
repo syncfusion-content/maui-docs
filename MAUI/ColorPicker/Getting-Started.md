@@ -90,13 +90,13 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
-{% highlight MauiProgram.cs %}
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %} 
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-{% highlight MauiProgram.cs %}
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 

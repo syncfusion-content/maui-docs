@@ -87,26 +87,16 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-To enable Syncfusion components in your .NET MAUI application, you need to register the Syncfusion core handler.
+Make sure to add the namespace.
 
-### Add the Required Namespace
-
-First, include the Syncfusion core hosting namespace in your MauiProgram.cs file:
-
-{% highlight MauiProgram.cs %}
-
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-
 {% endhighlight %} 
 
-### Register the Syncfusion Handler
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-Next, register the Syncfusion handler inside the MauiProgram.cs file's CreateMauiApp method. 
-
-{% highlight MauiProgram.cs %}
-
+{% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-
 {% endhighlight %} 
  
 ## Step 4: Import the Expander namespace
@@ -407,5 +397,7 @@ The following screenshot illustrates the result of the above code.
 <img alt="Defining the Header and Content" src="Images/maui-expander-getting_started.png" width="404" /> 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
+
+You can download the Expander Getting Started sample from [GitHub]()
 
 N> You can refer to our [.NET MAUI Expander](https://www.syncfusion.com/maui-controls/maui-expander) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Expander Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Expander) that shows you how to render and configure the Expander in .NET MAUI.
