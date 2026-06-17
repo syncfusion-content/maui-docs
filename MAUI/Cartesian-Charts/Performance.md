@@ -14,9 +14,7 @@ The .NET MAUI Chart provides performance optimization techniques to efficiently 
 
 ## ListenPropertyChange in .NET MAUI Charts
 
-The `ListenPropertyChange` property in .NET MAUI Charts allows the chart to update dynamically when the underlying data source properties change. This enables real-time data visualization with responsive updates.
-
-By leveraging `INotifyPropertyChanged`, the data points automatically reflect changes, ensuring the chart remains responsive to data updates.
+The `ListenPropertyChange` property allows the chart to update dynamically when the underlying data source properties change. This enables real-time data visualization with responsive updates. By leveraging `INotifyPropertyChanged`, the data points automatically reflect changes, ensuring the chart remains responsive to data updates.
 
 Use `ListenPropertyChange` with your series when your data model implements `INotifyPropertyChanged`:
 
@@ -80,11 +78,7 @@ public class DataModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-## Performance in .NET MAUI Charts
-
-* If your underlying data object implements `INotifyPropertyChanged`, you can enable the `ListenPropertyChange` property on the series to make the chart listen to the property changes of your data objects.
-
-* However, enabling the `ListenPropertyChange` property registers the `PropertyChanged` event for every object in the data source.
+* Enabling the `ListenPropertyChange` property registers the `PropertyChanged` event for every object in the data source.
 
 * When dealing with a large number of data points, registering these events can slow down the chart's loading time.
 
