@@ -146,6 +146,6 @@ The following screenshot illustrates the result of the above code.
 
 ![getting-started](Images\getting-started.png)
 
-You can download the DigitalGauge Getting Started sample from [GitHub]()
+You can download the DigitalGauge Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-digital-gauge)
 
 N> You can refer to our [.NET MAUI Digital Gauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Digital Gauge Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Gauges/SampleBrowser.Maui.Gauges/Samples/DigitalGauge) that shows you how to render the Digital Gauge in .NET MAUI.
