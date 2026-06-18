@@ -240,4 +240,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Chat control in .NET MAUI platform](images/getting-started/maui-chat-getting-started.png)
 
-You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)
+You can download the Chat Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)

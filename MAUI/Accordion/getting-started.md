@@ -281,7 +281,7 @@ The following screenshot illustrates the result of the above code.
 
 <img alt="Defining the Accordion items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png"/> 
 
-You can download accordion sample for .NET MAUI [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
+You can download the Accordion Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 
 N> When adding the template control inside the `Grid` with a height set to `Auto`, the child element will not receive the height changes at runtime. Since the `SfAccordion` is a template-based control, the default height value cannot be determined. Therefore, it is recommended to provide the `HorizontalOptions` and `VerticalOptions` as `FillAndExpand` options for the control.
 

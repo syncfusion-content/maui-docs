@@ -157,4 +157,4 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ![DateTimeRangeSlider ticks](images/getting-started/ticks.png)
 
-You can access a complete getting started sample from this [link](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-range-slider).
+You can download the DateTime Range Slider Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-range-slider).
