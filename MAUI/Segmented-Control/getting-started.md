@@ -38,70 +38,6 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-    
-    using Syncfusion.Maui.Core.Hosting;
-    public static class MauiProgram
-    {
-	    public static MauiApp CreateMauiApp()
-	    {
-	        var builder = MauiApp.CreateBuilder();
-		    builder
-			    .ConfigureSyncfusionCore()
-			    .UseMauiApp<App>()
-			    .ConfigureFonts(fonts =>
-			    {
-				    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			    });
-
-		    return builder.Build();
-	    }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Segmented Control
-
-1. To initialize the control, import the `Syncfusion.Maui.Buttons` namespace into your code.
-2. Initialize [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control).
-
-{% tabs %}
-{% highlight XAML %}
-
-<ContentPage   
-          ...  
-          xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-
-        <buttons:SfSegmentedControl />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# %}
-
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -127,70 +63,6 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Buttons` to install the Syncfusion<sup>®</sup> .NET MAUI Segmented Control NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-    
-    using Syncfusion.Maui.Core.Hosting;
-    public static class MauiProgram
-    {
-	    public static MauiApp CreateMauiApp()
-	    {
-	        var builder = MauiApp.CreateBuilder();
-		    builder
-			    .ConfigureSyncfusionCore()
-			    .UseMauiApp<App>()
-			    .ConfigureFonts(fonts =>
-			    {
-				    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			    });
-
-		    return builder.Build();
-	    }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Segmented Control
-
-1. To initialize the control, import the `Syncfusion.Maui.Buttons` namespace into your code.
-2. Initialize [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control).
-
-{% tabs %}
-{% highlight XAML %}
-
-<ContentPage   
-            
-        xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-
-        <buttons:SfSegmentedControl />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# %}
-
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
@@ -214,120 +86,75 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-    
-    using Syncfusion.Maui.Core.Hosting;
-    public static class MauiProgram
-    {
-	    public static MauiApp CreateMauiApp()
-	    {
-	        var builder = MauiApp.CreateBuilder();
-		    builder
-			    .ConfigureSyncfusionCore()
-			    .UseMauiApp<App>()
-			    .ConfigureFonts(fonts =>
-			    {
-				    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			    });
-
-		    return builder.Build();
-	    }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Segmented Control
-
-1. To initialize the control, import the `Syncfusion.Maui.Buttons` namespace into your code.
-2. Initialize [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control).
-
-{% tabs %}
-{% highlight XAML %}
-
-<ContentPage   
-        ...   
-        xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-
-        <buttons:SfSegmentedControl />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# %}
-
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Populating segmented items
+## Step 3: Register Syncfusion handler
 
-You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to populate the segmented items.
+Make sure to add the namespace.
+
+{% highlight csharp %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Import Segmented Control namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.Buttons;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 5: Add the Segmented Control
+
+Initialize the `Segmented Control` and use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to populate the segmented items.
 
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage   
-        ...
-        xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <buttons:SfSegmentedControl x:Name="segmentedControl">
-        <buttons:SfSegmentedControl.ItemsSource>
-            <x:Array Type="{x:Type x:String}">
-                <x:String>Day</x:String>
-                <x:String>Week</x:String>
-                <x:String>Month</x:String>
-                <x:String>Year</x:String>
-            </x:Array>
-        </buttons:SfSegmentedControl.ItemsSource>
-    </buttons:SfSegmentedControl>
-</ContentPage>
+<buttons:SfSegmentedControl x:Name="segmentedControl">
+    <buttons:SfSegmentedControl.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+            <x:String>Day</x:String>
+            <x:String>Week</x:String>
+            <x:String>Month</x:String>
+            <x:String>Year</x:String>
+        </x:Array>
+    </buttons:SfSegmentedControl.ItemsSource>
+</buttons:SfSegmentedControl>
 
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
+SfSegmentedControl segmentedControl = new SfSegmentedControl();
+List<SfSegmentItem> itemList = new List<SfSegmentItem>
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        List<SfSegmentItem> itemList = new List<SfSegmentItem>
-        {
-            new SfSegmentItem() {Text = "Day"},
-            new SfSegmentItem() {Text = "Week"},
-            new SfSegmentItem() {Text = "Month"},
-            new SfSegmentItem() {Text = "Year"},
-        };
-        segmentedControl.ItemsSource = itemList;
-        this.Content = segmentedControl;
-    }
-}
+    new SfSegmentItem() {Text = "Day"},
+    new SfSegmentItem() {Text = "Week"},
+    new SfSegmentItem() {Text = "Month"},
+    new SfSegmentItem() {Text = "Year"},
+};
+segmentedControl.ItemsSource = itemList;
+this.Content = segmentedControl;
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Getting started in .NET MAUI Segmented control.](images/getting-started/getting-started.png)
+
+You can download the Segmented Control Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/net-maui-segmented-control-examples/tree/master/GettingStarted)

@@ -52,6 +52,44 @@ N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
+## RightTapped
+
+The `RightTapped` event occurs when a user performs a right-click action on scheduler elements in desktop platforms such as **Windows** or **macOS**. 
+
+* `sender` - The SfScheduler object where the right-click occurred
+
+The `SchedulerRightTappedEventArgs` provides information about the right-click interaction:
+
+* `Appointments` – Collection of appointments associated with the clicked element
+
+* `Date` – The date corresponding to the clicked cell or appointment
+
+* `Element` – The scheduler element interacted with (appointment, cell, header, resource, week number)
+
+* `Resource` – The resource associated with the clicked element (in resource views)
+
+* `WeekNumber` – The week number value (Not applicable in `TimelineMonth` and `Agenda` views)
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       RightTapped="Scheduler_RightTapped" >
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 5 6 7 8" %}
+this.Scheduler.RightTapped += Scheduler_RightTapped;
+
+private void scheduler_RightTapped(object sender, SchedulerRightTappedEventArgs e)
+{
+    var element = e.Element;
+    var date = e.Date;
+    var resource = e.Resource;
+    var appointments = e.Appointments;
+    var weekNumber = e.WeekNumber;
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## DoubleTapped
 
 Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped onto the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTapped) event occurs. Below is a list of the arguments:
@@ -245,6 +283,48 @@ public class SchedulerInteractionViewModel
 
 }
 
+{% endhighlight %}  
+{% endtabs %}
+
+### RightTappedCommand
+
+The `RightTappedCommand` will be triggered when you perform a right tap on the scheduler view in desktop platforms (Windows and macOS) and will pass the `SchedulerRightTappedEventArgs` as the parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Month"
+                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       RightTappedCommand="{Binding SchedulerRightTappedCommand}">
+    <scheduler:SfScheduler.BindingContext>
+        <local:SchedulerInteractionViewModel />
+    </scheduler:SfScheduler.BindingContext>
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 15 17 18 19 20 21" %}
+public class SchedulerInteractionViewModel
+{
+    public ICommand SchedulerRightTappedCommand { get; set; }
+
+    public SchedulerInteractionViewModel()
+    {
+        this.SchedulerRightTappedCommand = new Command<SchedulerRightTappedEventArgs>(ExecuteRightTapped, CanExecuteRightTapped);
+    }
+
+    private bool CanExecuteRightTapped(SchedulerRightTappedEventArgs arg)
+    {
+        return true;
+    }
+
+    private void ExecuteRightTapped(SchedulerRightTappedEventArgs obj)
+    {
+        var appointments = obj.Appointments;
+        var date = obj.Date;
+        var schedulerElement = obj.Element;
+        var resource = obj.Resource;
+        var weekNumber = obj.WeekNumber;
+    }
+}
 {% endhighlight %}  
 {% endtabs %}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Chart control  Syncfusion
+title: Appearance in .NET MAUI Circular Chart control | Syncfusion
 description: Learn here all about appearance customization in .NET MAUI Chart (SfCircularChart), its elements and more.
 platform: maui
 control: SfCircularChart
@@ -10,6 +10,37 @@ documentation: ug
 # Appearance in .NET MAUI Circular Chart
 
 The appearance of the [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
+
+## Add a title
+
+The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of circular chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+    <chart:SfCircularChart.Title>
+        <Label Text="PRODUCT SALES"/>
+    </chart:SfCircularChart.Title>
+    . . .
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfCircularChart chart = new SfCircularChart();
+chart.Title = new Label()
+{
+    Text = "PRODUCT SALES"
+};
+. . .
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
 
 ## Custom PaletteBrushes
 

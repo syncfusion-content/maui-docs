@@ -19,7 +19,6 @@ To get start quickly with our [.NET MAUI Pyramid Chart](https://help.syncfusion.
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
-
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
@@ -37,80 +36,7 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Pyramid Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfPyramidChart/>
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        this.InitializeComponent();
-        SfPyramidChart chart = new SfPyramidChart();
-        this.Content = chart;
-    }
-}   
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
@@ -134,81 +60,7 @@ Before proceeding, ensure the following are set up:
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Charts` to install the Syncfusion<sup>®</sup> .NET MAUI Charts NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
-
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Pyramid Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfPyramidChart/>
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        this.InitializeComponent();
-        SfPyramidChart chart = new SfPyramidChart();
-        this.Content = chart;
-    }
-}   
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -231,88 +83,28 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Pyramid Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfPyramidChart/>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        this.InitializeComponent();
-        SfPyramidChart chart = new SfPyramidChart();
-        this.Content = chart;
-    }
-}   
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% endtabcontents %}
 
-## Step 5 - Initialize view model
+## Step 3: Register Syncfusion handler
 
-Now, let us define a simple data model that represents a data point in the chart.
+Make sure to add the namespace.
+
+{% highlight csharp %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Create Model and ViewModel
+
+Now, let us define a simple data Model and ViewModel that represents a data point in the chart.
 
 {% tabs %}  
-
 {% highlight c# %}
 
 public class StageModel
@@ -320,16 +112,6 @@ public class StageModel
     public string Name { get; set; }
     public double Value { get; set; }
 }
-
-{% endhighlight %} 
-
-{% endtabs %} 
-
-Next, create a StageViewModel class and initialize a list of `StageModel` objects as follows.
-
-{% tabs %}  
-
-{% highlight c# %}
 
 public class StageViewModel
 {
@@ -345,97 +127,68 @@ public class StageViewModel
         };
     }
 }
-
 {% endhighlight %} 
-
 {% endtabs %} 
 
-Create a `StageViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `StageViewModel` class.
+## Step 5: Import Pyramid Chart namespace
 
-N> Add the namespace of `StageViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.Charts;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 6: Add the Pyramid Chart component
+
+Configure the `Pyramid Chart` component to visually represent data in a hierarchical, proportional format. It is commonly used to display stages in a process or categorical data with decreasing values. Binding `Data` to the pyramid chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ItemsSource) property from its BindingContext to create our own pyramid chart.
 
 {% tabs %} 
 
 {% highlight xaml %}
 
-<ContentPage xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:model="clr-namespace:ChartGettingStarted">
-    <chart:SfPyramidChart>
-        <chart:SfPyramidChart.BindingContext>
-            <model:StageViewModel/>
-        </chart:SfPyramidChart.BindingContext>
-    </chart:SfPyramidChart>
-</ContentPage>
+<chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                    ShowDataLabels="True" 
+                    EnableTooltip="True"
+                    XBindingPath="Name"         
+                    YBindingPath="Value">
+    <chart:SfPyramidChart.Title>
+        <Label Text="Pyramid Stages"/>
+    </chart:SfPyramidChart.Title>
+    <chart:SfPyramidChart.BindingContext>
+        <model:StageViewModel/>
+    </chart:SfPyramidChart.BindingContext>
+    <chart:SfPyramidChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfPyramidChart.Legend>
+</chart:SfPyramidChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfPyramidChart chart = new SfPyramidChart();
+chart.Title = new Label()
+{
+    Text = "Pyramid Stages"
+};
+chart.Legend = new ChartLegend();
 StageViewModel viewModel = new StageViewModel();
 chart.BindingContext = viewModel;
+chart.ItemsSource = viewModel.Data;
+chart.XBindingPath = "Name";
+chart.YBindingPath = "Value";
+chart.EnableTooltip = true;
+chart.ShowDataLabels = true;
 this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-## Step 6 - Populate chart with data
-
- Binding `Data` to the pyramid chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ItemsSource) property from its BindingContext to create our own pyramid chart.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ChartGettingStarted.MainPage"
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
-    <chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                          ShowDataLabels="True" 
-                          EnableTooltip="True"
-                          XBindingPath="Name"         
-                          YBindingPath="Value">
-        <chart:SfPyramidChart.Title>
-            <Label Text="Pyramid Stages"/>
-        </chart:SfPyramidChart.Title>
-        <chart:SfPyramidChart.BindingContext>
-            <model:StageViewModel/>
-        </chart:SfPyramidChart.BindingContext>
-        <chart:SfPyramidChart.Legend>
-            <chart:ChartLegend/>
-        </chart:SfPyramidChart.Legend>
-    </chart:SfPyramidChart>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-public partial class MainPage : ContentPage
-{   
-    public MainWindow()
-    {
-        SfPyramidChart chart = new SfPyramidChart();
-        chart.Title = new Label()
-        {
-            Text = "Pyramid Stages"
-        };
-        chart.Legend = new ChartLegend();
-        StageViewModel viewModel = new StageViewModel();
-        chart.BindingContext = viewModel;
-        chart.ItemsSource = viewModel.Data;
-        chart.XBindingPath = "Name";
-        chart.YBindingPath = "Value";
-        chart.EnableTooltip = true;
-        chart.ShowDataLabels = true;
-        this.Content = chart;
-    }
-}
 
 {% endhighlight %}
 
@@ -443,4 +196,4 @@ public partial class MainPage : ContentPage
 
 ![Pyramid chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pyramid_chart.png)
 
-You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_PyramidChart_MAUI).
+You can download the Pyramid Charts Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_PyramidChart_MAUI).

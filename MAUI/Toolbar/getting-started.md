@@ -20,7 +20,6 @@ To get start quickly with our .NET MAUI Toolbar, you can check the below video.
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
-
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
@@ -37,74 +36,6 @@ Before proceeding, ensure the following are set up:
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Toolbar](https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-    using Syncfusion.Maui.Core.Hosting;
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .ConfigureSyncfusionCore()
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
-
-            return builder.Build();
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add a Toolbar
-
-1. To initialize the control, import the Toolbar namespace into your code.
-2. Initialize [Toolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html)
-
-{% tabs %}
-{% highlight xaml %}
-<ContentPage
-    ...        
-    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
-
-    <StackLayout>
-        <toolbar:SfToolbar />
-    </StackLayout>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Toolbar;
-namespace ToolbarGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();           
-            StackLayout stackLayout = new StackLayout();
-            SfToolbar toolbar = new SfToolbar();
-            stackLayout.Children.Add(toolbar);
-            this.Content = stackLayout;
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -131,74 +62,6 @@ Before proceeding, ensure the following are set up:
 3. Run the command dotnet add package [Syncfusion.Maui.Toolbar](https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/) to install the Syncfusion<sup>®</sup> .NET MAUI Toolbar package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-    using Syncfusion.Maui.Core.Hosting;
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .ConfigureSyncfusionCore()
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
-
-            return builder.Build();
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add a Toolbar
-
-1. To initialize the control, import the Toolbar namespace into your code.
-2. Initialize [Toolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.html)
-
-{% tabs %}
-{% highlight xaml %}
-<ContentPage
-    ...        
-    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
-
-    <StackLayout>
-        <toolbar:SfToolbar />
-    </StackLayout>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Toolbar;
-namespace ToolbarGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();           
-            StackLayout stackLayout = new StackLayout();
-            SfToolbar toolbar = new SfToolbar();
-            stackLayout.Children.Add(toolbar);
-            this.Content = stackLayout;
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
@@ -222,94 +85,54 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Toolbar]((https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/)) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-    using Syncfusion.Maui.Core.Hosting;
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .ConfigureSyncfusionCore()
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
-
-            return builder.Build();
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Toolbar control
-
-1. To initialize the control, import the `Syncfusion.Maui.Toolbar` namespace into your code.
-2. Initialize [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html)
-{% tabs %}
-{% highlight XAML hl_lines="3 5" %}
-
-<ContentPage
-    ...        
-    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
-
-    <StackLayout>
-        <toolbar:SfToolbar />
-    </StackLayout>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Toolbar;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();           
-        StackLayout stackLayout = new StackLayout();
-        SfToolbar toolbar = new SfToolbar();
-        stackLayout.Children.Add(toolbar);
-        this.Content = stackLayout;
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% endtabcontents %}
 
-## Adding Toolbar items
+## Step 3: Register Syncfusion handler
 
-You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
+Make sure to add the namespace.
+
+{% highlight csharp %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Import the Toolbar namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:treemap="xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar""
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.Toolbar;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 5: Add the Toolbar Component
+
+Initialize the `Toolbar` control and configure it to provide quick access to frequently used actions within your application. The Toolbar helps in organizing commands and improving user interaction. You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
  
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
-        <toolbar:SfToolbar.Items>
-            <toolbar:SfToolbarItem Name="Bold" ToolTipText="Bold">
-                <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE770;" FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
+<toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
+    <toolbar:SfToolbar.Items>
+        <toolbar:SfToolbarItem Name="Bold" ToolTipText="Bold">
+            <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE770;" FontFamily="MauiMaterialAssets" />
+            </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="Underline" ToolTipText="Underline">
                 <toolbar:SfToolbarItem.Icon>
@@ -319,57 +142,43 @@ You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.
             <toolbar:SfToolbarItem Name="Italic" ToolTipText="Italic">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE771;" FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            ....
-        </toolbar:SfToolbar.Items>
-    </toolbar:SfToolbar>
-</ContentPage>
+            </toolbar:SfToolbarItem.Icon>
+            <!--Add more items-->
+        </toolbar:SfToolbarItem>
+    </toolbar:SfToolbar.Items>
+</toolbar:SfToolbar>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Toolbar;
-
-namespace ToolbarGettingStarted
+SfToolbar toolbar = new SfToolbar();
+toolbar.HeightRequest = 56;
+ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
 {
-    public partial class MainPage : ContentPage
+    new SfToolbarItem
     {
-        public MainPage()
-        {
-            InitializeComponent();
-
-            SfToolbar toolbar = new SfToolbar();
-            toolbar.HeightRequest = 56;
-            ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
-            {
-                new SfToolbarItem
-                {
-                    Name = "Bold",
-                    ToolTipText = "Bold",
-                    Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
-                },
-                new SfToolbarItem
-                {
-                    Name = "Underline",
-                    ToolTipText = "Underline",
-                    Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
-                },
-                new SfToolbarItem
-                {
-                    Name = "Italic",
-                    ToolTipText = "Italic",
-                    Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
-                },
-                ....
-            };
+        Name = "Bold",
+        ToolTipText = "Bold",
+        Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
+    },
+    new SfToolbarItem
+    {
+        Name = "Underline",
+        ToolTipText = "Underline",
+        Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
+    },
+    new SfToolbarItem
+    {
+        Name = "Italic",
+        ToolTipText = "Italic",
+        Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
+    },
+    // Add more toolbar items
+};
             
-            toolbar.Items = itemCollection;
-            this.Content = toolbar;
-        }
-    }
-}
+toolbar.Items = itemCollection;
+this.Content = toolbar;
 
 {% endhighlight %}
 
@@ -377,6 +186,6 @@ namespace ToolbarGettingStarted
 
 ![getting-started](images/Icons.png)
 
->Note: Please refer to the [link](https://help.syncfusion.com/maui/icons) to add the `MauiMaterialAssets` custom font. 
+>N Please refer to the [link](https://help.syncfusion.com/maui/icons) to add the `MauiMaterialAssets` custom font. 
 
-You can find the getting started sample of .NET MAUI SfToolbar from this [GettingStarted](https://github.com/SyncfusionExamples/maui-toolbar/tree/Gettingstarted/GettingStarted).
+You can download the Toolbar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-toolbar/tree/Gettingstarted/GettingStarted).
