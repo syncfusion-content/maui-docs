@@ -145,7 +145,7 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Load more manually in Syncfusion .NET MAUI Chat](images/load-more/maui-chat-load-more-manual.gif)
+![Syncfusion .NET MAUI Chat Load more manually](images/load-more/maui-chat-load-more-manual.gif)
 
 ## Load more automatically
 
@@ -279,7 +279,7 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Load more automatically in Syncfusion .NET MAUI Chat](images/load-more/maui-chat-load-more-auto.gif)
+![Syncfusion .NET MAUI Chat Load more automatically](images/load-more/maui-chat-load-more-auto.gif)
 
 ## Load more template
 
@@ -403,4 +403,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Load more template in Syncfusion .NET MAUI Chat](images/load-more/maui-chat-load-more-template.gif)
+![Syncfusion .NET MAUI Chat Load more template](images/load-more/maui-chat-load-more-template.gif)

@@ -184,7 +184,7 @@ public class FileManagerViewModel
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-checkbox-in-each-nodes-in-.net-maui-treeview)
 
-![CheckBox nodes in Syncfusion .NET MAUI TreeView in bound mode](Images/checkbox/maui-treeView-checkboxBoundMode.png)
+![Syncfusion .NET MAUI TreeView CheckBox nodes in bound mode](Images/checkbox/maui-treeView-checkboxBoundMode.png)
 
 ## Working with checkbox in unbound mode
 
@@ -240,7 +240,7 @@ You can directly set the CheckBox state by setting the [TreeViewNode.IsChecked](
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-checkbox-in-each-nodes-with-unbound-mode-in-.net-maui-treeview)
 
-![Checkbox nodes in Syncfusion .NET MAUI TreeView in unbound mode](Images/checkbox/maui-treeView-checkboxUnboundMode.png)
+![Syncfusion .NET MAUI TreeView Checkbox nodes in unbound mode](Images/checkbox/maui-treeView-checkboxUnboundMode.png)
 
 ## CheckBox state
 

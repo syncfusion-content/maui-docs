@@ -119,4 +119,4 @@ listView.ItemBorderRadius = new CornerRadius(20,0,0,20);
 
 ## See Also
 
-- [Item Size Customization in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-size-customization)
+- [Syncfusion .NET MAUI ListView Item Size Customization](https://help.syncfusion.com/maui/listview/item-size-customization)

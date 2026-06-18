@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion® [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) renders set of data items using Maui views or custom templates. Data can easily be grouped, sorted, and filtered.
 
-![.NET MAUI list view overview ](images/overview/overview_listview.png)
+![Syncfusion .NET MAUI ListView overview ](images/overview/overview_listview.png)
  
 ## Business use cases
 

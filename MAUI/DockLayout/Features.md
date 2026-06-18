@@ -59,7 +59,7 @@ SfDockLayout dockLayout = new SfDockLayout()
 {% endtabs %}
 
 
-![Output of Syncfusion .NET MAUI DockLayout with Spacing](DockLayout-Images/maui-docklayout-spacing.png)
+![Syncfusion .NET MAUI DockLayout with Spacing](DockLayout-Images/maui-docklayout-spacing.png)
 
 ## GetDock
 The [GetDock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_GetDock_Microsoft_Maui_Controls_BindableObject_) method retrieves the docking position for a specified view within the layout.

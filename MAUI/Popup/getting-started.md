@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Popup control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Popup (SfPopup) control, its elements and more.
+title: Getting Started with .NET MAUI Popup control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Popup (SfPopup) control, its elements and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -146,6 +146,6 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 
 {% endtabs %}
 
-![Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
+![Syncfusion .NET MAUI Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
 
 You can download the Popup Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).

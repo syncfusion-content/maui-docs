@@ -71,7 +71,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Background color in .NET MAUI Chat](images/styles/maui-chat-background-color-style.png)
+![Syncfusion .NET MAUI Chat Background color](images/styles/maui-chat-background-color-style.png)
 
 ### Set background image
 
@@ -142,7 +142,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Background image in .NET MAUI Chat](images/styles/maui-chat-image-background-style.png)
+![Syncfusion .NET MAUI Chat Background image](images/styles/maui-chat-image-background-style.png)
 
 ### Set gradient background
 
@@ -220,7 +220,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Gradient background in .NET MAUI Chat](images/styles/maui-chat-gradient-background-style.png)
+![Syncfusion .NET MAUI Chat Gradient background](images/styles/maui-chat-gradient-background-style.png)
 
 ## Incoming message styling
 
@@ -338,7 +338,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Incoming message style in .NET MAUI Chat](images/styles/maui-chat-incoming-message-style.png)
+![Syncfusion .NET MAUI Chat Incoming message style](images/styles/maui-chat-incoming-message-style.png)
  
 ## Outgoing message styling
 
@@ -456,7 +456,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Outgoing message style in .NET MAUI Chat](images/styles/maui-chat-outgoing-message-style.png)
+![Syncfusion .NET MAUI Chat Outgoing message style](images/styles/maui-chat-outgoing-message-style.png)
 
 ## Calendar message styling
 
@@ -580,7 +580,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Hyperlink message style in .NET MAUI Chat](images/styles/maui-chat-hyperlink-message-style.png)
+![Syncfusion .NET MAUI Chat Hyperlink message style](images/styles/maui-chat-hyperlink-message-style.png)
 
 ## Image message styling
 
@@ -673,7 +673,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker message style in .NET MAUI Chat](images/styles/maui-chat-datepicker-message-style.png)
+![Syncfusion .NET MAUI Chat Date picker message style](images/styles/maui-chat-datepicker-message-style.png)
 
 ## Time picker message styling
 
@@ -739,7 +739,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Time picker message style in .NET MAUI Chat](images/styles/maui-chat-timepicker-message-style.png)
+![Syncfusion .NET MAUI Chat Time picker message style](images/styles/maui-chat-timepicker-message-style.png)
 
 ## Delivery State styling
 You can style the delivery state by setting values to the in-built keys of the delivery state in the resource dictionary.
@@ -804,7 +804,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Delivery State Style in .NET MAUI Chat](Images/styles/maui-chat-delivery-state-style.gif)
+![Syncfusion .NET MAUI Chat Delivery State Style](Images/styles/maui-chat-delivery-state-style.gif)
 
 ## Message input view styling
 
@@ -852,7 +852,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Message input view style in .NET MAUI Chat](images/styles/maui-chat-message-inputview-style.png)
+![Syncfusion .NET MAUI Chat Message input view style](images/styles/maui-chat-message-inputview-style.png)
 
 ## Editor styling
 
@@ -940,7 +940,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Editor style in .NET MAUI Chat](images/styles/maui-chat-editor-style.png)
+![Syncfusion .NET MAUI Chat Editor style](images/styles/maui-chat-editor-style.png)
 
 ## Typing indicator styling
 
@@ -1012,7 +1012,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Typing indicator style in .NET MAUI Chat](images/styles/maui-chat-typingindicator-style.png)
+![Syncfusion .NET MAUI Chat Typing indicator style](images/styles/maui-chat-typingindicator-style.png)
 
 ## Time break view styling
 
@@ -1090,7 +1090,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Time break view style in .NET MAUI Chat](images/styles/maui-chat-time-break-style.png)
+![Syncfusion .NET MAUI Chat Time break view style](images/styles/maui-chat-time-break-style.png)
 
 ## Suggestions styling
 
@@ -1172,7 +1172,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Suggestions style in .NET MAUI Chat](images/styles/maui-chat-suggestion-style.png)
+![Syncfusion .NET MAUI Chat Suggestions style](images/styles/maui-chat-suggestion-style.png)
 
 ## Send button styling
 
@@ -1246,7 +1246,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Send button disable and enable style in .NET MAUI Chat](images/styles/maui-chat-send-button-style.png)
+![Syncfusion .NET MAUI Chat Send button disable and enable style](images/styles/maui-chat-send-button-style.png)
 
 ## Attachment button styling
 
@@ -1310,7 +1310,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Attachment button style in .NET MAUI Chat](images/styles/maui-chat-attachmentbutton-style.png)
+![Syncfusion .NET MAUI Chat Attachment button style](images/styles/maui-chat-attachmentbutton-style.png)
 
 ## Load more styling
 

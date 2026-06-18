@@ -24,7 +24,7 @@ The `Chat` control provides a simple way to organize messages by their date and 
 {% endhighlight %}
 {% endtabs %}
 
-![Time break support in Syncfusion .NET MAUI Chat](images/time-break/maui-chat-time-break.png)
+![Syncfusion .NET MAUI Chat Time break support](images/time-break/maui-chat-time-break.png)
 
 ## Stick time break view
 
@@ -194,5 +194,5 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-![Time break template in Syncfusion .NET MAUI Chat](images/time-break/maui-chat-time-break-template.png)
+![Syncfusion .NET MAUI Chat Time break template](images/time-break/maui-chat-time-break-template.png)
       

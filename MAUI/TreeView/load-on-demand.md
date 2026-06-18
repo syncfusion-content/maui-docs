@@ -334,4 +334,4 @@ private void ExecuteOnDemandLoading(object obj)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/perform-load-on-demand-item-population-in-.net-maui-treeview)
 
-![Load-on-demand in Syncfusion .NET MAUI TreeView](Images/loadondemand/maui-treeView-Loadondemand.gif)
+![Syncfusion .NET MAUI TreeView Load-on-demand](Images/loadondemand/maui-treeView-Loadondemand.gif)

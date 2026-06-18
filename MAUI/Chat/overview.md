@@ -11,9 +11,7 @@ documentation: ug
 
 The Syncfusion® .NET MAUI Chat control offers a contemporary conversational chatbot experience, allowing for flexible customization of the layout to display conversations between two or more users.
 
-   ![overview in Syncfusion .NET MAUI SfChat](Images/maui-chat-overview.png)
-
-   ![Syncfusion .NET MAUI Chat Overview](Images/maui-chat-overview.png) 
+   ![Syncfusion .NET MAUI Chat overview](Images/maui-chat-overview.png)
 
 ## Business use cases
 

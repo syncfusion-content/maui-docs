@@ -1036,6 +1036,6 @@ private void OpenButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![ListView in a Syncfusion .NET MAUI Popup](Images/layout-customizations/maui-popup-with-listview-in-content-template.png)
+![Syncfusion .NET MAUI Popup in ListView](Images/layout-customizations/maui-popup-with-listview-in-content-template.png)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-show-a-.net-maui-listview-in-content-template-of-.net-maui-popup).

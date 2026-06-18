@@ -80,7 +80,7 @@ You can bind the `FilterText` property to a property in your ViewModel for MVVM 
 {% endhighlight %}
 {% endtabs %}
 
-![Filtering in Syncfusion .NET MAUI TreeView](Images/filtering//maui-treeview-filtering.gif)
+![Syncfusion .NET MAUI TreeView Filtering](Images/filtering//maui-treeview-filtering.gif)
 
 ## FilterPath and FilterPaths
 

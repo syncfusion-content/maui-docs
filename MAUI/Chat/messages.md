@@ -135,7 +135,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Current user in Syncfusion .NET MAUI Chat](images/messages/maui-chat-current-user.png)
+![Syncfusion .NET MAUI Chat Current user](images/messages/maui-chat-current-user.png)
 
 ## Text message
 
@@ -222,7 +222,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Text message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-text-message.png)
+![Syncfusion .NET MAUI Chat Text message type](images/messages/maui-chat-text-message.png)
 
 ## Date picker message
 
@@ -309,7 +309,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-date-picker-message.png)
+![Syncfusion .NET MAUI Chat Date picker message type](images/messages/maui-chat-date-picker-message.png)
 
 ## Time picker message
 
@@ -397,7 +397,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Time picker message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-timepicker-message.png)
+![Syncfusion .NET MAUI Chat Time picker message type](images/messages/maui-chat-timepicker-message.png)
 
 ## Calendar message
 
@@ -484,7 +484,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Calendar message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-calender-message.png)
+![Syncfusion .NET MAUI Chat Calendar message type](images/messages/maui-chat-calender-message.png)
 
 ## Hyperlink message
 
@@ -573,7 +573,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Hyperlink message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-hyperlink-message.png)
+![Syncfusion .NET MAUI Chat Hyperlink message type](images/messages/maui-chat-hyperlink-message.png)
 
 ### Adding hyperlink message as an outgoing message
 
@@ -668,7 +668,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Image message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-image-message.png)
+![Syncfusion .NET MAUI Chat Image message type](images/messages/maui-chat-image-message.png)
 
 ### Event and command
 
@@ -770,7 +770,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/display-tapped-
 
 Unlike the other messages, the `ImageMessage` can also be shown as an outgoing message. To add an ImageMessage as an outgoing message, just set the [ImageMessage.Author](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_Author) as [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser). You can also add an image message when clicking the attachment button, as shown here.
 
-![Outgoing Image message in Syncfusion .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
+![Syncfusion .NET MAUI Chat Outgoing Image message](images/messages/maui-chat-outgoing-image-message.png)
 
 ## Card message
 
@@ -897,10 +897,10 @@ public class ViewModel : INotifyPropertyChanged
 {% endtabs %}
 
 **Card message with button**
-![Card message type in Syncfusion .NET MAUI Chat](images/messages/maui-chat-card-message.png)
+![Syncfusion .NET MAUI Chat Card message type](images/messages/maui-chat-card-message.png)
 
 **Card message without button**
-![Card message type without button in Syncfusion .NET MAUI Chat](images/messages/maui-chat-card-message-without-button.png)
+![Syncfusion .NET MAUI Chat Card message type without button](images/messages/maui-chat-card-message-without-button.png)
 
 ### Event and Command
 
@@ -1151,7 +1151,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![DeliveryState in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-delivery-state.gif)
+![Syncfusion .NET MAUI Chat DeliveryState](Images/messages/maui-chat-delivery-state.gif)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/message-delivery-states-.net-maui-chat)
 
@@ -1222,7 +1222,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-![DeliveryState Customization in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-delivery-state-customization.gif)
+![Syncfusion .NET MAUI Chat DeliveryState Customization](Images/messages/maui-chat-delivery-state-customization.gif)
 
 ## Pin message
 
@@ -1264,7 +1264,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-![Pin Message in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-pin-message.gif)
+![Syncfusion .NET MAUI Chat Pin Message](Images/messages/maui-chat-pin-message.gif)
 
 N> 
 * The [`IMessage.IsPinned`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_IsPinned) property is used to mark a message as pinned during initial load.
@@ -1313,7 +1313,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-![Show Pin Message Container in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-pin-message-show-container.png)
+![Syncfusion .NET MAUI Chat Show Pin Message Container](Images/messages/maui-chat-pin-message-show-container.png)
 
 ### Customizing pinned message view
 
@@ -1353,7 +1353,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Pin Message Container Height in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-pin-message-container-height.png)
+![Syncfusion .NET MAUI Chat Pin Message Container Height](Images/messages/maui-chat-pin-message-container-height.png)
 
 #### Pinned message template
 
@@ -1406,7 +1406,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Pin Message Template in Syncfusion .NET MAUI Chat](Images/messages/maui-chat-pin-message-template.png)
+![Syncfusion .NET MAUI Chat Pin Message Template](Images/messages/maui-chat-pin-message-template.png)
 
 
 ### Events for pinned messages
@@ -1528,7 +1528,7 @@ public class ChatMessageTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-![Message template in Syncfusion .NET MAUI Chat](images/messages/maui-chat-message-template.png)
+![Syncfusion .NET MAUI Chat Message template](images/messages/maui-chat-message-template.png)
 
 ### Using ChatMessageTemplateSelector for custom templates
 
@@ -1799,7 +1799,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-![Message spacing in Syncfusion .NET MAUI Chat](images/messages/maui-chat-message-spacing.png)
+![Syncfusion .NET MAUI Chat Message spacing](images/messages/maui-chat-message-spacing.png)
 
 ## Sending message
 
@@ -2030,7 +2030,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 {% endhighlight %}
 {% endtabs %}
 
-![Hide incoming avatar and author visibility in Syncfusion .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
+![Syncfusion .NET MAUI Chat Hide incoming avatar and author visibility](images/messages/maui-chat-hide-avatar.png)
 
 N> In SfChat, when no avatar image is set, the author's initials are shown automatically based on their name.
 
@@ -2054,7 +2054,7 @@ The `SfChat` allows you specify the format in which timestamps are shown for out
 {% endhighlight %}
 {% endtabs %}
 
-![MessageTimeStampFormat in Syncfusion .NET MAUI Chat](images/messages/maui-chat-messagetimestampformat.png)
+![Syncfusion .NET MAUI Chat MessageTimeStampFormat](images/messages/maui-chat-messagetimestampformat.png)
 
 ## Customize the shape of the message
 
@@ -2108,7 +2108,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-![Message shape in Syncfusion .NET MAUI Chat](images/messages/maui-chat-message-shape.png)
+![Syncfusion .NET MAUI Chat Message shape](images/messages/maui-chat-message-shape.png)
 
 ## Hide the message input view
 
@@ -2220,7 +2220,7 @@ public class MessageTemplateSelector : ChatMessageTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-![Sytem generated message in Syncfusion .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
+![Syncfusion .NET MAUI Chat Sytem generated message](images/messages/maui-chat-system-generated-custom-message-template.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
 
@@ -2228,7 +2228,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generate
 
 You can assign unique color to each user in a group chat by writing converter and custom control templates to [OutgoingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageAuthorView.html) and [IncomingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageAuthorView.html) using `TargetStyle`.
 
-![Unique color to each user in Syncfusion .NET MAUI Chat](images/messages/maui-chat-assign-color-each-user.png)
+![Syncfusion .NET MAUI Chat Unique color to each user](images/messages/maui-chat-assign-color-each-user.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-assign-color-each-user-in-.net-maui-chat)
 
@@ -2236,6 +2236,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-assign-c
 
 You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageContentView.html) using `TargetStyle`. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview), you can display the drop down menu by using platform specific customization.
 
-![Drop down menu in Syncfusion .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
+![Syncfusion .NET MAUI Chat Drop down menu](images/messages/maui-chat-show-drop-down-menu.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-show-drop-down-menu-in-.net-maui-chat)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Typing indicator in .NET MAUI Chat control | Syncfusion®
-description: Learn here all about Typing indicator support in .NET MAUI Chat (SfChat) control, its elements, and more.
+description: Learn here all about Typing indicator support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -124,7 +124,7 @@ public class TypeIndicatorViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Typing indicator with image in Syncfusion .NET MAUI Chat](images/typing-indicator/maui-chat-typing-indicator.png)
+![Syncfusion .NET MAUI Chat Typing indicator with image](images/typing-indicator/maui-chat-typing-indicator.png)
 
 N> The `SfChat` allows customizing the height of the typing indicator using the [TypingIndicatorViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TypingIndicatorViewHeight) property.
 
@@ -151,7 +151,7 @@ public class TypingIndicatorViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Typing indicator with text in Syncfusion .NET MAUI Chat](images/typing-indicator/maui-chat-typing-indicator-text.png)
+![Syncfusion .NET MAUI Chat Typing indicator with text](images/typing-indicator/maui-chat-typing-indicator-text.png)
 
 ## Notifications when user start/stop typing
  

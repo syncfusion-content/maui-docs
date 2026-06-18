@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI TreeView Control | Syncfusion
-description: Learn here about getting started with the Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more.
+title: Getting Started with .NET MAUI TreeView Control | Syncfusion®
+description: Learn here about getting started with the Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -163,6 +163,6 @@ this.Content = treeView;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView getting started UnBoundMode](Images/getting-started/maui_treeview.png)
+![Syncfusion .NET MAUI TreeView getting started UnBoundMode](Images/getting-started/maui_treeview.png)
 
 You can download the TreeView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).

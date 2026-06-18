@@ -43,7 +43,7 @@ using Syncfusion.Maui.PullToRefresh;
 
 This is how the final output will look like when hosting a SfListView control as pullable content.
 
-![PullToRefresh with Syncfusion .NET MAUI ListView hosted with slide on top transition mode.](Images/pulltorefresh/net-maui-listview-slideontop.gif)
+![Syncfusion .NET MAUI ListView with PullToRefresh hosted with slide on top transition mode.](Images/pulltorefresh/net-maui-listview-slideontop.gif)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="21 23 33 35" %}
@@ -124,7 +124,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-listview-a
 
 If you run the above sample with the [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) as Push, the output will look as follows.
 
-![PullToRefresh with Syncfusion .NET MAUI ListView hosted with push transition mode.](Images/pulltorefresh/net-maui-listview-push.gif)
+![Syncfusion .NET MAUI ListView with PullToRefresh hosted with push transition mode.](Images/pulltorefresh/net-maui-listview-push.gif)
 
 ## Limitation
 

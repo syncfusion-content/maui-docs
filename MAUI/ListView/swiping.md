@@ -70,9 +70,9 @@ N> Similarly, the UI for swiping from right to left or bottom to top in vertical
 
 N> The swipe template is mandatory to perform swiping in the `SfListView`.
 
-![Start swipe view in Syncfusion .NET MAUI ListView](Images/swiping/maui-listview-startswipetemplate.jpg)
+![Syncfusion .NET MAUI ListView Start swipe view](Images/swiping/maui-listview-startswipetemplate.jpg)
 
-![End swipe view in Syncfusion .NET MAUI ListView](Images/swiping/maui-listview-endswipetemplate.jpg)
+![Syncfusion .NET MAUI ListView End swipe view](Images/swiping/maui-listview-endswipetemplate.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-swipe-view-in-.net-maui-listview). 
 
@@ -160,7 +160,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {%endhighlight %}
 {% endtabs %}
 
-![Customize start swipe view in Syncfusion .NET MAUI ListView](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
+![Syncfusion .NET MAUI ListView Customize start swipe view](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
 
 To delete the item when `Delete` image is tapped and set favorites to an item when `Favorites` image is tapped, follow the code example shown.
 
@@ -330,7 +330,7 @@ private void RightSwipeButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic start and end swiping in Syncfusion .NET MAUI ListView](Images/swiping/maui-listview-programmatic-swiping.gif)
+![Syncfusion .NET MAUI ListView Programmatic start and end swiping](Images/swiping/maui-listview-programmatic-swiping.gif)
 
 ## Events
 
@@ -488,7 +488,7 @@ private void ListView_PropertyChanged(object sender, PropertyChangedEventArgs e)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-do-indefinite-swiping-in-.net-maui-listview).
 
-![Indefinite swipe in Syncfusion .NET MAUI ListView](Images/swiping/maui-listview-swipe-an-item-indefinitely.jpg)
+![Syncfusion .NET MAUI ListView Indefinite swipe](Images/swiping/maui-listview-swipe-an-item-indefinitely.jpg)
 
 ### Edit data by swiping
 

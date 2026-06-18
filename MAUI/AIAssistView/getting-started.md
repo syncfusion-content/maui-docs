@@ -327,6 +327,6 @@ Create an instance for the AI AssistView control, and add it as content. To popu
 
 The following screenshot illustrates the result of the above code.
 
-![AI AssistView control in .NET MAUI platform](images/maui-aiassistview-getting-started.png)
+![Syncfusion .NET MAUI AI AssistView control](images/maui-aiassistview-getting-started.png)
 
 You can download the AI AssistView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)

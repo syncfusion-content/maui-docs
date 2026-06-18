@@ -27,7 +27,7 @@ treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
 
 While dropping, the dragged items can be added above, below, or as a child of the target item, depending on the position of the drag indicator.
 
-![Drag and drop](Images/drag-and-drop/maui-treeview-drag-and-drop.gif)
+![Syncfusion .NET MAUI TreeView Drag and drop](Images/drag-and-drop/maui-treeview-drag-and-drop.gif)
 
 N> The drag and drop operation is not supported when Load on Demand is enabled.
 
@@ -140,7 +140,7 @@ treeView.DragItemTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-![Drag item view customization](Images/drag-and-drop/maui-treeview-drag-view-customization.gif)
+![Syncfusion .NET MAUI TreeView Drag item view customization](Images/drag-and-drop/maui-treeview-drag-view-customization.gif)
 
 N> View sample in [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-drag-item-view).
 
@@ -173,7 +173,7 @@ treeView.AutoScroller.ScrollMargin = 20;
 {% endhighlight %}
 {% endtabs %}
 
-![Auto scroll](Images/drag-and-drop/maui-treeview-auto-scroll.gif)
+![Syncfusion .NET MAUI TreeView Auto scroll](Images/drag-and-drop/maui-treeview-auto-scroll.gif)
 
 ### Auto scroll interval
 
@@ -225,7 +225,7 @@ treeView.DragAndDropController.CanAutoExpand = true;
 {% endhighlight %}
 {% endtabs %}
 
-![Enable Auto Expand](Images/drag-and-drop/maui-treeview-enable-auto-expand.gif)
+![Syncfusion .NET MAUI TreeView Enable Auto Expand](Images/drag-and-drop/maui-treeview-enable-auto-expand.gif)
 
 ### Auto expand delay
 

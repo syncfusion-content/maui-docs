@@ -80,7 +80,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with header customization](Images/styles/maui-popup-with-header-customization.png)
+![Syncfusion .NET MAUI Popup Displaying with header customization](Images/styles/maui-popup-with-header-customization.png)
 
 ## Styling popup footer
 
@@ -157,7 +157,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with footer customization](Images/styles/maui-popup-with-footer-customization.png)
+![Syncfusion .NET MAUI Popup Displaying with footer customization](Images/styles/maui-popup-with-footer-customization.png)
 
 ## Styling popup message
 
@@ -228,7 +228,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with message customization](Images/styles/maui-popup-with-message-customization.png)
+![Syncfusion .NET MAUI Popup Displaying with message customization](Images/styles/maui-popup-with-message-customization.png)
 
 ## Stroke customization
 
@@ -283,7 +283,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with stroke customization](Images/styles/maui-popup-with-stroke-customization.png)
+![Syncfusion .NET MAUI Popup Displaying with stroke customization](Images/styles/maui-popup-with-stroke-customization.png)
 
 ## popup background
 
@@ -311,7 +311,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with the PopupView Background](Images/styles/maui-popup-with-popupview-background.png)
+![Syncfusion .NET MAUI Popup Displaying with the PopupView Background](Images/styles/maui-popup-with-popupview-background.png)
 
 ## Styling overlay background
 
@@ -339,7 +339,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with overlay customization](Images/styles/maui-popup-with-overlay-customization.png)
+![Syncfusion .NET MAUI Popup Displaying with overlay customization](Images/styles/maui-popup-with-overlay-customization.png)
 
 ### Set overlay opacity
 
@@ -426,7 +426,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with blur overlay](Images/styles/maui-popup-with-blurred-background.png)
+![Syncfusion .NET MAUI Popup Displaying with blur overlay](Images/styles/maui-popup-with-blurred-background.png)
 
 ### Set custom blur intensity
 
@@ -488,7 +488,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with blur radius](Images/styles/maui-popup-with-blur-radius.png)
+![Syncfusion .NET MAUI Popup Displaying with blur radius](Images/styles/maui-popup-with-blur-radius.png)
 
 ### Change the close button icon
 
@@ -531,7 +531,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with close button icon](Images/styles/maui-popup-with-close-button-icon.png)
+![Syncfusion .NET MAUI Popup Displaying with close button icon](Images/styles/maui-popup-with-close-button-icon.png)
 
 ### Set Shadow
 
@@ -573,7 +573,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a Syncfusion .NET MAUI Popup with shadow](Images/styles/maui-popup-with-shadow.png)
+![Syncfusion .NET MAUI Popup Displaying with shadow](Images/styles/maui-popup-with-shadow.png)
 
 ## Limitations
 

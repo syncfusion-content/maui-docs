@@ -51,7 +51,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Attachment button in Syncfusion .NET MAUI Chat](images/attachment-button/maui-chat-attachment-button.png)
+![Syncfusion .NET MAUI Chat Attachment button](images/attachment-button/maui-chat-attachment-button.png)
 
 ## Event and command
 
@@ -237,7 +237,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Custom attachment button in Syncfusion .NET MAUI Chat](images/attachment-button/maui-chat-custom-attachment-button.png)
+![Syncfusion .NET MAUI Chat Custom attachment button](images/attachment-button/maui-chat-custom-attachment-button.png)
 
 ## Attach image from gallery in .NET MAUI Chat
 

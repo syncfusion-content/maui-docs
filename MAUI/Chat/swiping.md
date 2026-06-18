@@ -181,7 +181,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-![Swipe views in Syncfusion .NET MAUI Chat](images/swiping/maui-chat-start-and-end-swipe-template.png)
+![Syncfusion .NET MAUI Chat Swipe views](images/swiping/maui-chat-start-and-end-swipe-template.png)
 
 ## Swipe Events
 

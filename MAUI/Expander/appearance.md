@@ -1217,7 +1217,7 @@ The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Expanded and collapsed visual states in Syncfusion .NET MAUI Expander" src="Images/appearance/maui-expander-with-vsm.png" width="404" /> 
+<img alt="Syncfusion .NET MAUI Expander Expanded and collapsed visual states" src="Images/appearance/maui-expander-with-vsm.png" width="404" /> 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-appearance-using-visual-state-manager-in-.net-maui-expander).
 

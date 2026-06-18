@@ -122,7 +122,7 @@ listView.ItemTemplate = new DataTemplate(() =>
 
 The screenshot shows the output of the reordering items by drag and drop. Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-load-drag-view-indicator-in-.net-maui-listview.).
 
-![Item reordering by drag and drop in Syncfusion .NET MAUI ListView](Images/item-drag-and-drop/maui-listview-dragviewindicator.gif)
+![Syncfusion .NET MAUI ListView Item reordering by drag and drop](Images/item-drag-and-drop/maui-listview-dragviewindicator.gif)
 
 ## Drag item customization
 
@@ -383,7 +383,7 @@ private async void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 Download the sample from GitHub [here](https://github.com/SyncfusionExamples/how-to-delete-a-dragging-item-after-dropping-it-to-a-specific-view-in-.net-maui-listview.).
 
-![Delete item while drop in Syncfusion .NET MAUI ListView](Images/item-drag-and-drop/maui-listview-draganddel.gif)
+![Syncfusion .NET MAUI ListView Delete item while drop](Images/item-drag-and-drop/maui-listview-draganddel.gif)
 
 ## Drag and drop customization
 

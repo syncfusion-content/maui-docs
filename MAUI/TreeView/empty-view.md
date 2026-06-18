@@ -78,7 +78,7 @@ treeView.EmptyView = new Border
 
 N> The view displayed by the `EmptyView` can be a single view or a view that includes multiple child views.
 
-![EmptyView in Syncfusion .NET MAUI TreeView](images/empty-view/maui-treeview-empty-view.gif)
+![Syncfusion .NET MAUI TreeView EmptyView](images/empty-view/maui-treeview-empty-view.gif)
 
 ## Empty view customization
 

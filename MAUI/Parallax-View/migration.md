@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from Xamarin to .NET MAUI Parallax View control | Syncfusion®
-description: This section explains the features available in the .NET MAUI Parallax View control compared to Xamarin Parallax View.
+description: This section explains the features available in the Syncfusion® .NET MAUI Parallax View control compared to Xamarin Parallax View.
 platform: MAUI
 control: SfParallaxView
 documentation: ug
@@ -46,10 +46,10 @@ To initialize the control, import the parallax view namespace and initialize [Sf
 {% highlight xaml %}
 
 <ContentPage
-    . . .
-    xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.XForms.ParallaxView">
+. . .
+xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.XForms.ParallaxView">
 
-    <parallax:SfParallaxView/>
+<parallax:SfParallaxView/>
 
 </ContentPage>
 
@@ -78,10 +78,10 @@ this.Content = parallax;
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
+. . .    
+xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
 
-    <parallax:SfParallaxView/>
+<parallax:SfParallaxView/>
 
 </ContentPage>
  

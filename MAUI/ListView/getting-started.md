@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI ListView control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
+title: Getting Started with .NET MAUI ListView control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI ListView (SfListView) control, its elements and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -211,9 +211,9 @@ Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
  
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
-  <syncfusion:SfListView x:Name="listView" 
-                   ItemsSource="{Binding BookInfo}"
-                   ItemSize="100">
+<syncfusion:SfListView x:Name="listView" 
+                ItemsSource="{Binding BookInfo}"
+                ItemSize="100">
     <syncfusion:SfListView.ItemTemplate>
         <DataTemplate>
         <Grid Padding="10">
@@ -226,36 +226,36 @@ Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
         </Grid>
         </DataTemplate>
     </syncfusion:SfListView.ItemTemplate>
-  </syncfusion:SfListView>
+</syncfusion:SfListView>
 {% endhighlight %}
 {% highlight c# hl_lines="14" %}
-        BookInfoRepository viewModel = new BookInfoRepository ();
-		SfListView listView = new SfListView();
-        listView.ItemSize = 100;
-        listView.ItemsSource = viewModel.BookInfo;
+BookInfoRepository viewModel = new BookInfoRepository ();
+SfListView listView = new SfListView();
+listView.ItemSize = 100;
+listView.ItemsSource = viewModel.BookInfo;
 
-        listView.ItemTemplate = new DataTemplate(() => {
-        var grid = new Grid();
-        grid.RowDefinitions.Add(new RowDefinition());
-        grid.RowDefinitions.Add(new RowDefinition());
-        var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
-        bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
-        var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
-        bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
-        grid.Children.Add(bookName);
-        grid.Children.Add(bookDescription);
-        grid.SetRow(bookName, 0);
-        grid.SetRow(bookDescription, 1);
-        return grid;
-        });
+listView.ItemTemplate = new DataTemplate(() => {
+var grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition());
+grid.RowDefinitions.Add(new RowDefinition());
+var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
+bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
+var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
+bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
+grid.Children.Add(bookName);
+grid.Children.Add(bookDescription);
+grid.SetRow(bookName, 0);
+grid.SetRow(bookDescription, 1);
+return grid;
+});
 
-		this.Content = listView;
+this.Content = listView;
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI ListView with item template](Images/getting-started/net-maui-listview-with-item-template.jpg)
+![Syncfusion .NET MAUI ListView with item template](Images/getting-started/net-maui-listview-with-item-template.jpg)
 
 You can download the ListView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui).
 

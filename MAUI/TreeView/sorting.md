@@ -59,7 +59,7 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic sorting in Syncfusion .NET MAUI TreeView](images/sorting/maui-treeView-programmatic-sorting.gif)
+![Syncfusion .NET MAUI TreeView Programmatic sorting](images/sorting/maui-treeView-programmatic-sorting.gif)
 
 N> It is mandatory to specify the `PropertyName` of `SortDescriptor` in programmatic sorting.
 

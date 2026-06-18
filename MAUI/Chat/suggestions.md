@@ -42,20 +42,20 @@ Suggestions can be shown in a message by creating a [ChatSuggestion](https://hel
 
 namespace GettingStarted
 {
-        public partial class MainPage : ContentPage
-        {
-        SfChat sfChat;
-        SuggestionsViewModel viewModel;
-        public MainPage()
-        {
-            InitializeComponent();
-            this.sfChat = new SfChat();
-            this.viewModel = new SuggestionsViewModel();
-            this.sfChat.Messages = viewModel.Messages;
-            this.sfChat.CurrentUser = viewModel.CurrentUser;
-            this.Content = sfChat;
-            }
+    public partial class MainPage : ContentPage
+    {
+    SfChat sfChat;
+    SuggestionsViewModel viewModel;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfChat = new SfChat();
+        this.viewModel = new SuggestionsViewModel();
+        this.sfChat.Messages = viewModel.Messages;
+        this.sfChat.CurrentUser = viewModel.CurrentUser;
+        this.Content = sfChat;
         }
+    }
 }  
 
 {% endhighlight %}
@@ -63,8 +63,8 @@ namespace GettingStarted
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="46" %}
- public class SuggestionsViewModel : INotifyPropertyChanged
- {
+public class SuggestionsViewModel : INotifyPropertyChanged
+{
       
     /// <summary>
     /// Chat suggestion
@@ -92,7 +92,7 @@ namespace GettingStarted
         suggestions.Add(new Suggestion() { Text = "Airways 6" });
         chatSuggestions.Items = suggestions;
         this.GenerateMessages();
-     }
+    }
 
     ...
 
@@ -110,8 +110,8 @@ namespace GettingStarted
             Text = "Here's my suggestion",
             Suggestions = chatSuggestions,
         });   
-     }
- }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +120,7 @@ namespace GettingStarted
 
 ### Add an image in suggestion item
 
-In the SfChat control, you can include an image in the suggestion list by assigning an image source to the [Suggestion.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Suggestion.html#Syncfusion_Maui_Chat_Suggestion_Image) property
+In the SfChat control, you can include an image in the suggestion list by assigning an image source to the [Syncfusion .NET MAUI Chat Suggestion.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Suggestion.html#Syncfusion_Maui_Chat_Suggestion_Image) property
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="21 22 23 24 25 26" %}
@@ -176,7 +176,7 @@ public class SuggestionsViewViewModel :INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Suggestions with image in Syncfusion .NET MAUI Chat](images/suggestions/maui-chat-suggestion-image.png)
+![Syncfusion .NET MAUI Chat Suggestions with image](images/suggestions/maui-chat-suggestion-image.png)
 
 ### Change the orientation of suggestions
 
@@ -205,7 +205,7 @@ public SuggestionsViewModel()
 {% endhighlight %}
 {% endtabs %}
 
-![Suggestions orientation support in Syncfusion .NET MAUI Chat](images/suggestions/maui-chat-suggestion-verticalorientation.png)
+![Syncfusion .NET MAUI Chat Suggestions orientation support](images/suggestions/maui-chat-suggestion-verticalorientation.png)
 
 ## Showing suggestions at bottom of chat control
 
@@ -308,7 +308,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Suggestion at bottom of control in Syncfusion .NET MAUI Chat](images/suggestions/maui-chat-suggestion-at-bottom.png)
+![Syncfusion .NET MAUI Chat Suggestion at bottom of control](images/suggestions/maui-chat-suggestion-at-bottom.png)
 
 ## Cancel the suggestions from closing
 

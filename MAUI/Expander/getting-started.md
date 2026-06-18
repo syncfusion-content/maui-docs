@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Expander control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Expander (SfExpander) control, its elements and more.
+title: Getting Started with .NET MAUI Expander control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Expander (SfExpander) control, its elements and more.
 platform: MAUI
 control: SfExpander
 documentation: ug
@@ -394,7 +394,7 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
 
 The following screenshot illustrates the result of the above code.
 
-<img alt="Defining the Header and Content" src="Images/maui-expander-getting_started.png" width="404" /> 
+<img alt="Syncfusion .NET MAUI Expander Defining the Header and Content" src="Images/maui-expander-getting_started.png" width="404" /> 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 
