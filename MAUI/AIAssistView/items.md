@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Items in .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about Items support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
+title: .NET MAUI AI AssistView Items Overview | Syncfusion®
+description: Learn how to use different item types in the Syncfusion® .NET MAUI AI AssistView control, including text, image, card, hyperlink, and attachments.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Work with Items in .NET MAUI SfAIAssistView?
 
-Learn how to work with different item types in Syncfusion .NET MAUI [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html), including text, image, card, hyperlink, and attachment items.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) enables working with various item types such as text, image, card, hyperlink, and attachments to represent and manage chat interactions effectively.
 
 ## Configuring common settings for the AssistItem
 

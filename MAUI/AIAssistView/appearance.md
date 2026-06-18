@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Appearance in .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about Appearance support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control and more.
+title: .NET MAUI AI AssistView Appearance Customization | Syncfusion®
+description: Learn how to customize the appearance of the Syncfusion® .NET MAUI AI AssistView control to create rich, interactive chat-style user interfaces.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
 # How to Customize Appearance in .NET MAUI SfAIAssistView?
-Learn how to customize conversation elements in [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) to build rich, interactive chat-style user interfaces.
 
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides flexible options to customize the appearance of chat interfaces. You can modify layout, styling, and visual structure to match your application's design and user experience requirements.
 
 ## Customizing AI AssistView with ControlTemplate
 
@@ -26,7 +26,6 @@ The `ControlTemplate` in AI AssistView allows you to define and reuse the visual
                         <ContentView.Content>
                             <Grid>
                                 <ContentView IsVisible="{Binding IsActiveChatView}" Content="{TemplateBinding AssistChatView}" BindingContext="{TemplateBinding BindingContext}" />
-                                <local:ComposeView  IsVisible="{Binding IsActiveComposeView}" BindingContext="{TemplateBinding BindingContext}"/>
                              </Grid>
                         </ContentView.Content>
                     </ContentView>

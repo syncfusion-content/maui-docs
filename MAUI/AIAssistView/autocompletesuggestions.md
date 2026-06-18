@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AutoComplete Suggestions in .NET MAUI AI AssistView | Syncfusion
-description: Learn here all about AutoComplete Suggestions support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
+title: .NET MAUI AI AssistView AutoComplete Suggestions | Syncfusion®
+description: Learn how to enable AutoComplete suggestions in the Syncfusion® .NET MAUI AI AssistView control to provide dynamic prompts and enhance user input.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # How to Display AutoComplete Suggestions in .NET MAUI SfAIAssistView?
 
-Learn how to enable AutoComplete suggestions in Syncfusion .NET MAUI [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html)  to provide dynamic prompts and improve user input experience.
+AutoComplete suggestions in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) enable dynamic prompts as users type, improving input efficiency and enhancing the overall chat interaction experience.
 
 ## Displaying AutoComplete suggestions
 
-The `SfAIAssistView` control includes an `AutoCompleteSuggestions` feature that displays relevant suggestions as the user types. The suggestions appear when the user enters the required number of characters, defined by the `MinimumPrefixCharacters` property. As the user continues typing, the list updates automatically.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control includes an `AutoCompleteSuggestions` feature that displays relevant suggestions as the user types. The suggestions appear when the user enters the required number of characters, defined by the `MinimumPrefixCharacters` property. As the user continues typing, the list updates automatically.
 
 Suggestions are provided through the AutoSuggestions property, which accepts any `IEnumerable<ISuggestion>` collection.
 This feature helps users compose clearer and more effective prompts, making it especially valuable in conversational AI scenarios.
