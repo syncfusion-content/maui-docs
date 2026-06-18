@@ -24,10 +24,10 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Barcode Generator](https://www.syncfus
 
 ## Key features
 
-* **One-dimensional barcodes** support multiple linear symbologies such as [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html), [`EAN8`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN8.html),[`EAN13`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN13.html), [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html), [`UPC-E`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCE.html), [`Code39`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code39.html), [`Code39 Extended`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code39Extended.html), [`Code93`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code93.html), and [`Codabar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Codabar.html).
-* **Two-dimensional barcode** include [`QR code`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html) and [`Data Matrix`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrix.html) formats for compact and high-density data encoding.
-* **Barcode customization** allows modifying properties such as `BackgroundColor`, [`ForegroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_ForegroundColor), and [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) size for better readability.
-* **Text customization** enables displaying encoded values with configurable position and styling.
+- **One-dimensional barcodes** support multiple linear symbologies such as [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html), [`EAN8`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN8.html), [`EAN13`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN13.html), [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html), [`UPC-E`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCE.html), [`Code39`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code39.html), [`Code39 Extended`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code39Extended.html), [`Code93`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code93.html), and [`Codabar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Codabar.html).
+- **Two-dimensional barcode** include [`QR code`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html) and [`Data Matrix`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrix.html) formats for compact and high-density data encoding.
+- **Barcode customization** allows modifying properties such as `BackgroundColor`, [`ForegroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_ForegroundColor), and [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) size for better readability.
+- **Text customization** enables displaying encoded values with configurable position and styling.
 
 ## Globalization
 
@@ -267,13 +267,13 @@ Explore tour
   </div>
 </a>
 <!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<a href="https://support.syncfusion.com/kb/cross-platforms/section/1357" class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
@@ -291,7 +291,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.

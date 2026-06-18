@@ -63,7 +63,8 @@ The following table summarizes the globalization support available in this contr
 
 - [CartesianChart](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing data using line, bar, and other chart types.  
 - [CircularChart](https://help.syncfusion.com/maui/circular-charts/overview) for representing proportional data using pie and doughnut charts.  
-- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for displaying hierarchical and comparative data.  
+- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for displaying hierarchical and comparative data. 
+- [Pyramid Chart](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.
 
 ## See Also
 
@@ -261,13 +262,13 @@ Explore tour
   </div>
 </a>
 <!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<a href="https://support.syncfusion.com/kb/cross-platforms/section/2009" class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
@@ -285,7 +286,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.
