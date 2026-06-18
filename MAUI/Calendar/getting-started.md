@@ -104,7 +104,7 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 
-## Step 4: Import the DataGrid namespace
+## Step 4: Import the Calendar namespace
 
 Add the following namespace in your XAML or C#.
 
@@ -140,4 +140,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Change different calendar views in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-month-view.png)
 
-You can download the Calendar Getting Started sample from [GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Calendar).
+You can download the Calendar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-calendar-control).

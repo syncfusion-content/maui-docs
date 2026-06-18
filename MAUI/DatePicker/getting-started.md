@@ -133,4 +133,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Set Height and width in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-height-and-width.png)
 
-You can download the DatePicker Getting Started sample from [GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DatePicker)
+You can download the DatePicker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-datepicker-sample)
