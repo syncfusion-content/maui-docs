@@ -74,6 +74,12 @@ The following table describes the types of columns and their usage:
 <td>To display a Picker within each cell</td>
 </tr>
 <tr>
+<td>{{'[DataGridPercentColumn]()'| markdownify }}</td>
+<td>{{'[DataGridPercentCellRenderer]()'| markdownify }}</td>
+<td>Percentage</td>
+<td>To display and edit percentage values in each row</td>
+</tr>
+<tr>
 <td>{{'[DataGridMultiColumnComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridMultiColumnComboBoxCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxCellRenderer.html)'| markdownify }}</td>
 <td>MultiColumnComboBox</td>
@@ -1596,6 +1602,13 @@ this.Content = dataGrid;
 <img alt="DataGrid with Percent column" src="Images\column-types\maui-datagrid-percentage-column.png" width="404"/>
 
 The `DataGridPercentColumn` supports culture-aware parsing and formatting for percentage values. By default the percent operator (`%`) is used when displaying and parsing values; change this symbol using the `PercentSymbol` property to support alternate conventions.
+
+### Allow Null Value
+
+You can allow null values in the column by setting the [DataGridPercentColumn.AllowNullValue]() property to `true`.
+
+N> 
+The `AllowNullValue` property will work only when the underlying property type is nullable.
 
 ## DataGridMultiColumnComboBoxColumn
 

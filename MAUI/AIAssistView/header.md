@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header customization in .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about Header support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control and more.
+title: Header customization in .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about Header support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -17,20 +17,20 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                    ShowHeader="True"/>  
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                            ShowHeader="True"/>  
 
 {% endhighlight %} 
 {% highlight c# hl_lines="6" %} 
 
-    SfAIAssistView sfAIAssistView; 
-    public MainPage() 
-    { 
-        InitializeComponent(); 
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ShowHeader = true;
-        this.Content = sfAIAssistView; 
-     } 
+SfAIAssistView sfAIAssistView; 
+public MainPage() 
+{ 
+    InitializeComponent(); 
+    this.sfAIAssistView = new SfAIAssistView();
+    this.sfAIAssistView.ShowHeader = true;
+    this.Content = sfAIAssistView; 
+    } 
 
 {% endhighlight %}
 {% endtabs %}
@@ -42,23 +42,23 @@ The `SfAIAssistView` control allows you to customize the header text using the [
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                    HeaderText="Ask AI"
-                                    ShowHeader="True"/>  
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                        HeaderText="Ask AI"
+                        ShowHeader="True"/>  
 
 {% endhighlight %} 
 
 {% highlight c# hl_lines="6" %} 
 
-    SfAIAssistView sfAIAssistView; 
-    public MainPage() 
-    { 
-        InitializeComponent(); 
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.HeaderText = "Ask AI";
-        this.sfAIAssistView.ShowHeader = true;
-        this.Content = sfAIAssistView; 
-     } 
+SfAIAssistView sfAIAssistView; 
+public MainPage() 
+{ 
+    InitializeComponent(); 
+    this.sfAIAssistView = new SfAIAssistView();
+    this.sfAIAssistView.HeaderText = "Ask AI";
+    this.sfAIAssistView.ShowHeader = true;
+    this.Content = sfAIAssistView; 
+    } 
 
 {% endhighlight %}
 {% endtabs %}
@@ -139,4 +139,4 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 {% endhighlight %}
 {% endtabs %}
 
-![Header View customization in .NET MAUI AI AssistView](Images/maui-aiassistview-header-customization.png)
+![Syncfusion .NET MAUI AI AssistView Header View customization](Images/maui-aiassistview-header-customization.png)

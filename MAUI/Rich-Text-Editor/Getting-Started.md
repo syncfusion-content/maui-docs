@@ -19,7 +19,6 @@ To get start quickly with our [.NET MAUI Rich Text Editor](https://help.syncfusi
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
-
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
@@ -36,94 +35,6 @@ Before proceeding, ensure the following are set up:
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the Handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion® core.
-
-{% highlight c# hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace RichTextEditorSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}   
-
-{% endhighlight %} 
-
-## Step 4: Add a Basic Rich Text Editor
-
-Step 1: Add the namespace as shown in the following code sample.
-
-{% tabs %}
-{% highlight xaml %}
-
-    xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
-
-{% endhighlight %}
-{% highlight c# %}
-
-    using Syncfusion.Maui.RichTextEditor;
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage ...
-             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
-    <Grid>
-        <rte:SfRichTextEditor />
-    </Grid>
-</ContentPage>
-	
-{% endhighlight %}
-
-{% highlight C# %}		
-
-using Syncfusion.Maui.RichTextEditor;
-
-namespace RichTextEditorSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfRichTextEditor richTextEditor = new SfRichTextEditor();
-            this.Content = richTextEditor;
-        }
-    }
-}
-        
-{% endhighlight %}
-
-{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -150,97 +61,7 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.RichTextEditor` to install the Syncfusion .NET MAUI Rich Text Editor package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the Handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion® core.
-
-{% highlight c# hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace RichTextEditorSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}   
-
-{% endhighlight %} 
-
-## Step 4: Add a Basic Rich Text Editor
-
-Step 1: Add the namespace as shown in the following code sample.
-
-{% tabs %}
-{% highlight xaml %}
-
-    xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
-
-{% endhighlight %}
-{% highlight c# %}
-
-    using Syncfusion.Maui.RichTextEditor;
-
-{% endhighlight %}
-{% endtabs %}
-
-
-Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage ...
-             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
-    <Grid>
-        <rte:SfRichTextEditor />
-    </Grid>
-</ContentPage>
-	
-{% endhighlight %}
-
-{% highlight C# %}		
-
-using Syncfusion.Maui.RichTextEditor;
-
-namespace RichTextEditorSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfRichTextEditor richTextEditor = new SfRichTextEditor();
-            this.Content = richTextEditor;
-        }
-    }
-}
-        
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -263,100 +84,41 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+{% endtabcontent %}
+{% endtabcontents %}
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
+## Step 3: Register Syncfusion handler
 
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
+Make sure to add the namespace.
 
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
 {% endhighlight %} 
-{% endtabs %}
 
-## Step 4: Add a Basic Rich Text Editor
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-Step 1: Add the namespace as shown in the following code sample.
+{% highlight csharp %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Import RichTextEditor namespace
+
+Add the following namespace in your XAML or C#.
 
 {% tabs %}
 {% highlight xaml %}
 
-    xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
+xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.RichTextEditor;
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage ...
-             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
-    <Grid>
-        <rte:SfRichTextEditor />
-    </Grid>
-</ContentPage>
-	
-{% endhighlight %}
-
-{% highlight C# %}		
-
 using Syncfusion.Maui.RichTextEditor;
 
-namespace RichTextEditorSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfRichTextEditor richTextEditor = new SfRichTextEditor();
-            this.Content = richTextEditor;
-        }
-    }
-}
-        
 {% endhighlight %}
-
 {% endtabs %}
 
-{% endtabcontent %}
-{% endtabcontents %}
-
-## Enable the Toolbar
+## Step 5: Add the RichTextEditor component
 
 The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides a comprehensive toolbar that allows users to format their content easily. You can enable it by setting the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ShowToolbar) property to `True`.
 
@@ -379,3 +141,5 @@ this.Content = richTextEditor;
 {% endtabs %}
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
+
+You can download the Rich Text Editor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-richtexteditor-samples/tree/master)

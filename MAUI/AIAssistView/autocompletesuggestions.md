@@ -67,7 +67,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Auto Complete Suggestions in Syncfusion .NET MAUI AI AssistView](images/maui-aiassistview-auto-complete-suggestion.gif)
+![Syncfusion .NET MAUI AI AssistView Auto Complete Suggestions](images/maui-aiassistview-auto-complete-suggestion.gif)
 
 ### ItemSelectedCommand
 
