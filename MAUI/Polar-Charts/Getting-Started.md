@@ -261,4 +261,4 @@ The following chart is created as a result of the previous codes.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_polar_chart.png)
 
-You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/Creating-a-Getting-Started-application-for-NET-MAUI-Polar-Chart).
+You can download the Polar Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Creating-a-Getting-Started-application-for-NET-MAUI-Polar-Chart).

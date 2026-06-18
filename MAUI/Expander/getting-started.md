@@ -398,6 +398,6 @@ The following screenshot illustrates the result of the above code.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 
-You can download the Expander Getting Started sample from [GitHub]()
+You can download the Expander Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander)
 
 N> You can refer to our [.NET MAUI Expander](https://www.syncfusion.com/maui-controls/maui-expander) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Expander Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Expander) that shows you how to render and configure the Expander in .NET MAUI.

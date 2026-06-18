@@ -265,4 +265,4 @@ Initialize the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusi
 
 ![.NET MAUI Navigation Drawer](Images/getting-started/gettingstarted.png)
 
-You can find the getting started sample from the [`GitHub`](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer) link.
+You can download the Navigation Drawer Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer) link.

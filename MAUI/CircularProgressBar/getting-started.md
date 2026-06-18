@@ -117,7 +117,7 @@ using Syncfusion.Maui.ProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Circular ProgressBar control
+## Step 5: Add .NET MAUI Circular ProgressBar control
 
 Create an instance for the circular progress bar control, and add it as content.
 

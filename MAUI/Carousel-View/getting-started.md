@@ -222,38 +222,7 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 
 {% endtabs %}
 
-## Step 6: Setting the height and width of the carousel item
-
-[ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemHeight) and [ItemWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemWidth) properties are used to change the height and width of carouselItem in carousel panel.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<carousel:SfCarousel x:Name="carousel"
-                     ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemsSource="{Binding ImageCollection}"
-                     ItemHeight="170"
-                     ItemWidth="270"/>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCarousel carousel = new SfCarousel()
-{
-    ItemHeight = 170,
-    ItemWidth = 270
-};
-
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Step 7: Set Desire Item to be Selected
+### Set Desire Item to be Selected
 
 We can bring particular item to the center of the screen using [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedIndex) property in [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control.
 
@@ -264,8 +233,6 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 <carousel:SfCarousel x:Name="carousel"
                      ItemTemplate="{StaticResource itemTemplate}" 
                      ItemsSource="{Binding ImageCollection}"
-                     ItemHeight="170"
-                     ItemWidth="270"
                      SelectedIndex="4"/>
 	
 {% endhighlight %}
@@ -274,8 +241,6 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 170,
-    ItemWidth = 270,
     SelectedIndex = 4
 };
 
@@ -292,6 +257,6 @@ The following screenshot illustrates the result of the above code.
 
 ![OverView image for Carousel](images/gettingstarted.png)
 
-N> You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel).
+You can download the Carousel View Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel).
 
 N> You can also explore our [.NET MAUI Carousel Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Carousel) that shows you how to render and configure the Carousel in .NET MAUI.
