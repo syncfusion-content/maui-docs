@@ -141,3 +141,5 @@ Create an instance of the SfDateTimeRangeSelector and initialize it as follows:
 {% endtabs %}
 
 ![Initialize RangeSelector](images/getting-started/initialize-slider.png)
+
+You can download the DateTime Range Selector Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-range-selector)

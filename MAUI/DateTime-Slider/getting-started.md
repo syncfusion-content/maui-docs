@@ -155,4 +155,4 @@ SfDateTimeSlider slider = new SfDateTimeSlider()
 
 ![Slider ticks](images/getting-started/ticks.png)
 
-You can access a complete getting started sample from this [link](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-slider).
+You can download the DateTime Slider Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-slider).

@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Linear ProgressBar (SfLinearProgressBar) Overview
 
-The .NET MAUI Linear ProgressBar shows the progress of a task with custom visuals. It displays the progress of a process in rectangular shapes, determinate and indeterminate states, segments, and smooth animation. You can also define ranges with different colors.
+The [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with custom visuals. It displays the progress of a process in rectangular shapes, determinate and indeterminate states, segments, and smooth animation. You can also define ranges with different colors.
 
    ![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
@@ -236,7 +236,7 @@ Explore tour
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
@@ -254,7 +254,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.

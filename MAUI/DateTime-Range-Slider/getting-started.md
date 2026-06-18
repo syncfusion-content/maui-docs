@@ -16,7 +16,6 @@ To quickly get started with the .NET MAUI DateTime Range Slider, watch this vide
 <style>#MAUIDateTimeRangeSliderVideoTutorial{width : 90% !important; height: 350px !important }</style>
 <iframe id='MAUIDateTimeRangeSliderVideoTutorial' src='https://www.youtube.com/embed/4mdAax8B4n4'></iframe>
 
-
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 
@@ -157,4 +156,4 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ![DateTimeRangeSlider ticks](images/getting-started/ticks.png)
 
-You can access a complete getting started sample from this [link](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-range-slider).
+You can download the Datetime Range Slider Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-range-slider).

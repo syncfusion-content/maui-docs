@@ -269,6 +269,6 @@ T> The size of the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 ![Syncfusion .NET MAUI Parallax View](ParallaxView_Images/maui_parallaxview.gif)
 
-You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos).
+You can download the Parallax View Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos)
 
 N> [\#11230](https://github.com/dotnet/maui/issues/11230) In Android, when an image's pixel size cannot stretch to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without degradation in image quality.

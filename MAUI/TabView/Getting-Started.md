@@ -204,7 +204,7 @@ this.Content = tabView;
 
 ![Getting started with .NET MAUI Tab View.](images/tab-view-gettingstarted.png)
 
-You can download the TabView Getting Started sample from [GitHub]()
+You can download the TabView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-.net-maui-tab-view)
 
 N> You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewGettingStarted). You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
 
@@ -213,8 +213,6 @@ N> You can download the getting started project of this demo from [GitHub](https
 [How to load content page to tab page in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/11416/how-to-load-content-page-to-tab-page-in-net-maui-tab-view)
 
 [How to Load Different Content Page as tab items content in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/13619/how-to-load-different-content-page-as-tab-items-content-in-net-maui-tabview)
-
-[How to set the BindingContext for .NET MAUI TabItem using various pages?](https://support.syncfusion.com/kb/article/14410/how-to-set-the-bindingcontext-for-net-maui-tabitem-using-various-pages)
 
 [How to integrate .NET MAUI Tab View with Android native embedding?](https://support.syncfusion.com/kb/article/16758/how-to-integrate-net-maui-tabview-with-android-native-embedding)
 

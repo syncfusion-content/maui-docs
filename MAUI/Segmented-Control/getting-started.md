@@ -103,7 +103,7 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 
-## Step 4: Import Switch namespace
+## Step 4: Import Segmented Control namespace
 
 Add the following namespace in your XAML or C#.
 
@@ -157,4 +157,4 @@ this.Content = segmentedControl;
 
 ![Getting started in .NET MAUI Segmented control.](images/getting-started/getting-started.png)
 
-You can download the Segmented Control Getting Started sample from [GitHub]()
+You can download the Segmented Control Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/net-maui-segmented-control-examples/tree/master/GettingStarted)

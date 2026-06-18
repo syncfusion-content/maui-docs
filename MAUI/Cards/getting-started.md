@@ -187,5 +187,6 @@ The following screenshot illustrates the result of the above code.
 
 ![MAUI SfCardView image](images/maui-card-cardlayout.gif)
 
+You can download the Card Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-cards-sample)
 
 N> You can refer to our [.NET MAUI Cards](https://www.syncfusion.com/maui-controls/maui-cards) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Cards Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Cards) that shows you how to render and configure the Cards in .NET MAUI.

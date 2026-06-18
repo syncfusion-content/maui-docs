@@ -27,7 +27,9 @@ The Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart is used to visualize hierar
 - **Legend** allows identifying categories and understanding data representation clearly.  
 - **Tooltip** allows displaying additional information on interaction with segments.  
 - **Appearance customization** allows applying custom color palettes and styling to enhance visualization.  
-- **Center view** allows displaying additional information or summary content at the center of the chart.  
+- **Center view** allows displaying additional information or summary content at the center of the chart. 
+- **Drill‑down** provides the ability to navigate into deeper levels of the chart, making it easier to view detailed data within large hierarchies.
+- **Selection** allows specific segments to be highlighted, giving clear focus on chosen parts of the chart.
 
 ## Globalization
 
@@ -263,13 +265,13 @@ Explore tour
   </div>
 </a>
 <!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<a href="https://support.syncfusion.com/kb/cross-platforms/section/1333" class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
       Find solutions, guides, and troubleshooting tips.
@@ -287,7 +289,7 @@ Explore KB's
     <div class="icon-circle">
     <span class="card-icon card-ai"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Read articles, use cases, and expert insights.

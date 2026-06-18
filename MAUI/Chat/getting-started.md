@@ -197,7 +197,7 @@ Create a simple message collection as shown in the following code example in a n
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Import the DataGrid namespace
+## Step 5: Import the Chat namespace
 
 Add the following namespace in your XAML or C#.
 
@@ -240,4 +240,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Syncfusion .NET MAUI Chat control](images/getting-started/maui-chat-getting-started.png)
 
-You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)
+You can download the Chat Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)
