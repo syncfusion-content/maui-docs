@@ -579,13 +579,6 @@ line-height: 1;
 .card-feedback:before { content: "\e726"; }
 .card-support:before { content: "\e727"; }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
 .form-card {
   flex: 0 0 calc(33.33% - 14px);
   max-width: calc(33.33% - 14px);
@@ -619,6 +612,7 @@ line-height: 1;
   border-radius: 50%;
   background: #EAF3FF;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
 }
@@ -649,7 +643,11 @@ line-height: 1;
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8px;
+}
+
+.card-header .form-title {
+  margin: 0;
+  line-height: 1.2;
 }
 
 .explore-link {
