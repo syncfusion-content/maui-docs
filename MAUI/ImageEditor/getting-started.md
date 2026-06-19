@@ -91,18 +91,22 @@ Before proceeding, ensure the following are set up:
 ## Step 3: Register Syncfusion handler
 
 Make sure to add the namespace.
-
+ 
+{% tabs %}
 {% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
+ 
+{% tabs %}
 {% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
-## Step 4: Import the Image Editor namespace
+## Step 4: Import the ImageEditor namespace
  
 Add the following namespace in your XAML or C#.
  
@@ -119,7 +123,7 @@ using Syncfusion.Maui.ImageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add a image editor component
+## Step 5: Add a ImageEditor component
 
 Initialize the [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) and load the images from different sources using [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property.
 
