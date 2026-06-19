@@ -92,15 +92,19 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
+{% tabs %}
 {% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
+{% tabs %}
 {% highlight csharp %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
+{% endtabs %}
 
 ## Step 4: Import Radial Gauge namespace
 
@@ -199,7 +203,7 @@ Content = gauge;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI Radial Gauge with Annotation](images/getting-started/maui-radial-gauge-gettingstarted.png)
+<img alt="MAUI Radial Gauge with Annotation" src="images/getting-started/maui-radial-gauge-gettingstarted.png" width="404" />
 
 You can download the Radial Gauge Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/MAUI-Radial-Gauge-Getting-Started-)
 
