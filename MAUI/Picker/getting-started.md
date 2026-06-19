@@ -110,7 +110,7 @@ The .NET MAUI Picker control is a data-bound control. Hence, you must create a d
 Create a simple Observable Collection of data for the picker,
 
 {% tabs %}
-{% highlight c# tabtitle="ItemInfo.cs" %}
+{% highlight c# %}
 
 public class ItemInfo
 {
