@@ -88,7 +88,7 @@ Before proceeding, ensure the following are set up:
 Make sure to add the namespace.
 
 {% tabs %}
-{% highlight csharp %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +96,7 @@ using Syncfusion.Maui.Core.Hosting;
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
 {% tabs %}
-{% highlight csharp %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 {% endtabs %}

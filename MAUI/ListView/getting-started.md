@@ -91,7 +91,7 @@ Before proceeding, ensure the following are set up:
 Make sure to add the namespace.
  
 {% tabs %}
-{% highlight csharp %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +99,7 @@ using Syncfusion.Maui.Core.Hosting;
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
  
 {% tabs %}
-{% highlight csharp %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +111,7 @@ builder.ConfigureSyncfusionCore();
 Create a simple data model as shown in the following code example, and save it as `BookInfo.cs` file. 
 
 {% tabs %}
-{% highlight c# tabtitle="BookInfo.cs" %}
+{% highlight c# %}
 public class BookInfo : INotifyPropertyChanged
 {
     private string bookName;
@@ -157,7 +157,7 @@ N> If you want your data model to respond to property changes, then implement [I
 Next, create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as `BookInfoRepository.cs` file:
 
 {% tabs %}
-{% highlight c# tabtitle="BookInfoRepository.cs" %}
+{% highlight c# %}
 public class BookInfoRepository
 {
     private ObservableCollection<BookInfo> bookInfo;
