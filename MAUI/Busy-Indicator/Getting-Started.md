@@ -73,6 +73,7 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
 ## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the **.NET MAUI App** template.
@@ -89,18 +90,22 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}  
+{% endhighlight %}
+{% endtabs %}  
 
 ## Step 4: Import the Busy Indicator namespace
 

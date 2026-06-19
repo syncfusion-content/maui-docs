@@ -89,18 +89,22 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Define Model and View Model
 
@@ -109,7 +113,7 @@ The `SfChat` control is data-bound and displays a collection of messages exchang
 Create a simple message collection as shown in the following code example in a new class file. Save it as `ViewModel.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# %}
 
   using Syncfusion.Maui.Chat;
   public class GettingStartedViewModel : INotifyPropertyChanged
@@ -202,7 +206,7 @@ Create a simple message collection as shown in the following code example in a n
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -217,7 +221,7 @@ Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This en
 To load the messages to SfChat, bind the message collection to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property of Chat and bind the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) to differentiate the incoming & outgoing messages.
 
 {% tabs %} 
-{% highlight xaml hl_lines="14" %}
+{% highlight xaml %}
     <syncfusion:SfChat x:Name="sfChat"
                     Messages="{Binding Messages}"
                     CurrentUser="{Binding CurrentUser}"/>

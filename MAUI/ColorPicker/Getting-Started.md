@@ -87,28 +87,32 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the Color Picker namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 using Syncfusion.Maui.Inputs;
 {% endhighlight %}
 {% endtabs %}

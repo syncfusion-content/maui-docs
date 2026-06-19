@@ -88,18 +88,22 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Define the view model
 
@@ -170,7 +174,7 @@ N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
