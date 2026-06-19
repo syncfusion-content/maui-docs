@@ -184,7 +184,6 @@ Used to define major sections within your Markdown content.
         InitializeComponent();  
         SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
         markdownViewer.Source = markdownContent;
-        Content = markdownViewer;       
     }
 }  
 

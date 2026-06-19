@@ -142,7 +142,6 @@ maskedEntry.WidthRequest = 200;
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "00/00/0000";
-content = maskedEntry;
 
 {% endhighlight %}
 {% endtabs %}

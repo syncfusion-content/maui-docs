@@ -216,7 +216,6 @@ Initialize the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     chart.YBindingPath = "YValue";
     chart.EnableTooltip = true;
     chart.ShowDataLabels = true;
-    this.Content = chart;
 
 {% endhighlight %}
 

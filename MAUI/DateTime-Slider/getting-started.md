@@ -152,7 +152,6 @@ SfDateTimeSlider slider = new SfDateTimeSlider()
     ShowTicks = true,
     MinorTicksPerInterval = 1,
 };
-content = slider;
 
 {% endhighlight %}
 

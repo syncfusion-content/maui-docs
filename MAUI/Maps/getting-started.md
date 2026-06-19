@@ -162,7 +162,6 @@ SfMaps map = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
 map.Layer = layer;
-this.Content = map;
 
 {% endhighlight %}
 
@@ -192,7 +191,6 @@ SfMaps map = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 map.Layer = layer;
-this.Content = map;
 
 {% endhighlight %}
 
@@ -216,7 +214,6 @@ SfMaps map = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
 map.Layer = layer;
-this.Content = map;
 
 {% endhighlight %}
 
@@ -236,7 +233,6 @@ Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
 var jsonStream = assembly?.GetManifestResourceStream("MyProject.Assets.australia.json");
 layer.ShapesSource = MapSource.FromStream(jsonStream);
 map.Layer = layer;
-this.Content = map;
 
 {% endhighlight %}
 

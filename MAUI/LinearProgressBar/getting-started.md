@@ -138,7 +138,6 @@ Initialize the [SfLinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfus
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { Progress = 75 };
-this.Content = linearProgressBar;
 
 {% endhighlight %}
 

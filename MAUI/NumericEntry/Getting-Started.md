@@ -141,7 +141,6 @@ numericEntry.WidthRequest=200;
 numericEntry.HorizontalOptions = LayoutOptions.Center;
 numericEntry.VerticalOptions = LayoutOptions.Center;
 numericEntry.CustomFormat = "0.000";
-content = numericEntry;
 
 {% endhighlight %}
 {% endtabs %}

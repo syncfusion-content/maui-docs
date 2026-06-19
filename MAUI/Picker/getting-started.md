@@ -181,8 +181,6 @@ SfPicker picker = new SfPicker()
     }
 };
 
-this.Content = picker;
-
 {% endhighlight %}
 {% endtabs %}
 

@@ -205,57 +205,56 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
 
 {% highlight C# %}
       
-    SfPolarChart chart = new SfPolarChart();
+SfPolarChart chart = new SfPolarChart();
 
-    chart.Title = new Label()
-    {
-        Text = "Plant Analysis",
-        HorizontalTextAlignment = TextAlignment.Center
-    };
+chart.Title = new Label()
+{
+    Text = "Plant Analysis",
+    HorizontalTextAlignment = TextAlignment.Center
+};
 
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.PrimaryAxis = primaryAxis;
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.PrimaryAxis = primaryAxis;
 
-    NumericalAxis secondaryAxis = new NumericalAxis()
-    {
-        Maximum = 100,
-    };
-    chart.SecondaryAxis = secondaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    Maximum = 100,
+};
+chart.SecondaryAxis = secondaryAxis;
 
-    PolarLineSeries  series1 = new PolarLineSeries()
-    {
-        ItemsSource = (new PlantViewModel()).PlantDetails,
-        XBindingPath = "Direction",
-        YBindingPath = "Tree",
-        Label="Tree", 
-        EnableTooltip = true,
-        ShowDataLabels = true,
-    }; 
+PolarLineSeries series1 = new PolarLineSeries()
+{
+    ItemsSource = (new PlantViewModel()).PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+    Label = "Tree",
+    EnableTooltip = true,
+    ShowDataLabels = true,
+};
 
-    PolarLineSeries  series2 = new PolarLineSeries()
-    {
-        ItemsSource = (new PlantViewModel()).PlantDetails,
-        XBindingPath = "Direction",
-        YBindingPath = "Weed",
-        Label="Weed", 
-        EnableTooltip = true, 
-        ShowDataLabels = true,
-    }; 
+PolarLineSeries series2 = new PolarLineSeries()
+{
+    ItemsSource = (new PlantViewModel()).PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Weed",
+    Label = "Weed",
+    EnableTooltip = true,
+    ShowDataLabels = true,
+};
 
-    PolarLineSeries series3 = new PolarLineSeries()
-    {
-        ItemsSource = (new PlantViewModel()).PlantDetails,
-        XBindingPath = "Direction",
-        YBindingPath = "Flower",
-        Label="Flower", 
-        EnableTooltip = true, 
-        ShowDataLabels = true
-    };   
+PolarLineSeries series3 = new PolarLineSeries()
+{
+    ItemsSource = (new PlantViewModel()).PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Flower",
+    Label = "Flower",
+    EnableTooltip = true,
+    ShowDataLabels = true
+};
 
-    chart.Series.Add(series1);
-    chart.Series.Add(series2);
-    chart.Series.Add(series3);
-    this.Content = chart;
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+chart.Series.Add(series3);
 
 {% endhighlight %}
 

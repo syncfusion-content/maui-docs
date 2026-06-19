@@ -156,28 +156,24 @@ Initialize the [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight c# %}
 
- SfLinearGauge gauge = new SfLinearGauge();
-        
-        LinearRange range = new LinearRange();
-        gauge.Ranges.Add(range);
-        
-        LinearShapePointer shapePointer = new LinearShapePointer();
-        shapePointer.Value = 70;
-        gauge.MarkerPointers.Add(shapePointer);
+SfLinearGauge gauge = new SfLinearGauge();
+LinearRange range = new LinearRange();
+gauge.Ranges.Add(range);
 
-        LinearContentPointer contentPointer = new LinearContentPointer();
-        contentPointer.Value = 80;
-        contentPointer.Content = new Image() { Source = "pin.png", HeightRequest = 20, WidthRequest = 20 };
-        gauge.MarkerPointers.Add(contentPointer);
+LinearShapePointer shapePointer = new LinearShapePointer();
+shapePointer.Value = 70;
+gauge.MarkerPointers.Add(shapePointer);
 
-        BarPointer barPointer = new BarPointer();
-        barPointer.Value = 60;
-        gauge.BarPointers.Add(barPointer);
+LinearContentPointer contentPointer = new LinearContentPointer();
+contentPointer.Value = 80;
+contentPointer.Content = new Image() { Source = "pin.png", HeightRequest = 20, WidthRequest = 20 };
+gauge.MarkerPointers.Add(contentPointer);
 
-        this.Content = gauge;
+BarPointer barPointer = new BarPointer();
+barPointer.Value = 60;
+gauge.BarPointers.Add(barPointer);
 
 {% endhighlight %}
-
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.

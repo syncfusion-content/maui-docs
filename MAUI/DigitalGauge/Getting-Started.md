@@ -136,11 +136,9 @@ Initialize the [SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-di
 
 {% highlight c# %}
 
-        SfDigitalGauge digitalGauge = new SfDigitalGauge();
+SfDigitalGauge digitalGauge = new SfDigitalGauge();
 
-        digital.Text = "SYNCFUSION";
-
-        this.Content = digitalGauge;
+digital.Text = "SYNCFUSION";
  
 {% endhighlight %}
 
