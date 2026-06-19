@@ -92,15 +92,19 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
+{% tabs %}
 {% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
+{% tabs %}
 {% highlight csharp %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
+{% endtabs %} 
 
 ## Step 4: Import the Toolbar namespace
 
@@ -129,21 +133,54 @@ Initialize the `Toolbar` control and configure it to provide quick access to fre
 
 <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
     <toolbar:SfToolbar.Items>
-        <toolbar:SfToolbarItem Name="Bold" ToolTipText="Bold">
+        <toolbar:SfToolbarItem Name="Bold"
+                            ToolTipText="Bold">
             <toolbar:SfToolbarItem.Icon>
-                <FontImageSource Glyph="&#xE770;" FontFamily="MauiMaterialAssets" />
+                <FontImageSource Glyph="&#xE770;"
+                                 FontFamily="MauiMaterialAssets" />
             </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Underline" ToolTipText="Underline">
-                <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE762;" FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Italic" ToolTipText="Italic">
-                <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE771;" FontFamily="MauiMaterialAssets" />
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="Underline"
+                               ToolTipText="Underline">
+            <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE762;"
+                                 FontFamily="MauiMaterialAssets" />
             </toolbar:SfToolbarItem.Icon>
-            <!--Add more items-->
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="Italic"
+                               ToolTipText="Italic">
+            <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE771;"
+                                 FontFamily="MauiMaterialAssets" />
+            </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignLeft"
+                               ToolTipText="Align-Left">
+            <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE751;"
+                                 FontFamily="MauiMaterialAssets" />
+            </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignRight"
+                               ToolTipText="Align-Right">
+            <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE753;"
+                                 FontFamily="MauiMaterialAssets" />
+            </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignCenter"
+                               ToolTipText="Align-Center">
+            <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE752;"
+                                 FontFamily="MauiMaterialAssets" />
+            </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignJustify"
+                               ToolTipText="Align-Justify">
+            <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE74F;"
+                                 FontFamily="MauiMaterialAssets" />
+            </toolbar:SfToolbarItem.Icon>
         </toolbar:SfToolbarItem>
     </toolbar:SfToolbar.Items>
 </toolbar:SfToolbar>
@@ -156,25 +193,76 @@ SfToolbar toolbar = new SfToolbar();
 toolbar.HeightRequest = 56;
 ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
 {
-    new SfToolbarItem
+    toolbar.Items.Add(new SfToolbarItem
     {
         Name = "Bold",
         ToolTipText = "Bold",
-        Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
-    },
-    new SfToolbarItem
+        Icon = new FontImageSource
+        {
+            Glyph = "\uE770",
+            FontFamily = "MauiMaterialAssets"
+        }
+    });
+    toolbar.Items.Add(new SfToolbarItem
     {
         Name = "Underline",
         ToolTipText = "Underline",
-        Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
-    },
-    new SfToolbarItem
+        Icon = new FontImageSource
+        {
+            Glyph = "\uE762",
+            FontFamily = "MauiMaterialAssets"
+        }
+    });
+    toolbar.Items.Add(new SfToolbarItem
     {
         Name = "Italic",
         ToolTipText = "Italic",
-        Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
-    },
-    // Add more toolbar items
+        Icon = new FontImageSource
+        {
+            Glyph = "\uE771",
+            FontFamily = "MauiMaterialAssets"
+        }
+    });
+    toolbar.Items.Add(new SfToolbarItem
+    {
+        Name = "AlignLeft",
+        ToolTipText = "Align-Left",
+        Icon = new FontImageSource
+        {
+            Glyph = "\uE751",
+            FontFamily = "MauiMaterialAssets"
+        }
+    });
+    toolbar.Items.Add(new SfToolbarItem
+    {
+        Name = "AlignRight",
+        ToolTipText = "Align-Right",
+        Icon = new FontImageSource
+        {
+            Glyph = "\uE753",
+            FontFamily = "MauiMaterialAssets"
+        }
+    });
+    toolbar.Items.Add(new SfToolbarItem
+    {
+        Name = "AlignCenter",
+        ToolTipText = "Align-Center",
+        Icon = new FontImageSource
+        {
+            Glyph = "\uE752",
+            FontFamily = "MauiMaterialAssets"
+        }
+    });
+    toolbar.Items.Add(new SfToolbarItem
+    {
+        Name = "AlignJustify",
+        ToolTipText = "Align-Justify",
+        Icon = new FontImageSource
+        {
+            Glyph = "\uE74F",
+            FontFamily = "MauiMaterialAssets"
+        }
+    });
 };
             
 toolbar.Items = itemCollection;
