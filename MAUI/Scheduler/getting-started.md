@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Scheduler control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/maui-controls/maui-scheduler"
 description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler(SfScheduler) control, its basic features to schedule the events
 platform: maui
 control: SfScheduler
