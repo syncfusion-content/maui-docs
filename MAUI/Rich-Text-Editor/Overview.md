@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Rich Text Editor control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/maui-controls/maui-rich-text-editor"
 description: Learn here all about introduction of Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
 control: Rich Text Editor
