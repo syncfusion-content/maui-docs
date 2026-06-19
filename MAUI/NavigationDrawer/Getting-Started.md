@@ -89,16 +89,20 @@ Before proceeding, ensure the following are set up:
 ## Step 3: Register Syncfusion handler
 
 Make sure to add the namespace.
-
+ 
+{% tabs %}
 {% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
+ 
+{% tabs %}
 {% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the Navigation Drawer namespace
  
@@ -225,26 +229,6 @@ Initialize the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusi
         var hamburgerButton = new ImageButton();
         hamburgerButton.Clicked += HamburgerButton_Clicked;
 
-        headerLabel = new Label();
-
-        topBar.Children.Add(hamburgerButton);
-        topBar.Children.Add(headerLabel);
-        contentLabel = new Label();
-        Grid.SetRow(contentLabel, 1);
-
-        mainGrid.Children.Add(topBar);
-        mainGrid.Children.Add(contentLabel);
-
-        navigationDrawer.ContentView = mainGrid;
-
-        Content = navigationDrawer;
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-
         private void hamburgerButton_Clicked(object sender, EventArgs e)
         {
             navigationDrawer.ToggleDrawer();
@@ -259,6 +243,20 @@ Initialize the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusi
                 navigationDrawer.ToggleDrawer();
             }
         }
+
+        headerLabel = new Label();
+
+        topBar.Children.Add(hamburgerButton);
+        topBar.Children.Add(headerLabel);
+        contentLabel = new Label();
+        Grid.SetRow(contentLabel, 1);
+
+        mainGrid.Children.Add(topBar);
+        mainGrid.Children.Add(contentLabel);
+
+        navigationDrawer.ContentView = mainGrid;
+
+        Content = navigationDrawer;
 
 {% endhighlight %}
 {% endtabs %}

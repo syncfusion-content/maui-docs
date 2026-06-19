@@ -88,22 +88,26 @@ Before proceeding, ensure the following are set up:
 ## Step 3: Register Syncfusion handler
 
 Make sure to add the namespace.
-
+ 
+{% tabs %}
 {% highlight csharp %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
+ 
+{% tabs %}
 {% highlight csharp %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}  
+{% endhighlight %}
+{% endtabs %}  
 
 ## Step 4: Add picker items to the picker
 
 The .NET MAUI Picker control is a data-bound control. Hence, you must create a data collection and bind it to the picker control.
 
-* Create a simple Observable Collection of data for the picker,
+Create a simple Observable Collection of data for the picker,
 
 {% tabs %}
 {% highlight c# tabtitle="ItemInfo.cs" %}
@@ -183,5 +187,7 @@ this.Content = picker;
 {% endtabs %}
 
 ![Picker items in .NET MAUI picker.](images/getting-started/maui-picker-items.png)
+
+You can download the Picker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/How-to-load-data-in-the-.NET-MAUI-Picker-SfPicker).
 
 N> You can refer to our [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker) that shows you how to render and configure the Picker in .NET MAUI.
