@@ -270,8 +270,6 @@ listView.ItemTemplate = new DataTemplate(() =>
     rootGrid.Children.Add(parallaxView);
     rootGrid.Children.Add(listView);
 
-    Content = rootGrid;
-
 {% endhighlight %}
 {% endtabs %}
 

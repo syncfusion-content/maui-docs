@@ -224,7 +224,6 @@ using System.Reflection;
 SfImageEditor imageEditor = new SfImageEditor();
 Assembly assembly = Assembly.GetExecutingAssembly();
 imageEditor.Source = ImageSource.FromStream(() => assembly.GetManifestResourceStream("MyProject.Resources.Images.image.jpeg"))
-this.content = imageEditor;
 
 {% endhighlight %}
 {% endtabs %}

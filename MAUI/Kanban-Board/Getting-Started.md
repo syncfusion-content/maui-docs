@@ -200,8 +200,6 @@ this.Content = kanban;
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
 
-using Syncfusion.Maui.Kanban;
-
 public class KanbanViewModel
 {
     public ObservableCollection<KanbanModel> Cards { get; set; }

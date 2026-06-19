@@ -256,8 +256,6 @@ Initialize the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusi
 
         navigationDrawer.ContentView = mainGrid;
 
-        Content = navigationDrawer;
-
 {% endhighlight %}
 {% endtabs %}
 

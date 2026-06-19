@@ -153,7 +153,6 @@ rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
 rangeSlider.Interval = 2;
 rangeSlider.MinorTicksPerInterval = 1;
-content = rangeSlider;
 
 {% endhighlight %}
 

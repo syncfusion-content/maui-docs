@@ -252,7 +252,6 @@ grid.SetRow(bookName, 0);
 grid.SetRow(bookDescription, 1);
 return grid;
 });
-this.Content = listView;
 
 {% endhighlight %}
 {% endtabs %}

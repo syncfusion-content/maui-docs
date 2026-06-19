@@ -227,8 +227,6 @@ var border = new Border
 
     border.Content = effectsView;
 
-    Content = border;
-
 {% endhighlight %}
 {% endtabs %}
 
