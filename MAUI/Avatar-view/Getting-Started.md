@@ -111,7 +111,7 @@ builder.ConfigureSyncfusionCore();
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -126,38 +126,28 @@ Create an instance for the Avatar View control, and add it as content. You can a
 {% tabs %}
 
 {% highlight xaml %}
-
-<Grid>
-    <sfavatar:SfAvatarView ContentType="Custom"
-                           ImageSource="alex.png"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center"   
-                           HeightRequest="100"
-                           CornerRadius="50"
-                           WidthRequest="100" 
-                           Stroke="Black"
-                           StrokeThickness="2"/>
-</Grid>
-
+<sfavatar:SfAvatarView ContentType="Custom"
+                       ImageSource="alex.png"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"   
+                       HeightRequest="100"
+                       CornerRadius="50"
+                       WidthRequest="100" 
+                       Stroke="Black"
+                       StrokeThickness="2"/>
 {% endhighlight %}
 
 {% highlight c# %}
-    //main grid
-    Grid mainGrid = new Grid();
-
-    // Create an SfAvatarView control.
-    SfAvatarView avatarView = new SfAvatarView();
-    avatarView.VerticalOptions = LayoutOptions.Center;
-    avatarView.HorizontalOptions = LayoutOptions.Center;
-    avatarView.ContentType = ContentType.Custom;
-    avatarView.ImageSource = "alex.png";
-    avatarView.WidthRequest = 100;
-    avatarView.HeightRequest = 100;
-    avatarView.CornerRadius = 50;
-    avatarView.Stroke = Colors.Black;
-    avatarView.StrokeThickness = 2;
-    mainGrid.Children.Add(avatarView);
-    this.Content = mainGrid;
+SfAvatarView avatarView = new SfAvatarView();
+avatarView.VerticalOptions = LayoutOptions.Center;
+avatarView.HorizontalOptions = LayoutOptions.Center;
+avatarView.ContentType = ContentType.Custom;
+avatarView.ImageSource = "alex.png";
+avatarView.WidthRequest = 100;
+avatarView.HeightRequest = 100;
+avatarView.CornerRadius = 50;
+avatarView.Stroke = Colors.Black;
+avatarView.StrokeThickness = 2;
 {% endhighlight %}
 
 {% endtabs %}

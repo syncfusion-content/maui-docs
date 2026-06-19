@@ -122,7 +122,7 @@ using Syncfusion.Maui.Buttons;
 
 ## Step 5: Add the Button component
 
-Create an instance for the Button control, and add it as content.
+Create an instance for the Button control.
 
 {% tabs %}
 
@@ -137,7 +137,6 @@ Create an instance for the Button control, and add it as content.
 SfButton button = new SfButton();
 button.Text = "Button";
 button.TextColor = Colors.White;
-this.Content = button;
 {% endhighlight %}
 
 {% endtabs %}

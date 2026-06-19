@@ -9,48 +9,6 @@ documentation: ug
 
 # Customization in MAUI Cards
 
-## Define the card layout
-
-Initialize a card layout with a card view using the provided code sample below.
-
-{% tabs %}
-{% highlight xaml %}
-
-<cards:SfCardLayout HeightRequest="500" BackgroundColor="#F0F0F0">
-
-    <cards:SfCardView CornerRadius="10">
-        <Label  Text="Peach" BackgroundColor="PeachPuff"/>
-    </cards:SfCardView>
-
-    <cards:SfCardView CornerRadius="10">
-        <Label  Text="MediumPurple" BackgroundColor="MediumPurple"/>
-    </cards:SfCardView>
-
-    <cards:SfCardView CornerRadius="10" >
-        <Label  Text="LightPink" BackgroundColor="LightPink"/>
-    </cards:SfCardView>
-
-</cards:SfCardLayout>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" %}
-    SfCardLayout cardLayout = new SfCardLayout();
-
-    //Add children for card layout 
-    cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Peach", BackgroundColor = Colors.PeachPuff }, CornerRadius = 15 });
-
-    cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "MediumPurple", BackgroundColor = Colors.MediumPurple },CornerRadius = 15 });
-
-    cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "LightPink", BackgroundColor = Colors.LightPink },CornerRadius = 15 });
-
-    this.Content = cardLayout;
-{% endhighlight %}
-{% endtabs %}	
-
-The following screenshot illustrates the result of the above code.
-
-![MAUI SfCardView image](images/maui-card-cardlayout.gif)
-
 ## ShowSwipedCard
 
 Enabling the [ShowSwipedCard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_ShowSwipedCard) option allows the swiped cards to be displayed at the edge of the card layout.

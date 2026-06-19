@@ -124,7 +124,7 @@ using Syncfusion.Maui.ProgressBar;
 
 ## Step 5: Add the Circular ProgressBar component
 
-Create an instance for the circular progress bar control, and add it as content.
+Create an instance for the circular progress bar control.
 
 {% tabs %}
 
@@ -137,7 +137,6 @@ Create an instance for the circular progress bar control, and add it as content.
 {% highlight c# %}
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { Progress = 75 };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

@@ -110,60 +110,58 @@ builder.ConfigureSyncfusionCore();
 Next, create a view model class and initialize the collection of [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) instance as follows
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# %}
+using Syncfusion.Maui.AIAssistView;
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<IAssistItem> assistItems;
 
-  using Syncfusion.Maui.AIAssistView;
-  public class GettingStartedViewModel : INotifyPropertyChanged
-  {
-        private ObservableCollection<IAssistItem> assistItems;
-
-        public GettingStartedViewModel()
-        {
-            this.assistItems = new ObservableCollection<IAssistItem>();
-            this.GenerateAssistItems();
-        }
-
-        public ObservableCollection<IAssistItem> AssistItems
-        {
-            get{return this.assistItems;}
-            set{this.assistItems = value;}
-        }
-
-        private async void GenerateAssistItems()
-        {
-        AssistItem requestItem = new AssistItem()
-        {
-            Text = "listening", 
-            IsRequested = true
-        };
-
-        this.AssistItems.Add(requestItem);
-        await GetResult(requestItem);
-        }
-
-        private async Task GetResult(AssistItem requestItem)
-        {
-        await Task.Delay(1000).ConfigureAwait(true);
-
-        AssistItem responseItem = new AssistItem()
-        {
-            Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-            IsRequested = false, 
-        };
-        this.AssistItems.Add(responseItem);
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void RaisePropertyChanged(string propName)
-        {
-            if (this.PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
-        }
+    public GettingStartedViewModel()
+    {
+        this.assistItems = new ObservableCollection<IAssistItem>();
+        this.GenerateAssistItems();
     }
 
+    public ObservableCollection<IAssistItem> AssistItems
+    {
+        get{return this.assistItems;}
+        set{this.assistItems = value;}
+    }
+
+    private async void GenerateAssistItems()
+    {
+    AssistItem requestItem = new AssistItem()
+    {
+        Text = "listening", 
+        IsRequested = true
+    };
+
+    this.AssistItems.Add(requestItem);
+    await GetResult(requestItem);
+    }
+
+    private async Task GetResult(AssistItem requestItem)
+    {
+    await Task.Delay(1000).ConfigureAwait(true);
+
+    AssistItem responseItem = new AssistItem()
+    {
+        Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+        IsRequested = false, 
+    };
+    this.AssistItems.Add(responseItem);
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    public void RaisePropertyChanged(string propName)
+    {
+        if (this.PropertyChanged != null)
+        {
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -185,22 +183,21 @@ using Syncfusion.Maui.AIAssistView;
 ## Step 6: Add the AI AssistView component
 
 Set the `ViewModel` as the BindingContext for the AI AssistView or the parent ContentPage. This allows data binding between the UI and the ViewModel properties.
-Create an instance for the AI AssistView control, and add it as content. To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property of AI AssistView.
+Create an instance for the AI AssistView control. To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property of AI AssistView.
 
 {% tabs %} 
 {% highlight xaml %}
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                AssistItems="{Binding AssistItems}">
-        <syncfusion:SfAIAssistView.BindingContext>
-            <local:GettingStartedViewModel/>
-        </syncfusion:SfAIAssistView.BindingContext>
-    </syncfusion:SfAIAssistView>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}">
+    <syncfusion:SfAIAssistView.BindingContext>
+        <local:GettingStartedViewModel/>
+    </syncfusion:SfAIAssistView.BindingContext>
+</syncfusion:SfAIAssistView>
 {% endhighlight %}
 {% highlight c# %}
-    SfAIAssistView aiAssistView = new SfAIAssistView();
-    GettingStartedViewModel viewModel = new GettingStartedViewModel();
-    this.aiAssistView.AssistItems = viewModel.AssistItems;
-    this.Content = aiAssistView;
+SfAIAssistView aiAssistView = new SfAIAssistView();
+GettingStartedViewModel viewModel = new GettingStartedViewModel();
+this.aiAssistView.AssistItems = viewModel.AssistItems;
 {% endhighlight %}
 {% endtabs %}
 

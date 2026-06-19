@@ -169,7 +169,7 @@ using Syncfusion.Maui.Carousel;
 
 ## Step 6: Add the Carousel View component
 
-Create an instance for the Carousel View control, and add it as content. Set the `CarouselViewModel` instance as the `BindingContext` of your page to bind `CarouselViewModel` properties.
+Create an instance for the Carousel View control. Set the `CarouselViewModel` instance as the `BindingContext` of your page to bind `CarouselViewModel` properties.
 
 [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemHeight) and [ItemWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemWidth) properties are used to change the height and width of carouselItem in carousel panel.
 
@@ -200,29 +200,27 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 {% endhighlight %}
 
 {% highlight C# %}
-    CarouselViewModel carouselViewModel = new CarouselViewModel();
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 
-    SfCarousel carousel = new SfCarousel()
-    {
-        ItemHeight = 170,
-        ItemWidth = 270,
-        SelectedIndex = 4
-    };
+SfCarousel carousel = new SfCarousel()
+{
+    ItemHeight = 170,
+    ItemWidth = 270,
+    SelectedIndex = 4
+};
 
-    var itemTemplate = new DataTemplate(() =>
-    {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
-    });
+var itemTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid();
+    var nameLabel = new Image();
+    nameLabel.SetBinding(Image.SourceProperty, "Image");
+    grid.Children.Add(nameLabel);
+    return grid;
+});
 
-    carousel.BindingContext = carouselViewModel;
-    carousel.ItemTemplate = itemTemplate;
-    carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-
-    this.Content = carousel;
+carousel.BindingContext = carouselViewModel;
+carousel.ItemTemplate = itemTemplate;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 

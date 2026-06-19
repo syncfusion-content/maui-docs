@@ -111,7 +111,7 @@ builder.ConfigureSyncfusionCore();
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -121,7 +121,7 @@ using Syncfusion.Maui.Core;
 
 ## Step 5: Add the Badge View component
 
-Create an instance for the Badge View control, and add it as content. Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
+Create an instance for the Badge View control. Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
 Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the badge.
 
@@ -131,18 +131,16 @@ An image, button, label or any view can be added to the Badge View using the [Co
 {% tabs %}
 
 {% highlight xaml %}
-
 <badgeView:SfBadgeView BadgeText="20"  
                        ScreenReaderText="20">
         <badgeView:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
         </badgeView:SfBadgeView.Content>
 </badgeView:SfBadgeView>   
-
 {% endhighlight %}
 
 {% highlight c# %}
-	
+
 SfBadgeView badgeView = new SfBadgeView(); 
 badgeView.ScreenReaderText = "20"; 
 badgeView.BadgeText = "20";
@@ -151,7 +149,6 @@ button.Text = "Primary";
 button.WidthRequest = 120;
 button.HeightRequest = 60;
 badgeView.Content = button;
-Content = badgeView;
 
 {% endhighlight %}
 {% endtabs %}

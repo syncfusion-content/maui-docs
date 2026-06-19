@@ -121,7 +121,7 @@ using Syncfusion.Maui.Accordion;
 
 ## Step 5: Add the Accordion component
 
-Create an instance for the Accordion control, and add it as content. Create the [AccordionItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html) instance that comprise a [header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Header) & [content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Content) and add it into [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Items) of `SfAccordion`.
+Create an instance for the Accordion control. Create the [AccordionItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html) instance that comprise a [header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Header) & [content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Content) and add it into [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Items) of `SfAccordion`.
 
 In this example, a Grid is loaded in both the header and content of accordion items.
 
@@ -276,8 +276,6 @@ item2.Content = contentGrid2;
 
 accordion.Items.Add(item1);
 accordion.Items.Add(item2);
-
-Content = accordion;
 {% endhighlight %}
 {% endtabs %}
 

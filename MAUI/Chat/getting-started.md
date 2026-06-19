@@ -232,11 +232,10 @@ To load the messages to SfChat, bind the message collection to the [Messages](ht
 {% endhighlight %} 
 
 {% highlight c# %}
-        SfChat sfChat = new SfChat();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel(); 
-        this.sfChat.Messages = viewModel.Messages; 
-        this.sfChat.CurrentUser = viewModel.CurrentUser; 
-        this.Content = sfChat; 
+SfChat sfChat = new SfChat();
+GettingStartedViewModel viewModel = new GettingStartedViewModel(); 
+this.sfChat.Messages = viewModel.Messages; 
+this.sfChat.CurrentUser = viewModel.CurrentUser;
 {% endhighlight %} 
 {% endtabs %}
 

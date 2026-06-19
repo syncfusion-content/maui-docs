@@ -176,7 +176,6 @@ SfDataForm dataForm = new SfDataForm()
 {
     DataObject = new ContactsInfo()
 };
-this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 

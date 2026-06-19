@@ -148,7 +148,7 @@ public class SocialMediaViewModel
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}

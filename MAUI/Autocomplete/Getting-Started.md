@@ -146,7 +146,7 @@ public class SocialMediaViewModel
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -156,7 +156,7 @@ using Syncfusion.Maui.Inputs;
 
 ## Step 6: Add the Autocomplete component
 
-Create an instance for the Autocomplete control, and add it as content. Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control by binding to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
+Create an instance for the Autocomplete control. Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control by binding to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
 
 The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control is populated with a list of social media options. However, since the 'SocialMedia' model includes two properties, 'Name' and 'ID', it's necessary to specify which property should be used as the display value in both the selection box portion and the drop-down suggestion list of the Autocomplete control.
 
@@ -166,7 +166,6 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% tabs %}
 {% highlight xaml %}
-
 <inputs:SfAutocomplete WidthRequest="250"
                        HeightRequest = "40"
                        DisplayMemberPath = "Name"
@@ -176,11 +175,9 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
         <local:SocialMediaViewModel />
     </inputs:SfAutocomplete.BindingContext>
 </inputs:SfAutocomplete>
-
 {% endhighlight %}
 
 {% highlight C# %}
-
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -191,7 +188,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
     BindingContext = socialMediaViewModel,
     ItemsSource = socialMediaViewModel.SocialMedias,
 };
-
 {% endhighlight %}
 {% endtabs %}
 

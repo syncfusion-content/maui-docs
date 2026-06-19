@@ -111,7 +111,7 @@ builder.ConfigureSyncfusionCore();
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -121,15 +121,14 @@ using Syncfusion.Maui.Picker;
 
 ## Step 5: Add the Date picker component
 
-Create an instance of Date Picker and add it to your page.
+Create an instance of Date Picker control.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
     <picker:SfDatePicker />
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-    SfDatePicker picker = new SfDatePicker();
-    this.Content = picker;
+SfDatePicker picker = new SfDatePicker();
 {% endhighlight %}
 {% endtabs %}
 

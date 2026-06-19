@@ -121,33 +121,71 @@ using Syncfusion.Maui.Cards;
 
 ## Step 5: Add the Card component
 
-Create an instance for the Card control, and add it as content.
+Create an instance for the Card control.
 
 {% tabs %}
 {% highlight xaml %}
 <cards:SfCardView>
-    <Label Text="CardView" 
+    <Label Text="CardView"
            Background="PeachPuff" 
            HorizontalTextAlignment="Center" 
            VerticalTextAlignment="Center"/>
 </cards:SfCardView>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-    SfCardView cardView = new SfCardView();
-    cardView.Content = new Label()
-    {
-        Text = "CardView",
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        BackgroundColor = Colors.PeachPuff
-    };
-    this.Content = cardView;
+SfCardView cardView = new SfCardView();
+cardView.Content = new Label()
+{
+    Text = "CardView",
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Center,
+    BackgroundColor = Colors.PeachPuff
+};
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
 ![MAUI SfCardView image](images/maui-card-initial.png)
+
+### Define the card layout
+
+Initialize a card layout with a card view using the provided code sample below.
+
+{% tabs %}
+{% highlight xaml %}
+
+<cards:SfCardLayout HeightRequest="500" BackgroundColor="#F0F0F0">
+
+    <cards:SfCardView CornerRadius="10">
+        <Label  Text="Peach" BackgroundColor="PeachPuff"/>
+    </cards:SfCardView>
+
+    <cards:SfCardView CornerRadius="10">
+        <Label  Text="MediumPurple" BackgroundColor="MediumPurple"/>
+    </cards:SfCardView>
+
+    <cards:SfCardView CornerRadius="10" >
+        <Label  Text="LightPink" BackgroundColor="LightPink"/>
+    </cards:SfCardView>
+
+</cards:SfCardLayout>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+SfCardLayout cardLayout = new SfCardLayout();
+
+cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Peach", BackgroundColor = Colors.PeachPuff }, CornerRadius = 15 });
+
+cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "MediumPurple", BackgroundColor = Colors.MediumPurple },CornerRadius = 15 });
+
+cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "LightPink", BackgroundColor = Colors.LightPink },CornerRadius = 15 });
+{% endhighlight %}
+{% endtabs %}	
+
+The following screenshot illustrates the result of the above code.
+
+![MAUI SfCardView image](images/maui-card-cardlayout.gif)
 
 You can download the Card Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-cards-sample)
 

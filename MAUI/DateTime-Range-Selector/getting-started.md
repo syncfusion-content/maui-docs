@@ -134,12 +134,11 @@ Create an instance of the SfDateTimeRangeSelector and initialize it as follows:
 {% endhighlight %}
 
 {% highlight C# %}
-    SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-    rangeSelector.Minimum = new DateTime(2010, 01, 01);
-    rangeSelector.Maximum = new DateTime(2018, 01, 01);
-    rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-    rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-    content = rangeSelector;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 {% endhighlight %}
 
 {% endtabs %}

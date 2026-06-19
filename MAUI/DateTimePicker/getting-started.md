@@ -122,15 +122,14 @@ using Syncfusion.Maui.Picker;
 
 ## Step 5: Add the DateTimepicker component
 
-Create an instance of DateTimepicker and add it to your page.
+Create an instance of DateTimepicker control.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
     <picker:SfDateTimePicker />
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-    SfDateTimePicker picker = new SfDateTimePicker();
-    this.Content = picker;
+SfDateTimePicker picker = new SfDateTimePicker();
 {% endhighlight %}
 {% endtabs %}
 

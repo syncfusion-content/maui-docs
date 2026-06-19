@@ -111,8 +111,6 @@ builder.ConfigureSyncfusionCore();
 
 ## Step 4: Define Model and View Model
 
-### Data Model
-
 Create a simple data model as shown in the following code example, and save it as `OrderInfo.cs` file:
 
 {% tabs %}
@@ -164,8 +162,6 @@ public class OrderInfo
 {% endtabs %}
 
 N> If you want your data model to respond to property changes, implement the `INotifyPropertyChanged` interface in your model class.
-
-### View Model
 
 Create a model repository class with `OrderInfo` collection property initialized with the required number of data objects in a new class file as shown in the following code example, and save it as `OrderInfoRepository.cs` file:
 
@@ -225,18 +221,17 @@ The following code example binds the collection created in the previous step to 
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrderInfoCollection}"> 
-        <syncfusion:SfDataGrid.BindingContext>
-            <local:OrderInfoRepository />
-        </syncfusion:SfDataGrid.BindingContext>
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"> 
+    <syncfusion:SfDataGrid.BindingContext>
+        <local:OrderInfoRepository />
+    </syncfusion:SfDataGrid.BindingContext>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 OrderInfoRepository viewModel = new OrderInfoRepository();
 SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection; 
-this.Content = dataGrid;
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 

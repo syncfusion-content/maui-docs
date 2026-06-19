@@ -112,7 +112,7 @@ builder.ConfigureSyncfusionCore();
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -122,26 +122,25 @@ using Syncfusion.Maui.Core;
 
 ## Step 5: Add the Busy Indicator component
 
-Create an instance for the Busy Indicator control, and add it as content. The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
+Create an instance for the Busy Indicator control. The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 
 The following example depicts the CircularMaterial type animation of .NET  MAUI Busy Indicator.
 
 {% tabs %}
 
 {% highlight xaml %}
-    <core:SfBusyIndicator x:Name="busyIndicator"
-                            IsRunning="True"
-                            AnimationType="CircularMaterial">
-    </core:SfBusyIndicator>
+<core:SfBusyIndicator x:Name="busyIndicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial">
+</core:SfBusyIndicator>
 {% endhighlight %}
 
 {% highlight C# %}
-    SfBusyIndicator busyIndicator = new SfBusyIndicator()
-    {
-        IsRunning = true,
-        AnimationType = AnimationType.CircularMaterial;
-    };
-    this.Content = busyIndicator;
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial;
+};
 {% endhighlight %}
 
 {% endtabs %}

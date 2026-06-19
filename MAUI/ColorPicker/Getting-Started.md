@@ -128,8 +128,7 @@ Create an instance of the Color Picker and initialize it as follows:
 {% endhighlight %}
 
 {% highlight c# %}
-    SfColorPicker colorPicker = new SfColorPicker();
-    Content = colorPicker;
+SfColorPicker colorPicker = new SfColorPicker();
 {% endhighlight %}
 
 {% endtabs %}

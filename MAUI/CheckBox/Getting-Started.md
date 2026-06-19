@@ -122,20 +122,19 @@ using Syncfusion.Maui.Buttons;
 
 ## Step 5: Add the CheckBox component
 
-Create an instance for the CheckBox control, and add it as content. You can set the caption of the CheckBox using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the CheckBox and is displayed next to it.
+Create an instance for the CheckBox control. You can set the caption of the CheckBox using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the CheckBox and is displayed next to it.
 
 {% tabs %}
 {% highlight xaml %}
-    <buttons:SfCheckBox x:Name="checkBox" 
-                        IsChecked="True" 
-                        Text="CheckBox">
-    </buttons:SfCheckBox>
+<buttons:SfCheckBox x:Name="checkBox" 
+                    IsChecked="True" 
+                    Text="CheckBox">
+</buttons:SfCheckBox>
 {% endhighlight %}
 {% highlight c# %}
-    SfCheckBox checkBox = new SfCheckBox();
-    checkBox.IsChecked = true;
-    checkBox.Text = "CheckBox";
-    this.Content = checkBox;
+SfCheckBox checkBox = new SfCheckBox();
+checkBox.IsChecked = true;
+checkBox.Text = "CheckBox";
 {% endhighlight %}
 {% endtabs %}
 
