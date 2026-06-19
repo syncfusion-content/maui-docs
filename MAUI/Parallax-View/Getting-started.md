@@ -104,6 +104,9 @@ builder.ConfigureSyncfusionCore();
 
 Now let us define simple data model and view model.
 
+{% tabs %}
+{% highlight c# %}
+
 public class Contacts
 {
     public string Name { get; set; }
@@ -134,6 +137,9 @@ public class ParallaxViewModel
         }
     }
 }
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the Parallax View namespace
  
