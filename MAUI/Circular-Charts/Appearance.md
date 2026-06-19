@@ -11,7 +11,7 @@ documentation: ug
 
 The appearance of the [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
 
-### Add a title
+## Add a title
 
 The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of circular chart as follows.
 

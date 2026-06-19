@@ -37,76 +37,6 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace BadgeViewGettingStarted
-{
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-   
-  }
-
-}     
-
-{% endhighlight %}
-
-## Step 4:  Add a basic Badge View
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-   <ContentPage
-    . . .    
-    xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <Grid>
-        <badgeView:SfBadgeView />
-    </Grid>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-    using Syncfusion.Maui.Core;
-    namespace BadgeViewGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfBadgeView badgeView = new SfBadgeView();
-            }
-        }   
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -132,78 +62,7 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Core` to install the Syncfusion<sup>®</sup> .NET MAUI Core package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace BadgeViewGettingStarted
-{
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-   
-  }
-
-}     
-
-{% endhighlight %}
-
-## Step 4:  Add a basic Badge View
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-   <ContentPage
-    . . .    
-    xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <Grid>
-        <badgeView:SfBadgeView />
-    </Grid>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-    using Syncfusion.Maui.Core;
-    namespace BadgeViewGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfBadgeView badgeView = new SfBadgeView();
-            }
-        }   
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -226,132 +85,44 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the terminal in Rider and manually run: `dotnet restore`.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight C# hl_lines="2 13" %}
-using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace BadgeViewGettingStarted
-{
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-   
-  }
-
-}     
-
-{% endhighlight %}
-
-## Step 4:  Add a basic Badge View
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-   <ContentPage
-    . . .    
-    xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <Grid>
-        <badgeView:SfBadgeView />
-    </Grid>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-    using Syncfusion.Maui.Core;
-    namespace BadgeViewGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfBadgeView badgeView = new SfBadgeView();
-            }
-        }   
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Adding a badge notification text
+## Step 3: Register Syncfusion handler
 
-Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
+Make sure to add the namespace.
 
-{% tabs %}
+{% highlight csharp %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
 
-{% highlight xaml %}
-       
-<badgeView:SfBadgeView BadgeText="20" />
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-{% endhighlight %}
+{% highlight csharp %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
 
-{% highlight c# %}
-   
-SfBadgeView badgeView = new SfBadgeView();
+## Step 4: Import the Badge View namespace
 
-//Adding text to the badge view.
-
-badgeView.BadgeText = "20";
-
-this.Content = badgeView;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Step 6: Adding screen reader text
-
-Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the badge. This is especially helpful for accessibility when the badge only contains an icon or when you want to provide a custom description.
+Add the following namespace in your XAML or C#.
 
 {% tabs %}
-
-{% highlight xaml %}
-
-<badgeView:SfBadgeView ScreenReaderText="20" 
-                       BadgeText="20" />
-
+{% highlight xaml tabtitle="xaml" %}
+xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 {% endhighlight %}
-
-{% highlight c# %}
-   
-SfBadgeView badgeView = new SfBadgeView();
-badgeView.ScreenReaderText = "20";
-badgeView.BadgeText = "20";
-Content = badgeView;
-
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Core;
 {% endhighlight %}
-
 {% endtabs %}
 
-## Step 7: Adding a content
+## Step 5: Add the Badge View component
+
+Create an instance for the Badge View control, and add it as content. Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
+
+Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the badge.
 
 An image, button, label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property. If you need to display a custom icon or image in the badge, ensure the image is included correctly in your project resources.
+
 
 {% tabs %}
 
@@ -370,8 +141,7 @@ An image, button, label or any view can be added to the Badge View using the [Co
 	
 SfBadgeView badgeView = new SfBadgeView(); 
 badgeView.ScreenReaderText = "20"; 
-badgeView.BadgeText = "20"; 
-//Adding image to the content of the badge view.
+badgeView.BadgeText = "20";
 Button button = new Button();
 button.Text = "Primary";
 button.WidthRequest = 120;
@@ -380,13 +150,12 @@ badgeView.Content = button;
 Content = badgeView;
 
 {% endhighlight %}
- 
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Badge View](getting-started_images/net_maui_badge_view_getting_started.png) 
 
-You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-BadgeView)
+You can download the Badge View Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-BadgeView)
 
 N> You can refer to our [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Badge View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/BadgeView/SampleBrowser.Maui.BadgeView/Samples/BadgeView) that shows you how to render the Badge View in .NET MAUI.

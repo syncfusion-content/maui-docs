@@ -20,7 +20,6 @@ To get start quickly with our .NET MAUI TreeMap, you can check the below video.
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
-
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
@@ -37,69 +36,6 @@ Before proceeding, ensure the following are set up:
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-using Syncfusion.Maui.Core.Hosting;
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-	    builder
-		.ConfigureSyncfusionCore()
-		.UseMauiApp<App>()
-		.ConfigureFonts(fonts =>
-		{
-		    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-		});
-
-	    return builder.Build();
-	}
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI TreeMap control
-
-1. To initialize the control, import the `Syncfusion.Maui.TreeMap` namespace into your code.
-2. Initialize [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
-
-{% tabs %}
-{% highlight XAML hl_lines="3 5" %}
-
-<ContentPage 
-    ...
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap />
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.TreeMap;
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        this.Content = treeMap;
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -125,72 +61,7 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-using Syncfusion.Maui.Core.Hosting;
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-	    builder
-		.ConfigureSyncfusionCore()
-		.UseMauiApp<App>()
-		.ConfigureFonts(fonts =>
-		{
-		    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-		});
-
-	    return builder.Build();
-	}
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI TreeMap control
-
-1. To initialize the control, import the `Syncfusion.Maui.TreeMap` namespace into your code.
-2. Initialize [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
-
-{% tabs %}
-{% highlight XAML hl_lines="3 5" %}
-
-<ContentPage 
-    ...
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap />
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.TreeMap;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        this.Content = treeMap;
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -213,83 +84,24 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
-
-using Syncfusion.Maui.Core.Hosting;
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-	    builder
-		.ConfigureSyncfusionCore()
-		.UseMauiApp<App>()
-		.ConfigureFonts(fonts =>
-		{
-		    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-		});
-
-	    return builder.Build();
-	}
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI TreeMap control
-
-1. To initialize the control, import the `Syncfusion.Maui.TreeMap` namespace into your code.
-2. Initialize [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
-
-{% tabs %}
-{% highlight XAML hl_lines="3 5" %}
-
-<ContentPage 
-    ...
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap />
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.TreeMap;
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        this.Content = treeMap;
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% endtabcontents %}
 
-## Step 5: Populate .NET MAUI TreeMap data source
+## Step 3: Register Syncfusion handler
 
-Here are the steps to render treemap items using the .NET MAUI TreeMap control with respective data properties created in a data model class.
+Make sure to add the namespace.
 
-* Create a data model for treemap.
-* Create view model.
-* Bind data source for TreeMap.
+{% highlight csharp %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
 
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-#### Create a data model for treemap 
+{% highlight csharp %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Create a data model for treemap 
 
 Create a simple data model in a new class file as shown in the following example code.
 
@@ -305,7 +117,7 @@ public class AirportDetails
 {% endhighlight %}
 {% endtabs %}
 
-#### Create view model
+## Step 5: Create a view model
 
 Create a view model class to set values for the properties listed in the model class as shown in the following example code.
 
@@ -339,9 +151,26 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-#### Bind data source for TreeMap
+## Step 6: Import the TreeMap namespace
 
-To populate the treemap items, utilize the [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). Additionally, ensure that the following properties of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) are mapped from corresponding properties in the [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource) while initializing the treemap control.
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.TreeMap;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 7: Add the TreeMap Component
+
+Initialize the `TreeMap` control and configure its properties to represent hierarchical data using a compact, space-efficient visualization. The TreeMap organizes data into nested rectangles, where each item’s size and color can reflect specific values. To populate the treemap items, utilize the [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). Additionally, ensure that the following properties of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) are mapped from corresponding properties in the [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource) while initializing the treemap control.
 * The [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) specifies the name of the property within the data object that provides the primary value used to determine the size of each item in the treemap.
 * The [RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath) specifies the name of the property within the data object that provides the range color value for each item in the tree map. This value determines the color of the item based on a gradient or range mapping. The [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_Brush) property within [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html) applies colors to items based on [RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath) values using [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html), also defining colors for treemap legend icons, exclusive to [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html). The [RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath) is applicable only when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) property of [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings) is enabled in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
 
@@ -376,41 +205,8 @@ this.Content = treeMap;
 
 N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain treemap binding.
 
-## Add labels
-
-To display text for the leaf items, utilize the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property within the [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property allows you to specify the path to the data property containing the text you want to display.
-
-{% tabs %}
-{% highlight XAML hl_lines="7 8 9" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
-
-{% endhighlight %}
-{% highlight C# hl_lines="5"  %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
-this.Content = treeMap;
-
-{% endhighlight %}
-{% endtabs %}
-
 ![getting-started-with-maui-tree-map](images/getting-started/treemap-view.png)
+
+You can download the TreeMap Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/GettingStarted)
 
 N> You can refer to our [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI TreeMap Example](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/) that shows you how to render the TreeMap in .NET MAUI.

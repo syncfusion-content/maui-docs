@@ -19,100 +19,24 @@ To get start quickly with our [.NET MAUI Polar Chart](https://help.syncfusion.co
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
-
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Click **Next**.
-3. Select the .NET framework version and click **Create**.
+2. Name the project and choose a location. Then, click **Next.**
+3. Select the .NET framework version and click **Create.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Charts Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
-1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Polar Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfPolarChart/>
-
-</ContentPage>
-    
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfPolarChart chart = new SfPolarChart();
-            this.Content = chart;         
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
-
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
@@ -123,96 +47,20 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a .NET MAUI project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Charts Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Charts` to install the Syncfusion<sup>®</sup> .NET MAUI Charts NuGet package.
-4. To ensure all dependencies are installed, run `dotnet restore`.
-
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Polar Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfPolarChart/>
-
-</ContentPage>
-    
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfPolarChart chart = new SfPolarChart();
-            this.Content = chart;         
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -223,97 +71,36 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Charts NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Polar Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfPolarChart/>
-
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfPolarChart chart = new SfPolarChart();
-            this.Content = chart;         
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% endtabcontents %}
 
-## Step 5: Initialize view model
+## Step 3: Register Syncfusion handler
+
+Make sure to add the namespace.
+
+{% highlight csharp %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Initialize the view model
 
 Now, let us define a simple data model that represents a data point on the chart.
 
@@ -362,68 +149,26 @@ public class PlantViewModel
 
 {% endtabs %} 
 
-Create a `PlantViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from the `PlantViewModel` class.
+## Step 5: Import the Charts namespace
  
-N> Add the namespace of the `PlantViewModel` class to your XAML page, if you prefer to set the `BindingContext` in XAML.
-
-{% tabs %} 
-
+Add the following namespace in your XAML or C#.
+ 
+{% tabs %}
 {% highlight xaml %}
-
-<ContentPage xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:model="clr-namespace:ChartGettingStarted">
-    <ContentPage.BindingContext>
-        <model:PlantViewModel/>
-    </ContentPage.BindingContext>
-</ContentPage>
+ 
+xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+ 
+{% endhighlight %}
+{% highlight c# %}
+ 
+using Syncfusion.Maui.Charts;
 
 {% endhighlight %}
+{% endtabs %}
 
-{% highlight C# %}
+## Step 6: Populate Chart with data
 
-this.BindingContext = new PlantViewModel();
-SfPolarChart chart = new SfPolarChart();
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-## Step 6: Initialize Chart axis
-
-[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [PrimaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_PrimaryAxis) and [SecondaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_SecondaryAxis) properties of the chart are used to initialize the axis for the chart.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfPolarChart>                            
-    <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis/>
-    </chart:SfPolarChart.PrimaryAxis>
-
-    <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis/>
-    </chart:SfPolarChart.SecondaryAxis>                       
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfPolarChart chart = new SfPolarChart();
-CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis = secondaryAxis;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-## Step 7: Populate Chart with data
-
-To create a polar chart, you can add a [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html) to the polar chart [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) property of the chart, and  then bind the `PlantDetails` property of the above `PlantViewModel` to the `PolarLineSeries.ItemsSource` as follows.
+Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) and you can add a [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html) to the polar chart [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) property of the chart, and  then bind the `PlantDetails` property of the above `PlantViewModel` to the `PolarLineSeries.ItemsSource` as follows.
 
 N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties need to be configured correctly. These properties allow the chart to retrieve values from the corresponding properties in the data model.
 
@@ -431,15 +176,6 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ChartGettingStarted.MainPage"
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
-    <ContentPage.BindingContext>
-        <model:PlantViewModel/>
-    </ContentPage.BindingContext>
     <chart:SfPolarChart>
         <chart:SfPolarChart.Title>
             <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
@@ -460,74 +196,62 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
         <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
                                Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
     </chart:SfPolarChart>
-</ContentPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
+      
+    SfPolarChart chart = new SfPolarChart();
 
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
+    chart.Title = new Label()
     {
-        public MainPage()
-        {
-            InitializeComponent();            
-            SfPolarChart chart = new SfPolarChart();
+        Text = "Plant Analysis",
+        HorizontalTextAlignment = TextAlignment.Center
+    };
 
-            chart.Title = new Label()
-            {
-                Text = "Plant Analysis",
-                HorizontalTextAlignment = TextAlignment.Center
-            };
+    CategoryAxis primaryAxis = new CategoryAxis();
+    chart.PrimaryAxis = primaryAxis;
 
-            CategoryAxis primaryAxis = new CategoryAxis();
-            chart.PrimaryAxis = primaryAxis;
+    NumericalAxis secondaryAxis = new NumericalAxis()
+    {
+        Maximum = 100,
+    };
+    chart.SecondaryAxis = secondaryAxis;
 
-            NumericalAxis secondaryAxis = new NumericalAxis()
-            {
-                Maximum = 100,
-            };
-            chart.SecondaryAxis = secondaryAxis;
+    PolarLineSeries  series1 = new PolarLineSeries()
+    {
+        ItemsSource = (new PlantViewModel()).PlantDetails,
+        XBindingPath = "Direction",
+        YBindingPath = "Tree",
+        Label="Tree", 
+        EnableTooltip = true,
+        ShowDataLabels = true,
+    }; 
 
-            PolarLineSeries  series1 = new PolarLineSeries()
-            {
-                ItemsSource = (new PlantViewModel()).PlantDetails,
-                XBindingPath = "Direction",
-                YBindingPath = "Tree",
-                Label="Tree", 
-                EnableTooltip = true,
-                ShowDataLabels = true,
-            }; 
+    PolarLineSeries  series2 = new PolarLineSeries()
+    {
+        ItemsSource = (new PlantViewModel()).PlantDetails,
+        XBindingPath = "Direction",
+        YBindingPath = "Weed",
+        Label="Weed", 
+        EnableTooltip = true, 
+        ShowDataLabels = true,
+    }; 
 
-            PolarLineSeries  series2 = new PolarLineSeries()
-            {
-                ItemsSource = (new PlantViewModel()).PlantDetails,
-                XBindingPath = "Direction",
-                YBindingPath = "Weed",
-                Label="Weed", 
-                EnableTooltip = true, 
-                ShowDataLabels = true,
-            }; 
+    PolarLineSeries series3 = new PolarLineSeries()
+    {
+        ItemsSource = (new PlantViewModel()).PlantDetails,
+        XBindingPath = "Direction",
+        YBindingPath = "Flower",
+        Label="Flower", 
+        EnableTooltip = true, 
+        ShowDataLabels = true
+    };   
 
-            PolarLineSeries series3 = new PolarLineSeries()
-            {
-                ItemsSource = (new PlantViewModel()).PlantDetails,
-                XBindingPath = "Direction",
-                YBindingPath = "Flower",
-                Label="Flower", 
-                EnableTooltip = true, 
-                ShowDataLabels = true
-            };   
-
-            chart.Series.Add(series1);
-            chart.Series.Add(series2);
-            chart.Series.Add(series3);
-            this.Content = chart;
-        }
-    }   
-}
+    chart.Series.Add(series1);
+    chart.Series.Add(series2);
+    chart.Series.Add(series3);
+    this.Content = chart;
 
 {% endhighlight %}
 
@@ -537,4 +261,4 @@ The following chart is created as a result of the previous codes.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_polar_chart.png)
 
-You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/Creating-a-Getting-Started-application-for-NET-MAUI-Polar-Chart).
+You can download the Polar Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Creating-a-Getting-Started-application-for-NET-MAUI-Polar-Chart).

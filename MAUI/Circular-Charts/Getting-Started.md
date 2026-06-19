@@ -37,79 +37,6 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Circular Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfCircularChart/>
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        this.InitializeComponent();
-        SfCircularChart chart = new SfCircularChart();
-        this.Content = chart;
-    }
-}   
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -136,78 +63,6 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Charts` to install the Syncfusion<sup>®</sup> .NET MAUI Charts NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-    
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Circular Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
-
-{% tabs %}
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfCircularChart/>
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        this.InitializeComponent();
-        SfCircularChart chart = new SfCircularChart();
-        this.Content = chart;
-    }
-}   
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% tabcontent JetBrains Rider %}
@@ -232,89 +87,29 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Circular Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage   
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfCircularChart/>
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        this.InitializeComponent();
-        SfCircularChart chart = new SfCircularChart();
-        this.Content = chart;
-    }
-}   
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Step 5: Initialize view model
+## Step 3: Register Syncfusion handler
+
+Make sure to add the namespace.
+
+{% highlight csharp %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% highlight csharp %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
+
+## Step 4: Define Model and View Model
 
 Now, let us define a simple data model that represents a data point in the chart.
 
 {% tabs %}  
-
 {% highlight c# %}
 
 public class SalesModel
@@ -324,13 +119,11 @@ public class SalesModel
 }
 
 {% endhighlight %} 
-
 {% endtabs %} 
 
 Next, create a SalesViewModel class and initialize a list of `SalesModel` objects as follows.
 
 {% tabs %}  
-
 {% highlight c# %}
 
 public class SalesViewModel
@@ -351,42 +144,26 @@ public class SalesViewModel
 }
 
 {% endhighlight %} 
-
 {% endtabs %} 
 
-Create a `SalesViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `SalesViewModel` class.
+## Step 5: Import the Circular Chart namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml tabtitle="xaml" %}
+xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Charts;
+{% endhighlight %}
+{% endtabs %}
+
+## Step 6: Add the Circular Chart component
+
+Create an instance for the AI AssistView control, and add it as content. Now, Create a `SalesViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `SalesViewModel` class.
 
 N> Add namespace of `SalesViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<ContentPage
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
-
-    <chart:SfCircularChart>
-        <chart:SfCircularChart.BindingContext>
-            <model:SalesViewModel/>
-        </chart:SfCircularChart.BindingContext>
-    </chart:SfCircularChart>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCircularChart chart = new SfCircularChart();
-this.BindingContext = new SalesViewModel();
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-## Step 6: Populate chart with data
 
 Adding [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) to the charts [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection and binding `Data` to the series [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ItemsSource) property from its BindingContext to create our own Product Sales Pie chart.
 
@@ -397,14 +174,6 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
 {% tabs %} 
 
 {% highlight xaml %}
-
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ChartGettingStarted.MainPage"
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
-
     <chart:SfCircularChart>
         <chart:SfCircularChart.Title>
             <Label Text="PRODUCT SALES"/>
@@ -424,8 +193,6 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
                          ShowDataLabels="True"
                          EnableTooltip="True"/>
     </chart:SfCircularChart>
-    
-</ContentPage>
 
 {% endhighlight %}
 
@@ -465,4 +232,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.png)
 
-You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_CircularChart_MAUI).
+You can download the Circular Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_CircularChart_MAUI).
