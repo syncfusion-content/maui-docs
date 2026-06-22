@@ -554,14 +554,6 @@ This page provides a comprehensive reference for all available APIs of the SfSli
 		 Gets or sets a value to customize the appearance of the track shape.
 		</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle">AnchorX</a> <br/>
-		</td>
-		<td>
-		 Gets or sets a value to customize the appearance of the track shape.
-		</td>
-	</tr>
 </table>
 
 ## Events
