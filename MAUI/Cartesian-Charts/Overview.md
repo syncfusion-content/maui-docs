@@ -24,4 +24,4 @@ The .NET MAUI chart provides a perfect way to visualize data with a high level o
 
 * User friendly customization support. Cartesian chart provides various options for you to customize chart features, axis, labels, legends, series, etc., and visualize them accordingly.
 
-N> Looking for the full ASP.NET Core Charts component overview, features, pricing, and documentation? Visit the [.NET MAUI Chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) page.
+N> Looking for the full .NET MAUI Charts component overview, features, pricing, and documentation? Visit the [.NET MAUI Chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) page.
