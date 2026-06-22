@@ -7,9 +7,11 @@ control: SfSlider
 documentation: ug
 ---
 
-# Slider
+# .NET MAUI Slider (SfSlider) API Reference
 
-The Syncfusion® .NET MAUI Slider (SfSlider) is a highly interactive UI control, allowing users to select a single value from a range of values.
+The Syncfusion® .NET MAUI Slider (SfSlider) is a highly interactive UI control that allows users to select a single value from a range of values. 
+
+This page provides a comprehensive reference for all available APIs of the SfSlider control.
 
 ## Constructors
 
