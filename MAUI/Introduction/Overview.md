@@ -540,7 +540,7 @@ line-height: 1;
 <br>
 
 
-## Additional resources
+## Resources
 
 <style>
 
@@ -667,7 +667,6 @@ line-height: 1;
 
 </style>
 
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
 <div class="form-card" target="_blank">
@@ -726,7 +725,7 @@ Explore Features
     <div class="icon-circle">
     <span class="card-icon card-knowledge-base"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
@@ -744,7 +743,7 @@ Search KB's
     <div class="icon-circle">
     <span class="card-icon card-blogs"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Discover in‑depth articles, use cases and expert insights from our developers.
@@ -752,7 +751,7 @@ Search KB's
     <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
 Read Blogs
   <span class="card-icon card-arrow"></span>
-</div>
+</a>
   </div>
 </div>
 
