@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Rich Text Editor control | Syncfusion®
-description: Learn here all about introduction of .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
+description: Learn here all about introduction of Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
 control: Rich Text Editor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Rich Text Editor (SfRichTextEditor) Overview
 
-The .NET MAUI Rich Text Editor provides a simple yet powerful editor interface to compose richly formatted text with all the common formatting options like bold and italics. The Rich Text Editor is used to create messaging applications, email composers, blog editors, forum post text boxes, feedback and review sections, notes sections, and more. It has a variety of tools to edit and format rich content and returns valid HTML markup content.
+The [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) provides a simple yet powerful editor interface to compose richly formatted text with all the common formatting options like bold and italics. The Rich Text Editor is used to create messaging applications, email composers, blog editors, forum post text boxes, feedback and review sections, notes sections, and more. It has a variety of tools to edit and format rich content and returns valid HTML markup content.
 
 ![RichTextEditor Overview Image](images/rich-text-editor-overview.png)
 
@@ -23,3 +23,5 @@ The .NET MAUI Rich Text Editor provides a simple yet powerful editor interface t
 * `Copy, paste, and cut` - Features built-in clipboard operations for user convenience.
 * `Undo and redo` - Provides robust undo and redo history for user-friendly editing.
 * `Localization and accessibility` - Supports right-to-left layouts and accessibility features.
+
+N> Looking for the full [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) component overview, features, pricing, and documentation? Visit the .NET MAUI Rich Text Editor page.

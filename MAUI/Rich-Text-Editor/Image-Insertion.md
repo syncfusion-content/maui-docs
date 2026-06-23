@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image Insertion in .NET MAUI Rich Text Editor | Syncfusion®
-description: Learn how to insert images from the gallery or a stream into the .NET MAUI Rich Text Editor (SfRichTextEditor) control.
+description: Learn how to insert images from the gallery or a stream into the Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control.
 platform: maui 
 control: Rich Text Editor
 documentation: ug

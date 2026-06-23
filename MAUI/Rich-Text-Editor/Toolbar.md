@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in .NET MAUI Rich Text Editor | Syncfusion®
-description: Learn here all about Toolbar features in .NET MAUI Rich Text Editor (SfRichTextEditor) control.
+description: Learn here all about Toolbar features in Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control.
 platform: maui 
 control: Rich Text Editor
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Toolbar position
 
-The Rich Text Editor allows you to position the toolbar at the top or bottom of the content area, depending on your layout requirements. By default, the toolbar appears at the top on Windows and macOS, and at the bottom on Android and iOS for better accessibility.
+The [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) allows you to position the toolbar at the top or bottom of the content area, depending on your layout requirements. By default, the toolbar appears at the top on Windows and macOS, and at the bottom on Android and iOS for better accessibility.
 
 {% tabs %}
 

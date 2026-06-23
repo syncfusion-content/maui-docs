@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Rich Text Editor control | Syncfusion®
-description: Learn here about getting started with .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
+description: Learn here about getting started with Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
 control: Rich Text Editor
 documentation: ug
@@ -379,3 +379,5 @@ this.Content = richTextEditor;
 {% endtabs %}
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
+
+N> Looking for the full [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) component overview, features, pricing, and documentation? Visit the .NET MAUI Rich Text Editor page.
