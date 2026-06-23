@@ -76,7 +76,7 @@ The `SchedulerRightTappedEventArgs` provides information about the right-click i
                        RightTapped="Scheduler_RightTapped" >
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 5 6 7 8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 5 6 7 8 9" %}
 this.Scheduler.RightTapped += Scheduler_RightTapped;
 
 private void scheduler_RightTapped(object sender, SchedulerRightTappedEventArgs e)
