@@ -30,7 +30,8 @@ The Syncfusion® [.NET MAUI ImageEditor (SfImageEditor)](https://www.syncfusion.
 - **Annotation support** allows adding text, shapes, and freehand drawings to enhance or mark images.  
 - **Toolbar support** provides built-in tools for easy access to editing features with customization options.  
 - **Undo and redo support** allows reverting or reapplying changes during editing.  
-- **Save support** allows storing edited images to a desired location after modifications.  
+- **Save support** allows storing edited images to a desired location after modifications. 
+- **Serialization support** allows saving and restoring the editing state of images, enabling persistence and reusability across sessions.
 
 ## Globalization
 
@@ -71,9 +72,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [SignaturePad](https://help.syncfusion.com/maui/signaturepad/overview) for capturing and adding signature annotations to images.
+- [Signature Pad](https://help.syncfusion.com/maui/signaturepad/overview) for capturing and adding signature annotations to images.
 - [Popup](https://help.syncfusion.com/maui/popup/overview) for presenting image editing tools or previews.
-- [AvatarView](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user/profile images.
+- [Toolbar](https://help.syncfusion.com/maui/toolbar/overview) for providing quick access to editing actions with customizable options.
 
 ## See Also
 

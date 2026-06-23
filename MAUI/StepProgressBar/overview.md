@@ -72,9 +72,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Linear ProgressBar](https://help.syncfusion.com/maui/linearprogressbar/overview) for displaying continuous progress using a linear indicator.
-- [Circular ProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview) for representing progress using circular visuals. 
-- [TabView](https://help.syncfusion.com/maui/tabview/overview) for guiding users through multiple steps or stages using a structured, step-by-step interface.
+- [Linear Progress Bar](https://help.syncfusion.com/maui/linearprogressbar/overview) for displaying continuous progress using a linear indicator.
+- [Circular Progress Bar](https://help.syncfusion.com/maui/circularprogressbar/overview) for representing progress using circular visuals. 
+- [Tab View](https://help.syncfusion.com/maui/tabview/overview) for guiding users through multiple steps or stages using a structured, step-by-step interface.
 
 ## See Also
 

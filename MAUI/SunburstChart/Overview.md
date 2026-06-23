@@ -70,7 +70,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for visualizing hierarchical data using rectangular layouts.
+- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for visualizing hierarchical data using rectangular layouts.
 - [Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview) for representing proportional data using pie and doughnut charts.
 - [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing tabular data trends and comparisons.
 

@@ -67,7 +67,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for traditional scheduling and calendar-based appointment management.  
-- [SmartDataGrid](https://help.syncfusion.com/maui/smartdatagrid/overview) for AI-driven data analysis and interaction in tabular form.  
+- [Smart DataGrid](https://help.syncfusion.com/maui/smartdatagrid/overview) for AI-driven data analysis and interaction in tabular form.  
 - [Calendar](https://help.syncfusion.com/maui/calendar/overview) for basic date selection and navigation interfaces.  
 
 ## See Also

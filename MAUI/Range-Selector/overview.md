@@ -74,7 +74,7 @@ The following table summarizes the globalization support available in the contro
 
 - [Range Slider](https://help.syncfusion.com/maui/range-slider/overview) for selecting numeric ranges using slider-based interaction.
 - [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing filtered data using charts.
-- [NumericEntry](https://help.syncfusion.com/maui/numericentry/overview) for precise numeric input and value modification.  
+- [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for precise numeric input and value modification.  
 
 ## See Also
 

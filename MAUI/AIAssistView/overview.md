@@ -71,7 +71,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Chat](https://help.syncfusion.com/maui/chat/overview) for conversational interfaces and messaging.
-- [AutoComplete](https://help.syncfusion.com/maui/autocomplete/overview) for predictive text input and suggestions.
+- [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) for predictive text input and suggestions.
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for flexible selection and entry scenarios.
 
 ## See Also

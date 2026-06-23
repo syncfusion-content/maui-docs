@@ -66,7 +66,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [TabView](https://help.syncfusion.com/maui/tabview/overview) for switching between views using tab-based navigation.  
+- [Tab View](https://help.syncfusion.com/maui/tabview/overview) for switching between views using tab-based navigation.  
 - [Radio Button](https://help.syncfusion.com/maui/radio-button/overview) for selecting a single option from a group.  
 - [Chips](https://help.syncfusion.com/maui/chips/overview) for compact selection and filtering using chip elements.  
 

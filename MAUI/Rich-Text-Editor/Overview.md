@@ -70,8 +70,8 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [MarkdownViewer](https://help.syncfusion.com/maui/markdownviewer/overview) for rendering formatted Markdown content in applications.  
-- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing simple text input fields with labels and validation. 
+- [Markdown Viewer](https://help.syncfusion.com/maui/markdownviewer/overview) for rendering formatted Markdown content in applications.  
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing simple text input fields with labels and validation. 
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting collections of rich text or formatted content within scrollable views.
 
 ## See Also

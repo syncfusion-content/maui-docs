@@ -76,9 +76,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Buttons](https://help.syncfusion.com/maui/button/overview) for applying selected colors to interactive UI elements.  
-- [Chips](https://help.syncfusion.com/maui/chips/overview) for using selected colors in tags and category displays.  
-- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for picking values from a dropdown list with flexible selection.  
+- [Button](https://help.syncfusion.com/maui/button/overview) for applying selected colors to interactive UI elements.  
+- [Slider](https://help.syncfusion.com/maui/slider/overview) for adjusting color values with precise range-based input.  
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for entering or displaying color codes alongside labels and validation.
 
 ## See Also
 

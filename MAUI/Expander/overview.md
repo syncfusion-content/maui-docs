@@ -67,7 +67,7 @@ The following table summarizes the globalization support available in this contr
 
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for managing multiple expandable sections in a grouped layout.  
 - [Cards](https://help.syncfusion.com/maui/cards/overview) for presenting content in expandable card-based layouts.
-- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
+- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
 
 ## See Also
 

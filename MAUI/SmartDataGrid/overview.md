@@ -73,7 +73,7 @@ The following table summarizes the globalization support available in this contr
 
 - [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for traditional data grid features and structured data handling.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying data collections in list formats.  
-- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for handling hierarchical data with expandable rows.  
+- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for handling hierarchical data with expandable rows.  
 
 ## See Also
 

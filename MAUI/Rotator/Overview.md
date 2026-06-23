@@ -66,7 +66,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Carousel](https://help.syncfusion.com/maui/carousel-view/overview) for advanced carousel-style data navigation with rich animations.  
+- [Carousel View](https://help.syncfusion.com/maui/carousel-view/overview) for advanced carousel-style data navigation with rich animations.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying items in structured list formats.  
 - [Cards](https://help.syncfusion.com/maui/cards/overview) for presenting content in card-based layouts.  
 

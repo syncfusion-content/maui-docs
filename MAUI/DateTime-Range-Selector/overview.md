@@ -25,11 +25,11 @@ documentation: ug
 ## Key features
 
 - **DateTime range selection support** allows selecting a start and end value within a specified range.  
-- **Content integration support** allows embedding custom UI elements or controls such as [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) within the range selector.  
-- **Customizable labels support** allows displaying date and time values with formatting based on requirements.  
+- **Content integration support** allows embedding custom UI elements or controls such as [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) within the range selector.   
 - **Ticks and dividers support** allows visualizing intervals clearly using major and minor ticks.  
 - **Discrete mode support** allows moving the selection in fixed intervals based on defined step values.  
 - **Tooltip support** allows displaying selected values clearly with customizable formatting.  
+- **Customizable labels support** allows displaying date and time values with formatting based on requirements. 
 
 ## Globalization
 

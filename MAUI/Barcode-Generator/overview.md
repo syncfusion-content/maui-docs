@@ -61,7 +61,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/barcode-generator/overview">Barcode Generator<a></td>
+<td><a href="/maui/barcode-generator/overview">Barcode Generator</a></td>
 <td align="center"><img src="../Images/no-support.svg" alt="not" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -74,7 +74,7 @@ The following table summarizes the globalization support available in this contr
 
 - [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing and displaying barcode-related data in tabular format.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting barcode items in list-based layouts.
-- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for visualize barcode usage or distribution patterns in a hierarchical, comparative view.
+- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for visualize barcode usage or distribution patterns in a hierarchical, comparative view.
 
 ## See Also
 

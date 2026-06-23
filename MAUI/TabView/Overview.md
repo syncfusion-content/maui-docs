@@ -9,7 +9,7 @@ documentation: UG
 
 # Overview of .NET MAUI Tab View (SfTabView)
 
-The advanced Syncfusion® .NET Multi-platform App UI (MAUI) [SfTabView](https://www.syncfusion.com/maui-controls/maui-tab-view) provides a simple and intuitive interface for tab navigation in both mobile and desktop applications. This allows users to explore and switch between different tabs efficiently.
+The advanced Syncfusion® .NET MAUI Tab View [SfTabView](https://www.syncfusion.com/maui-controls/maui-tab-view) provides a simple and intuitive interface for tab navigation in both mobile and desktop applications. This allows users to explore and switch between different tabs efficiently.
 
    ![.NET MAUI Tab View](images/TabView.png)
 
@@ -68,14 +68,15 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for organizing navigation using sliding panels.
-- [Segmented Control](https://help.syncfusion.com/maui/segmented-control/overview) for switching between limited options using segmented buttons.
-- [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing content in expandable sections.
+- [TreeView](https://help.syncfusion.com/maui/treeview/overview) for hierarchical navigation structures with expandable nodes.  
+- [Rotator](https://help.syncfusion.com/maui/rotator/overview) for cycling through content or images in a sliding view. 
 
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) shows a step‑by‑step guide to begin using the Tab View control.  
 - [Headers](https://help.syncfusion.com/maui/tabview/header-display-mode) explains how to configure header placement and styles.  
-- [Tab Bar Customization](https://help.syncfusion.com/maui/tabview/tab-bar-customization) helps customize tab bar appearance and behavior.  
+- [Tab Bar Customization](https://help.syncfusion.com/maui/tabview/tab-bar-customization) helps customize tab bar appearance and behavior. 
+- [Tab Item Customization](https://help.syncfusion.com/maui/tabview/tab-item-customization) details how to style and configure individual tab items. 
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
 ## Resources

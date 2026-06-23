@@ -70,7 +70,7 @@ The following table summarizes the globalization support available in this contr
 
 - [Radio Button](https://help.syncfusion.com/maui/radio-button/overview) for selecting one option from a group of choices.
 - [CheckBox](https://help.syncfusion.com/maui/checkbox/overview) for handling multiple selection inputs.  
-- [Segmented Controls](https://help.syncfusion.com/maui/segmented-control/overview) for grouped button-based selection.
+- [Segmented Control](https://help.syncfusion.com/maui/segmented-control/overview) for grouped button-based selection.
 
 ## See Also
 

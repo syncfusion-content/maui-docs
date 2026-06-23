@@ -68,7 +68,7 @@ The following table summarizes the globalization support available in this contr
 
 - [Image Editor](https://help.syncfusion.com/maui/imageeditor/overview) for editing and annotating images including saved signatures.   
 - [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating signature inputs within form-based workflows.
-- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.  
+- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.  
 
 ## See Also
 

@@ -67,7 +67,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [AvatarView](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with badge indicators.  
+- [Avatar View](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with badge indicators.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting notification items in a structured format.  
 - [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message badges.  
 
