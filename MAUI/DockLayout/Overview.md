@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI SfDockLayout](https://www.syncfusion.com/maui-controls/maui-docklayout) is a versatile and powerful layout control that enables developers to arrange and dock child elements in a defined area, providing a robust framework for designing complex user interfaces in both mobile and desktop applications.
 
-   ![.NET MAUI DockLayout](DockLayout-Images/maui-docklayout.png)
+  ![.NET MAUI DockLayout](DockLayout-Images/maui-docklayout.png)
 
 ## Business use cases
 
@@ -65,7 +65,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
  
-- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
+- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for displaying vertically collapsible sections.
 - [Expander](https://help.syncfusion.com/maui/expander/overview) for creating single expandable/collapsible sections.
 

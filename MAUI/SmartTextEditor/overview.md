@@ -70,9 +70,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [RichTextEditor](https://help.syncfusion.com/maui/rich-text-editor/overview) for editing and formatting rich text content.
-- [MarkDownViewer](https://help.syncfusion.com/maui/markdownviewer/overview) for displaying formatted Markdown content.
-- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation UI.
+- [Rich Text Editor](https://help.syncfusion.com/maui/rich-text-editor/overview) for editing and formatting rich text content.
+- [MarkDown Viewer](https://help.syncfusion.com/maui/markdownviewer/overview) for displaying formatted Markdown content.
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation UI.
 
 ## See Also
 

@@ -73,7 +73,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Linear Gauge](https://help.syncfusion.com/maui/linear-gauge/overview) for displaying values along a linear scale. 
-- [CircularChart](https://help.syncfusion.com/maui/circular-charts/overview) for visualizing proportional data using circular charts.   
+- [Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview) for visualizing proportional data using circular charts.   
 - [Digital Gauge](https://help.syncfusion.com/maui/digitalgauge/overview) for displaying numeric or character values using segmented digital display styles. 
 
 ## See Also

@@ -62,14 +62,14 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<tr>
+</tr> 
 </table>
 
 ## Related controls
 
-- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing data using line, column, and bar charts.  
-- [Circular Chart](https://help.syncfusion.com/maui/circular-charts/overview) for representing proportional data using pie and doughnut charts.  
-- [Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing process stages and conversion flows.
+- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing data using line, column, and bar charts.  
+- [Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview) for representing proportional data using pie and doughnut charts.  
+- [Funnel Charts](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing process stages and conversion flows.
 
 ## See Also
 

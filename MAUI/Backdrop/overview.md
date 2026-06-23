@@ -67,9 +67,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage) for providing navigation structure integrated with BackdropPage.
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing collapsible content within panels.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying navigational options or filter lists in the back layer.
+- [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for implementing sliding panel navigation patterns. 
 
 ## See Also
 

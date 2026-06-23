@@ -72,7 +72,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for visualizing hierarchical data using a graphical layout.
+- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for visualizing hierarchical data using a graphical layout.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying flat data collections.
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing grouped data into expandable and collapsible sections.
 

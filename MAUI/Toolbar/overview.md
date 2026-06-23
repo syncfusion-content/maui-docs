@@ -74,7 +74,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for organizing navigation and actions in a side panel.
-- [TabView](https://help.syncfusion.com/maui/tabview/overview) for grouping content and actions within tabbed interfaces.
+- [Tab View](https://help.syncfusion.com/maui/tabview/overview) for grouping content and actions within tabbed interfaces.
 - [Button](https://help.syncfusion.com/maui/button/overview) for triggering actions and commands.
 
 ## See Also

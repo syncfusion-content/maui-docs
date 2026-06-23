@@ -67,9 +67,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [RangeSelector](https://help.syncfusion.com/maui/range-selector/overview) for selecting ranges with enhanced UI and content integration.   
-- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting single date values.  
-- [DateTimeSlider](https://help.syncfusion.com/maui/datetime-slider/overview) for selecting date or time values interactively with a slider.
+- [Range Selector](https://help.syncfusion.com/maui/range-selector/overview) for selecting ranges with enhanced UI and content integration.   
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting single date values.  
+- [Date Time Slider](https://help.syncfusion.com/maui/datetime-slider/overview) for selecting date or time values interactively with a slider.
 
 ## See Also
 

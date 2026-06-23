@@ -67,7 +67,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [CheckBox](https://help.syncfusion.com/maui/checkbox/overview) for collecting multiple selection inputs.
-- [RadioButton](https://help.syncfusion.com/maui/radio-button/overview) for handling single selection scenarios.
+- [Radio Button](https://help.syncfusion.com/maui/radio-button/overview) for handling single selection scenarios.
 - [ComboBox](https://help.syncfusion.com/maui/checkbox/overview) for dropdown-based user input.
 
 ## See Also

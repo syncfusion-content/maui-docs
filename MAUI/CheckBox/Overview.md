@@ -65,9 +65,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [RadioButton](https://help.syncfusion.com/maui/radio-button/overview) for handling single selection scenarios.
+- [Radio Button](https://help.syncfusion.com/maui/radio-button/overview) for handling single selection scenarios.
 - [Switch](https://help.syncfusion.com/maui/switch/overview) for toggle-based on and off interactions.
-- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating checkbox inputs within forms. 
+- [Button](https://help.syncfusion.com/maui/button/overview) for triggering actions or commands with customizable styles.
 
 ## See Also
 

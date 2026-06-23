@@ -93,7 +93,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting both date and time values.  
+- [Date Time Picker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting both date and time values.  
 - [Calendar](https://help.syncfusion.com/maui/calendar/overview) for navigating and selecting dates using full calendar views.  
 - [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating date picker inputs within forms.  
 

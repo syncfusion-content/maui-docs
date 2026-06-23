@@ -67,9 +67,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for trend analysis, comparisons, and multi‑series data visualization using X and Y axes.
-- [Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing stages in a process or pipeline.
-- [Pyramid Chart](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.  
+- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for trend analysis, comparisons, and multi‑series data visualization using X and Y axes.
+- [Funnel Charts](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing stages in a process or pipeline.
+- [Pyramid Charts](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.  
 
 ## See Also
 

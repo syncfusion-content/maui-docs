@@ -33,9 +33,9 @@ The Syncfusion® [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-
 
 ## Related controls
 
-- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for displaying hierarchical and comparative data visualization.
+- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for displaying hierarchical and comparative data visualization.
 - [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing and presenting location-based data in tabular format.
-- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing geographical or statistical data trends using interactive charts.
+- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for visualizing geographical or statistical data trends using interactive charts.
 
 ## See Also
 

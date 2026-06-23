@@ -28,7 +28,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI EffectsView](https://www.syncfusion.co
 
 ## Related controls
 
-- [Buttons](https://help.syncfusion.com/maui/button/overview) for applying interaction effects to action elements.  
+- [Button](https://help.syncfusion.com/maui/button/overview) for applying interaction effects to action elements.  
 - [Cards](https://help.syncfusion.com/maui/cards/overview) for enhancing card interactions with visual effects.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for applying effects to list-based UI elements.  
 

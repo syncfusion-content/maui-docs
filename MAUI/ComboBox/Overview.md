@@ -27,7 +27,7 @@ The [.NET MAUI ComboBox](https://www.syncfusion.com/maui-controls/maui-combobox)
 - **Editable mode** enables switching between editable and non-editable input for controlled user interaction.  
 - **Filtering** allows narrowing down items based on user input and automatically suggesting matches.  
 - **Search highlighting** highlights matching results in the dropdown list to improve visibility and usability.  
-- **Placeholder support** displays instructional text before input is entered.  
+- **Drop‑down customization** allows tailoring the appearance and behavior of the suggestion list. 
 
 ## Globalization
 
@@ -73,8 +73,8 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) for implementing search-based suggestion inputs.  
-- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting values using picker-based inputs. 
-- [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) for adding strict formatting, useful in forms.
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting values using picker-based inputs. 
+- [Masked Entry](https://help.syncfusion.com/maui/masked-entry/overview) for adding strict formatting, useful in forms.
 
 ## See Also
 

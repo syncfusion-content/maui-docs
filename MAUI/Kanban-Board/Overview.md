@@ -26,7 +26,6 @@ The Syncfusion® [.NET MAUI Kanban](https://www.syncfusion.com/maui-controls/mau
 - **Work-in-progress (WIP) control** allows limiting the number of items in each stage to improve efficiency.  
 - **Workflow transition management** allows controlling how tasks move between different stages of the process.  
 - **High-level customization support** allows configuring layout, appearance, and behavior to match application needs.  
-- **Smooth transition support** allows providing seamless movement of tasks across workflow stages.  
 
 ## Globalization
 

@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion® [.NET MAUI PullToRefresh](https://www.syncfusion.com/maui-controls/maui-pull-to-refresh) is a refresh control that allows you to interact and refresh the view loaded in it. The PullToRefresh control allows you to refresh the view upon performing the pull-to-refresh action. A progress indicator will be shown while starting the pulling. The application will be refreshed once you have pulled down a certain distance and released the touch.
 
-![.NET MAUI pull to refresh overview ](Images/overview/pulltorefresh_overview.gif)
+![.NET MAUI pull to refresh overview](Images/overview/pulltorefresh_overview.gif)
 
 ## Business use cases
 

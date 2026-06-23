@@ -1,19 +1,17 @@
 ---
 layout: post
-title: About .NET MAUI NumericEntry Control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control, its features, and more.
+title: About .NET MAUI Numeric Entry Control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Numeric Entry (SfNumericEntry) control, its features, and more.
 platform: MAUI
 control: SfNumericEntry
 documentation: ug
 ---
 
-# .NET MAUI NumericEntry Overview
+# .NET MAUI Numeric Entry Overview
 
-The Syncfusion® [.NET MAUI NumericEntry](https://www.syncfusion.com/maui-controls/maui-numeric-entry) control is designed to provide a user-friendly and advanced input experience for numeric values. It supports a wide range of numeric formats, including currency, percentages, decimals, and more. With its key features, it enables enhanced user experience and facilitates input validation.
+The Syncfusion® [.NET MAUI Numeric Entry](https://www.syncfusion.com/maui-controls/maui-numeric-entry) control is designed to provide a user-friendly and advanced input experience for numeric values. It supports a wide range of numeric formats, including currency, percentages, decimals, and more. With its key features, it enables enhanced user experience and facilitates input validation.
 
-## Control Structure
-
-![.NET MAUI NumericEntry structure](Overview_images/overview_img.png)
+![.NET MAUI Numeric Entry structure](Overview_images/overview_img.png)
 
 ## Business use cases
 
@@ -25,10 +23,9 @@ The Syncfusion® [.NET MAUI NumericEntry](https://www.syncfusion.com/maui-contro
 ## Key features
 
 - **Validation** allows validating numeric input when focus is lost or when the enter key is pressed.  
-- **Increment and decrement** allows adjusting values easily using built-in up and down buttons.  
+- **Up and down buttons** provide a simple way to adjust values by incrementing or decrementing. 
 - **Flexible formatting** allows displaying values in formats such as currency, percentage, and decimals.  
-- **Culture-aware formatting** allows adapting value display based on regional and cultural settings.  
-- **Placeholder** allows displaying hint text when the control contains an empty or null value.  
+- **Culture-aware formatting** allows adapting value display based on regional and cultural settings.   
 
 ## Globalization
 
@@ -70,12 +67,12 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for selecting values from predefined lists.
-- [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) for formatted and restricted input scenarios.
-- [Slider](https://help.syncfusion.com/maui/slider/overview) for selecting numeric values interactively using a sliding control.
+- [Masked Entry](https://help.syncfusion.com/maui/masked-entry/overview) for formatted and restricted input scenarios.
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with floating labels, validation, and styling. 
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) shows a step‑by‑step guide to begin using the NumericEntry control.  
+- [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) shows a step‑by‑step guide to begin using the Numeric Entry control.  
 - [Features](https://help.syncfusion.com/maui/numericentry/basic-features) explains core capabilities like validation and culture support.  
 - [Formatting](https://help.syncfusion.com/maui/numericentry/formatting) helps configure numeric formats and display.  
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.

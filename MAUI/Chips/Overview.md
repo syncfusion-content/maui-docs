@@ -65,7 +65,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [CheckBox](https://help.syncfusion.com/maui/checkbox/overview) for implementing multi-selection using checkbox controls.  
+- [Button](https://help.syncfusion.com/maui/button/overview) for triggering actions or commands with customizable styles. 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for selection from dropdown-based inputs.  
 - [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) for searchable and suggestion-based inputs.  
 

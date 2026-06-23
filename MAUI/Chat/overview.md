@@ -11,9 +11,7 @@ documentation: ug
 
 The Syncfusion® [.NET MAUI Chat](https://www.syncfusion.com/maui-controls/maui-chat) control offers a contemporary conversational chatbot experience, allowing for flexible customization of the layout to display conversations between two or more users.
 
-   ![overview in .NET MAUI SfChat](Images/maui-chat-overview.png)
-
-   ![.NET MAUI Chat Overview](Images/maui-chat-overview.png) 
+  ![.NET MAUI Chat Overview](Images/maui-chat-overview.png) 
 
 ## Business use cases
 
@@ -73,9 +71,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related Controls
 
-- [AIAssistView](https://help.syncfusion.com/maui/aiassistview/overview) enhance conversations with AI‑driven suggestions and guided responses. 
-- [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview) speed up message composition with predictive text input.
-- [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) provide flexible selection options within chat workflows.
+- [AI AssistView](https://help.syncfusion.com/maui/aiassistview/overview) enhance conversations with AI‑driven suggestions and guided responses. 
+- [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) speed up message composition with predictive text input.
+- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) provide flexible selection options within chat workflows.
 
 ## See Also
 

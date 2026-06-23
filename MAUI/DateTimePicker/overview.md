@@ -101,9 +101,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date-only values.  
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date-only values.  
 - [Calendar](https://help.syncfusion.com/maui/calendar/overview) for navigating and selecting dates using full calendar views.
-- [TimePicker](https://help.syncfusion.com/maui/timepicker/overview) for picking time values with an intuitive clock‑style interface.
+- [Time Picker](https://help.syncfusion.com/maui/timepicker/overview) for picking time values with an intuitive clock‑style interface.
 
 ## See Also
 

@@ -93,7 +93,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Sunburst Chart](https://help.syncfusion.com/maui/sunburstchart/overview) for visualizing hierarchical data using a radial layout.
-- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for analyzing data trends using axis-based charts.
+- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for analyzing data trends using axis-based charts.
 - [Maps](https://help.syncfusion.com/maui/maps/overview) for visualizing location-based hierarchical data.  
 
 ## See Also

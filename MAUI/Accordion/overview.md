@@ -69,9 +69,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [SfExpander](https://help.syncfusion.com/maui/expander/overview) for expanding and collapsing a single content section.
-- [SfNavigationDrawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for slide‑in navigation panels and grouped menus.
-- [SfTabView](https://help.syncfusion.com/maui/tabview/overview) for organizing content into tabbed sections.
+- [Expander](https://help.syncfusion.com/maui/expander/overview) for expanding and collapsing a single content section.
+- [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for slide‑in navigation panels and grouped menus.
+- [Tab View](https://help.syncfusion.com/maui/tabview/overview) for organizing content into tabbed sections.
 
 ## See Also
 

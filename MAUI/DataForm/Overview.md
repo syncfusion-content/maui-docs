@@ -65,8 +65,8 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for providing dropdown-based selection in forms.  
-- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for capturing date inputs within forms.  
-- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation.  
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for capturing date inputs within forms.  
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation. 
 
 ## See Also
 

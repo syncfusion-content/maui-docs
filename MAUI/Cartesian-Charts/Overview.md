@@ -76,9 +76,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Circular Chart](https://help.syncfusion.com/maui/circular-charts/overview) for proportional data visualization using pie, doughnut, and radial bar charts.
-- [Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing stages in a process or pipeline.
-- [Pyramid Chart](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.
+- [Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview) for proportional data visualization using pie, doughnut, and radial bar charts.
+- [Funnel Charts](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing stages in a process or pipeline.
+- [Pyramid Charts](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.
 
 ## See Also
 

@@ -66,9 +66,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Busy-Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for displaying loading states after button interactions.
-- [Badge-view](https://help.syncfusion.com/maui/badge-view/overview) for showing notification indicators on buttons.
-- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for combining input fields with action buttons.
+- [Chips](https://help.syncfusion.com/maui/chips/overview) for compact interactive elements used in selection, filtering, or displaying information.  
+- [Radio Button](https://help.syncfusion.com/maui/radio-button/overview) for choosing a single option from a group of mutually exclusive choices.  
+- [CheckBox](https://help.syncfusion.com/maui/checkbox/overview) for enabling multi-selection from a list of options.
 
 ## See Also
 

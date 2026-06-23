@@ -33,13 +33,13 @@ documentation: UG
 
 - [Button](https://help.syncfusion.com/maui/button/overview) for triggering actions and commands in applications.  
 - [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for organizing navigation options in a sliding panel. 
-- [TabView](https://help.syncfusion.com/maui/tabview/overview) for organizing multiple actions or views.
+- [Tab View](https://help.syncfusion.com/maui/tabview/overview) for organizing multiple actions or views.
 
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) shows a step‑by‑step guide to begin using the Radial Menu control.  
 - [Customization](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization) explains how to customize layout and appearance of menu items.  
-- [Populating Items](https://help.syncfusion.com/maui/radial-menu/populating-items) helps configure menu structure and hierarchy.  
+- [Center Button Customization](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization) details how to style and configure the central button. 
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
 ## Resources

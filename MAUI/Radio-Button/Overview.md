@@ -67,7 +67,7 @@ The following table summarizes the globalization support available in this contr
 
 - [CheckBox](https://help.syncfusion.com/maui/checkbox/overview) for handling multiple selection scenarios.  
 - [Switch](https://help.syncfusion.com/maui/switch/overview) for toggle-based on and off interactions.  
-- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating selection controls within forms.  
+- [Button](https://help.syncfusion.com/maui/button/overview) for triggering actions or commands with customizable styles. 
 
 ## See Also
 

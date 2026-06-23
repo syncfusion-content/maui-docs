@@ -66,9 +66,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [RichTextEditor](https://help.syncfusion.com/maui/rich-text-editor/overview) for editing rich text content within applications.
+- [Rich Text Editor](https://help.syncfusion.com/maui/rich-text-editor/overview) for editing rich text content within applications.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting structured content alongside Markdown views. 
-- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for capturing and structuring input that can be used to create or update Markdown content.
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for capturing and structuring input that can be used to create or update Markdown content.
 
 ## See Also
 

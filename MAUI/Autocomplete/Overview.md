@@ -24,8 +24,8 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Autocomplete](https://www.syncfusion.c
 
 - **Flexible data binding** binds the control to different types of data sources.
 - **Filtering support** filters the suggestion list based on input and fills with the closest match.
-- **Search support** highlights matching text within suggestions.
-- **Placeholder text** displays helpful text before input.
+- **Drop‑down customization** allows tailoring the appearance and behavior of the suggestion list.  
+- **Multi‑selection** enables choosing multiple values from the available options.
 
 ## Globalization
 
@@ -59,7 +59,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/autocomplete/overview">AutoComplete</a></td>
+<td><a href="/maui/autocomplete/overview">Autocomplete</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -72,11 +72,11 @@ The following table summarizes the globalization support available in this contr
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for flexible selection with optional user input.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying filtered results in list format.
-- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating autocomplete inputs within forms.
+- [Numeric Entry](https://help.syncfusion.com/maui/numeric-entry/overview) for structured numeric input with validation and formatting. 
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) shows how to begin using AutoComplete step by step. 
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) shows how to begin using Autocomplete step by step. 
 - [Searching & Filtering](https://help.syncfusion.com/maui/autocomplete/searching-filtering) explains how to configure search logic and filtering behavior.
 - [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization) shows how to style and customize the AutoComplete control.
 
