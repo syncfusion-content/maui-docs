@@ -472,19 +472,20 @@ The `MonthInlineViewItemTemplate` property allows you to define a custom DataTem
         <schedule:SchedulerMonthView ShowAppointmentsInline="True">
             <schedule:SchedulerMonthView.MonthInlineViewItemTemplate>
                 <DataTemplate>
-                    <Border Stroke="DarkBlue"
-                            StrokeThickness="1"
-                            Margin="2">
-                        <StackLayout BackgroundColor="LightBlue"
-                                     Padding="5">
-                            <Label Text="{Binding Subject}"
-                                   FontSize="14"
-                                   TextColor="Black"/>
-                            <Label Text="{Binding StartTime, StringFormat='{}{0:hh:mm tt}'}"
-                                   FontSize="12"
-                                   TextColor="Black"/>
-                        </StackLayout>
-                    </Border>
+                    <Grid BackgroundColor="MediumOrchid" Padding="8">
+                        <HorizontalStackLayout HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               Spacing="6">
+                        <Label Text="&#xE71D;"
+                               FontFamily="MauiMaterialAssets"
+                               TextColor="White"
+                               VerticalOptions="Center"/>
+                        <Label Text="{Binding Subject}"
+                               TextColor="White"
+                               FontFamily="Bold"
+                               VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </Grid>
                 </DataTemplate>
             </schedule:SchedulerMonthView.MonthInlineViewItemTemplate>
         </schedule:SchedulerMonthView>
@@ -492,6 +493,8 @@ The `MonthInlineViewItemTemplate` property allows you to define a custom DataTem
 </schedule:SfScheduler>
 {% endhighlight %}  
 {% endtabs %}
+
+![Inline-appointments-customization-in-month-view-using-date-template](images/month-view/customize-inline-appointment-view-using-data-template.png)
 
 ### MonthInlineAppointmentTapped
 
