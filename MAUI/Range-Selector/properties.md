@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# .NET MAUI Range Selector (SfRangeSelector) API Reference
+# .NET MAUI Range Selector API Reference
 
 The Syncfusion® .NET MAUI Range Selector (SfRangeSelector) is a highly interactive UI control, allowing users to select a range values within a minimum and maximum limit.
 

@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# .NET MAUI Range Slider (SfRangeSlider) API Reference
+# .NET MAUI Range Slider API Reference
 
 The Syncfusion® .NET MAUI Range Slider (SfRangeSlider) is a highly interactive UI control, allowing users to select a range values within a minimum and maximum limit.
 
