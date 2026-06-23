@@ -31,7 +31,7 @@ The Syncfusion® [.NET MAUI ImageEditor (SfImageEditor)](https://www.syncfusion.
 - **Toolbar support** provides built-in tools for easy access to editing features with customization options.  
 - **Undo and redo support** allows reverting or reapplying changes during editing.  
 - **Save support** allows storing edited images to a desired location after modifications. 
-- **Serialization support** allows saving and restoring the editing state of images, enabling persistence and reusability across sessions.
+- **Serialization support** allows saving and restoring the editing state of images, enabling persistence and reusable across sessions.
 
 ## Globalization
 

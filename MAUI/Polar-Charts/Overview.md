@@ -62,7 +62,7 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<tr>
+</tr> 
 </table>
 
 ## Related controls
