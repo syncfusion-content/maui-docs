@@ -50,7 +50,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 * [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_TextColor) of type `Color`, indicates the color of the displayed text.
 * `Stroke` - Gets or sets the border color of the tooltip.
 * `StrokeWidth` - Gets or sets the thickness of the tooltip border.
-* `UseSeriesFillColor` - Gets or sets a value indicating whether the tooltip background should use the fill color of the associated series. When set to `true`, the tooltip adopts the series color as its background.
+* `UseSeriesFillColor` - Gets or sets a value indicating whether the tooltip background should use the fill color of the associated segment. When set to `true`, the tooltip adopts the segment color as its background.
 
 {% tabs %}
 
