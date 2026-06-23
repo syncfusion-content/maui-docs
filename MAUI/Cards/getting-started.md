@@ -89,25 +89,29 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}  
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the Card namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -117,27 +121,26 @@ using Syncfusion.Maui.Cards;
 
 ## Step 5: Add the Card component
 
-Create an instance for the Card control, and add it as content.
+Create an instance for the Card control.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 <cards:SfCardView>
-    <Label Text="CardView" 
+    <Label Text="CardView"
            Background="PeachPuff" 
            HorizontalTextAlignment="Center" 
            VerticalTextAlignment="Center"/>
 </cards:SfCardView>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-    SfCardView cardView = new SfCardView();
-    cardView.Content = new Label()
-    {
-        Text = "CardView",
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        BackgroundColor = Colors.PeachPuff
-    };
-    this.Content = cardView;
+{% highlight c# tabtitle="C#" %}
+SfCardView cardView = new SfCardView();
+cardView.Content = new Label()
+{
+    Text = "CardView",
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Center,
+    BackgroundColor = Colors.PeachPuff
+};
 {% endhighlight %}
 {% endtabs %}
 
@@ -150,7 +153,7 @@ The following screenshot illustrates the result of the above code.
 Initialize a card layout with a card view using the provided code sample below.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <cards:SfCardLayout HeightRequest="500" BackgroundColor="#F0F0F0">
 
@@ -169,17 +172,14 @@ Initialize a card layout with a card view using the provided code sample below.
 </cards:SfCardLayout>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-    SfCardLayout cardLayout = new SfCardLayout();
+{% highlight c# tabtitle="C#" %}
+SfCardLayout cardLayout = new SfCardLayout();
 
-    //Add children for card layout 
-    cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Peach", BackgroundColor = Colors.PeachPuff }, CornerRadius = 15 });
+cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Peach", BackgroundColor = Colors.PeachPuff }, CornerRadius = 15 });
 
-    cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "MediumPurple", BackgroundColor = Colors.MediumPurple },CornerRadius = 15 });
+cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "MediumPurple", BackgroundColor = Colors.MediumPurple },CornerRadius = 15 });
 
-    cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "LightPink", BackgroundColor = Colors.LightPink },CornerRadius = 15 });
-
-    this.Content = cardLayout;
+cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "LightPink", BackgroundColor = Colors.LightPink },CornerRadius = 15 });
 {% endhighlight %}
 {% endtabs %}	
 

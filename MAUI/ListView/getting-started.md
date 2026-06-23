@@ -89,16 +89,20 @@ Before proceeding, ensure the following are set up:
 ## Step 3: Register Syncfusion handler
 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Define the model and view model
 
@@ -107,7 +111,7 @@ builder.ConfigureSyncfusionCore();
 Create a simple data model as shown in the following code example, and save it as `BookInfo.cs` file. 
 
 {% tabs %}
-{% highlight c# tabtitle="BookInfo.cs" %}
+{% highlight c# %}
 public class BookInfo : INotifyPropertyChanged
 {
     private string bookName;
@@ -153,7 +157,7 @@ N> If you want your data model to respond to property changes, then implement [I
 Next, create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as `BookInfoRepository.cs` file:
 
 {% tabs %}
-{% highlight c# tabtitle="BookInfoRepository.cs" %}
+{% highlight c# %}
 public class BookInfoRepository
 {
     private ObservableCollection<BookInfo> bookInfo;
@@ -210,7 +214,7 @@ using Syncfusion.Maui.ListView;
 Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) and use the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to bind and display a collection of data. By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
+{% highlight xaml hl_lines="4" %}
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding BookInfo}"
                    ItemSize="100">
@@ -229,27 +233,26 @@ Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
   </syncfusion:SfListView>
 {% endhighlight %}
 {% highlight c# hl_lines="14" %}
-        BookInfoRepository viewModel = new BookInfoRepository ();
-		SfListView listView = new SfListView();
-        listView.ItemSize = 100;
-        listView.ItemsSource = viewModel.BookInfo;
 
-        listView.ItemTemplate = new DataTemplate(() => {
-        var grid = new Grid();
-        grid.RowDefinitions.Add(new RowDefinition());
-        grid.RowDefinitions.Add(new RowDefinition());
-        var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
-        bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
-        var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
-        bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
-        grid.Children.Add(bookName);
-        grid.Children.Add(bookDescription);
-        grid.SetRow(bookName, 0);
-        grid.SetRow(bookDescription, 1);
-        return grid;
-        });
+BookInfoRepository viewModel = new BookInfoRepository();
+SfListView listView = new SfListView();
+listView.ItemSize = 100;
+listView.ItemsSource = viewModel.BookInfo;
+listView.ItemTemplate = new DataTemplate(() => {
+var grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition());
+grid.RowDefinitions.Add(new RowDefinition());
+var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
+bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
+var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
+bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
+grid.Children.Add(bookName);
+grid.Children.Add(bookDescription);
+grid.SetRow(bookName, 0);
+grid.SetRow(bookDescription, 1);
+return grid;
+});
 
-		this.Content = listView;
 {% endhighlight %}
 {% endtabs %}
 

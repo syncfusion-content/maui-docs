@@ -89,25 +89,29 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the Avatar View namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -122,38 +126,28 @@ Create an instance for the Avatar View control, and add it as content. You can a
 {% tabs %}
 
 {% highlight xaml %}
-
-<Grid>
-    <sfavatar:SfAvatarView ContentType="Custom"
-                           ImageSource="alex.png"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center"   
-                           HeightRequest="100"
-                           CornerRadius="50"
-                           WidthRequest="100" 
-                           Stroke="Black"
-                           StrokeThickness="2"/>
-</Grid>
-
+<sfavatar:SfAvatarView ContentType="Custom"
+                       ImageSource="alex.png"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"   
+                       HeightRequest="100"
+                       CornerRadius="50"
+                       WidthRequest="100" 
+                       Stroke="Black"
+                       StrokeThickness="2"/>
 {% endhighlight %}
 
 {% highlight c# %}
-    //main grid
-    Grid mainGrid = new Grid();
-
-    // Create an SfAvatarView control.
-    SfAvatarView avatarView = new SfAvatarView();
-    avatarView.VerticalOptions = LayoutOptions.Center;
-    avatarView.HorizontalOptions = LayoutOptions.Center;
-    avatarView.ContentType = ContentType.Custom;
-    avatarView.ImageSource = "alex.png";
-    avatarView.WidthRequest = 100;
-    avatarView.HeightRequest = 100;
-    avatarView.CornerRadius = 50;
-    avatarView.Stroke = Colors.Black;
-    avatarView.StrokeThickness = 2;
-    mainGrid.Children.Add(avatarView);
-    this.Content = mainGrid;
+SfAvatarView avatarView = new SfAvatarView();
+avatarView.VerticalOptions = LayoutOptions.Center;
+avatarView.HorizontalOptions = LayoutOptions.Center;
+avatarView.ContentType = ContentType.Custom;
+avatarView.ImageSource = "alex.png";
+avatarView.WidthRequest = 100;
+avatarView.HeightRequest = 100;
+avatarView.CornerRadius = 50;
+avatarView.Stroke = Colors.Black;
+avatarView.StrokeThickness = 2;
 {% endhighlight %}
 
 {% endtabs %}

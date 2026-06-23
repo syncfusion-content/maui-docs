@@ -91,16 +91,20 @@ Before proceeding, ensure the following are set up:
 ## Step 3: Register Syncfusion handler
 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the Maps namespace
  
@@ -158,7 +162,6 @@ SfMaps map = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
 map.Layer = layer;
-this.Content = map;
 
 {% endhighlight %}
 
@@ -188,7 +191,6 @@ SfMaps map = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 map.Layer = layer;
-this.Content = map;
 
 {% endhighlight %}
 
@@ -212,7 +214,6 @@ SfMaps map = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
 map.Layer = layer;
-this.Content = map;
 
 {% endhighlight %}
 
@@ -232,7 +233,6 @@ Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
 var jsonStream = assembly?.GetManifestResourceStream("MyProject.Assets.australia.json");
 layer.ShapesSource = MapSource.FromStream(jsonStream);
 map.Layer = layer;
-this.Content = map;
 
 {% endhighlight %}
 

@@ -73,6 +73,7 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
 ## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the **.NET MAUI App** template.
@@ -89,25 +90,29 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %}  
+{% endhighlight %}
+{% endtabs %}  
 
 ## Step 4: Import the Busy Indicator namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -117,26 +122,25 @@ using Syncfusion.Maui.Core;
 
 ## Step 5: Add the Busy Indicator component
 
-Create an instance for the Busy Indicator control, and add it as content. The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
+Create an instance for the Busy Indicator control. The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 
 The following example depicts the CircularMaterial type animation of .NET  MAUI Busy Indicator.
 
 {% tabs %}
 
 {% highlight xaml %}
-    <core:SfBusyIndicator x:Name="busyIndicator"
-                            IsRunning="True"
-                            AnimationType="CircularMaterial">
-    </core:SfBusyIndicator>
+<core:SfBusyIndicator x:Name="busyIndicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial">
+</core:SfBusyIndicator>
 {% endhighlight %}
 
 {% highlight C# %}
-    SfBusyIndicator busyIndicator = new SfBusyIndicator()
-    {
-        IsRunning = true,
-        AnimationType = AnimationType.CircularMaterial;
-    };
-    this.Content = busyIndicator;
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial;
+};
 {% endhighlight %}
 
 {% endtabs %}

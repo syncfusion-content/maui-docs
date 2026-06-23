@@ -89,18 +89,22 @@ Before proceeding, ensure the following are set up:
 ## Step 3: Register Syncfusion handler
 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
-## Step 5: Initialize the view model
+## Step 4: Initialize the view model
 
 Now, let us define a simple data model that represents a data point in the chart.
 
@@ -149,35 +153,7 @@ Create a `AdmissionViewModel` instance and set it as the chart's `BindingContext
 
 N> Add the namespace of `AdmissionViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
-{% tabs %} 
-
-{% highlight xaml %}
-
-<ContentPage
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
-
-    <chart:SfFunnelChart>
-        <chart:SfFunnelChart.BindingContext>
-            <model:AdmissionViewModel/>
-        </chart:SfFunnelChart.BindingContext>
-    </chart:SfFunnelChart>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfFunnelChart chart = new SfFunnelChart();
-AdmissionViewModel viewModel = new AdmissionViewModel();
-chart.BindingContext = viewModel;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-## Step 4: Import the Funnel Chart namespace
+## Step 5: Import the Funnel Chart namespace
  
 Add the following namespace in your XAML or C#.
  
@@ -240,7 +216,6 @@ Initialize the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     chart.YBindingPath = "YValue";
     chart.EnableTooltip = true;
     chart.ShowDataLabels = true;
-    this.Content = chart;
 
 {% endhighlight %}
 
@@ -250,4 +225,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Funnel chart in .NET MAUI Chart](Getting-Started_Images/MAUI_funnel_chart.png)
 
-You can download the FunnelCharts Getting Started sample from [GitHub]()(https://github.com/SyncfusionExamples/GettingStarted_FunnelChart_MAUI).
+You can download the FunnelCharts Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_FunnelChart_MAUI).

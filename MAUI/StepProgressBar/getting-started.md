@@ -90,15 +90,19 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
-{% highlight csharp %}
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-{% highlight csharp %}
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
+{% endtabs %}
 
 ## Step 4: Create the ViewModel
 
@@ -159,7 +163,7 @@ using Syncfusion.Maui.ProgressBar;
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property from the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). Bind item collection in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="10" %}
+{% highlight xaml tabtitle="XAML" hl_lines="11" %}
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"                                                                                     
@@ -168,7 +172,7 @@ The Step progressbar control allows you to bind item collection by setting the [
                     ActiveStepProgressValue="60"
                     ProgressAnimationDuration="2500"
                     ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                                                             
+<stepProgressBar:SfStepProgressBar>                                                                                        
 
 <ContentPage.BindingContext>
     <local:ViewModel />

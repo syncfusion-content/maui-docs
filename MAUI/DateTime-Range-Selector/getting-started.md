@@ -91,25 +91,29 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the DateTime Range Selector namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -130,12 +134,11 @@ Create an instance of the SfDateTimeRangeSelector and initialize it as follows:
 {% endhighlight %}
 
 {% highlight C# %}
-    SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-    rangeSelector.Minimum = new DateTime(2010, 01, 01);
-    rangeSelector.Maximum = new DateTime(2018, 01, 01);
-    rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-    rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-    content = rangeSelector;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 {% endhighlight %}
 
 {% endtabs %}

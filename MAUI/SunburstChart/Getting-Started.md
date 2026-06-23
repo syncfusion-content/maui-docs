@@ -87,16 +87,19 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
-{% highlight csharp %}
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-{% highlight csharp %}
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
-
+{% endtabs %}
 
 ## Step 4: Create the Model and ViewModel
 
@@ -128,7 +131,6 @@ public class SunburstViewModel
             new SunburstModel ( "India", "Technical", "Developers",  125 ),
             new SunburstModel ( "Germany", "Sales", "Executive",  30 ),
             new SunburstModel ( "Germany", "Sales", "Analyst",  40 ),
-            // Add more items
         };
     }    
 }

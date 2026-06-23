@@ -90,25 +90,29 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the DateTimepicker namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -118,15 +122,14 @@ using Syncfusion.Maui.Picker;
 
 ## Step 5: Add the DateTimepicker component
 
-Create an instance of DateTimepicker and add it to your page.
+Create an instance of DateTimepicker control.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
     <picker:SfDateTimePicker />
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-    SfDateTimePicker picker = new SfDateTimePicker();
-    this.Content = picker;
+SfDateTimePicker picker = new SfDateTimePicker();
 {% endhighlight %}
 {% endtabs %}
 

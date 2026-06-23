@@ -90,25 +90,29 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the CheckBox namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -118,20 +122,19 @@ using Syncfusion.Maui.Buttons;
 
 ## Step 5: Add the CheckBox component
 
-Create an instance for the CheckBox control, and add it as content. You can set the caption of the CheckBox using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the CheckBox and is displayed next to it.
+Create an instance for the CheckBox control. You can set the caption of the CheckBox using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the CheckBox and is displayed next to it.
 
 {% tabs %}
 {% highlight xaml %}
-    <buttons:SfCheckBox x:Name="checkBox" 
-                        IsChecked="True" 
-                        Text="CheckBox">
-    </buttons:SfCheckBox>
+<buttons:SfCheckBox x:Name="checkBox" 
+                    IsChecked="True" 
+                    Text="CheckBox">
+</buttons:SfCheckBox>
 {% endhighlight %}
 {% highlight c# %}
-    SfCheckBox checkBox = new SfCheckBox();
-    checkBox.IsChecked = true;
-    checkBox.Text = "CheckBox";
-    this.Content = checkBox;
+SfCheckBox checkBox = new SfCheckBox();
+checkBox.IsChecked = true;
+checkBox.Text = "CheckBox";
 {% endhighlight %}
 {% endtabs %}
 

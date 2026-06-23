@@ -86,18 +86,22 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Define Model and View Model
 
@@ -106,7 +110,7 @@ The [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.Sf
 Here, the data object named **ContactsInfo** is created with some properties.
 
 {% tabs %}
-{% highlight c# tabtitle="ContactsInfo.cs" %}
+{% highlight c# %}
 
 public class ContactsInfo
 {
@@ -126,7 +130,7 @@ public class ContactsInfo
 Initialize the data object in view model class to bind in the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property of [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
-{% highlight c# tabtitle="DataFormViewModel.cs" %}
+{% highlight c# %}
 
 public class DataFormViewModel
 {
@@ -146,7 +150,7 @@ public class DataFormViewModel
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -172,7 +176,6 @@ SfDataForm dataForm = new SfDataForm()
 {
     DataObject = new ContactsInfo()
 };
-this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 

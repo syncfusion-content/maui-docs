@@ -90,18 +90,22 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Define Model and View Model
 
@@ -165,7 +169,7 @@ public class ViewModel : INotifyPropertyChanged
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -175,31 +179,26 @@ using Syncfusion.Maui.Core;
 
 ## Step 6: Add the Chips component
 
-Create an instance for the Chips control, and add it as content. Create an instance of ViewModel class,and then set it as the `BindingContext`. Bind the `ItemsSource` property with a collection, and then set the `DisplayMemberPath` property:
+Create an instance for the Chips control. Create an instance of ViewModel class,and then set it as the `BindingContext`. Bind the `ItemsSource` property with a collection, and then set the `DisplayMemberPath` property:
 
 {% tabs %}
 
 {% highlight xaml %}
-<Grid>
-	<chip:SfChipGroup 
-		ItemsSource="{Binding Employees}" 
-		ChipPadding="8,8,0,0" 
-		DisplayMemberPath="Name"
-		ChipBackground="white"
-		ChipTextColor="Black"
-		HorizontalOptions="Start" 
-		VerticalOptions="Center">
-		<chip:SfChipGroup.BindingContext>
-			<local:ViewModel x:Name="viewModel"/>
-		</chip:SfChipGroup.BindingContext>
-	</chip:SfChipGroup>  
-</Grid>
+<chip:SfChipGroup ItemsSource="{Binding Employees}" 
+				  ChipPadding="8,8,0,0" 
+				  DisplayMemberPath="Name"
+				  ChipBackground="white"
+				  ChipTextColor="Black"
+				  HorizontalOptions="Start" 
+				  VerticalOptions="Center">
+	<chip:SfChipGroup.BindingContext>
+		<local:ViewModel x:Name="viewModel"/>
+	</chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 {% endhighlight %}
 
 {% highlight c# %}
-
 this.BindingContext = new ViewModel();
-Grid grid = new Grid();
 SfChipGroup chipGroup = new SfChipGroup()
 {
 	DisplayMemberPath = "Name",
@@ -210,9 +209,6 @@ SfChipGroup chipGroup = new SfChipGroup()
 	ChipPadding = new Thickness(8, 8, 0, 0),
 };
 chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-grid.Children.Add(chipGroup);
-this.Content = grid;
-		
 {% endhighlight %}
 
 {% endtabs %}

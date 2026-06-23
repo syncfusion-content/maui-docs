@@ -90,25 +90,29 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the Backdrop page namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -118,14 +122,13 @@ using Syncfusion.Maui.Backdrop;
 
 ## Step 5: Add the Backdrop page component
 
-Create an instance for the Backdrop page control, and add it as content. Configure the layout and content structure of the [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) by defining the back layer and front layer.
+Create an instance for the Backdrop page control. Configure the layout and content structure of the [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) by defining the back layer and front layer.
 
 Reveals the back layer by setting the [`IsBackLayerRevealed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_IsBackLayerRevealed) property to true. By default, it is set to false.
 
 {% tabs %}
 
 {% highlight xaml %}
-
 <backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          x:Class="BackdropGettingStarted.BackdropSamplePage"
@@ -160,7 +163,6 @@ Reveals the back layer by setting the [`IsBackLayerRevealed`](https://help.syncf
     </backdrop:SfBackdropPage.FrontLayer> 
 
 </backdrop:SfBackdropPage>
-
 {% endhighlight %}
 
 {% highlight c# %}

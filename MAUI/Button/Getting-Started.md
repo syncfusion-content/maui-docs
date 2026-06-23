@@ -90,25 +90,29 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Import the Button namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -118,7 +122,7 @@ using Syncfusion.Maui.Buttons;
 
 ## Step 5: Add the Button component
 
-Create an instance for the Button control, and add it as content.
+Create an instance for the Button control.
 
 {% tabs %}
 
@@ -133,7 +137,6 @@ Create an instance for the Button control, and add it as content.
 SfButton button = new SfButton();
 button.Text = "Button";
 button.TextColor = Colors.White;
-this.Content = button;
 {% endhighlight %}
 
 {% endtabs %}

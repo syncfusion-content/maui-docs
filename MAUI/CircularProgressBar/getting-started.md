@@ -91,25 +91,30 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight C# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight C# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
+ 
 
 ## Step 4: Import the Circular ProgressBar namespace
 
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -117,9 +122,9 @@ using Syncfusion.Maui.ProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add .NET MAUI Circular ProgressBar control
+## Step 5: Add the Circular ProgressBar component
 
-Create an instance for the circular progress bar control, and add it as content.
+Create an instance for the circular progress bar control.
 
 {% tabs %}
 
@@ -132,7 +137,6 @@ Create an instance for the circular progress bar control, and add it as content.
 {% highlight c# %}
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { Progress = 75 };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

@@ -91,23 +91,28 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Define Model and View Model
 
 The below is a simple example for adding Carousel items through Model, for more details on populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
 
+{% tabs %}
 {% highlight C# %}
 // Model
 public class CarouselModel
@@ -145,6 +150,7 @@ public class CarouselViewModel
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 N> The images used in the above view model should be added in the Resources folder of the Application.
 
@@ -153,7 +159,7 @@ N> The images used in the above view model should be added in the Resources fold
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -163,7 +169,7 @@ using Syncfusion.Maui.Carousel;
 
 ## Step 6: Add the Carousel View component
 
-Create an instance for the Carousel View control, and add it as content. Set the `CarouselViewModel` instance as the `BindingContext` of your page to bind `CarouselViewModel` properties.
+Create an instance for the Carousel View control. Set the `CarouselViewModel` instance as the `BindingContext` of your page to bind `CarouselViewModel` properties.
 
 [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemHeight) and [ItemWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemWidth) properties are used to change the height and width of carouselItem in carousel panel.
 
@@ -194,29 +200,27 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 {% endhighlight %}
 
 {% highlight C# %}
-    CarouselViewModel carouselViewModel = new CarouselViewModel();
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 
-    SfCarousel carousel = new SfCarousel()
-    {
-        ItemHeight = 170,
-        ItemWidth = 270,
-        SelectedIndex = 4
-    };
+SfCarousel carousel = new SfCarousel()
+{
+    ItemHeight = 170,
+    ItemWidth = 270,
+    SelectedIndex = 4
+};
 
-    var itemTemplate = new DataTemplate(() =>
-    {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
-    });
+var itemTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid();
+    var nameLabel = new Image();
+    nameLabel.SetBinding(Image.SourceProperty, "Image");
+    grid.Children.Add(nameLabel);
+    return grid;
+});
 
-    carousel.BindingContext = carouselViewModel;
-    carousel.ItemTemplate = itemTemplate;
-    carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-
-    this.Content = carousel;
+carousel.BindingContext = carouselViewModel;
+carousel.ItemTemplate = itemTemplate;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 

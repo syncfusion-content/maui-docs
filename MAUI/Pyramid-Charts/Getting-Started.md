@@ -90,15 +90,19 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
-{% highlight csharp %}
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-{% highlight csharp %}
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
+{% endtabs %}
 
 ## Step 4: Create Model and ViewModel
 

@@ -92,18 +92,22 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
-
+ 
 Make sure to add the namespace.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
+{% endhighlight %}
+{% endtabs %}
+ 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
+ 
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Define Model and View Model
 
@@ -151,7 +155,7 @@ public class SalesViewModel
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="xaml" %}
+{% highlight xaml %}
 xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -161,7 +165,7 @@ using Syncfusion.Maui.Charts;
 
 ## Step 6: Add the Circular Chart component
 
-Create an instance for the AI AssistView control, and add it as content. Now, Create a `SalesViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `SalesViewModel` class.
+Create an instance for the Circular Chart control. Now, Create a `SalesViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `SalesViewModel` class.
 
 N> Add namespace of `SalesViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
@@ -174,56 +178,44 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
 {% tabs %} 
 
 {% highlight xaml %}
-    <chart:SfCircularChart>
-        <chart:SfCircularChart.Title>
-            <Label Text="PRODUCT SALES"/>
-        </chart:SfCircularChart.Title>
+<chart:SfCircularChart>
+    <chart:SfCircularChart.Title>
+        <Label Text="PRODUCT SALES"/>
+    </chart:SfCircularChart.Title>
 
-        <chart:SfCircularChart.BindingContext>
-            <model:SalesViewModel/>
-        </chart:SfCircularChart.BindingContext>
+    <chart:SfCircularChart.BindingContext>
+        <model:SalesViewModel/>
+    </chart:SfCircularChart.BindingContext>
 
-        <chart:SfCircularChart.Legend>
-            <chart:ChartLegend/>
-        </chart:SfCircularChart.Legend>
+    <chart:SfCircularChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfCircularChart.Legend>
 
-        <chart:PieSeries ItemsSource="{Binding Data}"
-                         XBindingPath="Product" 
-                         YBindingPath="SalesRate"
-                         ShowDataLabels="True"
-                         EnableTooltip="True"/>
-    </chart:SfCircularChart>
-
+    <chart:PieSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate"
+                        ShowDataLabels="True"
+                        EnableTooltip="True"/>
+</chart:SfCircularChart>
 {% endhighlight %}
 
 {% highlight C# %}
+SfCircularChart chart = new SfCircularChart();
+chart.Title = new Label()
+{
+    Text = "PRODUCT SALES"
+};
+chart.Legend = new ChartLegend();
+SalesViewModel viewModel = new SalesViewModel();
+chart.BindingContext = viewModel;
 
-using Syncfusion.Maui.Charts;
-. . .
-public partial class MainPage : ContentPage
-{   
-    public MainWindow()
-    {
-        SfCircularChart chart = new SfCircularChart();
-        chart.Title = new Label()
-        {
-            Text = "PRODUCT SALES"
-        };
-        chart.Legend = new ChartLegend();
-        SalesViewModel viewModel = new SalesViewModel();
-        chart.BindingContext = viewModel;
-
-        PieSeries series = new PieSeries();
-        series.ItemsSource = viewModel.Data;
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.EnableTooltip = true;
-        series.ShowDataLabels = true;
-        chart.Series.Add(series);
-        this.Content = chart;
-    }
-}
-
+PieSeries series = new PieSeries();
+series.ItemsSource = viewModel.Data;
+series.XBindingPath = "Product";
+series.YBindingPath = "SalesRate";
+series.EnableTooltip = true;
+series.ShowDataLabels = true;
+chart.Series.Add(series);
 {% endhighlight %}
 
 {% endtabs %}
