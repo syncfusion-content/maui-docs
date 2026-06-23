@@ -34,52 +34,26 @@ Syncfusion<sup>®</sup> .NET MAUI UI controls are built to deliver seamless expe
 Below is a summary of globalization capabilities supported by Syncfusion<sup>®</sup> .NET MAUI controls:
 
 <style>
-#legend
-{
-border:0 !important;
-}
-#legend tr {
-  border:0 !important;
-}
-#legend td {
-  border:0 !important;
-  vertical-align: top;
-  text-align: left;
-  display: flex;
-  gap: 8px; 
-  padding: 4px;
+.img{
+  margin:0 !important;
 }
 </style>
 
-<table id="legend" style="border-collapse:collapse;">
-    <tr>
-        <td>
-            <img src="../Images/full-support.svg" alt="full-support" width="16">
-            <span>Full Support</span>
-        </td>
-    </tr>
-
-  <tr>
-      <td>
-          <img src="../Images/partial-support.svg" alt="partial-support" width="16">
-          <span>Partial Support</span>
-      </td>
-  </tr>
-
-  <tr>
-      <td>
-          <img src="../Images/no-support.svg" alt="no-support" width="16">
-          <span>No Support</span>
-      </td>
-  </tr>
-
-  <tr>
-      <td>
-          <img src="../Images/not-applicable.svg" alt="not-applicable" width="16">
-          <span>Not Applicable</span>
-      </td>
-  </tr>
-</table>
+<span style="display: inline-flex; align-items: center; gap: 8px;">
+  <img src="../Images/full-support.svg" width="16"> Full Support
+</span><br>
+ 
+<span style="display: inline-flex; align-items: center; gap: 8px;">
+  <img src="../Images/partial-support.svg" width="16"> Partial Support
+</span><br>
+ 
+<span style="display: inline-flex; align-items: center; gap: 8px;">
+  <img src="../Images/no-support.svg" width="16"> No Support
+</span><br>
+ 
+<span style="display: inline-flex; align-items: center; gap: 8px;">
+  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
 
 
 <style>
