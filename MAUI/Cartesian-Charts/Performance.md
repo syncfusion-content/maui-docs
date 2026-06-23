@@ -1,22 +1,77 @@
 ---
 layout: post
 title: Performance in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn about performance optimization using suspend and resume notifications in Syncfusion .NET MAUI Cartesian Chart control.
+description: Learn about performance optimization techniques including fast series, suspend and resume notifications, and real-time updates in .NET MAUI Cartesian Chart control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
-keywords: .net maui chart performance, maui chart optimization, .net maui suspend notification, syncfusion maui chart performance, cartesian performance maui, .net maui chart real-time updates.
+keywords: .net maui chart performance, maui chart optimization, .net maui fast line chart, .net maui fast scatter chart, .net maui suspend notification, syncfusion maui chart performance, cartesian performance maui, .net maui chart real-time updates, maui chart large dataset.
 ---
 
-# Performance in .NET MAUI Chart (SfCartesianChart)
+# Performance in .NET MAUI Cartesian Chart
 
-The .NET MAUI Chart provides performance optimization techniques to efficiently handle large datasets and dynamic data updates.
+The .NET MAUI Chart provides performance optimization techniques to efficiently handle large datasets and dynamic data updates. Whether we are rendering thousands of data points or pushing real-time updates, the following strategies help us get the best rendering performance from `SfCartesianChart`.
+
+## Fast Chart in .NET MAUI Cartesian Charts
+
+A fast series is a special kind of chart series that can render a collection with a huge number of data points efficiently. Unlike standard series, fast series render all data points using a single segment, which significantly reduces the rendering overhead and improves frame rates when dealing with large datasets.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeAxis/>
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.YAxes>
+
+    <chart:FastLineSeries ItemsSource="{Binding Data}"
+                          XBindingPath="XValue"
+                          YBindingPath="YValue"/>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+
+DateTimeAxis primaryAxis = new DateTimeAxis();
+chart.XAxes.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
+
+FastLineSeries series = new FastLineSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![FastLine chart type in MAUI Chart](Chart-types-images/maui_fastline_chart.png)
+
+**When to use fast series:**
+
+* Use fast series when we need to plot continuous time-series or sensor data with thousands of points.
+* Prefer fast series over standard series whenever rendering performance is a priority and advanced per-point customization is not required.
 
 ## ListenPropertyChange in .NET MAUI Charts
 
 The `ListenPropertyChange` property allows the chart to update dynamically when the underlying data source properties change. This enables real-time data visualization with responsive updates. By leveraging `INotifyPropertyChanged`, the data points automatically reflect changes, ensuring the chart remains responsive to data updates.
 
-Use `ListenPropertyChange` with your series when your data model implements `INotifyPropertyChanged`:
+Use `ListenPropertyChange` with our series when our data model implements `INotifyPropertyChanged`:
 
 {% tabs %}
 
@@ -82,11 +137,11 @@ public class DataModel : INotifyPropertyChanged
 
 * When dealing with a large number of data points, registering these events can slow down the chart's loading time.
 
-* To optimize performance and avoid unnecessary event registration, the `ListenPropertyChange` property is set to `false`.
+N> To optimize performance and avoid unnecessary event registration, the `ListenPropertyChange` property is set to `false` by default.
 
 ## Deferred Real-Time Updates
 
-When performing bulk or real-time updates such as adding, removing, or modifying multiple data points, the chart refreshes for every change, which may impact performance. To optimize this, use chart-level or series-level suspend and resume notification methods to batch updates and reduce unnecessary refresh cycles based on your requirements.
+When performing bulk or real-time updates such as adding, removing, or modifying multiple data points, the chart refreshes for every change, which may impact performance. To optimize this, use chart-level or series-level suspend and resume notification methods to batch updates and reduce unnecessary refresh cycles based on our requirements.
 
 ### Series-Level Suspend and Resume
 
@@ -164,3 +219,13 @@ chart.ResumeSeriesNotification();
 {% endhighlight %}
 
 {% endtabs %}
+
+N> `SuspendNotification` and `ResumeNotification` (and their chart-level equivalents) apply only to the data source updates of the series. Other chart elements such as annotations are not considered and will not be suspended or resumed by these methods.
+
+## Additional Performance Best Practices
+
+For more tips and best practices on improving chart design and rendering performance, refer to the following resources:
+
+* [12 Chart Design Tips Every Developer Needs To Know](https://www.syncfusion.com/blogs/post/chart-design-tips-for-every-developer)
+* [How to optimize FastLine series performance in .NET MAUI Chart](https://support.syncfusion.com/kb/article/18844/how-to-optimize-fastline-series-performance-in-net-maui-chart)
+
