@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Chart control  Syncfusion
+title: Appearance in .NET MAUI Circular Chart control | Syncfusion
 description: Learn here all about appearance customization in .NET MAUI Chart (SfCircularChart), its elements and more.
 platform: maui
 control: SfCircularChart
@@ -10,6 +10,37 @@ documentation: ug
 # Appearance in .NET MAUI Circular Chart
 
 The appearance of the [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
+
+## Add a title
+
+The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of circular chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+    <chart:SfCircularChart.Title>
+        <Label Text="PRODUCT SALES"/>
+    </chart:SfCircularChart.Title>
+    . . .
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfCircularChart chart = new SfCircularChart();
+chart.Title = new Label()
+{
+    Text = "PRODUCT SALES"
+};
+. . .
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
 
 ## Custom PaletteBrushes
 
@@ -137,20 +168,70 @@ public class ViewModel
 
 The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
 
+The following code example demonstrates how to define a data model with a `PointColor` property and bind it to the chart series.
+
+{% tabs %}
+
+{% highlight c# %}
+
+public class PointColorViewModel
+{
+   public ObservableCollection<Model> Data { get; set; }
+
+   public PointColorViewModel()
+   {
+       Data = new ObservableCollection<Model>()
+       {
+           new() { XValue = "Purchases", YValue = 1000, PointColor = Color.FromArgb("#C695F0") },
+           new() { XValue = "Electronics", YValue = 1300, PointColor = Color.FromArgb("#A35DE5") },
+           new() { XValue = "Investment", YValue = 2000, PointColor = Color.FromArgb("#551E8B") },
+           new() { XValue = "Research", YValue = 1700, PointColor = Color.FromArgb("#8933DE") },
+           new() { XValue = "Jewelry", YValue = 1100, PointColor = Color.FromArgb("#D1A8F3") },
+        };
+    }
+}
+
+public class Model
+{
+    public string? XValue { get; set; }
+    public double YValue { get; set; }
+    public Color? PointColor { get; set; }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Set `ItemsSource` to your data collection and map `XBindingPath`, `YBindingPath`, and `PointColorPath` to the corresponding model properties.
+
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:PieSeries PointColorPath="PointColor"></chart:PieSeries>
+<chart:SfCircularChart>
+    ...
+    <chart:PieSeries ItemsSource = "{Binding Data}"
+                     XBindingPath = "XValue"
+                     YBindingPath = "YValue"
+                     PointColorPath = "PointColor"/>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
+SfCircularChart chart = new SfCircularChart();
+. . .
 PieSeries series = new PieSeries()
-{        
-   PointColorPath = "PointColor"       
+{
+    ItemsSource = new PointColorViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    PointColorPath = "PointColor"
 };
+
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

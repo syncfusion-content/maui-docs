@@ -176,6 +176,52 @@ N>
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightWorkingHour)
 
+## Customize All-Day appointment height in Day, Week, and Work Week Views
+
+The `AllDayAppointmentHeight` property specifies the height of all-day appointments displayed in the all-day panel of the Day, Week, and WorkWeek views. Increasing this value provides additional space for appointment content and can improve readability. By default, each all-day appointment is rendered with a height of 19.
+
+{% tabs %}
+{% highlight XAML hl_lines="4" %}
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Day">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView AllDayAppointmentHeight="50" />
+    </scheduler:SfScheduler.DaysView>
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Day;
+scheduler.DaysView.AllDayAppointmentHeight = 50;
+this.Content = scheduler;
+{% endhighlight %}
+{% endtabs %} 
+
+![Customize all day appointments height in days view](images/day-week-views/all-day-appointment-height-customization.png)
+
+## Display spanned appointments in time slots
+
+The `AllowSpannedAppointmentsInTimeSlots` property determines whether appointments spanning more than 24 hours are displayed in the all-day panel or directly within the timeslot cells of the `Day`, `Week`, and `WorkWeek` views. By default, these appointments are rendered in the all-day panel. Setting `AllowSpannedAppointmentsInTimeSlots` to `true` displays spanned appointments within the corresponding time-slot cells.
+
+{% tabs %}
+{% highlight XAML hl_lines="4" %}
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView AllowSpannedAppointmentsInTimeSlots="True" />
+    </scheduler:SfScheduler.DaysView>
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.AllowSpannedAppointmentsInTimeSlots = true;
+this.Content = scheduler;
+{% endhighlight %}
+{% endtabs %}
+
+![Allow spanned appointments in timeslots in days view](images/day-week-views/allow-spanned-appointment-in-timeslot-in-days-view.png)
+
 ## Special time regions
 
 The user interaction such as selection and highlights specific regions of day, week, and workweek views can be restricted by adding the [TimeRegions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) property of the [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). Set the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `TimeRegions` to create a specialTimeRegion. Use the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TimeZone) property to set the specific timezone for start and end time of `TimeRegions.`

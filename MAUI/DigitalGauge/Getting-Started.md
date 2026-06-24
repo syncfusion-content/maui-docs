@@ -26,113 +26,17 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a New MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location, then click **Next**.
+2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Gauges NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Gauges NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GaugeMauiSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-
-## Step 4: Add .NET MAUI DigitalGauge control
-1. To initialize the control, import the `Syncfusion.Maui.Gauges` namespace into your code.
-2. Initialize [SfDigitalGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-<ContentPage
-. . .
-   xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
-
-   <gauge:SfDigitalGauge/> 
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Gauges;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDigitalGauge digitalGauge = new SfDigitalGauge();
-        this.Content = digitalGauge;
-    }
-}
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-
-## Step 5: Display a value in .NET MAUI DigitalGauge
-
-In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) user can display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-   <gauge:SfDigitalGauge Text="SYNCFUSION"/> 
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-        SfDigitalGauge digitalGauge = new SfDigitalGauge();
-
-        digital.Text = "SYNCFUSION";
-
-        this.Content = digitalGauge;
- 
-{% endhighlight %}
-
-{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -145,95 +49,84 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a New MAUI Project
+## Step 1: Create a new .NET MAUI project
 
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project.**
+3. Select the project location, type the project name and press Enter.
+4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI DigitalGauge NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Gauges NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Gauges` to install the Syncfusion<sup>®</sup> .NET MAUI Gauges NuGet package.
+3. Run the command `dotnet add package Syncfusion.Maui.Gauges` to install the Syncfusion<sup>®</sup> .NET MAUI Gauges package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
+{% endtabcontent %}
+{% tabcontent JetBrains Rider %}
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+## Prerequisites
 
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
+Before proceeding, ensure the following are set up:
 
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-namespace GaugeMauiSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+## Step 1: Create a new .NET MAUI project
 
-            return builder.Build();
-        }
-    }
-}
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
 
-{% endhighlight %} 
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Gauges NuGet package
 
-## Step 4: Add .NET MAUI DigitalGauge control
-1. To initialize the control, import the `Syncfusion.Maui.Gauges` namespace into your code.
-2. Initialize [SfDigitalGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html).
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Step 3: Register Syncfusion handler
+
+Make sure to add the namespace.
+ 
 {% tabs %}
-
-{% highlight xaml %}
-<ContentPage
-. . .
-   xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
-
-   <gauge:SfDigitalGauge/> 
-</ContentPage>
-
-{% endhighlight %}
-
 {% highlight c# %}
-
-using Syncfusion.Maui.Gauges;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDigitalGauge digitalGauge = new SfDigitalGauge();
-        this.Content = digitalGauge;
-    }
-}
-
-
+using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
-
+{% endtabs %}
+ 
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+ 
+{% tabs %}
+{% highlight c# %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %}
+{% endtabs %}
+ 
+## Step 4: Import the Digital Gauge namespace
+ 
+Add the following namespace in your XAML or C#.
+ 
+{% tabs %}
+{% highlight xaml %}
+ 
+xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+ 
+{% endhighlight %}
+{% highlight c# %}
+ 
+using Syncfusion.Maui.Gauges;
+ 
+{% endhighlight %}
 {% endtabs %}
 
+## Step 5: Display a value in DigitalGauge
 
-## Step 5: Display a value in .NET MAUI DigitalGauge
-
-In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) user can display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
+Initialize the [SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) and display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
 
 {% tabs %}
 
@@ -245,114 +138,18 @@ In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digita
 
 {% highlight c# %}
 
-        SfDigitalGauge digitalGauge = new SfDigitalGauge();
+SfDigitalGauge digitalGauge = new SfDigitalGauge();
 
-        digital.Text = "SYNCFUSION";
-
-        this.Content = digitalGauge;
+digital.Text = "SYNCFUSION";
  
 {% endhighlight %}
 
 {% endtabs %}
 
-{% endtabcontent %}
-
-
-{% tabcontent JetBrains Rider %}
-
-## Prerequisites
-
-Before proceeding, ensure the following are set up:
-
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
-
-## Step 1: Create a new .NET MAUI Project
-
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
-2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
-
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI DigitalGauge NuGet Package
-
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
-
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GaugeMauiSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-
-## Step 4: Add .NET MAUI DigitalGauge control
-1. To initialize the control, import the `Syncfusion.Maui.Gauges` namespace into your code.
-2. Initialize [SfDigitalGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html).
-
-{% tabs %}
-
-{% highlight xaml %}
-<ContentPage
-. . .
-   xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
-
-   <gauge:SfDigitalGauge/> 
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Gauges;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDigitalGauge digitalGauge = new SfDigitalGauge();
-        this.Content = digitalGauge;
-    }
-}
-
-
-{% endhighlight %}
-
-{% endtabs %}
-{% endtabcontent %}
-{% endtabcontents %}
+The following screenshot illustrates the result of the above code.
 
 ![getting-started](Images\getting-started.png)
+
+You can download the DigitalGauge Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-digital-gauge)
 
 N> You can refer to our [.NET MAUI Digital Gauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Digital Gauge Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Gauges/SampleBrowser.Maui.Gauges/Samples/DigitalGauge) that shows you how to render the Digital Gauge in .NET MAUI.

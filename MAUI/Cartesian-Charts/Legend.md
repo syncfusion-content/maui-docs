@@ -44,6 +44,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+N> Additionally, set label for each series using the `Label` property of chart series, which will be displayed in corresponding legend.
+
 ## Legend visibility
 The visibility of the chart legend can be controlled using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_IsVisible) property. By default, the IsVisible property is set to `true`.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Chart control  Syncfusion
+title: Appearance in .NET MAUI Polar Chart control  Syncfusion
 description: Learn here all about appearance customization in Syncfusion® .NET MAUI Chart (SfPolarChart), including its elements, and more.
 platform: maui
 control: SfPolarChart
@@ -179,20 +179,73 @@ public class ViewModel
 
 The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
 
+The following code example demonstrates how to define a data model with a `PointColor` property and bind it to the chart series.
+
+{% tabs %}
+
+{% highlight c# %}
+
+public class PointColorViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+
+    public PointColorViewModel()
+    {
+        Data = new ObservableCollection<Model>()
+        {
+            new(){ XValue = "North", YValue = 80, PointColor = Color.FromArgb("#cbb4e0")},
+            new(){ XValue = "NorthEast", YValue = 85, PointColor = Color.FromArgb("#ab80d8")},
+            new(){ XValue = "East", YValue = 78, PointColor = Color.FromArgb("#8238c2")},
+            new(){ XValue = "SouthEast", YValue = 90, PointColor = Color.FromArgb("#5f209d")},
+            new(){ XValue = "South", YValue = 78, PointColor = Color.FromArgb("#441372")},
+            new(){ XValue = "SouthWest", YValue = 83, PointColor = Color.FromArgb("#a256de")},
+            new(){ XValue = "West", YValue = 79, PointColor = Color.FromArgb("#ba93df")},
+            new(){ XValue = "NorthWest", YValue = 88, PointColor = Color.FromArgb("#e1aeff")}
+        };
+    }
+}
+
+public class Model
+{
+    public string? XValue { get; set; }
+    public double YValue { get; set; }
+    public Color? PointColor { get; set; }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Set `ItemsSource` to your data collection and map `XBindingPath`, `YBindingPath`, and `PointColorPath` to the corresponding model properties.
+
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:PolarLineSeries PointColorPath="PointColor"></chart:PolarLineSeries>
+<chart:SfPolarChart>
+    ...
+    <chart:PolarLineSeries ItemsSource = "{Binding Data}"
+                           XBindingPath = "XValue"
+                           YBindingPath = "YValue"
+                           PointColorPath = "PointColor"/>
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-PolarAreaSeries series = new PolarAreaSeries()
+SfPolarChart chart = new SfPolarChart();
+. . .
+PolarLineSeries series = new PolarLineSeries()
 {
-	PointColorPath="PointColor"
+    ItemsSource = new PointColorViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    PointColorPath = "PointColor"
 };
+
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -264,3 +317,34 @@ this.Content = chart;
 {% endtabs %}
 
 ![Watermark in .NET MAUI Charts](Appearance_images/polar_water_mark.png)
+
+### Add a title
+
+The title of the chart provides quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set the title for the chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    <chart:SfPolarChart.Title>
+        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
+    </chart:SfPolarChart.Title> 
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfPolarChart chart = new SfPolarChart();
+chart.Title = new Label()
+{
+    Text = "Plant Analysis",
+    HorizontalTextAlignment = TextAlignment.Center
+};
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
+

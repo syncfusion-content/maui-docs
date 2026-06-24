@@ -247,19 +247,3 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI About Us offers a collection of 
 </span>
 <img id="popupImage">
 </div>
-<script>
-function openImage(src, event) {
-    event.stopPropagation();
-    document.getElementById("imageModal").style.display = "flex";
-    document.getElementById("popupImage").src = src;
-}
-function closeImage() {
-   document.getElementById("imageModal").style.display = "none";
-}
-/* Close when clicking outside image */
-document.getElementById("imageModal").addEventListener("click", function(e) {
-   if (e.target.id === "imageModal") {
-       closeImage();
-   }
-});
-</script>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Chart control | Syncfusion
+title: Tooltip in .NET MAUI Cartesian Chart control | Syncfusion
 description: This section explains about how to enable tooltip and its customization in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui chart tooltip, maui chart tooltip, .net maui chart tooltip customization, syncfusion maui chart tooltip, cartesian tooltip maui, .net maui chart hover info, .net maui chart tooltip options.
 ---
 
-# Tooltip in .NET MAUI Chart
+# Tooltip in .NET MAUI Cartesian Chart
 
 Tooltip is used to display any information or metadata of the tapped segment. The Cartesian chart provides tooltip support for all series. 
 
@@ -78,6 +78,9 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 * [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Duration) - Gets or sets the duration of the tooltip text in seconds.
 * [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Margin) - Gets or sets the margin of the label to customize the appearance of label.
 * [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_TextColor) - Used to set the color for the text of the label.
+* `Stroke` - Gets or sets the border color of the tooltip.
+* `StrokeWidth` - Gets or sets the thickness of the tooltip border.
+* `UseSeriesFillColor` - Gets or sets a value indicating whether the tooltip background should use the fill color of the associated series. When set to `true`, the tooltip adopts the series color as its background.
 
 
 {% tabs %}

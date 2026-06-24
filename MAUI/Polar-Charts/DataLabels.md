@@ -7,7 +7,7 @@ control: SfPolarChart
 documentation: ug
 ---
 
-# Data Labels in .NET MAUI Chart
+# Data Labels in .NET MAUI Polar Chart
 
 Data labels are used to display values related to a chart segment. Values from a data point(x, y) or other custom properties from a data source can be displayed. 
 

@@ -24,83 +24,17 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a New .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then click **Next**.
+2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Picker NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Picker NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Picker control
-
-1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
-2. Initialize [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
-    <picker:SfPicker />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Picker;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfPicker picker = new SfPicker();
-        this.Content = picker;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -113,87 +47,21 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a New .NET MAUI Project
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter**.
-4. Then choose **Create project.**
+## Step 1: Create a new .NET MAUI project
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Picker NuGet Package
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press Enter.
+4. Then choose **Create project**
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Picker NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Maps` to install the Syncfusion<sup>®</sup> .NET MAUI Maps NuGet package.
+3. Run the command `dotnet add package Syncfusion.Maui.Picker` to install the Syncfusion<sup>®</sup> .NET MAUI Picker package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Picker control
-
-1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
-2. Initialize [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
-    <picker:SfPicker />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Picker;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfPicker picker = new SfPicker();
-        this.Content = picker;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -204,124 +72,47 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Picker NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Picker NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Picker control
-
-1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
-2. Initialize [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
-    <picker:SfPicker />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Picker;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfPicker picker = new SfPicker();
-        this.Content = picker;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Set header to the Picker
+## Step 3: Register Syncfusion handler
 
-The SfPicker control allows you to add the header text by setting the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). To enable the header view by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_HeightProperty) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
-
+Make sure to add the namespace.
+ 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-
-<picker:SfPicker x:Name="picker">
-    <picker:SfPicker.HeaderView>
-        <picker:PickerHeaderView Text="Select a color" Height="40" />
-    </picker:SfPicker.HeaderView>
-</picker:SfPicker>
-
+{% highlight c# %}
+using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4 5" %}
-
-SfPicker picker = new SfPicker();
-picker.HeaderView = new PickerHeaderView()
-{
-    Text = "Select a color",
-    Height = 40,
-};
-
-this.Content = picker;
-
+{% endtabs %}
+ 
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+ 
+{% tabs %}
+{% highlight c# %}
+builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 {% endtabs %}
 
-![Set Header view in .NET MAUI Picker.](images/getting-started/maui-picker-set-header-view.png)
-
-## Add picker items to the picker
+## Step 4: Add picker items to the picker
 
 The .NET MAUI Picker control is a data-bound control. Hence, you must create a data collection and bind it to the picker control.
 
-* Create a simple Observable Collection of data for the picker,
+Create a simple Observable Collection of data for the picker,
 
 {% tabs %}
-{% highlight c# tabtitle="ItemInfo.cs" %}
+{% highlight c# %}
 
 public class ItemInfo
 {
@@ -332,16 +123,9 @@ public class ItemInfo
 
     public ObservableCollection<object> DataSource
     {
-        get
-        {
-            return dataSource;
-        }
-        set
-        {
-            dataSource = value;
-        }
+        get{ return dataSource; }
+        set{ dataSource = value; }
     }
-
     public ItemInfo()
     {
 
@@ -351,9 +135,26 @@ public class ItemInfo
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to picker
+## Step 5: Import the Picker namespace
+ 
+Add the following namespace in your XAML or C#.
+ 
+{% tabs %}
+{% highlight xaml %}
+ 
+xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+ 
+{% endhighlight %}
+{% highlight c# %}
+ 
+using Syncfusion.Maui.Picker;
+ 
+{% endhighlight %}
+{% endtabs %}
 
-The Picker control allows you to bind data collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSourceProperty) property from the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). Bind data collection in both XAML and C#.
+## Step 6: Add a Picker component
+
+Initialize the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) control and it allows you to bind data collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSourceProperty) property from the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). Bind data collection in both XAML and C#.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6 10 11 12" %}
@@ -366,10 +167,6 @@ The Picker control allows you to bind data collection by setting the [ItemsSourc
         <picker:PickerColumn ItemsSource="{Binding DataSource}" />
     </picker:SfPicker.Columns>
 </picker:SfPicker>
-
-<ContentPage.BindingContext>
-    <local:ItemInfo />
-</ContentPage.BindingContext>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="1 8" %}
@@ -386,125 +183,11 @@ SfPicker picker = new SfPicker()
     }
 };
 
-this.Content = picker;
-
 {% endhighlight %}
 {% endtabs %}
 
 ![Picker items in .NET MAUI picker.](images/getting-started/maui-picker-items.png)
 
-## Set footer to the Picker
-
-In SfPicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected item. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-
-<picker:SfPicker x:Name="picker">
-    <picker:SfPicker.FooterView>
-        <picker:PickerFooterView ShowOkButton="True" Height="40" />
-    </picker:SfPicker.FooterView>
-</picker:SfPicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4 5" %}
-
-SfPicker picker = new SfPicker();
-picker.FooterView= new PickerFooterView()
-{  
-    ShowOkButton = true,
-    Height = 40,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-![Picker Footer view in .NET MAUI picker.](images/getting-started/maui-picker-footer-view.png)
-
-## Set column header to the Picker items
-
-The SfPicker control allows you to add the column header text by setting the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderText) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html), and you need to add the column header height by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Height) property in the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html). Its text style and background color are customizable.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 7" %}
-
-<picker:SfPicker x:Name="picker">
-<picker:SfPicker.HeaderView>
-    <picker:PickerHeaderView Text="Select a color" Height="40" />
-</picker:SfPicker.HeaderView>
-
-<picker:SfPicker.Columns>
-    <picker:PickerColumn HeaderText="Colors" 
-                         ItemsSource="{Binding DataSource}" />
-</picker:SfPicker.Columns>
-
-<picker:SfPicker.ColumnHeaderView>
-    <picker:PickerColumnHeaderView Height="40" />
-</picker:SfPicker.ColumnHeaderView>
-</picker:SfPicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="14 21" %}
-
-ItemInfo itemInfo = new ItemInfo();
-SfPicker picker = new SfPicker()
-{
-    HeaderView = new PickerHeaderView()
-    {
-        Text = "Select a color",
-        Height = 40,
-    },
-
-    Columns = new ObservableCollection<PickerColumn>()
-    {
-        new PickerColumn()
-        {
-            HeaderText = "Colors",
-            ItemsSource = itemInfo.DataSource,
-        }
-    },
-
-    ColumnHeaderView = new PickerColumnHeaderView()
-    {
-        Height = 40,
-    },
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-![Picker Column header view in .NET MAUI picker.](images/getting-started/maui-picker-column-header-view.png)
-
-## Set height and width to the Picker
-
-The SfPicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
-
-<picker:SfPicker x:Name="picker" 
-                    HeightRequest="280" 
-                    WidthRequest="300">
-</picker:SfPicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfPicker picker = new SfPicker()
-{
-    HeightRequest = 280,
-    WidthRequest = 300,
-};
-
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
-
-![Set Picker height and width in .NET MAUI picker.](images/getting-started/maui-picker-height-and-width.png)
+You can download the Picker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/How-to-load-data-in-the-.NET-MAUI-Picker-SfPicker).
 
 N> You can refer to our [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker) that shows you how to render and configure the Picker in .NET MAUI.
