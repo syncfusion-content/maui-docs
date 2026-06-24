@@ -110,7 +110,7 @@ builder.ConfigureSyncfusionCore();
 Create a simple data model in a new class file as shown in the following example code.
 
 {% tabs %}
-{% highlight C# tabtitle="AirportDetails.cs" %}
+{% highlight C# %}
 
 public class AirportDetails
 {
@@ -126,7 +126,7 @@ public class AirportDetails
 Create a view model class to set values for the properties listed in the model class as shown in the following example code.
 
 {% tabs %}
-{% highlight C# tabtitle="ViewModel.cs" %}
+{% highlight C# %}
 
 public class ViewModel
 {

@@ -142,8 +142,6 @@ Configure the `TabView` control to organize content into multiple tabs, allowing
                         <x:String>James</x:String>
                         <x:String>Richard</x:String>
                         <x:String>Michael</x:String>
-                        <x:String>Alex</x:String>
-                        <x:String>Clara</x:String>
                     </x:Array>
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>
@@ -170,7 +168,7 @@ var callTab = new SfTabItem { Header = "Call" };
 tabView.Items.Add(callTab);
 var favoritesTab = new SfTabItem { Header = "Favorites" };
 var collectionView = new CollectionView();
-var itemsSource = new string[] { "James", "Richard", "Michael", "Alex", "Clara" };
+var itemsSource = new string[] { "James", "Richard", "Michael" };
 collectionView.ItemsSource = itemsSource;
 collectionView.ItemTemplate = new DataTemplate(() =>
 {

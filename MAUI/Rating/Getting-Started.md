@@ -124,6 +124,8 @@ using Syncfusion.Maui.Inputs;
 
 ## Step 5: Add the Rating component
 
+Initialize the `SfRating` control and you can select a rating value, providing a simple and interactive way to give feedback.
+
 {% tabs %}
 {% highlight xaml %}
 
