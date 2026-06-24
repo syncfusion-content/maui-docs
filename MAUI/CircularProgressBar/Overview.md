@@ -130,7 +130,7 @@ The [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/ma
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -146,7 +146,6 @@ The [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/ma
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {
