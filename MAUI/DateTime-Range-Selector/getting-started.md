@@ -127,18 +127,37 @@ Create an instance of the SfDateTimeRangeSelector and initialize it as follows:
 
 {% tabs %}
 {% highlight xaml %}
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
-                                     RangeEnd="2016-01-01" />
+<slider:SfDateTimeRangeSelector ShowLabels="True"
+                                ShowTicks="True"
+                                ShowDividers="True"
+                                Minimum="2022-01-01"
+                                Maximum="2023-03-01"
+                                RangeStart="2022-03-01"
+                                RangeEnd="2023-01-01"
+                                IntervalType="Months"
+                                Interval="2"
+                                DateFormat="MMM yy">
+</slider:SfDateTimeRangeSelector>
 {% endhighlight %}
 
 {% highlight C# %}
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2018, 01, 01);
-rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+var rangeSelector = new SfDateTimeRangeSelector
+{
+    ShowLabels = true,
+    ShowTicks = true,
+    ShowDividers = true,
+
+    Minimum = new DateTime(2022, 1, 1),
+    Maximum = new DateTime(2023, 3, 1),
+
+    RangeStart = new DateTime(2022, 3, 1),
+    RangeEnd = new DateTime(2023, 1, 1),
+
+    IntervalType = DateTimeIntervalType.Months,
+    Interval = 2,
+
+    DateFormat = "MMM yy"
+};
 {% endhighlight %}
 
 {% endtabs %}

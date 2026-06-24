@@ -113,7 +113,6 @@ Now, define a simple data model of person with the name properties.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-
 public class Person
 {
 	public string Name
@@ -122,7 +121,6 @@ public class Person
 		set;
 	}
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,7 +128,6 @@ Next, create a view model class and initialize a collection of persons as shown 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-
 public class ViewModel : INotifyPropertyChanged
 {
 	private ObservableCollection<Person> employees;
@@ -160,7 +157,6 @@ public class ViewModel : INotifyPropertyChanged
 		}
 	}
 }
-
 {% endhighlight %}
 {% endtabs %}
 
