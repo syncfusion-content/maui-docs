@@ -151,4 +151,4 @@ this.Content = picker;
 
 ![Set header view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-header-view.png)
 
-You can download the TimePicker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-timepicker-sample)
+You can download the TimePicker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-timepicker-sample).

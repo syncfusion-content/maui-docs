@@ -142,4 +142,4 @@ this.Content = rating;
 
 ![SfRating Getting Started ](images/getting-started.png)
 
-You can download the Rating Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-rating-samples)
+You can download the Rating Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-rating-samples).

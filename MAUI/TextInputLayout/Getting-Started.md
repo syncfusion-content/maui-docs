@@ -150,6 +150,6 @@ When focusing on the input view, the hint label will be moved to the top positio
 
 ![Adding hint](images/GettingStarted/GettingStarted.png)
 
-You can download the TextInputLayout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-textinputlayout-samples)
+You can download the TextInputLayout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-textinputlayout-samples).
 
 N> You can refer to our [.NET MAUI Text Input Layout](https://www.syncfusion.com/maui-controls/maui-textinputlayout) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Text Input Layout Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TextInputLayout) that shows you how to render the Text Input Layout in .NET MAUI.
