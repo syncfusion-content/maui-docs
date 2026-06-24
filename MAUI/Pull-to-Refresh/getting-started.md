@@ -124,7 +124,7 @@ Configure the `PullToRefresh` component to enable you to refresh content interac
 To show the progress indicator while updating the view, set [IsRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_IsRefreshing) property to `True` using [Refreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_Refreshing) event. Once view is updated, remove the progress indicator by setting `IsRefreshing` property to `False`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 11" %}
+{% highlight xaml %}
 
 <syncfusion:SfPullToRefresh x:Name="pullToRefresh">
     <syncfusion:SfPullToRefresh.PullableContent>
@@ -135,7 +135,7 @@ To show the progress indicator while updating the view, set [IsRefreshing](https
 </syncfusion:SfPullToRefresh>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+{% highlight c# %}
 
 public MainPage()
 {

@@ -111,7 +111,7 @@ You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pr
 Create a simple Observable Collection of the item for the step progressbar,
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# %}
 
 public class ViewModel
 {
@@ -163,7 +163,7 @@ using Syncfusion.Maui.ProgressBar;
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property from the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). Bind item collection in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="11" %}
+{% highlight xaml %}
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"                                                                                     
@@ -179,7 +179,7 @@ The Step progressbar control allows you to bind item collection by setting the [
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="11" %}
+{% highlight c# %}
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
