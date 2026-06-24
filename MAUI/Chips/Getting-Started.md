@@ -25,13 +25,13 @@ Before proceeding, ensure the following are in place:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a New MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and install the latest version.
@@ -48,14 +48,14 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a New MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -113,7 +113,6 @@ Now, define a simple data model of person with the name properties.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-
 public class Person
 {
 	public string Name
@@ -122,7 +121,6 @@ public class Person
 		set;
 	}
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,7 +128,6 @@ Next, create a view model class and initialize a collection of persons as shown 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-
 public class ViewModel : INotifyPropertyChanged
 {
 	private ObservableCollection<Person> employees;
@@ -160,7 +157,6 @@ public class ViewModel : INotifyPropertyChanged
 		}
 	}
 }
-
 {% endhighlight %}
 {% endtabs %}
 
