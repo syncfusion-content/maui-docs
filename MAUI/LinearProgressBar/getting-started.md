@@ -151,7 +151,7 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Linear ProgressBar](images/getting-started/progress-bar.png)
 
-You can download the Linear ProgressBar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-)
+You can download the Linear ProgressBar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-).
 
 N> 
 * Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.

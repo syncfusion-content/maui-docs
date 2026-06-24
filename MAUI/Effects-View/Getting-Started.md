@@ -227,8 +227,6 @@ var border = new Border
         Content = grid
     };
 
-    border.Content = effectsView;
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -236,7 +234,7 @@ The following screenshot illustrates the result of the above code.
 
 ![Effects View initialization](Getting-Started_images/RippleEffect.gif)
 
-You can download the EffectsView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-EffectsView)
+You can download the EffectsView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-EffectsView).
 
 N> You can refer to our [.NET MAUI Effects View](https://www.syncfusion.com/maui-controls/maui-effects-view) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Effects View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/EffectsView) that shows you how to render the Effects View in .NET MAUI.
 

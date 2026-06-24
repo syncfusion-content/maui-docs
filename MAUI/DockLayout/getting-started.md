@@ -114,7 +114,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
  
-xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
  
 {% endhighlight %}
 {% highlight c# %}
@@ -131,13 +131,13 @@ Initialize the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% tabs %}
 
 {% highlight xaml %}
-    <sf:SfDockLayout >
+    <syncfusion:SfDockLayout >
         <Label Text="Left" WidthRequest="80" sf:SfDockLayout.Dock="Left" Background="#E57373" />
         <Label Text="Right" WidthRequest="80" sf:SfDockLayout.Dock="Right" Background="#BA68C8" />
         <Label Text="Top" HeightRequest="80" sf:SfDockLayout.Dock="Top" Background="#F06292" />
         <Label Text="Bottom" HeightRequest="80"  sf:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
         <Label Text="None" BackgroundColor="#64B5F6" />
-    </sf:SfDockLayout>
+    </syncfusion:SfDockLayout>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -156,4 +156,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Output of DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 
-You can download the DockLayout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI)
+You can download the DockLayout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI).

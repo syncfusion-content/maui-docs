@@ -114,7 +114,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
  
-xmlns:rating="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
  
 {% endhighlight %}
 {% highlight c# %}
