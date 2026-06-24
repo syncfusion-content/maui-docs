@@ -304,6 +304,7 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
+{% endtabcontent %}
 {% endtabcontents %}
 
 ## Step 5: Adding hint
