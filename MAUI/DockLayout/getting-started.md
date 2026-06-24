@@ -156,4 +156,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Output of DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 
-You can download the DockLayout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI)
+You can download the DockLayout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI).
