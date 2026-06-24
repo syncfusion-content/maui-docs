@@ -113,14 +113,16 @@ Now, define a simple data model of person with the name properties.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-public class Person
-{
-	public string Name
+
+public class Person 
+{ 
+	public string Name 
 	{
 		get;
 		set;
-	}
+	} 
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,12 +130,13 @@ Next, create a view model class and initialize a collection of persons as shown 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 public class ViewModel : INotifyPropertyChanged
 {
-	private ObservableCollection<Person> employees;
-	public ObservableCollection<Person> Employees
+	private ObservableCollection<Person> employees; 
+	public ObservableCollection<Person> Employees 
 	{
-		get { return employees; }
+		get { return employees; } 
 		set { Employees = value; OnPropertyChanged("Employees"); }
 	}
 
@@ -145,7 +148,7 @@ public class ViewModel : INotifyPropertyChanged
 		employees.Add(new Person() { Name = "Linda" });
 		employees.Add(new Person() { Name = "Rose" });
 		employees.Add(new Person() { Name = "Mark" });
-	}
+	} 
 
 	public event PropertyChangedEventHandler PropertyChanged;
 
@@ -154,9 +157,10 @@ public class ViewModel : INotifyPropertyChanged
 		if (PropertyChanged != null)
 		{
 			PropertyChanged(this, new PropertyChangedEventArgs(property));
-		}
-	}
-}
+		} 
+	} 
+} 
+
 {% endhighlight %}
 {% endtabs %}
 
