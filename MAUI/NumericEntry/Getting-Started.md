@@ -274,7 +274,7 @@ Step 2: Add the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% endtabs %}
 
 {% endtabcontent %}
-{% endtabcontent %}
+{% endtabcontents %}
 
 ![.NET MAUI NumericEntry Application](GettingStarted_images/gettingStarted_img.png)
 

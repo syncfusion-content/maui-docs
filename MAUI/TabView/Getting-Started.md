@@ -280,7 +280,7 @@ this.Content = tabView;
 {% endtabs %}
 
 {% endtabcontent %}
-{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 5: Populate tab items in .NET MAUI Tab View
 

@@ -282,7 +282,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% endtabcontent %}
-{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 5: Data population
 
