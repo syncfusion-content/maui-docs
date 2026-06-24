@@ -128,7 +128,7 @@ Refer to the following code example for displaying popup using Button's Click ev
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <StackLayout x:Name="mainLayout">
 <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
@@ -139,7 +139,7 @@ Refer to the following code example for displaying popup using Button's Click ev
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+{% highlight c# %}
 
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {

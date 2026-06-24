@@ -274,6 +274,6 @@ this.Content = toolbar;
 
 ![getting-started](images/Icons.png)
 
->N Please refer to the [link](https://help.syncfusion.com/maui/icons) to add the `MauiMaterialAssets` custom font. 
+N> Please refer to the [link](https://help.syncfusion.com/maui/icons) to add the `MauiMaterialAssets` custom font. 
 
 You can download the Toolbar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-toolbar/tree/Gettingstarted/GettingStarted).
