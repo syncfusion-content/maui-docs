@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn about performance optimization techniques including fast series, suspend and resume notifications, and real-time updates in .NET MAUI Cartesian Chart control.
+description: Explore performance optimization techniques for .NET MAUI Cartesian Chart with fast series, real-time updates, and responsive data visualization.
 platform: maui
 control: SfCartesianChart
 documentation: ug

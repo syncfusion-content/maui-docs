@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Chart control | Syncfusion
+title: Tooltip in .NET MAUI Pyramid Chart control | Syncfusion
 description: This section explains about how to enable tooltip and its customization in Syncfusion® .NET MAUI Chart (SfPyramidChart) control
 platform: maui
 control: SfPyramidChart
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Chart
+# Tooltip in .NET MAUI Pyramid Chart
 
 The tooltip helps in providing additional information while hovering over the funnel segment. By default, the value of the pyramid process (Y value) will be shown in the tooltip.
 
