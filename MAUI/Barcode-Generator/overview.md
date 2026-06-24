@@ -37,10 +37,15 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; flex-direction: row; gap: 16px;">
- 
+<div class="legend">
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/partial-support.svg" width="16"> Partial Support
 </span>
@@ -52,8 +57,7 @@ The following table summarizes the globalization support available in this contr
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
- 
-</span>
+</div>
 
 <table>
 <tr>
