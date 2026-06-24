@@ -165,11 +165,51 @@ public class ViewModel
 
 The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
 
+The following code example demonstrates how to define a data model with a `PointColor` property and bind it to the chart series.
+
+{% tabs %}
+
+{% highlight c# %}
+
+public class PointColorViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+
+    public PointColorViewModel()
+    {
+        Data = new ObservableCollection<Model>()
+        {
+            new() { XValue = "Stage A", YValue = 1000, PointColor = Color.FromArgb("#cbb4e0") },
+            new() { XValue = "Stage B", YValue = 1300, PointColor = Color.FromArgb("#a678d6") },
+            new() { XValue = "Stage C", YValue = 2000, PointColor = Color.FromArgb("#5a189a") },
+            new() { XValue = "Stage D", YValue = 1700, PointColor = Color.FromArgb("#7b2cbf") },
+            new() { XValue = "Stage E", YValue = 1100, PointColor = Color.FromArgb("#cbb4e0") },
+        };
+    }
+}
+
+public class Model
+{
+    public string? XValue { get; set; }
+    public double YValue { get; set; }
+    public Color? PointColor { get; set; }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Set `ItemsSource` to your data collection and map `XBindingPath`, `YBindingPath`, and `PointColorPath` to the corresponding model properties.
+
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfFunnelChart PointColorPath="PointColor"></chart:SfFunnelChart>
+<chart:SfFunnelChart ItemsSource = "{Binding Data}"
+                     XBindingPath = "XValue"
+                     YBindingPath = "YValue"
+                     PointColorPath = "PointColor">
+</chart:SfFunnelChart>
 
 {% endhighlight %}
 
@@ -177,8 +217,11 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
 
 SfFunnelChart chart = new SfFunnelChart()
 {
-	PointColorPath = PointColor;
-}
+    ItemsSource = new PointColorViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    PointColorPath = "PointColor"
+};
 . . .
 this.Content = chart;
 
