@@ -203,8 +203,7 @@ Initialize the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusi
             {
                 "Home",
                 "Profile",
-                "Settings",
-                "About"
+                ...
             }
         };
         collectionView.SelectionChanged += CollectionView_SelectionChanged;
