@@ -596,6 +596,44 @@ public partial class MainPage : ContentPage
 
 ![Attachment button in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-attachmentButton.gif)
 
+### Enabling File Picker Support on iOS and macOS
+
+When ActionButtonType is set to AttachmentButton, tapping the Attach files option launches the platform file picker. To ensure the file picker opens correctly on iOS and macOS, the following platform-specific permissions and entitlements must be configured.
+
+#### iOS
+
+Add the following keys to the Info.plist file:
+
+{% tabs %}
+{% highlight xml %}
+
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>App requires access to save photos to the library.</string>
+<key>NSDocumentsFolderUsageDescription</key>
+<string>This app needs access to documents</string>
+
+{% endhighlight %}
+{% endtabs %}
+    
+#### macOS
+
+Add the following entitlements to the Entitlements.plist file:
+
+{% tabs %}
+{% highlight xml %}
+
+<key>com.apple.security.assets.pictures.read-write</key>
+<true/>
+<key>com.apple.security.files.downloads.read-write</key>
+<true/>
+<key>com.apple.security.files.user-selected.read-write</key>
+<true/>
+
+{% endhighlight %}
+{% endtabs %}
+
+ Without these configurations, the system file picker may not open when users select the Attach files option in the built-in attachment workflow on iOS and macOS.
+
 ### Displaying and customizing action buttons
 
 Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtons) collection with one or more [ActionButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html) items to populate the popup. When `ActionButtonType` is `ActionButton`, the quick‑action icon opens the `ActionButtons` popup. When `ActionButtonType` is `AttachmentButton`, the attachment icon is shown and the default `Attach files` item will be available unless you replace it via the `ActionButtons` collection.
