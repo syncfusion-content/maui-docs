@@ -21,14 +21,7 @@ A fast series is a special kind of chart series that can render a collection wit
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.XAxes>
-        <chart:DateTimeAxis/>
-    </chart:SfCartesianChart.XAxes>
-
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.YAxes>
-
+    ...
     <chart:FastLineSeries ItemsSource="{Binding Data}"
                           XBindingPath="XValue"
                           YBindingPath="YValue"/>
@@ -39,13 +32,7 @@ A fast series is a special kind of chart series that can render a collection wit
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes.Add(primaryAxis);
-
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
-
+...
 FastLineSeries series = new FastLineSeries()
 {
     ItemsSource = new ViewModel().Data,

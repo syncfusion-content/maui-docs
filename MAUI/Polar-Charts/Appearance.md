@@ -187,26 +187,29 @@ The following code example demonstrates how to define a data model with a `Point
 
 public class PointColorViewModel
 {
-     public ObservableCollection<Model> Data { get; set; }
+    public ObservableCollection<Model> Data { get; set; }
 
-     public PointColorViewModel()
-     {
-         Data = new ObservableCollection<Model>()
-         {
-             new() { XValue = "Purchases", YValue = 1000, PointColor = Color.FromArgb("#D1A8F3") },
-             new() { XValue = "Electronics", YValue = 1300, PointColor = Color.FromArgb("#A35DE5") },
-             new() { XValue = "Investment", YValue = 1700, PointColor = Color.FromArgb("#8933DE") },
-             new() { XValue = "Research", YValue = 1750, PointColor = Color.FromArgb("#6621AC") },
-             new() { XValue = "Jewelry", YValue = 2000, PointColor = Color.FromArgb("#551E8B") },
-         };
-     }
+    public PointColorViewModel()
+    {
+        Data = new ObservableCollection<Model>()
+        {
+            new(){ XValue = "North", YValue = 80, PointColor = Color.FromArgb("#cbb4e0")},
+            new(){ XValue = "NorthEast", YValue = 85, PointColor = Color.FromArgb("#ab80d8")},
+            new(){ XValue = "East", YValue = 78, PointColor = Color.FromArgb("#8238c2")},
+            new(){ XValue = "SouthEast", YValue = 90, PointColor = Color.FromArgb("#5f209d")},
+            new(){ XValue = "South", YValue = 78, PointColor = Color.FromArgb("#441372")},
+            new(){ XValue = "SouthWest", YValue = 83, PointColor = Color.FromArgb("#a256de")},
+            new(){ XValue = "West", YValue = 79, PointColor = Color.FromArgb("#ba93df")},
+            new(){ XValue = "NorthWest", YValue = 88, PointColor = Color.FromArgb("#e1aeff")}
+        };
+    }
 }
 
 public class Model
 {
-    public string XValue { get; set; }
+    public string? XValue { get; set; }
     public double YValue { get; set; }
-    public Color PointColor { get; set; }
+    public Color? PointColor { get; set; }
 }
 
 {% endhighlight %}

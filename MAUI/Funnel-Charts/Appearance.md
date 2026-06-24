@@ -173,26 +173,26 @@ The following code example demonstrates how to define a data model with a `Point
 
 public class PointColorViewModel
 {
-     public ObservableCollection<Model> Data { get; set; }
+    public ObservableCollection<Model> Data { get; set; }
 
-     public PointColorViewModel()
-     {
-         Data = new ObservableCollection<Model>()
-         {
-             new() { XValue = "Purchases", YValue = 1000, PointColor = Color.FromArgb("#D1A8F3") },
-             new() { XValue = "Electronics", YValue = 1300, PointColor = Color.FromArgb("#A35DE5") },
-             new() { XValue = "Investment", YValue = 1700, PointColor = Color.FromArgb("#8933DE") },
-             new() { XValue = "Research", YValue = 1750, PointColor = Color.FromArgb("#6621AC") },
-             new() { XValue = "Jewelry", YValue = 2000, PointColor = Color.FromArgb("#551E8B") },
-         };
-     }
+    public PointColorViewModel()
+    {
+        Data = new ObservableCollection<Model>()
+        {
+            new() { XValue = "Stage A", YValue = 1000, PointColor = Color.FromArgb("#cbb4e0") },
+            new() { XValue = "Stage B", YValue = 1300, PointColor = Color.FromArgb("#a678d6") },
+            new() { XValue = "Stage C", YValue = 2000, PointColor = Color.FromArgb("#5a189a") },
+            new() { XValue = "Stage D", YValue = 1700, PointColor = Color.FromArgb("#7b2cbf") },
+            new() { XValue = "Stage E", YValue = 1100, PointColor = Color.FromArgb("#cbb4e0") },
+        };
+    }
 }
 
 public class Model
 {
-    public string XValue { get; set; }
+    public string? XValue { get; set; }
     public double YValue { get; set; }
-    public Color PointColor { get; set; }
+    public Color? PointColor { get; set; }
 }
 
 {% endhighlight %}

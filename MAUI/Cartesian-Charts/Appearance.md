@@ -233,9 +233,9 @@ public class PointColorViewModel
 
 public class Model
 {
-    public string XValue { get; set; }
+    public string? XValue { get; set; }
     public double YValue { get; set; }
-    public Color PointColor { get; set; }
+    public Color? PointColor { get; set; }
 }
 
 {% endhighlight %}
