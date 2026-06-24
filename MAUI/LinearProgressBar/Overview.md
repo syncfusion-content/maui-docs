@@ -128,7 +128,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfu
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -144,7 +144,6 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfu
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

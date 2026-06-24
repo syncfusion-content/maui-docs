@@ -132,7 +132,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer ([SfShimmer](https://www.syncfusion
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -148,7 +148,6 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer ([SfShimmer](https://www.syncfusion
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {
