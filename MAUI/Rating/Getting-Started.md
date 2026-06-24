@@ -210,6 +210,8 @@ public MainPage()
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
