@@ -139,7 +139,7 @@ The following sample code demonstrates this process in action:
 
 {% tabs %}
 
-{% highlight XAML hl_lines="2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17" %}
+{% highlight XAML %}
 
 <kanban:SfKanban x:Name="kanban"
                  AutoGenerateColumns="False"
@@ -164,9 +164,7 @@ The following sample code demonstrates this process in action:
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5 7 8 9 10 11 13 14 15 16 17 19 20 21 22 23 24 25 26 27 28 29 31 32" %}
-
-using Syncfusion.Maui.Kanban;
+{% highlight C# %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
