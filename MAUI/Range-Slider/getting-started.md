@@ -124,7 +124,7 @@ using Syncfusion.Maui.Sliders;
 
 ## Step 5: Add the RangeSlider component
 
-Configure the `RangeSlider` component to allow you to select a range of values within specified limits, providing a flexible and interactive input experience. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
+Configure the `RangeSlider` component that allows you to select a range of values within specified limits, providing a flexible and interactive input experience. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 {% highlight xaml %}
@@ -158,6 +158,6 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ![RangeSlider ticks](images/getting-started/ticks.png)
 
-You can download the Range Slider Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-range-slider)
+You can download the Range Slider Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-range-slider).
 
 N> You can refer to our [.NET MAUI Range Slider](https://www.syncfusion.com/maui-controls/maui-range-slider) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Range Slider Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders/SampleBrowser.Maui.Sliders/Samples/RangeSlider) that shows you how to render the Range Slider in .NET MAUI.

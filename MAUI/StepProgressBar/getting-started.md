@@ -198,4 +198,4 @@ this.Content = stepProgressBar;
 
 ![Getting started of .NET MAUI StepProgressBar](images/getting-started/maui-stepprogressbar-getting-started.gif)
 
-You can download the Step ProgressBar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-step-progressbar-sample)
+You can download the Step ProgressBar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-step-progressbar-sample).

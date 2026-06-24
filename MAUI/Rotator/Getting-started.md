@@ -163,4 +163,4 @@ public Rotator()
 
 ![Rotator Items](images/RotatorItems.png)
 
-You can download the Rotator Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)
+You can download the Rotator Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator).

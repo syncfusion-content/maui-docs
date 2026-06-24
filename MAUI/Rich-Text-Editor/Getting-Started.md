@@ -147,4 +147,4 @@ this.Content = richTextEditor;
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
 
-You can download the Rich Text Editor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-richtexteditor-samples/tree/master)
+You can download the Rich Text Editor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-richtexteditor-samples/tree/master).

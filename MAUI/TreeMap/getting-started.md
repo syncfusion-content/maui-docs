@@ -110,7 +110,7 @@ builder.ConfigureSyncfusionCore();
 Create a simple data model in a new class file as shown in the following example code.
 
 {% tabs %}
-{% highlight C# tabtitle="AirportDetails.cs" %}
+{% highlight C# %}
 
 public class AirportDetails
 {
@@ -126,7 +126,7 @@ public class AirportDetails
 Create a view model class to set values for the properties listed in the model class as shown in the following example code.
 
 {% tabs %}
-{% highlight C# tabtitle="ViewModel.cs" %}
+{% highlight C# %}
 
 public class ViewModel
 {
@@ -211,6 +211,6 @@ N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembe
 
 ![getting-started-with-maui-tree-map](images/getting-started/treemap-view.png)
 
-You can download the TreeMap Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/GettingStarted)
+You can download the TreeMap Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/GettingStarted).
 
 N> You can refer to our [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI TreeMap Example](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/) that shows you how to render the TreeMap in .NET MAUI.

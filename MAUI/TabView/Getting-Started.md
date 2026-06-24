@@ -142,8 +142,6 @@ Configure the `TabView` control to organize content into multiple tabs, allowing
                         <x:String>James</x:String>
                         <x:String>Richard</x:String>
                         <x:String>Michael</x:String>
-                        <x:String>Alex</x:String>
-                        <x:String>Clara</x:String>
                     </x:Array>
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>
@@ -170,7 +168,7 @@ var callTab = new SfTabItem { Header = "Call" };
 tabView.Items.Add(callTab);
 var favoritesTab = new SfTabItem { Header = "Favorites" };
 var collectionView = new CollectionView();
-var itemsSource = new string[] { "James", "Richard", "Michael", "Alex", "Clara" };
+var itemsSource = new string[] { "James", "Richard", "Michael" };
 collectionView.ItemsSource = itemsSource;
 collectionView.ItemTemplate = new DataTemplate(() =>
 {
@@ -208,9 +206,9 @@ this.Content = tabView;
 
 ![Getting started with .NET MAUI Tab View.](images/tab-view-gettingstarted.png)
 
-You can download the TabView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-.net-maui-tab-view)
+You can download the TabView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-.net-maui-tab-view).
 
-N> You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewGettingStarted). You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
+N> You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
 
 ## See also 
 

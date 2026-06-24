@@ -124,6 +124,8 @@ using Syncfusion.Maui.Inputs;
 
 ## Step 5: Add the Rating component
 
+Initialize the `SfRating` control and you can select a rating value, providing a simple and interactive way to give feedback.
+
 {% tabs %}
 {% highlight xaml %}
 
@@ -140,4 +142,4 @@ this.Content = rating;
 
 ![SfRating Getting Started ](images/getting-started.png)
 
-You can download the Rating Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-rating-samples)
+You can download the Rating Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-rating-samples).
