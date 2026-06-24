@@ -237,6 +237,6 @@ The following screenshot illustrates the result of the above code.
 N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lambda function so that you can process them whenever needed.
 imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
 
-You can download the ImageEditor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
+You can download the ImageEditor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted).
 
 N> You can also explore our [.NET MAUI Image Editor Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ImageEditor) that shows you how to render the Image Editor in .NET MAUI.

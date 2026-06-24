@@ -216,7 +216,7 @@ using Syncfusion.Maui.ListView;
 Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) and use the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to bind and display a collection of data. By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
 {% tabs %}
-{% highlight xaml hl_lines="4" %}
+{% highlight xaml %}
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding BookInfo}"
                    ItemSize="100">
@@ -234,7 +234,7 @@ Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
     </syncfusion:SfListView.ItemTemplate>
   </syncfusion:SfListView>
 {% endhighlight %}
-{% highlight c# hl_lines="14" %}
+{% highlight c# %}
 
 BookInfoRepository viewModel = new BookInfoRepository();
 SfListView listView = new SfListView();
@@ -262,6 +262,6 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI ListView with item template](Images/getting-started/net-maui-listview-with-item-template.jpg)
 
-You can download the ListView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui)
+You can download the ListView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui).
 
 N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ListView example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ListView) that shows you how to render the ListView in .NET MAUI.

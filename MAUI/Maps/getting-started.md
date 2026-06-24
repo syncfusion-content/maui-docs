@@ -244,7 +244,7 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Maps basic view.](images/getting-started/net-maui-map-basic-view.png)
 
-You can download the Maps Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started)
+You can download the Maps Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started).
 
 N>
 * You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Maps) that shows you how to render the Maps in .NET MAUI.

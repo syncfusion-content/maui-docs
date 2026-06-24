@@ -195,7 +195,6 @@ kanban.Columns.Add(new KanbanColumn
 });
 
 kanban.ItemsSource = viewModel.Cards;
-this.Content = kanban;
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
@@ -263,4 +262,4 @@ public class KanbanViewModel
 
 ![defining-columns-using-default-modelin-maui-kanban](images/getting-started/defining-columns-using-default-modelin-maui-kanban.png)
 
-You can download the Kanban Board Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI)
+You can download the Kanban Board Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI).
