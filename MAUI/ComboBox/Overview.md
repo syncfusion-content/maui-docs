@@ -239,6 +239,22 @@ Explore Features
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
+    <span class="card-icon card-showcase"></span>
+  </div>
+    <h3 class="form-title">Showcase Samples</h3>
+</div>
+    <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI" class="explore-link">
+    View Samples
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+<!-- Card 3 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+  <div class="card-header">
+    <div class="icon-circle">
     <span class="card-icon card-videos"></span>
     </div>
     <h3 class="form-title">Tutorial Videos</h3>
@@ -252,7 +268,7 @@ Explore Features
 </a>
   </div>
 </div>
-<!-- Card 3 -->
+<!-- Card 4 -->
 <div class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
@@ -270,7 +286,7 @@ Search KB's
 </a>
   </div>
 </div>
-<!-- Card 3 -->
+<!-- Card 5 -->
 <div class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">

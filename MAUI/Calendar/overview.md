@@ -111,7 +111,8 @@ The following table summarizes the globalization support available in this contr
 
 - [Getting Started](https://help.syncfusion.com/maui/calendar/getting-started) shows how to begin using the Calendar control step by step.  
 - [Selection modes](https://help.syncfusion.com/maui/calendar/selections) explain different date selection behaviors.  
-- [Customization](https://help.syncfusion.com/maui/calendar/customizations) shows how to modify appearance and interaction settings.  
+- [Customization](https://help.syncfusion.com/maui/calendar/customizations) shows how to modify appearance and interaction settings. 
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.  
 
 ## Resources
 

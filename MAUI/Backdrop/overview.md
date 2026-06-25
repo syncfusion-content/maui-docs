@@ -274,7 +274,7 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1299" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="explore-link">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>
@@ -298,96 +298,5 @@ Read Blogs
 </a>
   </div>
 </div>
-
-</div>
-<!--End-->
-
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 1 -->
-<a href="https://www.syncfusion.com/maui-controls/maui-backdrop" class="form-card" target="_blank">
-  <div class="form-content">
-<div class="card-header">
-    <div class="icon-circle">
-        <span class="card-icon card-ai"></span>
-    </div>
-    <h3 class="form-title">Feature Tour</h3>
-</div>
-<div class="form-description">Quick overview of key features to get started.</div>
-<div class="explore-link">
-Explore tour
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Backdrop" class="form-card" target="_blank">
-  <div class="form-content">
-  <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-ai"></span>
-  </div>
-    <h3 class="form-title">Showcase Samples</h3>
-</div>
-    <div class="form-description">Explore sample apps and real-world use cases.</div>
-    <div class="explore-link">
-    Explore Samples
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
-<!-- Card 3 -->
-<a href="https://www.syncfusion.com/tutorial-videos/maui/backdrop" class="form-card" target="_blank">
-  <div class="form-content">
-  <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-ai"></span>
-    </div>
-    <h3 class="form-title">Tutorial Videos</h3>
-</div>
-    <div class="form-description">
-      Watch step‑by‑step videos to learn faster.
-    </div>
-    <div class="explore-link">
-    Explore Videos
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
-<!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-   <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-ai"></span>
-    </div>
-    <h3 class="form-title">Explore KB's</h3>
-</div>
-    <div class="form-description">
-      Find solutions, guides, and troubleshooting tips.
-    </div>
-    <div class="explore-link">
-Explore KB's
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
-<!-- Card 5 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-   <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-ai"></span>
-    </div>
-    <h3 class="form-title">Explore Blogs</h3>
-</div>
-    <div class="form-description">
-      Read articles, use cases, and expert insights.
-    </div>
-    <div class="explore-link">
-Explore Blogs
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
 
 </div>
