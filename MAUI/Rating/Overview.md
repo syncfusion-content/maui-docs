@@ -10,7 +10,7 @@ documentation: ug
 ---
 # .NET MAUI Rating (SfRating) Overview
 
-The Syncfusion® .NET MAUI Rating ([SfRating](https://www.syncfusion.com/maui-controls/maui-rating)) control provides the number of stars that represents a rating. Also used to configure the item size, item spacing and the number of displayed items in the [`SfRating`](https://www.syncfusion.com/maui-controls/maui-rating) control. Essential .NET MAUI Rating control can be used in various scenarios like movie rating, rating the application etc.
+The Syncfusion® [.NET MAUI Rating](https://www.syncfusion.com/maui-controls/maui-rating) (SfRating) control provides the number of stars that represents a rating. Also used to configure the item size, item spacing and the number of displayed items in the SfRating control. Essential .NET MAUI Rating control can be used in various scenarios like movie rating, rating the application etc.
 
    ![Rating OverView](images/overview.png)
 
@@ -238,7 +238,7 @@ Explore Features
     <h3 class="form-title">Showcase Samples</h3>
 </div>
     <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI" class="explore-link">
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs" class="explore-link">
     View Samples
   <span class="card-icon card-arrow"></span>
 </a>
