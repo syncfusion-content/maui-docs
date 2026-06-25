@@ -13,7 +13,9 @@ The Syncfusion® .NET MAUI Range Slider (SfRangeSlider) is a highly interactive 
 
 This page provides a comprehensive reference for all available APIs of the SfRangeSlider control.
 
-## Constructors
+## SfRangeSlider
+
+### Constructors
 
 <table>
 	<tr>
@@ -34,7 +36,7 @@ This page provides a comprehensive reference for all available APIs of the SfRan
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -327,7 +329,7 @@ This page provides a comprehensive reference for all available APIs of the SfRan
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -620,7 +622,7 @@ This page provides a comprehensive reference for all available APIs of the SfRan
 	</tr>
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
@@ -674,7 +676,7 @@ This page provides a comprehensive reference for all available APIs of the SfRan
 	
 </table>
 
-## Explicit Interface Implementations
+### Explicit Interface Implementations
 
 <table>
 	<tr>
