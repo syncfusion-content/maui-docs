@@ -14,7 +14,9 @@ The Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) is an i
 
 This page provides a comprehensive reference for all available APIs of the SfDateTimeRangeSlider control.
 
-## Constructors
+## SfDateTimeRangeSlider
+
+### Constructors
 
 <table>
 	<tr>
@@ -35,7 +37,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -304,7 +306,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -573,7 +575,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
@@ -626,7 +628,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-## Explicit Interface Implementations
+### Explicit Interface Implementations
 
 <table>
 	<tr>

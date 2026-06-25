@@ -13,7 +13,9 @@ The Syncfusion® .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) is 
 
 This page provides a comprehensive reference for all available APIs of the SfDateTimeRangeSelector control.
 
-## Constructors
+## SfDateTimeRangeSelector
+
+### Constructors
 
 <table>
 	<tr>
@@ -34,7 +36,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -383,7 +385,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -676,7 +678,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
@@ -729,7 +731,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-## Explicit Interface Implementations
+### Explicit Interface Implementations
 
 <table>
 	<tr>
