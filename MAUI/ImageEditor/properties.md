@@ -14,9 +14,9 @@ The Syncfusion .NET MAUI ImageEditor (SfImageEditor) is a very handy tool, which
 
 This page provides a comprehensive reference for all available APIs of the SfImageEditor control.
 
-# SfImageEditor
+## SfImageEditor
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -37,7 +37,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -130,7 +130,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -263,7 +263,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>
 </table>
 
-## Methods
+### Methods
 
 <table>
 	<tr>
@@ -367,7 +367,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Deserialize_System_IO_Stream_">Deserialize(Stream)</a>  <br/>
 		</td>
 		<td>
-		 Deserializes the annotations based on the specified Stream.
+		 Deserialize the annotations based on the specified Stream.
 		</td>
 	</tr>
 	<tr valign="top">		
@@ -484,7 +484,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
@@ -548,7 +548,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved">ImageSaved</a>  <br/>
 		</td>
 		<td>
-		 Occures when an image is successfully saved.
+		 Occurs when an image is successfully saved.
 		</td>
 	</tr>
 	<tr valign="top">		
@@ -577,9 +577,9 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>
 </table>
 
-# ImageEditorToolbar
+## ImageEditorToolbar
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -600,7 +600,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -653,7 +653,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>	
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -706,9 +706,9 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>	
 </table>
 
-# ImageEditorToolbarSettings
+## ImageEditorToolbarSettings
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -729,7 +729,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -838,7 +838,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -947,9 +947,9 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>
 </table>
 
-# ImageEditorToolbarItem
+## ImageEditorToolbarItem
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -970,7 +970,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -1047,7 +1047,7 @@ This page provides a comprehensive reference for all available APIs of the SfIma
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
