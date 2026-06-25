@@ -99,3 +99,11 @@ public class MainPage : ContentPage
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
+
+## See also 
+
+- [Header and Footer in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/header-and-footer)   
+
+- [Item Size Customization in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-size-customization)
+
+- [Item Border in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-border)

@@ -782,6 +782,9 @@ public class ViewModel:INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-## See also 
+## See also    
+- [How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://support.syncfusion.com/kb/article/11354/how-to-filter-the-items-in-net-maui-listview-sflistview-using-mvvm) 
 
-[How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://support.syncfusion.com/kb/article/11354/how-to-filter-the-items-in-net-maui-listview-sflistview-using-mvvm)                                                                                                            
+- [Selection in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/selection)
+
+- [Pull-to-Refresh in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/pull-to-refresh)

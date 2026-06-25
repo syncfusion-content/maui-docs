@@ -302,3 +302,9 @@ public partial class MainPage : ContentPage
 The following screenshot shows the output when items are sorted by month and year.
 
 ![.NET MAUI ListView sorting with grouping by month and year](Images/sorting/net-maui-listview-sorting-with-grouping-by-year.jpg)
+
+## See Also
+
+- [Grouping in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/grouping)
+
+- [Filtering in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/filtering)

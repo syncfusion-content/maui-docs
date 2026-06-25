@@ -353,4 +353,10 @@ private bool FilterDepartures(object obj)
 
 ## See also
 
-[How to set the font size for .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11569/how-to-set-the-font-size-for-net-maui-listview-sflistview)
+- [How to set the font size for .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11569/how-to-set-the-font-size-for-net-maui-listview-sflistview)
+
+- [Filtering in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/filtering)
+
+- [Selection in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/selection)
+
+- [Scrolling in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/scrolling)

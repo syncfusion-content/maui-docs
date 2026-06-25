@@ -334,3 +334,11 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![MAUI ListView linear layout](Images/header-and-footer/maui-listview-tabview-appearence-using-listview-header.jpg)
+
+## See Also
+
+- [Grouping in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/grouping)
+
+- [Layouts in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/layouts)
+
+- [Item Customization in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-size-customization)
