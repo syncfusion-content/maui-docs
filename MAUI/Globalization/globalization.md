@@ -735,10 +735,8 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 </table>  
 
-<br>
 
-
-## See Also  
+## See Also
 
 - [Syncfusion® Licensing in .NET MAUI](https://help.syncfusion.com/maui/licensing/overview)  
 
