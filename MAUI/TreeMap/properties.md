@@ -14,7 +14,9 @@ The Syncfusion® .NET MAUI TreeMap control allows you to visually represent hier
 
 This page provides a comprehensive reference for all available APIs of the SfTreeMap control.
 
-## Constructors
+## SfTreeMap
+
+### Constructors
 
 <table>
 	<tr>
@@ -35,7 +37,7 @@ This page provides a comprehensive reference for all available APIs of the SfTre
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -200,7 +202,7 @@ This page provides a comprehensive reference for all available APIs of the SfTre
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -365,7 +367,7 @@ This page provides a comprehensive reference for all available APIs of the SfTre
 	</tr>
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
