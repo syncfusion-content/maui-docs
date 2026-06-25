@@ -101,4 +101,3 @@ var accordion = new SfAccordion();
 accordion.ItemSpacing = 6.0d;
 {% endhighlight %}
 {% endtabs %}
-

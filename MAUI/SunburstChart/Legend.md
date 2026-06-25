@@ -36,4 +36,3 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %} 
-
