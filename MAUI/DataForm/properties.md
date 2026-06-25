@@ -13,9 +13,9 @@ The Syncfusion® .NET MAUI DataForm (SfDataForm) control is used to create or ed
 
 This page provides a comprehensive reference for all available APIs of the SfDataForm control.
 
-# SfDataForm
+## SfDataForm
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -36,7 +36,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -185,7 +185,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -334,7 +334,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-## Methods
+### Methods
 
 <table>
 	<tr>
@@ -428,7 +428,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
@@ -473,9 +473,9 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>
 </table>
 
-# DataFormViewItem
+## DataFormViewItem
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -496,7 +496,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -549,7 +549,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -602,9 +602,9 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-# DataFormGroupItem
+## DataFormGroupItem
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -625,7 +625,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -702,7 +702,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -779,9 +779,9 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-# DataFormItem
+## DataFormItem
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -802,7 +802,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -1015,7 +1015,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -1244,7 +1244,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 	</tr>	
 </table>
 
-## Methods
+### Methods
 
 <table>
 	<tr>

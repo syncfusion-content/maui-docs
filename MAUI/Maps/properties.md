@@ -13,9 +13,9 @@ The .NET MAUI Maps control is a powerful data visualization component that displ
 
 This page provides a comprehensive reference for all available APIs of the SfMaps control.
 
-# SfMaps
+## SfMaps
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -36,7 +36,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -57,7 +57,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -78,9 +78,9 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 </table>
 
-# MapsLayer
+## MapsLayer
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -101,7 +101,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -178,7 +178,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -255,7 +255,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
@@ -301,9 +301,9 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 </table>
 
 
-# MapShapeLayer
+## MapShapeLayer
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -324,7 +324,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -577,7 +577,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 <table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -830,7 +830,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 	<table>
 
-## Methods
+### Methods
 
 <table>
 	<tr>
@@ -852,7 +852,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
@@ -873,7 +873,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>	
 </table>
 
-## Explicit Interface Implementations
+### Explicit Interface Implementations
 
 <table>
 	<tr>
@@ -894,9 +894,9 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 </table>
 
-# MapTileLayer
+## MapTileLayer
 
-## Constructors
+### Constructors
 
 <table>
 	<tr>
@@ -917,7 +917,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -986,7 +986,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -1055,7 +1055,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>
 </table>
 
-## Methods
+### Methods
 
 <table>
 	<tr>
@@ -1092,7 +1092,7 @@ This page provides a comprehensive reference for all available APIs of the SfMap
 	</tr>	
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
