@@ -13,7 +13,9 @@ The Syncfusion® .NET MAUI Slider (SfSlider) is a highly interactive UI control 
 
 This page provides a comprehensive reference for all available APIs of the SfSlider control.
 
-## Constructors
+## SfSlider
+
+### Constructors
 
 <table>
 	<tr>
@@ -34,7 +36,7 @@ This page provides a comprehensive reference for all available APIs of the SfSli
 	</tr>	
 </table>
 
-## Fields
+### Fields
 
 <table>
 	<tr>
@@ -295,7 +297,7 @@ This page provides a comprehensive reference for all available APIs of the SfSli
 	</tr>
 </table>
 
-## Properties
+### Properties
 
 <table>
 	<tr>
@@ -556,7 +558,7 @@ This page provides a comprehensive reference for all available APIs of the SfSli
 	</tr>
 </table>
 
-## Events
+### Events
 
 <table>
 	<tr>
@@ -610,7 +612,7 @@ This page provides a comprehensive reference for all available APIs of the SfSli
 	
 </table>
 
-## Explicit Interface Implementations
+### Explicit Interface Implementations
 
 <table>
 	<tr>
