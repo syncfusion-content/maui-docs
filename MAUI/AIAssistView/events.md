@@ -518,7 +518,6 @@ The [ItemRatingChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% endhighlight %}
 {% endtabs %}
 
-
 ### StopResponding Event and Command
 
 The `SfAIAssistView` control includes a built-in event called [StopResponding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopResponding) and a command named [StopRespondingCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingCommand). These are triggered when the `Stop Responding` button is clicked.
