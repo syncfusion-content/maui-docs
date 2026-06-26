@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started | SfAccordion | MAUI | Syncfusion
-description: Learn here about getting started with .NET MAUI Accordion (SfAccordion) control, its elements and more.
+title: Getting started | SfAccordion | MAUI | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Accordion (SfAccordion) control, its elements and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug
@@ -430,7 +430,7 @@ public partial class MainPage : ContentPage
 
 The following screenshot illustrates the result of the above code.
 
-<img alt="Defining the Accordion items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png" width="404" /> 
+<img alt="Syncfuion Maui Accordion defining the items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png"/> 
 
 You can download accordion sample for .NET MAUI [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI ListView control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
+title: Getting Started with .NET MAUI ListView control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI ListView (SfListView) control, its elements and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -414,22 +414,22 @@ listView.ItemsSource = viewModel.BookInfo;
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
-  <syncfusion:SfListView x:Name="listView" 
-                   ItemsSource="{Binding BookInfo}"
-                   ItemSize="100">
-    <syncfusion:SfListView.ItemTemplate>
-        <DataTemplate>
-        <Grid Padding="10">
-            <Grid.RowDefinitions>
-            <RowDefinition Height="0.4*" />
-            <RowDefinition Height="0.6*" />
-            </Grid.RowDefinitions>
-            <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
-            <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
-        </Grid>
-        </DataTemplate>
-    </syncfusion:SfListView.ItemTemplate>
-  </syncfusion:SfListView>
+    <syncfusion:SfListView x:Name="listView" 
+                    ItemsSource="{Binding BookInfo}"
+                    ItemSize="100">
+        <syncfusion:SfListView.ItemTemplate>
+            <DataTemplate>
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                <RowDefinition Height="0.4*" />
+                <RowDefinition Height="0.6*" />
+                </Grid.RowDefinitions>
+                <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
+                <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
+            </Grid>
+            </DataTemplate>
+        </syncfusion:SfListView.ItemTemplate>
+    </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# hl_lines="14" %}
@@ -473,7 +473,7 @@ namespace GettingStarted
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI ListView with item template](Images/getting-started/net-maui-listview-with-item-template.jpg)
+![Syncfusion .NET MAUI ListView with item template](Images/getting-started/net-maui-listview-with-item-template.jpg)
 
 You can also download the entire source code of this demo [here](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui).
 

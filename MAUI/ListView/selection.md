@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Selection support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Selection in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Selection support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -25,10 +25,10 @@ The `SfListView` allows selecting items on different gestures such as tap, doubl
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4" %}
- <syncfusion:SfListView x:Name="listView"
-                        ItemsSource="{Binding MusicInfo}"
-                        SelectionMode="Multiple"
-                        SelectionGesture="LongPress"/>
+<syncfusion:SfListView x:Name="listView"
+                      ItemsSource="{Binding MusicInfo}"
+                      SelectionMode="Multiple"
+                      SelectionGesture="LongPress"/>
 {% endhighlight %}                     
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.SelectionMode = SelectionMode.Multiple;
@@ -36,7 +36,7 @@ listView.SelectionGesture = TouchGesture.LongPress;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView UI selection](Images/selection/maui-listview-ui-selection.jpg)
+![Syncfusion .NET MAUI ListView UI selection](Images/selection/maui-listview-ui-selection.jpg)
 
 ## Programmatic selection
 
@@ -196,7 +196,7 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView selected item customization](Images/selection/maui-listview-selected-item-customization.jpg)
+![Syncfusion .NET MAUI ListView selected item customization](Images/selection/maui-listview-selected-item-customization.jpg)
 
 ### Show checked circle on selected items 
 
@@ -276,7 +276,7 @@ listView.SelectedItemTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView show checked circle on selected items](Images/selection/maui-listview-show-checked-cirecle-on-selected-items.jpg)
+![Syncfusion .NET MAUI ListView show checked circle on selected items](Images/selection/maui-listview-show-checked-cirecle-on-selected-items.jpg)
 
 ## Selected item style
 
@@ -295,7 +295,7 @@ listView.SelectionBackground = Colors.Khaki;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView selection background](Images/selection/maui-listview-selection-background.jpg)
+![Syncfusion .NET MAUI ListView selection background](Images/selection/maui-listview-selection-background.jpg)
 
 ### Programmatic animation
 
@@ -326,7 +326,7 @@ public class SelectionControllerExt : SelectionController
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView programmatic animation](Images/selection/maui-listview-programatic-animation.gif)
+![Syncfusion .NET MAUI ListView programmatic animation](Images/selection/maui-listview-programatic-animation.gif)
 
 ## Events
 
@@ -448,7 +448,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView disable selection on particular item](Images/selection/maui-listview-disable-selection-on-particular-item.jpg)
+![Syncfusion .NET MAUI ListView disable selection on particular item](Images/selection/maui-listview-disable-selection-on-particular-item.jpg)
 
 ### Automatically scroll to bring a selected item into the view
 
@@ -480,7 +480,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView automatically scroll to bring a selected item into the view](Images/selection/maui-listview-automatically-scroll-to-bring-a-selected-item.jpg)
+![Syncfusion .NET MAUI ListView automatically scroll to bring a selected item into the view](Images/selection/maui-listview-automatically-scroll-to-bring-a-selected-item.jpg)
 
 ### Gets the index of selected item
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI AI AssistView Control | Syncfusion
-description: Learn here about getting started with the Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
+title: Getting Started with .NET MAUI AI AssistView Control | Syncfusion®
+description: Learn here about getting started with the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -75,27 +75,27 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
 
-    <ContentPage> 
-      . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
-      <syncfusion:SfAIAssistView />
-    </ContentPage>
+<ContentPage> 
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
+    <syncfusion:SfAIAssistView />
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# hl_lines="9" %}
-    using Syncfusion.Maui.AIAssistView;
-    . . .
+using Syncfusion.Maui.AIAssistView;
+. . .
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-          InitializeComponent();
-          SfAIAssistView sfAIAssistView = new SfAIAssistView();
-          this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -163,27 +163,27 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
 
-    <ContentPage> 
-      . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
-      <syncfusion:SfAIAssistView />
-    </ContentPage>
+<ContentPage> 
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
+    <syncfusion:SfAIAssistView />
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# hl_lines="9" %}
-    using Syncfusion.Maui.AIAssistView;
-    . . .
+using Syncfusion.Maui.AIAssistView;
+. . .
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-          InitializeComponent();
-          SfAIAssistView sfAIAssistView = new SfAIAssistView();
-          this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -250,27 +250,27 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
 
-    <ContentPage> 
-      . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
-      <syncfusion:SfAIAssistView />
-    </ContentPage>
+<ContentPage> 
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
+    <syncfusion:SfAIAssistView />
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# hl_lines="9" %}
-    using Syncfusion.Maui.AIAssistView;
-    . . .
+using Syncfusion.Maui.AIAssistView;
+. . .
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-          InitializeComponent();
-          SfAIAssistView sfAIAssistView = new SfAIAssistView();
-          this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -284,85 +284,84 @@ Next, create a view model class and initialize the collection of [AssistItem](ht
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-  using Syncfusion.Maui.AIAssistView;
-  public class GettingStartedViewModel : INotifyPropertyChanged
-  {
-      /// <summary>
-      /// Collection of assistItem in a conversation.
-      /// </summary>
-      private ObservableCollection<IAssistItem> assistItems;
+using Syncfusion.Maui.AIAssistView;
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    /// <summary>
+    /// Collection of assistItem in a conversation.
+    /// </summary>
+    private ObservableCollection<IAssistItem> assistItems;
 
+    public GettingStartedViewModel()
+    {
+        this.assistItems = new ObservableCollection<IAssistItem>();
+        this.GenerateAssistItems();
+    }
 
-      public GettingStartedViewModel()
-      {
-          this.assistItems = new ObservableCollection<IAssistItem>();
-          this.GenerateAssistItems();
-      }
-
-      /// <summary>
-      /// Gets or sets the collection of AssistItem of a conversation.
-      /// </summary>
-      public ObservableCollection<IAssistItem> AssistItems
-      {
-          get
-          {
-              return this.assistItems;
-          }
-
-          set
-          {
-              this.assistItems = value;
-          }
-      }
-
-      private async void GenerateAssistItems()
-      {
-        // Adding a request item
-        AssistItem requestItem = new AssistItem()
+    /// <summary>
+    /// Gets or sets the collection of AssistItem of a conversation.
+    /// </summary>
+    public ObservableCollection<IAssistItem> AssistItems
+    {
+        get
         {
-            Text = "listening", 
-            IsRequested = true
-        };
- 
-        // Add the request item to the collection
-        this.AssistItems.Add(requestItem);
- 
-        // Generating response item
-        await GetResult(requestItem);
-      }
- 
-     private async Task GetResult(AssistItem requestItem)
-     {
-        await Task.Delay(1000).ConfigureAwait(true);
- 
-        AssistItem responseItem = new AssistItem()
+            return this.assistItems;
+        }
+
+        set
         {
-            Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-            IsRequested = false, 
-        };
- 
-        // Add the response item to the collection
-        this.AssistItems.Add(responseItem);
-     }
+            this.assistItems = value;
+        }
+    }
 
-      /// <summary>
-      /// Property changed handler.
-      /// </summary>
-      public event PropertyChangedEventHandler PropertyChanged;
+    private async void GenerateAssistItems()
+    {
+    // Adding a request item
+    AssistItem requestItem = new AssistItem()
+    {
+        Text = "listening", 
+        IsRequested = true
+    };
 
-      /// <summary>
-      /// Occurs when property is changed.
-      /// </summary>
-      /// <param name="propName">changed property name</param>
-      public void RaisePropertyChanged(string propName)
-      {
-          if (this.PropertyChanged != null)
-          {
-              this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
-          }
-      }
+    // Add the request item to the collection
+    this.AssistItems.Add(requestItem);
 
-   }
+    // Generating response item
+    await GetResult(requestItem);
+    }
+
+    private async Task GetResult(AssistItem requestItem)
+    {
+    await Task.Delay(1000).ConfigureAwait(true);
+
+    AssistItem responseItem = new AssistItem()
+    {
+        Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+        IsRequested = false, 
+    };
+
+    // Add the response item to the collection
+    this.AssistItems.Add(responseItem);
+    }
+
+    /// <summary>
+    /// Property changed handler.
+    /// </summary>
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    /// <summary>
+    /// Occurs when property is changed.
+    /// </summary>
+    /// <param name="propName">changed property name</param>
+    public void RaisePropertyChanged(string propName)
+    {
+        if (this.PropertyChanged != null)
+        {
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+    }
+
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -376,18 +375,18 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
 
 {% tabs %} 
 {% highlight xaml hl_lines="7" %}
-    <ContentPage.BindingContext>
-      <local:GettingStartedViewModel/>
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel/>
+</ContentPage.BindingContext>
 
-    <ContentPage.Content>
-        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                   AssistItems="{Binding AssistItems}"/>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                AssistItems="{Binding AssistItems}"/>
+</ContentPage.Content>
 {% endhighlight %}
 {% highlight c# hl_lines="8" %}
- public partial class MainPage : ContentPage 
- {
+public partial class MainPage : ContentPage 
+{
     public MainPage()
     {
         InitializeComponent();
@@ -396,12 +395,12 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
         this.aiAssistView.AssistItems = viewModel.AssistItems;
         this.Content = aiAssistView;
     }
-  }
+}
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
-![AI AssistView control in .NET MAUI platform](images/maui-aiassistview-getting-started.png)
+![Syncfusion .NET MAUI AI AssistView control](images/maui-aiassistview-getting-started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)

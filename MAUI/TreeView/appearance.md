@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in .NET MAUI TreeView Control  | Syncfusion
-description: Learn about Appearance support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more details.
+title: Appearance in .NET MAUI TreeView Control  | Syncfusion®
+description: Learn about Appearance support in Syncfusion® .NET MAUI TreeView (SfTreeView) Control and more details.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -208,7 +208,7 @@ treeView.ItemTemplate = new ItemTemplateSelector();
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-template-selector-demo-in-.net-maui-treeview).
 
-![.NET MAUI TreeView with TemplateSelector](Images/appearance/maui-treeView-templateSelector.png)
+![Syncfusion .NET MAUI TreeView with TemplateSelector](Images/appearance/maui-treeView-templateSelector.png)
 
 Similarly, you can provide a `DataTemplateSelector` for the [ExpanderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderTemplate) property.
 
@@ -313,7 +313,7 @@ public class FontAttributeConverter : IValueConverter
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/node-level-based-styling-in-.net.maui-treeview).
 
-![.NET MAUI TreeView with LevelBasedStyling](Images/appearance/maui-treeView-levelBasedStyling.png)
+![Syncfusion .NET MAUI TreeView with LevelBasedStyling](Images/appearance/maui-treeView-levelBasedStyling.png)
 
 ## Animation
 
@@ -360,4 +360,4 @@ To disable the ripple effect when clicking a `TreeViewItem`, set color value `Tr
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView with Animation](Images/appearance/maui-treeView-animation.gif)
+![Syncfusion .NET MAUI TreeView with Animation](Images/appearance/maui-treeView-animation.gif)

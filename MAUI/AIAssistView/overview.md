@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI AI AssistView (SfAssistView) control, its elements and more.
+title: About .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI AI AssistView (SfAssistView) control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI AI AssistView](https://www.syncfusion.com/maui-controls/maui-ai-assistview) control is a component for integrating AI services into .NET MAUI apps. It provides a user-friendly interface, making it easier for developers to create applications that interact with AI. AI AssistView enables developers can customize both appearance and functionality, allowing them to match their app's design and requirements. It simplifies the process of building intelligent, responsive applications by leveraging AI to improve the user experience.
 
-![.NET MAUI AI assistview overview ](Images/overview/aiassistview.png)
+![Syncfusion .NET MAUI AI assistview overview ](Images/overview/aiassistview.png)
 
 ## Business use cases
 

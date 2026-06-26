@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Popup control | Syncfusion
-description: Learn about the introduction of Syncfusion .NET MAUI Popup (SfPopup) control, its elements and more.
+title: About .NET MAUI Popup control | Syncfusion®
+description: Learn about the introduction of Syncfusion® .NET MAUI Popup (SfPopup) control, its elements and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion® [.NET MAUI Popup](https://www.syncfusion.com/maui-controls/maui-popup) layout allows you to display an alert message with customizable buttons or load any desired view inside a popup. It provides options to fully customize the popup with custom header, body, and footer capabilities, allowing you to display important information precisely how users want to.
 
-![.NET MAUI popup overview ](Images/overview/popup_overview.png)
+![Syncfusion .NET MAUI popup overview](Images/overview/popup_overview.png)
 
 ## Business use cases
 

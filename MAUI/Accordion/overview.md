@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Accordion control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Accordion (SfAccordion) control, its elements and more.
+title: About .NET MAUI Accordion control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Accordion (SfAccordion) control, its elements and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The **[.NET MAUI Accordion](https://www.syncfusion.com/maui-controls/maui-accordion)** (SfAccordion) offers a vertically collapsible panel with stacked headers, allowing the expansion or collapse of one or multiple items simultaneously.
 
-![.NET MAUI accordion overview ](Images/overview_images/accordion_overview.png)
+![Syncfusion .NET MAUI accordion overview ](Images/overview_images/accordion_overview.png)
 
 ## Business use cases
 

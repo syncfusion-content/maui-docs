@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin  to .NET MAUI SfAccordion | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin Accordion to Syncfusion .NET MAUI Accordion control and more.
+title: Migrate from Xamarin to .NET MAUI SfAccordion | Syncfusion® 
+description: Learn here all about Migrating from Syncfusion® Xamarin Accordion to Syncfusion® .NET MAUI Accordion control and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug

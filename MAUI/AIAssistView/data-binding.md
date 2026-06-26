@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in .NET MAUI AI AssistView Control | Syncfusion
-description: Learn here all about Data Binding support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
+title: Data Binding in .NET MAUI AI AssistView Control | Syncfusion®
+description: Learn here all about Data Binding support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -60,7 +60,7 @@ public class ViewModel : INotifyPropertyChanged
     private async void ExecuteRequestCommand(object obj)
     {
         var request = (obj as Syncfusion.Maui.AIAssistView.RequestEventArgs).RequestItem;
-        await this.GetResult(request).ConfigureAwait(true);
+        await this.GetResult((AssistItem)request).ConfigureAwait(true);
     }
 
     private async Task GetResult(object inputQuery)
@@ -111,7 +111,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
     </ContentPage.BindingContext>
     <syncfusion:SfAIAssistView x:Name="assistView"
                                ItemsSource="{Binding AssistItemsCollection}"
-                               ItemsSourceConverter="{Binding converter}" />
+                               ItemsSourceConverter="{StaticResource converter}" />
 </ContentPage>
 {% endhighlight %}
  
@@ -141,65 +141,65 @@ Create the below collection of objects that must be converted to assist items co
 {% tabs %}
 {% highlight c# tabtitle="Model.cs" %}
 
-    public class ItemModel : INotifyPropertyChanged
+public class ItemModel : INotifyPropertyChanged
+{
+    private string? prompt;
+    private string? response;
+    private object? promptItem;
+    private bool isRequested;
+
+    public string? Prompt
     {
-        private string? prompt;
-        private string? response;
-        private object? promptItem;
-        private bool isRequested;
-
-        public string? Prompt
+        get { return prompt; }
+        set
         {
-            get { return prompt; }
-            set
-            {
-                prompt = value;
-                RaisePropertyChanged(nameof(Prompt));
-            }
-        }
-
-        public string? Response
-        {
-            get { return response; }
-            set
-            {
-                response = value;
-                RaisePropertyChanged(nameof(Response));
-            }
-        }
-
-        public bool IsRequested
-        {
-            get { return isRequested; }
-            set
-            {
-                isRequested = value;
-                RaisePropertyChanged(nameof(IsRequested));
-            }
-        }
-
-        public object? PromptItem
-        {
-            get { return promptItem; }
-            set
-            {
-                promptItem = value;
-                RaisePropertyChanged(nameof(PromptItem));
-            }
-        }
-
-        // Declare the PropertyChanged event.
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        /// <summary>
-        /// Raises the PropertyChanged event.
-        /// </summary>
-        /// <param name="propertyName">The name of the property that changed.</param>
-        protected virtual void RaisePropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            prompt = value;
+            RaisePropertyChanged(nameof(Prompt));
         }
     }
+
+    public string? Response
+    {
+        get { return response; }
+        set
+        {
+            response = value;
+            RaisePropertyChanged(nameof(Response));
+        }
+    }
+
+    public bool IsRequested
+    {
+        get { return isRequested; }
+        set
+        {
+            isRequested = value;
+            RaisePropertyChanged(nameof(IsRequested));
+        }
+    }
+
+    public object? PromptItem
+    {
+        get { return promptItem; }
+        set
+        {
+            promptItem = value;
+            RaisePropertyChanged(nameof(PromptItem));
+        }
+    }
+
+    // Declare the PropertyChanged event.
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    /// <summary>
+    /// Raises the PropertyChanged event.
+    /// </summary>
+    /// <param name="propertyName">The name of the property that changed.</param>
+    protected virtual void RaisePropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -209,74 +209,74 @@ N> If you want your data objects to respond to property changes, then implement 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    #region Fields
+    ObservableCollection<ItemModel> assistItemsCollection;
+    #endregion
+
+    #region Constructor
+    public ViewModel()
     {
-        #region Fields
-        ObservableCollection<ItemModel> assistItemsCollection;
-        #endregion
-
-        #region Constructor
-        public ViewModel()
-        {
-            assistItemsCollection = new ObservableCollection<ItemModel>();
-            this.GenerateAssistItems();
-        }
-        #endregion
-
-        #region Public Properties
-
-        /// <summary>
-        /// Gets or sets the collection of messages of a conversation.
-        /// </summary>
-        public ObservableCollection<ItemModel> AssistItemsCollection
-        {
-            get
-            {
-                return assistItemsCollection;
-            }
-
-            set
-            {
-                assistItemsCollection = value;
-                RaisePropertyChanged(nameof(AssistItemsCollection));
-            }
-        }
-        #endregion
-        ...
-
-        #region Item Generation
-        private async void GenerateAssistItems()
-        {
-            // Adding a request item
-            ItemModel requestItem = new ItemModel()
-            {
-                Prompt = "Types of listening",
-                IsRequested = true
-            };
-
-            // Add the request item to the collection
-            this.assistItemsCollection.Add(requestItem);
-
-            // Generating response item
-            await GetResult(requestItem);
-        }
-
-        private async Task GetResult(ItemModel requestItem)
-        {
-            await Task.Delay(1000).ConfigureAwait(true);
-
-            ItemModel responseItem = new ItemModel()
-            {
-                Response = "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-                IsRequested = false,
-                PromptItem = requestItem,
-            };
-
-            // Add the response item to the collection
-            this.assistItemsCollection.Add(responseItem);
-        }
-        #endregion
+        assistItemsCollection = new ObservableCollection<ItemModel>();
+        this.GenerateAssistItems();
     }
+    #endregion
+
+    #region Public Properties
+
+    /// <summary>
+    /// Gets or sets the collection of messages of a conversation.
+    /// </summary>
+    public ObservableCollection<ItemModel> AssistItemsCollection
+    {
+        get
+        {
+            return assistItemsCollection;
+        }
+
+        set
+        {
+            assistItemsCollection = value;
+            RaisePropertyChanged(nameof(AssistItemsCollection));
+        }
+    }
+    #endregion
+    ...
+
+    #region Item Generation
+    private async void GenerateAssistItems()
+    {
+        // Adding a request item
+        ItemModel requestItem = new ItemModel()
+        {
+            Prompt = "Types of listening",
+            IsRequested = true
+        };
+
+        // Add the request item to the collection
+        this.assistItemsCollection.Add(requestItem);
+
+        // Generating response item
+        await GetResult(requestItem);
+    }
+
+    private async Task GetResult(ItemModel requestItem)
+    {
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        ItemModel responseItem = new ItemModel()
+        {
+            Response = "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+            IsRequested = false,
+            PromptItem = requestItem,
+        };
+
+        // Add the response item to the collection
+        this.assistItemsCollection.Add(responseItem);
+    }
+    #endregion
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -286,53 +286,53 @@ This converter must implement the [IAssistItemConverter](https://help.syncfusion
 {% tabs %}
 {% highlight c# tabtitle="AssistItemConverter.cs" hl_lines="1" %}
 
-    public class AssistItemConverter : IAssistItemConverter
+public class AssistItemConverter : IAssistItemConverter
+{
+    public IAssistItem ConvertToAssistItem(object customItem, SfAIAssistView assistView)
     {
-        public IAssistItem ConvertToAssistItem(object customItem, SfAIAssistView assistView)
+        var assistItem = new AssistItem();
+        var item = customItem as ItemModel;
+        if (item != null)
         {
-            var assistItem = new AssistItem();
-            var item = customItem as ItemModel;
-            if (item != null)
+            assistItem.Data = item;
+            assistItem.IsRequested = item.IsRequested;
+            if (item.IsRequested)
             {
-                assistItem.Data = item;
-                assistItem.IsRequested = item.IsRequested;
-                if (item.IsRequested)
+                if (item.Prompt != null)
                 {
-                    if (item.Prompt != null)
-                    {
-                        assistItem.Text = item.Prompt;
-                    }
-                }
-                else
-                {
-                    if (item.Response != null)
-                    {
-                        assistItem.Text = item.Response;
-                    }
+                    assistItem.Text = item.Prompt;
                 }
             }
-            return assistItem;
-        }
-
-        public object ConvertToData(object assistViewItem, SfAIAssistView assistView)
-        {
-            var item = new ItemModel();
-            var assistItem = assistViewItem as AssistItem;
-            if (assistItem != null)
+            else
             {
-                item.IsRequested = assistItem.IsRequested;
-                if (item.IsRequested)
+                if (item.Response != null)
                 {
-                    item.Prompt = assistItem.Text;
-                }
-                else
-                {
-                    item.Response = assistItem.Text;
+                    assistItem.Text = item.Response;
                 }
             }
-            return item;
         }
+        return assistItem;
     }
+
+    public object ConvertToData(object assistViewItem, SfAIAssistView assistView)
+    {
+        var item = new ItemModel();
+        var assistItem = assistViewItem as AssistItem;
+        if (assistItem != null)
+        {
+            item.IsRequested = assistItem.IsRequested;
+            if (item.IsRequested)
+            {
+                item.Prompt = assistItem.Text;
+            }
+            else
+            {
+                item.Response = assistItem.Text;
+            }
+        }
+        return item;
+    }
+}
     
 {% endhighlight %}
 {% endtabs %}

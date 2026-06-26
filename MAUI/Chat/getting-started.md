@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chat Control | Syncfusion
-description: Learn here about getting started with the Syncfusion .NET MAUI Chat (SfChat) control, its elements and more.
+title: Getting Started with .NET MAUI Chat Control | Syncfusion®
+description: Learn here about getting started with the Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -451,6 +451,6 @@ To load the messages to SfChat, bind the message collection to the [Messages](ht
 
 The following screenshot illustrates the result of the above code.
 
-![Chat control in .NET MAUI platform](images/getting-started/maui-chat-getting-started.png)
+![Syncfusion .NET MAUI Chat control](images/getting-started/maui-chat-getting-started.png)
 
 You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)

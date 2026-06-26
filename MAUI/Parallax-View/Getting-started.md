@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Parallax View control | Syncfusion
+title: Getting started with .NET MAUI Parallax View control | Syncfusion®
 description: Learn about getting started with Syncfusion<sup>®</sup> .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView
@@ -401,7 +401,7 @@ public class Contacts
 
 T> The size of the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) view will automatically be stretched to the size of the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) view.
 
-![Output of Parallax View](ParallaxView_Images/maui_parallaxview.gif)
+![Syncfusion .NET MAUI Parallax View](ParallaxView_Images/maui_parallaxview.gif)
 
 You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos).
 
