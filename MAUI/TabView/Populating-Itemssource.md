@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Populating ItemsSource in .NET MAUI Tab View Control | Syncfusion®
-description: Learn about the populate itemssource of the Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
+description: Learn about the populate ItemsSource of the Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
@@ -330,6 +330,4 @@ public class TabItemViewModel : INotifyPropertyChanged
 
 ![DataTemplateSelector in .NET MAUI Tab View.](images/DataTemplateSelector.png)
 
-N> You can download the demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewItemTemplateSample)
-
-N> You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
+N> You can download the demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewItemTemplateSample).

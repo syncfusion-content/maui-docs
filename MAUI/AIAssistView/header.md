@@ -127,4 +127,4 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView header view customization](Images/maui-aiassistview-header-customization.png)
+![Syncfusion .NET MAUI AI AssistView Header View customization](Images/maui-aiassistview-header-customization.png)

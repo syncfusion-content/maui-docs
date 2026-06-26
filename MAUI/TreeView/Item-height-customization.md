@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Item Height Customization in .NET MAUI TreeView | Syncfusion
-description: Learn here all about Item Height Customization support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Item Height Customization in .NET MAUI TreeView | Syncfusion®
+description: Learn here all about Item Height Customization support in Syncfusion® .NET MAUI TreeView (SfTreeView) control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -129,7 +129,7 @@ public class MainPage : ContentPage
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/item-height-customization-in-.net-maui-treeview).
 
-![.NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-item-height.png)
+![Syncfusion .NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-item-height.png)
 
 ## Autofit the nodes height based on the content
 
@@ -143,7 +143,7 @@ The control offers the following two types of `NodeSizeMode`:
 {% tabs %}
 {% highlight xaml hl_lines="6" %}
 
-    <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
     <treeView:SfTreeView x:Name="treeView"
                      ChildPropertyName="SubFiles"
                      ItemsSource="{Binding ImageNodeInfo}"
@@ -152,7 +152,7 @@ The control offers the following two types of `NodeSizeMode`:
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-nodesizemode.png)
+![Syncfusion .NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-nodesizemode.png)
 
 ## Limitations
 

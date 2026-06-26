@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in .NET MAUI SfChat control | Syncfusion
-description: Learn here all about Localization feature of Syncfusion .NET MAUI Chat (SfChat) control and its elements, and more.
+title: Localization in .NET MAUI SfChat control | Syncfusion®
+description: Learn here all about Localization feature of Syncfusion® .NET MAUI Chat (SfChat) control and its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -18,23 +18,23 @@ Application culture can be changed by setting the `CurrentUICulture` in the `App
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 12 13" %}
 
-      using Syncfusion.Maui.Chat;
-      using System.Globalization;
-      using System.Resources;
+using Syncfusion.Maui.Chat;
+using System.Globalization;
+using System.Resources;
 
-      namespace MauiChat
+namespace MauiChat
+{
+   public partial class App : Application
+   {
+      public App()
       {
-         public partial class App : Application
-         {
-            public App()
-            {
-                  InitializeComponent();             
-                  CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");   
-                  SfChatResources.ResourceManager = new ResourceManager("MauiChat.Resources.SfChat", Application.Current!.GetType().Assembly);
-                  MainPage = new MainPage();
-            }
-         }
+            InitializeComponent();             
+            CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");   
+            SfChatResources.ResourceManager = new ResourceManager("MauiChat.Resources.SfChat", Application.Current!.GetType().Assembly);
+            MainPage = new MainPage();
       }
+   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -53,16 +53,16 @@ To localize the `Chat` based on the `CurrentUICulture` using the `resource` file
 
    4. The culture name indicates the name of the language and country.
 
-   ![Shows the name of resource file to be added for .NET MAUI Chat](images/localization/maui-chat-shows-the-name-of-resource-file-to-be-added.png)
+   ![Syncfusion .NET MAUI Chat Shows the name of resource file to be added](images/localization/maui-chat-shows-the-name-of-resource-file-to-be-added.png)
 
    5. Now, select `Add` option to add the resource file in the **Resources** folder.
 
-   ![Shows the added resource file for french language in .NET MAUI Chat](images/localization/maui-chat-shows-the-added-resource-file-for-french-language.png)
+   ![Syncfusion .NET MAUI Chat Shows the added resource file for french language](images/localization/maui-chat-shows-the-added-resource-file-for-french-language.png)
 
    6. Add the Name or Value pair in the Resource Designer of `SfChat.fr-FR.resx` file and change its corresponding value to corresponding culture.
 
-   ![Shows the added resource file name value pair in the resource designer in.NET MAUI Chat](images/localization/maui-chat-shows-the-added-resource-file-name-value-pair-in-the-resource-designer.png)
+   ![Syncfusion .NET MAUI Chat Shows the added resource file name value pair in the resource designer](images/localization/maui-chat-shows-the-added-resource-file-name-value-pair-in-the-resource-designer.png)
 
-   ![Localized content in .NET MAUI Chat](images/localization/maui-chat-with-localized-content.png)
+   ![Syncfusion .NET MAUI Chat Localized content](images/localization/maui-chat-with-localized-content.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/localization-for-.net-maui-chat)

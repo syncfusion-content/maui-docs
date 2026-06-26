@@ -21,22 +21,101 @@ To get start quickly with our .NET MAUI Maps, you can check the below video.
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a New .NET MAUI Project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next.**
-3. Select the .NET framework version and click **Create.**
+2. Name the project and choose a location. Then click **Next**.
+3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion .NET MAUI Maps NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Maps](https://www.nuget.org/packages/Syncfusion.Maui.Maps/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace MyProject
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+
+## Step 4: Add .NET MAUI Maps control
+
+1. To initialize the control, import the `Syncfusion.Maui.Maps` namespace into your code.
+2. Initialize [SfMaps](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html)
+
+{% tabs %}
+
+{% highlight xaml %}
+
+xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Create an instance for the maps control, and add it as content.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+  
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps map = new SfMaps();
+	
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -49,20 +128,101 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a .NET MAUI project
+## Step 1: Create a New .NET MAUI Project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter.**
+3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion .NET MAUI Maps NuGet Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Maps](https://www.nuget.org/packages/Syncfusion.Maui.Maps/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Maps` to install the Syncfusion<sup>®</sup> .NET MAUI Maps NuGet package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace MyProject
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+
+## Step 4: Add .NET MAUI Maps control
+
+1. To initialize the control, import the `Syncfusion.Maui.Maps` namespace into your code.
+2. Initialize [SfMaps](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html)
+
+{% tabs %}
+
+{% highlight xaml %}
+
+xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Create an instance for the maps control, and add it as content.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+  
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps map = new SfMaps();
+	
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 
 {% endtabcontent %}
+
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -73,59 +233,105 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Maps NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Maps](https://www.nuget.org/packages/Syncfusion.Maui.Maps/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-{% endtabcontent %}
-{% endtabcontents %}
+## Step 3: Register the handler
 
-## Step 3: Register Syncfusion handler
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
-Make sure to add the namespace.
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
 
-{% highlight csharp %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
 
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+namespace MyProject
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+            return builder.Build();
+        }
+    }
+}
 
-## Step 4: Import the Maps namespace
- 
-Add the following namespace in your XAML or C#.
- 
+{% endhighlight %}
+
+## Step 4: Add .NET MAUI Maps control
+
+1. To initialize the control, import the `Syncfusion.Maui.Maps` namespace into your code.
+2. Initialize [SfMaps](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html)
+
 {% tabs %}
+
 {% highlight xaml %}
- 
+
 xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
- 
+
 {% endhighlight %}
+
 {% highlight c# %}
- 
+
 using Syncfusion.Maui.Maps;
- 
+
 {% endhighlight %}
+
 {% endtabs %}
 
-## Step 5: Add a Maps component
+Create an instance for the maps control, and add it as content.
 
-Initialize the [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html) and add a [`Layer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer) collection  which contains [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) elements. The actual geographical rendering is done in the each [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property of the [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) is of type [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) can be set as the .json source or shapefile.
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+  
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps map = new SfMaps();
+	
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Step 5: Set GeoJSON data or shapefile for shape layer from various source
+
+The [`Layer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer) in [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html) holds [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property of the [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) is of type [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) can be set as the .json source or shapefile.
 
 I> The Mercator projection is the default projection in the maps.
-
-### Set GeoJSON data or shapefile for shape layer from various source
 
 The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property is used to load shapes from different sources:
 
@@ -136,7 +342,25 @@ The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.Ma
 
 ### Loading a local file
 
-`SfMaps` provides support to load the json data or shapefile from local path. 
+SfMaps provides support to load the json data or shapefile from local path. 
+
+{% tabs %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
+    map.Layer = layer;
+    this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
 
 The [`MapSource.FromFile`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) method requires a string argument, and returns a new [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html) object that reads the data from the shape source file. There's also an implicit conversion operator that enables the filename to be specified as a string argument to the [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property
 
@@ -154,11 +378,15 @@ The [`MapSource.FromFile`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.M
 
 {% highlight c# %}
 
-SfMaps map = new SfMaps();
-MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
-map.Layer = layer;
-this.Content = map;
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
+    map.Layer = layer;
+    this.Content = map;
+}
 
 {% endhighlight %}
 
@@ -167,6 +395,24 @@ this.Content = map;
 ### Load a remote file
 
 SfMaps provides support to load the json data or shapefile from the uri.
+
+{% tabs %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    map.Layer = layer;
+    this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
 
 The [`MapSource.FromUri`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) method requires a Uri argument, and returns a new [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html) object that reads the shape source from the Uri. There's also an implicit conversion for string-based URIs.
 
@@ -184,11 +430,15 @@ The [`MapSource.FromUri`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 {% highlight c# %}
 
-SfMaps map = new SfMaps();
-MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-map.Layer = layer;
-this.Content = map;
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    map.Layer = layer;
+    this.Content = map;
+}
 
 {% endhighlight %}
 
@@ -208,11 +458,15 @@ N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/suppo
 
 {% highlight c# %}
 
-SfMaps map = new SfMaps();
-MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
-map.Layer = layer;
-this.Content = map;
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+    map.Layer = layer;
+    this.Content = map;
+}
 
 {% endhighlight %}
 
@@ -226,13 +480,17 @@ SfMaps provides support to load the json data or shapefile as bytes from stream.
 
 {% highlight C# %}
 
-SfMaps map = new SfMaps();
-MapShapeLayer layer = new MapShapeLayer();
-Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
-var jsonStream = assembly?.GetManifestResourceStream("MyProject.Assets.australia.json");
-layer.ShapesSource = MapSource.FromStream(jsonStream);
-map.Layer = layer;
-this.Content = map;
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
+    var jsonStream = assembly?.GetManifestResourceStream("MyProject.Assets.australia.json");
+    layer.ShapesSource = MapSource.FromStream(jsonStream);
+    map.Layer = layer;
+    this.Content = map;
+}
 
 {% endhighlight %}
 
@@ -242,7 +500,6 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Maps basic view.](images/getting-started/net-maui-map-basic-view.png)
 
-You can download the Maps Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started)
-
 N>
+* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started) link.
 * You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Maps) that shows you how to render the Maps in .NET MAUI.

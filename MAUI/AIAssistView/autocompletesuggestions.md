@@ -69,7 +69,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView autocomplete suggestions display](images/maui-aiassistview-auto-complete-suggestion.gif)
+![Syncfusion .NET MAUI AI AssistView Auto Complete Suggestions](images/maui-aiassistview-auto-complete-suggestion.gif)
 
 ### Executing commands on suggestion selection 
 

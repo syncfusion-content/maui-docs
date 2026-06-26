@@ -38,6 +38,80 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace SliderGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+
+{% endhighlight %}
+
+## Step 4: Add a Basic Slider control
+
+Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) namespace and initialize the slider as shown below.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+    <Grid>
+        <sliders:SfSlider />
+    </Grid>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Sliders;
+
+namespace SliderGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfSlider slider = new SfSlider();
+            this.content = slider;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -63,7 +137,82 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Sliders` to install the Syncfusion<sup>®</sup> .NET MAUI Sliders package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace SliderGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+
+{% endhighlight %}
+
+## Step 4: Add a Basic Slider control
+
+Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) namespace and initialize the slider as shown below.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+    <Grid>
+        <sliders:SfSlider />
+    </Grid>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Sliders;
+
+namespace SliderGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfSlider slider = new SfSlider();
+            this.content = slider;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
+
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -86,43 +235,89 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-{% endtabcontent %}
-{% endtabcontents %}
+## Step 3: Register the Handler
 
-## Step 3: Register Syncfusion handler
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
-Make sure to add the namespace.
-
-{% highlight csharp %}
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
 
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+namespace SliderGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+            return builder.Build();
+        }
+    }
+}
 
-## Step 4: Import Sliders namespace
-
-Add the following namespace in your XAML or C#.
-
-{% tabs %}
-{% highlight xaml %}
-
-xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
 
 {% endhighlight %}
-{% highlight c# %}
+
+## Step 4: Add a Basic Slider control
+
+Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) namespace and initialize the slider as shown below.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+    <Grid>
+        <sliders:SfSlider />
+    </Grid>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
 
 using Syncfusion.Maui.Sliders;
 
+namespace SliderGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfSlider slider = new SfSlider();
+            this.content = slider;
+        }
+    }
+}
+
 {% endhighlight %}
+
 {% endtabs %}
 
-## Step 5: Add the Sliders Component
+{% endtabcontent %}
 
-Configure the `Sliders` component to enable users to select values within a specified range, providing an intuitive and interactive input mechanism. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
+{% endtabcontents %}
+
+![Initialize slider](images/getting-started/initialize-slider.png)
+
+## Step 5: Add Label and Ticks
+
+The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 
@@ -156,7 +351,5 @@ SfSlider slider = new SfSlider()
 {% endtabs %}
 
 ![Slider ticks](images/getting-started/ticks.png)
-
-You can download the Slider Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-.net-maui-slider)
 
 N> You can refer to our [.NET MAUI Slider](https://www.syncfusion.com/maui-controls/maui-slider) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Slider Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders) that shows you how to render the Slider in .NET MAUI.

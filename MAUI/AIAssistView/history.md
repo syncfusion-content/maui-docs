@@ -121,7 +121,7 @@ To populate the conversation items, bind the item collection from its BindingCon
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView conversation history display](Images/history/maui-aiassistview-conversation-history.gif)
+![Syncfusion .NET MAUI AI AssistView History](Images/history/maui-aiassistview-conversation-history.gif)
 
 ### Customizing conversation header text in SfAIAssistView 
 
@@ -142,7 +142,7 @@ sfAIAssistView.ConversationHeaderText = "Chat History";
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView conversation header text](Images/history/maui-aiassistview-conversation-header-text.png)
+![Syncfusion .NET MAUI AI AssistView Conversation Header Text](Images/history/maui-aiassistview-conversation-header-text.png)
 
 ### Customizing the empty conversation view
 
@@ -167,4 +167,6 @@ The [ConversationEmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView conversation empty view customization](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
+![Syncfusion .NET MAUI AI AssistView Conversation Empty View](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
+
+

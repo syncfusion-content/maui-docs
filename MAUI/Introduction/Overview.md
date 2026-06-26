@@ -540,7 +540,7 @@ line-height: 1;
 <br>
 
 
-## Additional resources
+## Resources
 
 <style>
 
@@ -579,13 +579,6 @@ line-height: 1;
 .card-feedback:before { content: "\e726"; }
 .card-support:before { content: "\e727"; }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
 .form-card {
   flex: 0 0 calc(33.33% - 14px);
   max-width: calc(33.33% - 14px);
@@ -619,6 +612,7 @@ line-height: 1;
   border-radius: 50%;
   background: #EAF3FF;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
 }
@@ -633,7 +627,7 @@ line-height: 1;
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -649,7 +643,11 @@ line-height: 1;
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8px;
+}
+
+.card-header .form-title {
+  margin-top: 0 !important;
+  line-height: 1.2;
 }
 
 .explore-link {
@@ -670,7 +668,7 @@ line-height: 1;
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<a href="https://www.syncfusion.com/maui-controls" class="form-card" target="_blank">
+<div class="form-card" target="_blank">
   <div class="form-content">
 <div class="card-header">
     <div class="icon-circle">
@@ -679,14 +677,14 @@ line-height: 1;
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<div class="explore-link">
+<a href="https://www.syncfusion.com/maui-controls" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
-</div>
-  </div>
 </a>
+  </div>
+</div>
 <!-- Card 2 -->
-<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI" class="form-card" target="_blank">
+<div class="form-card" target="_blank">
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
@@ -695,14 +693,14 @@ Explore Features
     <h3 class="form-title">Showcase Samples</h3>
 </div>
     <div class="form-description"> Explore real-world sample apps to see components in action and learn by example.</div>
-    <div class="explore-link">
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI" class="explore-link">
     View Samples
   <span class="card-icon card-arrow"></span>
-</div>
-  </div>
 </a>
+  </div>
+</div>
 <!-- Card 3 -->
-<a href="https://www.syncfusion.com/tutorial-videos/maui" class="form-card" target="_blank">
+<div class="form-card" target="_blank">
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
@@ -713,86 +711,85 @@ Explore Features
     <div class="form-description">
       Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
-    <div class="explore-link">
+    <a href="https://www.syncfusion.com/tutorial-videos/maui" class="explore-link">
     Watch now
   <span class="card-icon card-arrow"></span>
-</div>
-  </div>
 </a>
+  </div>
+</div>
 <!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
+<div class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-knowledge-base"></span>
     </div>
-    <h3 class="form-title">Explore KB's</h3>
+    <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <div class="explore-link">
+    <a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="explore-link">
 Search KB's
   <span class="card-icon card-arrow"></span>
-</div>
-  </div>
 </a>
+  </div>
+</div>
 <!-- Card 5 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
+<div class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
     <span class="card-icon card-blogs"></span>
     </div>
-    <h3 class="form-title">Explore Blogs</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
       Discover in‑depth articles, use cases and expert insights from our developers.
     </div>
-    <div class="explore-link">
+    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
 Read Blogs
   <span class="card-icon card-arrow"></span>
-</div>
-  </div>
 </a>
+  </div>
+</div>
 
 </div>
+
 
 ## Support and feedback
 
-<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
-<a href="https://support.syncfusion.com/support/tickets/create" class="form-card" target="_blank">
-  <div class="form-content">
-  <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-support"></span>
+<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:10px;">
+<div  class="form-card" target="_blank">
+    <div class="form-content">
+        <div class="card-header">
+            <div class="icon-circle">
+                <span class="card-icon card-support"></span>
+            </div>
+            <h3 class="form-title">Support Ticket</h3>
+        </div>
+        <div class="form-description">
+            Need assistance? Submit a support ticket and our team will help you resolve your issue quickly.
+        </div>
+        <a href="https://support.syncfusion.com/support/tickets/create" class="explore-link">Open ticket
+            <span class="card-icon card-arrow"></span>
+        </a>
     </div>
-    <h3 class="form-title">Support Ticket</h3>
 </div>
-    <div class="form-description">
-        Need assistance? Submit a support ticket and our team will help you resolve your issue quickly.
+<div class="form-card" target="_blank">
+    <div class="form-content">
+        <div class="card-header">
+            <div class="icon-circle">
+                <span class="card-icon card-feedback"></span>
+            </div>
+            <h3 class="form-title">Feedback Portal</h3>
+        </div>
+        <div class="form-description">
+            Have a suggestion or feature request? Share your ideas in our Feedback Portal to help us improve.
+        </div>
+        <a href="https://www.syncfusion.com/feedback/maui" class="explore-link">Share Feedback
+            <span class="card-icon card-arrow"></span>
+        </a>
     </div>
-     <div class="explore-link">
-Open ticket
-  <span class="card-icon card-arrow"></span>
 </div>
-  </div>
-</a>
-
-<a href="https://www.syncfusion.com/feedback/maui" class="form-card" target="_blank">
-  <div class="form-content">
-  <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-feedback"></span>
-    </div>
-    <h3 class="form-title">Feedback Portal</h3>
-</div>
-    <div class="form-description">Have a suggestion or feature request? Share your ideas in our Feedback Portal to help us improve.
-    </div>
-     <div class="explore-link">
-Share Feedback
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
 </div>

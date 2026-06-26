@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Appearance | Accordion for Maui | Syncfusion
-description: Learn here all about Appearance support in Syncfusion Maui Accordion (SfAccordion) control and more details. 
+title: Appearance in .NET MAUI Accordion control | Syncfusion®
+description: Learn here all about Appearance support in Syncfusion® Maui Accordion (SfAccordion) control and more details. 
 platform: MAUI
 control: SfAccordion
-documentation: ug
+documentation: ug   
 ---
 
 # Appearance in Maui Accordion (SfAccordion)
@@ -214,7 +214,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Header icon position" src="Images\appearance\maui-accordion-header-position-start.png" width="404" /> 
+<img alt="Syncfusion Maui Accordion Header icon position" src="Images\appearance\maui-accordion-header-position-start.png" width="404" /> 
 
 ## Header background color customization
 
@@ -418,7 +418,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Header background color customization" src="Images\appearance\maui-accordion-header-background-color.png" width="404" /> 
+<img alt="Syncfusion Maui Accordion Header background color customization" src="Images\appearance\maui-accordion-header-background-color.png" width="404" /> 
 
 ## Icon color customization
 
@@ -622,7 +622,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Icon color customization" src="Images\appearance\maui-accordion-icon-color.png" width="404" /> 
+<img alt="Syncfusion Maui Accordion Icon color customization" src="Images\appearance\maui-accordion-icon-color.png" width="404" /> 
 
 ## Visual State Manager
 
@@ -721,6 +721,6 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Expanded and collapsed visual states in .NET MAUI Accordion" src="Images/appearance/maui-accordion-with-visual-state-manager.gif" width="404" /> 
+<img alt="Syncfusion Maui Accordion Expanded and collapsed visual states" src="Images/appearance/maui-accordion-with-visual-state-manager.gif" width="404" /> 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-ui-appearance-using-visual-states-in-.net-maui-accordion).

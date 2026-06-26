@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scrolling in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Scrolling support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Scrolling in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Scrolling support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -134,7 +134,7 @@ listView.EnableFadeOnScroll = true;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView FadeOnScroll](Images/scrolling/maui-listview-fade-on-scroll-example.gif)
+![Syncfusion .NET MAUI ListView FadeOnScroll](Images/scrolling/maui-listview-fade-on-scroll-example.gif)
 
 ## Identify when end of the list is reached on scrolling
 

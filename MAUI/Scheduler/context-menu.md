@@ -226,7 +226,7 @@ The `ContextMenuOpening` event can be used to prevent a context menu from being 
                       ContextMenuOpening="scheduler_ContextMenuOpening">
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 4" %}
+{% highlight c# tabtitle="C#" hl_lines="1 3 5" %}
 this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening
 
 private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with MVVM in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about Working with MVVM support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
+title: Working with MVVM in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here about Working with MVVM support in Syncfusion® .NET MAUI TreeView (SfTreeView) Control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -71,7 +71,7 @@ public class CountriesViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView with selection](Images/selection/maui-treeView-BindingSelectedItem.png)
+![Syncfusion .NET MAUI TreeView with selection](Images/selection/maui-treeView-BindingSelectedItem.png)
 
 ### Binding SelectedItems
 
@@ -137,7 +137,7 @@ public class CountriesViewModel
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/binding-selected-items-in-.net-maui-treeview).
 
-![.NET MAUI TreeView with selection](Images/selection/maui-treeview-multipleselection.png)
+![Syncfusion .NET MAUI TreeView with selection](Images/selection/maui-treeview-multipleselection.png)
 
 ## Commands
 

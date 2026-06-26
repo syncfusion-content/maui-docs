@@ -148,8 +148,7 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
 {% endhighlight %}
 {% endtabs %}
 
-
-![Syncfusion .NET MAUI SfAIAssistView empty view customization](Images/maui-aiassistview-emptyview-customization.png)
+![Syncfusion .NET MAUI AI AssistView EmptyView customization](Images/maui-aiassistview-emptyview-customization.png)
 
 N>
 * The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
