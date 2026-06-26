@@ -15,12 +15,13 @@ This section guides you through setting up and configuring a [PullToRefresh](htt
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
@@ -86,15 +87,19 @@ Before proceeding, ensure the following are set up:
 
 Make sure to add the namespace.
 
-{% highlight csharp %}
+{% tabs %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
-{% highlight csharp %}
+{% tabs %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
+{% endtabs %}
 
 ## Step 4: Import PullToRefresh namespace
 
@@ -120,7 +125,7 @@ Configure the `PullToRefresh` component to enable you to refresh content interac
 To show the progress indicator while updating the view, set [IsRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_IsRefreshing) property to `True` using [Refreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_Refreshing) event. Once view is updated, remove the progress indicator by setting `IsRefreshing` property to `False`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 11" %}
+{% highlight xaml %}
 
 <syncfusion:SfPullToRefresh x:Name="pullToRefresh">
     <syncfusion:SfPullToRefresh.PullableContent>
@@ -131,7 +136,7 @@ To show the progress indicator while updating the view, set [IsRefreshing](https
 </syncfusion:SfPullToRefresh>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -151,7 +156,7 @@ private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
 
 ![Syncfusion .NET MAUI PullToRefresh with slide on top transition mode](Images/getting-started//maui-pull-to-refresh-slideontop-mode.gif)
 
-You can download the PullToRefresh Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-pull-to-refresh/tree/master)
+You can download the PullToRefresh Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-pull-to-refresh/tree/master).
 
 If we run the above sample with [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) set to [Push](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_Push), the output will be as shown in the following.
 

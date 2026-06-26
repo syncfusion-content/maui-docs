@@ -523,7 +523,7 @@ This property is only applicable when the [View](https://help.syncfusion.com/cr/
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4" %}
 <scheduler:SfScheduler x:Name="scheduler"
-                      View="TimelineMonth">
+                       View="TimelineMonth">
 <scheduler:SfScheduler.TimelineView>
     <scheduler:SchedulerTimelineView ShowMonthTimeRegions="True"/>
 </scheduler:SfScheduler.TimelineView>

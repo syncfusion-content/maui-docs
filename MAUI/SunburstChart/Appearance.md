@@ -41,6 +41,7 @@ this.Content = sunburst;
 
 {% endtabs %}  
 
+
 ## Angle
 
 The start angle and end angle of the sunburst chart can be adjusted by using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EndAngle) properties.

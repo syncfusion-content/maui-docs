@@ -15,10 +15,12 @@ To quickly get started with the .NET MAUI Range Slider, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=9W1N5rH0zD0" %}
 
+
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
@@ -35,6 +37,60 @@ Before proceeding, ensure the following are set up:
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace Slider
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+
+## Step 4: Add a Basic RangeSlider
+
+Add the namespace, as shown in the following code sample:
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<xmlns:rangeSlider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+	using Syncfusion.Maui.Sliders;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -61,7 +117,64 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Sliders` to install the Syncfusion<sup>®</sup> .NET MAUI Sliders package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace Slider
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+
+## Step 4: Add a Basic RangeSlider
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace, as shown in the following code sample:
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<xmlns:rangeSlider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+	using Syncfusion.Maui.Sliders;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
+
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -84,57 +197,77 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace Slider
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+
+## Step 4: Add a Basic RangeSlider
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace, as shown in the following code sample:
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<xmlns:rangeSlider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+	using Syncfusion.Maui.Sliders;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion handler
+## Step 5: Initialization of RangeSlider
 
-Make sure to add the namespace.
-
-{% highlight csharp %}
-using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Import Range Slider namespace
-
-Add the following namespace in your XAML or C#.
+The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
+
 {% highlight xaml %}
 
-xmlns:rangeSlider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+<sliders:SfRangeSlider Minimum="0" Maximum="10" RangeStart="2" RangeEnd="8" Interval="2" ShowLabels="True" ShowTicks="True" MinorTicksPerInterval="1" />
 
 {% endhighlight %}
-{% highlight c# %}
 
-using Syncfusion.Maui.Sliders;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 5: Add the RangeSlider component
-
-Configure the `RangeSlider` component to allow you to select a range of values within specified limits, providing a flexible and interactive input experience. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
-
-{% tabs %}
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2"
-                       RangeEnd="8"
-                       Interval="2"
-                       ShowLabels="True"
-                       ShowTicks="True"
-                       MinorTicksPerInterval="1" />
-
-{% endhighlight %}
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
@@ -153,7 +286,5 @@ rangeSlider.MinorTicksPerInterval = 1;
 {% endtabs %}
 
 ![RangeSlider ticks](images/getting-started/ticks.png)
-
-You can download the Range Slider Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-range-slider)
 
 N> You can refer to our [.NET MAUI Range Slider](https://www.syncfusion.com/maui-controls/maui-range-slider) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Range Slider Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders/SampleBrowser.Maui.Sliders/Samples/RangeSlider) that shows you how to render the Range Slider in .NET MAUI.

@@ -20,6 +20,7 @@ To quickly get started with the .NET MAUI Switch, watch this video.
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
@@ -36,6 +37,77 @@ Before proceeding, ensure the following are set up:
 1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure all necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls in .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# %}
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace SwitchGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %} 
+
+## Step 4: Adding the .NET MAUI Switch 
+
+1. Import the Buttons namespace into your code to initialize the control.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Buttons;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+2. Initialize [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<buttons:SfSwitch x:Name="sfSwitch" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+           
+    SfSwitch sfSwitch = new SfSwitch();
+    this.Content= sfSwitch;
+            
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfSwitch](images/getting-started/SfSwitch.png)
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -62,6 +134,77 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Buttons` to install the Syncfusion<sup>®</sup> .NET MAUI Buttons package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# %}
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace SwitchGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %} 
+
+## Step 4: Adding the .NET MAUI Switch 
+
+1. Import the Buttons namespace into your code to initialize the control.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Buttons;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+2. Initialize [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<buttons:SfSwitch x:Name="sfSwitch" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+           
+    SfSwitch sfSwitch = new SfSwitch();
+    this.Content= sfSwitch;
+            
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfSwitch](images/getting-started/SfSwitch.png)
+
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
@@ -85,41 +228,79 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`.
 
-{% endtabcontent %}
-{% endtabcontents %}
+## Step 3: Register the handler
 
-## Step 3: Register Syncfusion handler
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-Make sure to add the namespace.
-
-{% highlight csharp %}
+{% highlight c# %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
+
+namespace SwitchGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
 {% endhighlight %} 
 
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+## Step 4: Adding the .NET MAUI Switch 
 
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Import Switch namespace
-
-Add the following namespace in your XAML or C#.
-
+1. Import the Buttons namespace into your code to initialize the control.
 {% tabs %}
+
 {% highlight xaml %}
 
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
 {% endhighlight %}
+
 {% highlight c# %}
 
 using Syncfusion.Maui.Buttons;
 
 {% endhighlight %}
+
+{% endtabs %}
+2. Initialize [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<buttons:SfSwitch x:Name="sfSwitch" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+           
+    SfSwitch sfSwitch = new SfSwitch();
+    this.Content= sfSwitch;
+            
+{% endhighlight %}
+
 {% endtabs %}
 
-## Step 5: Add the Switch Component
+![SfSwitch](images/getting-started/SfSwitch.png)
+
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Step 5: Performing an action based on state
 
 You can switch between states in the .NET MAUI Switch control. When the state changes,the [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) and [StateChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html) events are triggered. These events allow you to perform specific actions depending on the current state of the Switch. The [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) event also allows you to cancel the transition to a new state if needed.
 
@@ -155,7 +336,5 @@ private void OnSwitchStateChanged(object sender, SwitchStateChangedEventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download the Switch Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch/tree/master/SwitchGettingStarted)
 
 N> Find the complete getting started sample of the .NET MAUI Switch from this [link](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch). Refer to our [.NET MAUI Switch](https://www.syncfusion.com/maui-controls/maui-switch) feature tour page for its groundbreaking feature representations. Explore our [.NET MAUI Switch example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons/SampleBrowser.Maui.Buttons/Samples/Switch) for rendering the .NET MAUI Switch.

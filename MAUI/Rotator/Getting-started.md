@@ -37,6 +37,94 @@ Before proceeding, ensure the following are in place:
 2. Search for [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace Rotator
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %} 
+
+## Step 4: Add a Basic Rotator
+
+Step 1: Add the namespace as shown in the following code sample.
+
+{% tabs %}
+{% highlight xaml %}
+
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+
+{% endhighlight %}
+{% highlight c# %}
+
+    using Syncfusion.Maui.Rotator;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 2: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage ...
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator">
+<ContentPage.Content>
+<syncfusion:SfRotator x:Name="rotator" />	
+</ContentPage.Content>
+</ContentPage>
+	
+{% endhighlight %}
+
+{% highlight C# %}		
+
+using Syncfusion.Maui.Rotator;
+
+namespace GettingStarted
+{
+public partial class RotatorControlPage : ContentPage
+    {
+        public RotatorControlPage()
+        {
+            InitializeComponent();
+            SfRotator rotator = new SfRotator();
+            this.Content = rotator;
+        }
+    }
+}
+        
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -62,6 +150,97 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Rotator` to install the Syncfusion<sup>®</sup> .NET MAUI Rotator package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace Rotator
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %} 
+
+## Step 4: Add a Basic Rotator
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample.
+
+{% tabs %}
+{% highlight xaml %}
+
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+
+{% endhighlight %}
+{% highlight c# %}
+
+    using Syncfusion.Maui.Rotator;
+
+{% endhighlight %}
+{% endtabs %}
+
+
+Step 3: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage ...
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator">
+<ContentPage.Content>
+<syncfusion:SfRotator x:Name="rotator" />	
+</ContentPage.Content>
+</ContentPage>
+	
+{% endhighlight %}
+
+{% highlight C# %}		
+
+using Syncfusion.Maui.Rotator;
+
+namespace GettingStarted
+{
+public partial class RotatorControlPage : ContentPage
+    {
+        public RotatorControlPage()
+        {
+            InitializeComponent();
+            SfRotator rotator = new SfRotator();
+            this.Content = rotator;
+        }
+    }
+}
+        
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
@@ -69,8 +248,8 @@ Before proceeding, ensure the following are set up:
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -85,43 +264,98 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-{% endtabcontent %}
-{% endtabcontents %}
+## Step 3: Register the handler
 
-## Step 3: Register Syncfusion handler
-
-Make sure to add the namespace.
-
-{% highlight csharp %}
-using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Import Rotator namespace
-
-Add the following namespace in your XAML or C#.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-{% endhighlight %}
-{% highlight c# %}
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-using Syncfusion.Maui.Rotator;
+            return builder.Build();
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the Rotator component
+## Step 4: Add .NET MAUI Rotator control
 
-Initialize the `Rotator` control and we can populate the rotator’s items by using any one of the following ways,
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample.
+
+{% tabs %}
+{% highlight xaml %}
+
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+
+{% endhighlight %}
+{% highlight c# %}
+
+    using Syncfusion.Maui.Rotator;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 3: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage ...
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator">
+<ContentPage.Content>
+<syncfusion:SfRotator x:Name="rotator" />	
+</ContentPage.Content>
+</ContentPage>
+	
+{% endhighlight %}
+
+{% highlight C# %}		
+
+using Syncfusion.Maui.Rotator;
+
+namespace GettingStarted
+{
+public partial class RotatorControlPage : ContentPage
+    {
+        public RotatorControlPage()
+        {
+            InitializeComponent();
+            SfRotator rotator = new SfRotator();
+            this.Content = rotator;
+        }
+    }
+}
+        
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Step 5: Add Rotator Items
+
+We can populate the rotator’s items by using any one of the following ways,
 
 * Through [SfRotatorItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html)
 
@@ -137,20 +371,29 @@ N> Ensure that the images mentioned in the code snippets are located in the **Re
 
 {% highlight C# %}
 
-SfRotator rotator = new SfRotator();
-StackLayout stackLayout = new StackLayout();
-public Rotator()
+using Syncfusion.Maui.Core.Rotator;
+
+namespace Rotator
 {
-    stackLayout.HeightRequest = 300;
-    List<SfRotatorItem> collectionOfItems = new List<SfRotatorItem>();
-    collectionOfItems.Add(new SfRotatorItem() { Image = "image1.png" });
-    collectionOfItems.Add(new SfRotatorItem() { Image = "image2.png" });
-    collectionOfItems.Add(new SfRotatorItem() { Image = "image3.png" });
-    collectionOfItems.Add(new SfRotatorItem() { Image = "image4.png" });
-    collectionOfItems.Add(new SfRotatorItem() { Image = "image5.png" });
-    rotator.ItemsSource = collectionOfItems;
-    stackLayout.Children.Add(rotator);
-    this.Content = stackLayout;
+    public partial class Rotator : ContentPage
+    {
+        SfRotator rotator = new SfRotator();
+        StackLayout stackLayout = new StackLayout();
+        public Rotator()
+        {
+            InitializeComponent ();
+            stackLayout.HeightRequest = 300;
+            List<SfRotatorItem> collectionOfItems = new List<SfRotatorItem>();
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image1.png" });
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image2.png" });
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image3.png" });
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image4.png" });
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image5.png" });
+            rotator.ItemsSource = collectionOfItems;
+            stackLayout.Children.Add(rotator);
+            this.Content = stackLayout;
+        }
+    }
 }
 
 {% endhighlight %}
@@ -159,4 +402,4 @@ public Rotator()
 
 ![Rotator Items](images/RotatorItems.png)
 
-You can download the Rotator Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)
+N> You can find the getting started sample of .NET MAUI SfRotator from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)

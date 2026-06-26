@@ -297,4 +297,3 @@ SfCardView cardView = new SfCardView()
 {% endtabs %}
 
 N> This property won't work when adding the SfCardView as a child of SfCardLayout.
-

@@ -292,7 +292,6 @@ public class GettingStartedViewModel : INotifyPropertyChanged
     /// </summary>
     private ObservableCollection<IAssistItem> assistItems;
 
-
     public GettingStartedViewModel()
     {
         this.assistItems = new ObservableCollection<IAssistItem>();

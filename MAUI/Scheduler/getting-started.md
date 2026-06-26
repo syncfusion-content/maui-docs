@@ -22,8 +22,9 @@ To quickly get started with the .NET MAUI Scheduler, watch this video.
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (18.0.0) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -37,15 +38,83 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI Scheduler view
+
+1. To initialize the control, import the `Syncfusion.Maui.Scheduler` namespace into your code.
+2. Initialize [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}
+{% highlight XAML hl_lines="3 5" %}
+
+<ContentPage 
+        ...
+        xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Scheduler;
+...
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        this.Content = scheduler;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio Code. 
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -60,6 +129,73 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI Scheduler view
+
+1. To initialize the control, import the `Syncfusion.Maui.Scheduler` namespace into your code.
+2. Initialize [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}
+{% highlight XAML hl_lines="3 5" %}
+
+<ContentPage 
+        ...
+        xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Scheduler;
+...
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        this.Content = scheduler;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
@@ -67,8 +203,8 @@ Before proceeding, ensure the following are set up:
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -83,41 +219,77 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-{% endtabcontent %}
-{% endtabcontents %}
+## Step 3: Register the handler
 
-## Step 3: Register Syncfusion handler
-
-Make sure to add the namespace.
-
-{% highlight csharp %}
-using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Import Scheduler namespace
-
-Add the following namespace in your XAML or C#.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 
-xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-{% endhighlight %}
-{% highlight c# %}
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
 
-using Syncfusion.Maui.Scheduler;
+            return builder.Build();
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the Scheduler component
+## Step 4: Add .NET MAUI Scheduler view
+
+1. To initialize the control, import the `Syncfusion.Maui.Scheduler` namespace into your code.
+2. Initialize [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}
+{% highlight XAML hl_lines="3 5" %}
+
+<ContentPage 
+        ...
+        xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+        
+    <scheduler:SfScheduler />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Scheduler;
+...
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        this.Content = scheduler;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Step 5: Adding the scheduler appointments
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) has a built-in capability to handle the appointment arrangement internally based on the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) collections. Allocate the collection generated to the Appointments property.
 
@@ -138,7 +310,10 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
 
+// Creating an instance for the scheduler appointment collection.
 var appointment = new ObservableCollection<SchedulerAppointment>();
+
+//Adding scheduler appointment in the schedule appointment collection. 
 appointment.Add(new SchedulerAppointment()
 {
     StartTime = DateTime.Today.AddHours(9),
@@ -147,11 +322,12 @@ appointment.Add(new SchedulerAppointment()
     Location = "Hutchison road",
 });
 
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
 this.scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs %}
 
-![adding-scheduler-appointments-in-maui-scheduler](images/getting-started/adding-scheduler-appointments-in-maui-scheduler.png)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 
-You can download the Scheduler Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+![adding-scheduler-appointments-in-maui-scheduler](images/getting-started/adding-scheduler-appointments-in-maui-scheduler.png)

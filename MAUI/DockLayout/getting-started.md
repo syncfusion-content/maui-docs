@@ -20,24 +20,98 @@ To get start quickly with our [.NET MAUI DockLayout](https://help.syncfusion.com
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next.**
-3. Select the .NET framework version and click **Create.**
+1. In **Visual Studio**, go to **File > New > Project**.
+2. Select the **.NET MAUI App** template and click **Next**.
+3. Enter a project name and location, then click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Core Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. Right-click on the project in **Solution Explorer** and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure all dependent packages are installed and the project builds successfully.
 
+## Step 3: Register the Syncfusion Core Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% tabs %}
+
+{% highlight csharp tabtitle="MauiProgram.cs" hl_lines="2 13" %}
+
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace DockLayoutGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Initialize the DockLayout Control
+
+1. To initialize the control, import the `Syncfusion.Maui.Core` namespace.
+2. Initialize an [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) instance.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .    
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Core;
+    assembly=Syncfusion.Maui.Core">
+   
+     <sf:SfDockLayout/>
+
+</ContentPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+namespace DockLayoutGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();  
+            SfDockLayout dockLayout = new SfDockLayout();
+            Content = dockLayout;       
+        }
+    }   
+}
+
+{% endhighlight %}
+{% endtabs %}
 {% endtabcontent %}
+
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
@@ -48,20 +122,96 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a .NET MAUI project
+## Step 1: Create a new .NET MAUI project
 
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Open the command palette by pressing `Ctrl+Shift+P`, type **.NET:New Project** and press **Enter**.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter.**
-4. Then choose **Create project.**
+3. Select the project location, type the project name, and press **Enter**.
+4. Then choose **Create project**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Core` to install the Syncfusion<sup>®</sup> .NET MAUI Core package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
 
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace DockLayoutSample
+{
+  public static class MauiProgram
+  {
+	public static MauiApp CreateMauiApp()
+	{
+		var builder = MauiApp.CreateBuilder();
+		builder
+		.UseMauiApp<App>()
+		.ConfigureSyncfusionCore()
+		.ConfigureFonts(fonts =>
+		{
+			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+		});
+
+		return builder.Build();
+	 }
+  }
+}     
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Initialize the DockLayout Control
+
+1. To initialize the control, import the `Syncfusion.Maui.Core` namespace.
+2. Initialize an [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) instance.
+
+{% tabs %} 
+{% highlight xaml %}
+
+<ContentPage
+    . . .    
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Core;
+    assembly=Syncfusion.Maui.Core">
+   
+     <sf:SfDockLayout/>
+
+</ContentPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+namespace DockLayoutGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();  
+            SfDockLayout dockLayout = new SfDockLayout();
+            Content = dockLayout;       
+        }
+    }   
+}
+
+{% endhighlight %}
+{% endtabs %}
 {% endtabcontent %}
+
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -72,77 +222,142 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Core Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-{% endtabcontent %}
-{% endtabcontents %}
+## Step 3: Register the handler
 
-## Step 3: Register Syncfusion handler
+Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
-Make sure to add the namespace.
-
-{% highlight csharp %}
-using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Import the DockLayout namespace
- 
-Add the following namespace in your XAML or C#.
- 
 {% tabs %}
-{% highlight xaml %}
- 
-xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
- 
-{% endhighlight %}
-{% highlight c# %}
- 
-using Syncfusion.Maui.Core;
- 
+
+{% highlight csharp tabtitle="MauiProgram.cs" hl_lines="2 13" %}
+
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace DockLayoutGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            return builder.Build();
+        }
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Create a DockLayout with Dock Position for Child Views
+## Step 4: Initialize the DockLayout Control
 
-Initialize the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control and arrange the child views using [Dock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_DockProperty) property. This property allows to dock elements to specific edges- `Top`, `Bottom`, `Left`, `Right`, or set to `None` to remain non-docked and fill the remaining space.
+1. To initialize the control, import the `Syncfusion.Maui.Core` namespace.
+2. Initialize an [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) instance.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .    
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Core;
+    assembly=Syncfusion.Maui.Core">
+   
+     <sf:SfDockLayout/>
+
+</ContentPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+namespace DockLayoutGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();  
+            SfDockLayout dockLayout = new SfDockLayout();
+            Content = dockLayout;       
+        }
+    }   
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Step 5: Set Dock Position for Child Views
+Inside the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control, child views can be arranged using the [Dock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_DockProperty) attached property. This property allows to dock elements to specific edges— `Top`, `Bottom`, `Left`, `Right`, or set to `None` to remain non-docked and fill the remaining space.
 
 {% tabs %}
 
 {% highlight xaml %}
-    <sf:SfDockLayout >
-        <Label Text="Left" WidthRequest="80" sf:SfDockLayout.Dock="Left" Background="#E57373" />
-        <Label Text="Right" WidthRequest="80" sf:SfDockLayout.Dock="Right" Background="#BA68C8" />
-        <Label Text="Top" HeightRequest="80" sf:SfDockLayout.Dock="Top" Background="#F06292" />
-        <Label Text="Bottom" HeightRequest="80"  sf:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
-        <Label Text="None" BackgroundColor="#64B5F6" />
-    </sf:SfDockLayout>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             x:Class="DockLayoutGettingStarted.MainPage">
+
+   <ContentPage.Content>
+        <sf:SfDockLayout >
+            <Label Text="Left" WidthRequest="80" sf:SfDockLayout.Dock="Left" Background="#E57373" />
+            <Label Text="Right" WidthRequest="80" sf:SfDockLayout.Dock="Right" Background="#BA68C8" />
+            <Label Text="Top" HeightRequest="80" sf:SfDockLayout.Dock="Top" Background="#F06292" />
+            <Label Text="Bottom" HeightRequest="80"  sf:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
+            <Label Text="None" BackgroundColor="#64B5F6" />
+        </sf:SfDockLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
+
 {% endhighlight %}
 
 {% highlight C# %}
-    
-    SfDockLayout dockLayout = new SfDockLayout();
-    dockLayout.Children.Add(new Label() { Text = "Left", WidthRequest = 80, Background = Color.FromArgb("#E57373") }, Dock.Left);
-    dockLayout.Children.Add(new Label() { Text = "Right", WidthRequest = 80, Background = Color.FromArgb("#BA68C8") }, Dock.Right);
-    dockLayout.Children.Add(new Label() { Text = "Top", HeightRequest = 80, Background = Color.FromArgb("#F06292") }, Dock.Top);
-    dockLayout.Children.Add(new Label() { Text = "Bottom", HeightRequest = 80, Background = Color.FromArgb("#9575CD") }, Dock.Bottom);
-    dockLayout.Children.Add(new Label() { Text = "None", Background = Color.FromArgb("#64B5F6") });
-    Content = dockLayout;   
+
+using Syncfusion.Maui.Core;
+
+namespace DockLayoutGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDockLayout dockLayout = new SfDockLayout();
+            dockLayout.Children.Add(new Label() { Text = "Left", WidthRequest = 80, Background = Color.FromArgb("#E57373") }, Dock.Left);
+            dockLayout.Children.Add(new Label() { Text = "Right", WidthRequest = 80, Background = Color.FromArgb("#BA68C8") }, Dock.Right);
+            dockLayout.Children.Add(new Label() { Text = "Top", HeightRequest = 80, Background = Color.FromArgb("#F06292") }, Dock.Top);
+            dockLayout.Children.Add(new Label() { Text = "Bottom", HeightRequest = 80, Background = Color.FromArgb("#9575CD") }, Dock.Bottom);
+            dockLayout.Children.Add(new Label() { Text = "None", Background = Color.FromArgb("#64B5F6") });
+            Content = dockLayout;   
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,4 +366,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Syncfusion .NET MAUI DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 
-You can download the DockLayout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI)
+You can access a complete getting started sample from this [link.](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI)

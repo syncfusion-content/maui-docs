@@ -19,22 +19,91 @@ To quickly get started with the .NET MAUI ListView, watch this video:
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
 3. Select the .NET framework version and click **Create.**
+ 
+## Step 2: Install the Syncfusion MAUI ListView NuGet Package
+ 
+ 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+ 2. Search for [Syncfusion.Maui.ListView](https://www.nuget.org/packages/Syncfusion.Maui.ListView) and install the latest version.
+ 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 3: Register the handler
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.ListView](https://www.nuget.org/packages/Syncfusion.Maui.ListView) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Maui.Hosting;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+{% endtabs %}
+
+ 
+## Step 4: Add a Basic ListView
+ 
+ 1. To initialize the control, import the `Syncfusion.Maui.ListView` namespace into your code.
+ 2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html).
+ 
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
+
+    <syncfusion:SfListView />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.ListView;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfListView listView = new SfListView();
+        this.Content = listView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -47,20 +116,89 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a .NET MAUI project
+## Step 1: Create a new .NET MAUI project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion MAUI ListView NuGet Package
+ 
+ 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+ 2. Search for [Syncfusion.Maui.ListView](https://www.nuget.org/packages/Syncfusion.Maui.ListView) and install the latest version.
+ 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.ListView](https://www.nuget.org/packages/Syncfusion.Maui.ListView) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Maui.Hosting;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+{% endtabs %}
+
+ 
+## Step 4: Add a Basic ListView
+ 
+ 1. To initialize the control, import the `Syncfusion.Maui.ListView` namespace into your code.
+ 2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html).
+ 
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
+
+    <syncfusion:SfListView />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.ListView;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfListView listView = new SfListView();
+        this.Content = listView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
+
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -71,36 +209,89 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI ListView NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.ListView](https://www.nuget.org/packages/Syncfusion.Maui.ListView) and install the latest version.
+2. Search for [Syncfusion.Maui.ListView](https://www.nuget.org/packages/Syncfusion.Maui.ListView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Maui.Hosting;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+{% endtabs %}
+
+ 
+## Step 4: Add a Basic ListView
+ 
+ 1. To initialize the control, import the `Syncfusion.Maui.ListView` namespace into your code.
+ 2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html).
+ 
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
+
+    <syncfusion:SfListView />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.ListView;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfListView listView = new SfListView();
+        this.Content = listView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion handler
-
-Make sure to add the namespace.
-
-{% highlight csharp %}
-using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
-
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
-
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Define the model and view model
+## Step 5: Define the view model
 
 ### Data Model
 
@@ -188,68 +379,95 @@ public class BookInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Import the ListView namespace
- 
-Add the following namespace in your XAML or C#.
- 
+## Step 6: Binding data to the listview
+
+Create a `ViewModel` instance and set it as the ListView's `BindingContext`. This enables property binding from `ViewModel` class.
+
+To populate the ListView, bind the item collection from its BindingContext to [SfListView.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property.
+
+The following code example binds the previously created collection to the `SfListView.ItemsSource` property:
+
 {% tabs %}
-{% highlight xaml %}
- 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
- 
+{% highlight xaml hl_lines="10" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
+             x:Class="GettingStarted.MainPage">
+  <ContentPage.BindingContext>
+    <local:BookInfoRepository />
+  </ContentPage.BindingContext>
+   <syncfusion:SfListView x:Name="listView" 
+                   ItemsSource="{Binding BookInfo}" />
+</ContentPage>
 {% endhighlight %}
-{% highlight c# %}
- 
-using Syncfusion.Maui.ListView;
- 
+{% highlight c# hl_lines="2" %}
+BookInfoRepository viewModel = new BookInfoRepository ();
+listView.ItemsSource = viewModel.BookInfo; 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Add a ListView with an item template
-
-Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) and use the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to bind and display a collection of data. By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
+## Step 7: Defining an item template
+ 
+ By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
-<syncfusion:SfListView x:Name="listView" 
-                ItemsSource="{Binding BookInfo}"
-                ItemSize="100">
-    <syncfusion:SfListView.ItemTemplate>
-        <DataTemplate>
-        <Grid Padding="10">
-            <Grid.RowDefinitions>
-            <RowDefinition Height="0.4*" />
-            <RowDefinition Height="0.6*" />
-            </Grid.RowDefinitions>
-            <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
-            <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
-        </Grid>
-        </DataTemplate>
-    </syncfusion:SfListView.ItemTemplate>
-</syncfusion:SfListView>
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
+    <syncfusion:SfListView x:Name="listView" 
+                    ItemsSource="{Binding BookInfo}"
+                    ItemSize="100">
+        <syncfusion:SfListView.ItemTemplate>
+            <DataTemplate>
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                <RowDefinition Height="0.4*" />
+                <RowDefinition Height="0.6*" />
+                </Grid.RowDefinitions>
+                <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
+                <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
+            </Grid>
+            </DataTemplate>
+        </syncfusion:SfListView.ItemTemplate>
+    </syncfusion:SfListView>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# hl_lines="14" %}
-BookInfoRepository viewModel = new BookInfoRepository ();
-SfListView listView = new SfListView();
-listView.ItemSize = 100;
-listView.ItemsSource = viewModel.BookInfo;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ListView;
+using System;
 
-listView.ItemTemplate = new DataTemplate(() => {
-var grid = new Grid();
-grid.RowDefinitions.Add(new RowDefinition());
-grid.RowDefinitions.Add(new RowDefinition());
-var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
-bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
-var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
-bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
-grid.Children.Add(bookName);
-grid.Children.Add(bookDescription);
-grid.SetRow(bookName, 0);
-grid.SetRow(bookDescription, 1);
-return grid;
-});
+namespace GettingStarted
+{
+    public class MainPage : ContentPage
+    {       
+        public MainPage()
+        {
+		    InitializeComponent();
+            BookInfoRepository viewModel = new BookInfoRepository ();
+			SfListView listView = new SfListView();
+            listView.ItemSize = 100;
+            listView.ItemsSource = viewModel.BookInfo;
+            listView.ItemTemplate = new DataTemplate(() => {
+                var grid = new Grid();
+                grid.RowDefinitions.Add(new RowDefinition());
+                grid.RowDefinitions.Add(new RowDefinition());
+                var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
+                bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
+                var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
+                bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
 
-this.Content = listView;
+                grid.Children.Add(bookName);
+                grid.Children.Add(bookDescription);
+                grid.SetRow(bookName, 0);
+                grid.SetRow(bookDescription, 1);
+
+                return grid;
+            });
+			this.Content = listView;
+        }
+    }
+} 
 {% endhighlight %}
 {% endtabs %}
 
@@ -257,6 +475,6 @@ The following screenshot illustrates the result of the above code.
 
 ![Syncfusion .NET MAUI ListView with item template](Images/getting-started/net-maui-listview-with-item-template.jpg)
 
-You can download the ListView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui)
+You can also download the entire source code of this demo [here](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui).
 
 N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ListView example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ListView) that shows you how to render the ListView in .NET MAUI.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Funnel Chart control | Syncfusion
+title: Appearance in .NET MAUI Funnel Chart control  Syncfusion
 description: Learn here all about appearance customization in .NET MAUI Chart (SfFunnelChart), its elements and more.
 platform: maui
 control: SfFunnelChart
@@ -160,32 +160,3 @@ public class ViewModel
 {% endtabs %}
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_funnel_chart.png)
-
-## Point Color Path
-
-The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfFunnelChart PointColorPath="PointColor"></chart:SfFunnelChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfFunnelChart chart = new SfFunnelChart()
-{
-	PointColorPath = PointColor;
-}
-. . .
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![PointColorPath in MAUI Chart](Appearance_images/MAUI_funnel_chart_pointcolorpath.png)
-
-N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.

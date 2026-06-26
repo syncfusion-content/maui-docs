@@ -20,6 +20,7 @@ To quickly get started with the .NET MAUI Radio Button, watch this video.
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
@@ -36,6 +37,72 @@ Before proceeding, ensure the following are set up:
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace RadioButtonGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %}
+
+## Step 4: Add a basic Radio Button
+
+1. To initialize the control, import the Buttons namespace into your code.
+2. Initialize [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    using Syncfusion.Maui.Buttons;
+    namespace RadioButtonGettingStarted
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfRadioButton radioButton = new SfRadioButton();
+                this.Content=radioButton
+            }
+        }   
+    }
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -62,7 +129,74 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.Buttons` to install the Syncfusion<sup>®</sup> .NET MAUI Buttons package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls in .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace RadioButtonGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %}
+
+## Step 4: Add a basic Radio Button
+
+1. To initialize the control, import the Buttons namespace into your code.
+2. Initialize [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    using Syncfusion.Maui.Buttons;
+    namespace RadioButtonGettingStarted
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfRadioButton radioButton = new SfRadioButton();
+                this.Content=radioButton
+            }
+        }   
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 {% endtabcontent %}
+
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -71,7 +205,7 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -85,41 +219,76 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the terminal in Rider and manually run: `dotnet restore`.
 
-{% endtabcontent %}
-{% endtabcontents %}
+## Step 3: Register the handler
 
-## Step 3: Register Syncfusion handler
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls in .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-Make sure to add the namespace.
-
-{% highlight csharp %}
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %} 
 
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+namespace RadioButtonGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-{% highlight csharp %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-
-## Step 4: Import Radio Button namespace
-
-Add the following namespace in your XAML or C#.
-
-{% tabs %}
-{% highlight xaml %}
-
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+            return builder.Build();
+        }      
+    }
+}   
 
 {% endhighlight %}
+
+## Step 4: Add a basic Radio Button
+
+1. To initialize the control, import the Buttons namespace into your code.
+2. Initialize [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
+</ContentPage>
+
+{% endhighlight %}
+
 {% highlight c# %}
 
-using Syncfusion.Maui.Buttons;
+    using Syncfusion.Maui.Buttons;
+    namespace RadioButtonGettingStarted
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfRadioButton radioButton = new SfRadioButton();
+                this.Content=radioButton
+            }
+        }   
+    }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the Radio Button component
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Step 5: Change the Radio Button state
 
 The two different visual states of the [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) are:
 
@@ -133,23 +302,23 @@ You can group multiple Radio Buttons together by using Radio Group. Only one but
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfRadioGroup x:Name="radioGroup">
-    <buttons:SfRadioButton x:Name="male" Text="Male"/>
-    <buttons:SfRadioButton x:Name="female" Text="Female" IsChecked="True"/>
-</buttons:SfRadioGroup>
+    <buttons:SfRadioGroup x:Name="radioGroup">
+         <buttons:SfRadioButton x:Name="male" Text="Male"/>
+         <buttons:SfRadioButton x:Name="female" Text="Female" IsChecked="True"/>
+    </buttons:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfRadioGroup radioGroup = new SfRadioGroup();
-SfRadioButton male = new SfRadioButton();
-male.Text = "Male";
-SfRadioButton female = new SfRadioButton();
-female.IsChecked = true;
-female.Text = "Female";
-radioGroup.Children.Add(male);
-radioGroup.Children.Add(female);
-this.Content = radioGroup;
+    SfRadioGroup radioGroup = new SfRadioGroup();
+    SfRadioButton male = new SfRadioButton();
+    male.Text = "Male";
+    SfRadioButton female = new SfRadioButton();
+    female.IsChecked = true;
+    female.Text = "Female";
+    radioGroup.Children.Add(male);
+    radioGroup.Children.Add(female);
+    this.Content = radioGroup;
 
 {% endhighlight %}
 {% endtabs %}
@@ -158,4 +327,6 @@ N> [SfRadioButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 
 ![.NET MAUI Radio Button](Images/Getting-Started/statechange.png)
 
-You can download the Radio Button Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-RadioButton). You can also explore our [.NET MAUI Radio Button example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons/SampleBrowser.Maui.Buttons/Samples/RadioButton) that shows you how to render the .NET MAUI Radio Button.
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-RadioButton)
+
+N> You can also explore our [.NET MAUI Radio Button example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons/SampleBrowser.Maui.Buttons/Samples/RadioButton) that shows you how to render the .NET MAUI Radio Button.

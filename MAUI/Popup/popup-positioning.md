@@ -302,6 +302,26 @@ public class ViewModel : INotifyPropertyChanged
 
 ![Syncfusion .NET MAUI Popup Relative positioning in MVVM](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
 
+## Close the popup
+
+To close the popup programmatically, you can call either the [Dismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Dismiss) method or set the `IsOpen` property to false.
+
+Refer to the following code example for dismissing popup.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 7" %}
+    
+private void ClickToDismissPopup_Clicked(object sender, EventArgs e)
+{
+    // Dismiss SfPopup from the view.
+    sfPopup.Dismiss();
+
+    // Or
+    sfPopup.IsOpen = false;
+}
+{% endhighlight %} 
+{% endtabs %}
+
 ## Close the popup automatically after timeout
 
 To close a popup automatically after a specified delay, you can use the [AutoCloseDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AutoCloseDuration) property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.

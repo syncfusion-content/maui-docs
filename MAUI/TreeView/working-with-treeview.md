@@ -201,4 +201,3 @@ You can refresh the view by using the [RefreshView](https://help.syncfusion.com/
 treeView.RefreshView();
 {% endhighlight %}
 {% endtabs %}
-
