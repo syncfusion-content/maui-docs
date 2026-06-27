@@ -124,12 +124,10 @@ public class ViewModel : INotifyPropertyChanged
         {
             // Adding a text item as a response from the AI service
             Text = "Sure! MAUI stands for .NET Multi-platform App UI. It’s a framework that allows you to create cross-platform applications using a single codebase.This powerful framework is an evolution of Xamarin.Forms and is designed to streamline the development process by allowing you to write code once and deploy it across multiple platforms.",
-,
         };
 
         // Add the response item to the collection
         this.AssistItems.Add(responseItem);
-
     }
 }
     
@@ -175,7 +173,6 @@ public class ViewModel : INotifyPropertyChanged
         // Add the response item to the collection
         this.AssistItems.Add(responseItem);
     }
-    ...
 } 
 
 
@@ -221,8 +218,6 @@ public class ViewModel : INotifyPropertyChanged
         // Add the response item to the collection
         this.AssistItems.Add(responseItem);
     }
-
-    ...
 }
 
 {% endhighlight %}
@@ -269,11 +264,9 @@ private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
 public class ViewModel : INotifyPropertyChanged
 {
     public Command<object> tappedCommand;
-
     public ViewModel()
     {
         TappedCommand = new Command<object>(ImageTapped);
->>>>>>> a5a181d8a14ba62f7c87dbf4c658245d2c16824f
     }
     
     public Command<object> TappedCommand
@@ -286,8 +279,7 @@ public class ViewModel : INotifyPropertyChanged
     {
         var ImageTappedArgs = obj as ImageTappedEventArgs;
         DisplayAlert("Image", " Tapped on Image item :" + ImageTappedArgs.ImageItem.Source, "Ok");                  
-    }    
-    
+    }       
 }
 
 {% endhighlight %}
@@ -300,9 +292,11 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="57" %}
 
+
 public class ViewModel : INotifyPropertyChanged
 {
     ...
+
     public ViewModel()
     {
         this.assistItems = new ObservableCollection<IAssistItem>();
@@ -361,7 +355,6 @@ public class ViewModel : INotifyPropertyChanged
             Cards = CardsCollection,
         });
     }
-    ...  
 }
 
 {% endhighlight %}
@@ -415,7 +408,6 @@ public class ViewModel : INotifyPropertyChanged
     public ViewModel()
     {
         TappedCommand = new Command<object>(CardTapped);
->>>>>>> a5a181d8a14ba62f7c87dbf4c658245d2c16824f
     }
     
     public Command<object> TappedCommand

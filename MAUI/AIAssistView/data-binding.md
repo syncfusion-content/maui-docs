@@ -239,7 +239,6 @@ public class ViewModel : INotifyPropertyChanged
         }
     }
     #endregion
-    ...
 
     #region Item Generation
     private async void GenerateAssistItems()
