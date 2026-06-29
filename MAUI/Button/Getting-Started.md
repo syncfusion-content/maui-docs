@@ -21,92 +21,22 @@ To quickly get started with the .NET MAUI Button, watch this video.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a New MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the Handler 
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ButtonSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}   
-
-{% endhighlight %} 
-
-## Step 4: Add a Basic Button control
-
-Step 1: Add the namespace as shown in the following code sample.
-
-{% tabs %}
-{% highlight xaml %}
-
-	xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-
-{% endhighlight %}
-{% highlight c# %}
-
-	using Syncfusion.Maui.Buttons;
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 2: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<buttons:SfButton x:Name="button" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfButton button = new SfButton();
-
-{% endhighlight %}
-
-{% endtabs %}
-
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -119,90 +49,19 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a New MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Buttons` to install the Syncfusion<sup>®</sup> .NET MAUI Buttons package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
-
-## Step 3: Register the Handler 
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ButtonSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}   
-
-{% endhighlight %} 
-
-## Step 4: Add a Basic Button control
-
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample.
-
-{% tabs %}
-{% highlight xaml %}
-
-	xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-
-{% endhighlight %}
-{% highlight c# %}
-
-	using Syncfusion.Maui.Buttons;
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 3: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<buttons:SfButton x:Name="button" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfButton button = new SfButton();
-
-{% endhighlight %}
-
-{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
@@ -221,106 +80,63 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the Handler 
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ButtonSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}   
-
-{% endhighlight %} 
-
-## Step 4: Add a Basic Button control
-
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample.
-
-{% tabs %}
-{% highlight xaml %}
-
-	xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-
-{% endhighlight %}
-{% highlight c# %}
-
-	using Syncfusion.Maui.Buttons;
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 3: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<buttons:SfButton x:Name="button" />
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfButton button = new SfButton();
-
-{% endhighlight %}
-
-{% endtabs %}
-
 {% endtabcontent %}
-
 {% endtabcontents %}
 
-## Step 5: Define the Button
+## Step 3: Register Syncfusion handler
+ 
+Make sure to add the namespace.
+ 
+{% tabs %}
+{% highlight c# %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %}
+{% endtabs %}
+ 
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+ 
+{% tabs %}
+{% highlight c# %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Import the Button namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Buttons;
+{% endhighlight %}
+{% endtabs %}
+
+## Step 5: Add the Button component
+
+Create an instance for the Button control.
 
 {% tabs %}
 
 {% highlight xaml %}
-
 <buttons:SfButton x:Name="button"
                   Text="Button"
                   TextColor="White">
 </buttons:SfButton>
-	
 {% endhighlight %}
 
 {% highlight C# %}
-
 SfButton button = new SfButton();
 button.Text = "Button";
 button.TextColor = Colors.White;
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -329,6 +145,6 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Button](images/customization-images/Button_textcolor.png)
 
-Find the complete getting started sample of the .NET MAUI Button from this [link.](https://github.com/SyncfusionExamples/maui-button-samples)
+You can download the Button Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-button-samples)
 
 N> You can refer to our [.NET MAUI Button](https://www.syncfusion.com/maui-controls/maui-button) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Button Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons) that shows you how to render the Button in .NET MAUI.
