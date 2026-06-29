@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in .NET MAUI ListView control | Syncfusion®
-description: Learn here all about Filtering support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
+title: Filtering in .NET MAUI ListView control | SyncfusionÂ®
+description: Learn here all about Filtering support in SyncfusionÂ® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -206,7 +206,7 @@ The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ht
 </syncfusion:SfListView>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"  h1lines="1 3 5"%}
+{% highlight c# tabtitle="MainPage.xaml.cs"  hl_lines="1 3 5" %}
 listView.FilteringUITitle = "Filtering";
 
 var command = listView.ShowFilteringUICommand;
