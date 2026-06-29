@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right To Left in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about Right To Left support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
+title: Right To Left in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here about Right To Left support in Syncfusion® .NET MAUI TreeView (SfTreeView) Control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug

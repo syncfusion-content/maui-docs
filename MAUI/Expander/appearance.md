@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Expander control | Syncfusion
-description: Learn here all about Appearance support in Syncfusion .NET MAUI Expander (SfExpander) control and more.
+title: Appearance in .NET MAUI Expander control | Syncfusion®
+description: Learn here all about Appearance support in Syncfusion® .NET MAUI Expander (SfExpander) control and more.
 platform: MAUI
 control: SfExpander
 documentation: ug
@@ -352,7 +352,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt=".NET MAUI Expander with HeaderIconPosition Start" src="Images/appearance/maui-expander-with-headericonposition.png" width="404" />
+<img alt="Syncfusion .NET MAUI Expander with HeaderIconPosition Start" src="Images/appearance/maui-expander-with-headericonposition.png" width="404" />
 
 ## Header background color customization
 
@@ -693,7 +693,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt=".NET MAUI Expander Header Background color" src="Images/appearance/maui-expander-with-header-background.png" width="404" />
+<img alt="Syncfusion .NET MAUI Expander Header Background color" src="Images/appearance/maui-expander-with-header-background.png" width="404" />
 
 ## Icon color customization
 
@@ -1036,7 +1036,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt=".NET MAUI Expander Header Icon Color customization" src="Images/appearance/maui-expander-header-iconcolor.png" width="404" /> 
+<img alt="Syncfusion .NET MAUI Expander Header Icon Color customization" src="Images/appearance/maui-expander-header-iconcolor.png" width="404" /> 
 
 ## Visual State Manager
 
@@ -1217,7 +1217,7 @@ The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Expanded and collapsed visual states in .NET MAUI Expander" src="Images/appearance/maui-expander-with-vsm.png" width="404" /> 
+<img alt="Syncfusion .NET MAUI Expander Expanded and collapsed visual states" src="Images/appearance/maui-expander-with-vsm.png" width="404" /> 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-appearance-using-visual-state-manager-in-.net-maui-expander).
 

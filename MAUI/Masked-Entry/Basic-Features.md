@@ -230,6 +230,62 @@ maskedEntry.TextColor =  Colors.Green;
 
 ![TextColor](MaskedEntry_Images/MaskedEntry_TextColor.png)
 
+## Setting the prompt character
+
+Every single mask displays a prompt character ('_') in the absence of your input. Customize this prompt character by using the [PromptChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PromptChar) property.
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfMaskedEntry WidthRequest="200"
+                          ClearButtonVisibility="WhileEditing"
+                          MaskType="Simple"
+                          Mask="00/00/0000"
+                          PromptChar="#" />
+                          
+{% endhighlight %}
+{% highlight C# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "00/00/0000";
+maskedEntry.PromptChar = '#';
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Masked Entry prompt character.](maskedentry_images/net-maui-masked-entry-prompt-char.png)
+
+## Setting the value
+
+The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Value) property sets the input value for the MaskedEntry control.
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfMaskedEntry WidthRequest="200"
+                          ClearButtonVisibility="WhileEditing"
+                          MaskType="Simple"
+                          Mask="00/00/0000"
+                          Value="12/02/2022" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "00/00/0000";
+maskedEntry.Value = "12/02/2022";
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Masked Entry value.](maskedentry_images/net-maui-masked-entry-value.png)
+
 ## Stroke
 
 The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Stroke) property.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and Footer in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Header and Footer support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Header and Footer in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Header and Footer support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -87,7 +87,7 @@ listView.IsStickyFooter = true;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView linear layout](Images/header-and-footer/maui-listview-sticky-header-and-footer.jpg)
+![Syncfusion .NET MAUI ListView linear layout](Images/header-and-footer/maui-listview-sticky-header-and-footer.jpg)
 
 ## Sticky footer position
 
@@ -110,7 +110,7 @@ listView.StickyFooterPosition = FooterPosition.Body;
 
 N> This API is applicable when `IsStickyFooter` is enabled.
 
-![MAUI ListView sticky footer position](Images/header-and-footer/maui-listview-sticky-footer-position.jpg)
+![Syncfusion .NET MAUI ListView sticky footer position](Images/header-and-footer/maui-listview-sticky-footer-position.jpg)
 
 ## How to
 
@@ -333,4 +333,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView linear layout](Images/header-and-footer/maui-listview-tabview-appearence-using-listview-header.jpg)
+![Syncfusion .NET MAUI ListView linear layout](Images/header-and-footer/maui-listview-tabview-appearence-using-listview-header.jpg)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom controls in .NET MAUI Parallax View Control | Syncfusion
+title: Custom controls in .NET MAUI Parallax View Control | Syncfusion®
 description: Learn about scrolling support for custom controls in Syncfusion<sup>®</sup> .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView

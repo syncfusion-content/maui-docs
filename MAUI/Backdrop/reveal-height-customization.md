@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reveal height customization of Syncfusion<sup>&reg;</sup> Backdrop Page | Syncfusion<sup>&reg;</sup>
+title: Reveal height customization of Backdrop Page | Syncfusion®
 description: Learn here all about how to configure and customize the reveal height in the Syncfusion<sup>&reg;</sup> backdrop page control.
 platform: MAUI
 control: SfBackdropPage
@@ -16,6 +16,14 @@ The following options are provided to move the front layer:
 [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.RevealOption.html#Syncfusion_Maui_Backdrop_RevealOption_Fill) – Moves the front layer downwards to the entire height of the page, excluding the [`RevealedHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html#Syncfusion_Maui_Backdrop_BackdropFrontLayer_RevealedHeight).
 
 [`Auto`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.RevealOption.html#Syncfusion_Maui_Backdrop_RevealOption_Auto) – Moves the front layer downwards to the height of the back layer content.
+
+## Reveal and conceal the back layer
+
+The following options are provided in the backdrop to reveal and conceal the back layer.
+
+* **Programmatically** - Reveals the back layer by setting the [`IsBackLayerRevealed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_IsBackLayerRevealed) property to true. By default, it is set to false.
+* **Touch interaction** - Reveals the back layer by clicking the toolbar icon at the top-right corner of the navigation bar header. The Hamburger (or menu ) icon reveals, and the Close icon conceals the back layer. When adding the backdrop as a child of the Fly out Page, the Hamburger and Close icons will be replaced by expand (or down arrow) and collapse (or up arrow) icons respectively.
+* **Swipe or fling action** - Reveals the back layer by swipe or fling action on the front layer to the required direction. Swipe downwards to reveal, and swipe upwards to conceal the back layer.  The swipe or fling action will be handled only on the top of the front layer to the [`RevealedHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html#Syncfusion_Maui_Backdrop_BackdropFrontLayer_RevealedHeight).
 
 {% tabs %} 
 

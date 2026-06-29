@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Parallax View control | Syncfusion
-description: This section explains the features available in the .NET MAUI Parallax View control compared to Xamarin Parallax View.
+title: Migration from Xamarin to .NET MAUI Parallax View control | Syncfusion®
+description: This section explains the features available in the Syncfusion® .NET MAUI Parallax View control compared to Xamarin Parallax View.
 platform: MAUI
 control: SfParallaxView
 documentation: ug
@@ -46,10 +46,10 @@ To initialize the control, import the parallax view namespace and initialize [Sf
 {% highlight xaml %}
 
 <ContentPage
-    . . .
-    xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.XForms.ParallaxView">
+. . .
+xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.XForms.ParallaxView">
 
-    <parallax:SfParallaxView/>
+<parallax:SfParallaxView/>
 
 </ContentPage>
 
@@ -78,10 +78,10 @@ this.Content = parallax;
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
+. . .    
+xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
 
-    <parallax:SfParallaxView/>
+<parallax:SfParallaxView/>
 
 </ContentPage>
  
@@ -235,7 +235,3 @@ The following table illustrates the API migration for the parallax view:
 <td>ScrollContentSize</td>
 </tr>
 </table>
-
-## Support and feedback
-
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you don't find what you need, please request it from our [feedback portal](https://www.syncfusion.com/feedback/maui).

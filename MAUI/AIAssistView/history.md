@@ -1,7 +1,7 @@
 ---
 layout: post
-title: History in .NET MAUI AI AssistView Control | Syncfusion
-description: Learn here all about History support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
+title: History in .NET MAUI AI AssistView Control | Syncfusion®
+description: Learn here all about History support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -152,7 +152,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![History in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-history.gif)
+![Syncfusion .NET MAUI AI AssistView History](Images/history/maui-aiassistview-conversation-history.gif)
 
 ### Conversation header text
 
@@ -179,7 +179,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Conversation Header Text in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-header-text.png)
+![Syncfusion .NET MAUI AI AssistView Conversation Header Text](Images/history/maui-aiassistview-conversation-header-text.png)
 
 ### Conversation empty view
 
@@ -215,7 +215,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Conversation Empty View in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
+![Syncfusion .NET MAUI AI AssistView Conversation Empty View](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
 
 ### Filter button
 

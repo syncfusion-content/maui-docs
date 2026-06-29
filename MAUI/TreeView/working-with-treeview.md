@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with TreeView in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about Working with TreeView support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Working with TreeView in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here about Working with TreeView support in Syncfusion® .NET MAUI TreeView (SfTreeView) control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -88,16 +88,16 @@ The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeVi
 {% tabs %}
 {% highlight xaml %}
       
-    <syncfusion:SfTreeView x:Name = "treeView" ItemRightTapped = "TreeView_ItemRightTapped" />
+<syncfusion:SfTreeView x:Name = "treeView" ItemRightTapped = "TreeView_ItemRightTapped" />
 {% endhighlight %}
 {% highlight c# %}
 
-    treeView.ItemRightTapped += TreeView_ItemRightTapped;
+treeView.ItemRightTapped += TreeView_ItemRightTapped;
 
-    private void TreeView_ItemRightTapped(object sender, ItemRightTappedEventArgs e)
-    {
-        DisplayAlert("Item RightTapped", "TreeView item right tapped", "Close");
-    }
+private void TreeView_ItemRightTapped(object sender, ItemRightTappedEventArgs e)
+{
+    DisplayAlert("Item RightTapped", "TreeView item right tapped", "Close");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -182,3 +182,22 @@ node.SetDirty();
 {% endhighlight %}
 {% endtabs %}
 
+## Reset tree view items
+
+You can reset the visible treeview items by using the [ResetTreeViewItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ResetTreeViewItems_System_Object_) method. If the parameter is null, all the visible treeview items will reset. If you are passing the data object as a parameter, a particular treeview item will reset.
+ 
+{% tabs %}
+{% highlight c# %}
+treeView.ResetTreeViewItems();
+{% endhighlight %}
+{% endtabs %}
+
+## Refresh view
+
+You can refresh the view by using the [RefreshView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_RefreshView_System_Boolean_) method. It will be used to refresh the items in the treeview at runtime while updating the view.
+
+{% tabs %}
+{% highlight c# %}
+treeView.RefreshView();
+{% endhighlight %}
+{% endtabs %}

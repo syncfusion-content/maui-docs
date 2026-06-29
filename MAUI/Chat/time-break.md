@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Time break in .NET MAUI Chat Control | Syncfusion
-description: Learn here all about Time break support in Syncfusion .NET MAUI Chat (SfChat) control, its elements and more.
+title: Time break in .NET MAUI Chat Control | Syncfusion®
+description: Learn here all about Time break support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more.
 platform: MAUI
 control: Chat
 documentation: ug
@@ -12,10 +12,10 @@ The `Chat` control provides a simple way to organize messages by their date and 
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
-  <sfChat:SfChat x:Name="sfChat"
-                 ShowTimeBreak="True"
-                 Messages="{Binding Messages}"
-                 CurrentUser="{Binding CurrentUser}" />
+<sfChat:SfChat x:Name="sfChat"
+                ShowTimeBreak="True"
+                Messages="{Binding Messages}"
+                CurrentUser="{Binding CurrentUser}" />
     
 {% endhighlight %}
 
@@ -24,7 +24,7 @@ The `Chat` control provides a simple way to organize messages by their date and 
 {% endhighlight %}
 {% endtabs %}
 
-![Time break support in .NET MAUI Chat](images/time-break/maui-chat-time-break.png)
+![Syncfusion .NET MAUI Chat Time break support](images/time-break/maui-chat-time-break.png)
 
 ## Stick time break view
 
@@ -32,9 +32,9 @@ To stick the time break view, enable the [StickyTimeBreak](https://help.syncfusi
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
-  <sfChat:SfChat x:Name="sfChat"
-                 ShowTimeBreak="True"
-                 StickyTimeBreak="True" />
+<sfChat:SfChat x:Name="sfChat"
+                ShowTimeBreak="True"
+                StickyTimeBreak="True" />
    
 {% endhighlight %}
 
@@ -78,25 +78,25 @@ The `Chat` control allows to load custom template for time break view using the 
 {% endhighlight %}
 
 {% highlight c# hl_lines="15" %}
-    namespace GettingStarted
-    {
-      public partial class MainPage : ContentPage
+namespace GettingStarted
+{
+  public partial class MainPage : ContentPage
+  {
+      SfChat sfChat;
+      GettingStartedViewModel viewModel;
+      public MainPage()
       {
-          SfChat sfChat;
-          GettingStartedViewModel viewModel;
-          public MainPage()
-          {
-              InitializeComponent();
-              sfChat = new SfChat();
-              viewModel = new GettingStartedViewModel();
-              this.sfChat.Messages = viewModel.Messages;
-              this.sfChat.CurrentUser = viewModel.CurrentUser;
-              this.sfChat.ShowTimeBreak="True";
-              this.sfChat.TimeBreakTemplate = new TimeBreakTemplateSelector();
-              this.Content = sfChat;
-           }
-        }
-     }
+          InitializeComponent();
+          sfChat = new SfChat();
+          viewModel = new GettingStartedViewModel();
+          this.sfChat.Messages = viewModel.Messages;
+          this.sfChat.CurrentUser = viewModel.CurrentUser;
+          this.sfChat.ShowTimeBreak="True";
+          this.sfChat.TimeBreakTemplate = new TimeBreakTemplateSelector();
+          this.Content = sfChat;
+      }
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,95 +104,95 @@ The `Chat` control allows to load custom template for time break view using the 
 {% tabs %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
 
-    internal class TimeBreakTemplateSelector : DataTemplateSelector
+  internal class TimeBreakTemplateSelector : DataTemplateSelector
+  {
+    /// <summary>
+    /// Returns the template based on the message's date time.
+    /// </summary>
+    /// <param name="item">The <see cref="GroupResult"/> of the grouped row.</param>
+    /// <param name="container">The ChatListView as <see cref="BindableObject"/>.</param>
+    /// <returns>The <see cref="Border"/> control which contains templates for the grouped row.</returns>
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-      /// <summary>
-      /// Returns the template based on the message's date time.
-      /// </summary>
-      /// <param name="item">The <see cref="GroupResult"/> of the grouped row.</param>
-      /// <param name="container">The ChatListView as <see cref="BindableObject"/>.</param>
-      /// <returns>The <see cref="Border"/> control which contains templates for the grouped row.</returns>
+      string dateString = (item as GroupResult).Key.ToString();
+      DateTime groupedDate = DateTime.ParseExact(dateString, "d/M/yyyy", CultureInfo.InvariantCulture);
+      string formatDate = string.Format("{0:dd MMMM yyyy}", groupedDate);
 
-      protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+      Grid grid = new Grid();
+      grid.Padding = new Thickness(3, 4, 2, 0);
+
+      grid.RowDefinitions = new RowDefinitionCollection()
       {
-        string dateString = (item as GroupResult).Key.ToString();
-        DateTime groupedDate = DateTime.ParseExact(dateString, "d/M/yyyy", CultureInfo.InvariantCulture);
-        string formatDate = string.Format("{0:dd MMMM yyyy}", groupedDate);
-
-       Grid grid = new Grid();
-       grid.Padding = new Thickness(3, 4, 2, 0);
-
-       grid.RowDefinitions = new RowDefinitionCollection()
-       {
-          new RowDefinition(){Height = 20},
-       };
-
-      grid.ColumnDefinitions = new ColumnDefinitionCollection()
-      {
-        new ColumnDefinition(){ Width = GridLength.Star},
-        new ColumnDefinition(){ Width = GridLength.Auto},
-        new ColumnDefinition(){ Width = GridLength.Star},
+        new RowDefinition(){Height = 20},
       };
 
-     Border border = new Border();
-     border.VerticalOptions = LayoutOptions.Center;
-     border.HorizontalOptions = LayoutOptions.Center;
-     border.Stroke = Color.FromHex("#FDE490");
-   
-     Label label = new Label();
-     label.FontSize = 11;
-     label.VerticalOptions = LayoutOptions.Center;
-     label.HorizontalOptions = LayoutOptions.Center;
-     label.HorizontalTextAlignment = TextAlignment.Center;
-     label.TextColor = Color.FromHex("#98770E");
-     label.FontAttributes = FontAttributes.Bold;
-     label.BackgroundColor = Color.FromHex("#FDF4D6");
+    grid.ColumnDefinitions = new ColumnDefinitionCollection()
+    {
+      new ColumnDefinition(){ Width = GridLength.Star},
+      new ColumnDefinition(){ Width = GridLength.Auto},
+      new ColumnDefinition(){ Width = GridLength.Star},
+    };
 
-     border.Content = label;
+    Border border = new Border();
+    border.VerticalOptions = LayoutOptions.Center;
+    border.HorizontalOptions = LayoutOptions.Center;
+    border.Stroke = Color.FromHex("#FDE490");
+  
+    Label label = new Label();
+    label.FontSize = 11;
+    label.VerticalOptions = LayoutOptions.Center;
+    label.HorizontalOptions = LayoutOptions.Center;
+    label.HorizontalTextAlignment = TextAlignment.Center;
+    label.TextColor = Color.FromHex("#98770E");
+    label.FontAttributes = FontAttributes.Bold;
+    label.BackgroundColor = Color.FromHex("#FDF4D6");
 
-     grid.Children.Add(new StackLayout() { HeightRequest = 1, Background =  Colors.LightGray, VerticalOptions = LayoutOptions.Center, Margin= 5 });
-     var boxview = new StackLayout() { HeightRequest = 1, Background =   Colors.LightGray, VerticalOptions = LayoutOptions.Center, Margin = 5 };
-     grid.Children.Add(boxview);
-     Grid.SetColumn(boxview, 2);
+    border.Content = label;
 
-     if (groupedDate.Date == DateTime.Now.Date)
-     {
-        label.WidthRequest = 60;
-        label.Text = "TODAY";
+    grid.Children.Add(new StackLayout() { HeightRequest = 1, Background =  Colors.LightGray, VerticalOptions = LayoutOptions.Center, Margin= 5 });
+    var boxview = new StackLayout() { HeightRequest = 1, Background =   Colors.LightGray, VerticalOptions = LayoutOptions.Center, Margin = 5 };
+    grid.Children.Add(boxview);
+    Grid.SetColumn(boxview, 2);
+
+    if (groupedDate.Date == DateTime.Now.Date)
+    {
+      label.WidthRequest = 60;
+      label.Text = "TODAY";
+      grid.Children.Add(border);
+      Grid.SetColumn(border, 1);
+      return new DataTemplate(() =>
+      {
+          return grid;
+      });
+    }
+    else if (groupedDate.Date == new DateTime(DateTime.Now.Year,DateTime.Now.Month, DateTime.Now.Day - 1))
+    {
+        label.WidthRequest = 80;
+        label.Text = "Yesterday";
         grid.Children.Add(border);
         Grid.SetColumn(border, 1);
         return new DataTemplate(() =>
         {
-            return grid;
+          return grid;
         });
-     }
-     else if (groupedDate.Date == new DateTime(DateTime.Now.Year,DateTime.Now.Month, DateTime.Now.Day - 1))
+      }
+      else
       {
-         label.WidthRequest = 80;
-         label.Text = "Yesterday";
-         grid.Children.Add(border);
-         Grid.SetColumn(border, 1);
-         return new DataTemplate(() =>
-         {
-            return grid;
-         });
-       }
-       else
-       {
-         label.WidthRequest = 120;
-         label.Text = formatDate;
-         grid.Children.Add(border);
-         Grid.SetColumn(border, 1);
-         return new DataTemplate(() =>
-         {
-            return grid;
-         });
-        }
+        label.WidthRequest = 120;
+        label.Text = formatDate;
+        grid.Children.Add(border);
+        Grid.SetColumn(border, 1);
+        return new DataTemplate(() =>
+        {
+          return grid;
+        });
       }
     }
+  }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Time break template in .NET MAUI Chat](images/time-break/maui-chat-time-break-template.png)
+![Syncfusion .NET MAUI Chat Time break template](images/time-break/maui-chat-time-break-template.png)
       

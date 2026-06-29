@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AutoComplete Suggestions in .NET MAUI AI AssistView | Syncfusion
-description: Learn here all about AutoComplete Suggestions support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
+title: AutoComplete Suggestions in .NET MAUI AI AssistView | Syncfusion®
+description: Learn here all about AutoComplete Suggestions support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -67,7 +67,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Auto Complete Suggestions in .NET MAUI AI AssistView](images/maui-aiassistview-auto-complete-suggestion.gif)
+![Syncfusion .NET MAUI AI AssistView Auto Complete Suggestions](images/maui-aiassistview-auto-complete-suggestion.gif)
 
 ### Category
 

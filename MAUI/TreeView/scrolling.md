@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scrolling in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Scrolling support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
+title: Scrolling in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here all about Scrolling support in Syncfusion® .NET MAUI TreeView (SfTreeView) Control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug

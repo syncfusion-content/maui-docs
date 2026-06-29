@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Chart control  Syncfusion
+title: Appearance in .NET MAUI Polar Chart control | Syncfusion
 description: Learn here all about appearance customization in Syncfusion® .NET MAUI Chart (SfPolarChart), including its elements, and more.
 platform: maui
 control: SfPolarChart
@@ -175,36 +175,7 @@ public class ViewModel
 
 ![Gradient in MAUI Chart](Appearance_images/MAUI_polar_chart_gradient.png)
 
-## Point Color Path
-
-The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:PolarLineSeries PointColorPath="PointColor"></chart:PolarLineSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-PolarAreaSeries series = new PolarAreaSeries()
-{
-	PointColorPath="PointColor"
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![PointColorPath in MAUI Chart](Appearance_images/MAUI_polar_chart_pointcolorpath.png)
-
-N> The property is not applicable to the `PolarAreaSeries` type.
-
-N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
-
-## Plotting Area Customization
+## Plotting Area Customization:
 
 [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 
@@ -264,3 +235,34 @@ this.Content = chart;
 {% endtabs %}
 
 ![Watermark in .NET MAUI Charts](Appearance_images/polar_water_mark.png)
+
+
+## Add a title
+
+The title of the chart provides quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set the title for the chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    <chart:SfPolarChart.Title>
+        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
+    </chart:SfPolarChart.Title> 
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfPolarChart chart = new SfPolarChart();
+chart.Title = new Label()
+{
+    Text = "Plant Analysis",
+    HorizontalTextAlignment = TextAlignment.Center
+};
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  

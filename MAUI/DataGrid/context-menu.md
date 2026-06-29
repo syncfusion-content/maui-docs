@@ -950,6 +950,117 @@ public class OrderInfoViewModel
 {% endhighlight %}
 {% endtabs %}
 
+## Context Menu Separators
+
+The `SfDataGrid` allows users to add visual separators between context menu items to visually organize and group related menu items by setting the [EnableContextMenuSeparators]() property to `true`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       EnableContextMenuSeparators="True">
+    <syncfusion:SfDataGrid.RecordContextMenu>
+        <syncfusion:MenuItemCollection>
+            <syncfusion:MenuItem Text="Copy">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe7a0;"
+                           FontFamily="MauiMaterialAssets"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Paste">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe797;"
+                           FontFamily="MauiMaterialAssets"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Cut">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe710;"
+                           FontFamily="MauiMaterialAssets"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Delete">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe70f;"
+                           FontFamily="MauiMaterialAssets"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+        </syncfusion:MenuItemCollection>
+    </syncfusion:SfDataGrid.RecordContextMenu>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.EnableContextMenuSeparators = true;
+
+// Define the context menu for records
+var recordContextMenu = new Syncfusion.Maui.DataGrid.MenuItemCollection
+{
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Copy",
+        Icon = new Label
+        {
+            Text = "\ue7a0",
+            FontFamily = "MauiMaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Paste",
+        Icon = new Label
+        {
+            Text = "\ue797",
+            FontFamily = "MauiMaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Cut",
+        Icon = new Label
+        {
+            Text = "\ue710",
+            FontFamily = "MauiMaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Delete",
+        Icon = new Label
+        {
+            Text = "\ue70f",
+            FontFamily = "MauiMaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    }
+};
+
+dataGrid.RecordContextMenu = recordContextMenu;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img src="Images/context-menu/context-menu-separator.png" alt="" width="404"/>
+
+You can customize the stroke color and thickness of the context menu separator using the [ContextMenuSeparatorColor]() and [ContextMenuSeparatorStroke]() properties.
+
 ## Events
 
 The DataGrid exposes events to customize and react to the context menu life cycle.

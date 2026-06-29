@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about Selection support in Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more more.
+title: Selection in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here about Selection support in Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements and more more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -29,7 +29,7 @@ treeView.SelectionMode = TreeViewSelectionMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView with Selection](Images/selection/maui-treeView-multipleselection.png)
+![Syncfusion .NET MAUI TreeView with Selection](Images/selection/maui-treeView-multipleselection.png)
 
 ## Programmatic selection
 
@@ -89,7 +89,7 @@ TreeView.FullRowSelect = true;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView with FullRowSelect](Images/selection/maui-treeView-fullrowselect.png)
+![Syncfusion .NET MAUI TreeView with FullRowSelect](Images/selection/maui-treeView-fullrowselect.png)
 
 ## Selected item style
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Load More in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Load More support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Load More in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Load More support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -236,9 +236,9 @@ private async void LoadMoreItems(object obj)
 
 Items can be loaded either on the top or bottom of the view.
 
-![.NET MAUI listview with load more on scrolling at bottom](Images/load-more/maui-listview-loadmore-items-on-end.gif)
+![Syncfusion .NET MAUI listview with load more on scrolling at bottom](Images/load-more/maui-listview-loadmore-items-on-end.gif)
 
-![.NET MAUI listview with load more on scrolling at top](Images/load-more/maui-listview-loadmore-items-on-start.gif)
+![Syncfusion .NET MAUI listview with load more on scrolling at top](Images/load-more/maui-listview-loadmore-items-on-start.gif)
 
 
 ## Load more view customization
@@ -654,7 +654,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI ListView with Auto Load More](Images/load-more/maui-listview-auto-load-more-on-top.png)
+![Syncfusion .NET MAUI ListView with Auto Load More](Images/load-more/maui-listview-auto-load-more-on-top.png)
 
 ### Load more items manually from the top
 
@@ -776,7 +776,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI ListView with Manual Load More](Images/load-more/maui-listview-manual-loadmore-on-top.png)
+![Syncfusion .NET MAUI ListView with Manual Load More](Images/load-more/maui-listview-manual-loadmore-on-top.png)
 
 ### How to disable LoadMoreCommand execution when the ListView is Empty?
 
