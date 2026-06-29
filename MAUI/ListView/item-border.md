@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Item Border Customization in .NET MAUI ListView control | SyncfusionÂ®
-description: Learn here all about Item Border Customization support in SyncfusionÂ® .NET MAUI ListView (SfListView) control and more.
+title: Item Border Customization in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Item Border Customization support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -120,3 +120,126 @@ listView.ItemBorderRadius = new CornerRadius(20,0,0,20);
 ## See Also
 
 - [Syncfusion .NET MAUI ListView Item Size Customization](https://help.syncfusion.com/maui/listview/item-size-customization)
+
+# Group Header Border Customization in .NET MAUI ListView (SfListView)
+
+This section explains how to customize group header borders in the `.NET MAUI ListView` (SfListView) using the built-in APIs.
+
+## Enable Group Header Border
+
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows applying borders to each group header by setting the `ShowGroupHeaderBorder` property to `true`. By default, group header borders are not displayed. You can customize the color, thickness, margin, and corner radius of the borders using the respective APIs.
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ShowGroupHeaderBorder</td>
+      <td>Enables or disables the visibility of group header borders. <em>(Default: false)</em></td>
+    </tr>
+    <tr>
+      <td>GroupHeaderBorderColor</td>
+      <td>Sets the color of the group header border.</td>
+    </tr>
+    <tr>
+      <td>GroupHeaderBorderThickness</td>
+      <td>Defines the border thickness for each side of the group header.</td>
+    </tr>
+    <tr>
+      <td>GroupHeaderBorderMargin</td>
+      <td>Sets the margin around the border within the group header.</td>
+    </tr>
+    <tr>
+      <td>GroupHeaderBorderRadius</td>
+      <td>Sets the corner radius of the group header border.</td>
+    </tr>
+  </tbody>
+</table>
+
+> **NOTE**
+> `GroupHeaderBorderRadius` is applicable only when `GroupHeaderBorderThickness` has uniform values on all sides.
+
+### XAML Example
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<syncfusion:SfListView x:Name="listView"
+                       GroupHeaderSize="50"
+                       ShowGroupHeaderBorder="True"
+                       AllowGroupExpandCollapse="True"
+                       ItemsSource="{Binding BookInfo}"
+                       GroupKeySelector="{Binding Category}">
+    <syncfusion:SfListView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="5">
+                <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                <Label Text="{Binding BookDescription}" />
+            </StackLayout>
+        </DataTemplate>
+    </syncfusion:SfListView.ItemTemplate>
+</syncfusion:SfListView>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+listView.ShowGroupHeaderBorder = true;
+{% endhighlight %}
+{% endtabs %}
+
+![MAUI ListView Group Header Border Example](Images/item-border/maui-listview-groupheader-border-example.jpg)
+
+## Border Customization
+
+After enabling the group header border, you can customize its appearance using the following properties:
+
+- `GroupHeaderBorderColor`: Sets the border color.
+- `GroupHeaderBorderThickness`: Specifies the thickness of the border.
+- `GroupHeaderBorderMargin`: Adds margin around the border.
+- `GroupHeaderBorderRadius`: Sets the corner radius of the  border.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7" %}
+<syncfusion:SfListView x:Name="listView"
+                       GroupHeaderSize="60"
+                       ShowGroupHeaderBorder="True"
+                       GroupHeaderBorderColor="Black"
+                       GroupHeaderBorderThickness="2"
+                       GroupHeaderBorderMargin="5,2,5,2"
+                       GroupHeaderBorderRadius="20,0,0,20"
+                       ItemsSource="{Binding BookInfo}">
+    <syncfusion:SfListView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="5">
+                <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                <Label Text="{Binding BookDescription}" />
+            </StackLayout>
+        </DataTemplate>
+    </syncfusion:SfListView.ItemTemplate>
+</syncfusion:SfListView>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 3 4 5" %}
+listView.ShowGroupHeaderBorder = true;
+listView.GroupHeaderBorderColor = Colors.Black;
+listView.GroupHeaderBorderThickness = new Thickness(2);
+listView.GroupHeaderBorderMargin = new Thickness(2);
+listView.GroupHeaderBorderRadius = new CornerRadius(20,0,0,20);
+{% endhighlight %}
+{% endtabs %}
+
+![MAUI ListView  Group Header Border Example](Images/item-border/maui-listview-groupheader-border-customization.jpg)
+
+## Limitations
+
+- Group header borders are rendered on top of the group header template content and do not interfere with touch interactions.
+- `GroupHeaderBorderRadius` is applicable only when `GroupHeaderBorderThickness` has uniform values on all sides.
+- Group header borders are only supported with grouped data sources (when `GroupKeySelector` is set).
+
+## See Also
+
+- [Item Border Customization in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-border)
+- [Grouping in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/grouping)
+- [Group Header Template Customization in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/group-header-template)
