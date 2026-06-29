@@ -1547,6 +1547,7 @@ By default, the `SfAIAssistView` control automatically scrolls to the bottom of 
                            CanAutoScrollToBottom="False" />
 
 {% endhighlight %}
+{% endtabs %}
 
 ### AutoScroll Behavior Configuration
 
