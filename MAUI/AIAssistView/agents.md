@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Agent in .NET MAUI AI AssistView Control | Syncfusion
-description: Learn how to work with Agent support in the Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, including its key elements and features.
+title: Agent in .NET MAUI AI AssistView Control | Syncfusion®
+description: Learn here all about Agent support in the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -136,7 +136,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Agents in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-agentview.png)
+![Syncfusion .NET MAUI AI AssistView Agents](Images/agents/maui-aiassitview-agentview.png)
 
 ### Selecting an agent
 
@@ -166,7 +166,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Selected Agents in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-selected-agent.png)
+![Syncfusion .NET MAUI AI AssistView Selected Agent](Images/agents/maui-aiassitview-selected-agent.png)
 
 ### Show selected agent in view
 
@@ -193,7 +193,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Show Selected Agent in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-show-selected-agent.png)
+![Syncfusion .NET MAUI AI AssistView Show Selected Agent](Images/agents/maui-aiassitview-show-selected-agent.png)
 
 ### Agent view customization
 
@@ -243,4 +243,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Agent Template in .NET MAUI AI AssistView](Images/agents/maui-aiassitview-selected-agent-template.png)
+![Syncfusion .NET MAUI AI AssistView Agent view customization](Images/agents/maui-aiassitview-selected-agent-template.png)

@@ -1448,7 +1448,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Time Break in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-time-break.png)
+![Syncfusion .NET MAUI AI AssistView Time Break](Images/working-with-aiassistview/maui-aiassistview-time-break.png)
 
 ### Time break customization
 
@@ -1498,13 +1498,13 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Time Break Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-time-break-template.png)
+![Syncfusion .NET MAUI AI AssistView Time Break view customization](Images/working-with-aiassistview/maui-aiassistview-time-break-template.png)
 
 ## Show Toast notification in view
 
 The `SfAIAssistView` control supports displaying toast notifications. These notifications appear as pop-up windows providing information during user interactions with the `SfAIAssistView`.
 
-![Toast Notification in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-toast-notification.png)
+![Syncfusion .NET MAUI AI AssistView Toast Notification](Images/working-with-aiassistview/maui-aiassistview-toast-notification.png)
 
 ### Restrict toast notification in view
 
@@ -1560,7 +1560,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Editor Expansion in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editor-expansion.png)
+![Syncfusion .NET MAUI AI AssistView Editor Expansion](Images/working-with-aiassistview/maui-aiassistview-editor-expansion.png)
 
 N> The editor expansion button is only visible when the content reaches the third line of the editor.
 
@@ -1644,13 +1644,13 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Speech to Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-speech-to-text.gif)
+![Syncfusion .NET MAUI AI AssistView Voice Input support](Images/working-with-aiassistview/maui-aiassistview-speech-to-text.gif)
 
 ## Text-to-speech support in SfAIAssistView
 
 The `SfAIAssistView` control provides built-in text-to-speech support for each response. This allows users to play, pause, and stop the text-to-speech functionality.
 
-![Text to Speech in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-text-to-speech.gif)
+![Syncfusion .NET MAUI AI AssistView Text to Speech](Images/working-with-aiassistview/maui-aiassistview-text-to-speech.gif)
 
 ## Disclaimer text
 
@@ -1677,11 +1677,11 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Disclaimer Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-disclaimer-text.png)
+![Syncfusion .NET MAUI AI AssistView Disclaimer Text](Images/working-with-aiassistview/maui-aiassistview-disclaimer-text.png)
 
 ## Image preview support in SfAIAssistView
 
 The `SfAIAssistView` control provides built-in image preview support. When an image is associated with an `AssistImageItem` or an `AssistAttachmentItem`, tapping the image displays it in a preview view.
 This behavior is enabled by default and does not require additional configuration.
 
-![Image Preview support in .NET MAUI AI AssistView](Images/working-with-aiassistview//maui-aiassistview-image-preview.gif)
+![Syncfusion .NET MAUI AI AssistView Image Preview support](Images/working-with-aiassistview//maui-aiassistview-image-preview.gif)
