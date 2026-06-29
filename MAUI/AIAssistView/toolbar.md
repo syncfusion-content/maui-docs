@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI AI AssistView Toolbar Customization | Syncfusion®
-description:  Learn how to customize the toolbar in the Syncfusion® .NET MAUI AI AssistView control with various options and features for an enhanced UI experience.
+title: Toolbar in .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about Toolbar support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

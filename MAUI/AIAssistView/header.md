@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI AI AssistView Header Customization | Syncfusion®
-description: Learn how to customize the header in the Syncfusion® .NET MAUI AI AssistView control to enhance layout, branding, and user experience.
+title: Header customization in .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about Header support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

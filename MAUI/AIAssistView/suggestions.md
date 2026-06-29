@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI AI AssistView Suggestions Feature | Syncfusion®
-description: Learn how to use suggestions in the Syncfusion® .NET MAUI AI AssistView control to improve user interactions and provide quick response options.
+title: Suggestions in .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about Suggestions support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

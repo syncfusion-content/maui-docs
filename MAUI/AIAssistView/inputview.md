@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI AI AssistView InputView Customization | Syncfusion®
-description: Learn how to customize the InputView in the Syncfusion® .NET MAUI AI AssistView control to enhance message input UI and improve user interaction.
+title: InputView customization in .NET MAUI AI AssistView | Syncfusion®
+description: Learn how to customize the InputView in the Syncfusion .NET MAUI AI AssistView (SfAIAssistView) to enhance message input UI and improve user interaction.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

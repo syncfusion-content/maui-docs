@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI AI AssistView Data Binding Guide | Syncfusion®
-description: Learn how to bind data in the Syncfusion® .NET MAUI AI AssistView control using AssistItems and ViewModel to display dynamic chat content.
+title: Data Binding in .NET MAUI AI AssistView Control | Syncfusion®
+description: Learn here all about Data Binding support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI AI AssistView EmptyView Customization | Syncfusion®
-description: Learn how to customize the EmptyView in the Syncfusion® .NET MAUI AI AssistView control to display content when no messages are available.
+title: EmptyView in .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about EmptyView support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI AI AssistView Localization Guide | Syncfusion®
-description: Learn how to implement localization in the Syncfusion® .NET MAUI AI AssistView control using resource files for supporting multiple languages.
+title: Localization in .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about Localization feature of Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control and its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

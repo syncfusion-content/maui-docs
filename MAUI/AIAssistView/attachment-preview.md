@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI AI AssistView Attachment Preview Editor | Syncfusion®
-description: Learn how to preview attachments in the Syncfusion® .NET MAUI AI AssistView editor using the Attachments property to display files and images.
+title: Attachment Preview Editor in .NET MAUI AI AssistView | Syncfusion®
+description: Learn how to preview attachments in the Syncfusion .NET MAUI AI AssistView (SfAIAssistView) using the Attachments property to display files and images.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
