@@ -217,7 +217,7 @@ public partial class MainPage : ContentPage
 
 ![Syncfusion .NET MAUI AI AssistView Conversation Empty View](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
 
-### Filter button
+### Filter Conversations by Date Range
 
 The Filter button allows users to narrow down conversation results by selecting a specific date range. This helps quickly locate relevant conversations within the history.
 
@@ -231,7 +231,7 @@ The following date-range options are available:
 
 Use these options to quickly narrow the conversation history shown in the drawer.
 
-### More options (Pin, Rename, Delete)
+### Conversation Actions Menu
 
 Each conversation item shows a More option that opens a small menu with three actions:
 
