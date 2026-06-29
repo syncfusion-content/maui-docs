@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI DataGrid control | Syncfusion
+canonical_url: "https://www.syncfusion.com/maui-controls/maui-datagrid"
 description: Learn about getting started with Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
 platform: MAUI
 control: SfDataGrid
