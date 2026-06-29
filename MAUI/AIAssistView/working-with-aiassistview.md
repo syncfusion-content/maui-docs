@@ -1644,13 +1644,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI AI AssistView Voice Input support](Images/working-with-aiassistview/maui-aiassistview-speech-to-text.gif)
-
 ## Text-to-speech support in SfAIAssistView
 
 The `SfAIAssistView` control provides built-in text-to-speech support for each response. This allows users to play, pause, and stop the text-to-speech functionality.
-
-![Syncfusion .NET MAUI AI AssistView Text to Speech](Images/working-with-aiassistview/maui-aiassistview-text-to-speech.gif)
 
 ## Disclaimer text
 
