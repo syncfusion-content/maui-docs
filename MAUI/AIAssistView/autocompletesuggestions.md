@@ -69,18 +69,18 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 ![Syncfusion .NET MAUI AI AssistView Auto Complete Suggestions](images/maui-aiassistview-auto-complete-suggestion.gif)
 
-### Category
+### Grouped Suggestions View
 
-In Syncfusion .NET MAUI AI AssistView, the `AssistSuggestion` class exposes a `Category` property that you can use to group autocomplete suggestions by topic. Set `Category` when creating suggestions (for example, "FAQ", "Commands", or "Examples") so the overlay can present related items together.
+In `SfAIAssistView`, the `AssistSuggestion` class exposes a `Category` property that you can use to group autocomplete suggestions by topic. Set `Category` when creating suggestions (for example, "Recommended", "History", or "Recent") so the overlay can present related items together.
 
-Example (setting categories in your ViewModel):
+### Grouping Suggestions by Category in ViewModel
 
 {% highlight c# tabtitle="ViewModel.cs" %}
 AutoCompleteSuggestions = new ObservableCollection<ISuggestion>()
 {
-    new AssistSuggestion() { Text = "What is .NET MAUI?", Category = "FAQ" },
-    new AssistSuggestion() { Text = "How do I get started with AI AssistView?", Category = "GettingStarted" },
-    new AssistSuggestion() { Text = "Explain data binding in .NET MAUI", Category = "FAQ" },
+    new AssistSuggestion() { Text = "What is .NET MAUI?", Category = "Recommended" },
+    new AssistSuggestion() { Text = "How do I get started with AI AssistView?", Category = "Recommended" },
+    new AssistSuggestion() { Text = "Explain data binding in .NET MAUI", Category = "History" },
 };
 {% endhighlight %}
 
