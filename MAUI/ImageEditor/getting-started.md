@@ -22,9 +22,10 @@ To get start quickly with our .NET MAUI ImageEditor, you can check the below vid
 
 ## Prerequisites
 
-Before proceeding, ensure the following are setup:
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (18.0.0). 
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -110,10 +111,11 @@ public partial class MainPage : ContentPage
 
 ## Prerequisites
 
-Before proceeding, ensure the following are setup:
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -204,8 +206,8 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -290,7 +292,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Loading an image to image editor
+## Step 5: Loading an image to image editor
 
 The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property is used to load images from different sources:
 
@@ -443,198 +445,11 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+The following screenshot illustrates the result of the above code.
+
 ![GettingStarted in .NET Maui ImageEditor](images\getting-started\imageeditor-gettingstarted.png)
 
 N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lambda function so that you can process them whenever needed.
+imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
 
-N> imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
-
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
-
-## Get the image stream
-The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream) method is used to get the edited image in form of a image stream.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="Get Image Stream"
-                Clicked="OnGetStreamClicked" />
-    </Grid>  
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-    private void OnGetStreamClicked(object sender, EventArgs e)
-    {
-        this.imageEditor.GetImageStream();
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Get the Image Original Size
-The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_OriginalImageSize) property is used to get the image's original size.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="Get Image Original Size"
-                Clicked="OnGetImageOriginalSize" />
-    </Grid>  
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-    private void OnGetImageOriginalSize(object sender, EventArgs e)
-    {
-        Size originalSize = this.imageEditor.OriginalImageSize;
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-N> The size value will only be available after the image has been loaded into view.
-
-## Get the Image Rendered Size
-The image editor utilizes the `AspectFit` image scaling of Image control to fit the entire image into the display area, with blank space added to the top or bottom sides depending on whether the image is wide or tall. The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize) property is used to get the current rendered size of the image inside the display area.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="Get Image Rendered Size"
-                Clicked="OnGetImageRenderedSize" />
-    </Grid>  
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-    private void OnGetImageRenderedSize(object sender, EventArgs e)
-    {
-        Size imageSize = this.imageEditor.ImageRenderedSize;
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-N> The size value will only be available after the image has been loaded into view.
-
-## Check image edited status
-
-The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property is used to determine whether any editing action has been performed on the image.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="IsImageEdited"
-                Clicked="OnIsImageEditedClicked" />
-    </Grid>  
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-private void OnIsImageEditedClicked(object sender, EventArgs e)
-{
-    if (this.imageEditor.IsImageEdited)
-    {
-        this.imageEditor.Save();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## ImageEditor inside stack layout
-
-#### Vertical StackLayout
-
-When the image editor is placed inside a vertical stack layout, users must define the required `MinimumHeightRequest` value. By default, this `MinimumHeightRequest` is set to 100.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<VerticalStackLayout>
-    <imageEditor:SfImageEditor x:Name="imageEditor"
-                               MinimumHeightRequest="400"
-                               Source="image.jpeg">
-    </imageEditor:SfImageEditor>
-</VerticalStackLayout>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-public MainPage()
-{
-    InitializeComponent();
-    VerticalStackLayout verticalLayout = new VerticalStackLayout();
-    SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
-    imageEditor.MinimumHeightRequest = 400;
-    verticalLayout.Add(imageEditor);
-    this.Content = verticalLayout;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Horizontal StackLayout
-
-When the image editor is placed inside a horizontal stack layout, users must define the required `MinimumWidthRequest` value. By default, this `MinimumWidthRequest` is set to 100.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<HorizontalStackLayout>
-    <imageEditor:SfImageEditor x:Name="imageEditor"
-                               MinimumWidthRequest="400"
-                               Source="image.jpeg">
-    </imageEditor:SfImageEditor>
-</HorizontalStackLayout>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-public MainPage()
-{
-    InitializeComponent();
-    HorizontalStackLayout horizontalLayout = new HorizontalStackLayout();
-    SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
-    imageEditor.MinimumWidthRequest = 400;
-    horizontalLayout.Add(imageEditor);
-    this.Content = horizontalLayout;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Change the image editor background
-The background of the Image Editor can be customized by setting the `Background` property of the SfImageEditor.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-   <imageEditor:SfImageEditor x:Name="imageEditor"
-                              Source="imageeditordesktop.png"
-                              Background="LightGreen">
-   </imageEditor:SfImageEditor>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> You can also explore our [.NET MAUI Image Editor Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ImageEditor) that shows you how to render the Image Editor in .NET MAUI.
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted). You can also explore our [.NET MAUI Image Editor Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ImageEditor) that shows you how to render the Image Editor in .NET MAUI.

@@ -24,7 +24,7 @@ To quickly get started with the .NET MAUI Radio Button, watch this video.
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -78,9 +78,9 @@ namespace RadioButtonGettingStarted
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-        <buttons:SfRadioButton x:Name="radioButton"/>     
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
 {% endhighlight %}
@@ -113,7 +113,7 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -169,9 +169,9 @@ namespace RadioButtonGettingStarted
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-        <buttons:SfRadioButton x:Name="radioButton"/>     
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
 {% endhighlight %}
@@ -203,8 +203,8 @@ namespace RadioButtonGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI project
@@ -259,9 +259,9 @@ namespace RadioButtonGettingStarted
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-        <buttons:SfRadioButton x:Name="radioButton"/>     
+            ...
+            xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
 {% endhighlight %}
@@ -288,28 +288,7 @@ namespace RadioButtonGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Setting caption
-
-The .NET MAUI Radio Button caption can be defined using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the Radio Button and is displayed next to it.
- 
-{% tabs %}
-{% highlight xaml %}
-
-    <buttons:SfRadioButton x:Name="radioButton" Text="Radio Button"/>
-
-{% endhighlight %}
-{% highlight c# %}
-
-    SfRadioButton radioButton = new SfRadioButton();
-    radioButton.Text = "Radio Button";
-    this.Content = radioButton;
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI Radio Button](Images/Getting-Started/radiobutton.png)
-
-## Change the Radio Button state
+## Step 5: Change the Radio Button state
 
 The two different visual states of the [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) are:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layout Customizations in .NET MAUI Popup control | Syncfusion
-description: Learn here all about Layout Customizations support in Syncfusion .NET MAUI Popup (SfPopup) control, its elements and more.
+title: Layout Customizations in .NET MAUI Popup control | Syncfusion®
+description: Learn here all about Layout Customizations support in Syncfusion® .NET MAUI Popup (SfPopup) control, its elements and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -68,7 +68,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with accept button](Images/layout-customizations/maui-popup-appearance-mode-one-button.png)
+![Syncfusion .NET MAUI Popup with accept button](Images/layout-customizations/maui-popup-appearance-mode-one-button.png)
 
 In the following code example, set the `AppearanceMode` property as [TwoButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_TwoButton), which displays both Accept and Decline buttons in the footer view.
 
@@ -159,7 +159,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup without header](Images/layout-customizations/maui-popup-without-header.png)
+![Syncfusion .NET MAUI Popup without header](Images/layout-customizations/maui-popup-without-header.png)
 
 ### Enable footer
 
@@ -202,7 +202,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with footer](Images/layout-customizations/maui-popup-with-footer.png)
+![Syncfusion .NET MAUI Popup with footer](Images/layout-customizations/maui-popup-with-footer.png)
 
 ## Enable close icon
 
@@ -245,7 +245,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with close icon](Images/layout-customizations/maui-popup-with-close-icon.png)
+![Syncfusion .NET MAUI Popup with close icon](Images/layout-customizations/maui-popup-with-close-icon.png)
 
 ## Customizing popup header
 
@@ -313,7 +313,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with header template](Images/layout-customizations/maui-popup-header-template.png)
+![Syncfusion .NET MAUI Popup with header template](Images/layout-customizations/maui-popup-header-template.png)
 
 ### Popup header height
 
@@ -464,7 +464,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with footer template](Images/layout-customizations/maui-popup-footer-template.png)
+![Syncfusion .NET MAUI Popup with footer template](Images/layout-customizations/maui-popup-footer-template.png)
 
 ### Popup footer height
 
@@ -615,7 +615,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with content template](Images/layout-customizations/maui-popup-content-template.png)
+![Syncfusion .NET MAUI Popup with content template](Images/layout-customizations/maui-popup-content-template.png)
 
 ### Popup message
 
@@ -658,6 +658,80 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+##  Load template view in the popup body
+
+Any view can be added as popup content by using the [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property to refresh it. Refer to the following code example in which a label is added as popup content. 
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GettingStarted"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="GettingStarted.MainPage" 
+             Padding="0,40,0,0">
+    <StackLayout>
+        <Button x:Name="clickToShowPopup"
+                Text="ClickToShowPopup"
+                VerticalOptions="Start"
+                HorizontalOptions="FillAndExpand"
+                Clicked="ClickToShowPopup_Clicked" />
+        <syncfusion:SfPopup x:Name="popup">
+            <syncfusion:SfPopup.ContentTemplate>
+                <DataTemplate>
+                    <Label Text="This is the Customized view for SfPopup"
+                           BackgroundColor="SkyBlue"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center" />
+                </DataTemplate>
+            </syncfusion:SfPopup.ContentTemplate>
+        </syncfusion:SfPopup>
+    </StackLayout>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
+using Syncfusion.Maui.Popup;
+
+namespace GettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        DataTemplate templateView;
+        Label popupContent;
+
+        public MainPage()
+        {
+            InitializeComponent();            
+            templateView = new DataTemplate(() =>
+            {
+                popupContent = new Label();
+                popupContent.Text = "This is the Customized view for SfPopup";
+                popupContent.BackgroundColor = Color.LightSkyBlue;
+                popupContent.HorizontalTextAlignment = TextAlignment.Center;
+                return popupContent;
+            });
+
+            // Adding ContentTemplate of the SfPopup
+            popup.ContentTemplate = templateView;
+        }
+
+        private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+        {
+            popup.Show();
+        }
+    } 
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Syncfusion .NET Maui Popup with custom content](Images/getting-started//maui-popup-with-custom-content.png)
+
 ## How to
 
 ### Disable the overlay background in .NET MAUI Popup?
@@ -687,7 +761,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-disable-overlay.png)
+![Syncfusion .NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-disable-overlay.png)
 
 ### Display popup in Android native embedding?
 
@@ -962,6 +1036,6 @@ private void OpenButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![ListView in a .NET MAUI Popup](Images/layout-customizations/maui-popup-with-listview-in-content-template.png)
+![Syncfusion .NET MAUI Popup in ListView](Images/layout-customizations/maui-popup-with-listview-in-content-template.png)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-show-a-.net-maui-listview-in-content-template-of-.net-maui-popup).

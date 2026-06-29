@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Chart control  Syncfusion
+title: Appearance in .NET MAUI Funnel Chart control  Syncfusion
 description: Learn here all about appearance customization in .NET MAUI Chart (SfFunnelChart), its elements and more.
 platform: maui
 control: SfFunnelChart
@@ -10,6 +10,37 @@ documentation: ug
 # Appearance in .NET MAUI Funnel Chart
 
 The appearance of the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
+
+## Add a title
+
+The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set the title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of the funnel chart as follows.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfFunnelChart>
+    <chart:SfFunnelChart.Title>
+        <Label Text="School Admission"/>
+    </chart:SfFunnelChart.Title>
+    . . .
+</chart:SfFunnelChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfFunnelChart chart = new SfFunnelChart();
+chart.Title = new Label()
+{
+    Text = "School Admission"
+};
+. . .
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}  
 
 ## Custom PaletteBrushes
 
@@ -129,32 +160,3 @@ public class ViewModel
 {% endtabs %}
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_funnel_chart.png)
-
-## Point Color Path
-
-The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfFunnelChart PointColorPath="PointColor"></chart:SfFunnelChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfFunnelChart chart = new SfFunnelChart()
-{
-	PointColorPath = PointColor;
-}
-. . .
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![PointColorPath in MAUI Chart](Appearance_images/MAUI_funnel_chart_pointcolorpath.png)
-
-N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.

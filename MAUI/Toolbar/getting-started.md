@@ -22,11 +22,9 @@ To get start quickly with our .NET MAUI Toolbar, you can check the below video.
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install .NET SDK
-  - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later must be installed.
-2. Set up a .NET MAUI Environment with Visual Studio. Supported Visual Studio Versions:
-  - Visual Studio 2022: Version 17.13 or later (e.g., 17.14.7) for .NET 9 development.
-  - Visual Studio 2026: Required for .NET 10 development.
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a new .NET MAUI Project
 
@@ -45,7 +43,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 
     using Syncfusion.Maui.Core.Hosting;
     public static class MauiProgram
@@ -78,8 +76,9 @@ Before proceeding, ensure the following are set up:
 {% tabs %}
 {% highlight xaml %}
 <ContentPage
-    . . .    
+    ...        
     xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
     <StackLayout>
         <toolbar:SfToolbar />
     </StackLayout>
@@ -111,13 +110,14 @@ namespace ToolbarGettingStarted
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a New .NET MAUI Project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
@@ -136,7 +136,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 
     using Syncfusion.Maui.Core.Hosting;
     public static class MauiProgram
@@ -169,8 +169,9 @@ Before proceeding, ensure the following are set up:
 {% tabs %}
 {% highlight xaml %}
 <ContentPage
-    . . .    
+    ...        
     xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
     <StackLayout>
         <toolbar:SfToolbar />
     </StackLayout>
@@ -205,8 +206,8 @@ namespace ToolbarGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -226,7 +227,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 
     using Syncfusion.Maui.Core.Hosting;
     public static class MauiProgram
@@ -256,7 +257,7 @@ Before proceeding, ensure the following are set up:
 1. To initialize the control, import the `Syncfusion.Maui.Toolbar` namespace into your code.
 2. Initialize [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html)
 {% tabs %}
-{% highlight XAML hl_lines="3 5" %}
+{% highlight XAML %}
 
 <ContentPage
     ...        
@@ -269,7 +270,7 @@ Before proceeding, ensure the following are set up:
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="1 9 10" %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Toolbar;
 . . .
@@ -294,7 +295,7 @@ public partial class MainPage : ContentPage
 
 {% endtabcontents %}
 
-## Adding Toolbar items
+## Step 5: Adding Toolbar items
 
 You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
  
@@ -302,60 +303,25 @@ You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.
 
 {% highlight xaml %}
 
-<ContentPage 
-            ...
-             xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+<ContentPage xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
         <toolbar:SfToolbar.Items>
-            <toolbar:SfToolbarItem Name="Bold"
-                            ToolTipText="Bold">
+            <toolbar:SfToolbarItem Name="Bold" ToolTipText="Bold">
                 <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE770;"
-                        FontFamily="MauiMaterialAssets" />
+                    <FontImageSource Glyph="&#xE770;" FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Underline"
-                            ToolTipText="Underline">
+            <toolbar:SfToolbarItem Name="Underline" ToolTipText="Underline">
                 <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE762;"
-                        FontFamily="MauiMaterialAssets" />
+                    <FontImageSource Glyph="&#xE762;" FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Italic"
-                            ToolTipText="Italic">
+            <toolbar:SfToolbarItem Name="Italic" ToolTipText="Italic">
                 <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE771;"
-                        FontFamily="MauiMaterialAssets" />
+                    <FontImageSource Glyph="&#xE771;" FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignLeft"
-                                    ToolTipText="Align-Left">
-                <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE751;"
-                        FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignRight"
-                                    ToolTipText="Align-Right">
-                <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE753;"
-                        FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignCenter"
-                                    ToolTipText="Align-Center">
-                <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE752;"
-                        FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignJustify"
-                                    ToolTipText="Align-Justify">
-                <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE74F;"
-                        FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
+            ....
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
 </ContentPage>
@@ -396,31 +362,9 @@ namespace ToolbarGettingStarted
                     ToolTipText = "Italic",
                     Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
                 },
-                new SfToolbarItem
-                {
-                    Name = "AlignLeft",
-                    ToolTipText = "Align-Left",
-                    Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
-                },
-                new SfToolbarItem
-                {
-                    Name = "AlignRight",
-                    ToolTipText = "Align-Right",
-                    Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
-                },
-                new SfToolbarItem
-                {
-                    Name = "AlignCenter",
-                    ToolTipText = "Align-Center",
-                    Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
-                },
-                new SfToolbarItem
-                {
-                    Name = "AlignJustify",
-                    ToolTipText = "Align-Justify",
-                    Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
-                }
+                ....
             };
+            
             toolbar.Items = itemCollection;
             this.Content = toolbar;
         }

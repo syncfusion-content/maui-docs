@@ -9,12 +9,12 @@ documentation: ug
 
 # Resource View in .NET MAUI Scheduler (SfScheduler)
 
-The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control allows you to group appointments based on the resources associated with them in the day, week, workweek, timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control allows you to group appointments based on the resources associated with them in the day, week, workweek, month, timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
 ## Create resources to Scheduler by using SchedulerResource
 You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
 
-In the **Day**, **Week** and **Work Week** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
+In the **Day**, **Week**, **Work Week**, and **Month** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -112,12 +112,14 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-net-maui-scheduler.png)
 
-## Resource Grouping in Days View - Desktop
+## Horizontal resource grouping - Desktop
  
-In the day, week, and work week views, you can control whether dates are grouped under resources or resources are grouped under dates by using the [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
- 
+In the Day, Week, WorkWeek, and Month views, you can control whether dates are grouped under resources or resources are grouped under dates by using the [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. 
+
 ### Grouping by Resource
- 
+
+#### Days view
+
 The [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) is set to [`Resource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceGroupType.html#Syncfusion_Maui_Scheduler_SchedulerResourceGroupType_Resource) by default. In this mode, the scheduler arranges the dates under each resource.
 
 {% tabs %}
@@ -142,6 +144,33 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resou
 {% endtabs %}
 
 ![Resource Grouping By Resource in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-resource-in-days-view-in-net-maui-scheduler.png)
+
+#### Month view
+
+In [Month]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html)) View, grouping is supported only by Resource (ResourceGroupType="Resource"), where each resource is rendered with its own independent month calendar layout to clearly display appointments and availability; for example, if three resources are defined, the view will show three distinct monthly calendars side by side, each containing only the appointments assigned to that specific resource.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Month">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
+    </scheduler:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
+var resources = new ObservableCollection<SchedulerResource>()
+{
+        new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+        new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
+{% endhighlight %}
+{% endtabs %}
+
+![Resource Grouping By Resource in Month View in .NET MAUI Scheduler.](images/resource-view/horizontal-resource-grouping-in-month-view.png)
  
 ### Grouping by Date
  
@@ -170,9 +199,55 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
 
 ![Resource Grouping By Date in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-date-in-days-view-in-net-maui-scheduler.png)
 
-## Resource Grouping in Days View - Mobile
+N> In the `Day`, `Week`, and `WorkWeek` views, **grouping resources by date is supported**. However, in the `Month` view, **grouping resources by date is not supported**. When the `ResourceGroupType` is set to `Date` while the `View` is `Month`, the scheduler automatically renders resources based on `ResourceGroupType` as `Resource` only.
 
-In Mobile platforms, the resource view for the day, week, and work week view where grouped under an adaptive header.
+## Adaptive resource grouping - Mobile
+
+On mobile platforms, the resource views for the Day, Week, WorkWeek, and Month views are grouped under an adaptive header.
+
+### Days view
+
+In Day view, resources are presented through an adaptive resource panel on mobile platforms.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day"/>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+var resources = new ObservableCollection<SchedulerResource>()
+{
+        new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+        new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+{% endhighlight %}
+{% endtabs %}
+
+![Adaptive Header in Days View in .NET MAUI Scheduler](images/resource-view/adaptive-header-in-days-view.jpg)
+
+### Month view
+
+In Month view, resources are presented through an adaptive resource panel on mobile platforms.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Month"/>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+var resources = new ObservableCollection<SchedulerResource>()
+{
+        new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+        new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+{% endhighlight %}
+{% endtabs %}
+
+![Adaptive Header in Month View in .NET MAUI Scheduler](images/resource-view/adaptive-header-in-month-view.jpg)
 
 ### Customize hamburger icon color
 
@@ -427,7 +502,7 @@ N> The BindingContext of the [DrawerResourceTemplate](https://help.syncfusion.co
 
 ## Visible Resource Count
  
-The number of resources shown in the day, week, work week, timelineday, timelineweek, timelineworkweek views can be controlled using the [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. This lets you define how many resources are visible at a time.
+The number of resources shown in the day, week, work week, month, timelineday, timelineweek, timelineworkweek views can be controlled using the [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. This lets you define how many resources are visible at a time.
 
 ### Days View 
 
@@ -461,6 +536,31 @@ this.Scheduler.ResourceView.VisibleResourceCount = 6;
 
 ![Visible Resource Count in Days View in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-for-resources-in-days-view-in-.net-maui-scheduler.png)
 
+### Month View
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Month" >
+<schedule:SfScheduler.ResourceView>
+    <schedule:SchedulerResourceView VisibleResourceCount="2"/>
+</schedule:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.VisibleResourceCount = 2;
+{% endhighlight %}
+{% endtabs %}
+
+![Visible Resource Count in Month View in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-for-resources-in-month-view-in-.net-maui-scheduler.png)
+
 ### Timeline View 
 
 {% tabs %}
@@ -487,19 +587,21 @@ this.Scheduler.ResourceView.VisibleResourceCount = 4;
 {% endhighlight %}
 {% endtabs %}
 
+![VisibleResourceCount in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-net-maui-scheduler.png)
+
 N> 
 * When [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) is set to 0, the resource view layout is removed, and only the plain Scheduler view is shown.
 * [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) applies to the horizontal resource view on Windows and macOS, and to the timeline resource view on all platforms. When the value is -1 (default), the horizontal resource view displays three resources. In timeline resource views, the number of visible resource rows is determined by the minimum row height, and the auto row height.
 
-![VisibleResourceCount in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-net-maui-scheduler.png)
-
-## Resource Header Height in Days View
+## Resource Header Height in Horizontal Resource Views
  
-In the day, week, and work week views, resources are arranged horizontally. The height of the resource headers can be customized using the [`ResourceHeaderHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderHeight) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
+In the day, week, work week, and month views, resources are arranged horizontally. The height of the resource headers can be customized using the [`ResourceHeaderHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderHeight) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Day" >
+<schedule:SfScheduler x:Name="Scheduler" 
+                      View="Day"
+                      AllowedViews="Day,Week,WorkWeek,Month" >
 <schedule:SfScheduler.ResourceView>
     <schedule:SchedulerResourceView ResourceHeaderHeight="100"/>
 </schedule:SfScheduler.ResourceView>
@@ -520,7 +622,9 @@ this.Scheduler.ResourceView.ResourceHeaderHeight = 100;
 
 ![Resource Header Height in Days View in .NET MAUI Scheduler.](images/resource-view/resource-header-height-for-resources-in-days-view-in-.net-maui-scheduler.png)
 
-## Resource Header Width in Timeline View
+![Resource Header Height in Month View in .NET MAUI Scheduler.](images/resource-view/resource-header-height-for-resources-in-month-view-in-.net-maui-scheduler.png)
+
+## Resource Header Width in Vertical Resource Views
  
 In the timelineday, timelineweek, and timeline work week views, resources are arranged vertically. The width of the resource headers can be customized using the [ResourceHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderWidth) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
 

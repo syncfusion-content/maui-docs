@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Expand and Collapse in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Expand and Collapse support in the Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Expand and Collapse in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here all about Expand and Collapse support in the Syncfusion® .NET MAUI TreeView (SfTreeView) control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug

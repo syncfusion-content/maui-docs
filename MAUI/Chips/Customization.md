@@ -1166,6 +1166,48 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 
 N> The default value of ChipStrokeThickness is [`2d`].
 
+## ChipLayout
+
+The chips control creates chip for each object and arranges chips in a StackLayout with horizontal orientation. Any layout can be used to arrange the chips in the chips control.In the following example, the `FlexLayout` has been used. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Content>
+	<Grid>
+		<chip:SfChipGroup DisplayMemberPath="Name">
+			<chip:SfChipGroup.ChipLayout>
+				<FlexLayout 
+					HorizontalOptions="Start" 
+					VerticalOptions="Center" /> 
+			</chip:SfChipGroup.ChipLayout>
+		</chip:SfChipGroup> 
+	</Grid>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+	Grid grid = new Grid();
+	SfChipGroup chipGroup = new SfChipGroup();
+	chipGroup.DispalyMemberpath="Name",
+	grid.Children.Add(chipGroup);
+	FlexLayout layout = new FlexLayout()
+	{
+		HorizontalOptions = LayoutOptions.Start,
+		VerticalOptions = LayoutOptions.Center,
+	};
+	chipGroup.ChipLayout = layout;
+	this.Content = grid;
+		
+{% endhighlight %}
+
+{% endtabs %}
+
 ## ItemHeight
 
 The [`ItemHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemHeight) property customizes the height of the items in the SfChipGroup.

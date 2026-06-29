@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Track in .NET MAUI Range Selector control | Syncfusion®
+title: Track in DateTime Range Selector control | Syncfusion®
 description: Learn here all about adding the track feature of .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
@@ -222,3 +222,56 @@ rangeSelector.Content = chart;
 **With track extent**
 
 ![RangeSelector track extent after](images/track/track-extent-after-image.png)
+
+## Inverse
+
+Invert the DateTime Range Selector using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2"
+                                     ShowLabels="True"
+                                     ShowTicks="True" 
+                                     MinorTicksPerInterval="1" 
+                                     IsInversed="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfDateTimeRangeSelector>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Interval = 2;
+rangeSelector.ShowLabels = true;
+rangeSelector.ShowTicks = true;
+rangeSelector.MinorTicksPerInterval = 1;
+rangeSelector.IsInversed = true;
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Inverse range selector](images/getting-started/slider-inverse.png)

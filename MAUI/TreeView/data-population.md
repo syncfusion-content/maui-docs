@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Population in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Data Population support in the Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Data Population in .NET MAUI TreeView Control | Syncfusion®
+description: Learn here all about Data Population support in the Syncfusion® .NET MAUI TreeView (SfTreeView) control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -227,7 +227,7 @@ this.Content = treeView;
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-binding-in-.net-maui-treeview).
 
-![.NET MAUI TreeView data population BoundMode](Images/getting-started/maui-treeView-boundMode.png)
+![Syncfusion .NET MAUI TreeView data population BoundMode](Images/getting-started/maui-treeView-boundMode.png)
 
 ## Populating nodes without data binding - unbound mode
 
@@ -310,4 +310,4 @@ namespace GettingStarted
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
-![.NET MAUI TreeView data popuplation UnBoundMode ](Images/getting-started/maui-treeView-unboundMode.png)
+![Syncfusion .NET MAUI TreeView data popuplation UnBoundMode ](Images/getting-started/maui-treeView-unboundMode.png)

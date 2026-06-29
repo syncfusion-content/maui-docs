@@ -24,7 +24,7 @@ To quickly get started with the .NET MAUI Masked Entry, watch this video.
 Before proceeding, ensure the following are in place:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later) or Visual Studio 2026 (v18.0.0 or later).
+2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
 ## Step 1: Create a New MAUI Project
 
@@ -42,12 +42,7 @@ Before proceeding, ensure the following are in place:
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace MaskedEntrySample
@@ -117,9 +112,9 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry();
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New MAUI Project
 
@@ -139,12 +134,98 @@ Before proceeding, ensure the following are set up:
 
  [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="1 12" %}
+using Syncfusion.Maui.Core.Hosting;
+
+namespace MaskedEntrySample
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %}  
+
+## Step 4: Add a Basic Masked Entry
+
+Step 1: Add the namespace as shown in the following code sample.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+	using Syncfusion.Maui.Inputs;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 2: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<editors:SfMaskedEntry x:Name="maskedentry" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
+
+## Step 2: Install the Syncfusion® MAUI Inputs NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+
+## Step 3: Register the handler
+
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace MaskedEntrySample
@@ -171,9 +252,7 @@ namespace MaskedEntrySample
 
 ## Step 4: Add a Basic Masked Entry
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 
@@ -191,7 +270,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% endtabs %}
 
-Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control with a required optimal name using the included namespace.
+Step 2: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -203,7 +282,7 @@ Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight C# %}
 
-        maskedEntry = new SfMaskedEntry();
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
 
 {% endhighlight %}
 
@@ -219,10 +298,7 @@ Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="00/00/0000" />
+<editors:SfMaskedEntry WidthRequest="200" ClearButtonVisibility="WhileEditing" MaskType="Simple" Mask="00/00/0000" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -244,9 +320,9 @@ maskedEntry.Mask = "00/00/0000";
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="RegEx"
-                          Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
+                       ClearButtonVisibility="WhileEditing"
+                       MaskType="RegEx"
+                       Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -262,65 +338,7 @@ maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}";
 
 ![RegEx mask in .NET MAUI Masked Entry.](maskedentry_images/net-maui-masked-entry-regex-mask.png)
 
-## Setting the prompt character
-
-Every single mask displays a prompt character ('_') in the absence of your input. Customize this prompt character by using the [PromptChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PromptChar) property.
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="00/00/0000"
-                          PromptChar="#" />
-                          
-{% endhighlight %}
-{% highlight C# %}
-
-SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = 200;
-maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
-maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = "00/00/0000";
-maskedEntry.PromptChar = '#';
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI Masked Entry prompt character.](maskedentry_images/net-maui-masked-entry-prompt-char.png)
-
-## Setting the value
-
-The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Value) property sets the input value for the MaskedEntry control.
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="00/00/0000"
-                          Value="12/02/2022" />
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = 200;
-maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
-maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = "00/00/0000";
-maskedEntry.Value = "12/02/2022";
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI Masked Entry value.](maskedentry_images/net-maui-masked-entry-value.png)
-
 N> 
 Get the complete getting started sample from the [GitHub](https://github.com/SyncfusionExamples/maui-maskedentry-samples) link.
 
 N> You can refer to our [.NET MAUI Masked Entry](https://www.syncfusion.com/maui-controls/maui-masked-entry) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Masked Entry Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs/SampleBrowser.Maui.Inputs/Samples/MaskedEntry) that shows you how to render the Masked Entry in .NET MAUI.
-
-

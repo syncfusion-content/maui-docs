@@ -74,10 +74,34 @@ The following table describes the types of columns and their usage:
 <td>To display a Picker within each cell</td>
 </tr>
 <tr>
+<td>{{'[DataGridPercentColumn]()'| markdownify }}</td>
+<td>{{'[DataGridPercentCellRenderer]()'| markdownify }}</td>
+<td>Percentage</td>
+<td>To display and edit percentage values in each row</td>
+</tr>
+<tr>
 <td>{{'[DataGridMultiColumnComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridMultiColumnComboBoxCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxCellRenderer.html)'| markdownify }}</td>
 <td>MultiColumnComboBox</td>
-<td>Use to display the IEnumerable data using [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) .</td>
+<td>Use to display the IEnumerable data using {{ '[SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html)'| markdownify }}</td>
+</tr>
+<tr>
+<td>{{'[DataGridCurrencyColumn]()'| markdownify }}</td>
+<td>{{'[DataGridCurrencyCellRenderer]()'| markdownify }}</td>
+<td>Currency</td>
+<td>To display and edit currency values in each row</td>
+</tr>
+<tr>
+<td>{{'[DataGridTimePickerColumn]()'| markdownify }}</td>
+<td>{{'[DataGridTimePickerCellRenderer]()'| markdownify }}</td>
+<td>TimePicker</td>
+<td>To display the time span value.</td>
+</tr>
+<tr>
+<td>{{'[DataGridCheckBoxSelectorColumn]()'| markdownify }}</td>
+<td>{{'[DataGridCheckBoxSelectorCellRenderer]()'| markdownify }}</td>
+<td>CheckBoxSelector</td>
+<td>Selects or deselects rows based on the check box value, which is not bound with data object.</td>
 </tr>
 <tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
@@ -1542,6 +1566,50 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 * `NullValue` - To set the null value when the numeric cell value is null, use the [DataGridNumericColumn.NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_NullValue) property.
 
+## DataGridPercentColumn
+
+`DataGridPercentColumn` is a specialized column for displaying and editing percentage values consistently across platforms. It supports two display modes, culture-aware formatting, numeric filtering, and serialization.
+
+The `PercentEditMode` property controls how values are interpreted and presented: use `PercentMode` to display values as percentages, or `DoubleMode` to treat the cell value as a plain numeric (double) value.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridPercentColumn MappingName="Discount"
+                                          HeaderText="Discount"
+                                          PercentEditMode="DoubleMode" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+
+dataGrid.Columns.Add(new DataGridPercentColumn()
+{
+    MappingName = "Discount",
+    HeaderText = "Discount",
+    PercentEditMode = DataGridPercentEditMode.DoubleMode
+});
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGrid with Percent column" src="Images\column-types\maui-datagrid-percentage-column.png" width="404"/>
+
+The `DataGridPercentColumn` supports culture-aware parsing and formatting for percentage values. By default the percent operator (`%`) is used when displaying and parsing values; change this symbol using the `PercentSymbol` property to support alternate conventions.
+
+### Allow Null Value
+
+You can allow null values in the column by setting the [DataGridPercentColumn.AllowNullValue]() property to `true`.
+
+N> 
+The `AllowNullValue` property will work only when the underlying property type is nullable.
+
 ## DataGridMultiColumnComboBoxColumn
 
 The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
@@ -1810,6 +1878,287 @@ dataGrid.DefaultStyle = new DataGridStyle
 
 {% endhighlight %}
 {% endtabs %}
+
+## DataGridCurrencyColumn
+
+The `DataGridCurrencyColumn` inherits all the properties of the `DataGridColumn`. It displays numeric values with the currency symbol. To create a `DataGridCurrencyColumn`, define the column manually by adding the `DataGridCurrencyColumn` object to the `SfDataGrid.Columns` collection. The property corresponding to the column in the underlying collection must be a numeric type (int, double, float, etc.).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.BindingContext>
+    <local:ViewModel  x:Name ="viewModel"/>
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCurrencyColumn HeaderText="Unit Price"
+                                           MappingName="UnitPrice" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+DataGridCurrencyColumn currencyColumn = new DataGridCurrencyColumn()
+{
+    MappingName = "UnitPrice",
+    HeaderText = "Unit Price"
+};
+dataGrid.Columns.Add(currencyColumn);
+{% endhighlight %}
+{% endtabs %}
+
+### Currency Symbol
+
+By default, the currency symbol is displayed based on the current culture. You can customize the symbol using the [CurrencySymbol]() property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCurrencyColumn HeaderText="Unit Price"
+                                           MappingName="UnitPrice"
+                                           CurrencySymbol="€" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+DataGridCurrencyColumn currencyColumn = new DataGridCurrencyColumn()
+{
+    MappingName = "UnitPrice",
+    HeaderText = "Unit Price",
+    CurrencySymbol = "€"
+};
+dataGrid.Columns.Add(currencyColumn);
+{% endhighlight %}
+{% endtabs %}
+
+### Allow Null Value
+
+You can allow null values in the column by setting the [DataGridCurrencyColumn.AllowNullValue]() property to `true`.
+
+N> 
+The `AllowNullValue` property will work only when the underlying property type is nullable.
+
+## DataGridTimePickerColumn
+
+[DataGridTimePickerColumn]() is derived from `DataGridColumn` and displays column data as a time span. It hosts an `SfTimePicker` element in editing mode.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTimePickerColumn HeaderText="Delivery Time" 
+                                             MappingName="DeliveryTime">
+        </syncfusion:DataGridTimePickerColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+
+var timePickerColumn = new DataGridTimePickerColumn()
+{
+    MappingName = "DeliveryTime",
+    HeaderText = "Delivery Time"
+};
+
+dataGrid.Columns.Add(timePickerColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridTimePicker column in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-timepicker.png" width="404"/>
+
+### Null value support
+
+`DataGridTimePickerColumn` provides support to restrict or allow null values in columns based on the [AllowNull]() property. Instead of displaying null values, you can display hint text using the [NullValue]() property.
+
+The `NullValue` property will not work when `AllowNull` is set to `false`.
+
+### Setting input value range
+
+You can restrict the input value to a specific range using [Minimum]() and [Maximum]() properties.
+
+### Data formatting
+
+You can format the time span values by setting the [Format]() property.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTimePickerColumn HeaderText="Delivery Time" 
+                                             MappingName="DeliveryTime"
+                                             Format="hh\:mm">
+        </syncfusion:DataGridTimePickerColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+
+var timePickerColumn = new DataGridTimePickerColumn()
+{
+    MappingName = "DeliveryTime",
+    HeaderText = "Delivery Time",
+    Format = @"hh\:mm"
+};
+
+dataGrid.Columns.Add(timePickerColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridTimePicker column with Format in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-timepicker-format.png" width="404"/>
+
+## DataGridCheckBoxSelectorColumn
+
+`SfDataGrid` allows you to select or deselect individual rows through `SfCheckBox` using [DataGridCheckBoxSelectorColumn](), which is not bound to a data object from the underlying data source and can be added like any other column. The selector column supports only row selection, and selection in the selector column works based on the [SelectionMode]().
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="50">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 50
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+By default, a checkbox is displayed in the header of the selector column, which is used to select or deselect all rows in the datagrid.
+
+<img alt="DataGridCheckBoxSelector column in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector.png" width="404"/>
+
+### Text on column header
+
+You can display text instead of a checkbox in the header of the selector column by setting the [AllowCheckboxOnHeader]() property to `false`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="100"
+                                                   AllowCheckboxOnHeader="False"
+                                                   HeaderText="Selector">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 100,
+    AllowCheckboxOnHeader = false,
+    HeaderText = "Selector"
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGridCheckBoxSelector column with AllowCheckboxOnHeader as false in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector-allowcheckboxonheader.png" width="404"/>
+
+### Canceling the checkbox state change
+
+The checkbox state change in the `DataGridCheckBoxSelectorColumn` can be canceled by setting [DataGridCheckboxSelectorCheckedEventArgs.Cancel]() to `true` in the [SfDataGrid.CheckboxSelectorChecked]() event. Additionally, the checkbox value can be modified by setting [DataGridCheckboxSelectorCheckedEventArgs.NewValue]() within the same event.
+
+Based on this, the selection state is not changed when `e.Cancel` is set to `true`, and the selection is applied according to the value specified in `e.NewValue`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple"
+                       CheckboxSelectorChecked="OnCellCheckBoxClick">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxSelectorColumn MappingName="SelectorColumn"
+                                                   Width="50">
+        </syncfusion:DataGridCheckBoxSelectorColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.CheckboxSelectorChecked += OnCellCheckBoxClick;
+
+var checkBoxSelectorColumn = new DataGridCheckBoxSelectorColumn()
+{
+    MappingName = "SelectorColumn",
+    Width = 50
+};
+
+dataGrid.Columns.Add(checkBoxSelectorColumn);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+void OnCellCheckBoxClick(object sender, DataGridCheckboxSelectorCheckedEventArgs e)
+{
+    if (e.RowIndex == 1)
+        e.Cancel = true;
+
+    else if (e.RowIndex == 2)
+        e.NewValue = CheckState.Checked;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Limitations
+
+The following are the limitations of `DataGridCheckBoxSelectorColumn`:
+
+* The Selector column does not support cell selection.
+* The Selector column does not support data operations such as sorting, filtering, and grouping.
+* The Selector column is excluded from operations such as printing and exporting.
+* The Selector column does not support the filter row.
 
 ## Row header
 
