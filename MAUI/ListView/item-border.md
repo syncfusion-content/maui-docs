@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Item Border Customization in .NET MAUI ListView control | Syncfusion®
-description: Learn here all about Item Border Customization support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
+title: Item Border Customization in .NET MAUI ListView control | SyncfusionÂ®
+description: Learn here all about Item Border Customization support in SyncfusionÂ® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -121,7 +121,7 @@ listView.ItemBorderRadius = new CornerRadius(20,0,0,20);
 
 - [Syncfusion .NET MAUI ListView Item Size Customization](https://help.syncfusion.com/maui/listview/item-size-customization)
 
-# Group Header Border Customization in .NET MAUI ListView (SfListView)
+## Group Header Border Customization in .NET MAUI ListView (SfListView)
 
 This section explains how to customize group header borders in the `.NET MAUI ListView` (SfListView) using the built-in APIs.
 
@@ -242,4 +242,3 @@ listView.GroupHeaderBorderRadius = new CornerRadius(20,0,0,20);
 
 - [Item Border Customization in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-border)
 - [Grouping in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/grouping)
-- [Group Header Template Customization in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/group-header-template)
