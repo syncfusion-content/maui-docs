@@ -84,8 +84,6 @@ AutoCompleteSuggestions = new ObservableCollection<ISuggestion>()
 };
 {% endhighlight %}
 
-Using the `Category` property helps organize suggestions and creates a clearer experience by enabling grouped suggestions, category headers, and category-based filtering.
-
 ### ItemSelectedCommand
 
 The [ItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_ItemSelectedCommand) property accepts an `ICommand` that runs when the user selects an item from the autocomplete overlay. The command receives the selected ISuggestion as its parameter.

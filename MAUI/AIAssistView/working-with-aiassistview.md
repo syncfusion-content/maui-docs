@@ -1551,7 +1551,7 @@ By default, the `SfAIAssistView` control automatically scrolls to the bottom of 
 ### AutoScroll Behavior Configuration
 
 The `SfAIAssistView` control provides the `AutoScrollBehavior` property, which determines how the view updates its scroll position when new messages or responses are added. This property is of type `AssistViewScrollBehavior`, and its default value is `ScrollToLastResponse`.
-The available options include:
+The AutoScrollBehavior property supports the following scrolling modes:
 
 - `ScrollToLastResponse` : Automatically scrolls the view to display the most recent AI response.
 - `ScrollToLastRequest` : Scrolls the view to display the latest user request instead of the response.
