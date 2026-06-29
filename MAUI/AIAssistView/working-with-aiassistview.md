@@ -247,14 +247,14 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 
 The `SfAIAssistView` control supports customizable Request context menu for both request. Use the following properties to configure context menus and their templates:
 
-- **RequestContextMenu**: `ObservableCollection<AssistContextMenuItem>` — collection of menu items shown for request items.
-- **RequestContextMenuItemTemplate**: `DataTemplate` — template for individual menu items.
-- **RequestContextMenuPanelTemplate**: `DataTemplate` — template for the popup panel that contains the menu items.
+- [RequestContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenu): `ObservableCollection<AssistContextMenuItem>` — collection of menu items shown for request items.
+- [RequestContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuItemTemplate): `DataTemplate` — template for individual menu items.
+- [RequestContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuPanelTemplate): `DataTemplate` — template for the popup panel that contains the menu items.
 
-Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the `AssistItem` property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+Assist context menu items are represented by [AssistContextMenuItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html) (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html#Syncfusion_Maui_AIAssistView_AssistContextMenuItem_AssistItem) property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
 
 - When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). 
-- The context menu is shown when the More Options icon is tapped for an item. The `ContextMenuOpening` event is raised before the popup appears so you can modify or cancel it.
+- The context menu is shown when the More Options icon is tapped for an item. The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) event is raised before the popup appears so you can modify or cancel it.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -285,7 +285,7 @@ Assist context menu items are represented by `AssistContextMenuItem` (inherits f
 {% endtabs %}
 
 ## Customizing the context menu item template
-The RequestContextMenuItemTemplate property allows you to customize the appearance and interaction of individual context menu items. You can define a custom layout, bind UI elements such as icons and text, and pass the associated AssistItem as a CommandParameter for handling item-specific actions.
+The [RequestContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuItemTemplate) property allows you to customize the appearance and interaction of individual context menu items. You can define a custom layout, bind UI elements such as icons and text, and pass the associated `AssistItem` as a CommandParameter for handling item-specific actions.
 
 {% tabs %}
 {% highlight xaml %}
@@ -311,7 +311,7 @@ The RequestContextMenuItemTemplate property allows you to customize the appearan
 {% endtabs %}
 
 ## Customizing the context menu panel template
-The RequestContextMenuPanelTemplate property enables you to customize the overall layout and styling of the context menu popup. This allows you to control how menu items are arranged and presented, including styling, spacing, and container appearance.
+The [RequestContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuPanelTemplate) property enables you to customize the overall layout and styling of the context menu popup. This allows you to control how menu items are arranged and presented, including styling, spacing, and container appearance.
 
 {% tabs %}
 {% highlight xaml %}
@@ -329,14 +329,14 @@ The RequestContextMenuPanelTemplate property enables you to customize the overal
 
 The `SfAIAssistView` control supports customizable Response context menu for both response. Use the following properties to configure Response context menu and its template:
 
-- **ResponseContextMenu**: `IList<AssistContextMenuItem>` — collection of menu items shown for response items.
-- **ResponseContextMenuItemTemplate**: `DataTemplate` — template for individual menu items.
-- **ResponseContextMenuPanelTemplate**: `DataTemplate` — template for the popup panel that contains the menu items.
+- [ResponseContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenu): `IList<AssistContextMenuItem>` — collection of menu items shown for response items.
+- [ResponseContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate): `DataTemplate` — template for individual menu items.
+- [ResponseContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate): `DataTemplate` — template for the popup panel that contains the menu items.
 
-Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the `AssistItem` property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html#Syncfusion_Maui_AIAssistView_AssistContextMenuItem_AssistItem) property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
 
 - When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). 
-- The context menu is shown when the More Options icon is tapped for an item. The `ContextMenuOpening` event is raised before the popup appears so you can modify or cancel it.
+- The context menu is shown when the More Options icon is tapped for an item. The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) event is raised before the popup appears so you can modify or cancel it.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -373,11 +373,11 @@ Assist context menu items are represented by `AssistContextMenuItem` (inherits f
 {% endhighlight %}
 {% endtabs %}
 
-N> The customization of ResponseContextMenuItemTemplate and ResponseContextMenuPanelTemplate follows the same approach as the RequestContextMenu templates. Refer to the Request Context Menu template customization section for implementation details.
+N> The customization of [ResponseContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate) and [ResponseContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate) follows the same approach as the `RequestContextMenu` templates. Refer to the Request Context Menu template customization section for implementation details.
 
 ## ContextMenuOpening Event
 
-The ContextMenuOpening event is triggered before the context menu is displayed. The [ContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) provide the following details:
+The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ContextMenuOpening) event is triggered before the context menu is displayed. The [ContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) provide the following details:
 
 - [ContextMenuItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html#Syncfusion_Maui_AIAssistView_ContextMenuOpeningEventArgs_ContextMenuItems) : Represents the collection of menu items that will be displayed. You can modify this list (add or remove items) dynamically before the menu appears.
 - `Cancel` : Indicates whether the context menu opening should be canceled. Set this property to true to prevent the menu from being shown.

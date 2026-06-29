@@ -74,15 +74,18 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 In `SfAIAssistView`, the `AssistSuggestion` class exposes a `Category` property that you can use to group autocomplete suggestions by topic. Set `Category` when creating suggestions (for example, "Recommended", "History", or "Recent") so the overlay can present related items together.
 
 ### Grouping Suggestions by Category in ViewModel
-
+{% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
+  
 AutoCompleteSuggestions = new ObservableCollection<ISuggestion>()
 {
-    new AssistSuggestion() { Text = "What is .NET MAUI?", Category = "Recommended" },
-    new AssistSuggestion() { Text = "How do I get started with AI AssistView?", Category = "Recommended" },
-    new AssistSuggestion() { Text = "Explain data binding in .NET MAUI", Category = "History" },
+   new AssistSuggestion() { Text = "What is .NET MAUI?", Category = "Recommended" },
+   new AssistSuggestion() { Text = "How do I get started with AI AssistView?", Category = "Recommended" },
+   new AssistSuggestion() { Text = "Explain data binding in .NET MAUI", Category = "History" },
 };
+
 {% endhighlight %}
+{% endtabs %}
 
 ### ItemSelectedCommand
 
