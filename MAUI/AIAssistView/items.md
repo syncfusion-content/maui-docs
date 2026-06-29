@@ -598,6 +598,58 @@ public class ViewModel : INotifyPropertyChanged
 
 ![Syncfusion .NET MAUI AI AssistView Error message](images/maui-aiassistview-error-message.png)
 
+## Show sourcechip in response
+
+The `SfAIAssistView` allows displaying source references in a response using the `AssistItem.Sources` collection.  
+These sources will be shown as source chip below the response message.
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="32,33,34" %}
+
+using Syncfusion.Maui.AIAssistView;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+
+public class ViewModel : INotifyPropertyChanged
+{
+
+    ...
+
+    private async void GenerateAssistItems()
+    {
+        AssistItem requestItem = new AssistItem()
+        {
+            Text = "What is .NET MAUI?",
+            IsRequested = true
+        };
+
+        AssistItems.Add(requestItem);
+
+        await GetResultAsync();
+    }
+
+    private async Task GetResultAsync()
+    {
+        AssistItem responseItem = new AssistItem()
+        {
+            Text = ".NET MAUI is a cross-platform framework for building native mobile and desktop applications using C# and XAML.",
+            IsRequested = false,
+        };
+
+        responseItem.Sources.Add(new Uri("https://learn.microsoft.com/dotnet/maui/"));
+        responseItem.Sources.Add(new Uri("https://www.syncfusion.com/maui-controls"));
+        responseItem.Sources.Add(new Uri("https://help.syncfusion.com/maui/aiassistview/getting-started"));
+
+        AssistItems.Add(responseItem);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Source chip in .NET MAUI AI AssistView](images/maui-aiassistview-source-chip.png)
+
+
 ## Request and response item
  
 The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is used to determine whether a item is a Request or a Response. If `IsRequested` property is set to `true`, the item is a Request item.
