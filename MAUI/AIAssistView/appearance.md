@@ -478,7 +478,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView response item template customization](Images/appearance/maui-aiassistview-ResponseTemplate.png)
+![Syncfusion .NET MAUI SfAIAssistView response item template customization](Images/appearance/maui-aiassistview-ResponseTemplate.gif)
 
 ## Text Selection in Request and Response messages
 The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
