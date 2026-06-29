@@ -1679,5 +1679,3 @@ public MainPage()
 
 The `SfAIAssistView` control provides built-in image preview support. When an image is associated with an `AssistImageItem` or an `AssistAttachmentItem`, tapping the image displays it in a preview view.
 This behavior is enabled by default and does not require additional configuration.
-
-![Syncfusion .NET MAUI AI AssistView Image Preview support](Images/working-with-aiassistview//maui-aiassistview-image-preview.gif)
