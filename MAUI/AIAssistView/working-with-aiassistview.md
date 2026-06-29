@@ -281,7 +281,7 @@ Assist context menu items are represented by `AssistContextMenuItem` (inherits f
 
     sfAIAssistView.RequestContextMenu = requestMenu;
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Customizing the context menu item template
@@ -307,7 +307,7 @@ The RequestContextMenuItemTemplate property allows you to customize the appearan
     </DataTemplate>
 </syncfusion:SfAIAssistView.RequestContextMenuItemTemplate>
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Customizing the context menu panel template
@@ -322,7 +322,7 @@ The RequestContextMenuPanelTemplate property enables you to customize the overal
     </DataTemplate>
 </syncfusion:SfAIAssistView.RequestContextMenuPanelTemplate>
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Response Context menu
@@ -349,7 +349,7 @@ Assist context menu items are represented by `AssistContextMenuItem` (inherits f
 </syncfusion:SfAIAssistView>
 
 
-{% highlight %}
+{% endhighlight %}
 {% highlight c# hl_lines="18" %}
     
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
@@ -370,7 +370,7 @@ Assist context menu items are represented by `AssistContextMenuItem` (inherits f
 
     sfAIAssistView.ResponseContextMenu = responseMenu;
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 N> The customization of ResponseContextMenuItemTemplate and ResponseContextMenuPanelTemplate follows the same approach as the RequestContextMenu templates. Refer to the Request Context Menu template customization section for implementation details.
@@ -388,7 +388,7 @@ The ContextMenuOpening event is triggered before the context menu is displayed. 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ContextMenuOpening="OnContextMenuOpening">
 </syncfusion:SfAIAssistView>
-{% highlight %}
+{% endhighlight %}
 {% highlight c# %}
 
 private void OnContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
@@ -396,7 +396,7 @@ private void OnContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
    // Allows customizing or canceling the context menu before it is displayed
 }
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Editor
