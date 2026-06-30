@@ -47,11 +47,26 @@ public MainPage()
 
 ![Syncfusion .NET MAUI AI AssistView Toolbar](Images/toolbar/maui-aiassistview-toolbar.png)
 
+## Toolbar menu items
+
+In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model. 
+
+{% highlight xaml %}
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.ToolbarMenuOptions>
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Settings" Icon="dotnet_bot.png" Command="{Binding TappedCommand}" />
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Help" Icon="dotnet_bot.png" Command="{Binding TappedCommand}" />
+    </syncfusion:SfAIAssistView.ToolbarMenuOptions>
+</syncfusion:SfAIAssistView>
+{% endhighlight %}
+
+The items added to `ToolbarMenuOptions` appear when the toolbar menu icon is clicked and invoke the bound commands when tapped.
+
 ## Chat Modes
 
 ### New chat button
 
-The toolbar now includes a chat option that provides both New Chat. When clicked, it opens a new chat window where the user can start an entirely new session, while the previous session is preserved in the conversation history.
+The toolbar includes a chat option that provides New Chat. When clicked, it opens a new chat window so the user can start an entirely new session, while the previous session is preserved in the conversation history.
 
 ### Temporary Chat
 
