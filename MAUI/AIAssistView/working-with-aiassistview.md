@@ -373,7 +373,7 @@ Assist context menu items are represented by `AssistContextMenuItem` (inherits f
 {% endhighlight %}
 {% endtabs %}
 
-N> The customization of [ResponseContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate) and [ResponseContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate) follows the same approach as the `RequestContextMenu` templates. Refer to the Request Context Menu template customization section for implementation details.
+N> The customization of [ResponseContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate) and [ResponseContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate) follows the same approach as the `RequestContextMenu` templates. Refer to the Request Context Menu template customization section for implementation details, as described there.
 
 ## ContextMenuOpening Event
 
