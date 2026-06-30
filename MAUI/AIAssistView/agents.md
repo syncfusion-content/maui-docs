@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Agent in .NET MAUI AI AssistView
 
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides an `Agent` feature that allows you to display a collection of agents in the view. Agents can be used in AI applications to handle specific tasks like writing assistance, image generation, and data analysis.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides an `Agent` feature that enables multiple AI agents to be presented within a single chat experience. Agents are useful in AI chat applications because they represent specialized assistants for different tasks and domains, allowing users to switch between capabilities seamlessly and receive more focused, context-aware responses.
 
 ## Populating agent collection
 
@@ -22,7 +22,7 @@ The `SfAIAssistView` control provides the `Agents` property to set the agents co
 
 ### Define the view model
 
-Create a simple view model as shown in the following code example and save it as `GettingStartedViewModel.cs`.
+Create a simple view model as shown in the following code example and save it as `ViewModel.cs`.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -92,7 +92,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-### Binding agent collection to SfAIAssistView
+### Binding agent collection to AI AssistView
 
 To populate the agent collection, bind the collection from its `BindingContext` to the `SfAIAssistView.Agents` property.
 
@@ -170,7 +170,7 @@ public MainPage()
 
 ### Show selected agent in view
 
-The `SfAIAssistView` control supports showing the selected agent in the view. By default, the `SelectedAgent` is displayed. To hide the `SelectedAgent`, set the `ShowSelectedAgent` property to `false`.
+The `SfAIAssistView` control supports showing the selected agent in the editor view. By default, the `SelectedAgent` is displayed. To hide the selected agent, set the `ShowSelectedAgent` property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
