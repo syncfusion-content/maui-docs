@@ -1504,6 +1504,15 @@ public partial class MainPage : ContentPage
 
 The `SfAIAssistView` control supports displaying toast notifications. These notifications appear as pop-up windows providing information during user interactions with the `SfAIAssistView`.
 
+### Toast notification types
+
+The `SfAIAssistView` supports the following types of toast notifications:
+
+* `None` : Displays the default toast notification.
+* `Success` : Indicates that an operation has been completed successfully.
+* `Warning` : Highlights a cautionary message or a potential issue that requires user attention.
+* `Error` : Notifies the user of a failure or an issue that has occurred during execution.
+
 ![Syncfusion .NET MAUI AI AssistView Toast Notification](Images/working-with-aiassistview/maui-aiassistview-toast-notification.png)
 
 ### Restrict toast notification in view
