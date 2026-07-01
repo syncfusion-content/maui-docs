@@ -129,21 +129,25 @@ public class OrderInfo
         get { return orderID; }
         set { this.orderID = value; }
     }
+
     public string CustomerID
     {
         get { return customerID; }
         set { this.customerID = value; }
     }
+
     public string ShipCountry
     {
         get { return shipCountry; }
         set { this.shipCountry = value; }
     }
+
     public string Customer
     {
         get { return this.customer; }
         set { this.customer = value; }
     }
+    
     public string ShipCity
     {
         get { return shipCity; }
