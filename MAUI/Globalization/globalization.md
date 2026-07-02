@@ -320,7 +320,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/datetime-range-slider/overview">Date Time Range Slider</a></td>
+<td><a href="/maui/datetime-range-selector/overview">Date Time Range Selector</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -329,7 +329,17 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/datetime-range-selector/overview">Date Time Range Selector</a></td>
+<td><a href="/maui/datetime-range-slider/overview">Date Time Range Slider</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+</tr>
+
+
+<tr>
+<td><a href="/maui/datetime-slider/overview">Date Time Slider</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>

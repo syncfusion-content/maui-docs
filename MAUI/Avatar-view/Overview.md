@@ -46,7 +46,7 @@ The following table summarizes the globalization support available in this contr
 
 <div class="legend">
 <span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/full-support.svg" width="16"> Full Support
+<img src="../Images/no-support.svg" width="16"> No Support
 </span>
  
 <span style="display: inline-flex; align-items: center; gap: 6px;">
@@ -66,10 +66,10 @@ The following table summarizes the globalization support available in this contr
 <tr>
 <td><a href="/maui/avatar-view/overview">Avatar View</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 </tr> 
 </table>
 
