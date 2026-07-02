@@ -11,7 +11,7 @@ documentation: ug
 
 The [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with customizable visuals. It displaying the progress of a process in circular shapes, determinate and indeterminate states, segments, smooth animation, and with customizable content. You can also define ranges with different colors.
 
-   ![Circular ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+  ![Circular ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
 ## Business use cases
 
@@ -32,8 +32,8 @@ The [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/ma
 
 ## Related controls
 
-- [Linear ProgressBar](https://help.syncfusion.com/maui/linearprogressbar/overview) for visualize task progress in a horizontal bar format, ideal for simple linear workflows.
-- [Step ProgressBar](https://help.syncfusion.com/maui/stepprogressbar/overview) for displaying progress across multiple steps or stages, perfect for guided processes.
+- [Linear Progress Bar](https://help.syncfusion.com/maui/linearprogressbar/overview) for visualize task progress in a horizontal bar format, ideal for simple linear workflows.
+- [Step Progress Bar](https://help.syncfusion.com/maui/stepprogressbar/overview) for displaying progress across multiple steps or stages, perfect for guided processes.
 - [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for displaying indeterminate loading states during operations.   
 
 ## See Also
@@ -130,7 +130,7 @@ The [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/ma
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -146,7 +146,6 @@ The [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/ma
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

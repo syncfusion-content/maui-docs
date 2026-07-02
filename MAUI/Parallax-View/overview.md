@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Parallax View control | Syncfusion
+title: About .NET MAUI Parallax View control | Syncfusion®
 description: Learn about the introduction of Syncfusion<sup>®</sup> .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView
@@ -11,7 +11,7 @@ documentation: ug
 
 The [SfParallaxView](https://www.syncfusion.com/maui-controls/maui-parallax-view) for .NET MAUI provides an optimal way to scroll any control that implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface with a background element that translates more slowly than the foreground element. The SfParallaxView control binds the scroll position of a foreground element (such as a list) to a background element and moves the background element at a varying speed.
 
-   ![Overview image of Parallax View](ParallaxView_Images/maui_parallaxview_overview.gif)
+   ![Syncfusion .NET MAUI Parallax View Overview image](ParallaxView_Images/maui_parallaxview_overview.gif)
 
 ## Business use cases
 
@@ -35,15 +35,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -164,7 +172,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -180,7 +188,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

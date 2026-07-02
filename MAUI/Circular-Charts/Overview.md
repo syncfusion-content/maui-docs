@@ -36,15 +36,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/partial-support.svg" width="16"> Partial Support
-</span><br>
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
  
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/no-support.svg" width="16"> No Support
-</span><br>
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+</div>
 
 <table>
 <tr>
@@ -67,9 +75,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for trend analysis, comparisons, and multi‑series data visualization using X and Y axes.
-- [Funnel Chart](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing stages in a process or pipeline.
-- [Pyramid Chart](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.  
+- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for trend analysis, comparisons, and multi‑series data visualization using X and Y axes.
+- [Funnel Charts](https://help.syncfusion.com/maui/funnel-charts/overview) for visualizing stages in a process or pipeline.
+- [Pyramid Charts](https://help.syncfusion.com/maui/pyramid-charts/overview) for hierarchical or comparative data representation.  
 
 ## See Also
 
@@ -166,7 +174,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -182,7 +190,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

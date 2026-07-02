@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI TreeView Control | Syncfusion
-description: Learn here about getting started with the Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more.
+title: Getting Started with .NET MAUI TreeView Control | Syncfusion®
+description: Learn here about getting started with the Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -20,7 +20,7 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
@@ -43,7 +43,7 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a .NET MAUI project
+## Step 1: Create a new .NET MAUI project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.

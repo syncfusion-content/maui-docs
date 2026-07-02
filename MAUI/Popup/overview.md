@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Popup control | Syncfusion
-description: Learn about the introduction of Syncfusion .NET MAUI Popup (SfPopup) control, its elements and more.
+title: About .NET MAUI Popup control | Syncfusion®
+description: Learn about the introduction of Syncfusion® .NET MAUI Popup (SfPopup) control, its elements and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion® [.NET MAUI Popup](https://www.syncfusion.com/maui-controls/maui-popup) layout allows you to display an alert message with customizable buttons or load any desired view inside a popup. It provides options to fully customize the popup with custom header, body, and footer capabilities, allowing you to display important information precisely how users want to.
 
-![.NET MAUI popup overview ](Images/overview/popup_overview.png)
+![Syncfusion .NET MAUI popup overview](Images/overview/popup_overview.png)
 
 ## Business use cases
 
@@ -38,19 +38,27 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/no-support.svg" width="16"> No Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -171,7 +179,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -187,7 +195,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

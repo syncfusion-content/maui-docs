@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin SfChat to .NET MAUI SfChat | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin Chat to Syncfusion .NET MAUI Chat control and more.
+title: Migrate from Xamarin SfChat to .NET MAUI SfChat | Syncfusion® 
+description: Learn here all about Migrating from Syncfusion® Xamarin Chat to Syncfusion® .NET MAUI Chat control and more.
 platform: MAUI
 control: SfChat
 documentation: ug

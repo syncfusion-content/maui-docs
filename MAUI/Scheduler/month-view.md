@@ -246,7 +246,7 @@ this.Content = scheduler;
 
 ## Non working days in month view
 
-The scheduler allows you to define non-working days in the Month view using the `NonWorkingDays` property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of `NonWorkingDays` property is “SchedulerMonthWeekDays.None” You can configure this property to include one or more days of the week.
+The scheduler allows you to define non-working days in the Month view using the `NonWorkingDays` property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of `NonWorkingDays` property is `SchedulerMonthWeekDays.None`. You can configure this property to include one or more days of the week.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="4" %}
@@ -267,7 +267,7 @@ this.Content = scheduler;
 
 ### Show or Hide non working days in Month View
 
-The `HideNonWorkingDays` property is used to control the visibility of non-working days in the MonthView. When `HideNonWorkingDays` is `false` (default), the specified non-working days are displayed in the MonthView. When `HideNonWorkingDays` is `true`, the specified non-working days are hidden from the MonthView.
+The `HideNonWorkingDays` property is used to control the visibility of non-working days in the Month view. When `HideNonWorkingDays` is `false` (default), the specified non-working days are displayed in the MonthView. When `HideNonWorkingDays` is `true`, the specified non-working days are hidden from the MonthView.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="4" %}
@@ -302,7 +302,7 @@ Non-working days in the MonthView can be customized using the `NonWorkingDaysBac
             <scheduler:SchedulerMonthView.CellStyle>
                 <scheduler:SchedulerMonthCellStyle NonWorkingDaysBackground="Azure">
                     <scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
-                        <scheduler:SchedulerTextStyle TextColor="Black"     FontSize="12" />
+                        <scheduler:SchedulerTextStyle TextColor="Black" FontSize="12" />
                     </scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
                 </scheduler:SchedulerMonthCellStyle>
             </scheduler:SchedulerMonthView.CellStyle>
@@ -323,7 +323,7 @@ SchedulerTextStyle nonWorkTextStyle = new SchedulerTextStyle()
 
 SchedulerMonthCellStyle monthCellStyle = new SchedulerMonthCellStyle()
 {
-    NonWorkingDaysBackground = Brush.LightGrey,
+    NonWorkingDaysBackground = Brush.Azure,
     NonWorkingDaysTextStyle = nonWorkTextStyle
 };
 
@@ -336,7 +336,7 @@ this.Content = scheduler;
 
 ## Inline Appointments in Month View
 
-Appointments can be displayed inline within the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the `ShowAppointmentsInline` property.When `ShowAppointmentsInline` is `false` (default), appointments are not shown inline in the MonthView. When `ShowAppointmentsInline` is `true`, tapping a date cell displays all appointments for that date inline below the tapped row. This provides a quick way to view daily schedules without switching to another view. Inline appointments are rendered in a collection view, allowing customization of styles such as background, text color, and layout.
+Appointments can be displayed inline within the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the `ShowAppointmentsInline` property. When `ShowAppointmentsInline` is `false` (default), appointments are not shown inline in the MonthView. When `ShowAppointmentsInline` is `true`, tapping a date cell displays all appointments for that date inline below the tapped row. This provides a quick way to view daily schedules without switching to another view. Inline appointments are rendered in a collection view, allowing customization of styles such as background, text color, and layout.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="4" %}
@@ -472,19 +472,20 @@ The `MonthInlineViewItemTemplate` property allows you to define a custom DataTem
         <schedule:SchedulerMonthView ShowAppointmentsInline="True">
             <schedule:SchedulerMonthView.MonthInlineViewItemTemplate>
                 <DataTemplate>
-                    <Border Stroke="DarkBlue"
-                            StrokeThickness="1"
-                            Margin="2">
-                        <StackLayout BackgroundColor="LightBlue"
-                                     Padding="5">
-                            <Label Text="{Binding Subject}"
-                                   FontSize="14"
-                                   TextColor="Black"/>
-                            <Label Text="{Binding StartTime, StringFormat='{}{0:hh:mm tt}'}"
-                                   FontSize="12"
-                                   TextColor="Black"/>
-                        </StackLayout>
-                    </Border>
+                    <Grid BackgroundColor="MediumOrchid" Padding="8">
+                        <HorizontalStackLayout HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               Spacing="6">
+                        <Label Text="&#xE71D;"
+                               FontFamily="MauiMaterialAssets"
+                               TextColor="White"
+                               VerticalOptions="Center"/>
+                        <Label Text="{Binding Subject}"
+                               TextColor="White"
+                               FontFamily="Bold"
+                               VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </Grid>
                 </DataTemplate>
             </schedule:SchedulerMonthView.MonthInlineViewItemTemplate>
         </schedule:SchedulerMonthView>
@@ -492,6 +493,8 @@ The `MonthInlineViewItemTemplate` property allows you to define a custom DataTem
 </schedule:SfScheduler>
 {% endhighlight %}  
 {% endtabs %}
+
+![Inline-appointments-customization-in-month-view-using-date-template](images/month-view/customize-inline-appointment-view-using-data-template.png)
 
 ### MonthInlineAppointmentTapped
 

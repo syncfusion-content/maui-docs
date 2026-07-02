@@ -69,6 +69,8 @@ N> It is recommended to set the `TabBarHeight` to 72 while displaying both the i
 
 {% endtabs %}
 
+N> The `TabBarHeight` property is obsolete — use `TabBarSize` instead. When `TabBarPlacement` is `Top` or `Bottom`, `TabBarSize` controls the tab bar's height; when `TabBarPlacement` is `Left` or `Right`, `TabBarSize` controls the tab bar's width.
+
 ## Customize the TabBarSize
 
 The size of the tab bar can be customized by setting the [TabBarSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarSize) property. The default size is 48.

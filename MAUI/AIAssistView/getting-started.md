@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI AI AssistView Control | Syncfusion
-description: Learn here about getting started with the Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
+title: Getting Started with .NET MAUI AI AssistView Control | Syncfusion®
+description: Learn here about getting started with the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -25,7 +25,7 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a .NET MAUI project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
@@ -203,6 +203,6 @@ this.aiAssistView.AssistItems = viewModel.AssistItems;
 
 The following screenshot illustrates the result of the above code.
 
-![AI AssistView control in .NET MAUI platform](images/maui-aiassistview-getting-started.png)
+![Syncfusion .NET MAUI AI AssistView control](images/maui-aiassistview-getting-started.png)
 
 You can download the AI AssistView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)

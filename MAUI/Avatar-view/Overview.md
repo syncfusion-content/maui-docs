@@ -36,15 +36,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -67,7 +75,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [BadgeView](https://help.syncfusion.com/maui/badge-view/overview) for displaying notifications or status indicators on avatars.  
+- [Badge View](https://help.syncfusion.com/maui/badge-view/overview) for displaying notifications or status indicators on avatars.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting user lists with avatar support.  
 - [Chat](https://help.syncfusion.com/maui/chat/overview) for showing user avatars in conversations.  
 
@@ -165,7 +173,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -181,7 +189,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

@@ -74,11 +74,19 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
+</div>
 
 <table>
 <tr>
@@ -101,9 +109,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date-only values.  
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date-only values.  
 - [Calendar](https://help.syncfusion.com/maui/calendar/overview) for navigating and selecting dates using full calendar views.
-- [TimePicker](https://help.syncfusion.com/maui/timepicker/overview) for picking time values with an intuitive clock‑style interface.
+- [Time Picker](https://help.syncfusion.com/maui/timepicker/overview) for picking time values with an intuitive clock‑style interface.
 
 ## See Also
 
@@ -199,7 +207,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -215,7 +223,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {
@@ -261,6 +268,22 @@ Explore Features
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
+    <span class="card-icon card-showcase"></span>
+  </div>
+    <h3 class="form-title">Showcase Samples</h3>
+</div>
+    <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DateTimePicker" class="explore-link">
+    View Samples
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+<!-- Card 3 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+  <div class="card-header">
+    <div class="icon-circle">
     <span class="card-icon card-videos"></span>
     </div>
     <h3 class="form-title">Tutorial Videos</h3>
@@ -274,7 +297,7 @@ Explore Features
 </a>
   </div>
 </div>
-<!-- Card 3 -->
+<!-- Card 4 -->
 <div class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
@@ -292,7 +315,7 @@ Search KB's
 </a>
   </div>
 </div>
-<!-- Card 4 -->
+<!-- Card 5 -->
 <div class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Chat Control | Syncfusion
-description: Learn here all about Introduction of the Syncfusion .NET MAUI Chat (SfChat) control, its elements, and more.
+title: About .NET MAUI Chat Control | Syncfusion®
+description: Learn here all about Introduction of the Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: Chat
 documentation: ug
@@ -11,9 +11,7 @@ documentation: ug
 
 The Syncfusion® [.NET MAUI Chat](https://www.syncfusion.com/maui-controls/maui-chat) control offers a contemporary conversational chatbot experience, allowing for flexible customization of the layout to display conversations between two or more users.
 
-   ![overview in .NET MAUI SfChat](Images/maui-chat-overview.png)
-
-   ![.NET MAUI Chat Overview](Images/maui-chat-overview.png) 
+  ![Syncfusion .NET MAUI Chat overview](Images/maui-chat-overview.png) 
 
 ## Business use cases
 
@@ -30,6 +28,7 @@ The Syncfusion® [.NET MAUI Chat](https://www.syncfusion.com/maui-controls/maui-
 - **Quick suggestions** for faster replies and reduced typing effort.
 - **Load more messages** to handle long chat histories smoothly.
 
+
 ## Globalization
 
 The following table summarizes the globalization support available in this control.
@@ -38,19 +37,27 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/partial-support.svg" width="16"> Partial Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -73,9 +80,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related Controls
 
-- [AIAssistView](https://help.syncfusion.com/maui/aiassistview/overview) enhance conversations with AI‑driven suggestions and guided responses. 
-- [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview) speed up message composition with predictive text input.
-- [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) provide flexible selection options within chat workflows.
+- [AI AssistView](https://help.syncfusion.com/maui/aiassistview/overview) enhance conversations with AI‑driven suggestions and guided responses. 
+- [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) speed up message composition with predictive text input.
+- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) provide flexible selection options within chat workflows.
 
 ## See Also
 
@@ -171,7 +178,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -187,7 +194,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {
@@ -296,7 +302,10 @@ Search KB's
 Read Blogs
   <span class="card-icon card-arrow"></span>
 </a>
+<<<<<<< HEAD
+=======
   </div>
 </div>
 
+>>>>>>> 0db85cb2c85193a2c646a813fcf82840a20310a1
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Accordion control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Accordion (SfAccordion) control, its elements and more.
+title: About .NET MAUI Accordion control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Accordion (SfAccordion) control, its elements and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The **[.NET MAUI Accordion](https://www.syncfusion.com/maui-controls/maui-accordion)** (SfAccordion) offers a vertically collapsible panel with stacked headers, allowing the expansion or collapse of one or multiple items simultaneously.
 
-![.NET MAUI accordion overview ](Images/overview_images/accordion_overview.png)
+![Syncfusion .NET MAUI accordion overview ](Images/overview_images/accordion_overview.png)
 
 ## Business use cases
 
@@ -34,19 +34,27 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/partial-support.svg" width="16"> Partial Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -69,9 +77,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [SfExpander](https://help.syncfusion.com/maui/expander/overview) for expanding and collapsing a single content section.
-- [SfNavigationDrawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for slide‑in navigation panels and grouped menus.
-- [SfTabView](https://help.syncfusion.com/maui/tabview/overview) for organizing content into tabbed sections.
+- [Expander](https://help.syncfusion.com/maui/expander/overview) for expanding and collapsing a single content section.
+- [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for slide‑in navigation panels and grouped menus.
+- [Tab View](https://help.syncfusion.com/maui/tabview/overview) for organizing content into tabbed sections.
 
 ## See Also
 
@@ -167,7 +175,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -183,7 +191,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

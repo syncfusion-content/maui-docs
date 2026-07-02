@@ -24,7 +24,6 @@ The Syncfusion® .NET MAUI Cards ([SfCards](https://www.syncfusion.com/maui-cont
 
 - **Removable card support** allows creating cards that can be dismissed through user interaction.
 - **Swipe interaction** enables dismissing cards in left and right directions for intuitive navigation.
-- **Appearance customization** allows configuring background, border width, border color, corner radius, indicator thickness, and indicator position.
 - **Dismissal control** allows restricting or customizing when cards can be removed.
 - **Card stack layout** allows displaying multiple cards in a stacked format with one visible at a time.
 - **Multi-directional swipe support** enables dismissing and retrieving cards in left, right, top, and bottom directions.
@@ -38,15 +37,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -69,7 +76,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Carousel-View](https://help.syncfusion.com/maui/carousel-view/overview) for swipe-based item navigation using carousel layouts.  
+- [Carousel View](https://help.syncfusion.com/maui/carousel-view/overview) for swipe-based item navigation using carousel layouts.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying items in structured and scrollable lists.  
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing collapsible content sections.  
 
@@ -167,7 +174,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -183,7 +190,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

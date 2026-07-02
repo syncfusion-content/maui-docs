@@ -35,15 +35,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -66,14 +74,14 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [TabView](https://help.syncfusion.com/maui/tabview/overview) for navigating between pages using tab-based interfaces.
-- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for implementing layered navigation patterns.
-- [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing navigation content in expandable sections.
+- [Tab View](https://help.syncfusion.com/maui/tabview/overview) for navigating between pages using tab-based interfaces.
+- [TreeView](https://help.syncfusion.com/maui/treeview/overview) for hierarchical navigation structures with expandable nodes.  
+- [Rotator](https://help.syncfusion.com/maui/rotator/overview) for cycling through content or images in a sliding view.
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/navigationdrawer/getting-started) shows a step‑by‑step guide to begin using the Navigation Drawer control.  
-- [Multi Drawer](https://help.syncfusion.com/maui/navigationdrawer/multi-drawer) explains how to configure pane behavior and positioning.  
+- [Getting Started](https://help.syncfusion.com/maui/navigationdrawer/getting-started) shows a step‑by‑step guide to begin using the Navigation Drawer control. 
+- [Setting Sliding Panel Content](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content) explains how to configure and manage the side pane content.
 - [Animation](https://help.syncfusion.com/maui/navigationdrawer/duration) helps customize animation and transition effects.  
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
@@ -164,7 +172,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -180,7 +188,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

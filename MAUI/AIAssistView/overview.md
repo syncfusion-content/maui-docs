@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI AI AssistView (SfAssistView) control, its elements and more.
+title: About .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI AI AssistView (SfAssistView) control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI AI AssistView](https://www.syncfusion.com/maui-controls/maui-ai-assistview) control is a component for integrating AI services into .NET MAUI apps. It provides a user-friendly interface, making it easier for developers to create applications that interact with AI. AI AssistView enables developers can customize both appearance and functionality, allowing them to match their app's design and requirements. It simplifies the process of building intelligent, responsive applications by leveraging AI to improve the user experience.
 
-![.NET MAUI AI assistview overview ](Images/overview/aiassistview.png)
+![Syncfusion .NET MAUI AI assistview overview ](Images/overview/aiassistview.png)
 
 ## Business use cases
 
@@ -35,19 +35,27 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/partial-support.svg" width="16"> Partial Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -71,7 +79,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Chat](https://help.syncfusion.com/maui/chat/overview) for conversational interfaces and messaging.
-- [AutoComplete](https://help.syncfusion.com/maui/autocomplete/overview) for predictive text input and suggestions.
+- [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) for predictive text input and suggestions.
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for flexible selection and entry scenarios.
 
 ## See Also
@@ -168,7 +176,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -184,7 +192,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

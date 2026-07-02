@@ -25,13 +25,13 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a New .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
@@ -48,14 +48,14 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
 
-## Step 1: Create a New .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
@@ -72,13 +72,13 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeMap NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeMap NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
@@ -110,7 +110,7 @@ builder.ConfigureSyncfusionCore();
 Create a simple data model in a new class file as shown in the following example code.
 
 {% tabs %}
-{% highlight C# tabtitle="AirportDetails.cs" %}
+{% highlight C# %}
 
 public class AirportDetails
 {
@@ -126,7 +126,7 @@ public class AirportDetails
 Create a view model class to set values for the properties listed in the model class as shown in the following example code.
 
 {% tabs %}
-{% highlight C# tabtitle="ViewModel.cs" %}
+{% highlight C# %}
 
 public class ViewModel
 {
@@ -181,7 +181,7 @@ Initialize the `TreeMap` control and configure its properties to represent hiera
 Also, specify the path to the data property containing the text you want to display for the treemap leaf item using the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property of [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings).
 
 {% tabs %}
-{% highlight XAML hl_lines="2 4 5 6" %}
+{% highlight XAML %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -195,7 +195,7 @@ Also, specify the path to the data property containing the text you want to disp
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2 3"  %}
+{% highlight C# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -211,6 +211,6 @@ N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembe
 
 ![getting-started-with-maui-tree-map](images/getting-started/treemap-view.png)
 
-You can download the TreeMap Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/GettingStarted)
+You can download the TreeMap Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/GettingStarted).
 
 N> You can refer to our [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI TreeMap Example](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/) that shows you how to render the TreeMap in .NET MAUI.

@@ -24,8 +24,8 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Autocomplete](https://www.syncfusion.c
 
 - **Flexible data binding** binds the control to different types of data sources.
 - **Filtering support** filters the suggestion list based on input and fills with the closest match.
-- **Search support** highlights matching text within suggestions.
-- **Placeholder text** displays helpful text before input.
+- **Drop‑down customization** allows tailoring the appearance and behavior of the suggestion list.  
+- **Multi‑selection** enables choosing multiple values from the available options.
 
 ## Globalization
 
@@ -35,19 +35,27 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/partial-support.svg" width="16"> Partial Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -59,7 +67,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/autocomplete/overview">AutoComplete</a></td>
+<td><a href="/maui/autocomplete/overview">Autocomplete</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -72,13 +80,14 @@ The following table summarizes the globalization support available in this contr
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for flexible selection with optional user input.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying filtered results in list format.
-- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating autocomplete inputs within forms.
+- [Numeric Entry](https://help.syncfusion.com/maui/numeric-entry/overview) for structured numeric input with validation and formatting. 
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) shows how to begin using AutoComplete step by step. 
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) shows how to begin using Autocomplete step by step. 
 - [Searching & Filtering](https://help.syncfusion.com/maui/autocomplete/searching-filtering) explains how to configure search logic and filtering behavior.
 - [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization) shows how to style and customize the AutoComplete control.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
 
@@ -167,7 +176,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -183,7 +192,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {
@@ -229,6 +237,22 @@ Explore Features
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
+    <span class="card-icon card-showcase"></span>
+  </div>
+    <h3 class="form-title">Showcase Samples</h3>
+</div>
+    <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI" class="explore-link">
+    View Samples
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+<!-- Card 3 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+  <div class="card-header">
+    <div class="icon-circle">
     <span class="card-icon card-videos"></span>
     </div>
     <h3 class="form-title">Tutorial Videos</h3>
@@ -242,7 +266,7 @@ Explore Features
 </a>
   </div>
 </div>
-<!-- Card 3 -->
+<!-- Card 4 -->
 <div class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">
@@ -260,7 +284,7 @@ Search KB's
 </a>
   </div>
 </div>
-<!-- Card 4 -->
+<!-- Card 5 -->
 <div class="form-card" target="_blank">
   <div class="form-content">
    <div class="card-header">

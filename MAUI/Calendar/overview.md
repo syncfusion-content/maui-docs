@@ -68,11 +68,19 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
+</div>
 
 <table>
 <tr>
@@ -95,15 +103,16 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting and handling single date input scenarios.  
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting and handling single date input scenarios.  
 - [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for managing appointments and scheduling workflows.  
-- [DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting combined date and time values.
+- [Date Time Picker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting combined date and time values.
 
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/calendar/getting-started) shows how to begin using the Calendar control step by step.  
 - [Selection modes](https://help.syncfusion.com/maui/calendar/selections) explain different date selection behaviors.  
-- [Customization](https://help.syncfusion.com/maui/calendar/customizations) shows how to modify appearance and interaction settings.  
+- [Customization](https://help.syncfusion.com/maui/calendar/customizations) shows how to modify appearance and interaction settings. 
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.  
 
 ## Resources
 
@@ -192,7 +201,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -208,7 +217,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

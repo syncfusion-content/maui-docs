@@ -36,15 +36,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -67,9 +75,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage) for providing navigation structure integrated with BackdropPage.
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing collapsible content within panels.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying navigational options or filter lists in the back layer.
+- [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for implementing sliding panel navigation patterns. 
 
 ## See Also
 
@@ -164,7 +172,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -180,7 +188,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {
@@ -267,7 +274,7 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1299" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="explore-link">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>
@@ -291,96 +298,5 @@ Read Blogs
 </a>
   </div>
 </div>
-
-</div>
-<!--End-->
-
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 1 -->
-<a href="https://www.syncfusion.com/maui-controls/maui-backdrop" class="form-card" target="_blank">
-  <div class="form-content">
-<div class="card-header">
-    <div class="icon-circle">
-        <span class="card-icon card-ai"></span>
-    </div>
-    <h3 class="form-title">Feature Tour</h3>
-</div>
-<div class="form-description">Quick overview of key features to get started.</div>
-<div class="explore-link">
-Explore tour
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
-<!-- Card 2 -->
-<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Backdrop" class="form-card" target="_blank">
-  <div class="form-content">
-  <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-ai"></span>
-  </div>
-    <h3 class="form-title">Showcase Samples</h3>
-</div>
-    <div class="form-description">Explore sample apps and real-world use cases.</div>
-    <div class="explore-link">
-    Explore Samples
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
-<!-- Card 3 -->
-<a href="https://www.syncfusion.com/tutorial-videos/maui/backdrop" class="form-card" target="_blank">
-  <div class="form-content">
-  <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-ai"></span>
-    </div>
-    <h3 class="form-title">Tutorial Videos</h3>
-</div>
-    <div class="form-description">
-      Watch step‑by‑step videos to learn faster.
-    </div>
-    <div class="explore-link">
-    Explore Videos
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
-<!-- Card 4 -->
-<a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="form-card" target="_blank">
-  <div class="form-content">
-   <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-ai"></span>
-    </div>
-    <h3 class="form-title">Explore KB's</h3>
-</div>
-    <div class="form-description">
-      Find solutions, guides, and troubleshooting tips.
-    </div>
-    <div class="explore-link">
-Explore KB's
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
-<!-- Card 5 -->
-<a href="https://www.syncfusion.com/blogs/category/net-maui" class="form-card" target="_blank">
-  <div class="form-content">
-   <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-ai"></span>
-    </div>
-    <h3 class="form-title">Explore Blogs</h3>
-</div>
-    <div class="form-description">
-      Read articles, use cases, and expert insights.
-    </div>
-    <div class="explore-link">
-Explore Blogs
-  <span class="card-icon card-arrow"></span>
-</div>
-  </div>
-</a>
 
 </div>

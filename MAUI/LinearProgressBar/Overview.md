@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with custom visuals. It displays the progress of a process in rectangular shapes, determinate and indeterminate states, segments, and smooth animation. You can also define ranges with different colors.
 
-   ![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+  ![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
 ## Business use cases
 
@@ -30,8 +30,8 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfu
 
 ## Related controls
 
-- [CircularProgressBar](https://help.syncfusion.com/maui/circularprogressbar/overview) for displaying circular progress indicators.
-- [BusyIndicator](https://help.syncfusion.com/maui/busy-indicator/overview) for showing indeterminate loading states.
+- [Circular Progress Bar](https://help.syncfusion.com/maui/circularprogressbar/overview) for displaying circular progress indicators.
+- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for showing indeterminate loading states.
 - [Linear Gauge](https://help.syncfusion.com/maui/linear-gauge/overview) for visualizing values using a linear scale with markers and ranges.
 
 ## See Also
@@ -128,7 +128,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfu
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -144,7 +144,6 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfu
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

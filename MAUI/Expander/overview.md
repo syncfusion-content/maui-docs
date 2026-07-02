@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Expander control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Expander (SfExpander) control, its elements and more.
+title: About .NET MAUI Expander control | Syncfusionv®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Expander (SfExpander) control, its elements and more.
 platform: MAUI
 control: SfExpander
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Expander](https://www.syncfusion.com/maui-controls/maui-expander) (SfExpander) is a layout control capable of loading any UI view in both header and content sections. By simply tapping the header, users can effortlessly expand or collapse the control.
 
-![.NET MAUI expander overview ](Images/overview.png)
+![Syncfusion .NET MAUI expander overview](Images/overview.png)
 
 ## Business use cases
 
@@ -34,15 +34,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -67,7 +75,7 @@ The following table summarizes the globalization support available in this contr
 
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for managing multiple expandable sections in a grouped layout.  
 - [Cards](https://help.syncfusion.com/maui/cards/overview) for presenting content in expandable card-based layouts.
-- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
+- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
 
 ## See Also
 
@@ -162,7 +170,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -178,7 +186,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

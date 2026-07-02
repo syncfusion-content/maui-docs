@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI PullToRefresh control | Syncfusion
-description: Learn about the introduction of Syncfusion .NET MAUI PullToRefresh (SfPullToRefresh) control, its elements and more.
+title: About .NET MAUI PullToRefresh control | Syncfusion®
+description: Learn about the introduction of Syncfusion® .NET MAUI PullToRefresh (SfPullToRefresh) control, its elements and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion® [.NET MAUI PullToRefresh](https://www.syncfusion.com/maui-controls/maui-pull-to-refresh) is a refresh control that allows you to interact and refresh the view loaded in it. The PullToRefresh control allows you to refresh the view upon performing the pull-to-refresh action. A progress indicator will be shown while starting the pulling. The application will be refreshed once you have pulled down a certain distance and released the touch.
 
-![.NET MAUI pull to refresh overview ](Images/overview/pulltorefresh_overview.gif)
+![Syncfusion .NET MAUI pull to refresh overview](Images/overview/pulltorefresh_overview.gif)
 
 ## Business use cases
 
@@ -35,15 +35,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -164,7 +172,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -180,7 +188,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

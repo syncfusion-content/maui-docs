@@ -108,37 +108,9 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Stop Responding in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresponding.gif)
+![Syncfusion .NET MAUI AI AssistView Stop Responding](Images/working-with-aiassistview/maui-aiassistview-stopresponding.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
-
-### StopResponding text
-
-The `SfAIAssistView` control allows you to set custom text for the StopResponding view using the [StopRespondingText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingText) property.
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               StopRespondingText="Cancel Response"/>  
-
-{% endhighlight %} 
-
-{% highlight c# hl_lines="6" %} 
-
-SfAIAssistView sfAIAssistView; 
-public MainPage() 
-{ 
-    InitializeComponent(); 
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.StopRespondingText = "Cancel Response";
-    this.Content = sfAIAssistView; 
-} 
-
-{% endhighlight %}
-{% endtabs %}
-
-![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresondingtext.png)
 
 ### StopResponding UI customization
 
@@ -190,7 +162,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Stop Responding Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-stoprespondingtemplate.gif)
+![Syncfusion .NET MAUI AI AssistView Stop Responding Template](Images/working-with-aiassistview/maui-aiassitview-stoprespondingtemplate.gif)
 
 
 ## Control template
@@ -269,7 +241,163 @@ The `SfAIAssistView` allows you to edit a previously sent request. This feature 
 
 N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal the Edit icon. On mobile (Android, iOS), tap the request to show the Edit option.
 
-![Edit Option in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editoption.gif)
+![Syncfusion .NET MAUI AI AssistView Edit Option](Images/working-with-aiassistview/maui-aiassistview-editoption.gif)
+
+## Request Context menu
+
+The `SfAIAssistView` control supports customizable Request context menu for both request. Use the following properties to configure context menus and their templates:
+
+- [RequestContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenu): `ObservableCollection<AssistContextMenuItem>` — collection of menu items shown for request items.
+- [RequestContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuItemTemplate): `DataTemplate` — template for individual menu items.
+- [RequestContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuPanelTemplate): `DataTemplate` — template for the popup panel that contains the menu items.
+
+Assist context menu items are represented by [AssistContextMenuItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html) (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html#Syncfusion_Maui_AIAssistView_AssistContextMenuItem_AssistItem) property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+
+- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). 
+- The context menu is shown when the More Options icon is tapped for an item. The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) event is raised before the popup appears so you can modify or cancel it.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.RequestContextMenu>
+        <syncfusion:AssistContextMenuItem Text="Retry" Command="{Binding RetryCommand}" />
+    </syncfusion:SfAIAssistView.RequestContextMenu>
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+{% highlight c# hl_lines="12" %}
+
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    GettingStartedViewModel viewModel = new GettingStartedViewModel();
+    var requestMenu = new ObservableCollection<AssistContextMenuItem>
+    {
+        new AssistContextMenuItem
+        {
+            Text = "Copy",
+            Command = viewModel.RetryCommand,
+        }
+    };
+
+    sfAIAssistView.RequestContextMenu = requestMenu;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customizing the context menu item template
+The [RequestContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuItemTemplate) property allows you to customize the appearance and interaction of individual context menu items. You can define a custom layout, bind UI elements such as icons and text, and pass the associated `AssistItem` as a CommandParameter for handling item-specific actions.
+
+{% tabs %}
+{% highlight xaml %}
+
+ <syncfusion:SfAIAssistView.RequestContextMenuItemTemplate>
+    <DataTemplate>
+        <Grid Padding="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Icon}" HeightRequest="20" WidthRequest="20" />
+            <Label Grid.Column="1" Text="{Binding Text}" />
+            <!-- Make the AssistItem available to the command as parameter -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Command}" CommandParameter="{Binding AssistItem}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+    </DataTemplate>
+</syncfusion:SfAIAssistView.RequestContextMenuItemTemplate>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customizing the context menu panel template
+The [RequestContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuPanelTemplate) property enables you to customize the overall layout and styling of the context menu popup. This allows you to control how menu items are arranged and presented, including styling, spacing, and container appearance.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView.RequestContextMenuPanelTemplate>
+    <DataTemplate>
+        ...
+    </DataTemplate>
+</syncfusion:SfAIAssistView.RequestContextMenuPanelTemplate>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Response Context menu
+
+The `SfAIAssistView` control supports customizable Response context menu for both response. Use the following properties to configure Response context menu and its template:
+
+- [ResponseContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenu): `IList<AssistContextMenuItem>` — collection of menu items shown for response items.
+- [ResponseContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate): `DataTemplate` — template for individual menu items.
+- [ResponseContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate): `DataTemplate` — template for the popup panel that contains the menu items.
+
+Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html#Syncfusion_Maui_AIAssistView_AssistContextMenuItem_AssistItem) property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+
+- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). 
+- The context menu is shown when the More Options icon is tapped for an item. The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) event is raised before the popup appears so you can modify or cancel it.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.ResponseContextMenu>
+        <syncfusion:AssistContextMenuItem Text="Share" Command="{Binding ShareCommand}" />
+        <syncfusion:AssistContextMenuItem Text="Regenerate" Command="{Binding RegenerateCommand}" />
+    </syncfusion:SfAIAssistView.ResponseContextMenu>
+</syncfusion:SfAIAssistView>
+
+
+{% endhighlight %}
+{% highlight c# hl_lines="18" %}
+    
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    GettingStartedViewModel viewModel = new GettingStartedViewModel()
+    var responseMenu = new ObservableCollection<AssistContextMenuItem>
+    {
+        new AssistContextMenuItem
+        {
+            Text = "Share",
+            Command = viewModel.ShareCommand
+        },
+        new AssistContextMenuItem
+        {
+           Text = "Regenerate",
+           Command = viewModel.RegenerateCommand
+        }
+    };
+
+    sfAIAssistView.ResponseContextMenu = responseMenu;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The customization of [ResponseContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate) and [ResponseContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate) follows the same approach as the `RequestContextMenu` templates. Refer to the Request Context Menu template customization section for implementation details, as described there.
+
+## ContextMenuOpening Event
+
+The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ContextMenuOpening) event is triggered before the context menu is displayed. The [ContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) provide the following details:
+
+- [ContextMenuItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html#Syncfusion_Maui_AIAssistView_ContextMenuOpeningEventArgs_ContextMenuItems) : Represents the collection of menu items that will be displayed. You can modify this list (add or remove items) dynamically before the menu appears.
+- `Cancel` : Indicates whether the context menu opening should be canceled. Set this property to true to prevent the menu from being shown.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ContextMenuOpening="OnContextMenuOpening">
+</syncfusion:SfAIAssistView>
+{% endhighlight %}
+{% highlight c# %}
+
+private void OnContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
+{
+   // Allows customizing or canceling the context menu before it is displayed
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Editor
 ### EditorView template
@@ -334,7 +462,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
+![Syncfusion .NET MAUI AI AssistView EditorView Template](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
 
 ### Editor customization
 The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.
@@ -357,7 +485,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img src="Images/working-with-aiassistview/maui-aiassitview-Editor-customization.png" width="444"/>
+<img alt="Syncfusion .NET MAUI AI AssistView Editor customization" src="Images/working-with-aiassistview/maui-aiassitview-Editor-customization.png" width="444"/>
 
 ### Accessing the editor in AssistView
 The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEditorView.html), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
@@ -449,7 +577,7 @@ internal class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Preview support in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-preview.gif)
+![Syncfusion .NET MAUI AI AssistView Preview support](Images/working-with-aiassistview/maui-aiassistview-preview.gif)
 
 ### Max Attachment Count
 
@@ -633,7 +761,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %} 
 {% endtabs %}
 
-![Action Buttons in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-actionbuttons.gif)
+![Syncfusion .NET MAUI AI AssistView Action Buttons](Images/working-with-aiassistview/maui-aiassistview-actionbuttons.gif)
 
 ### Action button customization
 
@@ -659,46 +787,46 @@ The editor action button and its popup are customizable beyond the `ActionButton
 
 {% highlight c# %}
 
-    public partial class MainPage : ContentPage 
-    { 
-        SfAIAssistView sfAIAssistView;
-        ViewModel viewModel;
-        public MainPage()
+public partial class MainPage : ContentPage 
+{ 
+    SfAIAssistView sfAIAssistView;
+    ViewModel viewModel;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.viewModel = new ViewModel();
+        this.BindingContext = this.viewModel;
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowActionButtons = true,
+        this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
+        this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start; // or   ActionButtonPosition.End,
+        this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
+        this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
         {
-            InitializeComponent();
-            this.viewModel = new ViewModel();
-            this.BindingContext = this.viewModel;
-            this.sfAIAssistView = new SfAIAssistView();
-            this.sfAIAssistView.ShowActionButtons = true,
-            this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
-            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start; // or   ActionButtonPosition.End,
-            this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
-            this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
+            new ActionButton
             {
-                new ActionButton
-                {
-                    BindingContext = this.viewModel;
-                    Text = "Attach",
-                    Icon = ImageSource.FromFile ("attach.png"),
-                    Command = viewModel.AttachCommand
-                },
-                new ActionButton
-                {
-                    BindingContext = this.viewModel;
-                    Text = "Search in web",
-                    Icon = ImageSource.FromFile ("format.png"),
-                    Command = this.viewModel.FormatCommand
-                },
-            };
+                BindingContext = this.viewModel;
+                Text = "Attach",
+                Icon = ImageSource.FromFile ("attach.png"),
+                Command = viewModel.AttachCommand
+            },
+            new ActionButton
+            {
+                BindingContext = this.viewModel;
+                Text = "Search in web",
+                Icon = ImageSource.FromFile ("format.png"),
+                Command = this.viewModel.FormatCommand
+            },
+        };
 
-            this.Content = sfAIAssistView;
-        }
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Action button customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-actionbutton-customization.png)
+![Syncfusion .NET MAUI AI AssistView Action button customization](Images/working-with-aiassistview/maui-aiassitview-actionbutton-customization.png)
 
 ## Request button customization
 
@@ -713,7 +841,7 @@ The `SfAIAssistView` control allows you to customize the request button icon by 
                            AssistItems="{Binding AssistItems}">
         <syncfusion:SfAIAssistView.RequestButtonIcon>
             <FontImageSource Glyph="&#xe809;"
-                             FontFamily="MauiMaterialAssets"
+                             FontFamily="MauiSampleFontIcon"
                              Color="Black" />
         </syncfusion:SfAIAssistView.RequestButtonIcon>
 </syncfusion:SfAIAssistView>
@@ -743,7 +871,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Request Button Icon in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-requestbutton.png)
+![Syncfusion .NET MAUI AI AssistView Request Button Icon](Images/working-with-aiassistview/maui-aiassistview-requestbutton.png)
 
 ### Request button template
 
@@ -817,7 +945,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![SendButton Customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-SendButtonCustomization.png)
+![Syncfusion .NET MAUI AI AssistView SendButton Customization](Images/working-with-aiassistview/maui-aiassistview-SendButtonCustomization.png)
 
 N> The [InputText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_InputText) is used to gets or sets the text of the editor in the `SfAIAssistView`.
 
@@ -1025,19 +1153,19 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
 {% tabs %}
 {% highlight xaml hl_lines="12" %}
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel/>
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel/>
+</ContentPage.BindingContext>
 
-    <ContentPage.Resources>
-        <local:CustomRequestTemplateSelector x:Key="requestSelector"/>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <local:CustomRequestTemplateSelector x:Key="requestSelector"/>
+</ContentPage.Resources>
 
-    <ContentPage.Content>
-        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AssistItems="{Binding AssistItems}"
-                               RequestItemTemplate="{StaticResource requestSelector}"/>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                            AssistItems="{Binding AssistItems}"
+                            RequestItemTemplate="{StaticResource requestSelector}"/>
+</ContentPage.Content>
 
 {% endhighlight %}
 {% highlight c# hl_lines="10" %}
@@ -1198,19 +1326,19 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
 {% tabs %}
 {% highlight xaml hl_lines="12" %}
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel/>
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel/>
+</ContentPage.BindingContext>
 
-    <ContentPage.Resources>
-        <local:CustomResponseTemplateSelector x:Key="responseSelector"/>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <local:CustomResponseTemplateSelector x:Key="responseSelector"/>
+</ContentPage.Resources>
 
-    <ContentPage.Content>
-        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                   AssistItems="{Binding AssistItems}"
-                                   ResponseItemTemplate="{StaticResource responseSelector}"/>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                AssistItems="{Binding AssistItems}"
+                                ResponseItemTemplate="{StaticResource responseSelector}"/>
+</ContentPage.Content>
 
 {% endhighlight %}
 {% highlight c# hl_lines="10" %}
@@ -1232,7 +1360,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![ResponseItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-ResponseTemplate.png)
+![Syncfusion .NET MAUI AI AssistView ResponseItem Template](Images/working-with-aiassistview/maui-aiassistview-ResponseTemplate.gif)
 
 ## Text selection
 The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
@@ -1264,7 +1392,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Text Selection in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-textselection.gif)
+![Syncfusion .NET MAUI AI AssistView Text Selection](Images/working-with-aiassistview/maui-aiassistview-textselection.gif)
 
 ## Scroll to bottom button
 
@@ -1297,7 +1425,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll-To-Buttom in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottom.gif)
+![Syncfusion .NET MAUI AI AssistView Scroll-To-Buttom](Images/working-with-aiassistview/maui-aiassistview-scrolltobottom.gif)
 
 ### Scroll to bottom button customization
 
@@ -1307,11 +1435,29 @@ The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom 
 {% highlight xaml hl_lines="12" %}
 
 <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="scrollToBottomButtonTemplate">
-                ...
-            </DataTemplate>
-        </ResourceDictionary>
+    <ResourceDictionary>
+        <DataTemplate x:Key="scrollToBottomButtonTemplate">
+            <Border Padding="10"
+                BackgroundColor="#6C4EC2"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 25"
+                HorizontalOptions="Center"
+                VerticalOptions="End">
+                    <HorizontalStackLayout Spacing="6"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                        <Image Source="down.png"
+                        WidthRequest="16"
+                        HeightRequest="16"
+                        VerticalOptions="Center" />
+                        <Label Text="New Response"
+                        FontSize="14"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+            </Border>
+        </DataTemplate>
+    </ResourceDictionary>
 </ContentPage.Resources>
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
@@ -1335,12 +1481,51 @@ public partial class MainPage : ContentPage
         this.sfAIAssistView.ScrollToBottomButtonTemplate = this.CreateScrollToBottomButtonTemplate();
         this.Content = this.sfAIAssistView;
     }
-
+    
     private DataTemplate CreateScrollToBottomButtonTemplate()
     {
         return new DataTemplate(() =>
         {
-            ...
+            var border = new Border
+            {
+                Padding = new Thickness(10),
+                BackgroundColor = Color.FromArgb("#6C4EC2"),
+                StrokeThickness = 0,
+                StrokeShape = new RoundRectangle
+                {
+                    CornerRadius = new CornerRadius(25)
+                },
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.End
+            };
+
+            var layout = new HorizontalStackLayout
+            {
+                Spacing = 6,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            var image = new Image
+            {
+                Source = "down.png",
+                WidthRequest = 16,
+                HeightRequest = 16,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            var label = new Label
+            {
+                Text = "New Response",
+                FontSize = 14,
+                TextColor = Colors.White,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            layout.Children.Add(image);
+            layout.Children.Add(label);
+            border.Content = layout;
+            return border;
         });
     }
 }
@@ -1348,7 +1533,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png)
+![Syncfusion .NET MAUI AI AssistView Scroll-To-Buttom Template](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png)
 
 ## Auto scroll control to bottom when new message is added
 
@@ -1360,6 +1545,31 @@ By default, the `SfAIAssistView` control automatically scrolls to the bottom of 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            AssistItems="{Binding AssistItems}"
                            CanAutoScrollToBottom="False" />
+
+{% endhighlight %}
+{% endtabs %}
+
+### AutoScroll Behavior Configuration
+
+The `SfAIAssistView` control provides the `AutoScrollBehavior` property, which determines how the view updates its scroll position when new messages or responses are added. This property is of type `AssistViewScrollBehavior`, and its default value is `ScrollToLastResponse`.
+The AutoScrollBehavior property supports the following scrolling modes:
+
+- `ScrollToLastResponse` : Automatically scrolls the view to display the most recent AI response.
+- `ScrollToLastRequest` : Scrolls the view to display the latest user request instead of the response.
+
+By configuring `AutoScrollBehavior`, you can control which part of the conversation remains visible when new content is appended. For more advanced scenarios, you can combine this property with `CanAutoScrollToBottom` and handle the Scrolled event to fine-tune scrolling behavior based on user interaction or application logic.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"       
+                           AutoScrollBehavior="ScrollToLastRequest" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="2" %}
+
+    SfAIAssistView sfAIAssistView = new SfAIAssistView(); 
+    sfAIAssistView.AutoScrollBehavior = AssistViewScrollBehavior.ScrollToLastRequest;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1388,3 +1598,274 @@ private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView
 
 {% endhighlight %}
 {% endtabs %}
+
+## Enable time break in view
+
+The `SfAIAssistView` control allows for organizing the `AssistItems` by their creation date and time, enabling users to identify request and responses chronologically. Set the `ShowTimeBreak` property to `true` to display the time break view.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowTimeBreak="True" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowTimeBreak = true;
+        this.Content = this.sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI AI AssistView Time Break](Images/working-with-aiassistview/maui-aiassistview-time-break.png)
+
+### Time break customization
+
+The `SfAIAssistView` control allows you to fully customize the time break appearance using the `TimeBreakTemplate` property. This property lets you define a custom layout and style for the time break UI.
+
+{% tabs %}
+{% highlight xaml hl_lines="11" %}
+
+<ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="timeBreakTemplate">
+                ...
+            </DataTemplate>
+        </ResourceDictionary>
+</ContentPage.Resources>
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowTimeBreak="True"
+                           TimeBreakTemplate="{StaticResource timeBreakTemplate}" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="11" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowScrollToBottomButton = true;
+        this.sfAIAssistView.TimeBreakTemplate = this.CreateTimeBreakTemplate();
+        this.Content = this.sfAIAssistView;
+    }
+
+    private DataTemplate CreateTimeBreakTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI AI AssistView Time Break view customization](Images/working-with-aiassistview/maui-aiassistview-time-break-template.png)
+
+## Show Toast notification in view
+
+The `SfAIAssistView` control supports displaying toast notifications. These notifications appear as pop-up windows providing information during user interactions with the `SfAIAssistView`.
+
+### Toast notification types
+
+The `SfAIAssistView` supports the following types of toast notifications:
+
+* `None` : Displays the default toast notification.
+* `Success` : Indicates that an operation has been completed successfully.
+* `Warning` : Highlights a cautionary message or a potential issue that requires user attention.
+* `Error` : Notifies the user of a failure or an issue that has occurred during execution.
+
+![Syncfusion .NET MAUI AI AssistView Toast Notification](Images/working-with-aiassistview/maui-aiassistview-toast-notification.png)
+
+### Restrict toast notification in view
+
+By default, toast notifications appear in the view. To prevent them from showing, use the `ToastOpening` event.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ToastOpening="assistView_ToastOpening" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="1" %}
+
+sfAIAssistView.ToastOpening += assistView_ToastOpening;
+
+private void assistView_ToastOpening(object sender, Syncfusion.Maui.AIAssistView.ToastNotificationEventArgs e)
+{
+   e.Cancel = true;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Editor expansion button in view
+
+The `SfAIAssistView` control allows for expanding the editor view based on its `MaximumHeightRequest` property. To enable editor expansion, set the `AllowEditorExpansion` property to `true`.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AllowEditorExpansion="True" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.RequestEditor.MaximumHeightRequest = 300;
+        this.sfAIAssistView.AllowEditorExpansion = true;
+        this.Content = this.sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI AI AssistView Editor Expansion](Images/working-with-aiassistview/maui-aiassistview-editor-expansion.png)
+
+N> The editor expansion button is only visible when the content reaches the third line of the editor.
+
+## Voice input support in SfAIAssistView
+
+The `SfAIAssistView` control provides built-in voice input support through a microphone button in the editor. By default, the microphone view is visible. To hide it, set the `EnableVoiceInput` property to `false`.
+
+### Permission required for voice input
+
+For using voice input support, you need to grant permission for audio. 
+
+#### Android platform
+
+Provide audio permission within the `AndroidManifest.xml` file:
+
+{% tabs %}
+{% highlight xml %}
+
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+{% endhighlight %}
+{% endtabs %}
+
+#### iOS and macOS platform
+
+Add the `NSMicrophoneUsageDescription` and `NSSpeechRecognitionUsageDescription` permissions to your `Info.plist` file:
+
+{% tabs %}
+{% highlight xml %}
+
+<key>NSSpeechRecognitionUsageDescription</key>
+<string>Recognize speech</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Use microphone to listen to your voice input</string>
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Windows platform
+
+Provide the `Microphone` capability for the application in the `Package.appxmanifest` file.
+
+{% tabs %}
+{% highlight xml %}
+
+<DeviceCapability Name="microphone"/>
+
+{% endhighlight %}
+{% endtabs %}
+
+##### Configure Speech Recognition
+
+Confirm that the following are enabled in your WinUI app:
+
+ - Online speech recognition: (Settings -> Privacy -> Privacy & Security) is enabled.
+ - Microphone: (Settings -> Privacy & Security -> Microphone) has the necessary permissions for the app.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           EnableVoiceInput="False" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.EnableVoiceInput = false;
+        this.Content = this.sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Text-to-speech support in SfAIAssistView
+
+The `SfAIAssistView` control provides built-in text-to-speech support for each response. This allows users to play, pause, and stop the text-to-speech functionality.
+
+## Disclaimer text
+
+The `SfAIAssistView` control supports displaying a note or suggestion text below the editor. To display this text, assign a value to the `DisclaimerText` property.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           DisclaimerText="AI outputs may be inaccurate or inconsistent." />
+
+{% endhighlight %}
+{% highlight c# hl_lines="6" %}
+
+SfAIAssistView sfAIAssistView; 
+public MainPage() 
+{ 
+    InitializeComponent(); 
+    this.sfAIAssistView = new SfAIAssistView();
+    this.sfAIAssistView.DisclaimerText = "AI outputs may be inaccurate or inconsistent.";
+    this.Content = sfAIAssistView;
+} 
+
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI AI AssistView Disclaimer Text](Images/working-with-aiassistview/maui-aiassistview-disclaimer-text.png)
+
+## Image preview support in SfAIAssistView
+
+The `SfAIAssistView` control provides built-in image preview support. When an image is associated with an `AssistImageItem` or an `AssistAttachmentItem`, tapping the image displays it in a preview view.
+This behavior is enabled by default and does not require additional configuration.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chat Control | Syncfusion
-description: Learn here about getting started with the Syncfusion .NET MAUI Chat (SfChat) control, its elements and more.
+title: Getting Started with .NET MAUI Chat Control | Syncfusion®
+description: Learn here about getting started with the Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -25,7 +25,7 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
 
-## Step 1: Create a .NET MAUI project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
@@ -115,88 +115,87 @@ Create a simple message collection as shown in the following code example in a n
 {% tabs %}
 {% highlight c# %}
 
-  using Syncfusion.Maui.Chat;
-  public class GettingStartedViewModel : INotifyPropertyChanged
-  {
-      private ObservableCollection<object> messages;
-      private Author currentUser;
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<object> messages;
+    private Author currentUser;
 
-      public GettingStartedViewModel()
-      {
-          this.messages = new ObservableCollection<object>();
-          this.currentUser = new Author() { Name = "Nancy" };
-          this.GenerateMessages();
-      }
+    public GettingStartedViewModel()
+    {
+        this.messages = new ObservableCollection<object>();
+        this.currentUser = new Author() { Name = "Nancy" };
+        this.GenerateMessages();
+    }
 
-      public ObservableCollection<object> Messages
-      {
-          get
-          {
-              return this.messages;
-          }
+    public ObservableCollection<object> Messages
+    {
+        get
+        {
+            return this.messages;
+        }
 
-          set
-          {
-              this.messages = value;
-          }
-      }
+        set
+        {
+            this.messages = value;
+        }
+    }
 
-      public Author CurrentUser
-      {
-          get
-          {
-              return this.currentUser;
-          }
-          set
-          {
-              this.currentUser = value;
-              RaisePropertyChanged("CurrentUser");
-          }
-      }
+    public Author CurrentUser
+    {
+        get
+        {
+            return this.currentUser;
+        }
+        set
+        {
+            this.currentUser = value;
+            RaisePropertyChanged("CurrentUser");
+        }
+    }
 
-      public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler PropertyChanged;
 
-      public void RaisePropertyChanged(string propName)
-      {
-          if (this.PropertyChanged != null)
-          {
-              this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
-          }
-      }
+    public void RaisePropertyChanged(string propName)
+    {
+        if (this.PropertyChanged != null)
+        {
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+    }
 
-      private void GenerateMessages()
-      {
-          this.messages.Add(new TextMessage()
-          {
-              Author = currentUser,
-              Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
-          });
+    private void GenerateMessages()
+    {
+        this.messages.Add(new TextMessage()
+        {
+            Author = currentUser,
+            Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
+        });
 
-          this.messages.Add(new TextMessage()
-          {
-              Author = new Author() { Name = "Andrea", Avatar = "Andrea.png" },
-              Text = "Oh! That's great.",
-          });
+        this.messages.Add(new TextMessage()
+        {
+            Author = new Author() { Name = "Andrea", Avatar = "Andrea.png" },
+            Text = "Oh! That's great.",
+        });
 
-          this.messages.Add(new TextMessage()
-          {
-              Author = new Author() { Name = "Harrison", Avatar = "Harrison.png" },
-              Text = "That is good news.",
-          });
+        this.messages.Add(new TextMessage()
+        {
+            Author = new Author() { Name = "Harrison", Avatar = "Harrison.png" },
+            Text = "That is good news.",
+        });
 
-          this.messages.Add(new TextMessage()
-          {
-              Author = new Author() { Name = "Margaret", Avatar = "Margaret.png" },
-              Text = "Are we going to develop the app natively or hybrid?",
-          });
+        this.messages.Add(new TextMessage()
+        {
+            Author = new Author() { Name = "Margaret", Avatar = "Margaret.png" },
+            Text = "Are we going to develop the app natively or hybrid?",
+        });
 
-          this.messages.Add(new TextMessage()
-          {
-              Author = currentUser,
-              Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.\",",
-          });
-      }
-   }
+        this.messages.Add(new TextMessage()
+        {
+            Author = currentUser,
+            Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.\",",
+        });
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -222,13 +221,13 @@ To load the messages to SfChat, bind the message collection to the [Messages](ht
 
 {% tabs %} 
 {% highlight xaml %}
-    <syncfusion:SfChat x:Name="sfChat"
-                    Messages="{Binding Messages}"
-                    CurrentUser="{Binding CurrentUser}"/>
-        <syncfusion:SfDataGrid.BindingContext>
-            <local:GettingStartedViewModel />
-        </syncfusion:SfDataGrid.BindingContext>
-    </syncfusion:SfChat>
+<syncfusion:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"
+                CurrentUser="{Binding CurrentUser}"/>
+    <syncfusion:SfDataGrid.BindingContext>
+        <local:GettingStartedViewModel />
+    </syncfusion:SfDataGrid.BindingContext>
+</syncfusion:SfChat>
 {% endhighlight %} 
 
 {% highlight c# %}
@@ -241,6 +240,6 @@ this.sfChat.CurrentUser = viewModel.CurrentUser;
 
 The following screenshot illustrates the result of the above code.
 
-![Chat control in .NET MAUI platform](images/getting-started/maui-chat-getting-started.png)
+![Syncfusion .NET MAUI Chat control](images/getting-started/maui-chat-getting-started.png)
 
 You can download the Chat Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)

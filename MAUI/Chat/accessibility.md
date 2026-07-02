@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Chat control | Syncfusion
-description: Learn here all about Accessibility support in Syncfusion .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Accessibility in .NET MAUI Chat control | Syncfusion®
+description: Learn here all about Accessibility support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -63,7 +63,7 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-![Accessibility in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-loadmore.png)
+![Syncfusion .NET MAUI Chat Accessibility](images/Accessibility/maui-chat-accessibility-loadmore.png)
 
 ## Calendar
 
@@ -78,7 +78,7 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-![Accessibility for calendar message in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-calendar.png)
+![Syncfusion .NET MAUI Chat Accessibility for calendar message](images/Accessibility/maui-chat-accessibility-calendar.png)
 
 ## Cards
 
@@ -93,7 +93,7 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-![Accessibility for card message in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-cards.png)
+![Syncfusion .NET MAUI Chat Accessibility for card message](images/Accessibility/maui-chat-accessibility-cards.png)
 
 ## Suggestion
 
@@ -108,4 +108,4 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-![Accessibility for suggestions in .NET MAUI Chat ](images/Accessibility/maui-chat-accessibility-suggestions.png)
+![Syncfusion .NET MAUI Chat Accessibility for suggestions](images/Accessibility/maui-chat-accessibility-suggestions.png)

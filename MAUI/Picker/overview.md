@@ -56,15 +56,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -87,8 +95,8 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [DatePicker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date values using a specialized picker interface.  
-- [DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting combined date and time values.
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date values using a specialized picker interface.  
+- [Date Time Picker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting combined date and time values.
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for searchable dropdown-based selection with text input.  
 
 ## See Also
@@ -185,7 +193,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -201,7 +209,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {
@@ -252,7 +259,7 @@ Explore Features
     <h3 class="form-title">Showcase Samples</h3>
 </div>
     <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker" class="explore-link">
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/Picker" class="explore-link">
     View Samples
   <span class="card-icon card-arrow"></span>
 </a>

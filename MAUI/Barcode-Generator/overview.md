@@ -37,19 +37,27 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/partial-support.svg" width="16"> Partial Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/no-support.svg" width="16"> No Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -61,7 +69,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/barcode-generator/overview">Barcode Generator<a></td>
+<td><a href="/maui/barcode-generator/overview">Barcode Generator</a></td>
 <td align="center"><img src="../Images/no-support.svg" alt="not" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -74,7 +82,7 @@ The following table summarizes the globalization support available in this contr
 
 - [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing and displaying barcode-related data in tabular format.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting barcode items in list-based layouts.
-- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for visualize barcode usage or distribution patterns in a hierarchical, comparative view.
+- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for visualize barcode usage or distribution patterns in a hierarchical, comparative view.
 
 ## See Also
 
@@ -170,7 +178,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -186,7 +194,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

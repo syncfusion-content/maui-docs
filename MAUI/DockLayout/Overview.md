@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI DockLayout control | Syncfusion
+title: About .NET MAUI DockLayout control | Syncfusion®
 description: Learn about the Syncfusion® .NET MAUI SfDockLayout control, its layout behavior, and key features for building structured UI.
 platform: MAUI
 control: SfDockLayout
@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI SfDockLayout](https://www.syncfusion.com/maui-controls/maui-docklayout) is a versatile and powerful layout control that enables developers to arrange and dock child elements in a defined area, providing a robust framework for designing complex user interfaces in both mobile and desktop applications.
 
-   ![.NET MAUI DockLayout](DockLayout-Images/maui-docklayout.png)
+   ![Syncfusion .NET MAUI DockLayout](DockLayout-Images/maui-docklayout.png)
 
 ## Business use cases
 
@@ -34,15 +34,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -65,7 +73,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
  
-- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
+- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for displaying vertically collapsible sections.
 - [Expander](https://help.syncfusion.com/maui/expander/overview) for creating single expandable/collapsible sections.
 
@@ -162,7 +170,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -178,7 +186,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

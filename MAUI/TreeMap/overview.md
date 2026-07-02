@@ -57,19 +57,27 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
  
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/partial-support.svg" width="16"> Partial Support
-</span><br>
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
  
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/no-support.svg" width="16"> No Support
-</span><br>
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+</div>
 
 <table>
 <tr>
@@ -93,7 +101,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [Sunburst Chart](https://help.syncfusion.com/maui/sunburstchart/overview) for visualizing hierarchical data using a radial layout.
-- [Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for analyzing data trends using axis-based charts.
+- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for analyzing data trends using axis-based charts.
 - [Maps](https://help.syncfusion.com/maui/maps/overview) for visualizing location-based hierarchical data.  
 
 ## See Also
@@ -190,7 +198,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -206,7 +214,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

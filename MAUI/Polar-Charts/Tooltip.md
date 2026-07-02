@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Chart control | Syncfusion
+title: Tooltip in .NET MAUI Polar Chart control | Syncfusion
 description: Learn here all about how to enable tooltips and customize them in the Syncfusion® .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Chart
+# Tooltip in .NET MAUI Polar Chart
 
 A tooltip is used to display information or metadata of the tapped segment. The Polar chart provides tooltip support for all series.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in .NET MAUI Accordion control | Syncfusion
-description: Learn here all about Customization support in Syncfusion Maui Accordion (SfAccordion) control and more details. 
+title: Customization in .NET MAUI Accordion control | Syncfusion®
+description: Learn here all about Customization support in Syncfusion® Maui Accordion (SfAccordion) control and more details. 
 platform: MAUI
 control: SfAccordion
 documentation: ug
@@ -101,4 +101,3 @@ var accordion = new SfAccordion();
 accordion.ItemSpacing = 6.0d;
 {% endhighlight %}
 {% endtabs %}
-

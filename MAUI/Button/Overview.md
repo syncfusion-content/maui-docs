@@ -35,15 +35,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -66,9 +74,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Busy-Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for displaying loading states after button interactions.
-- [Badge-view](https://help.syncfusion.com/maui/badge-view/overview) for showing notification indicators on buttons.
-- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for combining input fields with action buttons.
+- [Chips](https://help.syncfusion.com/maui/chips/overview) for compact interactive elements used in selection, filtering, or displaying information.  
+- [Radio Button](https://help.syncfusion.com/maui/radio-button/overview) for choosing a single option from a group of mutually exclusive choices.  
+- [CheckBox](https://help.syncfusion.com/maui/checkbox/overview) for enabling multi-selection from a list of options.
 
 ## See Also
 
@@ -164,7 +172,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -180,7 +188,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

@@ -39,15 +39,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
-
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/no-support.svg" width="16"> No Support
-</span><br>
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+</div>
 
 <table>
 <tr>
@@ -61,17 +69,17 @@ The following table summarizes the globalization support available in this contr
 <tr>
 <td><a href="/maui/rich-text-editor/overview">Rich Text Editor</a></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 
 ## Related controls
 
-- [MarkdownViewer](https://help.syncfusion.com/maui/markdownviewer/overview) for rendering formatted Markdown content in applications.  
-- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing simple text input fields with labels and validation. 
+- [Markdown Viewer](https://help.syncfusion.com/maui/markdownviewer/overview) for rendering formatted Markdown content in applications.  
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing simple text input fields with labels and validation. 
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting collections of rich text or formatted content within scrollable views.
 
 ## See Also
@@ -168,7 +176,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -184,7 +192,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

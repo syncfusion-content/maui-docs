@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI SignaturePad (SfSignaturePad) Overview
 
-The Syncfusion<sup>&reg;</sup> .NET MAUI SignaturePad ([`SfSignaturePad`](https://www.syncfusion.com/maui-controls/maui-signaturepad)) is an interactive UI control, allowing users to capture smooth and realistic signatures. It also allows you to save signatures as images and synchronize them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this SignaturePad control.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) (SfSignaturePad) is an interactive UI control, allowing users to capture smooth and realistic signatures. It also allows you to save signatures as images and synchronize them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this SignaturePad control.
 
 ![.NET MAUI signature pad overview ](Images/overview/default.jpg)
 
@@ -35,15 +35,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -68,11 +76,12 @@ The following table summarizes the globalization support available in this contr
 
 - [Image Editor](https://help.syncfusion.com/maui/imageeditor/overview) for editing and annotating images including saved signatures.   
 - [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating signature inputs within form-based workflows.
-- [BackdropPage](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.  
+- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.  
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) shows a step‑by‑step guide to begin using the SignaturePad control.  
+- [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) shows a step‑by‑step guide to begin using the SignaturePad control. 
+- [Customization](https://help.syncfusion.com/maui/signaturepad/customization) for ways to refine its look and behavior.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
 
 ## Resources
@@ -162,7 +171,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -178,7 +187,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

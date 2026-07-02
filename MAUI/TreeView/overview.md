@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about introduction of the Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more.
+title: About .NET MAUI TreeView Control | Syncfusion®
+description: Learn here all about introduction of the Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements and more.
 platform: MAUI
 control: TreeView
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeView](https://www.syncfusion.com/maui-controls/maui-treeview) is a data-oriented control that displays the hierarchical data,such as organizational structures and nested connections, within your application. It provides a user-friendly way to interact with complex data structures and navigate through different levels of information by allowing users to expand and collapse nodes to reveal or hide underlying information.
 
-![.NET MAUI tree view overview ](Images/overview/treeview_overview.png)
+![Syncfusion .NET MAUI tree view overview](Images/overview/treeview_overview.png)
  
 ## Business use cases
 
@@ -37,19 +37,27 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/partial-support.svg" width="16"> Partial Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -72,7 +80,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Treemap](https://help.syncfusion.com/maui/treemap/overview) for visualizing hierarchical data using a graphical layout.
+- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for visualizing hierarchical data using a graphical layout.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying flat data collections.
 - [Accordion](https://help.syncfusion.com/maui/accordion/overview) for organizing grouped data into expandable and collapsible sections.
 
@@ -170,7 +178,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -186,7 +194,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

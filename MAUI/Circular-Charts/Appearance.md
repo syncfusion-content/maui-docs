@@ -164,33 +164,6 @@ public class ViewModel
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_pie_chart_gradient.png)
 
-## Point Color Path
-
-The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:PieSeries PointColorPath="PointColor"></chart:PieSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-PieSeries series = new PieSeries()
-{        
-   PointColorPath = "PointColor"       
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![PointColorPath in MAUI Chart](Appearance_images/MAUI_pie_chart_pointcolorpath.png)
-
-N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
-
 ## Plotting Area Customization
 
 [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html?tabs=tabid-1) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.

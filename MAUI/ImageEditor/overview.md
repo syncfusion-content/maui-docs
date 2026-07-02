@@ -30,7 +30,8 @@ The Syncfusion® [.NET MAUI ImageEditor (SfImageEditor)](https://www.syncfusion.
 - **Annotation support** allows adding text, shapes, and freehand drawings to enhance or mark images.  
 - **Toolbar support** provides built-in tools for easy access to editing features with customization options.  
 - **Undo and redo support** allows reverting or reapplying changes during editing.  
-- **Save support** allows storing edited images to a desired location after modifications.  
+- **Save support** allows storing edited images to a desired location after modifications. 
+- **Serialization support** allows saving and restoring the editing state of images, enabling persistence and reusable across sessions.
 
 ## Globalization
 
@@ -40,15 +41,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -71,9 +80,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [SignaturePad](https://help.syncfusion.com/maui/signaturepad/overview) for capturing and adding signature annotations to images.
+- [Signature Pad](https://help.syncfusion.com/maui/signaturepad/overview) for capturing and adding signature annotations to images.
 - [Popup](https://help.syncfusion.com/maui/popup/overview) for presenting image editing tools or previews.
-- [AvatarView](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user/profile images.
+- [Toolbar](https://help.syncfusion.com/maui/toolbar/overview) for providing quick access to editing actions with customizable options.
 
 ## See Also
 
@@ -169,7 +178,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -185,7 +194,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

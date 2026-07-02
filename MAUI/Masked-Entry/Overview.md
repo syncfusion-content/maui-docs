@@ -1,17 +1,17 @@
 ---
 layout: post
-title: About .NET MAUI MaskedEntry control | Syncfusion®
-description: Learn about the introduction of Syncfusion® MAUI MaskedEntry (SfMaskedEntry) control with essential features and more.
+title: About .NET MAUI Masked Entry control | Syncfusion®
+description: Learn about the introduction of Syncfusion® MAUI Masked Entry (SfMaskedEntry) control with essential features and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
 ---
 
-# .NET MAUI MaskedEntry Overview
+# .NET MAUI Masked Entry Overview
 
-The Syncfusion® [.NET MAUI MaskedEntry](https://www.syncfusion.com/maui-controls/maui-masked-entry) is an advanced version of the input control that restricts input of certain characters, text, and numbers by using a mask pattern. This control creates a template for providing information such as telephone numbers, email IDs, IP addresses, product keys, and more.
+The Syncfusion® [.NET MAUI Masked Entry](https://www.syncfusion.com/maui-controls/maui-masked-entry) is an advanced version of the input control that restricts input of certain characters, text, and numbers by using a mask pattern. This control creates a template for providing information such as telephone numbers, email IDs, IP addresses, product keys, and more.
 
-![MaskedEntry control overview in MAUI](MaskedEntry_Images/maui_maskedentry_overview.png)
+![Masked Entry control overview in MAUI](MaskedEntry_Images/maui_maskedentry_overview.png)
 
 ## Business use cases
 
@@ -36,15 +36,23 @@ The following table summarizes the globalization support available in this contr
 .img{
   margin:0 !important;
 }
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
 </style>
 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/full-support.svg" width="16"> Full Support
-</span><br>
- 
-<span style="display: inline-flex; align-items: center; gap: 8px;">
-  <img src="../Images/not-applicable.svg" width="16"> Not Applicable
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
 
 <table>
 <tr>
@@ -68,12 +76,12 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for selecting values from predefined lists with optional input.
-- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating masked input fields within forms.  
-- [TextInputLayout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation UI.
+- [Numeric Entry](https://help.syncfusion.com/maui/numeric-entry/overview) for structured numeric input with validation and formatting.  
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation UI.
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) shows a step‑by‑step guide to begin using the MaskedEntry control.  
+- [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) shows a step‑by‑step guide to begin using the Masked Entry control.  
 - [Mask Types](https://help.syncfusion.com/maui/masked-entry/mask-types) explains how to configure mask patterns and input formats.  
 - [Features](https://help.syncfusion.com/maui/masked-entry/basic-features) highlights built‑in options for validation, placeholders, and easy formatting.  
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
@@ -165,7 +173,7 @@ The following table summarizes the globalization support available in this contr
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -181,7 +189,6 @@ The following table summarizes the globalization support available in this contr
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {

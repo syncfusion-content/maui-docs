@@ -33,7 +33,7 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.
 
 - [Range Selector](https://help.syncfusion.com/maui/range-selector/overview) for selecting ranges with enhanced UI and content integration.
 - [Slider](https://help.syncfusion.com/maui/slider/overview) for selecting a single value from a numeric range.  
-- [NumericEntry](https://help.syncfusion.com/maui/numericentry/overview) for precise numeric value input and adjustments.
+- [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for precise numeric value input and adjustments.
 
 ## See Also
 
@@ -129,7 +129,7 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 !important;
   color: #2d2d2d;
 }
 
@@ -145,7 +145,6 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8;
 }
 
 .card-header .form-title {
