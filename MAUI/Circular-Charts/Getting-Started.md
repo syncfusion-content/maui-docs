@@ -467,4 +467,4 @@ The following screenshot illustrates the result of the above code.
 
 You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_CircularChart_MAUI).
 
-N> Looking for the full .NET MAUI Charts component overview, features, pricing, and documentation? Visit the [.NET MAUI Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) page.
+N> Looking for the full .NET MAUI Charts component overview, features, pricing, and documentation? Visit the [.NET MAUI Circular Charts](https://www.syncfusion.com/maui-controls/maui-circular-charts) page.
