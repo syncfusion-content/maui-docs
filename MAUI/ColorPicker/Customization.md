@@ -441,37 +441,48 @@ You can define a custom collection of Colors displayed in the palette view by us
 
 {% highlight xaml %}
 
-<syncfusion:SfColorPicker>
-    <syncfusion:SfColorPicker.PaletteColors>
-        <x:Array Type="{x:Type Color}">
-            <x:Static Member="Colors.Red" />
-            <x:Static Member="Colors.Green" />
-            <x:Static Member="Colors.Blue" />
-            <x:Static Member="Colors.Yellow" />
-        </x:Array>
-    </syncfusion:SfColorPicker.PaletteColors>
-</syncfusion:SfColorPicker>
+ <syncfusion:SfColorPicker x:Name="colorPicker" 
+                           ColorMode="Palette"
+                           PaletteColors="{Binding PaletteColors}"
+                           PaletteColumnCount="3" 
+                           PaletteRowCount="2">
+ </syncfusion:SfColorPicker>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfColorPicker colorPicker = new SfColorPicker();
-
-// Set custom palette colors
-colorPicker.PaletteColors = new List<Color>
+public class ViewModel : INotifyPropertyChanged
 {
-    Colors.Red,
-    Colors.Green,
-    Colors.Blue,
-    Colors.Yellow,
-    Colors.Purple,
-    Colors.Orange
-};
+    private List<Color> _paletteColors;
 
-// Add a color to the existing palette
-colorPicker.PaletteColors.Add(Colors.Pink);
+    public List<Color> PaletteColors
+    { 
+        get {  return _paletteColors; }
+        set { _paletteColors = value; OnPropertyChanged(nameof(PaletteColors)); }
+    }
     
+    public ViewModel()
+    {
+        PaletteColors = new List<Color>
+        {
+            Colors.Red,
+            Colors.Green,
+            Colors.Blue,
+            Colors.Yellow,
+            Colors.Purple,
+            Colors.Orange
+        };
+    }
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    public void OnPropertyChanged(string property)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+    }
+}
+
 {% endhighlight %}
 
 {% endtabs %}
