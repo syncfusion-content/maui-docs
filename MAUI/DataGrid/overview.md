@@ -11,7 +11,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # .NET MAUI DataGrid (SfDataGrid) Overview
 
-The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
 <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
 

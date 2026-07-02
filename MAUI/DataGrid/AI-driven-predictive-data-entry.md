@@ -98,7 +98,7 @@ The **AzureOpenAIService** class now offers a convenient way to interact with th
 
 ## Integrating AI-driven predictive data entry in .NET MAUI DataGrid
 
-To design an AI-powered predictive data entry experience using the Syncfusion .NET MAUI DataGrid control, you can leverage AI services to suggest or auto-fill values based on historical patterns and user input. Before proceeding, please refer to the getting started documentation for the Syncfusion .NET MAUI DataGrid control.
+To design an AI-powered predictive data entry experience using the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control, you can leverage AI services to suggest or auto-fill values based on historical patterns and user input. Before proceeding, please refer to the getting started documentation for the .NET MAUI DataGrid control.
 
 ### Step 1: Create the DataGrid layout
 
