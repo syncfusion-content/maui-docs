@@ -106,7 +106,7 @@ builder.ConfigureSyncfusionCore();
 
 ## Step 4: Create Model and ViewModel
 
-Now, let us define a simple data Model and ViewModel that represents a data point in the chart.
+Now, let us define a simple data `Model` and `ViewModel` that represents a data point in the chart.
 
 {% tabs %}  
 {% highlight c# %}
@@ -160,10 +160,10 @@ Configure the `Pyramid Chart` component to visually represent data in a hierarch
 {% highlight xaml %}
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                    ShowDataLabels="True" 
-                    EnableTooltip="True"
-                    XBindingPath="Name"         
-                    YBindingPath="Value">
+                      ShowDataLabels="True" 
+                      EnableTooltip="True"
+                      XBindingPath="Name"         
+                      YBindingPath="Value">
     <chart:SfPyramidChart.Title>
         <Label Text="Pyramid Stages"/>
     </chart:SfPyramidChart.Title>
@@ -184,6 +184,7 @@ chart.Title = new Label()
 {
     Text = "Pyramid Stages"
 };
+
 chart.Legend = new ChartLegend();
 StageViewModel viewModel = new StageViewModel();
 chart.BindingContext = viewModel;

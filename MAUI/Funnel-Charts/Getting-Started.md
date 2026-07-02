@@ -124,7 +124,7 @@ public class AdmissionModel
 
 {% endtabs %} 
 
-Next, create a view AdmissionViewModel class and initialize a list of `AdmissionModel` objects as follows.
+Next, create a view `AdmissionViewModel` class and initialize a list of `AdmissionModel` objects as follows.
 
 {% tabs %}  
 
@@ -181,10 +181,10 @@ Initialize the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                        XBindingPath="XValue" 
-                        YBindingPath="YValue"
-                        ShowDataLabels="True" 
-                        EnableTooltip="True">
+                     XBindingPath="XValue" 
+                     YBindingPath="YValue"
+                     ShowDataLabels="True" 
+                     EnableTooltip="True">
 
     <chart:SfFunnelChart.Title>
         <Label Text="School Admission"/>
@@ -204,20 +204,20 @@ Initialize the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight C# %}
 
-    SfFunnelChart chart = new SfFunnelChart();
-    chart.Title = new Label()
-    {
-        Text = "School Admission"
-    };
-    chart.Legend = new ChartLegend();
-    AdmissionViewModel viewModel = new AdmissionViewModel();
-    chart.BindingContext = viewModel;
+SfFunnelChart chart = new SfFunnelChart();
+chart.Title = new Label()
+{
+    Text = "School Admission"
+};
 
-    chart.ItemsSource = viewModel.Data;
-    chart.XBindingPath = "XValue";
-    chart.YBindingPath = "YValue";
-    chart.EnableTooltip = true;
-    chart.ShowDataLabels = true;
+chart.Legend = new ChartLegend();
+AdmissionViewModel viewModel = new AdmissionViewModel();
+chart.BindingContext = viewModel;
+chart.ItemsSource = viewModel.Data;
+chart.XBindingPath = "XValue";
+chart.YBindingPath = "YValue";
+chart.EnableTooltip = true;
+chart.ShowDataLabels = true;
 
 {% endhighlight %}
 

@@ -170,7 +170,7 @@ using Syncfusion.Maui.Charts;
 
 ## Step 6: Add the Cartesian Chart component
 
-Create an instance for the Chips control. Set the `PersonViewModel` instance as the `BindingContext` of your page to bind `PersonViewModel` properties to the chart. 
+Create an instance for the Cartesian Chart control. Set the `PersonViewModel` instance as the `BindingContext` of your page to bind `PersonViewModel` properties to the chart. 
  
 N> Add namespace of `PersonViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 

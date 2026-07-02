@@ -934,28 +934,6 @@ internal class SelectionCellTemplateView
 
 ![Decade View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-decade-view-selection-cell-template.gif)
 
-## Corner radius
-
-You can customize the corner radius of the calendar using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CornerRadius) property of the SfCalendar, allowing you to set the desired roundness for the corners of the calendar. The default value of the `CornerRadius` property is `20`.
-
-{% tabs %}  
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-
-<calendar:SfCalendar x:Name="calendar" 
-                     View="Month"
-                     CornerRadius="15">
- </calendar:SfCalendar>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" %}
-
-this.calendar.CornerRadius = 15;
-
-{% endhighlight %}
-{% endtabs %}
-
-![Change corner radius in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-corner-radius.png)
-
 N>
 The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
 
