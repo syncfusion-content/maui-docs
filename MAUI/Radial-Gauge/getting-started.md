@@ -125,7 +125,7 @@ using Syncfusion.Maui.Gauges;
 
 ## Step 5: Add the Radial Gauge component
 
-Learn how to initialize the Syncfusion .NET MAUI SfRadialGauge control and configure its elements such as Axes, Ranges, Pointers, and Annotations to visualize data effectively.
+Learn how to initialize the `Syncfusion .NET MAUI SfRadialGauge` control and configure its elements such as Axes, Ranges, Pointers, and Annotations to visualize data effectively.
 
 {% tabs %}
 {% highlight xaml %}
