@@ -11,7 +11,7 @@ keywords : .net maui scheduler, maui appointment scheduling, .net maui agenda vi
 
 # Overview of .NET MAUI Scheduler (SfScheduler)
 
-The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) (SfScheduler) has nine different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) has nine different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
 
 ![overview-in-maui-scheduler](images/overview/overview-in-maui-scheduler.png)
 
