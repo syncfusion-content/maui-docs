@@ -40,7 +40,7 @@ N> In recursive mode, the parent nodes checkbox state or `IsChecked` property va
 
 N> When the `CheckBoxMode` is enabled, the `ItemTapped` and `ItemDoubleTapped` events will not be triggered in `SfTreeView` since the checkbox will handle the touch interaction, only the `NodeChecked` event is triggered.
 
-## CheckBoxWidth
+## CheckBox Width
 
 The `CheckBoxWidth` property reserves the width for the built-in checkbox in the tree view items. Its default value is `42`.
 
@@ -57,7 +57,7 @@ treeView.CheckBoxWidth = 50;
 
 N> The checkbox column is reserved only when the [CheckBoxMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckBoxMode) is set to a value other than `None`.
 
-## CheckBoxPosition
+## CheckBox Position
 
 The `CheckBoxPosition` property determines the position of the built-in checkbox in the tree view item. The checkbox can be placed on the start or end side of the content. Its default value is `Start`. The `TreeViewCheckBoxPosition` enumeration defines the available options:
 
@@ -75,7 +75,7 @@ treeView.CheckBoxPosition = TreeViewCheckBoxPosition.End;
 {% endhighlight %}
 {% endtabs %}
 
-## CheckActionTarget
+## CheckAction Target
 
 The `CheckActionTarget` property determines whether a node can be checked or unchecked by tapping only the checkbox or by tapping the entire node. Its default value is `CheckBox`. The `TreeViewCheckActionTarget` enumeration defines the available options:
 
@@ -286,7 +286,7 @@ In bound mode, bind the `SfCheckBox` in the [ItemTemplate](https://help.syncfusi
 N> Set the [ItemTemplateContextType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplateContextType) as `Node` in order to bind the [TreeViewNode.IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property to `SfCheckBox` within the `ItemTemplate`. To know more about `ItemTemplateContextType` click [here](https://help.syncfusion.com/maui/treeview/appearance#bindingcontext-for-itemtemplate).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 7 19 20 21" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 7 19 20 21" %}
 <syncfusion:SfTreeView x:Name="treeView"
                     ItemsSource="{Binding Folders}"
                     AutoExpandMode="AllNodesExpanded"
@@ -340,7 +340,7 @@ The checkbox state of each node can be set directly by setting the [TreeViewNode
 N> In unbound mode, the binding context of the `ItemTemplate` is the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) by default, so the [ItemTemplateContextType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplateContextType) property does not need to be set.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11 16" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 28 29" %}
 <syncfusion:SfTreeView x:Name="treeView"
                     CheckBoxMode="Recursive"
                     CheckBoxWidth="0"
@@ -399,7 +399,7 @@ private void OnTreeViewNodeChecked(object sender, Syncfusion.Maui.TreeView.NodeC
 
 ### NodeCheckedCommand
 
-The [NodeCheckedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeCheckedCommand) will be executed when checking and unchecking the CheckBox at run time. The command parameter will be of type [NodeCheckedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.NodeCheckedEventArgs.html), which provides information about the checked node.
+The `NodeCheckedCommand` will be executed when checking and unchecking the CheckBox at run time. The command parameter will be of type [NodeCheckedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.NodeCheckedEventArgs.html), which provides information about the checked node.
 
 * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.NodeCheckedEventArgs.html#Syncfusion_Maui_TreeView_NodeCheckedEventArgs_Node): Gets the `TreeViewNode` and data associated with the checked item as its arguments.
 
