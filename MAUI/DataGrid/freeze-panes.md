@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Freeze panes in MAUI DataGrid (SfDataGrid)
 
-In the [Syncfusion® .NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) (SfDataGrid) control, you can freeze rows and columns in view, similar to Excel. You can freeze rows and columns by setting the following properties:
+In the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)(SfDataGrid) control, you can freeze rows and columns in view, similar to Excel. You can freeze rows and columns by setting the following properties:
 
 | Property name | Description |
 |---------------|-------------|

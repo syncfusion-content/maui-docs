@@ -12,7 +12,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 ## Cell Tap Events
 
-The `Datagrid` provides the following events for handling interactions with the cells.
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides the following events for handling interactions with the cells.
 
 * [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) : Called when a tap on a cell has occurred.
 * [CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped) : Called when the user has tapped a cell with a primary button at the same cell twice in quick succession.
