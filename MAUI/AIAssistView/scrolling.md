@@ -16,16 +16,13 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 The `SfAIAssistView` control provides an option to display a scroll-to-bottom button that helps users quickly navigate back to the latest responses when they have scrolled up in the AI conversation. To enable this, set the [ShowScrollToBottomButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowScrollToBottomButton) property to `true`.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight xaml hl_lines="2" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}"
-                           ShowScrollToBottomButton="True" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ShowScrollToBottomButton="True" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="3" %}
-
-using Syncfusion.Maui.AIAssistView;
+{% highlight c# hl_lines="2" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     sfAIAssistView.ShowScrollToBottomButton = true;
@@ -42,7 +39,7 @@ The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom 
 {% tabs %}
 {% highlight xaml hl_lines="29" %}
 
-<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="scrollToBottomButtonTemplate">
                 <Border Padding="10"
@@ -66,29 +63,18 @@ The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom 
                 </Border>
             </DataTemplate>
         </ResourceDictionary>
-</ContentPage.Resources>
+    </ContentPage.Resources>
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}"
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ShowScrollToBottomButton="True"
                            ScrollToBottomButtonTemplate="{StaticResource scrollToBottomButtonTemplate}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="11" %}
+{% highlight c# hl_lines="3" %}
 
-using Syncfusion.Maui.AIAssistView;
-
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-        InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ShowScrollToBottomButton = true;
-        this.sfAIAssistView.ScrollToBottomButtonTemplate = this.CreateScrollToBottomButtonTemplate();
-        this.Content = this.sfAIAssistView;
-    }
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.ShowScrollToBottomButton = true;
+    sfAIAssistView.ScrollToBottomButtonTemplate = this.CreateScrollToBottomButtonTemplate();
 
     private DataTemplate CreateScrollToBottomButtonTemplate()
     {
@@ -136,7 +122,6 @@ public partial class MainPage : ContentPage
             return border;
         });
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -148,11 +133,10 @@ public partial class MainPage : ContentPage
 By default, the `SfAIAssistView` control automatically scrolls to the bottom of the conversation to display newly added messages. If you want to prevent this behavior and retain the current scroll position, you can disable auto‑scrolling by setting the [CanAutoScrollToBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CanAutoScrollToBottom) property to `false`.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight xaml hl_lines="2" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}"
-                           CanAutoScrollToBottom="False" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               CanAutoScrollToBottom="False" />
 
 {% endhighlight %}
 {% endtabs %}
@@ -166,18 +150,18 @@ You can handle this event to control the auto-scroll behavior of the AssistView.
 {% tabs %}
 {% highlight xaml hl_lines="2"  %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           Scrolled="sfAIAssistView_Scrolled" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               Scrolled="sfAIAssistView_Scrolled" />
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="1" %}
 
-sfAIAssistView.Scrolled += sfAIAssistView_Scrolled;
+    sfAIAssistView.Scrolled += sfAIAssistView_Scrolled;
 
-private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView.ScrolledEventArgs e)
-{
-   // Handle the Scrolled event.
-}
+    private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView.ScrolledEventArgs e)
+    {
+        // Handle the Scrolled event.
+    }
 
 {% endhighlight %}
 {% endtabs %}

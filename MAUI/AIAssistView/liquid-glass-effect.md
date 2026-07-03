@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Apply Liquid Glass Effect in .NET MAUI SfAIAssistView?
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. 
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible.
 
 This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control.
 
@@ -36,48 +36,37 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% tabs %}
 {% highlight xaml hl_lines="2 6" %}
 
-<Grid Background="#FF54A3CD">
-    <core:SfGlassEffectView EffectType="Regular"
-                            CornerRadius="20">
-        <assistView:SfAIAssistView x:Name="aiAssistView"
-                                   Background="Transparent"
-                                   EnableLiquidGlassEffect="True"/>
-    </core:SfGlassEffectView>
-</Grid>
+    <Grid Background="#FF54A3CD">
+        <core:SfGlassEffectView EffectType="Regular"
+                                CornerRadius="20">
+            <assistView:SfAIAssistView x:Name="aiAssistView"
+                                       Background="Transparent"
+                                       EnableLiquidGlassEffect="True"/>
+        </core:SfGlassEffectView>
+    </Grid>
 
 {% endhighlight %}
 {% highlight c# hl_lines="14 23" %}
 
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.AIAssistView;
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
+    Grid grid = new Grid
     {
-        InitializeComponent();
-        var grid = new Grid
-        {
-            Background = Color.FromArgb("#FF54A3CD")
-        };
+        Background = Color.FromArgb("#FF54A3CD")
+    };
 
-        var glassView = new SfGlassEffectView
-        {
-            CornerRadius = 20,
-            EffectType = LiquidGlassEffectType.Regular
-        };
+    SfGlassEffectView glassView = new SfGlassEffectView
+    {
+        CornerRadius = 20,
+        EffectType = LiquidGlassEffectType.Regular
+    };
 
-        var aiAssistView = new SfAIAssistView
-        {
-            Background = Colors.Transparent,
-            EnableLiquidGlassEffect = true
-        };
+    SfAIAssistView aiAssistView = new SfAIAssistView
+    {
+        Background = Colors.Transparent,
+        EnableLiquidGlassEffect = true
+    };
 
-        glassView.Content = aiAssistView;
-        grid.Children.Add(glassView);
-        this.Content = grid;
-    }
-}
+    glassView.Content = aiAssistView;
+    grid.Children.Add(glassView);
 
 {% endhighlight %}
 {% endtabs %}

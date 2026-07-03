@@ -64,72 +64,67 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 </tr>
 </table>
 
-
 ## Text item
 
 The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) is used to display plain text as a item, which is used to represent text-based content.
 
 {% tabs %}
-{% highlight xaml %}
-    
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>
+{% highlight xaml hl_lines="6" %}
 
-<ContentPage.Content>
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                AssistItems="{Binding AssistItems}"/>
-</ContentPage.Content>
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.AIAssistView;
+{% highlight c# hl_lines="3"%}
 
     SfAiAssistView sfAIAssistView = new SfAIAssistView();
     ViewModel viewModel = new ViewModel();
-    this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+    sfAIAssistView.AssistItems = viewModel.AssistItems;
 
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
-    
-public class ViewModel : INotifyPropertyChanged
-{
 
-    ...
-
-    private void GenerateAssistItems()
+    public class ViewModel : INotifyPropertyChanged
     {
-        AssistItem requestItem = new AssistItem()
+
+        ...
+
+        private void GenerateAssistItems()
         {
-            // Adding a user request as a text item
-            Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
-            IsRequested = true
-        };
+            AssistItem requestItem = new AssistItem()
+            {
+                // Adding a user request as a text item
+                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
+                IsRequested = true
+            };
 
-        this.AssistItems.Add(requestItem);
+            this.AssistItems.Add(requestItem);
 
-        // Generating response item
-        await GetResult(requestItem);
-    }
+            // Generating response item
+            await GetResult(requestItem);
+        }
         
-    private async Task GetResult(AssistItem requestItem)
-    {
-        await Task.Delay(1000).ConfigureAwait(true);
-
-        AssistItem responseItem = new AssistItem()
+        private async Task GetResult(AssistItem requestItem)
         {
-            // Adding a text item as a response from the AI service
-            Text = "Sure! MAUI stands for .NET Multi-platform App UI. It’s a framework that allows you to create cross-platform applications using a single codebase.This powerful framework is an evolution of Xamarin.Forms and is designed to streamline the development process by allowing you to write code once and deploy it across multiple platforms.",
-        };
+            await Task.Delay(1000).ConfigureAwait(true);
 
-        // Add the response item to the collection
-        this.AssistItems.Add(responseItem);
+            AssistItem responseItem = new AssistItem()
+            {
+                // Adding a text item as a response from the AI service
+                Text = "Sure! MAUI stands for .NET Multi-platform App UI. It’s a framework that allows you to create cross-platform applications using a single codebase.This powerful framework is an evolution of Xamarin.Forms and is designed to streamline the development process by allowing you to write code once and deploy it across multiple platforms.",
+            };
+
+            // Add the response item to the collection
+            this.AssistItems.Add(responseItem);
+        }
     }
-}
     
 {% endhighlight %}
 {% endtabs %}
@@ -141,40 +136,39 @@ The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    ...
-
-    private void GenerateAssistItems()
+    public class ViewModel : INotifyPropertyChanged
     {
-        AssistItem requestItem = new AssistItem()
-        {
-            Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
-            IsRequested = true
-        };
+        ...
 
-        this.AssistItems.Add(requestItem);
+        private void GenerateAssistItems()
+        {
+            AssistItem requestItem = new AssistItem()
+            {
+                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
+                IsRequested = true
+            };
+
+            this.AssistItems.Add(requestItem);
     
-        // Generating response item
-        await GetResult(requestItem);
-    }
+            // Generating response item
+            await GetResult(requestItem);
+        }
 
-    private async Task GetResult(AssistItem requestItem)
-    {
-        await Task.Delay(1000).ConfigureAwait(true);
-
-        AssistItem responseItem = new AssistHyperlinkItem()
+        private async Task GetResult(AssistItem requestItem)
         {
-            // Adding a hyperlink item as a response from the AI service.
-            Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
-            Url = "https://dotnet.microsoft.com/en-us/apps/maui",
-        };
+            await Task.Delay(1000).ConfigureAwait(true);
 
-        // Add the response item to the collection
-        this.AssistItems.Add(responseItem);
+            AssistItem responseItem = new AssistHyperlinkItem()
+            {
+                // Adding a hyperlink item as a response from the AI service.
+                Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+                Url = "https://dotnet.microsoft.com/en-us/apps/maui",
+            };
+
+            // Add the response item to the collection
+            this.AssistItems.Add(responseItem);
+        }
     }
-} 
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -186,39 +180,39 @@ The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    ...
-
-    private void GenerateAssistItems()
+    public class ViewModel : INotifyPropertyChanged
     {
-        AssistItem requestItem = new AssistItem()
+        ...
+
+        private void GenerateAssistItems()
         {
+            AssistItem requestItem = new AssistItem()
+            {
                 Text = "Hey AI, Please share an image of bird.",
                 IsRequested = true
-        };
+            };
 
-        this.AssistItems.Add(requestItem);
-        // Generating response item
-        await GetResult(requestItem);
-    }
+            this.AssistItems.Add(requestItem);
+            // Generating response item
+            await GetResult(requestItem);
+        }
     
-    private async Task GetResult(AssistItem requestItem)
-    {
-        await Task.Delay(1000).ConfigureAwait(true);
-        
-        // Adding image item as a response from the AI service.
-        AssistItem responseItem = newnew AssistImageItem()
+        private async Task GetResult(AssistItem requestItem)
         {
+            await Task.Delay(1000).ConfigureAwait(true);
+        
+            // Adding image item as a response from the AI service.
+            AssistItem responseItem = newnew AssistImageItem()
+            {
                 Aspect = Aspect.AspectFit,
                 Text = "Here's an image of a bird.",
                 Source = "bird01.png"          
-        };
+            };
 
-        // Add the response item to the collection
-        this.AssistItems.Add(responseItem);
+            // Add the response item to the collection
+            this.AssistItems.Add(responseItem);
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -234,18 +228,18 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                            ImageTapped="sfAIAssistView_ImageTapped" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ImageTapped="sfAIAssistView_ImageTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-      
-sfAIAssistView.ImageTapped += SfAIAssistView_ImageTapped;
 
-private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
-{  
-    DisplayAlert("Image", " Tapped on image :" + e.ImageItem.Source, "Ok");                  
-}
+    sfAIAssistView.ImageTapped += SfAIAssistView_ImageTapped;
+
+    private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
+    {  
+        DisplayAlert("Image", " Tapped on image :" + e.ImageItem.Source, "Ok");
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -253,34 +247,34 @@ private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
 ### ImageTapped Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                            ImageTappedCommand="{Binding TappedCommand}" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               ImageTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    public Command<object> tappedCommand;
-    public ViewModel()
+    public class ViewModel : INotifyPropertyChanged
     {
-        TappedCommand = new Command<object>(ImageTapped);
-    }
+        public Command<object> tappedCommand;
+        public ViewModel()
+        {
+            TappedCommand = new Command<object>(ImageTapped);
+        }
     
-    public Command<object> TappedCommand
-    {
-        get { return tappedCommand; }
-        set { tappedCommand = value; }
-    }
+        public Command<object> TappedCommand
+        {
+            get { return tappedCommand; }
+            set { tappedCommand = value; }
+        }
 
-    private void ImageTapped(object obj)
-    {
-        var ImageTappedArgs = obj as ImageTappedEventArgs;
-        DisplayAlert("Image", " Tapped on Image item :" + ImageTappedArgs.ImageItem.Source, "Ok");                  
-    }       
-}
+        private void ImageTapped(object obj)
+        {
+            var ImageTappedArgs = obj as ImageTappedEventArgs;
+            DisplayAlert("Image", " Tapped on Image item :" + ImageTappedArgs.ImageItem.Source, "Ok");                  
+        }       
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -288,74 +282,73 @@ public class ViewModel : INotifyPropertyChanged
 ## Card item
 
 In AI AssistView, to display a list of interactive cards, each card can contain an image, a list of buttons, and text (title, subtitle, and description) that align with the design used in popular bot frameworks. The [Card.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Image), [Card.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Title), [Card.Subtitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Subtitle), and [Card.Description](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Description) properties are used to define and display the image, title, subtitle, and description within each card.
- 
+
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="57" %}
 
-
-public class ViewModel : INotifyPropertyChanged
-{
-    ...
-
-    public ViewModel()
+    public class ViewModel : INotifyPropertyChanged
     {
-        this.assistItems = new ObservableCollection<IAssistItem>();
+        ...
 
-        //Generate card items
-        this.GenerateCards();
-
-        //Generate assist items with card responses
-        this.GenerateAssistItems();
-    }
-
-    private void GenerateCards()
-    {
-        cardsCollection = new ObservableCollection<Card>();
-        Card card1 = new Card()
+        public ViewModel()
         {
-            Title = "Miami",
-            Description = "Miami, officially the City of Miami, is the seat of Miami-Dade County and the cultural, economic and financial center of South Florida in the United States. The city covers an area of about 56 square miles between the Everglades to the west and Biscayne Bay to the east.",
-            Image = "miami.png",
-        };
-        card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miammi" });
+            this.assistItems = new ObservableCollection<IAssistItem>();
 
-        Card card2 = new Card()
+            //Generate card items
+            this.GenerateCards();
+
+            //Generate assist items with card responses
+            this.GenerateAssistItems();
+        }
+
+        private void GenerateCards()
         {
-            Title = "A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherman's Wharf, and its Chinatown district.",
-            Image = "sanfrancisco.png",
-        };
-        card2.Buttons.Add(new CardButton() { Title = "Choose", Value = "San Francisco" });
+            cardsCollection = new ObservableCollection<Card>();
+            Card card1 = new Card()
+            {
+                Title = "Miami",
+                Description = "Miami, officially the City of Miami, is the seat of Miami-Dade County and the cultural, economic and financial center of South Florida in the United States. The city covers an area of about 56 square miles between the Everglades to the west and Biscayne Bay to the east.",
+                Image = "miami.png",
+            };
+            card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miammi" });
 
-        Card card3 = new Card()
-        {
-            Title = "Las Vegas",
-            Description = "Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife. The Las Vegas Valley as a whole serves as the leading financial, commercial, and cultural center for Nevada.",
-            Image = "lasvegas.png",
-        };
-        card3.Buttons.Add(new CardButton() { Title = "Choose", Value = "Las Vegas" });
+            Card card2 = new Card()
+            {
+                Title = "A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherman's Wharf, and its Chinatown district.",
+                Image = "sanfrancisco.png",
+            };
+            card2.Buttons.Add(new CardButton() { Title = "Choose", Value = "San Francisco" });
 
-        Card card4 = new Card()
-        {
-            Title = "Dallas",
-            Description = "Dallas, a modern metropolis in north Texas, is a commercial and cultural hub of the region. The Downtown Sixth Floor Museum at Dealey Plaza commemorates the site of President John F. Kennedy's assassination in 1963. In the Arts District, the Dallas Museum of Art and the Crow Collection of Asian Art cover thousands of years of art. The sleek Nasher Sculpture Center showcases contemporary sculpture.",
-            Image = "dallas.png",
-        };
-        card4.Buttons.Add(new CardButton() { Title = "Choose", Value = "Dallas" });
+            Card card3 = new Card()
+            {
+                Title = "Las Vegas",
+                Description = "Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife. The Las Vegas Valley as a whole serves as the leading financial, commercial, and cultural center for Nevada.",
+                Image = "lasvegas.png",
+            };
+            card3.Buttons.Add(new CardButton() { Title = "Choose", Value = "Las Vegas" });
 
-        this.CardsCollection.Add(card1);
-        this.CardsCollection.Add(card2);
-        this.CardsCollection.Add(card3);
-        this.CardsCollection.Add(card4);
-    }   
+            Card card4 = new Card()
+            {
+                Title = "Dallas",
+                Description = "Dallas, a modern metropolis in north Texas, is a commercial and cultural hub of the region. The Downtown Sixth Floor Museum at Dealey Plaza commemorates the site of President John F. Kennedy's assassination in 1963. In the Arts District, the Dallas Museum of Art and the Crow Collection of Asian Art cover thousands of years of art. The sleek Nasher Sculpture Center showcases contemporary sculpture.",
+                Image = "dallas.png",
+            };
+            card4.Buttons.Add(new CardButton() { Title = "Choose", Value = "Dallas" });
+
+            this.CardsCollection.Add(card1);
+            this.CardsCollection.Add(card2);
+            this.CardsCollection.Add(card3);
+            this.CardsCollection.Add(card4);
+        }   
     
-    private void GenerateAssistItems()
-    {
-        AssistItems.Add(new AssistCardItem()
+        private void GenerateAssistItems()
         {
-            Cards = CardsCollection,
-        });
+            AssistItems.Add(new AssistCardItem()
+            {
+                Cards = CardsCollection,
+            });
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -374,18 +367,18 @@ The `SfAIAssistView` control includes a built-in event called [CardTapped](https
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                            CardTapped="sfAIAssistView_CardTapped" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               CardTapped="sfAIAssistView_CardTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-      
-sfAIAssistView.CardTapped += SfAIAssistView_CardTapped;
 
-private void SfAIAssistView_CardTapped(object sender, CardTappedEventArgs e)
-{  
-    DisplayAlert("Card", " Tapped on card :" + e.Card.Title, "Ok");                  
-}
+    sfAIAssistView.CardTapped += SfAIAssistView_CardTapped;
+
+    private void SfAIAssistView_CardTapped(object sender, CardTappedEventArgs e)
+    {  
+        DisplayAlert("Card", " Tapped on card :" + e.Card.Title, "Ok");                  
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -393,36 +386,35 @@ private void SfAIAssistView_CardTapped(object sender, CardTappedEventArgs e)
 ### CardTapped Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                            CardTappedCommand="{Binding TappedCommand}" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               CardTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    public Command<object> tappedCommand;
+    public class ViewModel : INotifyPropertyChanged
+    {
+        public Command<object> tappedCommand;
 
-    public ViewModel()
-    {
-        TappedCommand = new Command<object>(CardTapped);
-    }
+        public ViewModel()
+        {
+            TappedCommand = new Command<object>(CardTapped);
+        }
     
-    public Command<object> TappedCommand
-    {
-        get { return tappedCommand; }
-        set { tappedCommand = value; }
-    }
+        public Command<object> TappedCommand
+        {
+            get { return tappedCommand; }
+            set { tappedCommand = value; }
+        }
 
-    private void CardTapped(object obj)
-    {
-        var CardTappedArgs = obj as CardTappedEventArgs;
-        DisplayAlert("Card", " Tapped on Card item :" + CardTappedArgs.Card.Title, "Ok");                  
-    }    
-    
-}
+        private void CardTapped(object obj)
+        {
+            var CardTappedArgs = obj as CardTappedEventArgs;
+            DisplayAlert("Card", " Tapped on Card item :" + CardTappedArgs.Card.Title, "Ok");                  
+        }    
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -432,41 +424,41 @@ public class ViewModel : INotifyPropertyChanged
 The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachmentItem.html) is used to display the preview for a file or an image as a item. Using the [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property, you can display the desired attachments as item in the AI AssistView control.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    private async void GenerateAssistItems()
+    public class ViewModel : INotifyPropertyChanged
     {
-        // Adding a user request as attachments 
-        var requestItem = new AssistAttachmentItem()
+        private async void GenerateAssistItems()
         {
-            Text = "Read the following documents",
-            IsRequested = true,
-            Attachments = new List<IAttachment> { staticAttachment1, staticAttachment2, staticAttachment3 }
-        };
+            // Adding a user request as attachments 
+            var requestItem = new AssistAttachmentItem()
+            {
+                Text = "Read the following documents",
+                IsRequested = true,
+                Attachments = new List<IAttachment> { staticAttachment1, staticAttachment2, staticAttachment3 }
+            };
 
-        AssistItems.Add(requestItem);
+            AssistItems.Add(requestItem);
 
-        // Generating response item
-        await GetResult(requestItem);
-    }
+            // Generating response item
+            await GetResult(requestItem);
+        }
 
-    private async Task GetResult(AssistItem requestItem)
-    {
-        await Task.Delay(1000).ConfigureAwait(true);
-
-        AssistItem responseItem = new AssistItem()
+        private async Task GetResult(AssistItem requestItem)
         {
-            // Adding a text item as a response from the AI service
-            Text = "Thank you for sharing the documents. I will review the text file, the Excel sheet, and the PDF to provide you with a summary or any insights you need. Please let me know if you have any specific questions about these files.",
-            IsRequested = false,
-        };
+            await Task.Delay(1000).ConfigureAwait(true);
 
-        // Add the response item to the collection
-        this.AssistItems.Add(responseItem);
+            AssistItem responseItem = new AssistItem()
+            {
+                // Adding a text item as a response from the AI service
+                Text = "Thank you for sharing the documents. I will review the text file, the Excel sheet, and the PDF to provide you with a summary or any insights you need. Please let me know if you have any specific questions about these files.",
+                IsRequested = false,
+            };
+
+            // Add the response item to the collection
+            this.AssistItems.Add(responseItem);
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -477,46 +469,46 @@ The `SfAIAssistView` allows to display error responses by setting the error text
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="34" %}
-    
-public class ViewModel : INotifyPropertyChanged
-{
-    private async void GenerateAssistItems()
-    {
-        AssistItem requestItem = new AssistItem()
-        {
-            Text = "Types of listening",
-            IsRequested = true
-        };
 
-        this.AssistItems.Add(requestItem);
-
-        await GetResultAsync(requestItem);
-    }
-        
-    private async Task GetResultAsync(AssistItem requestItem)
+    public class ViewModel : INotifyPropertyChanged
     {
-       try
-       {
-           await Task.Delay(1000);
-           // If successful, add the normal response
-           AssistItem responseItem = new AssistItem()
-           {
-              Text = "Active Listening – Fully focusing and responding to the speaker with attention and empathy. Passive Listening – Hearing without reacting or engaging with the speaker. Empathetic Listening – Understanding the speaker’s emotions and feelings deeply.",
-              IsRequested = false,
-           };
-           this.AssistItems.Add(responseItem);
-        }
-        catch (Exception ex)
+        private async void GenerateAssistItems()
         {
-            AssistItem errorItem = new AssistItem()
+            AssistItem requestItem = new AssistItem()
             {
-               ErrorMessage = "An error occurred. Either the engine you requested does not exist or there was another issue processing your request.",
-               IsRequested = false,
+                Text = "Types of listening",
+                IsRequested = true
             };
-            this.AssistItems.Add(errorItem);
+
+            this.AssistItems.Add(requestItem);
+
+            await GetResultAsync(requestItem);
+        }
+        
+        private async Task GetResultAsync(AssistItem requestItem)
+        {
+            try
+            {
+                await Task.Delay(1000);
+                // If successful, add the normal response
+                AssistItem responseItem = new AssistItem()
+                {
+                    Text = "Active Listening – Fully focusing and responding to the speaker with attention and empathy. Passive Listening – Hearing without reacting or engaging with the speaker. Empathetic Listening – Understanding the speaker’s emotions and feelings deeply.",
+                    IsRequested = false,
+                };
+                this.AssistItems.Add(responseItem);
+            }
+            catch (Exception ex)
+            {
+                AssistItem errorItem = new AssistItem()
+                {
+                    ErrorMessage = "An error occurred. Either the engine you requested does not exist or there was another issue processing your request.",
+                    IsRequested = false,
+                };
+                this.AssistItems.Add(errorItem);
+            }
         }
     }
-}
     
 {% endhighlight %}
 {% endtabs %}
@@ -524,37 +516,37 @@ public class ViewModel : INotifyPropertyChanged
 ![Syncfusion .NET MAUI AI AssistView Error message](images/maui-aiassistview-error-message.png)
 
 ## Request and response item
- 
+
 The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is used to determine whether a item is a Request or a Response. If `IsRequested` property is set to `true`, the item is a Request item.
- 
+
 ### Request item
 
 These are the items sent by the user. They typically appear aligned to the right side of the window to visually differentiate them as user inputs.
- 
+
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="4" %}
- 
-  AssistItem requestItem = new AssistItem()
-  {
-      Text = "listening",
-      IsRequested = true
-  };
- 
+
+    AssistItem requestItem = new AssistItem()
+    {
+        Text = "listening",
+        IsRequested = true
+    };
+
 {% endhighlight %}
 {% endtabs %}
- 
+
 ### Response item
 
 These are messages generated by the AI in reply to a request. They are usually aligned to the left side of the window to indicate that they are responses.
- 
+
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="4" %}
- 
-  AssistItem responseItem = new AssistItem()
-  {
-      Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-      IsRequested = false,
-  };
- 
+
+    AssistItem responseItem = new AssistItem()
+    {
+        Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+        IsRequested = false,
+    };
+
 {% endhighlight %}
 {% endtabs %}

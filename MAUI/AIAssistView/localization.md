@@ -62,4 +62,3 @@ To localize the `AI AssistView` based on the `CurrentUICulture` using the `resou
    6. Add the Name or Value pair in the Resource Designer of `SfAIAssistView.es.resx` file and change its corresponding value to corresponding culture.
 
   ![Syncfusion .NET MAUI AI AssistView Shows the added resource file name value pair in the resource designer](images/localization/maui-aiassistview-shows-the-added-resource-file-name-value-pair-in-the-resource-designer.png)
-

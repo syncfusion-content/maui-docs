@@ -16,19 +16,15 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 The [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EmptyView) property can also be set to a string or a view, which will be displayed when no request or response is available to display in the control.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight xaml hl_lines="2" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                           AssistItems="{Binding AssistItems}"
-                           EmptyView="Ask AI Anything">
-</syncfusion:SfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               EmptyView="Ask AI Anything"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="4" %}
+{% highlight c# hl_lines="2" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    GettingStartedViewModel viewModel = new GettingStartedViewModel();
-    sfAIAssistView.AssistItems = viewModel.AssistItems;
     sfAIAssistView.EmptyView = "Ask AI Anything";
 
 {% endhighlight %}
@@ -41,109 +37,101 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
 {% tabs %}
 {% highlight xaml hl_lines="3 4" %}
 
- <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
-                         AssistItems="{Binding AssistItems}"
-                         EmptyView="No Items">
-     <syncfusion:SfAIAssistView.EmptyViewTemplate>
-         <DataTemplate>
-             <Grid RowDefinitions="45,30" 
-                   RowSpacing="10"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center">
-                <Border Background="#6C4EC2" 
-                         Stroke="#CAC4D0"  
-                         HorizontalOptions="Center" >
-                    <Border.StrokeShape>
-                         <RoundRectangle CornerRadius="12"/>
-                    </Border.StrokeShape>
-                       <Label Text="&#xe7e1;"
-                              FontSize="24"
-                              HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="MauiSampleFontIcon" 
-                              TextColor="White"
-                              HeightRequest="45" WidthRequest="45" HorizontalOptions="Center" />
-                 </Border>
-                 <Label Text="Hi, How can I help you!" 
-                        HorizontalOptions="Center" Grid.Row="1" FontFamily="Roboto-Regular" 
-                        FontSize="20"/>
-             </Grid>
-         </DataTemplate>
-     </syncfusion:SfAIAssistView.EmptyViewTemplate>
- </syncfusion:SfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
+                               AssistItems="{Binding AssistItems}"
+                               EmptyView="No Items">
+        <syncfusion:SfAIAssistView.EmptyViewTemplate>
+            <DataTemplate>
+                <Grid RowDefinitions="45,30" 
+                      RowSpacing="10"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center">
+                    <Border Background="#6C4EC2" 
+                            Stroke="#CAC4D0"  
+                            HorizontalOptions="Center" >
+                        <Border.StrokeShape>
+                             <RoundRectangle CornerRadius="12"/>
+                        </Border.StrokeShape>
+                            <Label Text="&#xe7e1;"
+                                   FontSize="24"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="MauiSampleFontIcon" 
+                                   TextColor="White"
+                                   HeightRequest="45" WidthRequest="45" HorizontalOptions="Center" />
+                        </Border>
+                        <Label Text="Hi, How can I help you!" 
+                               HorizontalOptions="Center" Grid.Row="1" FontFamily="Roboto-Regular" 
+                               FontSize="20"/>
+                 </Grid>
+            </DataTemplate>
+         </syncfusion:SfAIAssistView.EmptyViewTemplate>
+    </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
-{% highlight c# hl_lines="9 13" %}
+{% highlight c# hl_lines="3 7" %}
 
-   public partial class MainPage : ContentPage
-   {
-        SfAIAssistView sfAIAssistView;
-        public MainPage()
+    SfAIAssistView sfAIAssistView = new SfAIAssistView
+    {
+        EmptyView = "No Items"
+    };
+    GettingStartedViewModel viewModel = new GettingStartedViewModel();
+    sfAIAssistView.AssistItems = viewModel.AssistItems;
+    sfAIAssistView.EmptyViewTemplate = CreateEmptyViewTemplate();
+
+    private DataTemplate CreateEmptyViewTemplate()
+    {
+        return new DataTemplate(() =>
         {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView
+            var grid = new Grid
             {
-                EmptyView = "No Items"
+                RowDefinitions =
+                {
+                    new RowDefinition { Height = new GridLength(45) },
+                    new RowDefinition { Height = new GridLength(30) }
+                },
+                RowSpacing = 10,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
             };
-            GettingStartedViewModel viewModel = new GettingStartedViewModel();
-            sfAIAssistView.AssistItems = viewModel.AssistItems;
-            sfAIAssistView.EmptyViewTemplate = CreateEmptyViewTemplate();
-            Content = sfAIAssistView;
-        }
 
-        private DataTemplate CreateEmptyViewTemplate()
-        {
-            return new DataTemplate(() =>
+            var border = new Border
             {
-                var grid = new Grid
-                {
-                    RowDefinitions =
-                    {
-                        new RowDefinition { Height = new GridLength(45) },
-                        new RowDefinition { Height = new GridLength(30) }
-                    },
-                    RowSpacing = 10,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center
-                };
+                Background = Color.FromArgb("#6C4EC2"),
+                Stroke = Color.FromArgb("#CAC4D0"),
+                HorizontalOptions = LayoutOptions.Center,
+                StrokeShape = new RoundRectangle { CornerRadius = 12 }
+            };
 
-                var border = new Border
-                {
-                    Background = Color.FromArgb("#6C4EC2"),
-                    Stroke = Color.FromArgb("#CAC4D0"),
-                    HorizontalOptions = LayoutOptions.Center,
-                    StrokeShape = new RoundRectangle { CornerRadius = 12 }
-                };
+            var iconLabel = new Label
+            {
+                Text = "\ue7e1", 
+                FontSize = 24,
+                FontFamily = "MauiSampleFontIcon",  
+                TextColor = Colors.White,
+                WidthRequest = 45,
+                HeightRequest = 45,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalOptions = LayoutOptions.Center
+            };
 
-                var iconLabel = new Label
-                {
-                    Text = "\ue7e1", 
-                    FontSize = 24,
-                    FontFamily = "MauiSampleFontIcon",  
-                    TextColor = Colors.White,
-                    WidthRequest = 45,
-                    HeightRequest = 45,
-                    HorizontalTextAlignment = TextAlignment.Center,
-                    VerticalTextAlignment = TextAlignment.Center,
-                    HorizontalOptions = LayoutOptions.Center
-                };
+            border.Content = iconLabel;
 
-                border.Content = iconLabel;
+            var messageLabel = new Label
+            {
+                Text = "Hi, How can I help you!",
+                FontSize = 20,
+                FontFamily = "Roboto-Regular", 
+                HorizontalOptions = LayoutOptions.Center
+            };
 
-                var messageLabel = new Label
-                {
-                    Text = "Hi, How can I help you!",
-                    FontSize = 20,
-                    FontFamily = "Roboto-Regular", 
-                    HorizontalOptions = LayoutOptions.Center
-                };
+            Grid.SetRow(messageLabel, 1);
+            grid.Children.Add(border);
+            grid.Children.Add(messageLabel);
 
-                Grid.SetRow(messageLabel, 1);
-                grid.Children.Add(border);
-                grid.Children.Add(messageLabel);
-
-                return grid;
-            });
-        }
+            return grid;
+        });
     }
+    
 
 {% endhighlight %}
 {% endtabs %}

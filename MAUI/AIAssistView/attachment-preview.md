@@ -25,73 +25,72 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
 
-      <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
-                                 Attachments = "{Binding Attachments}">
-      </syncfusion:SfSfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               Attachments="{Binding Attachments}"/>
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-internal class ViewModel : INotifyPropertyChanged
-{
-    private ObservableCollection<IAttachment>? attachments;
-
-    public ViewModel()
+    internal class ViewModel : INotifyPropertyChanged
     {
-        Attachments = new ObservableCollection<IAttachment>();
-        UploadCommand = new Command(async () => await UploadFilesAsync());
-    }
+        private ObservableCollection<IAttachment>? attachments;
 
-    public ObservableCollection<IAttachment>? Attachments
-    {
-        get => attachments;
-        set
+        public ViewModel()
         {
-            if (attachments != value)
+            Attachments = new ObservableCollection<IAttachment>();
+            UploadCommand = new Command(async () => await UploadFilesAsync());
+        }
+
+        public ObservableCollection<IAttachment>? Attachments
+        {
+            get => attachments;
+            set
             {
-                attachments = value;
+               if (attachments != value)
+               {
+                  attachments = value;
+               }
+            }
+        }
+
+        public ICommand UploadCommand { get; }
+
+        private async Task UploadFilesAsync()
+        {
+            var results = await FilePicker.Default.PickMultipleAsync();
+            if (results == null) return;
+
+            foreach (var file in results)
+            {
+                Stream stream = await file.OpenReadAsync();
+
+                long size;
+                if (stream.CanSeek)
+                {
+                    size = stream.Length;
+                }
+                else
+                {
+                    using var ms = new MemoryStream();
+                    await stream.CopyToAsync(ms);
+                    size = ms.Length;
+                    stream.Dispose();
+                    stream = new MemoryStream(ms.ToArray());
+                }
+
+                Attachments?.Add(new AssistAttachment
+                {
+                    FileName = file.FileName,
+                    FileSize = size,
+                    FilePath = file.FullPath ?? string.Empty,
+                    FileExtension = Path.GetExtension(file.FileName) ?? string.Empty,
+                    FileContent = stream,
+                });
             }
         }
     }
-
-    public ICommand UploadCommand { get; }
-
-    private async Task UploadFilesAsync()
-    {
-        var results = await FilePicker.Default.PickMultipleAsync();
-        if (results == null) return;
-
-        foreach (var file in results)
-        {
-            Stream stream = await file.OpenReadAsync();
-
-            long size;
-            if (stream.CanSeek)
-            {
-                size = stream.Length;
-            }
-            else
-            {
-                using var ms = new MemoryStream();
-                await stream.CopyToAsync(ms);
-                size = ms.Length;
-                stream.Dispose();
-                stream = new MemoryStream(ms.ToArray());
-            }
-
-            Attachments?.Add(new AssistAttachment
-            {
-                FileName = file.FileName,
-                FileSize = size,
-                FilePath = file.FullPath ?? string.Empty,
-                FileExtension = Path.GetExtension(file.FileName) ?? string.Empty,
-                FileContent = stream,
-            });
-        }
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,15 +104,12 @@ The `SfAIAssistView` control allows you to control the number of attachments usi
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
 
-      <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
-                                 Attachments = "{Binding Attachments}"
-                                 MaxAttachmentCount = 8>                 
-      </syncfusion:SfSfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
+                               Attachments = "{Binding Attachments}"
+                               MaxAttachmentCount = 8/> 
 
 {% endhighlight %}
-{% highlight c# hl_lines="5" %}
-
-using Syncfusion.Maui.AIAssistView;
+{% highlight c# hl_lines="3" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     sfAIAssistView.Attachment = viewModel.Attachments;
@@ -129,65 +125,54 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
 {% tabs %}
 {% highlight xaml hl_lines="13" %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key = "attachmentItemTemplate">
-             <Grid Padding="8" ColumnSpacing="10">
-                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                 </Grid.ColumnDefinitions>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key = "attachmentItemTemplate">
+                <Grid Padding="8" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                 <!-- File Icon -->
-                <Image WidthRequest="32" HeightRequest="32">
-                    <Image.Source>
-                        <FontImageSource Glyph="&#xe76c;"
+                    <!-- File Icon -->
+                    <Image WidthRequest="32" HeightRequest="32">
+                        <Image.Source>
+                             <FontImageSource Glyph="&#xe76c;"
                                FontFamily="MauiMaterialAssets"
                                Color="Black" />
-                    </Image.Source>
-                </Image>
+                        </Image.Source>
+                    </Image>
 
-                 <!-- File Details -->
-                <StackLayout Grid.Column="1" Spacing="2">
-                   <!-- File Name -->
-                   <Label Text="{Binding FileName}"
-                          FontAttributes="Bold"
-                          FontSize="14"
-                          LineBreakMode="TailTruncation"/>
+                    <!-- File Details -->
+                    <StackLayout Grid.Column="1" Spacing="2">
+                         <!-- File Name -->
+                         <Label Text="{Binding FileName}"
+                                FontAttributes="Bold"
+                                FontSize="14"
+                                LineBreakMode="TailTruncation"/>
 
-                   <!-- File Size -->
-                   <Label Text="{Binding FileSize}"
-                          FontSize="12"
-                          TextColor="Gray"/>
-                </StackLayout>
-            </Grid>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
-<ContentPage.Content>
-      <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
-                                 Attachments = "{Binding Attachments}"
-                                 AttachmentItemTemplate = "{StaticResource attachmentItemTemplate}">
-      </syncfusion:SfSfAIAssistView>
-</ContentPage.Content>
+                        <!-- File Size -->
+                        <Label Text="{Binding FileSize}"
+                               FontSize="12"
+                               TextColor="Gray"/>
+                    </StackLayout>
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+   
+    <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
+                               Attachments = "{Binding Attachments}"
+                               AttachmentItemTemplate = "{StaticResource attachmentItemTemplate}"/>
 
 {% endhighlight %}
 {% highlight c# hl_lines="11" %}
 
-using Syncfusion.Maui.AIAssistView;
-
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        SfAIAssistView.Attachments = viewModel.Attachments;
-        sfAIAssistView.AttachmentItemTemplate = CreateAttachmentItemTemplate();
-        this.Content = sfAIAssistView;
-    }
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    SfAIAssistView.Attachments = viewModel.Attachments;
+    sfAIAssistView.AttachmentItemTemplate = CreateAttachmentItemTemplate();
 
     private DataTemplate CreateAttachmentItemTemplate()
     {
@@ -250,7 +235,6 @@ public partial class MainPage : ContentPage
             return grid;
         });
     }
-}
 
 {% endhighlight %}
 {% endtabs %}

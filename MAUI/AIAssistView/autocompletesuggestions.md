@@ -29,42 +29,42 @@ The [AutoSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}">
-    <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-        <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}" />
-    </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-</syncfusion:SfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}">
+        <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+            <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}" />
+        </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+    </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="9 17" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-public class GettingStartedViewModel : INotifyPropertyChanged
-{
-    private ObservableCollection<ISuggestion> autoSuggestions;
-
-    public GettingStartedViewModel()
+    public class GettingStartedViewModel : INotifyPropertyChanged
     {
-        AutoCompleteSuggestions = new ObservableCollection<ISuggestion>()
-        {
-            new AssistSuggestion() { Text = "What is .NET MAUI?" },
-            new AssistSuggestion() { Text = "How do I get started with AI AssistView?" },
-            new AssistSuggestion() { Text = "Explain data binding in .NET MAUI" },
-        };
-    }
+        private ObservableCollection<ISuggestion> autoSuggestions;
 
-    public ObservableCollection<ISuggestion> AutoCompleteSuggestions
-    {
-        get { return this.autoSuggestions; }
-        set
+        public GettingStartedViewModel()
         {
-            this.autoSuggestions = value;
-            RaisePropertyChanged(nameof(AutoCompleteSuggestions));
+            AutoCompleteSuggestions = new ObservableCollection<ISuggestion>()
+            {
+                new AssistSuggestion() { Text = "What is .NET MAUI?" },
+                new AssistSuggestion() { Text = "How do I get started with AI AssistView?" },
+                 new AssistSuggestion() { Text = "Explain data binding in .NET MAUI" },
+            };
+        }
+
+        public ObservableCollection<ISuggestion> AutoCompleteSuggestions
+        {
+            get { return this.autoSuggestions; }
+            set
+            {
+                this.autoSuggestions = value;
+                RaisePropertyChanged(nameof(AutoCompleteSuggestions));
+            }
         }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -78,32 +78,32 @@ The [ItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}">
-    <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-        <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
-                                          ItemSelectedCommand="{Binding SuggestionSelectedCommand}" />
-    </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-</syncfusion:SfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}">
+        <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+             <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
+                                               ItemSelectedCommand="{Binding SuggestionSelectedCommand}" />
+        </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+    </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-public class GettingStartedViewModel : INotifyPropertyChanged
-{
-    public GettingStartedViewModel()
+    public class GettingStartedViewModel : INotifyPropertyChanged
     {
-        SuggestionSelectedCommand = new Command<ISuggestion>(OnSuggestionSelected);
-    }
+        public GettingStartedViewModel()
+        {
+            SuggestionSelectedCommand = new Command<ISuggestion>(OnSuggestionSelected);
+        }
 
-    public ICommand SuggestionSelectedCommand { get; set; }
+        public ICommand SuggestionSelectedCommand { get; set; }
 
-    private void OnSuggestionSelected(ISuggestion selectedSuggestion)
-    {
-        // Handle the selected suggestion
-        Console.WriteLine($"Selected: {selectedSuggestion.Text}");
+        private void OnSuggestionSelected(ISuggestion selectedSuggestion)
+        {
+            // Handle the selected suggestion
+            Console.WriteLine($"Selected: {selectedSuggestion.Text}");
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -115,49 +115,35 @@ The [AutoSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% tabs %}
 {% highlight xaml hl_lines="20" %}
 
-<ContentPage.Resources>
-    <DataTemplate x:Key="autoSuggestionTemplate">
-        <Grid Padding="8"
-              Margin="4"
-              BackgroundColor="#F5F5F5">
-            <Label Text="{Binding Text}"
-                   FontSize="14"
-                   TextColor="Black"
-                   VerticalOptions="Center"/>
-        </Grid>
-    </DataTemplate>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <DataTemplate x:Key="autoSuggestionTemplate">
+            <Grid Padding="8"
+                   Margin="4"
+                   BackgroundColor="#F5F5F5">
+                <Label Text="{Binding Text}"
+                       FontSize="14"
+                       TextColor="Black"
+                       VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}">
-    <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-        <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
-                                          AutoSuggestionTemplate="{StaticResource autoSuggestionTemplate}" />
-    </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-</syncfusion:SfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+        <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+            <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
+                                              AutoSuggestionTemplate="{StaticResource autoSuggestionTemplate}" />
+        </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+    </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 {% highlight c# hl_lines="16" %}
 
-using Syncfusion.Maui.AIAssistView;
-
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-
-    public MainPage()
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
     {
-        InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
-        {
-            AutoSuggestions = viewModel.AutoCompleteSuggestions,
-            AutoSuggestionTemplate = CreateSuggestionTemplate(),
-        };
-        this.Content = sfAIAssistView;
-    }
+        AutoSuggestions = viewModel.AutoCompleteSuggestions,
+        AutoSuggestionTemplate = CreateSuggestionTemplate(),
+    };
 
     private DataTemplate CreateSuggestionTemplate()
     {
@@ -183,7 +169,6 @@ public partial class MainPage : ContentPage
             return grid;
         });
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -195,49 +180,49 @@ The [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}">
-    <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-        <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
-                                          MinimumPrefixCharacters="3" />
-    </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-</syncfusion:SfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+        <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+            <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
+                                              MinimumPrefixCharacters="3" />
+        </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+    </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 {% highlight c# hl_lines="4" %}
 
-this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
-{
-    AutoSuggestions = viewModel.AutoCompleteSuggestions,
-    MinimumPrefixCharacters = 3,
-};
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
+    {
+        AutoSuggestions = viewModel.AutoCompleteSuggestions,
+        MinimumPrefixCharacters = 3,
+    };
 
 {% endhighlight %}
 {% endtabs %}
 
-### Configuring suggestion delay 
+### Configuring suggestion delay
 
 The [SuggestionOpenDelay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_SuggestionOpenDelay) property sets the delay (in milliseconds) before the auto suggestion overlay opens after typing. This helps reduce unnecessary lookups during rapid typing. The default value is `200`.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}">
-    <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-        <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
-                                          SuggestionOpenDelay="300" />
-    </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-</syncfusion:SfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+         <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+            <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
+                                              SuggestionOpenDelay="300" />
+         </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+    </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 {% highlight c# hl_lines="4" %}
 
-this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
-{
-    AutoSuggestions = viewModel.AutoCompleteSuggestions,
-    SuggestionOpenDelay = 300,
-};
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
+    {
+        AutoSuggestions = viewModel.AutoCompleteSuggestions,
+        SuggestionOpenDelay = 300,
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -249,45 +234,46 @@ The [CancelRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssist
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}">
-    <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-        <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
-                                          CancelRequest="True" />
-    </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
-</syncfusion:SfAIAssistView>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}">
+        <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+             <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
+                                               CancelRequest="True" />
+        </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
+    </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 {% highlight c# hl_lines="4" %}
 
-this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
-{
-    AutoSuggestions = viewModel.AutoCompleteSuggestions,
-    CancelRequest = true,
-};
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
+    {
+        AutoSuggestions = viewModel.AutoCompleteSuggestions,
+        CancelRequest = true,
+    };
 
 {% endhighlight %}
 {% endtabs %}
 
-### Observing the AutoSuggestion overlay state 
+### Observing the AutoSuggestion overlay state
 
 The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_IsOpen) property is a read‑only boolean that indicates whether the autocomplete overlay is currently visible. It is updated automatically by the control, and you can observe it to respond to changes in the overlay’s state.
 
 {% tabs %}
 {% highlight c# %}
 
-// Observing the IsOpen state
-var autoComplete = sfAIAssistView.AutoSuggestionOverlay;
-if (autoComplete.IsOpen)
-{
-    // The suggestion overlay is currently visible
-    Console.WriteLine("Autocomplete overlay is open.");
-}
-else
-{
-    // The suggestion overlay is hidden
-    Console.WriteLine("Autocomplete overlay is closed.");
-}
+    // Observing the IsOpen state
+    var autoComplete = sfAIAssistView.AutoSuggestionOverlay;
+    if (autoComplete.IsOpen)
+    {
+        // The suggestion overlay is currently visible
+        Console.WriteLine("Autocomplete overlay is open.");
+    }
+    else
+    {
+        // The suggestion overlay is hidden
+        Console.WriteLine("Autocomplete overlay is closed.");
+    }
 
 {% endhighlight %}
 {% endtabs %}

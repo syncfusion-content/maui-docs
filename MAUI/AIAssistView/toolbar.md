@@ -22,11 +22,11 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2,3,4" %}
-<syncfusion:SfAIAssistView 
-            ShowToolbar="True" 
-            ToolbarTitle="AI AssistView" 
-            ToolbarHeight="50">
-</syncfusion:SfAIAssistView>
+
+    <syncfusion:SfAIAssistView ShowToolbar="True" 
+                                ToolbarTitle="AI AssistView" 
+                                ToolbarHeight="50">
+    </syncfusion:SfAIAssistView>
 {% endhighlight %}
 
 {% highlight c# hl_lines="2,3,4" %}
@@ -60,7 +60,8 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3" %}
-<syncfusion:SfAIAssistView x:Name="assist"
+
+    <syncfusion:SfAIAssistView x:Name="assist"
                                EnableTemporaryChat="True"
                                TemporaryChatBannerText="This chat will not be saved" />
 {% endhighlight %}
@@ -83,24 +84,28 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 - **`ChatModeChanging`**: provides a [ChatModeChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangingEventArgs.html)  with the [ChatMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangingEventArgs.html#Syncfusion_Maui_AIAssistView_ChatModeChangingEventArgs_ChatMode) that the control is about to transition to. Handlers can cancel the change by setting `e.Cancel = true`.
 - **`ChatModeChanged`**: provides a [ChatModeChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html) with the [ChatMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html#Syncfusion_Maui_AIAssistView_ChatModeChangedEventArgs_ChatMode) that the control has transitioned to.
 
+{% tabs %}
 {% highlight c# %}
-private void OnChatModeChanging(object sender,  ChatModeChangingEventArgs e)
-{
-    if (e.ChatMode == ChatMode.TemporaryChat)
-    {
-        e.Cancel = true; 
-    }
-}
 
-private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
-{
-    if (e.ChatMode == ChatMode.TemporaryChat)
+    private void OnChatModeChanging(object sender,  ChatModeChangingEventArgs e)
     {
-        // Temporary chat is active: maybe show custom banner or reset local state
+        if (e.ChatMode == ChatMode.TemporaryChat)
+        {
+           e.Cancel = true; 
+        }
     }
-    else
+
+    private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
     {
-        // New chat mode active: restore saved templates/state if needed
+        if (e.ChatMode == ChatMode.TemporaryChat)
+        {
+            // Temporary chat is active: maybe show custom banner or reset local state
+        }
+        else
+        {
+           // New chat mode active: restore saved templates/state if needed
+        }
     }
-}
+
 {% endhighlight %}
+{% endtabs %}

@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 # How to Bind Data in .NET MAUI SfAIAssistView?
+
 Data binding in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) enables managing chat interactions by adding request and response items using AssistItems, allowing dynamic updates through ViewModel integration.
 
 ## Generate the assist request & response items
@@ -32,59 +33,59 @@ Additionally, use the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusi
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    . . .
-
-    public ObservableCollection<IAssistItem> AssistItems
+    public class ViewModel : INotifyPropertyChanged
     {
-        get
+        . . .
+
+        public ObservableCollection<IAssistItem> AssistItems
         {
-            return this.assistItems;
+            get
+            {
+                return this.assistItems;
+            }
+
+            set
+            {
+                this.assistItems = value;
+                RaisePropertyChanged("AssistItems");
+            }
         }
 
-        set
+        public ICommand AssistViewRequestCommand { get; set; }
+
+        public ViewModel()
         {
-            this.assistItems = value;
-            RaisePropertyChanged("AssistItems");
+            this.assistItems = new ObservableCollection<IAssistItem>();
+            this.AssistViewRequestCommand = new Command<object>(ExecuteRequestCommand);
         }
-    }
 
-    public ICommand AssistViewRequestCommand { get; set; }
-
-    public ViewModel()
-    {
-        this.assistItems = new ObservableCollection<IAssistItem>();
-        this.AssistViewRequestCommand = new Command<object>(ExecuteRequestCommand);
-    }
-
-    private async void ExecuteRequestCommand(object obj)
-    {
-        var request = (obj as Syncfusion.Maui.AIAssistView.RequestEventArgs).RequestItem;
-        await this.GetResult((AssistItem)request).ConfigureAwait(true);
-    }
-
-    private async Task GetResult(object inputQuery)
-    {
-        await Task.Delay(1000).ConfigureAwait(true);
-        AssistItem request = (AssistItem)inputQuery;
-        if (request != null)
+        private async void ExecuteRequestCommand(object obj)
         {
-            // Generating response from AI
-
-            var userAIPrompt = this.GetUserAIPrompt(request.Text);
-            var response = await azureAIService!.GetResultsFromAI(request.Text, userAIPrompt).ConfigureAwait(true);
-
-            // Creating response item using response received from AI
-
-            AssistItem responseItem = new AssistItem() { Text = response };
-            responseItem.RequestItem = inputQuery;
-
-            this.AssistItems.Add(responseItem);
+            var request = (obj as Syncfusion.Maui.AIAssistView.RequestEventArgs).RequestItem;
+            await this.GetResult((AssistItem)request).ConfigureAwait(true);
         }
+
+        private async Task GetResult(object inputQuery)
+        {
+            await Task.Delay(1000).ConfigureAwait(true);
+            AssistItem request = (AssistItem)inputQuery;
+            if (request != null)
+            {
+                // Generating response from AI
+
+                var userAIPrompt = this.GetUserAIPrompt(request.Text);
+                var response = await azureAIService!.GetResultsFromAI(request.Text, userAIPrompt).ConfigureAwait(true);
+
+                // Creating response item using response received from AI
+
+                AssistItem responseItem = new AssistItem() { Text = response };
+                responseItem.RequestItem = inputQuery;
+
+                this.AssistItems.Add(responseItem);
+            }
+        }
+        ...
     }
-    ...
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,43 +93,34 @@ public class ViewModel : INotifyPropertyChanged
 N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
 
 ## Binding custom model collection
- 
+
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides support for binding collection of custom data objects through the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSource) property. This feature allows users to use their own data objects with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSourceConverter) property sets the converter used to transform data objects into assist items and vice versa.
- 
+
 {% tabs %}
 {% highlight xaml hl_lines="12 13" %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <local:AssistItemConverter x:Key="converter" />
-    </ResourceDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:AssistItemConverter x:Key="converter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-<ContentPage.BindingContext>
-    <local:ViewModel x:Name="viewModel"/>
-</ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
     
     <syncfusion:SfAIAssistView x:Name="assistView"
                                ItemsSource="{Binding AssistItemsCollection}"
                                ItemsSourceConverter="{StaticResource converter}" />
 
 {% endhighlight %}
- 
 {% highlight c# hl_lines="11 12" %}
-SfAIAssistView assistView;
-ViewModel viewModel;
-AssistItemConverter assistItemConverter;
 
-public MainPage()
-{
-    InitializeComponent();
-    assistView = new SfAIAssistView();
-    viewModel = new ViewModel();
-    assistItemConverter = new AssistItemConverter();
+    SfAIAssistView assistView = new SfAIAssistView();
+    ViewModel viewModel = new ViewModel();
+    AssistItemConverter assistItemConverter = new AssistItemConverter();
     assistView.ItemsSource = viewModel.AssistItems;
     assistView.ItemsSourceConverter = assistItemConverter;
-    Content = assistView;
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -138,65 +130,65 @@ Create the below collection of objects that must be converted to assist items co
 {% tabs %}
 {% highlight c# tabtitle="Model.cs" %}
 
-public class ItemModel : INotifyPropertyChanged
-{
-    private string? prompt;
-    private string? response;
-    private object? promptItem;
-    private bool isRequested;
-
-    public string? Prompt
+    public class ItemModel : INotifyPropertyChanged
     {
-        get { return prompt; }
-        set
+        private string? prompt;
+        private string? response;
+        private object? promptItem;
+        private bool isRequested;
+
+        public string? Prompt
         {
-            prompt = value;
-            RaisePropertyChanged(nameof(Prompt));
+            get { return prompt; }
+            set
+            {
+                prompt = value;
+                RaisePropertyChanged(nameof(Prompt));
+            }
+        }
+
+        public string? Response
+        {
+            get { return response; }
+            set
+            {
+                response = value;
+                RaisePropertyChanged(nameof(Response));
+            }
+        }
+
+        public bool IsRequested
+        {
+            get { return isRequested; }
+            set
+            {
+                isRequested = value;
+                RaisePropertyChanged(nameof(IsRequested));
+            }
+        }
+
+        public object? PromptItem
+        {
+            get { return promptItem; }
+            set
+            {
+                promptItem = value;
+                RaisePropertyChanged(nameof(PromptItem));
+            }
+        }
+
+         // Declare the PropertyChanged event.
+         public event PropertyChangedEventHandler? PropertyChanged;
+
+        /// <summary>
+        /// Raises the PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The name of the property that changed.</param>
+        protected virtual void RaisePropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
-
-    public string? Response
-    {
-        get { return response; }
-        set
-        {
-            response = value;
-            RaisePropertyChanged(nameof(Response));
-        }
-    }
-
-    public bool IsRequested
-    {
-        get { return isRequested; }
-        set
-        {
-            isRequested = value;
-            RaisePropertyChanged(nameof(IsRequested));
-        }
-    }
-
-    public object? PromptItem
-    {
-        get { return promptItem; }
-        set
-        {
-            promptItem = value;
-            RaisePropertyChanged(nameof(PromptItem));
-        }
-    }
-
-    // Declare the PropertyChanged event.
-    public event PropertyChangedEventHandler? PropertyChanged;
-
-    /// <summary>
-    /// Raises the PropertyChanged event.
-    /// </summary>
-    /// <param name="propertyName">The name of the property that changed.</param>
-    protected virtual void RaisePropertyChanged(string propertyName)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -206,129 +198,129 @@ N> If you want your data objects to respond to property changes, then implement 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    #region Fields
-    ObservableCollection<ItemModel> assistItemsCollection;
-    #endregion
-
-    #region Constructor
-    public ViewModel()
+    public class ViewModel : INotifyPropertyChanged
     {
-        assistItemsCollection = new ObservableCollection<ItemModel>();
-        this.GenerateAssistItems();
-    }
-    #endregion
+        #region Fields
+        ObservableCollection<ItemModel> assistItemsCollection;
+        #endregion
 
-    #region Public Properties
-
-    /// <summary>
-    /// Gets or sets the collection of messages of a conversation.
-    /// </summary>
-    public ObservableCollection<ItemModel> AssistItemsCollection
-    {
-        get
+        #region Constructor
+        public ViewModel()
         {
-            return assistItemsCollection;
+            assistItemsCollection = new ObservableCollection<ItemModel>();
+            this.GenerateAssistItems();
+        }
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets the collection of messages of a conversation.
+        /// </summary>
+        public ObservableCollection<ItemModel> AssistItemsCollection
+        {
+            get
+            {
+                return assistItemsCollection;
+            }
+
+            set
+            {
+                assistItemsCollection = value;
+                RaisePropertyChanged(nameof(AssistItemsCollection));
+            }
+        }
+        #endregion
+
+        #region Item Generation
+        private async void GenerateAssistItems()
+        {
+            // Adding a request item
+            ItemModel requestItem = new ItemModel()
+            {
+                Prompt = "Types of listening",
+                IsRequested = true
+            };
+
+            // Add the request item to the collection
+            this.assistItemsCollection.Add(requestItem);
+
+            // Generating response item
+            await GetResult(requestItem);
         }
 
-        set
+        private async Task GetResult(ItemModel requestItem)
         {
-            assistItemsCollection = value;
-            RaisePropertyChanged(nameof(AssistItemsCollection));
+            await Task.Delay(1000).ConfigureAwait(true);
+
+            ItemModel responseItem = new ItemModel()
+            {
+                Response = "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+                IsRequested = false,
+                PromptItem = requestItem,
+            };
+
+            // Add the response item to the collection
+            this.assistItemsCollection.Add(responseItem);
         }
+        #endregion
     }
-    #endregion
-
-    #region Item Generation
-    private async void GenerateAssistItems()
-    {
-        // Adding a request item
-        ItemModel requestItem = new ItemModel()
-        {
-            Prompt = "Types of listening",
-            IsRequested = true
-        };
-
-        // Add the request item to the collection
-        this.assistItemsCollection.Add(requestItem);
-
-        // Generating response item
-        await GetResult(requestItem);
-    }
-
-    private async Task GetResult(ItemModel requestItem)
-    {
-        await Task.Delay(1000).ConfigureAwait(true);
-
-        ItemModel responseItem = new ItemModel()
-        {
-            Response = "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-            IsRequested = false,
-            PromptItem = requestItem,
-        };
-
-        // Add the response item to the collection
-        this.assistItemsCollection.Add(responseItem);
-    }
-    #endregion
-}
 
 {% endhighlight %}
 {% endtabs %}
- 
+
 This converter must implement the [IAssistItemConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItemConverter.html) interface. Implement this interface to create a custom converter for the `ItemsSourceConverter` property.
- 
+
 {% tabs %}
 {% highlight c# tabtitle="AssistItemConverter.cs" hl_lines="1" %}
 
-public class AssistItemConverter : IAssistItemConverter
-{
-    public IAssistItem ConvertToAssistItem(object customItem, SfAIAssistView assistView)
+    public class AssistItemConverter : IAssistItemConverter
     {
-        var assistItem = new AssistItem();
-        var item = customItem as ItemModel;
-        if (item != null)
+        public IAssistItem ConvertToAssistItem(object customItem, SfAIAssistView assistView)
         {
-            assistItem.Data = item;
-            assistItem.IsRequested = item.IsRequested;
-            if (item.IsRequested)
+            var assistItem = new AssistItem();
+            var item = customItem as ItemModel;
+            if (item != null)
             {
-                if (item.Prompt != null)
+                assistItem.Data = item;
+                assistItem.IsRequested = item.IsRequested;
+                if (item.IsRequested)
                 {
-                    assistItem.Text = item.Prompt;
+                    if (item.Prompt != null)
+                    {
+                        assistItem.Text = item.Prompt;
+                    }
+                }
+                else
+                {
+                    if (item.Response != null)
+                    {
+                       assistItem.Text = item.Response;
+                    }
                 }
             }
-            else
-            {
-                if (item.Response != null)
-                {
-                    assistItem.Text = item.Response;
-                }
-            }
+            return assistItem;
         }
-        return assistItem;
-    }
 
-    public object ConvertToData(object assistViewItem, SfAIAssistView assistView)
-    {
-        var item = new ItemModel();
-        var assistItem = assistViewItem as AssistItem;
-        if (assistItem != null)
+        public object ConvertToData(object assistViewItem, SfAIAssistView assistView)
         {
-            item.IsRequested = assistItem.IsRequested;
-            if (item.IsRequested)
+            var item = new ItemModel();
+            var assistItem = assistViewItem as AssistItem;
+            if (assistItem != null)
             {
-                item.Prompt = assistItem.Text;
+                item.IsRequested = assistItem.IsRequested;
+                if (item.IsRequested)
+                {
+                    item.Prompt = assistItem.Text;
+                }
+                else
+                {
+                    item.Response = assistItem.Text;
+                }
             }
-            else
-            {
-                item.Response = assistItem.Text;
-            }
+            return item;
         }
-        return item;
     }
-}
     
 {% endhighlight %}
 {% endtabs %}
@@ -342,22 +334,16 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/custom-model-co
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to handle user requests by binding them to the [RequestCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestCommand) property. This command is triggered whenever the user sends a request in the assist view.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight xaml hl_lines="2" %}
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AssistItems="{Binding AssistItems}" 
-                           RequestCommand="{Binding AssistViewRequestCommand}"/>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               RequestCommand="{Binding AssistViewRequestCommand}"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="16" %}
-    
-using MauiAIAssistView.ViewModel;
-using Syncfusion.Maui.SfAIAssistView;
+{% highlight c# hl_lines="2" %}
 
-   SfAIAssistView  sfAIAssistView = new SfAIAssistView();
-   ViewModel viewModel = new ViewModel();
-   this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-   sfAIAssistView.SetBinding(SfAIAssistView.RequestCommandProperty, new Binding("AssistViewRequestCommand"));
+    SfAIAssistView  sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.SetBinding(SfAIAssistView.RequestCommandProperty, new Binding("AssistViewRequestCommand"));
 
 {% endhighlight %}
 {% endtabs %}

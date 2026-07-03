@@ -16,34 +16,27 @@ You can style the elements of the [SfAIAssistView](https://help.syncfusion.com/c
 To set a solid color as the background for [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html), assign a color to the `SfAssistView.Background` property. However, if you want the solid color to be applied to the control, also set the background as transparent, as shown in the below code sample.
 
 {% tabs %}
-{% highlight xaml hl_lines="10 18" %}
-    
- <ContentPage.BindingContext>
-    <local:ViewModel x:Name="viewModel"/>
- </ContentPage.BindingContext>
-        
- <ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewBackground">transparent</Color>
-             </ResourceDictionary>
-         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+{% highlight xaml hl_lines="7 13" %}
+  
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.  MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewBackground">transparent</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
- <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                            AssistItems="{Binding AssistItems}"
-                            Background="#94b6ec" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               Background="#94b6ec" />
       
 {% endhighlight %}
-{% highlight c# hl_lines="4" %}
+{% highlight c# hl_lines="2" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView ();
-    ViewModel.viewModel = new ViewModel();
-    sfAIAssistView.AssistItems = viewModel.AssistItems;
-    sfAIAssistView .Background = Color.FromHex("#94b6ec");
+    sfAIAssistView.Background = Color.FromHex("#94b6ec");
       
 {% endhighlight %}
 {% endtabs %}
@@ -53,12 +46,7 @@ To set a solid color as the background for [SfAIAssistView](https://help.syncfus
 To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistView.Background` to `Colors.Transparent` and place the image below the `SfAIAssistView` control.
 
 {% tabs %}
-{% highlight xaml hl_lines="18 21" %}
-    
-
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel"/>
-     </ContentPage.BindingContext>
+{% highlight xaml hl_lines="13" %}
 
     <ContentPage.Resources>
         <syncTheme:SyncfusionThemeDictionary>
@@ -71,39 +59,23 @@ To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistV
         </syncTheme:SyncfusionThemeDictionary>
     </ContentPage.Resources>
 
-        <ContentPage.Content>
-            <Grid>
-                <Image Source="backgroundimage.jpg" Aspect="AspectFill" />
-                <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                           AssistItems="{Binding AssistItems}"
+    <Grid>
+        <Image Source="backgroundimage.jpg" Aspect="AspectFill" />
+        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                            Background="Transparent" />   
-            </Grid>
-        </ContentPage.Content>
+    </Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="10 11 12" %}
+{% highlight c# hl_lines="3 4 5" %}
 
-public partial class MainPage : ContentPage
-{
     Grid grid = new Grid();
-    SfAIAssistView sfAIAssistView;
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
     Image image = new Image();
-    ViewModel viewModel;
-    public MainPage()
-    {
-        this.InitializeComponent();
-        image.Source = "backgroundimage.jpg";
-        image.Aspect = Aspect.AspectFill;
-        grid.Children.Add(image);
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.Background = Colors.Transparent;
-        this.viewModel = new ViewModel();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        grid.Children.Add(sfAIAssistView);
-        this.Content = grid;
-    }
-}
-
+    image.Source = "backgroundimage.jpg";
+    image.Aspect = Aspect.AspectFill;
+    grid.Children.Add(image);
+    sfAIAssistView.Background = Colors.Transparent;
+    grid.Children.Add(sfAIAssistView);
 
 {% endhighlight %}
 {% endtabs %}
@@ -114,61 +86,42 @@ To apply a gradient view as a background to the AI AssistView, set the `SfAIAssi
 
 {% tabs %}
 
-{% highlight xaml hl_lines="20 21" %}
+{% highlight xaml hl_lines="14 15" %}
 
-        <ContentPage.BindingContext>
-            <local:ViewModel x:Name="viewModel"/>
-        </ContentPage.BindingContext>
-        
-        <ContentPage.Resources>
-          <syncTheme:SyncfusionThemeDictionary>
-             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
                     <Color x:Key="SfAIAssistViewBackground">transparent</Color>
                 </ResourceDictionary>
             </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
           </syncTheme:SyncfusionThemeDictionary>
-        </ContentPage.Resources>
+    </ContentPage.Resources>
 
-        <ContentPage.Content>
-            <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                       AssistItems="{Binding AssistItems}">                                    
-                <syncfusion:SfAIAssistView.Background>
-                    <LinearGradientBrush>
-                        <GradientStop Color="SkyBlue" Offset="0.0" />
-                        <GradientStop Color="LightCyan" Offset="0.25" />
-                        <GradientStop Color="SteelBlue" Offset="0.5" />
-                        <GradientStop Color="LightSkyBlue" Offset="0.75" />
-                        <GradientStop Color="LightGray" Offset="1.0" />
-                    </LinearGradientBrush>
-                </syncfusion:SfAIAssistView.Background>
-            </syncfusion:SfAIAssistView>
-        </ContentPage.Content>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView">                                    
+        <syncfusion:SfAIAssistView.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="SkyBlue" Offset="0.0" />
+                <GradientStop Color="LightCyan" Offset="0.25" />
+                <GradientStop Color="SteelBlue" Offset="0.5" />
+                <GradientStop Color="LightSkyBlue" Offset="0.75" />
+                <GradientStop Color="LightGray" Offset="1.0" />
+            </LinearGradientBrush>
+        </syncfusion:SfAIAssistView.Background>
+    </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
-{% highlight c# hl_lines="12 18" %}
+{% highlight c# hl_lines="2 3" %}
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    ViewModel viewModel;
-    public MainPage()
-    {
-        InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
-        this.viewModel = new ViewModel();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        LinearGradientBrush linearGradientBrush = new LinearGradientBrush();     
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SkyBlue, 0.0f));
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightCyan, 0.25f));
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
-        this.AIAssistView.Background = linearGradientBrush;
-        this.Content = sfAIAssistView;
-    }
-}
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    LinearGradientBrush linearGradientBrush = new LinearGradientBrush();     
+    linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SkyBlue, 0.0f));
+    linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightCyan, 0.25f));
+    linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
+    linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
+    linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
+    sfAIAssistView.Background = linearGradientBrush;
 
 {% endhighlight %}
 {% endtabs %}
@@ -223,31 +176,28 @@ To apply styles to the elements of a request item, set values to the in-built ke
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewRequestItemTextColor">Gray</Color>
-                <Color x:Key="SfAIAssistViewRequestItemAuthorTextColor">Gray</Color>
-                <Color x:Key="SfAIAssistViewRequestItemBackground">#eee479</Color>
-                <x:String x:Key="SfAIAssistViewRequestItemFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfAIAssistViewRequestItemFontAttributes">Italic</FontAttributes>
-                <x:Double x:Key="SfAIAssistViewRequestItemFontSize">16</x:Double>
-                <x:String x:Key="SfAIAssistViewRequestItemAuthorFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfAIAssistViewRequestItemAuthorFontAttributes">Italic</FontAttributes>
-                <x:Double x:Key="SfAIAssistViewRequestItemAuthorFontSize">16</x:Double>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewRequestItemTextColor">Gray</Color>
+                    <Color x:Key="SfAIAssistViewRequestItemAuthorTextColor">Gray</Color>
+                    <Color x:Key="SfAIAssistViewRequestItemBackground">#eee479</Color>
+                    <x:String x:Key="SfAIAssistViewRequestItemFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfAIAssistViewRequestItemFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfAIAssistViewRequestItemFontSize">16</x:Double>
+                    <x:String x:Key="SfAIAssistViewRequestItemAuthorFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfAIAssistViewRequestItemAuthorFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfAIAssistViewRequestItemAuthorFontSize">16</x:Double>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewRequestItemTextColor", Colors.Gray);
@@ -260,7 +210,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewRequestItemAuthorFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfAIAssistViewRequestItemAuthorFontSize", 16);
     this.Resources.Add(dictionary);
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -314,32 +263,29 @@ To apply styles to the elements of a response item, set values to the in-built k
 
 {% tabs %}
 {% highlight xaml %}
-   
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewResponseItemTextColor">Gray</Color>
-                <Color x:Key="SfAIAssistViewResponseItemBackground">#eee479</Color>
-                <Color x:Key="SfAIAssistViewResponseItemAuthorTextColor">Gray</Color>
-                <x:String x:Key="SfAIAssistViewResponseItemFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfAIAssistViewResponseItemFontAttributes">Italic</FontAttributes>
-                <x:Double x:Key="SfAIAssistViewResponseItemFontSize">16</x:Double>
-                <x:String x:Key="SfAIAssistViewResponseItemAuthorFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfAIAssistViewResponseItemAuthorFontAttributes">Italic</FontAttributes>
-                <x:Double x:Key="SfAIAssistViewResponseItemAuthorFontSize">16</x:Double>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewResponseItemTextColor">Gray</Color>
+                    <Color x:Key="SfAIAssistViewResponseItemBackground">#eee479</Color>
+                    <Color x:Key="SfAIAssistViewResponseItemAuthorTextColor">Gray</Color>
+                    <x:String x:Key="SfAIAssistViewResponseItemFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfAIAssistViewResponseItemFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfAIAssistViewResponseItemFontSize">16</x:Double>
+                    <x:String x:Key="SfAIAssistViewResponseItemAuthorFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfAIAssistViewResponseItemAuthorFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfAIAssistViewResponseItemAuthorFontSize">16</x:Double>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewResponseItemTextColor", Colors.Gray);
@@ -352,7 +298,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewResponseItemAuthorFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfAIAssistViewResponseItemAuthorFontSize", 16);
     this.Resources.Add(dictionary);
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -391,26 +336,22 @@ To apply styles to the elements of a hyperlink item, set values to the in-built 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <Color x:Key="SfAIAssistViewRequestHyperlinkColor">#94b6ec</Color>
-                <Color x:Key="SfAIAssistViewHyperlinkMetaTitleTextColor">#f29d0a</Color>
-                <Color x:Key="SfAIAssistViewHyperlinkDescriptionTextColor">Black</Color>
-                <Color x:Key="SfAIAssistViewHyperlinkDescriptionBackground">#dde9cc</Color>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <Color x:Key="SfAIAssistViewRequestHyperlinkColor">#94b6ec</Color>
+                    <Color x:Key="SfAIAssistViewHyperlinkMetaTitleTextColor">#f29d0a</Color>
+                    <Color x:Key="SfAIAssistViewHyperlinkDescriptionTextColor">Black</Color>
+                    <Color x:Key="SfAIAssistViewHyperlinkDescriptionBackground">#dde9cc</Color>
+                </ResourceDictionary>
+             </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewRequestHyperlinkColor", Color.FromHex("#94b6ec"));
@@ -418,8 +359,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewHyperlinkDescriptionTextColor", Colors.Black);
     dictionary.Add("SfAIAssistViewHyperlinkDescriptionBackground", Color.FromHex("#dde9cc"));
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -518,42 +457,38 @@ To apply styles to the elements of a card item, set values to the in-built keys 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <Color x:Key="SfAIAssistViewCardBackground">#94b6ec</Color>
-                <Color x:Key="SfAIAssistViewCardStroke">#f29d0a</Color>
-                <Color x:Key="SfAIAssistViewCardTitleTextColor">Black</Color>
-                <x:String x:Key="SfAIAssistViewCardTitleFontFamily">Roboto-Medium</x:String>
-                <x:Double x:Key="SfAIAssistViewCardTitleFontSize">16</x:Double>
-                <FontAttributes x:Key="SfAIAssistViewCardTitleFontAttributes">Bold</FontAttributes>
-                <Color x:Key="SfAIAssistViewCardSubtitleTextColor">#dde9cc</Color>
-                <x:String x:Key="SfAIAssistViewCardSubtitleFontFamily">Roboto-Medium</x:String>
-                <x:Double x:Key="SfAIAssistViewCardSubtitleFontSize">12</x:Double>
-                <FontAttributes x:Key="SfAIAssistViewCardSubtitleFontAttributes">Italic</FontAttributes>
-                <Color x:Key="SfAIAssistViewCardDescriptionTextColor">#dde9cc</Color>
-                <x:String x:Key="SfAIAssistViewCardDescriptionFontFamily">Roboto-Medium</x:String>
-                <x:Double x:Key="SfAIAssistViewCardDescriptionFontSize">12</x:Double>
-                <FontAttributes x:Key="SfAIAssistViewCardDescriptionFontAttributes">Italic</FontAttributes>
-                <Color x:Key="SfAIAssistViewCardButtonBackground">#94b6ec</Color>
-                <Color x:Key="SfAIAssistViewCardButtonStroke">#f29d0a</Color>
-                <Color x:Key="SfAIAssistViewCardButtonTextColor">Gray</Color>
-                <x:String x:Key="SfAIAssistViewCardButtonFontFamily">Roboto-Medium</x:String>
-                <x:Double x:Key="SfAIAssistViewCardButtonFontSize">16</x:Double>
-                <FontAttributes x:Key="SfAIAssistViewCardButtonFontAttributes">Bold</FontAttributes>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <Color x:Key="SfAIAssistViewCardBackground">#94b6ec</Color>
+                    <Color x:Key="SfAIAssistViewCardStroke">#f29d0a</Color>
+                    <Color x:Key="SfAIAssistViewCardTitleTextColor">Black</Color>
+                    <x:String x:Key="SfAIAssistViewCardTitleFontFamily">Roboto-Medium</x:String>
+                    <x:Double x:Key="SfAIAssistViewCardTitleFontSize">16</x:Double>
+                    <FontAttributes x:Key="SfAIAssistViewCardTitleFontAttributes">Bold</FontAttributes>
+                    <Color x:Key="SfAIAssistViewCardSubtitleTextColor">#dde9cc</Color>
+                    <x:String x:Key="SfAIAssistViewCardSubtitleFontFamily">Roboto-Medium</x:String>
+                    <x:Double x:Key="SfAIAssistViewCardSubtitleFontSize">12</x:Double>
+                    <FontAttributes x:Key="SfAIAssistViewCardSubtitleFontAttributes">Italic</FontAttributes>
+                    <Color x:Key="SfAIAssistViewCardDescriptionTextColor">#dde9cc</Color>
+                    <x:String x:Key="SfAIAssistViewCardDescriptionFontFamily">Roboto-Medium</x:String>
+                    <x:Double x:Key="SfAIAssistViewCardDescriptionFontSize">12</x:Double>
+                    <FontAttributes x:Key="SfAIAssistViewCardDescriptionFontAttributes">Italic</FontAttributes>
+                    <Color x:Key="SfAIAssistViewCardButtonBackground">#94b6ec</Color>
+                    <Color x:Key="SfAIAssistViewCardButtonStroke">#f29d0a</Color>
+                    <Color x:Key="SfAIAssistViewCardButtonTextColor">Gray</Color>
+                    <x:String x:Key="SfAIAssistViewCardButtonFontFamily">Roboto-Medium</x:String>
+                    <x:Double x:Key="SfAIAssistViewCardButtonFontSize">16</x:Double>
+                    <FontAttributes x:Key="SfAIAssistViewCardButtonFontAttributes">Bold</FontAttributes>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewCardBackground", Color.FromHex("#94b6ec"));
@@ -577,8 +512,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewCardButtonFontSize", 16.0);
     dictionary.Add("SfAIAssistViewCardButtonFontAttributes", FontAttributes.Bold);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -601,30 +534,24 @@ To apply styles to the elements of the input view, set values to the in-built ke
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewInputViewBackground">#94b6ec</Color>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewInputViewBackground">#94b6ec</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight C# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewInputViewBackground", Colors.SkyBlue);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -671,30 +598,26 @@ To apply styles to the elements of the editor view, set values to the in-built k
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewEditorPlaceholderTextColor">Blue</Color>
-                <Color x:Key="SfAIAssistViewEditorTextColor">Black</Color>
-                <Color x:Key="SfAIAssistViewEditorBackground">LightGreen</Color>
-                <Color x:Key="SfAIAssistViewEditorStroke">Black</Color>
-                <x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfAIAssistViewEditorFontAttributes">Bold</FontAttributes>
-                <x:Double x:Key="SfAIAssistViewEditorFontSize">16</x:Double>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewEditorPlaceholderTextColor">Blue</Color>
+                    <Color x:Key="SfAIAssistViewEditorTextColor">Black</Color>
+                    <Color x:Key="SfAIAssistViewEditorBackground">LightGreen</Color>
+                    <Color x:Key="SfAIAssistViewEditorStroke">Black</Color>
+                    <x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfAIAssistViewEditorFontAttributes">Bold</FontAttributes>
+                    <x:Double x:Key="SfAIAssistViewEditorFontSize">16</x:Double>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewEditorPlaceholderTextColor", Colors.Blue);
@@ -705,8 +628,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewEditorFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfAIAssistViewEditorFontSize", 16);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -749,29 +670,25 @@ To apply styles to the elements of the suggestion view, set values to the in-bui
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewSuggestionItemTextColor">Blue</Color>
-                <Color x:Key="SfAIAssistViewSuggestionItemBackground">#d9d9d9</Color>
-                <Color x:Key="SfAIAssistViewSuggestionBackground">Violet</Color>
-                <x:String x:Key="SfAIAssistViewSuggestionItemFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfAIAssistViewSuggestionItemFontAttributes">Bold</FontAttributes>
-                <x:Double x:Key="SfAIAssistViewSuggestionItemFontSize">16</x:Double>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewSuggestionItemTextColor">Blue</Color>
+                    <Color x:Key="SfAIAssistViewSuggestionItemBackground">#d9d9d9</Color>
+                    <Color x:Key="SfAIAssistViewSuggestionBackground">Violet</Color>
+                    <x:String x:Key="SfAIAssistViewSuggestionItemFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfAIAssistViewSuggestionItemFontAttributes">Bold</FontAttributes>
+                    <x:Double x:Key="SfAIAssistViewSuggestionItemFontSize">16</x:Double>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewSuggestionItemTextColor", Colors.Blue);
@@ -781,8 +698,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewSuggestionItemFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfAIAssistViewSuggestionItemFontSize", 16);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -825,29 +740,25 @@ To apply styles to the elements of the action view, set values to the in-built k
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewNormalActionViewColor">Blue</Color>
-                <Color x:Key="SfAIAssistViewHoverActionViewColor">LightGray</Color>
-                <Color x:Key="SfAIAssistViewPressedActionViewColor">DarkGray</Color>
-                <Color x:Key="SfAIAssistViewNormalActionViewIconColor">Black</Color>
-                <Color x:Key="SfAIAssistViewSelectedLikeIconColor">Green</Color>
-                <Color x:Key="SfAIAssistViewSelectedDisLikeIconColor">Red</Color>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewNormalActionViewColor">Blue</Color>
+                    <Color x:Key="SfAIAssistViewHoverActionViewColor">LightGray</Color>
+                    <Color x:Key="SfAIAssistViewPressedActionViewColor">DarkGray</Color>
+                    <Color x:Key="SfAIAssistViewNormalActionViewIconColor">Black</Color>
+                    <Color x:Key="SfAIAssistViewSelectedLikeIconColor">Green</Color>
+                    <Color x:Key="SfAIAssistViewSelectedDisLikeIconColor">Red</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewNormalActionViewColor", Colors.Blue);
@@ -857,12 +768,9 @@ public MainPage()
     dictionary.Add("SfAIAssistViewSelectedLikeIconColor", Colors.Green);
     dictionary.Add("SfAIAssistViewSelectedDisLikeIconColor", Colors.Red);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Send button styling
 
@@ -886,32 +794,26 @@ To style the send item button based on its state, set values to the in-built key
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewDisabledSendButtonIconColor">Purple</Color>
-                <Color x:Key="SfAIAssistViewDisabledSendButtonColor">LightGreen</Color>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewDisabledSendButtonIconColor">Purple</Color>
+                    <Color x:Key="SfAIAssistViewDisabledSendButtonColor">LightGreen</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewDisabledSendButtonIconColor", Colors.Purple);
     dictionary.Add("SfAIAssistViewDisabledSendButtonColor", Colors.LightGreen);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -962,30 +864,26 @@ To style the stop responding view based on its appearance, set values to the in-
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewStopRespondingIconColor">Red</Color>
-                <Color x:Key="SfAIAssistViewStopRespondingTextColor">DarkBlue</Color>
-                <x:String x:Key="SfAIAssistViewStopRespondingFontFamily">Segoe UI</x:String>
-                <x:Double x:Key="SfAIAssistViewStopRespondingFontSize">14</x:Double>
-                <x:String x:Key="SfAIAssistViewStopRespondingFontAttributes">Italic</x:String>
-                <SolidColorBrush x:Key="SfAIAssistViewStopRespondingStroke">Violet</SolidColorBrush>
-                <x:Double x:Key="SfAIAssistViewStopRespondingStrokeThickness">2</x:Double>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewStopRespondingIconColor">Red</Color>
+                    <Color x:Key="SfAIAssistViewStopRespondingTextColor">DarkBlue</Color>
+                    <x:String x:Key="SfAIAssistViewStopRespondingFontFamily">Segoe UI</x:String>
+                    <x:Double x:Key="SfAIAssistViewStopRespondingFontSize">14</x:Double>
+                    <x:String x:Key="SfAIAssistViewStopRespondingFontAttributes">Italic</x:String>
+                    <SolidColorBrush x:Key="SfAIAssistViewStopRespondingStroke">Violet</SolidColorBrush>
+                    <x:Double x:Key="SfAIAssistViewStopRespondingStrokeThickness">2</x:Double>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewStopRespondingIconColor", Colors.Red);
@@ -996,8 +894,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewStopRespondingStroke", new SolidColorBrush(Colors.Violet));
     dictionary.Add("SfAIAssistViewStopRespondingStrokeThickness", 2.0);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1022,30 +918,24 @@ To modify the highlight color of selected text, you need to update the value ass
 {% tabs %}
 {% highlight xaml %}
 
- <ContentPage.Resources>
-     <core:SyncfusionThemeDictionary>
-         <core:SyncfusionThemeDictionary.MergedDictionaries>
-             <ResourceDictionary>
-                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                 <Color x:Key="SfAIAssistViewSelectionTextHighLightColor">Orange</Color>
-             </ResourceDictionary>
-         </core:SyncfusionThemeDictionary.MergedDictionaries>
-     </core:SyncfusionThemeDictionary>
- </ContentPage.Resources>
+    <ContentPage.Resources>
+         <core:SyncfusionThemeDictionary>
+            <core:SyncfusionThemeDictionary.MergedDictionaries>
+                 <ResourceDictionary>
+                     <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                     <Color x:Key="SfAIAssistViewSelectionTextHighLightColor">Orange</Color>
+                </ResourceDictionary>
+            </core:SyncfusionThemeDictionary.MergedDictionaries>
+        </core:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ...
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewSelectionTextHighLightColor", Colors.Orange);
     this.Resources.Add(dictionary);
-    ...
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1098,31 +988,27 @@ To style the common suggestion view based on its appearance, set values to the i
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-		<Color x:Key="SfAIAssistViewHeaderSuggestionBackground">LightSkyBlue</Color>
-		<Color x:Key="SfAIAssistViewHeaderSuggestionItemStroke">BlueViolet</Color>
-		<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemStrokeThickness">2</x:Double>
-		<Color x:Key="SfAIAssistViewHeaderSuggestionItemBackground">White</Color>
-		<Color x:Key="SfAIAssistViewHeaderSuggestionItemTextColor">Blue</Color>
-		<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemFontSize">16</x:Double>
-		<FontAttributes x:Key="SfAIAssistViewHeaderSuggestionItemFontAttribute">Italic</FontAttributes>
-		<x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                     <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+	   	             <Color x:Key="SfAIAssistViewHeaderSuggestionBackground">LightSkyBlue</Color>
+		             <Color x:Key="SfAIAssistViewHeaderSuggestionItemStroke">BlueViolet</Color>
+		             <x:Double x:Key="SfAIAssistViewHeaderSuggestionItemStrokeThickness">2</x:Double>
+	                <Color x:Key="SfAIAssistViewHeaderSuggestionItemBackground">White</Color>
+		            <Color x:Key="SfAIAssistViewHeaderSuggestionItemTextColor">Blue</Color>
+		            <x:Double x:Key="SfAIAssistViewHeaderSuggestionItemFontSize">16</x:Double>
+		            <FontAttributes x:Key="SfAIAssistViewHeaderSuggestionItemFontAttribute">Italic</FontAttributes>
+		            <x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewHeaderSuggestionBackground", Colors.LightSkyBlue);
@@ -1134,9 +1020,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewEditorFontFamily", "Roboto-Medium");
     dictionary.Add("SfAIAssistViewHeaderSuggestionItemBackground", Colors.White);
     this.Resources.Add(dictionary);
-    .... 
-
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1165,30 +1048,26 @@ To style the scroll to bottom button view based on its appearance, set values to
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <core:SyncfusionThemeDictionary>
-        <core:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewScrollToBottomButtonBackground">Orange</Color>
-                <Color x:Key="SfAIAssistViewScrollToBottomButtonIconColor">White</Color>
-            </ResourceDictionary>
-        </core:SyncfusionThemeDictionary.MergedDictionaries>
-    </core:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <core:SyncfusionThemeDictionary>
+            <core:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewScrollToBottomButtonBackground">Orange</Color>
+                    <Color x:Key="SfAIAssistViewScrollToBottomButtonIconColor">White</Color>
+                </ResourceDictionary>
+            </core:SyncfusionThemeDictionary.MergedDictionaries>
+        </core:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewScrollToBottomButtonBackground", Colors.Orange);
     dictionary.Add("SfAIAssistViewScrollToBottomButtonIconColor", Colors.White);
     this.Resources.Add(dictionary);
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1223,26 +1102,23 @@ To style the action button view based on its appearance, set values to the in-bu
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <core:SyncfusionThemeDictionary>
-        <core:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewActionButtonBackground">Orange</Color>
-                <Color x:Key="SfAIAssistViewActionButtonIconColor">White</Color>
-                <Color x:Key="SfAIAssistViewActionButtonViewTextColor">Black</Color>
-                <Color x:Key="SfAIAssistViewActionButtonsPopupBackground">LightGray</Color>
-            </ResourceDictionary>
-        </core:SyncfusionThemeDictionary.MergedDictionaries>
-    </core:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <core:SyncfusionThemeDictionary>
+            <core:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewActionButtonBackground">Orange</Color>
+                    <Color x:Key="SfAIAssistViewActionButtonIconColor">White</Color>
+                    <Color x:Key="SfAIAssistViewActionButtonViewTextColor">Black</Color>
+                    <Color x:Key="SfAIAssistViewActionButtonsPopupBackground">LightGray</Color>
+                </ResourceDictionary>
+            </core:SyncfusionThemeDictionary.MergedDictionaries>
+        </core:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewActionButtonBackground", Colors.Orange);
@@ -1250,7 +1126,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewActionButtonViewTextColor", Colors.Black);
     dictionary.Add("SfAIAssistViewActionButtonsPopupBackground", Colors.LightGray);
     this.Resources.Add(dictionary);
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1285,27 +1160,23 @@ To style the response suggestion header text view based on its appearance, set v
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewSuggestionHeaderTextColor">DarkBlue</Color>
-                <x:Double x:Key="SfAIAssistViewSuggestionHeaderFontSize">14</x:Double>
-                <x:String x:Key="SfAIAssistViewSuggestionHeaderFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfAIAssistViewSuggestionHeaderFontAttributes">Bold</FontAttributes>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewSuggestionHeaderTextColor">DarkBlue</Color>
+                    <x:Double x:Key="SfAIAssistViewSuggestionHeaderFontSize">14</x:Double>
+                    <x:String x:Key="SfAIAssistViewSuggestionHeaderFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfAIAssistViewSuggestionHeaderFontAttributes">Bold</FontAttributes>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewSuggestionHeaderTextColor", Colors.DarkBlue);
@@ -1313,8 +1184,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewSuggestionHeaderFontFamily", "Roboto-Medium");
     dictionary.Add("SfAIAssistViewSuggestionHeaderFontAttributes", FontAttributes.Bold);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1357,29 +1226,25 @@ To style the autocomplete suggestion overlay view based on its appearance, set v
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewAutoCompleteSuggestionBackground">Orange</Color>
-                <Color x:Key="SfAIAssistViewAutoCompleteSuggestionItemBackground">LightSkyBlue</Color>
-                <Color x:Key="SfAIAssistViewAutoCompleteSuggestionItemTextColor">Green</Color>
-                <x:String x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontFamily">OpenSansSemibold</x:String>
-                <x:Double x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontSize">20</x:Double>
-                <FontAttributes x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontAttributes">Bold</FontAttributes>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                    <Color x:Key="SfAIAssistViewAutoCompleteSuggestionBackground">Orange</Color>
+                    <Color x:Key="SfAIAssistViewAutoCompleteSuggestionItemBackground">LightSkyBlue</Color>
+                    <Color x:Key="SfAIAssistViewAutoCompleteSuggestionItemTextColor">Green</Color>
+                    <x:String x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontFamily">OpenSansSemibold</x:String>
+                    <x:Double x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontSize">20</x:Double>
+                    <FontAttributes x:Key="SfAIAssistViewAutoCompleteSuggestionItemFontAttributes">Bold</FontAttributes>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public MainPage()
-{
-    ....
-    InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewAutoCompleteSuggestionBackground", Colors.Orange);
@@ -1389,8 +1254,6 @@ public MainPage()
     dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemFontSize", 20.0);
     dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemFontAttributes", FontAttributes.Bold);
     this.Resources.Add(dictionary);
-    ....
-}
 
 {% endhighlight %}
 {% endtabs %}
