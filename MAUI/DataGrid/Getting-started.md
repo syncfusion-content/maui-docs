@@ -118,33 +118,33 @@ Create a simple data model as shown in the following code example, and save it a
 {% highlight c# %}
 public class OrderInfo
 {
-    private string orderID;
-    private string customerID;
-    private string customer;
-    private string shipCity;
-    private string shipCountry;
+    private string? orderID;
+    private string? customerID;
+    private string? customer;
+    private string? shipCity;
+    private string? shipCountry;
 
-    public string OrderID
+    public string? OrderID
     {
         get { return orderID; }
         set { this.orderID = value; }
     }
-    public string CustomerID
+    public string? CustomerID
     {
         get { return customerID; }
         set { this.customerID = value; }
     }
-    public string ShipCountry
+    public string? ShipCountry
     {
         get { return shipCountry; }
         set { this.shipCountry = value; }
     }
-    public string Customer
+    public string? Customer
     {
         get { return this.customer; }
         set { this.customer = value; }
     }
-    public string ShipCity
+    public string? ShipCity
     {
         get { return shipCity; }
         set { this.shipCity = value; }
@@ -170,7 +170,7 @@ Create a model repository class with `OrderInfo` collection property initialized
 {% highlight c# %}
 public class OrderInfoRepository
 {
-    private ObservableCollection<OrderInfo> orderInfo;
+    private ObservableCollection<OrderInfo> orderInfo = new();
     public ObservableCollection<OrderInfo> OrderInfoCollection
     {
         get { return orderInfo; }
@@ -235,7 +235,6 @@ SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
-
 
 The following screenshot illustrates the result of the above code.
 

@@ -153,7 +153,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         }
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     public void RaisePropertyChanged(string propName)
     {
@@ -192,7 +192,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         this.messages.Add(new TextMessage()
         {
             Author = currentUser,
-            Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.\",",
+            Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.",
         });
     }
 }

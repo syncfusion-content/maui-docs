@@ -152,7 +152,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
     this.AssistItems.Add(responseItem);
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     public void RaisePropertyChanged(string propName)
     {
