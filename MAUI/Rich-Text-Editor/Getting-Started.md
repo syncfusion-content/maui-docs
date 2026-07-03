@@ -148,7 +148,7 @@ Before proceeding, ensure the following are set up:
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.RichTextEditor` to install the Syncfusion .NET MAUI Rich Text Editor package.
+3. Run the command `dotnet add package Syncfusion.Maui.RichTextEditor` to install the .NET MAUI Rich Text Editor package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the Handler
@@ -380,3 +380,5 @@ this.Content = richTextEditor;
 {% endtabs %}
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
+
+N> Looking for the full [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) component overview, features, pricing, and documentation? Visit the .NET MAUI Rich Text Editor page.
