@@ -79,7 +79,7 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
                                AssistItems="{Binding AssistItems}"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="3"%}
+{% highlight c# hl_lines="3" %}
 
     SfAiAssistView sfAIAssistView = new SfAIAssistView();
     ViewModel viewModel = new ViewModel();
