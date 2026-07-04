@@ -18,7 +18,7 @@ AI AssistView allows developers to customize both the appearance and functionali
 ## Business use cases
 
 - AI writing assistants for generating and refining content.  
-- Customer support bots with guided responses and quick suggestions. 
+- Customer support bots with guided responses and quick suggestions.
 - Educational tutors delivering explanations, quizzes, and structured learning content.  
 - Business productivity apps integrating AI insights into workflows.  
 
@@ -26,8 +26,8 @@ AI AssistView allows developers to customize both the appearance and functionali
 
 - **Rich content types** display AI responses as text, images, hyperlinks, or structured cards.  
 - **Flexible control templates** define custom layouts and render any view or UI element.  
-- **Suggestions** provide quick reply options. 
-- **Styling & appearance** customize message styles, editor, and header. 
+- **Suggestions** provide quick reply options.
+- **Styling & appearance** customize message styles, editor, and header.
 
 ## Globalization
 
@@ -40,7 +40,7 @@ The following table summarizes the globalization support available in this contr
 
 .legend{
   display: inline-flex !important;
-  flex-direction: row !important; 
+  flex-direction: row !important;
   gap: 16px !important;
 }
 </style>
@@ -49,11 +49,11 @@ The following table summarizes the globalization support available in this contr
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/full-support.svg" width="16"> Full Support
 </span>
- 
+
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/partial-support.svg" width="16"> Partial Support
 </span>
- 
+
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
@@ -75,7 +75,7 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
+</tr>
 </table>
 
 ## Related controls

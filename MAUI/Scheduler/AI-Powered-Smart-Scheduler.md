@@ -9,7 +9,7 @@ documentation: ug
 
 # AI-powered Appointment Booking with .NET MAUI Scheduler (SfScheduler)
 
-This guide walks you through building a smart scheduling interface using .NET MAUI Scheduler ([SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html)) powered by AI via Azure OpenAI. Utilizing the new AI AssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) control, users can easily book appointments and check resource availability with the help of AI assistance.
+This guide walks you through building a smart scheduling interface using [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) ([SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html)) powered by AI via Azure OpenAI. Utilizing the new AI AssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) control, users can easily book appointments and check resource availability with the help of AI assistance.
 
 ## Integrating Azure OpenAI with the .NET MAUI App
 
@@ -616,4 +616,4 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 
 ![Booking-appointments-with-AI-in-NET-MAUI-Scheduler](images/smart-ai-samples/Booking-appointments-with-AI-in-NET-MAUI-Scheduler.gif)
 
-You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/Scheduler)
+You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartScheduler)

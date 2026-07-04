@@ -64,6 +64,33 @@ The `SfAIAssistView` control allows you to fully customize the editor's appearan
 
 ![Syncfusion .NET MAUI SfAIAssistView editor view template customization](Images/inputview/maui-aiassistview-editorviewtemplate.png)
 
+## Editor expansion button in view
+
+The `SfAIAssistView` control allows for expanding the editor view based on its `MaximumHeightRequest` property. To enable editor expansion, set the `AllowEditorExpansion` property to `true`.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+        <syncfusion:SfAIAssistView.RequestEditor>
+            <syncfusion:RequestEditorView MaximumHeightRequest="300"/>
+        </syncfusion:SfAIAssistView.RequestEditor>
+    </syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+{% highlight c# hl_lines="3" %}
+
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.RequestEditor.MaximumHeightRequest = 300;
+    sfAIAssistView.AllowEditorExpansion = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI AI AssistView Editor Expansion](Images/inputview/maui-aiassistview-editor-expansion.png)
+
+N> The editor expansion button is only visible when the content reaches the third line of the editor.
+
 ### Customizing editor appearance using RequestEditor
 
 The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.

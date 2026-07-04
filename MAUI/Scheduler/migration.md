@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfSchedule to .NET MAUI SfScheduler
+title: Migrate from Syncfusion® Xamarin SfSchedule to .NET MAUI SfScheduler
 description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Schedule to Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler control and more.
 platform: MAUI
 control: SfScheduler
@@ -610,7 +610,7 @@ Appointments.Add(new SchedulerAppointment()
     Background = Brush.LightSkyBlue,
 });
 	
-//Adding the scheduler appointment collection to the AppointmentsSource of the .NET MAUI Scheduler.
+//Adding the scheduler appointment collection to the AppointmentsSource of the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler).
 scheduler.AppointmentsSource = Appointments;
 this.Content = scheduler;	
 	

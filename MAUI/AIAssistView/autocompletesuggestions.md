@@ -71,7 +71,26 @@ The [AutoSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 
 ![Syncfusion .NET MAUI AI AssistView Auto Complete Suggestions](images/maui-aiassistview-auto-complete-suggestion.gif)
 
-### Executing commands on suggestion selection 
+### Grouped Suggestions View
+
+In `SfAIAssistView`, the `AssistSuggestion` class exposes a `Category` property that you can use to group autocomplete suggestions by topic. Set `Category` when creating suggestions (for example, "Recommended", "History", or "Recent") so the overlay can present related items together.
+
+### Grouping Suggestions by Category in ViewModel
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+  
+AutoCompleteSuggestions = new ObservableCollection<ISuggestion>()
+{
+   new AssistSuggestion() { Text = "What is .NET MAUI?", Category = "Recommended" },
+   new AssistSuggestion() { Text = "How do I get started with AI AssistView?", Category = "Recommended" },
+   new AssistSuggestion() { Text = "Explain data binding in .NET MAUI", Category = "History" },
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+### Executing commands on suggestion selection
 
 The [ItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_ItemSelectedCommand) property accepts an `ICommand` that runs when the user selects an item from the autocomplete overlay. The command receives the selected ISuggestion as its parameter.
 

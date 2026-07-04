@@ -166,6 +166,74 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 The following screenshot shows the output rendered when the filtered items are sorted:
 ![Syncfusion .NET MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sorting-filtered-items.png)
 
+## Custom Filter UI in .NET MAUI ListView (SfListView)
+
+This section explains how to enable and customize the filtering user interface (UI) in the `.NET MAUI ListView` (`SfListView`). You can customize the filter data using the `FilteringUITemplate` property. The filtering UI can be displayed by using the `ShowFilteringUICommand`, which internally invokes the `ShowFilteringUIForm()` method and displays the defined template inside a popup.
+
+## Filtering UI APIs
+
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) provides the following APIs to configure and display the filtering UI:
+
+- `FilteringUITitle`: Specifies the title displayed in the filtering UI popup.
+- `ShowFilteringUICommand`: Triggers the filtering UI programmatically, typically from a button.
+- `FilteringUITemplate`: Defines the custom layout of the filtering UI, allowing you to design filter elements such as buttons, chips, or other controls.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 9 14" %}
+<syncfusion:SfListView x:Name="listView"
+                       ItemsSource="{Binding Employees}"
+                       FilteringUITitle="Filtering">
+
+    <!-- Trigger Filtering UI -->
+    <syncfusion:SfListView.HeaderTemplate>
+        <DataTemplate>
+            <Button Text="Filter"
+                    Command="{Binding Source={x:Reference listView}, Path=ShowFilteringUICommand}" />
+        </DataTemplate>
+    </syncfusion:SfListView.HeaderTemplate>
+
+    <!-- Custom Filtering UI -->
+    <syncfusion:SfListView.FilteringUITemplate>
+        <DataTemplate>
+            <VerticalStackLayout Padding="14" Spacing="10">
+                <Label Text="Department" FontAttributes="Bold"/>
+                <!-- Define custom filter UI elements here -->
+            </VerticalStackLayout>
+        </DataTemplate>
+    </syncfusion:SfListView.FilteringUITemplate>
+
+</syncfusion:SfListView>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs"  hl_lines="1 3 5" %}
+listView.FilteringUITitle = "Filtering";
+
+var command = listView.ShowFilteringUICommand;
+
+listView.FilteringUITemplate = new DataTemplate(() =>
+{
+    return new VerticalStackLayout
+    {
+        Padding = 14,
+        Children =
+        {
+            new Label
+            {
+                Text = "Department",
+                FontAttributes = FontAttributes.Bold
+            }
+        }
+    };
+});
+{% endhighlight %}
+
+{% endtabs %}
+
+The following screenshot shows the filtering UI popup displayed in the SfListView:
+
+![MAUI ListView Filtering UI](Images/filtering/maui-listview-filtering-ui.png)
+
 ## See also
 
 [How to filter the items in .NET MAUI ListView (SfListview) using MVVM](https://www.syncfusion.com/kb/13060/)

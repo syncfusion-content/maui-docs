@@ -27,7 +27,52 @@ The Syncfusion<sup>®</sup> .NET MAUI Slider ([SfSlider](https://www.syncfusion.
 - **Customizable label** allows rendering value labels with user-defined formatting.  
 - **Ticks and dividers** allows visualizing intervals clearly using major and minor ticks.  
 - **Discrete mode** allows moving the slider thumb in fixed steps using defined intervals.  
-- **Tooltip** allows displaying the selected value clearly during interaction.  
+- **Tooltip** allows displaying the selected value clearly during interaction. 
+
+## Globalization
+
+The following table summarizes the globalization support available in the control.
+
+<style>
+.img{
+  margin:0 !important;
+}
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
+</style>
+
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
+
+<table>
+<tr>
+<th align="center">Control</th>
+<th align="center">Localization</th>
+<th align="center">RTL</th>
+<th align="center">Time zone</th>
+<th align="center">Screen reader</th>
+<th align="center">Keyboard navigation</th>
+</tr>
+<tr>
+<td><a href="/maui/slider/overview">Slider</a></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+</tr> 
+</table>
 
 ## Related controls
 

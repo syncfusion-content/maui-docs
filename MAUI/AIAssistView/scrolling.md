@@ -141,6 +141,31 @@ By default, the `SfAIAssistView` control automatically scrolls to the bottom of 
 {% endhighlight %}
 {% endtabs %}
 
+### AutoScroll Behavior Configuration
+
+The `SfAIAssistView` control provides the `AutoScrollBehavior` property, which determines how the view updates its scroll position when new messages or responses are added. This property is of type `AssistViewScrollBehavior`, and its default value is `ScrollToLastResponse`.
+The AutoScrollBehavior property supports the following scrolling modes:
+
+- `ScrollToLastResponse` : Automatically scrolls the view to display the most recent AI response.
+- `ScrollToLastRequest` : Scrolls the view to display the latest user request instead of the response.
+
+By configuring `AutoScrollBehavior`, you can control which part of the conversation remains visible when new content is appended. For more advanced scenarios, you can combine this property with `CanAutoScrollToBottom` and handle the Scrolled event to fine-tune scrolling behavior based on user interaction or application logic.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AutoScrollBehavior="ScrollToLastRequest" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="2" %}
+
+    SfAIAssistView sfAIAssistView = new SfAIAssistView(); 
+    sfAIAssistView.AutoScrollBehavior = AssistViewScrollBehavior.ScrollToLastRequest;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Scrolled Event
 
 The `SfAIAssistView` control comes with a built-in [Scrolled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Scrolled) event that will be fired whenever the conversation view is scrolled.  This event allows developers to track the current scroll position and determine whether the user has reached the top or bottom of the conversation list through the [ScrolledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ScrolledEventArgs.html). 

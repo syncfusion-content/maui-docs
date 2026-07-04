@@ -1259,3 +1259,202 @@ To style the autocomplete suggestion overlay view based on its appearance, set v
 {% endtabs %}
 
 ![Syncfusion .NET MAUI AI AssistView Auto Complete Suggestions style](images/styles/maui-aiassistview-auto-complete-suggestion-item-style.png)
+
+## Time break styling
+
+To style the time break view based on its appearance, set values to the built-in keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelTextColor </td>
+<td> Text color of the time break label. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontSize </td>
+<td> Font size of the time break label. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontFamily </td>
+<td> Font family of the time break label. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontAttributes </td>
+<td> Font attributes of the time break label. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakSeparatorHeightRequest </td>
+<td> Height of the time break separator line. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakSeparatorBackground </td>
+<td> Background color of the time break separator line. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewTimeBreakLabelTextColor">Blue</Color>
+                <x:Double x:Key="SfAIAssistViewTimeBreakLabelFontSize">15</x:Double>
+                <x:String x:Key="SfAIAssistViewTimeBreakLabelFontFamily">OpenSansSemibold</x:String>
+                <FontAttributes x:Key="SfAIAssistViewTimeBreakLabelFontAttributes">Bold</FontAttributes>
+                <x:Double x:Key="SfAIAssistViewTimeBreakSeparatorHeightRequest">4</x:Double>
+                <Color x:Key="SfAIAssistViewTimeBreakSeparatorBackground">LightSkyBlue</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewTimeBreakLabelTextColor", Colors.Blue);
+    dictionary.Add("SfAIAssistViewTimeBreakLabelFontSize", 15.0);
+    dictionary.Add("SfAIAssistViewTimeBreakLabelFontFamily", "OpenSansSemibold");
+    dictionary.Add("SfAIAssistViewAutoCompleteSuggestionItemFontSize", 20.0);
+    dictionary.Add("SfAIAssistViewTimeBreakLabelFontAttributes", FontAttributes.Bold);
+    dictionary.Add("SfAIAssistViewTimeBreakSeparatorHeightRequest", 4.0);
+    dictionary.Add("SfAIAssistViewTimeBreakSeparatorBackground", Colors.LightSkyBlue);
+    this.Resources.Add(dictionary);
+
+{% endhighlight %}
+{% endtabs %}
+
+## Editor expansion button styling
+
+To style the editor expansion button view based on its appearance, set values to the built-in keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewExpandViewBackground </td>
+<td> Background color of the editor expansion button. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewExpandViewStroke </td>
+<td> Stroke color of the editor expansion button. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewExpandIconColor </td>
+<td> Icon color of the editor expansion button. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewExpandViewBackground">Blue</Color>
+                <Color x:Key="SfAIAssistViewExpandViewStroke">Orange</Color>
+                <Color x:Key="SfAIAssistViewExpandIconColor">Red</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewExpandViewBackground", Colors.Blue);
+    dictionary.Add("SfAIAssistViewExpandViewStroke", Colors.Orange);
+    dictionary.Add("SfAIAssistViewExpandIconColor", Colors.Red);
+    this.Resources.Add(dictionary);
+
+{% endhighlight %}
+{% endtabs %}
+
+## Voice input styling
+
+To style the voice input view based on its appearance, set values to the built-in keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewNormalBackground </td>
+<td> Background color of the microphone view in normal state. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewHoverBackground </td>
+<td> Background color of the microphone view in hover state. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewPressedBackground </td>
+<td> Background color of the microphone view in pressed state. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewStroke </td>
+<td> Stroke color of the microphone view. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewStrokeThickness </td>
+<td> Stroke thickness of the microphone view. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicButtonDefaultIconColor </td>
+<td> Default icon color of the microphone button. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicButtonPressedIconColor </td>
+<td> Icon color of the microphone button when pressed. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewMicViewNormalBackground">Blue</Color>
+                <Color x:Key="SfAIAssistViewMicViewHoverBackground">LightBlue</Color>
+                <Color x:Key="SfAIAssistViewMicViewPressedBackground">Violet</Color>
+                <Color x:Key="SfAIAssistViewMicViewStroke">Red</Color>
+                <x:Double x:Key="SfAIAssistViewMicViewStrokeThickness">3</x:Double>
+                <Color x:Key="SfAIAssistViewMicButtonDefaultIconColor">Orange</Color>
+                <Color x:Key="SfAIAssistViewMicButtonPressedIconColor">Green</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewMicViewNormalBackground", Colors.Blue);
+    dictionary.Add("SfAIAssistViewMicViewHoverBackground", Colors.LightBlue);
+    dictionary.Add("SfAIAssistViewMicViewPressedBackground", Colors.Violet);
+    dictionary.Add("SfAIAssistViewMicViewStroke", Colors.Red);
+    dictionary.Add("SfAIAssistViewMicViewStrokeThickness", 3.0);
+    dictionary.Add("SfAIAssistViewMicButtonDefaultIconColor", Colors.Orange);
+    dictionary.Add("SfAIAssistViewMicButtonPressedIconColor", Colors.Green);
+    this.Resources.Add(dictionary);
+
+{% endhighlight %}
+{% endtabs %}
