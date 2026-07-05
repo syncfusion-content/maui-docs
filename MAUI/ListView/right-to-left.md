@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right To Left in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Right To Left support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Right To Left in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Right To Left support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -25,7 +25,7 @@ listView.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView with right to left](Images/right-to-left/maui-listview-right-to-left.png)
+![Syncfusion .NET MAUI ListView with right to left](Images/right-to-left/maui-listview-right-to-left.png)
 
 ## Limitation
 

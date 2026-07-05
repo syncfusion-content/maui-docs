@@ -203,7 +203,87 @@ public class ViewModel
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_chart_gradient_color.png)
 
-## Plotting Area Customization:
+## Point Color Path
+
+The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+
+The following code example demonstrates how to define a data model with a `PointColor` property and bind it to the chart series.
+
+{% tabs %}
+
+{% highlight c# %}
+
+public class PointColorViewModel
+{
+     public ObservableCollection<Model> Data { get; set; }
+
+     public PointColorViewModel()
+     {
+         Data = new ObservableCollection<Model>()
+         {
+
+             new() { XValue = "Purchases", YValue = 1000, PointColor = Color.FromArgb("#D1A8F3") },
+             new() { XValue = "Electronics", YValue = 1300, PointColor = Color.FromArgb("#A35DE5") },
+             new() { XValue = "Investment", YValue = 1700, PointColor = Color.FromArgb("#8933DE") },
+             new() { XValue = "Research", YValue = 1750, PointColor = Color.FromArgb("#6621AC") },
+             new() { XValue = "Jewelry", YValue = 2000, PointColor = Color.FromArgb("#551E8B") },
+         };
+     }
+}
+
+public class Model
+{
+    public string? XValue { get; set; }
+    public double YValue { get; set; }
+    public Color? PointColor { get; set; }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Set `ItemsSource` to your data collection and map `XBindingPath`, `YBindingPath`, and `PointColorPath` to the corresponding model properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    ...
+    <chart:ColumnSeries ItemsSource = "{Binding Data}"  
+                        XBindingPath = "XValue" 
+                        YBindingPath = "YValue" 
+                        PointColorPath = "PointColor"/>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ColumnSeries series = new ColumnSeries()
+{   
+    ItemsSource =  new PointColorViewModel().Data,
+    XBindingPath = "XValue", 
+    YBindingPath = "YValue", 
+    PointColorPath = "PointColor"
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![PointColorPath in MAUI Chart](Appearance_images/MAUI_chart_pointcolorpath.png)
+
+N> The property is not applicable to area-based series, fast series, financial series, box plot, error bar, waterfall, and histogram types.
+
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
+
+## Plotting Area Customization
 
 [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 

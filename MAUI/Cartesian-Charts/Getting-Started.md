@@ -32,85 +32,11 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the .NET MAUI Charts Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Charts NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %} 
-
-## Step 4: Add .NET MAUI Cartesian Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <chart:SfCartesianChart/>
-
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent(); 
-            SfCartesianChart chart = new SfCartesianChart(); 
-            this.Content = chart;            
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 {% endtabcontent %}
 
@@ -131,86 +57,12 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the .NET MAUI Charts Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Charts NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Charts` to install the .NET MAUI Charts NuGet package.
+3. Run the command `dotnet add package Syncfusion.Maui.Charts` to install the Syncfusion<sup>®</sup> .NET MAUI Charts NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
-
-## Step 3: Register the handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Cartesian Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <chart:SfCartesianChart/>
-
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent(); 
-            SfCartesianChart chart = new SfCartesianChart(); 
-            this.Content = chart;            
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 {% endtabcontent %}
 
@@ -230,91 +82,35 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Charts NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Charts NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
-
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
-{% endtabs %}
-
-## Step 4: Add .NET MAUI Cartesian Chart
-
-1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-2. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
-
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <chart:SfCartesianChart/>
-
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent(); 
-            SfCartesianChart chart = new SfCartesianChart(); 
-            this.Content = chart;            
-        }
-    }   
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Step 5: Initialize view model
+## Step 3: Register Syncfusion handler
+ 
+Make sure to add the namespace.
+ 
+{% tabs %}
+{% highlight c# %}
+using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %}
+{% endtabs %}
+ 
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+ 
+{% tabs %}
+{% highlight c# %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Define Model and View Model
 
 Now, let us define a simple data model that represents a data point in the chart.
 
@@ -359,76 +155,26 @@ public class PersonViewModel
 
 {% endtabs %} 
 
-Set the `PersonViewModel` instance as the `BindingContext` of your page to bind `PersonViewModel` properties to the chart. 
+## Step 5: Import the Cartesian Chart namespace
+
+Add the following namespace in your XAML or C#.
+
+{% tabs %}
+{% highlight xaml %}
+xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Charts;
+{% endhighlight %}
+{% endtabs %}
+
+## Step 6: Add the Cartesian Chart component
+
+Create an instance for the Cartesian Chart control. Set the `PersonViewModel` instance as the `BindingContext` of your page to bind `PersonViewModel` properties to the chart. 
  
 N> Add namespace of `PersonViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
-{% tabs %} 
-
-{% highlight xaml %}
-
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ChartGettingStarted.MainPage"
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
-
-    <ContentPage.BindingContext>
-        <model:PersonViewModel/>
-    </ContentPage.BindingContext>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-this.BindingContext = new PersonViewModel();
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-## Step 6: Initialize Chart axis
-
 [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [XAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_XAxes) and [YAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_YAxes) collection of the chart is used to initialize the axis for the chart.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>                            
-    <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis/>
-    </chart:SfCartesianChart.XAxes>
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.YAxes>                       
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCartesianChart chart = new SfCartesianChart();
-
-CategoryAxis primaryAxis = new CategoryAxis();
-chart.XAxes.Add(primaryAxis);
-
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
-
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-Run the project and check if you get following output to make sure you have configured your project properly to add a chart.
-
-![Initializing axis for .NET MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.jpg)
-
-## Step 7: Populate Chart with data
 
 As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `PersonViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
@@ -438,131 +184,97 @@ N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion
  properties so that chart will fetch values from the respective properties in the data model to plot the series. 
 
 {% tabs %} 
-
 {% highlight xaml %}
+<chart:SfCartesianChart>
 
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ChartGettingStarted.MainPage"
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:model="clr-namespace:ChartGettingStarted">
+    <chart:SfCartesianChart.Title>
+        <Label Text="Height Comparison"/>
+    </chart:SfCartesianChart.Title>
 
-    <ContentPage.BindingContext>
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfCartesianChart.Legend>
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis>
+            <chart:CategoryAxis.Title>
+                <chart:ChartAxisTitle Text="Name"/>
+            </chart:CategoryAxis.Title>
+        </chart:CategoryAxis>
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="Height(in cm)"/>
+            </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>
+
+    <!--Initialize the series for chart-->
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Name" 
+                        YBindingPath="Height"
+                        EnableTooltip="True"
+                        ShowDataLabels="True"
+                        Label="Height">
+        <chart:ColumnSeries.DataLabelSettings>
+            <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
+        </chart:ColumnSeries.DataLabelSettings>
+    </chart:ColumnSeries>
+
+    <chart:SfCartesianChart.BindingContext>
         <model:PersonViewModel/>
-    </ContentPage.BindingContext>
+    </chart:SfCartesianChart.BindingContext>
 
-    <chart:SfCartesianChart>
-
-        <chart:SfCartesianChart.Title>
-            <Label Text="Height Comparison"/>
-        </chart:SfCartesianChart.Title>
-
-        <chart:SfCartesianChart.Legend>
-            <chart:ChartLegend/>
-        </chart:SfCartesianChart.Legend>
-
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis>
-                <chart:CategoryAxis.Title>
-                    <chart:ChartAxisTitle Text="Name"/>
-                </chart:CategoryAxis.Title>
-            </chart:CategoryAxis>
-        </chart:SfCartesianChart.XAxes>
-
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis>
-                <chart:NumericalAxis.Title>
-                    <chart:ChartAxisTitle Text="Height(in cm)"/>
-                </chart:NumericalAxis.Title>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.YAxes>
-
-        <!--Initialize the series for chart-->
-        <chart:ColumnSeries ItemsSource="{Binding Data}"
-                            XBindingPath="Name" 
-                            YBindingPath="Height"
-                            EnableTooltip="True"
-                            ShowDataLabels="True"
-                            Label="Height">
-            <chart:ColumnSeries.DataLabelSettings>
-                <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
-            </chart:ColumnSeries.DataLabelSettings>
-        </chart:ColumnSeries>
-
-    </chart:SfCartesianChart>
-</ContentPage>
-
+</chart:SfCartesianChart>
 {% endhighlight %}
 
 {% highlight C# %}
+this.BindingContext = new PersonViewModel();   
+SfCartesianChart chart = new SfCartesianChart();
 
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
+chart.Title = new Label()
 {
-    public partial class MainPage : ContentPage
+    Text = "Height Comparison"
+};
+
+chart.Legend = new ChartLegend ();
+
+CategoryAxis primaryAxis = new CategoryAxis();
+primaryAxis.Title = new ChartAxisTitle()
+{
+    Text = "Name",
+};
+chart.XAxes.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.Title = new ChartAxisTitle()
+{
+    Text= "Height(in cm)",
+};
+chart.YAxes.Add(secondaryAxis);
+
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = (new PersonViewModel()).Data,
+    XBindingPath = "Name",
+    YBindingPath = "Height",
+    ShowDataLabels = true,
+    EnableTooltip = true,
+    Label = "Height",
+    DataLabelSettings = new CartesianDataLabelSettings()
     {
-        public MainPage()
-        {
-            InitializeComponent(); 
+        LabelPlacement = DataLabelPlacement.Inner
+    }              
+};  
 
-            this.BindingContext = new PersonViewModel();   
-
-            SfCartesianChart chart = new SfCartesianChart();
-
-            chart.Title = new Label()
-            {
-                Text = "Height Comparison"
-            };
-
-            chart.Legend = new ChartLegend ();
-
-            // Initializing primary axis
-            CategoryAxis primaryAxis = new CategoryAxis();
-            primaryAxis.Title = new ChartAxisTitle()
-            {
-                Text = "Name",
-            };
-            chart.XAxes.Add(primaryAxis);
-
-            //Initializing secondary Axis
-            NumericalAxis secondaryAxis = new NumericalAxis();
-            secondaryAxis.Title = new ChartAxisTitle()
-            {
-                Text= "Height(in cm)",
-            };
-            chart.YAxes.Add(secondaryAxis);
-
-            //Initialize the two series for SfChart
-            ColumnSeries series = new ColumnSeries()
-            {
-                ItemsSource = (new PersonViewModel()).Data,
-                XBindingPath = "Name",
-                YBindingPath = "Height",
-                ShowDataLabels = true,
-                EnableTooltip = true,
-                Label = "Height",
-                DataLabelSettings = new CartesianDataLabelSettings()
-                {
-                    LabelPlacement = DataLabelPlacement.Inner
-                }              
-            };  
-
-            //Adding Series to the Chart Series Collection
-            chart.Series.Add(series);
-            this.Content = chart;
-        }
-    }   
-}
-
+chart.Series.Add(series);
 {% endhighlight %}
-
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
 
-You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_CartesianChart_MAUI).
-
-N> Looking for the full .NET MAUI Charts component overview, features, pricing, and documentation? Visit the [.NET MAUI Chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) page.
+You can download the Cartesian Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_CartesianChart_MAUI).

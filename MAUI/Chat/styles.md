@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles in .NET MAUI Chat control | Syncfusion
-description: Learn here all about Styles support in Syncfusion .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Styles in .NET MAUI Chat control | Syncfusion®
+description: Learn here all about Styles support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -18,60 +18,60 @@ You can set any solid color as background for `SfChat` by setting any color to t
 {% tabs %}
 {% highlight xaml hl_lines="18 28" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel x:Name="viewModel"/>
-        </ContentPage.BindingContext>
-        
-        <ContentPage.Resources>
-            <syncTheme:SyncfusionThemeDictionary>
-                <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                    <ResourceDictionary>
-                        <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                        <Color x:Key="SfChatMessageInputViewBackground">Transparent</Color>
-                    </ResourceDictionary>
-                </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            </syncTheme:SyncfusionThemeDictionary>
-        </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                    <Color x:Key="SfChatMessageInputViewBackground">Transparent</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"
-                            CurrentUser="{Binding CurrentUser}"
-                            Background="#94b6ec"/>
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"
+                        CurrentUser="{Binding CurrentUser}"
+                        Background="#94b6ec"/>
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="12" %}
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    SfChat sfChat;
+    ViewModel viewModel;      
+    public MainPage()
     {
-        SfChat sfChat;
-        ViewModel viewModel;      
-        public MainPage()
-        {
-            InitializeComponent();
-            this.sfChat = new SfChat();
-            this.viewModel = new ViewModel();
-            this.sfChat.Messages = viewModel.Messages;
-            this.sfChat.CurrentUser = viewModel.CurrentUser;
-            sfChat.Background = Color.FromHex("#94b6ec");
-            this.Content = sfChat;
-        }
+        InitializeComponent();
+        this.sfChat = new SfChat();
+        this.viewModel = new ViewModel();
+        this.sfChat.Messages = viewModel.Messages;
+        this.sfChat.CurrentUser = viewModel.CurrentUser;
+        sfChat.Background = Color.FromHex("#94b6ec");
+        this.Content = sfChat;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Background color in .NET MAUI Chat](images/styles/maui-chat-background-color-style.png)
+![Syncfusion .NET MAUI Chat Background color](images/styles/maui-chat-background-color-style.png)
 
 ### Set background image
 
@@ -80,69 +80,69 @@ You can set any image as the background for the `SfChat` by setting the `SfChat.
 {% tabs %}
 {% highlight xaml hl_lines="26" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiApp1.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiApp1.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel x:Name="viewModel"/>
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
 
-        <ContentPage.Resources>
-            <syncTheme:SyncfusionThemeDictionary>
-                <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                    <ResourceDictionary>
-                        <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                        <Color x:Key="SfChatMessageInputViewBackground">Transparent</Color>
-                    </ResourceDictionary>
-                </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            </syncTheme:SyncfusionThemeDictionary>
-        </ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                    <Color x:Key="SfChatMessageInputViewBackground">Transparent</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
-        <ContentPage.Content>
-            <Grid>
-                <Image Source="backgroundimage.jpg" Aspect="AspectFill" />
-                <sfChat:SfChat x:Name="sfChat"
-                                Messages="{Binding Messages}"
-                                CurrentUser="{Binding CurrentUser}"
-                                Background="Transparent" /> 
-            </Grid>
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="backgroundimage.jpg" Aspect="AspectFill" />
+            <sfChat:SfChat x:Name="sfChat"
+                            Messages="{Binding Messages}"
+                            CurrentUser="{Binding CurrentUser}"
+                            Background="Transparent" /> 
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="10 11 12" %}
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    Grid grid = new Grid();
+    SfChat sfChat;
+    Image image = new Image();
+    ViewModel viewModel;
+    public MainPage()
     {
-        Grid grid = new Grid();
-        SfChat sfChat;
-        Image image = new Image();
-        ViewModel viewModel;
-        public MainPage()
-        {
-            this.InitializeComponent();
-            image.Source = "backgroundimage.jpg";
-            image.Aspect = Aspect.AspectFill;
-            grid.Children.Add(image);
-            this.sfChat = new SfChat();
-            this.sfChat.Background = Colors.Transparent;
-            this.viewModel = new ViewModel();
-            this.sfChat.Messages = viewModel.Messages;
-            this.sfChat.CurrentUser = viewModel.CurrentUser;
-            grid.Children.Add(sfChat);
-            this.Content = grid;
-        }
+        this.InitializeComponent();
+        image.Source = "backgroundimage.jpg";
+        image.Aspect = Aspect.AspectFill;
+        grid.Children.Add(image);
+        this.sfChat = new SfChat();
+        this.sfChat.Background = Colors.Transparent;
+        this.viewModel = new ViewModel();
+        this.sfChat.Messages = viewModel.Messages;
+        this.sfChat.CurrentUser = viewModel.CurrentUser;
+        grid.Children.Add(sfChat);
+        this.Content = grid;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Background image in .NET MAUI Chat](images/styles/maui-chat-image-background-style.png)
+![Syncfusion .NET MAUI Chat Background image](images/styles/maui-chat-image-background-style.png)
 
 ### Set gradient background
 
@@ -151,76 +151,76 @@ You can set the gradient view as a background for a chat by setting the `SfChat.
 {% tabs %}
 {% highlight xaml hl_lines="29 30" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                xmlns:local="clr-namespace:MauiApp1"             
-                x:Class="MauiApp1.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+            xmlns:local="clr-namespace:MauiApp1"             
+            x:Class="MauiApp1.MainPage">
 
-        <ContentPage.BindingContext>
-            <local:ViewModel x:Name="viewModel"/>
-        </ContentPage.BindingContext>
-        
-        <ContentPage.Resources>
-            <syncTheme:SyncfusionThemeDictionary>
-                <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                    <ResourceDictionary>
-                        <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                        <Color x:Key="SfChatMessageInputViewBackground">Transparent</Color>
-                    </ResourceDictionary>
-                </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            </syncTheme:SyncfusionThemeDictionary>
-        </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                    <Color x:Key="SfChatMessageInputViewBackground">Transparent</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                                Messages="{Binding Messages}"
-                                CurrentUser="{Binding CurrentUser}" >
-                                    
-                <sfChat:SfChat.Background>
-                    <LinearGradientBrush>
-                        <GradientStop Color="SkyBlue" Offset="0.0" />
-                        <GradientStop Color="LightCyan" Offset="0.25" />
-                        <GradientStop Color="SteelBlue" Offset="0.5" />
-                        <GradientStop Color="LightSkyBlue" Offset="0.75" />
-                        <GradientStop Color="LightGray" Offset="1.0" />
-                    </LinearGradientBrush>
-                </sfChat:SfChat.Background>
-            </sfChat:SfChat>
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                            Messages="{Binding Messages}"
+                            CurrentUser="{Binding CurrentUser}" >
+                                
+            <sfChat:SfChat.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="SkyBlue" Offset="0.0" />
+                    <GradientStop Color="LightCyan" Offset="0.25" />
+                    <GradientStop Color="SteelBlue" Offset="0.5" />
+                    <GradientStop Color="LightSkyBlue" Offset="0.75" />
+                    <GradientStop Color="LightGray" Offset="1.0" />
+                </LinearGradientBrush>
+            </sfChat:SfChat.Background>
+        </sfChat:SfChat>
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# hl_lines="12 18" %}
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    SfChat sfChat;
+    ViewModel viewModel;
+    public MainPage()
     {
-        SfChat sfChat;
-        ViewModel viewModel;
-        public MainPage()
-        {
-            InitializeComponent();
-            this.sfChat = new SfChat();
-            this.viewModel = new ViewModel();
-            this.sfChat.Messages = viewModel.Messages;
-            this.sfChat.CurrentUser = viewModel.CurrentUser;
-            LinearGradientBrush linearGradientBrush = new LinearGradientBrush();     
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SkyBlue, 0.0f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightCyan, 0.25f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
-            this.sfChat.Background = linearGradientBrush;
-            this.Content = sfChat;
-        }
+        InitializeComponent();
+        this.sfChat = new SfChat();
+        this.viewModel = new ViewModel();
+        this.sfChat.Messages = viewModel.Messages;
+        this.sfChat.CurrentUser = viewModel.CurrentUser;
+        LinearGradientBrush linearGradientBrush = new LinearGradientBrush();     
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SkyBlue, 0.0f));
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightCyan, 0.25f));
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
+        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
+        this.sfChat.Background = linearGradientBrush;
+        this.Content = sfChat;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Gradient background in .NET MAUI Chat](images/styles/maui-chat-gradient-background-style.png)
+![Syncfusion .NET MAUI Chat Gradient background](images/styles/maui-chat-gradient-background-style.png)
 
 ## Incoming message styling
 
@@ -288,57 +288,57 @@ You can style the elements of an incoming message by setting values to the in-bu
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatIncomingMessageTextColor">Gray</Color>
-                    <Color x:Key="SfChatIncomingMessageTimestampTextColor">Gray</Color>
-                    <Color x:Key="SfChatIncomingMessageAuthorTextColor">Gray</Color>
-                    <Color x:Key="SfChatIncomingMessageBackground">#eee479</Color>
-                    <x:String x:Key="SfChatIncomingMessageFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatIncomingMessageFontAttributes">Italic</FontAttributes>
-                    <x:Double x:Key="SfChatIncomingMessageFontSize">16</x:Double>
-                    <x:String x:Key="SfChatIncomingMessageAuthorFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatIncomingMessageAuthorFontAttributes">Italic</FontAttributes>
-                    <x:Double x:Key="SfChatIncomingMessageAuthorFontSize">16</x:Double>
-                    <x:String x:Key="SfChatIncomingMessageTimestampFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatIncomingMessageTimestampFontAttributes">Italic</FontAttributes>
-                    <x:Double x:Key="SfChatIncomingMessageTimestampFontSize">16</x:Double>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatIncomingMessageTextColor">Gray</Color>
+                <Color x:Key="SfChatIncomingMessageTimestampTextColor">Gray</Color>
+                <Color x:Key="SfChatIncomingMessageAuthorTextColor">Gray</Color>
+                <Color x:Key="SfChatIncomingMessageBackground">#eee479</Color>
+                <x:String x:Key="SfChatIncomingMessageFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatIncomingMessageFontAttributes">Italic</FontAttributes>
+                <x:Double x:Key="SfChatIncomingMessageFontSize">16</x:Double>
+                <x:String x:Key="SfChatIncomingMessageAuthorFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatIncomingMessageAuthorFontAttributes">Italic</FontAttributes>
+                <x:Double x:Key="SfChatIncomingMessageAuthorFontSize">16</x:Double>
+                <x:String x:Key="SfChatIncomingMessageTimestampFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatIncomingMessageTimestampFontAttributes">Italic</FontAttributes>
+                <x:Double x:Key="SfChatIncomingMessageTimestampFontSize">16</x:Double>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatIncomingMessageTextColor", Colors.Gray);
-        dictionary.Add("SfChatIncomingMessageTimestampTextColor", Colors.Gray);
-        dictionary.Add("SfChatIncomingMessageAuthorTextColor", Colors.Gray);
-        dictionary.Add("SfChatIncomingMessageBackground", Color.FromHex("#eee479"));
-        dictionary.Add("SfChatIncomingMessageFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatIncomingMessageFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatIncomingMessageFontSize", 16);
-        dictionary.Add("SfChatIncomingMessageAuthorFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatIncomingMessageAuthorFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatIncomingMessageAuthorFontSize", 16);
-        dictionary.Add("SfChatIncomingMessageTimestampFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatIncomingMessageTimestampFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatIncomingMessageTimestampFontSize", 16);
-        this.Resources.Add(dictionary);
-    }
+public MainPage()
+{
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatIncomingMessageTextColor", Colors.Gray);
+    dictionary.Add("SfChatIncomingMessageTimestampTextColor", Colors.Gray);
+    dictionary.Add("SfChatIncomingMessageAuthorTextColor", Colors.Gray);
+    dictionary.Add("SfChatIncomingMessageBackground", Color.FromHex("#eee479"));
+    dictionary.Add("SfChatIncomingMessageFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatIncomingMessageFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatIncomingMessageFontSize", 16);
+    dictionary.Add("SfChatIncomingMessageAuthorFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatIncomingMessageAuthorFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatIncomingMessageAuthorFontSize", 16);
+    dictionary.Add("SfChatIncomingMessageTimestampFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatIncomingMessageTimestampFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatIncomingMessageTimestampFontSize", 16);
+    this.Resources.Add(dictionary);
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Incoming message style in .NET MAUI Chat](images/styles/maui-chat-incoming-message-style.png)
+![Syncfusion .NET MAUI Chat Incoming message style](images/styles/maui-chat-incoming-message-style.png)
  
 ## Outgoing message styling
 
@@ -349,43 +349,55 @@ You can style the elements of an outgoing message by setting values to the in-bu
 <th> Key </th>
 <th> Description </th>
 </tr>
+<tr>
 <td> SfChatOutgoingMessageTextColor </td>
 <td> Text color of outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageAuthorTextColor </td>
 <td> Text color of the author’s name in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageTimestampTextColor </td>
 <td> Text color of the timestamp in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatOutgoingMessageBackground </td>
 <td> Background color of the outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageFontFamily </td>
 <td> Font family of the outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageFontAttributes </td>
 <td> Font attributes of the outgoing message. </td>
 </tr>
 <tr>
 <td> sfChatOutgoingMessageFontSize </td>
 <td> Font size of the outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageAuthorFontFamily </td>
 <td> Font family of the author’s name in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageAuthorFontAttributes </td>
 <td> Font attributes of the author’s name in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageAuthorFontSize </td>
 <td> Font size of the author’s name in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageTimestampFontFamily </td>
 <td> Font family of the timestamp in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatOutgoingMessageTimestampFontAttributes </td>
 <td> Font attributes of the timestamp in an outgoing message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatOutgoingMessageTimestampFontSize </td>
 <td> Font size of the timestamp in an outgoing message. </td>
 </tr>
@@ -394,57 +406,57 @@ You can style the elements of an outgoing message by setting values to the in-bu
 {% tabs %}
 {% highlight xaml %}
    
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatOutgoingMessageTextColor">Gray</Color>
-                    <Color x:Key="SfChatOutgoingMessageBackground">#eee479</Color>
-                    <Color x:Key="SfChatOutgoingMessageTimestampTextColor">Gray</Color>
-                    <Color x:Key="SfChatOutgoingMessageAuthorTextColor">Gray</Color>
-                    <x:String x:Key="SfChatOutgoingMessageFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatOutgoingMessageFontAttributes">Italic</FontAttributes>
-                    <x:Double x:Key="SfChatOutgoingMessageFontSize">16</x:Double>
-                    <x:String x:Key="SfChatOutgoingingMessageAuthorFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatOutgoingMessageAuthorFontAttributes">Italic</FontAttributes>
-                    <x:Double x:Key="SfChatOutgoingMessageAuthorFontSize">16</x:Double>
-                    <x:String x:Key="SfChatOutgoingMessageTimestampFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatOutgoingMessageTimestampFontAttributes">Italic</FontAttributes>
-                    <x:Double x:Key="SfChatOutgoingMessageTimestampFontSize">16</x:Double>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatOutgoingMessageTextColor">Gray</Color>
+                <Color x:Key="SfChatOutgoingMessageBackground">#eee479</Color>
+                <Color x:Key="SfChatOutgoingMessageTimestampTextColor">Gray</Color>
+                <Color x:Key="SfChatOutgoingMessageAuthorTextColor">Gray</Color>
+                <x:String x:Key="SfChatOutgoingMessageFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatOutgoingMessageFontAttributes">Italic</FontAttributes>
+                <x:Double x:Key="SfChatOutgoingMessageFontSize">16</x:Double>
+                <x:String x:Key="SfChatOutgoingingMessageAuthorFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatOutgoingMessageAuthorFontAttributes">Italic</FontAttributes>
+                <x:Double x:Key="SfChatOutgoingMessageAuthorFontSize">16</x:Double>
+                <x:String x:Key="SfChatOutgoingMessageTimestampFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatOutgoingMessageTimestampFontAttributes">Italic</FontAttributes>
+                <x:Double x:Key="SfChatOutgoingMessageTimestampFontSize">16</x:Double>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatOutgoingMessageTextColor", Colors.Gray);
-        dictionary.Add("SfChatOutgoingMessageTimestampTextColor", Colors.Gray);
-        dictionary.Add("SfChatOutgoingMessageAuthorTextColor", Colors.Gray);
-        dictionary.Add("SfChatOutgoingMessageBackground", Color.FromHex("#eee479"));
-        dictionary.Add("SfChatOutgoingMessageFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatOutgoingMessageFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatOutgoingMessageFontSize", 16);
-        dictionary.Add("SfChatOutgoingMessageAuthorFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatOutgoingMessageAuthorFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatOutgoingMessageAuthorFontSize", 16);
-        dictionary.Add("SfChatOutgoingMessageTimestampFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatOutgoingMessageTimestampFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatOutgoingMessageTimestampFontSize", 16);
-        this.Resources.Add(dictionary);
-    }
+public MainPage()
+{
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatOutgoingMessageTextColor", Colors.Gray);
+    dictionary.Add("SfChatOutgoingMessageTimestampTextColor", Colors.Gray);
+    dictionary.Add("SfChatOutgoingMessageAuthorTextColor", Colors.Gray);
+    dictionary.Add("SfChatOutgoingMessageBackground", Color.FromHex("#eee479"));
+    dictionary.Add("SfChatOutgoingMessageFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatOutgoingMessageFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatOutgoingMessageFontSize", 16);
+    dictionary.Add("SfChatOutgoingMessageAuthorFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatOutgoingMessageAuthorFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatOutgoingMessageAuthorFontSize", 16);
+    dictionary.Add("SfChatOutgoingMessageTimestampFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatOutgoingMessageTimestampFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatOutgoingMessageTimestampFontSize", 16);
+    this.Resources.Add(dictionary);
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Outgoing message style in .NET MAUI Chat](images/styles/maui-chat-outgoing-message-style.png)
+![Syncfusion .NET MAUI Chat Outgoing message style](images/styles/maui-chat-outgoing-message-style.png)
 
 ## Calendar message styling
 
@@ -468,32 +480,32 @@ You can style the elements of a calendar message by setting values to the in-bui
 {% tabs %}
 {% highlight xaml %}
   
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatCalendarBackground">White</Color>
-                    <Color x:Key="SfChatCalendarStroke">Black</Color>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatCalendarBackground">White</Color>
+                <Color x:Key="SfChatCalendarStroke">Black</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight C# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatCalendarBackground", Colors.White);
-        dictionary.Add("SfChatCalendarStroke", Colors.Black);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatCalendarBackground", Colors.White);
+    dictionary.Add("SfChatCalendarStroke", Colors.Black);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -534,41 +546,41 @@ You can style the elements of a hyperlink message by setting values to the in-bu
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatIncomingHyperlinkColor">#94b6ec</Color>
-                    <Color x:Key="SfChatHyperlinkMetaTitleTextColor">#f29d0a</Color>
-                    <Color x:Key="SfChatHyperlinkDescriptionTextColor">Black</Color>
-                    <Color x:Key="SfChatHyperlinkDescriptionBackground">#dde9cc</Color>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatIncomingHyperlinkColor">#94b6ec</Color>
+                <Color x:Key="SfChatHyperlinkMetaTitleTextColor">#f29d0a</Color>
+                <Color x:Key="SfChatHyperlinkDescriptionTextColor">Black</Color>
+                <Color x:Key="SfChatHyperlinkDescriptionBackground">#dde9cc</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatIncomingHyperlinkColor", Color.FromHex("#94b6ec"));
-        dictionary.Add("SfChatHyperlinkMetaTitleTextColor", Color.FromHex("#f29d0a"));
-        dictionary.Add("SfChatHyperlinkDescriptionTextColor", Colors.Black);
-        dictionary.Add("SfChatHyperlinkDescriptionBackground", Color.FromHex("#dde9cc"));
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatIncomingHyperlinkColor", Color.FromHex("#94b6ec"));
+    dictionary.Add("SfChatHyperlinkMetaTitleTextColor", Color.FromHex("#f29d0a"));
+    dictionary.Add("SfChatHyperlinkDescriptionTextColor", Colors.Black);
+    dictionary.Add("SfChatHyperlinkDescriptionBackground", Color.FromHex("#dde9cc"));
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Hyperlink message style in .NET MAUI Chat](images/styles/maui-chat-hyperlink-message-style.png)
+![Syncfusion .NET MAUI Chat Hyperlink message style](images/styles/maui-chat-hyperlink-message-style.png)
 
 ## Image message styling
 
@@ -627,41 +639,41 @@ You can style the elements of a date picker message by setting values to the in-
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatDatePickerIconColor">Blue</Color>
-                    <Color x:Key="SfChatDatePickerTextColor">White</Color>
-                    <Color x:Key="SfChatDatePickerBackground">SkyBlue</Color>
-                    <Color x:Key="SfChatDatePickerStroke">Black</Color>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatDatePickerIconColor">Blue</Color>
+                <Color x:Key="SfChatDatePickerTextColor">White</Color>
+                <Color x:Key="SfChatDatePickerBackground">SkyBlue</Color>
+                <Color x:Key="SfChatDatePickerStroke">Black</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatDatePickerBackground", Colors.SkyBlue);
-        dictionary.Add("SfChatDatePickerTextColor", Colors.White);
-        dictionary.Add("SfChatDatePickerIconColor", Colors.Blue);
-        dictionary.Add("SfChatDatePickerStroke", Colors.Blue);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatDatePickerBackground", Colors.SkyBlue);
+    dictionary.Add("SfChatDatePickerTextColor", Colors.White);
+    dictionary.Add("SfChatDatePickerIconColor", Colors.Blue);
+    dictionary.Add("SfChatDatePickerStroke", Colors.Blue);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker message style in .NET MAUI Chat](images/styles/maui-chat-datepicker-message-style.png)
+![Syncfusion .NET MAUI Chat Date picker message style](images/styles/maui-chat-datepicker-message-style.png)
 
 ## Time picker message styling
 
@@ -693,41 +705,41 @@ You can style the elements of a time picker message by setting values to the in-
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatTimePickerIconColor">Blue</Color>
-                    <Color x:Key="SfChatTimePickerTextColor">White</Color>
-                    <Color x:Key="SfChatTimePickerBackground">SkyBlue</Color>
-                    <Color x:Key="SfChatTimePickerStroke">Black</Color>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatTimePickerIconColor">Blue</Color>
+                <Color x:Key="SfChatTimePickerTextColor">White</Color>
+                <Color x:Key="SfChatTimePickerBackground">SkyBlue</Color>
+                <Color x:Key="SfChatTimePickerStroke">Black</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatTimePickerBackground", Colors.SkyBlue);
-        dictionary.Add("SfChatTimePickerTextColor", Colors.White);
-        dictionary.Add("SfChatTimePickerIconColor", Colors.Blue);
-        dictionary.Add("SfChatTimePickerStroke", Colors.Black);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatTimePickerBackground", Colors.SkyBlue);
+    dictionary.Add("SfChatTimePickerTextColor", Colors.White);
+    dictionary.Add("SfChatTimePickerIconColor", Colors.Blue);
+    dictionary.Add("SfChatTimePickerStroke", Colors.Black);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Time picker message style in .NET MAUI Chat](images/styles/maui-chat-timepicker-message-style.png)
+![Syncfusion .NET MAUI Chat Time picker message style](images/styles/maui-chat-timepicker-message-style.png)
 
 ## Delivery State styling
 You can style the delivery state by setting values to the in-built keys of the delivery state in the resource dictionary.
@@ -758,19 +770,19 @@ You can style the delivery state by setting values to the in-built keys of the d
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatDeliveryStateFailedIconColor">Red</Color>
-                    <Color x:Key="SfChatDeliveryStateSentIconColor">DarkGray</Color>
-                    <Color x:Key="SfChatDeliveryStateDeliveredIconColor">DarkGray</Color>
-                    <Color x:Key="SfChatDeliveryStateReadIconColor">Blue</Color>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatDeliveryStateFailedIconColor">Red</Color>
+                <Color x:Key="SfChatDeliveryStateSentIconColor">DarkGray</Color>
+                <Color x:Key="SfChatDeliveryStateDeliveredIconColor">DarkGray</Color>
+                <Color x:Key="SfChatDeliveryStateReadIconColor">Blue</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -792,7 +804,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Delivery State Style in .NET MAUI Chat](Images/styles/maui-chat-delivery-state-style.gif)
+![Syncfusion .NET MAUI Chat Delivery State Style](Images/styles/maui-chat-delivery-state-style.gif)
 
 ## Message input view styling
 
@@ -812,35 +824,35 @@ You can style the elements of the message input view by setting values to the in
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatMessageInputViewBackground">#94b6ec</Color>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatMessageInputViewBackground">#94b6ec</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight C# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatMessageInputViewBackground", Colors.SkyBlue);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatMessageInputViewBackground", Colors.SkyBlue);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Message input view style in .NET MAUI Chat](images/styles/maui-chat-message-inputview-style.png)
+![Syncfusion .NET MAUI Chat Message input view style](images/styles/maui-chat-message-inputview-style.png)
 
 ## Editor styling
 
@@ -888,47 +900,47 @@ You can style the elements of the editor view by setting values to the in-built 
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatEditorPlaceholderTextColor">Blue</Color>
-                    <Color x:Key="SfChatEditorTextColor">Black</Color>
-                    <Color x:Key="SfChatEditorBackground">LightGreen</Color>
-                    <Color x:Key="SfChatEditorStroke">Black</Color>
-                    <x:String x:Key="SfChatEditorFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatEditorFontAttributes">Bold</FontAttributes>
-                    <x:Double x:Key="SfChatEditorFontSize">16</x:Double>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatEditorPlaceholderTextColor">Blue</Color>
+                <Color x:Key="SfChatEditorTextColor">Black</Color>
+                <Color x:Key="SfChatEditorBackground">LightGreen</Color>
+                <Color x:Key="SfChatEditorStroke">Black</Color>
+                <x:String x:Key="SfChatEditorFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatEditorFontAttributes">Bold</FontAttributes>
+                <x:Double x:Key="SfChatEditorFontSize">16</x:Double>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatEditorPlaceholderTextColor", Colors.Blue);
-        dictionary.Add("SfChatEditorBackground", Colors.LightGreen);
-        dictionary.Add("SfChatEditorTextColor", Colors.Black);
-        dictionary.Add("SfChatEditorStroke", Colors.Black);
-        dictionary.Add("SfChatEditorFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatEditorFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatEditorFontSize", 16);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatEditorPlaceholderTextColor", Colors.Blue);
+    dictionary.Add("SfChatEditorBackground", Colors.LightGreen);
+    dictionary.Add("SfChatEditorTextColor", Colors.Black);
+    dictionary.Add("SfChatEditorStroke", Colors.Black);
+    dictionary.Add("SfChatEditorFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatEditorFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatEditorFontSize", 16);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Editor style in .NET MAUI Chat](images/styles/maui-chat-editor-style.png)
+![Syncfusion .NET MAUI Chat Editor style](images/styles/maui-chat-editor-style.png)
 
 ## Typing indicator styling
 
@@ -964,43 +976,43 @@ You can style the elements of the typing indicator view by setting values to the
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatTypingIndicatorTextColor">Blue</Color>
-                    <Color x:Key="SfChatTypingIndicatorBackground">#eee479</Color>
-                    <x:String x:Key="SfChatTypingIndicatorFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatTypingIndicatorFontAttributes">Italic</FontAttributes>
-                    <x:Double x:Key="SfChatTypingIndicatorFontSize">16</x:Double>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatTypingIndicatorTextColor">Blue</Color>
+                <Color x:Key="SfChatTypingIndicatorBackground">#eee479</Color>
+                <x:String x:Key="SfChatTypingIndicatorFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatTypingIndicatorFontAttributes">Italic</FontAttributes>
+                <x:Double x:Key="SfChatTypingIndicatorFontSize">16</x:Double>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatTypingIndicatorBackground", Color.FromHex("#eee479"));
-        dictionary.Add("SfChatTypingIndicatorTextColor", Colors.Blue);
-        dictionary.Add("SfChatTypingIndicatorFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatTypingIndicatorFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatTypingIndicatorFontSize", 16);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatTypingIndicatorBackground", Color.FromHex("#eee479"));
+    dictionary.Add("SfChatTypingIndicatorTextColor", Colors.Blue);
+    dictionary.Add("SfChatTypingIndicatorFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatTypingIndicatorFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatTypingIndicatorFontSize", 16);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Typing indicator style in .NET MAUI Chat](images/styles/maui-chat-typingindicator-style.png)
+![Syncfusion .NET MAUI Chat Typing indicator style](images/styles/maui-chat-typingindicator-style.png)
 
 ## Time break view styling
 
@@ -1040,45 +1052,45 @@ You can style the elements of the time break view by setting values to the in-bu
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatTimeBreakViewTextColor">Blue</Color>
-                    <Color x:Key="SfChatTimeBreakViewBackground">#e2f9cd</Color>
-                    <Color x:Key="SfChatTimeBreakViewStroke">LimeGreen</Color>
-                    <x:String x:Key="SfChatTimeBreakViewFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatTimeBreakViewFontAttributes">Italic</FontAttributes>
-                    <x:Double x:Key="SfChatTimeBreakViewFontSize">16</x:Double>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatTimeBreakViewTextColor">Blue</Color>
+                <Color x:Key="SfChatTimeBreakViewBackground">#e2f9cd</Color>
+                <Color x:Key="SfChatTimeBreakViewStroke">LimeGreen</Color>
+                <x:String x:Key="SfChatTimeBreakViewFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatTimeBreakViewFontAttributes">Italic</FontAttributes>
+                <x:Double x:Key="SfChatTimeBreakViewFontSize">16</x:Double>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatTimeBreakViewTextColor", Colors.Blue);
-        dictionary.Add("SfChatTimeBreakViewStroke", Colors.LimeGreen);
-        dictionary.Add("SfChatTimeBreakViewBackground", Color.FromHex("#e2f9cd"));
-        dictionary.Add("SfChatTimeBreakViewFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatTimeBreakViewFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatTimeBreakViewFontSize", 16);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatTimeBreakViewTextColor", Colors.Blue);
+    dictionary.Add("SfChatTimeBreakViewStroke", Colors.LimeGreen);
+    dictionary.Add("SfChatTimeBreakViewBackground", Color.FromHex("#e2f9cd"));
+    dictionary.Add("SfChatTimeBreakViewFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatTimeBreakViewFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatTimeBreakViewFontSize", 16);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Time break view style in .NET MAUI Chat](images/styles/maui-chat-time-break-style.png)
+![Syncfusion .NET MAUI Chat Time break view style](images/styles/maui-chat-time-break-style.png)
 
 ## Suggestions styling
 
@@ -1122,45 +1134,45 @@ You can style the elements of the suggestion view by setting values to the in-bu
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatSuggestionListItemTextColor">Blue</Color>
-                    <Color x:Key="SfChatSuggestionListItemBackground">#d9d9d9</Color>
-                    <Color x:Key="SfChatSuggestionListBackground">Violet</Color>
-                    <x:String x:Key="SfChatSuggestionListItemFontFamily">Roboto-Medium</x:String>
-                    <FontAttributes x:Key="SfChatSuggestionListItemFontAttributes">Bold</FontAttributes>
-                    <x:Double x:Key="SfChatSuggestionListItemFontSize">16</x:Double>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatSuggestionListItemTextColor">Blue</Color>
+                <Color x:Key="SfChatSuggestionListItemBackground">#d9d9d9</Color>
+                <Color x:Key="SfChatSuggestionListBackground">Violet</Color>
+                <x:String x:Key="SfChatSuggestionListItemFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfChatSuggestionListItemFontAttributes">Bold</FontAttributes>
+                <x:Double x:Key="SfChatSuggestionListItemFontSize">16</x:Double>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatSuggestionListItemTextColor", Colors.Blue);
-        dictionary.Add("SfChatSuggestionListBackground", Colors.Violet);
-        dictionary.Add("SfChatSuggestionListItemBackground", Color.FromHex("#d9d9d9"));
-        dictionary.Add("SfChatSuggestionListItemFontFamily", "Roboto-Medium");
-        dictionary.Add("SfChatSuggestionListItemFontAttributes", FontAttributes.Italic);
-        dictionary.Add("SfChatSuggestionListItemFontSize", 16);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatSuggestionListItemTextColor", Colors.Blue);
+    dictionary.Add("SfChatSuggestionListBackground", Colors.Violet);
+    dictionary.Add("SfChatSuggestionListItemBackground", Color.FromHex("#d9d9d9"));
+    dictionary.Add("SfChatSuggestionListItemFontFamily", "Roboto-Medium");
+    dictionary.Add("SfChatSuggestionListItemFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfChatSuggestionListItemFontSize", 16);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Suggestions style in .NET MAUI Chat](images/styles/maui-chat-suggestion-style.png)
+![Syncfusion .NET MAUI Chat Suggestions style](images/styles/maui-chat-suggestion-style.png)
 
 ## Send button styling
 
@@ -1200,41 +1212,41 @@ You can style the send message button based on its state by setting values to th
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatSendButtonDisabledColor">Purple</Color>
-                    <Color x:Key="SfChatSendButtonColor">DeepPink</Color>
-                    <Color x:Key="SfChatSendButtonBackground">SkyBlue</Color>
-                    <Color x:Key="SfChatDisabledSendButtonBackground">LightGreen</Color>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatSendButtonDisabledColor">Purple</Color>
+                <Color x:Key="SfChatSendButtonColor">DeepPink</Color>
+                <Color x:Key="SfChatSendButtonBackground">SkyBlue</Color>
+                <Color x:Key="SfChatDisabledSendButtonBackground">LightGreen</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatSendButtonDisabledColor", Colors.Purple);
-        dictionary.Add("SfChatSendButtonColor", Colors.DeepPink);
-        dictionary.Add("SfChatSendButtonBackground", Colors.SkyBlue);
-        dictionary.Add("SfChatDisabledSendButtonBackground", Colors.LightGreen);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatSendButtonDisabledColor", Colors.Purple);
+    dictionary.Add("SfChatSendButtonColor", Colors.DeepPink);
+    dictionary.Add("SfChatSendButtonBackground", Colors.SkyBlue);
+    dictionary.Add("SfChatDisabledSendButtonBackground", Colors.LightGreen);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Send button disable and enable style in .NET MAUI Chat](images/styles/maui-chat-send-button-style.png)
+![Syncfusion .NET MAUI Chat Send button disable and enable style](images/styles/maui-chat-send-button-style.png)
 
 ## Attachment button styling
 
@@ -1270,35 +1282,35 @@ You can style the attachment button by setting values to the in-built keys of th
 {% tabs %}
 {% highlight xaml %}
 
-    <ContentPage.Resources>
-        <syncTheme:SyncfusionThemeDictionary>
-            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatAttachmentButtonColor">Orange</Color>
-                </ResourceDictionary>
-            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-        </syncTheme:SyncfusionThemeDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatAttachmentButtonColor">Orange</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    public MainPage()
-    {
-        ....
-        InitializeComponent();
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatAttachmentButtonColor", Colors.Orange);
-        this.Resources.Add(dictionary);
-        ....
-    }
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatAttachmentButtonColor", Colors.Orange);
+    this.Resources.Add(dictionary);
+    ....
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Attachment button style in .NET MAUI Chat](images/styles/maui-chat-attachmentbutton-style.png)
+![Syncfusion .NET MAUI Chat Attachment button style](images/styles/maui-chat-attachmentbutton-style.png)
 
 ## Load more styling
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: History in .NET MAUI AI AssistView Control | Syncfusion
-description: Learn here all about History support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
+title: History in .NET MAUI AI AssistView Control | Syncfusion®
+description: Learn here all about History support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -152,7 +152,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![History in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-history.gif)
+![Syncfusion .NET MAUI AI AssistView History](Images/history/maui-aiassistview-conversation-history.gif)
 
 ### Conversation header text
 
@@ -179,7 +179,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Conversation Header Text in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-header-text.png)
+![Syncfusion .NET MAUI AI AssistView Conversation Header Text](Images/history/maui-aiassistview-conversation-header-text.png)
 
 ### Conversation empty view
 
@@ -215,7 +215,29 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Conversation Empty View in .NET MAUI AI AssistView](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
+![Syncfusion .NET MAUI AI AssistView Conversation Empty View](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
+
+### Filter Conversations by Date Range
+
+The Filter button allows users to narrow down conversation results by selecting a specific date range. This helps quickly locate relevant conversations within the history.
+
+The following date-range options are available:
+
+- All
+- Today
+- Yesterday
+- Last 7 Days
+- Last 30 Days
+
+Use these options to quickly narrow the conversation history shown in the drawer.
+
+### Conversation Actions Menu
+
+Each conversation item shows a More option that opens a small menu with three actions:
+
+- **Pin**: Pins the selected conversation so it appears at the top of the conversation list.
+- **Rename**: Opens a rename popup containing an editor where you can change the conversation title. The popup has two actions: **Rename** (save) and **Cancel** (exit without saving). When **Rename** is clicked, the conversation item's title is updated with the entered text.
+- **Delete**: Opens a delete confirmation popup with two actions: **Delete** and **Cancel**. When **Delete** is clicked the selected conversation item is removed from the conversation history.
 
 ## Events and commands
 

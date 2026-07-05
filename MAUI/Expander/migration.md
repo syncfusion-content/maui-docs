@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin SfExpander to .NET MAUI SfExpander | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin Expander to Syncfusion .NET MAUI Expander control and more.
+title: Migrate from Xamarin SfExpander to .NET MAUI SfExpander | Syncfusion® 
+description: Learn here all about Migrating from Syncfusion® Xamarin Expander to Syncfusion® .NET MAUI Expander control and more.
 platform: MAUI
 control: SfExpander
 documentation: ug

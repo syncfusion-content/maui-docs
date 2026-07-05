@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Positioning in .NET MAUI Popup control | Syncfusion
-description: Learn all about Popup Positioning support in the Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
+title: Popup Positioning in .NET MAUI Popup control | Syncfusion®
+description: Learn all about Popup Positioning support in the Syncfusion® .NET MAUI Popup (SfPopup) control, its elements, and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -39,10 +39,10 @@ Following are the list of options available to show SfPopup at various positions
 <td>{{'[Show(bool)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_)'| markdownify }}</td>
 <td>Similar as <code>SfPopup.IsFullScreen</code> property.</td></tr>
 <tr>
-<td>{{'[SfPopup.Show(string title, string message)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_)'| markdownify }}</td>
+<td>{{'[SfPopup.Show(string title, string message)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_Int32_)'| markdownify }}</td>
 <td>Static method to show a popup with the title and message.</td></tr>
 <tr>
-<td>{{'[SfPopup.Show(string title, string message, string acceptText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_)'| markdownify }}</td>
+<td>{{'[SfPopup.Show(string title, string message, string acceptText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_System_Int32_)'| markdownify }}</td>
 <td>Static method to show a popup with the title, message and acceptText.</td></tr>
 </table>
 
@@ -109,7 +109,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup at the center of the screen.](Images/popup-positioning/maui-popup-with-center-positioning.png)
+![Syncfusion .NET MAUI Popup Displaying at the center of the screen.](Images/popup-positioning/maui-popup-with-center-positioning.png)
 
 ## Absolute positioning
 
@@ -170,7 +170,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup at Absolute position.](Images/popup-positioning/maui-popup-absolute-positioning.png)
+![Syncfusion .NET MAUI Popup Displaying at Absolute position.](Images/popup-positioning/maui-popup-absolute-positioning.png)
 
 ## Relative positioning
 
@@ -201,7 +201,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup at Relative position.](Images/popup-positioning/maui-popup-relative-positioning.png)
+![Syncfusion .NET MAUI Popup Displaying at Relative position.](Images/popup-positioning/maui-popup-relative-positioning.png)
 
 ### Display popup relatively to a view with absolute coordinates
 
@@ -230,7 +230,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup at Absolute Relative position.](Images/popup-positioning/maui-popup-absolute-relative-positioning.png)
+![Syncfusion .NET MAUI Popup Displaying at Absolute Relative position.](Images/popup-positioning/maui-popup-absolute-relative-positioning.png)
 
 You can pass both negative and positive values as parameters to the `SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)`. The popup will be positioned by considering the relative position as (0, 0) the center point. For example, if you have set the `RelativePosition` as `PopupRelativePosition.AlignBottomRight` and `RelativeView` as a button, bottom right corner of the button will be considered as the 0, 0 point and a negative x-position value will place the popup to the left of that point and a positive x-position value will place the popup to the right of that point. The same applies for y-position also.
 
@@ -300,7 +300,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Relative positioning of .NET MAUI Popup in MVVM](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
+![Syncfusion .NET MAUI Popup Relative positioning in MVVM](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
 
 ## Close the popup
 
@@ -324,7 +324,7 @@ private void ClickToDismissPopup_Clicked(object sender, EventArgs e)
 
 ## Close the popup automatically after timeout
 
-To close a popup automatically after a specified delay, you can use the [AutoCloseDuration] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AutoCloseDuration) property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.
+To close a popup automatically after a specified delay, you can use the [AutoCloseDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AutoCloseDuration) property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -340,7 +340,7 @@ popup.IsOpen = true;
 {% endhighlight %}
 {% endtabs %}  
 
-![Dismiss the popup automatically after a specified delay in the .NET MAUI Popup.](Images/popup-positioning/maui-popup-autocloseduration.gif)
+![Syncfusion .NET MAUI Popup Dismiss automatically after a specified delay](Images/popup-positioning/maui-popup-autocloseduration.gif)
 
 ## Position the popup over the action bar
 
@@ -359,11 +359,31 @@ popup.Show(0,0);
 {% endhighlight %}
 {% endtabs %}
 
-![Positioning the popup without considering action bar](Images/popup-positioning/maui-popup-popsitioning-without-actionbar-consideration.png)
+![Syncfusion .NET MAUI Popup Positioning without considering action bar](Images/popup-positioning/maui-popup-popsitioning-without-actionbar-consideration.png)
 
 If `IgnoreActionBar` is set to false, the popup positioning will take the action bar into account, ensuring it does not overlap.
 
 This feature is useful when you want to display the popup freely across the screen, including over the action bar.
+
+## Close the popup
+
+To close the popup programmatically, you can call either the [Dismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Dismiss) method or set the IsOpen property to false.
+
+Refer to the following code example for dismissing popup.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 7" %}
+    
+    private void ClickToDismissPopup_Clicked(object sender, EventArgs e)
+    {
+        // Dismiss SfPopup from the view.
+        sfPopup.Dismiss();
+
+        // Or
+        sfPopup.IsOpen = false;
+    }
+{% endhighlight %} 
+{% endtabs %}
 
 ## How to
 
@@ -408,7 +428,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-The [Show(string title, string message, string acceptText, string declineText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_System_String_) static method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
+The [Show(string title, string message, string acceptText, string declineText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_System_String_System_Int32_) static method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -530,7 +550,7 @@ private void OnDataGridCellTapped(object sender, Syncfusion.Maui.DataGrid.DataGr
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with DataGrid ](Images/popup-positioning/show-maui-popup-when-grid-cell-tap.png)
+![Syncfusion .NET MAUI Popup with DataGrid ](Images/popup-positioning/show-maui-popup-when-grid-cell-tap.png)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-show-a-.net-maui-popup-when-tap-.net-maui-datagrid-cell).
 
@@ -708,7 +728,7 @@ private void OnListViewItemTapped(object sender, Syncfusion.Maui.ListView.ItemTa
 {% endhighlight %}
 {% endtabs %}
 
-![ListView with .NET MAUI Popup](Images/popup-positioning/show-maui-popup-when-listview-item-tap.png)
+![Syncfusion .NET MAUI Popup with ListView](Images/popup-positioning/show-maui-popup-when-listview-item-tap.png)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-show-a-.net-maui-popup-when-tap-.net-maui-listview-item).
 

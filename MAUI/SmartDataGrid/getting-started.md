@@ -5,14 +5,14 @@ description: Learn about getting started with Syncfusion .NET MAUI Smart DataGri
 platform: MAUI
 control: SfSmartDataGrid
 documentation: ug
-keywords: maui smart datagrid getting started, ai datagrid maui, .net maui smart datagrid setup, Syncfusion.Maui.SmartComponents
+keywords: maui smart datagrid getting started, ai datagrid maui, .net maui smart datagrid setup, Syncfusion.Maui.SmartDataGrid
 ---
 
 # Getting Started with .NET MAUI Smart DataGrid
 
-This section provides a quick overview for working with the [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) for .NET MAUI. Follow the steps below to add a basic Smart DataGrid to your project.
+This section provides a quick overview for working with the `SfSmartDataGrid` for .NET MAUI. Follow the steps below to add a basic Smart DataGrid to your project.
 
-N> The Smart DataGrid is distributed as part of the `Syncfusion.Maui.SmartComponents` package and supports AI-assisted interactions such as intelligent sorting, filtering, grouping, and highlighting. Ensure your application has the required AI service configuration to enable these features.
+N> The Smart DataGrid is distributed as part of the `Syncfusion.Maui.SmartDataGrid` package and supports AI-assisted interactions such as intelligent sorting, filtering, grouping, and highlighting. Ensure your application has the required AI service configuration to enable these features.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -32,7 +32,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart DataGrid NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.SmartComponents](https://www.nuget.org/packages/Syncfusion.Maui.SmartComponents) and install the latest version.
+2. Search for `Syncfusion.Maui.SmartDataGrid` and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
@@ -113,7 +113,7 @@ namespace GettingStarted
 
 ## Step 5: Add a Basic Smart DataGrid
 
-1. Import the control namespace `Syncfusion.Maui.SmartComponents` in XAML or C# code.
+1. Import the control namespace `Syncfusion.Maui.SmartDataGrid` in XAML or C# code.
 2. Initialize the [SfSmartDataGrid]() control.
 
 {% tabs %}
@@ -121,7 +121,7 @@ namespace GettingStarted
 
 <ContentPage
     . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartDataGrid;assembly=Syncfusion.Maui.SmartDataGrid">
 
     <syncfusion:SfSmartDataGrid />
 </ContentPage>
@@ -129,7 +129,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.SmartComponents;
+using Syncfusion.Maui.SmartDataGrid;
 . . .
 
 public partial class MainPage : ContentPage
@@ -165,7 +165,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart DataGrid NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.SmartComponents](https://www.nuget.org/packages/Syncfusion.Maui.SmartComponents) and install the latest version.
+2. Search for `Syncfusion.Maui.SmartDataGrid` and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
@@ -246,15 +246,15 @@ namespace GettingStarted
 
 ## Step 5: Add a Basic Smart DataGrid
 
-1. Import the control namespace `Syncfusion.Maui.SmartComponents` in XAML or C# code.
-2. Initialize the [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) control.
+1. Import the control namespace `Syncfusion.Maui.SmartDataGrid` in XAML or C# code.
+2. Initialize the `SfSmartDataGrid` control.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
     . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartDataGrid;assembly=Syncfusion.Maui.SmartDataGrid">
 
     <syncfusion:SfSmartDataGrid />
 </ContentPage>
@@ -262,7 +262,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.SmartComponents;
+using Syncfusion.Maui.SmartDataGrid;
 . . .
 
 public partial class MainPage : ContentPage
@@ -298,7 +298,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart DataGrid NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.SmartComponents](https://www.nuget.org/packages/Syncfusion.Maui.SmartComponents) and install the latest version.
+2. Search for `Syncfusion.Maui.SmartDataGrid` and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
@@ -379,15 +379,15 @@ namespace GettingStarted
 
 ## Step 5: Add a Basic Smart DataGrid
 
-1. Import the control namespace `Syncfusion.Maui.SmartComponents` in XAML or C# code.
-2. Initialize the [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) control.
+1. Import the control namespace `Syncfusion.Maui.SmartDataGrid` in XAML or C# code.
+2. Initialize the `SfSmartDataGrid` control.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
     . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartDataGrid;assembly=Syncfusion.Maui.SmartDataGrid">
 
     <syncfusion:SfSmartDataGrid />
 </ContentPage>
@@ -395,7 +395,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.SmartComponents;
+using Syncfusion.Maui.SmartDataGrid;
 . . .
 
 public partial class MainPage : ContentPage
@@ -525,36 +525,16 @@ The following code example binds the collection created in the previous step to 
 
 {% tabs %}
 {% highlight xaml %}
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents"
-              xmlns:local="clr-namespace:GettingStarted"
-             x:Class="GettingStarted.MainPage">
-
-    <ContentPage.BindingContext>
-        <local:OrderInfoRepository x:Name="viewModel" />
-    </ContentPage.BindingContext>
-
-    <ContentPage.Content>
-        <syncfusion:SfSmartDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfSmartDataGrid.Columns>
-            <syncfusion:TextColumn HeaderText="Order ID" Format="0"
-                                            MappingName="OrderID" Width="150"/>
-            <syncfusion:TextColumn  HeaderText="Customer ID"
-                                            MappingName="CustomerID"
-                                            Width="150" />
-            <syncfusion:TextColumn  HeaderText="Ship Country"
-                                            MappingName="ShipCountry"
-                                            Width="150" />
-        </syncfusion:SfSmartDataGrid.Columns>
-        </syncfusion:SfSmartDataGrid>
-    </ContentPage.Content>
-</ContentPage>
+<syncfusion:SfSmartDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfSmartDataGrid.BindingContext>
+        <local:OrderInfoRepository />
+    </syncfusion:SfSmartDataGrid.BindingContext>
+</syncfusion:SfSmartDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 OrderInfoRepository viewModel = new OrderInfoRepository();
+SfSmartDataGrid dataGrid = new SfSmartDataGrid();
 dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
@@ -579,5 +559,7 @@ Press **F5** to build and run the application. Once compiled, the smart datagrid
 Here is the result of the previous codes,
 
 <img src="Images\getting-started\maui-smart-datagrid.png" width="600" alt="Getting started with .NET MAUI Smart DataGrid." />
+
+You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/Maui-SmartDataGrid-Sample).
 
 N> You can refer to our [.NET MAUI Smart DataGrid](https://www.syncfusion.com/maui-controls/maui-smart-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Smart DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents) that shows you how to render the Smart DataGrid in .NET MAUI.

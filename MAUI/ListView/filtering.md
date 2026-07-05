@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Filtering support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Filtering in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Filtering support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -16,9 +16,9 @@ To get start quickly with filtering in .NET MAUI ListView, you can check on this
 
 ## Programmatic filtering
 
-The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) supports data filtering by setting the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) property. You have to call the [SfListView.DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method after assigning the `Filter` property for refreshing the view.
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) supports data filtering by setting the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_Filter) property. You have to call the [SfListView.DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_RefreshFilter) method after assigning the `Filter` property for refreshing the view.
 
-The [FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_FilterChanged) event is raised once filtering is applied to the SfListView.
+The [FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_FilterChanged) event is raised once filtering is applied to the SfListView.
 
 The `FilterContacts` method filters the data contains the filter text value. Assign the `FilterContacts` method to the `SfListView.DataSource.Filter` predicate to filter the `ContactName`. To apply filtering in the SfListView, follow the code example:
 
@@ -90,9 +90,7 @@ private bool FilterContacts(object obj)
 {% endtabs %}
 
 The following screenshot shows the output rendered when the items are filtered:
-![MAUI ListView Filtering](Images/filtering/maui-listview-filtering-items.png)
-
-
+![Syncfusion .NET MAUI ListView Filtering](Images/filtering/maui-listview-filtering-items.png)
 
 ### Filter based on multiple criteria
 
@@ -116,7 +114,7 @@ private bool FilterContacts(object obj)
 
 ## Getting the filtered data
 
-You can get filtered items from the view and modify it in the [SfListView.DataSource.FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_FilterChanged) event. When filter is applied, the filtered items are available in the [SfListView.DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_DisplayItems).
+You can get filtered items from the view and modify it in the [SfListView.DataSource.FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_FilterChanged) event. When filter is applied, the filtered items are available in the [SfListView.DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_DisplayItems).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
@@ -136,7 +134,7 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 
 ## Clear filtering
 
-The SfListView allows clearing the filters by setting the [DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) to null, and call the [DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method.
+The SfListView allows clearing the filters by setting the [DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_Filter) to null, and call the [DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_RefreshFilter) method.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -147,7 +145,7 @@ listView.DataSource.RefreshFilter();
 
 ## Sort the filtered items
 
-The order of the filtered items can be rearranged in the `FilterChanged` event by adding [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html). To sort the filtered items, follow the code example:
+The order of the filtered items can be rearranged in the `FilterChanged` event by adding [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html). To sort the filtered items, follow the code example:
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -166,7 +164,75 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 {% endtabs %}
 
 The following screenshot shows the output rendered when the filtered items are sorted:
-![MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sorting-filtered-items.png)
+![Syncfusion .NET MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sorting-filtered-items.png)
+
+## Custom Filter UI in .NET MAUI ListView (SfListView)
+
+This section explains how to enable and customize the filtering user interface (UI) in the `.NET MAUI ListView` (`SfListView`). You can customize the filter data using the `FilteringUITemplate` property. The filtering UI can be displayed by using the `ShowFilteringUICommand`, which internally invokes the `ShowFilteringUIForm()` method and displays the defined template inside a popup.
+
+## Filtering UI APIs
+
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) provides the following APIs to configure and display the filtering UI:
+
+- `FilteringUITitle`: Specifies the title displayed in the filtering UI popup.
+- `ShowFilteringUICommand`: Triggers the filtering UI programmatically, typically from a button.
+- `FilteringUITemplate`: Defines the custom layout of the filtering UI, allowing you to design filter elements such as buttons, chips, or other controls.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 9 14" %}
+<syncfusion:SfListView x:Name="listView"
+                       ItemsSource="{Binding Employees}"
+                       FilteringUITitle="Filtering">
+
+    <!-- Trigger Filtering UI -->
+    <syncfusion:SfListView.HeaderTemplate>
+        <DataTemplate>
+            <Button Text="Filter"
+                    Command="{Binding Source={x:Reference listView}, Path=ShowFilteringUICommand}" />
+        </DataTemplate>
+    </syncfusion:SfListView.HeaderTemplate>
+
+    <!-- Custom Filtering UI -->
+    <syncfusion:SfListView.FilteringUITemplate>
+        <DataTemplate>
+            <VerticalStackLayout Padding="14" Spacing="10">
+                <Label Text="Department" FontAttributes="Bold"/>
+                <!-- Define custom filter UI elements here -->
+            </VerticalStackLayout>
+        </DataTemplate>
+    </syncfusion:SfListView.FilteringUITemplate>
+
+</syncfusion:SfListView>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs"  hl_lines="1 3 5" %}
+listView.FilteringUITitle = "Filtering";
+
+var command = listView.ShowFilteringUICommand;
+
+listView.FilteringUITemplate = new DataTemplate(() =>
+{
+    return new VerticalStackLayout
+    {
+        Padding = 14,
+        Children =
+        {
+            new Label
+            {
+                Text = "Department",
+                FontAttributes = FontAttributes.Bold
+            }
+        }
+    };
+});
+{% endhighlight %}
+
+{% endtabs %}
+
+The following screenshot shows the filtering UI popup displayed in the SfListView:
+
+![MAUI ListView Filtering UI](Images/filtering/maui-listview-filtering-ui.png)
 
 ## See also
 

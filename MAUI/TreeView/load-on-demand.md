@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Load on Demand in .NET MAUI TreeView control | Syncfusion
-description: Learn here all about Load on Demand support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Load on Demand in .NET MAUI TreeView control | Syncfusion®
+description: Learn here all about Load on Demand support in Syncfusion® .NET MAUI TreeView (SfTreeView) control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -15,164 +15,164 @@ N> Load on-demand is applicable for bound mode only.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfTreeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-             xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
-             xmlns:local="clr-namespace:LoadonDemand.ViewModels"
-             x:Class="LoadOnDemand.MainPage">
-       <ContentPage.BindingContext>
-            <local:ViewModel x:Name="viewModel"/>
-       </ContentPage.BindingContext>
-       <ContentPage.Content>
-            <sfTreeView:SfTreeView x:Name="treeView"
-                               LoadOnDemandCommand="{Binding TreeViewOnDemandCommand}"
-                               ItemsSource="{Binding Menu}" /> 
-        </ContentPage.Content>
-    </ContentPage>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfTreeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
+            xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
+            xmlns:local="clr-namespace:LoadonDemand.ViewModels"
+            x:Class="LoadOnDemand.MainPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <sfTreeView:SfTreeView x:Name="treeView"
+                            LoadOnDemandCommand="{Binding TreeViewOnDemandCommand}"
+                            ItemsSource="{Binding Menu}" /> 
+    </ContentPage.Content>
+</ContentPage>
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="13 32 41 45" %}
-    public class ViewModel
-    { 
-     public ObservableCollection<Model> Menu { get; set; }
+public class ViewModel
+{ 
+    public ObservableCollection<Model> Menu { get; set; }
 
-     public ICommand? TreeViewOnDemandCommand
-     {
-         get; set;
-     }
+    public ICommand? TreeViewOnDemandCommand
+    {
+        get; set;
+    }
 
-     public ViewModel()
-     {
-         this.Menu = this.GetMenuItems();
-         TreeViewOnDemandCommand = new Command(ExecuteOnDemandLoading, CanExecuteOnDemandLoading);
-     }
+    public ViewModel()
+    {
+        this.Menu = this.GetMenuItems();
+        TreeViewOnDemandCommand = new Command(ExecuteOnDemandLoading, CanExecuteOnDemandLoading);
+    }
 
-     private bool CanExecuteOnDemandLoading(object sender)
-     {
-         var hasChildNodes = ((sender as TreeViewNode)!.Content as Model)!.HasChildNodes;
-         if (hasChildNodes)
-             return true;
-         else
-             return false;
-     }
+    private bool CanExecuteOnDemandLoading(object sender)
+    {
+        var hasChildNodes = ((sender as TreeViewNode)!.Content as Model)!.HasChildNodes;
+        if (hasChildNodes)
+            return true;
+        else
+            return false;
+    }
 
-     private void ExecuteOnDemandLoading(object obj)
-     {
-         var node = obj as TreeViewNode;
-         // Skip the repeated population of child items when every time the node expands.
-         if (node!.ChildNodes!.Count > 0)
-         {
-             node.IsExpanded = true;
-             return;
-         }
+    private void ExecuteOnDemandLoading(object obj)
+    {
+        var node = obj as TreeViewNode;
+        // Skip the repeated population of child items when every time the node expands.
+        if (node!.ChildNodes!.Count > 0)
+        {
+            node.IsExpanded = true;
+            return;
+        }
 
-         node.ShowExpanderAnimation = true;
-         //Animation starts for the expander to show the progressing of load on demand.
-         Model? Info = node!.Content as Model;
-         Microsoft.Maui.Controls.Application.Current!.Dispatcher.Dispatch(async () =>
-         {
-             await Task.Delay(1000);
-             //Fetching child items to add.
-             var items = GetSubMenu(Info!.ID);
-             // Populating child items for the node in on-demand.
-             node.PopulateChildNodes(items);			 
-             // Expand the node after child items are added.
-             if (items.Any())
-                 node.IsExpanded = true;
-             node.ShowExpanderAnimation = false;
-         });
-     }
+        node.ShowExpanderAnimation = true;
+        //Animation starts for the expander to show the progressing of load on demand.
+        Model? Info = node!.Content as Model;
+        Microsoft.Maui.Controls.Application.Current!.Dispatcher.Dispatch(async () =>
+        {
+            await Task.Delay(1000);
+            //Fetching child items to add.
+            var items = GetSubMenu(Info!.ID);
+            // Populating child items for the node in on-demand.
+            node.PopulateChildNodes(items);			 
+            // Expand the node after child items are added.
+            if (items.Any())
+                node.IsExpanded = true;
+            node.ShowExpanderAnimation = false;
+        });
+    }
 
-     private ObservableCollection<Model> GetMenuItems()
-     {
-         ObservableCollection<Model> menuItems = new ObservableCollection<Model>();
-         menuItems.Add(new Model() { ItemName = "My Drive", HasChildNodes = true, ID = 0 });
-         return menuItems;
-     }
+    private ObservableCollection<Model> GetMenuItems()
+    {
+        ObservableCollection<Model> menuItems = new ObservableCollection<Model>();
+        menuItems.Add(new Model() { ItemName = "My Drive", HasChildNodes = true, ID = 0 });
+        return menuItems;
+    }
 
-     public IEnumerable<Model> GetSubMenu(int iD)
-     {
-         ObservableCollection<Model> menuItems = new ObservableCollection<Model>();
-         if (iD == 0)
-         {
-             menuItems.Add(new Model() { ItemName = "Documents", HasChildNodes = true, ID = 1 });
-             menuItems.Add(new Model() { ItemName = "Work", HasChildNodes = true, ID = 2 });
-             menuItems.Add(new Model() { ItemName = "Photos", HasChildNodes = true, ID = 3 });
-             menuItems.Add(new Model() { ItemName = "Music", HasChildNodes = true, ID = 4 });
-             menuItems.Add(new Model() { ItemName = "Videos", HasChildNodes = true, ID = 5 });
-         }
-         if (iD == 1)
-         {
-             menuItems.Add(new Model() { ItemName = "Personal", HasChildNodes = true, ID = 11 });
-         }
-         else if (iD == 2)
-         {
-             menuItems.Add(new Model() { ItemName = "ProjectA", HasChildNodes = true, ID = 21 });
-             menuItems.Add(new Model() { ItemName = "ProjectB", HasChildNodes = true, ID = 22 });
-         }
-         else if (iD == 3)
-         {
-             menuItems.Add(new Model() { ItemName = "Family", HasChildNodes = true, ID = 31 });
-             menuItems.Add(new Model() { ItemName = "Friends", HasChildNodes = true, ID = 32 });
-         }
-         else if (iD == 4)
-         {
-             menuItems.Add(new Model() { ItemName = "Playlist1", HasChildNodes = true, ID = 41 });
-             menuItems.Add(new Model() { ItemName = "Playlist2", HasChildNodes = true, ID = 42 });
-         }
-         else if (iD == 5)
-         {
-             menuItems.Add(new Model() { ItemName = "Tutorial", HasChildNodes = true, ID = 51 });
-         }
-         else if (iD == 11)
-         {
-             menuItems.Add(new Model() { ItemName = "Resume.docx", HasChildNodes = false, ID = 61 });
-             menuItems.Add(new Model() { ItemName = "TravelPlans.pdf", HasChildNodes = false, ID = 62 });
-         }
-         else if (iD == 21)
-         {
-             menuItems.Add(new Model() { ItemName = "Proposal.docx", HasChildNodes = false, ID = 71 });
-             menuItems.Add(new Model() { ItemName = "Presentation.pptx", HasChildNodes = false, ID = 72 });
-         }
-         else if (iD == 22)
-         {
-             menuItems.Add(new Model() { ItemName = "Report.pdf", HasChildNodes = false, ID = 73 });
-         }
-         else if (iD == 31)
-         {
-             menuItems.Add(new Model() { ItemName = "Beach.jpg", HasChildNodes = false, ID = 81 });
-             menuItems.Add(new Model() { ItemName = "Mountains.jpg", HasChildNodes = false, ID = 82 });
-         }
-         else if (iD == 32)
-         {
-             menuItems.Add(new Model() { ItemName = "GrouPhoto.jpg", HasChildNodes = false, ID = 91 });
-         }
-         else if (iD == 41)
-         {
-             menuItems.Add(new Model() { ItemName = "Song1.mp3", HasChildNodes = false, ID = 101 });
-             menuItems.Add(new Model() { ItemName = "Song2.mp3", HasChildNodes = false, ID = 102 });
-         }
-         else if (iD == 42)
-         {
-             menuItems.Add(new Model() { ItemName = "Song3.mp3", HasChildNodes = false, ID = 111 });
-             menuItems.Add(new Model() { ItemName = "Song4.mp3", HasChildNodes = false, ID = 112 });
-         }
-         else if (iD == 51)
-         {
-             menuItems.Add(new Model() { ItemName = "Codingbasics.mp4", HasChildNodes = false, ID = 121 });
-             menuItems.Add(new Model() { ItemName = "Webdevelopment.mp4", HasChildNodes = false, ID = 122 });
-         }
-        
-         return menuItems;
-     }
- }
+    public IEnumerable<Model> GetSubMenu(int iD)
+    {
+        ObservableCollection<Model> menuItems = new ObservableCollection<Model>();
+        if (iD == 0)
+        {
+            menuItems.Add(new Model() { ItemName = "Documents", HasChildNodes = true, ID = 1 });
+            menuItems.Add(new Model() { ItemName = "Work", HasChildNodes = true, ID = 2 });
+            menuItems.Add(new Model() { ItemName = "Photos", HasChildNodes = true, ID = 3 });
+            menuItems.Add(new Model() { ItemName = "Music", HasChildNodes = true, ID = 4 });
+            menuItems.Add(new Model() { ItemName = "Videos", HasChildNodes = true, ID = 5 });
+        }
+        if (iD == 1)
+        {
+            menuItems.Add(new Model() { ItemName = "Personal", HasChildNodes = true, ID = 11 });
+        }
+        else if (iD == 2)
+        {
+            menuItems.Add(new Model() { ItemName = "ProjectA", HasChildNodes = true, ID = 21 });
+            menuItems.Add(new Model() { ItemName = "ProjectB", HasChildNodes = true, ID = 22 });
+        }
+        else if (iD == 3)
+        {
+            menuItems.Add(new Model() { ItemName = "Family", HasChildNodes = true, ID = 31 });
+            menuItems.Add(new Model() { ItemName = "Friends", HasChildNodes = true, ID = 32 });
+        }
+        else if (iD == 4)
+        {
+            menuItems.Add(new Model() { ItemName = "Playlist1", HasChildNodes = true, ID = 41 });
+            menuItems.Add(new Model() { ItemName = "Playlist2", HasChildNodes = true, ID = 42 });
+        }
+        else if (iD == 5)
+        {
+            menuItems.Add(new Model() { ItemName = "Tutorial", HasChildNodes = true, ID = 51 });
+        }
+        else if (iD == 11)
+        {
+            menuItems.Add(new Model() { ItemName = "Resume.docx", HasChildNodes = false, ID = 61 });
+            menuItems.Add(new Model() { ItemName = "TravelPlans.pdf", HasChildNodes = false, ID = 62 });
+        }
+        else if (iD == 21)
+        {
+            menuItems.Add(new Model() { ItemName = "Proposal.docx", HasChildNodes = false, ID = 71 });
+            menuItems.Add(new Model() { ItemName = "Presentation.pptx", HasChildNodes = false, ID = 72 });
+        }
+        else if (iD == 22)
+        {
+            menuItems.Add(new Model() { ItemName = "Report.pdf", HasChildNodes = false, ID = 73 });
+        }
+        else if (iD == 31)
+        {
+            menuItems.Add(new Model() { ItemName = "Beach.jpg", HasChildNodes = false, ID = 81 });
+            menuItems.Add(new Model() { ItemName = "Mountains.jpg", HasChildNodes = false, ID = 82 });
+        }
+        else if (iD == 32)
+        {
+            menuItems.Add(new Model() { ItemName = "GrouPhoto.jpg", HasChildNodes = false, ID = 91 });
+        }
+        else if (iD == 41)
+        {
+            menuItems.Add(new Model() { ItemName = "Song1.mp3", HasChildNodes = false, ID = 101 });
+            menuItems.Add(new Model() { ItemName = "Song2.mp3", HasChildNodes = false, ID = 102 });
+        }
+        else if (iD == 42)
+        {
+            menuItems.Add(new Model() { ItemName = "Song3.mp3", HasChildNodes = false, ID = 111 });
+            menuItems.Add(new Model() { ItemName = "Song4.mp3", HasChildNodes = false, ID = 112 });
+        }
+        else if (iD == 51)
+        {
+            menuItems.Add(new Model() { ItemName = "Codingbasics.mp4", HasChildNodes = false, ID = 121 });
+            menuItems.Add(new Model() { ItemName = "Webdevelopment.mp4", HasChildNodes = false, ID = 122 });
+        }
+    
+        return menuItems;
+    }
+}
 {% endhighlight %}
 {% highlight c# tabtitle="Model.cs" %}
-    public class Model : INotifyPropertyChanged
-    {
+public class Model : INotifyPropertyChanged
+{
 
     private string? itemName;
     private int id;
@@ -240,20 +240,20 @@ The TreeView displays the expander icon for a specific node based on the return 
 {% tabs %}
 {% highlight c# %}
 
-    /// <summary>
-    /// CanExecute method is called before expanding and initialization of node. Returns whether the node has child nodes or not.
-    /// Based on the return value of the expander, the visibility of the node is handled.  
-    /// </summary>
-    /// <param name="sender">TreeViewNode is passed as default parameter </param>
-    /// <returns>Returns true if the specified node has child items to load and the expander icon is displayed for that node, else returns false and the icon is not displayed.</returns>
-    private bool CanExecuteOnDemandLoading(object sender)
-    {
-      var hasChildNodes = ((sender as TreeViewNode).Content as Model).HasChildNodes;
-      if (hasChildNodes)
-        return true;
-      else
-        return false;
-    }
+/// <summary>
+/// CanExecute method is called before expanding and initialization of node. Returns whether the node has child nodes or not.
+/// Based on the return value of the expander, the visibility of the node is handled.  
+/// </summary>
+/// <param name="sender">TreeViewNode is passed as default parameter </param>
+/// <returns>Returns true if the specified node has child items to load and the expander icon is displayed for that node, else returns false and the icon is not displayed.</returns>
+private bool CanExecuteOnDemandLoading(object sender)
+{
+    var hasChildNodes = ((sender as TreeViewNode).Content as Model).HasChildNodes;
+    if (hasChildNodes)
+    return true;
+    else
+    return false;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -276,28 +276,28 @@ Within `LoadOnDemand.Execute`, you can perform the following operations.
 
 {% tabs %}
 {% highlight c# hl_lines="9 32 42 51" %}
-    /// <summary>
-    /// CanExecute method is called before expanding and initialization of node. Returns whether the node has child nodes or not.
-    /// Based on the return value, the expander visibility of the node is handled.  
-    /// </summary>
-    /// <param name="sender">TreeViewNode is passed as default parameter </param>
-    /// <returns>Returns true if the specified node has child items to load on demand and the expander icon is displayed for that node, else returns false, and the icon is not displayed.</returns>
-    private bool CanExecuteOnDemandLoading(object sender)
-    {
-        var hasChildNodes = ((sender as TreeViewNode).Content as Model).HasChildNodes;
-        if (hasChildNodes)
-            return true;
-        else
-            return false;
-    }
+/// <summary>
+/// CanExecute method is called before expanding and initialization of node. Returns whether the node has child nodes or not.
+/// Based on the return value, the expander visibility of the node is handled.  
+/// </summary>
+/// <param name="sender">TreeViewNode is passed as default parameter </param>
+/// <returns>Returns true if the specified node has child items to load on demand and the expander icon is displayed for that node, else returns false, and the icon is not displayed.</returns>
+private bool CanExecuteOnDemandLoading(object sender)
+{
+    var hasChildNodes = ((sender as TreeViewNode).Content as Model).HasChildNodes;
+    if (hasChildNodes)
+        return true;
+    else
+        return false;
+}
 	
-	/// <summary>
-    /// Execute method is called when any item is requested for load-on-demand items.
-    /// </summary>
-    /// <param name="obj">TreeViewNode is passed as default parameter </param>
-    private void ExecuteOnDemandLoading(object obj)
-    {
-      var node = obj as TreeViewNode;
+/// <summary>
+/// Execute method is called when any item is requested for load-on-demand items.
+/// </summary>
+/// <param name="obj">TreeViewNode is passed as default parameter </param>
+private void ExecuteOnDemandLoading(object obj)
+{
+    var node = obj as TreeViewNode;
         
     // Skip the repeated population of child items when every time the node expands.
     if (node.ChildNodes.Count > 0)
@@ -334,4 +334,4 @@ Within `LoadOnDemand.Execute`, you can perform the following operations.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/perform-load-on-demand-item-population-in-.net-maui-treeview)
 
-![Load-on-demand in .NET MAUI TreeView](Images/loadondemand/maui-treeView-Loadondemand.gif)
+![Syncfusion .NET MAUI TreeView Load-on-demand](Images/loadondemand/maui-treeView-Loadondemand.gif)

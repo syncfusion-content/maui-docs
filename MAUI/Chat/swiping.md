@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Swiping in .NET MAUI Chat control  | Syncfusion
-description: Learn here all about Swiping support in Syncfusion .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Swiping in .NET MAUI Chat control | Syncfusion®
+description: Learn here all about Swiping support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -181,7 +181,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-![Swipe views in .NET MAUI Chat](images/swiping/maui-chat-start-and-end-swipe-template.png)
+![Syncfusion .NET MAUI Chat Swipe views](images/swiping/maui-chat-start-and-end-swipe-template.png)
 
 ## Swipe Events
 
@@ -197,27 +197,27 @@ The `SwipeStarted` event provides the following properties in their arguments:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
-  <sfchat:SfChat x:Name="sfChat"
-                 Messages="{Binding Messages}"     
-                 CurrentUser="{Binding CurrentUser}"
-                 AllowSwiping="True"
-                 SwipeStarted="sfChat_SwipeStarted"/>
+<sfchat:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"     
+                CurrentUser="{Binding CurrentUser}"
+                AllowSwiping="True"
+                SwipeStarted="sfChat_SwipeStarted"/>
 
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
- sfChat.SwipeStarted += sfChat_SwipeStarted;
+sfChat.SwipeStarted += sfChat_SwipeStarted;
 
-  private void sfChat_SwipeStarted(object sender, MessageSwipeStartedEventArgs e)
-  {
+private void sfChat_SwipeStarted(object sender, MessageSwipeStartedEventArgs e)
+{
     var index = sfChat.Messages.IndexOf(e.Message);
     if (index == 1)
-     {
-        e.Cancel = true;
-     }
-  }
+    {
+    e.Cancel = true;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -235,28 +235,28 @@ The `Swiping` event provides the following properties in their arguments:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
-    <sfchat:SfChat x:Name="sfChat"
-                   Messages="{Binding Messages}"     
-                   CurrentUser="{Binding CurrentUser}"
-                   AllowSwiping="True"
-                   MaxSwipeOffset="130"
-                   Swiping="sfChat_Swiping"/>
+<sfchat:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"     
+                CurrentUser="{Binding CurrentUser}"
+                AllowSwiping="True"
+                MaxSwipeOffset="130"
+                Swiping="sfChat_Swiping"/>
 
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-    sfChat.Swiping += sfChat_Swiping;
+sfChat.Swiping += sfChat_Swiping;
 
-    private void sfChat_Swiping(object sender, MessageSwipingEventArgs e)
+private void sfChat_Swiping(object sender, MessageSwipingEventArgs e)
+{
+    var index = sfChat.Messages.IndexOf(e.Message);
+    if (index == 1 && e.SwipeOffset > 70)
     {
-        var index = sfChat.Messages.IndexOf(e.Message);
-        if (index == 1 && e.SwipeOffset > 70)
-        {
-             e.Handled = true;
-        }
+            e.Handled = true;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -273,12 +273,12 @@ The `SwipeEnded` event provides the following properties in their arguments:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
-    <sfchat:SfChat x:Name="sfChat"                
-                   Messages="{Binding Messages}"     
-                   CurrentUser="{Binding CurrentUser}"
-                   MaxSwipeOffset="130"
-                   AllowSwiping="True"
-                   SwipeEnded="sfChat_SwipeEnded"/>             
+<sfchat:SfChat x:Name="sfChat"                
+                Messages="{Binding Messages}"     
+                CurrentUser="{Binding CurrentUser}"
+                MaxSwipeOffset="130"
+                AllowSwiping="True"
+                SwipeEnded="sfChat_SwipeEnded"/>             
 
 {% endhighlight %}
 {% endtabs %}
@@ -304,26 +304,26 @@ The `SfChat` allows you to cancel the swipe programmatically by calling the [Res
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
- <sfchat:SfChat x:Name="sfChat"                
-                Messages="{Binding Messages}"     
-                CurrentUser="{Binding CurrentUser}"
-                AllowSwiping="True" 
-                SwipeEnded="sfChat_SwipeEnded" />             
+<sfchat:SfChat x:Name="sfChat"                
+            Messages="{Binding Messages}"     
+            CurrentUser="{Binding CurrentUser}"
+            AllowSwiping="True" 
+            SwipeEnded="sfChat_SwipeEnded" />             
     
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
- sfChat.SwipeEnded += sfChat_SwipeEnded;
+sfChat.SwipeEnded += sfChat_SwipeEnded;
 
- private void sfChat_SwipeEnded(object sender, MessageSwipeEndedEventArgs e)
- {
+private void sfChat_SwipeEnded(object sender, MessageSwipeEndedEventArgs e)
+{
     if (e.SwipeOffset > 100)
     {
-       sfChat.ResetSwipeOffset();
+        sfChat.ResetSwipeOffset();
     }
- }
+}
    
 {% endhighlight %}
 {% endtabs %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Size in .NET MAUI Popup control | Syncfusion
-description: Learn all about Popup Size support in the Syncfusion .NET MAUI Popup (SfPopup) control and more, with examples.
+title: Popup Size in .NET MAUI Popup control | Syncfusion®
+description: Learn all about Popup Size support in the Syncfusion® .NET MAUI Popup (SfPopup) control and more, with examples.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -97,7 +97,7 @@ namespace PopupMaui
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with HeightRequest and WidthRequest](Images/popup-size//maui-popup-with-heightrequest-and-widthrequest.png)
+![Syncfusion .NET MAUI Popup with HeightRequest and WidthRequest](Images/popup-size//maui-popup-with-heightrequest-and-widthrequest.png)
 
 ## Full screen
 
@@ -164,7 +164,7 @@ namespace PopupMaui
 
 Executing the above codes renders the following output in windows.
 
-![.NET MAUI Popup with Full Screen](Images/popup-size//maui-popup-with-fullscreen.png)
+![Syncfusion .NET MAUI Popup with Full Screen](Images/popup-size//maui-popup-with-fullscreen.png)
 
 
 ## Auto-size popup
@@ -231,7 +231,7 @@ popup.AutoSizeMode = PopupAutoSizeMode.Height;
 
 Executing the above codes renders the following output in windows.
 
-![.NET MAUI Popup with AutoSize](Images/popup-size//maui-popup-with-autosizemode.png)
+![Syncfusion .NET MAUI Popup with AutoSize](Images/popup-size//maui-popup-with-autosizemode.png)
 
 In the following code sample, the Popup is auto-sized in the height based on the content loaded inside the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderTemplate), [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate), [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_FooterTemplate) properties.
 
@@ -244,7 +244,7 @@ In the following code sample, the Popup is auto-sized in the height based on the
               xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
     <ContentPage.Content>
         <StackLayout Padding="20">
-    <Button x:Name="show" Text="Show" WidthRequest="300" Clicked="show_Clicked"/>
+    <Button x:Name="show" Text="Show" WidthRequest="300"              Clicked="show_Clicked"/>
     <popup:SfPopup x:Name="popup"
                    ShowFooter="True" 
                    AutoSizeMode="Height" 
@@ -292,5 +292,5 @@ popup.AutoSizeTarget = Syncfusion.Maui.Popup.PopupAutoSizeTarget.All;
 
 Executing the above codes renders the following output in windows.
 
-![.NET MAUI Popup with AutoSize](Images/popup-size//maui-popup-with-autosizemode-autosizetarget.png)
+![Syncfusion .NET MAUI Popup with AutoSize](Images/popup-size//maui-popup-with-autosizemode-autosizetarget.png)
 

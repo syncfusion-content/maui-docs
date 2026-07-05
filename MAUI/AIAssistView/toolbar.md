@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar in .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about Toolbar support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control and more.
+title: Toolbar in .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about Toolbar support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
@@ -22,36 +22,51 @@ This section explains how to define and customize the toolbar in the [SfAIAssist
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2,3,4" %}
-    <syncfusion:SfAIAssistView 
-                ShowToolbar="True" 
-                ToolbarTitle="AI AssistView" 
-                ToolbarHeight="50">
-    </syncfusion:SfAIAssistView>
+<syncfusion:SfAIAssistView 
+            ShowToolbar="True" 
+            ToolbarTitle="AI AssistView" 
+            ToolbarHeight="50">
+</syncfusion:SfAIAssistView>
 {% endhighlight %}
 
 {% highlight c# hl_lines="6,7,8" %}
 
-    SfAIAssistView sfAIAssistView; 
-    public MainPage() 
-    { 
-        InitializeComponent(); 
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ToolbarTitle = "AI AssistView";
-        this.sfAIAssistView.ShowToolbar = true;
-        this.sfAIAssistView.ToolbarHeight = 50;
-        this.Content = sfAIAssistView; 
-     }
+SfAIAssistView sfAIAssistView; 
+public MainPage() 
+{ 
+    InitializeComponent(); 
+    this.sfAIAssistView = new SfAIAssistView();
+    this.sfAIAssistView.ToolbarTitle = "AI AssistView";
+    this.sfAIAssistView.ShowToolbar = true;
+    this.sfAIAssistView.ToolbarHeight = 50;
+    this.Content = sfAIAssistView; 
+    }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Toolbar in .NET MAUI AI AssistView](Images/toolbar/maui-aiassistview-toolbar.png)
+![Syncfusion .NET MAUI AI AssistView Toolbar](Images/toolbar/maui-aiassistview-toolbar.png)
+
+## Toolbar menu items
+
+In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model. 
+
+{% highlight xaml %}
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.ToolbarMenuOptions>
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Settings" Icon="dotnet_bot.png" Command="{Binding TappedCommand}" />
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Help" Icon="dotnet_bot.png" Command="{Binding TappedCommand}" />
+    </syncfusion:SfAIAssistView.ToolbarMenuOptions>
+</syncfusion:SfAIAssistView>
+{% endhighlight %}
+
+The items added to `ToolbarMenuOptions` appear when the toolbar menu icon is clicked and invoke the bound commands when tapped.
 
 ## Chat Modes
 
 ### New chat button
 
-The toolbar now includes a chat option that provides both New Chat. When clicked, it opens a new chat window where the user can start an entirely new session, while the previous session is preserved in the conversation history.
+The toolbar includes a chat option that provides New Chat. When clicked, it opens a new chat window so the user can start an entirely new session, while the previous session is preserved in the conversation history.
 
 ### Temporary Chat
 
@@ -73,23 +88,23 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 
 {% highlight c# hl_lines="8 9" %}
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
     {
-        SfAIAssistView sfAIAssistView;
-        public MainPage()
-        {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.EnableTemporaryChat = true;
-            sfAIAssistView.TemporaryChatBannerText="This chat will not be saved";
-            this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.EnableTemporaryChat = true;
+        sfAIAssistView.TemporaryChatBannerText="This chat will not be saved";
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Temporary Chat Banner in .NET MAUI AI AssistView](Images/toolbar/maui-aiassistview-temporary-chat-banner.png)
+![Syncfusion .NET MAUI AI AssistView Temporary Chat Banner](Images/toolbar/maui-aiassistview-temporary-chat-banner.png)
 
 ### Events for chat mode
 
@@ -99,23 +114,23 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 - **`ChatModeChanged`**: provides a [ChatModeChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html) with the [ChatMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html#Syncfusion_Maui_AIAssistView_ChatModeChangedEventArgs_ChatMode) that the control has transitioned to.
 
 {% highlight c# %}
-    private void OnChatModeChanging(object sender,  ChatModeChangingEventArgs e)
+private void OnChatModeChanging(object sender,  ChatModeChangingEventArgs e)
+{
+    if (e.ChatMode == ChatMode.TemporaryChat)
     {
-        if (e.ChatMode == ChatMode.TemporaryChat)
-        {
-            e.Cancel = true; 
-        }
+        e.Cancel = true; 
     }
+}
 
-    private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
+private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
+{
+    if (e.ChatMode == ChatMode.TemporaryChat)
     {
-        if (e.ChatMode == ChatMode.TemporaryChat)
-        {
-            // Temporary chat is active: maybe show custom banner or reset local state
-        }
-        else
-        {
-            // New chat mode active: restore saved templates/state if needed
-        }
+        // Temporary chat is active: maybe show custom banner or reset local state
     }
+    else
+    {
+        // New chat mode active: restore saved templates/state if needed
+    }
+}
 {% endhighlight %}

@@ -72,6 +72,36 @@ The visibility of the helper text can be disabled by setting the [ShowHelperText
 
 ![maui-textinputlayout-helpertext label](images/AssistiveLabels/Maui-TextInputLayout-HelperText.jpg)
 
+## Enabling password visibility toggle
+
+The password visibility toggle is used to show or hide the visibility of characters in the input view added to the control. You can enable this toggle by setting the [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_EnablePasswordVisibilityToggle) property to `true.`
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<inputLayout:SfTextInputLayout  Hint="Name" 
+                                EnablePasswordVisibilityToggle="true">
+    <Entry Text="1234"/>
+</inputLayout:SfTextInputLayout>  
+ 
+{% endhighlight %}
+
+{% highlight C# %} 
+
+SfTextInputLayout inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Password";
+inputLayout.EnablePasswordVisibilityToggle = true;
+inputLayout.Content = new Entry() { Text = "1234" }; 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable password toggling image](images/GettingStarted/PasswordGettingStarted.png)
+
+N> Password visibility toggle can be enabled only for [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
+
 ## Error message
 
 When the text input is not accepted, an error message will display instructions to fix it. Error messages will be displayed below the input line till entering the correct text. It can be set using the [ErrorText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ErrorText) property, but it will be displayed only when the [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HasError) property is set to `true.`

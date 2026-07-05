@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Item Size Customization in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Item Size Customization support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Item Size Customization in .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Item Size Customization support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -38,7 +38,7 @@ private void ListView_QueryItemSize(object sender, Syncfusion.Maui.ListView.Quer
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView QueryItemSize](Images/item-size-customization/maui-listview-query-item-size.jpg)
+![Syncfusion .NET MAUI ListView QueryItemSize](Images/item-size-customization/maui-listview-query-item-size.jpg)
 
 ## AutoFit the items based on the content
 
@@ -70,7 +70,7 @@ listView.AutoFitMode = AutoFitMode.Height;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Height](Images/item-size-customization/maui-listview-height.jpg)
+![Syncfusion .NET MAUI ListView Height](Images/item-size-customization/maui-listview-height.jpg)
 
 ### AutoFitMode as DynamicHeight
 
@@ -90,7 +90,7 @@ listView.AutoFitMode = AutoFitMode.DynamicHeight;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView DynamicHeight](Images/item-size-customization/maui-listview-dynamic-height.jpg)
+![Syncfusion .NET MAUI ListView DynamicHeight](Images/item-size-customization/maui-listview-dynamic-height.jpg)
 
 ## Updating the list-view item size based on font at runtime
 
@@ -145,7 +145,7 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView update item size based on font at runtime](Images/item-size-customization/maui-listview-item-size-based-on-font-at-runtime.jpg)
+![Syncfusion .NET MAUI ListView update item size based on font at runtime](Images/item-size-customization/maui-listview-item-size-based-on-font-at-runtime.jpg)
 
 ## Updating the Header and Footer height based on font at runtime
 
@@ -213,7 +213,7 @@ namespace SfListViewSample
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView update header and footer size based on font at runtime](Images/item-size-customization/maui-listview-update-header-and-footer-size-based-on-font.jpg)
+![Syncfusion .NET MAUI ListView update header and footer size based on font at runtime](Images/item-size-customization/maui-listview-update-header-and-footer-size-based-on-font.jpg)
 
 ## Load images with autofit mode
 

@@ -157,7 +157,7 @@ dataGrid.ColumnWidthMode = ColumnWidthMode.Auto;
 Button button = new Button();
 button.Text = "Get Column Width";
 button.WidthRequest = 300;
-button.HorzontalOption = LayoutOptions.Center;
+button.HorizontalOptions = LayoutOptions.Center;
 button.Clicked += Button_Clicked;
 
 Grid grid = new Grid();
