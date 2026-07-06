@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Scheduler control | Syncfusion
-canonical_url: "https://www.syncfusion.com/maui-controls/maui-scheduler"
+canonical_url: "https://www.syncfusion.com/scheduler-sdk/maui-scheduler"
 description: Learn here all about introduction of Syncfusion .NET MAUI Scheduler(SfScheduler) control, its basic features and functionalities of scheduler.
 platform: maui
 control: SfScheduler
@@ -11,7 +11,7 @@ keywords : .net maui scheduler, maui appointment scheduling, .net maui agenda vi
 
 # Overview of .NET MAUI Scheduler (SfScheduler)
 
-The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) has nine different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) has nine different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
 
 ![overview-in-maui-scheduler](images/overview/overview-in-maui-scheduler.png)
 
@@ -265,7 +265,7 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<a href="https://www.syncfusion.com/maui-controls/maui-scheduler" class="explore-link">
+<a href="https://www.syncfusion.com/scheduler-sdk/maui-scheduler" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
 </a>
