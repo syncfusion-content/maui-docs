@@ -34,7 +34,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion® MAUI RichTextEditor NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for and install the latest version.
+2. Search for [Syncfusion.Maui.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Maui.RichTextEditor) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
@@ -82,7 +82,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI RichTextEditor NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and install the latest version.
+2. Search for [Syncfusion.Maui.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Maui.RichTextEditor) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
@@ -130,12 +130,14 @@ The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichT
 {% tabs %}
 
 {% highlight xaml %}
+<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
 <rte:SfRichTextEditor ShowToolbar="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
+using Syncfusion.Maui.RichTextEditor;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
 richTextEditor.ShowToolbar = true;
