@@ -95,8 +95,6 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView attachment preview in editor](Images/attachment-preview/maui-aiassistview-preview.gif)
-
 ### Setting the maximum number of attachments in SfAIAssistView
 
 The `SfAIAssistView` control allows you to control the number of attachments using the [MaxAttachmentCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_MaxAttachmentCount) property. This feature allows us to restrict the number of attachments that can be added to the `Attachments`. The default value is 10.

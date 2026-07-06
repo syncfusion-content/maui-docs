@@ -13,8 +13,6 @@ The The Syncfusion<sup>&reg;</sup> [.NET MAUI AI AssistView](https://www.syncfus
 
 AI AssistView allows developers to customize both the appearance and functionality of the control, making it adaptable to various design and application requirements. It streamlines the creation of intelligent and responsive applications by leveraging AI to enhance the overall user experience.
 
-![Syncfusion .NET MAUI AI assistview overview ](Images/overview/aiassistview.png)
-
 ## Business use cases
 
 - AI writing assistants for generating and refining content.  

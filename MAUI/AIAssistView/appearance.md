@@ -207,8 +207,6 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI AI AssistView EmptyView customization](Images/maui-aiassistview-emptyview-customization.png)
-
 N>
 * `EmptyView` and `EmptyViewTemplate` are displayed only when using `CustomAssistView`.
 * By default, `SfAIAssistView` shows its built-in temporary banner view when no messages are available.
