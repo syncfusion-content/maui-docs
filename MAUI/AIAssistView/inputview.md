@@ -69,16 +69,17 @@ The `SfAIAssistView` control allows you to fully customize the editor's appearan
 The `SfAIAssistView` control allows for expanding the editor view based on its `MaximumHeightRequest` property. To enable editor expansion, set the `AllowEditorExpansion` property to `true`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml hl_lines="2 3" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AllowEditorExpansion="True">
         <syncfusion:SfAIAssistView.RequestEditor>
             <syncfusion:RequestEditorView MaximumHeightRequest="300"/>
         </syncfusion:SfAIAssistView.RequestEditor>
     </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
-{% highlight c# hl_lines="3" %}
+{% highlight c# hl_lines="2 3" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     sfAIAssistView.RequestEditor.MaximumHeightRequest = 300;
@@ -227,7 +228,7 @@ Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIA
 - [CommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_CommandParameter): Passes a parameter to the command when executed.
 
 {% tabs %}
-{% highlight xaml hl_lines="4 5 6 7" %}
+{% highlight xaml hl_lines="3 4 5 6" %}
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
                                ShowActionButtons="True"> 

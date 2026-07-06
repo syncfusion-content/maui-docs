@@ -70,7 +70,7 @@ To populate the Suggestions, bind the item collection from its BindingContext to
                                Suggestions="{Binding Suggestions}"
                                ShowHeader="True"/>
 
-{% endhighlight %} 
+{% endhighlight %}
 {% highlight c# hl_lines="2" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
@@ -175,7 +175,7 @@ Suggestions are displayed by creating an instance of [AssistSuggestion](https://
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="28" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="27" %}
 
     public class SuggestionsViewModel : INotifyPropertyChanged
     {
@@ -331,7 +331,7 @@ The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-### Response item suggestion header
+### Response item suggestion header message
 
 The `SfAIAssistView` control allows you to define the header text for each response suggestion by setting a custom text to the [AssistItem.SuggestionHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_SuggestionHeaderText) property, ensuring clear identification and context for each suggestion group displayed to users.
 

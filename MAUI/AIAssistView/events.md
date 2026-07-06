@@ -651,3 +651,27 @@ public class AIAssistViewModel : INotifyPropertyChanged
 
 {% endhighlight %}
 {% endtabs %}
+
+## ContextMenuOpening Event
+
+The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ContextMenuOpening) event is triggered before the context menu is displayed. The [ContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) provide the following details:
+
+- [ContextMenuItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html#Syncfusion_Maui_AIAssistView_ContextMenuOpeningEventArgs_ContextMenuItems) : Represents the collection of menu items that will be displayed. You can modify this list (add or remove items) dynamically before the menu appears.
+- `Cancel` : Indicates whether the context menu opening should be canceled. Set this property to true to prevent the menu from being shown.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ContextMenuOpening="OnContextMenuOpening">
+</syncfusion:SfAIAssistView>
+{% endhighlight %}
+{% highlight c# %}
+
+private void OnContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
+{
+   // Allows customizing or canceling the context menu before it is displayed
+}
+
+{% endhighlight %}
+{% endtabs %}

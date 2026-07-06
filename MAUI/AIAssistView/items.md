@@ -89,13 +89,10 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="5" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
-
-        ...
-
         private void GenerateAssistItems()
         {
             AssistItem requestItem = new AssistItem()
@@ -134,12 +131,10 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
 The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html) is used to send a [URL](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html#Syncfusion_Maui_AIAssistView_AssistHyperlinkItem_Url) as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
-
         private void GenerateAssistItems()
         {
             AssistItem requestItem = new AssistItem()
@@ -178,12 +173,10 @@ The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
 The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html) is used to display an image as a item. Using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Source), [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Size), and [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Aspect) properties, you can display the desired image in the desired height and width as a item in the AI AssistView control.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
-
         private void GenerateAssistItems()
         {
             AssistItem requestItem = new AssistItem()
@@ -217,79 +210,15 @@ The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 {% endhighlight %}
 {% endtabs %}
 
-## ImageTapped Event and Command
-
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control includes a built-in event called [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTapped) and a command named [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTappedCommand). These are triggered when an image is tapped. The tapped image item is accessible through the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html). The `ImageTappedEventArgs` has the following member:
-
- * [ImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ImageTappedEventArgs_ImageItem) : Refers to the tapped image item.
-
-### ImageTapped Event
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ImageTapped="sfAIAssistView_ImageTapped" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-
-    sfAIAssistView.ImageTapped += SfAIAssistView_ImageTapped;
-
-    private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
-    {  
-        DisplayAlert("Image", " Tapped on image :" + e.ImageItem.Source, "Ok");
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-### ImageTapped Command
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               ImageTappedCommand="{Binding TappedCommand}" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
-
-    public class ViewModel : INotifyPropertyChanged
-    {
-        public Command<object> tappedCommand;
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(ImageTapped);
-        }
-    
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void ImageTapped(object obj)
-        {
-            var ImageTappedArgs = obj as ImageTappedEventArgs;
-            DisplayAlert("Image", " Tapped on Image item :" + ImageTappedArgs.ImageItem.Source, "Ok");                  
-        }       
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Card item
 
 In AI AssistView, to display a list of interactive cards, each card can contain an image, a list of buttons, and text (title, subtitle, and description) that align with the design used in popular bot frameworks. The [Card.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Image), [Card.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Title), [Card.Subtitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Subtitle), and [Card.Description](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Description) properties are used to define and display the image, title, subtitle, and description within each card.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="57" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="56" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
-
         public ViewModel()
         {
             this.assistItems = new ObservableCollection<IAssistItem>();
@@ -353,72 +282,6 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 {% endhighlight %}
 {% endtabs %}
 
-## CardTapped Event and Command
-
-The `SfAIAssistView` control includes a built-in event called [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTapped) and a command named [CardTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTappedCommand). These are triggered when a card is tapped. The tapped card item is accessible through the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html). The `CardTappedEventArgs` has the following members:
-
- * [Card](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Card) : Represents the selected card from the card collection.
- * [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Action) : Holds the information about the selected action when a user taps a button on a card.
- * [CardItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_CardItem) : Refers to the current assist view card item.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Handled) : Indicates whether the event is handled or not.
-
-### CardTapped Event
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               CardTapped="sfAIAssistView_CardTapped" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-
-    sfAIAssistView.CardTapped += SfAIAssistView_CardTapped;
-
-    private void SfAIAssistView_CardTapped(object sender, CardTappedEventArgs e)
-    {  
-        DisplayAlert("Card", " Tapped on card :" + e.Card.Title, "Ok");                  
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-### CardTapped Command
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               CardTappedCommand="{Binding TappedCommand}" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
-
-    public class ViewModel : INotifyPropertyChanged
-    {
-        public Command<object> tappedCommand;
-
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(CardTapped);
-        }
-    
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void CardTapped(object obj)
-        {
-            var CardTappedArgs = obj as CardTappedEventArgs;
-            DisplayAlert("Card", " Tapped on Card item :" + CardTappedArgs.Card.Title, "Ok");                  
-        }    
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Attachment item
 
 The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachmentItem.html) is used to display the preview for a file or an image as a item. Using the [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property, you can display the desired attachments as item in the AI AssistView control.
@@ -468,7 +331,7 @@ The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.A
 The `SfAIAssistView` allows to display error responses by setting the error text to the [AssistItem.ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItem.html#Syncfusion_Maui_AIAssistView_IAssistItem_ErrorMessage) property, ensuring clear notification when an error occurs during AI interactions.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="34" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="33" %}
 
     public class ViewModel : INotifyPropertyChanged
     {

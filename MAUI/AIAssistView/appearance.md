@@ -239,7 +239,7 @@ Create a custom class that inherits from [RequestItemTemplateSelector](https://h
 #### Applying the request template selector
 
 {% tabs %}
-{% highlight xaml hl_lines="12" %}
+{% highlight xaml hl_lines="6" %}
 
     <ContentPage.Resources>
         <local:CustomRequestTemplateSelector x:Key="requestSelector"/>
@@ -249,7 +249,7 @@ Create a custom class that inherits from [RequestItemTemplateSelector](https://h
                                RequestItemTemplate="{StaticResource requestSelector}"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="2" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     sfAIAssistView.RequestItemTemplate = new CustomRequestTemplateSelector();
@@ -393,19 +393,18 @@ Create a custom class that inherits from [ResponseItemTemplateSelector](https://
 #### Applying the response template selector
 
 {% tabs %}
-{% highlight xaml hl_lines="12" %}
+{% highlight xaml hl_lines="7" %}
 
     <ContentPage.Resources>
         <local:CustomResponseTemplateSelector x:Key="responseSelector"/>
     </ContentPage.Resources>
-
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                    AssistItems="{Binding AssistItems}"
                                    ResponseItemTemplate="{StaticResource responseSelector}"/>
   
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="2" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     sfAIAssistView.ResponseItemTemplate = new CustomResponseTemplateSelector();
@@ -671,13 +670,13 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 By default, a processing indicator is displayed when a request is added to indicate that the response is being generated. To disable it, set the [ShowResponseLoader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowResponseLoader) property to `false`
 
 {% tabs %}
-{% highlight xaml hl_lines="7" %}
+{% highlight xaml hl_lines="2" %}
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                ShowResponseLoader="False"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="4" %}
+{% highlight c# hl_lines="2" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     sfAIAssistView.ShowResponseLoader = false;
@@ -697,7 +696,7 @@ By default, text selection is disabled. To enable it, set the [AllowTextSelectio
                                AllowTextSelection="True"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="4" %}
+{% highlight c# hl_lines="2" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     sfAIAssistView.AllowTextSelection = true;
@@ -706,7 +705,6 @@ By default, text selection is disabled. To enable it, set the [AllowTextSelectio
 {% endtabs %}
 
 ![Syncfusion .NET MAUI SfAIAssistView text selection in request and response messages](Images/appearance/maui-aiassistview-textselection.gif)
-
 
 ## Request Context menu
 
@@ -718,7 +716,7 @@ The `SfAIAssistView` control supports customizable Request context menu for both
 
 Assist context menu items are represented by [AssistContextMenuItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html) (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html#Syncfusion_Maui_AIAssistView_AssistContextMenuItem_AssistItem) property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
 
-- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). 
+- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property).
 - The context menu is shown when the More Options icon is tapped for an item. The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) event is raised before the popup appears so you can modify or cancel it.
 
 {% tabs %}
@@ -750,6 +748,7 @@ Assist context menu items are represented by [AssistContextMenuItem](https://hel
 {% endtabs %}
 
 ## Customizing the context menu item template
+
 The [RequestContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuItemTemplate) property allows you to customize the appearance and interaction of individual context menu items. You can define a custom layout, bind UI elements such as icons and text, and pass the associated `AssistItem` as a CommandParameter for handling item-specific actions.
 
 {% tabs %}
@@ -800,7 +799,7 @@ The `SfAIAssistView` control supports customizable Response context menu for bot
 
 Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html#Syncfusion_Maui_AIAssistView_AssistContextMenuItem_AssistItem) property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
 
-- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). 
+- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property).
 - The context menu is shown when the More Options icon is tapped for an item. The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) event is raised before the popup appears so you can modify or cancel it.
 
 {% tabs %}
@@ -838,30 +837,6 @@ Assist context menu items are represented by `AssistContextMenuItem` (inherits f
 {% endtabs %}
 
 N> The customization of [ResponseContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate) and [ResponseContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate) follows the same approach as the `RequestContextMenu` templates. Refer to the Request Context Menu template customization section for implementation details, as described there.
-
-## ContextMenuOpening Event
-
-The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ContextMenuOpening) event is triggered before the context menu is displayed. The [ContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) provide the following details:
-
-- [ContextMenuItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html#Syncfusion_Maui_AIAssistView_ContextMenuOpeningEventArgs_ContextMenuItems) : Represents the collection of menu items that will be displayed. You can modify this list (add or remove items) dynamically before the menu appears.
-- `Cancel` : Indicates whether the context menu opening should be canceled. Set this property to true to prevent the menu from being shown.
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
-
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           ContextMenuOpening="OnContextMenuOpening">
-</syncfusion:SfAIAssistView>
-{% endhighlight %}
-{% highlight c# %}
-
-private void OnContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
-{
-   // Allows customizing or canceling the context menu before it is displayed
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Enable time break in view
 
@@ -961,7 +936,7 @@ private void assistView_ToastOpening(object sender, Syncfusion.Maui.AIAssistView
 {% endhighlight %}
 {% endtabs %}
 
-## Disclaimer text
+## Display a disclaimer message
 
 The `SfAIAssistView` control supports displaying a note or suggestion text below the editor. To display this text, assign a value to the `DisclaimerText` property.
 

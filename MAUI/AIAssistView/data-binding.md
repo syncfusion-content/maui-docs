@@ -35,7 +35,6 @@ Additionally, use the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusi
 
     public class ViewModel : INotifyPropertyChanged
     {
-        . . .
 
         public ObservableCollection<IAssistItem> AssistItems
         {
@@ -84,7 +83,6 @@ Additionally, use the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusi
                 this.AssistItems.Add(responseItem);
             }
         }
-        ...
     }
 
 {% endhighlight %}
@@ -114,7 +112,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
                                ItemsSourceConverter="{StaticResource converter}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="11 12" %}
+{% highlight c# hl_lines="4 5" %}
 
     SfAIAssistView assistView = new SfAIAssistView();
     ViewModel viewModel = new ViewModel();

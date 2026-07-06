@@ -21,7 +21,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2,3,4" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
     <syncfusion:SfAIAssistView ShowToolbar="True" 
                                 ToolbarTitle="AI AssistView" 
@@ -29,7 +29,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
     </syncfusion:SfAIAssistView>
 {% endhighlight %}
 
-{% highlight c# hl_lines="2,3,4" %}
+{% highlight c# %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     sfAIAssistView.ToolbarTitle = "AI AssistView";
@@ -43,7 +43,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 ## Toolbar menu items
 
-In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model. 
+In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model.
 
 {% highlight xaml %}
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView">

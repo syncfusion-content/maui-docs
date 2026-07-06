@@ -123,7 +123,7 @@ The `SfAIAssistView` control allows you to control the number of attachments usi
 The `SfAIAssistView` control allows you to customize the preview for the attachments by using the [AttachmentItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentItemTemplate) property. This property lets you define a custom layout for the attachment preview UI.
 
 {% tabs %}
-{% highlight xaml hl_lines="13" %}
+{% highlight xaml hl_lines="40" %}
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -162,13 +162,12 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
         </ResourceDictionary>
     </ContentPage.Resources>
 
-   
     <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
                                Attachments = "{Binding Attachments}"
                                AttachmentItemTemplate = "{StaticResource attachmentItemTemplate}"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="11" %}
+{% highlight c# hl_lines="3" %}
 
     SfAIAssistView sfAIAssistView = new SfAIAssistView();
     SfAIAssistView.Attachments = viewModel.Attachments;
