@@ -12,7 +12,7 @@ documentation: ug
 
 This section guides you through setting up and configuring a **Rich Text Editor** in your .NET MAUI application. Follow the steps below to add a basic Rich Text Editor to your project.
 
-To get start quickly with our [.NET MAUI Rich Text Editor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html), you can check the below video.
+To get started quickly with our [.NET MAUI Rich Text Editor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html), you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=1r8OrZxG_HI" %}
 
@@ -31,7 +31,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion® MAUI RichTextEditor NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI RichTextEditor NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Maui.RichTextEditor) and install the latest version.
@@ -55,7 +55,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion® MAUI RichTextEditor NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI RichTextEditor NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -75,7 +75,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution,** select **.NET (C#)** and choose the **.NET MAUI App** template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
@@ -83,14 +83,15 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Maui.RichTextEditor) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion handler
+## Step 3: Register the Syncfusion Handler
 
-Make sure to add the namespace.
+Open the `MauiProgram.cs` file in your project. Add the following
+using directive at the top of the file:
 
 {% tabs %}
 {% highlight c# %}
@@ -106,7 +107,7 @@ builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Import RichTextEditor namespace
+## Step 4: Import the RichTextEditor Namespace
 
 Add the following namespace in your XAML or C#.
 
@@ -123,9 +124,10 @@ using Syncfusion.Maui.RichTextEditor;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the RichTextEditor component
+## Step 5: Add the RichTextEditor Component
 
-The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides a comprehensive toolbar that allows users to format their content easily. You can enable it by setting the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ShowToolbar) property to `True`.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides a comprehensive toolbar that allows users to format their content easily. The toolbar is enabled by default — the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ShowToolbar)
+property defaults to `true`.
 
 {% tabs %}
 
