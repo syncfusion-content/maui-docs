@@ -665,41 +665,114 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
- 
-## Action buttons in the editor
 
-The `SfAIAssistView` can display a quick action icon inside the editor. To enable the action button, set the [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowActionButtons) property to `true`.
+## Built‑in Action Button (Attachment Support)
+The `SfAIAssistView` control provides built‑in support for quick action buttons inside the editor.
+By default, [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowActionButtons) is `true` and the attachment (plus +) icon is shown. This built‑in behavior allows users to quickly perform actions such as attaching files without any additional configuration.
 
-{% tabs %} 
-{% highlight xaml hl_lines="2" %} 
+### `ActionButtonType`
+The `ActionButtonType` enum controls the editor quick‑action behavior and accepts the following values:
 
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
-                           ShowActionButtons="True" />
+- `ActionButton` — show the standard action icon and open the configured `ActionButtons` popup.
+- `AttachmentButton` — show the built‑in attachment icon and enable the built‑in attach workflow (default).
 
+When `ActionButtonType` is `AttachmentButton`, tapping the attachment icon opens a context menu popup. By default that popup contains an `Attach files` option which launches the system file picker (`Microsoft.Maui.Storage.FilePicker`).
+
+### Attachment workflow
+
+- Tap the attachment (+) icon to open the context menu.
+- Select `Attach files` (default) to open the platform file picker.
+- Convert selected files into `AssistAttachment` instances and add them to the `Attachments` collection.
+
+### Attachment behavior customization
+
+Use these properties to control picker behavior:
+
+- `PreventDuplicateAttachments` (bool) — when `true`, files already present in `Attachments` will not be added again. Default: `false`.
+- `AllowMultiplePick` (bool) — when `true`, the file picker allows multiple selection (uses `PickMultipleAsync()`); otherwise a single pick is used. Default: `true`.
+
+Developers can also customize the context menu by setting the `ActionButtons` collection. Adding, removing, or replacing items in `ActionButtons` lets you extend or replace the default `Attach files` action.
+
+{% tabs %}
+{% highlight xaml hl_lines="2 3 4 5" %}
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowActionButtons="True"
+                           ActionButtonType="AttachmentButton"
+                           PreventDuplicateAttachments="True"
+                           AllowMultiplePick="True" />
 {% endhighlight %}
 
-{% highlight c# hl_lines="10" %} 
-
+{% highlight c# hl_lines="10 11 12 13" %}
 using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage 
-{ 
+public partial class MainPage : ContentPage
+{
     SfAIAssistView sfAIAssistView;
     public MainPage()
     {
         InitializeComponent();
         this.sfAIAssistView = new SfAIAssistView();
         this.sfAIAssistView.ShowActionButtons = true;
+        this.sfAIAssistView.ActionButtonType = ActionButtonType.AttachmentButton;
+        this.sfAIAssistView.PreventDuplicateAttachments = true;
+        this.sfAIAssistView.AllowMultiplePick = true;
         this.Content = sfAIAssistView;
     }
-} 
-
-{% endhighlight %} 
+}
+{% endhighlight %}
 {% endtabs %}
 
-### Displaying action buttons
+![Attachment button in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-attachmentButton.gif)
 
-Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtons) collection with one or more [ActionButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html) items to populate the popup. The `ActionButton` provides the properties. When the `ActionButton` icon is tapped, an action popup appears with the list of configured `ActionButton`.
+### Enabling File Picker Support on iOS and macOS
+
+When ActionButtonType is set to AttachmentButton, tapping the Attach files option launches the platform file picker. To ensure the file picker opens correctly on iOS and macOS, the following platform-specific permissions and entitlements must be configured.
+
+#### iOS
+
+Add the following keys to the Info.plist file:
+
+{% tabs %}
+{% highlight xml %}
+
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>App requires access to save photos to the library.</string>
+<key>NSDocumentsFolderUsageDescription</key>
+<string>This app needs access to documents</string>
+
+{% endhighlight %}
+{% endtabs %}
+    
+#### macOS
+
+Add the following entitlements to the Entitlements.plist file:
+
+{% tabs %}
+{% highlight xml %}
+
+<key>com.apple.security.assets.pictures.read-write</key>
+<true/>
+<key>com.apple.security.files.downloads.read-write</key>
+<true/>
+<key>com.apple.security.files.user-selected.read-write</key>
+<true/>
+
+{% endhighlight %}
+{% endtabs %}
+
+ Without these configurations, the system file picker may not open when users select the Attach files option in the built-in attachment workflow on iOS and macOS.
+
+### Displaying and customizing action buttons
+
+Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtons) collection with one or more [ActionButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html) items to populate the popup. When `ActionButtonType` is `ActionButton`, the quick‑action icon opens the `ActionButtons` popup. When `ActionButtonType` is `AttachmentButton`, the attachment icon is shown and the default `Attach files` item will be available unless you replace it via the `ActionButtons` collection.
+
+This lets you:
+
+- Replace the default `Attach files` option.
+- Add contextual actions (for example, AI tools, formatting, or search).
+- Provide a fully customized user experience.
+
+`ActionButton` items support the following members:
 
 - [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_Text): Displays the text for the action button.
 - [Icon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_Icon): Displays an icon for the action button.
@@ -711,6 +784,7 @@ Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIA
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
                            ShowActionButtons="True"
+                           ActionButtonType="ActionButton"
                            AssistItems="{Binding AssistItems}"> 
     <syncfusion:SfAIAssistView.ActionButtons> 
         <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Upload images" Icon="image.png" Command="{Binding UploadCommand}" /> 
@@ -735,6 +809,7 @@ public partial class MainPage : ContentPage
         this.BindingContext = this.viewModel;
         this.sfAIAssistView = new SfAIAssistView();
         this.sfAIAssistView.ShowActionButtons = true,
+        this.sfAIAssistView.ActionButtonType = ActionButtonType.ActionButton,
         this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
         this.sfAIAssistView.ActionButtons = new ObservableCollection<ActionButton>
         {
