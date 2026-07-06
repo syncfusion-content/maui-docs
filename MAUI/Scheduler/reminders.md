@@ -424,5 +424,5 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% endtabs %}
 
 N>
-* [View scheduler appointment reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/SchedulerReminder)
-* [View business object reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/BusinessObject)
+* [View scheduler appointment reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/SchedulerReminders)
+* [View business object reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/CustomReminder)
