@@ -106,7 +106,7 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
 }
 {% endhighlight %}
 
-**Note:** Frozen columns can be reordered among themselves, and non-frozen columns can be reordered among themselves, but dragging between the two regions is prevented by the code above.
+> **Note:** Frozen columns can be reordered among themselves, and non-frozen columns can be reordered among themselves, but dragging between the two regions is prevented by the code above.
 
 ## Customize the appearance
 
@@ -187,16 +187,4 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
     // Disable scroll while dragging the columns.   
     e.CanAutoScroll = false;
 }
-{% endhighlight %}
-
-## Event cleanup
-
-To prevent memory leaks, always unsubscribe from the `QueryColumnDragging` event when the page or view is destroyed:
-
-{% highlight c# %}
-// Subscribe to the event
-dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
-
-// Unsubscribe in your page's cleanup or disposal
-dataGrid.QueryColumnDragging -= SfDataGrid_QueryColumnDragging;
 {% endhighlight %}

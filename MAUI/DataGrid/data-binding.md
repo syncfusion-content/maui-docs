@@ -361,9 +361,7 @@ dataGrid.CanMaintainScrollPosition = true;
 
 The `SetCellValue` method allows you to programmatically update a cell value at runtime.
 
-**Note:**
-- For features like Sorting, Grouping, or Filtering to update automatically after a value change, set `LiveDataUpdateMode="AllowDataShaping"` on the grid's View.
-- Ensure the cell's row and column exist in the grid.
+> **Note:** For features like Sorting, Grouping, or Filtering to update automatically after a value change, set `LiveDataUpdateMode="AllowDataShaping"` on the grid's View. Ensure the cell's row and column exist in the grid.
 
 ### Limitations
 - Caption rows, summary rows, unbound rows, and unbound columns cannot be updated by `SetCellValue`.
@@ -440,4 +438,4 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** Looking for the full .NET MAUI DataGrid component overview, features, pricing, and documentation? Visit the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) page.
+> **Note:** Looking for the full .NET MAUI DataGrid component overview, features, pricing, and documentation? Visit the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) page.

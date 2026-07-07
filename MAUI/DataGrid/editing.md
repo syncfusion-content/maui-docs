@@ -65,7 +65,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** The `DataGridColumn.AllowEditing` property takes priority over `SfDataGrid.AllowEditing`.
+> **Note:** The `DataGridColumn.AllowEditing` property takes priority over `SfDataGrid.AllowEditing`.
 
 ## Entering into edit mode
 
@@ -94,7 +94,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** On iOS and Android, the keyboard will collapse when the editing grid cell loses focus.
+> **Note:** On iOS and Android, the keyboard will collapse when the editing grid cell loses focus.
 
 ## Lost focus behavior
 
@@ -120,7 +120,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** The `LostFocusBehavior` property applies only to `DataGridNumericColumn` and `DataGridTextColumn`. Other column types require explicit end-edit calls.
+> **Note:** The `LostFocusBehavior` property applies only to `DataGridNumericColumn` and `DataGridTextColumn`. Other column types require explicit end-edit calls.
 
 ## Support for IEditableObject
 
@@ -274,7 +274,7 @@ public class OrderInfo : INotifyPropertyChanged, IEditableObject
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** The `IEditableObject` implementation above works with simple properties. For nullable types or complex nested objects, ensure your `BackUp()` and `CancelEdit()` methods properly handle null values and deep copying when necessary.
+> **Note:** The `IEditableObject` implementation above works with simple properties. For nullable types or complex nested objects, ensure your `BackUp()` and `CancelEdit()` methods properly handle null values and deep copying when necessary.
 
 ## Editing events
 
@@ -438,7 +438,7 @@ The SfDataGrid allows you to undo or redo edits by setting the [SfDataGrid.Allow
  * **Windows/Mac Catalyst:** `Ctrl + Z` (Undo), `Ctrl + Y` (Redo)
  * **iOS/Mac Catalyst:** `Cmd + Z` (Undo), `Cmd + Y` (Redo)
 
-**Note:** Undo/Redo is supported on desktop platforms (Windows, Mac Catalyst). Mobile platform support may vary.
+> **Note:** Undo/Redo is supported on desktop platforms (Windows, Mac Catalyst). Mobile platform support may vary.
 
 Refer to the following example to enable undo and redo actions:
 

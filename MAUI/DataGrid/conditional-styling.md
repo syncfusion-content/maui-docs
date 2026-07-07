@@ -56,7 +56,7 @@ public class ColorConverter : IValueConverter
 
     object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -104,7 +104,7 @@ public class ColorConverter : IValueConverter
 
     object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -154,7 +154,7 @@ public class ColorConverter : IValueConverter
 
     object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -206,7 +206,7 @@ public class ColorConverter : IValueConverter
 
     object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -320,7 +320,7 @@ public class ColorConverter : IValueConverter
 
     object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -379,7 +379,7 @@ public class ColorConverter : IValueConverter
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -415,7 +415,7 @@ public class ForeColorConverter : IValueConverter
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 
@@ -469,7 +469,7 @@ public class ColorConverter : IValueConverter
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -498,7 +498,7 @@ public class ForeColorConverter : IValueConverter
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -548,7 +548,7 @@ public class BorderColorConverter : IValueConverter
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -598,7 +598,7 @@ public class ColorConverter : IValueConverter
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -625,7 +625,7 @@ public class ForeColorConverter : IValueConverter
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
