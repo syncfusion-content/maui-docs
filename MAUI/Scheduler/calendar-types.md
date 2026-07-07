@@ -43,14 +43,14 @@ The Scheduler control supports different types of calendars such as Gregorian, K
 </table>
 
 N>
-* The FlowDirection will be updated based on the CalendarType. If you want to override this behavior, set the FlowDirection after CalendarTypeIf calendar is specified other than the Gregorian. All the DateTime values such as Appointment Start and End time, SpecialTimeRegion Start and End time, SelectableDayPredicate, SelectedDate, and DisplayDate can be given in two ways.
+* The FlowDirection will be updated based on the CalendarType. If you want to override this behavior, set the FlowDirection after the CalendarType if a calendar is specified other than the Gregorian. All the DateTime values such as Appointment Start and End time, SpecialTimeRegion Start and End time, SelectableDayPredicate, SelectedDate, and DisplayDate can be given in two ways.
 * The DateTime instance without specifying calendar type. The scheduler will handle the DateTime value for the specified calendar type.
 * When a DateTime instance has a calendar type, the Scheduler handles it directly.
 * All calendar types are supported except the Lunar type calendars.
 
 {% tabs %}
 {% highlight XAML hl_lines="1" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
+<scheduler:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
@@ -65,8 +65,8 @@ this.Content = scheduler;
 
 ![calendar-type-in-maui-scheduler](images/calendar-type/calendartype-in-maui-scheduler.png)
 
-### DateTime values in Calendar Types
-All the DateTime values can be given such as [DisplayDate](), [SelectedDate](), [BlackoutDates](), Appointment [StartTime]() and [EndTime](), and SpecialTimeRegion [StartTime]() and [EndTime]() values in two ways when the calendar identifier is specified other than the [GregorianCalendar]().
+### DateTime values in Calendar types
+All the DateTime values can be given, such as [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate), [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedDate), [BlackoutDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_BlackoutDates), Appointment [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Scheduler/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), and SpecialTimeRegion [StartTime]() and [EndTime]() values, in two ways when the calendar identifier is specified other than the [GregorianCalendar]().
 
 * Create an appointment with a start and end time value by declaring the calendar type and respective calendar type date.
 

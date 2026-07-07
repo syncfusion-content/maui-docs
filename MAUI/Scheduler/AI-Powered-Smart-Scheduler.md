@@ -96,7 +96,6 @@ In this service, define a method called `GetResultsFromAI`. This method takes a 
             return string.Empty;
         }
     }
-}
 
 {% endhighlight %}
 
@@ -147,6 +146,7 @@ Within the base service class (AzureBaseService), initialize the OpenAIClient wi
      public AzureBaseService()
      {
          ValidateCredential();
+         GetAzureOpenAI();
      }
 
     internal IChatClient? Client { get; set; }
@@ -346,7 +346,7 @@ The core logic for finding available slots is inside the `GetRecommendation` met
 {% highlight c# %}
 
 ///<summary>
-/// Method to contain AI response and updates.
+/// Method to handle the AI response and apply updates.
 ///</summary>
 ///<param name="userInput">The user input</param>
 ///<returns></returns>
@@ -387,7 +387,7 @@ var jsonObj = JObject.Parse(returnMessage);
 
 var doctorAppointments = new Dictionary<string, (List<DateTime> StartTimes, List<DateTime> EndTimes, List<string> Subjects, List<string> Locations, List<string> ResourceIds)>
 {
-    { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string<()) },
+    { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) },
     { "Doctor2", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) }
 };
 
@@ -437,7 +437,7 @@ The parsed results are then shown to the user in natural text format via AssistV
 
 ///<summary>
 /// Method to generate the final time slots.
-///<summary>
+///</summary>
 ///<param name="userInput">The user input</param>
 ///<returns></returns>
 private string GenerateFinalTimeSlots(string userInput)
