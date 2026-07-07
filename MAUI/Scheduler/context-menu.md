@@ -77,7 +77,7 @@ scheduler.CellContextMenu = new MenuItemCollection()
 
 ## Context Menu for Appointments
 
-The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentContextMenu)property of the Scheduler enables users to define a set of context menu items that appear when the user performs a right tap or long press on an appointment.
+The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentContextMenu) property of the Scheduler enables users to define a set of context menu items that appear when the user performs a right tap or long press on an appointment.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27" %}
