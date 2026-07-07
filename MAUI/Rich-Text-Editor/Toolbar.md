@@ -130,6 +130,7 @@ xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Sync
 {% endhighlight %}
 {% highlight c# %}
 using Syncfusion.Maui.RichTextEditor;
+using Microsoft.Maui.Graphics;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
 richTextEditor.ShowToolbar = true;
