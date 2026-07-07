@@ -43,7 +43,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 ## Toolbar menu items
 
-In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model.
+In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the [ToolbarMenuOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToolbarMenuOptions) collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model.
 
 {% highlight xaml %}
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView">

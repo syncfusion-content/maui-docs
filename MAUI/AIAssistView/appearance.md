@@ -979,7 +979,7 @@ N> The customization of [ResponseContextMenuItemTemplate](https://help.syncfusio
 
 ## Enable time break in view
 
-The `SfAIAssistView` control allows for organizing the `AssistItems` by their creation date and time, enabling users to identify request and responses chronologically. Set the `ShowTimeBreak` property to `true` to display the time break view.
+The `SfAIAssistView` control allows for organizing the `AssistItems` by their creation date and time, enabling users to identify request and responses chronologically. Set the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowTimeBreak) property to `true` to display the time break view.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -1000,7 +1000,7 @@ The `SfAIAssistView` control allows for organizing the `AssistItems` by their cr
 
 ### Time break customization
 
-The `SfAIAssistView` control allows you to fully customize the time break appearance using the `TimeBreakTemplate` property. This property lets you define a custom layout and style for the time break UI.
+The `SfAIAssistView` control allows you to fully customize the time break appearance using the [TimeBreakTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_TimeBreakTemplate) property. This property lets you define a custom layout and style for the time break UI.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}
@@ -1045,16 +1045,16 @@ The `SfAIAssistView` control supports displaying toast notifications. These noti
 
 The `SfAIAssistView` supports the following types of toast notifications:
 
-* `None` : Displays the default toast notification.
-* `Success` : Indicates that an operation has been completed successfully.
-* `Warning` : Highlights a cautionary message or a potential issue that requires user attention.
-* `Error` : Notifies the user of a failure or an issue that has occurred during execution.
+* [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastType.html#Syncfusion_Maui_AIAssistView_ToastType_Default) : Displays the default toast notification.
+* [Success](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastType.html#Syncfusion_Maui_AIAssistView_ToastType_Success) : Indicates that an operation has been completed successfully.
+* [Warning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastType.html#Syncfusion_Maui_AIAssistView_ToastType_Warning) : Highlights a cautionary message or a potential issue that requires user attention.
+* [Error](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastType.html#Syncfusion_Maui_AIAssistView_ToastType_Error) : Notifies the user of a failure or an issue that has occurred during execution.
 
 ![Syncfusion .NET MAUI AI AssistView Toast Notification](Images/appearance/maui-aiassistview-toast-notification.png)
 
 ### Restrict toast notification in view
 
-By default, toast notifications appear in the view. To prevent them from showing, use the `ToastOpening` event.
+By default, toast notifications appear in the view. To prevent them from showing, use the [ToastOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToastOpening) event.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -1077,7 +1077,7 @@ private void assistView_ToastOpening(object sender, Syncfusion.Maui.AIAssistView
 
 ## Display a disclaimer message
 
-The `SfAIAssistView` control supports displaying a note or suggestion text below the editor. To display this text, assign a value to the `DisclaimerText` property.
+The `SfAIAssistView` control supports displaying a note or suggestion text below the editor. To display this text, assign a value to the [DisclaimerText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_DisclaimerText) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}

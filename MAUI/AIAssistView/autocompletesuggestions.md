@@ -73,7 +73,7 @@ The [AutoSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 
 ### Grouped Suggestions View
 
-In `SfAIAssistView`, the `AssistSuggestion` class exposes a `Category` property that you can use to group autocomplete suggestions by topic. Set `Category` when creating suggestions (for example, "Recommended", "History", or "Recent") so the overlay can present related items together.
+In `SfAIAssistView`, the [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) class exposes a [Category](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html#Syncfusion_Maui_AIAssistView_AssistSuggestion_Category) property that you can use to group autocomplete suggestions by topic. Set `Category` when creating suggestions (for example, "Recommended", "History", or "Recent") so the overlay can present related items together.
 
 ### Grouping Suggestions by Category in ViewModel
 

@@ -121,7 +121,7 @@ To populate the conversation items, bind the item collection from its BindingCon
 
 ![Syncfusion .NET MAUI AI AssistView History](Images/history/maui-aiassistview-conversation-history.gif)
 
-### Customizing conversation header text in SfAIAssistView 
+### Customizing conversation header text in SfAIAssistView
 
 The `SfAIAssistView` control provides the [ConversationHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationHeaderText) API to set the header text for the conversation view. By default, this property is set to `string.Empty`.
 

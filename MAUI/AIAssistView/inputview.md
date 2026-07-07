@@ -66,7 +66,7 @@ The `SfAIAssistView` control allows you to fully customize the editor's appearan
 
 ## Editor expansion button in view
 
-The `SfAIAssistView` control allows for expanding the editor view based on its `MaximumHeightRequest` property. To enable editor expansion, set the `AllowEditorExpansion` property to `true`.
+The `SfAIAssistView` control allows for expanding the editor view based on its `MaximumHeightRequest` property. To enable editor expansion, set the [AllowEditorExpansion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AllowEditorExpansion) property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3" %}
@@ -133,7 +133,7 @@ By default, the StopResponding button is visible. To hide this button, set the  
 
 ### Customizing the StopResponding icon
 
-The `SfAIAssistView` control allows you to set a custom icon for the StopResponding button using the [StopRespondingIcon]() property.
+The `SfAIAssistView` control allows you to set a custom icon for the StopResponding button using the [StopRespondingIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingIcon) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
