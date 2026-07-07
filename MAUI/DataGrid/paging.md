@@ -29,7 +29,7 @@ The data grid performs data paging using the `SfDataPager`. To enable paging, fo
  * Set the `SfDataPager.PageSize` property to determine the number of rows to be displayed on each page.
  * Set the `SfDataPager.NumericButtonCount` property to specify the number of buttons that should be displayed in view."
 
-**Note:** The [SfDataPager.PageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageSize) property should not be assigned with value 0. Setting PageSize to 0 will throw an `ArgumentException`.
+> **Note:** The [SfDataPager.PageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageSize) property should not be assigned with value 0. Setting PageSize to 0 will throw an `ArgumentException`.
 
 The following code example illustrates using `SfDataPager` with the data grid control:
 
@@ -181,7 +181,7 @@ private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** In on-demand paging, you should not assign a value to the `Source` property. Instead, set the `PageCount` property to the total number of pages needed to display all data. This generates the required numeric buttons in the view. For example, if you have 1000 items and a page size of 15, set `PageCount` to 67.
+> **Note:** In on-demand paging, you should not assign a value to the `Source` property. Instead, set the `PageCount` property to the total number of pages needed to display all data. This generates the required numeric buttons in the view. For example, if you have 1000 items and a page size of 15, set `PageCount` to 67.
 
 When using `OnDemandPaging`, `SfDataPager.PagedSource` loads only the current page data. Upon navigation to another page, `OnDemandLoading` event is fired which loads another set of data, but maintains the previous page data in cache. When you navigate to the previous page again, `OnDemandLoading` event is not fired, and the cached data is loaded directly. 
 
@@ -307,7 +307,7 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** The size of the `SfDataPager` is automatically adjusted based on the available screen size if the view cannot accommodate the numeric buttons specified in the `NumericButtonCount` property.
+> **Note:** The size of the `SfDataPager` is automatically adjusted based on the available screen size if the view cannot accommodate the numeric buttons specified in the `NumericButtonCount` property.
 
 ## Customizing button size and font size of pager buttons
 

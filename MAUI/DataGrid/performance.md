@@ -39,7 +39,7 @@ The default value of this property is `true`. If you want to improve loading and
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
+> **Note:** Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
 
 ### Limitations
 
@@ -133,4 +133,4 @@ dataGrid.AllowAsyncScrolling = true;
 {% endhighlight %}
 {% endtabs %}
 
-**Note:**  Asynchronous scrolling is supported for all column types only on the Windows platform.
+> **Note:**  Asynchronous scrolling is supported for all column types only on the Windows platform.
