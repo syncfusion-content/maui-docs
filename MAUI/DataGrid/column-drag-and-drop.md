@@ -16,7 +16,7 @@ To quickly get started with column drag and drop in [.NET MAUI DataGrid](https:/
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/qwkDwCgo_jo'></iframe>
 
-To enable column drag and drop functionality, please follow the code example below:
+To enable column drag and drop functionality, use the following code example:
 
 {% tabs %}
 {% highlight xaml %}
@@ -40,133 +40,73 @@ The `QueryColumnDragging` event provides the following properties in the [DataGr
 
 - [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_From): Returns the index of the currently dragging column.
 - [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_To): Returns the index where you are trying to drop the column.
-- [DraggingAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_DraggingAction): Returns the column dragging details as a `DataGridDragAction`.
-- [DraggingPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_DraggingPosition): Returns the position of the drag view during column drag and drop operations.
+- [DraggingAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_DraggingAction): Returns the column dragging status as a [DataGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDragAction.html) enum value. Possible values are `DragStarted`, `Dragging`, and `DragEnded`.
+- [DraggingPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_DraggingPosition): Returns the position (as a `Point`) of the drag view relative to the SfDataGrid during column drag and drop operations.
 - [CanAutoScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_CanAutoScroll): Returns whether auto-scrolling should happen when the column drag view reaches the left or right ends of the `SfDataGrid`.
-- `Cancel`: Returns a boolean property to cancel the event.
+- `Cancel`: Set to `true` to cancel the current drag or drop action. When set during `DragStarted`, it prevents the column from being dragged. When set during `Dragging` or `DragEnded`, it prevents the column from being dropped at the target position.
 
-## Cancel dragging of a particular column
+## Control drag and drop behavior
 
-The dragging of a particular column can be canceled using the `DataGridDragAction` argument in the `QueryColumnDragging` event.
+Use the `QueryColumnDragging` event to restrict or modify column drag and drop operations. The following table shows common scenarios and how to implement them:
+
+| Scenario | Condition | Code Example |
+|----------|-----------|--------------|
+| **Prevent dragging a specific column** | Check `DragStarted` action and column index | `if (e.From == 1 && e.DraggingAction == DataGridDragAction.DragStarted) e.Cancel = true;` |
+| **Prevent dropping in a specific range** | Check `Dragging` or `DragEnded` and target index | `if ((e.To > 3 && e.To < 6) && (e.DraggingAction == DataGridDragAction.DragEnded)) e.Cancel = true;` |
+| **Prevent dropping of a specific column** | Check `DragEnded` action and source column | `if (e.From == 1 && e.DraggingAction == DataGridDragAction.DragEnded) e.Cancel = true;` |
+| **Prevent dropping at specific positions** | Check target index | `if ((e.To == 3 \|\| e.To == 5) && e.DraggingAction == DataGridDragAction.DragEnded) e.Cancel = true;` |
+| **Prevent dropping at specific coordinates** | Check `DraggingPosition` | `if (e.DraggingPosition == new Point(100, 100) && e.DraggingAction == DataGridDragAction.DragEnded) e.Cancel = true;` |
+
+The following code example demonstrates implementing drag and drop restrictions:
 
 {% highlight c# %}
 dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
 
 private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnDraggingEventArgs e)
 {
-    //e.From returns the index of the dragged column.
-    //e.DraggingAction returns the dragging status of the column.
-    if (e.From == 1 && e.DraggingAction == DataGridDragAction.DragStarted) 
+    // Prevent dragging the column at index 1
+    if (e.From == 1 && e.DraggingAction == DataGridDragAction.DragStarted)
     {
         e.Cancel = true;
     }
-} 
-{% endhighlight %}
-
-## Cancel dropping when dragging for a particular column
-
-The dropping of a particular column when dragging can be canceled using the `DataGridDragAction` argument in the `QueryColumnDragging` event.
-
-{% highlight c# %}
-dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
-
-private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnDraggingEventArgs e)
-{
-    //e.To returns the index of the current column.
-    //e.DraggingAction returns the dragging status of the column.
-    if ((e.To > 3 && e.To < 6) &&
-    (e.DraggingAction == DataGridDragAction.DragEnded || e.DraggingAction == DataGridDragAction.Dragging))
+    
+    // Prevent dropping in the range between indices 3 and 5
+    if ((e.To > 3 && e.To < 6) && e.DraggingAction == DataGridDragAction.DragEnded)
     {
         e.Cancel = true;
     }
 }
 {% endhighlight %}
 
-## Cancel dropping for a particular column
+## Restrict drag and drop between frozen and non-frozen columns
 
-The dropping of a particular column can be canceled using the `DataGridDragAction` argument in the `QueryColumnDragging` event.
+Frozen columns can be restricted from being dragged to non-frozen areas or vice versa. The following code example demonstrates how to prevent dragging and dropping between frozen and non-frozen column regions:
 
 {% highlight c# %}
+dataGrid.FrozenColumnCount = 2;  // First 2 columns are frozen
 dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
 
 private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnDraggingEventArgs e)
 {
-    //e.From returns the index of the dragged column.
-    //e.DraggingAction returns the dragging status of the column.
-    if (e.From == 1 && e.DraggingAction == DataGridDragAction.DragEnded)
+    int frozenCount = dataGrid.FrozenColumnCount;
+    
+    // Prevent dragging frozen columns out of the frozen region
+    if (e.From < frozenCount && e.To >= frozenCount && 
+        e.DraggingAction == DataGridDragAction.DragStarted)
+    {
         e.Cancel = true;
+    }
+    
+    // Prevent dragging non-frozen columns into the frozen region
+    if (e.From >= frozenCount && e.To < frozenCount && 
+        e.DraggingAction == DataGridDragAction.DragStarted)
+    {
+        e.Cancel = true;
+    }
 }
 {% endhighlight %}
 
-## Cancel dropping at a particular position
-
-The dropping at a particular position can be canceled using the `DataGridDragAction` argument in the `QueryColumnDragging` event.
-
-{% highlight c# %}
-dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
-
-private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnDraggingEventArgs e)
-{
-    //e.From returns the index of the dragged column.
-    //e.DraggingAction returns the dragging status of the column.
-    if ((e.To == 3 || e.To == 5) && e.DraggingAction == DataGridDragAction.DragEnded)
-        e.Cancel = true;
-}
-{% endhighlight %}
-
-## Cancel dropping of a particular column in a position
-
-The dropping of a particular column in a position can be canceled using the `DataGridDragAction` and `DraggingPosition` arguments of the `QueryColumnDragging` event.
-
-{% highlight c# %}
-dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
-
-private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnDraggingEventArgs e)
-{
-    //e.From returns the index of the dragged column.
-    //e.DraggingPosition returns the x and y position of the current column
-    if (e.DraggingPosition == new Point(100, 100) && e.DraggingAction == DataGridDragAction.DragEnded)
-        e.Cancel = true;
-}
-{% endhighlight %}
-
-## Cancel drag and drop between frozen and non-frozen columns
-
-### Cancel dragging between frozen and non-frozen columns
-
-The dragging between frozen and non-frozen columns can be canceled using the `DataGridDragAction` and `From` arguments of the `QueryColumnDragging` event, by checking whether the value of the `From` argument is a frozen column index.
-
-{% highlight c# %}
-dataGrid.FrozenColumnCount = 2;
-
-dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
-
-private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnDraggingEventArgs e)
-{
-    //e.From returns the index of the dragged column.
-    //e.To returns the index of the current column.
-    if (e.From < 2 && e.DraggingAction == DataGridDragAction.DragStarted)
-        e.Cancel = true;
-}
-{% endhighlight %}
-
-### Cancel dropping between frozen and non-frozen columns
-
-The dropping between frozen and non-frozen columns can be canceled using the `DataGridDragAction` and `From` arguments of the `QueryColumnDragging` event by checking whether the `DataGridQueryColumnDraggingEventArgs.From` value is a frozen column index.
-
-{% highlight c# %}
-dataGrid.FrozenColumnCount = 2;
-
-dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
-
-private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnDraggingEventArgs e)
-{
-    //e.From returns the index of the dragged column.
-    //e.To returns the index of the current column.
-    if (e.From < 2 && e.DraggingAction == DataGridDragAction.DragEnded)
-        e.Cancel = true;
-}
-{% endhighlight %}
+**Note:** Frozen columns can be reordered among themselves, and non-frozen columns can be reordered among themselves, but dragging between the two regions is prevented by the code above.
 
 ## Customize the appearance
 
@@ -207,19 +147,24 @@ The SfDataGrid allows customizing the drag view text and background color using 
 
 The SfDataGrid allows you to load specific content into the column drag-and-drop template using the [SfDataGrid.ColumnDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnDragDropTemplate). The content can be provided through either a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/system.windows.datatemplate?view=windowsdesktop-9.0) or a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/system.windows.controls.datatemplateselector?view=windowsdesktop-9.0).
 
+The template's data context provides access to the dragged column information through the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) binding context, allowing you to display the column header text or other properties.
+
 The following code snippet demonstrates how to load a data template into the column drag-and-drop view:
 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowDraggingColumn="True">
     <syncfusion:SfDataGrid.ColumnDragDropTemplate>
         <DataTemplate>
-            <Grid BackgroundColor="LightBlue">
-                <Label  Text="Drag View"
-                        TextColor="Orange"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center" />
+            <Grid BackgroundColor="LightBlue" Padding="10">
+                <Label Text="{Binding HeaderText}"
+                       TextColor="Orange"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
             </Grid>
         </DataTemplate>
     </syncfusion:SfDataGrid.ColumnDragDropTemplate>
@@ -242,4 +187,16 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
     // Disable scroll while dragging the columns.   
     e.CanAutoScroll = false;
 }
+{% endhighlight %}
+
+## Event cleanup
+
+To prevent memory leaks, always unsubscribe from the `QueryColumnDragging` event when the page or view is destroyed:
+
+{% highlight c# %}
+// Subscribe to the event
+dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
+
+// Unsubscribe in your page's cleanup or disposal
+dataGrid.QueryColumnDragging -= SfDataGrid_QueryColumnDragging;
 {% endhighlight %}

@@ -15,7 +15,7 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
 * Automatically generating columns
 * Manually defining columns
 
-To get start quickly with column manipulation in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check on this video:
+To get started quickly with column manipulation in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), check this video tutorial:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/QrMUWMnnLDU'></iframe>
 
@@ -52,10 +52,11 @@ The table below shows the column type created for the respective data types. For
 </tr>
 </table>
 
-### Different modes to auto generate columns
+### Auto-generation Modes
 
-The auto generation of the columns in `SfDataGrid` is happening based on the `SfDataGrid.AutoGenerateColumnsMode` property. The default value is [AutoGenerateColumnsMode.Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.AutoGenerateColumnsMode.html#Syncfusion_Maui_DataGrid_AutoGenerateColumnsMode_Reset).
-The `SfDataGrid.AutoGenerateColumnsMode` includes the following modes,
+The auto generation of columns in `SfDataGrid` is controlled by the `AutoGenerateColumnsMode` property. The default value is [AutoGenerateColumnsMode.Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.AutoGenerateColumnsMode.html#Syncfusion_Maui_DataGrid_AutoGenerateColumnsMode_Reset).
+
+The following modes are available:
 
 <table>
 <tr>
@@ -85,9 +86,13 @@ Similarly, it retains the sorting of the columns that are defined explicitly at 
 </tr>
 </table>
 
-### Auto generate columns for custom type
+### Auto-generate Columns for Custom Types
 
-By default, columns are also auto-generated for custom type properties and parent properties of complex properties in the data object. In the case of complex properties, use the [SfDataGrid.AutoGenerateColumnsModeForCustomType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsModeForCustomType) to auto-generate columns for either the parent property, inner properties of the parent, or both the parent and inner properties.
+By default, columns are auto-generated for custom type properties and parent properties of complex properties in the data object. For complex properties, use the [AutoGenerateColumnsModeForCustomType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsModeForCustomType) property to control whether to auto-generate columns for the parent property, inner properties, or both:
+
+- **Parent**: Only the parent property column is generated
+- **Child**: Only the inner/nested property columns are generated  
+- **Both**: Both parent and nested property columns are generated
 
 {% tabs %}
 {% highlight xaml %}
@@ -109,9 +114,9 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize automatically generated columns
+### Customize Auto-generated Columns
 
-The auto generated column can be customized by handling the [SfDataGrid.AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingColumn) event. The event will be invoked when the column is auto-generated.
+Auto-generated columns can be customized by handling the [AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingColumn) event, which is raised when each column is auto-generated.
 
 The [DataGridAutoGeneratingColumnEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAutoGeneratingColumnEventArgs.html) object contains the following properties,
 
@@ -140,7 +145,7 @@ private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 {% endhighlight %}
 {% endtabs %}
 
-Formatting for the auto-generated columns can be applied as follows:
+**Example:** Applying formatting to auto-generated columns using the event handler:
 
 {% tabs %}
 {% highlight c# %}
@@ -165,11 +170,11 @@ private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 {% endhighlight %}
 {% endtabs %}
 
-### Data Annotations with AutoGenerateColumns
+### Customize Columns with Data Annotations
 
-SfDataGrid support to generate the columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)).
+SfDataGrid can auto-generate and customize columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)).
 
-N> Data annotations are only applied when the `DataGrid.AutoGenerateColumns` property is set to True.
+**Note:** Data annotations are only applied when `AutoGenerateColumnsMode` is not set to `None`. Ensure your model class includes `using System.ComponentModel.DataAnnotations;` at the top.
 
 #### Exclude column
 
@@ -233,9 +238,9 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-#### Change the order of the columns
+#### Reorder Columns
 
-You can change the order of columns using the `Display.Order` property. Columns are arranged based on the specified order value, with lower values appearing first.
+You can reorder columns using the `Display.Order` property. Columns are arranged by order value in ascending order, with lower values appearing first.
 
 {% tabs %}
 {% highlight c# %}
@@ -259,9 +264,9 @@ The OrderID and Customer column rearranged based on specified order.
 
 <img alt="Changing Columns Order in Maui DataGrid" src="Images\columns\maui-datagrid-order.png" width="404"/>
 
-#### DataGrid read-only column 
+#### Make Columns Read-Only
 
-You can disable the editing for a column using `ReadOnly` attribute.
+You can prevent editing of a column by applying the `ReadOnly` attribute.
 
 {% tabs %}
 {% highlight c# %}
@@ -281,9 +286,9 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-#### Format datagrid columns using DisplayFormat attribute
+#### Format Columns with DisplayFormat
 
-You can format auto-generated columns using the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute with the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) property defined for properties in the model.
+You can format auto-generated columns using the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute with the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) property. The `{0}` placeholder represents the property value and follows standard [.NET composite format strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting).
 
 {% tabs %}
 {% highlight c# %}
@@ -303,8 +308,9 @@ public class OrderInfo
 
 <img alt="Maui DataGrid with Columns Formatting" src="Images\columns\maui-datagrid-formatting.png" width="404"/>
 
-#### Group columns under stacked header
-You can group multiple columns under a shared stacked header using the `Display.GroupName` property. Nested grouping is supported using the / separator in the ChildColumns property.
+#### Group Columns Under Stacked Headers
+
+You can group multiple columns under a shared stacked header using the `Display.GroupName` property. Nested grouping is supported using the `/` separator to create hierarchical groups (e.g., `"Order Details/Shipping"`).
 
 {% tabs %}
 {% highlight c# %}

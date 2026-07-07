@@ -78,7 +78,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[QueryColumnDraggingReason](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.QueryColumnDraggingReason.html)'| markdownify }}</td>
 <td>{{'[DataGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDragAction.html)'| markdownify }}</td>
-<td>Defines constants that specify the possible progressing states of resizing operation.</td>
+<td>Defines constants that specify the drag action states (Starting, Dragging, Dropped, Cancelled) during column drag and drop operations.</td>
 </tr>
 <tr>
 <td>{{'[SelectionUnit](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SelectionUnit.html)'| markdownify }}</td>
@@ -106,8 +106,8 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <th>Description</th></tr>
 <tr>
 <td>{{'[AutoGenerateColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_AutoGenerateColumns)'| markdownify }}</td>
-<td>{{'[AutoGenerateColumnsMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnWidthMode.html)'| markdownify }}</td>
-<td>Defines constants that specify how the columns in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} are sized.</td></tr>
+<td>{{'[AutoGenerateColumnsMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsMode)'| markdownify }}</td>
+<td>Gets or sets a value that indicates whether the columns should be auto-generated from the data source. Supports None, Reset, and ResetAll modes.</td></tr>
 <tr>
 <td>{{'[AllowSorting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_AllowSorting)'| markdownify }}</td>
 <td>{{'[SortingMode.Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingMode.html#Syncfusion_Maui_DataGrid_DataGridSortingMode_Single)'| markdownify }}</td>
@@ -461,13 +461,13 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 <tr>
 <td>{{'[GridStackedHeaderCellRenderer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridStackedHeaderCellRenderer.html)'| markdownify }}</td>
 <td>{{'[DataGridStackedHeaderCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderCellRenderer.html)'| markdownify }}</td>
-<td>A class for cell renderer that displays{{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }} in a {{'[DataGridStackedCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderCell.html)'| markdownify }}.</td>
+<td>A class for cell renderer that displays {{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }} in a {{'[DataGridStackedCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderCell.html)'| markdownify }}.</td>
 </tr>
 
 <tr>
 <td>{{'[StackedHeaderRow](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.StackedHeaderRow.html)'| markdownify }}</td>
 <td>{{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }}</td>
-<td>The {{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }} contains the collection of {{'[DataGridStackedColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html)'| markdownify }} to be grouped under a particular category.}}.</td>
+<td>The {{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }} contains the collection of {{'[DataGridStackedColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html)'| markdownify }} to be grouped under a particular category.</td>
 </tr>
 
 <tr>
@@ -529,6 +529,6 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 
 * [Android] Horizontal scrolling performance is not smooth in the Debug solution configuration when compared to Xamarin.Forms SfDataGrid. However, the scrolling performance is smooth when the solution configuration is Release.
 
-## Upcoming Features   
+## Upcoming Features
 
-*	Custom selection
+* Custom selection 
