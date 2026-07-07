@@ -132,6 +132,19 @@ public class ViewModel
 {% endtabs %}
 
 ### 2. Defining Relations
+#### Auto-Generating Relations vs Manual Definitions
+
+**Auto-Generating Relations** - Best for:
+- Quick prototyping and rapid development
+- When you want to display all IEnumerable properties as nested grids
+- When minimal customization is needed
+
+**Manual Definitions** - Best for:
+- Fine-grained control over which relations to display
+- Custom column definitions for each nested grid
+- Performance optimization (display only necessary relations)
+- Complex customization scenarios
+
 #### Auto-Generating Relations
 [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) automatically generates master-details relationships for properties of type `IEnumerable` in the underlying data object. This can be enabled by setting the [SfDataGrid.AutoGenerateRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations) property to `true`.
 
@@ -155,13 +168,12 @@ Here, two relations are created from `Sales` and `Orders` collection property.
 <img alt="auto-relation" src="Images\master-details-view\maui-datagrid-auto-generate-relation.png" width="604"/>  
 
 #### Manually Defining Relations
-we can manually define the `Master-Details View` relation in `SfDataGrid` using [DetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDefinition.html) when [AutoGenerateRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations) is set to false.
+You can manually define the `Master-Details View` relation in `SfDataGrid` using [DetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDefinition.html) when [AutoGenerateRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations) is set to false. This approach provides greater control over the Master-Details structure and allows you to customize each relation separately.
 
  **To establish the relation:**
 1. Create a [DataGridViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html).
 2. Set the [RelationalColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html#Syncfusion_Maui_DataGrid_ViewDefinition_RelationalColumn) property to the name of the `IEnumerable` type property in the data object.
 3. Add the [DataGridViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html) to SfDataGrid.DetailsViewDefinition.
-This approach provides greater control over the Master-Details structure in the data grid.
 
 {% tabs %}
 {% highlight xaml %}
@@ -169,14 +181,14 @@ This approach provides greater control over the Master-Details structure in the 
                 AutoGenerateRelations="False"
                 ItemsSource="{Binding Employees}">
     <syncfusion:SfDataGrid.DetailsViewDefinition>
-        <!--  FirstLevelNestedGrid1 is created here  -->
+        <!--  FirstLevelNestedGrid1 is created here for Sales  -->
         <syncfusion:DataGridViewDefinition RelationalColumn="Sales">
             <syncfusion:DataGridViewDefinition.DataGrid>
                 <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid1" />
                 </syncfusion:DataGridViewDefinition.DataGrid>
                 </syncfusion:DataGridViewDefinition>
-                <!--  FirstLevelNestedGrid2 is created here  -->
-                <syncfusion:DataGridViewDefinition RelationalColumn="Products">
+                <!--  FirstLevelNestedGrid2 is created here for Orders  -->
+                <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
                     <syncfusion:DataGridViewDefinition.DataGrid>
                         <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid2" />
                         </syncfusion:DataGridViewDefinition.DataGrid>
@@ -193,7 +205,7 @@ This approach provides greater control over the Master-Details structure in the 
  gridViewDefinition1.DataGrid = new SfDataGrid();
 
  var gridViewDefinition2 = new DataGridViewDefinition();
- gridViewDefinition2.RelationalColumn = "Products";
+ gridViewDefinition2.RelationalColumn = "Orders";
  gridViewDefinition2.DataGrid = new SfDataGrid();
 
  dataGrid.DetailsViewDefinition.Add(gridViewDefinition1);
@@ -203,7 +215,8 @@ This approach provides greater control over the Master-Details structure in the 
 
  <img alt="manual-generate-relation" src="Images\master-details-view\maui-datagrid-manually-generate-relation.png" width="604" /> 
 
- In the same way, we can define relations for first level nested grids by defining relations to the ViewDefinition.DataGrid of first level nested grid.
+### Multi-Level Nesting
+You can define relations for first level nested grids by adding relations to the ViewDefinition.DataGrid of the first level nested grid. This allows you to create a deeper hierarchy with multiple nesting levels.
 
  {% tabs %}
 {% highlight xaml %}
@@ -281,6 +294,7 @@ To establish a `Master-Details` relationship in [SfDataGrid](https://help.syncfu
 
 {% tabs %}
 {% highlight c# %}
+using System.Data;
 
 public class DataViewModel
 {
@@ -400,9 +414,9 @@ We can manually define the `Master-Details View` relation in `SfDataGrid` using 
 {% endtabs %}
 
 N>
- The relation name **must be unique** and **must not** match any column name or collection name in the `DataTable`.  
+ The relation name **must be unique** and **must not** match any column name or collection name in the `DataTable` (this applies only when using DataTable relations).
  When defining a `RelationalColumn` in XAML, use the **exact case-sensitive keyword**. For example:  
- `<syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child" />`
+  `<syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child" />`
 
 
 ## Defining columns for DetailsViewDataGrid
@@ -487,10 +501,11 @@ var detailsViewDataGrid = this.dataGrid.SelectedDetailsViewDataGrid.SelectedDeta
 {% endtabs %}
 
 ### Getting the DetailsViewDataGrid
-We can get the [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) based on row index through `GetDetailsViewDataGrid` helper method.
+You can retrieve a specific [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) based on the row index using the `GetDetailsViewGrid` helper method. The rowIndex parameter represents the index of the data row in the parent grid.
 
 {% tabs %}
 {% highlight c# %}
+// Get the DetailsViewDataGrid for the third row (index 2)
 var detailsViewDataGrid = this.dataGrid.GetDetailsViewGrid(2);
 {% endhighlight %}
 {% endtabs %}
@@ -806,10 +821,10 @@ private void DataGrid_DetailsViewCollapsing(object? sender, DataGridDetailsViewC
 
 The `Master-Details View` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) has certain limitations that should be considered while using this feature:
 
-- Virtualization is not supported for the `DetailsViewDataGrid` on Android, iOS, and Mac platforms. Consequently, there may be delays in loading the details view data grid due to the initial loading of all rows and columns.
-- `DetailsViewDataGrid` does not support `AutoGenerateColumnsMode.ResetAll`. Instead, it works based on `Reset`.
-- Master-Details View does not support Data Virtualization.
-- Master-Details View does not support Freeze Panes.
-- Master-Details View does not support Auto Row Height.
-- `DetailsViewDataGrid` does not support interaction features such as Swiping, Column Drag and Drop, and Row Drag and Drop, and Pull to Refresh.
-- For the `DetailsViewDataGrid`, the `SelectionMode`, `SelectionUnit`, `NavigationMode`, and `DetailsViewPadding` properties are assigned from its parent grid only. Therefore, both the parent `DataGrid` and `DetailsViewDataGrid` cannot have different values for these properties.
+- **No virtualization support:** Virtualization is not supported for the `DetailsViewDataGrid` on Android, iOS, and macOS platforms. This means all rows and columns are loaded immediately, which may cause noticeable delays when displaying large datasets. To mitigate this, limit the number of rows in nested grids or use pagination if possible.
+- **Column auto-generation:** `DetailsViewDataGrid` does not support `AutoGenerateColumnsMode.ResetAll`. Use `Reset` or `None` instead.
+- **No data virtualization:** Master-Details View does not support virtual scrolling for large datasets.
+- **No Freeze Panes:** Freezing columns or rows is not supported in nested grids.
+- **No Auto Row Height:** Automatic row height adjustment is not supported for details view grids.
+- **Limited interaction features:** `DetailsViewDataGrid` does not support Swiping, Column Drag and Drop, Row Drag and Drop, or Pull to Refresh gestures.
+- **Inherited properties:** The `SelectionMode`, `SelectionUnit`, `NavigationMode`, and `DetailsViewPadding` properties are inherited from the parent grid. Both parent and nested grids must use the same values for these properties.

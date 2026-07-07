@@ -92,27 +92,38 @@ Before proceeding, ensure the following are set up:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion handler
+## Step 3: Register Syncfusion Core Handler
  
-Make sure to add the namespace.
+To use Syncfusion controls, you must register the Syncfusion core handler in your application's startup configuration.
  
+In the `MauiProgram.cs` file (located at the root of your project), add the namespace and register the handler in the `CreateMauiApp` method:
+
 {% tabs %}
 {% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %}
-{% endtabs %}
- 
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
- 
-{% tabs %}
-{% highlight c# %}
-builder.ConfigureSyncfusionCore();
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            })
+            .ConfigureSyncfusionCore();  // Add this line
+        
+        return builder.Build();
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Define Model and View Model
+## Step 4: Define Model and Data Repository
 
-Create a simple data model as shown in the following code example, and save it as `OrderInfo.cs` file:
+Create a simple data model as shown in the following code example and save it as `OrderInfo.cs` in the project root or in a `Models` folder:
 
 {% tabs %}
 {% highlight c# %}
@@ -166,9 +177,9 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want your data model to respond to property changes, implement the `INotifyPropertyChanged` interface in your model class.
+> **Note:** If you want your data model to respond to property changes, implement the [`INotifyPropertyChanged`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged) interface in your model class. This enables the DataGrid to refresh automatically when data properties are updated.
 
-Create a model repository class with `OrderInfo` collection property initialized with the required number of data objects in a new class file as shown in the following code example, and save it as `OrderInfoRepository.cs` file:
+Next, create a data repository class that manages a collection of `OrderInfo` objects. This repository serves as a simple data source for the DataGrid. Create a new class file and save it as `OrderInfoRepository.cs` in the same `Models` folder or project root:
 
 {% tabs %}
 {% highlight c# %}
@@ -189,15 +200,15 @@ public class OrderInfoRepository
 
     public void GenerateOrders()
     {
-        orderInfo.Add(new OrderInfo("1001", "Maria Anders", "Germany", "ALFKI", "Berlin"));
-        orderInfo.Add(new OrderInfo("1002", "Ana Trujillo", "Mexico", "ANATR", "Mexico D.F."));
-        orderInfo.Add(new OrderInfo("1003", "Ant Fuller", "Mexico", "ANTON", "Mexico D.F."));
-        orderInfo.Add(new OrderInfo("1004", "Thomas Hardy", "UK", "AROUT", "London"));
-        orderInfo.Add(new OrderInfo("1005", "Tim Adams", "Sweden", "BERGS", "London"));
-        orderInfo.Add(new OrderInfo("1006", "Hanna Moos", "Germany", "BLAUS", "Mannheim"));
-        orderInfo.Add(new OrderInfo("1007", "Andrew Fuller", "France", "BLONP", "Strasbourg"));
-        orderInfo.Add(new OrderInfo("1008", "Martin King", "Spain", "BOLID", "Madrid"));
-        orderInfo.Add(new OrderInfo("1009", "Lenny Lin", "France", "BONAP", "Marsiella"));
+        orderInfo.Add(new OrderInfo("1001", "ALFKI", "Germany", "Maria Anders", "Berlin"));
+        orderInfo.Add(new OrderInfo("1002", "ANATR", "Mexico", "Ana Trujillo", "Mexico D.F."));
+        orderInfo.Add(new OrderInfo("1003", "ANTON", "Mexico", "Ant Fuller", "Mexico D.F."));
+        orderInfo.Add(new OrderInfo("1004", "AROUT", "UK", "Thomas Hardy", "London"));
+        orderInfo.Add(new OrderInfo("1005", "BERGS", "Sweden", "Tim Adams", "London"));
+        orderInfo.Add(new OrderInfo("1006", "BLAUS", "Germany", "Hanna Moos", "Mannheim"));
+        orderInfo.Add(new OrderInfo("1007", "BLONP", "France", "Andrew Fuller", "Strasbourg"));
+        orderInfo.Add(new OrderInfo("1008", "BOLID", "Spain", "Martin King", "Madrid"));
+        orderInfo.Add(new OrderInfo("1009", "BONAP", "France", "Lenny Lin", "Marsiella"));
     }
 }
 {% endhighlight %}
@@ -216,35 +227,66 @@ using Syncfusion.Maui.DataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Add the DataGrid component
+## Step 6: Add the DataGrid Component
 
-Create a `ViewModel` instance and set it as the DataGrid's `BindingContext`. This enables property binding from `ViewModel` class.
+To populate the `SfDataGrid`, bind the data collection to the [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property. 
 
-To populate the `SfDataGrid`, bind the item collection from its `BindingContext` to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property. 
+Choose one of the following approaches to add the DataGrid:
 
-The following code example binds the collection created in the previous step to the `SfDataGrid.ItemsSource` property:
+**XAML Approach (Recommended)** — Define the DataGrid declaratively in XAML and bind to data:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"> 
-    <syncfusion:SfDataGrid.BindingContext>
-        <local:OrderInfoRepository />
-    </syncfusion:SfDataGrid.BindingContext>
-</syncfusion:SfDataGrid>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrderInfoCollection}"> 
+    </syncfusion:SfDataGrid>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# %}
-OrderInfoRepository viewModel = new OrderInfoRepository();
-SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+{% endtabs %}
+
+Then set the data repository as the page's BindingContext in your code-behind:
+
+{% tabs %}
+{% highlight c# tabtitle="DataGridPage.xaml.cs" %}
+public partial class DataGridPage : ContentPage
+{
+    public DataGridPage()
+    {
+        InitializeComponent();
+        // Set the repository as the BindingContext for data binding
+        this.BindingContext = new OrderInfoRepository();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+**C# Approach** — Create and configure the DataGrid programmatically in your page's code-behind:
+
+{% tabs %}
+{% highlight c# tabtitle="DataGridPage.xaml.cs" %}
+public partial class DataGridPage : ContentPage
+{
+    public DataGridPage()
+    {
+        InitializeComponent();
+        
+        // Create and configure the DataGrid programmatically
+        OrderInfoRepository repository = new OrderInfoRepository();
+        SfDataGrid dataGrid = new SfDataGrid();
+        dataGrid.ItemsSource = repository.OrderInfoCollection;
+        Content = dataGrid;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
 
-The following screenshot illustrates the result of the above code.
+The following screenshot shows the DataGrid populated with sample data:
 
 <img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">
 
-You can download the DataGrid Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
+**Next Steps:** You can download the complete Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid) and explore additional DataGrid features such as columns, sorting, filtering, and grouping.
 
-N> You can refer to our [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) that shows you how to render the DataGrid in .NET MAUI.
+> **Note:** You can refer to our [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for more information. You can also explore our [.NET MAUI DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) that shows you how to render the DataGrid in .NET MAUI.

@@ -44,7 +44,7 @@ You can bind the row data using the `Data.PropertyName` (where Data is the under
 
 ## Defining RowTemplateSelector
 
-`TemplateViewDefinition` provides support to choose different `DataTemplate` based on underlying data object using `TemplateViewDefinition.RowTemplate` property.
+`TemplateViewDefinition` provides support to choose different `DataTemplate` based on the underlying data object using `TemplateViewDefinition.RowTemplate` property. Use this approach when different row types require different template layouts. For simpler scenarios with a static template, use the approach described in "Defining row template" section above.
 
 {% tabs %}
 {% highlight xaml %}
@@ -59,7 +59,7 @@ You can bind the row data using the `Data.PropertyName` (where Data is the under
             <Label Grid.Row="0"
                    HorizontalOptions="Center"
                    Margin="5"
-                   Text="Prodcut Info"
+                   Text="Product Info"
                    FontAttributes="Bold" />
             <Grid Grid.Row="1"
                   HorizontalOptions="Center"
@@ -199,6 +199,9 @@ You can bind the row data using the `Data.PropertyName` (where Data is the under
 
 {% endhighlight %}
 {% highlight c# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.DataGrid;
+
 public class DetailsViewTemplateSelector : DataTemplateSelector
 {
     public DataTemplate ProductTemplate { get; set; }
@@ -206,6 +209,8 @@ public class DetailsViewTemplateSelector : DataTemplateSelector
 
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
+        // RecordEntry is the wrapper object passed to the template selector
+        // Access the underlying data via the Data property
         var employeeID = ((item as RecordEntry)?.Data as Employee)?.EmployeeID ?? 0;
         return (employeeID % 2 == 0) ? SupplierTemplate : ProductTemplate;
     }
@@ -235,7 +240,7 @@ Definition
 <code>Auto</code>
 </td>
 <td>
-Arranges template for the actual size as the {{'RowTemplate'| markdownify}} is measured.
+Arranges template for the actual size as the RowTemplate is measured.
 </td>
 </tr>
 <tr>
@@ -251,7 +256,7 @@ Arranges template for the specified height in {{'[TemplateViewDefinition.Height]
 <code>ViewportHeight</code>
 </td>
 <td>
-Arranges template for the <code>ViewPortHeight</code> when the {{'RowTemplate'| markdownify}} actual height is greater than <code>ViewPortHeight</code>.
+Arranges template for the visible DataGrid height when the RowTemplate's actual height exceeds the viewport size.
 </td>
 </tr>
 </table>
@@ -283,6 +288,7 @@ public DataTemplate GetDataTemplate()
 {
     return new DataTemplate(() =>
     {
+        // SetBinding works on any BindableObject-derived control
         var label = new Label();
         label.SetBinding(Label.TextProperty, "Data.ShipCity");
         return label;
@@ -299,6 +305,8 @@ The SfDataGrid allows you to expand or collapse the `RowTemplate` programmatical
 ### Expand or collapse all the row template
 
 You can expand or collapse all the `RowTemplate` by using the [ExpandAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllDetailsView) and [CollapseAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllDetailsView) methods.
+
+**Note:** For large datasets, expanding all rows may impact performance. Consider limiting expansion to specific rows using index-based methods instead.
 
 {% tabs %}
 {% highlight c# %}
@@ -409,7 +417,7 @@ void dataGrid_DetailsViewCollapsing(object sender, DataGridDetailsViewCollapsing
 
 ## Limitations
 
-Limitations are:
+The following limitations apply when using Record Template View:
 
 * Does not support both `DetailsViewTemplate` and `DetailsViewDataGrid` at same level.
 * Does not support more than one `DetailsViewTemplate` in same level.

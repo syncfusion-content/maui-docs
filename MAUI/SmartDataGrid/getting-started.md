@@ -10,9 +10,9 @@ keywords: maui smart datagrid getting started, ai datagrid maui, .net maui smart
 
 # Getting Started with .NET MAUI Smart DataGrid
 
-This section provides a quick overview for working with the `SfSmartDataGrid` for .NET MAUI. Follow the steps below to add a basic Smart DataGrid to your project.
+This section provides a quick overview for working with the `SfSmartDataGrid` for .NET MAUI. Follow the steps below to add a basic Smart DataGrid to your projectf and configure AI-powered features.
 
-N> The Smart DataGrid is distributed as part of the `Syncfusion.Maui.SmartDataGrid` package and supports AI-assisted interactions such as intelligent sorting, filtering, grouping, and highlighting. Ensure your application has the required AI service configuration to enable these features.
+> **Note:** The Smart DataGrid is distributed as part of the `Syncfusion.Maui.SmartDataGrid` package and supports AI-assisted interactions such as intelligent sorting, filtering, grouping, and highlighting. Ensure your application has the required AI service configuration to enable these features.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -170,7 +170,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -413,11 +413,11 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 6: Define the View Model
+## Step 6: Define Data Model and View Model
 
 ### Data Model
 
-Create a simple data model as shown in the following code example, and save it as `OrderInfo.cs` file:
+Create a data model class and save it as `OrderInfo.cs`. Implement `INotifyPropertyChanged` to enable property binding:
 
 {% tabs %}
 {% highlight c# %}
@@ -459,19 +459,46 @@ public class OrderInfo
         set { this.shipCity = value; }
     }
 
-    public OrderInfo(string orderId, string customerId, string country, string customer, string shipCity)
+    public OrderInfo(string orderId, string customerName, string country, string customerId, string shipCity)
     {
         this.OrderID = orderId;
-        this.CustomerID = customerId;
-        this.Customer = customer;
+        this.Customer = customerName;
         this.ShipCountry = country;
+        this.CustomerID = customerId;
         this.ShipCity = shipCity;
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want your data model to respond to property changes, implement the `INotifyPropertyChanged` interface in your model class.
+> **Note:** Implement `INotifyPropertyChanged` in your model to enable property-level binding and automatic UI updates when data changes.
+
+**Example INotifyPropertyChanged Implementation:**
+```csharp
+public class OrderInfo : INotifyPropertyChanged
+{
+    private string orderID;
+    public string OrderID
+    {
+        get { return orderID; }
+        set 
+        { 
+            if (orderID != value)
+            {
+                orderID = value;
+                OnPropertyChanged(nameof(OrderID));
+            }
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+}
+```
 
 ### View Model
 
@@ -515,7 +542,7 @@ public class OrderInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-### Binding the ViewModel
+### Binding the View Model
 
 Create a `ViewModel` instance and set it as the DataGrid's `BindingContext`. This enables property binding from `ViewModel` class.
 
@@ -539,9 +566,9 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 7: Enabling AI-Assisted Operations
+## Step 7: Enable AI-Assisted Operations
 
-The Smart DataGrid supports natural language operations for enhanced data interaction. These features require configuring an AI provider in your application.
+The Smart DataGrid automatically enables AI features when an Azure OpenAI client is configured. Users can interact with the grid using natural language commands through the AI Assist button in the toolbar.
 
 ### Using AI Features
 
@@ -562,4 +589,4 @@ Here is the result of the previous codes,
 
 You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/Maui-SmartDataGrid-Sample).
 
-N> You can refer to our [.NET MAUI Smart DataGrid](https://www.syncfusion.com/maui-controls/maui-smart-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Smart DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents) that shows you how to render the Smart DataGrid in .NET MAUI.
+> **Note:** You can refer to our [.NET MAUI Smart DataGrid](https://www.syncfusion.com/maui-controls/maui-smart-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Smart DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents) that shows you how to render the Smart DataGrid in .NET MAUI.

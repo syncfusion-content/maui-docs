@@ -10,6 +10,14 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Performance in MAUI DataGrid (SfDataGrid)
 
+The DataGrid provides multiple optimization techniques to enhance performance for different scenarios:
+- **LoadUIView**: Basic optimization for all data sizes; disables UI element wrapping to reduce overhead
+- **Data Virtualization**: For large datasets (100+ records); creates records on-demand during scrolling
+- **Incremental Loading**: For remote data sources; loads data in batches as users scroll to the end
+- **Asynchronous Scrolling**: For smooth performance during rapid scrolling on Windows (available for all column types)
+
+Choose based on your data source type (local vs. remote) and dataset size. You can combine techniques for optimal results.
+
 ## LoadUIView
 
 By default, the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) loads a `UIElement` into the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) to display the cell content. The [DataGridColumn.LoadUIView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LoadUIView) property determines whether to load a `UIElement` or to draw the cell content directly within the `DataGridCell` to improve scrolling performance. This is applicable for the all platforms except Windows.
@@ -31,18 +39,18 @@ The default value of this property is `true`. If you want to improve loading and
 {% endhighlight %}
 {% endtabs %}
 
-N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
+**Note:** Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
 
 ### Limitations
 
 * For Android platform, both implicit and explicit padding are not supported. However, left and right padding will be applied based on the padding, while the top and bottom positions will be adjusted based on the content.
 * [DataGridColumn.LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LineBreakMode) is not supported for Android platform.
 * Runtime theme changes will not be applied.
-* This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html) and [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html).
+* The `LoadUIView` property is not applicable to [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html) and [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html).
 
 ## Data virtualization
 
-DataGrid provides support to handle the large amount of data through built-in virtualization feature. With Data virtualization, the record entries will be created in the runtime only upon scrolling to the vertical end which increases the performance of grid loading time.
+DataGrid provides support to handle large datasets through built-in virtualization. With data virtualization, record entries are created at runtime only upon scrolling to the vertical end, which significantly improves grid loading time.
 
 To set [SfDataGrid.EnableDataVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EnableDataVirtualization) property to true, follow the code example:
 
@@ -60,7 +68,7 @@ dataGrid.EnableDataVirtualization = true;
 
 ## Incremental loading
 
-The DataGrid supports loading data incrementally using the [ISupportIncrementalLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISupportIncrementalLoading.html) interface. This interface includes the `LoadMoreItemsAsync` method, which helps to load data incrementally. The `LoadMoreItemsAsync` method is called on-demand while scrolling, based on the [HasMoreItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISupportIncrementalLoading.html#Syncfusion_Maui_Data_ISupportIncrementalLoading_HasMoreItems) property.
+The DataGrid supports loading data incrementally using the [ISupportIncrementalLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISupportIncrementalLoading.html) interface. This interface includes the `LoadMoreItemsAsync` method, which is called on-demand when the user scrolls within a threshold distance from the end of the grid. This is ideal for binding to remote data sources (APIs, databases) where you load data in batches.
 
 If `HasMoreItems` is false, SfDataGrid stops calling `LoadMoreItemsAsync`. SfDataGrid includes `IncrementalList`, which is derived from `ISupportIncrementalLoading`. You can use `IncrementalList` or create a collection derived from `ISupportIncrementalLoading` and bind it to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource).
 
@@ -102,11 +110,16 @@ public class ViewModel
 
 ## Asynchronous Scrolling
 
-The DataGrid provides support for asynchronous scrolling to enhance scrolling performance during large scroll jumps, especially on the Windows platform.
+The DataGrid provides support for asynchronous scrolling to enhance scrolling performance during rapid scroll gestures or large scroll jumps. This feature is most effective on the Windows platform.
 
-When the `AllowAsyncScrolling` property is enabled, the DataGrid renders content asynchronously while scrolling rapidly. This approach improves the perceived performance by reducing UI thread blocking and delivering smoother scrolling behavior.
+When the `AllowAsyncScrolling` property is enabled, the DataGrid renders content asynchronously while scrolling rapidly. This approach:
+- Reduces UI thread blocking during continuous scrolling
+- Improves scrolling responsiveness and frame consistency
+- Enables smoother rendering of complex cell templates
 
-By default, the `AllowAsyncScrolling` property is set to `false`. To improve scrolling performance, set this property to `true`.
+**Performance Impact:** Asynchronous scrolling may use additional memory during scroll operations but provides noticeable performance improvements on high-end devices with large datasets.
+
+By default, the `AllowAsyncScrolling` property is set to `false`. To enable asynchronous scrolling, set this property to `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -120,4 +133,4 @@ dataGrid.AllowAsyncScrolling = true;
 {% endhighlight %}
 {% endtabs %}
 
-N> Asynchronous scrolling is supported for all column types only on the Windows platform.
+**Note:**  Asynchronous scrolling is supported for all column types only on the Windows platform.

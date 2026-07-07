@@ -13,29 +13,29 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
-<img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
+<img alt="MAUI DataGrid" src="Images/overview/maui-datagrid.png" width="567"/>
 
 ## Business use cases
 
 - Business dashboards requiring clear and structured tabular data visualization.
-- Financial systems that rely on grouping, summaries, and Excel or PDF export.
+- Financial systems that rely on grouping, summaries, and Excel/PDF export.
 - Inventory management applications handling large datasets efficiently.
-- Analytics and reporting tools with dynamic filtering and real‑time updates.
+- Analytics and reporting tools with dynamic filtering and real-time updates.
 
 ## Key features
 
-- **Flexible data binding** to collections, tables, and MVVM sources.
-- **Rich column types** including text, numeric, date, checkbox, image, combobox, picker, and template columns.
-- **Data operations** with sorting, filtering, grouping, summaries, and search.
-- **Editing & interaction** through in‑place editing, drag‑drop, swipe actions, and selection.
-- **Performance & virtualization** with paging, incremental loading, and smooth rendering for large datasets.
-- **Advanced views** such as master‑details, record templates, unbound rows, and unbound columns.
-- **Styling & customization** with conditional formatting, stacked headers, freeze panes, and theme support.
-- **Export & data handling** including Excel/PDF export, clipboard operations, serialization, and deserialization.
+- **Flexible data binding** — Collections, tables, and MVVM sources.
+- **Rich column types** — Text, numeric, date, checkbox, image, combobox, picker, and template columns.
+- **Data operations** — Sorting, filtering, grouping, summaries, and search.
+- **Editing and interaction** — In-place editing, drag-drop, swipe actions, and selection.
+- **Performance and virtualization** — Paging, incremental loading, and smooth rendering for large datasets.
+- **Advanced views** — Master-details, record templates, unbound rows, and unbound columns.
+- **Styling and customization** — Conditional formatting, stacked headers, freeze panes, and theme support.
+- **Export and data handling** — Excel/PDF export, clipboard operations, serialization, and deserialization.
 
 ## Globalization
 
-The following table summarizes the globalization support available in this control.
+The following table summarizes the globalization support available in this control. Screen reader support is partial due to platform-specific accessibility API limitations; keyboard navigation is fully supported across all platforms.
 
 <style>
 .img{
@@ -82,18 +82,21 @@ The following table summarizes the globalization support available in this contr
 </tr> 
 </table>
 
+## Getting started
+
+- [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started) — Step-by-step guide to begin using the DataGrid.
+- [Data Binding](https://help.syncfusion.com/maui/datagrid/data-binding) — How to connect and display data efficiently.
+- [Column Types](https://help.syncfusion.com/maui/datagrid/column-types) — Different column options for customization.
+
 ## Related controls
 
 - [Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for advanced data visualization and analytics.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for flexible and lightweight collection display.
 - [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for hierarchical or comparative visualization.
 
-## See Also
+## See also
 
-- [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started) shows a step‑by‑step guide to begin using the DataGrid.  
-- [Data Binding](https://help.syncfusion.com/maui/datagrid/data-binding) explains how to connect and display data efficiently.  
-- [Column Types](https://help.syncfusion.com/maui/datagrid/column-types) explores different column options for customization.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) — Interactive demos and ready-made UI examples.
 
 ## Resources
 

@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Unbound column in MAUI DataGrid (SfDataGrid)
 
-The data grid allows adding additional columns that are not bound with data objects from the underlying data source.The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html) class.
+The data grid allows adding additional columns that are not bound with data objects from the underlying data source. The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html) class.
 
 {% tabs %}
 {% highlight xaml %}
@@ -82,99 +82,122 @@ this.Content = dataGrid;
 
 <img alt="Unbound column in MAUI DataGrid" src="Images\unbound-column\maui-datagrid-unbound-column.png" width="404" Height = "429"/>
 
-N> It is mandatory to specify the `DataGridColumn.MappingName` for `SfDataGrid.DataGridUnboundColumn` with some name to identify the column. It is not necessary to define name of the field in the data object.
+> **Note:** It is mandatory to specify the `DataGridColumn.MappingName` for `SfDataGrid.DataGridUnboundColumn` with some name to identify the column. It is not necessary for this field to exist in the data object.
 
 ## Populating data for the unbound column
-Data for the unbound column can be configured by setting the `Expression` property.
+
+Data for the unbound column can be configured using one of two approaches:
+1. **Expression property** — for simple arithmetic and logical calculations
+2. **QueryUnboundColumnValue event** — for complex logic and custom data retrieval
 
 ### Using Expression
-The arithmetic or logic expression can be specified by using the expression property to compute the display value. By default, `DataGridUnboundColumn` evaluates the expression with casing. The casing will be disabled while evaluating the expression by setting the [CaseSensitive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html#Syncfusion_Maui_DataGrid_DataGridUnboundColumn_CaseSensitiveProperty) property to false
 
-List of supported arithmetic and logical operations are as follows:
+The arithmetic or logical expression can be specified using the `Expression` property to compute the display value. By default, `DataGridUnboundColumn` evaluates expressions with case sensitivity. Disable case sensitivity by setting the [CaseSensitive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html#Syncfusion_Maui_DataGrid_DataGridUnboundColumn_CaseSensitiveProperty) property to `false`.
 
 <table>
     <tr>
         <th> Arithmetic operations </th>
         <th> Operator </th>
+        <th> Usage in Expression </th>
     </tr>
     <tr>
         <td> Add</td>
         <td> + </td>
+        <td> `UnitPrice + Tax` </td>
     </tr>
     <tr>
         <td> Subtract</td>
         <td> - </td>
+        <td> `Price - Discount` </td>
     </tr>
     <tr>
         <td> Multiply</td>
         <td> * </td>
+        <td> `UnitPrice * Quantity` </td>
     </tr>
     <tr>
         <td> Divide </td>
         <td> / </td>
+        <td> `Total / ItemCount` </td>
     </tr>
     <tr>
         <td> Power</td>
         <td> ^ </td>
+        <td> `Value ^ 2` </td>
     </tr>
     <tr>
         <td> Mod</td>
         <td> % </td>
+        <td> `Quantity % 12` </td>
     </tr>
     <tr>
         <td> Greater Than</td>
-        <td> < </td>
+        <td> > </td>
+        <td> `Price > 1000` </td>
     </tr>
     <tr>
         <td> Less than</td>
-        <td> > </td>
+        <td> < </td>
+        <td> `Quantity < 10` </td>
     </tr>
     <tr>
         <td> Equal</td>
         <td> = </td>
+        <td> `Status = 'Active'` </td>
     </tr>
     <tr>
-        <td> GreaterThanOrEqual</td>
+        <td> Greater Than or Equal</td>
         <td> >= </td>
+        <td> `Rating >= 4` </td>
     </tr>
     <tr>
-        <td> LessThanOrEqual </td>
+        <td> Less Than or Equal </td>
         <td> <= </td>
+        <td> `Age <= 18` </td>
     </tr>
 </table>
 
 <table>
     <tr>
         <th> Logical operations </th>
-        <th> Operators </th>
+        <th> Character Code </th>
+        <th> Usage in Expression </th>
     </tr>
     <tr>
         <td> AND </td>
         <td> (char)135 </td>
+        <td> `(Quantity > 10)(char)135(UnitPrice > 100)` </td>
     </tr>
     <tr>
         <td> OR  </td>
         <td> (char)136 </td>
+        <td> `(Quantity > 10)(char)136(UnitPrice > 100)` </td>
     </tr>
     <tr>
         <td> NOT </td>
         <td> (char)137 </td>
+        <td> `(char)137(IsApproved)` </td>
     </tr>
 </table>
 
+**CaseSensitive Example:**
+
+With `CaseSensitive="True"` (default): Expression `"unitprice*quantity"` will fail because field names are case-sensitive.
+With `CaseSensitive="False"`: Expression `"unitprice*quantity"` works and matches `UnitPrice` and `Quantity`.
+
 ## Using QueryUnboundColumnValue event
 
-The [QueryUnboundColumnValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryUnboundColumnValue) event is fired when value for the unbound column is quired. It provides information about the cell that triggered this event. So, you can set the desired value for the grid cells of the unbound column. This event is triggered with the `DataGridUnboundEventArgs`.
+The [QueryUnboundColumnValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryUnboundColumnValue) event fires when a value for the unbound column is requested. It provides information about the cell that triggered this event, allowing you to set custom values for unbound column cells. This event is triggered with `DataGridUnboundColumnEventArgs`.
 
 The [DataGridUnboundColumnEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumnEventArgs.html) provides the following properties:
 
-***Column:*** Gets DataGridColumn of the cell that triggers this event.
-***OriginalSender:*** Gets the data grid raising event.
-***Record:*** Gets the underlying row data
-***UnboundAction:*** Defines the action for triggering event.
-***Value:*** Gets or Sets the value for DataGridUnboundColumn cell based on unboundAction.
+- **Column:** Gets the `DataGridColumn` of the cell that triggers this event.
+- **OriginalSender:** Gets the data grid instance raising the event.
+- **Record:** Gets the underlying row data object.
+- **UnboundAction:** Defines the action that triggered the event. 
+- **Value:** Gets or sets the value for the `DataGridUnboundColumn` cell based on the `UnboundAction`.
 
-Populate the data for the unbound column by handling `QueryUnboundColumnValue` event which allows customizing the value of the `DataGridUnboundColumn`. `DataGridUnboundColumnEventArgs` exposes `Value` property, by which you can set the value for the grid cells of the unbound column based on the `UnboundAction`.
+Populate the data for the unbound column by handling the `QueryUnboundColumnValue` event, which allows customizing the value of the `DataGridUnboundColumn`. The `DataGridUnboundColumnEventArgs` exposes the `Value` property, allowing you to set values for unbound column cells based on the `UnboundAction`.
 
 Refer to the following code example in which data for the unbound column is populated by handling the `QueryUnboundColumnValue` event:
 
@@ -249,12 +272,27 @@ private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundCol
 {
     if (e.UnboundAction == DataGridUnboundActions.QueryData)
     {
-        var unitPrice = Convert.ToInt16(e.Record.GetType().GetProperty("UnitPrice").GetValue(e.Record));
-        var quantity = Convert.ToInt16(e.Record.GetType().GetProperty("Quantity").GetValue(e.Record));
-        var total = unitPrice * quantity;
-        e.Value = total.ToString("C");
+        var recordType = e.Record?.GetType();
+        if (recordType == null)
+            return;
 
+        var unitPriceProperty = recordType.GetProperty("UnitPrice");
+        var quantityProperty = recordType.GetProperty("Quantity");
+
+        if (unitPriceProperty == null || quantityProperty == null)
+            return;
+
+        var unitPriceValue = unitPriceProperty.GetValue(e.Record);
+        var quantityValue = quantityProperty.GetValue(e.Record);
+
+        if (unitPriceValue != null && quantityValue != null &&
+            decimal.TryParse(unitPriceValue.ToString(), out decimal unitPrice) &&
+            int.TryParse(quantityValue.ToString(), out int quantity))
+        {
+            decimal total = unitPrice * quantity;
+            e.Value = total.ToString("C");
+        }
     }
-} 
+}
 {% endhighlight %}
 {% endtabs %}
