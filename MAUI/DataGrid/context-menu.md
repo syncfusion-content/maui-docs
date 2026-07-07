@@ -12,7 +12,9 @@ keywords: maui datagrid context menu, maui grid context menu, .net maui datagrid
 
 ## Overview
 
-The `SfDataGrid` control allows you to display a customizable context menu when a user performs a secondary click (right-click on Windows and Mac Catalyst) or a long-press gesture (on Android and iOS) on different parts of the DataGrid.
+The `SfDataGrid` control allows you to display a customizable context menu when a user performs a secondary click (right-click on Windows and Mac Catalyst) or a long-press gesture (on Android and iOS) on different parts of the SfDataGrid.
+
+**BindingContext Setup**: When using XAML examples with commands and bindings, ensure your ContentPage's BindingContext is set to your ViewModel instance either through XAML (as shown in examples) or in code-behind: `this.BindingContext = new OrderInfoViewModel();`
 
 ### Types of Context Menus
 
@@ -24,11 +26,15 @@ You can define context menus for the following elements:
 -   **Group Summary**: Context menu for group summary rows.
 -   **Table Summary**: Context menu for table summary rows.
 
-Each context menu type provides specific options tailored to the DataGrid element it is associated with.
+Each context menu type provides specific options tailored to the SfDataGrid element it is associated with.
 
 ## Customize Header Context Menu
 
-The header context menu is displayed when the user invokes the context menu on a column header.You can customize the menu items by adding `MenuItem` objects to the `SfDataGrid.HeaderContextMenu` collection.
+The header context menu is displayed when the user invokes the context menu on a column header. You can customize the menu items by adding `MenuItem` objects to the `SfDataGrid.HeaderContextMenu` collection.
+
+**Icon Customization**: You can use font icons (as shown below with MaterialAssets), or provide custom images via `ImageSource` property for menu items. Supported formats include PNG, JPG, SVG, and other image formats compatible with MAUI's `ImageSource`.
+
+**MenuItemCollection Binding**: `MenuItemCollection` supports static population only. To create dynamic menus based on data, use the `ContextMenuOpening` event to programmatically modify menu items before display.
 
 {% tabs %}
 {% highlight xaml %}
@@ -200,6 +206,8 @@ public class OrderInfoViewModel
 
 The record context menu is displayed when the user invokes the context menu on a data row. You can customize the menu items by adding `MenuItem` objects to the `SfDataGrid.RecordContextMenu` collection.
 
+**Platform Behavior**: On Windows and Mac Catalyst, the record context menu displays on right-click. On Android and iOS, it displays on long-press gesture.
+
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
@@ -306,6 +314,8 @@ this.Content = dataGrid;
 ## Record Context Menu with Commands
 
 When binding a menu item using a `Command`, you can access the command parameter as `RowContextMenuInfo`. This object contains the `RowData` of the corresponding row, along with the `DataGrid` instance and the `RowIndex`.
+
+**Dynamic Menu Items**: To show/hide or enable/disable menu items conditionally, use the `ContextMenuOpening` event to modify the `MenuItems` collection before the menu is displayed (see [Events](#events) section below).
 
 {% tabs %}
 {% highlight xaml %}
@@ -782,7 +792,7 @@ tableSummaryRow.Position = SummaryRowPosition.Top;
 tableSummaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
 {
     Name = "Orders",
-    MappingName = "Orders",
+    MappingName = "OrderID",
     Format = "{Count}",
     SummaryType = SummaryType.CountAggregate
 });
@@ -1059,11 +1069,35 @@ this.Content = dataGrid;
 
 <img src="Images/context-menu/context-menu-separator.png" alt="" width="404"/>
 
-You can customize the stroke color and thickness of the context menu separator using the [ContextMenuSeparatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_DataGridStyle_ContextMenuSeparatorColor) and [ContextMenuSeparatorStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_DataGridStyle_ContextMenuSeparatorStroke) properties.
+You can customize the stroke color and thickness of the context menu separator using the [ContextMenuSeparatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ContextMenuSeparatorColor) and [ContextMenuSeparatorStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ContextMenuSeparatorStroke) properties.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       EnableContextMenuSeparators="True">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle ContextMenuSeparatorColor="Gray"
+                                  ContextMenuSeparatorStroke="2"/>
+    </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.EnableContextMenuSeparators = true;
+dataGrid.ContextMenuSeparatorColor = Colors.Gray;
+dataGrid.ContextMenuSeparatorStroke = 2;
+{% endhighlight %}
+{% endtabs %}
+
+## Performance Considerations
+
+**Menu Item Limits**: While there is no hard limit on the number of context menu items, it is recommended to keep the count under 15 items per menu for optimal user experience and performance. Excessive menu items may impact the display performance on mobile platforms.
+
+**Binding and Event Handlers**: Minimize complex operations within `ContextMenuOpening` event handlers, as they execute frequently during user interactions. For data-heavy operations, consider deferring them to background tasks or caching results.
 
 ## Events
 
-The DataGrid exposes events to customize and react to the context menu life cycle.
+The SfDataGrid exposes events to customize and react to the context menu life cycle.
 
 ### ContextMenuOpening
 
