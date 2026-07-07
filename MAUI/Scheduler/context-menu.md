@@ -23,15 +23,15 @@ When a context menu is configured, the Scheduler automatically displays the menu
  
 The Scheduler includes built-in commands that can be used directly in context menus.
 
-* **Add** - Creates a new appointment for the selected cell.
-* **Edit** - Opens the selected appointment for editing.
-* **Delete** - Deletes the selected appointment.
+* [Add](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCommands.html#Syncfusion_Maui_Scheduler_SchedulerCommands_Add) - Creates a new appointment for the selected cell.
+* [Edit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCommands.html#Syncfusion_Maui_Scheduler_SchedulerCommands_Edit) - Opens the selected appointment for editing.
+* [Delete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCommands.html#Syncfusion_Maui_Scheduler_SchedulerCommands_Delete) - Deletes the selected appointment.
  
 N> Built-in `Add` and `Edit` commands work only when the [AppointmentEditorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentEditorMode) property includes the corresponding `Add` or `Edit` option.
 
 ## Context Menu for Timeslot Cells
 
-The `CellContextMenu` property of the Scheduler allows users to define a set of context menu items that appear when the user performs a right tap or long press on a timeslot cell, month cell, or the all-day panel.
+The [CellContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellContextMenu) property of the Scheduler allows users to define a set of context menu items that appear when the user performs a right tap or long press on a timeslot cell, month cell, or the all-day panel.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15" %}
@@ -77,7 +77,7 @@ scheduler.CellContextMenu = new MenuItemCollection()
 
 ## Context Menu for Appointments
 
-The `AppointmentContextMenu` property of the Scheduler enables users to define a set of context menu items that appear when the user performs a right tap or long press on an appointment.
+The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentContextMenu) property of the Scheduler enables users to define a set of context menu items that appear when the user performs a right tap or long press on an appointment.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27" %}
@@ -150,11 +150,11 @@ scheduler.AppointmentContextMenu = new MenuItemCollection()
 
 ![Context-menu-for-appointments-in-maui-scheduler](images/context-menu/context-menu-for-appointments.png)
 
-N> The BindingContext of each context menu item is set to a `SchedulerContextMenuInfo` object.
+N> The BindingContext of each context menu item is set to a [SchedulerContextMenuInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuInfo.html) object.
 
 ## Customize context menu appearance
 
-You can modify the background and text appearance of the context menu displayed for scheduler cells and appointment using the `ContextMenuBackground` and `ContextMenuTextStyle` properties.
+You can modify the background and text appearance of the context menu displayed for scheduler cells and appointment using the [ContextMenuBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ContextMenuBackground) and [ContextMenuTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ContextMenuTextStyle) properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7" %}
@@ -183,14 +183,14 @@ scheduler.ContextMenuTextStyle = new SchedulerTextStyle()
 
 ## Handle Context Menu Opening
 
-The Scheduler raises the `ContextMenuOpening` event when a context menu is about to be displayed. This event provides access to the menu information and can be used to cancel the menu opening operation.
+The Scheduler raises the [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ContextMenuOpening) event when a context menu is about to be displayed. This event provides access to the menu information and can be used to cancel the menu opening operation.
 
-The `SchedulerContextMenuOpeningEventArgs` class provides information about the context menu being opened.
+The [SchedulerContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html) class provides information about the context menu being opened.
 
-- **ContextMenu** – Gets the collection of menu items that will be displayed.
-- **MenuInfo** – Gets information about the scheduler element that invoked the context menu. Provides the following details - selected appointment, cell date and time, associated resource and scheduler instance.
-- **MenuType** – Gets the type of scheduler element (Appointment, SchedulerCell or AllDay) for which the context menu is opened.
-- **Cancel** – Specifies whether the context menu opening operation should be canceled. 
+- [ContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuOpeningEventArgs_ContextMenu) – Gets the collection of menu items that will be displayed.
+- [MenuInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuOpeningEventArgs_MenuInfo) – Gets information about the scheduler element that invoked the context menu. Provides the following details - selected appointment, cell date and time, associated resource and scheduler instance.
+- [MenuType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuOpeningEventArgs_MenuType) – Gets the type of scheduler element (Appointment, SchedulerCell or AllDay) for which the context menu is opened.
+- 'Cancel' – Specifies whether the context menu opening operation should be canceled. 
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -217,7 +217,7 @@ private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpe
 
 ### Cancel context menu opening
 
-The `ContextMenuOpening` event can be used to prevent a context menu from being displayed. To cancel the context menu opening operation, set the `Cancel` property of the `SchedulerContextMenuOpeningEventArgs` to `true`.
+The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ContextMenuOpening) event can be used to prevent a context menu from being displayed. To cancel the context menu opening operation, set the `Cancel` property of the [SchedulerContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html) to `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -247,7 +247,7 @@ The clipboard functionality works as follows:
 
 ### Adding Context Menu Items
 
-The `AppointmentContextMenu` can be used to display Copy and Cut actions for appointments, while the `CellContextMenu` can be used to display the paste action for scheduler cells.
+The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentContextMenu) can be used to display Copy and Cut actions for appointments, while the [CellContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellContextMenu) can be used to display the paste action for scheduler cells.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
