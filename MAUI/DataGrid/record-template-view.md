@@ -306,7 +306,7 @@ The SfDataGrid allows you to expand or collapse the `RowTemplate` programmatical
 
 You can expand or collapse all the `RowTemplate` by using the [ExpandAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllDetailsView) and [CollapseAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllDetailsView) methods.
 
-**Note:** For large datasets, expanding all rows may impact performance. Consider limiting expansion to specific rows using index-based methods instead.
+> **Note:** For large datasets, expanding all rows may impact performance. Consider limiting expansion to specific rows using index-based methods instead.
 
 {% tabs %}
 {% highlight c# %}

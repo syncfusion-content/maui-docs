@@ -124,7 +124,7 @@ private void ScrollToColumnIndex_Mothod(object sender, EventArgs e)
 {% endtabs %}
 
 ### Scrolling to the row
-You can scroll programmatically to a particular row using the [SfDataGrid.ScrollToRow]() method by passing a row data object.
+You can scroll programmatically to a particular row using the [SfDataGrid.ScrollToRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRow_System_Object_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method by passing a row data object.
 
 {% tabs %}
 {% highlight xaml %}
@@ -157,7 +157,7 @@ private void ScrollToRow_Method(object sender, EventArgs e)
 {% endtabs %}
 
 ### Scrolling to the column
-You can scroll programmatically to a particular column using the [SfDataGrid.ScrollToColumn]() method by passing a DataGridColumn object.
+You can scroll programmatically to a particular column using the [SfDataGrid.ScrollToColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumn_Syncfusion_Maui_DataGrid_DataGridColumn_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method by passing a DataGridColumn object.
 
 {% tabs %}
 {% highlight xaml %}
@@ -328,7 +328,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
+> **Note:** These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
 
 
 ## Over-Scroll Mode

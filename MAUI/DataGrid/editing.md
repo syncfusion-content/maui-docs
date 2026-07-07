@@ -434,7 +434,7 @@ private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEd
 
 ## Undo and Redo an edit
 
-The SfDataGrid allows you to undo or redo edits by setting the [SfDataGrid.AllowUndoRedo]() to `true` (default: `false`). When enabled:
+The SfDataGrid allows you to undo or redo edits by setting the [SfDataGrid.AllowUndoRedo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowUndoRedo) to `true` (default: `false`). When enabled:
  * **Windows/Mac Catalyst:** `Ctrl + Z` (Undo), `Ctrl + Y` (Redo)
  * **iOS/Mac Catalyst:** `Cmd + Z` (Undo), `Cmd + Y` (Redo)
 
@@ -464,7 +464,7 @@ this.Content = dataGrid;
 
 ### MaxUndoRedoActions
 
-The [SfDataGrid.MaxUndoRedoActions]() property allows users to adjust the number of undo and redo actions in the DataGrid (default: `10`). This controls how many edit steps are retained in the undo/redo history before older entries are discarded. Refer to the following example to set `MaxUndoRedoActions`: 
+The [SfDataGrid.MaxUndoRedoActions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MaxUndoRedoActions) property allows users to adjust the number of undo and redo actions in the DataGrid. Refer to the following example to set `MaxUndoRedoActions`: 
 
 {% tabs %}
 {% highlight xaml %}
@@ -490,7 +490,7 @@ this.Content = dataGrid;
 
 ### Undo Programmatically
 
-The [Undo]() method can be used to undo an edit in the DataGrid. To undo an edit using the `Undo` method, refer to the example below:
+The [Undo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_Undo) method can be used to undo an edit in the DataGrid. To undo an edit using the `Undo` method, refer to the example below:
 
 {% tabs %}
 {% highlight xaml %}
@@ -545,7 +545,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ### Redo Programmatically
 
-The [Redo]() method can be used to redo an edit in the DataGrid. To redo an edit using the `Redo` method, refer to the example below:
+The [Redo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_Redo) method can be used to redo an edit in the DataGrid. To redo an edit using the `Redo` method, refer to the example below:
 
 {% tabs %}
 {% highlight xaml %}
@@ -600,7 +600,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ### Clear History
 
-The [ClearHistory]() method can be used to clear the history of undo and redo stored in the respective stacks. To clear the history using the `ClearHistory` method, refer to the example below:
+The [ClearHistory](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_ClearHistory) method can be used to clear the history of undo and redo stored in the respective stacks. To clear the history using the `ClearHistory` method, refer to the example below:
 
 {% tabs %}
 {% highlight xaml %}
@@ -655,7 +655,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ### Undo and Redo Count
 
-The number of undo and redo actions can be retrieved using [UndoCount]() and [RedoCount]() properties. These values update in real-time as edits are made. You can bind to these properties using OneWay binding mode for read-only display. Refer to the code below:
+The number of undo and redo actions can be retrieved using [UndoCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_UndoCount) and [RedoCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_RedoCount). Refer to the code below to set `UndoCount` and `RedoCount`:
 
 {% tabs %}
 {% highlight xaml %}
@@ -760,14 +760,14 @@ this.Content = grid;
 
 #### Cell Undoing
 
-The [SfDataGrid.CellUndoing]() event occurs when the undo action is in progress for a cell. The [DataGridUndoRedoEventArgs]() has the following members that provide information for the `SfDataGrid.CellUndoing` event:
+The [SfDataGrid.CellUndoing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellUndoing) event occurs when the undo action is in progress for a cell. The [DataGridUndoRedoEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html) has the following members that provide information for the `SfDataGrid.CellUndoing` event:
 
  * [Cancel](): When this member is set to `true`, the event is canceled and the undo action for the cell does not occur.
- * [RowIndex](): Gets the row index of the undoing cell in the DataGrid.
- * [ColumnIndex](): Gets the column index of the undoing cell in the DataGrid.
- * [Column](): Gets the column of the DataGrid.
- * [OldValue](): Gets the old value of the undoing cell in the DataGrid.
- * [NewValue](): Gets the new value of the undoing cell in the DataGrid.
+ * [RowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_RowIndex): Gets the row index of the undoing cell in the DataGrid.
+ * [ColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_ColumnIndex): Gets the column index of the undoing cell in the DataGrid.
+ * [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_Column): Gets the column of the DataGrid.
+ * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_OldValue): Gets the old value of the undoing cell in the DataGrid.
+ * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_NewValue): Gets the new value of the undoing cell in the DataGrid.
 
 To hook the `SfDataGrid.CellUndoing` event, follow the code example:
 
@@ -807,7 +807,7 @@ private void DataGrid_CellUndoing(object sender, DataGridUndoRedoEventArgs e)
 
 #### Cell Redoing
 
-The [SfDataGrid.CellRedoing]() event occurs when the redo action is in progress for a cell. To hook the `SfDataGrid.CellRedoing` event, follow the code example:
+The [SfDataGrid.CellRedoing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRedoing) event occurs when the redo action is in progress for a cell. To hook the `SfDataGrid.CellRedoing` event, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}

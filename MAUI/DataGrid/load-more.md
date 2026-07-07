@@ -43,20 +43,9 @@ public partial class MainPage : ContentPage
     private async void ExecuteLoadMoreCommand()
     {
         this.dataGrid.IsBusy = true;
-        try
-        {
-            await Task.Delay(new TimeSpan(0, 0, 5)); // Simulate network delay
-            viewModel.LoadMoreItems();
-        }
-        catch (Exception ex)
-        {
-            // Handle errors (e.g., network failures, timeouts)
-            await DisplayAlert("Error", "Failed to load more items: " + ex.Message, "OK");
-        }
-        finally
-        {
-            this.dataGrid.IsBusy = false;
-        }
+        await Task.Delay(new TimeSpan(0, 0, 5)); // Simulate network delay
+        viewModel.LoadMoreItems();
+        this.dataGrid.IsBusy = false;
     }
 }
 {% endhighlight %}
@@ -98,15 +87,8 @@ DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
 private async void ExecuteLoadMoreCommand()
 {
     DataGrid.IsBusy = true;
-    try
-    {
-        await Task.Delay(1000); // Simulate network delay
-        ViewModel.LoadMoreItems();
-    }
-    finally
-    {
-        DataGrid.IsBusy = false;
-    }
+    ViewModel.LoadMoreItems();
+    DataGrid.IsBusy = false;
 }
 {% endhighlight %}
 {% endtabs %}
@@ -349,15 +331,8 @@ public partial class MainPage : ContentPage
     private async void ExecuteLoadMoreCommand()
     {
         dataGrid.IsBusy = true;
-        try
-        {
-            await Task.Delay(new TimeSpan(0, 0, 5));
-            viewModel.LoadMoreItems();
-        }
-        finally
-        {
-            dataGrid.IsBusy = false;
-        }
+        viewModel.LoadMoreItems();
+        dataGrid.IsBusy = false;
     }
 }
 

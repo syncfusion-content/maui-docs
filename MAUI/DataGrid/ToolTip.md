@@ -211,7 +211,7 @@ public class ImageConverter : IValueConverter
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -286,7 +286,7 @@ The following image shows the `AlternateTemplate` which is applied through `Tool
 
 ## ToolTip Delay
 
-You can control how long the grid waits before showing a tooltip using the `SfDataGrid.TooltipDelay` property. The value is specified in milliseconds and applies to hover delay on Windows and macOS only. On touch platforms (Android/iOS) tooltips are shown via long-press and `TooltipDelay` is not applicable.
+You can control how long the grid waits before showing a tooltip using the [SfDataGrid.TooltipDelay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_TooltipDelay) property. The value is specified in milliseconds and applies to hover delay on Windows and macOS only. On touch platforms (Android/iOS) tooltips are shown via long-press and `TooltipDelay` is not applicable.
 
 This is helpful for preventing tooltip interference with other interactions, such as context menu popups or sorting operations.
 
