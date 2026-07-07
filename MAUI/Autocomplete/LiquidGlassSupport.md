@@ -47,7 +47,7 @@ To achieve a glass-like background in the SfAutocomplete, set the `Background` a
 | `EnableLiquidGlassEffect` | `bool` | `false` | Gets or sets a value that indicates whether the Liquid Glass Effect is applied. |
 | `Background` | `Brush` | `null` | Gets or sets the background of the input. Set to `Transparent` for the glass effect. |
 | `DropDownBackground` | `Brush` | `null` | Gets or sets the background of the drop-down. Set to `Transparent` for the glass effect. |
-| `SfGlassEffectView.EffectType` | `LiquidGlassEffectType` | `Regular` | The thickness of the glass effect. Values: `ExtraThin`, `Thin`, `Regular`, `Thick`, `ExtraThick`. |
+| `SfGlassEffectView.EffectType` | `LiquidGlassEffectType` | `Regular` | The thickness of the glass effect. Values: `Clear`, `Regular`. |
 | `SfGlassEffectView.CornerRadius` | `double` | `8.0` | The corner radius of the glass container. |
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the SfAutocomplete control:
