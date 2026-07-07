@@ -1002,7 +1002,7 @@ pdfDoc.PageSettings.Orientation = PdfPageOrientation.Landscape;
 
 ## Row height and column width customization
 
-### Exportcolumnwidth
+### ExportColumnWidth
 
 By default, columns are exported using the [DataGridPdfExportingOption.DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_DefaultColumnWidth) value. To export with the actual column widths from the data grid, set [DataGridPdfExportingOption.CanExportColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportColumnWidth) to `true`:
 
@@ -1013,7 +1013,7 @@ option.CanExportColumnWidth = true;
 {% endhighlight %}
 {% endtabs %}
 
-### Export row height
+### ExportRowHeight
 
 By default, rows are exported using the [DataGridPdfExportingOption.DefaultRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_DefaultRowHeight) value. To export with the actual row heights from the data grid, set [DataGridPdfExportingOption.CanExportRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportRowHeight) to `true`:
 
