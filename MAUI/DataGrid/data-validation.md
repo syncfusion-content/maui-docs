@@ -16,7 +16,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo` can be enabled by setting [SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) properties. Column-level validation mode takes priority over grid-level validation mode.
 
-> **Note:** ValidationMode is a static property set at initialization and applies consistently throughout the data entry lifecycle.
+> **Note:** ValidationMode is a static property set at initialization and applies consistently throughout the data entry life cycle.
 
 * DataGridValidationMode.InEdit - display error icon & tips and also doesn’t allow the users to commit the invalid data by not allowing users to edit other cells.
 * DataGridValidationMode.InView - displays error icons and tips alone.
