@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrate from Xamarin to .NET MAUI SfImageEditor | Syncfusion
-description: Learn about Migrating from Syncfusion<sup>&reg;</sup> Xamarin.Forms ImageEditor to the Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor control.
-platform: maui
+description: Learn here all about migrating from Syncfusion<sup>&reg;</sup> Xamarin.Forms Image Editor to the Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor control.
+platform: MAUI
 control: SfImageEditor
 documentation: ug
---- 
+---
 
 # Migrate from Xamarin.Forms SfImageEditor to .NET MAUI SfImageEditor
 
-To make the migration from the [Xamarin SfImageEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.html) to the [.NET MAUI SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.html) easier, most of the APIs from the Xamarin SfImageEditor are kept in the [.NET MAUI SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.html). However, to maintain the consistency of API naming in the [.NET MAUI SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.html), some of the APIs have been renamed. Please find the difference in the following topics.
+To make migration easier from the [Xamarin SfImageEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.html) to the [.NET MAUI SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.html), most of the APIs from Xamarin SfImageEditor have been retained in the .NET MAUI SfImageEditor. However, to maintain the consistency of API naming in the .NET MAUI SfImageEditor, some of the APIs have been renamed. The API changes from Xamarin SfImageEditor to .NET MAUI SfImageEditor are detailed as follows.
 
 ## Namespaces
 
@@ -36,14 +36,14 @@ To initialize the control, import the ImageEditor namespace and initialize the `
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage 
+<ContentPage
 ...
 xmlns:imageEditor="clr-namespace:Syncfusion.XForms.ImageEditor;assembly=Syncfusion.SfImageEditor.XForms">
     <imageEditor:SfImageEditor x:Name="imageEditor"/>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.XForms.ImageEditor;
 ...
@@ -68,7 +68,7 @@ xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 …
@@ -93,11 +93,11 @@ this.Content = imageEditor;
 <tr>
 <td>{{'[SfImageEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html)'| markdownify }}</td>
 <td>{{'[SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html)'| markdownify }}</td>
-<td>The image editor is used to crop, flip, rotate, annotate an image with freehand drawing, and built-in shapes.</td>
+<td>Used to crop, flip, rotate, and annotate an image with freehand drawings and built-in shapes.</td>
 </tr>
 
 <tr>
-<td>{{'[PenSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html)'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[ImageEditorAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html)'| markdownify }}</td>
 <td>Represents a class that contains common settings for annotation views.</td>
 </tr>
@@ -115,7 +115,7 @@ this.Content = imageEditor;
 </tr>
 
 <tr>
-<td>{{'[TextSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.TextSettings.html)'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[ImageEditorTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html)'| markdownify }}</td>
 <td>Represents a class that contains the style for text annotation view.</td>
 </tr>
@@ -128,7 +128,7 @@ this.Content = imageEditor;
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage 
+<ContentPage
 ...
 xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -137,9 +137,10 @@ xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
+using Microsoft.Maui.Controls;
 ...
 
 SfImageEditor imageEditor = new SfImageEditor();
@@ -157,7 +158,7 @@ this.Content = imageEditor;
 <tr>
 <td>{{'[Source](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Source)'| markdownify }}</td>
 <td>{{'[Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source)'| markdownify }}</td>
-<td>Gets or sets the source of image.</td>
+<td>Gets or sets the source of the image.</td>
 </tr>
 
 <tr>
@@ -169,7 +170,7 @@ this.Content = imageEditor;
 <tr>
 <td>{{'[EnableZooming](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_EnableZooming)'| markdownify }}</td>
 <td>{{'[AllowZoom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom)'| markdownify }}</td>
-<td>Gets or sets the value indicating whether to enable the zoom.</td>
+<td>Gets or sets a value indicating whether zoom is enabled.</td>
 </tr>
 
 <tr>
@@ -181,32 +182,31 @@ this.Content = imageEditor;
 <tr>
 <td>{{'[ActualImageRenderedBounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_ActualImageRenderedBounds)'| markdownify }}</td>
 <td>{{'[ImageRenderedSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize)'| markdownify }}</td>
-<td>Gets the image rendered size.</td>
+<td>Gets the rendered size of the image.</td>
 </tr>
 
 <tr>
 <td>{{'[OriginalImageSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_OriginalImageSize)'| markdownify }}</td>
 <td>{{'[OriginalImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_OriginalImageSize)'| markdownify }}</td>
-<td>Gets the original image size.</td>
+<td>Gets the original size of the image.</td>
 </tr>
 
 <tr>
 <td>{{'[IsImageEdited](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_IsImageEdited)'| markdownify }}</td>
 <td>{{'[IsImageEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited)'| markdownify }}</td>
-<td>Gets the value indicating whether the image is edited or not.</td>
+<td>Gets a value indicating whether the image has been edited.</td>
 </tr>
 
 <tr>
 <td>{{'[ToolbarSettings.IsVisible](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.ToolbarSettings.html#Syncfusion_SfImageEditor_XForms_ToolbarSettings_IsVisible)'| markdownify }}</td>
 <td>{{'[ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar)'| markdownify }}</td>
-<td>Gets or sets the value indicating whether to enable or disable default toolbar.</td>
+<td>Gets or sets a value indicating whether the default toolbar is enabled.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>{{'[SelectionStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SelectionStroke)'| markdownify }}</td>
-<td>Gets or sets the selection highlight stroke.
-Applicable for crop view selection, shape and text annotation selection.
+<td>Gets or sets the selection highlight stroke. Applicable to crop view selection, and shape and text annotation selection.
 </td>
 </tr>
 
@@ -222,25 +222,25 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <td>{{'[Bounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html#Syncfusion_SfImageEditor_XForms_PenSettings_Bounds)'| markdownify }}</td>
 <td>{{'[Bounds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds)'| markdownify }}</td>
-<td>Gets or sets the annotation view bounds.</td>
+<td>Gets or sets the bounds of the annotation view.</td>
 </tr>
 
 <tr>
 <td>{{'[EnableDrag](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html#Syncfusion_SfImageEditor_XForms_PenSettings_EnableDrag)'| markdownify }}</td>
 <td>{{'[AllowDrag](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowDrag)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether to enable drag action for annotation.</td>
+<td>Gets or sets a value indicating whether the drag action is enabled for the annotation.</td>
 </tr>
 
 <tr>
 <td>{{'[IsResizable](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html#Syncfusion_SfImageEditor_XForms_PenSettings_IsResizable)'| markdownify }}</td>
 <td>{{'[AllowResize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowResize)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether the resizing action is enabled or not for annotation.</td>
+<td>Gets or sets a value indicating whether the annotation can be resized.</td>
 </tr>
 
 <tr>
 <td>{{'[Opacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html#Syncfusion_SfImageEditor_XForms_PenSettings_Opacity)'| markdownify }}</td>
 <td>{{'[Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Opacity)'| markdownify }}</td>
-<td>Gets or sets the opacity value. It ranges from 0 to 1.</td>
+<td>Gets or sets the opacity value, ranging from 0 to 1.</td>
 </tr>
 </table>
 
@@ -254,19 +254,19 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html#Syncfusion_SfImageEditor_XForms_PenSettings_Color)'| markdownify }}</td>
 <td>{{'[Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_Color)'| markdownify }}</td>
-<td>Gets or sets the shape annotation color.</td>
+<td>Gets or sets the color of the shape annotation.</td>
 </tr>
 
 <tr>
 <td>{{'[StrokeWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html#Syncfusion_SfImageEditor_XForms_PenSettings_StrokeWidth)'| markdownify }}</td>
 <td>{{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_StrokeThickness)'| markdownify }}</td>
-<td>Gets or sets the shape annotation stroke thickness.</td>
+<td>Gets or sets the stroke thickness of the shape annotation.</td>
 </tr>
 
 <tr>
 <td>{{'[FillColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html#Syncfusion_SfImageEditor_XForms_PenSettings_FillColor)'| markdownify }}</td>
 <td>{{'[IsFilled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_IsFilled)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether the color should be applied to the shape fill or stroke.</td>
+<td>Gets or sets a value indicating whether the shape is filled with the color.</td>
 </tr>
 </table>
 
@@ -280,31 +280,31 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <td>{{'[Angle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.TextSettings.html#Syncfusion_SfImageEditor_XForms_TextSettings_Angle)'| markdownify }}</td>
 <td>{{'[RotationAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_RotationAngle)'| markdownify }}</td>
-<td>Gets or sets the initial rotation angle for text.</td>
+<td>Gets or sets the initial rotation angle of the text.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>{{'[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_TextStyle)'| markdownify }}</td>
-<td>Gets or sets the text style for text.</td>
+<td>Gets or sets the style applied to the text.</td>
 </tr>
 
 <tr>
 <td>{{'[RotatableElement](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_RotatableElements)'| markdownify }}</td>
 <td>{{'[IsRotatable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_IsRotatable)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether the text is rotatable or not.</td>
+<td>Gets or sets a value indicating whether the text is rotatable.</td>
 </tr>
 
 <tr>
 <td>{{'[TextAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.TextSettings.html#Syncfusion_SfImageEditor_XForms_TextSettings_TextAlignment)'| markdownify }}</td>
 <td>{{'[TextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_TextAlignment)'| markdownify }}</td>
-<td>Gets or sets the TextAlignment for the text.</td>
+<td>Gets or sets the text alignment.</td>
 </tr>
 
 <tr>
 <td>{{'[IsEditable](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.TextSettings.html#Syncfusion_SfImageEditor_XForms_TextSettings_IsEditable)'| markdownify }}</td>
 <td>{{'[IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_IsEditable)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether the text is editable or not.</td>
+<td>Gets or sets a value indicating whether the text is editable.</td>
 </tr>
 </table>
 
@@ -318,7 +318,7 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.TextSettings.html#Syncfusion_SfImageEditor_XForms_TextSettings_Color)'| markdownify }}</td>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html#Syncfusion_Maui_ImageEditor_ImageEditorTextStyle_TextColor)'| markdownify }}</td>
-<td>Gets or sets the color for the text.</td>
+<td>Gets or sets the color of the text.</td>
 </tr>
 
 <tr>
@@ -330,13 +330,13 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <td>{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.TextSettings.html#Syncfusion_SfImageEditor_XForms_TextSettings_FontFamily)'| markdownify }}</td>
 <td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html#Syncfusion_Maui_ImageEditor_ImageEditorTextStyle_FontFamily)'| markdownify }}</td>
-<td>Gets or sets the font family for the text.</td>
+<td>Gets or sets the font family of the text.</td>
 </tr>
 
 <tr>
 <td>{{'[TextEffects](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.TextSettings.html#Syncfusion_SfImageEditor_XForms_TextSettings_TextEffects)'| markdownify }}</td>
 <td>{{'[FontAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html#Syncfusion_Maui_ImageEditor_ImageEditorTextStyle_FontAttributes)'| markdownify }}</td>
-<td>Gets or sets the font attribute for the text.</td>
+<td>Gets or sets the font attributes of the text.</td>
 </tr>
 </table>
 
@@ -391,31 +391,31 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <td>{{'[BeginReset](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_BeginReset)'| markdownify }}</td>
 <td>{{'[BeginReset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BeginReset)'| markdownify }}</td>
-<td>Occurs when the image reset action.</td>
+<td>Occurs when the image reset action begins.</td>
 </tr>
 
 <tr>
 <td>{{'[ImageSaving](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_ImageSaving)'| markdownify }}</td>
 <td>{{'[ImageSaving](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaving)'| markdownify }}</td>
-<td>Occurs when the image saving.</td>
+<td>Occurs when the image is being saved.</td>
 </tr>
 
 <tr>
 <td>{{'[ImageSaved](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_ImageSaved)'| markdownify }}</td>
 <td>{{'[ImageSaved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved)'| markdownify }}</td>
-<td>Occurs when the image saved in local storage.</td>
+<td>Occurs when the image is saved to local storage.</td>
 </tr>
 
 <tr>
 <td>{{'[ItemSelected](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_ItemSelected)'| markdownify }}</td>
 <td>{{'[AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected)'| markdownify }}</td>
-<td>Occurs when an annotation view selected.</td>
+<td>Occurs when an annotation view is selected.</td>
 </tr>
 
 <tr>
 <td>{{'[ImageLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_ImageLoaded)'| markdownify }}</td>
 <td>{{'[ImageLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded)'| markdownify }}</td>
-<td>Occurs when image loaded into view initially.</td>
+<td>Occurs when the image is initially loaded into the view.</td>
 </tr>
 </table>
 
@@ -430,100 +430,101 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <td>{{'[Rotate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Rotate)'| markdownify }}</td>
 <td>{{'[Rotate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Rotate)'| markdownify }}</td>
-<td>Method to rotate image 90 degrees in clockwise direction.</td>
+<td>Rotates the image by 90 degrees in the clockwise direction.</td>
 </tr>
 
 <tr>
 <td>{{'[Flip](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Flip_Syncfusion_SfImageEditor_XForms_FlipDirection_)'| markdownify }}</td>
 <td>{{'[Flip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Flip_Syncfusion_Maui_ImageEditor_ImageFlipDirection_)'| markdownify }}</td>
-<td>Method to reverse the image along its horizontal or vertical axis. </td>
+<td>Reverses the image along its horizontal or vertical axis.</td>
 </tr>
 
 <tr>
 <td>{{'[Crop](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Crop_Xamarin_Forms_Rectangle_System_Boolean_)'| markdownify }}</td>
 <td>{{'[Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Syncfusion_Maui_ImageEditor_ImageCropType_)'| markdownify }}</td>
-<td>Method to select and remove a portion of the image.</td>
+<td>Selects and removes a portion of the image.</td>
 </tr>
 
 <tr>
 <td>{{'[AddText](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_AddText_System_String_Syncfusion_SfImageEditor_XForms_TextSettings_)'| markdownify }}</td>
 <td>{{'[AddText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddText_System_String_Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_)'| markdownify }}</td>
-<td>Method to add text to the image.</td>
+<td>Adds text to the image.</td>
 </tr>
 
 <tr>
 <td>{{'[AddShape](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_AddShape_Syncfusion_SfImageEditor_XForms_ShapeType_Syncfusion_SfImageEditor_XForms_PenSettings_)'| markdownify }}</td>
 <td>{{'[AddShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_)'| markdownify }}</td>
-<td>Method to add shapes such as rectangles, circles, and lines to the image.</td>
+<td>Adds shapes such as rectangles, circles, and lines to the image.</td>
 </tr>
 
 <tr>
 <td>{{'[Save](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Save_System_String_Xamarin_Forms_Size_)'| markdownify }}</td>
 <td>{{'[Save](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Save_System_Nullable_Syncfusion_Maui_ImageEditor_ImageFileType__System_String_System_String_System_Nullable_Microsoft_Maui_Graphics_Size__)'| markdownify }}</td>
-<td>Method to save the edited image.</td>
+<td>Saves the edited image.</td>
 </tr>
 
 <tr>
 <td>{{'[SaveEdits](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_SaveEdits)'| markdownify }}</td>
 <td>{{'[SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SaveEdits)'| markdownify }}</td>
-<td>Method to save the current editing actions.</td>
+<td>Saves the current editing actions.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>{{'[CancelEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_CancelEdits)'| markdownify }}</td>
-<td>Method to cancel the editing actions.</td>
+<td>Cancels the current editing actions.</td>
 </tr>
 
 <tr>
 <td>{{'[ClearAnnotations](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_ClearAnnotations)'| markdownify }}</td>
 <td>{{'[ClearAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations)'| markdownify }}</td>
-<td>Method to remove all the annotations.</td>
+<td>Removes all annotations from the image.</td>
 </tr>
 
 <tr>
 <td>{{'[Reset](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Reset)'| markdownify }}</td>
 <td>{{'[Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Reset)'| markdownify }}</td>
-<td>Method to reset the edited image to its initial stage.</td>
+<td>Resets the edited image to its initial state.</td>
 </tr>
 
 <tr>
 <td>{{'[Undo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Undo)'| markdownify }}</td>
 <td>{{'[Undo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Undo)'| markdownify }}</td>
-<td>Method to reverse or undo the last action or a series of actions.</td>
+<td>Reverses (undoes) the last action or a series of actions.</td>
 </tr>
 
 <tr>
 <td>{{'[Redo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Redo)'| markdownify }}</td>
 <td>{{'[Redo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Redo)'| markdownify }}</td>
-<td>Method to replay or redo an action or a series of actions that were previously undone using the "Undo" command.</td>
+<td>Re-applies an action or a series of actions that were previously undone using the 'Undo' command.</td>
 </tr>
 
 <tr>
 <td>{{'[Delete](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_Delete)'| markdownify }}</td>
 <td>{{'[DeleteAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_DeleteAnnotation)'| markdownify }}</td>
-<td>Method to remove the current selected annotations.</td>
+<td>Removes the currently selected annotations.</td>
 </tr>
 
 <tr>
 <td>{{'[GetStream](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_GetStream)'| markdownify }}</td>
 <td>{{'[GetImageStream](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream)'| markdownify }}</td>
-<td>Method to get the edited image stream</td>
+<td>Gets the edited image as a stream.</td>
 </tr>
 
 <tr>
 <td>{{'[ApplyImageEffect](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_ApplyImageEffect_Syncfusion_SfImageEditor_XForms_ImageEffect_System_Int32_)'| markdownify }}</td>
 <td>{{'[ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageEffect_Syncfusion_Maui_ImageEditor_ImageEffect_System_Nullable_System_Double__)'| markdownify }}</td>
-<td>Method to apply various visual effects to the image, such as adjusted brightness, blur, contrast, exposure, saturation, sharpen, hue, and opacity.</td>
+<td>Applies various visual effects to the image, such as adjusted brightness, blur, contrast, exposure, saturation, sharpen, hue, and opacity.</td>
 </tr>
 </table>
 
 ## Upcoming features
 
-* Support for pan and zoom improvements while performing the crop action on the images.
+* Support for pan and zoom improvements while performing the crop action on images.
 
-## Known issues in .NET MAUI ImageEditor
-* [Mac, iOS]The image is not loading correctly from the stream or URI binding source.
+## Known issues in .NET MAUI Image Editor
+
+* [Mac, iOS] The image is not loading correctly from the stream or URI binding source.
 * Rotation not working for text annotation.
-* [Mac, iOS] The `FontAttributes` will not work for text annotations with the Custom font family.
+* [Mac, iOS] The `FontAttributes` will not work for text annotations with the custom font family.
 * Rotation will not work for custom annotation views.
