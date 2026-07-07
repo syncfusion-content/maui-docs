@@ -47,7 +47,7 @@ private void OnSerializeClicked(object sender, EventArgs e)
 
 ## Deserialization
 
-The [`Deserialize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Deserialize_System_IO_Stream_) method deserializes the annotations over an image. It reloads the [`SfImageEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) control with the annotations stored in the stream.
+The [`Deserialize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Deserialize_System_IO_Stream_) method deserialize the annotations over an image. It reloads the [`SfImageEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) control with the annotations stored in the stream.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
