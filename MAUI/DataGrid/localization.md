@@ -45,7 +45,7 @@ To localize the `DataGrid` based on `CurrentUICulture` using resource files, fol
 
 ### Step-by-step Setup
 
-   1. Create new folder, named as `Resources` in the application.       
+   1. Create a new folder named `Resources` in the application if it does not already exist.      
 
    2. **Create culture-specific resource files:**
       - Right-click on the `Resources` folder, select `Add` and then `New Item`.

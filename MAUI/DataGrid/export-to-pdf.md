@@ -15,7 +15,7 @@ To quickly get started with export to PDF in [.NET MAUI DataGrid](https://www.sy
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/h8c_qnnG7iE'></iframe>
 
-If you are utilizing a NuGet package to facilitate the process, please ensure that the following package is installed in order to export the SfDataGrid to a PDF file:
+To export the SfDataGrid to a PDF file, install the following NuGet package:
 
 <table>
 <tr>
@@ -28,9 +28,13 @@ If you are utilizing a NuGet package to facilitate the process, please ensure th
 </tr>
 </table>
 
-## Save Service class in portable project
+## Implement SaveService Class
 
-Add a new class file named `SaveService` to the portable project and add the code below. This is the helper class used to save and view the PDF file on Windows, Android, iOS, and macOS devices.
+Create a platform-agnostic SaveService class in your portable project with partial methods that will be implemented for each platform (Windows, Android, iOS, MacCatalyst). This helper class handles saving and viewing PDF files across all platforms.
+
+### Step 1: Create the Base SaveService Class
+
+Add a new class file named `SaveService.cs` to your portable project root and add the following code:
 
 {% tabs %}
 {% highlight c# %}
@@ -45,9 +49,9 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View PDF documents on Windows
+### Step 2: Implement Windows Platform
 
-Add a new class file named `SaveWindows.cs` under **Project → Platforms → Windows** directory to save and view the PDF document on a Windows machine. Use the code below:
+Add a new partial class file named `SaveService.cs` under `Platforms/Windows/` directory to save and view PDF documents on Windows:
 
 {% tabs %}
 {% highlight c# %}
@@ -127,9 +131,9 @@ namespace GettingStarted
 {% endtabs %}
 
 
-### Save and View PDF documents on Android
+### Step 3: Implement Android Platform
 
-Add a new class file named `SaveAndroid.cs` under **Project → Platforms → Android** directory to save and view the PDF document on an Android device. Use the code below:
+Add a new partial class file named `SaveService.cs` under `Platforms/Android/` directory to save and view PDF documents on Android:
 
 {% tabs %}
 {% highlight c# %}
@@ -234,9 +238,9 @@ Add the following code to the `AndroidManifest.xml` file located under **Propert
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View PDF documents on iOS
+### Step 4: Implement iOS Platform
 
-Add a new class file named `SaveIOS.cs` under **Platforms → iOS** directory to save and view the PDF document on an iOS device. Use the code below:
+Add a new partial class file named `SaveService.cs` under `Platforms/iOS/` directory to save and view PDF documents on iOS:
 
 {% tabs %}
 {% highlight c# %}
@@ -359,9 +363,9 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View PDF documents on macOS (MacCatalyst)
+### Step 5: Implement MacCatalyst Platform
 
-Add a new class file named `SaveMAC.cs` under **Platforms → MacCatalyst** directory to save and view the PDF document on a macOS device. Use the code below:
+Add a new partial class file named `SaveService.cs` under `Platforms/MacCatalyst/` directory to save and view PDF documents on Mac:
 
 {% tabs %}
 {% highlight c# %}
@@ -998,7 +1002,7 @@ pdfDoc.PageSettings.Orientation = PdfPageOrientation.Landscape;
 
 ## Row height and column width customization
 
-### Export column width
+### Exportcolumnwidth
 
 By default, columns are exported using the [DataGridPdfExportingOption.DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_DefaultColumnWidth) value. To export with the actual column widths from the data grid, set [DataGridPdfExportingOption.CanExportColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportColumnWidth) to `true`:
 
@@ -1173,7 +1177,7 @@ Here, first record only expanded in SfDataGrid. But all the DetailsViewDataGrid�
 
 You can customize its exporting operation by using [DataGridChildPdfExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridChildPdfExportingEventArgs.html).
 
-N> While exporting DetailsViewDataGrid, [CanFitAllColumnInOnePage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanFitAllColumnsInOnePage) is set to true internally as horizontal pagination is not supported for DetailsViewDataGrid.
+> **Note:** While exporting DetailsViewDataGrid, [CanFitAllColumnInOnePage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanFitAllColumnsInOnePage) is set to true internally as horizontal pagination is not supported for DetailsViewDataGrid.
 
 ### Excluding DetailsViewDataGrid while exporting
 

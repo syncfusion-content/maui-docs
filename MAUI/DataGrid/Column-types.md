@@ -1620,7 +1620,7 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 `DataGridPercentColumn` is a specialized column for displaying and editing percentage values consistently across platforms. It supports two display modes, culture-aware formatting, numeric filtering, and serialization.
 
-The `PercentEditMode` property controls how values are interpreted and presented: use `PercentMode` to display values as percentages, or `DoubleMode` to treat the cell value as a plain numeric (double) value.
+The [PercentEditMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPercentColumn.html#Syncfusion_Maui_DataGrid_DataGridPercentColumn_PercentEditMode) property controls how values are interpreted and presented: use `PercentMode` to display values as percentages, or `DoubleMode` to treat the cell value as a plain numeric (double) value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1651,7 +1651,7 @@ this.Content = dataGrid;
 
 <img alt="DataGrid with Percent column" src="Images\column-types\maui-datagrid-percentage-column.png" width="404"/>
 
-The `DataGridPercentColumn` supports culture-aware parsing and formatting for percentage values. By default the percent operator (`%`) is used when displaying and parsing values; change this symbol using the `PercentSymbol` property to support alternate conventions.
+The `DataGridPercentColumn` supports culture-aware parsing and formatting for percentage values. By default the percent operator (`%`) is used when displaying and parsing values; change this symbol using the [PercentSymbol](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPercentColumn.html#Syncfusion_Maui_DataGrid_DataGridPercentColumn_PercentSymbol) property to support alternate conventions.
 
 ### Allow Null Value
 
