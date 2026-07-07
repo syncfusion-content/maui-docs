@@ -1,41 +1,83 @@
 ---
 layout: post
 title: Change Number Format in .NET MAUI NumericEntry | Syncfusion®
-description: Learn here about changing the number format of Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
-platform: MAUI
+description: Learn how to change the number format of the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
+platform: maui
 control: SfNumericEntry
 documentation: ug
 ---
 
 # Value Formatting with .NET MAUI NumericEntry
 
-This section explains how to change the value format of the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the `CustomFormat` properties.
+This section explains how to change the value format of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the `CustomFormat` property and the related formatting options (`Culture`, `PercentDisplayMode`, `MaximumNumberDecimalDigits`).
 
-## Currency, percentage and decimal format
+## Prerequisites
 
-The value of the `NumericEntry` control can be formatted using the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. By default, the value is formatted based on the current culture's decimal format. The default value of the `CustomFormat` properties is **null**.
+Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), ensure the following are set up:
 
-The following example shows how to set the `CurrencyFormatter`, `DecimalFormatter`, and `PercentFormatter` for the `NumberFormatter` property. 
+1. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
+2. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
 
-Using the **N**, **C**, and **P** format values, we can apply numeric, currency, and percent custom formats in the `CustomFormat` property. 
+    ```csharp
+    using Syncfusion.Maui.Core.Hosting;
 
-N> You can apply various custom formats available in  [this page](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings), which are supported for the `double` type.
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+    ```
+
+3. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
+
+    ```xml
+    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+    ```
+
+    ```csharp
+    using Syncfusion.Maui.Inputs;
+    ```
+
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+
+## Currency, percentage, and decimal formats
+
+Format the value of the `NumericEntry` control by using the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. By default, the value is formatted using the current culture's decimal format, and the default value of `CustomFormat` is `null`.
+
+The following table lists the most common standard format specifiers that are supported for the `double` type:
+
+| Specifier | Description | Example output (en-US) |
+| --- | --- | --- |
+| `C` or `c` | Currency | `$1,234.50` |
+| `P` or `p` | Percent | `12.50 %` |
+| `N` or `n` | Number (integer and decimal digits) | `1,234.50` |
+| `F` or `f` | Fixed-point | `1234.50` |
+
+> For the full list of supported standard format strings, see the [.NET documentation on standard numeric format strings](https://learn.microsoft.com/dotnet/standard/base-types/standard-numeric-format-strings).
+
+The following example shows how to apply the `C2`, `P2`, and `N2` format strings to the `CustomFormat` property.
 
 {% tabs %}
 {% highlight xaml %}
 
-// Format stock price in currency.
+<!-- Format stock price in currency. -->
 <editors:SfNumericEntry CustomFormat="C2" WidthRequest="200" />
 
-// Format product discount in percent.
+<!-- Format product discount in percent. -->
 <editors:SfNumericEntry CustomFormat="P2" WidthRequest="200" />
 
-// Format worked hours in decimal.
+<!-- Format worked hours in decimal. -->
 <editors:SfNumericEntry CustomFormat="N2" WidthRequest="200" />
 
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 // Format stock price in currency.
 var stockPrice = new SfNumericEntry
@@ -61,64 +103,60 @@ var hoursWorked = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry customize format by NumberFormatter](Formatting_images/maui-numeric-entry-numberformatter.png)
+![.NET MAUI NumericEntry custom format with C2, P2, and N2](Formatting_images/maui-numeric-entry-numberformatter.png)
 
 ## Format the integer digits
 
-You can change the decimal digits of the value in the `NumericEntry` control using the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) properties. 
+Pad the integer portion of the value to a fixed width by using the **0** (zero-placeholder) specifier in the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. For example, the format string `00000.00` always renders a 5-digit integer followed by a 2-digit fractional portion, padding the left with zeros when the value has fewer digits.
 
-For the `CustomFormat` property, use the **0** format specifier to set the minimum number of decimal digits.  
-
-N> **0** (Zero placeholder) replaces the zero with the corresponding digit present in the value; otherwise, zero appends with the leftmost position of the value. 
+> **0** (zero placeholder) replaces the zero with the corresponding digit present in the value; otherwise, a zero is appended at the leftmost position of the value.
 
 {% tabs %}
 {% highlight xaml %}
 
-// Format stock price in currency.
-<editors:SfNumericEntry CustomFormat="$00000.00" WidthRequest="200"/>
+<!-- Format stock price in currency. -->
+<editors:SfNumericEntry CustomFormat="$00000.00" WidthRequest="200" />
 
-// Format product discount in percentage.
-<editors:SfNumericEntry CustomFormat="00000.00%" WidthRequest="200"/>
+<!-- Format product discount in percentage. -->
+<editors:SfNumericEntry CustomFormat="00000.00%" WidthRequest="200" />
 
-// Format worked hours in decimal.
-<editors:SfNumericEntry CustomFormat="00000.00" WidthRequest="200"/>
+<!-- Format worked hours in decimal. -->
+<editors:SfNumericEntry CustomFormat="00000.00" WidthRequest="200" />
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 // Format stock price in currency.
 var stockPrice = new SfNumericEntry
 {
     CustomFormat = "$00000.00",
-    WidthRequest = 200
+    WidthRequest = 200,
 };
 
 // Format product discount in percentage.
 var productDiscount = new SfNumericEntry
 {
     CustomFormat = "00000.00%",
-    WidthRequest = 200
+    WidthRequest = 200,
 };
 
 // Format worked hours in decimal.
 var hoursWorked = new SfNumericEntry
 {
     CustomFormat = "00000.00",
-    WidthRequest = 200
+    WidthRequest = 200,
 };
 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry customize decimal digits](Formatting_images/maui-numeric-entry-change-decimal-digits.png)
+![.NET MAUI NumericEntry padded integer digits](Formatting_images/maui-numeric-entry-change-decimal-digits.png)
 
 ## Format the fractional digits
 
-You can change the fractional digits of the value in the `NumericEntry` control using the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) Properties.
+Set the number of fractional digits displayed by the value by using the **0** (zero-placeholder) specifier in the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. The following example renders a 3-digit fractional portion:
 
-For the `CustomFormat` property, use the **0** format specifier to set the minimum number of fractional digits.  
-
-N> **0** (Zero placeholder) replaces the zero with the corresponding digit in the value.
+> **0** (zero placeholder) replaces the zero with the corresponding digit in the value. If the value has fewer fractional digits, a zero is appended at the rightmost position.
 
 {% tabs %}
 {% highlight xaml %}
@@ -155,13 +193,14 @@ var hoursWorked = new SfNumericEntry
 
 ## Apply custom format
 
-You can apply custom formats to the `NumericEntry` control using the **0** and **#** format specifiers. Using these format specifiers, you can set the minimum and the maximum number of fractional digits in the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property.
+You can apply custom formats to the `NumericEntry` control by combining the **0** and **#** format specifiers in the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. Use these specifiers to set the minimum and maximum number of fractional digits.
 
-   * **0** (Zero placeholder) replaces the zero with the corresponding digit present in the value; otherwise, zero appends with the leftmost position of the value. 
+| Specifier | Description |
+| --- | --- |
+| **0** (zero placeholder) | Replaces the zero with the corresponding digit present in the value. If no digit is present, a zero is appended at the leftmost (integer) or rightmost (fractional) position. |
+| **#** (digit placeholder) | Replaces the placeholder with the corresponding digit present in the value. If no digit is present, no digit is rendered. |
 
-   * **#** (Digit placeholder) replaces the number sign symbol with the corresponding digit present in the value; otherwise, no digit will append to the value.
-
-In the following example, the value of the `CustomFormat` property is **#.00##**, hence it will allow a maximum of `4` fractional digits and a minimum of `2` fractional digits.
+In the following example, the value of the `CustomFormat` property is `$00.00##`. The two `0` specifiers before the decimal point force a minimum 2-digit integer, the two `0` specifiers after the decimal point force a minimum 2 fractional digits, and the two `#` specifiers allow up to 4 fractional digits in total.
 
 {% tabs %}
 {% highlight xaml %}
@@ -200,98 +239,131 @@ var hoursWorked = new SfNumericEntry
 
 ## Culture support
 
-The culture support allows the control to be configured for a specific language. To configure this, use the `culture` property.
+The `Culture` property configures the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) for a specific language. Set it to a `System.Globalization.CultureInfo` instance; the value is then formatted using that culture's decimal separator, currency symbol, and so on.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight xaml %}
 
-CultureInfo culture = new CultureInfo("en-US");
-NumericEntry.Culture = culture;
-         
+<editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        CustomFormat="C2"
+                        Value="1234.5" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+using System.Globalization;
+using Syncfusion.Maui.Inputs;
+
+var numericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    CustomFormat = "C2",
+    Value = 1234.5,
+    Culture = new CultureInfo("en-US"),
+};
+this.Content = numericEntry;
+
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry culture based custom format](Formatting_images/maui-numeric-entry-culture_support.png)
+![.NET MAUI NumericEntry culture-based custom format](Formatting_images/maui-numeric-entry-culture_support.png)
 
 ## Customize percentage display
 
-When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) is in percentage format, the value can be displayed in two ways as follows:
+When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) uses a percentage format (`CustomFormat` starts with `P` or `p`), the `PercentDisplayMode` property controls how the value is displayed:
 
-`Value`: Displays the actual value with percentage symbol.
+* `Value` — Displays the value as-is, followed by the percentage symbol.
+* `Compute` — Displays the value multiplied by 100, followed by the percentage symbol.
 
-{% tabs %}
-{% highlight xaml %}
-
-<editors:SfNumericEntry x:Name="numericEntry" WidthRequest="200"
-                        CustomFormat="p" 
-                        Value="1000"  
-                        PercentDisplayMode="Value">
-</editors:SfNumericEntry>
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfNumericEntry sfNumericEntry= new SfNumericEntry();
-sfNumericEntry.CustomFormat = "p";
-sfNumericEntry.Value = 1000;
-sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Value;
-sfNumericEntry.WidthRequest = 200;
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_value.png)
-
-`Compute`: Displays the computed value with percentage symbol.
+### Value mode
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry x:Name="numericEntry" WidthRequest="200"
-                        CustomFormat="p" 
-                        Value="1000"  
-                        PercentDisplayMode="Value">
-</editors:SfNumericEntry>
+<editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        CustomFormat="p"
+                        Value="1000"
+                        PercentDisplayMode="Value" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumericEntry sfNumericEntry= new SfNumericEntry();
-sfNumericEntry.Value = 1000;
-sfNumericEntry.CustomFormat = "p";
-sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Value;
-sfNumericEntry.WidthRequest = 200;
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    CustomFormat = "p",
+    Value = 1000,
+    PercentDisplayMode = PercentDisplayMode.Value,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_compute.png)
+![.NET MAUI NumericEntry PercentDisplayMode Value](GettingStarted_images/percentdisplaymode_value.png)
 
-N> Default value of PercentDisplayMode is `Compute`.
+### Compute mode
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        CustomFormat="p"
+                        Value="1000"
+                        PercentDisplayMode="Compute" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    CustomFormat = "p",
+    Value = 1000,
+    PercentDisplayMode = PercentDisplayMode.Compute,
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI NumericEntry PercentDisplayMode Compute](GettingStarted_images/percentdisplaymode_compute.png)
+
+> The default value of `PercentDisplayMode` is `Compute`.
 
 ## Manage maximum decimal digits
 
-The maximum number of digits to be displayed after the decimal point can be specified by using the `MaximumNumberDecimalDigits` property.
+Specify the maximum number of digits to display after the decimal point by setting the `MaximumNumberDecimalDigits` property.
 
-N> The `MaximumNumberDecimalDigits` property can only be set to a positive value and does not work when a CustomFormat is provided. The default value of MaximumNumberDecimalDigits is 2.
+> The `MaximumNumberDecimalDigits` property must be a positive integer and is ignored when a `CustomFormat` is provided. The default value of `MaximumNumberDecimalDigits` is `2`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry x:Name="numericEntry" WidthRequest="200"
-                        Value="1000.23232"  
-                        MaximumNumberDecimalDigits="3">
-</editors:SfNumericEntry>
+<editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        Value="1000.23232"
+                        MaximumNumberDecimalDigits="3" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumericEntry sfNumericEntry= new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.Value = 1000.23232;
-sfNumericEntry.MaximumNumberDecimalDigits = 3;
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    Value = 1000.23232,
+    MaximumNumberDecimalDigits = 3,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI NumericEntry MaximumNumberDecimalDigits](GettingStarted_images/maximumnumberdecimaldigits.png)
+
+## See Also
+
+* [Basic Features in .NET MAUI NumericEntry](Basic-Features.md)
+* [Restriction in .NET MAUI NumericEntry](Restriction.md)
+* [UpDown-Button in .NET MAUI NumericEntry](UpDown-Button.md)
+* [SfNumericEntry API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html)
