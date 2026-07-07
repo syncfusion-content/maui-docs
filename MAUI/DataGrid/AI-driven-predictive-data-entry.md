@@ -11,9 +11,9 @@ documentation: ug
 
 This document explains how to implement AI-assisted predictive data entry with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates using Azure OpenAI to predict GPA and grade values based on historical student performance data.
 
-## Integrating Azure OpenAI with the .NET MAUI app
+## Integrating Azure OpenAI with the .NET MAUI App
 
-### Step 1: Set up Azure OpenAI service
+### Step 1: Set Up Azure OpenAI Service
 
 First, open [Visual Studio](https://visualstudio.microsoft.com/) and [create a new .NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0&tabs=vswin&pivots=devices-android).
 
@@ -34,13 +34,22 @@ dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.12
 
 Alternatively, use the NuGet Package Manager in Visual Studio to install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/) package.
 
-### Step 1: Set up Azure OpenAI
+**Prerequisites:**
+- An active [Azure subscription](https://azure.microsoft.com/en-us/free/)
+- Access to Azure OpenAI service in your region
 
-To configure **Azure OpenAI**, we’ll use the **GPT-4O** model for text. Set up the `OpenAIClient` as shown in the following code example.
+### Step 2: Create the Azure OpenAI Service Class
+
+To configure Azure OpenAI, use the GPT-4O model for text analysis. Set up the OpenAIClient as shown in the following code example. This class provides the foundation for making API calls to Azure OpenAI.
 
 {% tabs %}
 
 {% highlight c# %}
+
+using Azure;
+using Azure.AI.OpenAI;
+using System;
+using System.Threading.Tasks;
 
 internal class AzureOpenAIService
 {
@@ -62,68 +71,30 @@ internal class AzureOpenAIService
 
 {% endtabs %}
 
-### Step 2: Create the Azure OpenAI service class
+**Configuration Requirements:**
+- Replace `{YOUR_RESOURCE_NAME}` with your Azure OpenAI resource name
+- Set `AZURE_OPENAI_KEY` environment variable with your API key (do not hardcode credentials)
+- Verify the deployment name matches your Azure OpenAI deployment
 
-Create a helper class to manage communication with Azure OpenAI. **Important**: Store your API key securely using environment variables, not hardcoded strings.
+### Step 3: Initialize the OpenAI Client
+
+Initialize the OpenAIClient in your AzureOpenAIService constructor or initialization method. This establishes the connection to Azure OpenAI:
 
 {% tabs %}
 
 {% highlight c# %}
 
-using Azure;
-using Azure.AI.OpenAI;
-using System;
-using System.Threading.Tasks;
-
-internal class AzureOpenAIService
-{
-    // Use environment variables for sensitive data
-    private const string endpoint = "https://{YOUR_RESOURCE_NAME}.openai.azure.com";
-    private const string deploymentName = "gpt-4o"; // Your GPT-4o deployment name
-    private readonly string apiKey;
-    
-    private OpenAIClient? client;
-    private ChatCompletionsOptions? chatCompletions;
-    
-    internal AzureOpenAIService()
-    {
-        // Retrieve API key from environment variable for security
-        apiKey = Environment.GetEnvironmentVariable("AZURE_OPENAI_KEY") 
-            ?? throw new InvalidOperationException("AZURE_OPENAI_KEY environment variable not found");
-        
-        InitializeClient();
-    }
-    
-    private void InitializeClient()
-    {
-        try
-        {
-            // Initialize the OpenAI client with Azure credentials
-            this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(apiKey));
-            
-            // Initialize chat completion options with deployment-specific settings
-            this.chatCompletions = new ChatCompletionsOptions
-            {
-                DeploymentName = deploymentName,
-                Temperature = 0.7f,
-                MaxTokens = 2048
-            };
-        }
-        catch (Exception ex)
-        {
-            throw new InvalidOperationException("Failed to initialize Azure OpenAI client. Ensure endpoint and credentials are correct.", ex);
-        }
-    }
-    
-    internal OpenAIClient? Client => this.client;
-    internal ChatCompletionsOptions? ChatCompletions => this.chatCompletions;
-}
+// Initialize when required
+this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
+this.chatCompletions = new ChatCompletionsOptions();
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Step 3: Implement the GetResultsFromAI method
+This connection allows you to send prompts to the model and receive predictions, which can then be used to populate your DataGrid with AI-generated values.
+
+### Step 4: Implement the GetResultsFromAI Method
 
 Implement a method to retrieve predictions from the Azure OpenAI API.
 
@@ -138,125 +109,35 @@ using System.Threading.Tasks;
 
 public async Task<string> GetResultsFromAI(string userPrompt)
 {
-    if (this.client == null || this.chatCompletions == null)
+    if (this.client != null && this.chatCompletions != null)
     {
-        return "Error: Azure OpenAI service not properly initialized.";
-    }
-
-    try
-    {
-        // Clear previous messages to avoid accumulation across requests
-        this.chatCompletions.Messages.Clear();
-        
-        // Add system message to set AI behavior for predictions
-        this.chatCompletions.Messages.Add(
-            new ChatRequestSystemMessage("You are an academic prediction assistant. Analyze student GPA data and predict future performance. " +
-                                        "Respond ONLY with valid JSON; do not include explanations or markdown."));
-        
-        // Add user's prediction request
+        // Add the system message and user message to the options.
+        this.chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are a data prediction assistant. Analyze the provided student data and predict missing GPA and grade values."));
         this.chatCompletions.Messages.Add(new ChatRequestUserMessage(userPrompt));
-        
-        // Call Azure OpenAI API
-        var response = await this.client.GetChatCompletionsAsync(this.chatCompletions);
-        
-        if (response.Value?.Choices.Count > 0)
+        try
         {
-            var content = response.Value.Choices[0].Message.Content;
-            return content ?? "No response received from AI service.";
+            var response = await client.GetChatCompletionsAsync(this.chatCompletions);
+            return response.Value.Choices[0].Message.Content;
         }
-        
-        return "Error: Empty response from Azure OpenAI.";
-    }
-    catch (Azure.RequestFailedException ex) when (ex.Status == 401)
-    {
-        return "Error: Authentication failed. Check your API key and endpoint.";
-    }
-    catch (Azure.RequestFailedException ex) when (ex.Status == 429)
-    {
-        return "Error: Rate limit exceeded. Please wait and try again.";
-    }
-    catch (Exception ex)
-    {
-        return $"Error: {ex.Message}";
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Integrating AI-driven predictive data entry in .NET MAUI DataGrid
-
-To design an AI-powered predictive data entry experience using the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control, you can leverage AI services to suggest or auto-fill values based on historical patterns and user input. This example demonstrates predicting final-year GPA and grades based on historical academic performance.
-
-### Architecture Overview
-
-The predictive data entry workflow:
-1. **Data Layer**: `StudentRepository` provides student academic performance data
-2. **AI Analysis**: `AzureOpenAIService` sends historical GPA data to OpenAI for prediction
-3. **Response Processing**: Parse JSON response containing predicted GPA and grades
-4. **UI Update**: Dynamically add predicted columns and populate data in the DataGrid
-
-### Data Models
-
-Define the following models for student academic data:
-
-{% tabs %}
-
-{% highlight c# %}
-
-// Student performance data model
-public class StudentData
-{
-    public string StudentID { get; set; }
-    public string StudentName { get; set; }
-    public double FirstYearGPA { get; set; }
-    public double SecondYearGPA { get; set; }
-    public double ThirdYearGPA { get; set; }
-    public double FinalYearGPA { get; set; } // Predicted by AI
-    public double TotalGPA { get; set; }     // Predicted CGPA
-    public string TotalGrade { get; set; }   // Predicted Grade
-    public bool IsPredicted { get; set; }    // Flag for styling predicted cells
-}
-
-// Student data repository
-public class StudentRepository : INotifyPropertyChanged
-{
-    private ObservableCollection<StudentData> studentDataCollection;
-    private bool isAnalyzing;
-    
-    public StudentRepository()
-    {
-        StudentDataCollection = new ObservableCollection<StudentData>
+        catch
         {
-            new StudentData { StudentID = "S001", StudentName = "John Smith", FirstYearGPA = 3.5, SecondYearGPA = 3.6, ThirdYearGPA = 3.7 },
-            new StudentData { StudentID = "S002", StudentName = "Sarah Johnson", FirstYearGPA = 3.8, SecondYearGPA = 3.9, ThirdYearGPA = 4.0 },
-            // Add more student records
-        };
+            return string.Empty;
+        }
     }
-    
-    public ObservableCollection<StudentData> StudentDataCollection
-    {
-        get => studentDataCollection;
-        set { studentDataCollection = value; OnPropertyChanged(); }
-    }
-    
-    public bool IsAnalyzing
-    {
-        get => isAnalyzing;
-        set { isAnalyzing = value; OnPropertyChanged(); }
-    }
-    
-    public event PropertyChangedEventHandler PropertyChanged;
-    protected void OnPropertyChanged([CallerMemberName] string name = "") 
-        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    return string.Empty;
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Step 1: Create the DataGrid layout
+## Integrating AI-Driven Predictive Data Entry in .NET MAUI DataGrid
+
+After completing the Azure OpenAI setup above, use the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control to display student data and enable AI-powered predictions. This section demonstrates how to leverage AI services to automatically predict and populate values based on historical patterns and existing student data.
+
+Before proceeding, review the [.NET MAUI DataGrid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).
+
+### Step 1: Create the DataGrid Layout
 
 {% tabs %}
 
@@ -266,14 +147,15 @@ public class StudentRepository : INotifyPropertyChanged
              x:Class="SampleBrowser.Maui.SmartDemos.SmartDemos.DataPrediction"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
 
+    <!-- local namespace refers to your project's namespace (e.g., SampleBrowser.Maui.SmartDemos) -->
     <ContentPage.BindingContext>
-        <local:StudentRepository x:Name="studentRepository" />
+        <local:GenerateDataCollection x:Name="generateDataCollection" />
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <local:PredictionHighlightConverter x:Key="highlightConverter" />
+        <local:DataPredictionConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridCell">
-            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=highlightConverter}}" />
+            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}" />
             <Setter Property="FontSize" Value="14" />
         </Style>
         <Style TargetType="syncfusion:DataGridHeaderCell">
@@ -297,7 +179,7 @@ public class StudentRepository : INotifyPropertyChanged
                 </Grid.ColumnDefinitions>
                 <Label Text="Predictive Data Entry" VerticalTextAlignment="Center" Padding="16,0,16,0" FontSize="15" Grid.Column="0" FontAttributes="Bold" />
 
-                <button:SfButton x:Name="predictButton"
+                <button:SfButton x:Name="button"
                                  Text="&#xe7e1;"
                                  FontFamily="MauiSampleFontIcon"
                                  Grid.Column="2"
@@ -307,8 +189,7 @@ public class StudentRepository : INotifyPropertyChanged
                                  WidthRequest="40"
                                  HeightRequest="40"
                                  FontAttributes="Bold"
-                                 CornerRadius="5"
-                                 Clicked="OnPredictClicked" />
+                                 CornerRadius="5" />
             </Grid>
 
             <syncfusion:SfDataGrid x:Name="dataGrid"
@@ -318,7 +199,7 @@ public class StudentRepository : INotifyPropertyChanged
                                    VerticalScrollBarVisibility="Always"
                                    ColumnWidthMode="Fill"
                                    AutoGenerateColumnsMode="None"
-                                   ItemsSource="{Binding StudentDataCollection}">
+                                   ItemsSource="{Binding Predictivedatas}">
                 <syncfusion:SfDataGrid.Columns>
                     <syncfusion:DataGridTextColumn MinimumWidth="90" HeaderText="ID" MappingName="StudentID" />
                     <syncfusion:DataGridTextColumn MinimumWidth="130" HeaderText="Name" MappingName="StudentName" />
@@ -328,7 +209,7 @@ public class StudentRepository : INotifyPropertyChanged
                 </syncfusion:SfDataGrid.Columns>
             </syncfusion:SfDataGrid>
 
-            <ActivityIndicator IsRunning="{Binding IsAnalyzing}" x:Name="Indicator" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" />
+            <ActivityIndicator IsRunning="False" x:Name="Indicator" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
@@ -336,165 +217,80 @@ public class StudentRepository : INotifyPropertyChanged
 
 {% endtabs %}
 
-### Step 2: Create the Prediction Converter
+### Step 2: Enable AI-Powered .NET MAUI DataGrid
 
-Create an `IValueConverter` to highlight predicted values in the DataGrid:
+Create a method to send student data to Azure OpenAI for prediction. The AI service analyzes historical GPA data and returns predictions for Final Year GPA, CGPA, and Total Grade. After deserializing the JSON response, add these new columns to the DataGrid and populate each row with the predicted values.
 
-{% tabs %}
-
-{% highlight c# %}
-
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using System.Globalization;
-
-public class PredictionHighlightConverter : IValueConverter
-{
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        if (value is StudentData student && student.IsPredicted)
-        {
-            return Color.FromArgb("#E3F2FD");
-        }
-        return Colors.White;
-    }
-
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        return null;
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Step 3: Implement the Prediction Logic
-
-Implement the button click handler to trigger AI predictions and update the DataGrid dynamically:
+**Note:** The helper methods `GetSerializedGridReport()`, `ValidateAndGeneratePrompt()`, and `DeserializeResult()` are assumed to be implemented in your ViewModel or code-behind to handle data serialization and JSON parsing.
 
 {% tabs %}
 
 {% highlight c# %}
 
-using System.Collections.ObjectModel;
-using System.Text.Json;
-using Microsoft.Maui.Controls;
-
-public partial class PredictiveDataEntryPage : ContentPage
+private async Task GetResponseAsync()
 {
-    private AzureOpenAIService azureOpenAIService;
-    
-    public PredictiveDataEntryPage()
+    try
     {
-        InitializeComponent();
-        azureOpenAIService = new AzureOpenAIService();
-    }
+        string prompt =
+            "Final year GPA column should be updated based on GPA of FirstYearGPA, SecondYearGPA and ThirdYearGPA columns. " +
+            "Total GPA (CGPA) should be updated based on the average of all years GPA. " +
+            "Total Grade should be updated based on total GPA. " +
+            "Updated grade rules: 0 - 2.5 = F, 2.6 - 2.9 = C, 3.0 - 3.4 = B, 3.5 - 3.9 = B+, 4.0 - 4.4 = A, 4.5 - 5 = A+. " +
+            "Average value decimals should not exceed 1 digit. " +
+            "Return JSON ONLY, no explanation. " +
+            "Schema: { \"GenerateDataSource\": [ { \"StudentID\": \"string\", \"FinalYearGPA\": number, \"TotalGPA\": number, \"TotalGrade\": \"string\" } ] }. " +
+            "Remove ```json and ``` if they are present.";
 
-    private async void OnPredictClicked(object sender, EventArgs e)
-    {
-        await AnalyzePredictionsAsync();
-    }
+        var repo = (this.dataGrid.BindingContext as GenerateDataCollection);
+        if (repo == null || repo.Predictivedatas == null || repo.Predictivedatas.Count == 0)
+            return;
 
-    private async Task AnalyzePredictionsAsync()
-    {
-        try
+        GenerateGridReport gridReport = new GenerateGridReport()
         {
-            var repo = this.BindingContext as StudentRepository;
-            if (repo?.StudentDataCollection == null || repo.StudentDataCollection.Count == 0)
+            GenerateDataSource = repo.Predictivedatas
+        };
+
+        var gridReportJson = GetSerializedGridReport(gridReport);
+        string userInput = ValidateAndGeneratePrompt(gridReportJson, prompt);
+
+        var result = await openAi.GetResultsFromAI(userInput);
+
+        result = result.Replace("```json", "").Replace("```", "").Trim();
+
+        GenerateGridReport deserializeResult = DeserializeResult(result);
+
+        if (deserializeResult?.GenerateDataSource != null && gridReport.GenerateDataSource != null)
+        {
+            foreach (var item in gridReport.GenerateDataSource)
             {
-                await DisplayAlert("Error", "No student data available.", "OK");
-                return;
-            }
-
-            repo.IsAnalyzing = true;
-
-            // Serialize student data
-            var studentJson = JsonSerializer.Serialize(repo.StudentDataCollection);
-
-            // Build prediction prompt
-            string gradeRules = "Grade Rules: 0-2.5=F, 2.6-2.9=C, 3.0-3.4=B, 3.5-3.9=B+, 4.0-4.4=A, 4.5-5.0=A+";
-            string prompt = $@"Predict student grades based on GPA history.
-Data: {studentJson}
-{gradeRules}
-
-Return JSON only:
-{{ ""predictions"": [ {{ ""studentId"": ""string"", ""finalYearGPA"": number, ""totalGPA"": number, ""totalGrade"": ""string"" }} ] }}";
-
-            // Call AI service
-            var aiResponse = await azureOpenAIService.GetResultsFromAI(prompt);
-
-            if (aiResponse.StartsWith("Error:"))
-            {
-                await DisplayAlert("Error", aiResponse, "OK");
-                return;
-            }
-
-            await ApplyPredictions(aiResponse, repo);
-            dataGrid.Refresh();
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert("Error", $"Prediction failed: {ex.Message}", "OK");
-        }
-        finally
-        {
-            if (this.BindingContext is StudentRepository repo)
-                repo.IsAnalyzing = false;
-        }
-    }
-
-    private async Task ApplyPredictions(string jsonResponse, StudentRepository repo)
-    {
-        try
-        {
-            string cleanJson = jsonResponse.Replace("```json", "").Replace("```", "").Trim();
-
-            using (JsonDocument doc = JsonDocument.Parse(cleanJson))
-            {
-                var root = doc.RootElement;
-                if (root.TryGetProperty("predictions", out JsonElement predictionsArray))
+                if (item != null)
                 {
-                    foreach (var prediction in predictionsArray.EnumerateArray())
+                    if (item.StudentID == gridReport.GenerateDataSource[index].StudentID)
                     {
-                        if (prediction.TryGetProperty("studentId", out JsonElement studentIdElem))
+                        if (deserializeResult != null && deserializeResult.GenerateDataSource != null)
                         {
-                            string studentId = studentIdElem.GetString();
-                            var student = repo.StudentDataCollection.FirstOrDefault(s => s.StudentID == studentId);
-
-                            if (student != null)
-                            {
-                                if (prediction.TryGetProperty("finalYearGPA", out JsonElement finalGpaElem))
-                                    student.FinalYearGPA = finalGpaElem.GetDouble();
-                                if (prediction.TryGetProperty("totalGPA", out JsonElement totalGpaElem))
-                                    student.TotalGPA = totalGpaElem.GetDouble();
-                                if (prediction.TryGetProperty("totalGrade", out JsonElement gradeElem))
-                                    student.TotalGrade = gradeElem.GetString() ?? "N/A";
-                                student.IsPredicted = true;
-                            }
+                            gridReport.GenerateDataSource[index].FinalYearGPA = deserializeResult.GenerateDataSource[index].FinalYearGPA;
+                            gridReport.GenerateDataSource[index].TotalGrade = deserializeResult.GenerateDataSource[index].TotalGrade;
+                            gridReport.GenerateDataSource[index].TotalGPA = deserializeResult.GenerateDataSource[index].TotalGPA;
                         }
                     }
-                }
+               }   
             }
+        } 
 
-            // Add prediction columns
-            if (!dataGrid.Columns.Any(c => c.MappingName == "FinalYearGPA"))
-                dataGrid.Columns.Add(new DataGridNumericColumn { MappingName = "FinalYearGPA", HeaderText = "Final Year GPA (Predicted)" });
-            if (!dataGrid.Columns.Any(c => c.MappingName == "TotalGPA"))
-                dataGrid.Columns.Add(new DataGridNumericColumn { MappingName = "TotalGPA", HeaderText = "Total GPA (Predicted)" });
-            if (!dataGrid.Columns.Any(c => c.MappingName == "TotalGrade"))
-                dataGrid.Columns.Add(new DataGridTextColumn { MappingName = "TotalGrade", HeaderText = "Grade (Predicted)" });
-        }
-        catch (JsonException ex)
-        {
-            await DisplayAlert("JSON Error", $"Failed to parse response: {ex.Message}", "OK");
-        }
+        this.dataGrid.Refresh();
+    }
+    finally
+    {
+        this.Indicator.IsRunning = false;
+        isButtonClicked = false;
     }
 }
 
 {% endhighlight %}
 
 {% endtabs %}
+
 
 ![AI driven Smart Predictive Data Entry .NET MAUI DataGrid](Images/smart-ai-solutions/predictive-data-entry.gif)
 
