@@ -34,7 +34,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+3. Ensure that the necessary dependencies are installed correctly and that the project is restored.
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -49,10 +49,10 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project**, then press **Enter**.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press Enter.
-4. Then choose **Create project**
+3. Select the project location, type the project name, and press **Enter**.
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI SignaturePad NuGet package
 
@@ -70,44 +70,49 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+3. Make sure the .NET MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
-2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+1. Go to **File > New Solution**, select **.NET (C#)**, and choose the **.NET MAUI App** template.
+2. Enter the **Project Name**, **Solution Name**, and **Location**.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI SignaturePad NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure that the necessary dependencies are installed correctly and that the project is restored. If not, open the terminal in Rider and run `dotnet restore`.
 
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion handler
+## Step 3: Register the Syncfusion core handler
 
-Make sure to add the namespace.
+Add the following `using` directive and call to `ConfigureSyncfusionCore()` in the `CreateMauiApp` method of `MauiProgram.cs` to register the Syncfusion core handler required by the SignaturePad control.
 
 {% tabs %}
 {% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore();
+        // ...
+        return builder.Build();
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+## Step 4: Import the SignaturePad namespace
 
-{% tabs %}
-{% highlight c# %}
-builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
-{% endtabs %}
-
-## Step 4: Import SignaturePad namespace
-
-Add the following namespace in your XAML or C#.
+Add the following XAML namespace declaration to your page and `using` directive to your C# files.
 
 {% tabs %}
 {% highlight xaml %}
@@ -122,29 +127,50 @@ using Syncfusion.Maui.SignaturePad;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the SignaturePad component
+## Step 5: Add the SignaturePad control
 
-Add the SignaturePad control to your XAML page and initialize it with basic properties.
+Add the SignaturePad control to your page. The following examples render a basic SignaturePad and set a stroke color.
 
 {% tabs %}
 {% highlight xaml %}
 
-<signaturePad:SfSignaturePad x:Name="signaturePad" />
+<ContentPage xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
+    <signaturePad:SfSignaturePad x:Name="signaturePad"
+                                 StrokeColor="Red" />
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
 
-var signaturePad = new SfSignaturePad();
-Content = new StackLayout
+using Syncfusion.Maui.SignaturePad;
+
+public partial class MainPage : ContentPage
 {
-    Children = { signaturePad }
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        Content = new SfSignaturePad
+        {
+            StrokeColor = Colors.Red,
+        };
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![SignaturePad default](images/getting-started/default.png)
 
-You can download the SignaturePad Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-signature-pad).
+## Related resources
+
+* [SignaturePad Getting Started sample on GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-signature-pad)
+* [.NET MAUI SignaturePad feature tour page](https://www.syncfusion.com/maui-controls/maui-signaturepad)
+* [.NET MAUI SignaturePad example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad)
 
 N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.
+
+## See Also
+
+* [Customization in .NET MAUI SignaturePad](customization.md)
+* [Events and Methods in .NET MAUI SignaturePad](events-and-methods.md)
+* [SfSignaturePad API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI SignaturePad control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI SignaturePad (SfSignaturePad) widget, its features, and more.
+title: .NET MAUI SignaturePad control overview | Syncfusion®
+description: Overview of the Syncfusion® .NET MAUI SignaturePad (SfSignaturePad) control, including its key features, business use cases, and globalization support.
 platform: maui
 control: SfSignaturePad
 documentation: ug
@@ -9,23 +9,31 @@ documentation: ug
 
 # .NET MAUI SignaturePad (SfSignaturePad) Overview
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) (SfSignaturePad) is an interactive UI control, allowing users to capture smooth and realistic signatures. It also allows you to save signatures as images and synchronize them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this SignaturePad control.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) (SfSignaturePad) is an interactive UI control that lets users capture smooth and realistic signatures. Use it to save signatures as images and synchronize them with the devices and documents that need them. Users can capture signatures with a finger, pen, or mouse on tablets, touchscreens, and other input surfaces.
 
-![.NET MAUI signature pad overview ](Images/overview/default.jpg)
+For prerequisites and a step-by-step setup, see [Getting Started with .NET MAUI SignaturePad](getting-started.md).
+
+**Supported platforms:** .NET MAUI SignaturePad is supported on Android, iOS, macOS (Mac Catalyst), and Windows.
+
+> **Compatibility:** The SignaturePad control requires .NET 8 or later and Syncfusion<sup>&reg;</sup> .NET MAUI controls (Essential Studio<sup>&reg;</sup> Volume 4, 2024 or later).
+
+![.NET MAUI SignaturePad default rendering](Images/overview/default.jpg)
 
 ## Business use cases
 
-- Business applications that require capturing user signatures for approvals, agreements, or confirmations.  
-- Document management systems that support digital signing and storing signed content as images.  
-- Delivery and service apps that collect customer acknowledgment signatures during transactions.  
-- Forms-based applications that require secure and convenient signature input for verification.  
+- Business applications that require capturing user signatures for approvals, agreements, or confirmations.
+- Document management systems that support digital signing and storing signed content as images.
+- Delivery and service apps that collect customer acknowledgment signatures during transactions.
+- Forms-based applications that require secure and convenient signature input for verification.
 
 ## Key features
 
-- **Stroke color customization** allows configuring the color of the signature drawing.  
-- **Stroke thickness customization** allows adjusting minimum and maximum stroke width for realistic handwriting effects.  
-- **Image export** allows saving the captured signature as an image for storage and integration into documents.  
-- **Realistic rendering** allows drawing smooth strokes based on gesture speed for a natural handwritten experience.  
+- **Stroke color customization** — configure the color of the signature drawing. See [Customization](customization.md).
+- **Stroke thickness customization** — adjust the minimum and maximum stroke thickness for realistic handwriting effects. See [Customization](customization.md).
+- **Image export** — save the captured signature as a `Microsoft.Maui.Controls.ImageSource` for storage or document integration. See [ToImageSource](events-and-methods.md#toimagesource).
+- **Realistic rendering** — render smooth strokes whose thickness is driven by gesture speed, producing a natural handwritten feel.
+- **Stroke data access** — read the captured points programmatically for storage, analysis, or replay. See [GetSignaturePoints](events-and-methods.md#getsignaturepoints).
+- **Event notifications** — react to stroke lifecycle with the `DrawStarted` and `DrawCompleted` events. See [Events and Methods](events-and-methods.md).
 
 ## Globalization
 
@@ -47,7 +55,7 @@ The following table summarizes the globalization support available in this contr
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/full-support.svg" width="16"> Full Support
 </span>
- 
+
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
@@ -74,15 +82,16 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Image Editor](https://help.syncfusion.com/maui/imageeditor/overview) for editing and annotating images including saved signatures.   
+- [Image Editor](https://help.syncfusion.com/maui/imageeditor/overview) for editing and annotating images including saved signatures.
 - [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating signature inputs within form-based workflows.
-- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for creating layered layouts with front and back panels.  
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) shows a step‑by‑step guide to begin using the SignaturePad control. 
-- [Customization](https://help.syncfusion.com/maui/signaturepad/customization) for ways to refine its look and behavior.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
+- [Getting Started with .NET MAUI SignaturePad](getting-started.md) — step-by-step guide to begin using the SignaturePad control.
+- [Customization in .NET MAUI SignaturePad](customization.md) — ways to refine the SignaturePad's look and behavior.
+- [Events and Methods in .NET MAUI SignaturePad](events-and-methods.md) — events and methods exposed by the SignaturePad.
+- [Migrating from Xamarin to .NET MAUI SignaturePad](migration.md) — guidance for upgrading existing Xamarin SignaturePad code.
+- [Liquid Glass Effect in .NET MAUI SignaturePad](liquidglasssupport.md) — how to apply the Liquid Glass Effect to the SignaturePad.
 
 ## Resources
 
@@ -274,7 +283,7 @@ Explore Features
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
     <a href="https://support.syncfusion.com/kb/cross-platforms/section/1277" class="explore-link">
-Search KB's
+Search the KB
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
@@ -299,3 +308,7 @@ Read Blogs
 </div>
 
 </div>
+
+## See Also
+
+* [SfSignaturePad API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html)
