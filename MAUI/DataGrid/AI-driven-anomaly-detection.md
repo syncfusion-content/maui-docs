@@ -17,6 +17,8 @@ This document provides a comprehensive guide to implementing AI-driven anomaly d
 
 First, open [Visual Studio](https://visualstudio.microsoft.com/) and [create a new .NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0&tabs=vswin&pivots=devices-android).
 
+Before enabling AI, ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and have set up a deployment in the Azure portal. 
+
 **Configure Azure OpenAI:**
 
 1. Log in to the [Azure Portal](https://portal.azure.com/)
