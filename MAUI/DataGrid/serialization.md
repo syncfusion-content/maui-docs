@@ -271,7 +271,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 {% endhighlight %}
 {% endtabs %}
 
-### Deserialize DetailsViewDefinition
+### Deserialize Details View
 
 Disable DetailsViewDefinition restoration by setting [DataGridDeserializationOptions.DeserializeDetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeDetailsViewDefinition) to `false`.
 

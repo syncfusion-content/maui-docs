@@ -233,7 +233,7 @@ The following code snippet demonstrates how to access DataPager elements using A
 [Description("SfDataPager AutomationId Access")]
 public void SfDataPager_NavigatePages()
 {
-    // First page
+    // Navigate to First page
     driver.FindElement(MobileBy.AccessibilityId("SfDataPager FirstPage")).Click();
 
     // Navigate to previous page
