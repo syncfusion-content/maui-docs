@@ -9,25 +9,23 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI DataGrid (SfDataGrid)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) control.
 
 ## Apply liquid glass effect
 
 Follow these steps to enable and configure the Liquid Glass Effect in the DataGrid control:
 
-### Step 1: Wrap the control inside glass effect view
+### Step 1: Wrap the DataGrid inside SfGlassEffectView
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
-
-For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control, wrap it inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container in your XAML layout.
 
 ### Step 2: Enable the liquid glass effect on DataGrid
 
 Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_EnableLiquidGlassEffect) property to `true` in the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent surfaces such as the row/column dragging view, tooltip, popups, context menu, and editor drop-downs (e.g., ComboBox/Picker) when their corresponding backgrounds are set to `Transparent` for a smooth and engaging user experience.
 
-### Step 3: Customize the background
+### Step 3: Configure surface backgrounds for glass effect
 
-To achieve a glass like background in the DataGrid related surfaces such as ContextMenu, Tooltip, RowDragViewBackground, and ColumnDragViewBackground, set their `Background` to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the control and its overlays.
+To achieve a glass-like background in the DataGrid and related surfaces (ContextMenu, Tooltip, RowDragViewBackground, ColumnDragViewBackground), set their `Background` properties to `Transparent`. The backgrounds will then be treated as tinted colors, ensuring a consistent glass effect across the control and its overlays.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDataGrid` control:
 
@@ -85,7 +83,7 @@ var grid = new Grid
     Background = gradientBrush
 };
 
-var glassView = new SfGlassEffectsView
+var glassView = new SfGlassEffectView
 {
     CornerRadius = 20,
     EffectType = LiquidGlassEffectType.Regular
@@ -98,13 +96,16 @@ var dataGrid = new SfDataGrid
     EnableLiquidGlassEffect = true
 };
 
-// Make specific surfaces transparent to reveal glass
+// Configure surface backgrounds for glass effect
+var defaultStyle = new DataGridStyle
+{
+    RowDragViewBackgroundColor = Colors.Transparent,
+    ColumnDragViewBackgroundColor = Colors.Transparent
+};
+dataGrid.DefaultStyle = defaultStyle;
 
-dataGrid.DefaultStyle.RowDragViewBackgroundColor = Colors.Transparent;
-dataGrid.DefaultStyle.ColumnDragViewBackgroundColor = Colors.Transparent;
-
-
-glassView.Content = this.dataGrid;
+// Assemble the layout
+glassView.Content = dataGrid;
 grid.Children.Add(glassView);
 this.Content = grid;
 
@@ -116,6 +117,16 @@ The following screenshot illustrates SfDataGrid within SfGlassEffectView.
 <img alt="MAUI DataGrid with liquid glass support" src="Images/liquidGlassEffect/maui-datagrid-Liquid-Glass-Effect.png" width="404" />   
 
 
-N>
-* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
+## Platform Support
+
+The Liquid Glass Effect is supported on the following platforms:
+
+| Platform | Supported | Minimum Version |
+|----------|-----------|-----------------|
+| macOS    | Yes       | 26 or higher    |
+| iOS      | Yes       | 26 or higher    |
+| Android  | No        | Not supported   |
+| Windows  | No        | Not supported   |
+
+**Framework requirement:** This feature is available only in `.NET 10.0` or higher.
+

@@ -145,14 +145,12 @@ public MainPage()
         ColumnMappingNames = "OrderID" + "," + "Customer",
         Text = "Order Details",
         MappingName = "OrderDetails",
-
     });
     stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
     {
         ColumnMappingNames = "City" + "," + "Country",
         Text = "Shipping Details",
         MappingName = "ShippingDetails",
-        
     });
     DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
     this.Content = DataGrid;
@@ -376,20 +374,20 @@ public MainPage()
         ColumnMappingNames = "OrderID" + "," + "Customer",
         Text = "Order Details",
         MappingName = "OrderDetails",
-
     });
     stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
     {
         ColumnMappingNames = "City" + "," + "Country",
         Text = "Shipping Details",
         MappingName = "ShippingDetails",
-
     });
     DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
     this.Content = DataGrid;
 }
 {% endhighlight %}
 {% endtabs %}
+
+>N The `HeaderRowHeight` property applies to all header rows, including stacked headers. Use the `QueryRowHeight` event for granular control per row.
 
 You can also change the height of stacked header rows using the [SfDataGrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight) event.
 
@@ -538,14 +536,12 @@ public partial class MainPage : ContentPage
             ColumnMappingNames = "OrderID" + "," + "Customer",
             Text = "Order Details",
             MappingName = "OrderDetails",
-
         });
         stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
         {
             ColumnMappingNames = "City" + "," + "Country",
             Text = "Shipping Details",
             MappingName = "ShippingDetails",
-
         });
         DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
         this.Content = DataGrid;
@@ -692,14 +688,12 @@ public partial class MainPage : ContentPage
             ColumnMappingNames = "OrderID" + "," + "Customer",
             Text = "Order Details",
             MappingName = "OrderDetails",
-
         });
         stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
         {
             ColumnMappingNames = "City" + "," + "Country",
             Text = "Shipping Details",
             MappingName = "ShippingDetails",
-            
         });
         DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
         this.Content = DataGrid;
@@ -712,7 +706,7 @@ public partial class MainPage : ContentPage
 
 ### Conditional styling
 
-The SfDataGrid also allows to customize the appearance of stacked header Cells conditionally based on its Cell Value.
+The SfDataGrid allows you to customize the appearance of stacked header cells conditionally based on their cell value.
 
 {% tabs %}
 {% highlight xaml %}
@@ -789,16 +783,15 @@ public class CellStyleConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        var text = (value as DataGridStackedHeaderCell).CellValue;
-
-        if (text != null)
+        if (value is DataGridStackedHeaderCell cell && cell.CellValue != null)
         {
-            if (text.ToString() == "Order Shipment Details")
-                return Color.FromArgb("#BEBFC5");
-            else if (text.ToString() == "Order Details")
-                return Color.FromArgb("#91A3B0");
-            else if (text.ToString() == "Shipping Details")
-                return Color.FromArgb("#E6E6FA");
+            return cell.CellValue.ToString() switch
+            {
+                "Order Shipment Details" => Color.FromArgb("#BEBFC5"),
+                "Order Details" => Color.FromArgb("#91A3B0"),
+                "Shipping Details" => Color.FromArgb("#E6E6FA"),
+                _ => Color.FromArgb("#FFFFFF")
+            };
         }
         return Color.FromArgb("#FFFFFF");
     }
@@ -815,10 +808,16 @@ public class CellStyleConverter : IValueConverter
 
 ## Loading template in stacked column
 
-The SfDataGrid allows you to load any desired view inside a `DataGridStackedColumn` using the [DataGridStackedColumn.Template](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html#Syncfusion_Maui_DataGrid_DataGridStackedColumn_Template) property.
+The SfDataGrid allows you to load any desired view inside a `DataGridStackedColumn` using the [DataGridStackedColumn.Template](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html#Syncfusion_Maui_DataGrid_DataGridStackedColumn_Template) property. 
+
+**Note:** Image resources should be placed in the `Resources/Images` folder within your project. Reference images using their filename without the path.
 
 {% tabs %}
 {% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
 <syncfusion:SfDataGrid x:Name="DataGrid"
                     HorizontalScrollBarVisibility="Never"
                     VerticalScrollBarVisibility="Never"
@@ -860,15 +859,12 @@ The SfDataGrid allows you to load any desired view inside a `DataGridStackedColu
                         ColumnMappingNames="City,Country">
                     <syncfusion:DataGridStackedColumn.Template>
                         <DataTemplate>
-                            <Grid BackgroundColor="#7d8597">
+                            <Grid BackgroundColor="#7d8597" Padding="5">
                                 <Label Text="Shipping Details" TextColor="#FFFFFF" 
                                     HorizontalTextAlignment="Center" 
                                     VerticalTextAlignment="Center"
-                                    FontAttributes="Bold"
-                                    Grid.Column="0"/>
-                                <StackLayout Orientation="Horizontal">
-                                    <Image Source="image0.png" HeightRequest="37" Margin="10" />
-                                </StackLayout>
+                                    FontAttributes="Bold"/>
+                                <Image Source="Image0.png" HeightRequest="20" Margin="5" />
                             </Grid>
                         </DataTemplate>
                     </syncfusion:DataGridStackedColumn.Template>
@@ -937,7 +933,6 @@ public MainPage()
         ColumnMappingNames = "OrderID" + "," + "Customer",
         Text = "Order Details",
         MappingName = "OrderDetails",
-
     });
     stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
     {
@@ -949,6 +944,7 @@ public MainPage()
             var grid = new Grid
             {
                 BackgroundColor = Color.FromArgb("#7d8597"),
+                Padding = new Thickness(5)
             };
 
             var label = new Label
@@ -962,19 +958,13 @@ public MainPage()
 
             var image = new Image
             {
-                Source = "image0.png",
-                HeightRequest = 37,
-                Margin = new Thickness(10)
+                Source = "Image0.png",
+                HeightRequest = 20,
+                Margin = new Thickness(5)
             };
-
-            var stack = new StackLayout
-            {
-                Orientation = StackOrientation.Horizontal
-            };
-            stack.Children.Add(image);
 
             grid.Children.Add(label);
-            grid.Children.Add(stack);
+            grid.Children.Add(image);
             return grid;
         })
     });
