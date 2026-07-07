@@ -185,9 +185,9 @@ namespace GettingStarted
 
 ![Syncfusion .NET MAUI Chat Swipe views](images/swiping/maui-chat-start-and-end-swipe-template.png)
 
-## Swipe Events
+## Swipe events
 
-### SwipeStarted Event
+### SwipeStarted event
 
 The [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeStarted) event is raised when the swipe offset changes from its initial value. This event is triggered with [MessageSwipeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeStartedEventArgs.html).
 
@@ -224,7 +224,7 @@ private void sfChat_SwipeStarted(object sender, MessageSwipeStartedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Swiping Event
+### Swiping event
 
 The [Swiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Swiping) event is raised while swiping a message is in progress. This event is triggered with [MessageSwipingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipingEventArgs.html).
 
@@ -263,7 +263,7 @@ private void sfChat_Swiping(object sender, MessageSwipingEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### SwipeEnded Event
+### SwipeEnded event
 
 The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeEnded) event is raised when the swipe offset reaches `MaxSwipeOffset`, indicating that the swipe action is completed. This event is triggered with [MessageSwipeEndedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEndedEventArgs.html).
 
