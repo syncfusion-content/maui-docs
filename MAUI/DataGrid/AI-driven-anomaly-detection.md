@@ -9,21 +9,45 @@ documentation: ug
 
 # AI-Driven Anomaly Detection in .NET MAUI DataGrid (SfDataGrid)
 
-This document provides a comprehensive guide to implementing AI-driven anomaly detection with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It uses the provided AnomalyDetection sample and integrates Azure OpenAI via the OpenAi helper service.
+This document provides a comprehensive guide to implementing AI-driven anomaly detection with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates how to integrate Azure OpenAI services to analyze dataset patterns and automatically highlight anomalies in real-time.
 
-## Integrating Azure OpenAI with the .NET MAUI app
+## Integrating Azure OpenAI with the .NET MAUI App
+
+### Step 1: Set Up Azure OpenAI Service
 
 First, open [Visual Studio](https://visualstudio.microsoft.com/) and [create a new .NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0&tabs=vswin&pivots=devices-android).
 
-Before enabling AI, ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and have set up a deployment in the Azure portal. Install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package in the project.
+Before enabling AI, ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and have set up a deployment in the Azure portal. 
 
-### Step 1: Set up Azure OpenAI
+**Configure Azure OpenAI:**
 
-To configure **Azure OpenAI**, we’ll use the **GPT-4O** model for text. Set up the `OpenAIClient` as shown in the following code example.
+1. Log in to the [Azure Portal](https://portal.azure.com/)
+2. Create a new OpenAI resource (or use an existing one)
+3. Deploy a **GPT-4o** model (or GPT-4 Turbo) for text analysis
+4. Copy your deployment name, endpoint URL, and API key from the **Keys and Endpoint** section
+
+**Install NuGet Package:**
+
+Run the following command in the Package Manager Console or terminal:
+
+```
+dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.12
+```
+
+Alternatively, use the NuGet Package Manager in Visual Studio to install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/) package.
+
+### Step 2: Create the Azure OpenAI service class
+
+Create a helper class to manage communication with Azure OpenAI. **Important**: Store your API key securely using environment variables or Azure Key Vault, not hard coded strings.
 
 {% tabs %}
 
 {% highlight c# %}
+
+using Azure;
+using Azure.AI.OpenAI;
+using System;
+using System.Threading.Tasks;
 
 internal class AzureOpenAIService
 {
@@ -45,7 +69,7 @@ internal class AzureOpenAIService
 
 {% endtabs %}
 
-### Step 2: Connect to the Azure OpenAI
+### Step 3: Initialize the OpenAI Client
 
 To set up the connection to Azure OpenAI. Refer to the following code.
 
@@ -53,8 +77,8 @@ To set up the connection to Azure OpenAI. Refer to the following code.
 
 {% highlight c# %}
 
-	// At the time of required.
-    this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key))
+// At the time of required.
+this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key))
 
 {% endhighlight %}
 
@@ -62,13 +86,18 @@ To set up the connection to Azure OpenAI. Refer to the following code.
 
 This connection allows you to send prompts to the model and **receive responses**, which can be used to generates.
 
-### Step 3: Get the result from the AI service
+### Step 4: Implement the GetResultsFromAI Method
 
-Implement the `GetResultsFromAI` methods to retrieve responses from the **OpenAI** API based on user input.
+Implement a method to retrieve responses from the Azure OpenAI API based on user prompts.
 
 {% tabs %}
 
 {% highlight c# %}
+
+using Azure;
+using Azure.AI.OpenAI;
+using System;
+using System.Threading.Tasks;
 
 public async Task<string> GetResultsFromAI(string userPrompt)
 {
@@ -94,13 +123,13 @@ public async Task<string> GetResultsFromAI(string userPrompt)
 
 {% endtabs %}
 
-The **AzureOpenAIService** class now offers a convenient way to interact with the **OpenAI** API and retrieve completion results based on the provided **prompt**.
+## Integrating AI-Driven Anomaly Detection in .NET MAUI DataGrid
 
-## Integrating AI-driven anomaly detection in .NET MAUI DataGrid
+After completing the Azure OpenAI setup above, use the `.NET MAUI DataGrid` control to display data and visualize anomaly detection results. This section demonstrates how to style cells dynamically based on AI analysis and highlight outliers in real-time.
 
-To design an AI-powered anomaly detection UI using the `.NET MAUI DataGrid` control, you can style cells dynamically based on anomaly detection logic and visualize outliers in real-time. Before proceeding, please refer to the getting started documentation for the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control.
+Before proceeding, review the [.NET MAUI DataGrid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).
 
-### Step 1: Create the DataGrid layout
+### Step 1: Create the DataGrid Layout
 
 {% tabs %}
 
@@ -115,7 +144,7 @@ To design an AI-powered anomaly detection UI using the `.NET MAUI DataGrid` cont
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <local:AnomalyDetetcionConverter x:Key="converter" />
+        <local:AnomalyDetectionConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridCell">
             <Setter Property="Background"
                     Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}" />
@@ -182,13 +211,14 @@ To design an AI-powered anomaly detection UI using the `.NET MAUI DataGrid` cont
         </Grid>
     </ContentPage.Content>
 </ContentPage>
+
 {% endhighlight %}
 
 {% endtabs %}
 
-### Step 2: Enable AI-powered .NET MAUI DataGrid
+### Step 2: Enable AI-Powered .NET MAUI DataGrid
 
-Add the prompt that requests the AI service to analyze the bound dataset and return anomaly detection results in JSON format. The JSON response should include the row index and anomaly status for each record. This data is then parsed and applied to the SfDataGrid by dynamically updating cell styles using the AnomalyDetectionConverter or by setting custom properties in the ViewModel.
+In your code-behind or ViewModel, create a method that sends the DataGrid data to Azure OpenAI for analysis. The AI service analyzes the dataset and returns anomaly detection results in JSON format, including the row index and anomaly status for each record. This data is then parsed and applied to the SfDataGrid by dynamically updating cell styles using the `AnomalyDetectionConverter` or by setting custom properties in the ViewModel.
 
 {% tabs %}
 
@@ -216,7 +246,7 @@ private async Task GetAnomalyResponseAsync()
 
         if (string.IsNullOrWhiteSpace(result))
         {
-            result = openAi.GetAnomalyyDetectionResponse();
+            result = openAi.GetAnomalyDetectionResponse();
         }
 
         result = result.Replace("```json", "").Replace("```", "").Trim();
@@ -230,7 +260,7 @@ private async Task GetAnomalyResponseAsync()
                 .Select(x => x.AnomalyDescription)
                 .ToArray();
 
-            var colorConverter = new AnomalyDetetcionConverter();
+            var colorConverter = new AnomalyDetectionConverter();
             colorConverter.GetString(anomalies);
 
             var anomalyDescriptionColumn = new DataGridTextColumn() { HeaderText = "Anomaly Description", MappingName = "AnomalyDescription",ColumnWidthMode = ColumnWidthMode.Auto };

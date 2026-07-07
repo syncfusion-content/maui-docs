@@ -37,7 +37,7 @@ this.Content = dataGrid;
 
 ## Column editing
 
-To enable or disable editing for a specific column, you can simply set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to `true` or `false`.
+To enable or disable editing for a specific column, you can simply set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to `true` or `false`. Editable column types include `DataGridTextColumn`, `DataGridNumericColumn`, `DataGridDateColumn`, `DataGridPickerColumn`, and `DataGridComboBoxColumn`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -65,11 +65,13 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-N>The `DataGridColumn.AllowEditing` takes higher priority than the `SfDataGrid.AllowEditing`.
+> **Note:** The `DataGridColumn.AllowEditing` property takes priority over `SfDataGrid.AllowEditing`.
 
 ## Entering into edit mode
 
-To enter the edit mode, you can simply tap or double-tap the grid cell. The behavior of the edit mode tapping is controlled by the [SfDataGrid.EditTapAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EditTapAction) property, with the default value being `EditTapAction.DoubleTap`.
+To enter edit mode, tap or double-tap the grid cell. Edit mode entry is controlled by the [SfDataGrid.EditTapAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EditTapAction) property. Supported values are:
+ * `DataGridTapAction.OnTap` — Enter edit mode on single tap
+ * `DataGridTapAction.OnDoubleTap` — Enter edit mode on double-tap (default)
 
 {% tabs %}
 {% highlight xaml %}
@@ -92,11 +94,11 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-N> The keyboard will collapse when the editing grid cell loses focus.
+> **Note:** On iOS and Android, the keyboard will collapse when the editing grid cell loses focus.
 
 ## Lost focus behavior
 
-By default, when focus moves from the data grid to another control, the current cell value is not committed. To change this behavior and commit the current cell's value when focus moves, set the [SfDataGrid.LostFocusBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LostFocusBehavior) property to `EndEditCurrentCell`.
+By default, when focus moves from the data grid to another control, the current cell value is not committed (default: `DataGridLostFocusBehavior.None`). To change this behavior and commit the current cell's value when focus moves, set the [SfDataGrid.LostFocusBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LostFocusBehavior) property to `EndEditCurrentCell`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -118,7 +120,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-N> This behavior applies only to `DataGridNumericColumn` and `DataGridTextColumn`.
+> **Note:** The `LostFocusBehavior` property applies only to `DataGridNumericColumn` and `DataGridTextColumn`. Other column types require explicit end-edit calls.
 
 ## Support for IEditableObject
 
@@ -136,6 +138,13 @@ The following code snippet demonstrates a simple implementation of the `IEditabl
 
 {% tabs %}
 {% highlight c# %}
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Reflection;
+using System.Linq;
+using System.Diagnostics;
+
 public class OrderInfo : INotifyPropertyChanged, IEditableObject
 {
     public OrderInfo()
@@ -254,7 +263,7 @@ public class OrderInfo : INotifyPropertyChanged, IEditableObject
         var itemProperties = this.GetType().GetTypeInfo().DeclaredProperties;
         foreach (var pDescriptor in itemProperties)
         {
-            if (pDescriptor.CanWrite)
+            if (pDescriptor.CanWrite && pDescriptor.CanRead)
                 dictionary.Add(pDescriptor.Name, pDescriptor.GetValue(this));
         }
         return dictionary;
@@ -265,6 +274,7 @@ public class OrderInfo : INotifyPropertyChanged, IEditableObject
 {% endhighlight %}
 {% endtabs %}
 
+> **Note:** The `IEditableObject` implementation above works with simple properties. For nullable types or complex nested objects, ensure your `BackUp()` and `CancelEdit()` methods properly handle null values and deep copying when necessary.
 
 ## Editing events
 
@@ -293,7 +303,7 @@ To hook the `SfDataGrid.CurrentCellBeginEdit` event, follow the code example:
 {% highlight c# %}
 private void dataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
 {
-    // Editing prevented for the cell at RowColumnIndex(2,2).
+    // Prevent editing of cell at RowColumnIndex(2,2).
     if (e.RowColumnIndex == new Syncfusion.Maui.GridCommon.ScrollAxis.RowColumnIndex(2, 2))
         e.Cancel = true;
 }
@@ -322,7 +332,7 @@ To hook the `SfDataGrid.CurrentCellEndEdit` event, follow the code example:
 {% highlight c# %}
 private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEditEventArgs e)
 {
-    // Editing prevented for the cell at RowColumnIndex(1,3).
+    // Prevent editing from being committed for cell at RowColumnIndex(1,3).
     if (e.RowColumnIndex == new Syncfusion.Maui.GridCommon.ScrollAxis.RowColumnIndex(1, 3))
         e.Cancel = true;
 }
@@ -356,7 +366,7 @@ private void dataGrid_Loaded(object sender, EventArgs e)
 
 ### End editing
 
-The [SfDataGrid.EndEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EndEdit) method allows you to programmatically conclude the editing process. When called, it commits the edited value of a cell to the underlying collection and exits the edit mode. To programmatically end the editing process, you can refer to the following code example
+The [SfDataGrid.EndEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EndEdit) method allows you to programmatically conclude the editing process without parameters. When called, it commits the edited value of the current cell to the underlying collection and exits edit mode. To programmatically end the editing process, refer to the following code example:
 
 {% tabs %}
 {% highlight c# %}
@@ -374,9 +384,11 @@ this.dataGrid.CancelEdit();
 {% endhighlight %}
 {% endtabs %}
 
-### Cancel editing for a particular Cell
+### Cancel editing operations
 
-The `SfDataGrid.CurrentCellBeginEdit` event can be used to cancel the editing operation for the corresponding cell. To cancel the editing operation using the `SfDataGrid.CurrentCellBeginEdit` event, follow the code example:
+You can prevent editing using two event-based approaches:
+
+**Prevent cell from entering edit mode:** Use the `CurrentCellBeginEdit` event to cancel editing before it starts:
 
 {% tabs %}
 {% highlight xaml %}
@@ -391,15 +403,14 @@ The `SfDataGrid.CurrentCellBeginEdit` event can be used to cancel the editing op
 {% highlight c# %}
 private void dataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
 {
+    // Prevent specific columns or rows from entering edit mode
     if (e.Column.MappingName == "OrderID" || e.RowColumnIndex.RowIndex == 2)
         e.Cancel = true;
 }
 {% endhighlight %}
 {% endtabs %}
 
-### Cancel edited value from being committed
-
-To prevent the edited value from being committed, use the `CurrentCellEndEdit` event. This event prevents the edited values from being committed to the underlying collection. Refer to the code example below:
+**Prevent edited value from being committed:** Use the `CurrentCellEndEdit` event to discard changes instead of saving them:
 
 {% tabs %}
 {% highlight xaml %}
@@ -414,6 +425,7 @@ To prevent the edited value from being committed, use the `CurrentCellEndEdit` e
 {% highlight c# %}
 private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEditEventArgs e)
 {
+    // Discard changes for specific rows instead of committing them
     if (e.RowColumnIndex.RowIndex == 2)
         e.Cancel = true;
 }
@@ -422,7 +434,13 @@ private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEd
 
 ## Undo and Redo an edit
 
-The SfDataGrid allows you to undo or redo edits by setting the [SfDataGrid.AllowUndoRedo]() to `true`. When set to true, `Ctrl + Z` in Windows and `Cmd + Z` in Mac Catalyst will undo an edit, while `Ctrl + Y` in Windows and `Cmd + Y` in Mac Catalyst will redo an edit. Refer to the following example to enable undo and redo actions:
+The SfDataGrid allows you to undo or redo edits by setting the [SfDataGrid.AllowUndoRedo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowUndoRedo) to `true` (default: `false`). When enabled:
+ * **Windows/Mac Catalyst:** `Ctrl + Z` (Undo), `Ctrl + Y` (Redo)
+ * **iOS/Mac Catalyst:** `Cmd + Z` (Undo), `Cmd + Y` (Redo)
+
+> **Note:** Undo/Redo is supported on desktop platforms (Windows, Mac Catalyst). Mobile platform support may vary.
+
+Refer to the following example to enable undo and redo actions:
 
 {% tabs %}
 {% highlight xaml %}
@@ -446,7 +464,7 @@ this.Content = dataGrid;
 
 ### MaxUndoRedoActions
 
-The [SfDataGrid.MaxUndoRedoActions]() property allows users to adjust the number of undo and redo actions in the DataGrid. Refer to the following example to set `MaxUndoRedoActions`: 
+The [SfDataGrid.MaxUndoRedoActions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MaxUndoRedoActions) property allows users to adjust the number of undo and redo actions in the DataGrid. Refer to the following example to set `MaxUndoRedoActions`: 
 
 {% tabs %}
 {% highlight xaml %}
@@ -472,7 +490,7 @@ this.Content = dataGrid;
 
 ### Undo Programmatically
 
-The [Undo]() method can be used to undo an edit in the DataGrid. To undo an edit using the `Undo` method, refer to the example below:
+The [Undo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_Undo) method can be used to undo an edit in the DataGrid. To undo an edit using the `Undo` method, refer to the example below:
 
 {% tabs %}
 {% highlight xaml %}
@@ -527,7 +545,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ### Redo Programmatically
 
-The [Redo]() method can be used to redo an edit in the DataGrid. To redo an edit using the `Redo` method, refer to the example below:
+The [Redo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_Redo) method can be used to redo an edit in the DataGrid. To redo an edit using the `Redo` method, refer to the example below:
 
 {% tabs %}
 {% highlight xaml %}
@@ -582,7 +600,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ### Clear History
 
-The [ClearHistory]() method can be used to clear the history of undo and redo stored in the respective stacks. To clear the history using the `ClearHistory` method, refer to the example below:
+The [ClearHistory](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_ClearHistory) method can be used to clear the history of undo and redo stored in the respective stacks. To clear the history using the `ClearHistory` method, refer to the example below:
 
 {% tabs %}
 {% highlight xaml %}
@@ -637,7 +655,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ### Undo and Redo Count
 
-The number of undo and redo actions can be retrieved using [UndoCount]() and [RedoCount](). Refer to the code below to set `UndoCount` and `RedoCount`:
+The number of undo and redo actions can be retrieved using [UndoCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_UndoCount) and [RedoCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoController.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoController_RedoCount). Refer to the code below to set `UndoCount` and `RedoCount`:
 
 {% tabs %}
 {% highlight xaml %}
@@ -742,14 +760,14 @@ this.Content = grid;
 
 #### Cell Undoing
 
-The [SfDataGrid.CellUndoing]() event occurs when the undo action is in progress for a cell. The [DataGridUndoRedoEventArgs]() has the following members that provide information for the `SfDataGrid.CellUndoing` event:
+The [SfDataGrid.CellUndoing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellUndoing) event occurs when the undo action is in progress for a cell. The [DataGridUndoRedoEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html) has the following members that provide information for the `SfDataGrid.CellUndoing` event:
 
  * [Cancel](): When this member is set to `true`, the event is canceled and the undo action for the cell does not occur.
- * [RowIndex](): Gets the row index of the undoing cell in the DataGrid.
- * [ColumnIndex](): Gets the column index of the undoing cell in the DataGrid.
- * [Column](): Gets the column of the DataGrid.
- * [OldValue](): Gets the old value of the undoing cell in the DataGrid.
- * [NewValue](): Gets the new value of the undoing cell in the DataGrid.
+ * [RowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_RowIndex): Gets the row index of the undoing cell in the DataGrid.
+ * [ColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_ColumnIndex): Gets the column index of the undoing cell in the DataGrid.
+ * [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_Column): Gets the column of the DataGrid.
+ * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_OldValue): Gets the old value of the undoing cell in the DataGrid.
+ * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUndoRedoEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUndoRedoEventArgs_NewValue): Gets the new value of the undoing cell in the DataGrid.
 
 To hook the `SfDataGrid.CellUndoing` event, follow the code example:
 
@@ -789,7 +807,7 @@ private void DataGrid_CellUndoing(object sender, DataGridUndoRedoEventArgs e)
 
 #### Cell Redoing
 
-The [SfDataGrid.CellRedoing]() event occurs when the redo action is in progress for a cell. To hook the `SfDataGrid.CellRedoing` event, follow the code example:
+The [SfDataGrid.CellRedoing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRedoing) event occurs when the redo action is in progress for a cell. To hook the `SfDataGrid.CellRedoing` event, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}

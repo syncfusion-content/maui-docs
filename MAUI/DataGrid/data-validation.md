@@ -10,13 +10,13 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Data Validation in MAUI DataGrid (SfDataGrid)
 
-[.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to validate the data and display hints in case of validation is not passed. In case of invalid data, error icon is displayed at the top right corner of DataGridCell. When mouse over the error icon, error information will be displayed in error tip.
+[.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to validate data and display hints when validation fails. When invalid data is detected, an error icon is displayed at the top right corner of the DataGridCell. When you hover over the error icon, error information is displayed in an error tip.
 
 ## Built-in Validation
 
-Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo`, can be enabled by setting [SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) properties.
+Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo` can be enabled by setting [SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) properties. Column-level validation mode takes priority over grid-level validation mode.
 
-`DataGridColumn.ValidationMode` takes priority than `SfDataGrid.ValidationMode`.
+> **Note:** ValidationMode is a static property set at initialization and applies consistently throughout the data entry life cycle.
 
 * DataGridValidationMode.InEdit - display error icon & tips and also doesn’t allow the users to commit the invalid data by not allowing users to edit other cells.
 * DataGridValidationMode.InView - displays error icons and tips alone.
@@ -28,10 +28,12 @@ Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo`, can be
 
 ### Using IDataErrorInfo
 
-You can validate the data by inheriting the [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) interface in model class.
+You can validate data by inheriting the [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) interface in your model class.
 
 {% tabs %}
 {% highlight C# %}
+using System.ComponentModel;
+
 public class OrderInfo : IDataErrorInfo
 {
     private string country;
@@ -101,20 +103,25 @@ this.Content = dataGrid;
 
 ### Using INotifyDataErrorInfo
 
-The data can be validated by inheriting the [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0) interface in model class.
+Data can be validated by inheriting the [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0) interface in your model class.
 
 {% tabs %}
 {% highlight C# %}
+using System.ComponentModel;
+
 public class OrderInfo : INotifyDataErrorInfo
 {
-    private List<string> errors = new List<string>();
-
     private string country;
+    private string city;
 
     public int OrderID { get; set; }
     public string Customer { get; set; }
-    public string City { get; set; }
-    public string Product { get; set; }
+    
+    public string City
+    {
+        get { return city; }
+        set { city = value; }
+    }
 
     public string Country
     {
@@ -122,14 +129,20 @@ public class OrderInfo : INotifyDataErrorInfo
         set { country = value; }
     }
 
+    public string Product { get; set; }
+
     public System.Collections.IEnumerable GetErrors(string propertyName)
     {
+        var errors = new List<string>();
 
         if (!propertyName.Equals("City"))
-            return null;
+            return errors;
 
-        if (this.City.Contains("Berlin") || this.City.Contains("Madrid"))
+        if (!string.IsNullOrEmpty(this.City) && 
+            (this.City.Contains("Berlin") || this.City.Contains("Madrid")))
+        {
             errors.Add("Delivery not available for " + this.City);
+        }
         return errors;
     }
 
@@ -174,15 +187,17 @@ this.Content = dataGrid;
 
 ## Built-in validation using Data Annotation
 
-You can validate the data using **data annotation attributes** by setting 
-[SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) property to `InEdit` or `InView`.
+You can validate data using **data annotation attributes** by setting 
+[SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) property to `InEdit` or `InView`. When validation fails, the ErrorMessage is displayed in the error tip.
 
 ### Using different annotations
 
-The numeric type like int, double, decimal properties can be validated using [Range attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute?view=net-5.0).
+Numeric properties (int, double, decimal) can be validated using [Range attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute?view=net-5.0).
 
 {% tabs %}
 {% highlight c# %}
+using System.ComponentModel.DataAnnotations;
+
 public class OrderInfo
 {
     private int orderID;
@@ -202,10 +217,12 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-The string type property can be validated using [Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-5.0), [String Length attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-5.0)
+String properties can be validated using [Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-5.0) and [StringLength attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-5.0).
 
 {% tabs %}
 {% highlight c# %}
+using System.ComponentModel.DataAnnotations;
+
 public class OrderInfo
 {
     private string _city;
@@ -213,14 +230,14 @@ public class OrderInfo
 
     public int OrderID { get; set; }
 
-    [StringLength(5)]
+    [StringLength(5, ErrorMessage = "Customer name cannot exceed 5 characters")]
     public string Customer
     {
         get { return _customerName; }
         set { _customerName = value; }
     }
 
-    [Required]
+    [Required(ErrorMessage = "City is required")]
     public string City
     {
         get { return _city; }
@@ -233,17 +250,19 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-The data that has heterogeneous type (combination of number, special character) can be validated using [RegularExpressions](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute?view=net-5.0).
+Data with heterogeneous types (combinations of letters, numbers, and special characters) can be validated using [RegularExpression attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute?view=net-5.0).
 
 {% tabs %}
 {% highlight c# %}
+using System.ComponentModel.DataAnnotations;
+
 public class OrderInfo
 {
     private string _customerName;
 
     public int OrderID { get; set; }
 
-    [RegularExpressionAttribute(@"^[a-zA-Z]{1,40}$", ErrorMessage = "Numbers and special characters not allowed")]
+    [RegularExpression(@"^[a-zA-Z]{1,40}$", ErrorMessage = "Numbers and special characters not allowed")]
     public string Customer
     {
         get { return _customerName; }
@@ -259,11 +278,9 @@ public class OrderInfo
 
 ## Cell Validation
 
-A cell can be validated using [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidating) event when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus. DataGrid will not allow user to edit other cells if validation failed.
+Individual cells can be validated using the [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidating) event. This event occurs when an edited cell attempts to commit data or loses focus. If validation fails, the user cannot navigate to other cells until the validation error is resolved.
 
-[DataGridCellValidatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValidatingEventArgs.html) provides information to `CellValidating` event for validating the cell. `DataGridCellValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
-
-`DataGridCellValidatingEventArgs.NewValue` returns the edited value and you can set the validation status using `DataGridCellValidatingEventArgs.IsValid` property.
+[DataGridCellValidatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValidatingEventArgs.html) provides information for the `CellValidating` event. `DataGridCellValidatingEventArgs.ColumnName` identifies the column being validated, `DataGridCellValidatingEventArgs.NewValue` returns the edited value, and `DataGridCellValidatingEventArgs.IsValid` sets the validation status. For nested grids, `DataGridCellValidatingEventArgs.OriginalSource` returns the DataGrid instance that fired this event.
 
 {% tabs %}
 {% highlight XAML %}
@@ -278,7 +295,7 @@ A cell can be validated using [CellValidating](https://help.syncfusion.com/cr/ma
 {% highlight C# %}
 private void dataGrid_CellValidating(object sender, DataGridCellValidatingEventArgs e)
 {
-    if (e.NewValue.ToString().Equals("Berlin"))
+    if (e.NewValue != null && e.NewValue.ToString().Equals("Berlin"))
     {
         e.IsValid = false;
         e.ErrorMessage = "Berlin cannot be passed";
@@ -309,11 +326,9 @@ private void dataGrid_CellValidated(object sender, DataGridCellValidatedEventArg
 
 ## Row Validation
 
-A Row can be validated using [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) event when the cell is edited. The `RowValidating` event occurs when the edited cells tries to commit the row data or lose the focus. DataGrid will not allow user to edit other rows if validation failed.
+Entire rows can be validated using the [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) event. This event occurs after a cell loses focus or when the row data is committed. If validation fails, the user cannot navigate to other rows until the validation error is resolved.
 
-[DataGridRowValidatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowValidatingEventArgs.html) provides information to `RowValidating` event for validating row. `DataGridRowValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
-
-`DataGridRowValidatingEventArgs.RowData` returns the edited value and you can set the validation status using `DataGridRowValidatingEventArgs.IsValid` property.
+[DataGridRowValidatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowValidatingEventArgs.html) provides information for the `RowValidating` event. `DataGridRowValidatingEventArgs.RowData` contains the edited row data, and `DataGridRowValidatingEventArgs.IsValid` sets the validation status. For nested grids, `DataGridRowValidatingEventArgs.OriginalSource` returns the DataGrid instance that fired this event.
 
 {% tabs %}
 {% highlight XAML %}
@@ -328,9 +343,7 @@ A Row can be validated using [RowValidating](https://help.syncfusion.com/cr/maui
 {% highlight C# %}
 private void dataGrid_RowValidating(object sender, DataGridRowValidatingEventArgs e)
 {
-    var data = e.RowData.GetType().GetProperty("Country").GetValue(e.RowData);
-
-    if (data != null && data.ToString().Equals("Spain"))
+    if (e.RowData is OrderInfo order && order.Country != null && order.Country.Equals("Spain"))
     {
         e.IsValid = false;
         e.ErrorMessages.Add("Country", "Spain cannot be passed");
@@ -395,7 +408,7 @@ this.Content = dataGrid;
 
 ### Load Error Icon through Template
 
-The SfDataGrid uses an icon to indicate if a cell has error. You can personalize the error icon by using the [SfDataGrid.ErrorIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ErrorIconTemplate) property.
+The SfDataGrid uses an icon to indicate if a cell has an error. You can customize the error icon using the [SfDataGrid.ErrorIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ErrorIconTemplate) property. Image source should reference a file in the project's Resources folder or an embedded resource.
 
 {% tabs %}
 {% highlight XAML %}
@@ -635,7 +648,18 @@ public class ErrorTipTemplateSelector : Microsoft.Maui.Controls.DataTemplateSele
 
 ## Data Validation with Master-Details View
 
-The data bound based on [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) or [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0) can be validated by setting [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) property of [DataGridViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html).
+Data validation in master-details grids works using the same built-in validation methods (IDataErrorInfo, INotifyDataErrorInfo, and Data Annotations) as well as custom event-based validation. Enable validation by setting the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) property on [DataGridViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html).
+
+> **Note:** The parent model must contain a public collection property (specified as `RelationalColumn`) that holds child records. For example:
+
+```csharp
+public class Customer
+{
+    public int CustomerID { get; set; }
+    public string CustomerName { get; set; }
+    public List<Order> Orders { get; set; } // RelationalColumn property
+}
+```
 
 {% tabs %}
 {% highlight XAML %}
@@ -688,32 +712,29 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-When the relation is auto-generated, the data can be validated by setting ValidationMode property to `AutoGeneratingRelations.DataGridViewDefinition.DataGrid` in [AutoGeneratingRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingRelations) event handler.
+When relations are auto-generated, configure validation in the [AutoGeneratingRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingRelations) event handler:
 
 {% tabs %}
 {% highlight C# %}
-
 dataGrid.AutoGenerateRelations = true;
-
 dataGrid.AutoGeneratingRelations += dataGrid_AutoGeneratingRelations;
 
-void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs e)
+private void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs e)
 {
     e.DataGridViewDefinition.DataGrid.ValidationMode = DataGridValidationMode.InView;
 }
-                       
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-with-master-details-view" src="Images\data-validation\maui-datagrid-datavalidation-with-masterdetailsview.png" width="464"/>
+<img alt="data-validation-with-master-details-view" src="Images/data-validation/maui-datagrid-datavalidation-with-masterdetailsview.png" width="464"/>
 
 ### Custom validation through events
 
-Master-Details View support to validate the cells and rows using [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidated) and [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) events.
+In addition to built-in validation, master-details grids support custom validation using the [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidating) and [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) events on the child grid. These work exactly like the standard validation events but are applied to nested grid instances.
 
-#### Cell Validation
+#### Cell Validation in Details Grid
 
-The cells can be validated using [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidating) event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus.
+Cells in the details (child) grid can be validated using the [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidating) event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html). The event occurs when an edited cell attempts to commit data or loses focus.
 
 {% tabs %}
 {% highlight XAML %}
@@ -868,11 +889,9 @@ private void FirstLevelNestedGrid_CellValidated(object sender, DataGridCellValid
 {% endhighlight %}
 {% endtabs %}
 
-#### Row Validation
+#### Row Validation in Details Grid
 
-The row can be validated using [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) when the cell is edited.
-
-The `RowValidating` event occurs when edited cells tries to commit the row data or lose the focus.
+Rows in the details grid can be validated using the [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html). The event occurs after a cell loses focus or when the row data is committed.
 
 {% tabs %}
 {% highlight XAML %}
@@ -1036,4 +1055,4 @@ private void FirstLevelNestedGrid_RowValidated(object sender, DataGridRowValidat
 
 ## Limitations
 
-1. Non editable columns will not support custom validation.
+1. Non-editable columns do not support custom validation through the `CellValidating` event. Built-in validation (IDataErrorInfo, INotifyDataErrorInfo, and Data Annotations) will display validation messages but the cell cannot be edited, so validation occurs only when viewing existing data.

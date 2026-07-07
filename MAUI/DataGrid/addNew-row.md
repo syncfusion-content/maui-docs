@@ -10,13 +10,15 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Add New Row in MAUI DataGrid (SfDataGrid)
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides built-in row (called AddNewRow) that allows user to add new records to underlying collection. Built-in add new row can be enabled or disabled by setting [SfDataGrid.AddNewRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowPosition) property. AddNewRowPosition also denotes the position of add new row in DataGrid.
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides a built-in row (called AddNewRow) that allows users to add new records to the underlying collection. The built-in add new row can be enabled or disabled by setting the [SfDataGrid.AddNewRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowPosition) property. The AddNewRowPosition property also denotes the position of the add new row in the DataGrid.
 
-When you start editing in AddNewRow, the SfDataGrid control creates an instance for the underlying data object and adds it to underlying collection when editing completed.
+When you start editing in AddNewRow, the SfDataGrid control creates an instance of the underlying data object and adds it to the underlying collection when editing is completed.
 
-N>
-1. The underlying data object must be defined with default constructor.
-2. Selection and Editing must be enabled.
+> **Note:**
+> 1. The underlying data object must be defined with a default (parameterless) constructor. If omitted, an error will occur when initiating a new row.
+> 2. Selection must be enabled (set `SelectionMode` to any value other than `None`).
+> 3. Editing must be enabled by setting `AllowEditing` to `true`.
+> 4. `NavigationMode` should be set to allow cell-level editing (typically `DataGridNavigationMode.Cell`).
 
 {% tabs %}
 {% highlight xaml %}
@@ -55,7 +57,12 @@ this.Content = dataGrid;
 
 ## Changing the AddNewRow position
 
-The position of the AddNewRow in SfDataGrid can be customized using the `SfDataGrid.AddNewRowPosition` property. By default, this property is set to Top.
+The position of the AddNewRow in SfDataGrid can be customized using the `SfDataGrid.AddNewRowPosition` property. By default, this property is set to `Top`. Valid values are:
+- `DataGridAddNewRowPosition.Top` — Places the add new row at the top of the grid
+- `DataGridAddNewRowPosition.Bottom` — Places the add new row at the bottom of the grid
+- `DataGridAddNewRowPosition.FixedTop` — Places the add new row at the top of the grid and keeps it fixed
+- `DataGridAddNewRowPosition.None` — Disables the add new row
+
 The following code snippet demonstrates how to change the AddNewRow position to Bottom in SfDataGrid:
 
 {% tabs %}
@@ -95,7 +102,10 @@ this.Content = dataGrid;
 
 ## Customize the newly added row position
 
-SfDataGrid adds new data item from AddNewRow at the end of collection. When data operations (sorting, grouping) performed, the new item added based on data operations. You can customize the newly added data item position by setting [SfDataGrid.NewItemPlaceHolderPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NewItemPlaceholderPosition).
+By default, SfDataGrid adds a new data item from AddNewRow at the end of the collection. When data operations such as sorting or grouping are applied, the new item is positioned based on those operations. You can customize where the newly added data item appears by setting the [SfDataGrid.NewItemPlaceholderPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NewItemPlaceholderPosition) property. Valid values include:
+- `NewItemPlaceholderPosition.AtBeginning` — Places the new row at the beginning of the collection
+- `NewItemPlaceholderPosition.AtEnd` — Places the new row at the end of the collection (default)
+- `NewItemPlaceholderPosition.None` — Disables the new row placeholder
 
 {% tabs %}
 {% highlight xaml %}
@@ -164,7 +174,7 @@ this.Content = dataGrid;
 
 ## Initializing default values for AddNewRow
 
-SfDataGrid allows you to set the default values for AddNewRow while initiating, through [DataGridAddNewRowInitiatingEventArgs.Object](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAddNewRowInitiatingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridAddNewRowInitiatingEventArgs_Object) property in [SfDataGrid.AddNewRowInitiating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowInitiating) event.
+SfDataGrid allows you to set the default values for AddNewRow when it is initiated through the [DataGridAddNewRowInitiatingEventArgs.Object](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAddNewRowInitiatingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridAddNewRowInitiatingEventArgs_Object) property in the [SfDataGrid.AddNewRowInitiating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowInitiating) event. This event fires when a new row is about to be added and allows you to initialize default values before the user begins editing.
 
 {% tabs %}
 {% highlight xaml %}
@@ -233,7 +243,7 @@ You can commit or cancel the new record in AddNewRow by pressing the Enter and E
 {% highlight c# %}
 if (this.dataGrid.View.IsAddingNew)
 {
-    // Which end edit the current cell and revert the entered value.
+    // This ends the edit of the current cell and reverts the entered value.
     if (this.dataGrid.CurrentCellManager.DataColumn.IsEditing)
         this.dataGrid.EndEdit();
 
@@ -262,11 +272,11 @@ if (this.dataGrid.View.IsAddingNew)
     rowColumnIndex.RowIndex = addNewRowController.GetAddNewRowIndex(dataGrid);
     this.dataGrid.SelectedRows.Clear();
 
-    // If the AddNewRowPosition is Top need to move the current cell to next row 
+    // If the AddNewRowPosition is Top, move the current cell to the next row 
     if (this.dataGrid.AddNewRowPosition == DataGridAddNewRowPosition.Top)
         rowColumnIndex.RowIndex = rowColumnIndex.RowIndex + 1;
 
-    // Which retains the current cell border in the row after canceling AddNewRow as you press ESC key operation.
+    // This maintains the current cell border in the row after committing the AddNewRow.
     this.dataGrid.MoveCurrentCellTo(rowColumnIndex);
 }
 {% endhighlight %}
@@ -284,9 +294,13 @@ To customize the AddNewRowText, add the default Syncfusion.SfDataGrid.WPF.resx f
 
 ## Customizing AddNewRow
 
+DataGridAddNewRow can be customized in two ways:
+- **Implicit Style**: Use a resource style when working with XAML-only pages. This approach applies globally to all `DataGridAddNewRowView` instances on the page.
+- **DefaultStyle Property**: Use the `DefaultStyle` property when you need programmatic control or to apply a style from code-behind or when using XAML with C#.
+
 ### Apply implicit style
 
-DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAddNewRowView.html) TargetType.
+DataGridAddNewRow can be customized by writing a style for the [DataGridAddNewRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAddNewRowView.html) TargetType. This approach is useful when defining styles in your page's resources.
 
 {% tabs %}
 {% highlight xaml %}
@@ -309,7 +323,7 @@ DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView]
 
 ### Apply default style
 
-You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFamily by using [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyle).
+You can customize the AddNewRow's background, text color, font attributes, and font family using the [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyle) property. This approach works with both XAML and code-behind.
 
 {% tabs %}
 {% highlight xaml %}
@@ -329,13 +343,33 @@ You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFami
     </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
+{% highlight c# %}
+// Code-behind approach
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.AllowEditing = true;
+dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+
+// Create and apply the default style
+DataGridStyle style = new DataGridStyle
+{
+    AddNewRowBackground = Color.FromArgb("#1976D2"),
+    AddNewRowTextColor = Colors.White,
+    AddNewRowFontAttributes = FontAttributes.Bold,
+    AddNewRowFontSize = 16,
+    AddNewRowFontFamily = "Segoe UI"
+};
+dataGrid.DefaultStyle = style;
+{% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRow-ImplicitStyle" src="Images\addnewrow\maui-dataGrid-AddNewRow_ImplicitStyle.png" width="404"/>  
+<img alt="addnewRow-ImplicitStyle" src="Images\addnewrow\maui-dataGrid-AddNewRow_ImplicitStyle.png" width="404"/>
 
 ## AddNewRow support in Master-Details View
 
-You can enable the AddNewRow in `DetailsViewDataGrid` by specifying the position to `SfDataGrid.AddNewRowPosition` property in [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html).
+You can enable the AddNewRow in the child `DetailsViewDataGrid` by setting the [SfDataGrid.AddNewRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowPosition) property in [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html). The same prerequisites (selection enabled, editing enabled, and navigation mode set to Cell) apply to details view grids.
 
 {% tabs %}
 {% highlight xaml %}
@@ -452,9 +486,9 @@ private void DataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowIniti
 
 <img alt="addnewRow-MasterdetailsView" src="Images\addnewrow\maui-dataGrid-AddNewRow_MasterDetailsView.png" width="404"/> 
 
-### Changing the AddNewRow default text in details view grid
+### Customizing AddNewRow in details view grid
 
-You can change the default static string of AddNewRow in details view grid by using the `SfDataGrid.AddNewRowText` property in `ViewDefinition.DataGrid`. The `AddNewRowText` property has higher priority than the text that is localized in resx file.
+You can customize the AddNewRow in the details view grid by setting the `SfDataGrid.AddNewRowText` property in `ViewDefinition.DataGrid`. The `AddNewRowText` property has higher priority than any localized text.
 
 {% tabs %}
 {% highlight xaml %}
@@ -511,7 +545,7 @@ detailsGrid.AllowEditing = true;
 detailsGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
 detailsGrid.NavigationMode = DataGridNavigationMode.Cell;
 detailsGrid.SelectionMode = DataGridSelectionMode.Single;
-detailsGrid.AddNewRowText="Click here to add new row in child grid";
+detailsGrid.AddNewRowText = "Click here to add new row in child grid";
 
 // DetailsView definition
 DataGridViewDefinition viewDefinition = new DataGridViewDefinition();

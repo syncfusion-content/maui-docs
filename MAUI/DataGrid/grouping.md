@@ -10,11 +10,11 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Grouping in MAUI DataGrid (SfDataGrid)
 
-Grouping in a datagrid refers to the process of organizing and categorizing data based on specific criteria or field values. It allows you to group related records together, creating a hierarchical structure within the datagrid. Each group is identified by its [CaptionSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CaptionSummaryRowProperty) to get the underlying records in view.
+Grouping in a datagrid refers to the process of organizing and categorizing data based on specific criteria or field values. It allows you to group related records together, creating a hierarchical structure within the datagrid. Each group is identified by its [CaptionSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CaptionSummaryRowProperty), which displays the group key and provides access to the underlying records in that group. The CaptionSummaryRow shows summary information such as the grouping column value and the count of records in each group.
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/OIwtE111xfk"></iframe>
 
-N> 
+> **Note:** 
 * To update the grouping for the newly added row or column, set the `SfDataGrid.View.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`.
 * When `BeginInit` method is called, it suspends all the updates until `EndInit` method is called.
 
@@ -38,7 +38,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-You can group data by an unlimited of columns. To group multiple columns, drag and drop the desired column headers into the GroupDropArea.
+You can group data by an unlimited number of columns. To group multiple columns, drag and drop the desired column headers into the GroupDropArea.
 
 <img alt="Maui UI Grouping" src="Images/Grouping/maui-datagrid-ui-grouping.png" width="404"/>
 
@@ -294,7 +294,10 @@ The following screenshot shows the multi-grouping:
 
 ## Custom Grouping
 
-The SfDataGrid allows to group a column based on custom logic when the standard grouping techniques do not meet the requirements.
+The SfDataGrid allows to group a column based on custom logic when the standard grouping techniques do not meet the requirements. You can choose between two approaches:
+
+- **IValueConverter**: Simpler approach for basic grouping logic with data transformation.
+- **KeySelector**: More direct approach providing full access to the data object for complex scenarios.
 
 ### Using IValueConverter
 
@@ -374,7 +377,7 @@ public class GroupConverter : IValueConverter
 
 ### Using KeySelector
 
-To achieve this, specify the custom logic in [GroupColumnDescription.KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html#Syncfusion_Maui_DataGrid_GroupColumnDescription_KeySelector) property and column name in [GroupColumnDescription.ColumnName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html#Syncfusion_Maui_DataGrid_GroupColumnDescription_ColumnName) property.
+To achieve this, specify the custom logic in [GroupColumnDescription.KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html#Syncfusion_Maui_DataGrid_GroupColumnDescription_KeySelector) property and column name in [GroupColumnDescription.ColumnName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html#Syncfusion_Maui_DataGrid_GroupColumnDescription_ColumnName) property. The KeySelector is a delegate that takes the column name and data item as parameters and returns the grouping key. This approach provides direct access to the data object, making it ideal for complex grouping scenarios requiring property inspection or calculations.
 
 In the below example, the Date column is grouped based on weeks.
 {% tabs %}
@@ -519,7 +522,7 @@ As you can see in the below screenshot, the records are sorted based on the `Ord
 
 ## Display based grouping using GroupMode property
 
-By default, column grouping occurs based on the value in the underlying collection thereby creating a new group for each new value of that column. However, a column can also be grouped based on the Display value by setting the [DataGridColumn.GroupMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_GroupMode) property as `Display`. In the following code example, set the [DataGridColumn.Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Format) property as "#" which displays only the rounded off value in the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html): 
+By default, column grouping occurs based on the value in the underlying collection thereby creating a new group for each new value of that column. However, a column can also be grouped based on the Display value by setting the [DataGridColumn.GroupMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_GroupMode) property as `Display`. When `GroupMode` is set to `Display`, the data grid groups records by their formatted display values rather than the underlying values. In the following code example, set the [DataGridColumn.Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Format) property as "#" which displays only the rounded off value in the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html). For numeric values, common format strings include "0" (round to nearest integer), "0.0" (one decimal), and "C" (currency). Refer to .NET format string documentation for additional format options. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -597,12 +600,14 @@ this.dataGrid.CollapseAllGroups();
 
 ### Expand or collapse a specific group
 
-To expand and collapse specific groups programmatically, you can simply invoke the [SfDataGrid.ExpandGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandGroup_Syncfusion_Maui_Data_Group_) and [SfDataGrid.CollapseGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseGroup_Syncfusion_Maui_Data_Group_) methods.
+To expand and collapse specific groups programmatically, retrieve a Group object from the `SfDataGrid.View.Groups` collection and pass it to the [SfDataGrid.ExpandGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandGroup_Syncfusion_Maui_Data_Group_) or [SfDataGrid.CollapseGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseGroup_Syncfusion_Maui_Data_Group_) methods.
 
 {% tabs %}
 {% highlight c# %}
+// Get the first group from the View
 var group = (dataGrid.View.Groups[0] as Group);
 
+// Expand or collapse the specific group
 this.dataGrid.ExpandGroup(group);
 this.dataGrid.CollapseGroup(group);
 {% endhighlight %}
@@ -618,7 +623,7 @@ The GroupExpanding event occurs when a group is being expanded.
  
 The [DataGridColumnGroupChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnGroupChangingEventArgs.html) of the `GroupExpanding` event provides information about the expanding group and has the following members:
 
- `Syncfusion.Data.Group`: Gets the expanded group.
+ `Syncfusion.Data.Group`: Gets the expanding group. The Group object contains the Key property (grouping key value) and other properties like ItemsCount (number of records in the group) and IsExpanded (current expansion state).
 
  `Cancel`: Determines whether to cancel group expansion.
  
@@ -628,7 +633,7 @@ Cancel the group expansion by setting [DataGridColumnGroupChangingEventArgs.Canc
 {% highlight c# %}
 this.dataGrid.GroupExpanding += dataGrid_GroupExpanding;
 
-void dataGrid_GroupExpanding(object sender, EventArgs e)
+void dataGrid_GroupExpanding(object sender, DataGridColumnGroupChangingEventArgs e)
 {
     if (e.Group.Key.Equals(1001))    
         e.Cancel = true;    
@@ -660,7 +665,7 @@ Cancel the group is being collapsed by setting the `DataGridColumnGroupChangingE
 {% highlight c# %}
 this.dataGrid.GroupCollapsing += dataGrid_GroupCollapsing;
 
-void dataGrid_GroupCollapsing(object sender, EventArgs e)
+void dataGrid_GroupCollapsing(object sender, DataGridColumnGroupChangingEventArgs e)
 {
     if (e.Group.Key.Equals(1001))    
         e.Cancel = true;    
@@ -702,9 +707,9 @@ this.Content = dataGrid;
 
 #### Customize indent column background color
 
-The indent columns can be customized by writing the implicit style for the [DataGridIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridIndentCell.html). 
+The indent columns can be customized by writing the implicit style for the [DataGridIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridIndentCell.html). The indent cell is a container that appears to the left of grouped rows and displays the expand/collapse button. 
 
-The following code snippet shows how to apply a background color to the indent cell based on the column index:
+The following code snippet shows how to apply a background color to the indent cell based on the row type (header, caption, or data row) by creating a converter that examines the parent row's data:
 
 {% tabs %}
 {% highlight xaml %}
@@ -714,8 +719,7 @@ The following code snippet shows how to apply a background color to the indent c
         <Style TargetType="syncfusion:DataGridIndentCell">
             <Setter Property="Background"
                     Value="{Binding Source={RelativeSource Mode=Self}, 
-                    Converter={StaticResource 
-                    Key=cellStyleConverter}}" />
+                    Converter={StaticResource cellStyleConverter}}" />
         </Style>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -776,7 +780,7 @@ this.Content = dataGrid;
 
 #### Load group icon through template
 
-The SfDataGrid uses an icon to indicate the expand and collapse state of groups. You can personalize the group icon by using the [SfDataGrid.GroupExpandCollapseTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpandCollapseTemplate) property. This property allows you to define a custom template that will be displayed in its normal form when the group is expanded, and it will rotate downwards when the group is collapsed. To implement this, refer to the following code snippet:
+The SfDataGrid uses an icon to indicate the expand and collapse state of groups. You can personalize the group icon by using the [SfDataGrid.GroupExpandCollapseTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpandCollapseTemplate) property. This property allows you to define a custom template that displays in its normal form when the group is expanded. The icon is automatically rotated 180 degrees by the control when the group is collapsed, so choose directional icons (like arrows) that clearly show orientation changes. To implement this, refer to the following code snippet:
 
 {% tabs %}
 
@@ -882,8 +886,7 @@ public class ExpandCollapseTemplate : DataTemplateSelector
 
 <img alt="DataGrid with template selector" src="Images/Grouping/maui-datagrid-template-selector.gif" width="404"/>
 
-N>
-* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+> **Note:** When using a DataTemplateSelector, templates are re-evaluated whenever a group's expanded/collapsed state changes. For optimal performance, use this approach only with small datasets or consider caching templates.
 
 #### Customize the size of group icon
 

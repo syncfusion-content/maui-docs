@@ -10,9 +10,9 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Column Types in .NET MAUI DataGrid (SfDataGrid)
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) contains different types of columns. The functionalities of the columns can be implied by their names. Any of the columns can be used depending on the requirements.
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) contains different types of columns. Each column type serves a specific purpose and provides specialized functionality. Any of the columns can be used depending on the requirements.
 
-To get start quickly with column types in .NET MAUI DataGrid, you can check on this video:
+To get started quickly with column types in .NET MAUI DataGrid, you can check this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/tLNua3iGnGE"></iframe>
 
@@ -74,8 +74,8 @@ The following table describes the types of columns and their usage:
 <td>To display a Picker within each cell</td>
 </tr>
 <tr>
-<td>{{'[DataGridPercentColumn]()'| markdownify }}</td>
-<td>{{'[DataGridPercentCellRenderer]()'| markdownify }}</td>
+<td>{{'[DataGridPercentColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPercentColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridPercentCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPercentCellRenderer.html)'| markdownify }}</td>
 <td>Percentage</td>
 <td>To display and edit percentage values in each row</td>
 </tr>
@@ -86,20 +86,20 @@ The following table describes the types of columns and their usage:
 <td>Use to display the IEnumerable data using {{ '[SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html)'| markdownify }}</td>
 </tr>
 <tr>
-<td>{{'[DataGridCurrencyColumn]()'| markdownify }}</td>
-<td>{{'[DataGridCurrencyCellRenderer]()'| markdownify }}</td>
+<td>{{'[DataGridCurrencyColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrencyColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridCurrencyCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrencyCellRenderer.html)'| markdownify }}</td>
 <td>Currency</td>
 <td>To display and edit currency values in each row</td>
 </tr>
 <tr>
-<td>{{'[DataGridTimePickerColumn]()'| markdownify }}</td>
-<td>{{'[DataGridTimePickerCellRenderer]()'| markdownify }}</td>
+<td>{{'[DataGridTimePickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTimePickerColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridTimePickerCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTimePickerCellRenderer.html)'| markdownify }}</td>
 <td>TimePicker</td>
 <td>To display the time span value.</td>
 </tr>
 <tr>
-<td>{{'[DataGridCheckBoxSelectorColumn]()'| markdownify }}</td>
-<td>{{'[DataGridCheckBoxSelectorCellRenderer]()'| markdownify }}</td>
+<td>{{'[DataGridCheckBoxSelectorColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxSelectorColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridCheckBoxSelectorCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxSelectorCellRenderer.html)'| markdownify }}</td>
 <td>CheckBoxSelector</td>
 <td>Selects or deselects rows based on the check box value, which is not bound with data object.</td>
 </tr>
@@ -147,6 +147,8 @@ To format cell contents, use the converter of the `DataGridColumn.DisplayBinding
 
 {% tabs %}
 {% highlight c# tabtitle="Converter.cs" %}
+using System.Globalization;
+
 public class DisplayBindingConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -154,6 +156,11 @@ public class DisplayBindingConverter : IValueConverter
         if (value != null)
             return "Customer : " + value.ToString();
         return null;
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
     }
 }
 {% endhighlight %}
@@ -342,8 +349,7 @@ Based on the requirement, the header cell can be customized using the [DataGridC
 
 ### Setting manual column width
 
-The SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize the column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders in a view based on the value of the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property.
-SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize column width, use the `DataGridColumn.Width` property. By default, this property will not be assigned any value. The DataGridColumn renders in view based on the value of the `DefaultColumnWidth` property.
+The SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize the column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders based on the value of the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -447,28 +453,43 @@ orderID.HeaderPadding = new Thickness(10, 0, 0, 0);
 
 ### Formatting
 
-To format values displayed in the DataGridColumn, use the [DataGridColumn.Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Format) property.
+To format values displayed in the DataGridColumn, use the [DataGridColumn.Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Format) property. The format string is applied to the underlying data type. Common format strings include:
+
+* **C or C2** - Currency format (e.g., $1,234.56)
+* **N or N2** - Number format with decimal places (e.g., 1,234.56)
+* **P or P2** - Percentage format (e.g., 123.46%)
+* **d** - Short date format (e.g., 7/6/2026)
+* **dd/MM/yyyy** - Custom date format
+* **hh\:mm** - Time format
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid.Columns>
     <syncfusion:DataGridTextColumn MappingName="Freight"
-                                   Format="C" />
+                                   Format="C2" />
     <syncfusion:DataGridTextColumn MappingName="ShippingDate"
                                    Format="dd/MM/yyyy" />
+    <syncfusion:DataGridTextColumn MappingName="Discount"
+                                   Format="P2" />
 </syncfusion:SfDataGrid.Columns>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 dataGrid.Columns.Add(new DataGridTextColumn()
 {
     MappingName = "Freight",
-    Format = "C"
+    Format = "C2"  // Displays as $1,234.56
 });
 
 dataGrid.Columns.Add(new DataGridTextColumn()
 {
     MappingName = "ShippingDate",
     Format = "dd/MM/yyyy"
+});
+
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "Discount",
+    Format = "P2"  // Displays as 25.50%
 });
 {% endhighlight %}
 {% endtabs %}
@@ -496,12 +517,23 @@ We can customize the format of a particular column using converter.
 
 {% tabs %}
 {% highlight C# tabtitle="Converter.cs" %}
+using System.Globalization;
+
 public class SummaryConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        var formattedString = string.Format("$ {0}", value);
-        return formattedString;
+        if (value != null)
+        {
+            var formattedString = string.Format("$ {0}", value);
+            return formattedString;
+        }
+        return null;
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
     }
 }
 {% endhighlight%}
@@ -592,7 +624,7 @@ dataGrid.Columns.Add(new DataGridTextColumn()
 {% endhighlight %}
 {% endtabs %}
 
-N> The truncation modes will not work on the Windows platform.
+N> The truncation modes will not work on the Windows platform. On Windows, text will be truncated by default and cannot be wrapped or configured via LineBreakMode.
 
 ### Line break mode
 
@@ -604,7 +636,7 @@ The text wrapping and truncation of a column's cell values can be customized by 
                        AutoGenerateColumnsMode="None"
                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns >
-        <syncfusion:DataGridTextColumn MappingName="CustomerName" LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="CustomerName" LineBreakMode="WordWrap" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -617,13 +649,18 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 dataGrid.Columns.Add(new DataGridTextColumn()
 {
     MappingName = "CustomerName",
-    LineBreakMode = LineBreakMode.NoWrap,
+    LineBreakMode = LineBreakMode.WordWrap,
 });
+
+// Available LineBreakMode values:
+// LineBreakMode.WordWrap - Text wraps to multiple lines
+// LineBreakMode.NoWrap - Text on single line without truncation
+// LineBreakMode.CharacterWrap - Text wraps at character boundaries
 
 {% endhighlight %}
 {% endtabs %}
 
-N> The truncation modes will not work on the Windows platform.
+N> The truncation modes will not work on the Windows platform. On Windows, text will be truncated by default and cannot be wrapped or configured via LineBreakMode.
 
 ## DataGridTextColumn
 
@@ -656,7 +693,7 @@ dataGrid.Columns.Add( new DataGridTextColumn()
 
 ## DataGridCheckBoxColumn
 
-The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed so that it toggles the values shown in the CheckBox. The `SfDataGrid` automatically generates `DataGridCheckBoxColumn` the property in the underlying collection of the type is set to bool.
+The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed to toggle the values shown in the CheckBox. The `SfDataGrid` automatically generates a `DataGridCheckBoxColumn` when a property in the underlying collection is of type `bool`.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -690,7 +727,16 @@ dataGrid.Columns.Add( new DataGridCheckBoxColumn()
 <img alt="DataGrid with CheckBox column" src="Images\column-types\maui-datagrid-column-checkbox.png" width="404"/>
 
 N>
-By default, `DataGridCheckBoxColumn` is read-only. To enable editing and allow users to toggle the checkbox, set the AllowEditing property to true either at the column level or the grid level.
+By default, `DataGridCheckBoxColumn` is read-only. To enable editing and allow users to toggle the checkbox, set the `AllowEditing` property to `true` either at the column level or the grid level:
+
+```xml
+<!-- Column-level -->
+<syncfusion:DataGridCheckBoxColumn MappingName="IsOnline" 
+                                   AllowEditing="True" />
+
+<!-- Or Grid-level -->
+<syncfusion:SfDataGrid AllowEditing="True" />
+```
 
 ## DataGridImageColumn
 
@@ -726,7 +772,7 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 
 dataGrid.Columns.Add( new DataGridImageColumn()
 { 
-    MappingName = "DealerImge",
+    MappingName = "DealerImage",
     HeaderText = "Dealer"
 });
 {% endhighlight %}
@@ -737,7 +783,11 @@ dataGrid.Columns.Add( new DataGridImageColumn()
 
 ### Aspect
 
-The SfDataGrid allows you to set the [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html#Syncfusion_Maui_DataGrid_DataGridImageColumn_Aspect) to size the loaded images within the bounds of the grid cell (whether to stretch, crop or letterbox) using the `DataGridImageColumn.Aspect` property. The default value is `AspectFit`.
+The SfDataGrid allows you to set the [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html#Syncfusion_Maui_DataGrid_DataGridImageColumn_Aspect) to size the loaded images within the bounds of the grid cell using the `DataGridImageColumn.Aspect` property. The available values are:
+
+* **AspectFit** (Default) - Scales the image to fit the cell while maintaining the aspect ratio.
+* **AspectFill** - Scales the image to fill the cell while maintaining the aspect ratio; content may be clipped.
+* **Fill** - Stretches the image to fill the cell completely, ignoring aspect ratio.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -978,9 +1028,9 @@ The [DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 ### Collection of primitive types
 
-To display the collection of items in the ComboBox drop-down, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a simple collection.
+To display the collection of items in the combo box drop-down, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a simple collection.
 
-To load the `DataGridComboBoxColumn` with a simple string collection, you can refer to the code example below:
+To load the `DataGridComboBoxColumn` with a simple string collection, refer to the following code example:
 
 {% tabs %}
 {% highlight xaml %}
@@ -1570,7 +1620,7 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 `DataGridPercentColumn` is a specialized column for displaying and editing percentage values consistently across platforms. It supports two display modes, culture-aware formatting, numeric filtering, and serialization.
 
-The `PercentEditMode` property controls how values are interpreted and presented: use `PercentMode` to display values as percentages, or `DoubleMode` to treat the cell value as a plain numeric (double) value.
+The [PercentEditMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPercentColumn.html#Syncfusion_Maui_DataGrid_DataGridPercentColumn_PercentEditMode) property controls how values are interpreted and presented: use `PercentMode` to display values as percentages, or `DoubleMode` to treat the cell value as a plain numeric (double) value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1601,11 +1651,11 @@ this.Content = dataGrid;
 
 <img alt="DataGrid with Percent column" src="Images\column-types\maui-datagrid-percentage-column.png" width="404"/>
 
-The `DataGridPercentColumn` supports culture-aware parsing and formatting for percentage values. By default the percent operator (`%`) is used when displaying and parsing values; change this symbol using the `PercentSymbol` property to support alternate conventions.
+The `DataGridPercentColumn` supports culture-aware parsing and formatting for percentage values. By default the percent operator (`%`) is used when displaying and parsing values; change this symbol using the [PercentSymbol](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPercentColumn.html#Syncfusion_Maui_DataGrid_DataGridPercentColumn_PercentSymbol) property to support alternate conventions.
 
 ### Allow Null Value
 
-You can allow null values in the column by setting the [DataGridPercentColumn.AllowNullValue]() property to `true`.
+You can allow null values in the column by setting the [DataGridPercentColumn.AllowNullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPercentColumn.html#Syncfusion_Maui_DataGrid_DataGridPercentColumn_AllowNullValue) property to `true`.
 
 N> 
 The `AllowNullValue` property will work only when the underlying property type is nullable.
@@ -1913,7 +1963,7 @@ dataGrid.Columns.Add(currencyColumn);
 
 ### Currency Symbol
 
-By default, the currency symbol is displayed based on the current culture. You can customize the symbol using the [CurrencySymbol]() property.
+By default, the currency symbol is displayed based on the current culture. You can customize the symbol using the [CurrencySymbol](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrencyColumn.html#Syncfusion_Maui_DataGrid_DataGridCurrencyColumn_CurrencySymbol) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1942,14 +1992,14 @@ dataGrid.Columns.Add(currencyColumn);
 
 ### Allow Null Value
 
-You can allow null values in the column by setting the [DataGridCurrencyColumn.AllowNullValue]() property to `true`.
+You can allow null values in the column by setting the [DataGridCurrencyColumn.AllowNullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrencyColumn.html#Syncfusion_Maui_DataGrid_DataGridCurrencyColumn_AllowNullValue) property to `true`.
 
 N> 
 The `AllowNullValue` property will work only when the underlying property type is nullable.
 
 ## DataGridTimePickerColumn
 
-[DataGridTimePickerColumn]() is derived from `DataGridColumn` and displays column data as a time span. It hosts an `SfTimePicker` element in editing mode.
+[DataGridTimePickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTimePickerColumn.html) is derived from `DataGridColumn` and displays column data as a time span. It hosts an `SfTimePicker` element in editing mode.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1982,17 +2032,17 @@ this.Content = dataGrid;
 
 ### Null value support
 
-`DataGridTimePickerColumn` provides support to restrict or allow null values in columns based on the [AllowNull]() property. Instead of displaying null values, you can display hint text using the [NullValue]() property.
+`DataGridTimePickerColumn` provides support to restrict or allow null values in columns based on the [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTimePickerColumn.html#Syncfusion_Maui_DataGrid_DataGridTimePickerColumn_AllowNull) property. Instead of displaying null values, you can display hint text using the [NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTimePickerColumn.html#Syncfusion_Maui_DataGrid_DataGridTimePickerColumn_NullValue) property.
 
 The `NullValue` property will not work when `AllowNull` is set to `false`.
 
 ### Setting input value range
 
-You can restrict the input value to a specific range using [Minimum]() and [Maximum]() properties.
+You can restrict the input value to a specific range using [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTimePickerColumn.html#Syncfusion_Maui_DataGrid_DataGridTimePickerColumn_Minimum) and [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTimePickerColumn.html#Syncfusion_Maui_DataGrid_DataGridTimePickerColumn_Maximum) properties.
 
 ### Data formatting
 
-You can format the time span values by setting the [Format]() property.
+You can format the time span values by setting the [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTimePickerColumn.html#Syncfusion_Maui_DataGrid_DataGridTimePickerColumn_Format) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -2027,7 +2077,7 @@ this.Content = dataGrid;
 
 ## DataGridCheckBoxSelectorColumn
 
-`SfDataGrid` allows you to select or deselect individual rows through `SfCheckBox` using [DataGridCheckBoxSelectorColumn](), which is not bound to a data object from the underlying data source and can be added like any other column. The selector column supports only row selection, and selection in the selector column works based on the [SelectionMode]().
+`SfDataGrid` allows you to select or deselect individual rows through `SfCheckBox` using [DataGridCheckBoxSelectorColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxSelectorColumn.html), which is not bound to a data object from the underlying data source and can be added like any other column. The selector column supports only row selection, and selection in the selector column works based on the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -2064,7 +2114,7 @@ By default, a checkbox is displayed in the header of the selector column, which 
 
 ### Text on column header
 
-You can display text instead of a checkbox in the header of the selector column by setting the [AllowCheckboxOnHeader]() property to `false`.
+You can display text instead of a checkbox in the header of the selector column by setting the [AllowCheckboxOnHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxSelectorColumn.html#Syncfusion_Maui_DataGrid_DataGridCheckBoxSelectorColumn_AllowCheckboxOnHeader) property to `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -2103,7 +2153,7 @@ this.Content = dataGrid;
 
 ### Canceling the checkbox state change
 
-The checkbox state change in the `DataGridCheckBoxSelectorColumn` can be canceled by setting [DataGridCheckboxSelectorCheckedEventArgs.Cancel]() to `true` in the [SfDataGrid.CheckboxSelectorChecked]() event. Additionally, the checkbox value can be modified by setting [DataGridCheckboxSelectorCheckedEventArgs.NewValue]() within the same event.
+The checkbox state change in the `DataGridCheckBoxSelectorColumn` can be canceled by setting [DataGridCheckboxSelectorCheckedEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckboxSelectorCheckedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCheckboxSelectorCheckedEventArgs_Cancel) to `true` in the [SfDataGrid.CheckboxSelectorChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CheckboxSelectorChecked) event. Additionally, the checkbox value can be modified by setting [DataGridCheckboxSelectorCheckedEventArgs.NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckboxSelectorCheckedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCheckboxSelectorCheckedEventArgs_NewValue) within the same event.
 
 Based on this, the selection state is not changed when `e.Cancel` is set to `true`, and the selection is applied according to the value specified in `e.NewValue`.
 

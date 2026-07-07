@@ -20,7 +20,9 @@ The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)
 * [CellRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRightTapped) : Called when a right-click mouse gesture has been recognized on a cell.
 
 ### CellTapped event
-This event will be triggered while tapping a cell in the DataGrid. This event has the [DataGridCellTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html) as arguments.
+This event is triggered when a user taps a cell in the DataGrid. This event has the [DataGridCellTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html) as arguments.
+
+**Platform availability:** Android, iOS, macOS, Windows
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -85,7 +87,9 @@ private static void ListenTapCommand(object obj)
 {% endtabs %}
 
 ### CellDoubleTapped event
-This event will be triggered while double tapping a cell in the DataGrid. This event has the [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) as arguments. 
+This event is triggered when a user double-taps a cell in the DataGrid. This event has the [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) as arguments.
+
+**Platform availability:** Android, iOS, macOS, Windows 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -150,7 +154,9 @@ private static void ListenDoubleTapCommand(object obj)
 {% endtabs %}
 
 ### CellLongPress event
-This event will be triggered while long pressing a cell in the DataGrid. This event has the [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) as arguments. 
+This event is triggered when a long-press gesture is recognized on a cell in the DataGrid. This event has the [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) as arguments.
+
+**Platform availability:** Android, iOS, macOS, Windows 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -216,7 +222,9 @@ private static void ListenLongPressCommand(object obj)
 {% endtabs %}
 
 ### CellRightTapped event
-This event will be triggered when a right-click mouse gesture is recognized on a cell. This event has the [DataGridCellRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs.html) as arguments.
+This event is triggered when a right-click mouse gesture is recognized on a cell. This event has the [DataGridCellRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs.html) as arguments.
+
+**Platform availability:** Windows, macOS
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -241,7 +249,7 @@ private void dataGrid_CellRightTapped(object sender, DataGridCellRightTappedEven
     var rowData = e.RowData;
     var columnIndex = e.RowColumnIndex.ColumnIndex;
     var column = e.Column;
-    var pointerDeviceType = e.PointerDeviceType;
+    var pointerDeviceType = e.PointerDeviceType; // PointerDeviceType: Mouse, Pen, Touch
 }
 {% endhighlight %}
 {% endtabs %}
@@ -285,14 +293,16 @@ private static void ListenRightTapCommand(object obj)
 
 ## Cell Pointer Events
 
-The `Datagrid` provides the following events for handling mouse pointer interactions with the cells.
+The DataGrid provides the following events for handling mouse pointer interactions with the cells. These events are only triggered on platforms that support mouse input.
 
-* [CellEntered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellEntered) : Called when the mouse pointer enters the cell.
-* [CellHovered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellHovered) : Called when the mouse pointer hovers over the cell.
-* [CellExited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellExited)  : Called when the mouse pointer exits the cell.
+* [CellEntered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellEntered) : Triggered when the mouse pointer enters a cell.
+* [CellHovered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellHovered) : Triggered when the mouse pointer hovers over a cell.
+* [CellExited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellExited)  : Triggered when the mouse pointer exits a cell.
+
+**Platform availability:** Windows, macOS
 
 ### CellEntered event
-This event will be triggered when the mouse pointer enters a cell in the DataGrid. It uses [DataGridCellEnteredEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellEnteredEventArgs.html) as its argument.
+This event is triggered when the mouse pointer enters a cell in the DataGrid. It uses [DataGridCellEnteredEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellEnteredEventArgs.html) as its argument.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -436,7 +446,7 @@ private static void ListenHoveredCommand(object obj)
 {% endtabs %}
 
 ### CellExited event
-This event will be triggered when the mouse pointer exits a cell in the DataGrid. It uses [DataGridCellExitedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellExitedEventArgs.html) as its argument.
+This event is triggered when the mouse pointer exits a cell in the DataGrid. It uses [DataGridCellExitedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellExitedEventArgs.html) as its argument.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -502,7 +512,7 @@ private static void ListenExitedCommand(object obj)
 
 ## CellValueChanged event
 
-The [SfDataGrid.CellValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) event will be triggered whenever the current cell's value has been changed in the DataGridTextColumn, DataGridNumericColumn, DataGridDateColumn, DataGridComboBoxColumn, DataGridPickerColumn or DataGridCheckBoxColumn. This event handler contains the parameter of type [DataGridCellValueChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html) that contains the following properties.
+The [SfDataGrid.CellValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) event is triggered when a cell's value is edited and committed in the DataGridTextColumn, DataGridNumericColumn, DataGridDateColumn, DataGridComboBoxColumn, DataGridPickerColumn, or DataGridCheckBoxColumn. This event handler contains the parameter of type [DataGridCellValueChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html) that contains the following properties.
 
 * [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellValueChangedEventArgs_Column)        : Gets the current `DataGridColumn` that contains the grid cell for which value is edited or changed.
 * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellValueChangedEventArgs_NewValue)      : The newly edited value to be committed.
@@ -538,7 +548,7 @@ private void dataGrid_CellValueChanged(object sender, DataGridCellValueChangedEv
 {% endtabs %}
 ## DataGridLoaded
 
-This event will be triggered once components in the `SfDataGrid` initialized and rendered.
+This event is triggered once all components in the `SfDataGrid` have been initialized and rendered.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -566,7 +576,7 @@ private void dataGrid_GridLoaded(object? sender, EventArgs e)
 
 ## ViewCreated
 
-This event will be triggered once the `SfDataGrid.View` is created.
+This event is triggered once the `SfDataGrid.View` is created.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -584,7 +594,7 @@ private void DataGrid_viewCreated(object? sender, EventArgs e)
 
 ## ItemsSourceChanged
 
-This event will be triggered once the source is changed in SfDataGrid
+This event is triggered when the ItemsSource of the DataGrid is changed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

@@ -16,17 +16,17 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Smart DataGrid ([SfSmartDataGrid](https
 
 ## Business use cases
 
-- Business intelligence applications that require advanced data analysis through natural language interactions.  
-- Enterprise systems that enable users to explore and manipulate large datasets without technical expertise.  
-- Dashboard applications that provide intelligent filtering, grouping, and highlighting of data.  
-- Data-driven applications that require interactive and AI-powered insights for decision-making.  
+- **Business Intelligence:** Applications requiring advanced data analysis through natural language interactions for complex queries without manual UI navigation.
+- **Enterprise Systems:** Applications enabling non-technical users to explore and manipulate large datasets intuitively using conversational commands.
+- **Dashboards:** Applications providing intelligent filtering, grouping, and highlighting of data to surface insights without writing code.
+- **Data-Driven Decisions:** Applications requiring interactive and AI-powered analytics for real-time decision-making and data exploration.  
 
 ## Key features
 
 - **AI-based sorting** allows sorting data using natural language inputs without manual configuration.  
 - **Intelligent filtering** allows applying filters using plain language queries with context-aware results.  
 - **Smart grouping** allows organizing related data dynamically based on user intent.  
-- **Conditional highlighting** allows emphasizing rows or cells by describing conditions in natural language.  
+- **Conditional highlighting** allows emphasizing rows or cells by describing conditions in natural language.
 
 ## Globalization
 
@@ -79,16 +79,16 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for traditional data grid features and structured data handling.  
-- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying data collections in list formats.  
-- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for handling hierarchical data with expandable rows.  
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) — Traditional data grid control with full support for sorting, filtering, grouping, and editing; ideal for applications not requiring AI-assisted operations.
+- [ListView](https://help.syncfusion.com/maui/listview/overview) — Lightweight list control for displaying data collections in simple list formats; suitable for non-tabular data presentation.
+- [TreeMap](https://help.syncfusion.com/maui/treemap/overview) — Hierarchical data visualization control for displaying nested data with treemap layout; useful for hierarchical analysis without grid structure.  
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/smartdatagrid/getting-started) shows a step‑by‑step guide to begin using the Smart DataGrid control.  
-- [AI Features](https://help.syncfusion.com/maui/smartdatagrid/ai-powered-features) explores AI‑powered operations such as filtering and grouping.  
-- [Customization](https://help.syncfusion.com/maui/smartdatagrid/customization) explains how to customize grid behavior and appearance.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/smartdatagrid/getting-started) — Step-by-step guide for initial setup, prerequisites, and creating your first Smart DataGrid application.
+- [AI-Powered Features](https://help.syncfusion.com/maui/smartdatagrid/ai-powered-features) — Detailed documentation of AI-assisted operations including natural language sorting, filtering, grouping, and row highlighting.
+- [Customization](https://help.syncfusion.com/maui/smartdatagrid/customization) — Learn how to customize grid behavior, appearance, event handling, and programmatic control of AI features.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) — Interactive demos and production-ready UI examples demonstrating common use cases.
 
 ## Resources
 
@@ -262,7 +262,7 @@ Explore Features
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
     <a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="explore-link">
-Search KB's
+Search Knowledge Base
   <span class="card-icon card-arrow"></span>
 </a>
   </div>

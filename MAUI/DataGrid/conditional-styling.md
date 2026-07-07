@@ -11,7 +11,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 # Conditional Styling in .NET MAUI DataGrid (SfDataGrid)
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to customize the style of the individual cells and rows based on the requirements. 
 
-To get start quickly with apply conditional styling in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check on this video:
+To get started quickly with applying conditional styling in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/1HHHz5isIM4?start=504"></iframe>
 
@@ -33,11 +33,19 @@ The data rows can be customized conditionally by writing the style with a conver
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="ColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+
 public class ColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    object? IValueConverter.Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var input = (value as OrderInfo).OrderID;
+        if (value is not OrderInfo orderInfo)
+            return Colors.White;
+
+        var input = orderInfo.OrderID;
         if (input < 10003)
             return Colors.Bisque;
         else if (input < 10007)
@@ -45,9 +53,10 @@ public class ColorConverter : IValueConverter
         else
             return Colors.White;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -73,20 +82,29 @@ Styling can be applied to a particular row based on RowIndex property by writing
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="ColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    object? IValueConverter.Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var dataGridRow = value as DataGridRow;
+        if (value is not DataGridRow dataGridRow || dataGridRow.DataRow == null)
+            return Colors.White;
+
         var rowIndex = dataGridRow.DataRow.RowIndex;
         if (rowIndex == 3)
             return Colors.LightBlue;
         else
             return Colors.White;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -112,20 +130,31 @@ Styling can be applied to a particular row based on the RowData property by writ
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="ColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    object? IValueConverter.Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var dataGridRow = value as DataGridRow;
+        if (value is not DataGridRow dataGridRow || dataGridRow.DataRow == null)
+            return Colors.White;
+
         var rowData = dataGridRow.DataRow.RowData;
-        if (rowData == (dataGridRow.DataGrid.BindingContext as OrderInfoViewModel).Orders[5])
+        var viewModel = dataGridRow.DataGrid?.BindingContext as OrderInfoViewModel;
+        
+        if (viewModel?.Orders != null && rowData == viewModel.Orders[5])
             return Colors.LightBlue;
         else
             return Colors.White;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -160,18 +189,24 @@ The `SfDataGrid` provides the support to apply the conditional style for specifi
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="ColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+
 public class ColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    object? IValueConverter.Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        if ((int)value < 10006)
+        if (value is int orderID && orderID < 10006)
             return Colors.LightBlue;
         else
             return Colors.White;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -210,6 +245,12 @@ The appearance of row header can be customized conditionally based on properties
 {% endhighlight %}
 {% highlight c# %}
 // Model class
+using System;
+using System.Globalization;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+
 public class OrderInfo
 {
     [Display(AutoGenerateField = false)]
@@ -219,21 +260,21 @@ public class OrderInfo
     public string City { get; set; }
 }
 
+// Converter class
 public class CustomConverter : IValueConverter
 {
-    public object Convert(object? value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        var data = value as OrderInfo;
-
-        if (data == null)
+        if (value is not OrderInfo data)
             return Colors.Transparent;
 
-        if (data?.ID % 2 == 0)
+        if (data.ID % 2 == 0)
             return Colors.LightGreen;
         else
             return Colors.Beige;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
         return null;
     }
@@ -244,7 +285,7 @@ public class CustomConverter : IValueConverter
 <img alt="Conditional styling for row header using converter" src="Images/conditional-styling/maui-datagrid-conditional-row-header.png" width="404"/>
 
 ## Conditional cell style
-The grid cell can be customized conditionally by writing the style with a converter for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) control. Its BindingContext is the underlying datasource object.
+Individual grid cells can be customized conditionally by writing a style with a converter for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) control. The BindingContext is the underlying datasource object.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -262,18 +303,24 @@ The grid cell can be customized conditionally by writing the style with a conver
                        HeaderGridLinesVisibility="Both"/>
 {% endhighlight %}
 {% highlight c# tabtitle="ColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+
 public class ColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    object? IValueConverter.Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        if ((int)value < 10006)
+        if (value is int orderID && orderID < 10006)
             return Colors.LightBlue;
         else
             return Colors.White;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -301,17 +348,23 @@ Styling can be applied to a particular cell based on RowIndex, ColumnIndex and M
                        ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
 {% highlight c# tabtitle="ColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var gridCell = (value as DataGridCell);
-        if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
+        if (value is not DataGridCell gridCell || gridCell.DataColumn?.DataGridColumn == null)
             return null;
 
         var columnIndex = gridCell.DataColumn.ColumnIndex;
         var rowIndex = gridCell.DataColumn.RowIndex;
         var mappingName = gridCell.DataColumn.DataGridColumn.MappingName;
+        
         if (columnIndex == 0 && rowIndex % 3 == 1)
             return Colors.BlueViolet;
         else if (mappingName == "Country")
@@ -320,25 +373,34 @@ public class ColorConverter : IValueConverter
             return Colors.YellowGreen;
         else if (columnIndex == 2 && rowIndex % 2 == 1)
             return Colors.PaleVioletRed;
+        
         return Colors.White;
     }
-    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="ForeColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ForeColorConverter : IValueConverter
 {
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var gridCell = (value as DataGridCell);
-        if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
+        if (value is not DataGridCell gridCell || gridCell.DataColumn?.DataGridColumn == null)
             return null;
+
         var columnIndex = gridCell.DataColumn.ColumnIndex;
         var rowIndex = gridCell.DataColumn.RowIndex;
         var mappingName = gridCell.DataColumn.DataGridColumn.MappingName;
+        
         if (columnIndex == 0 && rowIndex % 3 == 1)
             return Colors.Wheat;
         else if (mappingName == "Country")
@@ -350,9 +412,10 @@ public class ForeColorConverter : IValueConverter
 
         return Colors.Black;
     }
-    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 
@@ -382,42 +445,60 @@ Styling can be applied to a particular cell based on RowIndex and ColumnIndex pr
                        ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
 {% highlight c# tabtitle="ColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var gridCell = (value as DataGridCell);
-        if (gridCell == null || gridCell.DataColumn == null)
+        if (value is not DataGridCell gridCell || gridCell.DataColumn == null)
             return null;
+
         var columnIndex = gridCell.DataColumn.ColumnIndex;
         var rowIndex = gridCell.DataColumn.RowIndex;
+        
         if (columnIndex == 0 && rowIndex == 1)
             return Colors.BlueViolet;
+        
         return Colors.White;
     }
-    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="ForeColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ForeColorConverter : IValueConverter
 {
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var gridCell = (value as DataGridCell);
-        if (gridCell == null || gridCell.DataColumn == null)
+        if (value is not DataGridCell gridCell || gridCell.DataColumn == null)
             return null;
+
         var columnIndex = gridCell.DataColumn.ColumnIndex;
         var rowIndex = gridCell.DataColumn.RowIndex;
+        
         if (columnIndex == 0 && rowIndex == 1)
             return Colors.White;
+        
         return Colors.Black;
     }
-    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -426,7 +507,7 @@ public class ForeColorConverter : IValueConverter
 <img alt="Conditional cell styling based on RowIndex and ColumnIndex in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedon_rowcolumnindex.png" width="404">
 
 ### Customizing the BorderColor of a cell
-You can customize the border color of individual cells in the SfDataGrid based on RowIndex and ColumnIndex property, and setting the `BorderColor` property  in DataGridCell by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)
+Individual cells can have their border color customized based on RowIndex and ColumnIndex properties by setting the `BorderColor` property in DataGridCell using a style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -446,26 +527,28 @@ You can customize the border color of individual cells in the SfDataGrid based o
                        HeaderGridLinesVisibility="Both"/>
 {% endhighlight %}
 {% highlight c# tabtitle="BorderColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class BorderColorConverter : IValueConverter
 {
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        var gridCell = value as DataGridCell;
-
-        if (gridCell != null)
-        {
-            if (gridCell.DataColumn!.RowIndex == 3 && gridCell.DataColumn.ColumnIndex == 2)
-                return Colors.Blue;
-
+        if (value is not DataGridCell gridCell || gridCell.DataColumn == null)
             return Colors.Transparent;
-        }
+
+        if (gridCell.DataColumn.RowIndex == 3 && gridCell.DataColumn.ColumnIndex == 2)
+            return Colors.Blue;
 
         return Colors.Transparent;
     }
 
-    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -493,46 +576,56 @@ Styling can be applied to a particular cell based on CellValue property by writi
                        ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
 {% highlight c# tabtitle="ColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var gridCell = (value as DataGridCell);
-        if (gridCell == null || gridCell.DataColumn == null)
+        if (value is not DataGridCell gridCell || gridCell.DataColumn == null)
             return null;
+
         var cellValue = gridCell.DataColumn.CellValue;
-        if (cellValue != null)
-        {
-            if (cellValue.Equals("Diego"))
-                return Colors.LightBlue;
-        }
+        if (cellValue?.Equals("Diego") == true)
+            return Colors.LightBlue;
+
         return Colors.White;
     }
-    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="ForeColorConverter.cs" %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ForeColorConverter : IValueConverter
 {
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? info)
     {
-        var gridCell = (value as DataGridCell);
-        if (gridCell == null || gridCell.DataColumn == null)
+        if (value is not DataGridCell gridCell || gridCell.DataColumn == null)
             return null;
+
         var cellValue = gridCell.DataColumn.CellValue;
-        if (cellValue != null)
-        {
-            if (cellValue.Equals("Diego"))
-                return Colors.Red;
-        }
+        if (cellValue?.Equals("Diego") == true)
+            return Colors.Red;
+
         return Colors.Black;
     }
-    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        throw new NotImplementedException();
+         return null;
     }
 }
 {% endhighlight %}
@@ -544,7 +637,7 @@ public class ForeColorConverter : IValueConverter
 
 ### Conditional styling of caption summary cells using converter
 
-The appearance of caption summary cell can be customized conditionally based on [SummaryValues]() by using a `converter`, where converter returns the value based on `SummaryValues`. 
+The appearance of caption summary cells can be customized conditionally based on the [SummaryValues](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SummaryDetails.html#Syncfusion_Maui_DataGrid_SummaryDetails_SummaryValues) property by using a converter that returns values based on summary aggregates. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -579,21 +672,32 @@ The appearance of caption summary cell can be customized conditionally based on 
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+using System;
+using System.Globalization;
+using System.Linq;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        var summaryValue = (value as Group).SummaryDetails.SummaryValues[0];
+        if (value is not Group group || group.SummaryDetails?.SummaryValues == null || group.SummaryDetails.SummaryValues.Count == 0)
+            return Colors.LightBlue;
+
+        var summaryValue = group.SummaryDetails.SummaryValues[0];
         var aggregateValue = summaryValue.AggregateValues.ElementAt(0);
         var calculatedValue = aggregateValue.Value;
 
-        //custom condition is checked.
-
-        if ((Int32)calculatedValue < 3)
+        // Custom condition is checked
+        if (calculatedValue is int intValue && intValue < 3)
             return Colors.LightGreen;
+
         return Colors.LightBlue;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
         return null;
     }
@@ -601,7 +705,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-Here, caption summary cells are customized based on `City` summary value.
+Here, caption summary cells are customized based on the `City` column summary value.
 
 <img alt="Conditional style of caption summary cell using converter" src="Images/conditional-styling/maui-datagrid-conditional-captionsummary.png" width="404">
 
@@ -659,21 +763,32 @@ The appearance of group summary cell can be customized conditionally based on su
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+using System;
+using System.Globalization;
+using System.Linq;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        var summaryValue = (value as SummaryRecordEntry).SummaryValues[0];
+        if (value is not SummaryRecordEntry summaryEntry || summaryEntry.SummaryValues == null || summaryEntry.SummaryValues.Count == 0)
+            return Colors.LightBlue;
+
+        var summaryValue = summaryEntry.SummaryValues[0];
         var aggregateValue = summaryValue.AggregateValues.ElementAt(0);
         var calculatedValue = aggregateValue.Value;
 
-        //custom condition is checked.
-
-        if ((Int32)calculatedValue % 2 == 0)
+        // Custom condition is checked
+        if (calculatedValue is int intValue && intValue % 2 == 0)
             return Colors.LightGreen;
+
         return Colors.LightBlue;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
         return null;
     }
@@ -681,7 +796,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-Here, group summary cells are customized based on `OrderID` summary value.
+Here, group summary cells are customized based on the `OrderID` column summary value.
 
 <img alt="Conditional style of group summary cell using converter" src="Images/conditional-styling/maui-datagrid-conditional-groupsummary.png" width="404">
 
@@ -731,29 +846,40 @@ The appearance of table summary cell can be customized conditionally based on su
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+using System;
+using System.Globalization;
+using System.Linq;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        var summaryValue = (value as SummaryRecordEntry).SummaryValues[0];
+        if (value is not SummaryRecordEntry summaryEntry || summaryEntry.SummaryValues == null || summaryEntry.SummaryValues.Count == 0)
+            return Colors.LightBlue;
+
+        var summaryValue = summaryEntry.SummaryValues[0];
         var aggregateValue = summaryValue.AggregateValues.ElementAt(0);
         var calculatedValue = aggregateValue.Value;
 
-        //custom condition is checked.
+        // Custom condition is checked
         if (aggregateValue.Key == "Count")
         {
-            if ((Int32)calculatedValue % 2 == 0)
+            if (calculatedValue is int intValue && intValue % 2 == 0)
                 return Colors.LightGreen;
             return Colors.LightBlue;
         }
         else
         {
-            if ((double)calculatedValue % 2 == 0)
+            if (calculatedValue is double doubleValue && doubleValue % 2 == 0)
                 return Colors.LightGreen;
             return Colors.LightBlue;
         }
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
         return null;
     }
@@ -761,17 +887,17 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-Here, table summary cells are customized based on `OrderID` summary value.
+Here, table summary cells are customized based on the `OrderID` column summary value.
 
 <img alt="Conditional styling of table summary cell using converter" src="Images/conditional-styling/maui-datagrid-conditional-tablesummary.png" width="404">
 
 ## Unbound row cell
 
-Unbound row cells can be customized the unbound row cell based on various properties exposed in [DataGridUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRow.html) (example: `Position` property).
+Unbound row cells can be customized based on various properties exposed in [DataGridUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRow.html) (example: the `Position` property).
 
 ### Conditional styling of unbound row cell using converter
 
-The appearance of unbound row cell can be customized conditionally based on properties using `converter`, where converter returns the value based on various properties. 
+The appearance of unbound row cells can be customized conditionally based on their properties using a converter that returns values based on various unbound row characteristics. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -792,18 +918,26 @@ The appearance of unbound row cell can be customized conditionally based on prop
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+using System;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.DataGrid;
+
 public class ColorConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
-        var unboundValue = value as DataGridUnboundRowEventArgs;
-        if (unboundValue!.GridUnboundRow.Position == DataGridUnboundRowPosition.Top)
-        {
+        if (value is not DataGridUnboundRowEventArgs unboundValue || unboundValue.GridUnboundRow == null)
+            return Colors.LightGreen;
+
+        if (unboundValue.GridUnboundRow.Position == DataGridUnboundRowPosition.Top)
             return Colors.LightBlue;
-        }
+
         return Colors.LightGreen;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo? culture)
     {
         return null;
     }

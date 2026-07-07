@@ -12,6 +12,8 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 SfDataGrid allows you to serialize and deserialize the SfDataGrid settings using [DataContractSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.serialization.datacontractserializer?view=net-9.0&redirectedfrom=MSDN).
 
+By default, SfDataGrid serializes the following properties: column configurations, sorting, grouping, caption summaries, group summaries, table summaries, stacked headers, DetailsViewDefinition, and unbound rows. You can customize which features are serialized/deserialized using serialization options.
+
 ## Serialization
 
 You can serialize the SfDataGrid by using [SfDataGrid.Serialize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Serialize_System_IO_Stream_) method which exports the current DataGrid control properties to an XML file.
@@ -42,11 +44,11 @@ using (FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.
 
 ## Serialization options
 
-SfDataGrid serialization operation can be customized by passing [DataGridSerializationOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html) instance as an argument to `Serialize` method.
+SfDataGrid serialization can be customized by passing a [DataGridSerializationOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html) instance to the `Serialize` method. By default, all options are enabled. Disable specific options to exclude certain grid features from serialization.
 
 ### Serialize sorting
 
-By default, SfDataGrid allows you to serialize the sorting operation. You can disable the sorting serialization by setting the [DataGridSerializationOptions.SerializeSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeSorting) to `false`.
+Disable sorting serialization by setting [DataGridSerializationOptions.SerializeSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeSorting) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -62,7 +64,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize grouping
 
-By default, SfDataGrid allows you to serialize the grouping operation. You can disable the grouping serialization by setting the [DataGridSerializationOptions.SerializeGrouping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeGrouping) to `false`.
+Disable grouping serialization by setting [DataGridSerializationOptions.SerializeGrouping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeGrouping) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -78,7 +80,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize columns
 
-By default, SfDataGrid allows you to serialize the columns manipulation operation. You can disable the columns serialization by setting the [DataGridSerializationOptions.SerializeColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeColumns) to `false`.
+Disable column manipulation serialization by setting [DataGridSerializationOptions.SerializeColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeColumns) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -94,9 +96,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize summaries
 
-By default, SfDataGrid allows you to serialize the caption summary, group summary and table summary settings in SfDataGrid.
-
-You can disable the summaries serialization by setting [DataGridSerializationOptions.SerializeCaptionSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeCaptionSummary) , [DataGridSerializationOptions.SerializeGroupSummaries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeGroupSummaries) , [DataGridSerializationOptions.SerializeTableSummaries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeTableSummaries) properties to `false`.
+Disable caption, group, or table summary serialization by setting [DataGridSerializationOptions.SerializeCaptionSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeCaptionSummary), [DataGridSerializationOptions.SerializeGroupSummaries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeGroupSummaries), or [DataGridSerializationOptions.SerializeTableSummaries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeTableSummaries) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -114,7 +114,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize stacked headers
 
-By default, SfDataGrid allows you to serialize the stacked headers operation. You can disable the stacked headers serialization by setting the [DataGridSerializationOptions.SerializeStackedHeaders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeStackedHeaders) to `false`.
+Disable stacked headers serialization by setting [DataGridSerializationOptions.SerializeStackedHeaders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeStackedHeaders) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -122,7 +122,7 @@ string localPath = Path.Combine(FileSystem.AppDataDirectory, "DataGrid.xml");
 using (var file = File.Create(localPath))
 {
     DataGridSerializationOptions options = new DataGridSerializationOptions();
-    options.SerializeStackHeaders = false;
+    options.SerializeStackedHeaders = false;
     dataGrid.Serialize(file, options);
 }
 {% endhighlight %}
@@ -130,7 +130,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize Details View
 
-By default, SfDataGrid allows you to serialize the DetailsViewDefinition. You can disable the DetailsViewDefinition serialization by setting the [DataGridSerializationOptions.SerializeDetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeDetailsViewDefinition) to `false`.
+Disable DetailsViewDefinition serialization by setting [DataGridSerializationOptions.SerializeDetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeDetailsViewDefinition) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -146,7 +146,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize unbound rows
 
-By default, SfDataGrid allows you to serialize the unbound rows settings. You can disable the unbound rows serialization by setting the [DataGridSerializationOptions.SerializeUnBoundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeUnboundRows) to `false`.
+Disable unbound rows serialization by setting [DataGridSerializationOptions.SerializeUnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSerializationOptions.html#Syncfusion_Maui_DataGrid_DataGridSerializationOptions_SerializeUnboundRows) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -162,7 +162,7 @@ using (var file = File.Create(localPath))
 
 ## Deserialization
 
-You can deserialize the SfDataGrid setting by using [SfDataGrid.Deserialize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Deserialize_System_IO_Stream_) method which reconstructs the SfDataGrid based on the setting in the stored XML file.
+You can deserialize the SfDataGrid by using [SfDataGrid.Deserialize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Deserialize_System_IO_Stream_) method to reconstruct the grid based on settings stored in an XML file.
 
 {% tabs %}
 {% highlight c# %}
@@ -187,11 +187,11 @@ dataGrid.Deserialize(fileStream);
 
 ## Deserialization options
 
-Deserialization operation can be customized by passing [DataGridDeserializationOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html) instance as an argument to `Deserialize` method.
+Deserialization can be customized by passing a [DataGridDeserializationOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html) instance to the `Deserialize` method. By default, all options are enabled. Disable specific options to skip restoring certain grid features.
 
 ### Deserialize sorting
 
-By default, SfDataGrid allows you to deserialize the sorting operation. You can disable the sorting deserialization by setting the [DataGridDeserializationOptions.DeserializeSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeSorting) to `false`.
+Disable sorting restoration by setting [DataGridDeserializationOptions.DeserializeSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeSorting) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -207,7 +207,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize grouping
 
-By default, SfDataGrid allows you to deserialize the grouping operation. You can disable the grouping deserialization by setting the [DataGridDeserializationOptions.DeserializeGrouping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeGrouping) to `false`.
+Disable grouping restoration by setting [DataGridDeserializationOptions.DeserializeGrouping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeGrouping) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -223,7 +223,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize columns
 
-By default, SfDataGrid allows you to deserialize the columns manipulation operations. You can disable the columns deserialization by setting the [DataGridDeserializationOptions.DeserializeColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeColumns) to `false`.
+Disable column manipulation restoration by setting [DataGridDeserializationOptions.DeserializeColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeColumns) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -239,9 +239,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize summaries
 
-By default, SfDataGrid allows you to deserialize the group summary, caption summary and table summary settings.
-
-You can disable the summaries deserialization by setting [DataGridDeserializationOptions.DeserializeCaptionSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeCaptionSummary) , [DataGridDeserializationOptions.DeserializeGroupSummaries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeGroupSummaries) , [DataGridDeserializationOptions.DeserializeTableSummaries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeTableSummaries) properties to `false`.
+Disable caption, group, or table summary restoration by setting [DataGridDeserializationOptions.DeserializeCaptionSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeCaptionSummary), [DataGridDeserializationOptions.DeserializeGroupSummaries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeGroupSummaries), or [DataGridDeserializationOptions.DeserializeTableSummaries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeTableSummaries) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -259,7 +257,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize stacked headers
 
-By default, SfDataGrid allows you to deserialize the stacked headers. You can disable the stacked headers deserialization by setting the [DataGridDeserializationOptions.DeserializeStackedHeaders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeStackedHeaders) to `false`.
+Disable stacked headers restoration by setting [DataGridDeserializationOptions.DeserializeStackedHeaders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeStackedHeaders) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -275,7 +273,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize Details View
 
-By default, SfDataGrid allows you to deserialize the DetailsViewDefinition. You can disable the DetailsViewDefinition deserialization by setting the [DataGridDeserializationOptions.DeserializeDetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeDetailsViewDefinition) to `false`.
+Disable DetailsViewDefinition restoration by setting [DataGridDeserializationOptions.DeserializeDetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeDetailsViewDefinition) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -291,7 +289,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize unbound rows
 
-By default, SfDataGrid allows you to deserialize the unbound rows settings. You can disable the unbound rows deserialization by setting the [DataGridDeserializationOptions.DeserializeUnBoundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeUnboundRows) to `false`.
+Disable unbound rows restoration by setting [DataGridDeserializationOptions.DeserializeUnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDeserializationOptions.html#Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_DeserializeUnboundRows) to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -311,7 +309,7 @@ SfDataGrid allows you to customize the serialization and deserialization operati
 
 ### Serialize custom column
 
-By default, the unknown(custom) column types are serialized as [DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html) type. If you want to serialize the custom column, you have to add custom column type into predefined types.
+By default, unknown column types are serialized as [DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html). To serialize custom columns, register them in the serialization controller.
 
 In the below code snippet, `TextImageColumn` is created.
 
@@ -321,14 +319,14 @@ public class TextImageColumn : DataGridColumn
 {
     public TextImageColumn()
     {
-        var cellType = typeof(DataGridColumn).GetRuntimeProperties().FirstOrDefault(property => property.Name == "CellType");
+        var cellType = typeof(DataGridColumn).GetRuntimeProperties()
+            .FirstOrDefault(property => property.Name == "CellType");
         cellType?.SetValue(this, "TextImage");
     }
 
     protected override void SetConverterForDisplayBinding()
     {
         base.SetConverterForDisplayBinding();
-
         if (DisplayBinding is Binding binding)
         {
             binding.Converter = new CustomTextConverter();
@@ -337,15 +335,11 @@ public class TextImageColumn : DataGridColumn
 
     public class CustomTextConverter : IValueConverter
     {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return value?.ToString();
-        }
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture) 
+            => value?.ToString();
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return value?.ToString();
-        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) 
+            => value?.ToString();
     }
 }
 {% endhighlight %}
@@ -510,7 +504,7 @@ You can download the sample demo [here](https://github.com/SyncfusionExamples/Ho
 
 ### Serializing template column content
 
-By default, you cannot serialize the template content in SfDataGrid. This is the default behavior during Serialization and Deserialization operation.
+By default, you cannot serialize the template content in SfDataGrid because templates are XAML objects that cannot be serialized to XML. This limitation applies to DataTemplate, ControlTemplate, and other dynamic UI definitions. To work around this, you must reconstruct the templates during deserialization from stored resources or code-defined templates.
 
 {% tabs %}
 {% highlight xaml %}
@@ -568,7 +562,8 @@ public class SerializationControllerExt : DataGridSerializationController
         if (column is DataGridTemplateColumn templateColumn &&
             string.Equals(templateColumn.MappingName, "Name", StringComparison.Ordinal))
         {
-            if (_pageResources.TryGetValue("cellTemplate", out var template) &&
+            if (_pageResources != null && 
+                _pageResources.TryGetValue("cellTemplate", out var template) &&
                 template is DataTemplate dataTemplate)
             {
                 templateColumn.CellTemplate = dataTemplate;
@@ -579,4 +574,4 @@ public class SerializationControllerExt : DataGridSerializationController
 {% endhighlight %}
 {% endtabs %}
 
-You can download the sample demo [here](https://github.com/SyncfusionExamples/How-to-Serialize-template-column-content-in-.NET-MAUI-DataGrid--SfDataGrid/tree/master)
+You can download the template serialization sample [here](https://github.com/SyncfusionExamples/How-to-Serialize-template-column-content-in-.NET-MAUI-DataGrid--SfDataGrid/tree/master) to see a complete working example.

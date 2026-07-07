@@ -12,7 +12,8 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) Control is bound to an external data source to display the data in a tabular format. It supports data sources such as List, IEnumerable, and so on. The [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) property helps to bind this control with a collection of objects.
 
-The codes below codes demonstrate how to bind a data source to the `SfDataGrid`. Each row in the SfDataGrid binds to an object in the data source. Each column binds to a property in the data model object.
+The code below demonstrates how to bind a data source to the `SfDataGrid`. Each row in the SfDataGrid binds to an object in the data source. Each column binds to a property in the data model object.
+
 
 {% tabs %}
 {% highlight xaml %}
@@ -24,7 +25,7 @@ The codes below codes demonstrate how to bind a data source to the `SfDataGrid`.
              x:Class="GettingStarted.MainPage">
 
     <ContentPage.BindingContext>
-        <local:ViewModel/>
+        <local:OrderInfoViewModel/>
     </ContentPage.BindingContext>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
@@ -39,9 +40,9 @@ dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-If the data source implements the [ICollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.icollection?view=net-6.0) interface, then the `SfDataGrid` will automatically refresh the view when an item is added, removed, or cleared. When you add or remove an item in [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0), it automatically refreshes the view as the ObservableCollection. That implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.system-componentmodel-inotifypropertychanged-propertychanged?view=net-6.0). But when you do the same in `List`, it will not refresh the view automatically.
+If the data source implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) interface, then the `SfDataGrid` will automatically refresh the view when an item is added, removed, or cleared. [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) implements this interface and automatically triggers UI updates. However, [List](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0) does not, so changes will not refresh the view automatically.
 
-If the data model implements the `INotifyPropertyChanged` interface, then the SfDataGrid responds to the property change at runtime to update the view.
+If the data model implements the [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface, then the SfDataGrid responds to property changes at runtime and updates the view.
 
 ## Binding with IEnumerable
 
@@ -49,105 +50,122 @@ The `SfDataGrid` control supports binding any collection that implements from [I
 
 ## Binding with DataTable
 
-The `SfDataGrid` control supports binding the [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0). `SfDataGrid` control automatically refresh the UI when binding `DataTable` as `ItemsSource` when rows are added, removed or cleared.
+The `SfDataGrid` control supports binding to a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0). The `SfDataGrid` automatically refreshes the UI when rows are added, removed, or cleared.
 
 {% tabs %}
 {% highlight c# %}
-DataTable table = this.GetDataTable();
+DataTable table = GetDataTable();
 SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.ItemsSource = table;
+
+private DataTable GetDataTable()
+{
+    DataTable table = new DataTable("Orders");
+    table.Columns.Add("OrderID", typeof(int));
+    table.Columns.Add("CustomerName", typeof(string));
+    table.Columns.Add("OrderDate", typeof(DateTime));
+    
+    table.Rows.Add(1001, "John Smith", new DateTime(2024, 1, 15));
+    table.Rows.Add(1002, "Jane Doe", new DateTime(2024, 1, 16));
+    table.Rows.Add(1003, "Bob Wilson", new DateTime(2024, 1, 17));
+    
+    return table;
+}
 {% endhighlight %}
 {% endtabs %}
 
 ### Limitations
 
 * Custom sorting is not supported.
-* [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) is not supported.
-* [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) is not supported.
+* [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) is not supported. Use application-level filtering instead.
+* [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) is not supported. Manual grid refresh is required when data changes.
 
 ## Binding with dynamic data object
 
-The `SfDataGrid` control supports binding to a [dynamic data object](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-9.0).
+The `SfDataGrid` control supports binding to [dynamic data objects](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-9.0) using [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
 
-The code examples below demonstrate how to bind a dynamic data object to the `SfDataGrid` using both manually and automatically generated columns.
+### Example: ViewModel with Dynamic Objects
 
 {% tabs %}
 {% highlight c# %}
+using System.ComponentModel;
+using System.Collections.ObjectModel;
+using System.Dynamic;
+using System.Runtime.CompilerServices;
 
-public class EmployeeCollection
+public class EmployeeViewModel : INotifyPropertyChanged
 {
-       
-    Random random = new Random();
-        
-    public EmployeeCollection()
-    {
-        EmployeeDetails = GetEmployeesDetails_Dynamic(200);
-    }
-    
-    #region ItemsSource
-    
     private ObservableCollection<dynamic> _employeeDetails;
-    public ObservableCollection<dynamic> EmployeeDetails
-    {
-        get
-        {
-            return _employeeDetails;
-        }
-        set
-        {
-            _employeeDetails = value;
-            RaisePropertyChanged("EmployeeDetails");
-        }
-    }
-    
-    #endregion
-    
-    // Dynamic DataSource
-    
-    public ObservableCollection<dynamic> GetEmployeesDetails_Dynamic(int count)
-    {
-        var employees = new ObservableCollection<dynamic>();
-        for (int i = 1; i < count; i++)
-        {
-            employees.Add(GetDynamicEmployee(i));
-        }
-        return employees;
-    }
-    
-    // Dynamic Property
-    public dynamic GetDynamicEmployee(int i)
-    {
-        dynamic employee = new ExpandoObject();
-        employee.EmployeeName = employeeName[random.Next(4)];
-        employee.EmployeeID = i;
-        employee.ContactID = i + 100;
-        return employee;
-    }
-    
-    string[] employeeName = new string[]
+    private readonly Random _random = new Random();
+    private readonly string[] _employeeNames = new[]
     {
         "Sean Jacobson",
         "Phyllis Allen",
         "Marvin Allen",
         "Michael Allen",
     };
+    
+    public EmployeeViewModel()
+    {
+        EmployeeDetails = GetEmployeesDetails_Dynamic(200);
+    }
+    
+    public ObservableCollection<dynamic> EmployeeDetails
+    {
+        get => _employeeDetails;
+        set
+        {
+            if (_employeeDetails != value)
+            {
+                _employeeDetails = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+    
+    public ObservableCollection<dynamic> GetEmployeesDetails_Dynamic(int count)
+    {
+        var employees = new ObservableCollection<dynamic>();
+        for (int i = 1; i <= count; i++)
+        {
+            employees.Add(GetDynamicEmployee(i));
+        }
+        return employees;
+    }
+    
+    public dynamic GetDynamicEmployee(int id)
+    {
+        dynamic employee = new ExpandoObject();
+        employee.EmployeeID = id;
+        employee.EmployeeName = _employeeNames[_random.Next(_employeeNames.Length)];
+        employee.ContactID = id + 1000;
+        return employee;
+    }
+    
+    public event PropertyChangedEventHandler PropertyChanged;
+    
+    protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
 }
-
 {% endhighlight %}
 {% endtabs %}
+
+### Manually Defined Columns (with Dynamic Data)
 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding EmployeeDetails}"
                        AutoGenerateColumnsMode="None">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn MappingName="[OrderID]"
-                                          HeaderText="Order ID" />
-        <syncfusion:DataGridTextColumn MappingName="[CustomerID]"
-                                       HeaderText="Customer ID" />
-        <syncfusion:DataGridTextColumn MappingName="[ShipCountry]"
-                                       HeaderText="Ship Country" />
+        <syncfusion:DataGridNumericColumn MappingName="[EmployeeID]"
+                                          HeaderText="Employee ID" />
+        <syncfusion:DataGridTextColumn MappingName="[EmployeeName]"
+                                       HeaderText="Employee Name" />
+        <syncfusion:DataGridNumericColumn MappingName="[ContactID]"
+                                          HeaderText="Contact ID" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -174,22 +192,44 @@ private void datagrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 {% endhighlight %}
 {% endtabs %}
 
-### Limitations
+### Limitations with Dynamic Objects
 
-* SfDataGrid doesn’t support [LiveDataUpdateMode]() - `AllowDataShaping` and `AllowSummaryUpdate`.
+* SfDataGrid doesn't support [LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) with `AllowDataShaping` and `AllowSummaryUpdate`.
 
 ## Binding complex properties
 
-The SfDataGrid control provides support for binding complex properties to its columns. To bind the complex property to [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html), set the complex property path to [MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName).
+The SfDataGrid control supports binding complex (nested) properties to columns. To bind a complex property, set the property path to [MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName) using dot notation.
+
+### Data Model Example
+
+{% tabs %}
+{% highlight c# %}
+public class OrderInfo
+{
+    public int OrderID { get; set; }
+    public string ShipCity { get; set; }
+    public Customer Customer { get; set; }
+}
+
+public class Customer
+{
+    public string CustomerID { get; set; }
+    public string CustomerName { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### XAML Example
 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid AutoGenerateColumnsMode="None"
                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTextColumn MappingName="OrderID" />
-        <syncfusion:DataGridTextColumn MappingName="Customer.CustomerID" />
-        <syncfusion:DataGridTextColumn MappingName="ShipCity" />
+        <syncfusion:DataGridNumericColumn MappingName="OrderID" HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="Customer.CustomerID" HeaderText="Customer ID" />
+        <syncfusion:DataGridTextColumn MappingName="Customer.CustomerName" HeaderText="Customer Name" />
+        <syncfusion:DataGridTextColumn MappingName="ShipCity" HeaderText="City" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -215,13 +255,18 @@ The SfDataGrid control provides support for binding complex properties such as i
 
 * SfDataGrid doesn’t support [LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LiveDataUpdateModeProperty) - `AllowDataShaping` and `AllowSummaryUpdate`.
 
-## View
+## View and Data Operations
 
-The `SfDataGrid` has the View property of type [ICollectionViewAdv](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html) interface that implements `ICollectionView` interface. The view is responsible for maintaining and manipulating data and other advanced operations, like Sorting, Filtering, and etc.,
+When you bind a collection to the `ItemsSource` property, the SfDataGrid creates a view object that manages data operations.
 
-When you bind a collection to the `ItemsSource` property of the `SfDataGrid`, then View will be created and maintains the operations on Data such as Sorting, Filtering, Inserting, Deleting, and Modification.
+### ICollectionViewAdv Interface
 
->Note: The `SfDataGrid` creates different types of view derived from `ICollectionViewAdv` interface based on the `ItemsSource` property.
+The [ICollectionViewAdv](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html) interface is responsible for:
+- Maintaining the collection and applying filters/sorts
+- Handling data insertions, deletions, and modifications
+- Supporting advanced operations like grouping and summaries
+
+The SfDataGrid creates different view implementations based on your `ItemsSource` type.
 
 ### LiveDataUpdateMode
 
@@ -259,21 +304,49 @@ private void SfDataGrid_Loaded(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### RecordPropertyChanged
+### RecordPropertyChanged Event
 
-The [RecordPropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_RecordPropertyChanged) event is invoked when the value of the `DataModel` property is changed, if `DataModel` implements the `INotifyPropertyChanged` interface. The event receives with two arguments namely `sender` that handles the `DataModel` and the [PropertyChangedEventArgs](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.propertychangedeventargs?view=net-6.0) as argument. `PropertyChangedEventArgs` object contains the following property,
+The [RecordPropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_RecordPropertyChanged) event fires when a data model property changes (requires `INotifyPropertyChanged` implementation).
 
-* **PropertyName**: Defines the `PropertyName` of the changed value in the `DataModel`.
+#### Event Arguments
+- **sender**: The data model object
+- **PropertyChangedEventArgs.PropertyName**: Name of the changed property
 
-### SourceCollectionChanged
+#### Example
 
-The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_SourceCollectionChanged) event is invoked when the `SourceCollection` is changed, for example, adding or removing the collection. The event receives two arguments namely `sender` that handles [GridQueryableCollectionViewWrapper](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridQueryableCollectionViewWrapper.html) object and the [NotifyCollectionChangedEventArgs](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-6.0) as argument. `NotifyCollectionChangedEventArgs` object contains the following properties,
+{% highlight c# %}
+void OnViewLoaded()
+{
+    dataGrid.View.RecordPropertyChanged += (sender, args) =>
+    {
+        Debug.WriteLine($"Property changed: {args.PropertyName}");
+    };
+}
+{% endhighlight %}
 
-* **Action**: Defines the current action. (i.e.) Add, Remove, Move, Replace, Reset.
-* **NewItems**: It contains the list of new items involved in the change.
-* **OldItems**: It contains the list of old items affected by the Action.
-* **NewStartingIndex**: It contains the index at which the change occurred.
-* **OldStartingIndex**: It contains the index at which the Action occurred.
+### SourceCollectionChanged Event
+
+The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_SourceCollectionChanged) event fires when the underlying collection is modified (add, remove, clear items).
+
+#### Event Arguments ([NotifyCollectionChangedEventArgs](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-6.0))
+- **Action**: Type of change (Add, Remove, Move, Replace, or Reset)
+- **NewItems**: Items added to the collection
+- **OldItems**: Items removed from the collection
+- **NewStartingIndex**: Index where new items appear
+- **OldStartingIndex**: Index where old items were
+
+#### Example
+
+{% highlight c# %}
+void OnViewLoaded()
+{
+    dataGrid.View.SourceCollectionChanged += (sender, args) =>
+    {
+        if (args.Action == NotifyCollectionChangedAction.Add)
+            Debug.WriteLine($"{args.NewItems.Count} items added at index {args.NewStartingIndex}");
+    };
+}
+{% endhighlight %}
 
 ## Retain scroll position
 
@@ -286,11 +359,12 @@ dataGrid.CanMaintainScrollPosition = true;
 
 ## SetCellValue
 
-The `SetCellValue` method on `SfDataGrid` allows you to programmatically update the value of a specific cell.
+The `SetCellValue` method allows you to programmatically update a cell value at runtime.
 
-N>
-1. For features (like Sorting, Grouping, Filtering) set LiveDataUpdateMode="AllowDataShaping" to ensure the grid updates in live mode after a value change.
-2.Caption rows, summary rows, unbound rows and unbound columns cannot be updated by SetCellValue.
+> **Note:** For features like Sorting, Grouping, or Filtering to update automatically after a value change, set `LiveDataUpdateMode="AllowDataShaping"` on the grid's View. Ensure the cell's row and column exist in the grid.
+
+### Limitations
+- Caption rows, summary rows, unbound rows, and unbound columns cannot be updated by `SetCellValue`.
 
 SfDataGrid provides two overloads of SetCellValue:
 
@@ -323,12 +397,13 @@ SfDataGrid provides two overloads of SetCellValue:
 {% highlight C# %}
 private void Button_Clicked(object sender, EventArgs e)
 {
+    // Update using column object
     dataGrid.SetCellValue(1, dataGrid.Columns[0], "11111");    
 }
 {% endhighlight %}
 {% endtabs %}
 
-2. SetCellValue(int rowIndex, string fieldName, object value)
+### Overload 2: SetCellValue(int rowIndex, string fieldName, object value)
 
 <table>
 <tr>
@@ -357,9 +432,10 @@ private void Button_Clicked(object sender, EventArgs e)
 {% highlight C# %}
 private void Button_Clicked(object sender, EventArgs e)
 {
+    // Update using property name
     dataGrid.SetCellValue(1, "OrderID", "11111");    
 }
 {% endhighlight %}
 {% endtabs %}
 
-N> Looking for the full .NET MAUI DataGrid component overview, features, pricing, and documentation? Visit the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) page.
+> **Note:** Looking for the full .NET MAUI DataGrid component overview, features, pricing, and documentation? Visit the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) page.

@@ -8,11 +8,11 @@ documentation: UG
 ---
 
 # Search in MAUI DataGrid (SfDataGrid)
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to search the data displayed within the datagrid. You can search the data using the built-in search UI support or using programmatic searching.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to search the data displayed within the datagrid. You can search the data using the built-in search UI or programmatically.
 
 ## UI Searching
 
-The `SfDataGrid` allows you to enable searching support by setting the [AllowSearching]() property to `true`. By enabling this property, the built-in search UI is displayed above the DataGrid, allowing users to easily search the data.
+The `SfDataGrid` allows you to enable searching support by setting the [AllowSearching](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSearching) property to `true`. By enabling this property, the built-in search UI is displayed above the DataGrid, allowing users to search the data.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -38,7 +38,7 @@ dataGrid.AllowSearching = true;
 
 ### Settings Option
 
-The built-in search UI has a settings icon that offers options for searching, such as filtering, pattern matching, and case sensitivity. You can hide this icon by setting the [DataGridSearchToolbarView.ShowMoreOptions]() property to `false`.
+The built-in search UI has a settings icon that offers options for searching, such as filtering, pattern matching, and case sensitivity. You can hide this icon by setting the [DataGridSearchToolbarView.ShowMoreOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchToolbarView.html#Syncfusion_Maui_DataGrid_DataGridSearchToolbarView_ShowMoreOptions) property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -57,7 +57,7 @@ The built-in search UI has a settings icon that offers options for searching, su
 
 ### Navigation Between Search Results
 
-The navigation icons present in the built-in search bar allow users to navigate between search results. You can change the visibility of the navigation icons using the [DataGridSearchToolbarView.ShowNavigationButtons]() property.
+The navigation icons in the built-in search bar allow users to move to the next or previous search result. You can change the visibility of the navigation icons using the [DataGridSearchToolbarView.ShowNavigationButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchToolbarView.html#Syncfusion_Maui_DataGrid_DataGridSearchToolbarView_ShowNavigationButtons) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -74,9 +74,9 @@ The navigation icons present in the built-in search bar allow users to navigate 
 {% endhighlight %}
 {% endtabs %}
 
-### Clear Search
+### Clear Search via UI
 
-You can clear the search results by using the clear icon in the search bar. You can hide the clear icon by setting the [DataGridSearchToolbarView.ShowClearButton]() property to `false`.
+You can clear the search results by clicking the clear icon in the search bar. You can hide the clear icon by setting the [DataGridSearchToolbarView.ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchToolbarView.html#Syncfusion_Maui_DataGrid_DataGridSearchToolbarView_ShowClearButton) property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -98,9 +98,9 @@ You can clear the search results by using the clear icon in the search bar. You 
 #### Customize the SearchToolbarView
 
 You can customize the `DataGridSearchToolbarView` using the following `DataGridStyle` properties:
-- [SearchToolbarViewStroke](): Sets the border color of the SearchToolbarView.
-- [SearchToolbarViewStrokeThickness](): Sets the border thickness of the SearchToolbarView.
-- [SearchToolbarViewBackground](): Sets the background color of the SearchToolbarView.
+- [SearchToolbarViewStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchToolbarViewStroke): Sets the border color of the SearchToolbarView.
+- [SearchToolbarViewStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchToolbarViewStrokeThickness): Sets the border thickness of the SearchToolbarView.
+- [SearchToolbarViewBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchToolbarViewBackground): Sets the background color of the SearchToolbarView.
 
 {% tabs %}
 {% highlight xaml %}
@@ -125,11 +125,10 @@ var defaultStyle = new DataGridStyle()
 {
     SearchToolbarViewBackground = Colors.Yellow,
     SearchToolbarViewStroke = Colors.Brown,
-    SearchToolbarViewStrokeThickness = 2,
+    SearchToolbarViewStrokeThickness = 2
 };
 
 dataGrid.DefaultStyle = defaultStyle;
-
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
@@ -137,11 +136,11 @@ this.Content = dataGrid;
 #### Customize the Search bar
 
 You can customize the `SearchBar` using the following `DataGridStyle` properties:
-- [SearchBarBackground](): Sets the background color of the search bar.
-- [SearchBarTextColor](): Sets the text color of the search bar.
-- [SearchBarTextFontSize](): Sets the font size of the search bar text.
-- [SearchBarTextFontFamily](): Sets the font family of the search bar text.
-- [SearchBarTextFontAttributes](): Sets the font attributes of the search bar text.
+- [SearchBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchBarBackground): Sets the background color of the search bar.
+- [SearchBarTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchBarTextColor): Sets the text color of the search bar.
+- [SearchBarTextFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchBarTextFontSize): Sets the font size of the search bar text.
+- [SearchBarTextFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchBarTextFontFamily): Sets the font family of the search bar text.
+- [SearchBarTextFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchBarTextFontAttributes): Sets the font attributes of the search bar text.
 
 {% tabs %}
 {% highlight xaml %}
@@ -174,7 +173,6 @@ var defaultStyle = new DataGridStyle()
 };
 
 dataGrid.DefaultStyle = defaultStyle;
-
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
@@ -245,7 +243,7 @@ this.dataGrid.SearchController.FindPrevious("SearchText");
 
 <img alt="Navigated Search Text in DataGrid" src="Images\search\maui-datagrid-searchtext-navigate.png" width="404"/>
 
-### Clear Search
+### Clear Search Programmatically
 
 You can clear the search by using the [SearchController.ClearSearch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_ClearSearch) method.
 
@@ -259,7 +257,7 @@ this.dataGrid.SearchController.ClearSearch();
 
 ## Customize the Appearance of Highlight Text
 
-You can customize the appearance of searched text by using the [SearchTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchTextColor), [SearchTextBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchTextBackground), [SearchHighlightTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchHighlightTextColor), and [SearchHighlightTextBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchHighlightTextBackground) properties. You can also customize the background color of search-matched cells using the [SearchCellBackground]() property.
+You can customize the appearance of searched text by using the [SearchTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchTextColor), [SearchTextBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchTextBackground), [SearchHighlightTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchHighlightTextColor), and [SearchHighlightTextBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchHighlightTextBackground) properties. You can also customize the background color of search-matched cells using the [SearchCellBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SearchCellBackground) property.
 
 {% tabs %}
 {% highlight xaml %}

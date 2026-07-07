@@ -9,7 +9,8 @@ documentation: UG
 
 # Empty view in MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides options to display and customize an empty view when no data is available to display using the following properties,
+
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides options to display and customize an empty view when no data is available to display using the following properties. The EmptyView is displayed only when the ItemsSource is null or contains no items; it is hidden when data is present.
 
  * [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyView) object can be set to a string or view when `SfDataGrid` has no items. The default value is null.
  * [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyViewTemplate) is used to customize the appearance of `EmptyView`. The default value is null.
@@ -89,18 +90,20 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-N> The view that the `EmptyView` displays may be a single view or a view that has multiple child views.
+> **Note:** The EmptyView may be a single view or a container with multiple child views.
 
 <img src="Images/emptyview/emptyview-as-View.png" width="404" alt="DataGrid with emptyview as view">
 
 ## Display a DataTemplate when DataGrid has no items
 
-We can set the `EmptyView` to a custom type that will displayed when the `ItemsSource` is null or the collection that the `ItemsSource` parameter specifies is empty or null. The `EmptyViewTemplate` can be used to modify the `EmptyView`'s appearance.
+#### Using EmptyViewTemplate with Custom Binding
+
+For advanced scenarios such as filtered or searched data, you can set the `EmptyView` to a custom type that will be displayed when the `ItemsSource` is null or the collection that the `ItemsSource` parameter specifies is empty or null. The `EmptyViewTemplate` can be used to modify the `EmptyView`'s appearance and behavior based on dynamic properties.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-             xmlns:local="clr-namespace:EmptyViewTemplate">
+             xmlns:local="clr-namespace:YourAppNamespace">
     <StackLayout>
         <SearchBar x:Name="filterText"
                    FontSize="16"
@@ -206,6 +209,10 @@ public class FilterItem : BindableObject
 {% endhighlight %}
 {% endtabs %}
 
-FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.
+> **Note:** Place the `FilterItem.cs` file in your app's main project directory or in a Models folder (e.g., `Models/FilterItem.cs`) alongside your XAML pages.
+
+FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property. The `EmptyViewTemplate` DataTemplate is then invoked to display the custom message using the bound Filter value.
+
+**How FilterProperty works:** `BindableProperty.Create` enables property binding in MAUI. The FilterProperty BindableProperty allows the `Filter` property to respond to binding changes from external sources (like the SearchBar), triggering UI updates automatically.
 
 <img src="Images/emptyview/emptyview-as-template.png" width="404" alt="DataGrid with EmptyView template">

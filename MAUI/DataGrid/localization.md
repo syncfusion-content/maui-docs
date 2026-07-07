@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in .NET MAUI DataGrid (SfDataGrid)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The `SfDataGrid` can be localized by adding `resource` file. In `SfDataGrid`, provides the support to localize the below strings
+Localization is the process of translating application resources into different languages for specific cultures. The `SfDataGrid` can be localized by adding resource files. The following strings in `SfDataGrid` can be localized:
 
    * `Load More`
    * `Click here to add new row`
@@ -38,9 +38,36 @@ Localization is the process of translating the application resources into differ
    * `Ok`
    * `Cancel`
 
-## Setting CurrentUICulture to the application
+## Application-Level Localization
 
-Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
+To localize the `DataGrid` based on `CurrentUICulture` using resource files, follow these steps:
+
+
+### Step-by-step Setup
+
+   1. Create a new folder named `Resources` in the application if it does not already exist.      
+
+   2. **Create culture-specific resource files:**
+      - Right-click on the `Resources` folder, select `Add` and then `New Item`.
+      - In the Add New Item dialog, select the Resource File option and name the filename as `SfDataGrid.<culture name>.resx`. For example, use `SfDataGrid.fr-FR.resx` for French (France). The culture name format is `language-country` (e.g., `fr-FR`, `es-ES`).
+      - Right-click the newly created file → select `Properties` → set `Build Action` to `EmbeddedResource`.
+
+      <img alt="Resources folder structure in project" src="Images\localization\maui-datagrid-localization-create-resource-file.png" width="404"/>
+
+      <img alt="Creating new resource file via Add New Item dialog" src="Images\localization\maui-datagrid-localization-sample.png" width="404"/>
+
+   3. **Add localized strings:**
+      - Open the `SfDataGrid.fr-FR.resx` file and add the Name/Value pairs from the list above, translating values to the target culture.
+      - Use the Resource Designer to add entries (Name column = English string key, Value column = translated string).
+
+      <img alt="Resource Designer showing Name/Value pairs for localized strings" src="Images\localization\maui-datagrid-localization-resource-file.png" width="404"/>
+
+   4. **Repeat for additional cultures:**
+      - Create additional `SfDataGrid.<culture name>.resx` files for each language you want to support (e.g., `SfDataGrid.es-ES.resx`, `SfDataGrid.de-DE.resx`).
+
+### Configure CurrentUICulture in App.xaml.cs
+
+Application culture can be changed by setting `CurrentUICulture` in the `App.xaml.cs` file during application initialization. The ResourceManager path must match your project's namespace and folder structure exactly.
 
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 11 13" %}
@@ -55,8 +82,12 @@ public partial class App : Application
 	public App()
 	{
 		InitializeComponent();
+		// Set the application culture (e.g., "fr-FR" for French)
 		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
 
+		// Initialize the ResourceManager with your project namespace
+		// Format: "{ProjectNamespace}.{FolderName}.{ResourceFileName}"
+		// Replace "MauiDataGridDemo" with your actual project name
 		SfDataGridResources.ResourceManager = new ResourceManager("MauiDataGridDemo.Resources.SfDataGrid", Application.Current.GetType().Assembly);
 	   MainPage = new MainPage();
 	}
@@ -65,29 +96,8 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Load more in MAUI SfDataGrid" src="Images\localization\maui-datagrid-localization.png" width="404"/>
+### Activation and Behavior
 
-N>
-The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+After configuration, the DataGrid will use localized strings when the application starts. Localization applies immediately based on the `CurrentUICulture` set in the App constructor. If a translated string is missing from a culture-specific resource file, the DataGrid will fall back to the neutral culture resource (SfDataGrid.resx) or use the hardcoded English default. Changing the culture at runtime requires reassigning the ResourceManager and may require an application restart for the changes to take effect in all UI elements.
 
-## Localize application level
-
-To localize the `DataGrid` based on `CurrentUICulture` using `resource` files, follow the below steps.
-
-   1. Create new folder, named as `Resources` in the application.
-
-   2. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
-
-   3. In Add New Item wizard, select the Resource File option and name the filename as `SfDataGrid.<culture name>.resx.` For example, give the name as `SfDataGrid.fr-FR.resx` for French culture.
-
-   4. The culture name indicates the name of the language and country.
-
-   <img alt="Create resources file in the sample" src="Images\localization\maui-datagrid-localization-create-resource-file.png" width="404"/>
-
-   5. Now, select `Add` option to add the resource file in **Resources** folder.
-
-   <img alt="Localization sample" src="Images\localization\maui-datagrid-localization-sample.png" width="404"/>
-
-   6. Add the Name/Value pair in Resource Designer of `SfDataGrid.fr-FR.resx` file and change its corresponding value to corresponding culture.
-
-   <img alt="Resource file" src="Images\localization\maui-datagrid-localization-resource-file.png" width="404"/>
+<img alt="DataGrid with localized 'Load More' button in French" src="Images\localization\maui-datagrid-localization.png" width="404"/>

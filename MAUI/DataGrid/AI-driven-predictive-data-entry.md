@@ -9,21 +9,43 @@ documentation: ug
 
 # AI-Driven Predictive Data Entry in .NET MAUI DataGrid (SfDataGrid)
 
-This document explains how to implement AI-assisted predictive data entry with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). Azure OpenAI is used to generate predicted GPA values and grades.
+This document explains how to implement AI-assisted predictive data entry with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates using Azure OpenAI to predict GPA and grade values based on historical student performance data.
 
-## Integrating Azure OpenAI with the .NET MAUI app
+## Integrating Azure OpenAI with the .NET MAUI App
+
+### Step 1: Set Up Azure OpenAI Service
 
 First, open [Visual Studio](https://visualstudio.microsoft.com/) and [create a new .NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0&tabs=vswin&pivots=devices-android).
 
-Ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and have set up a deployment in the Azure portal. Install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package in the project.
+**Configure Azure OpenAI:**
 
-### Step 1: Set up Azure OpenAI
+1. Log in to the [Azure Portal](https://portal.azure.com/)
+2. Create a new OpenAI resource (or use an existing one)
+3. Deploy a **GPT-4o** model for text analysis
+4. Copy your deployment name, endpoint URL, and API key from the **Keys and Endpoint** section
 
-To configure **Azure OpenAI**, we’ll use the **GPT-4O** model for text. Set up the `OpenAIClient` as shown in the following code example.
+**Install NuGet Package:**
+
+Run the following command in the Package Manager Console or terminal:
+
+```
+dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.12
+```
+
+Alternatively, use the NuGet Package Manager in Visual Studio to install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/) package.
+
+### Step 2: Create the Azure OpenAI Service Class
+
+To configure Azure OpenAI, use the GPT-4O model for text analysis. Set up the OpenAIClient as shown in the following code example. This class provides the foundation for making API calls to Azure OpenAI.
 
 {% tabs %}
 
 {% highlight c# %}
+
+using Azure;
+using Azure.AI.OpenAI;
+using System;
+using System.Threading.Tasks;
 
 internal class AzureOpenAIService
 {
@@ -45,30 +67,35 @@ internal class AzureOpenAIService
 
 {% endtabs %}
 
-### Step 2: Connect to the Azure OpenAI
+### Step 3: Initialize the OpenAI Client
 
-To set up the connection to Azure OpenAI. Refer to the following code.
+Initialize the OpenAIClient in your AzureOpenAIService constructor or initialization method. This establishes the connection to Azure OpenAI:
 
 {% tabs %}
 
 {% highlight c# %}
 
-	// At the time of required.
-    this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key))
+// Initialize when required
+this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
 
 {% endhighlight %}
 
 {% endtabs %}
 
-This connection allows you to send prompts to the model and **receive responses**, which can then be used to generate outputs.
+This connection allows you to send prompts to the model and receive predictions, which can then be used to populate your DataGrid with AI-generated values.
 
-### Step 3: Get the result from the AI service
+### Step 4: Implement the GetResultsFromAI Method
 
-Implement the `GetResultsFromAI` methods to retrieve responses from the **OpenAI** API based on user input.
+Implement a method to retrieve predictions from the Azure OpenAI API.
 
 {% tabs %}
 
 {% highlight c# %}
+
+using Azure;
+using Azure.AI.OpenAI;
+using System;
+using System.Threading.Tasks;
 
 public async Task<string> GetResultsFromAI(string userPrompt)
 {
@@ -94,13 +121,13 @@ public async Task<string> GetResultsFromAI(string userPrompt)
 
 {% endtabs %}
 
-The **AzureOpenAIService** class now offers a convenient way to interact with the **OpenAI** API and retrieve completion results based on the provided **prompt**.
+## Integrating AI-Driven Predictive Data Entry in .NET MAUI DataGrid
 
-## Integrating AI-driven predictive data entry in .NET MAUI DataGrid
+After completing the Azure OpenAI setup above, use the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control to display student data and enable AI-powered predictions. This section demonstrates how to leverage AI services to automatically predict and populate values based on historical patterns and existing student data.
 
-To design an AI-powered predictive data entry experience using the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control, you can leverage AI services to suggest or auto-fill values based on historical patterns and user input. Before proceeding, please refer to the getting started documentation for the .NET MAUI DataGrid control.
+Before proceeding, review the [.NET MAUI DataGrid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).
 
-### Step 1: Create the DataGrid layout
+### Step 1: Create the DataGrid Layout
 
 {% tabs %}
 
@@ -179,9 +206,11 @@ To design an AI-powered predictive data entry experience using the [.NET MAUI Da
 
 {% endtabs %}
 
-### Step 2: Enable AI-powered .NET MAUI DataGrid
+### Step 2: Enable AI-Powered .NET MAUI DataGrid
 
-After deserializing the AI service’s JSON response, dynamically add the Final Year GPA, CGPA, and Total Grade columns to the SfDataGrid, then populate each row with the predicted values.
+Create a method to send student data to Azure OpenAI for prediction. The AI service analyzes historical GPA data and returns predictions for Final Year GPA, CGPA, and Total Grade. After deserializing the JSON response, add these new columns to the DataGrid and populate each row with the predicted values.
+
+**Note:** The helper methods `GetSerializedGridReport()`, `ValidateAndGeneratePrompt()`, and `DeserializeResult()` are assumed to be implemented in your ViewModel or code-behind to handle data serialization and JSON parsing.
 
 {% tabs %}
 
@@ -250,6 +279,7 @@ private async Task GetResponseAsync()
 {% endhighlight %}
 
 {% endtabs %}
+
 
 ![AI driven Smart Predictive Data Entry .NET MAUI DataGrid](Images/smart-ai-solutions/predictive-data-entry.gif)
 
