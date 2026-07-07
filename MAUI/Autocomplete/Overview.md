@@ -1,46 +1,31 @@
 ---
 layout: post
 title: About .NET MAUI Autocomplete control | Syncfusion®
-description: Learn about the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control, its features, globalization support, and related resources.
+description: Learn here all about the introduction of Syncfusion® .NET MAUI Autocomplete control, its features, and more.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# .NET MAUI Autocomplete (SfAutocomplete)
+# .NET MAUI Autocomplete (SfAutocomplete) Overview
 
-## Prerequisites
+The Syncfusion<sup>&reg;</sup> [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) control is highly optimized to load and populate suggestions quickly from large amounts of data depending on the user’s input characters. It allows users to select an item from the suggestion list. It displays the selected item in the input view with the text and clear button.
 
-Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Inputs`
-
-For step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
-
-## Overview
-
-The Syncfusion® [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) is highly optimized to load and populate suggestions quickly from large data sets based on user input. Users can select an item from the drop-down, and the selected item is displayed in the input area alongside a clear button.
-
-![.NET MAUI SfAutocomplete overview](Images/Overview/AutocompleteOverview.png)
+![.NET MAUI SfAutocomplete](Images/Overview/AutocompleteOverview.png)
 
 ## Business use cases
 
-- Search boxes with instant suggestions for faster discovery.
-- Form inputs with predefined selectable values to reduce errors.
-- Product and category search in e-commerce apps for better navigation.
-- Mobile apps requiring fast lookup from large datasets.
+- Search boxes with instant suggestions for faster discovery.  
+- Form inputs with predefined selectable values to reduce errors.  
+- Product and category search in e‑commerce apps for better navigation.  
+- Mobile apps requiring fast lookup from large datasets.  
 
 ## Key features
 
 - **Flexible data binding** binds the control to different types of data sources.
-- **Filtering support** filters the suggestion list based on input and shows the closest match.
-- **Drop-down customization** allows tailoring the appearance and behavior of the drop-down.
-- **Multi-selection** enables choosing multiple values, displayed as tokens or with a delimiter.
-- **Highlighting matched text** highlights the matching characters in each suggestion.
-- **Header and footer** lets you add custom views at the top and bottom of the drop-down.
-- **LoadMore** restricts the number of suggestions and lets users load the rest on demand.
-- **No-results message** customizes the message shown when no items match the input.
-- **Theming** integrates with the Syncfusion theme system to style the control.
+- **Filtering support** filters the suggestion list based on input and fills with the closest match.
+- **Drop‑down customization** allows tailoring the appearance and behavior of the suggestion list.  
+- **Multi‑selection** enables choosing multiple values from the available options.
 
 ## Globalization
 
@@ -53,22 +38,22 @@ The following table summarizes the globalization support available in this contr
 
 .legend{
   display: inline-flex !important;
-  flex-direction: row !important;
+  flex-direction: row !important; 
   gap: 16px !important;
 }
 </style>
 
 <div class="legend">
 <span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/full-support.svg" width="16" alt="Full Support"> Full Support
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
-
+ 
 <span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/partial-support.svg" width="16" alt="Partial Support"> Partial Support
+<img src="../Images/partial-support.svg" width="16"> Partial Support
 </span>
-
+ 
 <span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/not-applicable.svg" width="16" alt="Not Applicable"> Not Applicable
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
 </div>
 
@@ -82,45 +67,27 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="Overview.md">Autocomplete</a></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><a href="/maui/autocomplete/overview">Autocomplete</a></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr>
+</tr> 
 </table>
-
-N> **Localization**: The SfAutocomplete supports localization of all user-visible text, including the placeholder, no-results-found message, clear button, and LoadMore text. Set the strings in your application to localize them.
-
-N> **RTL**: Right-to-left layout is fully supported on all .NET MAUI targets. The drop-down and text alignment follow the current `FlowDirection`.
-
-N> **Time zone**: The control does not display date or time values, so time zone support is not applicable.
-
-N> **Screen reader**: The SfAutocomplete exposes `AutomationId` for the input field and the clear button. Limited support is provided for the drop-down suggestions; for full accessibility coverage, set meaningful display text on your data items.
-
-N> **Keyboard navigation**: The control supports Tab, arrow keys (Up/Down to navigate the drop-down), Enter (select), Esc (close), and Backspace (delete the previous character or selected token).
 
 ## Related controls
 
-- [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) – choose this if you need selection with optional user input.
-- [SfListView](https://help.syncfusion.com/maui/listview/overview) – choose this if you need to display filtered results in a list format.
-- [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) – choose this for structured numeric input with validation and formatting.
+- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for flexible selection with optional user input.
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying filtered results in list format.
+- [Numeric Entry](https://help.syncfusion.com/maui/numeric-entry/overview) for structured numeric input with validation and formatting. 
 
-## See also
+## See Also
 
-- [Getting Started](Getting-Started.md) – set up the SfAutocomplete in your .NET MAUI project.
-- [Selection](Selection.md) – configure single and multiple selection.
-- [Searching and Filtering](Searching-Filtering.md) – configure search logic and filtering behavior.
-- [UI Customization](UI-Customization.md) – style and customize the SfAutocomplete.
-- [Migration from Xamarin SfAutoComplete](Migration.md) – migrate an existing Xamarin app to .NET MAUI.
-- [Release notes](https://help.syncfusion.com/maui/autocomplete/release-notes) – see what's new in each release.
-
-## Next steps
-
-- Follow the [Getting Started](Getting-Started.md) guide to add the SfAutocomplete to your first .NET MAUI app.
-- Browse the [Showcase samples](https://github.com/syncfusion/maui-demos) for end-to-end demos.
-- See the [API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) for the full list of types and members.
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) shows how to begin using Autocomplete step by step. 
+- [Searching & Filtering](https://help.syncfusion.com/maui/autocomplete/searching-filtering) explains how to configure search logic and filtering behavior.
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization) shows how to style and customize the AutoComplete control.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
 
@@ -150,7 +117,6 @@ N> **Keyboard navigation**: The control supports Tab, arrow keys (Up/Down to nav
   line-height: 1;
   display: inline-block;
   font-style: normal;
-  color: #0A76FF;
 }
 
 .card-ai:before { content: "\e720"; }
@@ -200,6 +166,13 @@ N> **Keyboard navigation**: The control supports Tab, arrow keys (Up/Down to nav
   justify-content: center;
 }
 
+.card-icon {
+  font-family: 'Toolkit Icons' !important;
+  font-size: 16px;
+  line-height: 1;
+  color: #0A76FF;
+}
+
 .form-title {
   font-size: 16px;
   font-weight: 500;
@@ -229,7 +202,7 @@ N> **Keyboard navigation**: The control supports Tab, arrow keys (Up/Down to nav
 .explore-link {
   margin-top: auto;
   color: #0A76FF;
-  font-size: 12px;
+  font-size: 12;
   font-weight: 400;
   display: flex;
   align-items: center;
