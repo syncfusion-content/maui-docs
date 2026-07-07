@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Localization in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Implement Localization in .NET MAUI SfAIAssistView?
 
 `Localization` is the process of translating the application resources into different languages for specific cultures. The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) can be localized by adding a `resource` file.
 

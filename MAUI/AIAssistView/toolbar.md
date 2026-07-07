@@ -7,40 +7,34 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Toolbar in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Customize Toolbar in .NET MAUI SfAIAssistView?
 
-This section explains how to define and customize the toolbar in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to define and customize the toolbar to tailor actions and improve user interaction within the chat interface.
 
 ## AssistView Toolbar
 
 `SfAIAssistView` exposes a header toolbar that can be enabled and customized for conversation-level actions and titles. The toolbar will not be visible when the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowToolbar) is set to `false`.
 
-- **`ShowToolbar`**: Set to `false` to hide the toolbar. The default value is `true`.
+- **[ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowToolbar)**: Set to `false` to hide the toolbar. The default value is `true`.
 - **[ToolbarTitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToolbarTitle)**: A simple string title you can bind or set to display in the toolbar.
 - **[ToolbarHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToolbarHeight)**: Set a custom height for the toolbar area.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2,3,4" %}
-<syncfusion:SfAIAssistView 
-            ShowToolbar="True" 
-            ToolbarTitle="AI AssistView" 
-            ToolbarHeight="50">
-</syncfusion:SfAIAssistView>
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+    <syncfusion:SfAIAssistView ShowToolbar="True" 
+                                ToolbarTitle="AI AssistView" 
+                                ToolbarHeight="50">
+    </syncfusion:SfAIAssistView>
 {% endhighlight %}
 
-{% highlight c# hl_lines="6,7,8" %}
+{% highlight c# %}
 
-SfAIAssistView sfAIAssistView; 
-public MainPage() 
-{ 
-    InitializeComponent(); 
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.ToolbarTitle = "AI AssistView";
-    this.sfAIAssistView.ShowToolbar = true;
-    this.sfAIAssistView.ToolbarHeight = 50;
-    this.Content = sfAIAssistView; 
-    }
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.ToolbarTitle = "AI AssistView";
+    sfAIAssistView.ShowToolbar = true;
+    sfAIAssistView.ToolbarHeight = 50;
 
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +43,7 @@ public MainPage()
 
 ## Toolbar menu items
 
-In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the `ToolbarMenuOptions` collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model. 
+In Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the [ToolbarMenuOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToolbarMenuOptions) collection on `SfAIAssistView`. Each item can be an `ActionButton` (or any suitable view) and bound to a command on your view model.
 
 {% highlight xaml %}
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView">
@@ -81,30 +75,20 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3" %}
-<syncfusion:SfAIAssistView x:Name="assist"
+
+    <syncfusion:SfAIAssistView x:Name="assist"
                                EnableTemporaryChat="True"
                                TemporaryChatBannerText="This chat will not be saved" />
 {% endhighlight %}
 
-{% highlight c# hl_lines="8 9" %}
+{% highlight c# hl_lines="2 3" %}
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    {
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        sfAIAssistView.EnableTemporaryChat = true;
-        sfAIAssistView.TemporaryChatBannerText="This chat will not be saved";
-        this.Content = sfAIAssistView;
-    }
-}
+    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    sfAIAssistView.EnableTemporaryChat = true;
+    sfAIAssistView.TemporaryChatBannerText="This chat will not be saved";
 
 {% endhighlight %}
 {% endtabs %}
-
-![Syncfusion .NET MAUI AI AssistView Temporary Chat Banner](Images/toolbar/maui-aiassistview-temporary-chat-banner.png)
 
 ### Events for chat mode
 
@@ -113,24 +97,28 @@ public partial class MainPage : ContentPage
 - **`ChatModeChanging`**: provides a [ChatModeChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangingEventArgs.html)  with the [ChatMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangingEventArgs.html#Syncfusion_Maui_AIAssistView_ChatModeChangingEventArgs_ChatMode) that the control is about to transition to. Handlers can cancel the change by setting `e.Cancel = true`.
 - **`ChatModeChanged`**: provides a [ChatModeChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html) with the [ChatMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html#Syncfusion_Maui_AIAssistView_ChatModeChangedEventArgs_ChatMode) that the control has transitioned to.
 
+{% tabs %}
 {% highlight c# %}
-private void OnChatModeChanging(object sender,  ChatModeChangingEventArgs e)
-{
-    if (e.ChatMode == ChatMode.TemporaryChat)
-    {
-        e.Cancel = true; 
-    }
-}
 
-private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
-{
-    if (e.ChatMode == ChatMode.TemporaryChat)
+    private void OnChatModeChanging(object sender,  ChatModeChangingEventArgs e)
     {
-        // Temporary chat is active: maybe show custom banner or reset local state
+        if (e.ChatMode == ChatMode.TemporaryChat)
+        {
+           e.Cancel = true; 
+        }
     }
-    else
+
+    private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
     {
-        // New chat mode active: restore saved templates/state if needed
+        if (e.ChatMode == ChatMode.TemporaryChat)
+        {
+            // Temporary chat is active: maybe show custom banner or reset local state
+        }
+        else
+        {
+           // New chat mode active: restore saved templates/state if needed
+        }
     }
-}
+
 {% endhighlight %}
+{% endtabs %}

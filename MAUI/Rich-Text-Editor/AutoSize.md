@@ -9,7 +9,7 @@ documentation: ug
 
 # AutoSize in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
-The .NET MAUI Rich Text Editor control can dynamically change its height to fit the content by setting the [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EnableAutoSize) property to `True`.
+The [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) control can dynamically change its height to fit the content by setting the [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EnableAutoSize) property to `True`.
 
 By default, `EnableAutoSize` is `False`. In this state, the SfRichTextEditor maintains a fixed height based on the HeightRequest value, the parent layout's constraints, or the control's default height — in that order of precedence. Content that exceeds this height is scrolled within the editor, and the control does not resize.
 
