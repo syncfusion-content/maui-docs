@@ -952,7 +952,7 @@ public class OrderInfoViewModel
 
 ## Context Menu Separators
 
-The `SfDataGrid` allows users to add visual separators between context menu items to visually organize and group related menu items by setting the [EnableContextMenuSeparators]() property to `true`.
+The `SfDataGrid` allows users to add visual separators between context menu items to visually organize and group related menu items by setting the [EnableContextMenuSeparators](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EnableContextMenuSeparators) property to `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1059,7 +1059,7 @@ this.Content = dataGrid;
 
 <img src="Images/context-menu/context-menu-separator.png" alt="" width="404"/>
 
-You can customize the stroke color and thickness of the context menu separator using the [ContextMenuSeparatorColor]() and [ContextMenuSeparatorStroke]() properties.
+You can customize the stroke color and thickness of the context menu separator using the [ContextMenuSeparatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_DataGridStyle_ContextMenuSeparatorColor) and [ContextMenuSeparatorStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_DataGridStyle_ContextMenuSeparatorStroke) properties.
 
 ## Events
 

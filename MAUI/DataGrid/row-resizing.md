@@ -12,7 +12,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The `SfDataGrid` supports interactive row resizing. When enabled, users can long-press the bottom edge of a row header to change that row's height. Resized heights are cached and preserved during scrolling.
 
-**Note:** Row resizing requires `ShowRowHeader` to be set to `true`, and defaults to `false`.
+> **Note:** Row resizing requires `ShowRowHeader` to be set to `true`, and defaults to `false`.
 
 ## Enable Row Resizing
 

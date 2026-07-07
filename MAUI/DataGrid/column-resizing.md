@@ -39,7 +39,7 @@ To hide a column interactively, set the `DataGridColumn.MinimumWidth` property t
 
 ## Resizing Modes
 
-The `SfDataGrid` allows two modes of resizing by setting the [SfDataGrid.ColumnResizeMode]() property. The resizing modes are as follows:
+The `SfDataGrid` allows two modes of resizing by setting the [SfDataGrid.ColumnResizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnResizeMode) property. The resizing modes are as follows:
 
 * **OnMoved**: The resizing indicator is moved based on the touch point. The width of the column is updated as the resizing indicator moves.
 * **OnTouchUp**: The resizing indicator is moved based on the touch point. However, the width of the column is updated only on a touch up operation.

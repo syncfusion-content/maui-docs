@@ -86,8 +86,8 @@ The following table describes the types of columns and their usage:
 <td>Use to display the IEnumerable data using {{ '[SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html)'| markdownify }}</td>
 </tr>
 <tr>
-<td>{{'[DataGridCurrencyColumn]()'| markdownify }}</td>
-<td>{{'[DataGridCurrencyCellRenderer]()'| markdownify }}</td>
+<td>{{'[DataGridCurrencyColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrencyColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridCurrencyCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrencyCellRenderer.html)'| markdownify }}</td>
 <td>Currency</td>
 <td>To display and edit currency values in each row</td>
 </tr>
@@ -1913,7 +1913,7 @@ dataGrid.Columns.Add(currencyColumn);
 
 ### Currency Symbol
 
-By default, the currency symbol is displayed based on the current culture. You can customize the symbol using the [CurrencySymbol]() property.
+By default, the currency symbol is displayed based on the current culture. You can customize the symbol using the [CurrencySymbol](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrencyColumn.html#Syncfusion_Maui_DataGrid_DataGridCurrencyColumn_CurrencySymbol) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1942,7 +1942,7 @@ dataGrid.Columns.Add(currencyColumn);
 
 ### Allow Null Value
 
-You can allow null values in the column by setting the [DataGridCurrencyColumn.AllowNullValue]() property to `true`.
+You can allow null values in the column by setting the [DataGridCurrencyColumn.AllowNullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrencyColumn.html#Syncfusion_Maui_DataGrid_DataGridCurrencyColumn_AllowNullValue) property to `true`.
 
 N> 
 The `AllowNullValue` property will work only when the underlying property type is nullable.
