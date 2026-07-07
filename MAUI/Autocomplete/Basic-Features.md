@@ -19,7 +19,7 @@ For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) doc
 
 ## Selection
 
-The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows the user to select an item from the drop-down list by clicking or tapping the item, pressing the `Enter` key, or losing focus from the text box. By default, the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionMode) is `Single`.
+The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows the user to select an item from the drop-down list by clicking or tapping the item, pressing the `Enter` key, or losing focus from the text box. By default, the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_SelectionMode) is `Single`.
 
 ### Selection properties
 
