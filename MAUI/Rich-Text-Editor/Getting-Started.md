@@ -114,7 +114,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
 {% endhighlight %}
 {% highlight c# %}
@@ -132,9 +132,9 @@ property defaults to `true`.
 {% tabs %}
 
 {% highlight xaml %}
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
-<rte:SfRichTextEditor ShowToolbar="True" />
+<richTextEditor:SfRichTextEditor ShowToolbar="True" />
 
 {% endhighlight %}
 

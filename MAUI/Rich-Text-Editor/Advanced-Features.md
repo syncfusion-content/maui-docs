@@ -18,9 +18,9 @@ The Rich Text Editor control displays plain text that can be set using the [Text
 {% tabs %} 
 
 {% highlight xaml %} 
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
- <rte:SfRichTextEditor Text="The rich text editor component is a WYSIWYG editor that provides the best user experience to create and update the content"/>
+ <richTextEditor:SfRichTextEditor Text="The rich text editor component is a WYSIWYG (what you see is what you get) editor that provides the best user experience to create and update the content"/>
 
 {% endhighlight %}
 
@@ -28,7 +28,7 @@ The Rich Text Editor control displays plain text that can be set using the [Text
 using Syncfusion.Maui.RichTextEditor;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.Text = "The rich text editor component is a WYSIWYG editor that provides the best user experience to create and update the content";
+richTextEditor.Text = "The rich text editor component is a WYSIWYG (what you see is what you get) editor that provides the best user experience to create and update the content";
 
 {% endhighlight %}
 
@@ -43,9 +43,9 @@ The [HtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEdito
 {% tabs %} 
 
 {% highlight xaml %} 
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
- <rte:SfRichTextEditor HtmlText= "The &lt;b&gt; rich text editor &lt;/b&gt; component is a WYSIWYG editor that provides the best user experience to create and update the content"/>
+ <richTextEditor:SfRichTextEditor HtmlText= "The &lt;b&gt; rich text editor &lt;/b&gt; component is a WYSIWYG (what you see is what you get) editor that provides the best user experience to create and update the content"/>
 
 {% endhighlight %}
 
@@ -53,7 +53,7 @@ The [HtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEdito
 using Syncfusion.Maui.RichTextEditor;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.HtmlText = "The <b>rich text editor</b> component is a WYSIWYG editor that provides the best user experience to create and update the content";
+richTextEditor.HtmlText = "The <b>rich text editor</b> component is a WYSIWYG (what you see is what you get) editor that provides the best user experience to create and update the content";
 
 {% endhighlight %}
 
@@ -79,15 +79,15 @@ string selectedText = await richTextEditor.GetSelectedText();
 
 You can define the default appearance for any new text typed into the editor. These settings apply to text that does not have any other specific formatting applied.
 
-*   [DefaultFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultFontFamily): Sets the default font family for the content.
-*   [DefaultFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultFontSize): double — Sets the default font size. Default value is 12.0d.
-*   [DefaultTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultTextColor): Sets the default color of the text.
+*   [DefaultFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultFontFamily): Sets the default font family for the content. Default value is "Arial" (string).
+*   [DefaultFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultFontSize): Sets the default font size. Default value is 12.0d (double).
+*   [DefaultTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultTextColor): Sets the default color of the text. Default value is Colors.Black (Color).
 
 {% tabs %}
 {% highlight xaml %}
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
-<rte:SfRichTextEditor DefaultFontFamily="Impact"
+<richTextEditor:SfRichTextEditor DefaultFontFamily="Impact"
                       DefaultFontSize="14"
                       DefaultTextColor="DarkGreen"/>
 
@@ -117,9 +117,9 @@ The editor can display a [placeholder](https://help.syncfusion.com/cr/maui/Syncf
 {% tabs %}
 
 {% highlight xaml %}
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
-<rte:SfRichTextEditor Placeholder="Type your content here..."
+<richTextEditor:SfRichTextEditor Placeholder="Type your content here..."
                       PlaceholderFontFamily="Impact"
                       PlaceholderFontSize="24"
                       PlaceholderColor="Green"/>
@@ -271,9 +271,9 @@ RichTextEditorFormatType contains format details such as bold, italic, underline
 {% tabs %}
 
 {% highlight xaml %}
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
-<rte:SfRichTextEditor FormatChanged="OnFormatChanged"/>
+<richTextEditor:SfRichTextEditor FormatChanged="OnFormatChanged"/>
 
 {% endhighlight %}
 
@@ -299,9 +299,9 @@ The [HyperlinkClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichT
 {% tabs %}
 
 {% highlight xaml %}
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
-<rte:SfRichTextEditor HyperlinkClicked="OnHyperlinkClicked"/>
+<richTextEditor:SfRichTextEditor HyperlinkClicked="OnHyperlinkClicked"/>
 
 {% endhighlight %}
 
@@ -331,9 +331,9 @@ The [TextChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEd
 {% tabs %}
 
 {% highlight xaml %}
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
-<rte:SfRichTextEditor TextChanged="OnTextChanged"/>
+<richTextEditor:SfRichTextEditor TextChanged="OnTextChanged"/>
 
 {% endhighlight %}
 
@@ -362,9 +362,9 @@ The [Focused](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor
 {% tabs %}
 
 {% highlight xaml %}
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
-<rte:SfRichTextEditor Focused="OnEditorFocused"/>
+<richTextEditor:SfRichTextEditor Focused="OnEditorFocused"/>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -387,9 +387,9 @@ The [Unfocused](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEdit
 {% tabs %}
 
 {% highlight xaml %}
-<xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
 
-<rte:SfRichTextEditor Unfocused="OnEditorUnfocused"/>
+<richTextEditor:SfRichTextEditor Unfocused="OnEditorUnfocused"/>
 {% endhighlight %}
 
 {% highlight c# %}
