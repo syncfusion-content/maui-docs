@@ -11,7 +11,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Unbound Row in .NET MAUI DataGrid (SfDataGrid)
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) allows you to add **additional rows** at top and also bottom of the DataGrid which are **not bound with data object** of underlying data source. You can add unbound rows using [SfDataGrid.UnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_UnboundRows) collection property. You can add any no of unbound rows to the DataGrid. Unbound rows can also be exported to pdf and excel documents.
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) allows you to add **additional rows** at top and also bottom of the DataGrid which are **not bound with data object** of underlying data source. You can add unbound rows using [SfDataGrid.UnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_UnboundRows) collection property. You can add any number of unbound rows to the DataGrid. Unbound rows can also be exported to PDF and Excel documents.
 
 {% tabs %}
 {% highlight xaml %}
@@ -61,7 +61,7 @@ Position in DataGrid
 FixedTop
 </td>
 <td>
-Unbound row placed at top, right below the Header row. In this position, unbound row is not selectable, <b>not editable</b> and <b>frozen</b> when scrolling.
+Unbound row placed at top, right below the header row. In this position, unbound row is not selectable, <b>not editable</b> and <b>frozen</b> when scrolling.
 </td>
 </tr>
 <tr>
@@ -146,21 +146,24 @@ private void Datagrid_SelectionChanged(object? sender, DataGridSelectionChangedE
 
 private void Datagrid_QueryUnboundRow(object? sender, DataGridUnboundRowEventArgs e)
 {
+    if (dataGrid.CurrentRow is not OrderInfo currentOrder)
+        return;
+
     if (e.RowColumnIndex.ColumnIndex == 0)
     {
-        e.Value = (dataGrid.CurrentRow as OrderInfo).OrderID;
+        e.Value = currentOrder.OrderID;
     }
     else if (e.RowColumnIndex.ColumnIndex == 1)
     {
-        e.Value = (dataGrid.CurrentRow as OrderInfo).Customer;
+        e.Value = currentOrder.Customer;
     }
     else if (e.RowColumnIndex.ColumnIndex == 2)
     {
-        e.Value = (dataGrid.CurrentRow as OrderInfo).City;
+        e.Value = currentOrder.City;
     }
     else if (e.RowColumnIndex.ColumnIndex == 3)
     {
-        e.Value = (dataGrid.CurrentRow as OrderInfo).Country;
+        e.Value = currentOrder.Country;
     }
     e.Handled = true;
 }
@@ -171,14 +174,35 @@ private void Datagrid_QueryUnboundRow(object? sender, DataGridUnboundRowEventArg
 
 ## Refreshing the unbound rows at runtime
 
+### Add or remove unbound rows at runtime
 
-### Add or remove unbound rows
+You can add or remove unbound rows dynamically using the `SfDataGrid.UnboundRows` collection property. Changes reflect in the UI immediately.
 
-You can add or remove unbound rows using `SfDataGrid.UnboundRows` property which reflects in UI immediately.
+{% tabs %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.SelectionChanged += Datagrid_SelectionChanged;
+
+// Add a new unbound row
+var unboundRow = new DataGridUnboundRow()
+{
+    Position = DataGridUnboundRowPosition.Top,
+};
+dataGrid.UnboundRows.Add(unboundRow);
+
+//Remove an unbound row
+dataGrid.UnboundRows.RemoveAt(0);
+
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+### Refresh unbound row data programmatically
  
-### Trigger QueryUnboundRow event programmatically
- 
-You can trigger the `QueryUnboundRow` event for the unbound row cells at runtime by calling [SfDataGrid.InvalidateUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_InvalidateUnboundRow_Syncfusion_Maui_DataGrid_DataGridUnboundRow_System_Boolean_) method which invalidates the unbound row at the given index.
+You can trigger the `QueryUnboundRow` event for specific unbound row cells at runtime by calling the [SfDataGrid.InvalidateUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_InvalidateUnboundRow_Syncfusion_Maui_DataGrid_DataGridUnboundRow_System_Boolean_) method. This refreshes the unbound row data without recreating it.
 
 Here in the below code example, we have invalidated the unbound rows whenever selection is changed in the DataGrid.
 
@@ -275,7 +299,7 @@ private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeg
 
 ### Saving edited unbound row cell value to external source
 
-You can get the edited value of unbound row cell from `DataGridUnboundRowEventArgs.Value` property of `QueryUnboundRow` event when `UnboundAction` is `CommitData`.
+You can get the edited value of unbound row cells from `DataGridUnboundRowEventArgs.Value` property in the `QueryUnboundRow` event when `UnboundAction` is `CommitData`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -371,10 +395,14 @@ private void DataGrid_QueryRowHeight(object? sender, DataGridQueryRowHeightEvent
 
 ## Get unbound row
 
-The unbound row can be obtained by using the `GetUnboundRowAtRowIndex` method.
+The unbound row can be obtained by using the `GetUnboundRowAtRowIndex` method. Returns a `DataGridUnboundRow` object if an unbound row exists at the specified index; otherwise returns `null`.
 
 {% tabs %}
 {% highlight c# %}
 var unboundRow = dataGrid.GetUnboundRowAtRowIndex(1);
+if (unboundRow != null)
+{
+    // Unbound row found
+}
 {% endhighlight %}
 {% endtabs %}
