@@ -374,7 +374,7 @@ this.Content = scheduler;
 {% endtabs %}
 
 ## Show or Hide Empty Days 
-The HideEmptyDays property controls the visibility of days without appointments in the AgendaView. By default, all days are displayed, including those that do not contain any appointments. Setting `HideEmptyDays` to `true` hides empty days and displays only dates that contain scheduled appointments, resulting in a more compact agenda view.
+The [HideEmptyDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_HideEmptyDays) property controls the visibility of days without appointments in the AgendaView. By default, all days are displayed, including those that do not contain any appointments. Setting `HideEmptyDays` to `true` hides empty days and displays only dates that contain scheduled appointments, resulting in a more compact agenda view.
 
 {% tabs %}  
 {% highlight XAML hl_lines="4" %}
