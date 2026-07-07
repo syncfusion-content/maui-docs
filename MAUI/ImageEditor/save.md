@@ -2,7 +2,7 @@
 layout: post
 title: Save image .NET MAUI Image Editor Control | Syncfusion
 description: Learn about save support and various other features in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
-platform: maui
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
@@ -18,42 +18,44 @@ To save the modified image, use the [`Save`](https://help.syncfusion.com/cr/maui
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="Save"
-                Clicked="OnSaveImageClicked" />
-    </Grid>  
+<Grid RowDefinitions="0.9*, 0.1*">
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               Source="image.jpeg" />
+    <Button Grid.Row="1"
+            Text="Save"
+            Clicked="OnSaveImageClicked" />
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnSaveImageClicked(object sender, EventArgs e)
-    {
-        this.imageEditor.Save(ImageFileType.Png, "D:\\Syncfusion\\Pictures", "Syncfusion");
-    }
+using Syncfusion.Maui.ImageEditor;
+
+private void OnSaveImageClicked(object sender, EventArgs e)
+{
+    this.imageEditor.Save(ImageFileType.Png, "D:\\Syncfusion\\Pictures", "Syncfusion");
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-N> `JPG` format is supported only on `Android` and `Windows`, not on `macOS` or `iOS`.
+N> `JPG` format is supported only on `Android` and `Windows`. It is not supported on `macOS` or `iOS`.
 
 The saved image will be added to the device for each platform in the following locations:
 
-#### Windows, MacCatalyst and iOS
+#### Windows, MacCatalyst, and iOS
 
 In Windows, MacCatalyst, and iOS platforms, the image will be saved in the following location:
 
 `System.Environment.SpecialFolder.MyPictures`
 
-Please refer to the [System.Environment.SpecialFolder](https://learn.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=net-7.0) documentation for more information.
+For more information, see the [System.Environment.SpecialFolder](https://learn.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=net-7.0) documentation.
 
 On a Windows device, the image will be saved to:
 
 `C:\Users\your name\Pictures`
 
-On a MacCatalyst device, the image will be saved to: 
+On a MacCatalyst device, the image will be saved to:
 
 `/Users/your name/Documents/Pictures`
 
@@ -61,12 +63,12 @@ On an iOS device, the image will be saved to:
 
 `/Photos/Pictures`
 
-**Enable File Access Permission**
+### Enable file access permission
 
-For MacCatalyst devices, you should include permission in the Entitlements.plist file as shown in the following code.
+For MacCatalyst devices, include the following permission in the `Entitlements.plist` file.
 
 {% tabs %}
-{% highlight C# tabtitle="Entitlements.plist" %}
+{% highlight xml tabtitle="Entitlements.plist" %}
 
 <key>com.apple.security.files.user-selected.read-write</key>
 <true/>
@@ -74,12 +76,12 @@ For MacCatalyst devices, you should include permission in the Entitlements.plist
 {% endhighlight %}
 {% endtabs %}
 
-**Add Photo Library Usage Description**
+### Add photo library usage description
 
-For MacCatalyst devices, you should include permission in the Info.plist file as shown in the following code.
+For MacCatalyst devices, include the following permission in the `Info.plist` file.
 
 {% tabs %}
-{% highlight C# tabtitle="Info.plist" %}
+{% highlight xml tabtitle="Info.plist" %}
 
 <key>NSPhotoLibraryUsageDescription</key>
 <string>Pick Photos</string>
@@ -89,30 +91,30 @@ For MacCatalyst devices, you should include permission in the Info.plist file as
 
 #### Android
 
-**API 29 and above**
+### API 29 and above
 
-For devices running Android API 29 and above, the image will be saved to the `Pictures` folder using the following relative path:
+For devices running Android API 29 and above, the image is saved to the `Pictures` folder using the following relative path:
 
- `Android.Provider.MediaStore.IMediaColumns.RelativePath`
+`Android.Provider.MediaStore.IMediaColumns.RelativePath`
 
-Please refer to the [MediaStore.MediaColumns](https://developer.android.com/reference/android/provider/MediaStore.MediaColumns#RELATIVE_PATH) documentation for more details.
+For more details, see the [MediaStore.MediaColumns](https://developer.android.com/reference/android/provider/MediaStore.MediaColumns#RELATIVE_PATH) documentation.
 
-**API 28 and below**
+### API 28 and below
 
-For devices running Android API 28 and below, the image will be saved using the following URI:
+For devices running Android API 28 and below, the image is saved using the following URI:
 
 `Android.Provider.MediaStore.Images.Media.ExternalContentUri`
 
-Please refer to the [MediaStore.Images.Media](https://developer.android.com/reference/android/provider/MediaStore.Images.Media#EXTERNAL_CONTENT_URI) documentation for further information.
+For more details, see the [MediaStore.Images.Media](https://developer.android.com/reference/android/provider/MediaStore.Images.Media#EXTERNAL_CONTENT_URI) documentation.
 
 On an Android device, the image will be saved to:
 
 `\Internal storage\Pictures`
 
-N> For android, you should include permission in AndroidManifest.xml file. Please refer to the [App Model Permissions](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/appmodel/permissions?tabs=android) documentation for more details.
+N> For Android, include the required permission in the `AndroidManifest.xml` file. For more details, see the [App Model Permissions](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/appmodel/permissions?tabs=android) documentation.
 
 {% tabs %}
-{% highlight C# tabtitle="AndroidManifest.xml" %}
+{% highlight xml tabtitle="AndroidManifest.xml" %}
 
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -120,7 +122,7 @@ N> For android, you should include permission in AndroidManifest.xml file. Pleas
 {% endhighlight %}
 {% endtabs %}
 
-![Image save in .NET Maui ImageEditor](images/save/imageeditor-save-image.png)
+![Image save in .NET MAUI ImageEditor](images/save/imageeditor-save-image.png)
 
 ## Image save action events
 
