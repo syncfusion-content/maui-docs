@@ -18,7 +18,7 @@ The `QueryCoveredRange` event is fired when each cell is arranged, and the custo
 
 Cell merging works independently of the selection configuration. However, when [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) is not [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_None), set the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell) and the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Cell) to avoid conflicts between row selection and merged cell rendering.
 
-**Note:** `SelectionUnit` and `NavigationMode` do not need to be set to `Cell` when `SelectionMode` is `None`, as selection is disabled and there is no conflict with merged cell behavior.
+> **Note:** `SelectionUnit` and `NavigationMode` do not need to be set to `Cell` when `SelectionMode` is `None`, as selection is disabled and there is no conflict with merged cell behavior.
 
 To enable cell merging, subscribe to the `QueryCoveredRange` event in your XAML or code-behind:
 
@@ -306,7 +306,7 @@ private void FirstLevelNestedGrid_QueryCoveredRange(object sender, DataGridQuery
 {% endhighlight %}
 {% endtabs %}
 
-**Note**: The `x:Name` attribute on the nested grid is required to reference the event handler in code-behind.
+> **Note**: The `x:Name` attribute on the nested grid is required to reference the event handler in code-behind.
 
 <img alt="Merged cells in Master-Details view in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-merge-cells-master-details-view.png" width="404"/>
 

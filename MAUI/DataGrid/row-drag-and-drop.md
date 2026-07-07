@@ -40,7 +40,7 @@ The SfDataGrid supports drag-and-drop operations for both data rows and groups i
 * **Group reordering**: Group headers can be reordered using drag and drop. Note that groups cannot be nested within other groups.
 * **Cross-group row movement**: Data rows can be reordered within the same group or moved to different groups by dragging.
 
-**Note:** Reordering changes are made only in the [SfDataGrid.View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_View), not in the underlying data. As a result, these changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. To persist reordering changes in the underlying data, handle the [QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging) event as explained below in [Reordering underlying data](#Reordering underlying data).
+> **Note:** Reordering changes are made only in the [SfDataGrid.View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_View), not in the underlying data. As a result, these changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. To persist reordering changes in the underlying data, handle the [QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging) event as explained below in [Reordering underlying data](#Reordering underlying data).
 
 ## Row drag-and-drop template
 
@@ -231,7 +231,7 @@ private async void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.Dat
 {% endhighlight %}
 {% endtabs %}
 
-**Note**: The `FrozenRowCount` value must be less than the total number of rows in the grid view.
+> **Note**: The `FrozenRowCount` value must be less than the total number of rows in the grid view.
 
 ## Reorder the underlying data
 
@@ -379,7 +379,7 @@ Once enabled, users can select the required rows and perform drag-and-drop opera
 
 The multi-row drag-and-drop operation preserves the selection order. Upon dropping, the rows are arranged according to the order in which they were selected. During the drag operation, the number of selected rows is indicated through a badge view on the drag indicator.
 
-**Note:** The badge view is not displayed when a custom view is defined using the [SfDataGrid.RowDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_RowDragDropTemplate).
+> **Note:** The badge view is not displayed when a custom view is defined using the [SfDataGrid.RowDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_RowDragDropTemplate).
 
 {% tabs %}
 {% highlight XAML %}

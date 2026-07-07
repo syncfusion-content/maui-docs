@@ -35,7 +35,7 @@ The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)
 
 ## Globalization
 
-The following table summarizes the globalization support available in this control. Screen reader support is partial due to platform-specific accessibility API limitations; keyboard navigation is fully supported across all platforms.
+The following table summarizes the globalization support available in this control.
 
 <style>
 .img{
@@ -82,21 +82,18 @@ The following table summarizes the globalization support available in this contr
 </tr> 
 </table>
 
-## Getting started
-
-- [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started) — Step-by-step guide to begin using the DataGrid.
-- [Data Binding](https://help.syncfusion.com/maui/datagrid/data-binding) — How to connect and display data efficiently.
-- [Column Types](https://help.syncfusion.com/maui/datagrid/column-types) — Different column options for customization.
-
 ## Related controls
 
 - [Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for advanced data visualization and analytics.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for flexible and lightweight collection display.
 - [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for hierarchical or comparative visualization.
 
-## See also
+## See Also
 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) — Interactive demos and ready-made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started) shows a step‑by‑step guide to begin using the DataGrid.  
+- [Data Binding](https://help.syncfusion.com/maui/datagrid/data-binding) explains how to connect and display data efficiently.  
+- [Column Types](https://help.syncfusion.com/maui/datagrid/column-types) explores different column options for customization.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
 ## Resources
 
