@@ -190,14 +190,6 @@ The following image illustrates a footer view in the SfAutocomplete drop-down:
 
 ![Footer view in the SfAutocomplete drop-down](Images/HeaderFooter/footertemplate.png)
 
-## Notes
-
-N> **Platform support**: The header and footer views are supported on all .NET MAUI targets (iOS, Android, Windows, and macOS).
-
-N> **Updating content dynamically**: To refresh the header or footer content (for example, to show a "Load more" button) when the drop-down opens, handle the `DropDownOpening` and `DropDownClosed` events on the SfAutocomplete.
-
-N> **iOS AOT**: When publishing in AOT mode on iOS, add `[Preserve(AllMembers = true)]` to the model class. The attribute requires `using Foundation;`.
-
 ## See also
 
 - [Selection](Selection.md)

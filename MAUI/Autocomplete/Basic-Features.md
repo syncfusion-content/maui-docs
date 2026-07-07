@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic Features in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn about the basic features support in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control, including selection, text, and automation ID support.
+description: Learn about the basic feature support in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control, including selection, text, and automation ID support.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -37,8 +37,7 @@ The following code example shows how to configure the basic selection behavior i
 <editors:SfAutocomplete x:Name="autocomplete"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
-                        ItemsSource="{Binding SocialMedias}"
-                        SelectionChanged="autocomplete_SelectionChanged" />
+                        ItemsSource="{Binding SocialMedias}" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -49,15 +48,39 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
-    ItemsSource = new List<SocialMedia>
-    {
-        new SocialMedia { Name = "Facebook" },
-        new SocialMedia { Name = "Twitter" },
-        new SocialMedia { Name = "Instagram" },
-        new SocialMedia { Name = "LinkedIn" }
-    },
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
 };
-autocomplete.SelectionChanged += autocomplete_SelectionChanged;
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -108,5 +131,5 @@ The following screenshot illustrates the AutomationIds of the inner elements:
 ## See also
 
 - [Selection](Selection.md)
-- [Getting Started](Getting-Started.md)
 - [UI Customization](UI-Customization.md)
+- [Getting Started](Getting-Started.md)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn how to configure single and multiple selection, multi-selection display modes, selection events, and related APIs in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
+description: Learn how to configure single and multiple selection and related APIs in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -48,9 +48,7 @@ The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 The samples on this page use the following `SocialMedia` model and view model.
 
 {% tabs %}
-{% highlight c# %}
-
-using System.Collections.ObjectModel;
+{% highlight C# %}
 
 public class SocialMedia
 {
@@ -88,17 +86,12 @@ The SfAutocomplete allows the user to type a value and then select an item from 
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-
 <editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name" />
-
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 var viewModel = new SocialMediaViewModel();
 
@@ -138,9 +131,7 @@ You can choose how the selected items are displayed using the [MultiSelectionDis
                         TextMemberPath="Name" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 var viewModel = new SocialMediaViewModel();
 
@@ -174,9 +165,7 @@ When [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.
                         Placeholder="Enter Media" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -219,9 +208,7 @@ When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
                         TokensWrapMode="Wrap" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autoComplete = new SfAutocomplete
 {
@@ -256,9 +243,7 @@ When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
                         TokensWrapMode="None" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autoComplete = new SfAutocomplete
 {
@@ -280,9 +265,9 @@ SfAutocomplete autoComplete = new SfAutocomplete
 
 When the user attempts to select an item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging) event is raised. The event lets you intercept the selection and optionally cancel it. The `SelectionChangingEventArgs` provides the following data:
 
-- [CurrentSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_CurrentSelection) – the items that are about to be selected.
-- [PreviousSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_PreviousSelection) – the items that were previously selected.
-- `Cancel` – set to `true` to prevent the selection change.
+- [CurrentSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_CurrentSelection) - the items that are about to be selected.
+- [PreviousSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_PreviousSelection) - the items that were previously selected.
+- `Cancel` - set to `true` to prevent the selection change.
 
 {% tabs %}
 {% highlight xaml %}
@@ -294,9 +279,7 @@ When the user attempts to select an item, the [SelectionChanging](https://help.s
                         SelectionChanging="OnSelectionChanging" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -312,9 +295,7 @@ autocomplete.SelectionChanging += OnSelectionChanging;
 The event handler is implemented in the page's code-behind:
 
 {% tabs %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 private async void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
 {
@@ -332,8 +313,8 @@ The following image illustrates the result of the above code:
 
 When the selection changes, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is raised. The `SelectionChangedEventArgs` provides the newly selected and removed items in the following collections:
 
-- `AddedItems` – the items that were selected.
-- `RemovedItems` – the items that were unselected.
+- `AddedItems` - the items that were selected.
+- `RemovedItems` - the items that were unselected.
 
 {% tabs %}
 {% highlight xaml %}
@@ -345,9 +326,7 @@ When the selection changes, the [SelectionChanged](https://help.syncfusion.com/c
                         SelectionChanged="OnSelectionChanged" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -363,9 +342,7 @@ autocomplete.SelectionChanged += OnSelectionChanged;
 The event handler is implemented in the page's code-behind:
 
 {% tabs %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 private async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
@@ -407,9 +384,7 @@ In single selection mode, `SelectedValue` holds the value defined by `SelectedVa
 </StackLayout>
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -438,7 +413,7 @@ StackLayout mainLayout = new StackLayout
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
@@ -476,9 +451,7 @@ In multiple selection mode, `SelectedValue` is a collection (`IList<object>`) of
 </StackLayout>
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -496,7 +469,7 @@ autocomplete.SelectionChanged += OnSelectionChanged;
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
@@ -529,9 +502,7 @@ By default, the clear button (`X`) is displayed in the input area of the SfAutoc
                         TextMemberPath="Name" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -562,9 +533,7 @@ You can open or close the drop-down programmatically by using the [IsDropDownOpe
                         TextMemberPath="Name" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -583,7 +552,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 You can remove the selected items and the input text programmatically by calling the [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Clear) method on the SfAutocomplete.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 autocomplete.Clear();
 

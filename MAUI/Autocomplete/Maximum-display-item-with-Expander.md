@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LoadMore in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn how to restrict the number of suggestions and load the remaining items with the LoadMore button in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
+description: Learn how to restrict the number of items and load the remaining items with the LoadMore button in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete).
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -28,7 +28,7 @@ You can restrict the number of suggestions shown in the drop-down of the `SfAuto
 | `MaximumSuggestion` | `int` | `0` (no limit) | Gets or sets the maximum number of suggestions to display before showing the LoadMore button. |
 | `LoadMoreText` | `string` | `Load more` | Gets or sets the text displayed on the LoadMore button. |
 | `LoadMoreTemplate` | `DataTemplate` | `null` | Gets or sets a custom template used to render the LoadMore button. |
-| `LoadMoreButtonTapped` | `EventHandler` | – | Raised when the user taps the LoadMore button. |
+| `LoadMoreButtonTapped` | `EventHandler` | - | Raised when the user taps the LoadMore button. |
 
 ## MaximumSuggestion
 
@@ -37,43 +37,53 @@ You can restrict the maximum number of suggestions displayed by setting the [Max
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-
 <editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         MaximumSuggestion="2"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name" />
-
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-using System.Collections.ObjectModel;
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
+    MaximumSuggestion = 2,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
 
 public class SocialMedia
 {
     public string Name { get; set; }
     public int ID { get; set; }
 }
-
-var socialMedias = new ObservableCollection<SocialMedia>
-{
-    new SocialMedia { Name = "Facebook", ID = 0 },
-    new SocialMedia { Name = "Twitter", ID = 1 },
-    new SocialMedia { Name = "Instagram", ID = 2 },
-    new SocialMedia { Name = "LinkedIn", ID = 3 },
-    new SocialMedia { Name = "Skype", ID = 4 }
-};
-
-SfAutocomplete autocomplete = new SfAutocomplete
-{
-    ItemsSource = socialMedias,
-    MaximumSuggestion = 2,
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name"
-};
 
 {% endhighlight %}
 {% endtabs %}
@@ -100,26 +110,45 @@ The LoadMore feature exposes the [LoadMoreText](https://help.syncfusion.com/cr/m
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-using System.Collections.ObjectModel;
-
-var socialMedias = new ObservableCollection<SocialMedia>
-{
-    new SocialMedia { Name = "Facebook", ID = 0 },
-    new SocialMedia { Name = "Twitter", ID = 1 },
-    new SocialMedia { Name = "Instagram", ID = 2 },
-    new SocialMedia { Name = "LinkedIn", ID = 3 },
-    new SocialMedia { Name = "Skype", ID = 4 }
-};
-
 SfAutocomplete autocomplete = new SfAutocomplete
 {
-    ItemsSource = socialMedias,
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
     MaximumSuggestion = 2,
     LoadMoreText = "Load more items",
     DisplayMemberPath = "Name",
     TextMemberPath = "Name"
 };
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -157,25 +186,12 @@ SfAutocomplete allows you to customize the user interface (UI) of the LoadMore v
 
 {% highlight C# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Inputs;
-using System.Collections.ObjectModel;
-
-var socialMedias = new ObservableCollection<SocialMedia>
-{
-    new SocialMedia { Name = "Facebook", ID = 0 },
-    new SocialMedia { Name = "Twitter", ID = 1 },
-    new SocialMedia { Name = "Instagram", ID = 2 },
-    new SocialMedia { Name = "LinkedIn", ID = 3 },
-    new SocialMedia { Name = "Skype", ID = 4 }
-};
-
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     MaximumSuggestion = 2,
-    ItemsSource = socialMedias
+    ItemsSource = new SocialMediaViewModel().SocialMedias
 };
 autocomplete.LoadMoreTemplate = new DataTemplate(() =>
 {
@@ -191,6 +207,37 @@ autocomplete.LoadMoreTemplate = new DataTemplate(() =>
     grid.Children.Add(label);
     return grid;
 });
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -217,24 +264,12 @@ The LoadMore feature exposes the [LoadMoreButtonTapped](https://help.syncfusion.
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-using System.Collections.ObjectModel;
-
-var socialMedias = new ObservableCollection<SocialMedia>
-{
-    new SocialMedia { Name = "Facebook", ID = 0 },
-    new SocialMedia { Name = "Twitter", ID = 1 },
-    new SocialMedia { Name = "Instagram", ID = 2 },
-    new SocialMedia { Name = "LinkedIn", ID = 3 },
-    new SocialMedia { Name = "Skype", ID = 4 }
-};
-
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     MaximumSuggestion = 2,
-    ItemsSource = socialMedias
+    ItemsSource = new SocialMediaViewModel().SocialMedias
 };
 autocomplete.LoadMoreButtonTapped += Autocomplete_LoadMoreButtonTapped;
 
@@ -242,6 +277,37 @@ private void Autocomplete_LoadMoreButtonTapped(object? sender, EventArgs e)
 {
     // Triggered when the LoadMore button is tapped.
     // For example, load more items into the socialMedias collection.
+}
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
 }
 
 {% endhighlight %}
@@ -253,12 +319,8 @@ N> **LoadMore visibility**: The LoadMore button is shown only when the `ItemsSou
 
 N> **Loading more items**: In the `LoadMoreButtonTapped` event handler, add the remaining items to the same `ObservableCollection` (or to a backing list and reassign the `ItemsSource`) to make them visible.
 
-N> **iOS AOT**: When publishing in AOT mode on iOS, add `[Preserve(AllMembers = true)]` to the model class. The attribute requires `using Foundation;`.
-
 ## See also
 
 - [Selection](Selection.md)
 - [UI Customization](UI-Customization.md)
 - [Getting Started](Getting-Started.md)
-
-

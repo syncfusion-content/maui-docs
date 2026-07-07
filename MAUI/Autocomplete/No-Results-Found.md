@@ -36,8 +36,6 @@ You can customize the text displayed when no results are found by setting the [N
 
 {% highlight xaml %}
 
-xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-
 <editors:SfAutocomplete x:Name="autocomplete"
                         NoResultsFoundText="Not Found"
                         ItemsSource="{Binding SocialMedias}"
@@ -45,10 +43,40 @@ xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inp
                         DisplayMemberPath="Name" />
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-using System.Collections.Generic;
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    NoResultsFoundText = "Not Found",
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = new SocialMediaViewModel().SocialMedias
+};
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
 
 public class SocialMedia
 {
@@ -56,24 +84,7 @@ public class SocialMedia
     public int ID { get; set; }
 }
 
-var socialMedias = new List<SocialMedia>
-{
-    new SocialMedia { Name = "Facebook", ID = 0 },
-    new SocialMedia { Name = "Twitter", ID = 1 },
-    new SocialMedia { Name = "Instagram", ID = 2 },
-    new SocialMedia { Name = "LinkedIn", ID = 3 }
-};
-
-SfAutocomplete autocomplete = new SfAutocomplete
-{
-    NoResultsFoundText = "Not Found",
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name",
-    ItemsSource = socialMedias
-};
-
 {% endhighlight %}
-
 {% endtabs %}
 
 The following image illustrates a customized no-results-found message:
@@ -103,23 +114,11 @@ You can fully customize the appearance of the no-results-found message by settin
 </editors:SfAutocomplete>
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Inputs;
-using System.Collections.Generic;
-
-var socialMedias = new List<SocialMedia>
-{
-    new SocialMedia { Name = "Facebook", ID = 0 },
-    new SocialMedia { Name = "Twitter", ID = 1 },
-    new SocialMedia { Name = "Instagram", ID = 2 },
-    new SocialMedia { Name = "LinkedIn", ID = 3 }
-};
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
-    ItemsSource = socialMedias,
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
     NoResultsFoundTemplate = new DataTemplate(() =>
@@ -136,7 +135,37 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
+{% highlight ViewModel %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates a customized no-results-found template:
@@ -148,8 +177,6 @@ The following image illustrates a customized no-results-found template:
 N> **Hiding the message**: To hide the no-results-found message, set `NoResultsFoundText` to an empty string (`NoResultsFoundText = string.Empty`).
 
 N> **Template precedence**: When `NoResultsFoundTemplate` is set, the template is used instead of the `NoResultsFoundText` value. Leave the template unset to use the plain text message.
-
-N> **iOS AOT**: When publishing in AOT mode on iOS, add `[Preserve(AllMembers = true)]` to the model class. The attribute requires `using Foundation;`.
 
 ## See also
 

@@ -40,12 +40,11 @@ Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion
 
 To achieve a glass-like background in the SfAutocomplete, set the `Background` and `DropDownBackground` properties to `Transparent`. The background is then treated as a tinted color, ensuring a consistent glass effect across the input and the drop-down. Make sure the parent layout's background is also transparent or a tinted color so the effect is visible.
 
-### Properties
+**Properties**
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | `EnableLiquidGlassEffect` | `bool` | `false` | Gets or sets a value that indicates whether the Liquid Glass Effect is applied. |
-| `Background` | `Brush` | `null` | Gets or sets the background of the input. Set to `Transparent` for the glass effect. |
 | `DropDownBackground` | `Brush` | `null` | Gets or sets the background of the drop-down. Set to `Transparent` for the glass effect. |
 | `SfGlassEffectView.EffectType` | `LiquidGlassEffectType` | `Regular` | The thickness of the glass effect. Values: `Clear`, `Regular`. |
 | `SfGlassEffectView.CornerRadius` | `double` | `8.0` | The corner radius of the glass container. |
@@ -53,11 +52,7 @@ To achieve a glass-like background in the SfAutocomplete, set the `Background` a
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the SfAutocomplete control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="10" %}
-
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-xmlns:autocomplete="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <Grid BackgroundColor="Transparent">
     <Image Source="Wallpaper.png" Aspect="AspectFill" />
     <core:SfGlassEffectView EffectType="Regular"
@@ -67,20 +62,16 @@ xmlns:autocomplete="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Mau
                                      HeightRequest="40"
                                      WidthRequest="300"
                                      ItemsSource="{Binding Names}"
-                                     DisplayMemberPath="Name"
-                                     TextMemberPath="Name"
                                      DropDownBackground="Transparent"
                                      EnableLiquidGlassEffect="True" />
     </core:SfGlassEffectView>
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
-using Microsoft.Maui.Controls;
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
-using System.Collections.Generic;
 
 var grid = new Grid
 {
@@ -136,8 +127,6 @@ You can change the appearance of the glass effect by adjusting the `EffectType` 
 N> **Platform support**: The Liquid Glass Effect is supported only on .NET 10 with iOS 26 and macOS 26. On other platforms the effect is a no-op.
 
 N> **Image not visible**: If the `Wallpaper.png` image is not displayed, verify that it is added to `Resources/Images` with the **MauiImage** build action and that the `Image.Source` matches the filename.
-
-N> **iOS AOT**: When publishing in AOT mode on iOS, add `[Preserve(AllMembers = true)]` to the model class. The attribute requires `using Foundation;`.
 
 ## See also
 

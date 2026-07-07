@@ -65,7 +65,7 @@ The following image illustrates the result of the above code:
 
 ## Placeholder Color
 
-The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. The default value of the PlaceholderColor property is `Colors.Gray`.
+The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. The default value of the PlaceholderColor property is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -98,7 +98,7 @@ The following gif image illustrates the result of the above code:
 
 ## Clear Button Icon Color
 
-The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property. The default value of the `ClearButtonIconColor` property is `Colors.Black`.
+The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property. The default value of the `ClearButtonIconColor` property is `Color.FromArgb("#49454F")`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -133,7 +133,7 @@ The following gif image illustrates the result of the above code:
 
 ## Stroke
 
-The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property. The default value of the `Stroke` property is `Colors.Black`.
+The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property. The default value of the `Stroke` property is `Colors.LightGray`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -168,7 +168,7 @@ The following gif image illustrates the result of the above code.
 
 ## Customize the Selection Text Highlight Color
 
-The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the autocomplete control. The default value of the `SelectionTextHighlightColor` property is the theme's accent color.
+The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the autocomplete control. The default value of the `SelectionTextHighlightColor` property is `Color.FromArgb("#6750A4")`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -467,7 +467,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ### Customize the DropDown Selected Item Background Color
 
-The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown. The default value is the theme's accent color.
+The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown. The default value is `new SolidColorBrush(Color.FromArgb("#1C1B1F14"))`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -512,8 +512,6 @@ The [SelectedDropDownItemTextStyle](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 SfAutocomplete autoComplete = new SfAutocomplete
 {
@@ -707,7 +705,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ### Customize the DropDown Item Padding
 
-The autocomplete enables the user to provide padding for the items inside dropdown using the [ItemPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemPadding) property. The default value of the `ItemPadding` property is `new Thickness(0, 0, 0, 0)`.
+The autocomplete enables the user to provide padding for the items inside dropdown using the [ItemPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemPadding) property. The default value of the `ItemPadding` property is `new Thickness(10, 0, 10, 0)`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -739,7 +737,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ### Customize the DropDown Width
 
-The [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownWidth) property is used to modify the width of the dropdown. The default value of the `DropDownWidth` property is `200`.
+The [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownWidth) property is used to modify the width of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}

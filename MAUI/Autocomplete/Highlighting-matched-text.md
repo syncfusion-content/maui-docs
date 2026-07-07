@@ -22,7 +22,7 @@ For step-by-step setup, refer to the [Getting Started](Getting-Started.md) docum
 You can highlight the matching characters in each suggestion of the `SfAutocomplete` drop-down to help users identify the matching suggestion. There are two highlight modes:
 
 - `FirstOccurrence` — highlights the first match in each suggestion.
-- `MultipleOccurrence` — highlights every match in each suggestion (requires `TextSearchMode` to be `Contains`).
+- `MultipleOccurrence` — highlights every match in each suggestion.
 
 Use the following properties to customize the appearance of the highlighted text:
 
@@ -34,7 +34,7 @@ Use the following properties to customize the appearance of the highlighted text
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | `TextHighlightMode` | `OccurrenceMode` | `None` | Specifies whether the first match or every match is highlighted. |
-| `HighlightedTextColor` | `Color` | `Colors.Black` | Gets or sets the color of the highlighted text. |
+| `HighlightedTextColor` | `Color` | `Colors.Blue` | Gets or sets the color of the highlighted text. |
 | `HighlightedTextFontAttributes` | `FontAttributes` | `None` | Gets or sets the font attributes of the highlighted text. |
 | `TextSearchMode` | `AutocompleteTextSearchMode` | `StartsWith` | Specifies how the input text is matched against the suggestion list. `MultipleOccurrence` requires `Contains`. |
 
@@ -46,8 +46,6 @@ Set `TextHighlightMode` to [FirstOccurrence](https://help.syncfusion.com/cr/maui
 
 {% highlight xaml %}
 
-xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-
 <editors:SfAutocomplete x:Name="autocomplete"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -57,7 +55,7 @@ xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inp
                         HighlightedTextFontAttributes="Bold" />
 
 {% endhighlight %}
-{% highlight csharp %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Inputs;
 using System.Collections.Generic;
@@ -109,7 +107,7 @@ Set `TextHighlightMode` to [MultipleOccurrence](https://help.syncfusion.com/cr/m
                         TextSearchMode="Contains" />
 
 {% endhighlight %}
-{% highlight csharp %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Inputs;
 using System.Collections.Generic;
@@ -138,12 +136,6 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 The following image illustrates multiple-occurrence highlighting in the SfAutocomplete drop-down:
 
 ![Multiple occurrence highlighting in the SfAutocomplete drop-down](Images/HighlightingText/multipleoccurrence.png)
-
-## Notes
-
-N> **Disabling highlighting**: Set `TextHighlightMode` to `OccurrenceMode.None` (or the XAML value `None`) to disable highlighting.
-
-N> **iOS AOT**: When publishing in AOT mode on iOS, add `[Preserve(AllMembers = true)]` to the model class. The attribute requires `using Foundation;`.
 
 ## See also
 

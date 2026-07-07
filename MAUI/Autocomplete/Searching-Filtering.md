@@ -50,8 +50,6 @@ The SfAutocomplete searches by the [DisplayMemberPath](https://help.syncfusion.c
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-
 <editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name" />
@@ -59,37 +57,42 @@ xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inp
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-using System.Collections.ObjectModel;
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    DisplayMemberPath = "Name",
+    ItemsSource = new SocialMediaViewModel().SocialMedias
+};
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
 
 public class SocialMedia
 {
     public string Name { get; set; }
     public int ID { get; set; }
 }
-
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; } = new ObservableCollection<SocialMedia>
-    {
-        new SocialMedia { Name = "Facebook", ID = 0 },
-        new SocialMedia { Name = "Google Plus", ID = 1 },
-        new SocialMedia { Name = "Instagram", ID = 2 },
-        new SocialMedia { Name = "LinkedIn", ID = 3 },
-        new SocialMedia { Name = "Skype", ID = 4 },
-        new SocialMedia { Name = "Telegram", ID = 5 },
-        new SocialMedia { Name = "Tik Tok", ID = 6 },
-        new SocialMedia { Name = "Twitter", ID = 7 },
-        new SocialMedia { Name = "WhatsApp", ID = 8 },
-        new SocialMedia { Name = "YouTube", ID = 9 }
-    };
-}
-
-SfAutocomplete autocomplete = new SfAutocomplete
-{
-    DisplayMemberPath = "Name",
-    ItemsSource = new SocialMediaViewModel().SocialMedias
-};
 
 {% endhighlight %}
 {% endtabs %}
@@ -115,14 +118,43 @@ The SfAutocomplete searches by the [TextMemberPath](https://help.syncfusion.com/
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     DisplayMemberPath = "Name",
     TextMemberPath = "ID",
     ItemsSource = new SocialMediaViewModel().SocialMedias
 };
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,8 +186,6 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     DisplayMemberPath = "Name",
@@ -185,9 +215,7 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
                         TextMemberPath="Name" />
 
 {% endhighlight %}
-{% highlight csharp %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 SfAutocomplete autocomplete = new SfAutocomplete
 {
@@ -196,6 +224,37 @@ SfAutocomplete autocomplete = new SfAutocomplete
     TextSearchMode = AutocompleteTextSearchMode.Contains,
     ItemsSource = new SocialMediaViewModel().SocialMedias
 };
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -221,8 +280,6 @@ Instead of opening the drop-down on every keystroke, you can require a minimum n
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     DisplayMemberPath = "Name",
@@ -231,6 +288,37 @@ SfAutocomplete autocomplete = new SfAutocomplete
     TextSearchMode = AutocompleteTextSearchMode.StartsWith,
     ItemsSource = new SocialMediaViewModel().SocialMedias
 };
+
+{% endhighlight %}
+{% highlight ViewModel %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -247,8 +335,6 @@ First, define the model and view model used by the following examples:
 
 {% tabs %}
 {% highlight C# %}
-
-using System.Collections.ObjectModel;
 
 public class CityInfo
 {
@@ -285,8 +371,6 @@ Create a class that derives from the [IAutocompleteFilterBehavior](https://help.
 {% tabs %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
 public class CityFilteringBehavior : IAutocompleteFilterBehavior
 {
     // Members are added in Step 2.
@@ -299,14 +383,11 @@ public class CityFilteringBehavior : IAutocompleteFilterBehavior
 
 Implement the `GetMatchingItemsAsync` method to return the items that match the text entered in the SfAutocomplete. The method receives the following arguments:
 
-- `source` – the SfAutocomplete instance, which exposes the `ItemsSource` and other contextual information.
-- `filterInfo` – an [AutocompleteFilterInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteFilterInfo.html) instance that contains the text entered in the SfAutocomplete (`filterInfo.Text`).
+- `source` - the SfAutocomplete instance, which exposes the `ItemsSource` and other contextual information.
+- `filterInfo` - an [AutocompleteFilterInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteFilterInfo.html) instance that contains the text entered in the SfAutocomplete (`filterInfo.Text`).
 
 {% tabs %}
-{% highlight csharp %}
-
-using System.Collections;
-using Syncfusion.Maui.Inputs;
+{% highlight C# %}
 
 public class CityFilteringBehavior : IAutocompleteFilterBehavior
 {
@@ -331,17 +412,12 @@ Apply the custom filter to the SfAutocomplete by setting the `FilterBehavior` pr
 
 {% tabs %}
 {% highlight xaml %}
-
-xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-xmlns:local="clr-namespace:YourAppNamespace"
-
-<ContentPage.BindingContext>
-    <local:CityViewModel />
-</ContentPage.BindingContext>
-
 <editors:SfAutocomplete x:Name="autocomplete"
                         DisplayMemberPath="CityName"
                         ItemsSource="{Binding Cities}">
+    <editors:SfAutocomplete.BindingContext>
+        <local:CityViewModel />
+    </editors:SfAutocomplete.BindingContext>
     <editors:SfAutocomplete.FilterBehavior>
         <local:CityFilteringBehavior />
     </editors:SfAutocomplete.FilterBehavior>
@@ -365,8 +441,6 @@ Create a class that derives from the [IAutocompleteSearchBehavior](https://help.
 {% tabs %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
 public class CapitalCitySearchingBehavior : IAutocompleteSearchBehavior
 {
     // Members are added in Step 2.
@@ -379,16 +453,13 @@ public class CapitalCitySearchingBehavior : IAutocompleteSearchBehavior
 
 Implement the `GetHighlightIndex` method to return the index of the item that should be highlighted by default. The method receives the following arguments:
 
-- `source` – the SfAutocomplete instance.
-- `searchInfo` – an [AutocompleteSearchInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteSearchInfo.html) instance that exposes the filtered items (`searchInfo.FilteredItems`).
+- `source` - the SfAutocomplete instance.
+- `searchInfo` - an [AutocompleteSearchInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteSearchInfo.html) instance that exposes the filtered items (`searchInfo.FilteredItems`).
 
 The following example highlights the capital city of the country the user enters.
 
 {% tabs %}
 {% highlight C# %}
-
-using System.Linq;
-using Syncfusion.Maui.Inputs;
 
 public class CapitalCitySearchingBehavior : IAutocompleteSearchBehavior
 {
@@ -446,11 +517,6 @@ Create a class that derives from `IAutocompleteFilterBehavior` and implement `Ge
 {% tabs %}
 {% highlight C# %}
 
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Syncfusion.Maui.Inputs;
-
 public class CustomAsyncFilter : IAutocompleteFilterBehavior
 {
     private CancellationTokenSource cancellationTokenSource;
@@ -489,9 +555,6 @@ Apply the `CustomAsyncFilter` to the SfAutocomplete by setting the `FilterBehavi
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-xmlns:local="clr-namespace:YourAppNamespace"
-
 <editors:SfAutocomplete x:Name="autocomplete">
     <editors:SfAutocomplete.FilterBehavior>
         <local:CustomAsyncFilter />
@@ -510,8 +573,6 @@ The following image shows 100,000 items being loaded asynchronously in the drop-
 N> **Case and accent sensitivity**: The default `StartsWith` and `Contains` filtering modes are case- and accent-insensitive. To perform a case- or accent-sensitive search, provide a custom `FilterBehavior`.
 
 N> **Cancelled requests**: The `CustomAsyncFilter` example cancels any in-flight request when a new keystroke arrives, so the UI always shows the result of the latest filter. Keep a similar pattern when implementing your own asynchronous filter.
-
-N> **iOS AOT**: When publishing in AOT mode on iOS, add `[Preserve(AllMembers = true)]` to the model class. The attribute requires `using Foundation;`.
 
 ## See also
 

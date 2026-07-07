@@ -50,10 +50,22 @@ The following code example shows how to enable auto sizing in the [SfAutocomplet
                         EnableAutoSize="True" />
 
 {% endhighlight %}
-{% highlight csharp %}
+{% highlight C# %}
 
-using System.Collections.ObjectModel;
-using Syncfusion.Maui.Inputs;
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
+    SelectionMode = AutocompleteSelectionMode.Multiple,
+    MaxDropDownHeight = 250,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    Placeholder = "Enter Media",
+    TokensWrapMode = AutocompleteTokensWrapMode.Wrap,
+    EnableAutoSize = true
+};
+
+{% endhighlight %}
+{% highlight ViewModel %}
 
 // ViewModel
 public class SocialMediaViewModel
@@ -83,18 +95,6 @@ public class SocialMedia
     public int ID { get; set; }
 }
 
-SfAutocomplete autocomplete = new SfAutocomplete()
-{
-    ItemsSource = new SocialMediaViewModel().SocialMedias,
-    SelectionMode = AutocompleteSelectionMode.Multiple,
-    MaxDropDownHeight = 250,
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name",
-    Placeholder = "Enter Media",
-    TokensWrapMode = AutocompleteTokensWrapMode.Wrap,
-    EnableAutoSize = true
-};
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,6 +105,5 @@ The following image illustrates the auto-sized Autocomplete as the selected toke
 ## See also
 
 - [Selection](Selection.md)
-- [Getting Started](Getting-Started.md)
 - [UI Customization](UI-Customization.md)
-
+- [Getting Started](Getting-Started.md)
