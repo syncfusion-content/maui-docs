@@ -180,11 +180,6 @@ The arithmetic or logical expression can be specified using the `Expression` pro
     </tr>
 </table>
 
-**CaseSensitive Example:**
-
-With `CaseSensitive="True"` (default): Expression `"unitprice*quantity"` will fail because field names are case-sensitive.
-With `CaseSensitive="False"`: Expression `"unitprice*quantity"` works and matches `UnitPrice` and `Quantity`.
-
 ## Using QueryUnboundColumnValue event
 
 The [QueryUnboundColumnValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryUnboundColumnValue) event fires when a value for the unbound column is requested. It provides information about the cell that triggered this event, allowing you to set custom values for unbound column cells. This event is triggered with `DataGridUnboundColumnEventArgs`.
