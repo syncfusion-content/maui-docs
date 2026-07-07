@@ -29,7 +29,7 @@ The data grid performs data paging using the `SfDataPager`. To enable paging, fo
  * Set the `SfDataPager.PageSize` property to determine the number of rows to be displayed on each page.
  * Set the `SfDataPager.NumericButtonCount` property to specify the number of buttons that should be displayed in view."
 
-N> The [SfDataPager.PageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageSize) property should not be assigned with value 0.
+**Note:** The [SfDataPager.PageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageSize) property should not be assigned with value 0. Setting PageSize to 0 will throw an `ArgumentException`.
 
 The following code example illustrates using `SfDataPager` with the data grid control:
 
@@ -66,9 +66,13 @@ The following code example illustrates using `SfDataPager` with the data grid co
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
+using Syncfusion.Maui.DataGrid;
+using Syncfusion.Maui.DataGrid.DataPager;
 
 public partial class MainPage : ContentPage
 {
+    // Note: The XAML approach above is the recommended method. This C# example demonstrates
+    // programmatic creation for scenarios where declarative XAML markup is not available.
     public NormalPage()
     {
         InitializeComponent();
@@ -98,7 +102,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shows the outcome upon execution of the above code:
+The following screenshot shows the result of running the above code:
 
 <img alt="Normal paging .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-normal-paging.png" width="404" Height = "429"/>
 
@@ -177,9 +181,11 @@ private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e
 {% endhighlight %}
 {% endtabs %}
 
-N>In on-demand paging, you should not assign a value to the `Source` property. Additionally, you have to define an integer value for the `PageCount` property to generate the required numeric buttons in the view.
+**Note:** In on-demand paging, you should not assign a value to the `Source` property. Instead, set the `PageCount` property to the total number of pages needed to display all data. This generates the required numeric buttons in the view. For example, if you have 1000 items and a page size of 15, set `PageCount` to 67.
 
-When using `OnDemandPaging`, `SfDataPager.PagedSource` loads only the current page data. Upon navigation to another page, `OnDemandLoading` event is fired which loads another set of data, but maintains the previous page data also. When you navigate to the previous page again, OnDemandLoading event is not fired, and the required data maintained in the cache is loaded. However, for further performance enhancement if you do not want to maintain the previous page data, call `Syncfusion.Data.PagedCollectionView.ResetCache()` in the `OnDemandLoading` event. ResetCache method call resets the cache except the current page.
+When using `OnDemandPaging`, `SfDataPager.PagedSource` loads only the current page data. Upon navigation to another page, `OnDemandLoading` event is fired which loads another set of data, but maintains the previous page data in cache. When you navigate to the previous page again, `OnDemandLoading` event is not fired, and the cached data is loaded directly. 
+
+For improved performance when working with very large datasets or limited memory, you can call `Syncfusion.Data.PagedCollectionView.ResetCache()` in the `OnDemandLoading` event to discard cached pages except the current one. This reduces memory consumption but will require reloading data when navigating back to previously-viewed pages.
 
 To use ResetCache method, follow the code example:
 
@@ -301,7 +307,7 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-N> The size of the `SfDataPager` is automatically adjusted based on the available screen size if the view cannot accommodate the numeric buttons specified in the `NumericButtonCount` property.
+**Note:** The size of the `SfDataPager` is automatically adjusted based on the available screen size if the view cannot accommodate the numeric buttons specified in the `NumericButtonCount` property.
 
 ## Customizing button size and font size of pager buttons
 
@@ -362,7 +368,7 @@ this.Content = grid;
 
 ## Display mode
 
-The visibility of the numeric and navigation buttons can be personalized by using the [SfDataPager.DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_DisplayMode) property. All the buttons will be visible by default.
+The visibility of the numeric and navigation buttons can be personalized by using the [SfDataPager.DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_DisplayMode) property. The default value is `FirstLastPreviousNextNumeric`, which displays all navigation and numeric buttons.
 
 <table>
 <tr>
@@ -371,7 +377,7 @@ The visibility of the numeric and navigation buttons can be personalized by usin
 </tr>
 <tr>
 <td> {{'`None`'| markdownify }} </td>
-<td> Do not display any page buttons.</td>
+<td> Displays no page buttons.</td>
 </tr>
 <tr>
 <td> {{'`First`'| markdownify }} </td>
@@ -470,7 +476,7 @@ this.Content = grid;
 
 ## Auto-ellipsis mode
 
-The `SfDataPager` offers support for displaying an ellipsis button at the beginning and end of the numeric buttons when the scroll view contains additional numeric buttons before or after the currently selected numeric button. It can be customized by using the [SfDataPager.AutoEllipsisMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_AutoEllipsisMode) property.
+The `AutoEllipsisMode` property controls whether ellipsis buttons appear for navigating large ranges of page numbers, whereas the `DisplayMode` property controls which button types (First, Last, Previous, Next, Numeric) are visible. The `SfDataPager` offers support for displaying an ellipsis button at the beginning and end of the numeric buttons when the scroll view contains additional numeric buttons before or after the currently selected numeric button. It can be customized by using the [SfDataPager.AutoEllipsisMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_AutoEllipsisMode) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -582,23 +588,25 @@ this.Content = grid;
 
 ### Move to the first page
 
-The data pager allows the users to programmatically navigate to the first page using the [MoveToFirstPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToFirstPage) method.
+The [MoveToFirstPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToFirstPage) method allows you to programmatically navigate to the first page.
 
 ### Move to the last page
 
-The data pager allows the users to programmatically navigate to the last page using the [MoveToLastPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToLastPage) method.
+The [MoveToLastPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToLastPage) method allows you to programmatically navigate to the last page.
 
-### Move to to the next page
+### Move to the next page
 
-The data pager allows the users to programmatically navigate to the next page using the [MoveToNextPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToNextPage) method.
+The [MoveToNextPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToNextPage) method allows you to programmatically navigate to the next page.
 
-### Move to to the previous page
+### Move to the previous page
 
-The data pager allows the users to programmatically navigate to the previous page using the [MoveToPreviousPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPreviousPage) method.
+The [MoveToPreviousPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPreviousPage) method allows you to programmatically navigate to the previous page.
 
 ### Move to page
 
-The data pager allows the users to programmatically navigate to the desired page using the [MoveToPage(Int32)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPage_System_Int32_) method. Users can also able to navigate to the page with animation using the [MoveToPage(Int32, Int32, Boolean)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPage_System_Int32_System_Int32_System_Boolean_) method.
+The [MoveToPage(Int32)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPage_System_Int32_) method allows you to programmatically navigate to a specific page. You can also navigate to a page with animation using the [MoveToPage(Int32, Int32, Boolean)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPage_System_Int32_System_Int32_System_Boolean_) method, where the second parameter specifies the duration in milliseconds and the Boolean parameter indicates whether to animate the transition.
+
+**Boundary Behavior:** When calling `MoveToNextPage()` on the last page, the pager remains on the last page. Similarly, calling `MoveToPreviousPage()` on the first page keeps the pager on the first page. These methods handle boundary conditions gracefully without throwing exceptions.
 
 ## Orientation
 
@@ -716,7 +724,9 @@ this.Content = grid;
 {% highlight c# %}
 private void DataPager_PageChanging(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangingEventArgs e)
 {
-    // you can get the old page index and new page index here.
+    int oldPageIndex = e.OldPageIndex;
+    int newPageIndex = e.NewPageIndex;
+    // Perform any operations before the page changes
 }
 {% endhighlight %}
 {% endtabs %}
@@ -781,7 +791,9 @@ this.Content = grid;
 {% highlight c# %}
 private void DataPager_PageChanged(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs e)
 {
-    // you can get the old page index and new page index here.
+    int oldPageIndex = e.OldPageIndex;
+    int newPageIndex = e.NewPageIndex;
+    // Perform any operations after the page has changed
 }
 {% endhighlight %}
 {% endtabs %}
@@ -924,8 +936,7 @@ The following picture shows the customize styles of data pager:
 <img alt="Data pager style .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-pager-style.png" width="404" Height = "429"/>
 
 ### Limitations
-1. UI Filtering is not supported. You can code at the application level to filter the data.
-2. Data processing operations (Sorting, Grouping) are performed only on the current page. 
-3. Deleting is not supported. You can code to delete a row at the application level. 
-4. Only the navigated pages are exported when 'OnDemandPaging' is enabled. If the cache of the navigated page is cleared, then the corresponding page will not be exported.
-
+- UI Filtering is not supported. You can implement filtering at the application level.
+- Data processing operations (Sorting, Grouping) are performed only on the current page data.
+- Row deletion is not supported through the UI. You can implement deletion at the application level.
+- Only navigated pages are exported when OnDemandPaging is enabled. If you call `ResetCache()` to clear a page's data, that page will not be included in exports.

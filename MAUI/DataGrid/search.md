@@ -8,11 +8,11 @@ documentation: UG
 ---
 
 # Search in MAUI DataGrid (SfDataGrid)
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to search the data displayed within the datagrid. You can search the data using the built-in search UI support or using programmatic searching.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to search the data displayed within the datagrid. You can search the data using the built-in search UI or programmatically.
 
 ## UI Searching
 
-The `SfDataGrid` allows you to enable searching support by setting the [AllowSearching]() property to `true`. By enabling this property, the built-in search UI is displayed above the DataGrid, allowing users to easily search the data.
+The `SfDataGrid` allows you to enable searching support by setting the [AllowSearching]() property to `true`. By enabling this property, the built-in search UI is displayed above the DataGrid, allowing users to search the data.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -57,7 +57,7 @@ The built-in search UI has a settings icon that offers options for searching, su
 
 ### Navigation Between Search Results
 
-The navigation icons present in the built-in search bar allow users to navigate between search results. You can change the visibility of the navigation icons using the [DataGridSearchToolbarView.ShowNavigationButtons]() property.
+The navigation icons in the built-in search bar allow users to move to the next or previous search result. You can change the visibility of the navigation icons using the [DataGridSearchToolbarView.ShowNavigationButtons]() property.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -74,9 +74,9 @@ The navigation icons present in the built-in search bar allow users to navigate 
 {% endhighlight %}
 {% endtabs %}
 
-### Clear Search
+### Clear Search via UI
 
-You can clear the search results by using the clear icon in the search bar. You can hide the clear icon by setting the [DataGridSearchToolbarView.ShowClearButton]() property to `false`.
+You can clear the search results by clicking the clear icon in the search bar. You can hide the clear icon by setting the [DataGridSearchToolbarView.ShowClearButton]() property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="xaml" %}
@@ -125,11 +125,10 @@ var defaultStyle = new DataGridStyle()
 {
     SearchToolbarViewBackground = Colors.Yellow,
     SearchToolbarViewStroke = Colors.Brown,
-    SearchToolbarViewStrokeThickness = 2,
+    SearchToolbarViewStrokeThickness = 2
 };
 
 dataGrid.DefaultStyle = defaultStyle;
-
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
@@ -174,7 +173,6 @@ var defaultStyle = new DataGridStyle()
 };
 
 dataGrid.DefaultStyle = defaultStyle;
-
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
@@ -245,7 +243,7 @@ this.dataGrid.SearchController.FindPrevious("SearchText");
 
 <img alt="Navigated Search Text in DataGrid" src="Images\search\maui-datagrid-searchtext-navigate.png" width="404"/>
 
-### Clear Search
+### Clear Search Programmatically
 
 You can clear the search by using the [SearchController.ClearSearch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_ClearSearch) method.
 
