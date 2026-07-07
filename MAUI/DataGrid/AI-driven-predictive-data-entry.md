@@ -34,10 +34,6 @@ dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.12
 
 Alternatively, use the NuGet Package Manager in Visual Studio to install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/) package.
 
-**Prerequisites:**
-- An active [Azure subscription](https://azure.microsoft.com/en-us/free/)
-- Access to Azure OpenAI service in your region
-
 ### Step 2: Create the Azure OpenAI Service Class
 
 To configure Azure OpenAI, use the GPT-4O model for text analysis. Set up the OpenAIClient as shown in the following code example. This class provides the foundation for making API calls to Azure OpenAI.
@@ -71,11 +67,6 @@ internal class AzureOpenAIService
 
 {% endtabs %}
 
-**Configuration Requirements:**
-- Replace `{YOUR_RESOURCE_NAME}` with your Azure OpenAI resource name
-- Set `AZURE_OPENAI_KEY` environment variable with your API key (do not hardcode credentials)
-- Verify the deployment name matches your Azure OpenAI deployment
-
 ### Step 3: Initialize the OpenAI Client
 
 Initialize the OpenAIClient in your AzureOpenAIService constructor or initialization method. This establishes the connection to Azure OpenAI:
@@ -86,7 +77,6 @@ Initialize the OpenAIClient in your AzureOpenAIService constructor or initializa
 
 // Initialize when required
 this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-this.chatCompletions = new ChatCompletionsOptions();
 
 {% endhighlight %}
 
@@ -109,14 +99,14 @@ using System.Threading.Tasks;
 
 public async Task<string> GetResultsFromAI(string userPrompt)
 {
-    if (this.client != null && this.chatCompletions != null)
+    if (this.Client != null && this.chatCompletions != null)
     {
         // Add the system message and user message to the options.
-        this.chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are a data prediction assistant. Analyze the provided student data and predict missing GPA and grade values."));
+        this.chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
         this.chatCompletions.Messages.Add(new ChatRequestUserMessage(userPrompt));
         try
         {
-            var response = await client.GetChatCompletionsAsync(this.chatCompletions);
+            var response = await Client.GetChatCompletionsAsync(this.chatCompletions);
             return response.Value.Choices[0].Message.Content;
         }
         catch
@@ -147,7 +137,6 @@ Before proceeding, review the [.NET MAUI DataGrid getting started guide](https:/
              x:Class="SampleBrowser.Maui.SmartDemos.SmartDemos.DataPrediction"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
 
-    <!-- local namespace refers to your project's namespace (e.g., SampleBrowser.Maui.SmartDemos) -->
     <ContentPage.BindingContext>
         <local:GenerateDataCollection x:Name="generateDataCollection" />
     </ContentPage.BindingContext>
@@ -241,7 +230,7 @@ private async Task GetResponseAsync()
             "Schema: { \"GenerateDataSource\": [ { \"StudentID\": \"string\", \"FinalYearGPA\": number, \"TotalGPA\": number, \"TotalGrade\": \"string\" } ] }. " +
             "Remove ```json and ``` if they are present.";
 
-        var repo = (this.dataGrid.BindingContext as GenerateDataCollection);
+        var repo = (this.datagrid.BindingContext as GenerateDataCollection);
         if (repo == null || repo.Predictivedatas == null || repo.Predictivedatas.Count == 0)
             return;
 
@@ -253,7 +242,7 @@ private async Task GetResponseAsync()
         var gridReportJson = GetSerializedGridReport(gridReport);
         string userInput = ValidateAndGeneratePrompt(gridReportJson, prompt);
 
-        var result = await openAi.GetResultsFromAI(userInput);
+        var result = await openAi.GetResponseFromOpenAI(userInput);
 
         result = result.Replace("```json", "").Replace("```", "").Trim();
 
@@ -278,11 +267,11 @@ private async Task GetResponseAsync()
             }
         } 
 
-        this.dataGrid.Refresh();
+        this.datagrid.Refresh();
     }
     finally
     {
-        this.Indicator.IsRunning = false;
+        this.activityIndicator.IsRunning = false;
         isButtonClicked = false;
     }
 }

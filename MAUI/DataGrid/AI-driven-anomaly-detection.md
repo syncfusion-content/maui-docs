@@ -67,12 +67,24 @@ internal class AzureOpenAIService
 
 {% endtabs %}
 
-**Configuration Requirements:**
-- Replace `{YOUR_RESOURCE_NAME}` with your Azure OpenAI resource name
-- Set `AZURE_OPENAI_KEY` environment variable with your API key (do not hard code credentials)
-- Verify the deployment name matches your Azure OpenAI deployment
+### Step 3: Initialize the OpenAI Client
 
-### Step 3: Implement the GetResultsFromAI Method
+To set up the connection to Azure OpenAI. Refer to the following code.
+
+{% tabs %}
+
+{% highlight c# %}
+
+// At the time of required.
+this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key))
+
+{% endhighlight %}
+
+{% endtabs %}
+
+This connection allows you to send prompts to the model and **receive responses**, which can be used to generates.
+
+### Step 4: Implement the GetResultsFromAI Method
 
 Implement a method to retrieve responses from the Azure OpenAI API based on user prompts.
 
@@ -87,10 +99,10 @@ using System.Threading.Tasks;
 
 public async Task<string> GetResultsFromAI(string userPrompt)
 {
-    if (this.client != null && this.chatCompletions != null)
+    if (this.Client != null && this.chatCompletions != null)
     {
         // Add the system message and user message to the options.
-        this.chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are an anomaly detection assistant. Analyze the provided data and identify anomalies."));
+        this.chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
         this.chatCompletions.Messages.Add(new ChatRequestUserMessage(userPrompt));
         try
         {
@@ -108,12 +120,6 @@ public async Task<string> GetResultsFromAI(string userPrompt)
 {% endhighlight %}
 
 {% endtabs %}
-
-**Error Handling Guide:**
-- **401 Unauthorized**: Verify API key is correct and set in `AZURE_OPENAI_KEY` environment variable
-- **429 Too Many Requests**: Implement exponential back off retry logic or wait before retrying
-- **Timeout**: Increase `MaxTokens` or reduce dataset size if processing is slow
-- **Malformed JSON**: Add validation to parse response and provide fallback behavior
 
 ## Integrating AI-Driven Anomaly Detection in .NET MAUI DataGrid
 
@@ -255,9 +261,9 @@ private async Task GetAnomalyResponseAsync()
             var colorConverter = new AnomalyDetectionConverter();
             colorConverter.GetString(anomalies);
 
-            var anomalyDescriptionColumn = new DataGridTextColumn() { HeaderText = "Anomaly Description", MappingName = "AnomalyDescription", ColumnWidthMode = ColumnWidthMode.Auto };
+            var anomalyDescriptionColumn = new DataGridTextColumn() { HeaderText = "Anomaly Description", MappingName = "AnomalyDescription",ColumnWidthMode = ColumnWidthMode.Auto };
 
-            this.dataGrid?.Columns.Add(anomalyDescriptionColumn);
+            this.datagrid?.Columns.Add(anomalyDescriptionColumn);
 
             if (gridReport.DataSource != null)
             {
@@ -272,11 +278,11 @@ private async Task GetAnomalyResponseAsync()
             }
         }
 
-        this.dataGrid.Refresh();
+        this.datagrid.Refresh();
     }
     finally
     {
-        this.Indicator.IsRunning = false;
+        this.activityIndicator.IsRunning = false;
         isButtonClicked = false;
     }
 }
