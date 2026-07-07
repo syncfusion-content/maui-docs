@@ -59,41 +59,56 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 <td>Determines whether the footer, which includes Copy, Retry, Like, Dislike, should be displayed for the assist item.</td>
 </tr>
 <tr>
-<td>{{'[Sources]()'| markdownify }}</td>
-<td>Determines whether the footer, which includes Copy, Retry, Like, Dislike, should be displayed for the assist item.</td>
+<td>{{'[Sources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Sources)'| markdownify }}</td>
+<td>Displays the list of reference sources associated with the assist item response.</td>
 </tr>
 </table>
 
 ## Text item
 
-The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) is used to display plain text as a item, which is used to represent text-based content.
+The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) is used to display plain text as an item, which is used to represent text-based content.
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
     <ContentPage.BindingContext>
-        <local:ViewModel/>
+        <local:ViewModel />
     </ContentPage.BindingContext>
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AssistItems="{Binding AssistItems}"/>
+                               AssistItems="{Binding AssistItems}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="3" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
-    SfAiAssistView sfAIAssistView = new SfAIAssistView();
-    ViewModel viewModel = new ViewModel();
-    sfAIAssistView.AssistItems = viewModel.AssistItems;
+    using Syncfusion.Maui.AIAssistView;
+
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfAIAssistView sfAIAssistView = new SfAIAssistView();
+            ViewModel viewModel = new ViewModel();
+            sfAIAssistView.AssistItems = viewModel.AssistItems;
+            this.Content = sfAIAssistView;
+        }
+    }
 
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="5" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="10" %}
+
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.Threading.Tasks;
+    using Syncfusion.Maui.AIAssistView;
 
     public class ViewModel : INotifyPropertyChanged
     {
-        private void GenerateAssistItems()
+        private async Task GenerateAssistItems()
         {
             AssistItem requestItem = new AssistItem()
             {
@@ -115,7 +130,7 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
             AssistItem responseItem = new AssistItem()
             {
                 // Adding a text item as a response from the AI service
-                Text = "Sure! MAUI stands for .NET Multi-platform App UI. It’s a framework that allows you to create cross-platform applications using a single codebase.This powerful framework is an evolution of Xamarin.Forms and is designed to streamline the development process by allowing you to write code once and deploy it across multiple platforms.",
+                Text = "Sure! MAUI stands for .NET Multi-platform App UI. It's a framework that allows you to create cross-platform applications using a single codebase. This powerful framework is an evolution of Xamarin.Forms and is designed to streamline the development process by allowing you to write code once and deploy it across multiple platforms.",
             };
 
             // Add the response item to the collection
@@ -128,14 +143,19 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
 
 ## Hyperlink item
 
-The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html) is used to send a [URL](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html#Syncfusion_Maui_AIAssistView_AssistHyperlinkItem_Url) as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
+The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html) is used to send a [URL](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html#Syncfusion_Maui_AIAssistView_AssistHyperlinkItem_Url) as an item. Along with the link, the thumbnail, title, and description of the URL are displayed if they are provided through the corresponding properties of the `AssistHyperlinkItem`.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="26" %}
+
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.Threading.Tasks;
+    using Syncfusion.Maui.AIAssistView;
 
     public class ViewModel : INotifyPropertyChanged
     {
-        private void GenerateAssistItems()
+        private async Task GenerateAssistItems()
         {
             AssistItem requestItem = new AssistItem()
             {
@@ -170,14 +190,19 @@ The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
 
 ## Image item
 
-The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html) is used to display an image as a item. Using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Source), [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Size), and [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Aspect) properties, you can display the desired image in the desired height and width as a item in the AI AssistView control.
+The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html) is used to display an image as an item. Using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Source), [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Size), and [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Aspect) properties, you can display the desired image in the desired height and width as an item in the AI AssistView control.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="26" %}
+
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.Threading.Tasks;
+    using Syncfusion.Maui.AIAssistView;
 
     public class ViewModel : INotifyPropertyChanged
     {
-        private void GenerateAssistItems()
+        private async Task GenerateAssistItems()
         {
             AssistItem requestItem = new AssistItem()
             {
@@ -195,7 +220,7 @@ The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
             await Task.Delay(1000).ConfigureAwait(true);
         
             // Adding image item as a response from the AI service.
-            AssistItem responseItem = newnew AssistImageItem()
+            AssistItem responseItem = new AssistImageItem()
             {
                 Aspect = Aspect.AspectFit,
                 Text = "Here's an image of a bird.",
@@ -215,13 +240,33 @@ The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 In AI AssistView, to display a list of interactive cards, each card can contain an image, a list of buttons, and text (title, subtitle, and description) that align with the design used in popular bot frameworks. The [Card.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Image), [Card.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Title), [Card.Subtitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Subtitle), and [Card.Description](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Description) properties are used to define and display the image, title, subtitle, and description within each card.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="56" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="77" %}
+
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.Threading.Tasks;
+    using Syncfusion.Maui.AIAssistView;
 
     public class ViewModel : INotifyPropertyChanged
     {
+        private ObservableCollection<IAssistItem> assistItems;
+        private ObservableCollection<Card> cardsCollection;
+
+        public ObservableCollection<IAssistItem> AssistItems
+        {
+            get { return assistItems; }
+            set { assistItems = value; OnPropertyChanged(nameof(AssistItems)); }
+        }
+
+        public ObservableCollection<Card> CardsCollection
+        {
+            get { return cardsCollection; }
+            set { cardsCollection = value; OnPropertyChanged(nameof(CardsCollection)); }
+        }
+
         public ViewModel()
         {
-            this.assistItems = new ObservableCollection<IAssistItem>();
+            this.AssistItems = new ObservableCollection<IAssistItem>();
 
             //Generate card items
             this.GenerateCards();
@@ -232,18 +277,19 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 
         private void GenerateCards()
         {
-            cardsCollection = new ObservableCollection<Card>();
+            CardsCollection = new ObservableCollection<Card>();
             Card card1 = new Card()
             {
                 Title = "Miami",
                 Description = "Miami, officially the City of Miami, is the seat of Miami-Dade County and the cultural, economic and financial center of South Florida in the United States. The city covers an area of about 56 square miles between the Everglades to the west and Biscayne Bay to the east.",
                 Image = "miami.png",
             };
-            card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miammi" });
+            card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miami" });
 
             Card card2 = new Card()
             {
-                Title = "A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherman's Wharf, and its Chinatown district.",
+                Title = "San Francisco",
+                Description = "A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherman's Wharf, and its Chinatown district.",
                 Image = "sanfrancisco.png",
             };
             card2.Buttons.Add(new CardButton() { Title = "Choose", Value = "San Francisco" });
@@ -268,7 +314,7 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
             this.CardsCollection.Add(card2);
             this.CardsCollection.Add(card3);
             this.CardsCollection.Add(card4);
-        }   
+        }
     
         private void GenerateAssistItems()
         {
@@ -284,16 +330,22 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 
 ## Attachment item
 
-The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachmentItem.html) is used to display the preview for a file or an image as a item. Using the [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property, you can display the desired attachments as item in the AI AssistView control.
+The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachmentItem.html) is used to display the preview for a file or an image as an item. Using the [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property, you can display the desired attachments as an item in the AI AssistView control.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}
+
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.Threading.Tasks;
+    using Syncfusion.Maui.AIAssistView;
 
     public class ViewModel : INotifyPropertyChanged
     {
-        private async void GenerateAssistItems()
+        private async Task GenerateAssistItems()
         {
-            // Adding a user request as attachments 
+            // Adding a user request as attachments
             var requestItem = new AssistAttachmentItem()
             {
                 Text = "Read the following documents",
@@ -301,7 +353,7 @@ The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.A
                 Attachments = new List<IAttachment> { staticAttachment1, staticAttachment2, staticAttachment3 }
             };
 
-            AssistItems.Add(requestItem);
+            this.AssistItems.Add(requestItem);
 
             // Generating response item
             await GetResult(requestItem);
@@ -326,16 +378,73 @@ The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.A
 {% endhighlight %}
 {% endtabs %}
 
-## Show error response
+## Request and response item
 
-The `SfAIAssistView` allows to display error responses by setting the error text to the [AssistItem.ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItem.html#Syncfusion_Maui_AIAssistView_IAssistItem_ErrorMessage) property, ensuring clear notification when an error occurs during AI interactions.
+The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is used to determine whether an item is a Request or a Response. If `IsRequested` property is set to `true`, the item is a Request item.
+
+### Request item
+
+These are the items sent by the user. They typically appear aligned to the right side of the window to visually differentiate them as user inputs.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="33" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="10" %}
+
+    using Syncfusion.Maui.AIAssistView;
+
+    public class ViewModel
+    {
+        public void CreateRequestItem()
+        {
+            AssistItem requestItem = new AssistItem()
+            {
+                Text = "listening",
+                IsRequested = true
+            };
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### Response item
+
+These are messages generated by the AI in reply to a request. They are usually aligned to the left side of the window to indicate that they are responses.
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="10" %}
+
+    using Syncfusion.Maui.AIAssistView;
+
+    public class ViewModel
+    {
+        public void CreateResponseItem()
+        {
+            AssistItem responseItem = new AssistItem()
+            {
+                Text = "Types of Listening: For good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skills. Common types of Listening are Active listening and Passive listening.",
+                IsRequested = false,
+            };
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Show error response
+
+The `SfAIAssistView` allows to display error responses by setting the error text to the [AssistItem.ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_ErrorMessage) property, ensuring clear notification when an error occurs during AI interactions.
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="38" %}
+
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.Threading.Tasks;
+    using Syncfusion.Maui.AIAssistView;
 
     public class ViewModel : INotifyPropertyChanged
     {
-        private async void GenerateAssistItems()
+        private async Task GenerateAssistItems()
         {
             AssistItem requestItem = new AssistItem()
             {
@@ -356,7 +465,7 @@ The `SfAIAssistView` allows to display error responses by setting the error text
                 // If successful, add the normal response
                 AssistItem responseItem = new AssistItem()
                 {
-                    Text = "Active Listening – Fully focusing and responding to the speaker with attention and empathy. Passive Listening – Hearing without reacting or engaging with the speaker. Empathetic Listening – Understanding the speaker’s emotions and feelings deeply.",
+                    Text = "Active Listening – Fully focusing and responding to the speaker with attention and empathy. Passive Listening – Hearing without reacting or engaging with the speaker. Empathetic Listening – Understanding the speaker's emotions and feelings deeply.",
                     IsRequested = false,
                 };
                 this.AssistItems.Add(responseItem);
@@ -377,39 +486,3 @@ The `SfAIAssistView` allows to display error responses by setting the error text
 {% endtabs %}
 
 ![Syncfusion .NET MAUI AI AssistView Error message](images/maui-aiassistview-error-message.png)
-
-## Request and response item
-
-The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is used to determine whether a item is a Request or a Response. If `IsRequested` property is set to `true`, the item is a Request item.
-
-### Request item
-
-These are the items sent by the user. They typically appear aligned to the right side of the window to visually differentiate them as user inputs.
-
-{% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="4" %}
-
-    AssistItem requestItem = new AssistItem()
-    {
-        Text = "listening",
-        IsRequested = true
-    };
-
-{% endhighlight %}
-{% endtabs %}
-
-### Response item
-
-These are messages generated by the AI in reply to a request. They are usually aligned to the left side of the window to indicate that they are responses.
-
-{% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="4" %}
-
-    AssistItem responseItem = new AssistItem()
-    {
-        Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-        IsRequested = false,
-    };
-
-{% endhighlight %}
-{% endtabs %}

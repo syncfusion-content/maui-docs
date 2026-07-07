@@ -13,20 +13,29 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 ## Controlling header display in SfAIAssistView
 
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to display a header using the [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader)  property. By default, the value of ShowHeader is `true`, so the header is displayed at the top of the assist view.
-If the ShowHeader property is set to `false`, the header will not be displayed.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to display a header using the [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader) property. By default, the value of ShowHeader is `true`, so the header is displayed at the top of the assist view. If the ShowHeader property is set to `false`, the header will not be displayed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ShowHeader="False"/>  
+                               ShowHeader="False" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.ShowHeader = false;
+    using Syncfusion.Maui.AIAssistView;
+
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfAIAssistView sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.ShowHeader = false;
+            this.Content = sfAIAssistView;
+        }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -40,15 +49,24 @@ The `SfAIAssistView` control allows you to customize the header text using the [
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                HeaderText="Ask AI"
-                               ShowHeader="True"/>  
+                               ShowHeader="True" />
 
 {% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-{% highlight c# hl_lines="2" %}
+    using Syncfusion.Maui.AIAssistView;
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.HeaderText = "Ask AI";
-    sfAIAssistView.ShowHeader = true;
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfAIAssistView sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.HeaderText = "Ask AI";
+            sfAIAssistView.ShowHeader = true;
+            this.Content = sfAIAssistView;
+        }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -119,9 +137,9 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
         </ResourceDictionary>
     </ContentPage.Resources>
 
-      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                 ShowHeader="True"
-                                 HeaderTemplate="{StaticResource headerTemplate}"/>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ShowHeader="True"
+                               HeaderTemplate="{StaticResource headerTemplate}" />
 
 {% endhighlight %}
 {% endtabs %}

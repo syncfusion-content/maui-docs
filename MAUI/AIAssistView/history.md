@@ -21,17 +21,20 @@ The `SfAIAssistView` control provides the [ConversationItemsSource](https://help
 
 #### Define the view model
 
-Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
+Create a simple view model as shown in the following code example, and save it as a `GettingStartedViewModel.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
     using Syncfusion.Maui.AIAssistView;
+    
     public class GettingStartedViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<AssistConversationItem> conversationItems;
     
-        public AIAssistViewModel()
+        public GettingStartedViewModel()
         {
             this.conversationItems = new ObservableCollection<AssistConversationItem>();
             this.InitializeConversationHistory();
@@ -47,6 +50,13 @@ Create a simple view model as shown in the following code example, and save it a
             }
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void RaisePropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         public void InitializeConversationHistory()
         {
             DateTime baseTime = DateTime.Now;
@@ -59,8 +69,8 @@ Create a simple view model as shown in the following code example, and save it a
 
             string[] responses = new string[]
             {
-                "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-                "MAUI stands for .NET Multi-platform APP UI. It's is a framework that allowws you to create cross-platform applications using a single codebase.",
+                "Types of Listening: For effective communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skills. Common types of Listening are Active listening and Passive listening.",
+                "MAUI stands for .NET Multi-platform App UI. It is a framework that allows you to create cross-platform applications using a single codebase.",
             };
 
             for (int i = 0; i < 2; i++)
@@ -105,16 +115,32 @@ Create a simple view model as shown in the following code example, and save it a
 To populate the conversation items, bind the item collection from its BindingContext to `SfAIAssistView.ConversationItemsSource` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+
+    <ContentPage.BindingContext>
+        <local:GettingStartedViewModel />
+    </ContentPage.BindingContext>
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ConversationItemsSource="{Binding ConversationItems}"/>
+                               ConversationItemsSource="{Binding ConversationItems}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.ConversationItemsSource = viewModel.ConversationItems;
+    using Syncfusion.Maui.AIAssistView;
+
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfAIAssistView sfAIAssistView = new SfAIAssistView();
+            GettingStartedViewModel viewModel = new GettingStartedViewModel();
+            sfAIAssistView.BindingContext = viewModel;
+            sfAIAssistView.ConversationItemsSource = viewModel.ConversationItems;
+            this.Content = sfAIAssistView;
+        }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,16 +152,26 @@ To populate the conversation items, bind the item collection from its BindingCon
 The `SfAIAssistView` control provides the [ConversationHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationHeaderText) API to set the header text for the conversation view. By default, this property is set to `string.Empty`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfAIAssistView x:Name="aiAssistView"
                                ConversationHeaderText="Chat History" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.ConversationHeaderText = "Chat History";
+    using Syncfusion.Maui.AIAssistView;
+
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfAIAssistView sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.ConversationHeaderText = "Chat History";
+            this.Content = sfAIAssistView;
+        }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,16 +183,26 @@ The `SfAIAssistView` control provides the [ConversationHeaderText](https://help.
 The [ConversationEmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationEmptyView) property can be set to a string or a custom view, which will be displayed when no conversation items are available in the control.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               ConversationEmptyView="No conversations available"/>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ConversationEmptyView="No conversations available" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.ConversationEmptyView = "No conversations available";
+    using Syncfusion.Maui.AIAssistView;
+
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfAIAssistView sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.ConversationEmptyView = "No conversations available";
+            this.Content = sfAIAssistView;
+        }
+    }
 
 {% endhighlight %}
 {% endtabs %}
