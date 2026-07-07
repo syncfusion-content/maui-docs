@@ -224,6 +224,9 @@ public class ViewModel : INotifyPropertyChanged
 
 ![Syncfusion .NET MAUI Chat Text message type](images/messages/maui-chat-text-message.png)
 
+N> 
+The following examples use avatar images such as `flight.png`, `Healthcare.png`, and `peopledoctor.png`. Add these images to the application's `Resources/Images` folder.
+
 ## Date picker message
 
 [DatePickerMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DatePickerMessage.html) is used to display a date picker as a message, allowing users to select a date. When a date is selected, it will be added as a `TextMessage` to the chat window. When you select a date from the date picker, the [SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
@@ -401,7 +404,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ## Calendar message
 
-[CalendarMessage](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Chat.CalendarMessage.html) is used to display a calendar as a message, allowing users to choose a date. The date chosen from the calendar will be added as a `TextMessage`. When you select a date from the calendar, the [SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
+[CalendarMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CalendarMessage.html) is used to display a calendar as a message, allowing users to choose a date. The date chosen from the calendar will be added as a `TextMessage`. When you select a date from the calendar, the [SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -2041,7 +2044,7 @@ The `SfChat` allows you specify the format in which timestamps are shown for out
 {% tabs %}
 {% highlight xaml hl_lines="4 5" %}
 
-<sfchat:SfChat x:Name="SfChat"              
+<sfChat:SfChat x:Name="SfChat"              
                 Messages="{Binding Messages}"     
                 CurrentUser="{Binding CurrentUser}"
                 IncomingMessageTimestampFormat="hh:mm tt"

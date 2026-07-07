@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Time Break in .NET MAUI Chat (SfChat)
 
-The `Chat` control provides a simple way to organize messages by their date and time of creation, allowing users to easily identify messages in the order they were created. To display the time break view in Chat, set the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) property to `true`.
+Use the `Chat` control to display a time break between messages based on their creation date and time. Set the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) property to `true` to display a time break between messages.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -26,16 +26,15 @@ The `Chat` control provides a simple way to organize messages by their date and 
 
 ![Syncfusion .NET MAUI Chat Time break support](images/time-break/maui-chat-time-break.png)
 
-## Stick time break view
+## Sticky time break view
 
-To stick the time break view, enable the [StickyTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_StickyTimeBreak) property. When `StickyTimeBreak` is set to `true`, the time break view will remain displayed until the preceding time break view is no longer visible. Additionally, the time break will adjust its position as another time break appears while scrolling.
+To stick the time break view, enable the [StickyTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_StickyTimeBreak) property. When `StickyTimeBreak` is set to `true`, the current time break stays pinned at the top until the next one scrolls into view. Additionally, the time break will adjust its position as another time break appears while scrolling.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
 <sfChat:SfChat x:Name="sfChat"
                 ShowTimeBreak="True"
                 StickyTimeBreak="True" />
-   
 {% endhighlight %}
 
 {% highlight c# hl_lines="2" %}
@@ -45,9 +44,13 @@ To stick the time break view, enable the [StickyTimeBreak](https://help.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
+N> To use StickyTimeBreak, ensure that ShowTimeBreak="True" is also set. Otherwise, time break views will not be displayed.
+
 ## Template for time break view
 
-The `Chat` control allows to load custom template for time break view using the [TimeBreakTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TimeBreakTemplate) property.
+The `Chat` control allows to load a custom template for time break view using the [TimeBreakTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TimeBreakTemplate) property.
+
+N> The timeBreakTemplateSelector resource must be declared in the page's resource scope (or a parent ResourceDictionary) before it can be referenced using {StaticResource timeBreakTemplateSelector}.
 
 {% tabs %}
 {% highlight xaml hl_lines="9 21" %}
@@ -55,8 +58,8 @@ The `Chat` control allows to load custom template for time break view using the 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-             xmlns:local="clr-namespace:GettingStarted"
-             x:Class="GettingStarted.MainPage">
+             xmlns:local="clr-namespace:TimeBreak"
+             x:Class="TimeBreak.MainPage">
 
     <ContentPage.Resources>
         <local:TimeBreakTemplateSelector x:Key="timeBreakTemplateSelector"/>
@@ -78,7 +81,7 @@ The `Chat` control allows to load custom template for time break view using the 
 {% endhighlight %}
 
 {% highlight c# hl_lines="15" %}
-namespace GettingStarted
+namespace TimeBreak
 {
   public partial class MainPage : ContentPage
   {
@@ -91,7 +94,7 @@ namespace GettingStarted
           viewModel = new GettingStartedViewModel();
           this.sfChat.Messages = viewModel.Messages;
           this.sfChat.CurrentUser = viewModel.CurrentUser;
-          this.sfChat.ShowTimeBreak="True";
+          this.sfChat.ShowTimeBreak= true;
           this.sfChat.TimeBreakTemplate = new TimeBreakTemplateSelector();
           this.Content = sfChat;
       }
@@ -103,93 +106,95 @@ namespace GettingStarted
 
 {% tabs %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
+using System.Globalization;
+using Syncfusion.Maui.DataSource.Extensions;
 
-  internal class TimeBreakTemplateSelector : DataTemplateSelector
+public class TimeBreakTemplateSelector : DataTemplateSelector
+{
+  /// <summary>
+  /// Returns the template based on the message's date time.
+  /// </summary>
+  /// <param name="item">The <see cref="Syncfusion.Data.GroupResult"/> of the grouped row.</param>
+  /// <param name="container">The ChatListView as <see cref="BindableObject"/>.</param>
+  /// <returns>The <see cref="Border"/> control which contains templates for the grouped row.</returns>
+
+  protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
   {
-    /// <summary>
-    /// Returns the template based on the message's date time.
-    /// </summary>
-    /// <param name="item">The <see cref="GroupResult"/> of the grouped row.</param>
-    /// <param name="container">The ChatListView as <see cref="BindableObject"/>.</param>
-    /// <returns>The <see cref="Border"/> control which contains templates for the grouped row.</returns>
+    string dateString = (item as GroupResult).Key.ToString();
+    DateTime groupedDate = DateTime.ParseExact(dateString, "d/M/yyyy", CultureInfo.InvariantCulture);
+    string formatDate = string.Format("{0:dd MMMM yyyy}", groupedDate);
 
-    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    Grid grid = new Grid();
+    grid.Padding = new Thickness(3, 4, 2, 0);
+
+    grid.RowDefinitions = new RowDefinitionCollection()
     {
-      string dateString = (item as GroupResult).Key.ToString();
-      DateTime groupedDate = DateTime.ParseExact(dateString, "d/M/yyyy", CultureInfo.InvariantCulture);
-      string formatDate = string.Format("{0:dd MMMM yyyy}", groupedDate);
-
-      Grid grid = new Grid();
-      grid.Padding = new Thickness(3, 4, 2, 0);
-
-      grid.RowDefinitions = new RowDefinitionCollection()
-      {
-        new RowDefinition(){Height = 20},
-      };
-
-    grid.ColumnDefinitions = new ColumnDefinitionCollection()
-    {
-      new ColumnDefinition(){ Width = GridLength.Star},
-      new ColumnDefinition(){ Width = GridLength.Auto},
-      new ColumnDefinition(){ Width = GridLength.Star},
+      new RowDefinition(){Height = 20},
     };
 
-    Border border = new Border();
-    border.VerticalOptions = LayoutOptions.Center;
-    border.HorizontalOptions = LayoutOptions.Center;
-    border.Stroke = Color.FromHex("#FDE490");
-  
-    Label label = new Label();
-    label.FontSize = 11;
-    label.VerticalOptions = LayoutOptions.Center;
-    label.HorizontalOptions = LayoutOptions.Center;
-    label.HorizontalTextAlignment = TextAlignment.Center;
-    label.TextColor = Color.FromHex("#98770E");
-    label.FontAttributes = FontAttributes.Bold;
-    label.BackgroundColor = Color.FromHex("#FDF4D6");
+  grid.ColumnDefinitions = new ColumnDefinitionCollection()
+  {
+    new ColumnDefinition(){ Width = GridLength.Star},
+    new ColumnDefinition(){ Width = GridLength.Auto},
+    new ColumnDefinition(){ Width = GridLength.Star},
+  };
 
-    border.Content = label;
+  Border border = new Border();
+  border.VerticalOptions = LayoutOptions.Center;
+  border.HorizontalOptions = LayoutOptions.Center;
+  border.Stroke = Color.FromHex("#FDE490");
 
-    grid.Children.Add(new StackLayout() { HeightRequest = 1, Background =  Colors.LightGray, VerticalOptions = LayoutOptions.Center, Margin= 5 });
-    var boxview = new StackLayout() { HeightRequest = 1, Background =   Colors.LightGray, VerticalOptions = LayoutOptions.Center, Margin = 5 };
-    grid.Children.Add(boxview);
-    Grid.SetColumn(boxview, 2);
+  Label label = new Label();
+  label.FontSize = 11;
+  label.VerticalOptions = LayoutOptions.Center;
+  label.HorizontalOptions = LayoutOptions.Center;
+  label.HorizontalTextAlignment = TextAlignment.Center;
+  label.TextColor = Color.FromHex("#98770E");
+  label.FontAttributes = FontAttributes.Bold;
+  label.BackgroundColor = Color.FromHex("#FDF4D6");
 
-    if (groupedDate.Date == DateTime.Now.Date)
+  border.Content = label;
+
+  grid.Children.Add(new StackLayout() { HeightRequest = 1, Background =  Colors.LightGray, VerticalOptions = LayoutOptions.Center, Margin= 5 });
+  var boxview = new StackLayout() { HeightRequest = 1, Background =   Colors.LightGray, VerticalOptions = LayoutOptions.Center, Margin = 5 };
+  grid.Children.Add(boxview);
+  Grid.SetColumn(boxview, 2);
+
+  if (groupedDate.Date == DateTime.Now.Date)
+  {
+    label.WidthRequest = 60;
+    label.Text = "TODAY";
+    grid.Children.Add(border);
+    Grid.SetColumn(border, 1);
+    return new DataTemplate(() =>
     {
-      label.WidthRequest = 60;
-      label.Text = "TODAY";
+        return grid;
+    });
+  }
+  else if (groupedDate.Date == new DateTime(DateTime.Now.Year,DateTime.Now.Month, DateTime.Now.Day - 1))
+  {
+      label.WidthRequest = 80;
+      label.Text = "Yesterday";
       grid.Children.Add(border);
       Grid.SetColumn(border, 1);
       return new DataTemplate(() =>
       {
-          return grid;
+        return grid;
       });
     }
-    else if (groupedDate.Date == new DateTime(DateTime.Now.Year,DateTime.Now.Month, DateTime.Now.Day - 1))
+    else
     {
-        label.WidthRequest = 80;
-        label.Text = "Yesterday";
-        grid.Children.Add(border);
-        Grid.SetColumn(border, 1);
-        return new DataTemplate(() =>
-        {
-          return grid;
-        });
-      }
-      else
+      label.WidthRequest = 120;
+      label.Text = formatDate;
+      grid.Children.Add(border);
+      Grid.SetColumn(border, 1);
+      return new DataTemplate(() =>
       {
-        label.WidthRequest = 120;
-        label.Text = formatDate;
-        grid.Children.Add(border);
-        Grid.SetColumn(border, 1);
-        return new DataTemplate(() =>
-        {
-          return grid;
-        });
-      }
+        return grid;
+      });
     }
   }
+}
 
 {% endhighlight %}
 {% endtabs %}

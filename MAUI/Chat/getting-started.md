@@ -88,12 +88,13 @@ Before proceeding, ensure the following are set up:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion handler
+## Step 3: Register Syncfusion Core Handler
  
 Make sure to add the namespace.
  
 {% tabs %}
 {% highlight c# %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +103,27 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
  
 {% tabs %}
 {% highlight c# %}
-builder.ConfigureSyncfusionCore();
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
+
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif
+
+        return builder.Build();
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -114,6 +135,7 @@ Create a simple message collection as shown in the following code example in a n
 
 {% tabs %}
 {% highlight c# %}
+using System.Collections.ObjectModel;
 
 public class GettingStartedViewModel : INotifyPropertyChanged
 {
@@ -192,7 +214,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         this.messages.Add(new TextMessage()
         {
             Author = currentUser,
-            Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.\",",
+            Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.",
         });
     }
 }
@@ -217,17 +239,25 @@ using Syncfusion.Maui.Chat;
 
 Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This enables property binding from `ViewModel` class.
 
-To load the messages to SfChat, bind the message collection to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property of Chat and bind the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) to differentiate the incoming & outgoing messages.
+To load the messages to SfChat, bind the message collection to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property of Chat and bind the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) to differentiate the incoming and outgoing messages.
 
 {% tabs %} 
 {% highlight xaml %}
-<syncfusion:SfChat x:Name="sfChat"
-                Messages="{Binding Messages}"
-                CurrentUser="{Binding CurrentUser}"/>
-    <syncfusion:SfDataGrid.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
+
+    <ContentPage.BindingContext>
         <local:GettingStartedViewModel />
-    </syncfusion:SfDataGrid.BindingContext>
-</syncfusion:SfChat>
+    </ContentPage.BindingContext>
+
+    <syncfusion:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"
+                    CurrentUser="{Binding CurrentUser}"/>
+    </syncfusion:SfChat>
+</ContentPage>
 {% endhighlight %} 
 
 {% highlight c# %}

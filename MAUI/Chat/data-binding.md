@@ -9,29 +9,32 @@ documentation: ug
 
 # Data Binding in .NET MAUI Chat (SfChat)
 
-The `SfChat` control allows to bind any existing collection of data objects as message collection using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSource) and [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) property as follows.
+The `SfChat` control allows you to bind any existing collection of data objects as a data collection and display them as chat messages using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSource) and [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) properties as follows.
 
-Create the below collection of objects that must be converted to message collection and displayed as messages in SfChat.
+Create the following data collection of objects that will be converted to chat messages and displayed in SfChat.
 
 {% tabs %}
 {% highlight c# tabtitle="Model.cs" %}
+using Syncfusion.Maui.Chat;
+using System.ComponentModel;
 
-public class MessageModel
+namespace DataBinding
 {
-    public MessageModel()
+    public class MessageModel
     {
+        #region Public Properties
+        public Author? User { get; set; }
+        public string? Text { get; set; }
+        #endregion
     }
-
-    public ChatSuggestions Suggestions { get; set; }
-    public Author User { get; set; }
-    public string Text { get; set; }
-
 }
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 public class ViewModel : INotifyPropertyChanged
 {
@@ -41,7 +44,6 @@ public class ViewModel : INotifyPropertyChanged
 
     public ViewModel()
     {
-        MessageModel messageModel = new MessageModel();
         messageCollection = new ObservableCollection<MessageModel>();
         currentAuthor = new Author() { Name = "Stevan" };
         GenerateMessages();
@@ -57,7 +59,7 @@ public class ViewModel : INotifyPropertyChanged
         set
         {
             messageCollection = value;
-            RaisePropertyChanged("messageCollection");
+            RaisePropertyChanged(nameof(MessageCollection));
         }
     }
 
@@ -70,7 +72,7 @@ public class ViewModel : INotifyPropertyChanged
         set
         {
             currentAuthor = value;
-            RaisePropertyChanged("CurrentUser");
+            RaisePropertyChanged(nameof(CurrentUser));
         }
     }
 
@@ -78,10 +80,7 @@ public class ViewModel : INotifyPropertyChanged
 
     public void RaisePropertyChanged(string propName)
     {
-        if (PropertyChanged != null)
-        {
-            PropertyChanged(this, new PropertyChangedEventArgs(propName));
-        }
+       PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
     }
 
     private void GenerateMessages()
@@ -108,7 +107,9 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-Now, bind the existing collection of data objects to the `SfChat.ItemsSource` property, in our case it is `viewModel.MessageCollection`. 
+N> The sample uses peoplecircle14.png and peoplecircle16.png as avatar images. Add these image files to the project's Resources/Images folder and ensure their build action is set to MauiImage so that they can be displayed correctly at runtime.
+
+Now, bind the existing collection of data objects to the `SfChat.ItemsSource` property. In this example, the collection is `viewModel.MessageCollection`. 
 
 {% tabs %}
 {% highlight xaml hl_lines="21 22" %}
@@ -117,8 +118,8 @@ Now, bind the existing collection of data objects to the `SfChat.ItemsSource` pr
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-            xmlns:local="clr-namespace:MauiChat"
-            x:Class="MauiChat.MainPage">
+            xmlns:local="clr-namespace:DataBinding"
+            x:Class="DataBinding.MainPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -144,7 +145,7 @@ Now, bind the existing collection of data objects to the `SfChat.ItemsSource` pr
 using MauiChat.ViewModel;
 using Syncfusion.Maui.Chat;
 
-namespace MauiChat
+namespace DataBinding
 {
     public partial class MainPage : ContentPage
     {
@@ -167,42 +168,49 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-Next, create a class derived from [IChatMessageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html) interface and set it to the [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) property as shown below. The `IChatMessageConverter` interface provides the methods [ConvertToChatMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html#Syncfusion_Maui_Chat_IChatMessageConverter_ConvertToChatMessage_System_Object_Syncfusion_Maui_Chat_SfChat_) and [ConvertToData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html#Syncfusion_Maui_Chat_IChatMessageConverter_ConvertToData_System_Object_Syncfusion_Maui_Chat_SfChat_) to convert an item of an existing collection to a chat message and to convert a chat message to an item of the existing data collection respectively. Similarly these two methods `ConvertToChatMessage` and `ConvertToData` will be fired whenever a new item is added/removed/replaced in the existing data collection or in the chat message collection respectively.
+Next, create a class that implements the [IChatMessageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html) interface and assign it to the [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) property as shown below. The `IChatMessageConverter` interface provides the [ConvertToChatMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html#Syncfusion_Maui_Chat_IChatMessageConverter_ConvertToChatMessage_System_Object_Syncfusion_Maui_Chat_SfChat_) and [ConvertToData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html#Syncfusion_Maui_Chat_IChatMessageConverter_ConvertToData_System_Object_Syncfusion_Maui_Chat_SfChat_) methods to convert data collection items into chat messages and chat messages back into data collection items. Shese methods are triggered whenever an item is added, removed, or replaced in either the data collection or the chat message collection.
+
+N>  The ConvertToData method uses `SfChat.CurrentUser` and `SfChat.Suggestions` to populate the User and Suggestions properties of the converted MessageModel. Ensure that these properties are set on the SfChat instance before data conversion occurs; otherwise, the resulting MessageModel may contain `null` values.
 
 Implementation of a custom message converter class with conversion logic to convert from data to message and vice versa.
 
+N> The `ConvertToChatMessage` method must return an `IMessage` object, such as `TextMessage`, which is displayed by the `SfChat` control. The `ConvertToData` method must return an object of the underlying data type, such as `MessageModel`, to synchronize changes from the chat message collection back to the original data source. For more information, refer to the `IMessage` API documentation.
+
 {% tabs %}
 {% highlight c# tabtitle="Converter.cs" %}
-
-public class MessageConverter : IChatMessageConverter
+using Syncfusion.Maui.Chat;
+namespace MauiChat
 {
-    public IMessage ConvertToChatMessage(object data, SfChat chat)
+    public class MessageConverter : IChatMessageConverter
     {
-        var message = new TextMessage();
-        var item = data as MessageModel;
-
-        message.Text = item.Text;
-        message.Author = item.User;
-        message.Data = item;
-        if (item.Suggestions != null)
+        public IMessage ConvertToChatMessage(object data, SfChat chat)
         {
-            message.Suggestions = item.Suggestions;
+            var message = new TextMessage();
+            var item = data as MessageModel;
+
+            message.Text = item.Text;
+            message.Author = item.User;
+            message.Data = item;
+            if (item.Suggestions != null)
+            {
+                message.Suggestions = item.Suggestions;
+            }
+            return message;
         }
-        return message;
-    }
 
-    public object ConvertToData(object chatMessage, SfChat chat)
-    {
-        var message = new MessageModel();
-        var item = chatMessage as TextMessage;
-
-        message.Text = item.Text;
-        message.User = chat.CurrentUser;
-        if (message.Suggestions != null)
+        public object ConvertToData(object chatMessage, SfChat chat)
         {
-            message.Suggestions = chat.Suggestions;
+            var message = new MessageModel();
+            var item = chatMessage as TextMessage;
+
+            message.Text = item.Text;
+            message.User = chat.CurrentUser;
+            if (item.Suggestions != null)
+            {
+                message.Suggestions = item.Suggestions;
+            }
+            return message;
         }
-        return message;
     }
 }
 {% endhighlight %}

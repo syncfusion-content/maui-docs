@@ -9,16 +9,16 @@ documentation: ug
 
 # Suggestions in .NET MAUI Chat (SfChat)
 
-The `SfChat` control allows to display a list of options, as suggestions, either below the current message or at the bottom of the chat control. These suggestions can be presented for all the supported message types in `SfChat`. When a user selects a suggestion item, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelectedCommand) will be triggered. Both the event and the command will provide the [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html) as arguments, providing the following information about the selected suggestion item.
+The `SfChat` control allows displaying a list of options, as suggestions, either below the current message or at the bottom of the chat control. These suggestions can be presented for all the supported message types in `SfChat`. When a user selects a suggestion item, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelectedCommand) will be triggered. Both the event and the command provide the [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html) as arguments. These arguments expose the following information about the selected suggestion item.
 
-* [HideAfterSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_HideAfterSelection): Gets or sets a value indicating whether the suggestions control should be shown or collapsed after an item is selected from the list of suggestions. The default value is true.
+* [HideAfterSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_HideAfterSelection): Gets or sets a value indicating whether the suggestions control should be shown or collapsed after an item is selected from the list of suggestions. The default value is `true`.
 * [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_Message): Gets the instance of the current message for which suggestions was shown.
 * [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_SelectedItem): Gets the item that was selected from the suggestion control.
-* [SuggestionType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_SuggestionType): Gets a value that indicates whether the selected item is from an inline suggestion box or from an outline suggestion.
+* [SuggestionType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_SuggestionType): Gets a value that indicates whether the selected item is from an inline suggestion box attached to a message (`SuggestionType.Inline`) or from the outline suggestion list at the bottom of the chat control (`SuggestionType.Outline`).
 
-## Showing suggestions in message
+## Showing suggestions in a message
 
-Suggestions can be shown in a message by creating a [ChatSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatSuggestions.html) instance and setting it to the desired message's [Message.Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_Suggestions) property.
+Suggestions can be shown in a message by creating a [ChatSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatSuggestions.html) instance and setting it to the desired message's [Message.Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_Suggestions) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -27,20 +27,25 @@ Suggestions can be shown in a message by creating a [ChatSuggestion](https://hel
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-            x:Class="GettingStarted.MainPage">
+            xmlns:local="clr-namespace:Suggestions"
+            x:Class="Suggestions.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ChatViewModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"
-                        CurrentUser="{Binding CurrentUser}"/>
-    <ContentPage.Content>	
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"
+                    CurrentUser="{Binding CurrentUser}"/>
+    </ContentPage.Content>	
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-namespace GettingStarted
+namespace Suggestions
 {
     public partial class MainPage : ContentPage
     {
@@ -63,16 +68,21 @@ namespace GettingStarted
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="46" %}
+
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Syncfusion.Maui.Chat;
+
 public class SuggestionsViewModel : INotifyPropertyChanged
 {
       
     /// <summary>
-    /// Chat suggestion
+    /// Chat suggestion.
     /// </summary>
     private ChatSuggestions chatSuggestions;
 
     /// <summary>
-    /// collection of suggestion items for chat suggestion.
+    /// Collection of suggestion items for chat suggestion.
     /// </summary>
     private ObservableCollection<ISuggestion> suggestions;
 
@@ -118,28 +128,32 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 
 ![Suggestions support in Syncfusion .NET MAUI Chat](images/suggestions/maui-chat-suggestion-text.png)
 
+N>
+Before using images in suggestion items, add the required image files (for example, Flight1.png, Flight2.png, and so on) to your .NET MAUI application's image resources and ensure they are available for all target platforms.
+
 ### Add an image in suggestion item
 
-In the SfChat control, you can include an image in the suggestion list by assigning an image source to the [Syncfusion .NET MAUI Chat Suggestion.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Suggestion.html#Syncfusion_Maui_Chat_Suggestion_Image) property
+In the SfChat control, you can include an image in the suggestion list by assigning an image source to the [Syncfusion .NET MAUI Chat Suggestion.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Suggestion.html#Syncfusion_Maui_Chat_Suggestion_Image) property.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="21 22 23 24 25 26" %}
-public class SuggestionsViewViewModel :INotifyPropertyChanged
+public class SuggestionsViewModel : INotifyPropertyChanged
 {
 
-    /// Chat suggestion
+    /// <summary>
+    /// Chat suggestion.
     /// </summary>
     private ChatSuggestions chatSuggestions;
 
     /// <summary>
-    /// collection of suggestion items for chat suggestion.
+    /// Collection of suggestion items for chat suggestion.
     /// </summary>
     private ObservableCollection<ISuggestion> suggestions;
 
     public SuggestionsViewModel()
     {
-        this.messages = new ObservableCollection<object>();
-        this.currentUser = new Author() { Name = "Nancy"};
+        this.Messages = new ObservableCollection<object>();
+        this.CurrentUser = new Author() { Name = "Nancy"};
     
         chatSuggestions = new ChatSuggestions();
     
@@ -164,9 +178,9 @@ public class SuggestionsViewViewModel :INotifyPropertyChanged
             Text = "Flight to USA",
         });
 
-        this.messages.Add(new TextMessage()
+        this.Messages.Add(new TextMessage()
         {
-            Author = new Author() { Avatar ="Aeroplane.png", Name = "Travel Bot" },
+            Author = new Author() { Avatar = "Aeroplane.png", Name = "Travel Bot" },
             Text = "Here's my suggestion",
             Suggestions = chatSuggestions,
         });   
@@ -177,6 +191,9 @@ public class SuggestionsViewViewModel :INotifyPropertyChanged
 {% endtabs %}
 
 ![Syncfusion .NET MAUI Chat Suggestions with image](images/suggestions/maui-chat-suggestion-image.png)
+
+N>
+To display the configured ChatSuggestions in the SfChat control, bind the ViewModel's ChatSuggestions property to the SfChat.Suggestions property.
 
 ### Change the orientation of suggestions
 
@@ -205,19 +222,24 @@ public SuggestionsViewModel()
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI Chat Suggestions orientation support](images/suggestions/maui-chat-suggestion-verticalorientation.png)
+![Syncfusion .NET MAUI Chat Suggestions with orientation support](images/suggestions/maui-chat-suggestion-verticalorientation.png)
 
-## Showing suggestions at bottom of chat control
+## Showing suggestions at the bottom of the chat control
 
-The SfChat allows to show a list of options as suggestions at the bottom of chat control by creating a [ChatSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatSuggestions.html) instance and setting it to the [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Suggestions) property.
+`SfChat` allows you to show a list of options as suggestions at the bottom of the chat control by creating a [ChatSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatSuggestions.html) instance and setting it to the [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Suggestions) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}   
-?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-            x:Class="GettingStarted.MainPage">
+            xmlns:local="clr-namespace:Suggestions"
+            x:Class="Suggestions.MainPage">
+    
+    <ContentPage.BindingContext>
+        <local:ChatViewModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <sfChat:SfChat x:Name="sfChat"
@@ -230,7 +252,7 @@ The SfChat allows to show a list of options as suggestions at the bottom of chat
 {% endhighlight %}
 
 {% highlight c# hl_lines="14" %}
-namespace GettingStarted
+namespace Suggestions
 {
     public partial class MainPage : ContentPage
     {
@@ -255,23 +277,27 @@ namespace GettingStarted
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Syncfusion.Maui.Chat;
+
 public class SuggestionsViewModel : INotifyPropertyChanged
 {
     
     /// <summary>
-    /// Chat suggestion
+    /// Chat suggestion.
     /// </summary>
     private ChatSuggestions chatSuggestions;
 
     /// <summary>
-    /// collection of suggestion items for chat suggestion.
+    /// Collection of suggestion items for chat suggestion.
     /// </summary>
     private ObservableCollection<ISuggestion> suggestions;
 
     public SuggestionsViewModel()
     {
-        this.messages = new ObservableCollection<object>();
-        this.currentUser = new Author() { Name = "Nancy" };
+        this.Messages = new ObservableCollection<object>();
+        this.CurrentUser = new Author() { Name = "Nancy" };
 
         ChatSuggestions = new ChatSuggestions();
 
@@ -308,11 +334,11 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI Chat Suggestion at bottom of control](images/suggestions/maui-chat-suggestion-at-bottom.png)
+![Syncfusion .NET MAUI Chat Suggestion at the bottom of the control](images/suggestions/maui-chat-suggestion-at-bottom.png)
 
 ## Cancel the suggestions from closing
 
-By default, the suggestions list in the `SfChat` closes automatically after the user selects an option from the list. If you wish to prevent this behavior and keep the suggestions list open even after selection, you can set the [SuggestionItemSelectedEventArgs.HideAfterSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_HideAfterSelection) to `false` within the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelected) event handler or the [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelectedCommand) command's execution. This ensures that the suggestions list remains visible for further interaction after an option is chosen by the user.
+By default, the suggestions list in `SfChat` closes automatically after the user selects an option from the list. If you wish to prevent this behavior and keep the suggestions list open even after selection, you can set the [SuggestionItemSelectedEventArgs.HideAfterSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_HideAfterSelection) to `false` within the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelected) event handler or the [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelectedCommand) command's execution. This ensures that the suggestions list remains visible for further interaction after an option is chosen by the user.
 
 **SuggestionItemSelected event**
 
@@ -327,7 +353,7 @@ this.sfChat.SuggestionItemSelected += this.SfChat_SuggestionItemSelected;
 /// <param name="e"><see cref="SuggestionItemSelectedEventArgs"/> as parameter</param>
 private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelectedEventArgs e)
 {
-    // Suggestion list not closed after selection.
+    // Suggestion list is not closed after selection.
     e.HideAfterSelection = false;
 }
 
@@ -341,14 +367,19 @@ private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelected
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:sfChat=clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-            x:Class="GettingStarted.MainPage">
+            xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:Suggestions"
+            x:Class="Suggestions.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ChatViewModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                
-                        CurrentUser="{Binding CurrentUser}"
-                        SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}"/>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                
+                    CurrentUser="{Binding CurrentUser}"
+                    SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}"/>
     </ContentPage.Content>
 </ContentPage>
 
@@ -357,6 +388,11 @@ private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelected
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
+
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Syncfusion.Maui.Chat;
+
 public class SuggestionsViewModel : INotifyPropertyChanged
 {
     private ICommand suggestionItemSelectedCommand;
@@ -384,7 +420,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
     public void Execute(object parameter)
     {
         var args = parameter as SuggestionItemSelectedEventArgs;
-        // Suggestion list not closed after selection.
+        // Suggestion list is not closed after selection.
         args.HideAfterSelection = false;
     }
 }
@@ -392,9 +428,9 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-## Prevent the chosen suggestion from being sent automatically.
+## Prevent a chosen suggestion from being sent automatically
 
-By default, when tapping or clicking the suggestion item, it will be sent as an outgoing message immediately. So, if you wish to prevent this behavior and show the suggestions list in editor view, you can set the [SuggestionItemSelectedEventArgs.CancelSendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_CancelSendMessage) to `true` within the `SuggestionItemSelected` event handler or the `SfChat.SuggestionItemSelectedCommand` command's execution.
+By default, when tapping or clicking the suggestion item, it will be sent as an outgoing message immediately. So, if you wish to prevent this behavior and show the suggestion in the editor view, you can set the [SuggestionItemSelectedEventArgs.CancelSendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_CancelSendMessage) to `true` within the `SuggestionItemSelected` event handler or the `SfChat.SuggestionItemSelectedCommand` command's execution.
 
 **SuggestionItemSelected event**
 
@@ -409,7 +445,7 @@ this.sfChat.SuggestionItemSelected += this.SfChat_SuggestionItemSelected;
 /// <param name="e"><see cref="SuggestionItemSelectedEventArgs"/> as parameter</param>
 private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelectedEventArgs e)
 {
-    // After tapping or clicking the suggestion item,it will be visible in editor view.
+    // After tapping or clicking the suggestion item, it will be visible in the editor view.
     e.CancelSendMessage = true;
 }
 
@@ -424,13 +460,18 @@ private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelected
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:sfChat=clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-            x:Class="GettingStarted.MainPage">
+            xmlns:local="clr-namespace:Suggestions"
+            x:Class="Suggestions.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ChatViewModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                
-                        CurrentUser="{Binding CurrentUser}"
-                        SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}"/>
+        <sfChat:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"                
+                    CurrentUser="{Binding CurrentUser}"
+                    SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}"/>
     </ContentPage.Content>
 </ContentPage>
 
@@ -439,6 +480,11 @@ private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelected
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
+
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Syncfusion.Maui.Chat;
+
 public class SuggestionsViewModel : INotifyPropertyChanged
 {
     private ICommand suggestionItemSelectedCommand;
@@ -469,7 +515,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
     public void ExecuteSuggestion(object parameter)
     {
         var args = parameter as SuggestionItemSelectedEventArgs;
-        // Selected suggestion item will be shown in editor view.
+        // The selected suggestion item will be shown in the editor view.
         args.CancelSendMessage = true;
     }
 }
