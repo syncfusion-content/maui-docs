@@ -83,20 +83,24 @@ The `CustomAssistViewChat`class inherits from `AssistViewChat` and can be used t
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-control-template-in-.net-maui-aiassistview)
 
+N>
+* `EmptyView` and `EmptyViewTemplate` are displayed only when using `CustomAssistView`.
+* By default, `SfAIAssistView` shows its built-in temporary banner view when no messages are available.
+
 ## Display empty view when AI AssistView has no items
 
-When using a custom AI AssistView implementation (for example, a CustomAssistView that overrides CreateAssistChat),  [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EmptyView) property can also be set to a string or a view, which will be displayed when no request or response is available in the AssistItems collection.
+When no request or response messages are available in the AssistItems collection, you can use the  [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EmptyView) property to display placeholder content in the AI AssistView. The `EmptyView` can be set to either a string or a custom data object and is shown until one or more items are added to the AssistItems collection.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+    <local:CustomAssistView x:Name="sfAIAssistView"
                                EmptyView="Ask AI Anything"/>
 
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
+    CustomAssistView sfAIAssistView = new CustomAssistView();
     sfAIAssistView.EmptyView = "Ask AI Anything";
 
 {% endhighlight %}
@@ -109,10 +113,10 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
 {% tabs %}
 {% highlight xaml hl_lines="3 4" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
+    <local:CustomAssistView x:Name="sfAIAssistView" 
                                AssistItems="{Binding AssistItems}"
                                EmptyView="No Items">
-        <syncfusion:SfAIAssistView.EmptyViewTemplate>
+        <local:CustomAssistView.EmptyViewTemplate>
             <DataTemplate>
                 <Grid RowDefinitions="45,30" 
                       RowSpacing="10"
@@ -135,13 +139,13 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
                                FontSize="20"/>
                  </Grid>
             </DataTemplate>
-         </syncfusion:SfAIAssistView.EmptyViewTemplate>
-    </syncfusion:SfAIAssistView>
+         </local:CustomAssistView.EmptyViewTemplate>
+    </local:CustomAssistView>
 
 {% endhighlight %}
 {% highlight c# hl_lines="3 7" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView
+    CustomAssistView sfAIAssistView = new CustomAssistView
     {
         EmptyView = "No Items"
     };
@@ -208,8 +212,6 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
 {% endtabs %}
 
 N>
-* `EmptyView` and `EmptyViewTemplate` are displayed only when using `CustomAssistView`.
-* By default, `SfAIAssistView` shows its built-in temporary banner view when no messages are available.
 * The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
 * `EmptyView` can be set to custom data model and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
 
