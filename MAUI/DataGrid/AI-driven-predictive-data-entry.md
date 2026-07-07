@@ -64,7 +64,7 @@ internal class AzureOpenAIService
 
 ### Step 2: Create the Azure OpenAI service class
 
-Create a helper class to manage communication with Azure OpenAI. **Important**: Store your API key securely using environment variables, not hardcoded strings.
+Create a helper class to manage communication with Azure OpenAI. **Important**: Store your API key securely using environment variables, not hard coded strings.
 
 {% tabs %}
 
