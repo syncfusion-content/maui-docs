@@ -30,7 +30,7 @@ The Syncfusion® [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-co
 - **Table insertion** allows embedding structured data within the editor.
 - **Customizable toolbar** offers configuring toolbar actions and visibility based on application requirements.
 - **Clipboard operation** includes copy, paste, and cut actions for efficient editing.
-- **Undo and redo** helps manage editing history for better user control.
+- **Undo and redo** help manage editing history for better user control.
 
 ## Globalization
 

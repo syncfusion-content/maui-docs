@@ -60,7 +60,7 @@ Before proceeding, ensure the following are set up:
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.RichTextEditor` to install the Syncfusion .NET MAUI Rich Text Editor package.
-4. To ensure all dependencies are installed, run `dotnet restore`.
+4. Ensure the necessary dependencies are installed correctly, and the project is restored, If not, open the Terminal and manually run: `dotnet restore`.
 
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
@@ -71,11 +71,11 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** select **.NET (C#)** and choose the **.NET MAUI App** template.
+1. Go to **File > New Solution**, select **.NET (C#)** and choose the **.NET MAUI App** template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
@@ -103,7 +103,13 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
 
 {% tabs %}
 {% highlight c# %}
-builder.ConfigureSyncfusionCore();
+public static MauiApp CreateMauiApp()
+{
+    var builder = MauiApp.CreateBuilder();
+    ...
+    builder.ConfigureSyncfusionCore();
+    return builder.Build();
+}
 {% endhighlight %} 
 {% endtabs %}
 
@@ -132,7 +138,7 @@ property defaults to `true`.
 {% tabs %}
 
 {% highlight xaml %}
-<xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor">
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
 <richTextEditor:SfRichTextEditor ShowToolbar="True" />
 
