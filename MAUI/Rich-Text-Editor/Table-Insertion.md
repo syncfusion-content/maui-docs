@@ -59,3 +59,22 @@ richTextEditor.InsertTable(3, 3);
 {% endtabs %}
 
 ![.NET MAUI Rich Text Editor inserting a table](images/richtexteditor-table.png)
+
+## Table interactions after insertion
+
+After a table is inserted (via the toolbar or programmatically), end users can
+modify its structure using the table context tooltip:
+
+* **Desktop:** Right-click a table cell to open the table tooltip.
+* **Mobile:** Long-press a table cell to open the table tooltip.
+
+The tooltip provides the following actions, all applied relative to the
+current cursor position within the table:
+
+* Insert Row Above
+* Insert Row Below
+* Insert Column Left
+* Insert Column Right
+* Delete Row
+* Delete Column
+* Delete Table
