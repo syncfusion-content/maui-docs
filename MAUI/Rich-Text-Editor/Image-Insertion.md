@@ -32,13 +32,18 @@ The following example shows how to use the [ImageRequested](https://help.syncfus
 
 {% tabs %}
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-<rte:SfRichTextEditor x:Name="richTextEditor"
+<richTextEditor:SfRichTextEditor x:Name="richTextEditor"
                       ShowToolbar="True"
-                      ImageRequested="OnImageInserting" />
+                      ImageRequested="OnImageInserting"/>
 
 {% endhighlight %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
+
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
+richTextEditor.ImageRequested += OnImageInserting;
 
 private async void OnImageInserting(object sender, RichTextEditorImageRequestedEventArgs e)
 {

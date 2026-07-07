@@ -11,17 +11,20 @@ documentation: ug
 
 ## Toolbar position
 
-The Rich Text Editor allows you to position the toolbar at the top or bottom of the content area, depending on your layout requirements. By default, the toolbar appears at the top on Windows and macOS, and at the bottom on Android and iOS for better accessibility.
+The [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) allows you to position the toolbar at the top or bottom of the content area 
+using the [ToolbarPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToolbarPosition) property, depending on your layout requirements. By default, the toolbar appears at the top on Windows and macOS, and at the bottom on Android and iOS for better accessibility.
 
 {% tabs %}
 
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-<rte:SfRichTextEditor ToolbarPosition="Bottom" />
+<richTextEditor:SfRichTextEditor ToolbarPosition="Bottom"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
 richTextEditor.ToolbarPosition = RichTextEditorToolbarPosition.Bottom;
@@ -31,25 +34,27 @@ richTextEditor.ToolbarPosition = RichTextEditorToolbarPosition.Bottom;
 
 ## Inline tooltip for link
 
-The link quick tooltip appears when you click on a link in the editor. The Rich Text Editor provides essential tools in the link quick tooltip, including “Open”, “Edit Link” and “Remove Link”.
+The link tooltip appears when you click a link in the editor. The Rich Text Editor provides essential tools in the link tooltip, including "Open", "Edit Link", and "Remove Link".
 
-![.NET MAUI Rich Text Editor Link Quick Tooltip](images/richtexteditor-link-quick-tooltip.png)
+![.NET MAUI Rich Text Editor link quick tooltip](images/richtexteditor-link-quick-tooltip.png)
 
-N> The link quick tooltip will automatically disappear after 2 seconds if there is no user interaction.
+N> The link quick tooltip automatically disappears after 2 seconds if there is no user interaction.
 
-## Customizing the Toolbar
+## Customizing the toolbar
 
 The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) toolbar is highly customizable, allowing you to control its items, styling, and position.
 
 ### Add or Remove Toolbar Items
 
-By default, the toolbar includes a comprehensive set of formatting tools. You can specify a custom set of items by populating the [ToolbarItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToolbarItems) collection. This allows you to add or remove any built-in toolbar item.
+By default, the toolbar includes a comprehensive set of formatting tools. You can specify a custom set of items by populating the [ToolbarItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToolbarItems) collection.
+
+N> Populating the `ToolbarItems` collection **replaces** the default toolbar items. Only the items you add will appear in the toolbar.
 
 The following items are available to be added to the `ToolbarItems` collection:
 *   `Bold`, `Italic`, `Underline`, `Strikethrough`
 *   `SubScript`, `SuperScript`
 *   `FontFamily`, `FontSize`, `TextColor`, `HighlightColor`
-*   `ParagraphFormat` , `Alignment`
+*   `ParagraphFormat`, `Alignment`
 *   `NumberList`, `BulletList`
 *   `IncreaseIndent`, `DecreaseIndent`
 *   `Hyperlink`, `Image`, `Table`
@@ -58,21 +63,23 @@ The following items are available to be added to the `ToolbarItems` collection:
 
 {% tabs %}
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-<rte:SfRichTextEditor ShowToolbar="True">
-    <rte:SfRichTextEditor.ToolbarItems>
+<richTextEditor:SfRichTextEditor ShowToolbar="True">
+    <richTextEditor:SfRichTextEditor.ToolbarItems>
         <!-- Define a custom set of toolbar items -->
-        <rte:RichTextToolbarItem Type="Bold" />
-        <rte:RichTextToolbarItem Type="Italic" />
-        <rte:RichTextToolbarItem Type="Underline" />
-        <rte:RichTextToolbarItem Type="Separator" />
-        <rte:RichTextToolbarItem Type="NumberList" />
-        <rte:RichTextToolbarItem Type="BulletList" />
-    </rte:SfRichTextEditor.ToolbarItems>
-</rte:SfRichTextEditor>
+        <richTextEditor:RichTextToolbarItem Type="Bold" />
+        <richTextEditor:RichTextToolbarItem Type="Italic" />
+        <richTextEditor:RichTextToolbarItem Type="Underline" />
+        <richTextEditor:RichTextToolbarItem Type="Separator" />
+        <richTextEditor:RichTextToolbarItem Type="NumberList" />
+        <richTextEditor:RichTextToolbarItem Type="BulletList" />
+    </richTextEditor:SfRichTextEditor.ToolbarItems>
+</richTextEditor:SfRichTextEditor>
 
 {% endhighlight %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
 richTextEditor.ShowToolbar = true;
@@ -90,33 +97,39 @@ richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolb
 
 You can customize the visual style of the toolbar using the `ToolbarSettings` property. This gives you access to the [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html) object, which has several properties for changing its appearance.
 
-*   [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackgroundColor): Sets the Background color or brush of the toolbar.
+*   [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackgroundColor): Sets the background color or brush of the toolbar.
 *   [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_TextColor) : Sets the color of the toolbar item icons.
-*   [IsScrollButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_IsScrollButtonVisible): Sets the scroll button visibility.
 *   [SeparatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_SeparatorColor): Sets the color of the separator lines between toolbar items.
 *   [SeparatorThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_SeparatorThickness): Sets the thickness of the separator lines.
+*   [SelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_SelectionColor): Sets the color of hovered/selected toolbar items.
+
+When the toolbar items exceed the available width, the toolbar supports horizontal scrolling. The following properties control the scroll button behavior:
+
+*   [IsScrollButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_IsScrollButtonVisible): Sets the visibility of the scroll buttons. The default value is `false`. When set to `true`, the forward and backward scroll buttons appear only if the toolbar items overflow the available width.
 *   [ForwardIconBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_ForwardIconBackground): Sets the background color of the forward scroll icon.
 *   [ForwardIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_ForwardIconColor): Sets the color of the forward scroll icon.
 *   [BackwardIconBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackwardIconBackground): Sets the background color of the backward scroll icon.
 *   [BackwardIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackwardIconColor): Sets the color of the backward scroll icon.
-*   [SelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_SelectionColor): Sets the color for toolbar text hover and selection color.
 
+N> The forward and backward scroll buttons are visible only when `IsScrollButtonVisible` is set to `true` and the toolbar items overflow the available width.
 
 {% tabs %}
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-<rte:SfRichTextEditor ShowToolbar="True">
-    <rte:SfRichTextEditor.ToolbarSettings>
-        <rte:RichTextEditorToolbarSettings BackgroundColor="SkyBlue" SelectionColor="Brown"
+<richTextEditor:SfRichTextEditor ShowToolbar="True">
+    <richTextEditor:SfRichTextEditor.ToolbarSettings>
+        <richTextEditor:RichTextEditorToolbarSettings BackgroundColor="SkyBlue" SelectionColor="Brown"
                                    TextColor="Orange" IsScrollButtonVisible="True"
                                    SeparatorColor="Brown" SeparatorThickness="5" 
                                    ForwardIconBackground="Blue" ForwardIconColor="Green"
                                    BackwardIconBackground="Yellow" BackwardIconColor="Green"/>
-    </rte:SfRichTextEditor.ToolbarSettings>
-</rte:SfRichTextEditor>
+    </richTextEditor:SfRichTextEditor.ToolbarSettings>
+</richTextEditor:SfRichTextEditor>
 
 {% endhighlight %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
 richTextEditor.ShowToolbar = true;

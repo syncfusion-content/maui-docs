@@ -514,7 +514,7 @@ N>
 
 ### Display special time regions in TimelineMonth
 
-The `ShowMonthTimeRegions` property defines whether special time regions are displayed in the scheduler’s [TimelineMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_TimelineMonth) view.
+The [ShowMonthTimeRegions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_ShowMonthTimeRegions) property defines whether special time regions are displayed in the scheduler’s [TimelineMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_TimelineMonth) view.
 
 By default, the property is set to `false`, so time regions are hidden. Setting it to `true` makes the scheduler show the configured [SchedulerTimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) values within the `TimelineMonth` view.
 

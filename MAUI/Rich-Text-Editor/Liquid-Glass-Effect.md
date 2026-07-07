@@ -35,17 +35,19 @@ To enable the Cupertino theme's liquid glass effect, set the [EnableLiquidGlassE
 {% tabs %}
 
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-<editor:SfRichTextEditor EnableLiquidGlassEffect="True"
+<richTextEditor:SfRichTextEditor EnableLiquidGlassEffect="True"
                          EditorBackgroundColor="Transparent">
-    <editor:SfRichTextEditor.ToolbarSettings>
-        <editor:RichTextEditorToolbarSettings BackgroundColor="Transparent" />
-    </editor:SfRichTextEditor.ToolbarSettings>
-</editor:SfRichTextEditor>
+    <richTextEditor:SfRichTextEditor.ToolbarSettings>
+        <richTextEditor:RichTextEditorToolbarSettings BackgroundColor="Transparent"/>
+    </richTextEditor:SfRichTextEditor.ToolbarSettings>
+</richTextEditor:SfRichTextEditor>
 
 {% endhighlight %}
 
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor()
 {

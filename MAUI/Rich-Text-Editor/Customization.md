@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
-The .NET MAUI Rich Text Editor control provides extensive options for customizing its appearance and functionality, from the toolbar and editor area to programmatic formatting and hyperlink management.
+The [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) control provides extensive options for customizing its appearance and functionality, from the toolbar and editor area to programmatic formatting and hyperlink management.
 
 ## Customizing Editor Appearance
 
@@ -22,14 +22,16 @@ The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichT
 
 {% tabs %}
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-<rte:SfRichTextEditor EditorBackgroundColor="LightYellow"
+<richTextEditor:SfRichTextEditor EditorBackgroundColor="LightYellow"
                       BorderColor="SlateGray"
                       BorderThickness="2"
-                      EnableWordWrap="True" />
+                      EnableWordWrap="True"/>
 
 {% endhighlight %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
 richTextEditor.EditorBackgroundColor = Colors.LightYellow;
@@ -62,7 +64,9 @@ You can easily toggle common text styles like bold, italic, and underline on the
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
 // Toggle bold on the selected text
 richTextEditor.ToggleBold();
 
@@ -84,7 +88,9 @@ You can format the selected paragraphs as a bulleted or numbered list.
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
 // Apply or remove a bulleted list from the current paragraph
 richTextEditor.ToggleBulletList();
 
@@ -105,7 +111,9 @@ These methods allow you to set the text alignment for the selected paragraphs.
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
 // Justify the text in the current paragraph
 richTextEditor.AlignJustify();
 
@@ -127,7 +135,9 @@ These methods apply a specific value for a given formatting attribute to the cur
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
 // Apply a new font family and size
 richTextEditor.ApplyFontFamily("Arial");
 richTextEditor.ApplyFontSize(18);
@@ -155,7 +165,9 @@ Use the [InsertHyperlink(string displayText, string Url)](https://help.syncfusio
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
 // Insert a new hyperlink
 richTextEditor.InsertHyperlink("Example", "https://example.com");
 
@@ -172,7 +184,9 @@ Use the [EditHyperlink(string text, string oldUrl, string newUrl)](https://help.
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
 // Change the URL of an existing hyperlink
 richTextEditor.InsertHyperlink("Example", "https://example.com", "https://www.google.com/");
 
@@ -188,7 +202,9 @@ Use the [RemoveHyperlink(string text, string Url)](https://help.syncfusion.com/c
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
 // Remove a specific hyperlink, keeping its text
 richTextEditor.RemoveHyperlink("Example", "https://www.google.com/");
 
