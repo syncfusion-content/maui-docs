@@ -23,26 +23,27 @@ You can insert a code block using the `CodeBlock` toolbar item available in the 
 {% tabs %}
 
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
- <rte:SfRichTextEditor ShowToolbar="True">
-        <rte:SfRichTextEditor.ToolbarItems>
-            <rte:RichTextToolbarItem Type="CodeBlock" />
-        </rte:SfRichTextEditor.ToolbarItems>
-</rte:SfRichTextEditor>
+ <richTextEditor:SfRichTextEditor ShowToolbar="True">
+        <richTextEditor:SfRichTextEditor.ToolbarItems>
+            <richTextEditor:RichTextToolbarItem Type="CodeBlock" />
+        </richTextEditor:SfRichTextEditor.ToolbarItems>
+</richTextEditor:SfRichTextEditor>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
+using Syncfusion.Maui.RichTextEditor;
 
 // Create the Rich Text Editor
-var editor = new SfRichTextEditor
+SfRichTextEditor richTextEditor = new SfRichTextEditor
 {
     ShowToolbar = true
 };
 
 // Add CodeBlock toolbar item
-editor.ToolbarItems.Add(new RichTextToolbarItem
+richTextEditor.ToolbarItems.Add(new RichTextToolbarItem
 {
     Type = RichTextToolbarOptions.CodeBlock
 });
