@@ -452,7 +452,7 @@ The selected rows will be deleted.
 </tr>
 </table>
 
->N When the CurrentCell reaches a boundary (first/last row or column), navigation keys will not move the cell beyond that boundary. For example, pressing <kbd>UpArrow</kbd> in the first row has no effect.
+> **Note:** When the CurrentCell reaches a boundary (first/last row or column), navigation keys will not move the cell beyond that boundary. For example, pressing <kbd>UpArrow</kbd> in the first row has no effect.
 
 ## Multiple Row or Cell Selection
 
@@ -738,7 +738,7 @@ The `SfDataGrid` supports highlighting the current row when the `SelectionMode` 
 
 ### Selected Row Styling
 
-Change the selection back color and text color of selected rows by using the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectedRowTextColor) properties in `SfDataGrid.DefaultStyle`.
+Change the selection background color and text color of selected rows by using the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectedRowTextColor) properties in `SfDataGrid.DefaultStyle`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

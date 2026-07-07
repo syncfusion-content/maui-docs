@@ -174,7 +174,7 @@ private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 
 SfDataGrid can auto-generate and customize columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)).
 
-**Note:** Data annotations are only applied when `AutoGenerateColumnsMode` is not set to `None`. Ensure your model class includes `using System.ComponentModel.DataAnnotations;` at the top.
+> **Note:** Data annotations are only applied when `AutoGenerateColumnsMode` is not set to `None`. Ensure your model class includes `using System.ComponentModel.DataAnnotations;` at the top.
 
 #### Exclude column
 

@@ -16,7 +16,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo` can be enabled by setting [SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) properties. Column-level validation mode takes priority over grid-level validation mode.
 
-**Note:** ValidationMode is a static property set at initialization and applies consistently throughout the data entry lifecycle.
+> **Note:** ValidationMode is a static property set at initialization and applies consistently throughout the data entry life cycle.
 
 * DataGridValidationMode.InEdit - display error icon & tips and also doesn’t allow the users to commit the invalid data by not allowing users to edit other cells.
 * DataGridValidationMode.InView - displays error icons and tips alone.
@@ -650,7 +650,7 @@ public class ErrorTipTemplateSelector : Microsoft.Maui.Controls.DataTemplateSele
 
 Data validation in master-details grids works using the same built-in validation methods (IDataErrorInfo, INotifyDataErrorInfo, and Data Annotations) as well as custom event-based validation. Enable validation by setting the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) property on [DataGridViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html).
 
-**Note:** The parent model must contain a public collection property (specified as `RelationalColumn`) that holds child records. For example:
+> **Note:** The parent model must contain a public collection property (specified as `RelationalColumn`) that holds child records. For example:
 
 ```csharp
 public class Customer

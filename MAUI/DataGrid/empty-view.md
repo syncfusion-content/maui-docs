@@ -90,7 +90,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** The EmptyView may be a single view or a container with multiple child views.
+> **Note:** The EmptyView may be a single view or a container with multiple child views.
 
 <img src="Images/emptyview/emptyview-as-View.png" width="404" alt="DataGrid with emptyview as view">
 
@@ -209,22 +209,10 @@ public class FilterItem : BindableObject
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** Place the `FilterItem.cs` file in your app's main project directory or in a Models folder (e.g., `Models/FilterItem.cs`) alongside your XAML pages.
+> **Note:** Place the `FilterItem.cs` file in your app's main project directory or in a Models folder (e.g., `Models/FilterItem.cs`) alongside your XAML pages.
 
 FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property. The `EmptyViewTemplate` DataTemplate is then invoked to display the custom message using the bound Filter value.
 
 **How FilterProperty works:** `BindableProperty.Create` enables property binding in MAUI. The FilterProperty BindableProperty allows the `Filter` property to respond to binding changes from external sources (like the SearchBar), triggering UI updates automatically.
 
 <img src="Images/emptyview/emptyview-as-template.png" width="404" alt="DataGrid with EmptyView template">
-
-## Triggering EmptyView Display Programmatically
-
-You can dynamically display the EmptyView by clearing or setting the ItemsSource to an empty collection:
-
-```csharp
-// Clear the data to show EmptyView
-dataGrid.ItemsSource = new ObservableCollection<OrderInfo>();
-
-// Or set to null
-dataGrid.ItemsSource = null;
-```

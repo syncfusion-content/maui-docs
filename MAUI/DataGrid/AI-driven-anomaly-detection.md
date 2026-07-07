@@ -36,7 +36,7 @@ Alternatively, use the NuGet Package Manager in Visual Studio to install the [Az
 
 ### Step 2: Create the Azure OpenAI service class
 
-Create a helper class to manage communication with Azure OpenAI. **Important**: Store your API key securely using environment variables or Azure Key Vault, not hardcoded strings.
+Create a helper class to manage communication with Azure OpenAI. **Important**: Store your API key securely using environment variables or Azure Key Vault, not hard coded strings.
 
 {% tabs %}
 
@@ -69,7 +69,7 @@ internal class AzureOpenAIService
 
 **Configuration Requirements:**
 - Replace `{YOUR_RESOURCE_NAME}` with your Azure OpenAI resource name
-- Set `AZURE_OPENAI_KEY` environment variable with your API key (do not hardcode credentials)
+- Set `AZURE_OPENAI_KEY` environment variable with your API key (do not hard code credentials)
 - Verify the deployment name matches your Azure OpenAI deployment
 
 ### Step 3: Implement the GetResultsFromAI Method
@@ -111,7 +111,7 @@ public async Task<string> GetResultsFromAI(string userPrompt)
 
 **Error Handling Guide:**
 - **401 Unauthorized**: Verify API key is correct and set in `AZURE_OPENAI_KEY` environment variable
-- **429 Too Many Requests**: Implement exponential backoff retry logic or wait before retrying
+- **429 Too Many Requests**: Implement exponential back off retry logic or wait before retrying
 - **Timeout**: Increase `MaxTokens` or reduce dataset size if processing is slow
 - **Malformed JSON**: Add validation to parse response and provide fallback behavior
 

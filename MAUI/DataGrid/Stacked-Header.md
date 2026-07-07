@@ -387,7 +387,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
->N The `HeaderRowHeight` property applies to all header rows, including stacked headers. Use the `QueryRowHeight` event for granular control per row.
+> **Note:** The `HeaderRowHeight` property applies to all header rows, including stacked headers. Use the `QueryRowHeight` event for granular control per row.
 
 You can also change the height of stacked header rows using the [SfDataGrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight) event.
 

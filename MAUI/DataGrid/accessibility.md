@@ -107,9 +107,9 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-### Accessing DataGrid Elements with Appium
+### Accessing DataGrid Elements
 
-The following code snippet demonstrates how to access DataGrid elements using Appium for UI automation (requires Appium WebDriver and NUnit framework):
+The following code snippet demonstrates how to access DataGrid elements for UI automation:
 
 {% tabs %}
 {% highlight c# %}
@@ -223,9 +223,9 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-### Accessing DataPager Elements with Appium
+### Accessing DataPager Elements
 
-The following code snippet demonstrates how to access DataPager elements using Appium:
+The following code snippet demonstrates how to access DataPager elements:
 
 {% tabs %}
 {% highlight c# %}
@@ -233,7 +233,7 @@ The following code snippet demonstrates how to access DataPager elements using A
 [Description("SfDataPager AutomationId Access")]
 public void SfDataPager_NavigatePages()
 {
-    // First page
+    // Navigate to First page
     driver.FindElement(MobileBy.AccessibilityId("SfDataPager FirstPage")).Click();
 
     // Navigate to previous page
