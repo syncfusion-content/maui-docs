@@ -226,6 +226,22 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
+### Enable or disable swipe navigation 
+
+The `EnableSwipeNavigation` property determines whether users can navigate between dates using the scheduler's built-in navigation interactions. By default, `EnableSwipeNavigation` is set to `true`, allowing users to navigate using swipe gestures and the navigation buttons in the scheduler header. Setting `EnableSwipeNavigation` to `false` disables these navigation interactions.
+
+{% tabs %}  
+{% highlight XAML tabtitle="xaml" hl_lines="2" %}
+<scheduler:SfScheduler x:Name="scheduler" 
+                       EnableSwipeNavigation="False"/>
+{% endhighlight %}
+{% highlight C# tabtitle="c#" hl_lines="2" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.EnableSwipeNavigation = false;
+this.Content = scheduler;
+{% endhighlight %}  
+{% endtabs %}
+
 ## Date restriction
 
 In [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can restrict the available dates to a range of dates using the properties [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MinimumDateTime), [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MaximumDateTime) and [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectableDayPredicate). It is applicable to all the Scheduler views.
