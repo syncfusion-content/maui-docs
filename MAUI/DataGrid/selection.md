@@ -12,7 +12,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The MAUI DataGrid [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to select one or more rows based on the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html).
 
-To get start quickly with perform selection in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check on this video:
+To get started quickly with performing selection in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/mN95SPfVcHo"></iframe>
 
@@ -60,7 +60,7 @@ this.Content = dataGrid;
 
 <img alt="Selection-unit" src="Images\selection\maui-datagrid-selection-unit.png" width="404" />
 
-N>  It is not possible to set `NavigationMode.Row` when cell selection is enabled (SelectionUnit is Cell or Any). 
+> **Note:** You cannot use `NavigationMode.Row` when `SelectionUnit` is set to `Cell` or `Any`. In such cases, you must use `NavigationMode.Cell` instead. 
 
 ## Current Cell Navigation
 The Keyboard navigation through the cells and rows is determined based on the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) property. The [NavigationMode.Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Cell) allows you to navigate between the cells in a row as well as between rows. The [NavigationMode.Row](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Row) allows you to navigate only between rows. 
@@ -73,19 +73,19 @@ The Keyboard navigation through the cells and rows is determined based on the [N
 </tr>
 <tr>
 <td> {{'[None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_None)'| markdownify }} </td>
-<td>Disables selection, and no rows or cells can be selected. This is the default value.</td>
+<td>Disables selection entirely. No rows or cells can be selected. This is the default value.</td>
 </tr>
 <tr>
 <td>{{'[Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Single)'| markdownify }} </td>
-<td> Allows selection of a single row. Upon selecting the next row or cell, the selection in the previous row or cell is cleared. </td>
+<td> Allows selection of a single row. Previous selection is cleared when selecting a different row or cell. </td>
 </tr>
 <tr>
 <td>{{'[Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Multiple)'| markdownify }}</td>
-<td> Allows selection of more than one row. Selection is not cleared when selecting more than one row or cell. When you click on an already selected row or cell for the second time, the selection is cleared. </td>
+<td> Allows selection of more than one row. Selection is not cleared when selecting additional rows or cells. Click an already selected row or cell a second time to deselect it. </td>
 </tr>
 <tr>
 <td> {{'[SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_SingleDeselect)'| markdownify }} </td>
-<td> Allows selection of a single row or cell only. However, upon tapping the row or cell again, the selection is cleared. Similar to single mode, upon selecting the next row or cell, the selection in the previous row or cell is cleared. </td>
+<td> Allows selection of a single row or cell only. Tap the row or cell again to deselect it. Previous selection is cleared when selecting a different row or cell. </td>
 </tr>
 <td> {{'[Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Extended)'| markdownify }} </td>
 <td> Allows selecting multiple rows or cells. You can select multiple rows or cells in the SfDataGrid by dragging the mouse or by using the key modifiers <kbd>Ctrl</kbd> and <kbd>Shift</kbd>. </td>
@@ -102,7 +102,7 @@ The `SfDataGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Sy
 
 `SfDataGrid.SelectedIndex`: Provides the row index of SfDataGrid.SelectedRow. Denotes the index of first selected row in multiple selections.
 
-`SfDataGrid.CurrentRow`: Provides the underlying data object of the currently selected row in the DataGrid. Denotes the underlying data object of lastly selected row in multiple selections.
+`SfDataGrid.CurrentRow`: Provides the underlying data object of the currently selected row in the DataGrid. Denotes the underlying data object of the most recently selected row in multiple selections.
 
 `SfDataGrid.SelectedRows`: Provides all the selected records of the selected items when multiple selection is enabled.
 
@@ -221,9 +221,9 @@ public partial class MainPage : ContentPage
 <img alt="All the rows selected in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-selectall.png" width="404" />
 
 ## Column selection
-The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection) property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) is set to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingMode.html#Syncfusion_Maui_DataGrid_DataGridSortingMode_Multiple), the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) is set to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell), and the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#fields) is set to `Cell`.
+The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection) property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) is set to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Multiple), the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) is set to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell), and the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#fields) is set to `Cell`.
 
-N> When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingGestureType.html#fields) is set to [Tap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingGestureType.html#Syncfusion_Maui_DataGrid_DataGridSortingGestureType_Tap), column selection is applied only when double-tapping the column header cell. This ensures both sorting and column selection interactions can occur without conflicts.
+> **Note:** When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingGestureType.html#fields) is set to [Tap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingGestureType.html#Syncfusion_Maui_DataGrid_DataGridSortingGestureType_Tap), column selection is applied only when double-tapping the column header cell. This ensures both sorting and column selection interactions can occur without conflicts.
 
 {% tabs %}
 {% highlight XAML %}
@@ -302,6 +302,9 @@ this.Content = dataGrid;
 {% endtabs %}
 
 ## Keyboard behavior
+
+The keyboard behavior in the DataGrid is categorized into Navigation Keys (for moving the current cell), Selection Keys (for selecting multiple rows/cells), and Edit Keys (for committing changes). The following table lists all supported keyboard shortcuts:
+
 <table>
 <tr>
 <th>
@@ -449,6 +452,8 @@ The selected rows will be deleted.
 </tr>
 </table>
 
+>N When the CurrentCell reaches a boundary (first/last row or column), navigation keys will not move the cell beyond that boundary. For example, pressing <kbd>UpArrow</kbd> in the first row has no effect.
+
 ## Multiple Row or Cell Selection
 
 The `SfDataGrid` allows you to select multiple rows or cells by setting the `SelectionMode` property to [Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Extended). This enables selection of multiple rows or cells by dragging the mouse or by clicking while holding modifier keys such as <kbd>Ctrl</kbd> and <kbd>Shift</kbd>.
@@ -572,7 +577,7 @@ Key Combinations
 The `Extended Selection` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) has certain limitations that should be considered while using this feature:
 
 - Drag selection using the mouse pointer is not supported on Android or iOS.
-- Drag selection cannot be used together with PullToRefresh, Swiping, or Row drag-and-drop features.
+- Drag selection cannot be used together with PullToRefresh, Swiping, or Row drag-and-drop features. Disable these features if you need drag-based selection.
 
 ## Move Current Cell
 The [CurrentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCell) can be moved to a particular [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.RowColumnIndex.html) by using the [SfDataGrid.MoveCurrentCellTo()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MoveCurrentCellTo_Syncfusion_Maui_GridCommon_ScrollAxis_RowColumnIndex_System_Boolean_) method. This method is not applicable when the `SfDataGrid.SelectionMode` is None or the `NavigationMode` is Row.
@@ -729,8 +734,11 @@ The `SfDataGrid` supports highlighting the current row when the `SelectionMode` 
 
 <img alt="Customize the current row highlight color in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-currentrowhighlight.png" width="404" />
 
-## 	Customizing Selection Appearance
-Change the selection back color and text color by using the  [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectedRowTextColor) in `SfDataGrid.DefaultStyle`.
+## Customizing Selection Appearance
+
+### Selected Row Styling
+
+Change the selection back color and text color of selected rows by using the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectedRowTextColor) properties in `SfDataGrid.DefaultStyle`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -764,8 +772,9 @@ public partial class MainPage : ContentPage
 
 <img alt="Selection style in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-selection-style.png" width="404" />
 
-## Changing current cell border color and width
-Change the current cell border color and width by using the [CurrentCellBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderColor) and [CurrentCellBorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderWidth) in the SfDataGrid.DefaultStyle.
+### Current Cell Border Styling
+
+Change the current cell border color and width by using the [CurrentCellBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderColor) and [CurrentCellBorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderWidth) properties in `SfDataGrid.DefaultStyle`. This styling is distinct from the selected row styling above and applies to the cell that has keyboard focus.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -878,7 +887,7 @@ By default, the keyboard navigation will be enabled when setting the selection a
 
 ## Customize selection behavior
 
-The default keyboard selection behaviors can be customized by setting the instance of the custom [DataGridRowSelectionController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowSelectionController.html) to the [SfDataGrid.SelectionController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionController) property.
+The default keyboard selection behaviors can be customized by creating a custom class that inherits from [DataGridRowSelectionController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowSelectionController.html) and overriding its methods, then assigning an instance of this custom controller to the [SfDataGrid.SelectionController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionController) property.
 
 ### Change enter key behavior
 

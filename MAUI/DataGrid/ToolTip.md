@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # ToolTip in MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides support for displaying tooltips. ToolTip provides the support to show the pop-up window that displays the information when interacting with cells of SfDataGrid. 
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides support for displaying tooltips. A tooltip displays a pop-up window showing information when interacting with cells of SfDataGrid. 
 
 To show tooltips:
 - **On Windows/Mac**: Hover the mouse cursor over any cell in the grid
@@ -18,7 +18,7 @@ To show tooltips:
 
 ## Show tooltip in a header and record cell
 
-To enable tooltip for datagrid, set the [SfDataGrid.ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowToolTip) property to `true`. This will display tooltip containing cell content when users interact with the cells.
+To enable tooltip for the DataGrid, set the [SfDataGrid.ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowToolTip) property to `true` (default: `false`). This displays a tooltip containing cell content when users interact with cells.
 
 {% tabs %}
 {% highlight xaml %}
@@ -43,9 +43,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI DataGrid displays ToolTip for Record Cell" src="Images\tooltip\maui-datagrid-tooltip-basic.png" width="404" />   
+<img alt="MAUI DataGrid displays ToolTip for Record Cell" src="Images/tooltip/maui-datagrid-tooltip-basic.png" width="404" />   
 
-You can enable tooltips for specific columns by setting the `DataGridColumn.ShowToolTip` property to `true` for the desired columns.
+You can enable tooltips for specific columns by setting the `DataGridColumn.ShowToolTip` property to `true` for the desired columns. If a column has `ShowToolTip` explicitly set to `false`, the tooltip will not display for that column even if grid-level `ShowToolTip` is `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -118,7 +118,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> 
+> **Note:** 
 The `DataGridColumn.ShowToolTip` property takes higher priority than the `SfDataGrid.ShowToolTip` property.
 
 ## ToolTip Customization
@@ -149,7 +149,7 @@ To change the tooltip's border appearance, use the Stroke and StrokeThickness pr
                        ShowToolTip="True" />
 {% endhighlight %}
 {% endtabs %}
-<img alt="Customizing ToolTip Style in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-style.png" width="404" /> 
+<img alt="Customizing ToolTip Style in MAUI DataGrid" src="Images/tooltip/maui-datagrid-tooltip-style.png" width="404" /> 
 
 ### Apply Default Style
 
@@ -168,7 +168,7 @@ You can apply basic tooltip styling using the DefaultStyle property of SfDataGri
 {% endhighlight %}
 {% endtabs %}
 
-## Load views to the Tooltip
+## Creating custom tooltip views
 
 ### Customizing the ToolTip using DataTemplate
 
@@ -176,19 +176,48 @@ You can customize the appearance and content of tooltips by setting the [SfDataG
 
 {% tabs %}
 {% highlight xaml %}
+<ContentPage.Resources>
+    <local:ImageConverter x:Key="ImageConverter" />
+</ContentPage.Resources>
+
 <syncfusion:SfDataGrid x:Name="dataGrid" 
                        ItemsSource="{Binding Orders}"
                        ShowToolTip="True">
     <syncfusion:SfDataGrid.ToolTipTemplate>
         <DataTemplate>
-            <Image Height="100" Width="100" Source="{Binding Customer,Converter={StaticResource ImageConverter}}" />
+            <Image HeightRequest="100" WidthRequest="100" Source="{Binding Customer,Converter={StaticResource ImageConverter}}" />
         </DataTemplate>
     </syncfusion:SfDataGrid.ToolTipTemplate>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
+{% highlight c# %}
+// Create a custom converter to convert customer name to image source
+public class ImageConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        if (value is string customerName)
+        {
+            // Example: Map customer names to image resources
+            return customerName switch
+            {
+                "Anderson" => "anderson.png",
+                "Chopra" => "chopra.png",
+                _ => "placeholder.png"
+            };
+        }
+        return null;
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
+    }
+}
+{% endhighlight %}
 {% endtabs %}
 
-<img alt="Customizing ToolTip using ToolTipTemplate in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template.png" width="404" /> 
+<img alt="Customizing ToolTip using ToolTipTemplate in MAUI DataGrid" src="Images/tooltip/maui-datagrid-tooltip-template.png" width="404" /> 
 
 ### Customizing the ToolTip with DataTemplateSelector
 
@@ -228,9 +257,10 @@ public class ToolTipTemplateSelector : DataTemplateSelector
 
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        if (item is OrderInfo employee)
+        if (item is OrderInfo order)
         {
-            if (employee.OrderID % 2 == 0)
+            // Select template based on OrderID value
+            if (order.OrderID % 2 == 0)
             {
                 return AlternateTemplate;
             }
@@ -248,17 +278,17 @@ public class ToolTipTemplateSelector : DataTemplateSelector
 
 The following image shows the `DefaultTemplate` which is applied through `ToolTipTemplate`.
 
-<img alt="Customizing ToolTip with ToolTipTemplateSelector in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector2.png"  width="404"/>
+<img alt="Customizing ToolTip with ToolTipTemplateSelector in MAUI DataGrid" src="Images/tooltip/maui-datagrid-tooltip-template-selector2.png"  width="404"/>
 
 The following image shows the `AlternateTemplate` which is applied through `ToolTipTemplate`.
 
-<img alt="Displaying AlternateTemplate for ToolTip in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector1.png" width="404"/>
+<img alt="Displaying AlternateTemplate for ToolTip in MAUI DataGrid" src="Images/tooltip/maui-datagrid-tooltip-template-selector1.png" width="404"/>
 
 ## ToolTip Delay
 
 You can control how long the grid waits before showing a tooltip using the `SfDataGrid.TooltipDelay` property. The value is specified in milliseconds and applies to hover delay on Windows and macOS only. On touch platforms (Android/iOS) tooltips are shown via long-press and `TooltipDelay` is not applicable.
 
-This will be helpful for other interactions (such as context menu popups, sorting, etc.) to perform without any interference.
+This is helpful for preventing tooltip interference with other interactions, such as context menu popups or sorting operations.
 
 {% tabs %}
 {% highlight xaml %}
@@ -284,7 +314,7 @@ this.Content = dataGrid;
 The [CellToolTipOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellToolTipOpening) event is raised when a tooltip is about to be displayed for a cell. The event provides [DataGridCellToolTipOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html) which contains the following properties:
 
 * [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_Column): Gets the GridColumn of the cell for which the tooltip is being shown.
-* [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_RowData): Gets the data associated with a specific row. 
+* [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_RowData): Gets the data object associated with the row containing the cell. 
 * [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_RowColumnIndex): Gets the row and column index of the cell.
 * [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_ToolTipText): Gets the text content that is displayed within the tooltip.
 * `Cancel`: Gets or sets a value indicating whether the tooltip should be displayed. Set to `true` to prevent the tooltip from showing.
@@ -298,13 +328,26 @@ The [CellToolTipOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.CellToolTipOpening += DataGrid_CellToolTipOpening;
-
-private void DataGrid_CellToolTipOpening(object sender, DataGridCellToolTipOpeningEventArgs e)
+public partial class MainPage : ContentPage
 {
+    public MainPage()
+    {
+        InitializeComponent();
+        dataGrid.CellToolTipOpening += DataGrid_CellToolTipOpening;
+    }
 
+    private void DataGrid_CellToolTipOpening(object sender, DataGridCellToolTipOpeningEventArgs e)
+    {
+        // Access the row data
+        if (e.RowData is OrderInfo order)
+        {
+            // Optionally cancel tooltip for specific conditions
+            if (order.OrderID < 10000)
+            {
+                e.Cancel = true; // Hide tooltip for orders below 10000
+            }
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
-
-
