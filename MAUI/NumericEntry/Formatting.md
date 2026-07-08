@@ -29,7 +29,7 @@ The following table lists the most common standard format specifiers that are su
 | `P` | Percent | `12.50 %` |
 | `N` | Number (integer and decimal digits) | `1,234.50` |
 
-N> For the full list of supported standard format strings, see the [.NET documentation on standard numeric format strings](https://learn.microsoft.com/dotnet/standard/base-types/standard-numeric-format-strings).
+N> For the full list of supported standard format strings, see the [.NET documentation on standard numeric format strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings).
 
 The following example shows how to apply the `C`, `P`, and `N` format strings to the `CustomFormat` property.
 
