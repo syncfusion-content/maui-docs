@@ -9,11 +9,11 @@ documentation: ug
 
 # Styles in .NET MAUI Chat (SfChat)
 
-You can style the elements of the `SfChat` control by creating resource dictionaries and assigning values to the in-built keys assigned for each individual element.
+You can style the elements of the `SfChat` control by creating resource dictionaries and assigning values to the built-in keys assigned for each individual element.
 
 ## Chat background
 
-You can set any solid color as background for `SfChat` by setting any color to the `SfChat.Background` property. However, if you want the solid color to be applied to the message input view area, also, set the background color of the message input view as transparent, as shown in the below code sample.
+You can set any solid color as background for `SfChat` by setting any color to the `SfChat.Background` property. However, if you want the solid color to be applied to the message input view area, also set the background color of the message input view as transparent, as shown in the code sample below.
 
 {% tabs %}
 {% highlight xaml hl_lines="18 28" %}
@@ -23,13 +23,13 @@ You can set any solid color as background for `SfChat` by setting any color to t
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
             xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-            xmlns:local="clr-namespace:MauiChat"             
-            x:Class="MauiChat.MainPage">
+            xmlns:local="clr-namespace:MauiApp1"
+            x:Class="MauiApp1.MainPage">
 
     <ContentPage.BindingContext>
         <local:ViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <syncTheme:SyncfusionThemeDictionary>
             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
@@ -63,7 +63,7 @@ public partial class MainPage : ContentPage
         this.viewModel = new ViewModel();
         this.sfChat.Messages = viewModel.Messages;
         this.sfChat.CurrentUser = viewModel.CurrentUser;
-        sfChat.Background = Color.FromHex("#94b6ec");
+        sfChat.Background = Color.FromArgb("#94b6ec");
         this.Content = sfChat;
     }
 }
@@ -75,7 +75,9 @@ public partial class MainPage : ContentPage
 
 ### Set background image
 
-You can set any image as the background for the `SfChat` by setting the `SfChat.Background` as `Colors.Transparent` and adding an image below the `SfChat` control. However, if you want the image to be applied to the message input view area as well, set the background color of the message input view as transparent, as shown in the code sample below.
+You can set any image as the background for the `SfChat` by setting the `SfChat.Background` as `Colors.Transparent` and adding an image below the `SfChat` control. However, if you want the image to be applied to the message input view area as well, set the message input view's background to Transparent, as shown in the code sample below.
+
+N> Place the respective image file in the `Resources/Images/` folder of your .NET MAUI project and ensure its build action is set to `MauiImage` so that it is included in the application package.
 
 {% tabs %}
 {% highlight xaml hl_lines="26" %}
@@ -85,7 +87,7 @@ You can set any image as the background for the `SfChat` by setting the `SfChat.
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
             xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-            xmlns:local="clr-namespace:MauiChat"             
+            xmlns:local="clr-namespace:MauiApp1"
             x:Class="MauiApp1.MainPage">
 
     <ContentPage.BindingContext>
@@ -146,7 +148,7 @@ public partial class MainPage : ContentPage
 
 ### Set gradient background
 
-You can set the gradient view as a background for a chat by setting the `SfChat.Background` property to the gradient colors. However, if you want the gradient view to be applied to the message input view area, also, set the background color of the message input view as transparent as shown in the below code sample.
+You can set a `LinearGradientBrush` as the `Background` of `SfChat` by setting the `SfChat.Background` property to the gradient colors. However, if you want the gradient to be applied to the message input view area, also set the message input view's background to Transparent as shown in the code sample below.
 
 {% tabs %}
 {% highlight xaml hl_lines="29 30" %}
@@ -206,12 +208,18 @@ public partial class MainPage : ContentPage
         this.viewModel = new ViewModel();
         this.sfChat.Messages = viewModel.Messages;
         this.sfChat.CurrentUser = viewModel.CurrentUser;
-        LinearGradientBrush linearGradientBrush = new LinearGradientBrush();     
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SkyBlue, 0.0f));
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightCyan, 0.25f));
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
-        linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
+        LinearGradientBrush linearGradientBrush = new LinearGradientBrush
+        {
+            GradientStops =
+            {
+                new GradientStop(Colors.SkyBlue, 0.0f),
+                new GradientStop(Colors.LightCyan, 0.25f),
+                new GradientStop(Colors.SteelBlue, 0.5f),
+                new GradientStop(Colors.LightSkyBlue, 0.75f),
+                new GradientStop(Colors.LightGray, 1.0f)
+            }
+        };
+        sfChat.Background = linearGradientBrush;
         this.sfChat.Background = linearGradientBrush;
         this.Content = sfChat;
     }
@@ -224,7 +232,7 @@ public partial class MainPage : ContentPage
 
 ## Incoming message styling
 
-You can style the elements of an incoming message by setting values to the in-built keys of an incoming message in the resource dictionary.
+You can style the elements of an incoming message by setting values to the built-in keys of an incoming message in the resource dictionary.
 
 <table>
 <tr>
@@ -322,7 +330,7 @@ public MainPage()
     dictionary.Add("SfChatIncomingMessageTextColor", Colors.Gray);
     dictionary.Add("SfChatIncomingMessageTimestampTextColor", Colors.Gray);
     dictionary.Add("SfChatIncomingMessageAuthorTextColor", Colors.Gray);
-    dictionary.Add("SfChatIncomingMessageBackground", Color.FromHex("#eee479"));
+    dictionary.Add("SfChatIncomingMessageBackground", Color.FromArgb("#eee479"));
     dictionary.Add("SfChatIncomingMessageFontFamily", "Roboto-Medium");
     dictionary.Add("SfChatIncomingMessageFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfChatIncomingMessageFontSize", 16);
@@ -342,7 +350,7 @@ public MainPage()
  
 ## Outgoing message styling
 
-You can style the elements of an outgoing message by setting values to the in-built keys of an outgoing message in the resource dictionary.
+You can style the elements of an outgoing message by setting values to the built-in keys of an outgoing message in the resource dictionary.
 
 <table>
 <tr>
@@ -418,7 +426,7 @@ You can style the elements of an outgoing message by setting values to the in-bu
                 <x:String x:Key="SfChatOutgoingMessageFontFamily">Roboto-Medium</x:String>
                 <FontAttributes x:Key="SfChatOutgoingMessageFontAttributes">Italic</FontAttributes>
                 <x:Double x:Key="SfChatOutgoingMessageFontSize">16</x:Double>
-                <x:String x:Key="SfChatOutgoingingMessageAuthorFontFamily">Roboto-Medium</x:String>
+                <x:String x:Key="SfChatOutgoingMessageAuthorFontFamily">Roboto-Medium</x:String>
                 <FontAttributes x:Key="SfChatOutgoingMessageAuthorFontAttributes">Italic</FontAttributes>
                 <x:Double x:Key="SfChatOutgoingMessageAuthorFontSize">16</x:Double>
                 <x:String x:Key="SfChatOutgoingMessageTimestampFontFamily">Roboto-Medium</x:String>
@@ -440,7 +448,7 @@ public MainPage()
     dictionary.Add("SfChatOutgoingMessageTextColor", Colors.Gray);
     dictionary.Add("SfChatOutgoingMessageTimestampTextColor", Colors.Gray);
     dictionary.Add("SfChatOutgoingMessageAuthorTextColor", Colors.Gray);
-    dictionary.Add("SfChatOutgoingMessageBackground", Color.FromHex("#eee479"));
+    dictionary.Add("SfChatOutgoingMessageBackground", Color.FromArgb("#eee479"));
     dictionary.Add("SfChatOutgoingMessageFontFamily", "Roboto-Medium");
     dictionary.Add("SfChatOutgoingMessageFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfChatOutgoingMessageFontSize", 16);
@@ -460,7 +468,7 @@ public MainPage()
 
 ## Calendar message styling
 
-You can style the elements of a calendar message by setting values to the in-built keys of a calendar message in the resource dictionary.
+You can style the elements of a calendar message by setting values to the built-in keys of a calendar message in the resource dictionary.
 
 <table>
 <tr>
@@ -493,7 +501,7 @@ You can style the elements of a calendar message by setting values to the in-bui
 </ContentPage.Resources>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -510,11 +518,11 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-N> In addition to this, you can write the target style to the `SfCalendar` control to style the inner elements of the calendar, like the selection of background color, foreground color, etc.
+N> In addition to this, you can also apply styles to the inner elements of the calendar using the `SfCalendar` control's styling keys, like the selection background color, foreground color, etc.
 
 ## Hyperlink message styling
 
-You can style the elements of a hyperlink message by setting values to the in-built keys of a hyperlink message in the resource dictionary.
+You can style the elements of a hyperlink message by setting values to the built-in keys of a hyperlink message in the resource dictionary.
 
 <table>
 <tr>
@@ -552,6 +560,7 @@ You can style the elements of a hyperlink message by setting values to the in-bu
             <ResourceDictionary>
                 <x:String x:Key="SfChatTheme">CustomTheme</x:String>
                 <Color x:Key="SfChatIncomingHyperlinkColor">#94b6ec</Color>
+                <Color x:Key="SfChatOutgoingHyperlinkColor">#94b6ec</Color>
                 <Color x:Key="SfChatHyperlinkMetaTitleTextColor">#f29d0a</Color>
                 <Color x:Key="SfChatHyperlinkDescriptionTextColor">Black</Color>
                 <Color x:Key="SfChatHyperlinkDescriptionBackground">#dde9cc</Color>
@@ -569,10 +578,11 @@ public MainPage()
     InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfChatTheme", "CustomTheme");
-    dictionary.Add("SfChatIncomingHyperlinkColor", Color.FromHex("#94b6ec"));
-    dictionary.Add("SfChatHyperlinkMetaTitleTextColor", Color.FromHex("#f29d0a"));
+    dictionary.Add("SfChatIncomingHyperlinkColor", Color.FromArgb("#94b6ec"));
+    dictionary.Add("SfChatOutgoingHyperlinkColor", Color.FromArgb("#94b6ec"));
+    dictionary.Add("SfChatHyperlinkMetaTitleTextColor", Color.FromArgb("#f29d0a"));
     dictionary.Add("SfChatHyperlinkDescriptionTextColor", Colors.Black);
-    dictionary.Add("SfChatHyperlinkDescriptionBackground", Color.FromHex("#dde9cc"));
+    dictionary.Add("SfChatHyperlinkDescriptionBackground", Color.FromArgb("#dde9cc"));
     this.Resources.Add(dictionary);
     ....
 }
@@ -584,7 +594,7 @@ public MainPage()
 
 ## Image message styling
 
-You can style the elements of a image message by setting values to the in-built keys of a image message in the resource dictionary.
+You can style the elements of an image message by setting values to the built-in keys of an image message in the resource dictionary.
 
 <table>
 <tr>
@@ -601,9 +611,42 @@ You can style the elements of a image message by setting values to the in-built 
 </tr>
 </table>
 
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                <Color x:Key="SfChatIncomingImageStroke">SkyBlue</Color>
+                <Color x:Key="SfChatOutgoingImageStroke">DeepPink</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatIncomingImageStroke", Colors.SkyBlue);
+    dictionary.Add("SfChatOutgoingImageStroke", Colors.DeepPink);
+    this.Resources.Add(dictionary);
+    ....
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Date picker message styling
 
-You can style the elements of a date picker message by setting values to the in-built keys of a date picker message in the resource dictionary.
+You can style the elements of a date picker message by setting values to the built-in keys of a date picker message in the resource dictionary.
 
 <table>
 <tr>
@@ -648,6 +691,8 @@ You can style the elements of a date picker message by setting values to the in-
                 <Color x:Key="SfChatDatePickerTextColor">White</Color>
                 <Color x:Key="SfChatDatePickerBackground">SkyBlue</Color>
                 <Color x:Key="SfChatDatePickerStroke">Black</Color>
+                <Color x:Key="SfChatDateTimeInputMessageIconColor">Orange</Color>
+                <Color x:Key="SfChatDateTimeInputMessageIconBackground">LightYellow</Color>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
     </syncTheme:SyncfusionThemeDictionary>
@@ -665,7 +710,9 @@ public MainPage()
     dictionary.Add("SfChatDatePickerBackground", Colors.SkyBlue);
     dictionary.Add("SfChatDatePickerTextColor", Colors.White);
     dictionary.Add("SfChatDatePickerIconColor", Colors.Blue);
-    dictionary.Add("SfChatDatePickerStroke", Colors.Blue);
+    dictionary.Add("SfChatDatePickerStroke", Colors.Black);
+    dictionary.Add("SfChatDateTimeInputMessageIconColor", Colors.Orange);
+    dictionary.Add("SfChatDateTimeInputMessageIconBackground", Colors.LightYellow);
     this.Resources.Add(dictionary);
     ....
 }
@@ -677,7 +724,7 @@ public MainPage()
 
 ## Time picker message styling
 
-You can style the elements of a time picker message by setting values to the in-built keys of a time picker message in the resource dictionary.
+You can style the elements of a time picker message by setting values to the built-in keys of a time picker message in the resource dictionary.
 
 <table>
 <tr>
@@ -742,7 +789,7 @@ public MainPage()
 ![Syncfusion .NET MAUI Chat Time picker message style](images/styles/maui-chat-timepicker-message-style.png)
 
 ## Delivery State styling
-You can style the delivery state by setting values to the in-built keys of the delivery state in the resource dictionary.
+You can style the delivery state by setting values to the built-in keys of the delivery state in the resource dictionary.
 
 <table>
 <tr>
@@ -751,7 +798,7 @@ You can style the delivery state by setting values to the in-built keys of the d
 </tr>
 <tr>
 <td> SfChatDeliveryStateFailedIconColor </td>
-<td> Color of the Delivery State None. </td>
+<td> Color of the Failed delivery state icon. </td>
 </tr>
 <tr>
 <td> SfChatDeliveryStateSentIconColor </td>
@@ -808,7 +855,7 @@ public MainPage()
 
 ## Message input view styling
 
-You can style the elements of the message input view by setting values to the in-built keys of the message input view in the resource dictionary.
+You can style the elements of the message input view by setting values to the built-in keys of the message input view in the resource dictionary.
 
 <table>
 <tr>
@@ -836,7 +883,7 @@ You can style the elements of the message input view by setting values to the in
 </ContentPage.Resources>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -856,7 +903,7 @@ public MainPage()
 
 ## Editor styling
 
-You can style the elements of the editor view by setting values to the in-built keys of the editor view in the resource dictionary.
+You can style the elements of the editor view by setting values to the built-in keys of the editor view in the resource dictionary.
 
 <table>
 <tr>
@@ -909,8 +956,9 @@ You can style the elements of the editor view by setting values to the in-built 
                 <Color x:Key="SfChatEditorTextColor">Black</Color>
                 <Color x:Key="SfChatEditorBackground">LightGreen</Color>
                 <Color x:Key="SfChatEditorStroke">Black</Color>
+                <Color x:Key="SfChatFocusedEditorStroke">DeepPink</Color>
                 <x:String x:Key="SfChatEditorFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfChatEditorFontAttributes">Bold</FontAttributes>
+                <FontAttributes x:Key="SfChatEditorFontAttributes">Italic</FontAttributes>
                 <x:Double x:Key="SfChatEditorFontSize">16</x:Double>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
@@ -930,6 +978,7 @@ public MainPage()
     dictionary.Add("SfChatEditorBackground", Colors.LightGreen);
     dictionary.Add("SfChatEditorTextColor", Colors.Black);
     dictionary.Add("SfChatEditorStroke", Colors.Black);
+    dictionary.Add("SfChatFocusedEditorStroke", Colors.DeepPink);
     dictionary.Add("SfChatEditorFontFamily", "Roboto-Medium");
     dictionary.Add("SfChatEditorFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfChatEditorFontSize", 16);
@@ -944,7 +993,7 @@ public MainPage()
 
 ## Typing indicator styling
 
-You can style the elements of the typing indicator view by setting values to the in-built keys of the typing indicator view in the resource dictionary.
+You can style the elements of the typing indicator view by setting values to the built-in keys of the typing indicator view in the resource dictionary.
 
 <table>
 <tr>
@@ -1000,7 +1049,7 @@ public MainPage()
     InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfChatTheme", "CustomTheme");
-    dictionary.Add("SfChatTypingIndicatorBackground", Color.FromHex("#eee479"));
+    dictionary.Add("SfChatTypingIndicatorBackground", Color.FromArgb("#eee479"));
     dictionary.Add("SfChatTypingIndicatorTextColor", Colors.Blue);
     dictionary.Add("SfChatTypingIndicatorFontFamily", "Roboto-Medium");
     dictionary.Add("SfChatTypingIndicatorFontAttributes", FontAttributes.Italic);
@@ -1016,7 +1065,7 @@ public MainPage()
 
 ## Time break view styling
 
-You can style the elements of the time break view by setting values to the in-built keys of the time break view in the resource dictionary.
+You can style the elements of the time break view by setting values to the built-in keys of the time break view in the resource dictionary.
 
 <table>
 <tr>
@@ -1079,7 +1128,7 @@ public MainPage()
     dictionary.Add("SfChatTheme", "CustomTheme");
     dictionary.Add("SfChatTimeBreakViewTextColor", Colors.Blue);
     dictionary.Add("SfChatTimeBreakViewStroke", Colors.LimeGreen);
-    dictionary.Add("SfChatTimeBreakViewBackground", Color.FromHex("#e2f9cd"));
+    dictionary.Add("SfChatTimeBreakViewBackground", Color.FromArgb("#e2f9cd"));
     dictionary.Add("SfChatTimeBreakViewFontFamily", "Roboto-Medium");
     dictionary.Add("SfChatTimeBreakViewFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfChatTimeBreakViewFontSize", 16);
@@ -1094,7 +1143,7 @@ public MainPage()
 
 ## Suggestions styling
 
-You can style the elements of the suggestion view by setting values to the in-built keys of the suggestion view in the resource dictionary.
+You can style the elements of the suggestion view by setting values to the built-in keys of the suggestion view in the resource dictionary.
 
 <table>
 <tr>
@@ -1143,8 +1192,9 @@ You can style the elements of the suggestion view by setting values to the in-bu
                 <Color x:Key="SfChatSuggestionListItemBackground">#d9d9d9</Color>
                 <Color x:Key="SfChatSuggestionListBackground">Violet</Color>
                 <x:String x:Key="SfChatSuggestionListItemFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfChatSuggestionListItemFontAttributes">Bold</FontAttributes>
+                <FontAttributes x:Key="SfChatSuggestionListItemFontAttributes">Italic</FontAttributes>
                 <x:Double x:Key="SfChatSuggestionListItemFontSize">16</x:Double>
+                <Color x:Key="SfChatSuggestionListItemStroke">DeepPink</Color>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
     </syncTheme:SyncfusionThemeDictionary>
@@ -1161,10 +1211,11 @@ public MainPage()
     dictionary.Add("SfChatTheme", "CustomTheme");
     dictionary.Add("SfChatSuggestionListItemTextColor", Colors.Blue);
     dictionary.Add("SfChatSuggestionListBackground", Colors.Violet);
-    dictionary.Add("SfChatSuggestionListItemBackground", Color.FromHex("#d9d9d9"));
+    dictionary.Add("SfChatSuggestionListItemBackground", Color.FromArgb("#d9d9d9"));
     dictionary.Add("SfChatSuggestionListItemFontFamily", "Roboto-Medium");
     dictionary.Add("SfChatSuggestionListItemFontAttributes", FontAttributes.Italic);
     dictionary.Add("SfChatSuggestionListItemFontSize", 16);
+    dictionary.Add("SfChatSuggestionListItemStroke", Colors.DeepPink);
     this.Resources.Add(dictionary);
     ....
 }
@@ -1176,7 +1227,7 @@ public MainPage()
 
 ## Send button styling
 
-You can style the send message button based on its state by setting values to the in-built keys of the send message button in the resource dictionary.
+You can style the send message button based on its state by setting values to the built-in keys of the send message button in the resource dictionary.
 
 <table>
 <tr>
@@ -1221,6 +1272,8 @@ You can style the send message button based on its state by setting values to th
                 <Color x:Key="SfChatSendButtonColor">DeepPink</Color>
                 <Color x:Key="SfChatSendButtonBackground">SkyBlue</Color>
                 <Color x:Key="SfChatDisabledSendButtonBackground">LightGreen</Color>
+                <Color x:Key="SfChatHoveredSendButtonBackground">LightSkyBlue</Color>
+                <Color x:Key="SfChatPressedSendButtonBackground">SteelBlue</Color>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
     </syncTheme:SyncfusionThemeDictionary>
@@ -1239,6 +1292,8 @@ public MainPage()
     dictionary.Add("SfChatSendButtonColor", Colors.DeepPink);
     dictionary.Add("SfChatSendButtonBackground", Colors.SkyBlue);
     dictionary.Add("SfChatDisabledSendButtonBackground", Colors.LightGreen);
+    dictionary.Add("SfChatHoveredSendButtonBackground", Colors.LightSkyBlue);
+    dictionary.Add("SfChatPressedSendButtonBackground", Colors.SteelBlue);
     this.Resources.Add(dictionary);
     ....
 }
