@@ -2,17 +2,17 @@
 layout: post
 title: Getting Started with .NET MAUI Image Editor control | Syncfusion
 description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor(SfImageEditor) control and more.
-platform: maui
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, image view maui.
 ---
 
-# Getting Started with the .NET MAUI ImageEditor
+# Getting Started with the .NET MAUI Image Editor
 
-This section explains the steps to create and load an image to the [.Net MAUI ImageEditor(SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control. Follow the steps below to add .NET MAUI ImageEditor control to your project.
+This section explains the steps to create and load an image in the [.NET MAUI Image Editor (SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control. Follow the steps below to add the .NET MAUI Image Editor control to your project.
 
-To get start quickly with our .NET MAUI ImageEditor, you can check the below video.
+To get started quickly with the .NET MAUI Image Editor, you can check the video below.
 
 {% youtube
 "youtube:https://youtu.be/Gkkh52xSehM?si=_WKWcnGgob0DofXe"%}
@@ -73,7 +73,7 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -92,18 +92,12 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-Make sure to add the namespace.
- 
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
 {% tabs %}
 {% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-{% endhighlight %}
-{% endtabs %}
- 
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
- 
-{% tabs %}
-{% highlight c# %}
+
 builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 {% endtabs %}
@@ -125,15 +119,15 @@ using Syncfusion.Maui.ImageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add a ImageEditor component
+## Step 5: Add the Image Editor component
 
-Initialize the [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) and load the images from different sources using [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property.
+Initialize the [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) and load images from different sources using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property.
 
-N> You can load image formats such as JPEG, PNG, and BMP to the image editor.
+N> You can load image formats such as JPEG, PNG, JPG and BMP into the image editor.
 
 ### Loading a local file
 
-To load an image from a local path. The following code shows adding an image to the image editor control with the format as "JPEG" and name as "image."
+To load an image from a local path, use the following code. This example loads an image named "image" with the "JPEG" format into the image editor control.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -141,11 +135,14 @@ To load an image from a local path. The following code shows adding an image to 
     <imageEditor:SfImageEditor Source="D:\images\image.jpeg"/>
 
 {% endhighlight %}
-{% highlight C# hl_lines="9 10 11" %}
+{% highlight C# tabtitle="C#" hl_lines="3 4 5" %}
 
-    SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromFile("D:\\images\\image.jpeg");
-    this.content = imageEditor;
+using Syncfusion.Maui.ImageEditor;
+using Microsoft.Maui.Controls;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("D:\\images\\image.jpeg");
+this.content = imageEditor;
 
 {% endhighlight %}
 {% endtabs %}
@@ -160,11 +157,14 @@ To load an image from a remote URI, you can use the following code example.
     <imageEditor:SfImageEditor Source="https://dummyimage.com/300x200/000/fff.png"/>
 
 {% endhighlight %}
-{% highlight C#  %}
+{% highlight C# tabtitle="C#" %}
 
-    SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromUri(new Uri("https://dummyimage.com/300x200/000/fff.png"));
-    this.content = imageEditor;
+using Syncfusion.Maui.ImageEditor;
+using Microsoft.Maui.Controls;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromUri(new Uri("https://dummyimage.com/300x200/000/fff.png"));
+this.content = imageEditor;
 
 {% endhighlight %}
 {% endtabs %}
@@ -183,9 +183,9 @@ N> To load an URI image on iOS platform, you need to set the [App Transport Secu
 {% endhighlight %}
 {% endtabs %}
 
-### Load an image from Resource folder
+### Loading an image from the Resource folder
 
-To load an image from a resource file.
+To load an image from a resource file, follow these steps:
 
 Refer to the following steps to add an image to the project:
 
@@ -205,37 +205,46 @@ The following code shows adding an image to the image editor control.
     <imageEditor:SfImageEditor Source="image.jpeg"/>
 
 {% endhighlight %}
-{% highlight C#  %}
+{% highlight C# tabtitle="C#" %}
 
-    SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source =  ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
-    this.content = imageEditor;
+using Syncfusion.Maui.ImageEditor;
+using Microsoft.Maui.Controls;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source =  ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
+this.content = imageEditor;
 
 {% endhighlight %}
 {% endtabs %}
 
-### Load an image from stream
+### Loading an image from a stream
 
 To load an image from a byte array, use the provided code example for stream-based loading.
 
 {% tabs %}
-{% highlight C#  %}
+{% highlight C# tabtitle="C#" %}
 
+using Syncfusion.Maui.ImageEditor;
 using System.Reflection;
 
 SfImageEditor imageEditor = new SfImageEditor();
 Assembly assembly = Assembly.GetExecutingAssembly();
-imageEditor.Source = ImageSource.FromStream(() => assembly.GetManifestResourceStream("MyProject.Resources.Images.image.jpeg"))
+imageEditor.Source = ImageSource.FromStream(() => assembly.GetManifestResourceStream("MyProject.Resources.Images.image.jpeg"));
 
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
-![GettingStarted in .NET Maui ImageEditor](images\getting-started\imageeditor-gettingstarted.png)
+![Getting started in .NET MAUI Image Editor](images\getting-started\imageeditor-gettingstarted.png)
 
-N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lambda function so that you can process them whenever needed.
-imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
+N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the lambda function so that you can process them whenever needed.
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes));
+{% endhighlight %}
+{% endtabs %}
 
 You can download the ImageEditor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted).
 

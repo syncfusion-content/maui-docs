@@ -30,22 +30,25 @@ The Liquid Glass Effect elevates the [SfRichTextEditor](https://help.syncfusion.
 
 ## Apply Liquid Glass Effect to SfRichTextEditor
 
-To enable the Cupertino theme's liquid glass effect, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EnableLiquidGlassEffect) property to `True` on the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html). For optimal visual appearance with a sleek and glassy output, set transparent backgrounds for both the editor and toolbar using the [EditorBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EditorBackgroundColor) property of `SfRichTextEditor` and the [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackgroundColor) property of ToolbarSettings.
+To enable the Cupertino theme's liquid glass effect, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EnableLiquidGlassEffect) property to `True` on the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html). By default, `EnableLiquidGlassEffect` is `False`. For optimal visual appearance with a sleek and glassy output, set transparent backgrounds for both the editor and toolbar using the [EditorBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EditorBackgroundColor) property of `SfRichTextEditor` and the [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackgroundColor) property of ToolbarSettings.
 
 {% tabs %}
 
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-<editor:SfRichTextEditor EnableLiquidGlassEffect="True"
+<richTextEditor:SfRichTextEditor EnableLiquidGlassEffect="True"
                          EditorBackgroundColor="Transparent">
-    <editor:SfRichTextEditor.ToolbarSettings>
-        <editor:RichTextEditorToolbarSettings BackgroundColor="Transparent" />
-    </editor:SfRichTextEditor.ToolbarSettings>
-</editor:SfRichTextEditor>
+    <richTextEditor:SfRichTextEditor.ToolbarSettings>
+        <richTextEditor:RichTextEditorToolbarSettings BackgroundColor="Transparent"/>
+    </richTextEditor:SfRichTextEditor.ToolbarSettings>
+</richTextEditor:SfRichTextEditor>
 
 {% endhighlight %}
 
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
+using Microsoft.Maui.Graphics;
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor()
 {
@@ -64,7 +67,7 @@ richTextEditor.ToolbarSettings = new RichTextEditorToolbarSettings()
 
 #### Customize Toolbar and Editor Corner Radius
 
-The toolbar corner radius, toolbar selection corner radius and editor corner radius can be customized using Syncfusion theme keys:
+The toolbar corner radius, toolbar selection corner radius, and editor corner radius are not exposed as public properties, so they are customized by overriding the Syncfusion theme resource keys, which target the internal styling used by the RichTextEditor renderer.
 
 {% tabs %}
 

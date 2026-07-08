@@ -13,7 +13,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 This section provides a quick overview for working with the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) for .NET MAUI.  Follow the steps below to add a basic DataGrid to your project.
 
-To quickly get started with the .NET MAUI DataGrid, watch this video:
+To quickly get started with the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), watch this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/xW0a7JlHbz4'></iframe>
 

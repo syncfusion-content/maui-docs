@@ -9,7 +9,25 @@ documentation: ug
 
 # Implementing AI-Powered Smart Search in .NET MAUI Autocomplete
 
-This document will walk you through the implementation of an advanced search functionality in the Syncfusion [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The example leverages the power of Azure OpenAI for an intelligent, AI-driven search experience.
+This document walks you through the implementation of an advanced search feature in the Syncfusion [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The example leverages Azure OpenAI for an intelligent, AI-driven search experience.
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+- A working .NET MAUI application with the Syncfusion.Maui.Inputs package installed.
+- An active Azure subscription with access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and a deployed model. If you don’t have access, refer to the [create and deploy Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account. Note down the deployment name, endpoint URL, and API key.
+- The [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) NuGet package (version 2.x recommended for the `IChatClient` API used in this sample). Install it by running the following command in the Visual Studio Package Manager Console:
+
+    ```powershell
+    Install-Package Azure.AI.OpenAI -Version 2.0.0
+    ```
+
+    Or using the .NET CLI:
+
+    ```bash
+    dotnet add package Azure.AI.OpenAI --version 2.0.0
+    ```
 
 ## Integrating Azure OpenAI with your .NET MAUI App
 
@@ -19,15 +37,15 @@ If you don’t have access, please refer to the [create and deploy Azure OpenAI 
 
 Note down the deployment name, endpoint URL, and API key.
 
-we’ll use the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/). So, before getting started, install the Azure.AI.OpenAI NuGet package in your .NET MAUI app.
+Use the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/). Before getting started, install the Azure.AI.OpenAI NuGet package in your .NET MAUI app.
 
-In your base service class (AzureBaseService), initialize the OpenAIClient. Replace the Endpoint, DeploymentName, Key with actual values from your Azure OpenAI resource.
+In your base service class (`AzureBaseService`), initialize the `OpenAIClient`. Replace the `Endpoint`, `DeploymentName`, and `Key` with actual values from your Azure OpenAI resource.
 
-This creates a chat client using your endpoint, API key, and deployment name. It’s stored in the Client property for use in other methods.
+This creates a chat client using your endpoint, API key, and deployment name. It is stored in the `Client` property for use in other methods.
 
-ComboBoxAzureAIService use this Client to send prompts and receive completions.
+`ComboBoxAzureAIService` uses this `Client` to send prompts and receive completions.
 
-In the `GetCompletion` method, we will construct the prompt and send it to the Azure OpenAI Service. The ChatHistory helps maintain context but is cleared for each new prompt in this implementation to ensure each search is independent.
+In the `GetCompletion` method, construct the prompt and send it to the Azure OpenAI Service. The `ChatHistory` helps maintain context but is cleared for each new prompt in this implementation to ensure that each search is independent.
 
 {% tabs %}
 {% highlight c# %}
@@ -177,7 +195,7 @@ Implement the `GetMatchingItemsAsync` method from the interface. This method is 
 
 The logic within [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) intelligently decides whether to perform an online AI search based on the availability of Azure credentials.
 
-To get accurate and structured results from the AI, we must provide a detailed prompt. This is constructed inside the 
+To get accurate and structured results from the AI, provide a detailed prompt. This is constructed inside the 
 `FilterCountriesUsingAzureAI` method.
 
 The `FilterCountriesUsingAzureAI` method uses prompt engineering to instruct the AI on how to filter the results, including asking it to handle spelling mistakes and providing the response in a clean format.
@@ -335,4 +353,4 @@ The following image demonstrates the output of the above AI-based search using a
 
 You can find the complete sample from this [link](https://github.com/SyncfusionExamples/Smart-AI-Searching-using-.NET-MAUI-Autocomplete).
 
-By combining a powerful AI-driven online search with a robust you can create a truly smart and reliable search experience in your .NET MAUI applications.
+By combining a powerful AI-driven online search with a robust offline fallback, you can create a truly smart and reliable search experience in your .NET MAUI applications.
