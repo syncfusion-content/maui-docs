@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointment Resizing in .NET MAUI Scheduler Control | Syncfusion®
-description: Learn how to resize appointments in the Syncfusion® .NET MAUI Scheduler (SfScheduler) control, change appointment duration interactively, and customize resize behavior using settings and events.
+description: Learn how to resize appointments in the Syncfusion® .NET MAUI Scheduler control, change appointment duration interactively, and customize resize behavior using settings and events.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -222,7 +222,7 @@ namespace GettingStarted
 
 ### Resize Border Customization
  
-The border displayed around an appointment during resizing can be customized using the [ResizeBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderThickness) and [ResizeBorderStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderStroke) properties. `ResizeBorderThickness` defines how thick the border appears (default value is `1`), while `ResizeBorderStroke` of type [Brush](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/brush) specifies its color (default value is `Black`).
+The border displayed around an appointment during resizing can be customized using the [ResizeBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderThickness) and [ResizeBorderStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderStroke) properties. `ResizeBorderThickness` defines how thick the border appears, while `ResizeBorderStroke` specifies its color.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="7 8 9 10" %}

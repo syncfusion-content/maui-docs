@@ -211,7 +211,7 @@ namespace GettingStarted
 
 ### Set the Appointment Tooltip Template in C#
 
-You can also set `AppointmentToolTipTemplate` programmatically using [`DataTemplate`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate). When the bound items are `SchedulerAppointment` objects, you can bind directly without setting `x:DataType`:
+You can also set `AppointmentToolTipTemplate` programmatically using `DataTemplate`. When the bound items are `SchedulerAppointment` objects, you can bind directly without setting `x:DataType`:
 
 ```csharp
 using Syncfusion.Maui.Scheduler;

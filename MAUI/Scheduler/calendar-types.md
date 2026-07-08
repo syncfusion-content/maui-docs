@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Calendar types in .NET MAUI Scheduler (SfScheduler)
-The Scheduler control supports different types of calendars such as Gregorian, Korean, Hebrew, and more. Change the calendar types by using the [CalendarType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CalendarType) property in the SfScheduler.  
+The Scheduler control supports different types of calendars such as Gregorian, Korean, Hebrew, and more. Change the calendar types by using the [CalendarType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CalendarType) property in the SfScheduler.
 
 <table>
 <tr>
@@ -43,14 +43,14 @@ The Scheduler control supports different types of calendars such as Gregorian, K
 </table>
 
 N>
-* The FlowDirection will be updated based on the CalendarType. If you want to override this behavior, set the FlowDirection after CalendarType. If a calendar is specified other than the Gregorian, all the DateTime values such as Appointment Start and End time, SpecialTimeRegion Start and End time, SelectableDayPredicate, SelectedDate, and DisplayDate can be given in two ways.
+* The FlowDirection will be updated based on the CalendarType. If you want to override this behavior, set the FlowDirection after the CalendarType if a calendar is specified other than the Gregorian. All the DateTime values such as Appointment Start and End time, SpecialTimeRegion Start and End time, SelectableDayPredicate, SelectedDate, and DisplayDate can be given in two ways.
 * The DateTime instance without specifying calendar type. The scheduler will handle the DateTime value for the specified calendar type.
 * When a DateTime instance has a calendar type, the Scheduler handles it directly.
 * All calendar types are supported except the Lunar type calendars.
 
 {% tabs %}
 {% highlight XAML hl_lines="1" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
+<scheduler:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
@@ -65,8 +65,8 @@ this.Content = scheduler;
 
 ![calendar-type-in-maui-scheduler](images/calendar-type/calendartype-in-maui-scheduler.png)
 
-### DateTime values in Calendar Types
-All the DateTime values can be given such as [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate), [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedDate), [BlackoutDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_BlackoutDates), Appointment [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), and SpecialTimeRegion [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_EndTime) values in two ways when the calendar identifier is specified other than the [GregorianCalendar](https://learn.microsoft.com/dotnet/api/system.globalization.gregoriancalendar).
+### DateTime values in Calendar types
+All the DateTime values can be given, such as [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate), [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedDate), [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectableDayPredicate), Appointment [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), and [SpecialTimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html) values, in two ways when the calendar identifier is specified other than the [GregorianCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.CalendarType.html#Syncfusion_Maui_Scheduler_CalendarType_Gregorian).
 
 * Create an appointment with a start and end time value by declaring the calendar type and respective calendar type date.
 
@@ -74,7 +74,7 @@ All the DateTime values can be given such as [DisplayDate](https://help.syncfusi
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
 // Creating an instance for the schedule appointment collection.
-var appointments = new ObservableCollection<SchedulerAppointment>(); 
+var appointments = new ObservableCollection<SchedulerAppointment>();
 
 // Adding schedule appointment in the schedule appointment collection.
 appointments.Add(new SchedulerAppointment()
@@ -104,7 +104,7 @@ var appointments = new ObservableCollection<SchedulerAppointment>();
 appointments.Add(new SchedulerAppointment()
 {
 	Subject = "Meeting",
-	//The StartTime and EndTime values specified with the local system date will be converted to the Hijri calendar mentioned.
+	//The StartTime and EndTime values specified with the local system date will be converted to the Hijiri calendar mentioned.
 	StartTime = new DateTime(2021, 09, 29, 10, 0, 0, 0),
 	EndTime = new DateTime(2021, 09, 29, 11, 0, 0, 0),
 });

@@ -173,15 +173,8 @@ this.Content = scheduler;
 <td>{{'[SchedulerTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTappedEventArgs.html)'| markdownify }}</td>
 <td>Provides data for view header tapped event.</td></tr>
 
-    <tr>
-      <td>{{'[ScheduleAppointmentCollection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointmentCollection.html)'| markdownify }}</td>
-      <td>{{'[ObservableCollection&lt;SchedulerAppointment&gt;](https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1)'| markdownify }}</td>
-      <td>The Xamarin `ScheduleAppointmentCollection` is replaced with the standard .NET `ObservableCollection&lt;SchedulerAppointment&gt;` to be assigned to `AppointmentsSource`.</td></tr>
-
-    <tr>
-      <td>{{'[MonthViewSettings.ShowLeadingAndTrailingDates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewSettings.html)'| markdownify }}</td>
-      <td>{{'[SchedulerMonthView.ShowLeadingAndTrailingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowLeadingAndTrailingDates)'| markdownify }}</td>
-      <td>Property moved from the settings class to the dedicated `SchedulerMonthView` class and renamed for consistency.</td></tr>
+<tr>
+<td>{{'[VisibleDatesChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.VisibleDatesChangedEventArgs.html)'| markdownify }}</td>
 <td>{{'[SchedulerViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html)'| markdownify }}</td>
 <td>Provides data for scheduler view changed event.</td></tr>
 

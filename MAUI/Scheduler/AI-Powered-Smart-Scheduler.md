@@ -844,4 +844,4 @@ namespace GettingStarted
 
 ![Booking-appointments-with-AI-in-NET-MAUI-Scheduler](images/smart-ai-samples/Booking-appointments-with-AI-in-NET-MAUI-Scheduler.gif)
 
-You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartScheduler)
+You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/Scheduler)
