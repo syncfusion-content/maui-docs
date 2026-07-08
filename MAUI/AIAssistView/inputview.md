@@ -264,7 +264,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView stop responding template customization](Images/inputview/maui-aiassistview-stoprespondingtemplate.gif)
+![Syncfusion .NET MAUI SfAIAssistView stop responding template customization](Images/inputview/maui-aiassitview-stoprespondingtemplate.gif)
 
 ## Action buttons in the editor
 
@@ -430,7 +430,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView action button customization in input view](Images/inputview/maui-aiassistview-actionbutton-customization.png)
+![Syncfusion .NET MAUI SfAIAssistView action button customization in input view](Images/inputview/maui-aiassitview-actionbutton-customization.png)
 
 ## Request button customization
 

@@ -186,10 +186,10 @@ N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 using Syncfusion.Maui.AIAssistView;
 {% endhighlight %}
 {% endtabs %}
