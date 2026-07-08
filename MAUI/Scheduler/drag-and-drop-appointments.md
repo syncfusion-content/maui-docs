@@ -142,6 +142,7 @@ You can change the appointment of drag and drop settings in Scheduler by using t
 {% tabs %}
 {% highlight xaml %}
 <scheduler:SfScheduler x:Name="scheduler"
+                       ShowBusyIndicator="True"
                        AppointmentsSource="{Binding DragEvents}"
                        View="Week"
                        DisplayDate="{Binding DisplayDate}"

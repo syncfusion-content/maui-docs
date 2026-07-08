@@ -27,7 +27,7 @@ The following Time Zone's of the respective countries are added to cover all the
 Pacific/Apia
 </td>
 <td>
-UTC + 13:00
+UTC - 13:00
 </td>
 </tr>
 <tr>
@@ -72,7 +72,7 @@ UTC - 08:00
 </tr>
 <tr>
 <td>
-America/Tijuana
+America/Santa_Isabel
 </td>
 <td>
 UTC - 08:00
@@ -155,7 +155,7 @@ UTC - 05:00
 America/Caracas
 </td>
 <td>
-UTC - 04:00
+UTC - 04:30
 </td>
 </tr>
 <tr>

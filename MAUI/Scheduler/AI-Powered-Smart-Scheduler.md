@@ -146,7 +146,6 @@ Within the base service class (AzureBaseService), initialize the OpenAIClient wi
      public AzureBaseService()
      {
          ValidateCredential();
-         GetAzureOpenAI();
      }
 
     internal IChatClient? Client { get; set; }
