@@ -119,11 +119,11 @@ using Syncfusion.Maui.ImageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the ImageEditor component
+## Step 5: Add the Image Editor component
 
 Initialize the [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) and load images from different sources using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property.
 
-N> You can load image formats such as JPEG, PNG, and BMP into the image editor.
+N> You can load image formats such as JPEG, PNG, JPG and BMP into the image editor.
 
 ### Loading a local file
 
@@ -135,7 +135,7 @@ To load an image from a local path, use the following code. This example loads a
     <imageEditor:SfImageEditor Source="D:\images\image.jpeg"/>
 
 {% endhighlight %}
-{% highlight C# tabtitle="C#" hl_lines="9 10 11" %}
+{% highlight C# tabtitle="C#" hl_lines="3 4 5" %}
 
 using Syncfusion.Maui.ImageEditor;
 using Microsoft.Maui.Controls;

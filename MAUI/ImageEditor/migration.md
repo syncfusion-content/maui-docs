@@ -97,7 +97,7 @@ this.Content = imageEditor;
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[PenSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.PenSettings.html)'| markdownify }}</td>
 <td>{{'[ImageEditorAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html)'| markdownify }}</td>
 <td>Represents a class that contains common settings for annotation views.</td>
 </tr>
@@ -115,7 +115,7 @@ this.Content = imageEditor;
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[TextSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.TextSettings.html)'| markdownify }}</td>
 <td>{{'[ImageEditorTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html)'| markdownify }}</td>
 <td>Represents a class that contains the style for text annotation view.</td>
 </tr>
@@ -206,7 +206,7 @@ this.Content = imageEditor;
 <tr>
 <td>Nil</td>
 <td>{{'[SelectionStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SelectionStroke)'| markdownify }}</td>
-<td>Gets or sets the selection highlight stroke. Applicable to crop view selection, and shape and text annotation selection.
+<td>Gets or sets the selection highlight stroke. Applicable to crop view selection, shape and text annotation selection.
 </td>
 </tr>
 
