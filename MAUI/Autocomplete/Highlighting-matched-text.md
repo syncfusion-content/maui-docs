@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Highlighting matched text in .NET MAUI Autocomplete control | Syncfusion®
+title: Highlighting matched text in .NET MAUI Autocomplete | Syncfusion®
 description: Learn how to highlight matched text in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) drop-down.
 platform: maui
 control: SfAutocomplete

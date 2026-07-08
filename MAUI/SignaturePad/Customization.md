@@ -24,15 +24,11 @@ Customize the stroke color of the SignaturePad control by setting the [StrokeCol
 
 {% highlight xaml %}
 
-<ContentPage xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-    <signaturePad:SfSignaturePad StrokeColor="Red" />
-</ContentPage>
+<signaturePad:SfSignaturePad StrokeColor="Red" />
 
 {% endhighlight %}
 
 {% highlight C# %}
-
-using Syncfusion.Maui.SignaturePad;
 
 SfSignaturePad signaturePad = new SfSignaturePad()
 {
@@ -60,16 +56,12 @@ The actual stroke thickness is dynamically computed based on the speed and press
 
 {% highlight xaml %}
 
-<ContentPage xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-    <signaturePad:SfSignaturePad MinimumStrokeThickness="1"
-                                 MaximumStrokeThickness="6" />
-</ContentPage>
+<signaturePad:SfSignaturePad MinimumStrokeThickness="1"
+                             MaximumStrokeThickness="6" />
 
 {% endhighlight %}
 
 {% highlight C# %}
-
-using Syncfusion.Maui.SignaturePad;
 
 SfSignaturePad signaturePad = new SfSignaturePad()
 {

@@ -54,21 +54,21 @@ N>
 
 ## RightTapped
 
-The `RightTapped` event occurs when a user performs a right-click action on scheduler elements in desktop platforms such as **Windows** or **macOS**. 
+The [RightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_RightTapped) event occurs when a user performs a right-click action on scheduler elements in desktop platforms such as **Windows** or **macOS**. 
 
 * `sender` - The SfScheduler object where the right-click occurred
 
-The `SchedulerRightTappedEventArgs` provides information about the right-click interaction:
+The [SchedulerRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRightTappedEventArgs.html) provides information about the right-click interaction:
 
-* `Appointments` – Collection of appointments associated with the clicked element
+* [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments) – Collection of appointments associated with the clicked element
 
-* `Date` – The date corresponding to the clicked cell or appointment
+* [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) – The date corresponding to the clicked cell or appointment
 
-* `Element` – The scheduler element interacted with (appointment, cell, header, resource, week number)
+* [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) – The scheduler element interacted with (appointment, cell, header, resource, week number)
 
-* `Resource` – The resource associated with the clicked element (in resource views)
+* [Resource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Resource) – The resource associated with the clicked element (in resource views)
 
-* `WeekNumber` – The week number value (Not applicable in `TimelineMonth` and `Agenda` views)
+* [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_WeekNumber) – The week number value (Not applicable in `TimelineMonth` and `Agenda` views)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -288,7 +288,7 @@ public class SchedulerInteractionViewModel
 
 ### RightTappedCommand
 
-The `RightTappedCommand` will be triggered when you perform a right tap on the scheduler view in desktop platforms (Windows and macOS) and will pass the `SchedulerRightTappedEventArgs` as the parameter.
+The [RightTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_RightTappedCommand) will be triggered when you perform a right tap on the scheduler view in desktop platforms (Windows and macOS) and will pass the [SchedulerRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRightTappedEventArgs.html) as the parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}

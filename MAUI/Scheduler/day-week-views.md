@@ -178,7 +178,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 
 ## Customize All-Day appointment height in Day, Week, and Work Week Views
 
-The `AllDayAppointmentHeight` property specifies the height of all-day appointments displayed in the all-day panel of the Day, Week, and WorkWeek views. Increasing this value provides additional space for appointment content and can improve readability. By default, each all-day appointment is rendered with a height of 19.
+The [AllDayAppointmentHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_AllDayAppointmentHeight) property specifies the height of all-day appointments displayed in the all-day panel of the Day, Week, and WorkWeek views. Increasing this value provides additional space for appointment content and can improve readability. By default, each all-day appointment is rendered with a height of 19.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -201,7 +201,7 @@ this.Content = scheduler;
 
 ## Display spanned appointments in time slots
 
-The `AllowSpannedAppointmentsInTimeSlots` property determines whether appointments spanning more than 24 hours are displayed in the all-day panel or directly within the timeslot cells of the `Day`, `Week`, and `WorkWeek` views. By default, these appointments are rendered in the all-day panel. Setting `AllowSpannedAppointmentsInTimeSlots` to `true` displays spanned appointments within the corresponding time-slot cells.
+The [AllowSpannedAppointmentsInTimeSlots](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_AllowSpannedAppointmentsInTimeSlots) property determines whether appointments spanning more than 24 hours are displayed in the all-day panel or directly within the timeslot cells of the `Day`, `Week`, and `WorkWeek` views. By default, these appointments are rendered in the all-day panel. Setting `AllowSpannedAppointmentsInTimeSlots` to `true` displays spanned appointments within the corresponding time-slot cells.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}

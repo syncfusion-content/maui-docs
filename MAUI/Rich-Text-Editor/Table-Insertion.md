@@ -20,23 +20,24 @@ To enable this functionality, ensure the `Table` toolbar item is included in you
 
 {% tabs %}
 {% highlight xaml %}
+xmlns:richTextEditor="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
 
-<rte:SfRichTextEditor ShowToolbar="True">
-    <rte:SfRichTextEditor.ToolbarItems>
-        <rte:RichTextToolbarItem Type="FontFamily" />
-        <rte:RichTextToolbarItem Type="FontSize" />
-        <rte:RichTextToolbarItem Type="Separator" />
-        <rte:RichTextToolbarItem Type="Bold" />
-        <rte:RichTextToolbarItem Type="Italic" />
-        <rte:RichTextToolbarItem Type="Underline" />
-        <rte:RichTextToolbarItem Type="Separator" />
+<richTextEditor:SfRichTextEditor ShowToolbar="True">
+    <richTextEditor:SfRichTextEditor.ToolbarItems>
+        <richTextEditor:RichTextToolbarItem Type="FontFamily" />
+        <richTextEditor:RichTextToolbarItem Type="FontSize" />
+        <richTextEditor:RichTextToolbarItem Type="Separator" />
+        <richTextEditor:RichTextToolbarItem Type="Bold" />
+        <richTextEditor:RichTextToolbarItem Type="Italic" />
+        <richTextEditor:RichTextToolbarItem Type="Underline" />
+        <richTextEditor:RichTextToolbarItem Type="Separator" />
         <!-- Add the Table toolbar item -->
-        <rte:RichTextToolbarItem Type="Table" />
-        <rte:RichTextToolbarItem Type="Separator" />
-        <rte:RichTextToolbarItem Type="Hyperlink" />
-        <rte:RichTextToolbarItem Type="Image" />
-    </rte:SfRichTextEditor.ToolbarItems>
-</rte:SfRichTextEditor>
+        <richTextEditor:RichTextToolbarItem Type="Table" />
+        <richTextEditor:RichTextToolbarItem Type="Separator" />
+        <richTextEditor:RichTextToolbarItem Type="Hyperlink" />
+        <richTextEditor:RichTextToolbarItem Type="Image" />
+    </richTextEditor:SfRichTextEditor.ToolbarItems>
+</richTextEditor:SfRichTextEditor>
 
 {% endhighlight %}
 {% endtabs %}
@@ -49,10 +50,31 @@ The following example demonstrates how to insert a 3x3 table at the current curs
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.RichTextEditor;
 
-richtexteditor.InsertTable(3, 3);
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
+richTextEditor.InsertTable(3, 3);
 
 {% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Rich Text Editor inserting a table](images/richtexteditor-table.png)
+
+## Table interactions after insertion
+
+After a table is inserted (via the toolbar or programmatically), end users can
+modify its structure using the table context tooltip:
+
+* **Desktop:** Right-click a table cell to open the table tooltip.
+* **Mobile:** Long-press a table cell to open the table tooltip.
+
+The tooltip provides the following actions, all applied relative to the
+current cursor position within the table:
+
+* Insert Row Above
+* Insert Row Below
+* Insert Column Left
+* Insert Column Right
+* Delete Row
+* Delete Column
+* Delete Table

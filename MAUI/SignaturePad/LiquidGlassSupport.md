@@ -54,30 +54,24 @@ The following code snippet applies the Liquid Glass Effect to the `SfSignaturePa
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-    <Grid>
-        <Image Source="Wallpaper.png"
-               Aspect="AspectFill" />
-        <core:SfGlassEffectView CornerRadius="20"
-                                HeightRequest="40"
-                                EffectType="Regular"
-                                EnableShadowEffect="True">
-            <signaturePad:SfSignaturePad x:Name="SignaturePad"
-                                         Background="Transparent"
-                                         StrokeColor="#1F2937"
-                                         MaximumStrokeThickness="2"
-                                         MinimumStrokeThickness="2" />
-        </core:SfGlassEffectView>
-    </Grid>
-</ContentPage>
+<Grid>
+    <Image Source="Wallpaper.png"
+           Aspect="AspectFill" />
+    <core:SfGlassEffectView CornerRadius="20"
+                            HeightRequest="40"
+                            EffectType="Regular"
+                            EnableShadowEffect="True">
+        <signaturePad:SfSignaturePad x:Name="SignaturePad"
+                                     Background="Transparent"
+                                     StrokeColor="#1F2937"
+                                     MaximumStrokeThickness="2"
+                                     MinimumStrokeThickness="2" />
+    </core:SfGlassEffectView>
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.SignaturePad;
 
@@ -105,8 +99,7 @@ var signaturePad = new SfSignaturePad
 {
     BackgroundColor = Colors.Transparent,
     StrokeColor = Color.FromArgb("#1F2937"),
-    MaximumStrokeThickness = 2,
-    MinimumStrokeThickness = 2,
+    StrokeWidth = 2,
     HorizontalOptions = LayoutOptions.Fill,
     VerticalOptions = LayoutOptions.Fill,
 };
@@ -125,8 +118,6 @@ The following screenshot illustrates the `SfSignaturePad` rendered inside a Liqu
 
 ## See Also
 
-* [Getting Started with .NET MAUI SignaturePad](getting-started.md)
-* [Customization in .NET MAUI SignaturePad](customization.md)
-* [Events and Methods in .NET MAUI SignaturePad](events-and-methods.md)
-* [SfSignaturePad API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html)
-* [SfGlassEffectView API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html)
+* [Getting Started](getting-started.md)
+* [Customization](customization.md)
+* [Events and Methods](events-and-methods.md)
