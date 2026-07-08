@@ -900,7 +900,7 @@ Set the specific time zone to schedule using the [TimeZone](https://help.syncfus
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="SchedulerViewModel.cs" hl_lines="5"%}
+{% highlight c# tabtitle="SchedulerViewModel.cs" hl_lines="5" %}
 
 public class SchedulerViewModel
 {
