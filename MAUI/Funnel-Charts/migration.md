@@ -11,7 +11,6 @@ documentation: ug
 
 The Funnel Chart was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, minor code changes are required. Additionally, the single [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) control has been split into five specialized chart controls in .NET MAUI for improved user experience and clarity.
 
-> **Prerequisite:** This migration guide assumes you have experience with Xamarin.Forms and are familiar with the original `SfChart` control.
 
 <table>
 <tr>
