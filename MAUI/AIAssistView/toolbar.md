@@ -23,28 +23,28 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1 2 3" %}
 
-    <syncfusion:SfAIAssistView ShowToolbar="True"
-                               ToolbarTitle="AI AssistView"
-                               ToolbarHeight="50" />
+<syncfusion:SfAIAssistView ShowToolbar="True"
+                           ToolbarTitle="AI AssistView"
+                           ToolbarHeight="50" />
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10 11" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.ToolbarTitle = "AI AssistView";
-            sfAIAssistView.ShowToolbar = true;
-            sfAIAssistView.ToolbarHeight = 50;
-            this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ToolbarTitle = "AI AssistView";
+        sfAIAssistView.ShowToolbar = true;
+        sfAIAssistView.ToolbarHeight = 50;
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -58,12 +58,12 @@ In the Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items us
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView">
-        <syncfusion:SfAIAssistView.ToolbarMenuOptions>
-            <syncfusion:ActionButton Text="Settings" Icon="settings.png" Command="{Binding SettingsCommand}" />
-            <syncfusion:ActionButton Text="Help" Icon="help.png" Command="{Binding HelpCommand}" />
-        </syncfusion:SfAIAssistView.ToolbarMenuOptions>
-    </syncfusion:SfAIAssistView>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.ToolbarMenuOptions>
+        <syncfusion:ActionButton Text="Settings" Icon="settings.png" Command="{Binding SettingsCommand}" />
+        <syncfusion:ActionButton Text="Help" Icon="help.png" Command="{Binding HelpCommand}" />
+    </syncfusion:SfAIAssistView.ToolbarMenuOptions>
+</syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,27 +90,27 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3" %}
 
-    <syncfusion:SfAIAssistView x:Name="assist"
-                               EnableTemporaryChat="True"
-                               TemporaryChatBannerText="This chat will not be saved" />
+<syncfusion:SfAIAssistView x:Name="assist"
+                           EnableTemporaryChat="True"
+                           TemporaryChatBannerText="This chat will not be saved" />
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.EnableTemporaryChat = true;
-            sfAIAssistView.TemporaryChatBannerText = "This chat will not be saved";
-            this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.EnableTemporaryChat = true;
+        sfAIAssistView.TemporaryChatBannerText = "This chat will not be saved";
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -125,39 +125,39 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.ChatModeChanging += OnChatModeChanging;
-            sfAIAssistView.ChatModeChanged += OnChatModeChanged;
-            this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ChatModeChanging += OnChatModeChanging;
+        sfAIAssistView.ChatModeChanged += OnChatModeChanged;
+        this.Content = sfAIAssistView;
+    }
 
-        private void OnChatModeChanging(object sender, ChatModeChangingEventArgs e)
+    private void OnChatModeChanging(object sender, ChatModeChangingEventArgs e)
+    {
+        if (e.ChatMode == ChatMode.TemporaryChat)
         {
-            if (e.ChatMode == ChatMode.TemporaryChat)
-            {
-                e.Cancel = true;
-            }
-        }
-
-        private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
-        {
-            if (e.ChatMode == ChatMode.TemporaryChat)
-            {
-                // Temporary chat is active: show custom banner or reset local state.
-            }
-            else
-            {
-                // Any other chat mode (for example, NewChat): restore saved templates/state if needed.
-            }
+            e.Cancel = true;
         }
     }
+
+    private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
+    {
+        if (e.ChatMode == ChatMode.TemporaryChat)
+        {
+            // Temporary chat is active: show custom banner or reset local state.
+        }
+        else
+        {
+            // Any other chat mode (for example, NewChat): restore saved templates/state if needed.
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}

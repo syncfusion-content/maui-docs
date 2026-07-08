@@ -30,49 +30,49 @@ Create a simple view model as shown in the following code example, and save it a
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Runtime.CompilerServices;
-    using Syncfusion.Maui.AIAssistView;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Syncfusion.Maui.AIAssistView;
 
-    public class GettingStartedViewModel : INotifyPropertyChanged
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<ISuggestion> _suggestions;
+
+    public GettingStartedViewModel()
     {
-        private ObservableCollection<ISuggestion> _suggestions;
-
-        public GettingStartedViewModel()
+        this._suggestions = new ObservableCollection<ISuggestion>()
         {
-            this._suggestions = new ObservableCollection<ISuggestion>()
-            {
-                new AssistSuggestion() { Text = "Ownership", ImageSource = "ownership.png" },
-                new AssistSuggestion() { Text = "Brainstorming", ImageSource = "brainstorming.png" },
-                new AssistSuggestion() { Text = "Listening", ImageSource = "listening.png" },
-                new AssistSuggestion() { Text = "Resilience", ImageSource = "resilience.png" },
-            };
-        }
+            new AssistSuggestion() { Text = "Ownership", ImageSource = "ownership.png" },
+            new AssistSuggestion() { Text = "Brainstorming", ImageSource = "brainstorming.png" },
+            new AssistSuggestion() { Text = "Listening", ImageSource = "listening.png" },
+            new AssistSuggestion() { Text = "Resilience", ImageSource = "resilience.png" },
+        };
+    }
 
-        public ObservableCollection<ISuggestion> Suggestions
+    public ObservableCollection<ISuggestion> Suggestions
+    {
+        get { return this._suggestions; }
+        set
         {
-            get { return this._suggestions; }
-            set
-            {
-                this._suggestions = value;
-                this.RaisePropertyChanged(nameof(Suggestions));
-            }
-        }
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises the <see cref="PropertyChanged"/> event for the specified property.
-        /// </summary>
-        private void RaisePropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            this._suggestions = value;
+            this.RaisePropertyChanged(nameof(Suggestions));
         }
     }
+
+    /// <summary>
+    /// Occurs when a property value changes.
+    /// </summary>
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    /// <summary>
+    /// Raises the <see cref="PropertyChanged"/> event for the specified property.
+    /// </summary>
+    private void RaisePropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,33 +84,33 @@ To populate the Suggestions, bind the item collection from its BindingContext to
 {% tabs %}
 {% highlight xaml hl_lines="6" %}
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               Suggestions="{Binding Suggestions}"
-                               ShowHeader="True"/>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Suggestions="{Binding Suggestions}"
+                           ShowHeader="True"/>
 
 {% endhighlight %}
 {% highlight c# hl_lines="10" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+
+    public MainPage()
     {
-        SfAIAssistView sfAIAssistView;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.sfAIAssistView = new SfAIAssistView();
-            this.BindingContext = new GettingStartedViewModel();
-            this.sfAIAssistView.Suggestions = (this.BindingContext as GettingStartedViewModel).Suggestions;
-            this.sfAIAssistView.ShowHeader = true;
-            this.Content = this.sfAIAssistView;
-        }
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.BindingContext = new GettingStartedViewModel();
+        this.sfAIAssistView.Suggestions = (this.BindingContext as GettingStartedViewModel).Suggestions;
+        this.sfAIAssistView.ShowHeader = true;
+        this.Content = this.sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,74 +126,74 @@ The `SfAIAssistView` control allows you to fully customize the appearance of the
 {% tabs %}
 {% highlight xaml hl_lines="38" %}
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="suggestionTemplate">
-                <Border WidthRequest="130"
-                        HeightRequest="85"
-                        StrokeShape="RoundRectangle 10"
-                        BackgroundColor="#E6E8F5"
-                        Margin="2">
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="suggestionTemplate">
+            <Border WidthRequest="130"
+                    HeightRequest="85"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="#E6E8F5"
+                    Margin="2">
 
-                    <Grid>
-                        <Image Source="{Binding ImageSource}"
-                               Aspect="AspectFill" />
+                <Grid>
+                    <Image Source="{Binding ImageSource}"
+                           Aspect="AspectFill" />
 
-                        <Border VerticalOptions="End"
-                                BackgroundColor="#CCFFFFFF"
-                                StrokeShape="RoundRectangle 10"
-                                Margin="2"
-                                Padding="2">
+                    <Border VerticalOptions="End"
+                            BackgroundColor="#CCFFFFFF"
+                            StrokeShape="RoundRectangle 10"
+                            Margin="2"
+                            Padding="2">
 
-                            <Label Text="{Binding Text}"
-                                   FontSize="13"
-                                   TextColor="Black"
-                                   HorizontalOptions="Center"
-                                   HorizontalTextAlignment="Center" />
-                        </Border>
-                    </Grid>
-                </Border>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+                        <Label Text="{Binding Text}"
+                               FontSize="13"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" />
+                    </Border>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               Suggestions="{Binding Suggestions}"
-                               SuggestionTemplate="{StaticResource suggestionTemplate}"
-                               ShowHeader="True"/>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Suggestions="{Binding Suggestions}"
+                           SuggestionTemplate="{StaticResource suggestionTemplate}"
+                           ShowHeader="True"/>
 
 {% endhighlight %}
 {% highlight c# hl_lines="13" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    private readonly SfAIAssistView sfAIAssistView;
+
+    public MainPage()
     {
-        private readonly SfAIAssistView sfAIAssistView;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.BindingContext = new GettingStartedViewModel();
-            this.sfAIAssistView = new SfAIAssistView();
-            this.sfAIAssistView.Suggestions = (this.BindingContext as GettingStartedViewModel).Suggestions;
-            this.sfAIAssistView.SuggestionTemplate = CreateSuggestionTemplate();
-            this.sfAIAssistView.ShowHeader = true;
-            this.Content = this.sfAIAssistView;
-        }
-
-        private DataTemplate CreateSuggestionTemplate()
-        {
-            return new DataTemplate(() =>
-            {
-                ...
-            });
-        }
+        InitializeComponent();
+        this.BindingContext = new GettingStartedViewModel();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.Suggestions = (this.BindingContext as GettingStartedViewModel).Suggestions;
+        this.sfAIAssistView.SuggestionTemplate = CreateSuggestionTemplate();
+        this.sfAIAssistView.ShowHeader = true;
+        this.Content = this.sfAIAssistView;
     }
+
+    private DataTemplate CreateSuggestionTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -211,35 +211,34 @@ Suggestions are displayed by creating an instance of [AssistSuggestion](https://
 {% tabs %}
 {% highlight xaml%}
 
-    <ContentPage.BindingContext>
-        <local:SuggestionsViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:SuggestionsViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AssistItems="{Binding AssistItems}"/
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    private readonly SfAIAssistView sfAIAssistView;
+    private readonly SuggestionsViewModel viewModel;
+
+    public MainPage()
     {
-        private readonly SfAIAssistView sfAIAssistView;
-        private readonly SuggestionsViewModel viewModel;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.viewModel = new SuggestionsViewModel();
-            this.BindingContext = this.viewModel;
-            this.sfAIAssistView = new SfAIAssistView();
-            this.sfAIAssistView.AssistItems = this.viewModel.AssistItems;
-            this.Content = this.sfAIAssistView;
-        }
+        InitializeComponent();
+        this.viewModel = new SuggestionsViewModel();
+        this.BindingContext = this.viewModel;
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.AssistItems = this.viewModel.AssistItems;
+        this.Content = this.sfAIAssistView;
     }
-
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -247,55 +246,55 @@ Suggestions are displayed by creating an instance of [AssistSuggestion](https://
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="27" %}
 
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Runtime.CompilerServices;
-    using Syncfusion.Maui.AIAssistView;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Syncfusion.Maui.AIAssistView;
 
-    public class SuggestionsViewModel : INotifyPropertyChanged
+public class SuggestionsViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<ISuggestion> _suggestions;
+
+    public SuggestionsViewModel()
     {
-        private ObservableCollection<ISuggestion> _suggestions;
-
-        public SuggestionsViewModel()
-        {
-            this.AssistItems = new ObservableCollection<object>();
-        }
-
-        /// <summary>
-        /// Gets or sets the collection of assist items displayed by the SfAIAssistView.
-        /// </summary>
-        public ObservableCollection<object> AssistItems
-        {
-            get;
-            set;
-        }
-
-        private async Task GetResult(AssistItem requestItem)
-        {
-            await Task.Delay(1000).ConfigureAwait(true);
-
-            AssistItem responseItem = new AssistItem()
-            {
-                // response from AI service
-                Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
-            };
-
-            // Generate suggestions.
-            var assistSuggestions = new AssistItemSuggestion();
-
-            _suggestions = new ObservableCollection<ISuggestion>();
-            _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
-            _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
-
-            assistSuggestions.Items = _suggestions;
-
-            // Assign suggestions to response item.
-            responseItem.Suggestion = assistSuggestions;
-
-            // Add the response item to the collection
-            this.AssistItems.Add(responseItem);
-        }
+        this.AssistItems = new ObservableCollection<object>();
     }
+
+    /// <summary>
+    /// Gets or sets the collection of assist items displayed by the SfAIAssistView.
+    /// </summary>
+    public ObservableCollection<object> AssistItems
+    {
+        get;
+        set;
+    }
+
+    private async Task GetResult(AssistItem requestItem)
+    {
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        AssistItem responseItem = new AssistItem()
+        {
+            // response from AI service
+            Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+        };
+
+        // Generate suggestions.
+        var assistSuggestions = new AssistItemSuggestion();
+
+        _suggestions = new ObservableCollection<ISuggestion>();
+        _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
+        _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
+
+        assistSuggestions.Items = _suggestions;
+
+        // Assign suggestions to response item.
+        responseItem.Suggestion = assistSuggestions;
+
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem);
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -307,39 +306,39 @@ You can add an image to the suggestion item by setting the [ImageSource](https:/
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16 17" %}
 
-    using System.Collections.ObjectModel;
-    using Syncfusion.Maui.AIAssistView;
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.AIAssistView;
 
-    public class SuggestionsViewModel : INotifyPropertyChanged
+public class SuggestionsViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<ISuggestion> _suggestions;
+
+    private async Task GetResult(AssistItem requestItem)
     {
-	    private ObservableCollection<ISuggestion> _suggestions;
+        await Task.Delay(1000).ConfigureAwait(true);
 
-	    private async Task GetResult(AssistItem requestItem)
+        AssistItem responseItem = new AssistItem()
         {
-            await Task.Delay(1000).ConfigureAwait(true);
+            // response from AI service
+            Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+        };
 
-            AssistItem responseItem = new AssistItem()
-            {
-                // response from AI service
-                Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
-            };
+        // Generate suggestions.
+        var assistSuggestions = new AssistItemSuggestion();
 
-            // Generate suggestions.
-		    var assistSuggestions = new AssistItemSuggestion();
+        _suggestions = new ObservableCollection<ISuggestion>();
+        _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI", ImageSource = "learn_more.png" });
+        _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app", ImageSource = "get_started.png" });
 
-            _suggestions = new ObservableCollection<ISuggestion>();
-            _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI", ImageSource = "learn_more.png" });
-            _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app", ImageSource = "get_started.png" });
+        assistSuggestions.Items = _suggestions;
 
-            assistSuggestions.Items = _suggestions;
+        // Assign suggestions to response item.
+        responseItem.Suggestion = assistSuggestions;
 
-		    // Assign suggestions to response item.
-     		responseItem.Suggestion = assistSuggestions;
-
-            // Add the response item to the collection
-            this.AssistItems.Add(responseItem);
-        }
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem);
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -351,43 +350,43 @@ The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncf
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="19" %}
 
-    using System.Collections.ObjectModel;
-    using Syncfusion.Maui.AIAssistView;
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.AIAssistView;
 
-    public class SuggestionsViewModel : INotifyPropertyChanged
+public class SuggestionsViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<ISuggestion> _suggestions;
+
+    public ObservableCollection<object> AssistItems { get; set; }
+
+    private async Task GetResult(AssistItem requestItem)
     {
-        private ObservableCollection<ISuggestion> _suggestions;
+        await Task.Delay(1000).ConfigureAwait(true);
 
-        public ObservableCollection<object> AssistItems { get; set; }
-
-        private async Task GetResult(AssistItem requestItem)
+        AssistItem responseItem = new AssistItem()
         {
-            await Task.Delay(1000).ConfigureAwait(true);
+            // response from AI service
+            Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+        };
 
-            AssistItem responseItem = new AssistItem()
-            {
-                // response from AI service
-                Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
-            };
+        // Generate suggestions.
+        var assistSuggestions = new AssistItemSuggestion();
 
-            // Generate suggestions.
-            var assistSuggestions = new AssistItemSuggestion();
+        _suggestions = new ObservableCollection<ISuggestion>();
+        _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
+        _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
 
-            _suggestions = new ObservableCollection<ISuggestion>();
-            _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
-            _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
+        assistSuggestions.Items = _suggestions;
 
-            assistSuggestions.Items = _suggestions;
+        assistSuggestions.Orientation = SuggestionsOrientation.Horizontal;
 
-            assistSuggestions.Orientation = SuggestionsOrientation.Horizontal;
+        // Assign suggestions to response item.
+        responseItem.Suggestion = assistSuggestions;
 
-            // Assign suggestions to response item.
-            responseItem.Suggestion = assistSuggestions;
-
-            // Add the response item to the collection
-            this.AssistItems.Add(responseItem);
-        }
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem);
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -399,43 +398,43 @@ The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncf
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="20" %}
 
-    using System.Collections.ObjectModel;
-    using Syncfusion.Maui.AIAssistView;
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.AIAssistView;
 
-    public class SuggestionsViewModel : INotifyPropertyChanged
+public class SuggestionsViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<ISuggestion> _suggestions;
+
+    public ObservableCollection<object> AssistItems { get; set; }
+
+    private async Task GetResult(AssistItem requestItem)
     {
-        private ObservableCollection<ISuggestion> _suggestions;
+        await Task.Delay(1000).ConfigureAwait(true);
 
-        public ObservableCollection<object> AssistItems { get; set; }
-
-        private async Task GetResult(AssistItem requestItem)
+        AssistItem responseItem = new AssistItem()
         {
-            await Task.Delay(1000).ConfigureAwait(true);
+            // response from AI service
+            Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+        };
 
-            AssistItem responseItem = new AssistItem()
-            {
-                // response from AI service
-                Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
-            };
+        // Generate suggestions.
+        var assistSuggestions = new AssistItemSuggestion();
 
-            // Generate suggestions.
-            var assistSuggestions = new AssistItemSuggestion();
+        _suggestions = new ObservableCollection<ISuggestion>();
+        _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
+        _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
 
-            _suggestions = new ObservableCollection<ISuggestion>();
-            _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
-            _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
+        assistSuggestions.Items = _suggestions;
 
-            assistSuggestions.Items = _suggestions;
+        assistSuggestions.ItemSpacing = 10;
 
-            assistSuggestions.ItemSpacing = 10;
+        // Assign suggestions to response item.
+        responseItem.Suggestion = assistSuggestions;
 
-            // Assign suggestions to response item.
-            responseItem.Suggestion = assistSuggestions;
-
-            // Add the response item to the collection
-            this.AssistItems.Add(responseItem);
-        }
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem);
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -447,39 +446,39 @@ The `SfAIAssistView` control allows you to define the header text for each respo
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
-    using System.Collections.ObjectModel;
-    using Syncfusion.Maui.AIAssistView;
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.AIAssistView;
 
-    public class SuggestionsViewModel : INotifyPropertyChanged
+public class SuggestionsViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<ISuggestion> _suggestions;
+
+    public ObservableCollection<object> AssistItems { get; set; }
+
+    private async Task GetResult(AssistItem requestItem)
     {
-        private ObservableCollection<ISuggestion> _suggestions;
+        await Task.Delay(1000).ConfigureAwait(true);
 
-        public ObservableCollection<object> AssistItems { get; set; }
-
-        private async Task GetResult(AssistItem requestItem)
+        AssistItem responseItem = new AssistItem()
         {
-            await Task.Delay(1000).ConfigureAwait(true);
+            Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+        };
 
-            AssistItem responseItem = new AssistItem()
-            {
-                Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
-            };
+        var assistSuggestions = new AssistItemSuggestion();
 
-            var assistSuggestions = new AssistItemSuggestion();
+        _suggestions = new ObservableCollection<ISuggestion>();
+        _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
+        _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
 
-            _suggestions = new ObservableCollection<ISuggestion>();
-            _suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
-            _suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
+        assistSuggestions.Items = _suggestions;
 
-            assistSuggestions.Items = _suggestions;
+        responseItem.SuggestionHeaderText = "Related Topics";
 
-            responseItem.SuggestionHeaderText = "Related Topics";
-
-            // Assign suggestions to response item.
-            responseItem.Suggestion = assistSuggestions;
-            this.AssistItems.Add(responseItem);
-        }
+        // Assign suggestions to response item.
+        responseItem.Suggestion = assistSuggestions;
+        this.AssistItems.Add(responseItem);
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -493,43 +492,43 @@ The `SfAIAssistView` control allows you to fully customize the appearance of the
 {% tabs %}
 {% highlight xaml hl_lines="10" %}
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="suggestionTemplate">
-                ...
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="suggestionTemplate">
+            ...
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ResponseSuggestionTemplate="{StaticResource suggestionTemplate}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ResponseSuggestionTemplate="{StaticResource suggestionTemplate}" />
 
 {% endhighlight %}
 
 {% highlight c# hl_lines="12" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    private readonly SfAIAssistView sfAIAssistView;
+
+    public MainPage()
     {
-        private readonly SfAIAssistView sfAIAssistView;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.sfAIAssistView = new SfAIAssistView();
-            this.sfAIAssistView.ResponseSuggestionTemplate = this.CreateSuggestionTemplate();
-            this.Content = this.sfAIAssistView;
-        }
-
-        private DataTemplate CreateSuggestionTemplate()
-        {
-            return new DataTemplate(() =>
-            {
-                ...
-            });
-        }
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ResponseSuggestionTemplate = this.CreateSuggestionTemplate();
+        this.Content = this.sfAIAssistView;
     }
+
+    private DataTemplate CreateSuggestionTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -546,52 +545,52 @@ The `SfAIAssistView` control allows you to fully customize the appearance of the
 {% tabs %}
 {% highlight xaml hl_lines="16 17" %}
 
-    <ContentPage.BindingContext>
-        <local:FooterSuggestionsViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:FooterSuggestionsViewModel />
+</ContentPage.BindingContext>
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="footerSuggestionTemplate">
-                <Border Padding="8">
-                    <Label Text="{Binding Text}" />
-                </Border>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="footerSuggestionTemplate">
+            <Border Padding="8">
+                <Label Text="{Binding Text}" />
+            </Border>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <syncfusion:SfAIAssistView x:Name="assist"
-                               FooterSuggestions="{Binding FooterSuggestions}"
-                               FooterSuggestionTemplate="{StaticResource footerSuggestionTemplate}" />
+<syncfusion:SfAIAssistView x:Name="assist"
+                           FooterSuggestions="{Binding FooterSuggestions}"
+                           FooterSuggestionTemplate="{StaticResource footerSuggestionTemplate}" />
 
 {% endhighlight %}
 
 {% highlight c# hl_lines="12 13" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    private readonly SfAIAssistView sfAIAssistView;
+
+    public MainPage()
     {
-        private readonly SfAIAssistView sfAIAssistView;
-
-        public MainPage()
+        InitializeComponent();
+        this.BindingContext = new FooterSuggestionsViewModel();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.FooterSuggestions = (this.BindingContext as FooterSuggestionsViewModel).FooterSuggestions;
+        this.sfAIAssistView.FooterSuggestionTemplate = new DataTemplate(() =>
         {
-            InitializeComponent();
-            this.BindingContext = new FooterSuggestionsViewModel();
-            this.sfAIAssistView = new SfAIAssistView();
-            this.sfAIAssistView.FooterSuggestions = (this.BindingContext as FooterSuggestionsViewModel).FooterSuggestions;
-            this.sfAIAssistView.FooterSuggestionTemplate = new DataTemplate(() =>
-            {
-                var border = new Border { Padding = 8 };
-                var label = new Label();
-                label.SetBinding(Label.TextProperty, new Binding("Text"));
-                border.Content = label;
+            var border = new Border { Padding = 8 };
+            var label = new Label();
+            label.SetBinding(Label.TextProperty, new Binding("Text"));
+            border.Content = label;
 
-                return border;
-            });
-            this.Content = this.sfAIAssistView;
-        }
+            return border;
+        });
+        this.Content = this.sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -613,25 +612,25 @@ By default, a suggestion is sent as a request item immediately when selected. To
 {% tabs %}
 {% highlight c# hl_lines="11" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    private readonly SfAIAssistView sfAIAssistView;
+
+    public MainPage()
     {
-         private readonly SfAIAssistView sfAIAssistView;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.sfAIAssistView = new SfAIAssistView();
-            this.sfAIAssistView.SuggestionItemSelected += this.OnSuggestionItemSelected;
-            this.Content = this.sfAIAssistView;
-        }
-
-        private void OnSuggestionItemSelected(object sender, SuggestionItemSelectedEventArgs e)
-        {
-            e.CancelRequest = true;
-        }
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.SuggestionItemSelected += this.OnSuggestionItemSelected;
+        this.Content = this.sfAIAssistView;
     }
+
+    private void OnSuggestionItemSelected(object sender, SuggestionItemSelectedEventArgs e)
+    {
+        e.CancelRequest = true;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -641,12 +640,12 @@ By default, a suggestion is sent as a request item immediately when selected. To
 {% tabs %}
 {% highlight xaml hl_lines="6" %}
 
-    <ContentPage.BindingContext>
-        <local:SuggestionsViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:SuggestionsViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}" />
 
 {% endhighlight %}
 {% endtabs %}
@@ -654,42 +653,42 @@ By default, a suggestion is sent as a request item immediately when selected. To
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="28" %}
 
-    using System.Windows.Input;
-    using Syncfusion.Maui.AIAssistView;
+using System.Windows.Input;
+using Syncfusion.Maui.AIAssistView;
 
-    public class SuggestionsViewModel : INotifyPropertyChanged
+public class SuggestionsViewModel : INotifyPropertyChanged
+{
+    private ICommand _suggestionItemSelectedCommand;
+
+    public SuggestionsViewModel()
     {
-        private ICommand _suggestionItemSelectedCommand;
+        SuggestionItemSelectedCommand = new Command(ExecuteSuggestion);
+    }
 
-        public SuggestionsViewModel()
+    /// <summary>
+    /// Gets or sets the suggestion item selected command.
+    /// </summary>
+    public ICommand SuggestionItemSelectedCommand
+    {
+        get
         {
-            SuggestionItemSelectedCommand = new Command(ExecuteSuggestion);
+            return this._suggestionItemSelectedCommand;
         }
-
-        /// <summary>
-        /// Gets or sets the suggestion item selected command.
-        /// </summary>
-        public ICommand SuggestionItemSelectedCommand
+        set
         {
-            get
-            {
-                return this._suggestionItemSelectedCommand;
-            }
-            set
-            {
-                this._suggestionItemSelectedCommand = value;
-            }
-        }
-
-        /// <summary>
-        /// Executes the action when a suggestion item is selected.
-        /// </summary>
-        public void ExecuteSuggestion(object parameter)
-        {
-            var args = parameter as SuggestionItemSelectedEventArgs;
-            args.CancelRequest = true;
+            this._suggestionItemSelectedCommand = value;
         }
     }
+
+    /// <summary>
+    /// Executes the action when a suggestion item is selected.
+    /// </summary>
+    public void ExecuteSuggestion(object parameter)
+    {
+        var args = parameter as SuggestionItemSelectedEventArgs;
+        args.CancelRequest = true;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}

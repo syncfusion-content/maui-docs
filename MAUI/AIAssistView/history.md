@@ -26,87 +26,87 @@ Create a simple view model as shown in the following code example, and save it a
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using Syncfusion.Maui.AIAssistView;
-    
-    public class GettingStartedViewModel : INotifyPropertyChanged
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Syncfusion.Maui.AIAssistView;
+
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<AssistConversationItem> conversationItems;
+
+    public GettingStartedViewModel()
     {
-        private ObservableCollection<AssistConversationItem> conversationItems;
-    
-        public GettingStartedViewModel()
+        this.conversationItems = new ObservableCollection<AssistConversationItem>();
+        this.InitializeConversationHistory();
+    }
+
+    public ObservableCollection<AssistConversationItem> ConversationItems
+    {
+        get { return this.conversationItems; }
+        set
         {
-            this.conversationItems = new ObservableCollection<AssistConversationItem>();
-            this.InitializeConversationHistory();
-        }
-
-        public ObservableCollection<AssistConversationItem> ConversationItems 
-        { 
-            get { return this.conversationItems; }
-            set 
-            {
-                this.conversationItems = value;
-                this.RaisePropertyChanged(nameof(ConversationItems));
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void RaisePropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public void InitializeConversationHistory()
-        {
-            DateTime baseTime = DateTime.Now;
-
-            string[] topics = new string[]
-            {
-                "listening",
-                "Hey AI, can you tell me what Maui is?",
-            };
-
-            string[] responses = new string[]
-            {
-                "Types of Listening: For effective communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skills. Common types of Listening are Active listening and Passive listening.",
-                "MAUI stands for .NET Multi-platform App UI. It is a framework that allows you to create cross-platform applications using a single codebase.",
-            };
-
-            for (int i = 0; i < 2; i++)
-            {
-                var dateTime = baseTime.AddDays(-i);
-                var request = new AssistItem
-                {
-                    Text = topics[i],
-                    IsRequested = true,
-                    DateTime = dateTime,
-                };
-
-                var response = new AssistItem
-                {
-                    Text = responses[i],
-                    IsRequested = false,
-                    DateTime = dateTime,
-                    RequestItem = request,
-                };
-
-                var title = topics[i];
-                var conversationItem = new AssistConversationItem
-                {
-                    Title = title,
-                    DateTime = baseTime.AddDays(-i),
-                    AssistItems = new ObservableCollection<IAssistItem>
-                    {
-                        request,
-                        response,
-                    }
-                };
-
-                this.ConversationItems.Add(conversationItem);
-            }
+            this.conversationItems = value;
+            this.RaisePropertyChanged(nameof(ConversationItems));
         }
     }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    public void RaisePropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    public void InitializeConversationHistory()
+    {
+        DateTime baseTime = DateTime.Now;
+
+        string[] topics = new string[]
+        {
+            "listening",
+            "Hey AI, can you tell me what Maui is?",
+        };
+
+        string[] responses = new string[]
+        {
+            "Types of Listening: For effective communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skills. Common types of Listening are Active listening and Passive listening.",
+            "MAUI stands for .NET Multi-platform App UI. It is a framework that allows you to create cross-platform applications using a single codebase.",
+        };
+
+        for (int i = 0; i < 2; i++)
+        {
+            var dateTime = baseTime.AddDays(-i);
+            var request = new AssistItem
+            {
+                Text = topics[i],
+                IsRequested = true,
+                DateTime = dateTime,
+            };
+
+            var response = new AssistItem
+            {
+                Text = responses[i],
+                IsRequested = false,
+                DateTime = dateTime,
+                RequestItem = request,
+            };
+
+            var title = topics[i];
+            var conversationItem = new AssistConversationItem
+            {
+                Title = title,
+                DateTime = baseTime.AddDays(-i),
+                AssistItems = new ObservableCollection<IAssistItem>
+                {
+                    request,
+                    response,
+                }
+            };
+
+            this.ConversationItems.Add(conversationItem);
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -117,30 +117,30 @@ To populate the conversation items, bind the item collection from its BindingCon
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ConversationItemsSource="{Binding ConversationItems}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ConversationItemsSource="{Binding ConversationItems}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            GettingStartedViewModel viewModel = new GettingStartedViewModel();
-            sfAIAssistView.BindingContext = viewModel;
-            sfAIAssistView.ConversationItemsSource = viewModel.ConversationItems;
-            this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();
+        sfAIAssistView.BindingContext = viewModel;
+        sfAIAssistView.ConversationItemsSource = viewModel.ConversationItems;
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,24 +154,24 @@ The `SfAIAssistView` control provides the [ConversationHeaderText](https://help.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                               ConversationHeaderText="Chat History" />
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                           ConversationHeaderText="Chat History" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.ConversationHeaderText = "Chat History";
-            this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ConversationHeaderText = "Chat History";
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -185,24 +185,24 @@ The [ConversationEmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ConversationEmptyView="No conversations available" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ConversationEmptyView="No conversations available" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.ConversationEmptyView = "No conversations available";
-            this.Content = sfAIAssistView;
-        }
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ConversationEmptyView = "No conversations available";
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}

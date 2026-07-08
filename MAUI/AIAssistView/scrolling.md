@@ -18,8 +18,8 @@ The `SfAIAssistView` control provides an option to display a scroll-to-bottom bu
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ShowScrollToBottomButton="True" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowScrollToBottomButton="True" />
 
 {% endhighlight %}
 {% highlight c# hl_lines="9" %}
@@ -48,33 +48,33 @@ The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom 
 {% tabs %}
 {% highlight xaml hl_lines="29" %}
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="scrollToBottomButtonTemplate">
-                <Border Padding="10"
-                        BackgroundColor="#6C4EC2"
-                        StrokeThickness="0"
-                        StrokeShape="RoundRectangle 25"
-                        HorizontalOptions="Center"
-                        VerticalOptions="End">
-                    <HorizontalStackLayout Spacing="6"
-                                           HorizontalOptions="Center"
-                                           VerticalOptions="Center">
-                        <Image Source="down.png"
-                               WidthRequest="16"
-                               HeightRequest="16"
-                               VerticalOptions="Center" />
-                        <Label Text="New Response"
-                               FontSize="14"
-                               TextColor="White"
-                               VerticalOptions="Center" />
-                    </HorizontalStackLayout>
-                </Border>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="scrollToBottomButtonTemplate">
+            <Border Padding="10"
+                    BackgroundColor="#6C4EC2"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 25"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End">
+                <HorizontalStackLayout Spacing="6"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center">
+                    <Image Source="down.png"
+                           WidthRequest="16"
+                           HeightRequest="16"
+                           VerticalOptions="Center" />
+                    <Label Text="New Response"
+                           FontSize="14"
+                           TextColor="White"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Border>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ShowScrollToBottomButton="True"
                            ScrollToBottomButtonTemplate="{StaticResource scrollToBottomButtonTemplate}" />
 
@@ -151,8 +151,8 @@ By default, the `SfAIAssistView` control automatically scrolls to the bottom of 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               CanAutoScrollToBottom="False" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           CanAutoScrollToBottom="False" />
 
 {% endhighlight %}
 {% highlight c# hl_lines="9" %}
@@ -220,8 +220,8 @@ You can handle this event to control the auto-scroll behavior of the `SfAIAssist
 {% tabs %}
 {% highlight xaml hl_lines="2"  %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               Scrolled="sfAIAssistView_Scrolled" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Scrolled="sfAIAssistView_Scrolled" />
 
 {% endhighlight %}
 {% highlight c# hl_lines="9" %}

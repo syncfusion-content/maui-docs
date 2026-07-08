@@ -144,26 +144,26 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
     private async void GenerateAssistItems()
     {
-    AssistItem requestItem = new AssistItem()
-    {
-        Text = "listening", 
-        IsRequested = true
-    };
+        AssistItem requestItem = new AssistItem()
+        {
+            Text = "listening",
+            IsRequested = true
+        };
 
-    this.AssistItems.Add(requestItem);
-    await GetResult(requestItem);
+        this.AssistItems.Add(requestItem);
+        await GetResult(requestItem);
     }
 
     private async Task GetResult(AssistItem requestItem)
     {
-    await Task.Delay(1000).ConfigureAwait(true);
+        await Task.Delay(1000).ConfigureAwait(true);
 
-    AssistItem responseItem = new AssistItem()
-    {
-        Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-        IsRequested = false, 
-    };
-    this.AssistItems.Add(responseItem);
+        AssistItem responseItem = new AssistItem()
+        {
+            Text = "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+            IsRequested = false,
+        };
+        this.AssistItems.Add(responseItem);
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
@@ -202,31 +202,31 @@ Create an instance of the `SfAIAssistView` control. To populate AI AssistView, b
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AssistItems="{Binding AssistItems}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    private SfAIAssistView aiAssistView;
+
+    public MainPage()
     {
-        private SfAIAssistView aiAssistView;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.aiAssistView = new SfAIAssistView();
-            GettingStartedViewModel viewModel = new GettingStartedViewModel();
-            this.aiAssistView.AssistItems = viewModel.AssistItems;
-            this.Content = this.aiAssistView;
-        }
+        InitializeComponent();
+        this.aiAssistView = new SfAIAssistView();
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();
+        this.aiAssistView.AssistItems = viewModel.AssistItems;
+        this.Content = this.aiAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}

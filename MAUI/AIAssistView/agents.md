@@ -90,7 +90,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         this.AgentCollection.Add(agent2);
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     public void OnPropertyChanged(string name)
     {
@@ -103,7 +103,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 ### Binding Agent Collection to AI AssistView
 
-To populate the agent collection, first assign the view model as the `BindingContext` of the page, then bind the collection to the `SfAIAssistView.Agents` property.
+To populate the agent collection, first assign the view model as the `BindingContext` of the page, then bind the collection to the [Agents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Agents) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
