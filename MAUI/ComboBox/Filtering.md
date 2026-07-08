@@ -7,18 +7,63 @@ control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui combobox filtering.
 ---
-# Filtering in .NET MAUI ComboBox (SfComboBox)
 
-The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) has built-in support to filter data items depending on the text entered in the editing text box. The filter operation starts as soon as you start typing characters in the component.
+# Filtering in .NET MAUI ComboBox
+
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) has built-in support to filter the items displayed in the drop-down based on the text typed into the editor. The filter operation starts as soon as the user types a character, and matching is performed against the value of [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath).
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later and the .NET MAUI workload. For setup details, see [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0).
+2. Create a [.NET MAUI project](Getting-Started.md#step-1-create-a-new-net-maui-project).
+3. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
+4. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
+
+    ```csharp
+    using Syncfusion.Maui.Core.Hosting;
+
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+    ```
+
+5. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
+
+    ```xml
+    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+    ```
+
+    ```csharp
+    using Syncfusion.Maui.Inputs;
+    ```
+
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+
+N> The filtering APIs (`IsFilteringEnabled`, `TextSearchMode`, `FilterBehavior`) are available starting with Syncfusion<sup>®</sup> .NET MAUI Inputs `26.1.35` and later.
 
 ## Enable filtering
 
-To enable filtering functionality in `ComboBox` control, set the [IsFilteringEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsFilteringEnabled) and [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) properties as `true`. The default value is `false`. The drop-down will open automatically as soon as you start typing characters in the `ComboBox` control.
+To enable filtering in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), set the [IsFilteringEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsFilteringEnabled) `bool` property and the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) `bool` property to `true`. Both default to `false`. When both are enabled, the drop-down opens automatically as soon as the user types a character in the editor.
+
+### Step 1: Define the model and view model
+
+Define a `CityInfo` model and a `CityViewModel` that exposes a `Cities` collection.
 
 {% tabs %}
 {% highlight c# %}
 
-//Model.cs
+using System.Collections.ObjectModel;
+
 public class CityInfo
 {
     public string CityName { get; set; }
@@ -26,48 +71,52 @@ public class CityInfo
     public bool IsCapital { get; set; }
 }
 
-//ViewModel.cs
 public class CityViewModel
 {
     public ObservableCollection<CityInfo> Cities { get; set; }
+
     public CityViewModel()
     {
-        this.Cities = new ObservableCollection<CityInfo>();
-        this.Cities.Add(new CityInfo() { CityName= "Chicago", CountryName= "USA" });
-        this.Cities.Add(new CityInfo() { CityName= "Los Angeles", CountryName= "USA" });          
-        this.Cities.Add(new CityInfo() { CityName= "Houston", CountryName= "USA" });
-        this.Cities.Add(new CityInfo() { CityName= "New York", CountryName= "USA" });
-        this.Cities.Add(new CityInfo() { CityName = "Washington", CountryName = "USA", IsCapital = true });
-        this.Cities.Add(new CityInfo() { CityName= "Chennai", CountryName= "India" });
-        this.Cities.Add(new CityInfo() { CityName= "Delhi", CountryName= "India", IsCapital = true });
-        this.Cities.Add(new CityInfo() { CityName= "Kolkata", CountryName= "India" });
-        this.Cities.Add(new CityInfo() { CityName= "Mumbai", CountryName= "India" });
-        this.Cities.Add(new CityInfo() { CityName= "Berlin", CountryName= "Germany", IsCapital = true });
-        this.Cities.Add(new CityInfo() { CityName= "Cologne", CountryName= "Germany" });
-        this.Cities.Add(new CityInfo() { CityName= "Hamburg", CountryName= "Germany" });
-        this.Cities.Add(new CityInfo() { CityName= "Munich", CountryName= "Germany" });
-        this.Cities.Add(new CityInfo() { CityName= "Quebec City", CountryName= "Canada" });
-        this.Cities.Add(new CityInfo() { CityName= "Ottawa", CountryName= "Canada", IsCapital = true });
-        this.Cities.Add(new CityInfo() { CityName= "Toronto", CountryName= "Canada" });
-        this.Cities.Add(new CityInfo() { CityName= "Vancouver", CountryName= "Canada" });
-        this.Cities.Add(new CityInfo() { CityName= "Victoria", CountryName= "Canada" });
-        this.Cities.Add(new CityInfo() { CityName= "London", CountryName= "England", IsCapital = true });
-        this.Cities.Add(new CityInfo() { CityName= "Bath", CountryName= "England" });
-        this.Cities.Add(new CityInfo() { CityName= "Manchester", CountryName= "England" });
-        this.Cities.Add(new CityInfo() { CityName= "Oxford", CountryName= "England" });
-        this.Cities.Add(new CityInfo() { CityName= "Bandung", CountryName= "Indonesia" });
-        this.Cities.Add(new CityInfo() { CityName= "Jakarta", CountryName= "Indonesia", IsCapital = true });
-        this.Cities.Add(new CityInfo() { CityName= "Depok", CountryName= "Indonesia" });
-        this.Cities.Add(new CityInfo() { CityName= "Makassar", CountryName= "Indonesia" });
-        this.Cities.Add(new CityInfo() { CityName= "Surabaya", CountryName= "Indonesia" });
+        this.Cities = new ObservableCollection<CityInfo>
+        {
+            new CityInfo { CityName = "Chicago",    CountryName = "USA" },
+            new CityInfo { CityName = "Los Angeles",CountryName = "USA" },
+            new CityInfo { CityName = "Houston",    CountryName = "USA" },
+            new CityInfo { CityName = "New York",   CountryName = "USA" },
+            new CityInfo { CityName = "Washington", CountryName = "USA",      IsCapital = true },
+            new CityInfo { CityName = "Chennai",    CountryName = "India" },
+            new CityInfo { CityName = "Delhi",      CountryName = "India",    IsCapital = true },
+            new CityInfo { CityName = "Kolkata",    CountryName = "India" },
+            new CityInfo { CityName = "Mumbai",     CountryName = "India" },
+            new CityInfo { CityName = "Berlin",     CountryName = "Germany",  IsCapital = true },
+            new CityInfo { CityName = "Cologne",    CountryName = "Germany" },
+            new CityInfo { CityName = "Hamburg",    CountryName = "Germany" },
+            new CityInfo { CityName = "Munich",     CountryName = "Germany" },
+            new CityInfo { CityName = "Quebec City",CountryName = "Canada" },
+            new CityInfo { CityName = "Ottawa",     CountryName = "Canada",   IsCapital = true },
+            new CityInfo { CityName = "Toronto",    CountryName = "Canada" },
+            new CityInfo { CityName = "Vancouver",  CountryName = "Canada" },
+            new CityInfo { CityName = "Victoria",   CountryName = "Canada" },
+            new CityInfo { CityName = "London",     CountryName = "England",  IsCapital = true },
+            new CityInfo { CityName = "Bath",       CountryName = "England" },
+            new CityInfo { CityName = "Manchester", CountryName = "England" },
+            new CityInfo { CityName = "Oxford",     CountryName = "England" },
+            new CityInfo { CityName = "Bandung",    CountryName = "Indonesia" },
+            new CityInfo { CityName = "Jakarta",    CountryName = "Indonesia",IsCapital = true },
+            new CityInfo { CityName = "Depok",      CountryName = "Indonesia" },
+            new CityInfo { CityName = "Makassar",   CountryName = "Indonesia" },
+            new CityInfo { CityName = "Surabaya",   CountryName = "Indonesia" },
+        };
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
+### Step 2: Add the ComboBox with filtering enabled
+
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
                     IsEditable="true"
@@ -75,18 +124,17 @@ public class CityViewModel
                     ItemsSource="{Binding Cities}"
                     TextMemberPath="CityName"
                     DisplayMemberPath="CityName">
-        <editors:SfComboBox.BindingContext>
-            <local:CityViewModel/>
-        </editors:SfComboBox.BindingContext>
+    <editors:SfComboBox.BindingContext>
+        <local:CityViewModel />
+    </editors:SfComboBox.BindingContext>
 </editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight c# %}
 
 CityViewModel cityViewModel = new CityViewModel();
+
 SfComboBox comboBox = new SfComboBox
 {
     IsEditable = true,
@@ -94,27 +142,27 @@ SfComboBox comboBox = new SfComboBox
     ItemsSource = cityViewModel.Cities,
     TextMemberPath = "CityName",
     DisplayMemberPath = "CityName",
-    BindingContext = cityViewModel
+    BindingContext = cityViewModel,
 };
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Filtering will be supported only for editable mode.
+N> Filtering is supported only when `IsEditable` is `true`.
 
 ## Filter mode
 
-The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property. The default filtering type is `StartsWith`, ignoring accent and it is case insensitive. The available filtering modes are,
+The string comparison used to filter suggestions is controlled by the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property. The default value is `StartsWith`, and matching is case-insensitive and accent-insensitive. The available modes are:
 
-* StartsWith
-* Contains
+* `StartsWith` - Filters items whose `DisplayMemberPath` value starts with the typed text. The first match is auto-appended to the editor.
+* `Contains` - Filters items whose `DisplayMemberPath` value contains the typed text anywhere.
 
-### Filter with beginning text
+### StartsWith mode
 
-Filter the matching items based on the starting text and the first filtered item will be appended to the typed input and highlighted in the drop-down. 
+Filters items whose `DisplayMemberPath` value starts with the typed text, and the first match is auto-appended to the editor and highlighted in the drop-down.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
                     TextSearchMode="StartsWith"
@@ -122,12 +170,17 @@ Filter the matching items based on the starting text and the first filtered item
                     IsFilteringEnabled="true"
                     ItemsSource="{Binding Cities}"
                     TextMemberPath="CityName"
-                    DisplayMemberPath="CityName" />
-       
+                    DisplayMemberPath="CityName">
+    <editors:SfComboBox.BindingContext>
+        <local:CityViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
+
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
 CityViewModel cityViewModel = new CityViewModel();
+
 SfComboBox comboBox = new SfComboBox
 {
     TextSearchMode = ComboBoxTextSearchMode.StartsWith,
@@ -135,21 +188,23 @@ SfComboBox comboBox = new SfComboBox
     IsFilteringEnabled = true,
     ItemsSource = cityViewModel.Cities,
     TextMemberPath = "CityName",
-    DisplayMemberPath = "CityName"
+    DisplayMemberPath = "CityName",
+    BindingContext = cityViewModel,
 };
 
 {% endhighlight %}
 {% endtabs %}
 
+The following image illustrates the result of the above code:
+
 ![.NET MAUI ComboBox filter the items based on starting text](Images/Filtering/maui_filtering_startswith.gif)
 
+### Contains mode
 
-### Filter with contains text
-
-Filter the matching items that contain specific text, and the first filtered item will be highlighted in the drop-down.
+Filters items whose `DisplayMemberPath` value contains the typed text anywhere. The first match is highlighted in the drop-down, but it is not auto-appended to the editor.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
                     TextSearchMode="Contains"
@@ -157,15 +212,18 @@ Filter the matching items that contain specific text, and the first filtered ite
                     IsFilteringEnabled="true"
                     ItemsSource="{Binding Cities}"
                     TextMemberPath="CityName"
-                    DisplayMemberPath="CityName" />
+                    DisplayMemberPath="CityName">
+    <editors:SfComboBox.BindingContext>
+        <local:CityViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
-
-using Syncfusion.Maui.Inputs;
+{% highlight c# %}
 
 CityViewModel cityViewModel = new CityViewModel();
+
 SfComboBox comboBox = new SfComboBox
 {
     TextSearchMode = ComboBoxTextSearchMode.Contains,
@@ -174,21 +232,23 @@ SfComboBox comboBox = new SfComboBox
     ItemsSource = cityViewModel.Cities,
     TextMemberPath = "CityName",
     DisplayMemberPath = "CityName",
-    BindingContext = cityViewModel
+    BindingContext = cityViewModel,
 };
 
 {% endhighlight %}
 {% endtabs %}
 
+The following image illustrates the result of the above code:
+
 ![.NET MAUI ComboBox filter the items based on contains text](Images/Filtering/maui_filtering_contains.gif)
 
-N> Auto appending of the first suggested item text to typed input is not supported in this mode.
+N> Auto-appending the first suggested item to the typed input is not supported in `Contains` mode.
 
-### Custom filtering
+## Custom filtering
 
-The ComboBox control provides support to apply your own custom filter logic to suggest the items based on your filter criteria by using the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property. The default value of **FilterBehavior** is **null**.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports applying your own filter logic to suggest items based on custom criteria. Use the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property to plug in a custom behavior. The default value of `FilterBehavior` is `null`.
 
-Now, let us create custom filtering class to apply our own filter logic to ComboBox control by the following steps.
+Follow these steps to create a custom filtering class and apply it to the ComboBox control.
 
 **Step 1:** Create a class that derives from the [IComboBoxFilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.IComboBoxFilterBehavior.html) interface. 
 
@@ -242,24 +302,29 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 **Step3:** Apply custom filtering to the ComboBox control by using the **FilterBehavior** property. 
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
-<editors:SfComboBox TextMemberPath="CityName"
+<editors:SfComboBox x:Name="comboBox"
+                    TextMemberPath="CityName"
                     DisplayMemberPath="CityName"
                     IsEditable="True"
                     IsFilteringEnabled="True"
                     ItemsSource="{Binding Cities}">
-        <editors:SfComboBox.FilterBehavior>
-            <local:CityFilteringBehavior/>
-        </editors:SfComboBox.FilterBehavior>
+    <editors:SfComboBox.BindingContext>
+        <local:CityViewModel />
+    </editors:SfComboBox.BindingContext>
+    <editors:SfComboBox.FilterBehavior>
+        <local:CityFilteringBehavior />
+    </editors:SfComboBox.FilterBehavior>
 </editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-CityViewModel cityViewModel = new CityViewModel();  
+CityViewModel cityViewModel = new CityViewModel();
 CityFilteringBehavior cityFilteringBehavior = new CityFilteringBehavior();
+
 SfComboBox comboBox = new SfComboBox
 {
     TextMemberPath = "CityName",
@@ -268,11 +333,20 @@ SfComboBox comboBox = new SfComboBox
     IsFilteringEnabled = true,
     FilterBehavior = cityFilteringBehavior,
     ItemsSource = cityViewModel.Cities,
+    BindingContext = cityViewModel,
 };
 
 {% endhighlight %}
 {% endtabs %}
 
-The following gif demonstrates how to display the cities in drop-down based on the country name entered in the ComboBox control.
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox filter the items based on custom filtering logic](Images/Filtering/maui_custom_filtering.gif)
+
+## See Also
+
+* [Getting started with .NET MAUI ComboBox](getting-started.md)
+* [Editing in .NET MAUI ComboBox](Editing.md)
+* [Selection in .NET MAUI ComboBox](Selection.md)
+* [Searching in .NET MAUI ComboBox](searching.md)
+* [SfComboBox API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html)
