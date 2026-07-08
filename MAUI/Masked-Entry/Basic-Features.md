@@ -11,52 +11,7 @@ documentation: ug
 
 ## Prerequisites
 
-Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), ensure the following are set up:
-
-1. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-2. Register the Syncfusion license in your application. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/maui/licensing/overview) for more details.
-
-    ```csharp
-    using Syncfusion.Licensing;
-
-    public class App : Application
-    {
-        public App()
-        {
-            // Replace the license key with your own.
-            SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-            InitializeComponent();
-        }
-    }
-    ```
-
-3. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-4. Add the following namespace declarations to your XAML page and `using` directives to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
@@ -68,9 +23,9 @@ The ClearButtonVisibility of type [ClearButtonVisibility](https://help.syncfusio
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask="(000) 000-0000"
-                          ClearButtonVisibility="WhileEditing"/>
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"
+                       ClearButtonVisibility="WhileEditing"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -90,8 +45,8 @@ maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 
 The [MaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_MaskType) property of type [MaskedEntryMaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskType.html) defines the masking format applied to the user input. The available values are:
 
-- `Simple` — Applies a fixed-format mask (for example, `(000) 000-0000`).
-- `RegEx` — Applies a mask based on a regular expression pattern.
+- `Simple` - Applies a fixed-format mask (for example, `(000) 000-0000`).
+- `RegEx` - Applies a mask based on a regular expression pattern.
 
 The default value is `MaskedEntryMaskType.Simple`.
 
@@ -103,11 +58,11 @@ The clear button icon color can be changed by using the [ClearButtonColor](https
 {% highlight xaml %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
-                          WidthRequest="200"
-                          MaskType="Simple"
-                          Mask="(000) 000-0000"
-                          ClearButtonVisibility="WhileEditing"
-                          ClearButtonColor="Red"/>
+                       WidthRequest="200"
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"
+                       ClearButtonVisibility="WhileEditing"
+                       ClearButtonColor="Red"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -159,9 +114,10 @@ The Masked Entry control allows the user to customize the font size of the text 
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask="(000) 000-0000" Value="1234567890"
-                          FontSize="18"/>
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"
+                       Value="1234567890"
+                       FontSize="18"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -186,9 +142,10 @@ The Masked Entry control allows the user to customize the font attribute of the 
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask="(000) 000-0000" Value="1234567890"
-                          FontAttributes="Bold"/>
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"
+                       Value="1234567890"
+                       FontAttributes="Bold"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -213,9 +170,10 @@ The Masked Entry control allows the user to customize the text's font family ins
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask="(000) 000-0000" Value="1234567890"
-                          FontFamily="Lobster-Regular"/>
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"
+                       Value="1234567890"
+                       FontFamily="Lobster-Regular"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -264,7 +222,7 @@ The Masked Entry control allows the user to define the text displayed when the M
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          Placeholder="Enter the value"/>
+                       Placeholder="Enter the value"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -286,8 +244,8 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          Placeholder="Enter the value"
-                          PlaceholderColor="Green"/>
+                       Placeholder="Enter the value"
+                       PlaceholderColor="Green"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -310,9 +268,10 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask="(000) 000-0000" Value="1234567890"
-                          TextColor="Green"/>
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"
+                       Value="1234567890"
+                       TextColor="Green"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -329,7 +288,7 @@ maskedEntry.TextColor = Colors.Green;
 
 ![TextColor](MaskedEntry_Images/MaskedEntry_TextColor.png)
 
-## Setting PromptChar
+## Setting prompt character
 
 Each mask displays a prompt character (`_`) in the absence of user input. Customize this prompt character by using the [PromptChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PromptChar) property of type `char`. The default value of the PromptChar property is `_`.
 
@@ -337,10 +296,10 @@ Each mask displays a prompt character (`_`) in the absence of user input. Custom
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="00/00/0000"
-                          PromptChar="#"/>
+                       ClearButtonVisibility="WhileEditing"
+                       MaskType="Simple"
+                       Mask="00/00/0000"
+                       PromptChar="#"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -355,7 +314,7 @@ maskedEntry.PromptChar = '#';
 {% endhighlight %}
 {% endtabs %}
 
-![PromptChar](maskedentry_images/net-maui-masked-entry-prompt-char.png)
+![.NET MAUI Masked Entry prompt character](maskedentry_images/net-maui-masked-entry-prompt-char.png)
 
 ## Setting Value
 
@@ -365,10 +324,10 @@ The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedE
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="00/00/0000"
-                          Value="12/02/2022"/>
+                       ClearButtonVisibility="WhileEditing"
+                       MaskType="Simple"
+                       Mask="00/00/0000"
+                       Value="12/02/2022"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -383,19 +342,19 @@ maskedEntry.Value = "12/02/2022";
 {% endhighlight %}
 {% endtabs %}
 
-![Value](maskedentry_images/net-maui-masked-entry-value.png)
+![.NET MAUI Masked Entry value](maskedentry_images/net-maui-masked-entry-value.png)
 
 ## Setting Stroke
 
-The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Stroke) property. The default value of the Stroke property is `Colors.Black`. The thickness of the border can be customized using the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_StrokeThickness) property of type `double`, whose default value is `1`.
+The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Stroke) property. The default value of the Stroke property is `Colors.LightGray`.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          Mask="(000) 000-0000"
-                          ClearButtonVisibility="WhileEditing"
-                          Stroke="Red"/>
+                       Mask="(000) 000-0000"
+                       ClearButtonVisibility="WhileEditing"
+                       Stroke="Red"/>
 {% endhighlight %}
 {% highlight c# %}
 
@@ -420,9 +379,9 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMa
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          Mask="00/00/0000"
-                          ClearButtonVisibility="WhileEditing"
-                          ShowBorder="False"/>
+                       Mask="00/00/0000"
+                       ClearButtonVisibility="WhileEditing"
+                       ShowBorder="False"/>
 {% endhighlight %}
 {% highlight c# %}
 
@@ -447,11 +406,11 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          HeightRequest="50"
-                          Mask="00/00/0000"
-                          ClearButtonVisibility="WhileEditing"
-                          HorizontalTextAlignment="Center"
-                          VerticalTextAlignment="Start"/>
+                       HeightRequest="50"
+                       Mask="00/00/0000"
+                       ClearButtonVisibility="WhileEditing"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"/>
 {% endhighlight %}
 {% highlight c# %}
 
@@ -530,12 +489,12 @@ The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of 
 
 You can define the return key type of [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) by using the ReturnType property. The available enum values are:
 
-- `Default` — Default return key.
-- `Done` — Indicates the input is complete.
-- `Go` — Indicates navigation, such as opening a URL.
-- `Next` — Moves focus to the next input field.
-- `Search` — Indicates a search action.
-- `Send` — Indicates the message or input should be sent.
+- `Default` - Default return key.
+- `Done` - Indicates the input is complete.
+- `Go` - Indicates navigation, such as opening a URL.
+- `Next` - Moves focus to the next input field.
+- `Search` - Indicates a search action.
+- `Send` - Indicates the message or input should be sent.
 
 N> Default value of ReturnType is `Default`.
 
@@ -543,9 +502,9 @@ N> Default value of ReturnType is `Default`.
 {% highlight xaml %}
 
 <editors:SfMaskedEntry x:Name="maskedentry"
-                        Mask="00:00:0000"
-                        ClearButtonVisibility="WhileEditing"
-                        ReturnType="Next"/>
+                       Mask="00:00:0000"
+                       ClearButtonVisibility="WhileEditing"
+                       ReturnType="Next"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -690,7 +649,6 @@ The following screenshot illustrates the AutomationIds of inner elements.
 
 ## See Also
 
-* [Getting Started with .NET MAUI Masked Entry](getting-started.md)
-* [Validation in .NET MAUI Masked Entry](validation.md)
-* [Events in .NET MAUI Masked Entry](events.md)
-* [SfMaskedEntry API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html)
+* [Getting Started](getting-started.md)
+* [Validation](validation.md)
+* [Events](events.md)

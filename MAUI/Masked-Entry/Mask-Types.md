@@ -1,64 +1,13 @@
 ---
 layout: post
 title: Mask Types in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn more about the various mask types available in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control, including Simple and RegEx, and how to use them effectively.
+description: Learn more about the various mask types available in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry), including Simple and RegEx, and how to use them effectively.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
 ---
 
 # Mask Types in .NET MAUI Masked Entry
-
-## Prerequisites
-
-Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), ensure the following are set up:
-
-1. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-2. Register the Syncfusion license in your application. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/maui/licensing/overview) for more details.
-
-    ```csharp
-    using Syncfusion.Licensing;
-
-    public class App : Application
-    {
-        public App()
-        {
-            // Replace the license key with your own.
-            SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-            InitializeComponent();
-        }
-    }
-    ```
-
-3. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-4. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
-
-For a step-by-step setup, refer to the [Getting Started](getting-started.md) documentation.
 
 The [MaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_MaskType) property of type [MaskedEntryMaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskType.html) defines the masking format applied to the user input. The default value is `MaskedEntryMaskType.Simple`.
 
@@ -71,8 +20,14 @@ The following table summarizes the differences between the available mask types:
 
 The available mask types are:
 
-- [Simple](#simple) — fixed-format masks built from mask elements.
-- [RegEx](#regex) — masks that use standard regular-expression patterns.
+- [Simple](#simple) - fixed-format masks built from mask elements.
+- [RegEx](#regex) - masks that use standard regular-expression patterns.
+
+## Prerequisites
+
+Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
+
+For a step-by-step setup, refer to the [Getting Started](getting-started.md) documentation.
 
 ## Simple
 
@@ -181,107 +136,83 @@ Description</th></tr>
 <tr>
 <td>
 [ABC]</td><td>
-Character class. Accepts any single character included in the specified set of characters.</td></tr>
+Accepts any single character included in the specified set of characters.</td></tr>
 <tr>
 <td>
 [^ABC]</td><td>
-Negated character class. Accepts any single character not included in the specified set of characters.</td></tr>
+Accepts any single character not included in the specified set of characters.</td></tr> 
 <tr>
 <td>
 [0-9A-Z]</td><td>
-Range. Accepts any digit between 0-9 and any letter between A-Z.</td></tr>
-<tr>
-<td>
-^</td><td>
-Anchor. Matches the start of the input string (or line, in multiline mode).</td></tr>
-<tr>
-<td>
-$</td><td>
-Anchor. Matches the end of the input string (or line, in multiline mode).</td></tr>
-<tr>
-<td>
-.</td><td>
-Wildcard. Matches any character except the newline character (<code>\n</code>).</td></tr>
+Accepts any digit between 0-9 and character between A-Z.</td></tr>
 <tr>
 <td>
 \d</td><td>
-Digit. Accepts any digit. Same as <code>[0-9]</code>.</td></tr>
+Accepts any digit. Same as [0-9].</td></tr>
 <tr>
 <td>
 \D</td><td>
-Non-digit. Accepts any non digit. Same as <code>[^0-9]</code>.</td></tr>
+Accepts any non digit. Same as [^0-9].</td></tr>
 <tr>
 <td>
 \w</td><td>
-Word character. Same as <code>[a-zA-Z_0-9]</code>.</td></tr>
+Accepts any  word character. \w is the same as [a-zA-Z_0-9].</td></tr>
 <tr>
 <td>
 \W</td><td>
-Non-word character. Same as <code>[^a-zA-Z_0-9]</code>.</td></tr>
+Accepts any  non word character. \W is the same as [^a-zA-Z_0-9].</td></tr>
 <tr>
 <td>
 \s</td><td>
-Whitespace. Accepts any whitespace character such as space or tab.</td></tr>
+Accepts any  white space characters.</td></tr>
 <tr>
 <td>
 \S</td><td>
-Non-whitespace. Accepts any non-whitespace character.</td></tr>
+Accepts any non white space characters.</td></tr>
 <tr>
 <td>
-\b</td><td>
-Word boundary. Matches the position between a word and a non-word character.</td></tr>
-<tr>
-<td>
-(ABC)</td><td>
-Grouping. Groups the enclosed pattern as a single unit.</td></tr>
+\S</td><td>
+Accepts any non white space characters.</td></tr>
 <tr>
 <td>
 (?=ABC)</td><td>
-Positive lookahead. Asserts that the following group matches without consuming characters.</td></tr>
+Matches a group after the main expression without including it in the result.</td></tr>
 <tr>
 <td>
 (?!ABC)</td><td>
-Negative lookahead. Asserts that the following group does not match.</td></tr>
-<tr>
-<td>
-(?<=ABC)</td><td>
-Positive lookbehind. Asserts that the preceding group matches.</td></tr>
-<tr>
-<td>
-(?<!ABC)</td><td>
-Negative lookbehind. Asserts that the preceding group does not match.</td></tr>
+Specifies a group that cannot match after the main expression.</td></tr>
 <tr>
 <td>
 {n}</td><td>
-Quantifier. Accepts the input exactly <code>n</code> times.</td></tr>
+Accepts the input for n number of times.</td></tr>
 <tr>
 <td>
 {n,}</td><td>
-Quantifier. Accepts the input <code>n</code> or more times.</td></tr>
+Accepts the input for 'n' and more than 'n' number of times. </td></tr>
 <tr>
 <td>
 {n,m}</td><td>
-Quantifier. Accepts the input between <code>n</code> and <code>m</code> times.</td></tr>
+Accepts the input for n minimum number of times and m maximum number of times.</td></tr>
 <tr>
 <td>
 +</td><td>
-Quantifier. Accepts one or more matches of the preceding element.</td></tr>
+Accepts one or more matches for the preceding character.</td></tr>
 <tr>
 <td>
 *</td><td>
-Quantifier. Accepts zero or more matches of the preceding element.</td></tr>
+Accepts zero or more matches for the preceding character.</td></tr>
 <tr>
 <td>
 ?</td><td>
-Quantifier. Accepts zero or one occurrence of the preceding element.</td></tr>
+Optional input (Zero or one occurrence  of the matching input)</td></tr>
 <tr>
 <td>
 |</td><td>
-Alternation. Acts like a Boolean OR; matches the expression before or after the pipe.</td></tr>
+Acts like a Boolean OR. Matches the expression before or after the |.</td></tr>
 <tr>
 <td>
-\\</td><td>
-Escape. Escapes a metacharacter so it is matched literally (for example, <code>\\.</code> matches a dot).</td></tr>
+.</td><td>
+Accepts any character. It can be changed based on culture</td></tr>
 </table>
 
 ### RegEx mask example
@@ -292,9 +223,9 @@ The following example validates an email address using the RegEx mask `[A-Za-z0-
 {% highlight xaml %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="RegEx"
-                          Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}"/>
+                       ClearButtonVisibility="WhileEditing"
+                       MaskType="RegEx"
+                       Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -314,9 +245,7 @@ The mask accepts strings such as `user@example.com` and rejects incomplete or ma
 
 ## See Also
 
-* [Getting Started with .NET MAUI Masked Entry](getting-started.md)
-* [Basic Features in .NET MAUI Masked Entry](basic-features.md)
-* [Formatting Value in .NET MAUI Masked Entry](formatting-value.md)
-* [Validation in .NET MAUI Masked Entry](validation.md)
-* [Events in .NET MAUI Masked Entry](events.md)
-* [SfMaskedEntry API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html)
+* [Getting Started](getting-started.md)
+* [Basic Features](basic-features.md)
+* [Formatting Value](formatting-value.md)
+* [Validation](validation.md)

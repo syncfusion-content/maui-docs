@@ -9,56 +9,11 @@ documentation: ug
 
 # Validation in .NET MAUI Masked Entry
 
-The SfMaskedEntry control validates user input against the configured [Mask](basic-features.md) and exposes the result through the [HasError](#haserror) property. Use the [ValidationMode](#validation-mode) property to choose when validation is performed.
+The SfMaskedEntry control validates user input against the configured `Mask` and exposes the result through the [HasError](#haserror) property. Use the [ValidationMode](#validation-mode) property to choose when validation is performed.
 
 ## Prerequisites
 
-Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), ensure the following are set up:
-
-1. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-2. Register the Syncfusion license in your application. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/maui/licensing/overview) for more details.
-
-    ```csharp
-    using Syncfusion.Licensing;
-
-    public class App : Application
-    {
-        public App()
-        {
-            // Replace the license key with your own.
-            SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-            InitializeComponent();
-        }
-    }
-    ```
-
-3. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-4. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
 
 For a step-by-step setup, refer to the [Getting Started](getting-started.md) documentation.
 
@@ -70,8 +25,6 @@ Use the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 - [`LostFocus`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_LostFocus): validation is performed only when the control loses focus.
 
 The default value is `KeyPress`. The selected mode works the same for both `Simple` and `RegEx` [MaskType](mask-types.md) values.
-
-> **Note:** Validation cannot be fully disabled. To defer validation until the user is done editing, use `ValidationMode = LostFocus`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -109,16 +62,16 @@ The following example shows how to surface the validation result in the UI. Bind
 
 {% tabs %}
 {% highlight xaml %}
-
-<editors:SfMaskedEntry x:Name="maskedEntry"
-                       WidthRequest="200"
-                       MaskType="Simple"
-                       Mask="00/00/0000"
-                       ValidationMode="LostFocus"/>
-<Label Text="Please enter a valid date."
-       TextColor="Red"
-       IsVisible="{Binding HasError, Source={x:Reference maskedEntry}}"/>
-
+<VerticalStackLayout>
+    <editors:SfMaskedEntry x:Name="maskedEntry"
+                           WidthRequest="200"
+                           MaskType="Simple"
+                           Mask="00/00/0000"
+                           ValidationMode="LostFocus"/>
+    <Label Text="Please enter a valid date."
+           TextColor="Red"
+           IsVisible="{Binding HasError, Source={x:Reference maskedEntry}}"/>
+</VerticalStackLayout>
 {% endhighlight %}
 {% highlight c# %}
 
@@ -149,9 +102,7 @@ The following image illustrates an invalid input that triggers `HasError = true`
 
 ## See Also
 
-* [Getting Started with .NET MAUI Masked Entry](getting-started.md)
-* [Basic Features in .NET MAUI Masked Entry](basic-features.md)
-* [Mask Types in .NET MAUI Masked Entry](Mask-Types.md)
-* [Formatting Value in .NET MAUI Masked Entry](formatting-value.md)
-* [Events in .NET MAUI Masked Entry](events.md)
-* [SfMaskedEntry API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html)
+* [Getting Started](getting-started.md)
+* [Basic Features](basic-features.md)
+* [Mask Types](Mask-Types.md)
+* [Formatting Value](formatting-value.md)

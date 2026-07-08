@@ -13,60 +13,13 @@ The SfMaskedEntry control can be used as a password text box by setting a charac
 
 ## Prerequisites
 
-Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), ensure the following are set up:
-
-1. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-2. Register the Syncfusion license in your application. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/maui/licensing/overview) for more details.
-
-    ```csharp
-    using Syncfusion.Licensing;
-
-    public class App : Application
-    {
-        public App()
-        {
-            // Replace the license key with your own.
-            SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-            InitializeComponent();
-        }
-    }
-    ```
-
-3. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-4. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
 
 For a step-by-step setup, refer to the [Getting Started](getting-started.md) documentation.
 
 ## Password Char
 
 The [PasswordChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PasswordChar) property of type `char` defines the character that is displayed in place of each typed character. The default value is `'\0'`, which means the typed characters are shown normally. When set to any other value (for example, `*` or `•`), all typed characters are masked with that character, making the control behave like a password text box.
-
-The underlying value is still retrievable through the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Value) property; only the visual rendering is affected. When [PromptChar](basic-features.md#setting-promptchar) is also set, the `PromptChar` is shown in unfilled slots and the `PasswordChar` is shown in filled slots.
 
 > **Note:** The `PasswordChar` is purely visual. Screen readers and accessibility tools typically still read the underlying value, so do not rely on the password mask as a security control.
 
@@ -134,10 +87,8 @@ The following GIF demonstrates the password delay behavior: each typed character
 
 ## See Also
 
-* [Getting Started with .NET MAUI Masked Entry](getting-started.md)
-* [Basic Features in .NET MAUI Masked Entry](basic-features.md)
-* [Mask Types in .NET MAUI Masked Entry](Mask-Types.md)
-* [Formatting Value in .NET MAUI Masked Entry](formatting-value.md)
-* [Validation in .NET MAUI Masked Entry](validation.md)
-* [Events in .NET MAUI Masked Entry](events.md)
-* [SfMaskedEntry API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html)
+* [Getting Started](getting-started.md)
+* [Basic Features](basic-features.md)
+* [Mask Types](Mask-Types.md)
+* [Formatting Value](formatting-value.md)
+* [Validation](validation.md)

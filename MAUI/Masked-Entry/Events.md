@@ -9,74 +9,29 @@ documentation: ug
 
 # Events in .NET MAUI Masked Entry
 
-## Prerequisites
-
-Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), ensure the following are set up:
-
-1. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-2. Register the Syncfusion license in your application. Refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/maui/licensing/overview) for more details.
-
-    ```csharp
-    using Syncfusion.Licensing;
-
-    public class App : Application
-    {
-        public App()
-        {
-            // Replace the license key with your own.
-            SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
-            InitializeComponent();
-        }
-    }
-    ```
-
-3. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-4. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
-
-For a step-by-step setup, refer to the [Getting Started](getting-started.md) documentation.
-
 This section provides information about the events available in the .NET MAUI Masked Entry control. Events are typically subscribed in the page constructor or in code-behind, and are raised on the UI thread.
 
 The events fire in the following order when the user enters a value:
 
-1. `ValueChanging` — raised before the value is committed, and is cancelable.
-2. `ValueChanged` — raised after the value is committed.
-3. `Completed` — raised when the user finalizes text by pressing the return key.
-4. `ClearButtonClicked` — raised when the user taps the clear button.
+1. `ValueChanging` - raised before the value is committed, and is cancelable.
+2. `ValueChanged` - raised after the value is committed.
+3. `Completed` - raised when the user finalizes text by pressing the return key.
+4. `ClearButtonClicked` - raised when the user taps the clear button.
+
+## Prerequisites
+
+Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
+
+For a step-by-step setup, refer to the [Getting Started](getting-started.md) documentation.
 
 ## ValueChanging Event
 
 The [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanging) event is raised when the `Value` property is about to change in the Masked Entry control, for example on each keystroke that modifies the value. The event handler receives a [MaskedEntryValueChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryValueChangingEventArgs.html) instance that provides the following properties:
 
-* `NewValue` (`object`): Gets the newly entered value that is about to be committed.
-* `OldValue` (`object`): Gets the previous value before the change.
-* `IsValid` (`bool`): Gets a boolean value indicating whether the input is considered valid based on the mask completion.
-* `Cancel` (`bool`): Gets or sets a value indicating whether the change should be canceled. When set to `true`, the `Value` property is not updated.
+* `NewValue`: Gets the newly entered value that is about to be committed.
+* `OldValue`: Gets the previous value before the change.
+* `IsValid`: Gets a boolean value indicating whether the input is considered valid based on the mask completion.
+* `Cancel`: Gets or sets a value indicating whether the change should be canceled. When set to `true`, the `Value` property is not updated.
 
 {% tabs %}
 {% highlight xaml %}
@@ -129,9 +84,9 @@ private void MaskedEntry_ValueChanging(object sender, MaskedEntryValueChangingEv
 
 The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanged) event is raised after the `Value` property is changed in the Masked Entry control. The event handler receives a [MaskedEntryValueChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryValueChangedEventArgs.html) instance that provides the following properties:
 
-* `IsMaskCompleted` (`bool`): Gets a boolean value indicating whether all the required inputs for the mask are completed.
-* `NewValue` (`object`): Gets the newly committed value.
-* `OldValue` (`object`): Gets the previous value before the change.
+* `IsMaskCompleted`: Gets a boolean value indicating whether all the required inputs for the mask are completed.
+* `NewValue`: Gets the newly committed value.
+* `OldValue`: Gets the previous value before the change.
 
 {% tabs %}
 {% highlight xaml %}
@@ -266,6 +221,5 @@ private void MaskedEntry_ClearButtonClicked(object sender, EventArgs e)
 
 ## See Also
 
-* [Getting Started with .NET MAUI Masked Entry](getting-started.md)
-* [Basic Features in .NET MAUI Masked Entry](basic-features.md)
-* [SfMaskedEntry API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html)
+* [Getting Started](getting-started.md)
+* [Basic Features](basic-features.md)
