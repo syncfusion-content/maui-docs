@@ -108,31 +108,31 @@ To populate the agent collection, first assign the view model as the `BindingCon
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               Agents="{Binding AgentCollection}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Agents="{Binding AgentCollection}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            var viewModel = new GettingStartedViewModel();
-            this.BindingContext = viewModel;
+        InitializeComponent();
+        var viewModel = new GettingStartedViewModel();
+        this.BindingContext = viewModel;
 
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.Agents = viewModel.AgentCollection;
-            this.Content = sfAIAssistView;
-        }
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.Agents = viewModel.AgentCollection;
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,33 +146,33 @@ The `SfAIAssistView` control supports setting a current agent using the [Selecte
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               Agents="{Binding AgentCollection}"
-                               SelectedAgent="{Binding Agent}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Agents="{Binding AgentCollection}"
+                           SelectedAgent="{Binding Agent}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            var viewModel = new GettingStartedViewModel();
-            this.BindingContext = viewModel;
+        InitializeComponent();
+        var viewModel = new GettingStartedViewModel();
+        this.BindingContext = viewModel;
 
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.Agents = viewModel.AgentCollection;
-            sfAIAssistView.SelectedAgent = viewModel.Agent;
-            this.Content = sfAIAssistView;
-        }
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.Agents = viewModel.AgentCollection;
+        sfAIAssistView.SelectedAgent = viewModel.Agent;
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -186,25 +186,25 @@ The `SfAIAssistView` control supports showing the `SelectedAgent` in the editor 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ShowSelectedAgent="False" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowSelectedAgent="False" />
 
 {% endhighlight %}
 {% highlight c# hl_lines="10" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
+        InitializeComponent();
 
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.ShowSelectedAgent = false;
-            this.Content = sfAIAssistView;
-        }
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ShowSelectedAgent = false;
+        this.Content = sfAIAssistView;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -218,39 +218,43 @@ The `SfAIAssistView` control allows you to fully customize the `SelectedAgent` a
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-             ...
-        </ResourceDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="agentTemplate">
+            <Grid>
+                ...
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               SelectedAgentTemplate="{StaticResource agentTemplate}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           SelectedAgentTemplate="{StaticResource agentTemplate}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
-    using Syncfusion.Maui.AIAssistView;
+using Syncfusion.Maui.AIAssistView;
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
+        InitializeComponent();
 
-            SfAIAssistView sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.SelectedAgentTemplate = this.CreateAgentTemplate();
-            this.Content = sfAIAssistView;
-        }
-
-        private DataTemplate CreateAgentTemplate()
-        {
-            return new DataTemplate(() =>
-            {
-                ...
-            });
-        }
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.SelectedAgentTemplate = this.CreateAgentTemplate();
+        this.Content = sfAIAssistView;
     }
+
+    private DataTemplate CreateAgentTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
