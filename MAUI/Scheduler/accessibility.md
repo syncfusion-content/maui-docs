@@ -13,9 +13,9 @@ Accessibility support in `SfScheduler` is designed to provide voice descriptions
 
 ## Keyboard shortcuts in .NET MAUI Scheduler (SfScheduler)
 
-The `SfScheduler` supports selecting the scheduler date time, appointments, and view navigation using keyboard interactions in WinUI, macOS, and iOS platforms.
+The `SfScheduler` supports selecting the scheduler date time, appointments, and view navigation using keyboard interactions on Windows, macOS, and iOS platforms.
 
-N> [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChanged) event triggers for cell selection changed.
+N> The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChanged) event is triggered when the cell selection changes.
 
 ### Day, Week and WorkWeek views
 
@@ -82,7 +82,7 @@ It triggers {{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sche
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Right arrow<br/><br/></td><td>Moves selection to the next (LTR) or previous (LTR) date of the currently selected date.<br/><br/></td></tr>
+Right arrow<br/><br/></td><td>Moves selection to the next (LTR) or previous (RTL) date of the currently selected date.<br/><br/></td></tr>
 <tr>
 <td>
 Left arrow<br/><br/></td><td>
@@ -110,7 +110,7 @@ It triggers {{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sche
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Tab<br/><br/></td><td>Moves selection to the next (LTR) or Previous (RTL) appointment of the currently selected appointment. 
+Tab<br/><br/></td><td>Moves selection to the next (LTR) or previous (RTL) appointment of the currently selected appointment.
 <br/><br/></td></tr>
 <tr>
 <td>
@@ -119,7 +119,7 @@ Moves selection to the previous (LTR) or next (RTL) appointment of the currently
 <br/><br/></td></tr>
 <tr>
 <td>
-Delete<br/><br/></td><td>Deletes the selected appointment from appointments collection.<br/><br/></td></tr>
+Delete<br/><br/></td><td>Deletes the selected appointment from the appointments collection.<br/><br/></td></tr>
 <tr>
 <td>
 Enter<br/><br/></td><td>
@@ -146,7 +146,7 @@ Moves the view to work week view.<br/><br/></td></tr>
 <tr>
 <td>
 Ctrl + Alt + 4 => MonthView<br/><br/></td><td>
-Moves the view to work week view.<br/><br/></td></tr>
+Moves the view to month view.<br/><br/></td></tr>
 <tr>
 <td>
 Ctrl + Alt + 5 => TimelineDayView<br/><br/></td><td>
@@ -169,7 +169,7 @@ Ctrl + Alt + 9 => AgendaView<br/><br/></td><td>
 Moves the view to Agenda view.<br/><br/></td></tr>
 </table>
 
-N> There is a framework issue with unable to remove or modify the default visual focus style on tab press in windows platform and following the framework issue in this report [link](https://github.com/dotnet/maui/issues/10193).
+N> There is a framework issue preventing the removal or modification of the default visual focus style on tab press on the Windows platform. For more information, refer to the framework issue in this report [link](https://github.com/dotnet/maui/issues/10193).
 
 #### MAC and iOS
 
@@ -189,7 +189,7 @@ Moves the view to work week view.<br/><br/></td></tr>
 <tr>
 <td>
 Command + 4 => MonthView<br/><br/></td><td>
-Moves the view to work week view.<br/><br/></td></tr>
+Moves the view to month view.<br/><br/></td></tr>
 <tr>
 <td>
 Command + 5 => TimelineDayView<br/><br/></td><td>
@@ -212,7 +212,7 @@ Command + 9 => AgendaView<br/><br/></td><td>
 Moves the view to Agenda view.<br/><br/></td></tr>
 </table>
 
-N> There is a framework issue with focus events not working in MAC and iOS and the following framework issue in this report [link](https://github.com/dotnet/maui/issues/10192).
+N> There is a framework issue with focus events not working in macOS and iOS. For more information, refer to the framework issue in this report [link](https://github.com/dotnet/maui/issues/10192).
 
 ### Header
 
@@ -223,11 +223,11 @@ N> There is a framework issue with focus events not working in MAC and iOS and t
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Tab<br/><br/></td><td>Move to next focusable element in header.<br/><br/></td></tr>
+Tab<br/><br/></td><td>Moves to the next focusable element in the header.<br/><br/></td></tr>
 <tr>
 <td>
 Shift + Tab<br/><br/></td><td>
-Move to previous focusable element in header.<br/><br/></td></tr>
+Moves to the previous focusable element in the header.<br/><br/></td></tr>
 </table>
 
 N> You can also explore our [MAUI Scheduler example](https://github.com/syncfusion/maui-demos) to know how to schedule and manage appointments through an intuitive user interface, similar to the Outlook calendar.

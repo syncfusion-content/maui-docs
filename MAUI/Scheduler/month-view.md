@@ -12,15 +12,15 @@ keywords : .net maui scheduler, .net maui month view, .net maui month cell, .net
 
 By default, the Month view displays the entire days of a particular month and current month initially. The current date color is differentiated from other dates of the current month, and also the color differentiation for dates will be applicable for the previous and next month dates.
 
-By default, when an appointment is tried to create through Month view, it is considered to be created for an entire day.
+By default, when an appointment is created through the Month view, it is considered to be created for an entire day.
 
-N> The appointment views for each month cells will be updated depends on the month cells height. While resizing the layout, the following actions would be performed,
-* If the appointment views overlaps with month cell dates or do not fit into the month cell height then the appointment view is changed from [AppointmentDisplayMode.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text) to [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) view.
-* If the indicator views overlaps with month cell dates, then the indicator view is changed from [(AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) to [AppointmentDisplayMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_None).
+N> The appointment views for each month cell will be updated depending on the month cell height. While resizing the layout, the following actions will be performed:
+* If the appointment views overlap with month cell dates or do not fit into the month cell height, then the appointment view is changed from [AppointmentDisplayMode.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text) to [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) view.
+* If the indicator views overlap with month cell dates, then the indicator view is changed from [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) to [AppointmentDisplayMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_None).
 
 ## Appointment display mode
 
-The scheduler month view appointment display can be handled by using the [AppointmentDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentDisplayMode) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, `AppointmentDisplayMode` is set to `Text,` using the `AppointmentDisplayMode.` 
+The scheduler month view appointment display can be handled by using the [AppointmentDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentDisplayMode) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, `AppointmentDisplayMode` is set to `Text`.
 
 You can set the month view appointments display as follows.
 
@@ -76,7 +76,7 @@ The scheduler month view appointment indicator count allows you to customize the
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorCount = 1;
+this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
 
 {% endhighlight %}  
 {% endtabs %}
@@ -376,7 +376,7 @@ The [TimeTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedul
 {% endhighlight %}
 {% highlight C# tabtitle="C#" hl_lines="6" %}
 SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
+scheduler.View = SchedulerView.Month;
 scheduler.MonthView.ShowAppointmentsInline = true;
 scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 {
@@ -406,11 +406,11 @@ The [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.M
 {% endhighlight %}
 {% highlight C# tabtitle="C#" hl_lines="6" %}
 SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
+scheduler.View = SchedulerView.Month;
 scheduler.MonthView.ShowAppointmentsInline = true;
 scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 {
-    ItemHeight="70"
+    ItemHeight = 70
 };
 {% endhighlight %}   
 {% endtabs %}
@@ -443,7 +443,7 @@ The [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {% endhighlight %}
 {% highlight C# tabtitle="C#" hl_lines="4 6 7 9 10" %}
 SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
+scheduler.View = SchedulerView.Month;
 scheduler.MonthView.ShowAppointmentsInline = true;
 scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 {

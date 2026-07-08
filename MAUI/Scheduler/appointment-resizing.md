@@ -108,7 +108,7 @@ The format of the time displayed in the time indicator while resizing an appoint
                        View="Day" 
                        AllowAppointmentResize="True">
     <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings TimeIndicatorTextFormat="HH:MM"/>
+        <scheduler:AppointmentResizeSettings TimeIndicatorTextFormat="HH:mm"/>
     </scheduler:SfScheduler.AppointmentResizeSettings>
 </scheduler:SfScheduler>
 {% endhighlight %}
@@ -119,7 +119,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         this.scheduler.AllowAppointmentResize = true;
-        this.scheduler.AppointmentResizeSettings.TimeIndicatorTextFormat="HH:MM";
+        this.scheduler.AppointmentResizeSettings.TimeIndicatorTextFormat="HH:mm";
     }
 }
 {% endhighlight %}
