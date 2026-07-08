@@ -83,7 +83,6 @@ Before proceeding, ensure the following are set up:
 2. Search for `Syncfusion.Maui.SmartDataGrid` and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-{% endtabs %}
 {% endtabcontent %}
 {% endtabcontents %}
 
