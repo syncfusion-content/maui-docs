@@ -229,8 +229,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ![Syncfusion .NET MAUI Chat Text message type](images/messages/maui-chat-text-message.png)
 
-N> 
-The following examples use avatar images such as `flight.png`. Ensure that all referenced avatar images are added to the application's `Resources/Images` folder.
+N> The following examples use avatar images such as `flight.png`. Ensure that all referenced avatar images are added to the application's `Resources/Images` folder.
 
 ## Date picker message
 

@@ -535,11 +535,11 @@ public class InverseBoolConverter : IValueConverter
 {% highlight c# hl_lines="10" %}
 public partial class MainPage : ContentPage
 {
-    private readonly LoadMoreViewModel viewModel = new LoadMoreViewModel();
 
     public MainPage()
     {
         InitializeComponent();
+        LoadMoreViewModel viewModel = new LoadMoreViewModel();
         sfChat.Messages = viewModel.Messages;
         sfChat.CurrentUser = viewModel.CurrentUser;
         Label LoadMoreLabel;

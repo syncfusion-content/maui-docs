@@ -77,7 +77,7 @@ public partial class MainPage : ContentPage
 
 You can set any image as the background for the `SfChat` by setting the `SfChat.Background` as `Colors.Transparent` and adding an image below the `SfChat` control. However, if you want the image to be applied to the message input view area as well, set the message input view's background to Transparent, as shown in the code sample below.
 
-N> Place the `backgroundimage.jpg` file in the `Resources/Images/` folder of your .NET MAUI project and ensure its build action is set to `MauiImage` so that it is included in the application package.
+N> Place the respective image file in the `Resources/Images/` folder of your .NET MAUI project and ensure its build action is set to `MauiImage` so that it is included in the application package.
 
 {% tabs %}
 {% highlight xaml hl_lines="26" %}

@@ -15,7 +15,7 @@ In `SfChat`, you can enable swiping by setting the [AllowSwiping](https://help.s
 
 The swipe views can be customized by using the [StartSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_StartSwipeTemplate) when swiping towards the right and [EndSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_EndSwipeTemplate) when swiping towards the left. The content inside the swipe template is arranged based on the offset values when swiping a message.
 
-N> The samples below reference `edit.png` and `delete.png`. Add these images to the `Resources/Images` folder of your .NET MAUI project and register each as a `MauiImage` in the project file (`.csproj`):
+N> The samples below reference `edit.png` and `delete.png`. Add these images to the `Resources/Images` folder of your .NET MAUI project and register each as a `MauiImage` in the project file (`.csproj`).
 
 {% tabs %}
 {% highlight xaml hl_lines="17 41" %}
@@ -273,7 +273,7 @@ The `SwipeEnded` event provides the following properties in its arguments:
 * [SwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEventArgs_SwipeDirection): Defines the swipe direction of the message being swiped.
 * [SwipeOffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEndedEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEndedEventArgs_SwipeOffSet): Defines the current swipe offset of the message that is being swiped.
 
-> **NOTE:** In the XAML below, `MaxSwipeOffset="130"` caps the swipe distance and is also the threshold at which this `SwipeEnded` event is raised. The value is the same `MaxSwipeOffset` introduced at the top of this document.
+N> In the XAML below, `MaxSwipeOffset="130"` caps the swipe distance and is also the threshold at which this `SwipeEnded` event is raised. The value is the same `MaxSwipeOffset` introduced at the top of this document.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}

@@ -50,7 +50,7 @@ N> To use StickyTimeBreak, ensure that ShowTimeBreak="True" is also set. Otherwi
 
 The `Chat` control allows to load a custom template for time break view using the [TimeBreakTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TimeBreakTemplate) property.
 
-N> The timeBreakTemplateSelector resource must be declared in the page's resource scope (or a parent ResourceDictionary) before it can be referenced using {StaticResource timeBreakTemplateSelector}.
+N> The `timeBreakTemplateSelector` resource must be declared in the page's resource scope (or a parent ResourceDictionary) before it can be referenced using {StaticResource timeBreakTemplateSelector}.
 
 {% tabs %}
 {% highlight xaml hl_lines="9 21" %}

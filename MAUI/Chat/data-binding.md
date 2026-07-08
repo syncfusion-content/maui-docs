@@ -107,7 +107,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> The sample uses peoplecircle14.png and peoplecircle16.png as avatar images. Add these image files to the project's Resources/Images folder and ensure their build action is set to MauiImage so that they can be displayed correctly at runtime.
+N> The sample uses `peoplecircle14.png` and `peoplecircle16.png` as avatar images. Add these image files to the project's `Resources/Images` folder and ensure their build action is set to MauiImage so that they can be displayed correctly at runtime.
 
 Now, bind the existing collection of data objects to the `SfChat.ItemsSource` property. In this example, the collection is `viewModel.MessageCollection`. 
 
@@ -170,7 +170,7 @@ namespace DataBinding
 
 Next, create a class that implements the [IChatMessageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html) interface and assign it to the [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) property as shown below. The `IChatMessageConverter` interface provides the [ConvertToChatMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html#Syncfusion_Maui_Chat_IChatMessageConverter_ConvertToChatMessage_System_Object_Syncfusion_Maui_Chat_SfChat_) and [ConvertToData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html#Syncfusion_Maui_Chat_IChatMessageConverter_ConvertToData_System_Object_Syncfusion_Maui_Chat_SfChat_) methods to convert data collection items into chat messages and chat messages back into data collection items. These methods are triggered whenever an item is added, removed, or replaced in either the data collection or the chat message collection.
 
-N>  The ConvertToData method uses `SfChat.CurrentUser` and `SfChat.Suggestions` to populate the User and Suggestions properties of the converted MessageModel. Ensure that these properties are set on the SfChat instance before data conversion occurs; otherwise, the resulting MessageModel may contain `null` values.
+N>  The ConvertToData method uses `SfChat.CurrentUser` and `SfChat.Suggestions` to populate the User and Suggestions properties of the converted MessageModel. Ensure that these properties are set on the `SfChat` instance before data conversion occurs; otherwise, the resulting MessageModel may contain `null` values.
 
 Implementation of a custom message converter class with conversion logic to convert from data to message and vice versa.
 

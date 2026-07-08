@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events and Commands in .NET MAUI Chat Control | Syncfusion®
-description: Learn about the events and commands supported by the Syncfusion® .NET MAUI Chat (SfChat) control.
+description: Learn about the events and commands supported by the Syncfusion® .NET MAUI Chat (SfChat) control, including message requests, suggestions, and MVVM interactions.
 platform: MAUI
 control: SfChat
 documentation: ug

@@ -192,8 +192,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 
 ![Syncfusion .NET MAUI Chat Suggestions with image](images/suggestions/maui-chat-suggestion-image.png)
 
-N>
-To display the configured ChatSuggestions in the SfChat control, bind the ViewModel's ChatSuggestions property to the SfChat.Suggestions property.
+N> To display the configured ChatSuggestions in the SfChat control, bind the ViewModel's ChatSuggestions property to the SfChat.Suggestions property.
 
 ### Change the orientation of suggestions
 
