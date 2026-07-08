@@ -42,7 +42,7 @@ The [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 The following code snippet applies the Liquid Glass Effect to the `SfNumericEntry` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.xaml" %}
 
 <Grid>
     <Image Source="Wallpaper.png"
@@ -62,7 +62,7 @@ The following code snippet applies the Liquid Glass Effect to the `SfNumericEntr
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;

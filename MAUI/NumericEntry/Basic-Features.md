@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic Features in .NET MAUI NumericEntry control | Syncfusion®
-description: Learn about the basic features of the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
+description: Learn about the basic features of the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
 platform: maui
 control: SfNumericEntry
 documentation: ug
@@ -20,7 +20,7 @@ For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) doc
 Use the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Placeholder) property to display a hint when the control has no value. The placeholder text is shown only when the value of the [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull) property is **true** and the `Value` is **null**. The default value of the `Placeholder` property is `string.Empty` — no placeholder is displayed.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
@@ -48,7 +48,7 @@ The [ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 N> The clear button appears only when the text box is focused and the `IsEditable` property is set to **true**.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         ShowClearButton="True"
@@ -85,7 +85,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 | `OldValue` | `double?` | The previous value of the control. |
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
@@ -126,7 +126,7 @@ The [ValueChangeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 * [OnKeyFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ValueChangeMode.html#Syncfusion_Maui_Inputs_ValueChangeMode_OnKeyFocus) — The value is updated with each keypress.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <VerticalStackLayout Spacing="10" VerticalOptions="Center">
     <editors:SfNumericEntry x:Name="numericEntry"
@@ -206,7 +206,7 @@ public partial class MainPage : ContentPage
 The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Completed) event is raised when the user finalizes the text in the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) in editable mode by pressing the Return key on the keyboard. The handler is a generic event handler that takes the `sender` and `EventArgs`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"
@@ -246,7 +246,7 @@ private async void numericEntry_Completed(object sender, EventArgs e)
 The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ClearButtonClicked) event is raised when the user activates the clear button in the `SfNumericEntry` by tapping it. The handler is a generic event handler that takes the `sender` and `EventArgs`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"
@@ -285,7 +285,7 @@ private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
 Use the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property to change the border color of the NumericEntry. The default value is `LightGray`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
@@ -309,7 +309,7 @@ sfNumericEntry.Stroke = Colors.Red;
 Use the [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ShowBorder) property of [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) to control the visibility of the border. The default value is `true`. The following example shows how to change the border visibility:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HeightRequest="40"
@@ -337,7 +337,7 @@ The [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 N> Dynamic changes to the `HorizontalTextAlignment` property may not behave as expected on the Android platform.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HeightRequest="50"
@@ -365,7 +365,7 @@ The following image illustrates the result of the above code:
 The [`SelectAllOnFocus`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_SelectAllOnFocus) property automatically selects all the text in the NumericEntry when the control gains focus. This makes it easy to replace the entire content. The default value is `true`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         Value="123456"
@@ -391,7 +391,7 @@ You can define the return key type of [SfNumericEntry](https://help.syncfusion.c
 N> The default value of `ReturnType` is `Default`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"
@@ -414,7 +414,7 @@ sfNumericEntry.ReturnType = ReturnType.Next;
 The `ClearButtonPath` property specifies the `Path` that is rendered as the clear-button icon, allowing the appearance of the clear button to be customized.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"
@@ -462,7 +462,7 @@ The following image illustrates the result of the above code:
 - `ReturnCommandParameter`, of type `object`, specifies the parameter passed to the `ReturnCommand`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"

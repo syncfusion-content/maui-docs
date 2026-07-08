@@ -26,7 +26,7 @@ The control is considered to have lost focus when the user taps outside the entr
 The following example demonstrates how to hide prompt characters when the Masked Entry control loses focus:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
                        Placeholder="Enter here"
@@ -36,7 +36,7 @@ The following example demonstrates how to hide prompt characters when the Masked
                        HidePromptOnLeave="True"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {

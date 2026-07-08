@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn about the events available in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control, including ValueChanging, ValueChanged, Completed, and ClearButtonClicked.
+description: Learn the events available in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry), including ValueChanging, ValueChanged, Completed, and ClearButtonClicked.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -34,7 +34,7 @@ The [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 * `Cancel`: Gets or sets a value indicating whether the change should be canceled. When set to `true`, the `Value` property is not updated.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
                        WidthRequest="200"
@@ -43,7 +43,7 @@ The [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
                        ValueChanging="MaskedEntry_ValueChanging"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
@@ -59,7 +59,7 @@ maskedEntry.ValueChanging += MaskedEntry_ValueChanging;
 The `ValueChanging` event can be handled in C# as follows:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 private void MaskedEntry_ValueChanging(object sender, MaskedEntryValueChangingEventArgs e)
 {
@@ -89,7 +89,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 * `OldValue`: Gets the previous value before the change.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
                        WidthRequest="200"
@@ -98,7 +98,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
                        ValueChanged="MaskedEntry_ValueChanged"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
@@ -114,7 +114,7 @@ maskedEntry.ValueChanged += MaskedEntry_ValueChanged;
 The `ValueChanged` event can be handled in C# as follows:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 private void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChangedEventArgs e)
 {
@@ -135,7 +135,7 @@ private void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChangedEven
 The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Completed) event is raised when the user finalizes the text in the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) editable mode by pressing the return key on the keyboard. The handler for the event is a generic `EventHandler`, taking the `sender` and `EventArgs` (the `EventArgs` value is `EventArgs.Empty`):
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
                        WidthRequest="200"
@@ -144,7 +144,7 @@ The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMas
                        Completed="MaskedEntry_Completed"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
@@ -160,7 +160,7 @@ maskedEntry.Completed += MaskedEntry_Completed;
 The `Completed` event can be handled in C# as follows:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 private void MaskedEntry_Completed(object sender, EventArgs e)
 {
@@ -179,7 +179,7 @@ private void MaskedEntry_Completed(object sender, EventArgs e)
 The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonClicked) event is raised when the user activates the clear button in the `SfMaskedEntry` editable mode by tapping the clear button. The handler for the event is a generic `EventHandler`, taking the `sender` and `EventArgs`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
                        WidthRequest="200"
@@ -189,7 +189,7 @@ The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
                        ClearButtonClicked="MaskedEntry_ClearButtonClicked"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
@@ -206,7 +206,7 @@ maskedEntry.ClearButtonClicked += MaskedEntry_ClearButtonClicked;
 The `ClearButtonClicked` event can be handled in C# as follows:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 private void MaskedEntry_ClearButtonClicked(object sender, EventArgs e)
 {

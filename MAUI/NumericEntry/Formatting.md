@@ -34,7 +34,7 @@ N> For the full list of supported standard format strings, see the [.NET documen
 The following example shows how to apply the `C`, `P`, and `N` format strings to the `CustomFormat` property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <!-- Format stock price in currency. -->
 <editors:SfNumericEntry CustomFormat="C2" WidthRequest="200" />
@@ -82,7 +82,7 @@ Pad the integer portion of the value to a fixed width by using the **0** (zero-p
 N> **0** (zero placeholder) replaces the zero with the corresponding digit present in the value; otherwise, a zero is appended at the leftmost position of the value.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <!-- Format stock price in currency. -->
 <editors:SfNumericEntry CustomFormat="$00000.00" WidthRequest="200" />
@@ -129,14 +129,14 @@ Set the number of fractional digits displayed by the value by using the **0** (z
 N> **0** (zero placeholder) replaces the zero with the corresponding digit in the value. If the value has fewer fractional digits, a zero is appended at the rightmost position.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry CustomFormat="$000.000" WidthRequest="200"/>
 <editors:SfNumericEntry CustomFormat="00.000%" WidthRequest="200"/>
 <editors:SfNumericEntry CustomFormat="00.000" WidthRequest="200"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 var stockPrice = new SfNumericEntry
 {
@@ -173,14 +173,14 @@ You can apply custom formats to the `NumericEntry` control by combining the **0*
 In the following example, the value of the `CustomFormat` property is `$00.00##`. The two `0` specifiers before the decimal point force a minimum 2-digit integer, the two `0` specifiers after the decimal point force a minimum 2 fractional digits, and the two `#` specifiers allow up to 4 fractional digits in total.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="stockPrice" CustomFormat="$00.00##" WidthRequest="200"/>
 <editors:SfNumericEntry x:Name="productDiscount" CustomFormat="00.00##%" WidthRequest="200"/>
 <editors:SfNumericEntry x:Name="hoursWorked" CustomFormat="00.00##" WidthRequest="200"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 var stockPrice = new SfNumericEntry
 {
@@ -210,7 +210,7 @@ var hoursWorked = new SfNumericEntry
 The `Culture` property configures the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) for a specific language. Set it to a `System.Globalization.CultureInfo` instance; the value is then formatted using that culture's decimal separator, currency symbol, and so on.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"
@@ -247,7 +247,7 @@ When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 ### Value mode
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"
@@ -274,7 +274,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 ### Compute mode
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"
@@ -307,7 +307,7 @@ Specify the maximum number of digits to display after the decimal point by setti
 > The `MaximumNumberDecimalDigits` property must be a positive integer and is ignored when a `CustomFormat` is provided. The default value of `MaximumNumberDecimalDigits` is `2`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
                         WidthRequest="200"

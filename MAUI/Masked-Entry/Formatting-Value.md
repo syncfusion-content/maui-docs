@@ -31,7 +31,7 @@ For a step-by-step setup, refer to the [Getting Started](getting-started.md) doc
 Configure the Masked Entry to exclude prompt and literal characters, preserving only the characters typed by the user. With this option, the resulting `Value` is `DF321SD1A` (the literals `-` and any unfilled prompt slots `_` are removed).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
                        MaskType="Simple"
@@ -41,7 +41,7 @@ Configure the Masked Entry to exclude prompt and literal characters, preserving 
                        ValueMaskFormat="ExcludePromptAndLiterals"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
@@ -63,7 +63,7 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
 Configure the Masked Entry to preserve typed and prompt characters while excluding the literal characters. With this option, the resulting `Value` is `DF321SD1A`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
                        MaskType="Simple"
@@ -73,7 +73,7 @@ Configure the Masked Entry to preserve typed and prompt characters while excludi
                        ValueMaskFormat="IncludePrompt"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
@@ -96,7 +96,7 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
 Configure the Masked Entry to keep typed and literal characters while excluding prompt characters. With this option, the resulting `Value` is `DF321-SD1A` .
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
                        MaskType="Simple"
@@ -106,7 +106,7 @@ Configure the Masked Entry to keep typed and literal characters while excluding 
                        ValueMaskFormat="IncludeLiterals"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
@@ -128,7 +128,7 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
 Configure the Masked Entry to maintain typed, prompt, and literal characters in the input. This is the default option. The resulting `Value` is `DF321-SD1A`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
                        MaskType="Simple"
@@ -138,7 +138,7 @@ Configure the Masked Entry to maintain typed, prompt, and literal characters in 
                        ValueMaskFormat="IncludePromptAndLiterals"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {

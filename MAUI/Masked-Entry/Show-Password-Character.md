@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show Password Character in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn how to show password characters using the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control with the PasswordChar and PasswordDelayDuration properties.
+title: Show Password Character in .NET MAUI Masked Entry | Syncfusion®
+description: Learn how to show password characters using the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) with the PasswordChar and PasswordDelayDuration properties.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -24,7 +24,7 @@ The [PasswordChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 > **Note:** The `PasswordChar` is purely visual. Screen readers and accessibility tools typically still read the underlying value, so do not rely on the password mask as a security control.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
                        WidthRequest="200"
@@ -33,7 +33,7 @@ The [PasswordChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
                        PasswordChar="*"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
@@ -55,7 +55,7 @@ The [PasswordDelayDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 When the control loses focus, the timer is canceled and the most-recently typed character is masked immediately. The delay is reset for each new character typed.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="passwordEntry"
                        WidthRequest="200"
@@ -65,7 +65,7 @@ When the control loses focus, the timer is canceled and the most-recently typed 
                        PasswordDelayDuration="2000"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry passwordEntry = new SfMaskedEntry
 {

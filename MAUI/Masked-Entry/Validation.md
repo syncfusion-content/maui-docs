@@ -27,7 +27,7 @@ Use the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 The default value is `KeyPress`. The selected mode works the same for both `Simple` and `RegEx` [MaskType](mask-types.md) values.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
                        WidthRequest="200"
@@ -36,7 +36,7 @@ The default value is `KeyPress`. The selected mode works the same for both `Simp
                        ValidationMode="KeyPress"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
@@ -61,7 +61,7 @@ The [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMask
 The following example shows how to surface the validation result in the UI. Bind the `HasError` property to a `Label.IsVisible` (or a `Label.Text` for a custom error message) to avoid relying on `DisplayAlert` for inline validation feedback.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <VerticalStackLayout>
     <editors:SfMaskedEntry x:Name="maskedEntry"
                            WidthRequest="200"
@@ -73,7 +73,7 @@ The following example shows how to surface the validation result in the UI. Bind
            IsVisible="{Binding HasError, Source={x:Reference maskedEntry}}"/>
 </VerticalStackLayout>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry
 {

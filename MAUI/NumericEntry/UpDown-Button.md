@@ -24,7 +24,7 @@ You can increment or decrement the value in the `NumericEntry` control using the
 N> The value in the `NumericEntry` can also be changed by mouse scrolling. The scroll wheel increments or decrements the value based on the `SmallChange` property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
@@ -60,7 +60,7 @@ N> When the up-down buttons are visible, the value changes by the `SmallChange` 
 ### UpDown button placement: Inline
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
@@ -83,12 +83,12 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Placement in .NET MAUI NumericEntry (Inline)](UpDownButton_images/UpDownButtonPlacement.gif)
+![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
 
 ### UpDown button placement: InlineVertical
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry Value="360"
                         WidthRequest="200"
@@ -111,7 +111,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Vertical Placement in .NET MAUI NumericEntry (InlineVertical)](UpDownButton_images/UpDownButtonPlacementVertical.png)
+![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
 
 ## UpDown button alignment
 
@@ -120,7 +120,7 @@ You can adjust the alignment of the up-down buttons in the [NumericEntry](https:
 ### UpDown button alignment: Left
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry Value="123"
                         HorizontalTextAlignment="End"
@@ -148,7 +148,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 ### UpDown button alignment: Right (default)
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry Value="123"
                         HorizontalTextAlignment="Start"
@@ -174,7 +174,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 ### UpDown button alignment: Both
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry Value="123"
                         HorizontalTextAlignment="Center"
@@ -209,7 +209,7 @@ You can change the order of the up-down buttons in the `NumericEntry` control us
 ### UpDown button order: UpThenDown
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry Value="123"
                         WidthRequest="200"
@@ -237,7 +237,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 ### UpDown button order: DownThenUp
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry Value="123"
                         WidthRequest="200"
@@ -268,7 +268,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 Customize the color of the up-down buttons using the [UpDownButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonColor) property. The property accepts a `Microsoft.Maui.Graphics.Color` value (or a color string in XAML).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry HeightRequest="50"
                         WidthRequest="200"
@@ -303,7 +303,7 @@ Customize the appearance of the up-down buttons using the [UpButtonTemplate](htt
 > The custom font used in the following example (`FontIcons`) must be registered in your project before it can be referenced. Add the font file under `Resources/Fonts` and include it in the `MauiProgram.cs` call to `.ConfigureFonts(fonts => { ... })`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <VerticalStackLayout Spacing="10" VerticalOptions="Center">
     <editors:SfNumericEntry x:Name="numericEntry"
@@ -403,7 +403,7 @@ Content = verticalStackLayout;
 The [AutoReverse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AutoReverse) property causes the `NumericEntry` control to automatically switch direction when it reaches the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, the value progresses from `Minimum` to `Maximum`; when decrementing, it progresses from `Maximum` to `Minimum`. The default value of `AutoReverse` is `false`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         UpDownPlacementMode="Inline"

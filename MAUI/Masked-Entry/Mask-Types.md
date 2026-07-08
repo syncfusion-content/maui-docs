@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mask Types in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn more about the various mask types available in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry), including Simple and RegEx, and how to use them effectively.
+description: Learn more about the various mask types available in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) and how to use them effectively.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -85,7 +85,7 @@ Shift up. Converts all the characters that follow to uppercase.</td></tr>
 The following example formats input as a U.S. phone number using the Simple mask `(000) 000-0000`:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry WidthRequest="200"
                           ClearButtonVisibility="WhileEditing"
@@ -93,7 +93,7 @@ The following example formats input as a U.S. phone number using the Simple mask
                           Mask="(000) 000-0000"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
@@ -108,7 +108,7 @@ The mask renders the input as `(123) 456-7890` when the user types the digits `1
 
 The following example uses the `>` shift modifier to convert input to uppercase:
 
-```xaml
+```XAML
 <editors:SfMaskedEntry WidthRequest="200"
                        MaskType="Simple"
                        Mask=">AAAA-AAAA"/>
@@ -220,7 +220,7 @@ Accepts any character. It can be changed based on culture</td></tr>
 The following example validates an email address using the RegEx mask `[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}`:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry WidthRequest="200"
                        ClearButtonVisibility="WhileEditing"
@@ -228,7 +228,7 @@ The following example validates an email address using the RegEx mask `[A-Za-z0-
                        Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}"/>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;

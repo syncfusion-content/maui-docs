@@ -26,7 +26,7 @@ N> The behavior after clearing the input depends on the combination of `AllowNul
 * When the value of the Minimum property is **15**, and the `AllowNull` property is **false**, the `minimum` value is returned in `NumericEntry` control after clearing the input.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
@@ -56,7 +56,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 Restrict user input to a minimum and maximum range by setting the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) and [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) properties. The default value of `Minimum` is `double.MinValue` and the default value of `Maximum` is `double.MaxValue`. When the user enters a value outside the range, the control rejects the invalid input and keeps the previous `Value`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
@@ -88,7 +88,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 Prevent the user from typing in the editor by setting the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_IsEditable) property to `false`. Even when text editing is disabled, the value can still be changed using the up-down buttons, the mouse scroll wheel, the keyboard arrow keys, and the Page Up/Page Down keys. The default value of `IsEditable` is `true`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry x:Name="sfNumericEntry"
                         WidthRequest="200"
