@@ -94,7 +94,6 @@ Make sure to add the namespace.
  
 {% tabs %}
 {% highlight c# %}
-using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
@@ -103,27 +102,7 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
  
 {% tabs %}
 {% highlight c# %}
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-            });
-
-#if DEBUG
-        builder.Logging.AddDebug();
-#endif
-
-        return builder.Build();
-    }
-}
+builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 {% endtabs %}
 
