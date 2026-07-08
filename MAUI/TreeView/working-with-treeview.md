@@ -13,7 +13,16 @@ documentation: ug
 
 ### Loaded event
 
-The [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Loaded) event is raised when the TreeView is loading in view for the first time.
+The [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Loaded) event is raised when the TreeView is loaded into the view for the first time.
+
+The `Loaded` event is commonly used to scroll a desired item into view by using the [BringIntoView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_BringIntoView_Syncfusion_TreeView_Engine_TreeViewNode_System_Boolean_System_Boolean_Microsoft_Maui_Controls_ScrollToPosition_) method. The `BringIntoView` method accepts the following parameters:
+
+  * `node`: The [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) that should be scrolled into view.
+  * `disableAnimation`: `true` to disable the scroll animation; `false` to animate the scroll.
+  * `scrollIfNotVisible`: `true` to scroll the node only if it is not currently visible; `false` to always scroll.
+  * `scrollToPosition`: A [ScrollToPosition](https://help.syncfusion.com/cr/maui/Microsoft_Maui_Controls_ScrollToPosition.html) value (`MakeVisible`, `Start`, `Center`, or `End`) that determines the final position of the node within the viewport.
+
+The following example shows how to handle the `Loaded` event and bring the first node into view:
 
 {% tabs %}
 {% highlight c# %}
@@ -21,22 +30,23 @@ treeView.Loaded += TreeView_Loaded;
 
 private void TreeView_Loaded(object sender, TreeViewLoadedEventArgs e)
 {
-   DisplayAlert("Message", "TreeView is Loaded", "Done");
+    // Bring the first node into view when the TreeView is loaded.
+    if (treeView.Nodes.Count > 0)
+    {
+        var node = treeView.Nodes[0];
+        treeView.BringIntoView(node, true, true, ScrollToPosition.MakeVisible);
+    }
 }
 {% endhighlight %}
 {% endtabs %}
 
-The `Loaded` event is used for the following use case:
+### ItemTapped event
 
-* To scroll the desired item by using the [BringIntoView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_BringIntoView_Syncfusion_TreeView_Engine_TreeViewNode_System_Boolean_System_Boolean_Microsoft_Maui_Controls_ScrollToPosition_).
+The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTapped) event is triggered whenever an item is tapped. [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTappedEventArgs.html) has the following members that provide information for the `ItemTapped` event:
 
-### Tapped event
-
-The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTapped) event will be triggered whenever tapping the item. [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTappedEventArgs.html) has the following members which provide the information for the `ItemTapped` event:
-
- * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemTappedEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and data associated with the tapped item as its arguments.
- * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemTappedEventArgs_Position): Gets the touch position in the tapped item.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemTappedEventArgs_Handled): Gets or sets whether the event is handled or not.
+ * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemTappedEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and its associated data for the tapped item.
+ * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemTappedEventArgs_Position): Gets the touch position within the tapped item.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemTappedEventArgs_Handled): Gets or sets whether the event is handled.
 
 {% tabs %}
 {% highlight xaml %}
@@ -56,11 +66,11 @@ private void TreeView_ItemTapped(object sender, ItemTappedEventArgs e)
 
 ### ItemDoubleTapped event
 
-The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemDoubleTapped) event will be triggered whenever double tapping the item. The [ItemDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDoubleTappedEventArgs.html) has the following members providing information for the `ItemDoubleTapped` event:
+The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemDoubleTapped) event is triggered whenever an item is double-tapped. [ItemDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDoubleTappedEventArgs.html) has the following members that provide information for the `ItemDoubleTapped` event:
 
- * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemDoubleTappedEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and data associated with the double-tapped item as its arguments.
- * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemDoubleTappedEventArgs_Position): Gets the touch position in the double tapped item.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemDoubleTappedEventArgs_Handled): Gets or sets whether the event is handled or not.
+ * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemDoubleTappedEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and its associated data for the double-tapped item.
+ * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemDoubleTappedEventArgs_Position): Gets the touch position within the double-tapped item.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemDoubleTappedEventArgs_Handled): Gets or sets whether the event is handled.
 
 {% tabs %}
 {% highlight xaml %}
@@ -72,7 +82,7 @@ treeView.ItemDoubleTapped += TreeView_ItemDoubleTapped;
 
 private void TreeView_ItemDoubleTapped(object sender, ItemDoubleTappedEventArgs e)
 {
-    DisplayAlert("Item DoubleTapped", "TreeView item double tapped", "Close");
+    DisplayAlert("Item DoubleTapped", "TreeView item double-tapped", "Close");
 }
 
 {% endhighlight %}
@@ -80,15 +90,15 @@ private void TreeView_ItemDoubleTapped(object sender, ItemDoubleTappedEventArgs 
 
 ### ItemRightTapped event
 
-The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemRightTapped) event will be triggered whenever the item is right tapped. The [ItemRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html) has the following members providing information for the `ItemRightTapped` event:
+The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemRightTapped) event is triggered whenever an item is right-tapped. [ItemRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html) has the following members that provide information for the `ItemRightTapped` event:
 
- * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and data associated with the right-tapped item as its arguments.
- * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Position): Gets the touch position in the right-tapped item.
+ * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and its associated data for the right-tapped item.
+ * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Position): Gets the touch position within the right-tapped item.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Handled): Gets or sets whether the event is handled.
 
 {% tabs %}
 {% highlight xaml %}
-      
-<syncfusion:SfTreeView x:Name = "treeView" ItemRightTapped = "TreeView_ItemRightTapped" />
+<syncfusion:SfTreeView x:Name="treeView" ItemRightTapped="TreeView_ItemRightTapped" />
 {% endhighlight %}
 {% highlight c# %}
 
@@ -96,7 +106,7 @@ treeView.ItemRightTapped += TreeView_ItemRightTapped;
 
 private void TreeView_ItemRightTapped(object sender, ItemRightTappedEventArgs e)
 {
-    DisplayAlert("Item RightTapped", "TreeView item right tapped", "Close");
+    DisplayAlert("Item RightTapped", "TreeView item right-tapped", "Close");
 }
 
 {% endhighlight %}
@@ -104,12 +114,12 @@ private void TreeView_ItemRightTapped(object sender, ItemRightTappedEventArgs e)
 
 ### ItemLongPress event
 
-The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemLongPress) event will be triggered whenever the item is long pressed.
- [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html) has the following members which provides the information for the `ItemLongPress` event:
+The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemLongPress) event is triggered whenever an item is long-pressed.
+[ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html) has the following members that provide information for the `ItemLongPress` event:
 
- * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html#Syncfusion_Maui_TreeView_ItemLongPressEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and data associated with the hold item as its arguments.
- * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html#Syncfusion_Maui_TreeView_ItemLongPressEventArgs_Position): Gets the touch position in the hold item.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html#Syncfusion_Maui_TreeView_ItemLongPressEventArgs_Handled): Gets or sets whether the event is handled or not.
+ * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html#Syncfusion_Maui_TreeView_ItemLongPressEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and its associated data for the long-pressed item.
+ * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html#Syncfusion_Maui_TreeView_ItemLongPressEventArgs_Position): Gets the touch position within the long-pressed item.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html#Syncfusion_Maui_TreeView_ItemLongPressEventArgs_Handled): Gets or sets whether the event is handled.
 
 {% tabs %}
 {% highlight xaml %}
@@ -118,9 +128,10 @@ The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView
 {% highlight c# %}
 
 treeView.ItemLongPress += TreeView_ItemLongPress;
+
 private void TreeView_ItemLongPress(object sender, ItemLongPressEventArgs e)
 {
-    DisplayAlert("Item LongPress", "TreeView item is Long Pressed","Close");   
+    DisplayAlert("Item LongPress", "TreeView item is long-pressed", "Close");
 }
 
 {% endhighlight %}
@@ -135,35 +146,52 @@ The [KeyDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTre
  * [IsCtrlKeyPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_IsCtrlKeyPressed): Indicates whether the Control key is in pressed state.
  * [IsAltKeyPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_IsAltKeyPressed): Indicates whether the Alt key is in pressed state.
  * [IsCommandKeyPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_IsCommandKeyPressed): Indicates whether the Command key is in pressed state.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_Handled): Gets or sets whether the event is handled or not.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_Handled): Gets or sets whether the event is handled.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" KeyDown="OnTreeViewKeyDown "/>
+<syncfusion:SfTreeView x:Name="treeView" KeyDown="OnTreeViewKeyDown"/>
 {% endhighlight %}
 {% highlight c# %}
 
-private void OnTreeViewKeyDown(object? sender, KeyPressEventArgs e)
-{
+treeView.KeyDown += OnTreeViewKeyDown;
 
+private void OnTreeViewKeyDown(object sender, KeyPressEventArgs e)
+{
+    // Example: handle the Enter key.
+    if (e.Key == Key.Enter)
+    {
+        // Perform the required action when Enter is pressed.
+        e.Handled = true;
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Update the runtime changes
+> **NOTE**: The `KeyDown` event is raised only when the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) has focus. Set focus to the control by calling `treeView.Focus()` or by tapping it before expecting key events.
 
-The [PropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_PropertyChanged) event will be triggered whenever a property in the customized TreeViewNode is changed. You can get the name of the property that changed by using the `PropertyName` property of the `PropertyChangedEventArgs`.
+## Track node property changes
+
+The [PropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_PropertyChanged) event is triggered whenever a property in the customized TreeViewNode is changed. You can get the name of the property that changed by using the `PropertyName` property of the `PropertyChangedEventArgs`.
+
+To track changes, first obtain a `TreeViewNode` instance from the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) collection of the `SfTreeView` (or a child node's `ChildNodes` collection), then hook the `PropertyChanged` event on that node.
 
 {% tabs %}
 {% highlight c# %}
-treeviewnode.PropertyChanged += Treeviewnode_PropertyChanged;
-
-private void Treeviewnode_PropertyChanged(object sender, PropertyChangedEventArgs e)
+// Retrieve a node from the TreeView (for example, the first root node).
+if (treeView.Nodes.Count > 0)
 {
+    var treeViewNode = treeView.Nodes[0];
+    treeViewNode.PropertyChanged += TreeViewNode_PropertyChanged;
+}
+
+private void TreeViewNode_PropertyChanged(object sender, PropertyChangedEventArgs e)
+{
+    var treeViewNode = sender as TreeViewNode;
     if (e.PropertyName == "IsExpanded")
     {
-        if (treeviewnode.IsExpanded)
+        if (treeViewNode.IsExpanded)
             DisplayAlert("treeview", "nodeexpanded", "ok");
         else
             DisplayAlert("treeview", "nodecollapsed", "ok");
@@ -174,7 +202,9 @@ private void Treeviewnode_PropertyChanged(object sender, PropertyChangedEventArg
 
 ## Refresh layout
 
-You can refresh the `TreeViewNode` from the root node and update all layout by using the [SetDirty](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_SetDirty) method that notifies the tree view layout mechanism to invalidate nodes.
+> **NOTE**: Use the right method for the job — [SetDirty](#refresh-layout) invalidates the layout of a single `TreeViewNode` and its descendants; [ResetTreeViewItems](#reset-treeview-items) recreates the item templates for the visible (or a specific) item; [RefreshView](#refresh-view) refreshes all visible items and optionally recreates their templates.
+
+You can refresh a `TreeViewNode` from the root node and update the entire layout by using the [SetDirty](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_SetDirty) method that notifies the tree view layout mechanism to invalidate nodes. Call this method whenever you modify properties of a `TreeViewNode` (such as its content, child collection, or expansion state) at runtime so that the control recalculates the layout and re-renders the affected node and its descendants.
 
 {% tabs %}
 {% highlight c# %}
@@ -182,22 +212,38 @@ node.SetDirty();
 {% endhighlight %}
 {% endtabs %}
 
-## Reset tree view items
+## Reset TreeView items
 
-You can reset the visible treeview items by using the [ResetTreeViewItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ResetTreeViewItems_System_Object_) method. If the parameter is null, all the visible treeview items will reset. If you are passing the data object as a parameter, a particular treeview item will reset.
+You can reset the visible TreeView items by using the [ResetTreeViewItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ResetTreeViewItems_System_Object_) method. If the parameter is null, all the visible TreeView items will reset. If you are passing the data object as a parameter, a particular TreeView item will reset.
  
+**Reset all visible items:**
+
 {% tabs %}
 {% highlight c# %}
 treeView.ResetTreeViewItems();
 {% endhighlight %}
 {% endtabs %}
 
-## Refresh view
-
-You can refresh the view by using the [RefreshView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_RefreshView_System_Boolean_) method. It will be used to refresh the items in the treeview at runtime while updating the view.
+**Reset a particular item by passing its data object:**
 
 {% tabs %}
 {% highlight c# %}
-treeView.RefreshView();
+// `dataObject` is the underlying data bound to the TreeViewNode you want to reset.
+treeView.ResetTreeViewItems(dataObject);
+{% endhighlight %}
+{% endtabs %}
+
+## Refresh view
+
+You can refresh the view by using the [RefreshView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_RefreshView_System_Boolean_) method. It is used to refresh the items in the TreeView at runtime while updating the view.
+
+The `RefreshView` method accepts a `bool` parameter:
+ * `true`: Recreates and refreshes all the visible items, including their templates and bindings. Use this when underlying data or templates have changed and a full refresh is required.
+ * `false`: Increments the view by refreshing only the differences (added, removed, or changed items) without recreating existing item templates.
+
+{% tabs %}
+{% highlight c# %}
+// Full refresh — recreates all visible items.
+treeView.RefreshView(true);
 {% endhighlight %}
 {% endtabs %}
