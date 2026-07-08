@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Calendar types in .NET MAUI Scheduler control | Syncfusion<sup>&reg;</sup>
+title: Calendar types in .NET MAUI Scheduler | Syncfusion®
 description: Learn here all about the Calendar types in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more details.
 platform: maui
 control: SfScheduler
