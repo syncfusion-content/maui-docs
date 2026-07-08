@@ -27,7 +27,7 @@ The SignaturePad control raises the following events to notify you of user inter
 
 ### DrawStarted
 
-The [DrawStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawStarted) event is raised when the user starts a new stroke on the SignaturePad. The event handler receives a [CancelEventArgs](https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs) instance. Set `e.Cancel` to `true` to cancel the stroke before it is drawn.
+The [DrawStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawStarted) event is raised when the user starts a new stroke on the SignaturePad. The event handler receives a `CancelEventArgs` instance. Set `e.Cancel` to `true` to cancel the stroke before it is drawn.
 
 {% tabs %}
 
@@ -55,7 +55,7 @@ private void OnDrawStarted(object? sender, CancelEventArgs e)
 
 ### DrawCompleted
 
-The [DrawCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawCompleted) event is raised when the user completes a stroke on the SignaturePad. The event handler receives an [EventArgs](https://learn.microsoft.com/dotnet/api/system.eventargs) instance.
+The [DrawCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawCompleted) event is raised when the user completes a stroke on the SignaturePad. The event handler receives an `EventArgs` instance.
 
 {% tabs %}
 
@@ -119,7 +119,7 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 
 ### ToImageSource
 
-Use the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method to save the signature drawn on the SignaturePad as a [Microsoft.Maui.Controls.ImageSource](https://learn.microsoft.com/dotnet/maui/user-interface/controls/image). The method returns a nullable `ImageSource?`; if the pad is empty, `null` is returned. The resulting `ImageSource` can be assigned to an `Image` control, exported to a file, or shared with other applications.
+Use the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method to save the signature drawn on the SignaturePad as a `ImageSource`. The method returns a nullable `ImageSource?`; if the pad is empty, `null` is returned. The resulting `ImageSource` can be assigned to an `Image` control, exported to a file, or shared with other applications.
 
 {% tabs %}
 
