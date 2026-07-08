@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time Zone in .NET MAUI Scheduler control | Syncfusion
+title: Time Zone in .NET MAUI Scheduler control | Syncfusion®
 description: Learn here all about Time Zone support in Syncfusion<sup>&reg;</sup> MAUI Scheduler (SfScheduler) control, it's elements and more.
 platform: maui
 control: SfScheduler

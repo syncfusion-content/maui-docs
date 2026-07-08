@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header in .NET MAUI Scheduler control | Syncfusion
+title: Header in .NET MAUI Scheduler control | Syncfusion®
 description: Learn here all about how to customize header height, date format, and appearance of Syncfusion® .NET MAUI Scheduler control and more. 
 platform: maui
 control: SfScheduler
