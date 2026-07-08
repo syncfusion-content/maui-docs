@@ -19,7 +19,7 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 
 - Calendar and booking applications that require managing appointments, meetings, and schedules efficiently.  
 - Enterprise systems that track employee schedules, tasks, and resource planning.  
-- Healthcare and service applications that manage appointments with recurrence and time-based availability.  
+- Health care and service applications that manage appointments with recurrence and time-based availability.  
 - Productivity and collaboration apps that display events across multiple calendar views for better planning.
 
 ## Key features
