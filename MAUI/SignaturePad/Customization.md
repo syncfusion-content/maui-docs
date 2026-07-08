@@ -7,11 +7,18 @@ control: SfSignaturePad
 documentation: ug
 ---
 
-# Customization of Signature Pad
+# Customization of SignaturePad
+
+This section explains how to customize the appearance of the .NET MAUI SignaturePad (SfSignaturePad) control. The following aspects of the SignaturePad can be customized:
+
+* Stroke color
+* Stroke thickness
+
+For prerequisites and initial setup, refer to the [Getting Started with .NET MAUI SignaturePad](getting-started.md) documentation.
 
 ## Stroke Color
 
-Customize the stroke color of the SignaturePad control by using the [StrokeColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_StrokeColor) property. The default stroke color is **Colors.Black**.
+Customize the stroke color of the SignaturePad control by setting the [StrokeColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_StrokeColor) property. The default stroke color is **Colors.Black**.
 
 {% tabs %}
 
@@ -23,8 +30,11 @@ Customize the stroke color of the SignaturePad control by using the [StrokeColor
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad();
-signaturePad.StrokeColor = Colors.Red;
+SfSignaturePad signaturePad = new SfSignaturePad()
+{
+    StrokeColor = Colors.Red,
+};
+this.Content = signaturePad;
 
 {% endhighlight %}
 
@@ -34,7 +44,13 @@ signaturePad.StrokeColor = Colors.Red;
 
 ## Stroke Thickness
 
-The thickness of the stroke drawn can be customized by setting the [MinimumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) and [MaximumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) properties. The [MinimumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) defines the minimum thickness of the stroke and the [MaximumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) defines the maximum thickness of the stroke that can be drawn based on the speed and impression we provide through gesture within its minimum and maximum stroke thickness ranges. So that the signature will be more realistic.
+The thickness of the stroke can be customized by setting the [MinimumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) and [MaximumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) properties. Both properties accept `double` values that represent the stroke thickness in device-independent units (DIPs). The valid range is `0` to `10`; the default value of each property is `1`.
+
+N> Ensure that the value of `MaximumStrokeThickness` is greater than or equal to `MinimumStrokeThickness`; otherwise, the rendered stroke thickness is undefined.
+
+The [MinimumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) defines the minimum thickness of the stroke, while the [MaximumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) defines the maximum thickness of the stroke.
+
+The actual stroke thickness is dynamically computed based on the speed and pressure of the user's gesture. Faster gestures render closer to `MinimumStrokeThickness`, and slower gestures render closer to `MaximumStrokeThickness`. This produces a more realistic signature.
 
 {% tabs %}
 
@@ -52,9 +68,16 @@ SfSignaturePad signaturePad = new SfSignaturePad()
     MinimumStrokeThickness = 1,
     MaximumStrokeThickness = 6,
 };
+this.Content = signaturePad;
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ![SignaturePad stroke thickness](images/getting-started/stroke-thickness.png)
+
+## See Also
+
+* [Getting Started with .NET MAUI SignaturePad](getting-started.md)
+* [Events in .NET MAUI SignaturePad](events.md)
+* [SfSignaturePad API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html)
