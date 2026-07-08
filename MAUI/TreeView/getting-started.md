@@ -30,7 +30,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in VS and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -45,7 +45,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET: New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
@@ -54,7 +54,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in VS Code and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
@@ -64,12 +64,12 @@ Before proceeding, ensure the following are set up:
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
-2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
+2. Set up a .NET MAUI environment with JetBrains Rider v2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution,** select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
@@ -77,7 +77,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% endtabcontents %}
@@ -102,28 +102,30 @@ builder.ConfigureSyncfusionCore();
  
 ## Step 4: Import the TreeView namespace
 
-Add the following namespace in your XAML or C#.
+Add the following namespace to your XAML or C#.
 
 {% tabs %}
 {% highlight xaml %}
 
 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
+xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView
 
 {% endhighlight %}
 {% highlight c# %}
 
 using Syncfusion.Maui.TreeView;
+using Syncfusion.TreeView.Engine;
 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the TreeView Component
+## Step 5: Add the TreeView component
 
 Initialize the `TreeView` control and configure its properties to display hierarchical data in an organized and interactive structure. TreeView can be populated either with the data source by using a [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) or by creating & adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
 
-You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
+You can create and manage the `TreeViewNode` objects directly to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
 
-I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property.
+I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property. To learn how to populate nodes using `ItemsSource` with data binding (bound mode), see [Data Population in .NET MAUI TreeView](https://help.syncfusion.com/maui/treeview/data-population#populating-nodes-by-data-binding---bound-mode).
 
 {% tabs %}
 {% highlight xaml %}
@@ -134,13 +136,9 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
             <treeviewengine:TreeViewNode.ChildNodes>
                 <treeviewengine:TreeViewNode Content="New South Wales" IsExpanded="True">
                     <treeviewengine:TreeViewNode.ChildNodes>
-                <treeviewengine:TreeViewNode Content="Sydney" IsExpanded="True"/>
-            </treeviewengine:TreeViewNode.ChildNodes>
-            </treeviewengine:TreeViewNode>
-                <treeviewengine:TreeViewNode Content="Victoria" IsExpanded="True">
-                    <treeviewengine:TreeViewNode.ChildNodes>
-                        <treeviewengine:TreeViewNode Content="Melbourne" IsExpanded="True"/>
-                        <treeviewengine:TreeViewNode Content="Canada" IsExpanded="True"/>
+                        <treeviewengine:TreeViewNode Content="Sydney"/>
+                        <treeviewengine:TreeViewNode Content="Canberra"/>
+                        <treeviewengine:TreeViewNode Content="Newcastle–Maitland"/>
                     </treeviewengine:TreeViewNode.ChildNodes>
                 </treeviewengine:TreeViewNode>
             </treeviewengine:TreeViewNode.ChildNodes>
@@ -152,11 +150,11 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
 {% highlight c# %}
 
 SfTreeView treeView = new SfTreeView();
-var australia = new TreeViewNode() { Content = "Australia" };
-var nsw = new TreeViewNode() { Content = "New South Wales" };
-var sydney = new TreeViewNode{ Content = "Sydney", IsExpanded = true };
-var canberra = new TreeViewNode{ Content = "Canberra",IsExpanded = true };
-var newcastle = new TreeViewNode{ Content = "Newcastle–Maitland", IsExpanded = true};
+var australia = new TreeViewNode() { Content = "Australia", IsExpanded = true };
+var newSouthWales = new TreeViewNode() { Content = "New South Wales", IsExpanded = true };
+var sydney = new TreeViewNode{ Content = "Sydney"};
+var canberra = new TreeViewNode{ Content = "Canberra"};
+var newcastle = new TreeViewNode{ Content = "Newcastle–Maitland"};
 newSouthWales.ChildNodes.Add(sydney);
 newSouthWales.ChildNodes.Add(canberra);
 newSouthWales.ChildNodes.Add(newcastle);
