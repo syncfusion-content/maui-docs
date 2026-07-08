@@ -9,7 +9,9 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfFunnelChart
 
-The Funnel Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
+The Funnel Chart was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, minor code changes are required. Additionally, the single [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) control has been split into five specialized chart controls in .NET MAUI for improved user experience and clarity.
+
+> **Prerequisite:** This migration guide assumes you have experience with Xamarin.Forms and are familiar with the original `SfChart` control.
 
 <table>
 <tr>
@@ -30,11 +32,11 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, the most of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html). Currently, most of the features have been added to the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html), but only a few are pending in the .NET MAUI, along with some limitations. Please refer to the following details and the API migration information available below.
+To make migration easier, most of the APIs from Xamarin.Forms [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) have been retained in .NET MAUI [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html). Most features have been implemented, though some are pending or have limitations. Please refer to the API migration information and feature status below.
 
 ## API migration
 
-To initialize the control, import the Chart namespace and Initialize [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html), as shown in the following code sample. 
+To initialize the control, import the Chart namespace and initialize [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html), as shown in the following code samples. 
 
 <table>
 <tr>
@@ -84,9 +86,10 @@ this.Content = chart;
 {% highlight C# %}
 
 using Syncfusion.Maui.Charts;
-. . .
-SfFunnelChart chart = new SfFunnelChart(); 
-this.Content = chart; 
+
+SfFunnelChart chart = new SfFunnelChart();
+// Configure data binding and properties here
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -117,9 +120,8 @@ The following properties are given in [SfFunnelChart](https://help.syncfusion.co
 
 <table>
 <tr>
-<tr>
-<th>Xamarin</th>
-<th>.NET MAUI</th></tr>
+<th>Xamarin.Forms</th>
+<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>Color</td>
@@ -207,7 +209,7 @@ this.Content = chart;
 
 <table>
 <tr>
-<th>Xamarin</th>
+<th>Xamarin.Forms</th>
 <th>.NET MAUI</th>
 </tr>
 <tr>
@@ -325,11 +327,11 @@ this.Content = chart;
 
 ### Data Label
 
-To customize the data label appearance, create an instance of the [ChartDataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataMarker.html) class and add it to the [DataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html#Syncfusion_SfChart_XForms_ChartSeries_DataMarker) of [Series](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html). For [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html), you can set the [FunnelDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FunnelDataLabelSettings.html) instance to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_DataLabelSettings) property, as shown in the below code sample.
+To customize the data label appearance, create an instance of the [ChartDataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataMarker.html) class and add it to the [DataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html#Syncfusion_SfChart_XForms_ChartSeries_DataMarker) of [Series](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html). For [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html), set the [FunnelDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FunnelDataLabelSettings.html) instance to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_DataLabelSettings) property, as shown below.
 
 <table>
 <tr>
-<th>Xamarin</th>
+<th>Xamarin.Forms</th>
 </tr>
 <tr>
 <td>
@@ -412,19 +414,28 @@ this.Content = chart;
 
 {% endhighlight %} 
 {% highlight C# %}
+
+using Syncfusion.Maui.Charts;
+
 SfFunnelChart chart = new SfFunnelChart();
-. . .
+chart.ItemsSource = viewModel.Data;
+chart.XBindingPath = "XValue";
+chart.YBindingPath = "YValue";
 chart.ShowDataLabels = true;
+
 chart.DataLabelSettings = new FunnelDataLabelSettings();
 var style = new ChartDataLabelStyle();
 style.TextColor = Colors.Blue;
 style.Stroke = Colors.Red;
 style.StrokeWidth = 2;
 style.Background = Colors.Aqua;
-style.Margin = 5;
-style.FontSize = 18;
+style.Margin = 10;
+style.FontSize = 16;
+style.FontAttributes = FontAttributes.Bold;
+
 chart.DataLabelSettings.LabelStyle = style;
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -434,11 +445,11 @@ this.Content = chart;
 
 ### Tooltip
 
-To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html), you can directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the below code sample.
+To customize the tooltip appearance in Xamarin.Forms, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). In .NET MAUI, directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown below.
 
 <table>
 <tr>
-<th>Xamarin</th>
+<th>Xamarin.Forms</th>
 </tr>
 <tr>
 <td>
@@ -506,14 +517,21 @@ this.Content = chart;
 
 {% endhighlight %} 
 {% highlight C# %}
+
+using Syncfusion.Maui.Charts;
+
 SfFunnelChart chart = new SfFunnelChart();
-. . .      
-chart.EnableTooltip=true;
+chart.ItemsSource = viewModel.Data;
+chart.XBindingPath = "XValue";
+chart.YBindingPath = "YValue";
+chart.EnableTooltip = true;
+
 ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
 tooltip.Background = Colors.Blue;
 tooltip.TextColor = Colors.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
 tooltip.FontSize = 15;
+
 chart.TooltipBehavior = tooltip;
 this.Content = chart;
 
@@ -526,11 +544,11 @@ this.Content = chart;
 
 ### Selection
 
-Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html), you can directly set the [DataPointSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataPointSelectionBehavior.html?tabs=tabid-1) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_SelectionBehavior) property, as shown in the below code sample.
+In Xamarin.Forms, create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). In .NET MAUI, directly set the [DataPointSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataPointSelectionBehavior.html?tabs=tabid-1) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_SelectionBehavior) property, as shown below.
 
 <table>
 <tr>
-<th>Xamarin</th>
+<th>Xamarin.Forms</th>
 </tr>
 <tr>
 <td>
@@ -573,26 +591,37 @@ this.Content = chart;
 <tr>
 <td>
 {% tabs %} 
-{% highlight xaml %}
+{% highlight xml %}
+
+xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue"      
                      YBindingPath="YValue">
     <chart:SfFunnelChart.SelectionBehavior>
         <chart:DataPointSelectionBehavior SelectedIndex="2" 
-                                          SelectionBrush="red"/>
+                                          SelectionBrush="Red"/>
     </chart:SfFunnelChart.SelectionBehavior>
 </chart:SfFunnelChart>
 
-{% endhighlight %} 
+{% endhighlight %}
+
 {% highlight C# %}
+
+using Syncfusion.Maui.Charts;
+
 SfFunnelChart chart = new SfFunnelChart();
-. . .    
+chart.ItemsSource = viewModel.Data;
+chart.XBindingPath = "XValue";
+chart.YBindingPath = "YValue";
+
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
 selection.SelectedIndex = 2;
 selection.SelectionBrush = Colors.Red;
+
 chart.SelectionBehavior = selection;
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -624,7 +653,7 @@ this.Content = chart;
 
 ## Unsupported features from Xamarin.Forms
 
-* In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
+* In .NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class is no longer available. Instead, create your own custom data model to represent chart data points. For example, define a class with properties for your X and Y values, then bind the collection to the chart's `ItemsSource` property.
 
 ## Support and feedback
 

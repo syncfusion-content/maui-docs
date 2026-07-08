@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Segment spacing in .NET MAUI Chart control Syncfusion
-description: Learn here all about segment spacing customization in .NET MAUI Chart (SfFunnelChart), its elements and more.
+title: Segment spacing in .NET MAUI Funnel Chart control Syncfusion
+description: Learn here all about segment spacing customization in .NET MAUI Funnel Chart (SfFunnelChart), its elements and more.
 platform: maui
 control: SfFunnelChart
 documentation: ug
@@ -9,27 +9,41 @@ documentation: ug
 
 # Segment spacing in .NET MAUI Funnel Chart
 
-The gap between each segment in the funnel chart can be set using the [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_GapRatio) property. The default value of [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_GapRatio) property is `0` and its value ranges from `0` to `1`.
+The gap between each segment in the funnel chart can be set using the [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_GapRatio) property. The default value of the [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_GapRatio) property is `0`, and its value ranges from `0` to `1`. This ratio represents the spacing relative to the segment height; a value of `0.2` means the gap is 20% of the segment's height.
+
+> **Prerequisite:** For a complete introduction to the Funnel Chart control, see the [getting-started](getting-started.md) topic.
 
 {% tabs %}
 
 {% highlight xml %}
 
-<chart:SfFunnelChart GapRatio="0.2">
-    . . .
+xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+
+<chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                     XBindingPath="XValue" 
+                     YBindingPath="YValue"
+                     GapRatio="0.2">
 </chart:SfFunnelChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
+using Syncfusion.Maui.Charts;
+
 SfFunnelChart chart = new SfFunnelChart();
-. . .
+AdmissionViewModel viewModel = new AdmissionViewModel();
+chart.BindingContext = viewModel;
+
+chart.ItemsSource = viewModel.Data;
+chart.XBindingPath = "XValue";
+chart.YBindingPath = "YValue";
 chart.GapRatio = 0.2;
+
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Segment spacing in MAUI Chart](Segment_Spacing_images/MAUI_spacing_chart.png)
+![Segment spacing in .NET MAUI Funnel Chart](Segment_Spacing_images/MAUI_spacing_chart.png)
