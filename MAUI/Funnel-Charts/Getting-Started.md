@@ -139,8 +139,6 @@ First, define a simple data model that represents a data point in the chart:
 
 {% highlight c# %}
 
-using System.Collections.Generic;
-
 public class AdmissionModel
 {
     public string XValue { get; set; }
@@ -156,8 +154,6 @@ Next, create an `AdmissionViewModel` class and initialize a list of `AdmissionMo
 {% tabs %}  
 
 {% highlight c# %}
-
-using System.Collections.Generic;
 
 public class AdmissionViewModel
 {
@@ -209,9 +205,6 @@ Initialize the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight xml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-xmlns:model="clr-namespace:YourAppNamespace"
-
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
                      YBindingPath="YValue"
@@ -235,8 +228,6 @@ xmlns:model="clr-namespace:YourAppNamespace"
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
 
 SfFunnelChart chart = new SfFunnelChart()
 {

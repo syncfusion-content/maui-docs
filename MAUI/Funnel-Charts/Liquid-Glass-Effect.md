@@ -12,7 +12,9 @@ keywords: .net maui funnel chart, glass effect, liquid glass effect, funnel char
 
 The Liquid Glass Effect is a modern design style that provides a sleek, minimalist appearance with clean lines, subtle visual effects, and elegant styling. It features smooth rounded corners and sophisticated visual treatments that create a polished, professional look for your charts.
 
-> **Prerequisite:** For a complete introduction to the Funnel Chart control, see the [getting-started](getting-started.md) topic.
+N> **Prerequisite:** 
+- Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Funnel Chart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/funnel-charts/getting-started)** guide.
+- To use **SfGlassEffectView**, ensure that the Syncfusion.Maui.Core package is installed and import the Syncfusion.Maui.Core namespace.
 
 N> The liquid glass effect is supported with `.NET 10` and on iOS and macOS versions 26 or later.
 
@@ -31,9 +33,6 @@ Wrap the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 {% highlight xml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-
 <core:SfGlassEffectView CornerRadius="20"
                         Padding="12"
                         EffectType="Regular"
@@ -46,9 +45,6 @@ xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
-using Syncfusion.Maui.Core;
 
 SfFunnelChart chart = new SfFunnelChart();
 chart.ItemsSource = viewModel.Data;
@@ -80,8 +76,6 @@ To enable the liquid glass effect for the tooltip, set the [EnableLiquidGlassEff
 
 {% highlight xml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
                      YBindingPath="YValue"
@@ -92,8 +86,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
 
 SfFunnelChart chart = new SfFunnelChart();
 chart.ItemsSource = viewModel.Data;
@@ -123,8 +115,6 @@ The following code example shows how to use a custom tooltip template with a tra
 
 {% highlight xml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
 <Grid x:Name="grid">
     <Grid.Resources>
         <DataTemplate x:Key="tooltipTemplate">
@@ -147,9 +137,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Controls;
 
 // In your DataTemplate for the tooltip, set Background to Transparent
 var tooltipTemplate = new DataTemplate(() =>

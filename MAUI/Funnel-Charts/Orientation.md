@@ -11,13 +11,11 @@ documentation: ug
 
 The rendering direction of the funnel chart can be changed using the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_Orientation) property. The default value of this property is `Vertical`, which arranges segments from bottom to top. It can be set to `Horizontal` to render segments from right to left.
 
-> **Prerequisite:** For a complete introduction to the Funnel Chart control, see the [getting-started](getting-started.md) topic.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Funnel Chart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/funnel-charts/getting-started)** guide.
 
 {% tabs %}
 
 {% highlight xml %}
-
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
@@ -28,8 +26,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
 
 SfFunnelChart chart = new SfFunnelChart();
 AdmissionViewModel viewModel = new AdmissionViewModel();

@@ -11,13 +11,11 @@ documentation: ug
 
 The gap between each segment in the funnel chart can be set using the [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_GapRatio) property. The default value of the [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_GapRatio) property is `0`, and its value ranges from `0` to `1`. This ratio represents the spacing relative to the segment height; a value of `0.2` means the gap is 20% of the segment's height.
 
-> **Prerequisite:** For a complete introduction to the Funnel Chart control, see the [getting-started](getting-started.md) topic.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Funnel Chart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/funnel-charts/getting-started)** guide.
 
 {% tabs %}
 
 {% highlight xml %}
-
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
@@ -29,10 +27,8 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Charts;
-
 SfFunnelChart chart = new SfFunnelChart();
-AdmissionViewModel viewModel = new AdmissionViewModel();
+ViewModel viewModel = new ViewModel();
 chart.BindingContext = viewModel;
 
 chart.ItemsSource = viewModel.Data;

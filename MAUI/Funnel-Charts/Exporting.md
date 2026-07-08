@@ -8,30 +8,9 @@ documentation: ug
 keywords: .net maui funnel chart, export chart, save image, export stream, png, jpeg, image export.
 ---
 
-# Exporting in .NET MAUI Funnel Chart (SfFunnelChart)
+# Exporting in .NET MAUI Funnel Chart
 
-## Prerequisites
-
-Before exporting the chart, ensure that the Syncfusion.Maui.Charts package is installed and that the following namespaces are imported.
-
-{% tabs %}
-
-{% highlight xml %}
-
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Charts;
-using Syncfusion.Maui.Core;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Next, define a simple data model that represents a data point in the chart. Then, create a `ViewModel` class and initialize a list of `Model` objects. Set the `ViewModel` instance as the `BindingContext` of your page to bind `ViewModel` properties to the chart.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Funnel Chart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/funnel-charts/getting-started)** guide.
 
 ## Export as an image
 
@@ -104,9 +83,6 @@ The following code snippet demonstrates the usage of this method:
 {% tabs %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
-using Syncfusion.Maui.Core;
 
 SfFunnelChart chart = new SfFunnelChart()
 {

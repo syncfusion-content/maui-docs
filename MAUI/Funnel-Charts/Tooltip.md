@@ -11,7 +11,7 @@ documentation: ug
 
 The tooltip provides additional information when hovering over a funnel segment. By default, the segment's Y value will be shown in the tooltip.
 
-> **Prerequisite:** For a complete introduction to the Funnel Chart control, see the [getting-started](getting-started.md) topic.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Funnel Chart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/funnel-charts/getting-started)** guide.
 
 ## Enable Tooltip
 
@@ -20,8 +20,6 @@ To enable the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 {% tabs %}
 
 {% highlight xml %}
-
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
@@ -32,8 +30,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
 
 SfFunnelChart chart = new SfFunnelChart();
 chart.ItemsSource = viewModel.Data;
@@ -68,8 +64,6 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 {% highlight xml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
                      YBindingPath="YValue"
@@ -82,8 +76,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
 
 SfFunnelChart chart = new SfFunnelChart();
 chart.ItemsSource = viewModel.Data;
@@ -108,8 +100,6 @@ this.Content = chart;
 {% tabs %}
 
 {% highlight xml %}
-
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
 
 <Grid x:Name="grid">
     <Grid.Resources>
@@ -138,9 +128,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Controls;
 
 SfFunnelChart chart = new SfFunnelChart();
 chart.ItemsSource = viewModel.Data;

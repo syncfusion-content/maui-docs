@@ -8,32 +8,11 @@ documentation: ug
 keywords: .net maui funnel chart, chart legend, legend wrap, legend view, legend layout, chart legend items, legend alignment.
 ---
 
-# Legend in .NET MAUI Funnel Chart (SfFunnelChart)
+# Legend in .NET MAUI Funnel Chart
 
 The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding funnel segments in the chart. Here's a detailed guide on how to define and customize the legend in the funnel chart.
 
-## Prerequisites
-
-Before initializing the chart legend, ensure that the Syncfusion.Maui.Charts package is installed and that the following namespace is imported.
-
-{% tabs %}
-
-{% highlight xml %}
-
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Charts;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Next, define a simple data model that represents a data point in the chart. Then, create a `ViewModel` class and initialize a list of `Model` objects. Set the `ViewModel` instance as the `BindingContext` of your page to bind `ViewModel` properties to the chart.
-
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Funnel Chart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/funnel-charts/getting-started)** guide.
 
 ## Defining the legend
 
@@ -345,8 +324,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Charts;
-
 public class LegendExt : ChartLegend
 {
     protected override double GetMaximumSizeCoefficient()
@@ -426,8 +403,6 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
 <chart:SfFunnelChart ItemsSource="{Binding Data}" x:Name="chart"
                      XBindingPath="XValue"  
                      YBindingPath="YValue">
@@ -451,9 +426,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Controls;
 
 SfFunnelChart chart = new SfFunnelChart()
 {

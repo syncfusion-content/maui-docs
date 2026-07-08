@@ -434,8 +434,6 @@ this.Content = chart;
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Charts;
-
 SfFunnelChart chart = new SfFunnelChart();
 chart.ItemsSource = viewModel.Data;
 chart.XBindingPath = "XValue";
@@ -541,8 +539,6 @@ this.Content = chart;
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Charts;
-
 SfFunnelChart chart = new SfFunnelChart();
 chart.ItemsSource = viewModel.Data;
 chart.XBindingPath = "XValue";
@@ -635,8 +631,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight C# %}
-
-using Syncfusion.Maui.Charts;
 
 SfFunnelChart chart = new SfFunnelChart();
 chart.ItemsSource = viewModel.Data;

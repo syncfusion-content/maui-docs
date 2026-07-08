@@ -12,6 +12,8 @@ documentation: ug
 
 The appearance of the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) can be customized by using the custom palettes and gradients that enhance the visual appeal of the application.
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Funnel Chart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/funnel-charts/getting-started)** guide.
+
 ## Add a title
 
 The chart title provides quick information to the user about the data being plotted in the chart. You can set the title using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of the funnel chart as follows.
@@ -19,8 +21,6 @@ The chart title provides quick information to the user about the data being plot
 {% tabs %} 
 
 {% highlight xml %}
-
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}"
                      XBindingPath="XValue"
@@ -33,8 +33,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Charts;
 
 SfFunnelChart chart = new SfFunnelChart()
 {
@@ -61,8 +59,6 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
 
 {% highlight xml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue"
                      YBindingPath="YValue"
@@ -72,11 +68,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using System.Collections.ObjectModel;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Charts;
 
 public class ViewModel
 {
@@ -109,8 +100,6 @@ The gradient for the funnel chart can be set by using the [PaletteBrushes](https
 
 {% highlight xml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue"
                      YBindingPath="YValue"
@@ -120,11 +109,6 @@ xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% highlight c# %}
-
-using System.Collections.ObjectModel;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Charts;
 
 public class ViewModel
 {
