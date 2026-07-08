@@ -13,42 +13,13 @@ The Liquid Glass Effect introduces a modern, translucent design with adaptive co
 
 ## Prerequisites
 
-Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), ensure the following are set up:
-
-1. Target `net10.0` in your .NET MAUI project. The Liquid Glass Effect is supported only on .NET 10 together with iOS 26 and macOS 26.
-2. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-3. Install the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet package, which provides the `SfGlassEffectView` class.
-4. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-5. Add the following namespace declarations to your XAML page and `using` directives to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    using Syncfusion.Maui.Core;
-    ```
+Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+
+N>
+* The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
+* It is not supported on Android or Windows.
 
 ## Apply the Liquid Glass Effect
 
@@ -62,51 +33,37 @@ For more information about the Liquid Glass Effect, refer to the [Liquid Glass G
 
 ## Configure the SfGlassEffectView properties
 
-The following table describes the key `SfGlassEffectView` properties used to configure the effect:
+The [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) exposes the following key properties:
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `CornerRadius` | `double` | The radius of the rounded corners applied to the glass container. Default is `0`. |
-| `HeightRequest` | `double` | The height of the glass container. |
-| `EffectType` | `LiquidGlassEffectType` | The style of the Liquid Glass Effect. See the enum members below. |
-| `EnableShadowEffect` | `bool` | Indicates whether a drop shadow is rendered behind the glass container. Default is `false`. |
-
-The `LiquidGlassEffectType` enum exposes the following members:
-
-* `Regular`
-* `Clear`
+- `EffectType`: Defines the glass style. The available values are `Regular` and `Clear`. The default value is `Regular`.
+- `CornerRadius`: The corner radius of the glass container.
+- `EnableShadowEffect`: Indicates whether a drop shadow is rendered behind the glass container. The default value is `false`.
 
 The following code snippet applies the Liquid Glass Effect to the `SfNumericEntry` control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <Grid>
-        <Image Source="Wallpaper.png"
-               Aspect="AspectFill" />
-        <core:SfGlassEffectView CornerRadius="20"
-                                HeightRequest="40"
-                                EffectType="Regular"
-                                EnableShadowEffect="True">
-            <editors:SfNumericEntry Value="1234.56"
-                                    CustomFormat="N2"
-                                    Placeholder="Enter amount"
-                                    Maximum="1000000"
-                                    Minimum="0"
-                                    Background="Transparent"
-                                    ShowClearButton="True" />
-        </core:SfGlassEffectView>
-    </Grid>
-</ContentPage>
+<Grid>
+    <Image Source="Wallpaper.png"
+            Aspect="AspectFill" />
+    <core:SfGlassEffectView CornerRadius="20"
+                            HeightRequest="40"
+                            EffectType="Regular"
+                            EnableShadowEffect="True">
+        <editors:SfNumericEntry Value="1234.56"
+                                CustomFormat="N2"
+                                Placeholder="Enter amount"
+                                Maximum="1000000"
+                                Minimum="0"
+                                Background="Transparent"
+                                ShowClearButton="True" />
+    </core:SfGlassEffectView>
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
 
@@ -155,10 +112,7 @@ The following screenshot illustrates the `SfNumericEntry` rendered inside a Liqu
 
 ## See Also
 
-* [Overview of .NET MAUI NumericEntry](Overview.md)
-* [Basic Features in .NET MAUI NumericEntry](Basic-Features.md)
-* [Formatting in .NET MAUI NumericEntry](Formatting.md)
-* [Restriction in .NET MAUI NumericEntry](Restriction.md)
-* [UpDown-Button in .NET MAUI NumericEntry](UpDown-Button.md)
-* [SfNumericEntry API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html)
-* [SfGlassEffectView API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html)
+* [Basic Features](Basic-Features.md)
+* [Formatting](Formatting.md)
+* [Restriction](Restriction.md)
+* [UpDown-Button](UpDown-Button.md)

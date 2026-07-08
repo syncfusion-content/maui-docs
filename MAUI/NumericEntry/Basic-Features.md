@@ -11,36 +11,7 @@ documentation: ug
 
 ## Prerequisites
 
-Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), ensure the following are set up:
-
-1. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-2. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-3. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
@@ -54,7 +25,6 @@ Use the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        AllowNull="True"
                         Placeholder="Enter input here..." />
 
 {% endhighlight %}
@@ -62,7 +32,6 @@ Use the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.AllowNull = true;
 sfNumericEntry.Placeholder = "Enter input here...";
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
@@ -86,7 +55,6 @@ N> The clear button appears only when the text box is focused and the `IsEditabl
                         IsEditable="True"
                         Value="10" />
 
-
 {% endhighlight %}
 {% highlight C# %}
 
@@ -95,7 +63,6 @@ sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.Value = 10;
 sfNumericEntry.ShowClearButton = true;
 sfNumericEntry.IsEditable = true;
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +74,6 @@ If `IsEditable` is **true**:
 If `IsEditable` is **false**:
 
 ![.NET MAUI NumericEntry without Clear Button](GettingStarted_images/clearbutton_collapsed.png)
-
 
 ## Value changed notification
 
@@ -226,7 +192,7 @@ public partial class MainPage : ContentPage
 
     private void NumericEntry_ValueChanged(object sender, NumericEntryValueChangedEventArgs e)
     {
-        valueDisplay.Text = $"${e.NewValue:F2}";
+        valueDisplay.Text = "$"+e.NewValue.ToString();;
     }
 }
 
@@ -316,7 +282,7 @@ private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
 
 ## Stroke
 
-Use the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property to change the border color of the NumericEntry. The default value is `Black`.
+Use the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property to change the border color of the NumericEntry. The default value is `LightGray`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -420,7 +386,7 @@ numericEntry.SelectAllOnFocus = false;
 
 The `ReturnType` property specifies the return button of the on-screen keyboard (for example, `Next`, `Done`, or `Go`). Use it to manage the flow between multiple input fields by defining what action the Return key performs.
 
-For more information, see the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) API reference.
+You can define the return key type of [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) by using the ReturnType property.
 
 N> The default value of `ReturnType` is `Default`.
 
@@ -445,7 +411,7 @@ sfNumericEntry.ReturnType = ReturnType.Next;
 
 ## Clear button customization
 
-The `ClearButtonPath` property specifies the [`Microsoft.Maui.Controls.Shapes.Path`](https://learn.microsoft.com/dotnet/maui/user-interface/controls/shapes/path) that is rendered as the clear-button icon, allowing the appearance of the clear button to be customized.
+The `ClearButtonPath` property specifies the `Path` that is rendered as the clear-button icon, allowing the appearance of the clear button to be customized.
 
 {% tabs %}
 {% highlight xaml %}
@@ -465,26 +431,22 @@ The `ClearButtonPath` property specifies the [`Microsoft.Maui.Controls.Shapes.Pa
 {% endhighlight %}
 {% highlight C# %}
 
-using Microsoft.Maui.Controls.Shapes;
-using Syncfusion.Maui.Inputs;
+private string _customPath = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z";
 
-const string customPathData = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z";
+var converter = new PathGeometryConverter();
 
-var path = new Path
+var path = new Path()
 {
-    Data = new PathFigureCollectionConverter().ConvertFromInvariantString(customPathData) as PathFigureCollection,
-    Fill = Colors.Red,
-    Stroke = Colors.Red,
+    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath),
+    Stroke = Colors.Red
 };
 
-SfNumericEntry numericEntry = new SfNumericEntry
-{
-    Value = 10,
-    WidthRequest = 200,
-    ShowClearButton = true,
-    IsEditable = true,
-    ClearButtonPath = path,
-};
+SfNumericEntry numericEntry = new SfNumericEntry();
+numericEntry.Value = 10;
+numericEntry.WidthRequest = 200;
+numericEntry.ShowClearButton = true;
+numericEntry.IsEditable = true;
+numericEntry.ClearButtonPath = path;
 this.Content = numericEntry;
 
 {% endhighlight %}
@@ -502,23 +464,17 @@ The following image illustrates the result of the above code:
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-             xmlns:local="clr-namespace:MyApp.ViewModels"
-             x:Class="MyApp.MainPage">
-    <ContentPage.BindingContext>
+<editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        ReturnCommand="{Binding AlertCommand}"
+                        ReturnCommandParameter="Return key is pressed" />
+    <editors:SfNumericEntry.BindingContext>
         <local:CommandDemoViewModel />
-    </ContentPage.BindingContext>
-    <editors:SfNumericEntry x:Name="numericEntry"
-                            WidthRequest="200"
-                            ReturnCommand="{Binding AlertCommand}"
-                            ReturnCommandParameter="Return key is pressed" />
-</ContentPage>
+    </editors:SfNumericEntry.BindingContext>                    
+</editors:SfNumericEntry>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using System.Windows.Input;
-using Syncfusion.Maui.Inputs;
 
 var viewModel = new CommandDemoViewModel();
 SfNumericEntry numericEntry = new SfNumericEntry
@@ -562,10 +518,9 @@ The following screenshot illustrates the `AutomationId`s of the inner elements:
 
 ## See Also
 
-* [Formatting in .NET MAUI NumericEntry](formatting.md)
-* [Restriction in .NET MAUI NumericEntry](restriction.md)
-* [UpDown-Button in .NET MAUI NumericEntry](UpDown-Button.md)
-* [SfNumericEntry API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html)
+* [Formatting](formatting.md)
+* [Restriction](restriction.md)
+* [UpDown-Button](UpDown-Button.md)
 
 ## Related resources
 
