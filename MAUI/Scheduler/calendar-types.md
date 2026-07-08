@@ -35,7 +35,7 @@ The Scheduler control supports different types of calendars such as Gregorian, K
 * Haida Calendar<br>
 * Igbo calendar<br>
 * Javanese calendar<br>
-* Maramataka (Māori lunar calendar)<br>
+* Maramataka (Maori lunar calendar)<br>
 * Nepal Sambat<br>
 * Yoruba calendar<br>
 </td>
