@@ -45,23 +45,26 @@ To initialize the control, import the Chart namespace and initialize [SfFunnelCh
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
+
 <ContentPage
-    . . .
     xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
     <chart:SfChart/>
 </ContentPage>
+
 {% endhighlight %}
 
 {% highlight C# %}
+
 using Syncfusion.SfChart.XForms;
-...
 
 SfChart chart = new SfChart(); 
 this.Content = chart;
 
 {% endhighlight %}
+
 {% endtabs %}
 </td>
 </tr>
@@ -75,7 +78,6 @@ this.Content = chart;
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
     <chart:SfFunnelChart/>
@@ -160,15 +162,18 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 </chart:SfChart>
 
 {% endhighlight %} 
+
 {% highlight C# %}
+
 SfChart chart = new SfChart();
-. . .
+
 FunnelSeries series = new FunnelSeries();
 series.ItemsSource = Data;
 series.XBindingPath = "XValue";
 series.YBindingPath = "YValue";
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -181,6 +186,7 @@ this.Content = chart;
 <td>
 
 {% tabs %} 
+
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
@@ -190,7 +196,9 @@ this.Content = chart;
 
 
 {% endhighlight %} 
+
 {% highlight C# %}
+
 SfFunnelChart chart = new SfFunnelChart();
 ChartViewModel viewModel = new ChartViewModel();
 chart.BindingContext = viewModel;
@@ -198,6 +206,7 @@ chart.ItemsSource = viewModel.Data;
 chart.XBindingPath = "XValue";
 chart.YBindingPath = "YValue";
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -274,6 +283,7 @@ The following code example shows how to enable legend in chart.
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
 
 <chart:SfChart>
@@ -283,9 +293,11 @@ The following code example shows how to enable legend in chart.
 </chart:SfChart>
 
 {% endhighlight %} 
+
 {% highlight C# %}
+
 SfChart chart = new SfChart();
-. . .
+
 chart.Legend = new ChartLegend();
 this.Content = chart;
 
@@ -300,10 +312,11 @@ this.Content = chart;
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
 
 <chart:SfFunnelChart>
-    . . .
+
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend/>
     </chart:SfFunnelChart.Legend>
@@ -314,7 +327,7 @@ this.Content = chart;
 {% highlight C# %}
 
 SfFunnelChart chart = new SfFunnelChart();
-. . .
+
 chart.Legend = new ChartLegend();
 this.Content = chart;
 
@@ -336,6 +349,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
 
 <chart:SfChart>  
@@ -360,11 +374,13 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 </chart:SfChart>
 
 {% endhighlight %}
+
 {% highlight C# %}
+
 SfChart chart = new SfChart();
-. . .
+
 FunnelSeries series = new FunnelSeries();
-. . .
+
 series.DataMarker = new ChartDataMarker();
 series.DataMarker.ShowLabel = true;
 
@@ -380,6 +396,7 @@ series.DataMarker.LabelStyle = style;
 
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %} 
@@ -391,6 +408,7 @@ this.Content = chart;
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
 
  <chart:SfFunnelChart ItemsSource="{Binding Data}" 
@@ -413,6 +431,7 @@ this.Content = chart;
  </chart:SfFunnelChart>
 
 {% endhighlight %} 
+
 {% highlight C# %}
 
 using Syncfusion.Maui.Charts;
@@ -454,10 +473,11 @@ To customize the tooltip appearance in Xamarin.Forms, create an instance of the 
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
 
 <chart:SfChart>
-    . . . 
+
     <chart:SfChart.ChartBehaviors>
         <chart:ChartTooltipBehavior BackgroundColor="Blue" 
                                     TextColor="White" 
@@ -474,10 +494,11 @@ To customize the tooltip appearance in Xamarin.Forms, create an instance of the 
 {% endhighlight %} 
 
 {% highlight C# %}
+
 SfChart chart = new SfChart();
-. . .
+
 FunnelSeries series = new FunnelSeries ();
-. . .
+
 series.EnableTooltip = true;
 chart.Series.Add(series);
 
@@ -501,6 +522,7 @@ this.Content = chart;
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data1}" 
@@ -516,6 +538,7 @@ this.Content = chart;
 </chart:SfFunnelChart>
 
 {% endhighlight %} 
+
 {% highlight C# %}
 
 using Syncfusion.Maui.Charts;
@@ -553,10 +576,10 @@ In Xamarin.Forms, create an instance of the [ChartSelectionBehavior](https://hel
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
 
 <chart:SfChart>
-    ...
     <chart:SfChart.ChartBehaviors>
         <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
@@ -570,10 +593,12 @@ In Xamarin.Forms, create an instance of the [ChartSelectionBehavior](https://hel
 </chart:SfChart>
 
 {% endhighlight %} 
+
 {% highlight C# %}
+
 SfChart chart = new SfChart();
 FunnelSeries series = new FunnelSeries();
-. . .
+
 series.EnableDataPointSelection = true;
 series.SelectedDataPointIndex = 2;
 series.SelectedDataPointColor = Color.Red;
@@ -581,7 +606,9 @@ ChartSelectionBehavior selectionBehavior = new ChartSelectionBehavior();
 chart.ChartBehaviors.Add(selectionBehavior);
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
+
 {% endtabs %}
 </td>
 </tr>
@@ -591,6 +618,7 @@ this.Content = chart;
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xml %}
 
 xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"

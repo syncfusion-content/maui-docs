@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segment spacing in .NET MAUI Funnel Chart control Syncfusion
-description: Learn here all about segment spacing customization in .NET MAUI Funnel Chart (SfFunnelChart), its elements and more.
+description: Learn how to set the gap between segments in .NET MAUI Funnel Chart (SfFunnelChart) using the GapRatio property.
 platform: maui
 control: SfFunnelChart
 documentation: ug
