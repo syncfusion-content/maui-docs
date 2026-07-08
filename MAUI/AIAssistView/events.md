@@ -25,16 +25,27 @@ The following example demonstrates how to handle the [ItemTapped](https://help.s
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                               ItemTapped="OnAssistViewItemTapped" />
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                           ItemTapped="OnAssistViewItemTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnAssistViewItemTapped(object sender, ItemTappedEventArgs e)
-    {  
-       DisplayAlert("Item", " Tapped on item :" + e.Item.Text, "Ok");                  
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
     }
+
+    private void OnAssistViewItemTapped(object sender, ItemTappedEventArgs e)
+    {
+        DisplayAlert("Item", "Tapped on item: " + e.Item.Text, "Ok");
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -46,34 +57,40 @@ To handle the tap action using commands (MVVM), bind the [ItemTappedCommand](htt
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"  
-                               ItemTappedCommand="{Binding TappedCommand}" />
+<syncfusion:SfAIAssistView x:Name="aiAssistView"  
+                           ItemTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="20" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private ICommand tappedCommand;
+
+    public ViewModel()
     {
-        public Command<object> tappedCommand;
-
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(ExecuteItemTappedCommand);
-        }
-        
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void ExecuteItemTappedCommand(object obj)
-        {
-           var ItemTappedArgs = obj as ItemTappedEventArgs;
-           DisplayAlert("Item", " Tapped on item :" + ItemTappedArgs.Text, "Ok");                  
-        }    
-      
+        tappedCommand = new Command<object>(ExecuteItemTappedCommand);
     }
+
+    public ICommand TappedCommand
+    {
+        get { return tappedCommand; }
+        set { tappedCommand = value; }
+    }
+
+    private void ExecuteItemTappedCommand(object obj)
+    {
+        var itemTappedArgs = obj as ItemTappedEventArgs;
+        if (itemTappedArgs != null)
+        {
+            Application.Current.MainPage.DisplayAlert("Item", "Tapped on item: " + itemTappedArgs.Item.Text, "Ok");
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,16 +107,27 @@ The `SfAIAssistView` control also supports the [ItemLongPressed](https://help.sy
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                               ItemLongPressed="OnAssistViewItemLongPressed" />
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                           ItemLongPressed="OnAssistViewItemLongPressed" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnAssistViewItemLongPressed(object sender, ItemLongPressedEventArgs e)
-    {  
-       DisplayAlert("Item", " Long pressed on item :" + e.Item.Text, "Ok");                  
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
     }
+
+    private void OnAssistViewItemLongPressed(object sender, ItemLongPressedEventArgs e)
+    {
+        DisplayAlert("Item", "Long pressed on item: " + e.Item.Text, "Ok");
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -111,33 +139,40 @@ To handle the long-press action using commands (MVVM), bind the [ItemLongPressed
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                               ItemLongPressedCommand ="{Binding LongPressedCommand}" />
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                           ItemLongPressedCommand ="{Binding LongPressedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="20" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private ICommand longPressedCommand;
+
+    public ViewModel()
     {
-        public Command<object> longPressedCommand;
+        longPressedCommand = new Command<object>(ExecuteItemLongPressedCommand);
+    }
 
-        public ViewModel()
-        {
-            LongPressedCommand = new Command<object>(ExecuteItemLongPressedCommand);
-        }
+    public ICommand LongPressedCommand
+    {
+        get { return longPressedCommand; }
+        set { longPressedCommand = value; }
+    }
 
-        public Command<object> LongPressedCommand
+    private void ExecuteItemLongPressedCommand(object obj)
+    {
+        var itemLongPressedArgs = obj as ItemLongPressedEventArgs;
+        if (itemLongPressedArgs != null)
         {
-            get { return longPressedCommand; }
-            set { longPressedCommand = value; }
+            Application.Current.MainPage.DisplayAlert("Item", "LongPressed on item: " + itemLongPressedArgs.Item.Text, "Ok");
         }
-
-        private void ExecuteItemLongPressedCommand(object obj)
-        {
-            var ItemLongPressedArgs = obj as ItemLongPressedEventArgs;
-            DisplayAlert("Item", "LongPressed on Item :" + ItemLongPressedArgs.Item.Text, "Ok");
-        }
-    }  
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,18 +189,29 @@ These are triggered whenever a user taps on an image within the control. The tap
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ImageTapped="sfAIAssistView_ImageTapped" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ImageTapped="sfAIAssistView_ImageTapped" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
 
-    sfAIAssistView.ImageTapped += SfAIAssistView_ImageTapped;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ImageTapped += SfAIAssistView_ImageTapped;
+    }
 
     private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
-    {  
-       DisplayAlert("Image", " Tapped on image :" + e.ImageItem.Source, "Ok");                  
+    {
+        DisplayAlert("Image", "Tapped on image: " + e.ImageItem.Source, "Ok");
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -175,34 +221,40 @@ These are triggered whenever a user taps on an image within the control. The tap
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               ImageTappedCommand="{Binding TappedCommand}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                           ImageTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="20" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private ICommand imageTappedCommand;
+
+    public ViewModel()
     {
-        public Command<object> tappedCommand;
-
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(ImageTapped);
-        }
-        
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void ImageTapped(object obj)
-        {
-           var ImageTappedArgs = obj as ImageTappedEventArgs;
-           DisplayAlert("Image", " Tapped on Image item :" + ImageTappedArgs.ImageItem.Source, "Ok");                  
-        }    
-      
+        imageTappedCommand = new Command<object>(OnImageTapped);
     }
+
+    public ICommand ImageTappedCommand
+    {
+        get { return imageTappedCommand; }
+        set { imageTappedCommand = value; }
+    }
+
+    private void OnImageTapped(object obj)
+    {
+        var imageTappedArgs = obj as ImageTappedEventArgs;
+        if (imageTappedArgs != null)
+        {
+            Application.Current.MainPage.DisplayAlert("Image", "Tapped on image item: " + imageTappedArgs.ImageItem.Source, "Ok");
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -221,18 +273,31 @@ These are triggered whenever a user taps on an image within the control. The tap
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               CardTapped="sfAIAssistView_CardTapped" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           CardTapped="sfAIAssistView_CardTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-    sfAIAssistView.CardTapped += SfAIAssistView_CardTapped;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+namespace MauiAssistViewSample;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.CardTapped += this.SfAIAssistView_CardTapped;
+    }
 
     private void SfAIAssistView_CardTapped(object sender, CardTappedEventArgs e)
-    {  
-       DisplayAlert("Card", " Tapped on card :" + e.Card.Title, "Ok");                  
+    {
+        DisplayAlert("Card", "Tapped on card: " + e.Card.Title, "Ok");
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -242,34 +307,40 @@ These are triggered whenever a user taps on an image within the control. The tap
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               CardTappedCommand="{Binding TappedCommand}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                           CardTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="20" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private ICommand cardTappedCommand;
+
+    public ViewModel()
     {
-        public Command<object> tappedCommand;
-
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(CardTapped);
-        }
-        
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void CardTapped(object obj)
-        {
-           var CardTappedArgs = obj as CardTappedEventArgs;
-           DisplayAlert("Card", " Tapped on Card item :" + CardTappedArgs.Card.Title, "Ok");                  
-        }    
-      
+        cardTappedCommand = new Command<object>(OnCardTapped);
     }
+
+    public ICommand CardTappedCommand
+    {
+        get { return cardTappedCommand; }
+        set { cardTappedCommand = value; }
+    }
+
+    private void OnCardTapped(object obj)
+    {
+        var cardTappedArgs = obj as CardTappedEventArgs;
+        if (cardTappedArgs != null)
+        {
+            DisplayAlert("Card", "Tapped on card item: " + cardTappedArgs.Card.Title, "Ok");
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -287,19 +358,29 @@ The [AttachmentTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAss
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AttachmentTapped="sfAIAssistView_AttachmentTapped" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AttachmentTapped="sfAIAssistView_AttachmentTapped" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
-    SfAIAsssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.AttachmentTapped += SfAIAssistView_AttachmentTapped;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAsssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.AttachmentTapped += this.SfAIAssistView_AttachmentTapped;
+    }
 
     private void SfAIAssistView_AttachmentTapped(object sender, AttachmentTappedEventArgs e)
-    {  
-        DisplayAlert("Attachment", " Tapped on attachment :" + e.Attachment.FileName, "Ok");                  
+    {
+        DisplayAlert("Attachment", "Tapped on attachment: " + e.Attachment.FileName, "Ok");
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -311,33 +392,40 @@ The [AttachmentTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               AttachmentTappedCommand="{Binding TappedCommand}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                           AttachmentTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="20" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private ICommand attachmentTappedCommand;
+
+    public ViewModel()
     {
-        public Command<object> tappedCommand;
-
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(AttachmentTapped);
-        }
-    
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void AttachmentTapped(object obj)
-        {
-            var AttachmentTappedArgs = obj as AttachmentTappedEventArgs;
-            DisplayAlert("Attachment", " Tapped on Attachment item :" + AttachmentTappedArgs.Attachment.FileName, "Ok");                  
-        }      
+        attachmentTappedCommand = new Command<object>(OnAttachmentTapped);
     }
+
+    public ICommand AttachmentTappedCommand
+    {
+        get { return attachmentTappedCommand; }
+        set { attachmentTappedCommand = value; }
+    }
+
+    private void OnAttachmentTapped(object obj)
+    {
+        var attachmentTappedArgs = obj as AttachmentTappedEventArgs;
+        if (attachmentTappedArgs != null)
+        {
+            Application.Current.MainPage.DisplayAlert("Attachment", "Tapped on attachment item: " + attachmentTappedArgs.Attachment.FileName, "Ok");
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -356,16 +444,29 @@ The [Request](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                               Request="OnAssistViewRequest" />
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                           Request="OnAssistViewRequest" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAsssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.Request += this.OnAssistViewRequest;
+    }
 
     private void OnAssistViewRequest(object sender, RequestEventArgs e)
-    {  
-       // Add your code for getting response from the AI.
+    {
+        // Add your code for getting response from the AI.
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -375,30 +476,36 @@ The [Request](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.S
 To handle the request action using commands (MVVM), bind the [RequestCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestCommand).
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                               RequestCommand="{Binding AssistViewRequestCommand}"/>
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                           RequestCommand="{Binding AssistViewRequestCommand}"/>
+
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="9" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    public ViewModel()
     {
-        public ViewModel()
-        {
-            this.assistItems = new ObservableCollection<object>();
-            this.AssistViewRequestCommand = new Command<object>(ExecuteRequestCommand);
-        }
-
-        private async void ExecuteRequestCommand(object obj)
-        {
-            var request = (obj as Syncfusion.Maui.AIAssistView.RequestEventArgs).RequestItem;
-            //logic for getting response from the AI
-        }
+        this.AssistViewRequestCommand = new Command<object>(ExecuteRequestCommand);
     }
+
+    public ICommand AssistViewRequestCommand { get; private set; }
+
+    private async void ExecuteRequestCommand(object obj)
+    {
+        var request = (obj as RequestEventArgs)?.RequestItem;
+        //logic for getting response from the AI
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -410,33 +517,38 @@ The [ItemCopyCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"  
-                               ItemCopyCommand="{Binding CopyCommand}" />
+<syncfusion:SfAIAssistView x:Name="aiAssistView"  
+                           ItemCopyCommand="{Binding CopyCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private ICommand copyCommand;
+
+    public ViewModel()
     {
-        public Command<object> copyCommand;
-
-        public ViewModel()
-        {
-            CopyCommand = new Command<object>(ExecuteCopyCommand);
-        }
-        
-        public Command<object> CopyCommand
-        {
-            get { return copyCommand; }
-            set { copyCommand = value; }
-        }
-
-        private void ExecuteCopyCommand(object obj)
-        {
-             // add copy logic here
-        }    
-      
+        copyCommand = new Command<object>(ExecuteCopyCommand);
     }
+
+    public ICommand CopyCommand
+    {
+        get { return copyCommand; }
+        set { copyCommand = value; }
+    }
+
+    private void ExecuteCopyCommand(object obj)
+    {
+        // add copy logic here
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -446,35 +558,40 @@ The [ItemCopyCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 The [ItemRetryCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemRetryCommand) is executed when user clicks on the retry action icon in a response item.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               ItemRetryCommand="{Binding RetryCommand}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                           ItemRetryCommand="{Binding RetryCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private ICommand retryCommand;
+
+    public ViewModel()
     {
-        public Command<object> retryCommand;
-
-        public ViewModel()
-        {
-            RetryCommand = new Command<object>(ExecuteRetryCommand);
-        }
-        
-        public Command<object> RetryCommand
-        {
-            get { return retryCommand; }
-            set { retryCommand = value; }
-        }
-
-        private void ExecuteRetryCommand(object obj)
-        {
-            // add retry logic here
-        }    
-      
+        retryCommand = new Command<object>(ExecuteRetryCommand);
     }
+
+    public ICommand RetryCommand
+    {
+        get { return retryCommand; }
+        set { retryCommand = value; }
+    }
+
+    private void ExecuteRetryCommand(object obj)
+    {
+        // add retry logic here
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -484,35 +601,40 @@ The [ItemRetryCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAss
 The [ItemRatingChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemRatingChangedCommand) is executed whenever a user changes the rating of a response item. This typically occurs when a user performs an action like liking or disliking the item.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"   
-                               ItemRatingChangedCommand="{Binding RatingChangedCommand}" />
+<syncfusion:SfAIAssistView x:Name="aiAssistView"   
+                           ItemRatingChangedCommand="{Binding RatingChangedCommand}" />
 
-{% endhighlight %}                                  
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private ICommand ratingChangedCommand;
+
+    public ViewModel()
     {
-        public Command<object> ratingChangedCommand;
-
-        public ViewModel()
-        {
-            RatingChangedCommand = new Command<object>(ExecuteRatingChangedCommand);
-        }
-        
-        public Command<object> RatingChangedCommand
-        {
-            get { return ratingChangedCommand; }
-            set { ratingChangedCommand = value; }
-        }
-
-        private void ExecuteRatingChangedCommand(object obj)
-        {
-            DisplayAlert("Rating", "Rating changed", "Ok");                              
-        }    
-      
+        ratingChangedCommand = new Command<object>(ExecuteRatingChangedCommand);
     }
+
+    public ICommand RatingChangedCommand
+    {
+        get { return ratingChangedCommand; }
+        set { ratingChangedCommand = value; }
+    }
+
+    private void ExecuteRatingChangedCommand(object obj)
+    {
+        Application.Current.MainPage.DisplayAlert("Rating", "Rating changed", "Ok");
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -527,19 +649,30 @@ To cancel the response using the `StopRespondingCommand` or `StopResponding` eve
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               StopResponding="OnStopResponding" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           StopResponding="OnStopResponding" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.StopResponding += OnStopResponding;
+using System;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAsssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.StopResponding += OnStopResponding;
+    }
 
     private void OnStopResponding(object sender, EventArgs e)
     {
-       // Handle the Stop Responding action
+        // Handle the Stop Responding action
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -549,44 +682,83 @@ To cancel the response using the `StopRespondingCommand` or `StopResponding` eve
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               StopRespondingCommand="{Binding StopRespondingCommand}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                           StopRespondingCommand="{Binding StopRespondingCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-    public class ViewModel : INotifyPropertyChanged
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
+{
+    private bool cancelResponse;
+    private ObservableCollection<object> assistItems;
+
+    public ViewModel()
     {
-         public ICommand StopRespondingCommand { get; set; }
-
-        public ViewModel()
-        {
-            AssistViewRequestCommand = new Command(ExecuteRequestCommand);
-            StopRespondingCommand = new Command(ExecuteStopResponding);
-        }
-
-        private void ExecuteStopResponding()
-        {
-            // logic to handle the Stop Responding action
-            this.CancelResponse = true;
-            AssistItem responseItem = new AssistItem() { Text = "You canceled the response" };
-            responseItem.ShowAssistItemFooter = false;
-            this.AssistItems.Add(responseItem);
-        } 
-        
-        private void ExecuteRequestCommand()
-        {
-            this.GetResult();
-        }
-
-        private void GetResult()
-        {
-            if (!CancelResponse)
-            {
-                // generating the response if it has not been canceled.
-            }  
-        }      
+        this.assistItems = new ObservableCollection<object>();
+        AssistViewRequestCommand = new Command(ExecuteRequestCommand);
+        StopRespondingCommand = new Command(ExecuteStopResponding);
     }
+
+    public ICommand AssistViewRequestCommand { get; private set; }
+    public ICommand StopRespondingCommand { get; private set; }
+
+    public ObservableCollection<object> AssistItems
+    {
+        get { return assistItems; }
+        set
+        {
+            assistItems = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public bool CancelResponse
+    {
+        get { return cancelResponse; }
+        set
+        {
+            cancelResponse = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    private void ExecuteStopResponding()
+    {
+        // logic to handle the Stop Responding action
+        this.CancelResponse = true;
+        AssistItem responseItem = new AssistItem() { Text = "You canceled the response" };
+        responseItem.ShowAssistItemFooter = false;
+        this.AssistItems.Add(responseItem);
+    }
+
+    private void ExecuteRequestCommand(object obj)
+    {
+        this.GetResult();
+    }
+
+    private void GetResult()
+    {
+        if (!CancelResponse)
+        {
+            // generating the response if it has not been canceled.
+        }
+    }
+
+    protected void OnPropertyChanged([CallerMemberName] string name = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -605,20 +777,31 @@ When a user selects a conversation item, the [ConversationItemTapped](https://he
 ### ConversationItemTapped event
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                               ConversationItemTapped="OnConversationItemTapped"/>
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                           ConversationItemTapped="OnConversationItemTapped"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
-    aiAssistView.ConversationItemTapped += OnConversationItemTapped;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAsssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ConversationItemTapped += OnConversationItemTapped;
+    }
 
     private void OnConversationItemTapped(object sender, ConversationItemTappedEventArgs e)
     {
         // Handle the conversation item action
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -626,22 +809,29 @@ When a user selects a conversation item, the [ConversationItemTapped](https://he
 ### ConversationItemTappedCommand
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                               ConversationItemTappedCommand="{Binding ConversationItemTappedCommand}"/>
+<syncfusion:SfAIAssistView x:Name="aiAssistView"
+                           ConversationItemTappedCommand="{Binding ConversationItemTappedCommand}"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="7,10" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}
 
-public class AIAssistViewModel : INotifyPropertyChanged
+using System.ComponentModel;
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel : INotifyPropertyChanged
 {
     public ICommand ConversationItemTappedCommand { get; }
 
-    public AIAssistViewModel()
+    public ViewModel()
     {
         this.ConversationItemTappedCommand = new Command<object>(OnConversationItemTapped);
     }
+
+    public event PropertyChangedEventHandler PropertyChanged;
 
     private void OnConversationItemTapped(object obj)
     {
@@ -660,17 +850,30 @@ The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIA
 - `Cancel` : Indicates whether the context menu opening should be canceled. Set this property to true to prevent the menu from being shown.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ContextMenuOpening="OnContextMenuOpening">
 </syncfusion:SfAIAssistView>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-private void OnContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
 {
-   // Allows customizing or canceling the context menu before it is displayed
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAsssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ContextMenuOpening += OnContextMenuOpening;
+    }
+
+    private void OnContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
+    {
+        // Allows customizing or canceling the context menu before it is displayed
+    }
 }
 
 {% endhighlight %}
