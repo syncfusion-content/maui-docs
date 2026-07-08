@@ -337,7 +337,7 @@ public class ViewModel : INotifyPropertyChanged
         var cardTappedArgs = obj as CardTappedEventArgs;
         if (cardTappedArgs != null)
         {
-            Application.Current.MainPage.DisplayAlert("Card", "Tapped on card item: " + cardTappedArgs.Card.Title, "Ok");
+            DisplayAlert("Card", "Tapped on card item: " + cardTappedArgs.Card.Title, "Ok");
         }
     }
 }
