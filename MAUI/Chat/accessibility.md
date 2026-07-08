@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Chat control | Syncfusion®
-description: Learn here all about Accessibility support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Accessibility in .NET MAUI Chat (SfChat) | Syncfusion®
+description: Learn here all about Accessibility support in Syncfusion® .NET MAUI Chat (SfChat) control and its elements.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in .NET MAUI Chat (SfChat)
 
-Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
+[SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) provides built-in accessibility support, exposing its UI elements to assistive technologies such as screen readers. The following tables list each element along with the value announced by the screen reader.
 
 ## Avatar
 
@@ -24,7 +24,7 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-## LoadMore
+## LoadMore Button
 
 <table>
 <tr>
@@ -32,12 +32,12 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 <th>Value</th>
 </tr>
 <tr>
-<td>loadMoreView</td>
-<td>Load more button, Double tap to load more messages</td>
+<td>LoadMoreView</td>
+<td>Load More Button, Double Tap to Load More Messages</td>
 </tr>
 </table>
 
-## Attachment button
+## Attachment Button
 
 <table>
 <tr>
@@ -46,11 +46,11 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 <tr>
 <td>AttachmentIconView</td>
-<td>Attachment Button, Double tap to activate</td>
+<td>Attachment Button, Double Tap to Activate</td>
 </tr>
 </table>
 
-## Send icon
+## Send Icon
 
 <table>
 <tr>
@@ -59,13 +59,13 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 <tr>
 <td>SendIconView</td>
-<td>Send Button, Double tap to send message</td>
+<td>Send Button, Double Tap to Send Message</td>
 </tr>
 </table>
 
-![Syncfusion .NET MAUI Chat Accessibility](images/Accessibility/maui-chat-accessibility-loadmore.png)
+![Syncfusion .NET MAUI Chat Accessibility for load more button](images/accessibility/maui-chat-accessibility-loadmore.png)
 
-## Calendar
+## Calendar Message
 
 <table>
 <tr>
@@ -73,14 +73,14 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 <th>Value</th>
 </tr>
 <tr>
-<td>Calendar View</td>
+<td>CalendarView</td>
 <td>Calendar</td>
 </tr>
 </table>
 
-![Syncfusion .NET MAUI Chat Accessibility for calendar message](images/Accessibility/maui-chat-accessibility-calendar.png)
+![Syncfusion .NET MAUI Chat Accessibility for calendar message](images/accessibility/maui-chat-accessibility-calendar.png)
 
-## Cards
+## Card Message
 
 <table>
 <tr>
@@ -88,14 +88,14 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 <th>Value</th>
 </tr>
 <tr>
-<td>Card View</td>
+<td>CardView</td>
 <td>Cards</td>
 </tr>
 </table>
 
-![Syncfusion .NET MAUI Chat Accessibility for card message](images/Accessibility/maui-chat-accessibility-cards.png)
+![Syncfusion .NET MAUI Chat Accessibility for card message](images/accessibility/maui-chat-accessibility-cards.png)
 
-## Suggestion
+## Suggestion Message
 
 <table>
 <tr>
@@ -103,9 +103,9 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 <th>Value</th>
 </tr>
 <tr>
-<td>Suggestions View</td>
+<td>SuggestionsView</td>
 <td>Suggestions</td>
 </tr>
 </table>
 
-![Syncfusion .NET MAUI Chat Accessibility for suggestions](images/Accessibility/maui-chat-accessibility-suggestions.png)
+![Syncfusion .NET MAUI Chat Accessibility for suggestions](images/accessibility/maui-chat-accessibility-suggestions.png)

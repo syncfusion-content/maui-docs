@@ -18,13 +18,13 @@ documentation: ug
 </tr>
 <tr>
 <td>{{'[Message.DateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_DateTime)'| markdownify }}</td>
-<td>To display message created or received time.</td>
+<td>To display the message's created or received time.</td>
 </tr>
 </table>
 
 ## Setting current user for conversation
 
-The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) helps differentiate between the sender and receiver of the messages. On any given chat window, the `CurrentUser` is meant to be the sender (author of outgoing messages). Refer to the below code example to set up a current user in a chat.
+The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) helps differentiate between the sender and receiver of messages. The `CurrentUser` represents the local user (the author of outgoing messages) in the chat window. Refer to the code example below to set up a current user in a chat.
 
 {% tabs %}
 {% highlight xaml hl_lines="15" %}
@@ -74,7 +74,11 @@ namespace MauiChat
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
-    
+
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Syncfusion.Maui.Chat;
+
 public class ViewModel : INotifyPropertyChanged
 {
     private ObservableCollection<object> messages;
@@ -109,8 +113,9 @@ public class ViewModel : INotifyPropertyChanged
         set
         {
             this.messages = value;
+            RaisePropertyChanged("Messages");
         }
-    }  
+    }
 
     public event PropertyChangedEventHandler? PropertyChanged;
     
@@ -271,7 +276,7 @@ namespace MauiChat
             this.viewModel = new ViewModel();
             this.sfChat.Messages = viewModel.Messages;
             this.sfChat.CurrentUser = viewModel.CurrentUser;
-            this.sfChat.SendMessage += this.SfChat_SendMessage;
+            this.sfChat.SendMessage += this.sfChat_SendMessage;
             this.Content = sfChat;
         }
 
@@ -279,9 +284,9 @@ namespace MauiChat
         {
             // Denotes the date selected from the date picker.
             var selectedDate = e.Message.Text;
-        }  
+        }
     }
-} 
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -358,7 +363,7 @@ namespace MauiChat
             this.viewModel = new ViewModel();
             this.sfChat.Messages = viewModel.Messages;
             this.sfChat.CurrentUser = viewModel.CurrentUser;
-            this.sfChat.SendMessage += this.SfChat_SendMessage;
+            this.sfChat.SendMessage += this.sfChat_SendMessage;
             this.Content = sfChat;
         }
 
@@ -446,7 +451,7 @@ namespace MauiChat
             this.viewModel = new ViewModel();
             this.sfChat.Messages = viewModel.Messages;
             this.sfChat.CurrentUser = viewModel.CurrentUser;
-            this.sfChat.SendMessage += this.SfChat_SendMessage;
+            this.sfChat.SendMessage += this.sfChat_SendMessage;
             this.Content = sfChat;
         }
 
@@ -491,7 +496,9 @@ public class ViewModel : INotifyPropertyChanged
 
 ## Hyperlink message
 
-[HyperlinkMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.HyperlinkMessage.html) is used to send a URL as a message. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed. The code example below illustrates how to add a hyperlink message.
+[HyperlinkMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.HyperlinkMessage.html) is used to send a URL as a message. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
+
+N> On Android, ensure the `INTERNET` permission is declared in `Platforms/Android/AndroidManifest.xml` (`<uses-permission android:name="android.permission.INTERNET" />`) so the metadata for the URL can be fetched. On iOS, Mac Catalyst, and Windows, network access is enabled by default.
 
 {% tabs %}
 {% highlight xaml %}
@@ -643,7 +650,7 @@ public class ViewModel : INotifyPropertyChanged
     ...
     private void GenerateMessages()
     {
-        this.messages.Add(new TextMessage()
+        this.Messages.Add(new TextMessage()
         {
             Author = CurrentUser,
             Text = "I was delighted to buy some sports cars, can you suggest some cars",
@@ -652,7 +659,7 @@ public class ViewModel : INotifyPropertyChanged
 
         this.Messages.Add(new ImageMessage()
         {
-            Author = currentUser,
+            Author = CurrentUser,
             Aspect = Aspect.AspectFill,
             Source = "car1.jpg",
             DateTime = DateTime.Now,
@@ -675,7 +682,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ### Event and command
 
-The `ImageMessage` comes with in-built [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTapped) event and [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTappedCommand) that will be fired upon tapping an image message. You can get the instance of the `ImageMessage` that was tapped in the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html) as [ImageTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html#Syncfusion_Maui_Chat_ImageTappedEventArgs_Message). You can handle this event/command to achieve requirements like showing the image in full screen or showing options for sharing the image, etc.
+The `ImageMessage` comes with a built-in [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTapped) event and [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTappedCommand) that will be fired upon tapping an image message. You can get the instance of the `ImageMessage` that was tapped in the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html) as [ImageTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html#Syncfusion_Maui_Chat_ImageTappedEventArgs_Message). You can handle this event/command to achieve requirements like showing the image in full screen or showing options for sharing the image, etc.
 
 ## ImageTapped event
 
@@ -697,7 +704,7 @@ The `ImageMessage` comes with in-built [ImageTapped](https://help.syncfusion.com
         <sfChat:SfChat x:Name="sfChat"
                     Messages="{Binding Messages}"                          
                     CurrentUser="{Binding CurrentUser}" 
-                    ImageTapped="chat_ImageTapped"/>
+                    ImageTapped="sfChat_ImageTapped"/>
     </ContentPage.Content>
 </ContentPage>
 
@@ -707,7 +714,7 @@ The `ImageMessage` comes with in-built [ImageTapped](https://help.syncfusion.com
 private void sfChat_ImageTapped(object sender, ImageTappedEventArgs e)
 {
     // Check if a particular image message was tapped.
-    if (e.Message.Source == ImageSource.FromFile("car1.png"))
+    if (e.Message.Text == "car1.png" || (e.Message.Source is FileImageSource fis && fis.File == "car1.png"))
     {
         // Do desired actions like displaying the image in full screen.
     }
@@ -743,13 +750,18 @@ private void sfChat_ImageTapped(object sender, ImageTappedEventArgs e)
 
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+
 public class ViewModel : INotifyPropertyChanged
 {
     public ICommand ImageTappedCommand { get; set; }
     ...
     public ViewModel()
     {
-        this.messages = new ObservableCollection<object>();
+        this.Messages = new ObservableCollection<object>();
         this.CurrentUser = new Author() { Name = "Nancy" };
         ImageTappedCommand = new Command<object>(ImageTapped);
     }
@@ -757,7 +769,8 @@ public class ViewModel : INotifyPropertyChanged
     private void ImageTapped(object args)
     {
         // Check if a particular image message was tapped.
-        if((args as ImageTappedEventArgs).Message.Source == ImageSource.FromFile("car1.png"))
+        var eventArgs = args as ImageTappedEventArgs;
+        if (eventArgs?.Message.Text == "car1.png" || (eventArgs?.Message.Source is FileImageSource fis && fis.File == "car1.png"))
         {
             // Do desired actions like displaying the image in full screen.
         }
@@ -781,9 +794,9 @@ You can show a list of interactive cards with each card containing an image, a l
 
 You can also show one or more buttons on a card as options to choose from. Create the [CardButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardButton.html) with the necessary [CardButton.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardButton.html#Syncfusion_Maui_Chat_CardButton_Title)(the text to be displayed in the button) and [CardButton.Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardButton.html#Syncfusion_Maui_Chat_CardButton_Value)(the text value that should be added as a response message when the button is clicked, usually the title of the card) and add it to the [Card.Buttons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Buttons) collection.
 
-Upon creating the individual cards, add them to a Card typed collection and assign this collection of cards to the [CardMessage.Cards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardMessage.html#Syncfusion_Maui_Chat_CardMessage_Cards) property. The card message auto-sizes itself in height based on the card contents (the text and button count) of the largest card in the list of cards.
+Upon creating the individual cards, add them to a Card typed collection and assign this collection of cards to the [CardMessage.Cards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardMessage.html#Syncfusion_Maui_Chat_CardMessage_Cards) property. The card message auto-sizes its height based on the largest card in the collection.
 
-If you don’t want to display images, buttons, or text(title, subtitle, description) in a card simply do not set values to the required properties. For example, if you don’t want to display the image on a card, do not set any value to the `Card.Image` property.
+If you don't want to display images, buttons, or text (title, subtitle, description) in a card, simply omit the corresponding properties. For example, omit the `Card.Image` property to hide the image on a card.
 
 {% tabs %}
 {% highlight xaml %}
@@ -834,8 +847,13 @@ namespace MauiChat
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="54" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Syncfusion.Maui.Chat;
+
 public class ViewModel : INotifyPropertyChanged
 {
+    public ObservableCollection<Card> CardsCollection { get; set; }
     ...
     public ViewModel()
     {
@@ -847,14 +865,14 @@ public class ViewModel : INotifyPropertyChanged
 
     private void GenerateCards()
     {
-        cardsCollection = new ObservableCollection<Card>();
+        CardsCollection = new ObservableCollection<Card>();
         Card card1 = new Card()
         {
             Title = "Miami",
             Description = "Miami, officially the City of Miami, is the seat of Miami-Dade County and the cultural, economic and financial center of South Florida in the United States. The city covers an area of about 56 square miles between the Everglades to the west and Biscayne Bay to the east.",
             Image = "miami.png",
         };
-        card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miammi" });
+        card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miami" });
 
         Card card2 = new Card()
         {
@@ -890,7 +908,7 @@ public class ViewModel : INotifyPropertyChanged
         Messages.Add(new CardMessage()
         {
             Cards = CardsCollection,
-            Author = new Author(){Name="Stacy", Avatar= ImageSource.FromResource("Stacy.png")}
+            Author = new Author(){Name="Stacy", Avatar= "Stacy.png"}
         });
     }
     ...  
@@ -993,7 +1011,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endtabs %}
 
 ## Delivery states
-The `SfChat` provides built-in support for displaying message delivery states such as sent, delivered, read, and failed. This feature enhances communication transparency by showing the current status of each message.
+The `SfChat` provides built-in support for displaying message delivery states such as sent, delivered, read, and failed. This feature enhances communication transparency by showing the current status of each message in the chat.
 The [ShowDeliveryState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowDeliveryState) property determines whether delivery state indicators are displayed for messages. By default, this property is set to `false`.
 
 {% tabs %}
@@ -1060,12 +1078,19 @@ The [DeliveryState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMe
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+
 public class ViewModel : INotifyPropertyChanged
 {
     ...
-    public ChatViewModel()
+    public ViewModel()
     {
         ...
+        this.Messages = new ObservableCollection<object>();
+        this.CurrentUser = new Author() { Name = "Nancy" };
         this.SendMessageCommand = new Command<object>(ExecuteSendMessageCommand);
         ...
     }
@@ -1082,15 +1107,15 @@ public class ViewModel : INotifyPropertyChanged
     /// <summary>
     /// Generates the messages and adds them to the messages collection.
     /// </summary>
-    private async void GenerateMessages()
+    private async Task GenerateMessages()
     {
         var initialMessage = new TextMessage
         {
-            Author = currentUser,
+            Author = CurrentUser,
             Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
             DeliveryState = Syncfusion.Maui.Chat.DeliveryStates.Sent,
         };
-        messages.Add(initialMessage);
+        Messages.Add(initialMessage);
         UpdateDeliveryStatesIfCurrentUser(initialMessage);
 
         var responses = new[]
@@ -1110,7 +1135,7 @@ public class ViewModel : INotifyPropertyChanged
         foreach (var response in responses)
         {
             await Task.Delay(1000).ConfigureAwait(true);
-            messages.Add(response);
+            Messages.Add(response);
         }
     }
 
@@ -1136,7 +1161,7 @@ public class ViewModel : INotifyPropertyChanged
     /// </summary>
     /// <param name="messageObj">The message object to update. Must be of type <see cref="TextMessage"/>.</param>
     /// <returns>A task that represents the asynchronous operation.</returns>
-    private async void UpdateDeliveryStatesIfCurrentUser(TextMessage messageObj)
+    private async Task UpdateDeliveryStatesIfCurrentUser(TextMessage messageObj)
     {
         if (messageObj.Author == CurrentUser)
         {
@@ -1230,7 +1255,7 @@ namespace MauiChat
 ## Pin message
 
 The [`SfChat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) control allows you to pin messages using the [`AllowPinning`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowPinning) property.
-To enable pin message support, set the `AllowPinning` property to `true`.
+To enable pinning, set the `AllowPinning` property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
@@ -1271,7 +1296,7 @@ namespace MauiChat
 
 N> 
 * The [`IMessage.IsPinned`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_IsPinned) property is used to mark a message as pinned during initial load.
-* Pinned messages are stored in the read‑only [`SfChat.PinnedMessages`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedMessages) collection.
+* Pinned messages are stored in the read-only [`SfChat.PinnedMessages`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedMessages) collection.
 
 ### Restricting pinned message container visibility
 
@@ -1368,7 +1393,11 @@ You can customize pinned message appearance using the
 
     <ContentPage.Resources>
         <DataTemplate x:Key="PinnedTemplate">
-            ...
+            <Grid Padding="8">
+                <Label Text="{Binding Text}"
+                       FontAttributes="Bold"
+                       TextColor="DarkRed" />
+            </Grid>
         </DataTemplate>
     </ContentPage.Resources>
 
@@ -1382,6 +1411,9 @@ You can customize pinned message appearance using the
 
 {% endhighlight %}
 {% highlight c# hl_lines="13" %}
+
+using Syncfusion.Maui.Chat;
+
 public partial class MainPage : ContentPage
 {
     SfChat sfChat;
@@ -1390,6 +1422,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+        this.sfChat = new SfChat();
         this.viewModel = new ViewModel();
         this.sfChat.Messages = viewModel.Messages;
         this.sfChat.CurrentUser = viewModel.CurrentUser;
@@ -1402,7 +1435,11 @@ public partial class MainPage : ContentPage
     {
         return new DataTemplate(() =>
         {
-            ...
+            var grid = new Grid { Padding = new Thickness(8) };
+            var label = new Label { FontAttributes = FontAttributes.Bold, TextColor = Colors.DarkRed };
+            label.SetBinding(Label.TextProperty, "Text");
+            grid.Children.Add(label);
+            return grid;
         });
     }
 }
@@ -1418,7 +1455,7 @@ The `SfChat` control triggers the [MessagePinned](https://help.syncfusion.com/cr
 
 {% tabs %}
 {% highlight xaml hl_lines="5, 6" %}
-    
+
     <sfChat:SfChat x:Name="sfChat"
                    Messages="{Binding Messages}"
                    CurrentUser="{Binding CurrentUser}"
@@ -1533,6 +1570,8 @@ public class ChatMessageTemplateSelector : DataTemplateSelector
 
 ![Syncfusion .NET MAUI Chat Message template](images/messages/maui-chat-message-template.png)
 
+N> The `IncomingMessageTemplate`, `OutgoingMessageTemplate`, and `RatingTemplate` classes referenced above are `ContentView` subclasses that contain the visual tree for each message type. Their XAML/code definitions are available in the [GitHub sample](https://github.com/SyncfusionExamples/message-template-.net-maui-chat).
+
 ### Using ChatMessageTemplateSelector for custom templates
 
 Create a custom class that extends [ChatMessageTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatMessageTemplateSelector.html) and override the `OnSelectTemplate` method to return either a custom template or default templates based on the message item.
@@ -1607,12 +1646,12 @@ The `SfChat` allows you to target and fully customize views within the chat cont
 
 {% tabs %}
 {% highlight xaml hl_lines="15 31" %}
-    
+
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-             xmlns:local="clr-namespace:MauiChat"             
+             xmlns:local="clr-namespace:MauiChat"
              x:Class="MauiChat.MainPage">
 
         <ContentPage.BindingContext>
@@ -1625,7 +1664,7 @@ The `SfChat` allows you to target and fully customize views within the chat cont
             <Style TargetType="sfChat:IncomingMessageContentView">
                 <Setter Property="ControlTemplate">
                     <Setter.Value>
-                        <ControlTemplate>
+                        <ControlTemplate x:Key="IncomingContentTemplate">
                             <Grid>
                                 <Label Text="{Binding Text}"
                                        Padding="10"
@@ -1636,15 +1675,15 @@ The `SfChat` allows you to target and fully customize views within the chat cont
                     </Setter.Value>
                 </Setter>
             </Style>
-            
+
             <!-- OutgoingContentView Style -->
             <Style TargetType="sfChat:OutgoingMessageContentView">
                 <Setter Property="ControlTemplate">
                     <Setter.Value>
-                        <ControlTemplate>
+                        <ControlTemplate x:Key="OutgoingContentTemplate">
                             <Grid>
                                 <Label  Padding="10,10,10,40"
-                                        FontSize="12" 
+                                        FontSize="12"
                                         FontAttributes="Italic"
                                         Text="{Binding Text}" />
                             </Grid>
@@ -1652,7 +1691,6 @@ The `SfChat` allows you to target and fully customize views within the chat cont
                     </Setter.Value>
                 </Setter>
             </Style>
-            ...
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -1666,84 +1704,86 @@ The `SfChat` allows you to target and fully customize views within the chat cont
 {% endhighlight %}
 {% highlight c# hl_lines="23 48" %}
 
+using Microsoft.Maui.Controls;
 using Syncfusion.Maui.Chat;
 
 namespace MauiChat
-
-public partial class ContentViews : ContentPage
 {
-    SfChat sfChat;
-    ViewModel viewModel;
-
-    public ContentViews()
+    public partial class ContentViews : ContentPage
     {
-        InitializeComponent();
+        SfChat sfChat;
+        ViewModel viewModel;
 
-        viewModel = new ViewModel();
-        sfChat = new SfChat
+        public ContentViews()
         {
-            Messages = viewModel.Messages,
-            CurrentUser = viewModel.CurrentUser
-        };
+            InitializeComponent();
 
-        Resources = new ResourceDictionary();
-
-        var incomingStyle = new Style(typeof(IncomingMessageContentView))
-        {
-            Setters =
+            viewModel = new ViewModel();
+            sfChat = new SfChat
             {
-                new Setter
-                {
-                    Property = IncomingMessageContentView.ControlTemplateProperty,
-                    Value = new ControlTemplate(() =>
-                    {
-                        var grid = new Grid();
-                        var label = new Label
-                        {
-                            Padding = new Thickness(10),
-                            BackgroundColor = Colors.LightGoldenrodYellow,
-                            FontSize = 12,
-                            FontAttributes = FontAttributes.Italic
-                        };
-                        label.SetBinding(Label.TextProperty, "Text");
-                        grid.Children.Add(label);
-                        return grid;
-                    })
-                }
-            }
-        };
+                Messages = viewModel.Messages,
+                CurrentUser = viewModel.CurrentUser
+            };
 
-        var outgoingStyle = new Style(typeof(OutgoingMessageContentView))
-        {
-            Setters =
+            Resources = new ResourceDictionary();
+
+            var incomingStyle = new Style(typeof(IncomingMessageContentView))
             {
-                new Setter
+                Setters =
                 {
-                    Property = OutgoingMessageContentView.ControlTemplateProperty,
-                    Value = new ControlTemplate(() =>
+                    new Setter
                     {
-                        var grid = new Grid();
-                        var label = new Label
+                        Property = IncomingMessageContentView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
                         {
-                            Padding = new Thickness(10, 10, 10, 40),
-                            FontSize = 12,
-                            BackgroundColor = Colors.LightGoldenrodYellow,
-                            FontAttributes = FontAttributes.Italic
-                        };
-                        label.SetBinding(Label.TextProperty, "Text");
-                        grid.Children.Add(label);
-                        return grid;
-                    })
+                            var grid = new Grid();
+                            var label = new Label
+                            {
+                                Padding = new Thickness(10),
+                                BackgroundColor = Colors.LightGoldenrodYellow,
+                                FontSize = 12,
+                                FontAttributes = FontAttributes.Italic
+                            };
+                            label.SetBinding(Label.TextProperty, "Text");
+                            grid.Children.Add(label);
+                            return grid;
+                        })
+                    }
                 }
-            }
-        };
-        ...
+            };
 
-        Resources.Add(incomingStyle);
-        Resources.Add(outgoingStyle);
+            var outgoingStyle = new Style(typeof(OutgoingMessageContentView))
+            {
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = OutgoingMessageContentView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
+                        {
+                            var grid = new Grid();
+                            var label = new Label
+                            {
+                                Padding = new Thickness(10, 10, 10, 40),
+                                FontSize = 12,
+                                BackgroundColor = Colors.LightGoldenrodYellow,
+                                FontAttributes = FontAttributes.Italic
+                            };
+                            label.SetBinding(Label.TextProperty, "Text");
+                            grid.Children.Add(label);
+                            return grid;
+                        })
+                    }
+                }
+            };
+            ...
 
-        Content = sfChat;
-        BindingContext = viewModel;
+            Resources.Add(incomingStyle);
+            Resources.Add(outgoingStyle);
+
+            Content = sfChat;
+            BindingContext = viewModel;
+        }
     }
 }
 
@@ -1752,7 +1792,7 @@ public partial class ContentViews : ContentPage
 
 ## Spacing between messages
 
-`SfChat` allows to change the vertical spacing between the messages in view using [MessageSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageSpacing) property. The default value is `8`.
+`SfChat` allows you to change the vertical spacing between the messages in view using the [MessageSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageSpacing) property. The default value is `8`.
 
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
@@ -1806,11 +1846,11 @@ namespace MauiChat
 
 ## Sending message
 
-The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) can send messages by using the send button located in the message input area at the bottom of the chat control. Tapping the send button or pressing the Enter key (in WinUI & macOS) will generate a new text message with the text entered in the editor and add it to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection. The [SendMessage event](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be triggered upon tapping the send button.
+The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) can send messages by using the send button located in the message input area at the bottom of the chat control. Tapping the send button or pressing the Enter key (in WinUI and macOS) will generate a new text message with the text entered in the editor and add it to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection. The [SendMessage event](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be triggered upon tapping the send button.
 
 **Cancel the message from sending**
 
-The newly added message can be canceled from sending in the `SendMessage` event handler and `SendMessageCommand` by setting the Handled value as `true` in the provided [SendMessageEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SendMessageEventArgs.html).
+The newly added message can be canceled from sending in the `SendMessage` event handler or `SendMessageCommand` by setting `Handled` to `true` in the provided [SendMessageEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SendMessageEventArgs.html).
 
 **SendMessage event handler**
 
@@ -1872,6 +1912,9 @@ namespace MauiChat
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+
 public class ViewModel : INotifyPropertyChanged
 {
     ...
@@ -1916,7 +1959,7 @@ public class SendMessageCommandExt : ICommand
 
 ## Show keyboard always
 
-By default, the keyboard will be open in view, even after a message is sent or focus is lost, just like in most mainstream chat applications. To hide the keyboard after the message has been sent or lost focus, set the [ShowKeyboardAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowKeyboardAlways) property to `false`.
+By default, the keyboard remains open even after a message is sent or focus is lost, similar to most mainstream chat applications. To hide the keyboard after a message is sent or focus is lost, set the [ShowKeyboardAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowKeyboardAlways) property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
@@ -1943,7 +1986,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in chat
+## Single-line input in the editor
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
@@ -1980,12 +2023,12 @@ By default, the author’s name and avatar are not shown for outgoing messages s
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
-    
+
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-            xmlns:local="clr-namespace:MauiChat"             
+            xmlns:local="clr-namespace:MauiChat"
             x:Class="MauiChat.MainPage">
 
     <ContentPage.BindingContext>
@@ -1994,13 +2037,37 @@ By default, the author’s name and avatar are not shown for outgoing messages s
 
     <ContentPage.Content>
         <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
+                        Messages="{Binding Messages}"
                         CurrentUser="{Binding CurrentUser}"
                         ShowOutgoingMessageAvatar="True"
                         ShowOutgoingMessageAuthorName="True" />
     </ContentPage.Content>
 </ContentPage>
 
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.ShowOutgoingMessageAvatar = true;
+            this.sfChat.ShowOutgoingMessageAuthorName = true;
+            this.Content = sfChat;
+        }
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -2010,12 +2077,12 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
-    
+
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-            xmlns:local="clr-namespace:MauiChat"             
+            xmlns:local="clr-namespace:MauiChat"
             x:Class="MauiChat.MainPage">
 
     <ContentPage.BindingContext>
@@ -2024,12 +2091,36 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
     <ContentPage.Content>
         <sfChat:SfChat x:Name="sfChat"
-                        Messages="{Binding Messages}"                          
+                        Messages="{Binding Messages}"
                         CurrentUser="{Binding CurrentUser}"
                         ShowIncomingMessageAuthorName="False"
                         ShowIncomingMessageAvatar="False" />
     </ContentPage.Content>
 </ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.ShowIncomingMessageAuthorName = false;
+            this.sfChat.ShowIncomingMessageAvatar = false;
+            this.Content = sfChat;
+        }
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -2037,7 +2128,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 N> In SfChat, when no avatar image is set, the author's initials are shown automatically based on their name.
 
-## MessageTimestampFormat for incoming and outgoing messages
+## Message timestamp format for incoming and outgoing messages
 
 The `SfChat` allows you specify the format in which timestamps are shown for outgoing and incoming messages. The date and time representation can be customized using the [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) properties.
 
@@ -2051,9 +2142,12 @@ The `SfChat` allows you specify the format in which timestamps are shown for out
                 OutgoingMessageTimestampFormat="hh:mm tt" />
 {% endhighlight %}
 {% highlight c# hl_lines="2 3" %}
-  SfChat sfChat = new SfChat();
-  sfChat.IncomingMessageTimestampFormat = "hh:mm tt";
-  sfChat.OutgoingMessageTimestampFormat = "hh:mm tt";
+
+using Syncfusion.Maui.Chat;
+
+SfChat sfChat = new SfChat();
+sfChat.IncomingMessageTimestampFormat = "hh:mm tt";
+sfChat.OutgoingMessageTimestampFormat = "hh:mm tt";
 {% endhighlight %}
 {% endtabs %}
 
@@ -2061,7 +2155,7 @@ The `SfChat` allows you specify the format in which timestamps are shown for out
 
 ## Customize the shape of the message
 
-The `SfChat` allows to change the shape of the messages by using the [MessageShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageShape) property.
+The `SfChat` allows you to change the shape of the messages by using the [MessageShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageShape) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
@@ -2115,7 +2209,7 @@ namespace MauiChat
 
 ## Hide the message input view
 
-The `SfChat` allows to hide the message input view (editor) by setting `false` to [ShowMessageInputView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowMessageInputView) property.
+The `SfChat` allows you to hide the message input view (editor) by setting the [ShowMessageInputView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowMessageInputView) property to `false`.
 
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
@@ -2166,19 +2260,25 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-## Messages without author (system generated messages / admin messages)
+## Messages without author
 
-Using templates, you can show messages with any information, similar to security alerts in WhatsApp or admin notifications. These messages can be put into the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection without specifying an author.
-In the provided code example, we've set up a custom template to display a security message from an admin when the author of the message is not specified.
+Using templates, you can show messages with any information as system-generated messages or admin notifications (similar to security alerts in WhatsApp). These messages can be put into the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection without specifying an author.
+In the provided code example, a custom template displays a security message from an admin when the author of the message is not specified.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-sfChat = new SfChat();
-this.sfChat.Messages = viewModel.Messages;
-this.sfChat.CurrentUser = viewModel.CurrentUser;
-this.sfChat.MessageTemplate = new CustomMessageTemplateSelector(this.sfChat);
-this.Content = sfChat;
+using Syncfusion.Maui.Chat;
+
+public MainPage()
+{
+    InitializeComponent();
+    sfChat = new SfChat();
+    this.sfChat.Messages = viewModel.Messages;
+    this.sfChat.CurrentUser = viewModel.CurrentUser;
+    this.sfChat.MessageTemplate = new CustomMessageTemplateSelector(this.sfChat);
+    this.Content = sfChat;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -2223,7 +2323,7 @@ public class MessageTemplateSelector : ChatMessageTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI Chat Sytem generated message](images/messages/maui-chat-system-generated-custom-message-template.png)
+![Syncfusion .NET MAUI Chat System generated message](images/messages/maui-chat-system-generated-custom-message-template.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
 
