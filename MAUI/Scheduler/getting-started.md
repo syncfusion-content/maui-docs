@@ -69,7 +69,7 @@ Before proceeding, ensure the following are set up:
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI project
@@ -131,29 +131,48 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {% tabs %}
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                       View="Week"
-                       DisplayDate="{Binding DisplayDate}"
-                       AppointmentsSource="{Binding Events}"
-                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GettingStarted"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Week"
+                           DisplayDate="{Binding DisplayDate}"
+                           AppointmentsSource="{Binding Events}"
+                           AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
         <scheduler:SfScheduler.BindingContext>
             <local:SchedulerViewModel />
         </scheduler:SfScheduler.BindingContext>
     </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# %}
 
-var appointment = new ObservableCollection<SchedulerAppointment>();
-appointment.Add(new SchedulerAppointment()
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+namespace GettingStarted
 {
-    StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(11),
-    Subject = "Client Meeting",
-    Location = "Hutchison road",
-});
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
 
-this.scheduler.AppointmentsSource = appointment;
+            var appointment = new ObservableCollection<SchedulerAppointment>();
+            appointment.Add(new SchedulerAppointment()
+            {
+                StartTime = DateTime.Today.AddHours(9),
+                EndTime = DateTime.Today.AddHours(11),
+                Subject = "Client Meeting",
+                Location = "Hutchison road",
+            });
 
+            this.Scheduler.AppointmentsSource = appointment;
+        }
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 

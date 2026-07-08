@@ -189,8 +189,12 @@ The [SchedulerContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/S
 
 - [ContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuOpeningEventArgs_ContextMenu) – Gets the collection of menu items that will be displayed.
 - [MenuInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuOpeningEventArgs_MenuInfo) – Gets information about the scheduler element that invoked the context menu. Provides the following details - selected appointment, cell date and time, associated resource and scheduler instance.
-- [MenuType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuOpeningEventArgs_MenuType) – Gets the type of scheduler element (Appointment, SchedulerCell or AllDay) for which the context menu is opened.
-- 'Cancel' – Specifies whether the context menu opening operation should be canceled. 
+- [MenuType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuOpeningEventArgs_MenuType) – Gets the type of scheduler element (`Appointment`, `SchedulerCell`, or `AllDay`) for which the context menu is opened.
+- [MenuInfo.Appointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuInfo.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuInfo_Appointment) – The `SchedulerAppointment` associated with the context menu (only for `Appointment` type).
+- [MenuInfo.DateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuInfo.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuInfo_DateTime) – The date/time of the cell where the context menu was opened.
+- [MenuInfo.Resource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuInfo.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuInfo_Resource) – The associated `SchedulerResource` (only in resource views).
+- [MenuInfo.Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuInfo.html#Syncfusion_Maui_Scheduler_SchedulerContextMenuInfo_Scheduler) – The `SfScheduler` instance that raised the event.
+- `Cancel` – Specifies whether the context menu opening operation should be canceled.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}

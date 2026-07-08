@@ -1,31 +1,44 @@
 ---
 layout: post
-title: Appointment Resizing in .NET MAUI Scheduler | Syncfusion
-description: Discover how to resize appointments in the Syncfusion .NET MAUI Scheduler, interactively change duration, and control resize behavior with settings and events.
+title: Appointment Resizing in .NET MAUI Scheduler Control | Syncfusion®
+description: Learn how to resize appointments in the Syncfusion® .NET MAUI Scheduler (SfScheduler) control, change appointment duration interactively, and customize resize behavior using settings and events.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler appointments, .net maui appointment resizing, .net maui scheduler appointment duration, .net maui scheduler resize events, .net maui scheduler resize appointment.
 ---
 
-# Appointment Resizing in .NET MAUI SfScheduler
+# Appointment Resizing in .NET MAUI Scheduler (SfScheduler)
 
 Appointments can be resized interactively to adjust their start or end times. In Day, Week, and Work Week views, you can resize an appointment by dragging its top or bottom edges. In Month, Week, All‑Day, and Timeline views, resizing is performed by dragging the left or right edges of the appointment. By default, the [AllowAppointmentResize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowAppointmentResize) property is set to `false`. To enable appointment resizing, set the `AllowAppointmentResize` property to `true`.
 
+Refer to the [.NET MAUI Scheduler getting started](https://help.syncfusion.com/maui/scheduler/getting-started) documentation to add the scheduler control to your project before using these features.
+
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-<scheduler:SfScheduler x:Name="scheduler" 
-                       View="Day" 
-                       AllowAppointmentResize="True">
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="scheduler" 
+                           View="Day" 
+                           AllowAppointmentResize="True">
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="6" %}
-public partial class MainPage : ContentPage
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        this.scheduler.AllowAppointmentResize = true;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.scheduler.AllowAppointmentResize = true;
+        }
     }
 }
 {% endhighlight %}
@@ -36,6 +49,7 @@ public partial class MainPage : ContentPage
 N>
 - Appointment resizing is supported only on desktop platforms.
 - Resizing works exclusively through mouse interactions, using the built‑in mouse resize cursors of the native platform.
+- The resize handles appear only on appointments added through the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) collection or appointments bound through the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property. Ensure `AllowAppointmentResize` is set to `true` if resize does not trigger.
 
 ## Appointment Resize Settings
 
@@ -46,23 +60,34 @@ The [AppointmentResizeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.M
 You can enable automatic scrolling during appointment resizing using the [AllowResizeScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_AllowResizeScroll) property. As the appointment is being resized and reaches the boundary of the visible timeslots, the scheduler scrolls to display additional timeslots. This allows the resizing process to continue smoothly. By default, `AllowResizeScroll` is set to `true`. To disable automatic scrolling during appointment resizing, set the `AllowResizeScroll` property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
-<scheduler:SfScheduler x:Name="scheduler" 
-                       View="Day" 
-                       AllowAppointmentResize="True">
-    <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings AllowResizeScroll="False"/>
-    </scheduler:SfScheduler.AppointmentResizeSettings>
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="8 9 10" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="scheduler" 
+                           View="Day" 
+                           AllowAppointmentResize="True">
+        <scheduler:SfScheduler.AppointmentResizeSettings>
+            <scheduler:AppointmentResizeSettings AllowResizeScroll="False"/>
+        </scheduler:SfScheduler.AppointmentResizeSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7" %}
-public partial class MainPage : ContentPage
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        this.scheduler.AllowAppointmentResize = true;
-        this.scheduler.AppointmentResizeSettings.AllowResizeScroll = false;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.scheduler.AllowAppointmentResize = true;
+            this.scheduler.AppointmentResizeSettings.AllowResizeScroll = false;
+        }
     }
 }
 {% endhighlight %}
@@ -73,23 +98,34 @@ public partial class MainPage : ContentPage
 You can display a time indicator while resizing an appointment by using the [ShowTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ShowTimeIndicator) property. By default, `ShowTimeIndicator` is set to `true`. To hide the time indicator during resizing, set the `ShowTimeIndicator` property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
-<scheduler:SfScheduler x:Name="scheduler" 
-                       View="Day" 
-                       AllowAppointmentResize="True">
-    <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings ShowTimeIndicator="False"/>
-    </scheduler:SfScheduler.AppointmentResizeSettings>
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="8 9 10" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="scheduler" 
+                           View="Day" 
+                           AllowAppointmentResize="True">
+        <scheduler:SfScheduler.AppointmentResizeSettings>
+            <scheduler:AppointmentResizeSettings ShowTimeIndicator="False"/>
+        </scheduler:SfScheduler.AppointmentResizeSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7" %}
-public partial class MainPage : ContentPage
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        this.scheduler.AllowAppointmentResize = true;
-        this.scheduler.AppointmentResizeSettings.ShowTimeIndicator = false;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.scheduler.AllowAppointmentResize = true;
+            this.scheduler.AppointmentResizeSettings.ShowTimeIndicator = false;
+        }
     }
 }
 {% endhighlight %}
@@ -100,26 +136,37 @@ N>
 
 ### Time Indicator Text Format
 
-The format of the time displayed in the time indicator while resizing an appointment can be customized using the [TimeIndicatorTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_TimeIndicatorTextFormat) property.
+The format of the time displayed in the time indicator while resizing an appointment can be customized using the [TimeIndicatorTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_TimeIndicatorTextFormat) property. The default value is `hh:mm tt`. Use standard .NET [date and time format strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
-<scheduler:SfScheduler x:Name="scheduler" 
-                       View="Day" 
-                       AllowAppointmentResize="True">
-    <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings TimeIndicatorTextFormat="HH:MM"/>
-    </scheduler:SfScheduler.AppointmentResizeSettings>
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="8 9 10" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="scheduler" 
+                           View="Day" 
+                           AllowAppointmentResize="True">
+        <scheduler:SfScheduler.AppointmentResizeSettings>
+            <scheduler:AppointmentResizeSettings TimeIndicatorTextFormat="HH:mm"/>
+        </scheduler:SfScheduler.AppointmentResizeSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7" %}
-public partial class MainPage : ContentPage
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        this.scheduler.AllowAppointmentResize = true;
-        this.scheduler.AppointmentResizeSettings.TimeIndicatorTextFormat="HH:MM";
+        public MainPage()
+        {
+            InitializeComponent();
+            this.scheduler.AllowAppointmentResize = true;
+            this.scheduler.AppointmentResizeSettings.TimeIndicatorTextFormat = "HH:mm";
+        }
     }
 }
 {% endhighlight %}
@@ -130,33 +177,44 @@ public partial class MainPage : ContentPage
 The appearance of the time indicator text, including color, font size, font family, and font attributes, can be customized using the [TimeIndicatorStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_TimeIndicatorStyle) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6 7 8" %}
-<scheduler:SfScheduler x:Name="scheduler" 
-                       View="Day" 
-                       AllowAppointmentResize="True">
-    <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings>
-            <scheduler:AppointmentResizeSettings.TimeIndicatorStyle>
-                <scheduler:SchedulerTextStyle TextColor="Green" FontSize="15" FontAttributes="Bold" FontFamily="OpenSansSemibold"/>
-            </scheduler:AppointmentResizeSettings.TimeIndicatorStyle>
-        </scheduler:AppointmentResizeSettings>
-    </scheduler:SfScheduler.AppointmentResizeSettings>
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="9 10 11 12 13" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="scheduler" 
+                           View="Day" 
+                           AllowAppointmentResize="True">
+        <scheduler:SfScheduler.AppointmentResizeSettings>
+            <scheduler:AppointmentResizeSettings>
+                <scheduler:AppointmentResizeSettings.TimeIndicatorStyle>
+                    <scheduler:SchedulerTextStyle TextColor="Green" FontSize="15" FontAttributes="Bold" FontFamily="OpenSansSemibold"/>
+                </scheduler:AppointmentResizeSettings.TimeIndicatorStyle>
+            </scheduler:AppointmentResizeSettings>
+        </scheduler:SfScheduler.AppointmentResizeSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7 8 9 10 11 12 13 14" %}
-public partial class MainPage : ContentPage
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        this.scheduler.AllowAppointmentResize = true;
-        this.scheduler.AppointmentResizeSettings.TimeIndicatorStyle = new SchedulerTextStyle() 
+        public MainPage()
         {
-            TextColor = Colors.Green,
-            FontSize = 15,
-            FontAttributes = FontAttributes.Bold,
-            FontFamily = "OpenSansSemibold"
-        };
+            InitializeComponent();
+            this.scheduler.AllowAppointmentResize = true;
+            this.scheduler.AppointmentResizeSettings.TimeIndicatorStyle = new SchedulerTextStyle()
+            {
+                TextColor = Colors.Green,
+                FontSize = 15,
+                FontAttributes = FontAttributes.Bold,
+                FontFamily = "OpenSansSemibold"
+            };
+        }
     }
 }
 {% endhighlight %}
@@ -164,26 +222,37 @@ public partial class MainPage : ContentPage
 
 ### Resize Border Customization
  
-The border displayed around an appointment during resizing can be customized using the [ResizeBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderThickness) and [ResizeBorderStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderStroke) properties. `ResizeBorderThickness` defines how thick the border appears, while `ResizeBorderStroke` specifies its color.
+The border displayed around an appointment during resizing can be customized using the [ResizeBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderThickness) and [ResizeBorderStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderStroke) properties. `ResizeBorderThickness` defines how thick the border appears (default value is `1`), while `ResizeBorderStroke` of type [Brush](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/brush) specifies its color (default value is `Black`).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="4 5 6" %}
-<scheduler:SfScheduler x:Name="scheduler" 
-                       View="Day" 
-                       AllowAppointmentResize="True">
-    <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings ResizeBorderThickness="5" ResizeBorderStroke="Red"/>
-    </scheduler:SfScheduler.AppointmentResizeSettings>
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="7 8 9 10" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="scheduler" 
+                           View="Day" 
+                           AllowAppointmentResize="True">
+        <scheduler:SfScheduler.AppointmentResizeSettings>
+            <scheduler:AppointmentResizeSettings ResizeBorderThickness="5" ResizeBorderStroke="Red"/>
+        </scheduler:SfScheduler.AppointmentResizeSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="6 7" %}
-public partial class MainPage : ContentPage
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        this.scheduler.AppointmentResizeSettings.ResizeBorderStroke = Colors.Red;
-        this.scheduler.AppointmentResizeSettings.ResizeBorderThickness = 5;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.scheduler.AppointmentResizeSettings.ResizeBorderStroke = Colors.Red;
+            this.scheduler.AppointmentResizeSettings.ResizeBorderThickness = 5;
+        }
     }
 }
 {% endhighlight %}
@@ -196,16 +265,35 @@ public partial class MainPage : ContentPage
 The [AppointmentResizeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentResizeStart) event is triggered when resizing of an appointment begins. This event occurs when the pointer is placed on a resizable edge of an appointment and the resize operation is initiated. This event can be used to validate whether the appointment can be resized before the operation proceeds. The resize operation can be cancelled by setting `e.Cancel` to true.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Day" 
-                       AppointmentResizeStart="Scheduler_AppointmentResizeStart">
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Day" 
+                           AppointmentResizeStart="Scheduler_AppointmentResizeStart">
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
-private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeStartEventArgs e)
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    e.Cancel = true;
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeStartEventArgs e)
+        {
+            e.Cancel = true;
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -217,18 +305,37 @@ The [AppointmentResizeStartEventArgs](https://help.syncfusion.com/cr/maui/Syncfu
 - [ResizeEdge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeStartEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeStartEventArgs_ResizeEdge) : Specifies the edge from which the resizing action starts. The values include Top, Bottom, Left, and Right.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Day" 
-                       AppointmentResizeStart="Scheduler_AppointmentResizeStart">
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Day" 
+                           AppointmentResizeStart="Scheduler_AppointmentResizeStart">
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeStartEventArgs e)
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    var appointment = e.Appointment;
-    var resource = e.Resource;
-    var resizeEdge = e.ResizeEdge;
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeStartEventArgs e)
+        {
+            var appointment = e.Appointment;
+            var resource = e.Resource;
+            var resizeEdge = e.ResizeEdge;
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -238,16 +345,35 @@ private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeSt
 The [AppointmentResizing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentResizing) event is triggered continuously while the appointment is being resized. This event is raised as the resize handle is dragged and the appointment duration changes dynamically. This event can be used to monitor the resizing process or to apply custom validation logic while the appointment duration is changing. The resizing operation can be prevented during interaction by setting `e.Cancel` to true.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Day" 
-                       AppointmentResizing="Scheduler_AppointmentResizing">
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Day" 
+                           AppointmentResizing="Scheduler_AppointmentResizing">
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
-private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEventArgs e)
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    e.Cancel = true;
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEventArgs e)
+        {
+            e.Cancel = true;
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -259,21 +385,64 @@ The [AppointmentResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusio
 - [ResizeEdge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_ResizeEdge) : Specifies the edge used for resizing the appointment. The values include Top, Bottom, Left, and Right.
 - [ResizingTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_ResizingTime) : Represents the date time value that corresponds to the current resize position.
 
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEventArgs e)
+        {
+            var appointment = e.Appointment;
+            var resizeEdge = e.ResizeEdge;
+            var resizingTime = e.ResizingTime;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ### Appointment Resize End
 
 The [AppointmentResizeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentResizeEnd) event occurs when the resizing action is completed and the pointer is released. After this event is triggered, the scheduler updates the appointment duration according to the resized position. You can prevent this update by setting the `Cancel` property to `true`, which keeps the appointment with its original duration.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Day" 
-                       AppointmentResizeEnd="Scheduler_AppointmentResizeEnd">
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Day" 
+                           AppointmentResizeEnd="Scheduler_AppointmentResizeEnd">
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
-private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndEventArgs e)
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    e.Cancel = true;
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndEventArgs e)
+        {
+            e.Cancel = true;
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -286,19 +455,38 @@ The [AppointmentResizeEndEventArgs](https://help.syncfusion.com/cr/maui/Syncfusi
 - [ResizedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeEndEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeEndEventArgs_ResizedTime) : Represents the final date time value after the resizing operation. The final resized time can be modified within this event if necessary by assigning a new value to the ResizedTime property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Day" 
-                       AppointmentResizeEnd="Scheduler_AppointmentResizeEnd">
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="GettingStarted.MainPage">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Day" 
+                           AppointmentResizeEnd="Scheduler_AppointmentResizeEnd">
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndEventArgs e)
+using Syncfusion.Maui.Scheduler;
+
+namespace GettingStarted
 {
-    var appointment = e.Appointment;
-    var resource = e.Resource;
-    var resizeEdge = e.ResizeEdge;
-    var resizedTime = e.ResizedTime;
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndEventArgs e)
+        {
+            var appointment = e.Appointment;
+            var resource = e.Resource;
+            var resizeEdge = e.ResizeEdge;
+            var resizedTime = e.ResizedTime;
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
