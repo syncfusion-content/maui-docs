@@ -92,7 +92,7 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 
 * `EventArgs`: In SfDateTimePicker picker, `CancelEventArgs` is used to describe the cancel event which holds the bool value.
 
-    * `Cancel` : Indicating whether we should cancel the operation or not.
+* `Cancel` : Indicating whether we should cancel the operation or not.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -244,7 +244,6 @@ public class ViewModel
 
 ### AcceptCommand
 
-The SfDateTimePicker includes a built-in event called `OkButtonClicked`, which is triggered when the confirm button is tapped on the date time picker. This event can be invoked through the [AcceptCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_AcceptCommand).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
