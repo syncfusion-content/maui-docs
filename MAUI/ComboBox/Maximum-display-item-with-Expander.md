@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load More in .NET MAUI ComboBox control | Syncfusion®
-description: Learn about Load More support in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
+description: Learn how to restrict the number of items and load the remaining items with the LoadMore button in the Syncfusion® .NET MAUI ComboBox (SfComboBox)
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -14,51 +14,15 @@ The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 
 ## Prerequisites
 
-Before proceeding, ensure the following are set up:
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later and the .NET MAUI workload. For setup details, see [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0).
-2. Create a [.NET MAUI project](Getting-Started.md#step-1-create-a-new-net-maui-project).
-3. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-4. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-5. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+- `Syncfusion.Maui.Inputs`
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
-
-N> `Load More` is displayed only when `IsEditable` is `true` and `IsFilteringEnabled` is `true`. If either is `false`, the `Load More` button is not shown even if `MaximumSuggestion` is set.
-
-## Define the model and view model
-
-The samples below use the `SocialMedia` model and `SocialMediaViewModel` defined in [Getting Started](Getting-Started.md#step-4-define-model-and-view-model). Use a `BindingContext` on the page so that `{Binding SocialMedias}` resolves correctly.
-
 ## Maximum suggestions
 
-Use the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) `int` property to limit the number of suggestions displayed in the drop-down. When the filtered results exceed this value, a `Load More` button appears at the bottom of the drop-down so the user can load additional items. The default value is `0` (no limit).
+Use the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) `int` property to limit the number of suggestions displayed in the drop-down. When the filtered results exceed this value, a `Load More` button appears at the bottom of the drop-down so the user can load additional items. The default value is `0`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -79,8 +43,6 @@ Use the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Inputs;
-
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
@@ -93,6 +55,37 @@ SfComboBox comboBox = new SfComboBox
     ItemsSource = socialMediaViewModel.SocialMedias,
     BindingContext = socialMediaViewModel,
 };
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -142,6 +135,37 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -182,8 +206,6 @@ The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Inputs;
-
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
@@ -218,6 +240,37 @@ comboBox.LoadMoreTemplate = new DataTemplate(() =>
 });
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -228,8 +281,7 @@ The following image illustrates the result of the above code:
 
 The [LoadMoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreButtonTapped) event fires when the user taps the `Load More` button. The event handler receives the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) as `sender` and `EventArgs` as the event arguments. Use this event to load additional items into the bound collection.
 
-### XAML
-
+{% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
@@ -246,45 +298,65 @@ The [LoadMoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.I
 </editors:SfComboBox>
 
 {% endhighlight %}
-
-### C# (page code-behind)
-
-Define the event handler in the page's code-behind file (`MainPage.xaml.cs`).
-
 {% highlight c# %}
 
-using Syncfusion.Maui.Inputs;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
-public partial class MainPage : ContentPage
+SfComboBox comboBox = new SfComboBox
 {
-    public MainPage()
-    {
-        InitializeComponent();
+    IsFilteringEnabled = true,
+    IsEditable = true,
+    MaximumSuggestion = 2,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
+};
 
-        SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+comboBox.LoadMoreButtonTapped += OnComboBoxLoadMoreButtonTapped;
+Content = comboBox;
 
-        SfComboBox comboBox = new SfComboBox
-        {
-            IsFilteringEnabled = true,
-            IsEditable = true,
-            MaximumSuggestion = 2,
-            ItemsSource = socialMediaViewModel.SocialMedias,
-            DisplayMemberPath = "Name",
-            TextMemberPath = "Name",
-            BindingContext = socialMediaViewModel,
-        };
+{% endhighlight %}
+{% highlight c# %}
 
-        comboBox.LoadMoreButtonTapped += OnComboBoxLoadMoreButtonTapped;
-        Content = comboBox;
-    }
-
-    private void OnComboBoxLoadMoreButtonTapped(object? sender, EventArgs e)
-    {
-        // Load additional items into the bound collection here.
-    }
+private void OnComboBoxLoadMoreButtonTapped(object? sender, EventArgs e)
+{
+    // Load additional items into the bound collection here.
 }
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 
@@ -292,5 +364,3 @@ public partial class MainPage : ContentPage
 * [Editing in .NET MAUI ComboBox](Editing.md)
 * [Filtering in .NET MAUI ComboBox](Filtering.md)
 * [Selection in .NET MAUI ComboBox](Selection.md)
-* [SfComboBox API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html)
-

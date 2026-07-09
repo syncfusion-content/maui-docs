@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Highlighting matched text in .NET MAUI ComboBox | Syncfusion®
-description: Learn about highlighting matched text in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
+description: Learn about highlighting matched text in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -14,44 +14,11 @@ The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 
 ## Prerequisites
 
-Before proceeding, ensure the following are set up:
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later and the .NET MAUI workload. For setup details, see [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0).
-2. Create a [.NET MAUI project](Getting-Started.md#step-1-create-a-new-net-maui-project).
-3. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-4. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-5. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+- `Syncfusion.Maui.Inputs`
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
-
-## Define the model and view model
-
-The samples below use the `SocialMedia` model and `SocialMediaViewModel` defined in [Getting Started](Getting-Started.md#step-4-define-model-and-view-model). Use a `BindingContext` on the page so that `{Binding SocialMedias}` resolves correctly.
 
 ## Highlight modes
 
@@ -66,8 +33,8 @@ The default value of `TextHighlightMode` is `FirstOccurrence`.
 
 The highlight style can be customized using the following properties:
 
-* `HighlightedTextColor` - Sets the color of the highlighted characters. Type: `Color`. Default: the theme accent color.
-* `HighlightedTextFontAttributes` - Sets the font attributes (such as `Bold` or `Italic`) of the highlighted characters. Type: `FontAttributes`. Default: `None`. Multiple attributes can be combined using the `|` operator (for example, `Bold, Italic`).
+* `HighlightedTextColor` - Sets the color of the highlighted characters. Type: `Color`. Default: `Colors.Blue`.
+* `HighlightedTextFontAttributes` - Sets the font attributes (such as `Bold` or `Italic`) of the highlighted characters. Type: `FontAttributes`. Default: `None`.
 
 N> Highlighting is applied only when `IsEditable` is `true` and `IsFilteringEnabled` is `true`. If either is `false`, the matched text is not highlighted even if `TextHighlightMode` is set.
 
@@ -97,8 +64,6 @@ Highlights only the first occurrence of the matched characters in each item of t
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Inputs;
-
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
@@ -113,6 +78,37 @@ SfComboBox comboBox = new SfComboBox
     HighlightedTextFontAttributes = FontAttributes.Bold,
     BindingContext = socialMediaViewModel,
 };
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,8 +142,6 @@ Highlights every occurrence of the matched characters in each item. This mode is
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Inputs;
-
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
@@ -165,6 +159,37 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![Multiple Occurrence highlight in the .NET MAUI ComboBox drop-down](images/HighlightingText/multipleoccurence2.png)
@@ -176,4 +201,3 @@ SfComboBox comboBox = new SfComboBox
 * [Editing in .NET MAUI ComboBox](Editing.md)
 * [Filtering in .NET MAUI ComboBox](Filtering.md)
 * [Selection in .NET MAUI ComboBox](Selection.md)
-* [SfComboBox API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html)

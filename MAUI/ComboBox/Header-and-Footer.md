@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header and Footer in .NET MAUI ComboBox control | Syncfusion®
-description: Learn about Header and Footer support in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
+description: Learn about the Header and Footer support in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -14,41 +14,11 @@ The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 
 ## Prerequisites
 
-Before proceeding, ensure the following are set up:
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later and the .NET MAUI workload. For setup details, see [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0).
-2. Create a [.NET MAUI project](Getting-Started.md#step-1-create-a-new-net-maui-project).
-3. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-4. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-5. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+- `Syncfusion.Maui.Inputs`
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
-
 
 ## Show or hide the header and footer
 
@@ -56,13 +26,9 @@ To show a header or footer in the [SfComboBox](https://help.syncfusion.com/cr/ma
 
 N> A `DropdownHeaderView` or `DropdownFooterView` is only rendered when its corresponding `ShowDropDownHeaderView` or `ShowDropDownFooterView` property is `true`.
 
-## Define the model and view model
-
-The samples below use the `SocialMedia` model and `SocialMediaViewModel` defined in [Getting Started](Getting-Started.md#step-4-define-model-and-view-model). Use a `BindingContext` on the page so that `{Binding SocialMedias}` resolves correctly.
-
 ## Header content
 
-Use the [DropdownHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderView) property to set the content of the header. It accepts any `View` and is displayed at the top of the drop-down while it is open. Adjust the header height with the [DropdownHeaderViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderViewHeight) `double` property, which defaults to the view's measured height.
+Use the [DropdownHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderView) property to set the content of the header. It accepts any `View` and is displayed at the top of the drop-down while it is open. Adjust the header height with the [DropdownHeaderViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderViewHeight) `double` property and it's default value is `30`.
 
 {% tabs %}
 
@@ -95,8 +61,6 @@ Use the [DropdownHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 
 {% highlight c# %}
-
-    using Syncfusion.Maui.Inputs;
 
     // Run this code in a ContentPage code-behind file.
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
@@ -140,14 +104,44 @@ Use the [DropdownHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
     Content = layout;
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![Header view at the top of the .NET MAUI ComboBox drop-down](Images/HeaderFooter/headertemplate.png)
 
 ## Footer content
 
-Use the [DropdownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterView) property to set the content of the footer. It accepts any `View` and is displayed at the bottom of the drop-down while it is open. Adjust the footer height with the [DropdownFooterViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterViewHeight) `double` property, which defaults to the view's measured height.
+Use the [DropdownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterView) property to set the content of the footer. It accepts any `View` and is displayed at the bottom of the drop-down while it is open. Adjust the footer height with the [DropdownFooterViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterViewHeight) `double` property and it's default value is `30`.
 
 {% tabs %}
 
@@ -181,8 +175,6 @@ Use the [DropdownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 
 {% highlight c# %}
-
-    using Syncfusion.Maui.Inputs;
 
     // Run this code in a ContentPage code-behind file.
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
@@ -227,7 +219,37 @@ Use the [DropdownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
     Content = layout;
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![Footer view at the bottom of the .NET MAUI ComboBox drop-down](Images/HeaderFooter/footertemplate.png)
@@ -239,4 +261,3 @@ Use the [DropdownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 * [Filtering in .NET MAUI ComboBox](Filtering.md)
 * [No results found in .NET MAUI ComboBox](No-Results-Found.md)
 * [UI customization in .NET MAUI ComboBox](UI-Customization.md)
-* [SfComboBox API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html)

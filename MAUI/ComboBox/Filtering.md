@@ -14,42 +14,11 @@ The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 
 ## Prerequisites
 
-Before proceeding, ensure the following are set up:
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later and the .NET MAUI workload. For setup details, see [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0).
-2. Create a [.NET MAUI project](Getting-Started.md#step-1-create-a-new-net-maui-project).
-3. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-4. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-5. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+- `Syncfusion.Maui.Inputs`
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
-
-N> The filtering APIs (`IsFilteringEnabled`, `TextSearchMode`, `FilterBehavior`) are available starting with Syncfusion<sup>®</sup> .NET MAUI Inputs `26.1.35` and later.
 
 ## Enable filtering
 
@@ -60,9 +29,7 @@ To enable filtering in the [SfComboBox](https://help.syncfusion.com/cr/maui/Sync
 Define a `CityInfo` model and a `CityViewModel` that exposes a `Cities` collection.
 
 {% tabs %}
-{% highlight c# %}
-
-using System.Collections.ObjectModel;
+{% highlight c# tabtitle="ViewModel" %}
 
 public class CityInfo
 {
@@ -146,6 +113,56 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+public class CityInfo
+{
+    public string CityName { get; set; }
+    public string CountryName { get; set; }
+    public bool IsCapital { get; set; }
+}
+
+// ViewModel
+public class CityViewModel
+{
+    public ObservableCollection<CityInfo> Cities { get; set; }
+
+    public CityViewModel()
+    {
+        this.Cities = new ObservableCollection<CityInfo>
+        {
+            new CityInfo { CityName = "Chicago",    CountryName = "USA" },
+            new CityInfo { CityName = "Los Angeles",CountryName = "USA" },
+            new CityInfo { CityName = "Houston",    CountryName = "USA" },
+            new CityInfo { CityName = "New York",   CountryName = "USA" },
+            new CityInfo { CityName = "Washington", CountryName = "USA",      IsCapital = true },
+            new CityInfo { CityName = "Chennai",    CountryName = "India" },
+            new CityInfo { CityName = "Delhi",      CountryName = "India",    IsCapital = true },
+            new CityInfo { CityName = "Kolkata",    CountryName = "India" },
+            new CityInfo { CityName = "Mumbai",     CountryName = "India" },
+            new CityInfo { CityName = "Berlin",     CountryName = "Germany",  IsCapital = true },
+            new CityInfo { CityName = "Cologne",    CountryName = "Germany" },
+            new CityInfo { CityName = "Hamburg",    CountryName = "Germany" },
+            new CityInfo { CityName = "Munich",     CountryName = "Germany" },
+            new CityInfo { CityName = "Quebec City",CountryName = "Canada" },
+            new CityInfo { CityName = "Ottawa",     CountryName = "Canada",   IsCapital = true },
+            new CityInfo { CityName = "Toronto",    CountryName = "Canada" },
+            new CityInfo { CityName = "Vancouver",  CountryName = "Canada" },
+            new CityInfo { CityName = "Victoria",   CountryName = "Canada" },
+            new CityInfo { CityName = "London",     CountryName = "England",  IsCapital = true },
+            new CityInfo { CityName = "Bath",       CountryName = "England" },
+            new CityInfo { CityName = "Manchester", CountryName = "England" },
+            new CityInfo { CityName = "Oxford",     CountryName = "England" },
+            new CityInfo { CityName = "Bandung",    CountryName = "Indonesia" },
+            new CityInfo { CityName = "Jakarta",    CountryName = "Indonesia",IsCapital = true },
+            new CityInfo { CityName = "Depok",      CountryName = "Indonesia" },
+            new CityInfo { CityName = "Makassar",   CountryName = "Indonesia" },
+            new CityInfo { CityName = "Surabaya",   CountryName = "Indonesia" },
+        };
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 N> Filtering is supported only when `IsEditable` is `true`.
@@ -154,12 +171,12 @@ N> Filtering is supported only when `IsEditable` is `true`.
 
 The string comparison used to filter suggestions is controlled by the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property. The default value is `StartsWith`, and matching is case-insensitive and accent-insensitive. The available modes are:
 
-* `StartsWith` - Filters items whose `DisplayMemberPath` value starts with the typed text. The first match is auto-appended to the editor.
-* `Contains` - Filters items whose `DisplayMemberPath` value contains the typed text anywhere.
+* `StartsWith` - Filters items whose values starts with the typed text. The first match is auto-appended to the editor.
+* `Contains` - Filters items whose values contain the typed text anywhere.
 
-### StartsWith mode
+### Filter with beginning text
 
-Filters items whose `DisplayMemberPath` value starts with the typed text, and the first match is auto-appended to the editor and highlighted in the drop-down.
+Filters items whose values starts with the typed text, and the first match is auto-appended to the editor and highlighted in the drop-down.
 
 {% tabs %}
 {% highlight xaml %}
@@ -193,15 +210,65 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+public class CityInfo
+{
+    public string CityName { get; set; }
+    public string CountryName { get; set; }
+    public bool IsCapital { get; set; }
+}
+
+// ViewModel
+public class CityViewModel
+{
+    public ObservableCollection<CityInfo> Cities { get; set; }
+
+    public CityViewModel()
+    {
+        this.Cities = new ObservableCollection<CityInfo>
+        {
+            new CityInfo { CityName = "Chicago",    CountryName = "USA" },
+            new CityInfo { CityName = "Los Angeles",CountryName = "USA" },
+            new CityInfo { CityName = "Houston",    CountryName = "USA" },
+            new CityInfo { CityName = "New York",   CountryName = "USA" },
+            new CityInfo { CityName = "Washington", CountryName = "USA",      IsCapital = true },
+            new CityInfo { CityName = "Chennai",    CountryName = "India" },
+            new CityInfo { CityName = "Delhi",      CountryName = "India",    IsCapital = true },
+            new CityInfo { CityName = "Kolkata",    CountryName = "India" },
+            new CityInfo { CityName = "Mumbai",     CountryName = "India" },
+            new CityInfo { CityName = "Berlin",     CountryName = "Germany",  IsCapital = true },
+            new CityInfo { CityName = "Cologne",    CountryName = "Germany" },
+            new CityInfo { CityName = "Hamburg",    CountryName = "Germany" },
+            new CityInfo { CityName = "Munich",     CountryName = "Germany" },
+            new CityInfo { CityName = "Quebec City",CountryName = "Canada" },
+            new CityInfo { CityName = "Ottawa",     CountryName = "Canada",   IsCapital = true },
+            new CityInfo { CityName = "Toronto",    CountryName = "Canada" },
+            new CityInfo { CityName = "Vancouver",  CountryName = "Canada" },
+            new CityInfo { CityName = "Victoria",   CountryName = "Canada" },
+            new CityInfo { CityName = "London",     CountryName = "England",  IsCapital = true },
+            new CityInfo { CityName = "Bath",       CountryName = "England" },
+            new CityInfo { CityName = "Manchester", CountryName = "England" },
+            new CityInfo { CityName = "Oxford",     CountryName = "England" },
+            new CityInfo { CityName = "Bandung",    CountryName = "Indonesia" },
+            new CityInfo { CityName = "Jakarta",    CountryName = "Indonesia",IsCapital = true },
+            new CityInfo { CityName = "Depok",      CountryName = "Indonesia" },
+            new CityInfo { CityName = "Makassar",   CountryName = "Indonesia" },
+            new CityInfo { CityName = "Surabaya",   CountryName = "Indonesia" },
+        };
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox filter the items based on starting text](Images/Filtering/maui_filtering_startswith.gif)
 
-### Contains mode
+### Filter with contains text
 
-Filters items whose `DisplayMemberPath` value contains the typed text anywhere. The first match is highlighted in the drop-down, but it is not auto-appended to the editor.
+Filters items whose values contain the typed text anywhere.. The first match is highlighted in the drop-down, but it is not auto-appended to the editor.
 
 {% tabs %}
 {% highlight xaml %}
@@ -234,6 +301,56 @@ SfComboBox comboBox = new SfComboBox
     DisplayMemberPath = "CityName",
     BindingContext = cityViewModel,
 };
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+public class CityInfo
+{
+    public string CityName { get; set; }
+    public string CountryName { get; set; }
+    public bool IsCapital { get; set; }
+}
+
+// ViewModel
+public class CityViewModel
+{
+    public ObservableCollection<CityInfo> Cities { get; set; }
+
+    public CityViewModel()
+    {
+        this.Cities = new ObservableCollection<CityInfo>
+        {
+            new CityInfo { CityName = "Chicago",    CountryName = "USA" },
+            new CityInfo { CityName = "Los Angeles",CountryName = "USA" },
+            new CityInfo { CityName = "Houston",    CountryName = "USA" },
+            new CityInfo { CityName = "New York",   CountryName = "USA" },
+            new CityInfo { CityName = "Washington", CountryName = "USA",      IsCapital = true },
+            new CityInfo { CityName = "Chennai",    CountryName = "India" },
+            new CityInfo { CityName = "Delhi",      CountryName = "India",    IsCapital = true },
+            new CityInfo { CityName = "Kolkata",    CountryName = "India" },
+            new CityInfo { CityName = "Mumbai",     CountryName = "India" },
+            new CityInfo { CityName = "Berlin",     CountryName = "Germany",  IsCapital = true },
+            new CityInfo { CityName = "Cologne",    CountryName = "Germany" },
+            new CityInfo { CityName = "Hamburg",    CountryName = "Germany" },
+            new CityInfo { CityName = "Munich",     CountryName = "Germany" },
+            new CityInfo { CityName = "Quebec City",CountryName = "Canada" },
+            new CityInfo { CityName = "Ottawa",     CountryName = "Canada",   IsCapital = true },
+            new CityInfo { CityName = "Toronto",    CountryName = "Canada" },
+            new CityInfo { CityName = "Vancouver",  CountryName = "Canada" },
+            new CityInfo { CityName = "Victoria",   CountryName = "Canada" },
+            new CityInfo { CityName = "London",     CountryName = "England",  IsCapital = true },
+            new CityInfo { CityName = "Bath",       CountryName = "England" },
+            new CityInfo { CityName = "Manchester", CountryName = "England" },
+            new CityInfo { CityName = "Oxford",     CountryName = "England" },
+            new CityInfo { CityName = "Bandung",    CountryName = "Indonesia" },
+            new CityInfo { CityName = "Jakarta",    CountryName = "Indonesia",IsCapital = true },
+            new CityInfo { CityName = "Depok",      CountryName = "Indonesia" },
+            new CityInfo { CityName = "Makassar",   CountryName = "Indonesia" },
+            new CityInfo { CityName = "Surabaya",   CountryName = "Indonesia" },
+        };
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -337,6 +454,56 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+public class CityInfo
+{
+    public string CityName { get; set; }
+    public string CountryName { get; set; }
+    public bool IsCapital { get; set; }
+}
+
+// ViewModel
+public class CityViewModel
+{
+    public ObservableCollection<CityInfo> Cities { get; set; }
+
+    public CityViewModel()
+    {
+        this.Cities = new ObservableCollection<CityInfo>
+        {
+            new CityInfo { CityName = "Chicago",    CountryName = "USA" },
+            new CityInfo { CityName = "Los Angeles",CountryName = "USA" },
+            new CityInfo { CityName = "Houston",    CountryName = "USA" },
+            new CityInfo { CityName = "New York",   CountryName = "USA" },
+            new CityInfo { CityName = "Washington", CountryName = "USA",      IsCapital = true },
+            new CityInfo { CityName = "Chennai",    CountryName = "India" },
+            new CityInfo { CityName = "Delhi",      CountryName = "India",    IsCapital = true },
+            new CityInfo { CityName = "Kolkata",    CountryName = "India" },
+            new CityInfo { CityName = "Mumbai",     CountryName = "India" },
+            new CityInfo { CityName = "Berlin",     CountryName = "Germany",  IsCapital = true },
+            new CityInfo { CityName = "Cologne",    CountryName = "Germany" },
+            new CityInfo { CityName = "Hamburg",    CountryName = "Germany" },
+            new CityInfo { CityName = "Munich",     CountryName = "Germany" },
+            new CityInfo { CityName = "Quebec City",CountryName = "Canada" },
+            new CityInfo { CityName = "Ottawa",     CountryName = "Canada",   IsCapital = true },
+            new CityInfo { CityName = "Toronto",    CountryName = "Canada" },
+            new CityInfo { CityName = "Vancouver",  CountryName = "Canada" },
+            new CityInfo { CityName = "Victoria",   CountryName = "Canada" },
+            new CityInfo { CityName = "London",     CountryName = "England",  IsCapital = true },
+            new CityInfo { CityName = "Bath",       CountryName = "England" },
+            new CityInfo { CityName = "Manchester", CountryName = "England" },
+            new CityInfo { CityName = "Oxford",     CountryName = "England" },
+            new CityInfo { CityName = "Bandung",    CountryName = "Indonesia" },
+            new CityInfo { CityName = "Jakarta",    CountryName = "Indonesia",IsCapital = true },
+            new CityInfo { CityName = "Depok",      CountryName = "Indonesia" },
+            new CityInfo { CityName = "Makassar",   CountryName = "Indonesia" },
+            new CityInfo { CityName = "Surabaya",   CountryName = "Indonesia" },
+        };
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -349,4 +516,3 @@ The following image illustrates the result of the above code:
 * [Editing in .NET MAUI ComboBox](Editing.md)
 * [Selection in .NET MAUI ComboBox](Selection.md)
 * [Searching in .NET MAUI ComboBox](searching.md)
-* [SfComboBox API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html)

@@ -10,46 +10,21 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # UI Customization in .NET MAUI ComboBox (SfComboBox)
 
-## Prerequisites
-
-Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following are set up:
-
-1. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-2. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-3. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
-
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation. The examples in this article assume that your page has an appropriate binding context and that any referenced image assets are added to the project.
+ The examples in this article assume that your page has an appropriate binding context and that any referenced image assets are added to the project.
 
 This section explains the different UI customizations available in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
 
 To get started quickly with customizing the appearance of the .NET MAUI ComboBox, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=_yk7El0Seu8" %}
+
+## Prerequisites
+
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
 ## Placeholder
 
@@ -1876,4 +1851,3 @@ The following screenshot illustrates the AutomationIds of inner elements.
 * [Header and Footer customization in .NET MAUI ComboBox](header-and-footer.md)
 * [No results found in .NET MAUI ComboBox](no-results-found.md)
 * [LiquidGlass support in .NET MAUI ComboBox](liquidglasssupport.md)
-* [SfComboBox API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html)

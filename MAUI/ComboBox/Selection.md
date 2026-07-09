@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in .NET MAUI ComboBox control | Syncfusion®
-description: Learn about the selection modes in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
+description: Learn how to configure single and multiple selection and related APIs in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -14,44 +14,11 @@ The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 
 ## Prerequisites
 
-Before proceeding, ensure the following are set up:
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later and the .NET MAUI workload. For setup details, see [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0).
-2. Create a [.NET MAUI project](Getting-Started.md#step-1-create-a-new-net-maui-project).
-3. Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
-4. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`:
-
-    ```csharp
-    using Syncfusion.Maui.Core.Hosting;
-
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-    ```
-
-5. Add the following namespace declaration to your XAML page and `using` directive to your C# files:
-
-    ```xml
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    ```
-
-    ```csharp
-    using Syncfusion.Maui.Inputs;
-    ```
+- `Syncfusion.Maui.Inputs`
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
-
-## Define the model and view model
-
-The samples below use the `SocialMedia` model and `SocialMediaViewModel` defined in [Getting Started](Getting-Started.md#step-4-define-model-and-view-model). Use a `BindingContext` on the page so that `{Binding SocialMedias}` resolves correctly.
 
 ## Single selection
 
@@ -78,8 +45,6 @@ The selected item can be changed interactively by selecting from the drop-down o
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Inputs;
-
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
@@ -90,6 +55,37 @@ SfComboBox comboBox = new SfComboBox
     TextMemberPath = "Name",
     BindingContext = socialMediaViewModel,
 };
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -135,6 +131,37 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -145,7 +172,7 @@ The following image illustrates the result of the above code:
 
 The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to select multiple values from the drop-down by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple). The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property, which supports two-way binding.
 
-There are two ways to display multi-selection items, controlled by the [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html) property. The default value is [Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_ComboBoxMultiSelectionDisplayMode_Token).
+There are two ways to display multi-selection items, controlled by the [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_MultiSelectionDisplayMode) property. The default value is `Token`.
 
 * [Delimiter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_ComboBoxMultiSelectionDisplayMode_Delimiter) - Displays selected items as a single line separated by a custom character.
 * [Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_ComboBoxMultiSelectionDisplayMode_Token) - Displays each selected item as a token (chip).
@@ -169,11 +196,9 @@ The following example uses `MultiSelectionDisplayMode="Token"` (the default) and
 </editors:SfComboBox>
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
 
-{% highlight c# %}
-
-using Syncfusion.Maui.Inputs;
-
+// ViewModel
 public class SocialMediaViewModel
 {
     public ObservableCollection<SocialMedia> SocialMedias { get; set; }
@@ -181,12 +206,17 @@ public class SocialMediaViewModel
 
     public SocialMediaViewModel()
     {
-        SocialMedias = new ObservableCollection<SocialMedia>
+        this.SocialMedias = new ObservableCollection<SocialMedia>
         {
             new SocialMedia { Name = "Facebook", ID = 0 },
             new SocialMedia { Name = "Google Plus", ID = 1 },
             new SocialMedia { Name = "Instagram", ID = 2 },
             new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
         };
 
         SelectedItemsList = new ObservableCollection<SocialMedia>
@@ -197,8 +227,13 @@ public class SocialMediaViewModel
     }
 }
 
-{% endhighlight %}
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -247,7 +282,37 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox with MultiSelectionDisplayMode as Delimiter](Images/Selection/net-maui-combobox-delimiter.jpg)
@@ -297,7 +362,37 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox Wrap mode](Images/Selection/net-maui-combobox-wrapmode.png)
@@ -340,7 +435,37 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox None mode](Images/Selection/net-maui-combobox-nonemode.png)
@@ -383,33 +508,35 @@ The XAML below references an event handler defined in the page code-behind. The 
 using Syncfusion.Maui.Inputs;
 
 // Run this code in a ContentPage code-behind file (MainPage.xaml.cs).
-public partial class MainPage : ContentPage
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
 {
-    public MainPage()
-    {
-        InitializeComponent();
+    WidthRequest = 250,
+    HeightRequest = 40,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
+};
 
-        SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+comboBox.SelectionChanging += OnSelectionChanging;
+Content = comboBox;
 
-        SfComboBox comboBox = new SfComboBox
-        {
-            WidthRequest = 250,
-            HeightRequest = 40,
-            ItemsSource = socialMediaViewModel.SocialMedias,
-            TextMemberPath = "Name",
-            DisplayMemberPath = "Name",
-            BindingContext = socialMediaViewModel,
-        };
+private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
+{
+    // Set e.Cancel = true to cancel the selection change.
+    e.Cancel = false;
+}
 
-        comboBox.SelectionChanging += OnSelectionChanging;
-        Content = comboBox;
-    }
+{% endhighlight %}
 
-    private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
-    {
-        // Set e.Cancel = true to cancel the selection change.
-        e.Cancel = false;
-    }
+{% highlight c# %}
+
+private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
+{
+    // Set e.Cancel = true to cancel the selection change.
+    e.Cancel = false;
 }
 
 {% endhighlight %}
@@ -425,8 +552,6 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Input
 
 * `AddedItems` - The items that were just selected.
 * `RemovedItems` - The items that were unselected.
-
-N> The `CurrentSelection` and `PreviousSelection` members of `SelectionChangedEventArgs` are marked as `Obsolete`. Use `AddedItems` and `RemovedItems` instead.
 
 {% tabs %}
 {% highlight xaml %}
@@ -445,31 +570,26 @@ N> The `CurrentSelection` and `PreviousSelection` members of `SelectionChangedEv
 
 {% highlight c# %}
 
-public partial class MainPage : ContentPage
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
 {
-    public MainPage()
-    {
-        InitializeComponent();
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
+};
 
-        SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+comboBox.SelectionChanged += OnSelectionChanged;
+Content = comboBox;
 
-        SfComboBox comboBox = new SfComboBox
-        {
-            ItemsSource = socialMediaViewModel.SocialMedias,
-            DisplayMemberPath = "Name",
-            TextMemberPath = "Name",
-            BindingContext = socialMediaViewModel,
-        };
+{% endhighlight %}
+{% highlight c# %}
 
-        comboBox.SelectionChanged += OnSelectionChanged;
-        Content = comboBox;
-    }
-
-    private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        // e.AddedItems contains the newly selected items.
-        // e.RemovedItems contains the items that were unselected.
-    }
+private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    // e.AddedItems contains the newly selected items.
+    // e.RemovedItems contains the items that were unselected.
 }
 
 {% endhighlight %}
@@ -718,4 +838,3 @@ comboBox.Clear();
 * [Filtering in .NET MAUI ComboBox](Filtering.md)
 * [Searching in .NET MAUI ComboBox](Searching.md)
 * [Highlighting matched text in .NET MAUI ComboBox](Highlighting-matched-text.md)
-* [SfComboBox API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html)
