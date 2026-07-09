@@ -19,7 +19,7 @@ margin-top: 1.5em;     margin-bottom: 1.5em;
 Syncfusion<sup>®</sup> license key validation in CI services ensures that Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> components are properly licensed during CI processes. Validating the license key at the CI level can prevent licensing errors during deployment. Configure the continuous integration pipeline to fail when the license key validation fails. If validation fails, re-verify the platform, version, and license key values to resolve the issue.
 
 > **Prerequisites**
-> - PowerShell 7+ (`pwsh`) must be available on the build agent. It is preinstalled on `windows-latest` in Azure DevOps and GitHub Actions, but you must add an installation step for Linux or macOS agents.
+> - PowerShell 7+ (`pwsh`) must be available on the build agent. It is pre installed on `windows-latest` in Azure DevOps and GitHub Actions, but you must add an installation step for Linux or macOS agents.
 > - The Syncfusion license key must be stored as a CI secret (Azure DevOps secret variable, GitHub Actions secret, or Jenkins credentials) rather than being hard-coded in scripts.
 > - The Syncfusion NuGet/assembly version referenced in the project must match the version passed to the validator.
 
