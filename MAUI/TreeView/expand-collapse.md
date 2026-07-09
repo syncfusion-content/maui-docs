@@ -180,8 +180,6 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-The example above binds the `IsExpanded` property of multiple nodes to a single `IsExpanded` value in the ViewModel for demonstration purposes. In a real-world scenario, bind each node to a separate source property, or to a property on the node's underlying data object, so that each node's expanded state is tracked independently.
-
 ## Events
 
 The TreeView exposes the following events to handle the expanding and collapsing of items.
@@ -263,7 +261,3 @@ treeView.CollapseCommand = new Command<TreeViewNode>(node =>
 
 {% endhighlight %}
 {% endtabs %}
-
-## Version compatibility
-
-The `ExpandActionTarget`, `AutoExpandMode`, expand and collapse methods, keyboard support, and events described here are available with the Syncfusion .NET MAUI TreeView (SfTreeView) control from version 20.4.0.x onward. For the latest API additions and any breaking changes, refer to the [release notes](https://help.syncfusion.com/maui/release-notes).

@@ -169,7 +169,6 @@ private void OnTreeViewKeyDown(object sender, KeyPressEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-> **NOTE**: The `KeyDown` event is raised only when the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) has focus. Set focus to the control by calling `treeView.Focus()` or by tapping it before expecting key events.
 
 ## Track node property changes
 

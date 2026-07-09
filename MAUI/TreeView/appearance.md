@@ -11,8 +11,6 @@ documentation: ug
 
 The `SfTreeView` allows customizing the appearance of the underlying data and provides different functionalities to the end user.
 
-N> Before proceeding, ensure the `Syncfusion.Maui.TreeView` NuGet package is referenced in your .NET MAUI application and that the namespace `xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"` (XAML) or `using Syncfusion.Maui.TreeView;` (C#) is registered. See the [Getting Started](https://help.syncfusion.com/maui/treeview/getting-started) guide for setup details.
-
 ## ItemTemplate
 
 A template can be used to present the data using controls that make sense for the application.
@@ -197,7 +195,6 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> `ExpanderIconConverter` is a custom `IValueConverter` that returns an image source based on the `IsExpanded` value. Implement it following the pattern shown in the [Level based styling](#level-based-styling) section.
 
 ## ItemTemplate selector
 
@@ -233,38 +230,6 @@ public class ItemTemplateSelector : DataTemplateSelector
             return Template1;
         else
             return Template2;
-    }
-}
-{% endhighlight %}
-{% highlight c# tabtitle="Template1.cs" %}
-// Template for root-level (Level 0) items.
-public class Template1 : ContentView
-{
-    public Template1()
-    {
-        var label = new Label
-        {
-            FontAttributes = FontAttributes.Bold,
-            VerticalTextAlignment = TextAlignment.Center
-        };
-        label.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
-        this.Content = label;
-    }
-}
-{% endhighlight %}
-{% highlight c# tabtitle="Template2.cs" %}
-// Template for child-level items.
-public class Template2 : ContentView
-{
-    public Template2()
-    {
-        var label = new Label
-        {
-            FontAttributes = FontAttributes.Italic,
-            VerticalTextAlignment = TextAlignment.Center
-        };
-        label.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
-        this.Content = label;
     }
 }
 {% endhighlight %}
@@ -524,4 +489,3 @@ To disable the ripple effect when clicking a `TreeViewItem`, set the color value
 {% endhighlight %}
 {% endtabs %}
 
-N> To customize other TreeView theme brushes (selection background, focus border, etc.), override additional `SfTreeView*` theme keys within the same `SyncfusionThemeDictionary`.

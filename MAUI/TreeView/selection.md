@@ -18,7 +18,7 @@ The TreeView allows selecting items programmatically or via touch interactions b
 * [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Single): Allows selecting only a single item. When clicking on the selected item, the selection will not be cleared. This is the default value for `SelectionMode`.
 * [SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_SingleDeselect): Allows selecting only a single item. When clicking on the selected item, the selection is cleared.
 * [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Multiple): Allows selecting more than one item. Selection is not cleared when selecting more than one item. When clicking on the selected item, the selection is cleared.
-* [Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Extended): Allows selecting multiple items using the common key modifiers. Hold `Ctrl` (or `Cmd` on macOS) and click to toggle individual non-contiguous items, or hold `Shift` and click to select all items between the previously selected item and the clicked item. Clicking without a modifier clears the existing selection and selects only the clicked item.
+* [Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Extended): Allows selecting multiple items using the common key modifiers.
 
 {% tabs %}
 {% highlight xaml %}
@@ -207,8 +207,6 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> `SelectionForeground` is applicable only for unbound mode, that is, when `ItemsSource` is not bound and items are populated directly. For details on unbound mode, refer to the [getting started](getting-started.md) documentation.
-
 ## Events
 
 N> `SelectionChanging` and `SelectionChanged` events are triggered only on UI interactions. To detect programmatic selection changes, observe the `SelectedItem` or `CurrentItem` property changes instead.
@@ -283,7 +281,7 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-W> Avoid calling `SelectedItems.Clear()` directly inside the `SelectionChanged` handler without a guard, as clearing selection again raises `SelectionChanging` and `SelectionChanged`, which can lead to recursive calls. Use a re-entrancy guard flag if selection must be cleared in response to a change.
+W> Avoid calling `SelectedItems.Clear()` directly inside the `SelectionChanged` handler without a guard, as clearing selection again raises `SelectionChanging` and `SelectionChanged`, which can lead to recursive calls.
 
 ## Key navigation
 
@@ -311,30 +309,3 @@ The following keys are supported for navigation and selection:
 ## Limitations
 
 * When a grid is loaded inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) with a background color, the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionBackground) will not be displayed because the grid background overlaps the `SelectionBackground`. In this case, set the background color on the TreeView instead of the grid in the `ItemTemplate`.
-
-  {% tabs %}
-  {% highlight xaml %}
-  <syncfusion:SfTreeView x:Name="treeView" BackgroundColor="White">
-      <syncfusion:SfTreeView.ItemTemplate>
-          <DataTemplate>
-              <Grid>
-                  <!-- Do not set BackgroundColor here; set it on the SfTreeView instead. -->
-              </Grid>
-          </DataTemplate>
-      </syncfusion:SfTreeView.ItemTemplate>
-  </syncfusion:SfTreeView>
-  {% endhighlight %}
-  {% highlight c# %}
-  using Syncfusion.Maui.TreeView;
-
-  public class MainPage : ContentPage
-  {
-     public MainPage()
-     {
-        InitializeComponent();
-
-        treeView.BackgroundColor = Colors.White;
-     }
-  }
-  {% endhighlight %}
-  {% endtabs %}

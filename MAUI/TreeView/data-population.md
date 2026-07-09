@@ -29,7 +29,7 @@ To decide how to populate the nodes, set the [NodePopulationMode](https://help.s
 The `NodePopulationMode` enum has the following members:
 
 * [OnDemand](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeNodePopulationMode.html#Syncfusion_TreeView_Engine_TreeNodePopulationMode_OnDemand) - Populates the child nodes only when the parent node is expanded. It is the default value. Recommended for large data sets to improve initial load performance.
-* [Instant](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeNodePopulationMode.html#Syncfusion_TreeView_Engine_TreeNodePopulationMode_Instant) - Populates all the child nodes when the TreeView control is initially loaded. Recommended for small data sets where all nodes need to be available immediately.
+* [Instant](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeNodePopulationMode.html#Syncfusion_TreeView_Engine_TreeNodePopulationMode_Instant) - Populates all the child nodes when the TreeView control is initially loaded.
 
 The following code example shows how to configure the `NotificationSubscriptionMode` and `NodePopulationMode` properties of the TreeView in XAML and C#:
 
@@ -307,25 +307,11 @@ To display each node's content (such as the icon and item name), define an [Item
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-binding-in-.net-maui-treeview).
-
 ![Syncfusion .NET MAUI TreeView data population BoundMode](Images/getting-started/maui-treeView-boundMode.png)
 
 ## Populating nodes without data binding - unbound mode
 
 You can create and manage the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) objects by yourself to display the data in a hierarchical view. Create the node hierarchy by adding one or more root nodes to the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) collection. Each `TreeViewNode` can then have more nodes added to its [ChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_ChildNodes) collection. You can nest the tree view nodes to any depth you need.
-
-### TreeViewNode properties
-
-The following `TreeViewNode` properties are available when working in unbound mode:
-
-* [Content](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_Content) - Gets or sets the data object associated with the tree view node. For unbound nodes, you can directly set the `Content` value. For bound nodes, you bind the data object using the `Content` property by setting the `ItemTemplateContextType` to `Node`.
-* [ParentNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_ParentNode) - Gets the parent node of the current tree view node.
-* [Level](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_Level) - Gets the zero-based depth of the tree node in the TreeView control. The root node returns `0`.
-* [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsExpanded) - Gets or sets a value indicating whether the node is expanded.
-* [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsVisible) - Gets or sets a value indicating whether the node is visible in the TreeView.
-* [HasChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_HasChildNodes) - Gets a value indicating whether the node has child nodes.
-* [ChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_ChildNodes) - Gets the collection of child nodes for the current node.
 
 {% tabs %}
 {% highlight xaml %}
@@ -404,3 +390,15 @@ namespace GettingStarted
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
 ![Syncfusion .NET MAUI TreeView data population UnboundMode](Images/getting-started/maui-treeView-unboundMode.png)
+
+## TreeViewNode properties
+
+The following `TreeViewNode` properties are available :
+
+* [Content](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_Content) - Gets or sets the data object associated with the tree view node. For unbound nodes, you can directly set the `Content` value. For bound nodes, you bind the data object using the `Content` property by setting the `ItemTemplateContextType` to `Node`.
+* [ParentNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_ParentNode) - Gets the parent node of the current tree view node.
+* [Level](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_Level) - Gets the zero-based depth of the tree node in the TreeView control. The root node returns `0`.
+* [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsExpanded) - Gets or sets a value indicating whether the node is expanded.
+* [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsVisible) - Gets or sets a value indicating whether the node is visible in the TreeView.
+* [HasChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_HasChildNodes) - Gets a value indicating whether the node has child nodes.
+* [ChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_ChildNodes) - Gets the collection of child nodes for the current node.

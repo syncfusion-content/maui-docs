@@ -23,7 +23,7 @@ The `SfTreeView` handles the [IsChecked](https://help.syncfusion.com/cr/maui/Syn
 
 N> Set the [NodePopulationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodePopulationMode) as `Instant` and the [CheckBoxMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckBoxMode) as `Recursive` to support recursive checking programmatically through `CheckedItems`.
 
-N> The checkbox feature is available in Syncfusion® .NET MAUI TreeView control from **Syncfusion.Maui.TreeView** package version **24.1.41** onward.
+
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -270,9 +270,6 @@ You can directly set the checkbox state of a node by setting the [TreeViewNode.I
                 <treeviewengine:TreeViewNode Content="Egypt"/>
                 <treeviewengine:TreeViewNode Content="South Africa"/>
             </treeviewengine:TreeViewNode.ChildNodes>
-            .....
-            .....
-            .....
     </syncfusion:SfTreeView.Nodes>
 </syncfusion:SfTreeView>
 {% endhighlight %}
@@ -404,9 +401,6 @@ N> In unbound mode, the binding context of the `ItemTemplate` is the [TreeViewNo
                 <treeviewengine:TreeViewNode Content="Egypt"/>
                 <treeviewengine:TreeViewNode Content="South Africa"/>
             </treeviewengine:TreeViewNode.ChildNodes>
-            .....
-            .....
-            .....
     </syncfusion:SfTreeView.Nodes>
 
     <syncfusion:SfTreeView.ItemTemplate>
@@ -474,4 +468,4 @@ public class CommandViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> `NodeChecked` event and `NodeCheckedCommand` occur only on UI interactions. Refer to the note in the [NodeChecked event](#nodechecked-event) section for programmatic alternatives.
+N> `NodeChecked` event and `NodeCheckedCommand` occur only on UI interactions.
