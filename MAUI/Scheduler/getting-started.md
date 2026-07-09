@@ -131,48 +131,39 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GettingStarted"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
-    <scheduler:SfScheduler x:Name="Scheduler"
-                           View="Week"
-                           DisplayDate="{Binding DisplayDate}"
-                           AppointmentsSource="{Binding Events}"
-                           AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
-        <scheduler:SfScheduler.BindingContext>
-            <local:SchedulerViewModel />
-        </scheduler:SfScheduler.BindingContext>
-    </scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+ 
+    <scheduler:SfScheduler />
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
+        InitializeComponent();
+
+        var appointment = new ObservableCollection<SchedulerAppointment>();
+        appointment.Add(new SchedulerAppointment()
         {
-            InitializeComponent();
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(11),
+            Subject = "Client Meeting",
+            Location = "Hutchison road",
+        });
 
-            var appointment = new ObservableCollection<SchedulerAppointment>();
-            appointment.Add(new SchedulerAppointment()
-            {
-                StartTime = DateTime.Today.AddHours(9),
-                EndTime = DateTime.Today.AddHours(11),
-                Subject = "Client Meeting",
-                Location = "Hutchison road",
-            });
-
-            this.Scheduler.AppointmentsSource = appointment;
-        }
+        this.Scheduler.AppointmentsSource = appointment;
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
