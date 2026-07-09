@@ -99,7 +99,7 @@ N>
 When no request or response messages are available in the AssistItems collection, you can use the [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EmptyView) property to display placeholder content in the AI AssistView. The `EmptyView` can be set to either a string or a custom data object and is shown until one or more items are added to the AssistItems collection.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <local:CustomAssistView x:Name="sfAIAssistView"
                         EmptyView="Ask AI Anything"/>
@@ -127,7 +127,7 @@ public partial class MainPage : ContentPage
 The `SfAIAssistView` control allows you to fully customize the empty view appearance by using the [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EmptyViewTemplate) property. This property lets you define a custom layout and style for the `EmptyView`.
 
 {% tabs %}
-{% highlight xaml hl_lines="3 4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 8" %}
 
 <ContentPage.BindingContext>
     <local:GettingStartedViewModel/>
@@ -422,7 +422,7 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
 #### Applying the request template selector
 
 {% tabs %}
-{% highlight xaml hl_lines="12" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
 
 <ContentPage.BindingContext>
     <local:GettingStartedViewModel/>
@@ -598,7 +598,7 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
 #### Applying the response template selector
 
 {% tabs %}
-{% highlight xaml hl_lines="13" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
 
 <ContentPage.BindingContext>
     <local:GettingStartedViewModel/>
@@ -772,7 +772,7 @@ The following views can be customized individually:
 </table>
 
 {% tabs %}
-{% highlight xaml hl_lines="14 30" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8 24" %}
 
 <ContentPage.BindingContext>
     <local:ViewModel/>
@@ -819,7 +819,7 @@ The following views can be customized individually:
                            AssistItems="{Binding AssistItems}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23 47" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 39" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.AIAssistView;
@@ -905,7 +905,7 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 By default, a processing indicator is displayed when a request is added to indicate that the response is being generated. To disable it, set the [ShowResponseLoader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowResponseLoader) property to `false`
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ShowResponseLoader="False"/>
@@ -934,7 +934,7 @@ The `SfAIAssistView` allows for selecting specific phrases or the entire respons
 By default, text selection is disabled. To enable it, set the [AllowTextSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AllowTextSelection) property to `true`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            AllowTextSelection="True"/>
@@ -973,7 +973,7 @@ Assist context menu items are represented by [AssistContextMenuItem](https://hel
 - The context menu is shown when the More Options icon is tapped for an item. The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) event is raised before the popup appears so you can modify or cancel it.
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <ContentPage.BindingContext>
     <local:GettingStartedViewModel/>
@@ -1064,13 +1064,13 @@ The `SfAIAssistView` control supports customizable Response context menu for bot
 - [ResponseContextMenuItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate): `DataTemplate` — template for individual menu items.
 - [ResponseContextMenuPanelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate): `DataTemplate` — template for the popup panel that contains the menu items.
 
-Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html#Syncfusion_Maui_AIAssistView_AssistContextMenuItem_AssistItem) property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+Assist context menu items are represented by [AssistContextMenuItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html) (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistContextMenuItem.html#Syncfusion_Maui_AIAssistView_AssistContextMenuItem_AssistItem) property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
 
 - When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property).
 - The context menu is shown when the More Options icon is tapped for an item. The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html) event is raised before the popup appears so you can modify or cancel it.
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <ContentPage.BindingContext>
     <local:GettingStartedViewModel/>
@@ -1123,7 +1123,7 @@ N> The customization of [ResponseContextMenuItemTemplate](https://help.syncfusio
 The `SfAIAssistView` control allows for organizing the `AssistItems` by their creation date and time, enabling users to identify request and responses chronologically. Set the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowTimeBreak) property to `true` to display the time break view.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ShowTimeBreak="True" />
@@ -1153,7 +1153,7 @@ public partial class MainPage : ContentPage
 The `SfAIAssistView` control allows you to fully customize the time break appearance using the [TimeBreakTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_TimeBreakTemplate) property. This property lets you define a custom layout and style for the time break UI.
 
 {% tabs %}
-{% highlight xaml hl_lines="11" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 
 <ContentPage.Resources>
         <ResourceDictionary>
@@ -1216,7 +1216,7 @@ The `SfAIAssistView` supports the following types of toast notifications:
 By default, toast notifications appear in the view. To prevent them from showing, use the [ToastOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToastOpening) event.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ToastOpening="assistView_ToastOpening" />
@@ -1249,7 +1249,7 @@ public partial class MainPage : ContentPage
 The `SfAIAssistView` control supports displaying a note or suggestion text below the editor. To display this text, assign a value to the [DisclaimerText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_DisclaimerText) property.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            DisclaimerText="AI outputs may be inaccurate or inconsistent." />

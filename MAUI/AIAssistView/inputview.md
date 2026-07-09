@@ -73,12 +73,12 @@ public partial class MainPage : ContentPage
 
 ![Syncfusion .NET MAUI SfAIAssistView editor view template customization](Images/inputview/maui-aiassistview-editorviewtemplate.png)
 
-## Editor expansion button in view
+### Editor expansion button in view
 
 The `SfAIAssistView` control allows for expanding the editor view based on its `MaximumHeightRequest` property. To enable editor expansion, set the [AllowEditorExpansion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AllowEditorExpansion) property to `true`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2 3" %}
+{% highlight xaml hl_lines="2 4" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            AllowEditorExpansion="True">
@@ -146,7 +146,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 By default, the StopResponding button is visible. To hide this button, set the [EnableStopResponding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EnableStopResponding) property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            EnableStopResponding="False"/>  
@@ -305,7 +305,7 @@ Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIA
 - [CommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_CommandParameter): Passes a parameter to the command when executed.
 
 {% tabs %}
-{% highlight xaml hl_lines="3 4 5 6" %}
+{% highlight xaml hl_lines="7 8 9 10" %}
 
 <ContentPage.BindingContext>
     <local:ViewModel x:Name="viewModel"/>
@@ -321,7 +321,7 @@ Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIA
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="13 16 24" %}
+{% highlight c# hl_lines="16 24" %}
 
 using System.Collections.ObjectModel;
 using Syncfusion.Maui.AIAssistView;

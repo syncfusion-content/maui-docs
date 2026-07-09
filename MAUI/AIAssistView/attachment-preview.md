@@ -23,7 +23,7 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 * [FilePreviewIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FilePreviewIcon) : Displays the preview icon for the file.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml hl_lines="6" %}
 
 <ContentPage.BindingContext>
     <local:ViewModel/>
@@ -32,7 +32,7 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            Attachments="{Binding Attachments}"/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -130,7 +130,7 @@ The `SfAIAssistView` control allows you to control the number of attachments usi
                            Attachments = "{Binding Attachments}"
                            MaxAttachmentCount = 8/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+{% highlight c#  hl_lines="12" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -201,7 +201,7 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
                            Attachments = "{Binding Attachments}"
                            AttachmentItemTemplate = "{StaticResource attachmentItemTemplate}"/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c#  hl_lines="12" %}
 using Syncfusion.Maui.AIAssistView;
 
 public partial class MainPage : ContentPage
