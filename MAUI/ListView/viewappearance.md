@@ -22,7 +22,7 @@ A template can be used to present the data in a way that makes sense for the app
 
 The `SfListView` allows customizing the appearance of each item with different templates based on specific constraints by using the `DataTemplateSelector`. You can choose a `DataTemplate` for each item at runtime based on the value of data-bound property using `DataTemplateSelector`.
 
-Here, an [ItemsCacheLimit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ItemsCacheLimit) property is used to maintain the number of items that can be reused in the view. This cache limit is used to create and reuse the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) if different templates are used in `DataTemplateSelector` for better scrolling performance. Based on this value,. Based on this value, `SfListView` creates a number of `ListViewItem` for different templates in the view, if a new template is created while scrolling, and reuses them, if the same template is used to improve the scrolling performance.
+Here, an [ItemsCacheLimit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ItemsCacheLimit) property is used to maintain the number of items that can be reused in the view. This cache limit is used to create and reuse the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) if different templates are used in `DataTemplateSelector` for better scrolling performance. Based on this value, `SfListView` creates a number of `ListViewItem` for different templates in the view, if a new template is created while scrolling, and reuses them, if the same template is used to improve the scrolling performance.
 
 ### Create a data template selector
 
@@ -31,7 +31,7 @@ Create a custom class that inherits from `DataTemplateSelector`, and override th
 {% tabs %}
 {% highlight c# tabtitle="DataTemplateSelector.cs" hl_lines="13 14 15 16 17 18 19" %}
 
-class MyDataTemplateSelector : DataTemplateSelector
+public class MyDataTemplateSelector : DataTemplateSelector
 {
 
    private readonly DataTemplate incomingDataTemplate;
@@ -102,22 +102,24 @@ public class MainPage : ContentPage
 ![Syncfusion .NET MAUI ListView Data Template Selector](Images/appearance/maui-listview-applying-the-data-template-selector.jpg)
 
 ## Setting DisplayMemberPath
- 
+
 The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_DisplayMemberPath) property in the SfListView provides a simple and efficient way to display a specific property from business objects without creating custom item template. This feature is especially useful for simple lists where you want to display a single property without defining a custom template.
- 
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView"
+                       ItemsSource="{Binding BookInfo}"
                        DisplayMemberPath="BookName" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+listView.ItemsSource = viewModel.BookInfo;
 listView.DisplayMemberPath = "BookName";
 {% endhighlight %}
 {% endtabs %}
- 
+
 N> The `ItemTemplate` property takes precedence over `DisplayMemberPath`. If both are set, `ItemTemplate` will be used.
 
-## Horizontal ListView
+## Horizontal list view
 
 The SfListView allows you to layout every item in the [SfListView.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property either in `Vertical` or `Horizontal` orientation by setting the [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation). The default orientation is `Vertical`.
 
@@ -147,9 +149,9 @@ The `SfListView` allows you to layout the items like `TabView` in the horizontal
                 <Label Text="{Binding ContactName}" />
                 <Label Text="{Binding ContactNumber}" />
             </Grid>
-            <syncfusion:SfListView x:Name="listView" ItemTapped="list_ItemTapped" ItemSize="70" ItemsSource="{Binding ContactsInfo}">
+            <syncfusion:SfListView x:Name="listView" ItemTapped="ListView_ItemTapped" ItemSize="70" ItemsSource="{Binding ContactsInfo}">
                 <syncfusion:SfListView.ItemTemplate>
-                    <DataTemplate x:Name="ItemTemplate"  x:Key="ItemTemplate" >
+                    <DataTemplate>
                         <Image Source="{Binding ContactImage}" />
                     </DataTemplate>
                 </syncfusion:SfListView.ItemTemplate>
@@ -164,7 +166,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        list.BindingContext = new ContactsViewModel();
+        listView.BindingContext = new ContactsViewModel();
 
         var grid = new Grid();
         var label = new Label();
@@ -173,9 +175,9 @@ public partial class MainPage : ContentPage
         var image = new Image();
         image.SetBinding(Image.SourceProperty, new Binding("ContactImage"));
         var label1 = new Label();
-        label.SetBinding(Label.TextProperty, new Binding("ContactName"));
+        label1.SetBinding(Label.TextProperty, new Binding("ContactName"));
         var label2 = new Label();
-        label1.SetBinding(Label.TextProperty, new Binding("ContactNumber"));
+        label2.SetBinding(Label.TextProperty, new Binding("ContactNumber"));
         grid1.Children.Add(image);
         grid1.Children.Add(label1);
         grid1.Children.Add(label2);
@@ -200,7 +202,7 @@ public partial class MainPage : ContentPage
 
     private void ListView_ItemTapped(object sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
     {
-        GridView.BindingContext = e.DataItem;
+        grid.BindingContext = e.DataItem;
     }
 }
 {% endhighlight %}
@@ -257,19 +259,20 @@ public partial class MainPage : ContentPage
         listView.ItemSize = 100;
         listView.ItemTemplate = new DataTemplate(() =>
         {
-            var InnerListView = new SfListView();
-            InnerListView.ItemSize = 100;
-            InnerListView.ItemsSource = InnerList;
-            InnerListView.Orientation = ItemsLayoutOrientation.Horizontal;
-            listView.ItemTemplate = new DataTemplate(() =>
+            var innerListView = new SfListView();
+            innerListView.ItemSize = 100;
+            innerListView.ItemsSource = InnerList;
+            innerListView.Orientation = ItemsLayoutOrientation.Horizontal;
+            innerListView.ItemTemplate = new DataTemplate(() =>
             {
                 var grid1 = new Grid();
                 var image = new Image();
                 image.SetBinding(Image.SourceProperty, new Binding("Image"));
                 grid1.Children.Add(image);
-            }
-            
-            return InnerListView;
+                return grid1;
+            });
+
+            return innerListView;
         });
 
         grid.Children.Add(label1);
@@ -297,14 +300,14 @@ listView.ItemSize = 60;
 
 ## Item spacing
 
-The `SfListView` allows specifying space between each item in the list by setting the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSpacing) property. Generate the space around the item. The default value of this property is `0`. This property can be customized at runtime.
+The `SfListView` allows specifying space between each item in the list by setting the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSpacing) property. This adds space around each item. The default value of this property is `0`. This property can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView" ItemSpacing="5,0,0,0" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-listView.ItemSpacing = new Thickness(5, 0, 0, 0)
+listView.ItemSpacing = new Thickness(5, 0, 0, 0);
 {% endhighlight %}
 {% endtabs %}
 
@@ -363,17 +366,25 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-{% highlight c# tabtitle="IndexToColorConverter.cs" hl_lines="7 8 9" %}
+{% highlight c# tabtitle="IndexToColorConverter.cs" hl_lines="9 10 11" %}
+using System;
+using System.Collections;
+using System.Globalization;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ListView;
+
 public class IndexToColorConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         var listview = parameter as SfListView;
-        var index = listview.DataSource.DisplayItems.IndexOf(value);
-
-        if (index % 2 == 0)
-            return Color.LightGray;
-        return Color.Aquamarine;
+        if (listview?.ItemsSource is IList items)
+        {
+            var index = items.IndexOf(value);
+            if (index % 2 == 0)
+                return Colors.LightGray;
+        }
+        return Colors.Aquamarine;
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -386,7 +397,7 @@ public class IndexToColorConverter : IValueConverter
 
 ## Rounded corner on items
 
-The `SfListView` allows customizing the item appearance, such as rounded corners, by using the `Border` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of the border, you can perform rounded corner for items. 
+The `SfListView` allows customizing the item appearance, such as rounded corners, by using the `Border` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of the border, you can apply rounded corners to items.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
@@ -395,7 +406,7 @@ The `SfListView` allows customizing the item appearance, such as rounded corners
         <syncfusion:SfListView x:Name="listView" ItemSize="60" ItemsSource="{Binding customerDetails}">
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
-                    <Border x:Name="frame" CornerRadius="10" Padding="0">
+                    <Border x:Name="border" CornerRadius="10" Padding="0">
                         <StackLayout>
                             <Label Text="{Binding ContactName}" />
                             <Label Text="{Binding ContactNumber}" />
@@ -424,11 +435,11 @@ public partial class MainPage : ContentPage
             border.CornerRadius = 10;
             var stackLayout = new StackLayout();
             var label1 = new Label();
-            label.SetBinding(Label.TextProperty, new Binding("ContactName"));
+            label1.SetBinding(Label.TextProperty, new Binding("ContactName"));
             var label2 = new Label();
-            label.SetBinding(Label.TextProperty, new Binding("ContactName"));
+            label2.SetBinding(Label.TextProperty, new Binding("ContactNumber"));
             var label3 = new Label();
-            label1.SetBinding(Label.TextProperty, new Binding("ContactType"));
+            label3.SetBinding(Label.TextProperty, new Binding("ContactType"));
             stackLayout.Children.Add(label1);
             stackLayout.Children.Add(label2);
             stackLayout.Children.Add(label3);
@@ -445,9 +456,9 @@ public partial class MainPage : ContentPage
 
 ## Drop shadow effect on items
 
-The `SfListView` allows customizing the item appearance like shadow effect for items by using a `Border` inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
+The `SfListView` allows applying a shadow effect to items by using a `Border` inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
 
-N> Define the border within any view inside `ItemTemplate` with some margin around it. 
+N> Define the border within any view inside `ItemTemplate` with some margin around it.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
@@ -457,7 +468,7 @@ N> Define the border within any view inside `ItemTemplate` with some margin arou
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="2" Margin="2" >
-                        <Border x:Name="frame" Padding="2" Margin="2">
+                        <Border x:Name="border" Padding="2" Margin="2">
                             <StackLayout>
                                 <Label Text="{Binding ContactName}" /> 
                                 <Label Text="{Binding ContactNumber}" />
@@ -491,11 +502,11 @@ public partial class MainPage : ContentPage
             border.Margin = 2;
             var stackLayout = new StackLayout();
             var label1 = new Label();
-            label.SetBinding(Label.TextProperty, new Binding("ContactName"));
+            label1.SetBinding(Label.TextProperty, new Binding("ContactName"));
             var label2 = new Label();
-            label.SetBinding(Label.TextProperty, new Binding("ContactName"));
+            label2.SetBinding(Label.TextProperty, new Binding("ContactNumber"));
             var label3 = new Label();
-            label1.SetBinding(Label.TextProperty, new Binding("ContactType"));
+            label3.SetBinding(Label.TextProperty, new Binding("ContactType"));
             stackLayout.Children.Add(label1);
             stackLayout.Children.Add(label2);
             stackLayout.Children.Add(label3);
@@ -521,7 +532,7 @@ The appearance of the `ListViewItem` can be customized using the following `Visu
 * Selected
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ListViewMaui.MainPage"
@@ -530,34 +541,32 @@ The appearance of the `ListViewItem` can be customized using the following `Visu
     <ContentPage.Resources>
         <Style TargetType="syncfusion:ListViewItem">
             <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup>
-                        <VisualState x:Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="Background"
-                                        Value="Transparent"/>
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="PointerOver">
-                            <VisualState.Setters>
-                                <Setter Property="Background"
-                                        Value= "Gray"/>
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="Pressed">
-                            <VisualState.Setters>
-                                <Setter Property="Background"
-                                        Value="DarkGrey"/>
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="Selected">
-                            <VisualState.Setters>
-                                <Setter Property="Background"
-                                        Value="LightBlue"/>
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background"
+                                    Value="Transparent"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter Property="Background"
+                                    Value="Gray"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Background"
+                                    Value="DarkGrey"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="Background"
+                                    Value="LightBlue"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
             </Setter>
         </Style>
     </ContentPage.Resources>
@@ -606,7 +615,7 @@ public class ItemGeneratorExt : ItemsGenerator
         this.listView = listView;
     }
 
-    protected override ListViewItem OnCreateListViewItem(int itemIndex, ItemType type, object data = null)
+    protected override ListViewItem OnCreateListViewItem(int itemIndex, ItemType type, object data)
     {
         if (type == ItemType.Header)
             return new HeaderItemExt(this.listView);
@@ -823,21 +832,24 @@ The `SfListView` supports accordion view to display a list of items. Each item c
 `Accordion` view can be displayed by defining two different ItemTemplates. The ItemTemplates can be enabled or disabled in the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event.
 
 {% tabs %}
-{% highlight c# tabtitle="AccordionBehavior.cs" hl_lines="33 34 35 36 37 38 39 40 41 42 43 44 45 46 47" %}
+{% highlight c# tabtitle="AccordionBehavior.cs" hl_lines="37 38 39 40 41 42 43 44 45 46 47 48 49 50 51" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ListView;
+
 internal class SfListViewAccordionBehavior : Behavior<ContentPage>
 {
     #region Fields
 
     private Contact tappedItem;
     private SfListView listview;
-    private AccordionViewModel AccordionViewModel;
+    private AccordionViewModel viewModel;
 
     #endregion
 
     #region Properties
     public SfListViewAccordionBehavior()
     {
-        AccordionViewModel = new AccordionViewModel();
+        viewModel = new AccordionViewModel();
     }
 
     #endregion
@@ -847,7 +859,7 @@ internal class SfListViewAccordionBehavior : Behavior<ContentPage>
     protected override void OnAttachedTo(ContentPage bindable)
     {
         listview = bindable.FindByName<SfListView>("listView");
-        listview.ItemsSource = AccordionViewModel.ContactsInfo;
+        listview.ItemsSource = viewModel.ContactsInfo;
         listview.ItemTapped += ListView_ItemTapped;
     }
 
@@ -856,7 +868,7 @@ internal class SfListViewAccordionBehavior : Behavior<ContentPage>
     #region Private Methods
     private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        var tappedItemData = obj as Contact;
+        var tappedItemData = e.DataItem as Contact;
         if (tappedItem != null && tappedItem.IsVisible)
         {
             tappedItem.IsVisible = false;
@@ -889,14 +901,14 @@ The `IsVisible` model property, which is bound to the second template, will be e
 
 ## Item animation on appearing
 
-The `SfListView` supports animating the items by using an [OnItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html#Syncfusion_Maui_ListView_ListViewItem_OnItemAppearing) virtual method. It is raised when the items appearing in the view on scrolling, loading, and navigating from one page to another page. To apply the animation effect for items, follow these steps:
+The `SfListView` supports animating the items by using an [OnItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html#Syncfusion_Maui_ListView_ListViewItem_OnItemAppearing) virtual method. It is raised when an item appears during scrolling, loading, or navigation between pages. To apply the animation effect for items, follow these steps:
 
 ### Extension of ItemGenerator
 
 {% tabs %}
 {% highlight c# tabtitle="ItemGeneratorExt.cs" %}
 
-public class ItemGeneratorExt : ItemGenerator
+public class ItemGeneratorExt : ItemsGenerator
 {
     public SfListView listView;
 	
@@ -905,7 +917,7 @@ public class ItemGeneratorExt : ItemGenerator
         this.listView = listView;
     }
 
-    protected override ListViewItem OnCreateListViewItem(int itemIndex, ItemType type, object data = null)
+    protected override ListViewItem OnCreateListViewItem(int itemIndex, ItemType type, object data)
     {
         if (type == ItemType.Record)
             return new ListViewItemExt(this.listView);
@@ -916,7 +928,7 @@ public class ItemGeneratorExt : ItemGenerator
 {% endhighlight %}
 {% endtabs %}
 
-Initialize and assign ItemGenerator extension to ListView
+### Initialize and assign ItemGenerator extension to ListView
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -949,11 +961,11 @@ public class ListViewItemExt : ListViewItem
         this.listView = listView;
     }
 
-    protected override void OnItemAppearing()
+    protected override async void OnItemAppearing()
     {
-        this.Opacity = 0;
-        this.FadeTo(1, 400, Easing.SinInOut);
         base.OnItemAppearing();
+        this.Opacity = 0;
+        await this.FadeTo(1, 400, Easing.SinInOut);
     }
 }
 
@@ -964,9 +976,9 @@ Here `FadeTo` animation is applied for [ListViewItem](https://help.syncfusion.co
 
 ![Syncfusion .NET MAUI Extension of ListViewItem](Images/appearance/maui-listview-extension-of-listview-item.gif)
 
-### Right to left(RTL)
+### Right to left (RTL)
 
-`SfListView` supports to change the flow of text to the right-to-left direction by setting the `FlowDirection` property. 
+`SfListView` supports to change the flow of text to the right-to-left direction by setting the `FlowDirection` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
@@ -976,7 +988,7 @@ Here `FadeTo` animation is applied for [ListViewItem](https://help.syncfusion.co
                  FlowDirection="RightToLeft"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 this.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
@@ -985,9 +997,9 @@ this.FlowDirection = FlowDirection.RightToLeft;
 
 ### Limitations
 
-* `SfListView` does not support the right-to-left(RTL) direction when `SfListView.Orientation` is `Horizontal`.
+* `SfListView` does not support the right-to-left (RTL) direction when `SfListView.Orientation` is `Horizontal`.
 
-## How to
+## How To
 
 ### Disable ripple effect on item click
 
@@ -1015,8 +1027,8 @@ To disable the ripple effect when clicking a `ListViewItem`, set color value `Tr
 {% endhighlight %}
 {% endtabs %}
 
-## See also 
+## See also
 
-[How to change selected image in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11586/how-to-change-selected-image-in-net-maui-listview-sflistview)                                                         
-[How to apply alternate item background in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11575/how-to-apply-alternate-item-background-in-net-maui-listview-sflistview)  
-[How to apply the item text color in .NET MAUI ListView(SfListView)](https://support.syncfusion.com/kb/article/11526/how-to-apply-the-item-text-color-in-net-maui-listview-sflistview)
+[How to change selected image in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11586/how-to-change-selected-image-in-net-maui-listview-sflistview)
+[How to apply alternate item background in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11575/how-to-apply-alternate-item-background-in-net-maui-listview-sflistview)
+[How to apply the item text color in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11526/how-to-apply-the-item-text-color-in-net-maui-listview-sflistview)

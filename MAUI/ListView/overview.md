@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI ListView control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI ListView (SfListView) control, its elements and more.
+title: About .NET MAUI ListView (SfListView) control | Syncfusion®
+description: Learn about the Syncfusion® .NET MAUI ListView (SfListView) control, its features, and more.
 platform: MAUI
 control: ListView
 documentation: ug
@@ -9,30 +9,30 @@ documentation: ug
 
 # Overview of .NET MAUI ListView (SfListView)
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) renders set of data items using Maui views or custom templates. Data can easily be grouped, sorted, and filtered.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI ListView (SfListView)](https://www.syncfusion.com/maui-controls/maui-listview) renders a set of data items using .NET MAUI views or custom templates. Data can easily be grouped, sorted, and filtered.
 
-![Syncfusion .NET MAUI ListView overview ](images/overview/overview_listview.png)
- 
+![Syncfusion .NET MAUI ListView overview](Images/overview/overview_listview.png)
+
 ## Business use cases
 
 - Data-driven applications that require efficient display of large collections using list or grid layouts.  
 - E-commerce and catalog apps that present products with rich templates and grouped categories.  
 - Messaging and social apps that display dynamic lists with real-time updates and infinite scrolling.  
-- Business applications that require sorting, grouping, and filtering of data in list-based views.  
+- Line-of-business applications (such as CRM, ERP, or inventory) that require sorting, grouping, and filtering of data in list-based views.  
 
 ## Key features
 
-- **Optimized performance support** allows smooth rendering using efficient view reuse techniques.  
-- **Item templating support** allows designing rich and customized UI layouts for each data item.  
-- **Dynamic template selection** allows using DataTemplateSelector to define different UI layouts based on item type.  
-- **Auto-fit item sizing** allows adjusting item size automatically based on content within the template.  
-- **Multiple layout support** allows displaying items in both linear and grid arrangements.  
-- **Orientation support** allows switching between horizontal and vertical list layouts.  
-- **Data operations support** allows sorting, grouping, and filtering data efficiently.  
-- **Group header customization** allows customizing group headers with sticky header support.  
-- **Selection support** allows choosing items using various selection modes and gestures.  
-- **Header and footer support** allows adding sticky headers and footers for better content organization.  
-- **Load more support** allows loading additional data automatically or manually when scrolling reaches the list boundaries.  
+- **Optimized performance** delivers smooth scrolling through view recycling and UI virtualization.  
+- **Item templating** enables rich, customized UI layouts for each data item.  
+- **Dynamic template selection** uses `DataTemplateSelector` to define different UI layouts based on item type.  
+- **Auto-fit item sizing** adjusts the item size automatically based on the content of the template.  
+- **Multiple layouts** displays items in linear or grid layouts.  
+- **Orientation support** renders items horizontally or vertically.  
+- **Data operations** sort, group, and filter data efficiently.  
+- **Group header customization** styles group headers with sticky-header behavior.  
+- **Selection support** chooses items using various selection modes and gestures.  
+- **Header and footer support** adds headers and footers that stay in view while scrolling.  
+- **Load more support** loads additional data automatically or manually when scrolling reaches the list boundary.  
 
 ## Globalization
 
@@ -77,7 +77,7 @@ The following table summarizes the globalization support available in this contr
 <td><a href="/maui/listview/overview">ListView</a></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 <td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
@@ -89,7 +89,7 @@ The following table summarizes the globalization support available in this contr
 - [Cards](https://help.syncfusion.com/maui/cards/overview) for presenting content using card-based layouts.
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for displaying and selecting items from a dropdown list.
 
-## See Also
+## See also
 
 - [Getting Started](https://help.syncfusion.com/maui/listview/getting-started) shows a step‑by‑step guide to begin using the ListView control.  
 - [Layouts](https://help.syncfusion.com/maui/listview/layouts) explains how to configure list and grid layouts.  
@@ -224,7 +224,7 @@ The following table summarizes the globalization support available in this contr
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
 <div class="card-header">
     <div class="icon-circle">
@@ -233,14 +233,14 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<a href="https://www.syncfusion.com/maui-controls/maui-listview" class="explore-link">
+<a href="https://www.syncfusion.com/maui-controls/maui-listview" class="explore-link" target="_blank" rel="noopener noreferrer">
 Explore Features
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
 </div>
 <!-- Card 2 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
@@ -249,14 +249,14 @@ Explore Features
     <h3 class="form-title">Showcase Samples</h3>
 </div>
     <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/ListView" class="explore-link">
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/ListView" class="explore-link" target="_blank" rel="noopener noreferrer">
     View Samples
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
 </div>
 <!-- Card 3 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
@@ -267,14 +267,14 @@ Explore Features
     <div class="form-description">
       Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
-    <a href="https://www.syncfusion.com/tutorial-videos/maui/listview" class="explore-link">
+    <a href="https://www.syncfusion.com/tutorial-videos/maui/listview" class="explore-link" target="_blank" rel="noopener noreferrer">
     Watch now
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
 </div>
 <!-- Card 4 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
@@ -285,14 +285,14 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1228" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1228" class="explore-link" target="_blank" rel="noopener noreferrer">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
 </div>
 <!-- Card 5 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
@@ -303,7 +303,7 @@ Search KB's
     <div class="form-description">
       Discover in‑depth articles, use cases and expert insights from our developers.
     </div>
-    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
+    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link" target="_blank" rel="noopener noreferrer">
 Read Blogs
   <span class="card-icon card-arrow"></span>
 </a>

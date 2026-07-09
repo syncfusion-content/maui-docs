@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with ListView in .NET MAUI ListView control | Syncfusion®
+title: Working with SfListView in .NET MAUI | Syncfusion®
 description: Learn here all about Working with ListView support in Syncfusion® .NET MAUI ListView control and more.
 platform: MAUI
 control: SfListView
@@ -13,9 +13,16 @@ documentation: ug
 
 ### Loaded event
 
-The [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event is triggered when the `SfListView` is loading in view for the first time.
+The [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event is triggered when the `SfListView` is loaded into view for the first time.
 
 {% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<sync:SfListView x:Name="listView"
+                 ItemsSource="{Binding Customers}"
+                 Loaded="ListView_Loaded" />
+
+{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.Loaded += ListView_Loaded;
@@ -31,18 +38,25 @@ private void ListView_Loaded(object sender, Syncfusion.Maui.ListView.ListViewLoa
 The `Loaded` event is used for the following use cases:
 
 * To scroll the desired position or index, use the [ScrollTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollTo_System_Double_System_Boolean_) or [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_).
-* To collapse all the groups.
-* To find the sorted or grouped [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_DisplayItems) of the underlying bound data  to `SfListView`.
+* To collapse all the groups, use `SfListView.CollapseAllGroups()`.
+* To access the sorted or grouped items of the bound data via [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_DisplayItems).
 
 ### Tapped event
 
-The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event will be triggered whenever tapping the item. Here, [TapCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter) property sets the parameter for [SfListView.TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) and its default value is [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html). `ItemTappedEventArgs` has the following members,which provides information for `ItemTapped` event:
+The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event will be triggered whenever tapping the item. Here, [TapCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter) property sets the parameter for [SfListView.TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) and its default value is [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html). `ItemTappedEventArgs` has the following members, which provides information for `ItemTapped` event:
 
  * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_ItemType): It gets the type of the tapped item.
- * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_DataItem): The underlying data associated with the tapped item as its arguments.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_DataItem): The underlying data associated with the tapped item.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_Position): Gets the touch position in the tapped item.
 
 {% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<sync:SfListView x:Name="listView"
+                 ItemsSource="{Binding InboxInfo}"
+                 ItemTapped="ListView_ItemTapped" />
+
+{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.ItemTapped += ListView_ItemTapped;
@@ -50,7 +64,7 @@ listView.ItemTapped += ListView_ItemTapped;
 private void ListView_ItemTapped(object sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
 {
     if (e.DataItem == viewModel.InboxInfo[0])
-      viewModel.InboxInfo.Remove(e.DataItem as ListViewInboxInfo);  
+      viewModel.InboxInfo.Remove(e.DataItem as ListViewInboxInfo);
 }
 
 {% endhighlight %}
@@ -100,8 +114,10 @@ The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListV
 
 The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemRightTapped) event will be triggered whenever the item is right tapped. The [ItemRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html) has the following members providing information for the `ItemRightTapped` event:
 
+N> Platform behavior: `ItemRightTapped` is only raised on platforms that support a right-click or secondary-button gesture, such as Windows (WinUI), macOS (Mac Catalyst), and desktop targets. It is **not** raised on iOS and Android, which do not expose a right-click gesture. On iOS and Android, use the `ItemLongPress` event instead to provide a similar context-menu experience.
+
  * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_ItemType): Gets the type of right tapped item.
- * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_DataItem): The underlying data is associated with the right tapped item as its arguments.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_DataItem): The underlying data associated with the right-tapped item.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_Position): Gets the touch position in the right tapped item.
 
 {% tabs %}
@@ -121,8 +137,10 @@ private void ListView_ItemRightTapped(object sender, Syncfusion.Maui.ListView.It
 
 The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress) event will be triggered whenever long pressing the item. Here, [LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter) sets the parameter for [SfListView.LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) and its default value is [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html). `ItemLongPressEventArgs` has the following members, which provides information for `ItemLongPress` event:
 
+N> Platform behavior: `ItemLongPress` is supported on iOS, Android, Windows (WinUI), and macOS (Mac Catalyst). However, on Windows (WinUI), the long-press is triggered by touch only; it is **not** raised by a mouse press-and-hold gesture.
+
  * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_ItemType): It gets the type of the long pressed item.
- * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_DataItem): The underlying data associated with the holding item as its arguments.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_DataItem): The underlying data associated with the long-pressed item.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_Position): Gets the touch position in the holding item.
 
 {% tabs %}
@@ -130,14 +148,15 @@ The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
 
 listView.ItemLongPress += ListView_ItemLongPress;
 
-private void ListView_ItemLongPress(object sender, Syncfusion.Maui.ListView.ItemLongPressEventArgs e)
-{
+pri// Note: this comparison uses reference equality, not value equality.
    if (e.DataItem == viewModel.InboxInfo[3])
-      viewModel.InboxInfo.Remove(e.DataItem as ListViewInboxInfo);         
+      viewModel.InboxInfo.Remove(e.DataItem as ListViewInboxInfo);
+   if (e.DataItem == viewModel.InboxInfo[3])
+      viewModel.InboxInfo.Remove(e.DataItem as ListViewInboxInfo);
 }
 
 {% endhighlight %}
-{% endtabs%}
+{% endtabs %}
 
 The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress) event is used for the following use cases:
 
@@ -145,11 +164,11 @@ The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
 
 N>
 * Interaction events of the `SfListView` will be triggered for all the `ListViewItems` like `HeaderItem`, `FooterItem`, `GroupHeaderItem`, `LoadMoreItem`, and `RecordItem`. Handle the interaction actions based on the `ItemType` of the event args. 
-* The `LongPress` interaction with the mouse is not supported in the `WinUI` platform. For more details about this, refer to this [link](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.holding?view=winrt-22621#remarks).
+* The `LongPress` interaction with the mouse is not supported on the Windows (WinUI) platform. For more details about this, refer to the [`UIElement.Holding`](/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.uielement.holding) documentation in the Windows App SDK.
 
 ### ItemAppearing
 
-The [ItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemAppearing) triggered when items appear in the view while scrolling, loading, or navigating from one page to another. The [ItemAppearingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html)  has the following member, which provides information of appearing Items.
+The [ItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemAppearing) is triggered when items appear in the view while scrolling, loading, or navigating from one page to another. The [ItemAppearingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html)  has the following member, which provides information of appearing Items.
 
 * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html#Syncfusion_Maui_ListView_ItemAppearingEventArgs_DataItem): The underlying data associated with the appearing item.
 
@@ -173,12 +192,12 @@ private void listView_ItemAppearing(object sender,  Syncfusion.Maui.ListView.Ite
 
 The [ItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemAppearing) event is used for the following use cases:
 
-* To find the item appears in the view.
+* To determine when an item appears in the view.
 * To change the background color of the appearing item, use the converter.
 
 ### ItemDisappearing
 
-The [ItemDisappearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDisappearing) event is triggered when the items disappearing in the view while scrolling, disposing, or navigating from one page to another. The [ItemDisappearingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html) has the following member, which provides information about disappearing Items:
+The [ItemDisappearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDisappearing) event is triggered when items disappear from the view while scrolling, disposing, or navigating from one page to another. The [ItemDisappearingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html) has the following member, which provides information about disappearing Items:
 
 * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html#Syncfusion_Maui_ListView_ItemDisappearingEventArgs_DataItem): The underlying data associated with the disappearing item.
 
@@ -202,25 +221,26 @@ private void listView_ItemDisappearing(object sender, Syncfusion.Maui.ListView.I
 
 The [ItemDisappearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDisappearing) event is used for the following use cases:
 
-* To find the item disappears in the view.
+* To determine when an item disappears from the view.
 
 ## Improving ListView performance
 
-The .NET MAUI ListView (SfListView) has been built from the ground up with an optimized view reuse strategy to provide best possible performance on the .NET MAUI platform, even when loading large data sets. The following techniques are used to improve performance of the `SfListView`:
+The .NET MAUI ListView (SfListView) has been built from the ground up with an optimized view reuse strategy to provide the best possible performance on the .NET MAUI platform, even when loading large data sets. The following techniques are used to improve performance of the `SfListView`:
 
- * Bind the `ItemsSource` property to an IList<T> collection instead of an IEnumerable<T> collection because IEnumerable<T> collection do not support random access.
- * The `SfListView` gets refreshed each and every time when a new item is added into the underlying collection. Because, when adding items at runtime, the `DataSource` gets refreshed. To avoid this behavior, use [BeginInit()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_BeginInit) to stop the `RefreshView()` calling in each time, and use [EndInit()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_EndInit) to start the `RefreshView()` calling when adding number of finished items.
+ * Bind the `ItemsSource` property to an IList<T> collection instead of an IEnumerable<T> collection because IEnumerable<T> collection does not support random access.
+ * The `SfListView` gets refreshed each and every time when a new item is added into the underlying collection. When adding items at runtime, the `DataSource` gets refreshed. To avoid this behavior, use [BeginInit()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_BeginInit) to stop the `RefreshView()` calling in each time, and use [EndInit()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_EndInit) to start the `RefreshView()` calling when adding number of finished items.
  * Avoid loading complex layout in template of listview. For example, loading large-size images or nested containers degrades the scrolling performance. This practice commonly degrades performance in all platforms, and particularly more in Android version API level 19. So, use fewer elements and images with small size and resolution to achieve the maximum performance.
  * Avoid placing the `SfListView` inside `ScrollView` for the following reasons:
     * The `SfListView` implement its own scrolling.
-    * The `SfListView` will not receive any gestures as it will be handled by the parent `ScrollView`.
-    * If the `SfListView` loads inside the `ScrollView`, the size should be defined.
+    * The `SfListView` will not receive any gestures as they are handled by the parent `ScrollView`.
+    * If the `SfListView` loads inside the `ScrollView`, an explicit `HeightRequest` should be set.
  * Avoid changing the cell layout based on the `BindingContext`. This incurs large layout and initialization costs.
  * Implement a model class inherited with `INotifyPropertyChanged` interface to notify the property changes at runtime.
+ * Use an `ObservableCollection<T>` as the bound `ItemsSource` so that additions, removals, and property updates are propagated to the UI automatically. The sample event handlers in this document (e.g., `viewModel.InboxInfo.Remove(...)`) assume an `ObservableCollection<ListViewInboxInfo>`.
  
 ## Scrolling ListView without virtualization
 
-The `SfListView` allows you to scroll by loading the entire collection of items inside the ScrollView and defining the total extend of its container to `HeightRequest` in the [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event.
+The `SfListView` allows you to scroll by loading the entire collection of items inside the ScrollView and defining the total extent of its container to `HeightRequest` in the [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event.
 
 {% tabs %}
 {% highlight xaml %}
@@ -229,15 +249,17 @@ The `SfListView` allows you to scroll by loading the entire collection of items 
 </ScrollView>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+using System.Reflection;
 using Syncfusion.ListView.Control.Helpers;
+
 public partial class MainPage : ContentPage
-{ 
+{
 	public MainPage()
 	{
 		InitializeComponent();
 	}
- 
-	private void listView_Loaded(object sender,  e)
+
+	private void listView_Loaded(object sender, ListViewLoadedEventArgs e)
 	{
 		var container = listView.GetVisualContainer();
 		var extent = (double)container.GetType().GetRuntimeProperties().FirstOrDefault(x => x.Name == "TotalExtent").GetValue(container);
@@ -248,7 +270,9 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 
-When `SfListView` is in [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) as `Height`, the extend of the ListView will be updated only while scrolling. So you can resize the ListView in [VisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html) `PropertyChanged` method  as shown in the following code sample.
+N> The `TotalExtent` property is accessed via reflection because it is an internal member. This approach is **unsupported** and may break when the control is updated. Prefer using the `AutoFitMode="Height"` approach below whenever possible.
+
+When `SfListView` is in [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) as `Height`, the extent of the ListView will be updated only while scrolling. So you can resize the ListView in the [VisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html) `PropertyChanged` event handler as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
@@ -297,26 +321,26 @@ The following limitations should be noted when using the previous approaches:
 
 ## Rendering ListView when loading in different layouts
 
-The options are as follows:
+Behavior depends on the parent layout:
 
-* Creates the measurement and layout similar to .NET MAUI ListView, when the ListView is loaded inside the layouts such as `StackLayout`, `ScrollView`, and `Grid`, in which the `RowDefinition` or `ColumnDefinition` is set to `Auto`. In all other layouts, the ListView size will be allocated from the framework.
-* Sets the value of total extend to the `HeightRequest` of ListView, because the scrolling will be handled by the parent `ScrollView`, when ListView is loaded inside the `StackLayout` with base parent as `ScrollView` and multiple elements inside the `StackLayout`.
+* Measures and lays out the control the same way as the .NET MAUI ListView, when the ListView is loaded inside the layouts such as `StackLayout`, `ScrollView`, and `Grid`, in which the `RowDefinition` or `ColumnDefinition` is set to `Auto`. In all other layouts, the ListView size will be allocated from the framework.
+* Sets the value of total extent to the `HeightRequest` of ListView, because the scrolling will be handled by the parent `ScrollView`, when ListView is loaded inside the `StackLayout` with base parent as `ScrollView` and multiple elements inside the `StackLayout`.
 
 ## Refresh view
 
-You can refresh the view by using the [RefreshView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshView) method. It will be used to refresh the items in the listview at runtime while updating the view.
+You can refresh the view by using the [RefreshView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshView) method. Use it to refresh the items in the ListView at runtime while updating the view.
 
 {% tabs %}
 {% highlight c# %} 
-   listview.RefreshView();   
+   listView.RefreshView();   
 {% endhighlight %}
 {% endtabs %}
 
 ## How to
 
-### Filter listview items based on another listview selection
+### Filter ListView items based on another ListView selection
 
-To filter the listview items based on the item selection in another listview, use the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_Filter) property.
+To filter the ListView items based on the item selection in another ListView, use the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_Filter) property.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
