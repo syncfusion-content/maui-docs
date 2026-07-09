@@ -105,7 +105,7 @@ this.Content = sunburstChart;
 
 {% endtabs %}
 
-![DisplayMode HighlightByBrush.](Selection_images/maui_selection_highlight_by_brush.png)
+![DisplayMode HighlightByBrush in MAUI Sunburst Chart.](Selection_images/maui_selection_highlight_by_brush.png)
 
 ### Opacity
 
@@ -141,7 +141,7 @@ this.Content = sunburstChart;
 
 {% endtabs %}
 
-![DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_opacity.png)
+![DisplayMode HighlightByOpacity in MAUI Sunburst Chart.](Selection_images/maui_selection_highlight_by_opacity.png)
 
 ### Stroke
 
@@ -178,7 +178,7 @@ this.Content = sunburstChart;
 
 {% endtabs %}
 
-![DisplayMode HighlightByStroke.](Selection_images/maui_selection_highlight_by_stroke.png)
+![DisplayMode HighlightByStroke in MAUI Sunburst Chart.](Selection_images/maui_selection_highlight_by_stroke.png)
 
 ## Events
 

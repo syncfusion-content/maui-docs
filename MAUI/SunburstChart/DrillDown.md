@@ -81,7 +81,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Drill Down Toolbar Alignment.](drill_down_images/maui_toolbar_alignment.png)
+![Drill Down Toolbar Alignment in MAUI Sunburst Chart.](drill_down_images/maui_toolbar_alignment.png)
 
 ## Toolbar Positioning
 
@@ -117,7 +117,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Drill Down Toolbar Positioning.](drill_down_images/maui_toolbar_positioning.png)
+![Drill Down Toolbar Positioning in MAUI Sunburst Chart.](drill_down_images/maui_toolbar_positioning.png)
 
 ## Toolbar Customization
 
@@ -156,4 +156,4 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Drill Down Toolbar Customization.](drill_down_images/maui_toolbar_customization.png)
+![Drill Down Toolbar Customization in MAUI Sunburst Chart.](drill_down_images/maui_toolbar_customization.png)

@@ -29,7 +29,7 @@ The title of the sunburst chart provides quick information to the user about the
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.Title = new Label()
@@ -62,7 +62,7 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
  
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
@@ -94,7 +94,7 @@ The sunburst chart allows you to customize the radius by using the [Radius](http
  
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
@@ -125,7 +125,7 @@ The sunburst chart allows you to customize the inner radius by using the [InnerR
  
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
@@ -157,7 +157,7 @@ Stroke color and stroke width of the sunburst chart can be customized by using t
  
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.ItemsSource = (new SunburstViewModel()).DataSource;

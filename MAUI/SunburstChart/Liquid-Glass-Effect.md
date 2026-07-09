@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liquid Glass Effect in .NET MAUI Sunburst Chart control | Syncfusion
-description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Chart (SfSunburstChart) for stunning UI.
+description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Sunburst Chart (SfSunburstChart) for stunning UI.
 platform: maui
 control: SfSunburstChart
 documentation: ug
@@ -104,7 +104,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Sunburst Chart with Liquid Glass Tooltip](Liquid-Glass-Images/sunburst_liquid_tooltip.png)
+![Liquid Glass Tooltip in MAUI Sunburst Chart.](Liquid-Glass-Images/sunburst_liquid_tooltip.png)
 
 When using a custom tooltip template via the [TooltipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_TooltipTemplate) property, set the template's background to `Transparent` so the liquid glass effect is visible.
 
