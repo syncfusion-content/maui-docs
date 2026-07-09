@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Overview of .NET MAUI Image Editor Control | Syncfusion
-description: Learn about the introduction of Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor(SfImageEditor) control, its basic features, and editing functionalities.
-platform: maui
+description: Learn here all about the Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor (SfImageEditor) control, its basic features, and editing functionalities.
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, image view maui.
@@ -10,7 +10,7 @@ keywords: .net maui imageEditor, .net maui image editing, image view maui.
 
 # Overview of .NET MAUI Image Editor (SfImageEditor)
 
-The Syncfusion® [.NET MAUI ImageEditor (SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) is a very handy tool, which is used to edit an image by annotating with freehand drawing paths, text, and built-in shapes; it also allows to crop and flip an image. This control has a built-in toolbar that helps to perform editing operations.
+The **[.NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor)** (SfImageEditor) lets you edit images by annotating them with freehand drawing paths, text, and built-in shapes, and by cropping and flipping them. A built-in toolbar provides quick access to the editing operations.
 
 ![.NET MAUI image editor overview ](images/overview/overview_imageeditor.png)
  
@@ -23,15 +23,15 @@ The Syncfusion® [.NET MAUI ImageEditor (SfImageEditor)](https://www.syncfusion.
 
 ## Key features
 
-- **Image cropping support** allows selecting and trimming specific portions of an image based on user requirements.  
-- **Visual effects support** allows applying effects such as brightness, contrast, blur, saturation, exposure, sharpen, hue, and opacity.  
-- **Zooming and panning support** allows navigating images easily for detailed editing.  
-- **Transformation support** allows performing operations such as rotation and flipping.  
-- **Annotation support** allows adding text, shapes, and freehand drawings to enhance or mark images.  
-- **Toolbar support** provides built-in tools for easy access to editing features with customization options.  
-- **Undo and redo support** allows reverting or reapplying changes during editing.  
-- **Save support** allows storing edited images to a desired location after modifications. 
-- **Serialization support** allows saving and restoring the editing state of images, enabling persistence and reusable across sessions.
+- **Image cropping** allows you to select and trim specific portions of an image.  
+- **Visual effects** allows you to apply effects such as brightness, contrast, blur, saturation, exposure, sharpen, hue, and opacity.  
+- **Zooming and panning** allows you to navigate images for detailed editing.  
+- **Transformation** allows you to perform operations such as rotation and flipping.  
+- **Annotation** allows you to add text, shapes, and freehand drawings to enhance or mark images.  
+- **Toolbar** provides built-in tools for easy access to editing features, with customization options.  
+- **Undo and redo** allows you to revert or reapply changes during editing.  
+- **Save** allows you to store edited images to a desired location after modifications.  
+- **Serialization** allows you to save and restore the editing state of images, enabling persistence and reuse across sessions.
 
 ## Globalization
 
@@ -82,14 +82,14 @@ The following table summarizes the globalization support available in this contr
 
 - [Signature Pad](https://help.syncfusion.com/maui/signaturepad/overview) for capturing and adding signature annotations to images.
 - [Popup](https://help.syncfusion.com/maui/popup/overview) for presenting image editing tools or previews.
-- [Toolbar](https://help.syncfusion.com/maui/toolbar/overview) for providing quick access to editing actions with customizable options.
+- [Toolbar](https://help.syncfusion.com/maui/toolbar/overview) for providing quick access to editing actions with customization options.
 
-## See Also
+## See also
 
-- [Getting Started](https://help.syncfusion.com/maui/imageeditor/getting-started) shows a step‑by‑step guide to begin using the Image Editor control.  
-- [Image filters](https://help.syncfusion.com/maui/imageeditor/imagefilter) let you apply built‑in filters to adjust brightness, contrast, and colors for better visuals.  
-- [Custom view](https://help.syncfusion.com/maui/imageeditor/custom-view) allows embedding custom UI elements inside the editor to extend functionality and tailor the editing experience.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/imageeditor/getting-started) shows a step-by-step guide to begin using the Image Editor control.  
+- [Image filters](https://help.syncfusion.com/maui/imageeditor/imagefilter) let you apply built-in filters to adjust brightness, contrast, and colors.  
+- [Custom view](https://help.syncfusion.com/maui/imageeditor/custom-view) allows you to embed custom UI elements inside the editor to extend functionality.  
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and reference UI examples.
 
 ## Resources
 

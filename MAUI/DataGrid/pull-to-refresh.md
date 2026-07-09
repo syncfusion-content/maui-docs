@@ -156,7 +156,7 @@ To customize the various properties of SfPullToRefresh, refer to this [documenta
 
 ## Host .NET MAUI DataGrid as pullable content
 
-The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI Datagrid inside the PullToRefresh, follow these steps.
+The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) inside the PullToRefresh, follow these steps.
 <ol>
     <li> Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/datagrid/getting-started">DataGrid</a> and PullToRefresh.</li>
     <li> Import PullToRefresh and DataGrid control namespace as follows.</li>

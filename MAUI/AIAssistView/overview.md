@@ -9,23 +9,23 @@ documentation: ug
 
 # Overview of .NET MAUI AI AssistView (SfAIAssistView)
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI AI AssistView](https://www.syncfusion.com/maui-controls/maui-ai-assistview) control is a component for integrating AI services into .NET MAUI apps. It provides a user-friendly interface, making it easier for developers to create applications that interact with AI. AI AssistView enables developers can customize both appearance and functionality, allowing them to match their app's design and requirements. It simplifies the process of building intelligent, responsive applications by leveraging AI to improve the user experience.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI AI AssistView](https://www.syncfusion.com/maui-controls/maui-ai-assistview) control enables seamless integration of AI capabilities into .NET MAUI applications. It provides a user-friendly interface that simplifies the development of applications capable of interacting with AI services.
 
-![Syncfusion .NET MAUI AI assistview overview ](Images/overview/aiassistview.png)
+AI AssistView allows developers to customize both the appearance and functionality of the control, making it adaptable to various design and application requirements. It streamlines building AI-driven, responsive applications.
 
 ## Business use cases
 
 - AI writing assistants for generating and refining content.  
-- Customer support bots with guided responses and quick suggestions. 
-- Educational tutors delivering explanations, quizzes, and structured learning content.  
+- Customer support bots with guided responses and quick suggestions.
+- Educational tutors that deliver explanations, quizzes, and structured learning content.
 - Business productivity apps integrating AI insights into workflows.  
 
 ## Key features
 
 - **Rich content types** display AI responses as text, images, hyperlinks, or structured cards.  
 - **Flexible control templates** define custom layouts and render any view or UI element.  
-- **Suggestions** provide quick reply options. 
-- **Styling & appearance** customize message styles, editor, and header. 
+- **Suggestions** provide quick reply options.
+- **Styling & appearance** customize message styles, editor, and header.
 
 ## Globalization
 
@@ -38,7 +38,7 @@ The following table summarizes the globalization support available in this contr
 
 .legend{
   display: inline-flex !important;
-  flex-direction: row !important; 
+  flex-direction: row !important;
   gap: 16px !important;
 }
 </style>
@@ -47,11 +47,11 @@ The following table summarizes the globalization support available in this contr
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/full-support.svg" width="16"> Full Support
 </span>
- 
+
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/partial-support.svg" width="16"> Partial Support
 </span>
- 
+
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
@@ -73,7 +73,7 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
+</tr>
 </table>
 
 ## Related controls
@@ -202,7 +202,7 @@ The following table summarizes the globalization support available in this contr
 .explore-link {
   margin-top: auto;
   color: #0A76FF;
-  font-size: 12;
+  font-size: 12px;
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -239,7 +239,7 @@ Explore Features
     <div class="icon-circle">
     <span class="card-icon card-showcase"></span>
   </div>
-    <h3 class="form-title">Showcase Samples</h3>
+    <h3 class="form-title">Sample Showcase</h3>
 </div>
     <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
     <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/AIAssistView" class="explore-link">
@@ -279,7 +279,7 @@ Explore Features
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
     <a href="https://support.syncfusion.com/kb/cross-platforms/section/1571" class="explore-link">
-Search KB's
+Search KB articles
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
@@ -291,7 +291,7 @@ Search KB's
     <div class="icon-circle">
     <span class="card-icon card-blogs"></span>
     </div>
-    <h3 class="form-title">Blogs</h3>
+    <h3 class="form-title">Blog Articles</h3>
 </div>
     <div class="form-description">
       Discover in‑depth articles, use cases and expert insights from our developers.

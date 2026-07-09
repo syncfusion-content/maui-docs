@@ -1,8 +1,8 @@
 ---
 layout: post
-title: About .NET MAUI Scheduler control | Syncfusion
-canonical_url: "https://www.syncfusion.com/maui-controls/maui-scheduler"
-description: Learn here all about introduction of Syncfusion .NET MAUI Scheduler(SfScheduler) control, its basic features and functionalities of scheduler.
+title: About .NET MAUI Scheduler control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/scheduler-sdk/maui-scheduler"
+description: Learn here all about the introduction of Syncfusion .NET MAUI Scheduler(SfScheduler) control, its basic features and functionalities of scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -11,7 +11,7 @@ keywords : .net maui scheduler, maui appointment scheduling, .net maui agenda vi
 
 # Overview of .NET MAUI Scheduler (SfScheduler)
 
-The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler ([SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler)) has nine different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) has nine different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
 
 ![overview-in-maui-scheduler](images/overview/overview-in-maui-scheduler.png)
 
@@ -20,11 +20,11 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler ([SfScheduler](https://www.sy
 - Calendar and booking applications that require managing appointments, meetings, and schedules efficiently.  
 - Enterprise systems that track employee schedules, tasks, and resource planning.  
 - Health care and service applications that manage appointments with recurrence and time-based availability.  
-- Productivity and collaboration apps that display events across multiple calendar views for better planning. 
+- Productivity and collaboration apps that display events across multiple calendar views for better planning.
 
 ## Key features
 
-- **Built‑in views** switch between Day, Week, WorkWeek, Month, Agenda, and Timeline views for flexible scheduling
+- **Built‑in views** switch between Day, Week, WorkWeek, Month, Agenda, and Timeline views for flexible scheduling.
 
  ![built-in-views-in-maui-scheduler](images/overview/built-in-views-in-maui-scheduler.png)
 
@@ -70,8 +70,9 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler ([SfScheduler](https://www.sy
 
 - **Custom start & End hours** show only relevant time ranges by hiding unnecessary hours
 
- ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png) 
+ ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
 
+ N> Looking for the full .NET MAUI Scheduler component overview, features, pricing, and documentation? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) page. 
 
 ## Globalization
 
@@ -264,7 +265,7 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<a href="https://www.syncfusion.com/maui-controls/maui-scheduler" class="explore-link">
+<a href="https://www.syncfusion.com/scheduler-sdk/maui-scheduler" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
 </a>

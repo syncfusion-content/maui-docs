@@ -14,7 +14,7 @@ documentation: ug
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control allows to navigate through dates either programmatically or by using the [forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward) and [backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward) buttons, and it is applicable to all the Scheduler views.
 
 N> 
-Touch gesture is not working, as framework is facing an [issue](https://github.com/dotnet/maui/issues/3561) 
+Touch gesture is not working, as the framework is facing an [issue](https://github.com/dotnet/maui/issues/3561) 
 
 ### Programmatic date navigation
 
@@ -67,7 +67,7 @@ The next and previous views can be accessed through swiping the control from rig
 
 #### Forward
 
-The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to view the next immediate date using the [Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward) method. If the scheduler view is month, it moves on to the next month, similarly for week and day views it moves on to the next day.
+The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to view the next immediate date using the [Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward) method. If the scheduler view is month, it moves to the next month, similarly for week and day views it moves to the next day.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -80,7 +80,7 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
     <scheduler:SfScheduler x:Name="Scheduler" 
                            View="Week" >
     </scheduler:SfScheduler>
-    <Button x:Name="button" Text="Forward" Clicked="OnButtonClicked" GridLayout.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    <Button x:Name="button" Text="Forward" Clicked="OnButtonClicked" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 </Grid>
 
 {% endhighlight %}
@@ -98,7 +98,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 
 #### Backward
 
-The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to view the previous immediate date using the [Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward) method. If the scheduler view is month, it moves on to the previous month, similarly for week and day views it moves on to the previous day.
+The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to view the previous immediate date using the [Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward) method. If the scheduler view is month, it moves to the previous month, similarly for week and day views it moves to the previous day.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -111,7 +111,7 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
     <scheduler:SfScheduler x:Name="Scheduler" 
                            View="Week" >
     </scheduler:SfScheduler>
-    <Button x:Name="button" Text="Backward" Clicked="OnButtonClicked" GridLayout.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    <Button x:Name="button" Text="Backward" Clicked="OnButtonClicked" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 </Grid>
 
 {% endhighlight %}
@@ -224,6 +224,22 @@ scheduler.ShowAllowedViews = false;
 this.Content = scheduler;
 
 {% endhighlight %}
+{% endtabs %}
+
+### Enable or disable swipe navigation 
+
+The [EnableSwipeNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableSwipeNavigation) property determines whether users can navigate between dates using the scheduler's built-in navigation interactions. By default, `EnableSwipeNavigation` is set to `true`, allowing users to navigate using swipe gestures and the navigation buttons in the scheduler header. Setting `EnableSwipeNavigation` to `false` disables these navigation interactions.
+
+{% tabs %}  
+{% highlight XAML tabtitle="xaml" hl_lines="2" %}
+<scheduler:SfScheduler x:Name="scheduler" 
+                       EnableSwipeNavigation="False"/>
+{% endhighlight %}
+{% highlight C# tabtitle="c#" hl_lines="2" %}
+SfScheduler scheduler = new SfScheduler();
+scheduler.EnableSwipeNavigation = false;
+this.Content = scheduler;
+{% endhighlight %}  
 {% endtabs %}
 
 ## Date restriction

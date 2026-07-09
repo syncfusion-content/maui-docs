@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Barcode Generator control | Syncfusion
+title: About .NET MAUI Barcode Generator control | Syncfusion®
 description: Learn here all about introduction of Syncfusion .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
 platform: maui
 control: SfBarcodeGenerator
@@ -28,55 +28,6 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Barcode Generator](https://www.syncfus
 - **Two-dimensional barcode** include [`QR code`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html) and [`Data Matrix`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrix.html) formats for compact and high-density data encoding.
 - **Barcode customization** allows modifying properties such as `BackgroundColor`, [`ForegroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_ForegroundColor), and [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) size for better readability.
 - **Text customization** enables displaying encoded values with configurable position and styling.
-
-## Globalization
-
-The following table summarizes the globalization support available in this control.
-
-<style>
-.img{
-  margin:0 !important;
-}
-
-.legend{
-  display: inline-flex !important;
-  flex-direction: row !important; 
-  gap: 16px !important;
-}
-</style>
-
-<div class="legend">
-<span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/partial-support.svg" width="16"> Partial Support
-</span>
- 
-<span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/no-support.svg" width="16"> No Support
-</span>
- 
-<span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/not-applicable.svg" width="16"> Not Applicable
-</span>
-</div>
-
-<table>
-<tr>
-<th align="center">Control</th>
-<th align="center">Localization</th>
-<th align="center">RTL</th>
-<th align="center">Time zone</th>
-<th align="center">Screen reader</th>
-<th align="center">Keyboard navigation</th>
-</tr>
-<tr>
-<td><a href="/maui/barcode-generator/overview">Barcode Generator</a></td>
-<td align="center"><img src="../Images/no-support.svg" alt="not" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
-</tr> 
-</table>
 
 ## Related controls
 

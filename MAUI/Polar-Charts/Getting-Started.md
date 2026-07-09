@@ -126,7 +126,7 @@ public class PlantModel
 
 {% endtabs %} 
 
-Next, create a PlantViewModel class and initialize a list of `PlantModel` objects as follows.
+Next, create a `PlantViewModel` class and initialize a list of `PlantModel` objects as follows.
 
 {% tabs %}  
 
@@ -182,26 +182,26 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
 
 {% highlight xaml %}
 
-    <chart:SfPolarChart>
-        <chart:SfPolarChart.Title>
-            <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
-        </chart:SfPolarChart.Title>
-        <chart:SfPolarChart.Legend>
-            <chart:ChartLegend/>
-        </chart:SfPolarChart.Legend>
-        <chart:SfPolarChart.PrimaryAxis>
-            <chart:CategoryAxis/>                    
-        </chart:SfPolarChart.PrimaryAxis>
-        <chart:SfPolarChart.SecondaryAxis>
-            <chart:NumericalAxis Maximum="100"/>                   
-        </chart:SfPolarChart.SecondaryAxis>
-        <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                               Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
-        <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
-                               Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
-        <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
-                               Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
-    </chart:SfPolarChart>
+<chart:SfPolarChart>
+    <chart:SfPolarChart.Title>
+        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
+    </chart:SfPolarChart.Title>
+    <chart:SfPolarChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfPolarChart.Legend>
+    <chart:SfPolarChart.PrimaryAxis>
+        <chart:CategoryAxis/>                    
+    </chart:SfPolarChart.PrimaryAxis>
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis Maximum="100"/>                   
+    </chart:SfPolarChart.SecondaryAxis>
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+                           Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
+                           Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
+                           Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
+</chart:SfPolarChart>
  
 {% endhighlight %}
 

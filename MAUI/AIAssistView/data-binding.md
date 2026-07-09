@@ -7,20 +7,22 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Data Binding in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Bind Data in .NET MAUI SfAIAssistView?
 
-## Generate the assist request & response items
+Data binding in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) enables managing chat interactions by adding request and response items using AssistItems, allowing dynamic updates through ViewModel integration.
+
+## Generate the Assist Request and Response Items
 
 To add an [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) to the `ViewModel.AssistItems` collection with specific values for profile details, text, and the [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property, follow the steps below:
 
 1. Start by creating an instance of the [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) class. This item will represent either a user request or a response received from the AI service.
 
-2. The Assist item has the following members, which provides information for the request/response items,
+2. The `AssistItem` has the following members, which provide information for the request and response items:
 
    * [Profile](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Profile): Provides information for the user details.
    * [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Text): Describes the text content of the assist item (e.g., the request text from the user or the response text from the AI).
-   * [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested): When the assist item represents a user request, set the `IsRequested` property to `True`. If it's a response item from the AI service, set `IsRequested` to `False`.
-   * [DateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_DateTime): To display item created or received time.
+   * [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested): When the assist item represents a user request, set the `IsRequested` property to `True`. If the assist item represents a response from the AI service, set `IsRequested` to `False`.
+   * [DateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_DateTime): Displays the created or received time of the item.
    * [RequestItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_RequestItem): Used to hold data (request item) associated with response item. Default value is `null`.
 
 3. After setting the properties, add the `AssistItem` instance to the `ViewModel.AssistItems` collection, which binds to the `SfAIAssistView.AssistItems` property.
@@ -31,9 +33,13 @@ Additionally, use the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusi
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Input;
+using Syncfusion.Maui.AIAssistView;
+
 public class ViewModel : INotifyPropertyChanged
 {
-    . . .
 
     public ObservableCollection<IAssistItem> AssistItems
     {
@@ -82,7 +88,6 @@ public class ViewModel : INotifyPropertyChanged
             this.AssistItems.Add(responseItem);
         }
     }
-    ...
 }
 
 {% endhighlight %}
@@ -91,46 +96,44 @@ public class ViewModel : INotifyPropertyChanged
 N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
 
 ## Binding custom model collection
- 
+
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides support for binding collection of custom data objects through the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSource) property. This feature allows users to use their own data objects with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSourceConverter) property sets the converter used to transform data objects into assist items and vice versa.
- 
+
 {% tabs %}
-{% highlight xaml hl_lines="15 16" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-             xmlns:local="clr-namespace:MauiAssistView"
-             x:Class="MauiAssistView.MainPage">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <local:AssistItemConverter x:Key="converter" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel"/>
-    </ContentPage.BindingContext>
-    <syncfusion:SfAIAssistView x:Name="assistView"
-                               ItemsSource="{Binding AssistItemsCollection}"
-                               ItemsSourceConverter="{StaticResource converter}" />
-</ContentPage>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12 13" %}
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <local:AssistItemConverter x:Key="converter" />
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<ContentPage.BindingContext>
+    <local:ViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfAIAssistView x:Name="assistView"
+                           ItemsSource="{Binding AssistItemsCollection}"
+                           ItemsSourceConverter="{StaticResource converter}" />
+
 {% endhighlight %}
- 
-{% highlight c# hl_lines="12 13" %}
-SfAIAssistView assistView;
-ViewModel viewModel;
-AssistItemConverter assistItemConverter;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13" %}
 
-public MainPage()
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
+    public MainPage()
+    {
+        InitializeComponent();
+        ViewModel viewModel = new ViewModel();
+        AssistItemConverter assistItemConverter = new AssistItemConverter();
 
-    assistView = new SfAIAssistView();
-    viewModel = new ViewModel();
-    assistItemConverter = new AssistItemConverter();
-    assistView.ItemsSource = viewModel.AssistItems;
-    assistView.ItemsSourceConverter = assistItemConverter;
-
-    Content = assistView;
+        SfAIAssistView assistView = new SfAIAssistView();
+        assistView.ItemsSource = viewModel.AssistItems;
+        assistView.ItemsSourceConverter = assistItemConverter;
+        this.Content = assistView;
+    }
 }
 
 {% endhighlight %}
@@ -140,6 +143,8 @@ Create the below collection of objects that must be converted to assist items co
 
 {% tabs %}
 {% highlight c# tabtitle="Model.cs" %}
+
+using System.ComponentModel;
 
 public class ItemModel : INotifyPropertyChanged
 {
@@ -209,6 +214,9 @@ N> If you want your data objects to respond to property changes, then implement 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+
 public class ViewModel : INotifyPropertyChanged
 {
     #region Fields
@@ -242,7 +250,6 @@ public class ViewModel : INotifyPropertyChanged
         }
     }
     #endregion
-    ...
 
     #region Item Generation
     private async void GenerateAssistItems()
@@ -280,11 +287,13 @@ public class ViewModel : INotifyPropertyChanged
 
 {% endhighlight %}
 {% endtabs %}
- 
+
 This converter must implement the [IAssistItemConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItemConverter.html) interface. Implement this interface to create a custom converter for the `ItemsSourceConverter` property.
- 
+
 {% tabs %}
-{% highlight c# tabtitle="AssistItemConverter.cs" hl_lines="1" %}
+{% highlight c# tabtitle="AssistItemConverter.cs" hl_lines="3" %}
+
+using Syncfusion.Maui.AIAssistView;
 
 public class AssistItemConverter : IAssistItemConverter
 {
@@ -333,7 +342,7 @@ public class AssistItemConverter : IAssistItemConverter
         return item;
     }
 }
-    
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -346,47 +355,30 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/custom-model-co
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to handle user requests by binding them to the [RequestCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestCommand) property. This command is triggered whenever the user sends a request in the assist view.
 
 {% tabs %}
-{% highlight xaml hl_lines="15" %}
-    
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                xmlns:local="clr-namespace:MauiAIAssistView.ViewModel"
-                x:Class="MauiAIAssistView.MainPage">
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <ContentPage.BindingContext>
-    <local:ViewModel/>
+    <local:ViewModel />
 </ContentPage.BindingContext>
 
-<ContentPage.Content>
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AssistItems="{Binding AssistItems}" 
-                               RequestCommand="{Binding AssistViewRequestCommand}"/>
-</ContentPage.Content>
-</ContentPage>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           RequestCommand="{Binding AssistViewRequestCommand}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="16" %}
-    
-using MauiAIAssistView.ViewModel;
-using Syncfusion.Maui.SfAIAssistView;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
 
-namespace MauiAIAssistView
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        SfAIAssistView sfAIAssistView;
-        ViewModel viewModel;
-        public MainPage()
-        {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView();
-            viewModel = new ViewModel();
-            this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-            sfAIAssistView.SetBinding(SfAIAssistView.RequestCommandProperty, new Binding("AssistViewRequestCommand"));
-            this.Content = sfAIAssistView;
-        }       
+        InitializeComponent();
+        ViewModel viewModel = new ViewModel();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.BindingContext = viewModel;
+        sfAIAssistView.SetBinding(SfAIAssistView.RequestCommandProperty, new Binding("AssistViewRequestCommand"));
+        this.Content = sfAIAssistView;
     }
 }
 

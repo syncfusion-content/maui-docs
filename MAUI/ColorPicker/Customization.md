@@ -439,26 +439,14 @@ You can define a custom collection of Colors displayed in the palette view by us
 
 {% tabs %}
 
-{% highlight xaml %}
-
-<syncfusion:SfColorPicker>
-    <syncfusion:SfColorPicker.PaletteColors>
-        <x:Array Type="{x:Type Color}">
-            <x:Static Member="Colors.Red" />
-            <x:Static Member="Colors.Green" />
-            <x:Static Member="Colors.Blue" />
-            <x:Static Member="Colors.Yellow" />
-        </x:Array>
-    </syncfusion:SfColorPicker.PaletteColors>
-</syncfusion:SfColorPicker>
-
-{% endhighlight %}
-
 {% highlight c# %}
 
-SfColorPicker colorPicker = new SfColorPicker();
+ SfColorPicker colorPicker = new SfColorPicker();
 
-// Set custom palette colors
+ // Set custom palette colors
+colorPicker.ColorMode = ColorPickerMode.Palette;
+colorPicker.PaletteColumnCount = 7;
+colorPicker.PaletteRowCount = 3;
 colorPicker.PaletteColors = new List<Color>
 {
     Colors.Red,
@@ -471,7 +459,7 @@ colorPicker.PaletteColors = new List<Color>
 
 // Add a color to the existing palette
 colorPicker.PaletteColors.Add(Colors.Pink);
-    
+
 {% endhighlight %}
 
 {% endtabs %}

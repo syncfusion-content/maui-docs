@@ -9,7 +9,7 @@ documentation: ug
 
 # AI-powered Appointment Booking with .NET MAUI Scheduler (SfScheduler)
 
-This guide walks you through building a smart scheduling interface using .NET MAUI Scheduler ([SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html)) powered by AI via Azure OpenAI. Utilizing the new AI AssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) control, users can easily book appointments and check resource availability with the help of AI assistance.
+This guide walks you through building a smart scheduling interface using [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) ([SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html)) powered by AI via Azure OpenAI. Utilizing the new AI AssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) control, users can easily book appointments and check resource availability with the help of AI assistance.
 
 ## Integrating Azure OpenAI with the .NET MAUI App
 
@@ -96,7 +96,6 @@ In this service, define a method called `GetResultsFromAI`. This method takes a 
             return string.Empty;
         }
     }
-}
 
 {% endhighlight %}
 
@@ -346,7 +345,7 @@ The core logic for finding available slots is inside the `GetRecommendation` met
 {% highlight c# %}
 
 ///<summary>
-/// Method to contain AI response and updates.
+/// Method to handle the AI response and apply updates.
 ///</summary>
 ///<param name="userInput">The user input</param>
 ///<returns></returns>
@@ -387,7 +386,7 @@ var jsonObj = JObject.Parse(returnMessage);
 
 var doctorAppointments = new Dictionary<string, (List<DateTime> StartTimes, List<DateTime> EndTimes, List<string> Subjects, List<string> Locations, List<string> ResourceIds)>
 {
-    { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string<()) },
+    { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) },
     { "Doctor2", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) }
 };
 
@@ -437,7 +436,7 @@ The parsed results are then shown to the user in natural text format via AssistV
 
 ///<summary>
 /// Method to generate the final time slots.
-///<summary>
+///</summary>
 ///<param name="userInput">The user input</param>
 ///<returns></returns>
 private string GenerateFinalTimeSlots(string userInput)
@@ -616,4 +615,4 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 
 ![Booking-appointments-with-AI-in-NET-MAUI-Scheduler](images/smart-ai-samples/Booking-appointments-with-AI-in-NET-MAUI-Scheduler.gif)
 
-You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/Scheduler)
+You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/Scheduler)

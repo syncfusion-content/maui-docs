@@ -125,7 +125,7 @@ public class SalesModel
 {% endhighlight %} 
 {% endtabs %} 
 
-Next, create a SalesViewModel class and initialize a list of `SalesModel` objects as follows.
+Next, create a `SalesViewModel` class and initialize a list of `SalesModel` objects as follows.
 
 {% tabs %}  
 {% highlight c# %}
@@ -192,10 +192,10 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
     </chart:SfCircularChart.Legend>
 
     <chart:PieSeries ItemsSource="{Binding Data}"
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate"
-                        ShowDataLabels="True"
-                        EnableTooltip="True"/>
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"
+                     ShowDataLabels="True"
+                     EnableTooltip="True"/>
 </chart:SfCircularChart>
 {% endhighlight %}
 

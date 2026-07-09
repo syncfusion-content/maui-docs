@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resource View in MAUI Scheduler Control | Syncfusion®
-description: Learn here all about resource view feature of Syncfusion<sup>&reg;</sup> .NET MAUI SfSchedler(SfScheduler) in day, week and workweek of timeline views and more.
+description: Learn here all about resource view feature of Syncfusion<sup>&reg;</sup> .NET MAUI SfScheduler in day, week and workweek of timeline views and more.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -9,12 +9,12 @@ documentation: ug
 
 # Resource View in .NET MAUI Scheduler (SfScheduler)
 
-The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control allows you to group appointments based on the resources associated with them in the day, week, workweek, month, timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) control allows you to group appointments based on the resources associated with them in the day, week, workweek, month, timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi-resource appointment sharing, and UI customization features.
 
-## Create resources to Scheduler by using SchedulerResource
-You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
+## Create resources to the Scheduler by using the SchedulerResource
+You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_DataItem) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
 
-In the **Day**, **Week**, **Work Week**, and **Month** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
+In the **Day**, **Week**, **Work Week**, and **Month** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week, and Timeline Month), resources are displayed **vertically**.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -33,14 +33,14 @@ var Resources = new ObservableCollection<SchedulerResource>()
    new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
 };
 
-// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+// Adding the scheduler resource collection to the schedule resources of SfScheduler.
 this.Scheduler.ResourceView.Resources = Resources;
 {% endhighlight %}
 {% endtabs %}
 
 ### Assigning Scheduler resources to appointments
 
-Appointments associated with the `ResourceView` [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources), will be displayed by setting the `SchedulerResourceView` resource Id in the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) by using the [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds).
+Appointments associated with the `ResourceView` [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) will be displayed by setting the `SchedulerResourceView` resource Id in the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) by using the [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -60,7 +60,7 @@ var Resources = new ObservableCollection<SchedulerResource>()
    new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
 };
 
-// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+// Adding the scheduler resource collection to the schedule resources of SfScheduler.
 this.Scheduler.ResourceView.Resources = Resources;
 
 var appointment = new ObservableCollection<SchedulerAppointment>();
@@ -84,7 +84,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ### Multiple resource sharing using Scheduler resources
 
-Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds) in [ScheduleAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
+Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds) in [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -158,7 +158,7 @@ In [Month]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.Schedu
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
-var resources = new ObservableCollection<SchedulerResource>()
+var Resources = new ObservableCollection<SchedulerResource>()
 {
         new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
         new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
@@ -214,7 +214,7 @@ In Day view, resources are presented through an adaptive resource panel on mobil
 <schedule:SfScheduler x:Name="Scheduler" View="Day"/>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-var resources = new ObservableCollection<SchedulerResource>()
+var Resources = new ObservableCollection<SchedulerResource>()
 {
         new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
         new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
@@ -236,7 +236,7 @@ In Month view, resources are presented through an adaptive resource panel on mob
 <schedule:SfScheduler x:Name="Scheduler" View="Month"/>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-var resources = new ObservableCollection<SchedulerResource>()
+var Resources = new ObservableCollection<SchedulerResource>()
 {
         new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
         new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
@@ -626,7 +626,7 @@ this.Scheduler.ResourceView.ResourceHeaderHeight = 100;
 
 ## Resource Header Width in Vertical Resource Views
  
-In the timelineday, timelineweek, and timeline work week views, resources are arranged vertically. The width of the resource headers can be customized using the [ResourceHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderWidth) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
+In the timeline day, timeline week, and timeline work week views, resources are arranged vertically. The width of the resource headers can be customized using the [ResourceHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderWidth) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfSchedule to .NET MAUI SfScheduler
+title: Migrate from Syncfusion® Xamarin SfSchedule to .NET MAUI SfScheduler
 description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Schedule to Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler control and more.
 platform: MAUI
 control: SfScheduler
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfSchedule to .NET MAUI SfScheduler 
 
-To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) to [.NET MAUI SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) easier, most of the APIs from the Xamarin SfSchedule were kept in the.NET MAUI SfScheduler. However, to maintain the consistency of API naming in the.NET MAUI SfScheduler, some of the APIs have been renamed. Please find the difference in the following topics.
+To make migrating from the Xamarin [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) to the [.NET MAUI SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) easier, most of the APIs from the Xamarin SfSchedule were kept in the .NET MAUI SfScheduler. However, to maintain consistency in API naming in the .NET MAUI SfScheduler, some of the APIs have been renamed. The following topics describe these differences.
 
 ## Namespaces 
 
@@ -75,7 +75,6 @@ xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Mau
 {% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
-…
 
 SfScheduler scheduler = new SfScheduler();
 this.Content = scheduler;
@@ -310,7 +309,7 @@ this.Content = schedule;
 {% highlight C# %}
 
 SfScheduler scheduler = new SfScheduler();
-scheduler.View = ScheduleView.Week;
+scheduler.View = SchedulerView.Week;
 scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
 this.Content = scheduler;
 
@@ -366,7 +365,7 @@ this.Content = scheduler;
 
 <tr>
 <td>{{'[HeaderStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_HeaderStyle)' | markdownify }}</td>
-<td>{{'[HeaderVIew](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_HeaderView)'| markdownify }}</td>
+<td>{{'[HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_HeaderView)'| markdownify }}</td>
 <td>Gets or sets the properties which allows to customize the scheduler header of day, week and work week, month, timeline day, timeline week, timeline work week, and timeline month views of the scheduler.</td></tr>
 
 <tr>
@@ -377,7 +376,7 @@ this.Content = scheduler;
 <tr>
 <td>{{'[Locale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_Locale)' | markdownify }}</td>
 <td>Application culture can be changed by setting CurrentUICulture. in App.xaml.cs file.</td>
-<td>To localize the schedule default strings with given language..</td></tr>
+<td>To localize the schedule default strings with given language.</td></tr>
 
 <tr>
 <td>{{'[MaxDisplayDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MaxDisplayDate)' | markdownify }}</td>
@@ -610,7 +609,7 @@ Appointments.Add(new SchedulerAppointment()
     Background = Brush.LightSkyBlue,
 });
 	
-//Adding the scheduler appointment collection to the AppointmentsSource of the .NET MAUI Scheduler.
+//Adding the scheduler appointment collection to the AppointmentsSource of the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler).
 scheduler.AppointmentsSource = Appointments;
 this.Content = scheduler;	
 	

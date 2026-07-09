@@ -1,106 +1,202 @@
 ---
 layout: post
-title: LoadMore in .NET MAUI ComboBox control | Syncfusion®
-description: Learn all about LoadMore support in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
+title: Load More in .NET MAUI ComboBox control | Syncfusion®
+description: Learn how to restrict the number of items and load the remaining items with the LoadMore button in the Syncfusion® .NET MAUI ComboBox (SfComboBox)
 platform: maui
 control: SfComboBox
 documentation: ug
-keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui combobox load more.
 ---
 
-# LoadMore in .NET MAUI ComboBox (SfComboBox)
+# Load More in .NET MAUI ComboBox
 
-Restrict the number of suggestions displayed and have the remaining items loaded by selecting LoadMore. We can restrict maximum suggestion to be displayed with the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) property.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports displaying a limited number of suggestions in the drop-down and loading additional items on demand through a `Load More` button. This is useful when binding a large data set and you want to keep the drop-down compact.
+
+## Prerequisites
+
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+
+## Maximum suggestions
+
+Use the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) `int` property to limit the number of suggestions displayed in the drop-down. When the filtered results exceed this value, a `Load More` button appears at the bottom of the drop-down so the user can load additional items. The default value is `0`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox" 
+<editors:SfComboBox x:Name="comboBox"
                     IsFilteringEnabled="True"
-                    IsEditable="True" 
-                    ItemsSource="{Binding SocialMedias}"          
+                    IsEditable="True"
+                    ItemsSource="{Binding SocialMedias}"
                     MaximumSuggestion="2"
-                    DisplayMemberPath="Name"                                    
-                    TextMemberPath="Name"/>
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-SfComboBox comboBox = new SfComboBox() 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
 {
     MaximumSuggestion = 2,
     IsEditable = true,
     IsFilteringEnabled = true,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
-    ItemsSource = socialMediaViewModel.SocialMedias
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    BindingContext = socialMediaViewModel,
 };
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox LoadMore support](Images/Maximum-display-item-with-Expander/LoadMore.gif)
 
-## LoadMore text customization
+N> If `MaximumSuggestion` is set to a value greater than or equal to the number of filtered items, the `Load More` button is not displayed.
 
-The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText). We can set the desire text for the displaying the Load more text with the property LoadMoreText.
+## Load More text customization
+
+Use the [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText) `string` property to customize the text shown on the `Load More` button. The default value is `"Load More"`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox" 
+<editors:SfComboBox x:Name="comboBox"
                     IsFilteringEnabled="True"
-                    IsEditable="True" 
-                    ItemsSource="{Binding SocialMedias}"          
+                    IsEditable="True"
+                    ItemsSource="{Binding SocialMedias}"
                     MaximumSuggestion="2"
                     LoadMoreText="Load more items"
-                    DisplayMemberPath="Name"                                    
-                    TextMemberPath="Name"/>
-
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-SfComboBox comboBox = new SfComboBox() 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
 {
     MaximumSuggestion = 2,
-    LoadMoreText= "Load more items",
+    LoadMoreText = "Load more items",
     IsEditable = true,
     IsFilteringEnabled = true,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
-    ItemsSource = socialMediaViewModel.SocialMedias
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    BindingContext = socialMediaViewModel,
 };
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox LoadMoreText](Images/Maximum-display-item-with-Expander/LoadMoreText.png)
 
-## LoadMore view customization
+## Load More view customization
 
-SfComboBox allows customizing User Interface(UI) of Load More view. To customize the load more text, add the custom UI in the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreTemplate) API in SfComboBox, as shown in the following code snippet.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows customizing the user interface of the `Load More` view. Use the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreTemplate) property to provide a custom `DataTemplate`. The `BindingContext` of the template is not set; the template's content is rendered as-is.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox" 
+<editors:SfComboBox x:Name="comboBox"
                     IsFilteringEnabled="True"
-                    IsEditable="True" 
-                    ItemsSource="{Binding SocialMedias}"          
+                    IsEditable="True"
+                    ItemsSource="{Binding SocialMedias}"
                     MaximumSuggestion="2"
-                    DisplayMemberPath="Name"                                    
+                    DisplayMemberPath="Name"
                     TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
     <editors:SfComboBox.LoadMoreTemplate>
         <DataTemplate>
             <Grid BackgroundColor="LightGreen">
-                <Label Text="Load more items..." VerticalOptions="Center" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Red"/>
+                <Label Text="Load more items..."
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"
+                       TextColor="Red" />
             </Grid>
         </DataTemplate>
     </editors:SfComboBox.LoadMoreTemplate>
@@ -108,65 +204,103 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-    SfComboBox comboBox = new SfComboBox
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
+{
+    IsFilteringEnabled = true,
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    MaximumSuggestion = 2,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
+};
+
+comboBox.LoadMoreTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid
     {
-        IsFilteringEnabled = true,
-        IsEditable = true, 
-        ItemsSource = socialMediaViewModel.SocialMedias,
-        MaximumSuggestion = 2,
-        DisplayMemberPath = "Name",
-        TextMemberPath = "Name"
+        BackgroundColor = Colors.LightGreen,
     };
 
-    comboBox.LoadMoreTemplate = new DataTemplate(() =>
+    var label = new Label
     {
-        var grid = new Grid
-        {
-            BackgroundColor = Colors.LightGreen
-        };
+        Text = "Load more items...",
+        TextColor = Colors.Red,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+        FontAttributes = FontAttributes.Bold,
+    };
 
-        var label = new Label
-        {
-            Text = "Load more items...",
-            TextColor = Colors.Red,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center,
-            FontAttributes = FontAttributes.Bold
-        };
+    grid.Children.Add(label);
+    return grid;
+});
 
-        grid.Children.Add(label);
-        return grid;
-    });
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox LoadMoreTemplate](Images/Maximum-display-item-with-Expander/LoadMoreTemplate.png)
 
-## LoadMore Button Tapped Event
+## Load More button tapped event
 
-The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreButtonTapped) Event. The event can be triggered only when you tap on the load more button.
+The [LoadMoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreButtonTapped) event fires when the user taps the `Load More` button. The event handler receives the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) as `sender` and `EventArgs` as the event arguments. Use this event to load additional items into the bound collection.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox" 
+<editors:SfComboBox x:Name="comboBox"
                     IsFilteringEnabled="True"
-                    IsEditable="True" 
+                    IsEditable="True"
                     MaximumSuggestion="2"
                     ItemsSource="{Binding SocialMedias}"
-                    LoadMoreButtonTapped="ComboBox_LoadMoreButtonTapped"
-                    DisplayMemberPath="Name"                                    
+                    LoadMoreButtonTapped="OnComboBoxLoadMoreButtonTapped"
+                    DisplayMemberPath="Name"
                     TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
 </editors:SfComboBox>
 
 {% endhighlight %}
+{% highlight c# %}
 
-{% highlight C# %}
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
 {
@@ -175,16 +309,58 @@ SfComboBox comboBox = new SfComboBox
     MaximumSuggestion = 2,
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
-    TextMemberPath = "Name"
+    TextMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
 };
-comboBox.LoadMoreButtonTapped += ComboBox_LoadMoreButtonTapped;
 
-private void ComboBox_LoadMoreButtonTapped(object? sender, EventArgs e)
+comboBox.LoadMoreButtonTapped += OnComboBoxLoadMoreButtonTapped;
+Content = comboBox;
+
+{% endhighlight %}
+{% highlight c# %}
+
+private void OnComboBoxLoadMoreButtonTapped(object? sender, EventArgs e)
 {
-    // Triggered when the load more button is tapped.
+    // Load additional items into the bound collection here.
+}
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
+## See Also
 
+* [Getting started with .NET MAUI ComboBox](getting-started.md)
+* [Editing in .NET MAUI ComboBox](Editing.md)
+* [Filtering in .NET MAUI ComboBox](Filtering.md)
+* [Selection in .NET MAUI ComboBox](Selection.md)

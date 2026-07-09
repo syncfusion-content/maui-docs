@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Month View in .NET MAUI Scheduler control | Syncfusion
+title: Month View in .NET MAUI Scheduler control | Syncfusion®
 description: Learn here all about how to customize the appearance and change the date format for month view in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
@@ -12,15 +12,15 @@ keywords : .net maui scheduler, .net maui month view, .net maui month cell, .net
 
 By default, the Month view displays the entire days of a particular month and current month initially. The current date color is differentiated from other dates of the current month, and also the color differentiation for dates will be applicable for the previous and next month dates.
 
-By default, when an appointment is tried to create through Month view, it is considered to be created for an entire day.
+By default, when an appointment is created through the Month view, it is considered to be created for an entire day.
 
-N> The appointment views for each month cells will be updated depends on the month cells height. While resizing the layout, the following actions would be performed,
-* If the appointment views overlaps with month cell dates or do not fit into the month cell height then the appointment view is changed from [AppointmentDisplayMode.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text) to [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) view.
-* If the indicator views overlaps with month cell dates, then the indicator view is changed from [(AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) to [AppointmentDisplayMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_None).
+N> The appointment views for each month cell will be updated depending on the month cell height. While resizing the layout, the following actions will be performed:
+* If the appointment views overlap with month cell dates or do not fit into the month cell height, then the appointment view is changed from [AppointmentDisplayMode.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text) to [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) view.
+* If the indicator views overlap with month cell dates, then the indicator view is changed from [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) to [AppointmentDisplayMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_None).
 
 ## Appointment display mode
 
-The scheduler month view appointment display can be handled by using the [AppointmentDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentDisplayMode) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, `AppointmentDisplayMode` is set to `Text,` using the `AppointmentDisplayMode.` 
+The scheduler month view appointment display can be handled by using the [AppointmentDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentDisplayMode) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, `AppointmentDisplayMode` is set to `Text`.
 
 You can set the month view appointments display as follows.
 
@@ -76,7 +76,7 @@ The scheduler month view appointment indicator count allows you to customize the
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorCount = 1;
+this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
 
 {% endhighlight %}  
 {% endtabs %}
@@ -195,7 +195,7 @@ this.Content = scheduler;
 
 ## Date text positioning in Month view
 
-The `DateHorizontalAlignment` property specifies how the date text is aligned horizontally within each cell of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. Its default value is `Center`, but you can set it to `Left`, `Right` or `Justified` to adjust the placement of the date numbers.
+The [DateHorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_DateHorizontalAlignment) property specifies how the date text is aligned horizontally within each cell of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. Its default value is `Center`, but you can set it to `Left`, `Right` or `Justified` to adjust the placement of the date numbers.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="4" %}
@@ -246,7 +246,7 @@ this.Content = scheduler;
 
 ## Non working days in month view
 
-The scheduler allows you to define non-working days in the Month view using the `NonWorkingDays` property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of `NonWorkingDays` property is `SchedulerMonthWeekDays.None`. You can configure this property to include one or more days of the week.
+The scheduler allows you to define non-working days in the Month view using the [NonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NonWorkingDays) property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of `NonWorkingDays` property is [SchedulerMonthWeekDays.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthWeekDays.html#Syncfusion_Maui_Scheduler_SchedulerMonthWeekDays_None). You can configure this property to include one or more days of the week.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="4" %}
@@ -267,7 +267,7 @@ this.Content = scheduler;
 
 ### Show or Hide non working days in Month View
 
-The `HideNonWorkingDays` property is used to control the visibility of non-working days in the Month view. When `HideNonWorkingDays` is `false` (default), the specified non-working days are displayed in the MonthView. When `HideNonWorkingDays` is `true`, the specified non-working days are hidden from the MonthView.
+The [HideNonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_HideNonWorkingDays) property is used to control the visibility of non-working days in the Month view. When `HideNonWorkingDays` is `false` (default), the specified non-working days are displayed in the MonthView. When `HideNonWorkingDays` is `true`, the specified non-working days are hidden from the MonthView.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="4" %}
@@ -291,7 +291,7 @@ this.Content = scheduler;
 
 ### Customize Non-Working Days in Month View
 
-Non-working days in the MonthView can be customized using the `NonWorkingDaysBackground` and `NonWorkingDaysTextStyle` properties of the `SchedulerMonthCellStyle`. These properties allow you to visually differentiate non-working days with custom background and text styles.
+Non-working days in the MonthView can be customized using the [NonWorkingDaysBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_NonWorkingDaysBackground) and [NonWorkingDaysTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_NonWorkingDaysTextStyle) properties of the [SchedulerMonthCellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html). These properties allow you to visually differentiate non-working days with custom background and text styles.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="6 7 8 9" %}
@@ -336,7 +336,7 @@ this.Content = scheduler;
 
 ## Inline Appointments in Month View
 
-Appointments can be displayed inline within the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the `ShowAppointmentsInline` property. When `ShowAppointmentsInline` is `false` (default), appointments are not shown inline in the MonthView. When `ShowAppointmentsInline` is `true`, tapping a date cell displays all appointments for that date inline below the tapped row. This provides a quick way to view daily schedules without switching to another view. Inline appointments are rendered in a collection view, allowing customization of styles such as background, text color, and layout.
+Appointments can be displayed inline within the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the [ShowAppointmentsInline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowAppointmentsInline) property. When `ShowAppointmentsInline` is `false` (default), appointments are not shown inline in the MonthView. When `ShowAppointmentsInline` is `true`, tapping a date cell displays all appointments for that date inline below the tapped row. This provides a quick way to view daily schedules without switching to another view. Inline appointments are rendered in a collection view, allowing customization of styles such as background, text color, and layout.
 
 {% tabs %}  
 {% highlight XAML tabtitle="xaml" hl_lines="4" %}
@@ -359,7 +359,7 @@ this.Content = scheduler;
 
 ### Appointment time format in inline view
 
-The `TimeTextFormat` property in `MonthInlineViewStyle` defines the string format used to display appointment time value in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, appointment time is shown in the "hh:mm tt" format (12‑hour clock with AM/PM). 
+The [TimeTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_TimeTextFormat) property in [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html) defines the string format used to display appointment time value in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, appointment time is shown in the "hh:mm tt" format (12‑hour clock with AM/PM). 
 
 {% tabs %}  
 {% highlight XAML tabtitle="XAML" hl_lines="6" %}
@@ -376,7 +376,7 @@ The `TimeTextFormat` property in `MonthInlineViewStyle` defines the string forma
 {% endhighlight %}
 {% highlight C# tabtitle="C#" hl_lines="6" %}
 SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
+scheduler.View = SchedulerView.Month;
 scheduler.MonthView.ShowAppointmentsInline = true;
 scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 {
@@ -389,7 +389,7 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 
 ### Appointment height in inline view
 
-The `ItemHeight` property in `MonthInlineViewStyle` specifies the vertical height of each appointment item displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, each appointment item has a height of 50 units. You can increase or decrease this value to adjust how compact or spacious the inline appointment list appears.
+The [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_ItemHeight) property in [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html) specifies the vertical height of each appointment item displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, each appointment item has a height of 50 units. You can increase or decrease this value to adjust how compact or spacious the inline appointment list appears.
 
 {% tabs %}  
 {% highlight XAML tabtitle="XAML" hl_lines="6" %}
@@ -406,11 +406,11 @@ The `ItemHeight` property in `MonthInlineViewStyle` specifies the vertical heigh
 {% endhighlight %}
 {% highlight C# tabtitle="C#" hl_lines="6" %}
 SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
+scheduler.View = SchedulerView.Month;
 scheduler.MonthView.ShowAppointmentsInline = true;
 scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 {
-    ItemHeight="70"
+    ItemHeight = 70
 };
 {% endhighlight %}   
 {% endtabs %}
@@ -421,7 +421,7 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 
 #### Customize inline appointments appearance using TextStyle
 
-The `MonthInlineViewStyle` property allows you to customize the appearance of inline view in the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the `Background` and `TextStyle` properties.
+The [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_MonthInlineViewStyle) property allows you to customize the appearance of inline view in the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_TextStyle) properties.
 
 {% tabs %}  
 {% highlight XAML tabtitle="XAML" hl_lines="6 7 8 9 10" %}
@@ -443,7 +443,7 @@ The `MonthInlineViewStyle` property allows you to customize the appearance of in
 {% endhighlight %}
 {% highlight C# tabtitle="C#" hl_lines="4 6 7 9 10" %}
 SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
+scheduler.View = SchedulerView.Month;
 scheduler.MonthView.ShowAppointmentsInline = true;
 scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 {
@@ -462,7 +462,7 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 
 #### Customize inline appointments appearance using DateTemplate
 
-The `MonthInlineViewItemTemplate` property allows you to define a custom DataTemplate to customize the appearance of appointment items displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
+The [MonthInlineViewItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_MonthInlineViewItemTemplate) property allows you to define a custom DataTemplate to customize the appearance of appointment items displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
 
 {% tabs %}  
 {% highlight XAML hl_lines="5 21" %}
@@ -498,15 +498,15 @@ The `MonthInlineViewItemTemplate` property allows you to define a custom DataTem
 
 ### MonthInlineAppointmentTapped
 
-The `MonthInlineAppointmentTapped` event is raised when a user taps on an appointment displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
+The [MonthInlineAppointmentTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MonthInlineAppointmentTapped) event is raised when a user taps on an appointment displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
 
 * `sender` - Refers to the SfScheduler instance that raised the event.
 
-This event provides details about the tapped appointment and the selected date through the `MonthInlineAppointmentTappedEventArgs`.
+This event provides details about the tapped appointment and the selected date through the [MonthInlineAppointmentTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineAppointmentTappedEventArgs.html).
 
-* `Appointment`: Gets the tapped appointment. Returns null if the user taps an empty area.
+* [Appointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineAppointmentTappedEventArgs.html#Syncfusion_Maui_Scheduler_MonthInlineAppointmentTappedEventArgs_Appointment): Gets the tapped appointment. Returns null if the user taps an empty area.
 
-* `SelectedDate`: Gets the date of the month cell where the inline view was opened.
+* [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineAppointmentTappedEventArgs.html#Syncfusion_Maui_Scheduler_MonthInlineAppointmentTappedEventArgs_SelectedDate): Gets the date of the month cell where the inline view was opened.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}

@@ -7,9 +7,9 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# History in .NET MAUI AI AssistView (SfAIAssistView)
+# How to Work with Conversation History in .NET MAUI SfAIAssistView?
 
-This section explains how to define and customize the history in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) enables managing conversation history by using AssistItems to store, display, and track chat interactions effectively.
 
 ## Conversation history
 
@@ -17,40 +17,45 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 ### Binding data into conversation history
 
-The `SfAIAssistView` control provides the [ConversationItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemsSource) API to manually set the conversation history items source. This source also updates at runtime when new requests are made in the conversation. 
+The `SfAIAssistView` control provides the [ConversationItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemsSource) API to manually set the conversation history items source. This source also updates at runtime when new requests are made in the conversation.
 
-#### View model
-Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
+#### Define the view model
+
+Create a simple view model as shown in the following code example, and save it as a `GettingStartedViewModel.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using Syncfusion.Maui.AIAssistView;
+
 public class GettingStartedViewModel : INotifyPropertyChanged
 {
-    ...
     private ObservableCollection<AssistConversationItem> conversationItems;
-    ...
 
-    public AIAssistViewModel()
+    public GettingStartedViewModel()
     {
-        ...
         this.conversationItems = new ObservableCollection<AssistConversationItem>();
         this.InitializeConversationHistory();
-        ...
     }
 
-    ...
-    public ObservableCollection<AssistConversationItem> ConversationItems 
-    { 
+    public ObservableCollection<AssistConversationItem> ConversationItems
+    {
         get { return this.conversationItems; }
-        set 
+        set
         {
             this.conversationItems = value;
             this.RaisePropertyChanged(nameof(ConversationItems));
         }
     }
-    ...
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    public void RaisePropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
 
     public void InitializeConversationHistory()
     {
@@ -64,8 +69,8 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
         string[] responses = new string[]
         {
-            "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-            "MAUI stands for .NET Multi-platform APP UI. It's is a framework that allowws you to create cross-platform applications using a single codebase.",
+            "Types of Listening: For effective communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skills. Common types of Listening are Active listening and Passive listening.",
+            "MAUI stands for .NET Multi-platform App UI. It is a framework that allows you to create cross-platform applications using a single codebase.",
         };
 
         for (int i = 0; i < 2; i++)
@@ -101,7 +106,6 @@ public class GettingStartedViewModel : INotifyPropertyChanged
             this.ConversationItems.Add(conversationItem);
         }
     }
-    ...
 }
 
 {% endhighlight %}
@@ -111,40 +115,29 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 To populate the conversation items, bind the item collection from its BindingContext to `SfAIAssistView.ConversationItemsSource` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="15" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-             xmlns:local="clr-namespace:GettingStarted.ViewModel"            
-             x:Class="GettingStarted.MainPage">
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
 
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModal/>
-    </ContentPage.BindingContext>
-
-    <ContentPage.Content>
-        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                   AssistItems="{Binding AssistItems}"
-                                   ConversationItemsSource="{Binding ConversationItems}"/>
-    </ContentPage.Content>
-
-</ContentPage>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ConversationItemsSource="{Binding ConversationItems}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
 
-public partial class MainPage : ContentPage 
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
 {
-    SfAIAssistView sfAIAssistView;
     public MainPage()
     {
         InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
         GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        this.sfAIAssistView.ConversationItemsSource = viewModel.ConversationItems;
+        sfAIAssistView.BindingContext = viewModel;
+        sfAIAssistView.ConversationItemsSource = viewModel.ConversationItems;
         this.Content = sfAIAssistView;
     }
 }
@@ -154,26 +147,30 @@ public partial class MainPage : ContentPage
 
 ![Syncfusion .NET MAUI AI AssistView History](Images/history/maui-aiassistview-conversation-history.gif)
 
-### Conversation header text
+### Customizing conversation header text in SfAIAssistView
 
 The `SfAIAssistView` control provides the [ConversationHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationHeaderText) API to set the header text for the conversation view. By default, this property is set to `string.Empty`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="aiAssistView"
-                     ConversationHeaderText="Chat History" />
+                           ConversationHeaderText="Chat History" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-SfAIAssistView sfAIAssistView; 
-public MainPage() 
-{ 
-    InitializeComponent(); 
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.ConversationHeaderText = "Chat History";
-    this.Content = sfAIAssistView;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ConversationHeaderText = "Chat History";
+        this.Content = sfAIAssistView;
+    }
 }
 
 {% endhighlight %}
@@ -181,35 +178,30 @@ public MainPage()
 
 ![Syncfusion .NET MAUI AI AssistView Conversation Header Text](Images/history/maui-aiassistview-conversation-header-text.png)
 
-### Conversation empty view
+### Customizing the empty conversation view
 
 The [ConversationEmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationEmptyView) property can be set to a string or a custom view, which will be displayed when no conversation items are available in the control.
 
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
-
-   <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                              AssistItems="{Binding AssistItems}"
-                              ConversationEmptyView="No conversations available">
-    </syncfusion:SfAIAssistView>
-</ContentPage>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ConversationEmptyView="No conversations available" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+
+using Syncfusion.Maui.AIAssistView;
+
 public partial class MainPage : ContentPage
 {
-    SfAIAssistView sfAIAssistView;
     public MainPage()
-    { 
+    {
         InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        sfAIAssistView.AssistItems = viewModel.AssistItems;
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
         sfAIAssistView.ConversationEmptyView = "No conversations available";
-        Content = sfAIAssistView;
-   }
+        this.Content = sfAIAssistView;
+    }
 }
 
 {% endhighlight %}
@@ -217,65 +209,24 @@ public partial class MainPage : ContentPage
 
 ![Syncfusion .NET MAUI AI AssistView Conversation Empty View](Images/history/maui-aiassistview-conversation-custom-empty-view.png)
 
-## Events and commands
+### Filter Conversations by Date Range
 
-When a user selects a conversation item, the [ConversationItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTapped) event and [ConversationItemTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTappedCommand) are triggered, providing [ConversationItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
+The Filter button allows users to narrow down conversation results by selecting a specific date range. This helps quickly locate relevant conversations within the history.
 
- * [ConversationItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ConversationItemTappedEventArgs_ConversationItem) : The conversation item selected by the user.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ConversationItemTappedEventArgs_Handled) : A boolean indicating whether the selected conversation item is automatically visible in view. The default value is false.
+The following date-range options are available:
 
-### ConversationItemTapped event
+- All
+- Today
+- Yesterday
+- Last 7 Days
+- Last 30 Days
 
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
+Use these options to quickly narrow the conversation history shown in the drawer.
 
-<syncfusion:SfAIAssistView x:Name="aiAssistView"
-                     ConversationItemTapped="OnConversationItemTapped"/>
+### Conversation Actions Menu
 
-{% endhighlight %}
-{% highlight c# hl_lines="1" %}
+Each conversation item shows a More option that opens a small menu with three actions:
 
-aiAssistView.ConversationItemTapped += OnConversationItemTapped;
-
-private void OnConversationItemTapped(object sender, ConversationItemTappedEventArgs e)
-{
-    // Handle the conversation item action
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### ConversationItemTappedCommand
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
-
-<syncfusion:SfAIAssistView x:Name="aiAssistView"
-                     ConversationItemTappedCommand="{Binding ConversationItemTappedCommand}"/>
-
-{% endhighlight %}
-{% highlight c# hl_lines="4,7" %}
-
-public class AIAssistViewModel : INotifyPropertyChanged
-{
-    ...
-    public ICommand ConversationItemTappedCommand { get; }
-    ...
-
-    public AIAssistViewModel()
-    {
-        ...
-        this.ConversationItemTappedCommand = new Command<object>(OnConversationItemTapped);
-        ...
-    }
-
-    ...
-    private void OnConversationItemTapped(object obj)
-    {
-        // Handle the conversation item action
-    }
-    ...
-}
-
-{% endhighlight %}
-{% endtabs %} 
+- **Pin**: Pins the selected conversation so it appears at the top of the conversation list.
+- **Rename**: Opens a rename popup containing an editor where you can change the conversation title. The popup has two actions: **Rename** (save) and **Cancel** (exit without saving). When **Rename** is clicked, the conversation item's title is updated with the entered text.
+- **Delete**: Opens a delete confirmation popup with two actions: **Delete** and **Cancel**. When **Delete** is clicked the selected conversation item is removed from the conversation history.

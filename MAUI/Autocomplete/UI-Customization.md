@@ -11,7 +11,24 @@ documentation: ug
 
 This section explains different UI customizations available in the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
 
-To get start quickly to customize the Appearance of .NET MAUI Autocomplete, you can check on this video:
+## Prerequisites
+
+Before customizing the UI, ensure the Syncfusion.Maui.Inputs package is installed and the following namespace is registered:
+
+{% tabs %}
+{% highlight xaml %}
+
+xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+{% endhighlight %}
+{% endtabs %}
+
+To get started quickly on customizing the appearance of the .NET MAUI Autocomplete, you can check out this video:
 
 {% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
 
@@ -48,7 +65,7 @@ The following image illustrates the result of the above code:
 
 ## Placeholder Color
 
-The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. The default value of the PlaceholderColor property is `Colors.Gray`.
+The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. The default value of the PlaceholderColor property is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -81,7 +98,7 @@ The following gif image illustrates the result of the above code:
 
 ## Clear Button Icon Color
 
-The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property. The default value of the ClearButtonIconColor property is `Colors.Black`.
+The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property. The default value of the `ClearButtonIconColor` property is `Color.FromArgb("#49454F")`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -116,7 +133,7 @@ The following gif image illustrates the result of the above code:
 
 ## Stroke
 
-The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property.
+The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property. The default value of the `Stroke` property is `Colors.LightGray`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -149,9 +166,9 @@ The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Autocomplete border color](Images/UICustomization/BorderColor.png)
 
-## Customize the selection text highlightColor 
+## Customize the Selection Text Highlight Color
 
-The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the autocomplete control.
+The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the autocomplete control. The default value of the `SelectionTextHighlightColor` property is `Color.FromArgb("#6750A4")`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -191,7 +208,7 @@ N> If the `MaxDropDownHeight` is too small compared to the populated items, the 
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        MaxDropDownHeight = "100"
+                        MaxDropDownHeight="100"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name" />
@@ -334,7 +351,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         image.HorizontalOptions = LayoutOptions.Center;
         image.VerticalOptions = LayoutOptions.Center;
         image.Aspect = Aspect.AspectFit;
-        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
+        image.SetBinding(Image.SourceProperty, "ProfilePicture");
         Grid.SetColumn(image, 0);
 
         StackLayout stack = new();
@@ -448,9 +465,9 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ![.NET MAUI Autocomplete DropDown Background](Images/UICustomization/DropDownBackground.png)
 
-### Customize the DropDown selected item background color
+### Customize the DropDown Selected Item Background Color
 
-The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown.
+The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown. The default value is `new SolidColorBrush(Color.FromArgb("#1C1B1F14"))`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -468,11 +485,11 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    ItemsSource = socialMediaViewModel.SocialMedias;
-    DisplayMemberPath = "Name";
-    TextMemberPath = "Name";
-    Placeholder = "Enter Media";
-    SelectedDropDownItemBackground = Colors.LightSeaGreen;
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    Placeholder = "Enter Media",
+    SelectedDropDownItemBackground = Colors.LightSeaGreen
 };
 
 {% endhighlight %}
@@ -482,7 +499,7 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 
 ### Customize the Selected DropDown Item Text Style
 
-The [SelectedDropDownItemTextStyle]() property in the SfAutoComplete control allows developers to customize the appearance of the selected item in the dropdown list. This feature is useful for highlighting user selections and improving the overall UI experience.
+The [SelectedDropDownItemTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemTextStyle) property in the `SfAutocomplete` control is used to customize the appearance of the selected item in the dropdown list.
 
 {% tabs %}
 {% highlight xaml %}
@@ -569,7 +586,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
-    DropDownStroke = Color.DarkOrange,
+    DropDownStroke = Colors.DarkOrange,
     DropDownStrokeThickness = 5
 };
 
@@ -579,9 +596,9 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ![.NET MAUI Autocomplete DropDown Stroke Thickness](Images/UICustomization/DropDownStrokeThickness.png)
 
-### Customize the visibility of Dropdown Shadow
+### Customize the Dropdown Shadow Visibility
 
-The [IsDropDownShadowVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible) property is used to customize the visibility of the dropdown shadow.
+The [IsDropDownShadowVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible) property is used to customize the visibility of the dropdown shadow. The default value of the `IsDropDownShadowVisible` property is `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -645,9 +662,9 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ![.NET MAUI Autocomplete DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
-### Customize the DropDownPlacement
+### Customize the DropDown Placement
 
-The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
+The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the [DropDownPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownPlacement) property. The default value of the `DropDownPlacement` property is `Auto`.
 
 *   `Top` - Drop-down will be placed above the text box.
 
@@ -686,9 +703,9 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ![.NET MAUI Autocomplete Dropdownplacement.](Images/UICustomization/placementauto.png)
 
-### Customize the DropDown ItemPadding
+### Customize the DropDown Item Padding
 
-The autocomplete enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
+The autocomplete enables the user to provide padding for the items inside dropdown using the [ItemPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemPadding) property. The default value of the `ItemPadding` property is `new Thickness(10, 0, 10, 0)`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -720,7 +737,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ### Customize the DropDown Width
 
-The `DropdownWidth` property is used to modify the Width of the dropdown.
+The [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownWidth) property is used to modify the width of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -728,8 +745,8 @@ The `DropdownWidth` property is used to modify the Width of the dropdown.
     <editors:SfAutocomplete x:Name="autocomplete"
                             ItemsSource="{Binding SocialMedias}"
                             DisplayMemberPath="Name"
-                            TextMemberPath="Name"                           
-                            DropdownWidth="400"/>
+                            TextMemberPath="Name"
+                            DropDownWidth="400"/>
 
 {% endhighlight %}
 
@@ -751,9 +768,9 @@ SfAutocomplete autocomplete = new SfAutocomplete
 ![.NET MAUI Autocomplete DropDownWidth.](Images/UICustomization/DropDownWidth.png)
 
 
-### Show suggestion box on focus
+### Show Suggestion Box on Focus
 
-Suggestion box can be shown whenever the control receives focus using the `ShowSuggestionsOnFocus` property. At this time, suggestion list is the complete list of data source.
+Suggestion box can be shown whenever the control receives focus using the [ShowSuggestionsOnFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ShowSuggestionsOnFocus) property. At this time, suggestion list is the complete list of data source. The default value of the `ShowSuggestionsOnFocus` property is `false`.
 
 {% tabs %}
 
@@ -983,7 +1000,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         image.HorizontalOptions = LayoutOptions.Center;
         image.VerticalOptions = LayoutOptions.Center;
         image.Aspect = Aspect.AspectFit;
-        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
+        image.SetBinding(Image.SourceProperty, "ProfilePicture");
         Grid.SetColumn(image, 0);
 
         StackLayout stack = new();
@@ -1035,7 +1052,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         image.HorizontalOptions = LayoutOptions.Center;
         image.VerticalOptions = LayoutOptions.Center;
         image.Aspect = Aspect.AspectFit;
-        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
+        image.SetBinding(Image.SourceProperty, "ProfilePicture");
         Grid.SetColumn(image, 0);
 
         StackLayout stack = new();
@@ -1095,7 +1112,7 @@ The following image illustrates the result of the above code:
 
 ## Customize Dropdown corner radius
 
-The [DropDownCornerRadius]() property is used to modify the corner radius of the dropdown container for the `SfAutoComplete` control.
+The [DropDownCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownCornerRadius) property is used to modify the corner radius of the dropdown container for the `SfAutocomplete` control. The default value of the `DropDownCornerRadius` property is `0`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1170,7 +1187,7 @@ The following image illustrates the result of the above code:
 
 ## Completed Event
 
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing the return key on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`:
 
 {% tabs %}
 {% highlight xaml %}
@@ -1216,7 +1233,7 @@ N> The `Completed` event is not supported in the Android platform.
 
 ## DropDownOpening Event
 
-The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event will be fired whenever opening the dropdown menu in the SfAutocomplete. It can cancel dropdown opening with CancelEventArgs that contains the following property:
+The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event is raised when the dropdown menu is about to open in the `SfAutocomplete`. The event uses `CancelEventArgs`, which exposes the following property:
 
  * Cancel: Dropdown opening is based on this value.
 
@@ -1364,7 +1381,7 @@ When the value of Autocomplete changes, the [ValueChanged](https://help.syncfusi
 
 {% highlight C# %}
 
-SfAutoComplete autocomplete = new SfAutoComplete
+SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
@@ -1406,7 +1423,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% endhighlight %}
 {% highlight C# %}
 
-    SfAutoComplete autocomplete = new SfAutoComplete
+    SfAutocomplete autocomplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
         TextMemberPath = "Name",
@@ -1454,7 +1471,7 @@ The cursor position in the input view can be obtained or updated using the [Curs
 
 N> Two way binding not supported in Android platform.
 
-## Border visibility
+## Border Visibility
 
 The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_ShowBorder) property of [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
@@ -1544,7 +1561,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ## Clear button customization
 
-The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) clear button.
+The [ClearButtonPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonPath) property is used to customize the appearance of the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) clear button using a custom shape.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1573,8 +1590,8 @@ var path = new Path()
     Stroke = Colors.Red
 };
 
-SfAutocomplte autocomplete = new SfAutocomplte();
-autocomplete.ItemsSource = viewModel.SocialMedia;
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
 autocomplete.ClearButtonPath = path;

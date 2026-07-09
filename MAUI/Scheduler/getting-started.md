@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Scheduler control | Syncfusion®
-canonical_url: "https://www.syncfusion.com/maui-controls/maui-scheduler"
+canonical_url: "https://www.syncfusion.com/scheduler-sdk/maui-scheduler"
 description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler(SfScheduler) control, its basic features to schedule the events
 platform: maui
 control: SfScheduler
@@ -13,7 +13,7 @@ keywords : .net maui scheduler, .net maui horizontal scheduler, maui appointment
 
 This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario. Follow the steps below to add a .NET Scheduler control to your project.
 
-To quickly get started with the .NET MAUI Scheduler, watch this video.
+To quickly get started with the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler), watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=Io2ElO8ORSQ" %}
 
@@ -44,7 +44,7 @@ Before proceeding, ensure the following are set up:
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 2. Set up a .NET MAUI environment with Visual Studio Code. 
 3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
@@ -59,7 +59,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Visual Studio Code and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
@@ -124,9 +124,9 @@ using Syncfusion.Maui.Scheduler;
 
 ## Step 5: Add the Scheduler component
 
-The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) has a built-in capability to handle the appointment arrangement internally based on the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) collections. Allocate the collection generated to the Appointments property.
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) has a built-in capability to handle the appointment arrangement internally based on the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) collections. Assign the generated collection to the `AppointmentsSource` property.
 
-The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that includes the specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Subject), and some additional information about the appointment can be added with [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Location), and [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_IsAllDay) properties.
+The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that includes the specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Subject), and some additional information about the appointment can be added with [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Location), and [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -152,11 +152,11 @@ appointment.Add(new SchedulerAppointment()
     Location = "Hutchison road",
 });
 
-this.scheduler.AppointmentsSource = appointment;
+this.Scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs %}
 
 ![adding-scheduler-appointments-in-maui-scheduler](images/getting-started/adding-scheduler-appointments-in-maui-scheduler.png)
 
-You can download the Scheduler Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted).
+You can download the Scheduler Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted). Looking for the full .NET MAUI Scheduler component overview, features, pricing, and documentation? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) page.

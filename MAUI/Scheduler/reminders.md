@@ -9,16 +9,16 @@ documentation: ug
 
 # Appointment reminders in .NET MAUI Scheduler (SfScheduler)
 
-The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) notify an appointment reminder by using the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property and [ReminderAlertOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ReminderAlertOpening) event. An appointment can have one or more reminders.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) notifies an appointment reminder by using the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property and [ReminderAlertOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ReminderAlertOpening) event. An appointment can have one or more reminders.
 
 N>
 * As a [restriction](https://github.com/dotnet/maui/discussions/4216) in enabling toast notification in .NET MAUI Framework, as of now, add an event to notify appointment reminders.
 
 **Handling reminders for future appointments**
 
-* Future normal and recurring appointment reminder alerts will be displayed as Reminder alert time.
+* Future normal and recurring appointment reminder alerts will be displayed at the reminder alert time.
 
-* Reminder alert time will be calculated from the appointment start time substrate with reminder time interval. For example, if the appointment time is 3.30 pm and the reminder time interval is `new Timespan (0,15,0)`, then the reminder alter time is 3.15 pm.
+* Reminder alert time will be calculated from the appointment start time substrate with reminder time interval. For example, if the appointment time is 3.30 pm and the reminder time interval is `new Timespan (0,15,0)`, then the reminder alert time is 3.15 pm.
 
 **Handling reminders for overdue appointments**
 
@@ -30,7 +30,7 @@ N>
 
 * If the last occurrence in recurrence in series is dismissed, then the recurring pattern appointment is dismissed.
 
-**Handling reminders for Changed occurrence appointments**
+**Handling reminders for changed occurrence appointments**
 
 * Once the changed occurrence is moved to the future, then the pattern reminder value will be used for the changed occurrence.
 
@@ -85,6 +85,9 @@ Configure the appointment reminders with [SchedulerReminder](https://help.syncfu
  {
     ...
     public ObservableCollection<SchedulerAppointment> Events { get; set; } = new ObservableCollection<SchedulerAppointment>();
+
+    public ReminderViewModel()
+    {
         // Normal Appointment
         SchedulerAppointment normalAppointment = new SchedulerAppointment()
         {
@@ -132,6 +135,7 @@ Configure the appointment reminders with [SchedulerReminder](https://help.syncfu
 
         };
         Events.Add(recurrenceAppointment);
+    }
  }
 {% endhighlight %}
 {% endtabs %}
@@ -231,53 +235,56 @@ public class ReminderViewModel
   ...
    public ObservableCollection<Event> Events { get; set; } = new ObservableCollection<Event>();
 
-   // Normal Appointment
-    Event normalAppointment = new Event()
-    {
-        From = DateTime.Now.AddMinutes(5),
-        To = DateTime.Now.AddHours(1),
-        EventName = "Normal Appointment",
-        Color = Brush.SkyBlue,
-        Reminders = new ObservableCollection<Reminder>
+   public ReminderViewModel()
+   {
+       // Normal Appointment
+        Event normalAppointment = new Event()
         {
-            new Reminder {TimeBeforeStart = new TimeSpan (0,4,0)},
-        }
+            From = DateTime.Now.AddMinutes(5),
+            To = DateTime.Now.AddHours(1),
+            EventName = "Normal Appointment",
+            Color = Brush.SkyBlue,
+            Reminders = new ObservableCollection<Reminder>
+            {
+                new Reminder {TimeBeforeStart = new TimeSpan (0,4,0)},
+            }
 
-    };
-    Events.Add(normalAppointment);
+        };
+        Events.Add(normalAppointment);
 
-    // All Day Appointment
-    Event allDayAppointment = new Event()
-    {
-        From = DateTime.Now.AddDays(1).AddMinutes(1),
-        To = DateTime.Now.AddDays(1).AddHours(1),
-        EventName = "All Day Appointment",
-        Color = Brush.SkyBlue,
-        IsAllDay = true,
-        Reminders = new ObservableCollection<Reminder>
+        // All Day Appointment
+        Event allDayAppointment = new Event()
         {
-            new Reminder {TimeBeforeStart = new TimeSpan (0,0,50)},
-        }
+            From = DateTime.Now.AddDays(1).AddMinutes(1),
+            To = DateTime.Now.AddDays(1).AddHours(1),
+            EventName = "All Day Appointment",
+            Color = Brush.SkyBlue,
+            IsAllDay = true,
+            Reminders = new ObservableCollection<Reminder>
+            {
+                new Reminder {TimeBeforeStart = new TimeSpan (0,0,50)},
+            }
 
-    };
-    Events.Add(allDayAppointment);
+        };
+        Events.Add(allDayAppointment);
 
-    // Recurrence Appointment
-    Event recurrenceAppointment = new Event()
-    {
-        Id = 1,
-        From = DateTime.Now.AddDays(2).AddMinutes(1),
-        To = DateTime.Now.AddDays(2).AddHours(1),
-        EventName = "Recurrence Appointment",
-        Color = Brush.LightGray,
-        RecurrenceRule = "FREQ=DAILY;COUNT=3",
-        Reminders = new ObservableCollection<Reminder>
+        // Recurrence Appointment
+        Event recurrenceAppointment = new Event()
         {
-            new Reminder {TimeBeforeStart = new TimeSpan (0,0,40)},
-        }
+            Id = 1,
+            From = DateTime.Now.AddDays(2).AddMinutes(1),
+            To = DateTime.Now.AddDays(2).AddHours(1),
+            EventName = "Recurrence Appointment",
+            Color = Brush.LightGray,
+            RecurrenceRule = "FREQ=DAILY;COUNT=3",
+            Reminders = new ObservableCollection<Reminder>
+            {
+                new Reminder {TimeBeforeStart = new TimeSpan (0,0,40)},
+            }
 
-    };
-    Events.Add(recurrenceAppointment);
+        };
+        Events.Add(recurrenceAppointment);
+   }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -291,9 +298,9 @@ Scheduler notifies the appointment's reminders by [ReminderAlertOpening](https:/
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
 
-private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
 {
-    bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss"); 
+    bool snooze = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss"); 
 }
 {% endhighlight %}
 {% endtabs %}
@@ -301,7 +308,7 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 
 * Normal appointment directly dismissed using [IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_IsDismissed) property
 
-* For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
+* For a recurrence appointment, if the current occurrence needs to be dismissed, a changed occurrence must be added for the dismissed reminder occurrence, and then the current occurrence dismissed details are updated in the underlying appointment or data source.
 
 * If only occurrence dismissed, then the changed icon will not be updated for dismissed changed occurrence
 
@@ -309,12 +316,12 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
 
-private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
 {
-    bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
-    if (Dismiss)
+    bool dismiss = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
+    if (dismiss)
     {
-        // For Recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed
+        // For a Recurrence appointment, if the current occurrence needs to be dismissed, add a changed occurrence for the dismissed reminder occurrence
         if (!string.IsNullOrEmpty(e.Reminders[0].Appointment.RecurrenceRule))
         {
             ObservableCollection<SchedulerAppointment> appointments = scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>;
@@ -357,7 +364,7 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% endtabs %}
 
 ## Handle Snooze for reminders
-If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_TimeBeforeStart) property is calculated by 
+If Snooze time is set to 5 minutes, then the value of reminder [TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_TimeBeforeStart) property is calculated by 
 
 * For Future appointments, `TimeBeforeStart = Appointment.StartTime - AlertTime - snoozeTime`.
 
@@ -369,9 +376,9 @@ If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart](
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
 
-private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
 {
-    bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
+    bool snooze = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
 
     if (snooze)
         {
@@ -424,5 +431,5 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% endtabs %}
 
 N>
-* [View scheduler appointment reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/SchedulerReminder)
-* [View business object reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/BusinessObject)
+* [View scheduler appointment reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/SchedulerReminders)
+* [View business object reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/CustomReminder)
