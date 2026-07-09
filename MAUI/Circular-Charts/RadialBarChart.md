@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Radial Bar chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about radial bar chart and its features in Syncfusion® .NET MAUI Chart Chart (SfCircularChart) control.
+title: Radial Bar chart in .NET MAUI Circular Chart control | Syncfusion
+description: Learn here all about radial bar chart and its features in Syncfusion® .NET MAUI Circular Chart (SfCircularChart) control.
 platform: maui
 control: SfCircularChart
 documentation: ug
 ---
 
-# Radial Bar Chart in .NET MAUI Chart
+# Radial Bar Chart in .NET MAUI Circular Chart
 
 [RadialBarSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html) is a type of doughnut chart that represents each segment as a separate circle. It is used to compare values between various categories. To render a [RadialBarSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html) in circular chart, create an instance of the [RadialBarSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection property of [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCircularChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/circularchart/getting-started)** guide.
 
 N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) as its default content.
 
@@ -63,7 +65,7 @@ this.Content = chart;
 
 ## Changing the radial bar size
 
-You can use the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_Radius) property to change the radial bar chart size. The default value of the radius is `0.8`.
+You can use the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_Radius) property to change the radial bar chart size. The default value of the radius property is `0.8`.
 
 {% tabs %}
 
@@ -135,7 +137,7 @@ this.Content = chart;
 
 ## CapStyle customization
 
-The [CapStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CapStyle) property of the radial bar series is used to specify the shape of the start and end points of the circular segment. The default value of this property is `Both.Flat`.
+The [CapStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CapStyle) property of the radial bar series is used to specify the shape of the start and end points of the circular segment. The default value of this property is `CapStyle.BothFlat`.
 
 The following types are available for [CapStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CapStyle) property.
 
@@ -149,7 +151,7 @@ The following types are available for [CapStyle](https://help.syncfusion.com/cr/
 
 **BothCurve**
 
-You can customize the CapStyle property of the radial bar based on its types.
+You can customize the CapStyle property of the radial bar based on its types. The following example demonstrates the `BothCurve` cap style; other cap styles follow the same pattern.
 
 {% tabs %}
 
@@ -160,7 +162,7 @@ You can customize the CapStyle property of the radial bar based on its types.
                            XBindingPath="Product" 
                            YBindingPath="SalesRate"
                            CapStyle = "BothCurve"/>
-    </chart:SfCircularChart>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
@@ -185,7 +187,7 @@ this.Content = chart;
 
 ## Segment spacing
 
-The [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_GapRatio) property of the radial bar series is used to define the spacing between each segments. The default value of this property is `0.2`.
+The [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_GapRatio) property of the radial bar series is used to define the spacing between each segment. The default value of this property is `0.2`.
 
 {% tabs %}
 
@@ -229,7 +231,7 @@ You can use the following properties to customize the appearance of the circular
 
   * [TrackStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_TrackStrokeWidth) - To customize the border width of the circular bar.
 
-  * [TrackFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_TrackFill) - To customize the circular bar area which behind the radial bar segments.
+  * [TrackFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_TrackFill) - To customize the circular bar area behind the radial bar segments.
 
 **TrackFill**
 
@@ -271,11 +273,11 @@ this.Content = chart;
 
 ## CenterView
 
- Any view can be added to the center of the radial bar chart using the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CenterView) property of [RadialBarSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html). The view placed in the center of the radial bar chart is useful for sharing additional information about the radial bar chart.The binding context of the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CenterView) will be the respective radial bar series.
+ Any view can be added to the center of the radial bar chart using the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CenterView) property of [RadialBarSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html). The view placed in the center of the radial bar chart is useful for displaying additional information about the radial bar chart. The binding context of the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CenterView) will be the respective radial bar series.
 
 ### CenterHoleSize
 
-The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CenterHoleSize) property of RadialBarSeries is used to get the diameter value of the center hole. Using the CenterHoleSize, we can protect the view in the radial bar center from overlapping with the series
+The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RadialBarSeries.html#Syncfusion_Maui_Charts_RadialBarSeries_CenterHoleSize) property of RadialBarSeries is used to get the diameter value (in px) of the center hole. Using the CenterHoleSize, we can protect the view in the radial bar center from overlapping with the series.
 
 {% tabs %}
 
@@ -288,10 +290,10 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
                            MaximumValue ="100"
                            CapStyle = "BothCurve">
         <chart:RadialBarSeries.CenterView>
-            <StackLayout HeightRequest="{Binding CenterHoleSize}"
-                         WidthRequest="{Binding CenterHoleSize}">
+            <VerticalStackLayout HeightRequest="{Binding CenterHoleSize}"
+                                 WidthRequest="{Binding CenterHoleSize}">
                 <Image Source="person.png"/>
-            </StackLayout>
+            </VerticalStackLayout>
         </chart:RadialBarSeries.CenterView>
     </chart:RadialBarSeries>
 </chart:SfCircularChart>
@@ -309,13 +311,13 @@ series.YBindingPath = "SalesRate";
 series.MaximumValue = 100;
 series.CapStyle = CapStyle.BothCurve;
 
-StackLayout layout = new StackLayout();
+VerticalStackLayout layout = new VerticalStackLayout();
 Image image = new Image { Source = "person.png" };
 layout.SetBinding(HeightRequestProperty, nameof(RadialBarSeries.CenterHoleSize));
 layout.SetBinding(WidthRequestProperty, nameof(RadialBarSeries.CenterHoleSize));
 layout.Children.Add(image);       
 
-series.CenterView = image;
+series.CenterView = layout;
 chart.Series.Add(series);
 this.Content = chart;
 
