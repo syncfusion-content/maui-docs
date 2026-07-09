@@ -9,8 +9,12 @@ documentation: ug
 
 # Date Restriction in .NET MAUI Date Time Picker (SfDateTimePicker)
 
+Restrict which dates and times a user can select using the following options: `MinimumDate` and `MaximumDate` define an allowed range, and `BlackoutDateTimes` disables specific dates or time slots within that range.
+
+N> The `MinimumDate` and `MaximumDate` properties are of type `DateTime`. The default values are `DateTime.MinValue` (1/1/0001) and `DateTime.MaxValue` (12/31/9999) respectively. If `MinimumDate` is set to a value greater than `MaximumDate`, the picker throws an `ArgumentOutOfRangeException` when initialized.
+
 ## Minimum date
-The Date time picker provides an option to restrict the selection of date and time using the [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MinimumDate) property in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), and you cannot select the date and time beyond the minimum date range. The MinimumDate value has to be lesser than the MaximumDate value.
+The Date Time Picker restricts selection to dates and times on or after the [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MinimumDate) property. The `MinimumDate` value must be less than or equal to `MaximumDate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -32,7 +36,7 @@ this.Content = picker;
    ![Minimum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-minimum-date.png)
 
 ## Maximum date
-The Date time picker provides an option to restrict the selection of date and time using the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MaximumDate) property in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), and you cannot select the date and time beyond the maximum date range.
+The Date Time Picker restricts selection to dates and times on or before the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MaximumDate) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -55,7 +59,7 @@ this.Content = picker;
 
 ## Blackout Date times
 
-The [Blackout Date times](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_BlackoutDateTimes) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) component allows you to block the selection of specific dates and times. You can define a list of entire dates or particular time slots within those dates to disable, preventing their selection. This feature is useful for enforcing availability rules, such as restricting specific days or hours.
+The [Blackout Date times](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_BlackoutDateTimes) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) component allows you to block the selection of specific dates and times. The property accepts an `ObservableCollection<DateTime?>`; each entry can represent an entire day (time component is midnight) or a specific time slot within a day. This feature is useful for enforcing availability rules, such as restricting specific days or hours.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -82,7 +86,7 @@ The [Blackout Date times](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-SfDatePicker picker = new SfDatePicker();
+SfDateTimePicker picker = new SfDateTimePicker();
 picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 10));
 picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 12));
 picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 14));
