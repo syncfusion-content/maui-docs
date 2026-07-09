@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events and Commands in .NET MAUI Chat Control | Syncfusion®
-description: Learn here all about Events and Commands support in Syncfusion® .NET MAUI Chat (SfChat) control and more.
+description: Learn about the events, commands, suggestions, and MVVM interactions supported by the Syncfusion® .NET MAUI Chat (SfChat) control.
 platform: MAUI
 control: SfChat
 documentation: ug
@@ -9,9 +9,11 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Chat (SfChat)
 
+The `SfChat` control exposes a set of events and commands that are raised in response to user interactions on chat messages, such as tapping, double-tapping, and long-pressing.
+
 ## MessageTapped Event and Command
 
-The `SfChat` control includes a built-in event called [MessageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTapped) and a command named [MessageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTappedCommand). These are triggered when a message is tapped. You can access the tapped message and the point of interaction through the [MessageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageTappedEventArgs.html). 
+The `SfChat` control includes a built-in event called [MessageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTapped) and a command named [MessageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTappedCommand). These are raised when a chat message bubble is tapped. You can access the tapped message and the point of interaction through the [MessageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageTappedEventArgs.html). 
 
 ### MessageTapped Event
 
@@ -28,7 +30,7 @@ sfChat.MessageTapped += SfChat_MessageTapped;
 
 private void sfChat_MessageTapped(object sender, MessageTappedEventArgs e)
 {                    
-    DisplayAlert("Message", " Tapped on message :" + e.Message.Author.Name, "Ok");
+    DisplayAlert("Message", "Tapped on message: " + e.Message.Author.Name, "Ok");
 }
 
 {% endhighlight %}
@@ -45,27 +47,57 @@ private void sfChat_MessageTapped(object sender, MessageTappedEventArgs e)
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+
 public class ViewModel : INotifyPropertyChanged
 {
-    public Command<object> tappedCommand;
+    private ICommand tappedCommand;
 
     public ViewModel()
     {
         // Assigning command action to ICommand type property
-        TappedCommand = new Command<object>(MessageTapped);
+        TappedCommand = new Command<object>(OnMessageTapped);
     }
     
     // ICommand type property for binding with sfChat.MessageTappedCommand
-    public Command<object> TappedCommand
+    public ICommand TappedCommand
     {
         get { return tappedCommand; }
-        set { tappedCommand = value; }
+        set
+        {
+            tappedCommand = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
     
-    private void MessageTapped(object args)
+    private void OnMessageTapped(object obj)
     {
-        var MessageTappedArgs = obj as MessageTappedEventArgs;
-        DisplayAlert("Message", "Tapped on Message :" + MessageTappedArgs.Message.Author.Name, "Ok");
+        if (obj is MessageTappedEventArgs messageTappedArgs)
+        {
+            // Expose the tapped message to the View rather than calling UI APIs from the ViewModel
+            LastTappedMessage = messageTappedArgs.Message.Author.Name;
+        }
+    }
+
+    private string lastTappedMessage;
+    public string LastTappedMessage
+    {
+        get { return lastTappedMessage; }
+        set
+        {
+            lastTappedMessage = value;
+            OnPropertyChanged();
+        }
     }
 }
 {% endhighlight %}
@@ -73,7 +105,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ## MessageDoubleTapped Event and Command
 
-The `SfChat` control includes built-in features like the [MessageDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTapped) event and [MessageDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTappedCommand). These are activated when a message is double-tapped. You can access the message that was double-tapped and the point of interaction through the [MessageDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageDoubleTappedEventArgs.html).
+The `SfChat` control includes built-in features like the [MessageDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTapped) event and [MessageDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTappedCommand). These are raised when a chat message bubble is double-tapped. You can access the message that was double-tapped and the point of interaction through the [MessageDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageDoubleTappedEventArgs.html).
 
 ### MessageDoubleTapped Event
 
@@ -90,7 +122,7 @@ sfChat.MessageDoubleTapped += SfChat_MessageDoubleTapped;
 
 private void sfChat_MessageDoubleTapped(object? sender, MessageDoubleTappedEventArgs e)
 {
-    DisplayAlert("Message", " DoubleTapped on message :" + e.Message.Author.Name, "Ok");
+    DisplayAlert("Message", "Tapped on message: " + e.Message.Author.Name, "Ok");
 }
 {% endhighlight %}
 {% endtabs %}
@@ -106,27 +138,57 @@ private void sfChat_MessageDoubleTapped(object? sender, MessageDoubleTappedEvent
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+
 public class ViewModel : INotifyPropertyChanged
 {
-    public Command<object> doubleTappedCommand;
+    private ICommand doubleTappedCommand;
 
     public ViewModel()
     {
         // Assigning command action to ICommand type property
-        DoubleTappedCommand = new Command<object>(MessageDoubleTapped);
+        DoubleTappedCommand = new Command<object>(OnMessageDoubleTapped);
     }
     
     // ICommand type property for binding with sfChat.MessageDoubleTappedCommand
-    public Command<object> DoubleTappedCommand
+    public ICommand DoubleTappedCommand
     {
         get { return doubleTappedCommand; }
-        set { doubleTappedCommand = value; }
+        set
+        {
+            doubleTappedCommand = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
     
-    private void MessageDoubleTapped(object obj)
+    private void OnMessageDoubleTapped(object obj)
     {
-        var MessageDoubleTappedArgs= obj as MessageDoubleTappedEventArgs;
-        DisplayAlert("Message", "DoubleTapped on Message :" + MessageDoubleTappedArgs.Message.Author.Name, "Ok");
+        if (obj is MessageDoubleTappedEventArgs messageDoubleTappedArgs)
+        {
+            // Expose the double-tapped message to the View rather than calling UI APIs from the ViewModel
+            LastTappedMessage = messageDoubleTappedArgs.Message.Author.Name;
+        }
+    }
+
+    private string lastTappedMessage;
+    public string LastTappedMessage
+    {
+        get { return lastTappedMessage; }
+        set
+        {
+            lastTappedMessage = value;
+            OnPropertyChanged();
+        }
     }
 }
 {% endhighlight %}
@@ -134,7 +196,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ## MessageLongPressed Event and Command
 
-The `SfChat` control has built-in features like the [MessageLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressed) event and [MessageLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressedCommand). These are activated when a message is long-pressed. You can access the message that was long-pressed and the point of interaction through the [MessageLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageLongPressedEventArgs.html).
+The `SfChat` control has built-in features like the [MessageLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressed) event and [MessageLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressedCommand). These are raised when a chat message bubble is long-pressed. You can access the message that was long-pressed and the point of interaction through the [MessageLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageLongPressedEventArgs.html).
 
 ### MessageLongPressed Event
 
@@ -151,7 +213,7 @@ sfChat.MessageLongPressed += sfChat_MessageLongPressed;
 
 private void sfChat_MessageLongPressed(object sender, MessageLongPressedEventArgs e)
 {
-    DisplayAlert("Message", " LongPressed on message :" + e.Message.Author.Name, "Ok");
+    DisplayAlert("Message", "Tapped on message: " + e.Message.Author.Name, "Ok");
 }
 {% endhighlight %}
 {% endtabs %}
@@ -162,33 +224,63 @@ private void sfChat_MessageLongPressed(object sender, MessageLongPressedEventArg
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
     
 <sfChat:SfChat x:Name="sfChat"  
-        MessageLongPressedCommand ="{Binding LongPressedCommand }" />
+        MessageLongPressedCommand="{Binding LongPressedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+
 public class ViewModel : INotifyPropertyChanged
 {
-    public Command<object> longPressedCommand;
+    private ICommand longPressedCommand;
 
     public ViewModel()
     {
         // Assigning command action to ICommand type property
-        LongPressedCommand = new Command<object>(MessageLongPressed);
+        LongPressedCommand = new Command<object>(OnMessageLongPressed);
     }
 
     // ICommand type property for binding with sfChat.MessageLongPressedCommand
-    public Command<object> LongPressedCommand
+    public ICommand LongPressedCommand
     {
         get { return longPressedCommand; }
-        set { longPressedCommand = value; }
+        set
+        {
+            longPressedCommand = value;
+            OnPropertyChanged();
+        }
     }
 
-    private void MessageLongPressed(object obj)
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    private void OnPropertyChanged([CallerMemberName] string propertyName = null)
     {
-        var MessageLongPressedArgs = obj as MessageLongPressedEventArgs;
-        DisplayAlert("Message", "LongPressed on Message :" + MessageLongPressedArgs.Message.Author.Name, "Ok");
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
-}       
+
+    private void OnMessageLongPressed(object obj)
+    {
+        if (obj is MessageLongPressedEventArgs messageLongPressedArgs)
+        {
+            // Expose the long-pressed message to the View rather than calling UI APIs from the ViewModel
+            LastTappedMessage = messageLongPressedArgs.Message.Author.Name;
+        }
+    }
+
+    private string lastTappedMessage;
+    public string LastTappedMessage
+    {
+        get { return lastTappedMessage; }
+        set
+        {
+            lastTappedMessage = value;
+            OnPropertyChanged();
+        }
+    }
+}
 {% endhighlight %}
 {% endtabs %}

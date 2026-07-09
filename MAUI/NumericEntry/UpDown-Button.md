@@ -1,53 +1,61 @@
 ---
 layout: post
 title: Use UpDown Button in .NET MAUI NumericEntry | Syncfusion®
-description: Learn here all about how to use UpDown Button (SpinButton) in Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
-platform: MAUI
-control:  SfNumericEntry
+description: Learn how to use the UpDown buttons with the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
+platform: maui
+control: SfNumericEntry
 documentation: ug
 ---
 
 # UpDown Button in .NET MAUI NumericEntry
 
-This section describes how to change the value in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using keys, mouse scrolling, and the up-down button
+This section describes how to change the value of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the keyboard, the mouse scroll wheel, and the on-screen up-down buttons. It also covers placement, alignment, ordering, color, template customization, and auto-reverse behavior.
+
+## Prerequisites
+
+Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
+
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
 ## Increase or decrease value
 
-You can increment or decrement the value in the `NumericEntry` control using the **UpArrow**, **DownArrow**, **PageUp**, and **PageDown** keys. You can change the increment or decrement value when the Arrow keys are pressed using the [SmallChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_SmallChange) property and Page keys using the [LargeChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_LargeChange) property. By default, the value of the `SmallChange` property is **1**, and the `LargeChange` property is **10**. 
+You can increment or decrement the value in the `NumericEntry` control using the `Up`, `Down`, `PageUp`, and `PageDown` keys. Control the step size for the arrow keys with the [SmallChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_SmallChange) property, and for the page keys with the [LargeChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_LargeChange) property. Both properties accept `double` values. The default value of `SmallChange` is `1`, and the default value of `LargeChange` is `10`.
 
-N> The value in the `NumericEntry` can also be changed by mouse scrolling. The mouse scrolling increases or decreases the value based on the `SmallChange` property.
+N> The value in the `NumericEntry` can also be changed by mouse scrolling. The scroll wheel increments or decrements the value based on the `SmallChange` property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center" 
+                        VerticalOptions="Center"
                         SmallChange="5"
                         Value="10"
-                        LargeChange="10" />
+                        LargeChange="20" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumericEntry sfNumericEntry= new SfNumericEntry();
-sfNumericEntry.Value=10;
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.SmallChange=5;
-sfNumericEntry.LargeChange=10;
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
-sfNumericEntry.VerticalOptions = LayoutOptions.Center;
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    Value = 10,
+    WidthRequest = 200,
+    SmallChange = 5,
+    LargeChange = 20,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry Placeholder Text](GettingStarted_images/valuechange-bykeys.gif)
+![.NET MAUI NumericEntry value changed by key presses](GettingStarted_images/valuechange-bykeys.gif)
 
 ## UpDown button placement
 
-You can increase or decrease the value of the `NumericEntry` control using the up-down button. By default, the value of the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownPlacementMode) property is **Hidden**. You can adjust the position of the up-down buttons by setting the `UpDownPlacementMode` property to **Inline** for horizontal orientation and **InlineVertical** for vertical orientation.
+You can increase or decrease the value of the `NumericEntry` control using the on-screen up-down buttons. By default, the value of the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownPlacementMode) property is `Hidden` (the buttons are not displayed). Set `UpDownPlacementMode` to `Inline` for a horizontal layout, or to `InlineVertical` for a vertical layout.
 
-N> When using the up-down button, the `NumericEntry` control value changes based on the value of the `SmallChange` property.
+N> When the up-down buttons are visible, the value changes by the `SmallChange` step each time a button is pressed.
 
 ### UpDown button placement: Inline
 
@@ -57,18 +65,20 @@ N> When using the up-down button, the `NumericEntry` control value changes based
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Value="360";
+                        Value="360"
                         UpDownPlacementMode="Inline" />
-                     
-{% endhighlight %}
-{% highlight c# %}
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
-sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-sfNumericEntry.Value=360;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Value = 360,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,17 +94,19 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
                         WidthRequest="200"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
-                        UpDownPlacementMode="InlineVertical"/>
-                     
-{% endhighlight %}
-{% highlight c# %}
+                        UpDownPlacementMode="InlineVertical" />
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
-sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-sfNumericEntry.Value=360;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVertical;
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Value = 360,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVertical,
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -103,66 +115,96 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 
 ## UpDown button alignment
 
-You can adjust the alignment of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [UpDownButtonAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonAlignment) property. Set its value to **Left**, **Right**, or **Both** to position the buttons on the left, right, or both sides of the entry field, respectively.
-
-N> By default, the `UpDownButtonAlignment` property is set to **Right**.  
+You can adjust the alignment of the up-down buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [UpDownButtonAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonAlignment) property. Set its value to `Left`, `Right`, or `Both` to position the buttons on the left, right, or both sides of the entry field, respectively. The default value of `UpDownButtonAlignment` is `Right`.
 
 ### UpDown button alignment: Left
 
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry Value="123" HorizontalTextAlignment="End" 
+<editors:SfNumericEntry Value="123"
+                        HorizontalTextAlignment="End"
                         WidthRequest="200"
-                        UpDownPlacementMode="Inline" 
-                        UpDownButtonAlignment="Left"/>
-                     
-{% endhighlight %}
-{% highlight c# %}
+                        UpDownPlacementMode="Inline"
+                        UpDownButtonAlignment="Left" />
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.Value = 123;
-sfNumericEntry.HorizontalTextAlignment=TextAlignment.End;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    Value = 123,
+    HorizontalTextAlignment = TextAlignment.End,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+    UpDownButtonAlignment = UpDownButtonAlignment.Left,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Alignment is left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
+![UpDown alignment is Left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
+
+### UpDown button alignment: Right (default)
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry Value="123"
+                        HorizontalTextAlignment="Start"
+                        WidthRequest="200"
+                        UpDownPlacementMode="Inline"
+                        UpDownButtonAlignment="Right" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    Value = 123,
+    HorizontalTextAlignment = TextAlignment.Start,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+    UpDownButtonAlignment = UpDownButtonAlignment.Right,
+};
+
+{% endhighlight %}
+{% endtabs %}
 
 ### UpDown button alignment: Both
 
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry Value="123" HorizontalTextAlignment="Center" 
+<editors:SfNumericEntry Value="123"
+                        HorizontalTextAlignment="Center"
                         WidthRequest="200"
-                        UpDownPlacementMode="Inline" 
-                        UpDownButtonAlignment="Both"/>
-                     
-{% endhighlight %}
-{% highlight c# %}
+                        UpDownPlacementMode="Inline"
+                        UpDownButtonAlignment="Both" />
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.Value = 123;
-sfNumericEntry.HorizontalTextAlignment=TextAlignment.Center;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    Value = 123,
+    HorizontalTextAlignment = TextAlignment.Center,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+    UpDownButtonAlignment = UpDownButtonAlignment.Both,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Alignment is Both in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
+![UpDown alignment is Both in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
 
 
 ## UpDown button order
 
-You can change the order of the UpDown buttons in the `NumericEntry` control using the [UpDownOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownOrder) property. Set its value to **UpThenDown** or **DownThenUp** to position the buttons on the entry field, respectively.
+You can change the order of the up-down buttons in the `NumericEntry` control using the [UpDownOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownOrder) property. Set its value to `UpThenDown` or `DownThenUp` to position the up button above the down button, or vice-versa.
 
-N> By default, the `UpDownOrder` property is set to **UpThenDown**.  
+> The default value of `UpDownOrder` is `UpThenDown`.
 
 ### UpDown button order: UpThenDown
 
@@ -172,25 +214,27 @@ N> By default, the `UpDownOrder` property is set to **UpThenDown**.
 <editors:SfNumericEntry Value="123"
                         WidthRequest="200"
                         UpDownOrder="UpThenDown"
-                        UpDownPlacementMode="Inline" 
-                        UpDownButtonAlignment="Right"/>
-                     
-{% endhighlight %}
-{% highlight c# %}
+                        UpDownPlacementMode="Inline"
+                        UpDownButtonAlignment="Right" />
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.Value = 123;
-sfNumericEntry.UpDownOrder = UpDownOrder.UpThenDown;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    Value = 123,
+    UpDownOrder = UpDownOrder.UpThenDown,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+    UpDownButtonAlignment = UpDownButtonAlignment.Right,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Order is Up then down in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderUpThenDown.png)
+![UpDown Order is UpThenDown in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderUpThenDown.png)
 
-### UpDown button order: DownThenUP
+### UpDown button order: DownThenUp
 
 {% tabs %}
 {% highlight XAML %}
@@ -198,30 +242,30 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
 <editors:SfNumericEntry Value="123"
                         WidthRequest="200"
                         UpDownOrder="DownThenUp"
-                        UpDownPlacementMode="Inline" 
-                        UpDownButtonAlignment="Right/>
-                     
-{% endhighlight %}
-{% highlight c# %}
+                        UpDownPlacementMode="Inline"
+                        UpDownButtonAlignment="Right" />
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.Value = 123;
-sfNumericEntry.UpDownOrder = UpDownOrder.DownThenUp;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    Value = 123,
+    UpDownOrder = UpDownOrder.DownThenUp,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+    UpDownButtonAlignment = UpDownButtonAlignment.Right,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown order is DownThenUp in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderDownThenUp.png)
+![UpDown Order is DownThenUp in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderDownThenUp.png)
 
-
-## UpDown button customization
 
 ## UpDown button color
 
-Customize the `NumericEntry` control button color by using the [UpDownButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonColor) property.
+Customize the color of the up-down buttons using the [UpDownButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonColor) property. The property accepts a `Microsoft.Maui.Graphics.Color` value (or a color string in XAML).
 
 {% tabs %}
 {% highlight XAML %}
@@ -232,18 +276,20 @@ Customize the `NumericEntry` control button color by using the [UpDownButtonColo
                         VerticalOptions="Center"
                         Value="360"
                         UpDownPlacementMode="Inline"
-                        UpDownButtonColor="Blue"/>
-                     
-{% endhighlight %}
-{% highlight c# %}
+                        UpDownButtonColor="Blue" />
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center
-sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-sfNumericEntry.Value = 360;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonColor = Colors.Blue;
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Value = 360,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+    UpDownButtonColor = Colors.Blue,
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -252,103 +298,100 @@ sfNumericEntry.UpDownButtonColor = Colors.Blue;
 
 ## UpDown button template
 
-The `NumericEntry` control supports customization of the UpDownButton's appearance through the use of the [UpButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpButtonTemplate) and [DownButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_DownButtonTemplate) properties.
+Customize the appearance of the up-down buttons using the [UpButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpButtonTemplate) and [DownButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_DownButtonTemplate) properties, which accept a `DataTemplate`.
+
+> The custom font used in the following example (`FontIcons`) must be registered in your project before it can be referenced. Add the font file under `Resources/Fonts` and include it in the `MauiProgram.cs` call to `.ConfigureFonts(fonts => { ... })`.
+
 {% tabs %}
 {% highlight XAML %}
 
 <VerticalStackLayout Spacing="10" VerticalOptions="Center">
     <editors:SfNumericEntry x:Name="numericEntry"
                             WidthRequest="200"
-                            HeightRequest="40" 
+                            HeightRequest="40"
                             VerticalOptions="Center"
                             UpDownPlacementMode="Inline"
                             Value="50">
         <editors:SfNumericEntry.UpButtonTemplate>
             <DataTemplate>
                 <Grid>
-                    <Label Padding="10, 3, 15, 10" 
-                           FontFamily="FontIcons"
-                           HorizontalOptions="Center"
-                           Text="&#8593;"
-                           TextColor="Green"
-                           FontSize="20"/>
+                    <Label Padding="10, 3, 15, 10"
+                            FontFamily="FontIcons"
+                            HorizontalOptions="Center"
+                            Text="&#8593;"
+                            TextColor="Green"
+                            FontSize="20" />
                 </Grid>
             </DataTemplate>
         </editors:SfNumericEntry.UpButtonTemplate>
         <editors:SfNumericEntry.DownButtonTemplate>
             <DataTemplate>
                 <Grid>
-                    <Label Padding="10, 3, 15, 10" 
-                           Rotation="180"
-                           FontFamily="FontIcons"
-                           HorizontalOptions="Center"
-                           Text="&#8593;"
-                           TextColor="Red"
-                           FontSize="20"/>
+                    <Label Padding="10, 3, 15, 10"
+                            FontFamily="FontIcons"
+                            HorizontalOptions="Center"
+                            Text="&#8595;"
+                            TextColor="Red"
+                            FontSize="20" />
                 </Grid>
             </DataTemplate>
         </editors:SfNumericEntry.DownButtonTemplate>
     </editors:SfNumericEntry>
 </VerticalStackLayout>
-                     
-{% endhighlight %}
-{% highlight c# %}
 
- public partial class MainPage : ContentPage
- {
-     public MainPage()
-     {
-         InitializeComponent();
-         var verticalStackLayout = new StackLayout
-         {
-             Spacing = 10,
-             VerticalOptions = LayoutOptions.Center
-         };
-         var numericEntry = new SfNumericEntry
-         {
-             WidthRequest = 200,
-             HeightRequest = 40,
-             VerticalOptions = LayoutOptions.Center,
-             UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
-             Value = 50
-         };
-         var upButtonTemplate = new DataTemplate(() =>
-         {
-             var grid = new Grid();
-             var label = new Label
-             {
-                 Padding = new Thickness(10, 3, 15, 10),
-                 FontFamily = "FontIcons",
-                 HorizontalOptions = LayoutOptions.Center,
-                 Text = "\u2191", // Use Unicode directly for the icon
-                 TextColor = Colors.Green,
-                 FontSize = 20
-             };
-             grid.Children.Add(label);
-             return grid;
-         });
-         var downButtonTemplate = new DataTemplate(() =>
-         {
-             var grid = new Grid();
-             var label = new Label
-             {
-                 Padding = new Thickness(10, 3, 15, 10),
-                 Rotation = 180,
-                 FontFamily = "FontIcons",
-                 HorizontalOptions = LayoutOptions.Center,
-                 Text = "\u2191",
-                 TextColor = Colors.Red,
-                 FontSize = 20
-             };
-             grid.Children.Add(label);
-             return grid;
-         });
-         numericEntry.UpButtonTemplate = upButtonTemplate;
-         numericEntry.DownButtonTemplate = downButtonTemplate;
-         verticalStackLayout.Children.Add(numericEntry);
-         Content = verticalStackLayout;
-     }
- }
+{% endhighlight %}
+{% highlight C# %}
+
+var verticalStackLayout = new VerticalStackLayout
+{
+    Spacing = 10,
+    VerticalOptions = LayoutOptions.Center,
+};
+var numericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    HeightRequest = 40,
+    VerticalOptions = LayoutOptions.Center,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+    Value = 50,
+};
+
+var upButtonTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid();
+    var label = new Label
+    {
+        Padding = new Thickness(10, 3, 15, 10),
+        FontFamily = "FontIcons",
+        HorizontalOptions = LayoutOptions.Center,
+        Text = "\u2191",
+        TextColor = Colors.Green,
+        FontSize = 20,
+    };
+    grid.Children.Add(label);
+    return grid;
+});
+
+var downButtonTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid();
+    var label = new Label
+    {
+        Padding = new Thickness(10, 3, 15, 10),
+        FontFamily = "FontIcons",
+        HorizontalOptions = LayoutOptions.Center,
+        Text = "\u2193",
+        TextColor = Colors.Red,
+        FontSize = 20,
+    };
+    grid.Children.Add(label);
+    return grid;
+});
+
+numericEntry.UpButtonTemplate = upButtonTemplate;
+numericEntry.DownButtonTemplate = downButtonTemplate;
+verticalStackLayout.Add(numericEntry);
+Content = verticalStackLayout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -357,30 +400,36 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
 
 ## Auto reverse in SfNumericEntry
 
-[Auto-reverse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AutoReverse) in NumericEntry allows the control to automatically switch direction when reaching its [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, it starts at the `Minimum` and progresses to the `Maximum`, and conversely.
+The [AutoReverse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AutoReverse) property causes the `NumericEntry` control to automatically switch direction when it reaches the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, the value progresses from `Minimum` to `Maximum`; when decrementing, it progresses from `Maximum` to `Minimum`. The default value of `AutoReverse` is `false`.
 
-N> The default value of this property is `false.`
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry UpDownPlacementMode="Inline"
+<editors:SfNumericEntry WidthRequest="200"
+                        UpDownPlacementMode="Inline"
                         AutoReverse="True"
                         Minimum="0"
-                        Maximum="10"/>
-                        
-                     
-{% endhighlight %}
-{% highlight c# %}
+                        Maximum="10" />
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.AutoReverse = true;
-sfNumericEntry.Minimum=0;
-sfNumericEntry.Maximum=10;
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry
+{
+    WidthRequest = 200,
+    UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+    AutoReverse = true,
+    Minimum = 0,
+    Maximum = 10,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
 ![AutoReverse support in .NET MAUI NumericEntry](UpDownButton_images/AutoReverseSupport.gif)
 
+## See Also
+
+* [Basic Features](Basic-Features.md)
+* [Formatting](Formatting.md)
+* [Restriction](Restriction.md)
