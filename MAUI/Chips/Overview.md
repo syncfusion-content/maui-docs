@@ -6,11 +6,11 @@ description: Learn here about overall key features in Essential Studio® for .NE
 control: SfChip
 ---
 
-# Overview in .NET MAUI Chips
+# Overview of .NET MAUI Chips
 
 The Syncfusion® [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) control is a versatile and feature-rich component that allows you to present information in an interactive and customizable layout. It enables you to arrange multiple chips in a layout and group them, making a selection and interaction seamless.
 
-   ![NET MAUI Chip](images/overview/maui_chip.png)
+![NET MAUI Chip](images/overview/maui_chip.png)
 
 ## Business use cases
 

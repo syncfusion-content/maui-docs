@@ -7,7 +7,7 @@ control: TreeMap (SfTreeMap)
 documentation: ug
 ---
  
-# Overview of .NET MAUI TreeMap (SfTreeMap)
+# Overview of .NET MAUI TreeMap
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) control allows you to visually represent hierarchical data with rectangles that are sized and colored based on underlying values. It efficiently displays grouped and nested data structures, offering various layout options, extensive customization options, supporting item selection, data binding to different sources, and more.
 
@@ -24,30 +24,13 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeMap](https://www.syncfusion.com/ma
  
 - **Data Binding** allows binding structured data with multiple levels and categories.
 - **Layout** allows choosing between layouts such as slice and dice or squarified for optimal visualization. 
-
-    ![layout-in-maui-tree-map](images/overview/layout-in-maui-tree-map.png)
-
 - **Levels** allows representing nested data structures with clear parent-child relationships. 
-
-    ![level-in-maui-tree-map](images/overview/level-in-maui-tree-map.png)
-
 - **Brush Settings** allows applying colors based on value ranges or categories for better interpretation.
-
-    ![brush-settings-in-maui-tree-map](images/overview/brush-settings-in-maui-tree-map.png)
-
 - **Legend** allows providing visual guidance for understanding color and data mapping. 
-
-    ![legend-in-maui-tree-map](images/overview/legend-in-maui-tree-map.png)
-
 - **Tooltip** allows displaying additional information on interaction with tree map items.
-
-    ![tool-tip-in-maui-tree-map](images/overview/tool-tip-in-maui-tree-map.gif)
-
 - **Interaction** allows selecting and highlighting items for focused analysis.  
 - **Accessibility and keyboard** allows improving usability with keyboard navigation and inclusive design.  
 - **Appearance customization** allows modifying styles, layouts, and visual properties to match application requirements.
-
-    ![leaf-item-template-in-maui-tree-map](images/overview/leaf-item-template-in-maui-tree-map.png)
 
 ## Globalization
 
