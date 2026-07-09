@@ -377,8 +377,8 @@ The `DataGridCellHoveredEventArgs` object exposes the following properties:
 | [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_RowData)        | Gets the underlying data object for the row that contains the hovered cell. |
 | [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_Column)         | Gets the column associated with the hovered cell.                           |
 | [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_Point)          | Gets the location (coordinates) of the hovered cell.                        |
-| `CellValue`      | Gets the value contained in the hovered cell.                               |
-| `CellType`       | Gets the type of the hovered cell.                                          |
+| [CellValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_CellValue)      | Gets the value contained in the hovered cell.                               |
+| [CellType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellHoveredEventArgs_CellType)       | Gets the type of the hovered cell.                                          |
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
