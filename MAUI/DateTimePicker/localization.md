@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization in .NET MAUI Date Time Picker Control | Syncfusion
+title: Localization in .NET MAUI Date Time Picker Control | Syncfusion®
 description: Learn about localization support in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control.
 platform: maui
 control: SfDateTimePicker
@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in .NET MAUI Date Time Picker (SfDateTimePicker)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The `SfDateTimePicker` can be localized by adding `resource` file. In `SfDateTimePicker`, provides the support to localize the below strings
+Localization is the process of translating the application resources into different languages for specific cultures. The `SfDateTimePicker` can be localized by adding a resource file. `SfDateTimePicker` supports localizing the following strings:
 
    * `Day`
    * `Month`
@@ -55,7 +55,7 @@ public partial class App : Application
    ![Date Time picker Time localization in .NET MAUI Date Picker.](images/localization/maui-date-time-picker-time-localization.png)
 
 N>
-The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+The required `resx` files must have their `Build Action` set to `EmbeddedResource`, and the file name must contain the culture code (for example, `SfDateTimePicker.fr-FR.resx`). Place the files in the `Resources` folder.
 
 ## Localize application level
 
