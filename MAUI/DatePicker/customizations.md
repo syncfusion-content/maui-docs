@@ -11,6 +11,8 @@ documentation: ug
 
 The [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) header, column header, footer, and selection views can be customized.
 
+N> Before proceeding, ensure the required Syncfusion MAUI package is installed and the namespace is registered. See the [Getting Started](getting-started.md) documentation for prerequisites and setup.
+
 ## Header Customization
 
 Customize the date picker header by using the `HeaderView` property of the `SfDatePicker`.
@@ -34,7 +36,7 @@ The SfDatePicker control allows you to add the header text by setting the [Text]
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.HeaderView = new PickerHeaderView()
+datePicker.HeaderView = new PickerHeaderView()
 {
     Height = 40,
     Text = "Date Picker"
@@ -67,7 +69,7 @@ The SfDatePicker control allows you to customize the header divider color by set
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.HeaderView = new PickerHeaderView()
+datePicker.HeaderView = new PickerHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -145,52 +147,56 @@ You can customize the date picker header appearance by using the [HeaderTemplate
 
 ![Header template in .NET MAUI Date picker.](images/customizations/maui-date-picker-header-template.png)
 
-N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
+N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) property.
 
 ### Custom Header appearance using DataTemplateSelector
 
 You can customize the date picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
 
+N> The `HeaderTemplateSelector` C# class shown below should be added to a code file in your project (for example, a `Selectors/HeaderTemplateSelector.cs` file). Ensure the `xmlns:local` namespace is declared in the parent XAML to point to that namespace (for example, `xmlns:local="clr-namespace:MyApp.Selectors"`).
+
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid.Resources>
-    <DataTemplate x:Key="todayDatesTemplate">
-        <Grid Background="LightBlue">
-            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Date" TextColor="Red"/>
-        </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="normalDatesTemplate">
-        <Grid Background="LightGreen">
-            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Date" TextColor="Orange"/>
-        </Grid>
-    </DataTemplate>
-    <local:DateTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normalDatesTemplate}"/>
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="todayDatesTemplate">
+            <Grid Background="LightBlue">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Date" TextColor="Red"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="normalDatesTemplate">
+            <Grid Background="LightGreen">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Date" TextColor="Orange"/>
+            </Grid>
+        </DataTemplate>
+        <local:HeaderTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormalDatesTemplate="{StaticResource normalDatesTemplate}"/>
+    </Grid.Resources>
     <picker:SfDatePicker x:Name="datepicker" HeaderTemplate="{StaticResource headerTemplateSelector}">
     </picker:SfDatePicker>
-</Grid.Resources>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-public class DateTemplateSelector : DataTemplateSelector
+public class HeaderTemplateSelector : DataTemplateSelector
 {
-    public DateTemplateSelector()
+    public HeaderTemplateSelector()
     {
     }
     public DataTemplate TodayDatesTemplate { get; set; }
-    public DataTemplate NormaldatesTemplate { get; set; }
+    public DataTemplate NormalDatesTemplate { get; set; }
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        var Details = item as SfDatePicker;
-        if (Details != null)
+        var picker = container as SfDatePicker ?? (container?.BindingContext as SfDatePicker);
+        if (picker != null)
         {
-            if (Details.SelectedDate.HasValue && Details.SelectedDate.Value < DateTime.Now.Date)
+            if (picker.SelectedDate.HasValue && picker.SelectedDate.Value < DateTime.Now.Date)
                 return TodayDatesTemplate;
         }
-        return NormaldatesTemplate;
+        return NormalDatesTemplate;
     }
 }
 
@@ -257,7 +263,7 @@ The SfDatePicker control allows you to customize the column header divider color
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+datePicker.ColumnHeaderView = new DatePickerColumnHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -348,60 +354,64 @@ N> If a template is applied to the column header in the [DatePickerColumnHeaderV
 
 You can customize the date picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker column header. This lets you apply a custom data template to the column header and customize its appearance based on specific conditions.
 
+N> The `ColumnHeaderTemplateSelector` C# class shown below should be added to a code file in your project (for example, a `Selectors/ColumnHeaderTemplateSelector.cs` file). Ensure the `xmlns:local` namespace is declared in the parent XAML to point to that namespace (for example, `xmlns:local="clr-namespace:MyApp.Selectors"`).
+
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid.Resources>
-    <DataTemplate x:Key="todayDatesTemplate">
-        <Grid Background="LightBlue">
-            <Grid.ColumnDefinitions>
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="todayDatesTemplate">
+            <Grid Background="LightBlue">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                <Label Text="Year" Grid.Column="0" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Month" Grid.Column="1" TextColor="Red"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Day" Grid.Column="2" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="normalDatesTemplate">
+            <Grid Background="LightGreen">
+                <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-            <Label Text="Year" Grid.Column="0" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Label Text="Month" Grid.Column="1" TextColor="Red"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Label Text="Day" Grid.Column="2" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-        </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="normalDatesTemplate">
-        <Grid Background="LightGreen">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Label Text="Year" Grid.Column="0" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Label Text="Month" Grid.Column="1" TextColor="Orange"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Label Text="Day" Grid.Column="2" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-        </Grid>
-    </DataTemplate>
-    <local:DateTemplateSelector x:Key="columnHeaderTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normalDatesTemplate}"/>
+                <Label Text="Year" Grid.Column="0" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Month" Grid.Column="1" TextColor="Orange"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Day" Grid.Column="2" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+        <local:ColumnHeaderTemplateSelector x:Key="columnHeaderTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormalDatesTemplate="{StaticResource normalDatesTemplate}"/>
+    </Grid.Resources>
     <picker:SfDatePicker x:Name="datepicker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
     </picker:SfDatePicker>
-</Grid.Resources>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-public class DateTemplateSelector : DataTemplateSelector
+public class ColumnHeaderTemplateSelector : DataTemplateSelector
 {
-    public DateTemplateSelector()
+    public ColumnHeaderTemplateSelector()
     {
     }
     public DataTemplate TodayDatesTemplate { get; set; }
-    public DataTemplate NormaldatesTemplate { get; set; }
+    public DataTemplate NormalDatesTemplate { get; set; }
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        var Details = item as SfDatePicker;
-        if (Details != null)
+        var picker = container as SfDatePicker ?? (container?.BindingContext as SfDatePicker);
+        if (picker != null)
         {
-            if (Details.SelectedDate.HasValue && Details.SelectedDate.Value < DateTime.Now.Date)
+            if (picker.SelectedDate.HasValue && picker.SelectedDate.Value < DateTime.Now.Date)
                 return TodayDatesTemplate;
         }
-        return NormaldatesTemplate;
+        return NormalDatesTemplate;
     }
 }
 
@@ -415,7 +425,7 @@ Customize the date picker footer view by using the FooterView property of the Sf
 
 ### Set the footer with OK and Cancel button customizations
 
-In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date. The OkButtonText can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date. The OK button visibility can be controlled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). Similarly, the Cancel button visibility can be controlled using the [ShowCancelButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowCancelButton) property.
 The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel". To enable the footer view, set the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html) to a value greater than 0. The default value of the Height property is 0.
 
 {% tabs %}
@@ -425,7 +435,7 @@ The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Sync
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.FooterView >
         <picker:PickerFooterView Height="40" OkButtonText="Save"
-                                 CancelButtonText="Exit"/>
+                                 CancelButtonText="Exit" ShowOkButton="True"/>
     </picker:SfDatePicker.FooterView>
 </picker:SfDatePicker>
 
@@ -439,6 +449,7 @@ datePicker.FooterView = new PickerFooterView()
     Height = 40,
     OkButtonText = "Save",
     CancelButtonText = "Exit",
+    ShowOkButton = true,
 };
 
 this.Content = datePicker;
@@ -468,7 +479,7 @@ The SfDatePicker control allows you to customize the footer divider color by set
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.FooterView = new PickerFooterView()
+datePicker.FooterView = new PickerFooterView()
 {
     DividerColor = Colors.Red,
 };
@@ -551,62 +562,66 @@ You can customize the date picker footer appearance by using the [FooterTemplate
 
 ![Footer template in .NET MAUI Date picker.](images/customizations/maui-date-picker-footer-template.png)
 
-N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
+N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) property.
 
 ### Custom Footer appearance using DataTemplateSelector
 
 You can customize the date picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
 
+N> The `FooterTemplateSelector` C# class shown below should be added to a code file in your project (for example, a `Selectors/FooterTemplateSelector.cs` file). Ensure the `xmlns:local` namespace is declared in the parent XAML to point to that namespace (for example, `xmlns:local="clr-namespace:MyApp.Selectors"`).
+
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid.Resources>
-    <DataTemplate x:Key="todayDatesTemplate">
-        <Grid Background="LightBlue">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Text="Decline" TextColor="Red" Background="Transparent"/>
-            <Button Grid.Column="1" Text="Accept" TextColor="Red" Background="Transparent"/>
-        </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="normalDatesTemplate">
-        <Grid Background="LightGreen">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Text="Decline" TextColor="Orange" Background="Transparent"/>
-            <Button Grid.Column="1" Text="Accept" TextColor="Orange" Background="Transparent"/>
-        </Grid>
-    </DataTemplate>
-    <local:DateTemplateSelector x:Key="footerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normalDatesTemplate}"/>
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="todayDatesTemplate">
+            <Grid Background="LightBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="Red" Background="Transparent"/>
+                <Button Grid.Column="1" Text="Accept" TextColor="Red" Background="Transparent"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="normalDatesTemplate">
+            <Grid Background="LightGreen">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="Orange" Background="Transparent"/>
+                <Button Grid.Column="1" Text="Accept" TextColor="Orange" Background="Transparent"/>
+            </Grid>
+        </DataTemplate>
+        <local:FooterTemplateSelector x:Key="footerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormalDatesTemplate="{StaticResource normalDatesTemplate}"/>
+    </Grid.Resources>
     <picker:SfDatePicker x:Name="datepicker" FooterTemplate="{StaticResource footerTemplateSelector}">
     </picker:SfDatePicker>
-</Grid.Resources>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-public class DateTemplateSelector : DataTemplateSelector
+public class FooterTemplateSelector : DataTemplateSelector
 {
-    public DateTemplateSelector()
+    public FooterTemplateSelector()
     {
     }
     public DataTemplate TodayDatesTemplate { get; set; }
-    public DataTemplate NormaldatesTemplate { get; set; }
+    public DataTemplate NormalDatesTemplate { get; set; }
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        var Details = item as SfDatePicker;
-        if (Details != null)
+        var picker = container as SfDatePicker ?? (container?.BindingContext as SfDatePicker);
+        if (picker != null)
         {
-            if (Details.SelectedDate.HasValue && Details.SelectedDate.Value < DateTime.Now.Date)
+            if (picker.SelectedDate.HasValue && picker.SelectedDate.Value < DateTime.Now.Date)
                 return TodayDatesTemplate;
         }
-        return NormaldatesTemplate;
+        return NormalDatesTemplate;
     }
 }
 
@@ -641,7 +656,7 @@ datePicker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
     Stroke = Color.FromArgb("#36454F"),
-    Pading = new Thickness(10, 5, 10, 5),
+    Padding = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
 
@@ -655,7 +670,7 @@ this.Content = datePicker;
 
 ### Customization of the selected item
 
-Customize the selected view text style of the Date Picker using the [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SelectedTextStyle) property of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+Customize the selected item's text style of the Date Picker by using the [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SelectedTextStyle) property of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
@@ -674,11 +689,8 @@ Customize the selected view text style of the Date Picker using the [SelectedTex
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.SelectedTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.White,
-        FontSize = 15,
-    }
+    TextColor = Colors.White,
+    FontSize = 15,
 };
 
 this.Content = datePicker;
@@ -704,20 +716,22 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-SfDatePicker datepicker = new SfDatePicker();
-datepicker.ColumnDividerColor = Colors.Red;
-this.Content = datepicker;
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.ColumnDividerColor = Colors.Red;
+this.Content = datePicker;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker coloumn divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-divider-color.png)
+![Date picker column divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-divider-color.png)
 
 ## CloseButtonIcon
 
 ### Show Close Button
 
 You can enable or disable the CloseButton in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
+
+N> The close button is only displayed when the picker is opened in [Dialog mode](date-picker-mode.md). In the example below, the `Mode="Dialog"` property and the `IsOpen` property are used to open the picker from the host page. See [Date picker mode](date-picker-mode.md) for more information.
 
 {% tabs %}
 
@@ -905,7 +919,7 @@ this.Content = datePicker;
 
 ### Customization of the day column width
 
-Customize the day column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property. This property controls the width of the day column.
+Customize the day column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property. This property controls the width of the day column. The default value of the `DayColumnWidth` property is `-1`, which means the column is sized to fit its content.
 
 {% tabs %}
 
@@ -928,7 +942,7 @@ this.Content = datePicker;
 
 ### Customization of the month column width
 
-Customize the month column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnWidth) property. This property controls the width of the month column.
+Customize the month column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnWidth) property. This property controls the width of the month column. The default value of the `MonthColumnWidth` property is `-1`, which means the column is sized to fit its content.
 
 {% tabs %}
 
@@ -951,7 +965,7 @@ this.Content = datePicker;
 
 ### Customization of the year column width
 
-Customize the year column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property. This property controls the width of the year column.
+Customize the year column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property. This property controls the width of the year column. The default value of the `YearColumnWidth` property is `-1`, which means the column is sized to fit its content.
 
 {% tabs %}
 

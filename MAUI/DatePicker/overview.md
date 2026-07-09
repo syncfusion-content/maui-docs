@@ -1,15 +1,18 @@
 ---
 layout: post
-title: About .NET MAUI Date Picker control | Syncfusion
-description: Learn about the overview of Syncfusion .NET MAUI Date Picker (SfDatePicker) control, its basic features, and date picker functionalities.
+title: About .NET MAUI DatePicker control | Syncfusion
+description: Learn about the overview of Syncfusion .NET MAUI DatePicker (SfDatePicker) control, its basic features, and date picker functionalities.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
-# Overview of .NET MAUI Date Picker (SfDatePicker)
+# Overview of .NET MAUI DatePicker (SfDatePicker)
 
-Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker ([SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker)) control allows you to select a date and visualize its items inside a popup or a drop-down UI element. The Date Picker also enables you to set date ranges and formats and customize its dialog appearance by configuring its header, footer, and more.
+The Syncfusion® .NET MAUI DatePicker ([SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker)) is a lightweight, fully customizable control that lets you select a date and visualize its items inside a popup or a drop-down UI element. Use it to set date ranges and formats, and to tailor the dialog appearance by configuring its header, footer, and more.
+
+> **Supported platforms:** Android, iOS, macOS (Mac Catalyst and Mac UI), and Windows.
+> **Package:** [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker) (compatible with .NET MAUI on .NET 7 and later).
 
 ## Business use cases
 
@@ -44,7 +47,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker ([SfDatePicker](https://www.syn
 
    ![Dialog mode in .NET MAUI Date picker.](images/overview/maui-date-picker-dialog-mode.gif)
 
-- **Date restriction support** allows limiting selection within minimum and maximum date ranges.  
+- **Date restriction support** allows limiting selection within minimum and maximum date ranges.
 
    ![Minimum date in .NET MAUI Date picker.](images/overview/maui-date-picker-minimum-date.png)
 
@@ -54,9 +57,17 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker ([SfDatePicker](https://www.syn
 
    ![Intervals in .NET MAUI Date picker.](images/overview/maui-date-picker-intervals.gif)
 
-- **User interaction support** allows selecting dates through intuitive tap and scroll gestures.
+- **Looping support** allows the selected item in each picker column to wrap from the last value back to the first, providing a continuous scrolling experience.
 
-   ![Picker interactions in .NET MAUI Date picker.](images/overview/maui-date-picker-interactions.gif)   
+- **Text display mode support** allows displaying the selected date inside the picker, in the input view, or both.
+
+- **Localization support** allows you to localize the date picker text for different cultures.
+
+- **Liquid glass effect support** allows applying a fluid, glass-like visual effect on supported platforms (iOS 26 and later).
+
+- **Accessibility support** allows screen readers to announce the selected date and navigation changes, and provides keyboard navigation across all platforms.
+
+- **Events support** provides notifications for selection, dialog opening/closing, and other interactions.
 
 ## Globalization
 
@@ -76,7 +87,7 @@ The following table summarizes the globalization support available in this contr
 
 <div class="legend">
 <span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/full-support.svg" width="16"> Full Support
+<img src="../images/full-support.svg" width="16"> Full Support
 </span>
 </div>
 
@@ -91,25 +102,36 @@ The following table summarizes the globalization support available in this contr
 </tr>
 <tr>
 <td><a href="/maui/datepicker/overview">DatePicker</a></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
+<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
+</tr>
 </table>
 
 ## Related controls
 
-- [Date Time Picker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting both date and time values.  
-- [Calendar](https://help.syncfusion.com/maui/calendar/overview) for navigating and selecting dates using full calendar views.  
-- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating date picker inputs within forms.  
+- [DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting both date and time values.
+- [Calendar](https://help.syncfusion.com/maui/calendar/overview) for navigating and selecting dates using full calendar views.
+- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating date picker inputs within forms.
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/datepicker/getting-started) shows a step‑by‑step guide to begin using the Date Picker control.  
-- [Formatting](https://help.syncfusion.com/maui/datepicker/formatting) explains how to configure how date values are displayed.  
-- [Customization](https://help.syncfusion.com/maui/datepicker/customizations) helps modify appearance and interaction behavior.  
+- [Getting Started](https://help.syncfusion.com/maui/datepicker/getting-started) shows a step‑by‑step guide to begin using the DatePicker control.
+- [Formatting](https://help.syncfusion.com/maui/datepicker/formatting) explains how to configure how date values are displayed.
+- [Date Picker Mode](https://help.syncfusion.com/maui/datepicker/date-picker-mode) shows how to display the picker as a popup or dialog.
+- [Date Restriction](https://help.syncfusion.com/maui/datepicker/date-restriction) explains how to set minimum and maximum selectable dates.
+- [Date Interval](https://help.syncfusion.com/maui/datepicker/date-interval) describes how to configure day, month, and year intervals.
+- [Selection](https://help.syncfusion.com/maui/datepicker/selection) explains how to set and read the selected date.
+- [Text Display Mode](https://help.syncfusion.com/maui/datepicker/date-picker-text-display-mode) describes how to show the selected date in the picker and/or input view.
+- [Enable Looping](https://help.syncfusion.com/maui/datepicker/enable-looping) shows how to wrap item selection from the last value back to the first.
+- [Events](https://help.syncfusion.com/maui/datepicker/events) lists the events raised by the date picker.
+- [Localization](https://help.syncfusion.com/maui/datepicker/localization) explains how to localize picker text.
+- [Accessibility](https://help.syncfusion.com/maui/datepicker/accessibility) describes screen reader and keyboard navigation support.
+- [Liquid Glass Effect](https://help.syncfusion.com/maui/datepicker/liquid-glass-effect) shows how to apply the liquid glass effect on supported platforms.
+- [Customization](https://help.syncfusion.com/maui/datepicker/customizations) helps modify appearance and interaction behavior.
+- [Migration](https://help.syncfusion.com/maui/datepicker/migration) covers migrating from earlier versions of the control.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
 ## Resources
