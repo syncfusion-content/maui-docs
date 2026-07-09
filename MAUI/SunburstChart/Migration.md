@@ -7,7 +7,7 @@ control: SfSunburstChart
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfSunburstChart to .NET MAUI SfSunburstChart
+# Migrate from Xamarin.Forms SunburstChart to .NET MAUI SunburstChart
 
 The SfSunburstChart was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain API naming consistency in .NET MAUI SfSunburstChart, we renamed some of the APIs. The changes in APIs from Xamarin SfSunburstChart to .NET MAUI SfSunburstChart are detailed below.
 
