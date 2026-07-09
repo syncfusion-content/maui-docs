@@ -202,13 +202,21 @@ private void TreeViewNode_PropertyChanged(object sender, PropertyChangedEventArg
 
 ## Refresh layout
 
-> **NOTE**: Use the right method for the job — [SetDirty](#refresh-layout) invalidates the layout of a single `TreeViewNode` and its descendants; [ResetTreeViewItems](#reset-treeview-items) recreates the item templates for the visible (or a specific) item; [RefreshView](#refresh-view) refreshes all visible items and optionally recreates their templates.
-
 You can refresh a `TreeViewNode` from the root node and update the entire layout by using the [SetDirty](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_SetDirty) method that notifies the tree view layout mechanism to invalidate nodes. Call this method whenever you modify properties of a `TreeViewNode` (such as its content, child collection, or expansion state) at runtime so that the control recalculates the layout and re-renders the affected node and its descendants.
 
 {% tabs %}
 {% highlight c# %}
-node.SetDirty();
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        node.SetDirty();
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -220,7 +228,17 @@ You can reset the visible TreeView items by using the [ResetTreeViewItems](https
 
 {% tabs %}
 {% highlight c# %}
-treeView.ResetTreeViewItems();
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        treeView.ResetTreeViewItems();
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -228,8 +246,18 @@ treeView.ResetTreeViewItems();
 
 {% tabs %}
 {% highlight c# %}
-// `dataObject` is the underlying data bound to the TreeViewNode you want to reset.
-treeView.ResetTreeViewItems(dataObject);
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        // `dataObject` is the underlying data bound to the TreeViewNode you want to reset.
+        treeView.ResetTreeViewItems(dataObject);
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -243,7 +271,17 @@ The `RefreshView` method accepts a `bool` parameter:
 
 {% tabs %}
 {% highlight c# %}
-// Full refresh — recreates all visible items.
-treeView.RefreshView(true);
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        // Full refresh — recreates all visible items.
+        treeView.RefreshView(true);
+    }
+}
 {% endhighlight %}
 {% endtabs %}

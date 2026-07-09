@@ -20,14 +20,22 @@ The TreeView allows selecting items programmatically or via touch interactions b
 * [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Multiple): Allows selecting more than one item. Selection is not cleared when selecting more than one item. When clicking on the selected item, the selection is cleared.
 * [Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Extended): Allows selecting multiple items using the common key modifiers. Hold `Ctrl` (or `Cmd` on macOS) and click to toggle individual non-contiguous items, or hold `Shift` and click to select all items between the previously selected item and the clicked item. Clicking without a modifier clears the existing selection and selects only the clicked item.
 
-N> The `SingleDeselect` and `Extended` selection modes are available from Syncfusion .NET MAUI TreeView version 20.4.0.40 onwards. Ensure the Syncfusion.Maui.TreeView NuGet package reference is up to date before using these modes.
-
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" SelectionMode="Multiple"/>
 {% endhighlight %}
 {% highlight c# %}
-treeView.SelectionMode = TreeViewSelectionMode.Multiple;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectionMode = TreeViewSelectionMode.Multiple;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,7 +50,17 @@ When the selection mode is `Single` or `SingleDeselect`, programmatically select
 {% tabs %}
 {% highlight c# %}
 
-treeView.SelectedItem = viewModel.CountriesInfo[2];
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectedItem = viewModel.CountriesInfo[2];
+   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -52,8 +70,18 @@ When the selection mode is `Multiple`, programmatically select more than one ite
 {% tabs %}
 {% highlight c# %}
 
-treeView.SelectedItems.Add(viewModel.CountriesInfo[2]);
-treeView.SelectedItems.Add(viewModel.CountriesInfo[3]);
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectedItems.Add(viewModel.CountriesInfo[2]);
+      treeView.SelectedItems.Add(viewModel.CountriesInfo[3]);
+   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +98,17 @@ The selected items can be cleared based on the selection mode. When the selectio
 
 {% tabs %}
 {% highlight c# %}
-treeView.SelectedItems.Clear();
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectedItems.Clear();
+   }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,7 +116,17 @@ When the selection mode is `Single` or `SingleDeselect`, clear the selection by 
 
 {% tabs %}
 {% highlight c# %}
-treeView.SelectedItem = null;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectedItem = null;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
  
@@ -95,7 +143,17 @@ By default, selection applies only within the content area of the item (after th
 <syncfusion:SfTreeView x:Name="treeView" FullRowSelect="True" />
 {% endhighlight %}
 {% highlight c# %}
-treeView.FullRowSelect = true;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.FullRowSelect = true;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -112,7 +170,17 @@ The TreeView allows you to change the selection background color for selected it
 <syncfusion:SfTreeView x:Name="treeView" SelectionBackground="LightBlue" />
 {% endhighlight %}
 {% highlight c# %}
-treeView.SelectionBackground = Colors.LightBlue;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectionBackground = Colors.LightBlue;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,7 +193,17 @@ The TreeView allows you to change the selection foreground color for selected it
 <syncfusion:SfTreeView x:Name="treeView" SelectionForeground="Red" />
 {% endhighlight %}
 {% highlight c# %}
-treeView.SelectionForeground = Colors.Red;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectionForeground = Colors.Red;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -145,14 +223,24 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tree
 You can cancel the selection process within this event by setting the `ItemSelectionChangingEventArgs.Cancel` property to true.
 
 {% tabs %}
-{% highlight c# hl_lines="7" %}
-treeView.SelectionChanging += TreeView_SelectionChanging;  
+{% highlight c# hl_lines="10" %}
+using Syncfusion.Maui.TreeView;
 
-private void TreeView_SelectionChanging(object sender, ItemSelectionChangingEventArgs e)
+public class MainPage : ContentPage
 {
-   if (e.AddedItems.Count > 0 && e.AddedItems[0] == ViewModel.Items[0])
+   public MainPage()
    {
-      e.Cancel = true;
+      InitializeComponent();
+
+      treeView.SelectionChanging += TreeView_SelectionChanging;
+   }
+
+   private void TreeView_SelectionChanging(object sender, ItemSelectionChangingEventArgs e)
+   {
+      if (e.AddedItems.Count > 0 && e.AddedItems[0] == ViewModel.Items[0])
+      {
+         e.Cancel = true;
+      }
    }
 }
 {% endhighlight %}
@@ -162,7 +250,8 @@ You can also wire the event handler declaratively in XAML.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" SelectionChanging="TreeView_SelectionChanging" />
+   <syncfusion:SfTreeView x:Name="treeView" 
+                          SelectionChanging="TreeView_SelectionChanging" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -175,11 +264,21 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeV
 
 {% tabs %}
 {% highlight c# %}
-treeView.SelectionChanged += TreeView_SelectionChanged;  
+using Syncfusion.Maui.TreeView;
 
-private void TreeView_SelectionChanged(object sender, ItemSelectionChangedEventArgs e)
+public class MainPage : ContentPage
 {
-   treeView.SelectedItems.Clear();
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectionChanged += TreeView_SelectionChanged;
+   }
+
+   private void TreeView_SelectionChanged(object sender, ItemSelectionChangedEventArgs e)
+   {
+      treeView.SelectedItems.Clear();
+   }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -226,17 +325,16 @@ The following keys are supported for navigation and selection:
   </syncfusion:SfTreeView>
   {% endhighlight %}
   {% highlight c# %}
-  treeView.BackgroundColor = Colors.White;
+  using Syncfusion.Maui.TreeView;
+
+  public class MainPage : ContentPage
+  {
+     public MainPage()
+     {
+        InitializeComponent();
+
+        treeView.BackgroundColor = Colors.White;
+     }
+  }
   {% endhighlight %}
   {% endtabs %}
-
-* When the `TreeView` contains duplicate item instances in the collection, only the first instance of the matching item will be selected or deselected. Ensure unique object references in the `ItemsSource` collection for reliable selection behavior.
-
-## Troubleshooting
-
-If selection does not appear to work, verify the following:
-
-* The data objects passed to `SelectedItem` or `SelectedItems` reference the exact same instances present in the `ItemsSource` collection. References that merely match by value are not sufficient.
-* The `SelectionMode` is set to a value other than `None` before attempting programmatic or UI selection.
-* The `ItemsSource` is fully populated before assigning `SelectedItem` or `SelectedItems`, to avoid selection being discarded before the items are realized.
-* For `ItemTemplate` based workflows, ensure the root element of the template does not override the `SelectionBackground`.

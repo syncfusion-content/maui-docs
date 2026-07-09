@@ -51,7 +51,6 @@ treeView.CheckBoxMode = CheckBoxMode.Individual;
 {% endhighlight %}
 {% endtabs %}
 
-N> In recursive mode, the parent node's checkbox state or `IsChecked` property value is updated only on UI interaction.
 
 N> When the `CheckBoxMode` is enabled, the `ItemTapped` and `ItemDoubleTapped` events will not be triggered in `SfTreeView` since the checkbox will handle the touch interaction, only the `NodeChecked` event is triggered.
 
@@ -320,7 +319,7 @@ node.IsChecked = true;
 
 By default, the `SfTreeView` renders a built-in checkbox when the [CheckBoxMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckBoxMode) is enabled, and the checkbox column is reserved based on the `CheckBoxWidth` property. To use a custom checkbox, hide the built-in checkbox column by setting the `CheckBoxWidth` property to `0` and add the `SfCheckBox` to the `ItemTemplate`. Ensure the `CheckBoxMode` is still set to a value other than `None` so that `CheckedItems` and `IsChecked` tracking continue to function.
 
-N> The `SfCheckBox` control requires the `Syncfusion.Maui.Buttons` namespace. Add the namespace declaration `xmlns:checkbox="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"` to the page to use the `checkbox:` prefix shown in the following examples. For more information on getting started with `SfCheckBox`, refer to the [SfCheckBox getting started](https://help.syncfusion.com/maui/buttons/overview) documentation.
+N> The `SfCheckBox` control requires the `Syncfusion.Maui.Buttons` namespace. Add the namespace declaration `xmlns:checkbox="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"` to the page to use the `checkbox:` prefix shown in the following examples. For more information on getting started with `SfCheckBox`, refer to the [SfCheckBox getting started](https://help.syncfusion.com/maui/button/overview) documentation.
 
 ### Checkbox Template in Bound Mode
 

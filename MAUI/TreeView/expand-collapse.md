@@ -196,32 +196,50 @@ Use `NodeCollapsing` and `NodeExpanding` to handle or cancel an action in progre
 {% tabs %}
 {% highlight c# %}
 
-// Subscribe to events.
-treeView.NodeExpanding += TreeView_NodeExpanding;
-treeView.NodeExpanded += TreeView_NodeExpanded;
-treeView.NodeCollapsing += TreeView_NodeCollapsing;
-treeView.NodeCollapsed += TreeView_NodeCollapsed;
+using Syncfusion.Maui.TreeView;
 
-private void TreeView_NodeExpanding(object sender, NodeExpandingEventArgs e)
+public class MainPage : ContentPage
 {
-    // Handle or cancel the expanding action. e.Node is the node being expanded.
-    // Set e.Cancel = true to cancel the expansion.
-}
+    public MainPage()
+    {
+        InitializeComponent();
 
-private void TreeView_NodeExpanded(object sender, NodeExpandedEventArgs e)
-{
-    // Respond after a node has expanded. e.Node is the expanded node.
-}
+        // Subscribe to events
+        treeView.NodeExpanding += TreeView_NodeExpanding;
+        treeView.NodeExpanded += TreeView_NodeExpanded;
+        treeView.NodeCollapsing += TreeView_NodeCollapsing;
+        treeView.NodeCollapsed += TreeView_NodeCollapsed;
+    }
 
-private void TreeView_NodeCollapsing(object sender, NodeCollapsingEventArgs e)
-{
-    // Handle or cancel the collapsing action. e.Node is the node being collapsed.
-    // Set e.Cancel = true to cancel the collapse.
-}
+    private void TreeView_NodeExpanding(object sender, NodeExpandingEventArgs e)
+    {
+        // Handle or cancel the expanding action.
+        // e.Node represents the node being expanded.
 
-private void TreeView_NodeCollapsed(object sender, NodeCollapsedEventArgs e)
-{
-    // Respond after a node has collapsed. e.Node is the collapsed node.
+        // Example:
+        // e.Cancel = true;
+    }
+
+    private void TreeView_NodeExpanded(object sender, NodeExpandedEventArgs e)
+    {
+        // Handle the expanded event.
+        // e.Node represents the expanded node.
+    }
+
+    private void TreeView_NodeCollapsing(object sender, NodeCollapsingEventArgs e)
+    {
+        // Handle or cancel the collapsing action.
+        // e.Node represents the node being collapsed.
+
+        // Example:
+        // e.Cancel = true;
+    }
+
+    private void TreeView_NodeCollapsed(object sender, NodeCollapsedEventArgs e)
+    {
+        // Handle the collapsed event.
+        // e.Node represents the collapsed node.
+    }
 }
 
 {% endhighlight %}

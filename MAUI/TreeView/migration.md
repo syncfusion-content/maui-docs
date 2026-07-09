@@ -11,15 +11,6 @@ documentation: ug
 
 To make it easier to migrate from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treeview) to [.NET MAUI SfTreeView](https://www.syncfusion.com/maui-controls/maui-treeview), we retained most of the APIs from the Xamarin SfTreeView in the .NET MAUI SfTreeView. To keep API naming consistent in the .NET MAUI SfTreeView, however, we renamed some APIs. The APIs that have changed from the Xamarin SfTreeView to the .NET MAUI SfTreeView are detailed as follows.
 
-## Prerequisites
-
-Before migrating, ensure the following:
-
-* The [MAUI SfTreeView](https://www.syncfusion.com/maui-controls/maui-treeview) is supported starting from Syncfusion .NET MAUI TreeView **v20.1.0.47** (Essential Studio® 2022 Volume 1). For the latest compatibility details and platform support, see [System Requirements](system-requirements.html) and [Release Notes](release-notes.html).
-* Create or convert your project to a .NET MAUI app. To move a Xamarin.Forms project to .NET MAUI, follow the migration guide: [Upgrade from Xamarin.Forms to .NET MAUI](upgrade.html).
-* Remove the Xamarin TreeView NuGet package(s) and add the MAUI TreeView package. The required package is `Syncfusion.Maui.TreeView` (available on NuGet). See [Installation](installation.html) for setup steps.
-* Register the Syncfusion license key after installation. For details, see [Licensing](licensing.html).
-
 > **NOTE**  
 > The tables below list only the APIs whose names changed. All other APIs from the Xamarin SfTreeView are retained in the .NET MAUI SfTreeView under the new namespace.
 

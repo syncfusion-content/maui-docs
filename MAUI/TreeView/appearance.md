@@ -168,21 +168,32 @@ Similarly, you can customize the expander view using the [ExpanderTemplate](http
 </syncfusion:SfTreeView>
 {% endhighlight %}
 {% highlight c# %}
-treeView.ExpanderTemplate = new DataTemplate(() =>
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
 {
-    var grid = new Grid();
-    var expanderIcon = new Image
+    public MainPage()
     {
-        Source = "expand_arrow.png",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    // Swap the icon based on the expanded state of the node.
-    expanderIcon.SetBinding(Image.SourceProperty,
-        new Binding("IsExpanded", converter: new ExpanderIconConverter()));
-    grid.Children.Add(expanderIcon);
-    return grid;
-});
+        InitializeComponent();
+
+        SfTreeView treeView = new SfTreeView();
+        treeView.ExpanderTemplate = new DataTemplate(() =>
+        {
+            var grid = new Grid();
+            var expanderIcon = new Image
+            {
+                Source = "expand_arrow.png",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+            // Swap the icon based on the expanded state of the node.
+            expanderIcon.SetBinding(Image.SourceProperty,
+                new Binding("IsExpanded", converter: new ExpanderIconConverter()));
+            grid.Children.Add(expanderIcon);
+            return grid;
+        });
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -286,10 +297,20 @@ N> When the `DataTemplateSelector` accesses node-level properties such as `Level
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="3" %}
-SfTreeView treeView = new SfTreeView();
-treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
-treeView.ItemTemplate = new ItemTemplateSelector();
+{% highlight c# hl_lines="3 4 5" %}
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfTreeView treeView = new SfTreeView();
+        treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
+        treeView.ItemTemplate = new ItemTemplateSelector();
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -312,8 +333,18 @@ The `SfTreeView` allows you to customize the indent spacing of items by setting 
 <syncfusion:SfTreeView x:Name="treeView" Indentation="40">
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
-SfTreeView treeView = new SfTreeView();
-treeView.Indentation = 40;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfTreeView treeView = new SfTreeView();
+        treeView.Indentation = 40;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -326,8 +357,18 @@ The `SfTreeView` allows you to customize the width of the expander view by setti
 <syncfusion:SfTreeView x:Name="treeView" ExpanderWidth="40">
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
-SfTreeView treeView = new SfTreeView();
-treeView.ExpanderWidth = 40;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfTreeView treeView = new SfTreeView();
+        treeView.ExpanderWidth = 40;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -343,8 +384,18 @@ The `SfTreeView` allows you to change the position of the expander view by setti
 <syncfusion:SfTreeView x:Name="treeView" ExpanderPosition="End">
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
-SfTreeView treeView = new SfTreeView();
-treeView.ExpanderPosition = TreeViewExpanderPosition.End;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfTreeView treeView = new SfTreeView();
+        treeView.ExpanderPosition = TreeViewExpanderPosition.End;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -423,8 +474,18 @@ N> The default value of the `IsAnimationEnabled` property is `false`.
                        IsAnimationEnabled="true">
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
-SfTreeView treeView = new SfTreeView();
-treeView.IsAnimationEnabled = true;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfTreeView treeView = new SfTreeView();
+        treeView.IsAnimationEnabled = true;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 

@@ -14,9 +14,6 @@ The `SfTreeView` provides various options to achieve programmatic scrolling. The
 ## Bring into view
 
 The TreeView allows programmatic scrolling based on the data model and [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) using the [BringIntoView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_BringIntoView_Syncfusion_TreeView_Engine_TreeViewNode_System_Boolean_System_Boolean_Microsoft_Maui_Controls_ScrollToPosition_) method.
-
-> **Prerequisites:** Ensure the `SfTreeView` is set up and bound to a data source. For setup details, refer to the [getting-started](https://help.syncfusion.com/maui/treeview/getting-started) guide. The `ScrollToPosition` enum used in the following examples resides in the `Microsoft.Maui.Controls` namespace.
-
 ### Method signature
 
 The following table summarizes the parameters of the `BringIntoView` method:
@@ -88,8 +85,6 @@ The same GitHub sample covers the optional-parameter variants of `BringIntoView`
 
 ### Scroll to the collapsed child item
 
-> **Prerequisites:** Set the `NodePopulationMode` API value to `TreeNodePopulationMode.Instant` to enable scrolling to a collapsed item. Without this mode, the collapsed item's child nodes are not available for the `BringIntoView` method.
-
 The `canExpand` parameter in the `BringIntoView` method determines whether to expand and show the collapsed node when an item passed to the `BringIntoView` method is in a collapsed state. By default, the value of this parameter is `false`.
 
 * If the parameter value is `true`, the TreeView expands the collapsed node and scrolls to the specified item.
@@ -140,9 +135,19 @@ The TreeView allows you to enable horizontal scrolling based on the content by s
 <syncfusion:SfTreeView x:Name="treeView" 
                        EnableHorizontalScrolling="True" />
 {% endhighlight %}
-{% highlight c# hl_lines="1" %}
-SfTreeView treeView = new SfTreeView();
-treeView.EnableHorizontalScrolling = true;
+{% highlight c# hl_lines="8" %}
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfTreeView treeView = new SfTreeView();
+        treeView.EnableHorizontalScrolling = true;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -160,9 +165,19 @@ The TreeView allows showing or hiding the scrollbars using the [VerticalScrollBa
                        VerticalScrollBarVisibility="Always" 
                        HorizontalScrollBarVisibility="Always" />
 {% endhighlight %}
-{% highlight c# hl_lines="2 3" %}
-SfTreeView treeView = new SfTreeView();
-treeView.VerticalScrollBarVisibility = ScrollBarVisibility.Always;
-treeView.HorizontalScrollBarVisibility = ScrollBarVisibility.Always;
+{% highlight c# hl_lines="8 9" %}
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfTreeView treeView = new SfTreeView();
+        treeView.VerticalScrollBarVisibility = ScrollBarVisibility.Always;
+        treeView.HorizontalScrollBarVisibility = ScrollBarVisibility.Always;
+    }
+}
 {% endhighlight %}
 {% endtabs %}

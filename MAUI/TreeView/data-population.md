@@ -11,10 +11,8 @@ documentation: ug
 
 TreeView can be populated either with the data source by using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) property or by creating and adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) in a hierarchical structure to the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
 
-> **Prerequisites:** To use the `SfTreeView` control, add the [`Syncfusion.Maui.TreeView`](https://www.nuget.org/packages/Syncfusion.Maui.TreeView) NuGet package to your .NET MAUI application (supports .NET MAUI 6.0 and later). Then, initialize the control in your application by calling the `ConfigureSyncfusionTreeView` extension method in the `MauiProgram.cs` file. Refer to the [Getting Started](https://help.syncfusion.com/maui/treeview/getting-started) topic for detailed setup steps.
-
 ## Populating nodes by data binding - bound mode
-
+ 
 Populating nodes in bound mode includes the following steps:
 
 * [Create hierarchical data model](#create-data-model-for-treeview)
@@ -37,15 +35,29 @@ The following code example shows how to configure the `NotificationSubscriptionM
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView"
-                      ChildPropertyName="SubFiles"
-                      ItemsSource="{Binding ImageNodeInfo}"
-                      NotificationSubscriptionMode="CollectionChange"
-                      NodePopulationMode="OnDemand"/>
+
+<ContentPage.Content>
+   <syncfusion:SfTreeView x:Name="treeView"
+                           ChildPropertyName="SubFiles"
+                           ItemsSource="{Binding ImageNodeInfo}"
+                           NotificationSubscriptionMode="CollectionChange"
+                           NodePopulationMode="OnDemand"/>
+</ContentPage.Content>
+
 {% endhighlight %}
 {% highlight c# %}
-treeView.NotificationSubscriptionMode = Syncfusion.TreeView.Engine.NotificationSubscriptionMode.CollectionChange;
-treeView.NodePopulationMode = Syncfusion.TreeView.Engine.NodePopulationMode.OnDemand;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.NotificationSubscriptionMode = Syncfusion.TreeView.Engine.NotificationSubscriptionMode.CollectionChange;
+      treeView.NodePopulationMode = Syncfusion.TreeView.Engine.NodePopulationMode.OnDemand;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,7 +73,6 @@ using Microsoft.Maui.Controls; // For ImageSource
 {% endhighlight %}
 {% endtabs %}
 
-> **Image assets:** The image files referenced in the data source (such as `folder.png`, `word.png`, and `pdfimage.png`) must be added to the `Resources/Images` folder of your .NET MAUI project so that they can be resolved by the `ImageSource` at runtime.
 
 Create a simple data source as shown in the following code example in a new class file, and save it as `FileManager.cs` file: 
 
@@ -222,12 +233,6 @@ public class FileManagerViewModel
 
 To create a tree view using data binding, set a hierarchical data collection to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) property. And set the child object name to the [ChildPropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ChildPropertyName) property.
 
-The following `TreeViewNode` properties are also available for bound-mode scenarios:
-
-* [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsExpanded) - Gets or sets a value indicating whether the node is expanded.
-* [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsVisible) - Gets or sets a value indicating whether the node is visible in the TreeView.
-* [HasChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_HasChildNodes) - Gets a value indicating whether the node has child nodes.
-
 {% tabs %}
 {% highlight xaml hl_lines="11 12" %}
 <?xml version="1.0" encoding="utf-8" ?>
@@ -248,12 +253,27 @@ The following `TreeViewNode` properties are also available for bound-mode scenar
 
 {% endhighlight %}
 {% highlight c# hl_lines="3 4" %}
-SfTreeView treeView = new SfTreeView();
-FileManagerViewModel viewModel = new FileManagerViewModel();
-treeView.ChildPropertyName = "SubFiles";
-treeView.ItemsSource = viewModel.ImageNodeInfo; 
-treeView.BindingContext = viewModel;
-this.Content = treeView;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   SfTreeView treeView;
+
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView = new SfTreeView();
+
+      var viewModel = new FileManagerViewModel();
+
+      treeView.ChildPropertyName = "SubFiles";
+      treeView.ItemsSource = viewModel.ImageNodeInfo;
+      treeView.BindingContext = viewModel;
+
+      this.Content = treeView;
+   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -378,47 +398,9 @@ namespace GettingStarted
         }
     }
 }
-
-{% endhighlight %}
-{% endtabs %}
-
-> **Namespace note:** The `xmlns:treeviewengine` declaration is required because the `TreeViewNode` class is defined in the `Syncfusion.TreeView.Engine` namespace (in the `Syncfusion.Maui.TreeView` assembly). This namespace must be mapped in XAML to declare `TreeViewNode` objects inline.
-
-### Setting ItemTemplateContextType for bound nodes
-
-When using an `ItemTemplate` with nodes populated via the `Nodes` collection (unbound mode), set the [ItemTemplateContextType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplateContextType) property to `Node` so that the template's `BindingContext` is the `TreeViewNode` itself (rather than the underlying data object). This allows you to bind directly to node properties such as `Content`, `Level`, and `IsExpanded`.
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView"
-                       ItemTemplateContextType="Node">
-    <syncfusion:SfTreeView.ItemTemplate>
-        <DataTemplate>
-            <Label Text="{Binding Content}"
-                   Margin="10,0,0,0"
-                   VerticalOptions="Center"/>
-        </DataTemplate>
-    </syncfusion:SfTreeView.ItemTemplate>
-    <syncfusion:SfTreeView.Nodes>
-        <!-- Add nodes here -->
-    </syncfusion:SfTreeView.Nodes>
-</syncfusion:SfTreeView>
-{% endhighlight %}
-{% highlight c# %}
-treeView.ItemTemplateContextType = Syncfusion.TreeView.Engine.ItemTemplateContextType.Node;
 {% endhighlight %}
 {% endtabs %}
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
 ![Syncfusion .NET MAUI TreeView data population UnboundMode](Images/getting-started/maui-treeView-unboundMode.png)
-
-## Troubleshooting
-
-If the TreeView nodes do not appear after binding, check the following:
-
-* Ensure the `ChildPropertyName` value exactly matches the name of the child collection property in the data model (for example, `SubFiles`).
-* Ensure the `ItemsSource` is bound to a non-null collection in the `BindingContext`.
-* Ensure the `BindingContext` is set on the page (XAML) or on the TreeView (C#) before or at the same time as `ItemsSource`.
-* If the data source changes at runtime, set `NotificationSubscriptionMode` to `CollectionChange` or `PropertyChange` so the UI reflects the updates.
-* Verify that image assets referenced in the data model exist in the `Resources/Images` folder of the project.
