@@ -11,11 +11,11 @@ documentation: ug
 
 ## Selection changed event
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_SelectionChanged) event is used to notify when the date time selection is changed onto the view in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectionChanged) event is raised when the user changes the selected date or time on the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
-* `EventArgs`: In the SfDateTimePicker picker, the [DateTimePickerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionChangedEventArgs.html) is used for this event, which holds the data of NewValue and OldValue.
+* `EventArgs`: The [DateTimePickerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerSelectionChangedEventArgs.html) provides the new and old values:
 
     * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerSelectionChangedEventArgs.html#Syncfusion_Maui_Picker_DatePickerSelectionChangedEventArgs_NewValue) : Returns the new selected date and time.
     * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerSelectionChangedEventArgs.html#Syncfusion_Maui_Picker_DatePickerSelectionChangedEventArgs_OldValue) : Returns the old selected date and time.
@@ -43,9 +43,9 @@ private void OnDateTimePickerSelectionChanged(object sender, DateTimePickerSelec
 {% endtabs %}
 
 N>
-* In `SfDateTimePicker`, the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) is confirmed only when the OK button in the footer view is tapped. This behavior applies when the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) is set to `Dialog` or `RelativeDialog`, the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) of the PickerFooterView is greater than zero, and [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) is enabled.
-* When [IsSelectionImmediate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsSelectionImmediate) is set to `true`, the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) is updated immediately upon selection.
-* When [IsSelectionImmediate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsSelectionImmediate) is set to `false` by `default`, the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) is confirmed only when the OK button in the footer view is tapped.
+* The [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) value is committed at different points depending on the configuration:
+  * When [IsSelectionImmediate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsSelectionImmediate) is `true` (default), the new value is applied as soon as the user picks it.
+  * When `IsSelectionImmediate` is `false`, the value is committed only after the user taps the OK button. This applies when the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) is `Dialog` or `RelativeDialog`, the [PickerFooterView.Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) is greater than zero, and [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) is enabled.
 
 ## Events in dialog mode
 
@@ -57,7 +57,7 @@ In `SfDateTimePicker`, three events are used while the date time picker is in Di
 
 ### Opened event
 
-The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened) event occurs when the picker popup is opened in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened) event fires after the picker popup has been opened in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
@@ -209,18 +209,20 @@ private void OnDateTimePickerCancelButtonClicked(object sender, EventArgs e)
 
 ## Commands
 
+The events documented above can also be invoked through bindable commands for use in MVVM scenarios.
+
 ### SelectionChangedCommand
 
-The SfDateTimePicker includes a built-in event called `SelectionChanged` that is triggered whenever the selection index in the picker changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectionChangedCommand), which passes the `DateTimePickerSelectionChangedEventArgs` as a parameter.
+The SfDateTimePicker includes a built-in `SelectionChanged` event that is raised whenever the selected date or time changes. The event can also be handled through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectionChangedCommand), which passes a `DateTimePickerSelectionChangedEventArgs` instance as the command parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                    SelectionChangedCommand="{Binding SelectionChangedCommand}">
 <ContentPage.BindingContext>
     <local:ViewModel/>
-</ContentPage.BindingContext>					  
+</ContentPage.BindingContext>
+<picker:SfDateTimePicker x:Name="picker"
+                    SelectionChangedCommand="{Binding SelectionChangedCommand}">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
@@ -244,15 +246,16 @@ public class ViewModel
 
 ### AcceptCommand
 
+The SfDateTimePicker includes a built-in `OkButtonClicked` event that is raised when the user taps the confirmation button in the date-time picker. This action can also be handled using the [AcceptCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_AcceptCommand), which is invoked when the confirmation button is clicked.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                    AcceptCommand="{Binding AcceptCommand}">
 <ContentPage.BindingContext>
     <local:ViewModel/>
-</ContentPage.BindingContext>					  
+</ContentPage.BindingContext>
+<picker:SfDateTimePicker x:Name="picker"
+                    AcceptCommand="{Binding AcceptCommand}">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
@@ -276,16 +279,16 @@ public class ViewModel
 
 ### DeclineCommand
 
-The SfDateTimePicker includes a built-in event called `CancelButtonClicked`, which is triggered when the cancel button is tapped on the date time picker. This event can be invoked through the [DeclineCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DeclineCommand).
+The SfDateTimePicker includes a built-in `CancelButtonClicked` event that is raised when the user taps the Cancel button in the date-time picker. This action can also be handled using the [DeclineCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DeclineCommand), which is invoked when the Cancel button is clicked.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                    DeclineCommand="{Binding DeclineCommand}">
 <ContentPage.BindingContext>
     <local:ViewModel/>
-</ContentPage.BindingContext>					  
+</ContentPage.BindingContext>
+<picker:SfDateTimePicker x:Name="picker"
+                    DeclineCommand="{Binding DeclineCommand}">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
