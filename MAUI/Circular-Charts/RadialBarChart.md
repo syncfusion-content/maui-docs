@@ -151,7 +151,7 @@ The following types are available for [CapStyle](https://help.syncfusion.com/cr/
 
 **BothCurve**
 
-You can customize the CapStyle property of the radial bar based on its types. The following example demonstrates the `BothCurve` cap style; otsher cap styles follow the same pattern.
+You can customize the CapStyle property of the radial bar based on its types. The following example demonstrates the `BothCurve` cap style; other cap styles follow the same pattern.
 
 {% tabs %}
 

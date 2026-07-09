@@ -256,8 +256,6 @@ N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusio
 
 N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_YBindingPath) properties must be configured so that the chart can read values from the respective properties in the data model.
 
-N> For more on data label appearance and tooltip formatting, see the [data labels](https://help.syncfusion.com/maui/circular-charts/data-labels) and [tooltips](https://help.syncfusion.com/maui/circular-charts/tooltip) documentation.
-
 ## Step 7: Run the application
 
 Run the application on your target platform (Windows, Android, iOS, or macOS) to view the Product Sales Pie chart.
