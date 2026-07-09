@@ -8,7 +8,13 @@ documentation: ug
 ---
 
 # Getting Started with the .NET MAUI DateTimePicker
-This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Time Picker. Follow the steps below to add a .NET MAUI Date time picker to your project.
+This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Time Picker. Follow the steps below to add a .NET MAUI Date Time Picker to your project.
+
+N>
+* **Required package:** `Syncfusion.Maui.Picker` (latest stable).
+* **Minimum runtime:** .NET 9 (for the Liquid Glass feature, .NET 10 is required).
+* **Supported platforms:** Android, iOS, Mac Catalyst, and Windows (WinUI 3).
+* **Licensing:** Syncfusion controls require a license key. Register it in `MauiProgram.cs` by passing the key to `ConfigureSyncfusionCore` — for example, `builder.ConfigureSyncfusionCore("YOUR_LICENSE_KEY")`. Community License users must also register a valid community license key. See [Register Syncfusion license](https://help.syncfusion.com/maui/licensing/how-to-register-in-an-application) for details.
 
 To get start quickly with our .NET MAUI Date Time Picker, you can check the below video.
 
@@ -31,7 +37,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Picker NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI DateTimePicker NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
@@ -120,22 +126,28 @@ using Syncfusion.Maui.Picker;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the DateTimepicker component
+## Step 5: Add the Date Time Picker component
 
-Create an instance of DateTimepicker control.
+Create an instance of the Date Time Picker control inside a `ContentPage` so it renders on screen.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
-    <picker:SfDateTimePicker />
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="MauiApp1.MainPage">
+    <picker:SfDateTimePicker x:Name="picker" />
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 SfDateTimePicker picker = new SfDateTimePicker();
+this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code.
+The following image illustrates the result of the above code.
 
-![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
+![Add Date Time Picker component in .NET MAUI.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
 
 You can download the DateTimePicker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-datetimepicker-sample)
 
