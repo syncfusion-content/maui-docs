@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in .NET MAUI Date Time Picker (SfDateTimePicker)
 
-The [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) control has interact with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
+The [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) allows users to interact with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
 
 ## Header Layout
 
@@ -81,9 +81,6 @@ The SfDateTimePicker control has interact with the item source in picker items. 
 
 <table>
 <tr>
-<th>
-Key
-</th>
 <th>
 Description
 </th>
