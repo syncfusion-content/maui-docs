@@ -17,7 +17,7 @@ Localization is the process of translating the application resources into differ
    * `Hour`
    * `Minute`
    * `Second`
-   * `Meridien`
+   * `Meridian`
    * `OK`
    * `Cancel`
 
