@@ -10,11 +10,21 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # UI Customization in .NET MAUI ComboBox (SfComboBox)
 
-This section explains different UI customizations available in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
+ The examples in this article assume that your page has an appropriate binding context and that any referenced image assets are added to the project.
 
-To get start quickly to customize the Appearance of .NET MAUI ComboBox, you can check on this video:
+This section explains the different UI customizations available in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
+
+To get started quickly with customizing the appearance of the .NET MAUI ComboBox, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=_yk7El0Seu8" %}
+
+## Prerequisites
+
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
 ## Placeholder
 
@@ -108,7 +118,7 @@ SfComboBox comboBox = new SfComboBox()
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox clear button color](Images/UICustomization/ClearButtonColor.png)
 
@@ -139,7 +149,7 @@ SfComboBox comboBox = new SfComboBox()
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox  drop-down icon color](Images/UICustomization/DropDownIconColor.png)
 
@@ -173,11 +183,11 @@ SfComboBox comboBox = new SfComboBox()
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox border color](Images/UICustomization/BorderColor.png)
 
-## Customize the selection text highlightColor 
+## Customize the selection text highlight color
 
 The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the combobox control.
 
@@ -197,7 +207,7 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 SfComboBox comboBox = new SfComboBox() 
 {
-    ItemsSource = socialMediaViewModel.SocialMedias
+    ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
@@ -211,7 +221,7 @@ SfComboBox comboBox = new SfComboBox()
 
 ## CustomView for ComboBox
 
-[CustomView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_CustomView) property has used to provide the custom view instead of entry in ComboBox. It's default height and width has control height and width.
+[CustomView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_CustomView) property is used to provide a custom view instead of an entry in the ComboBox. Its default height and width match the control height and width.
 
 {% tabs %}
 
@@ -271,7 +281,7 @@ The maximum height of the drop-down can be changed by using the [MaxDropDownHeig
 SfComboBox comboBox = new SfComboBox() 
 {
     IsEditable = true,
-    comboBox.MaxDropDownHeight = 150,
+    MaxDropDownHeight = 150,
     ItemsSource = socialMediaViewModel.SocialMedias,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
@@ -286,7 +296,7 @@ The following image illustrates the result of the above code:
 
 ## Customize the DropDown (suggestion) item 
 
-The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using the custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
+The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates. The sample assumes a binding context with an `Employees` collection and image assets added to the project.
 
 {% tabs %}
 {% highlight C# %}
@@ -552,7 +562,7 @@ SfComboBox comboBox = new SfComboBox()
 
 ### Customize the Selected DropDown Item Text Style
 
-The [SelectedDropDownItemTextStyle]() property in the SfComboBox control allows developers to customize the appearance of the selected item in the dropdown list. This feature is useful for highlighting user selections and improving the overall UI experience.
+The [SelectedDropDownItemTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemTextStyle) property in the SfComboBox control allows developers to customize the appearance of the selected item in the dropdown list. This feature is useful for highlighting user selections and improving the overall UI experience.
 
 {% tabs %}
 {% highlight xaml %}
@@ -654,7 +664,7 @@ SfComboBox comboBox = new SfComboBox()
 
 ![.NET MAUI ComboBox DropDown StrokeThickness](Images/UICustomization/DropDownStrokeThickness.png)
 
-### Customize the visibility of Dropdown Shadow
+### Customize the dropdown shadow visibility
 
 The [IsDropDownShadowVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible) property is used to customize the visibility of the dropdown shadow.
 
@@ -1835,3 +1845,9 @@ For example, if the SfComboBox’s `AutomationId` is set to “Employee ComboBox
 The following screenshot illustrates the AutomationIds of inner elements.
 
 ![.NET MAUI ComboBox AutomationId Image demonstration](Images/UICustomization/ComboBox_AutomationID.png)
+
+## See Also
+
+* [Header and Footer customization in .NET MAUI ComboBox](header-and-footer.md)
+* [No results found in .NET MAUI ComboBox](no-results-found.md)
+* [LiquidGlass support in .NET MAUI ComboBox](liquidglasssupport.md)

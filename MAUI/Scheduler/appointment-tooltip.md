@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appointment Tooltip in .NET MAUI Scheduler | Syncfusion
-description: Learn how to show appointment tooltips in the Syncfusion .NET MAUI Scheduler to quickly view details and customize tooltip appearance and behavior.
+title: Appointment Tooltip in .NET MAUI Scheduler | Syncfusion®
+description: Learn how to show appointment tooltips in the Syncfusion® .NET MAUI Scheduler to quickly view details and customize tooltip appearance and behavior.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -45,8 +45,7 @@ namespace GettingStarted
 
 N>
 - **Desktop platforms**: A tooltip is shown when you hover the mouse over an appointment.
-- **Mobile platforms**: A tooltip is shown when you tap or long‑press an appointment. For long‑press interactions, the tooltip appears only when [appointment dragging](appointment-drag-and-drop.md) is disabled.
-- **Version**: `IsAppointmentToolTipEnabled`, `AppointmentToolTipSettings`, and `AppointmentToolTipTemplate` are available from Syncfusion .NET MAUI Scheduler `v21.2.3` onwards. Requires .NET MAUI 7.0 or higher.
+- **Mobile platforms**: A tooltip is shown when you tap or long‑press an appointment. The tooltip appears on long‑press only when appointment dragging is disabled.
 
 ## Appointment Tooltip Settings
 

@@ -11,7 +11,7 @@ documentation: ug
 
 The agenda view displays the events or appointments (normal appointments, all-day appointments, recurring appointments, and span appointments) in chronological order, grouped by date between the minimum and maximum dates and the current date displayed by default. When the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) is `null`, the agenda view will show only the month, week, and date headers for mobile view and responsive UI, and for desktop UI it will display only the date header of display date.
 
-A agenda view displays different UI for mobile and desktop, for mobile it displays the month header, the week header, and the date header, whereas for desktop, it displays the appointment only.
+An agenda view displays different UI for mobile and desktop. For mobile, it displays the month header, the week header, and the date header, whereas for desktop, it displays only the date header.
 
 N> When the desktop view width is less than 600, the scheduler will display the mobile agenda UI on the desktop.
 
@@ -592,7 +592,7 @@ namespace GettingStarted
 
 ![Hide-days-without-appointment-in-agenda-view-in-Maui-Scheduler](images/agenda-view/hide-empty-days-in-agenda-view.png)
 
-## Agenda appointment template 
+## Agenda appointment template
 
 The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) allows users to customize the visual representation of agenda appointments by defining data templates, enhancing usability within the application. Users can customize the appointment text, icon, image, or view based on their needs and appointment details.
 

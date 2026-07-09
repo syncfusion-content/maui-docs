@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appointment Resizing in .NET MAUI Scheduler Control | Syncfusion®
+title: Appointment Resizing in .NET MAUI Scheduler | Syncfusion®
 description: Learn how to resize appointments in the Syncfusion® .NET MAUI Scheduler, change duration interactively, and customize behavior with settings and events.
 platform: maui
 control: SfScheduler

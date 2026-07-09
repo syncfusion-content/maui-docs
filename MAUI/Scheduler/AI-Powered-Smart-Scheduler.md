@@ -109,7 +109,6 @@ namespace GettingStarted
             return string.Empty;
         }
     }
-}
 
 {% endhighlight %}
 

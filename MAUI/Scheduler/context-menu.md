@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Context Menu in .NET MAUI Scheduler | Syncfusion
-description: Learn how to use the built-in context menu in the Syncfusion .NET MAUI Scheduler to perform actions on appointments, cells, and other elements.
+title: Context Menu in .NET MAUI Scheduler | Syncfusion®
+description: Learn how to use the built-in context menu in the Syncfusion® .NET MAUI Scheduler to perform actions on appointments, cells, and other elements.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -10,7 +10,7 @@ keywords : .net maui scheduler, .net maui scheduler context menu, .net maui sche
 
 # Context Menu in .NET MAUI Scheduler (SfScheduler)
 
-The .NET MAUI Scheduler supports context menus for timeslot cells, month cells, all-day panels, and appointments. Context menus provide quick access to common actions such as creating, editing, or deleting appointments. The Scheduler provides built-in commands that can be assigned to context menu items.
+The .NET MAUI Scheduler supports context menus for timeslot cells, month cells, all-day panels, and appointments. These context menus provide quick access to common actions such as creating, editing, or deleting appointments. The Scheduler provides built-in commands that can be assigned to context menu items.
 
 The Scheduler displays context menus through the following interactions:
  
@@ -204,7 +204,7 @@ The [SchedulerContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/S
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="1 3 5 6 7 8 9 10 11" %}
-this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening
+this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening;
 
 private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
 {
@@ -231,7 +231,7 @@ The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="1 3 5" %}
-this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening
+this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening;
 
 private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
 {
