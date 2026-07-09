@@ -593,23 +593,23 @@ Selection in Xamarin was enabled by assigning a [SunburstSelectionSettings](http
 </tr>
 <tr>
 <td>SelectionType</td>
-<td>[Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstSelectionSettings.html#Syncfusion_Maui_SunburstChart_SunburstSelectionSettings_Type)</td>
+<td>Type</td>
 </tr>
 <tr>
 <td>SelectionMode</td>
-<td>[DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstSelectionSettings.html#Syncfusion_Maui_SunburstChart_SunburstSelectionSettings_DisplayMode)</td>
+<td>DisplayMode</td>
 </tr>
 <tr>
 <td>SelectionBrush</td>
-<td>[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstSelectionSettings.html#Syncfusion_Maui_SunburstChart_SunburstSelectionSettings_Fill)</td>
+<td>Fill</td>
 </tr>
 <tr>
 <td>StrokeColor</td>
-<td>[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstSelectionSettings.html#Syncfusion_Maui_SunburstChart_SunburstSelectionSettings_Stroke) / [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstSelectionSettings.html#Syncfusion_Maui_SunburstChart_SunburstSelectionSettings_StrokeWidth)</td>
+<td>Stroke / StrokeWidth</td>
 </tr>
 <tr>
 <td>Opacity</td>
-<td>[Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstSelectionSettings.html#Syncfusion_Maui_SunburstChart_SunburstSelectionSettings_Opacity)</td>
+<td>Opacity</td>
 </tr>
 </table>
 
@@ -707,11 +707,11 @@ Drill down in Xamarin was enabled by setting the `EnableDrillDown` property. In 
 </tr>
 <tr>
 <td>EnableDrillDown</td>
-<td>[EnableDrillDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EnableDrillDown)</td>
+<td>EnableDrillDown</td>
 </tr>
 <tr>
 <td>ToolbarSettings</td>
-<td>[ToolbarSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ToolbarSettings)</td>
+<td>ToolbarSettings</td>
 </tr>
 </table>
 
