@@ -246,6 +246,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Syncfusion .NET MAUI AI AssistView EmptyView customization](Images/maui-aiassistview-emptyview-customization.png)
+
 N>
 * The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
 * `EmptyView` can be set to a custom data model and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.

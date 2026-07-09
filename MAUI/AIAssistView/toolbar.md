@@ -116,6 +116,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Syncfusion .NET MAUI AI AssistView Temporary Chat Banner](Images/toolbar/maui-aiassistview-temporary-chat-banner.png)
+
 ### Events for chat mode
 
 `SfAIAssistView` raises two events when the user changes the chat mode via the toolbar: [`ChatModeChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ChatModeChanging) (raised before the change) and [`ChatModeChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ChatModeChanged) (raised after the change). Both event-args types expose a [ChatMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html#Syncfusion_Maui_AIAssistView_ChatModeChangedEventArgs_ChatMode) property indicating the mode being switched to. The `ChatMode` enumeration includes values such as `NewChat` and `TemporaryChat`.
