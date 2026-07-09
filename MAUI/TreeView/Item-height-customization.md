@@ -145,7 +145,7 @@ The TreeView allows dynamically adjust the node height based on the content load
 The `NodeSizeMode` property supports the following values:
 
  * [Dynamic](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewNodeSizeMode.html#Syncfusion_Maui_TreeView_TreeViewNodeSizeMode_Dynamic): Automatically adjusts the node height to fit its content, and resizes the node if the content size changes at runtime
- * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewNodeSizeMode.html#Syncfusion_Maui_TreeView_TreeViewNodeSizeMode_None): Uses [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight) to lay out the nodes
+ * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewNodeSizeMode.html#Syncfusion_Maui_TreeView_TreeViewNodeSizeMode_None): Uses [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight) to layout the nodes
 
 {% tabs %}
 {% highlight xaml hl_lines="6" %}

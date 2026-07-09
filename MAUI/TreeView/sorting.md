@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in .NET MAUI TreeView Control | Syncfusion®
-description: Learn about sorting support in the Syncfusion® .NET MAUI TreeView (SfTreeView) control.
+description: Learn how to sort nodes in the Syncfusion® .NET MAUI TreeView (SfTreeView) control using built-in and custom sorting support.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -22,7 +22,7 @@ Sort items by creating a [SortDescriptor](https://help.syncfusion.com/cr/maui/Sy
 * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html#Syncfusion_TreeView_Engine_SortDescriptor_Comparer): Describes the comparer to be applied when sorting takes place.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 8" %}
 <ContentPage>
     <ContentPage.BindingContext>
         <local:FileManagerViewModel x:Name="viewModel"/>

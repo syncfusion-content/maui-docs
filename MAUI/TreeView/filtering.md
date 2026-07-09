@@ -121,7 +121,7 @@ You can bind the `FilterText` property to a property in your ViewModel for MVVM 
 The [FilterPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_FilterPath) property specifies a single property name of the data model to use for filtering. If `FilterPath` is not set, filtering is applied to the default display member used in the ItemTemplate or the `ToString()` method.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
+{% highlight xaml hl_lines="9" %}
 <ContentPage>
     <ContentPage.BindingContext>
         <local:FileManagerViewModel x:Name="viewModel"/>
@@ -135,8 +135,8 @@ The [FilterPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.Sf
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-treeView.FilterPath = "ItemName";
+{% highlight c# hl_lines="1" %}
+treeView.FilterPath = "Name";
 {% endhighlight %}
 {% endtabs %}
 
@@ -145,7 +145,7 @@ treeView.FilterPath = "ItemName";
 The [FilterPaths](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_FilterPaths) property allows filtering across multiple properties. When specified, the filter evaluates all properties and displays a node if any property matches the filter criteria.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="10" %}
+{% highlight xaml hl_lines="10" %}
 <ContentPage>
     <ContentPage.BindingContext>
         <local:FileManagerViewModel x:Name="viewModel"/>
@@ -164,9 +164,7 @@ The [FilterPaths](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.S
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2" %}
-using System.Collections.Generic;
-
+{% highlight c# hl_lines="1" %}
 treeView.FilterPaths = new List<string> { "ItemName", "FileSize", "Description" };
 {% endhighlight %}
 {% endtabs %}
@@ -178,7 +176,7 @@ For advanced filtering scenarios, you can use `FilterMode.Custom` with the [Filt
 ### Setting a filter predicate
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 3 4 5 6 7 8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 treeView.FilterMode = TreeViewFilterMode.Custom;
 treeView.FilterPredicate = (item) =>
 {
@@ -254,7 +252,7 @@ The [FilteredItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView
 The [Filtering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Filtering) event is raised before filtering is applied. You can use this to validate or modify filter criteria.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 3 4 5" %}
+{% highlight c# hl_lines="1" %}
 treeView.Filtering += (sender, args) =>
 {
     // Handle the filtering event action
