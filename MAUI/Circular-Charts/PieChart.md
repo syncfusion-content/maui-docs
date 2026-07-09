@@ -47,7 +47,7 @@ this.Content = chart;
 
 ## Radius
 
-The [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_Radius) property, of type `double`, controls the rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) as a coefficient of the available chart area. The default value is `1`, which makes the series fill the chart area.
+The [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_Radius) property, of type `double`, controls the rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) as a coefficient of the available chart area. The default value is `0.8`, which makes the series fill the chart area.
 
 {% tabs %}
 

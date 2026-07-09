@@ -14,7 +14,7 @@ documentation: ug
 Exploding a segment pulls attention to a specific area of the circular chart. The following properties, available on both [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) and [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html), are used to explode the segments in the circular chart.
 
 * [ExplodeIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeIndex), of type `int`, explodes any specific segment. The default value is `-1` (no segment exploded). The index is zero-based; out-of-range values are ignored.
-* [ExplodeRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeRadius), of type `double`, defines the explode distance in pixels (px). The default value is `0`. A positive value moves the segment outward from the center.
+* [ExplodeRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeRadius), of type `double`, defines the explode distance in pixels (px). The default value is `10`. A positive value moves the segment outward from the center.
 * [ExplodeOnTouch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeOnTouch), of type `bool`, enables a segment to be exploded on tap interaction. The default value is `false`. The explosion is animated when tapped.
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCircularChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/circularchart/getting-started)** guide.
@@ -30,7 +30,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
                           XBindingPath="XValue"
                           YBindingPath="YValue"
                           ExplodeIndex="2"
-                          ExplodeRadius="10"
+                          ExplodeRadius="12"
                           ExplodeOnTouch="True"/>
 </chart:SfCircularChart>
 
@@ -46,7 +46,7 @@ DoughnutSeries series = new DoughnutSeries()
     XBindingPath = "XValue",
     YBindingPath = "YValue",
     ExplodeIndex = 2,
-    ExplodeRadius = 10,
+    ExplodeRadius = 12,
     ExplodeOnTouch = true
 };
 

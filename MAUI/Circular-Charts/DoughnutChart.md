@@ -47,7 +47,7 @@ this.Content = chart;
 
 ## Inner Radius
 
-The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_InnerRadius) property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) controls the size of the inner hole of the doughnut. It accepts a coefficient value from `0` to `1`, where `0` renders a full pie and `1` renders an empty ring. The default value is `0.5`.
+The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_InnerRadius) property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) controls the size of the inner hole of the doughnut. It accepts a coefficient value from `0` to `1`, where `0` renders a full pie and `1` renders an empty ring. The default value is `0.4`.
 
 {% tabs %}
 
