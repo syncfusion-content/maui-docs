@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data handling in .NET MAUI DataForm control | Syncfusion®
-description: Learn about data editing features in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control, including commit modes, value converters, and read only mode, in mobile and desktop applications from a single shared codebase.
+description: Learn about data editing features in Syncfusion® .NET MAUI DataForm (SfDataForm), including commit modes, value converters, and read-only mode.
 platform: maui
 control: SfDataForm
 documentation: ug

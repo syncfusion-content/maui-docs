@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Editors in .NET MAUI DataForm (SfDataForm) control | Syncfusion®
+title: Data Editors in .NET MAUI DataForm(SfDataForm) control | Syncfusion®
 description: Learn about the supported data editors in Syncfusion® .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
@@ -9,7 +9,7 @@ documentation: UG
 
 # Data Editors in .NET MAUI DataForm (SfDataForm)
 
-To get started quickly with data editors in .NET MAUI DataForm, you can check out this video:
+To get start quickly with data editors in .NET MAUI DataForm, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=Fv__sIKRsIA" %}
 
@@ -223,7 +223,7 @@ Enum and List type property.
 
 ## Change the editor for any data type
 
-By default, the editors are loaded based on the primitive data type, such as string, enumeration, DateTime, and TimeSpan.
+By default, the editors will be loaded based on the primitive data type such as string, enumeration, DateTime, and TimeSpan.
 
 {% tabs %}
 {% highlight C# %}
@@ -275,9 +275,9 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {   
-    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEditorItem textEditorItem)
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEdiorItem textEditorItem)
     {
-         textEditorItem.Keyboard = Keyboard.Text;
+         textEditorItem.Keyboard= Keyboard.Text;
     }
 }
 
@@ -295,7 +295,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {   
-    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEditorItem textEditorItem)
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEdiorItem textEditorItem)
     {
         textEditorItem.MaxLength = 20;
     }
@@ -338,8 +338,7 @@ public string Password { get; set; }
 ![Password editor in .NET MAUI DataForm.](images/editors/dataform-password-editor.png)
 
 ## Numeric editor
-
-In the numeric editor, the [SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview) will be loaded, and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties.
+In the numeric editor, the [SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview) will be loaded and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties. 
 
 Also, to add a DataForm numeric editor, register the editor as [DataFormEditorType.Numeric](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_Numeric) for the required field using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
@@ -454,7 +453,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
     {
         if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormMaskedTextItem amount)
         {
-            amount.PromptChar = 'X';
+            amount.PromptChar = 'X'
             amount.MaskType = MaskedEditorMaskType.Simple;
             amount.Mask = "000000.00";
             amount.ValueMaskFormat = MaskedEditorMaskFormat.IncludeLiterals;
@@ -463,7 +462,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
         {
             phoneNumber.PromptChar = '#';
             phoneNumber.MaskType = MaskedEditorMaskType.Simple;
-            phoneNumber.Mask = "000 000 0000";
+            phoneNumber.Mask="000 000 0000";
             phoneNumber.Culture = new CultureInfo("en-In");
             phoneNumber.ClearButtonVisibility = MaskedEditorClearButtonVisibility.WhileEditing;
         }
@@ -540,7 +539,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 In the time editor, the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows) will be loaded.
 
-In the time editor, by default, (12:00 AM) will be displayed.
+In the time editor, by default (12:00 AM) will be displayed.
 
 {% tabs %}
 {% highlight C# %}
@@ -782,14 +781,14 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### ComboBox editor filtering options
 
-The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html#Syncfusion_Maui_DataForm_DataFormComboBoxItem_TextSearchMode) property of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3). The default text search strategy is "StartsWith," and it is case-insensitive. The available text search modes are:
+The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html#Syncfusion_Maui_DataForm_DataFormComboBoxItem_TextSearchMode) property of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3). The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
 
 * StartsWith
 * Contains
 
-**Searching words that start with the input text**
+**Searching words that starts with the input text**
 
-Displays all the matches that start with the typed characters in the ItemsSource of the combo box editor. This strategy is case-insensitive.
+Displays all the matches that contain the first character of the typed characters in the item source of the combo box editor. This strategy is case-insensitive.
 
 {% tabs %}
 {% highlight C# %}
@@ -807,9 +806,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-**Searching words that contain the input text**
+**Searching words that contains the input text**
 
-Displays all the matches that contain the typed characters in the ItemsSource of the combo box editor. This strategy is case-insensitive.
+Displays all the matches that contain the typed characters in items source of the combo box editor. This strategy is case-insensitive.
 
 {% tabs %}
 {% highlight C# %}
@@ -829,7 +828,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Changing the height of Combobox drop down
 
-By default, the combo box drop down list item height is `400d`. You can change the size of the drop down list item by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html#Syncfusion_Maui_DataForm_DataFormComboBoxItem_MaxDropDownHeight) property of the [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+By default, the combo box drop down list item height is `400d`. You can change the size for the drop down list item size by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html#Syncfusion_Maui_DataForm_DataFormComboBoxItem_MaxDropDownHeight) property of the [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
 
 N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
@@ -1078,14 +1077,14 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 #### AutoComplete editor suggestion options
 
-The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html#Syncfusion_Maui_DataForm_DataFormAutoCompleteItem_TextSearchMode) property of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1). The default text search strategy is "StartsWith," and it is case-insensitive. The available text search modes are:
+The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html#Syncfusion_Maui_DataForm_DataFormAutoCompleteItem_TextSearchMode) property of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1). The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
 
 * StartsWith
 * Contains
 
-**Filtering words that start with the input text**
+**Filtering words that starts with the input text**
 
-Displays all the matches that start with the typed characters in the ItemsSource of the autocomplete editor. This strategy is case-insensitive.
+Displays all the matches that contain first character of the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
 {% tabs %}
 {% highlight C# %}
@@ -1096,16 +1095,16 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {
     if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
     {
-        autoCompleteItem.TextSearchMode = DataFormTextSearchMode.StartsWith;
+        autoComplete.TextSearchMode = DataFormTextSearchMode.StartsWith;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Filtering words that contain the input text**
+**Filtering words that contains the input text**
 
-Displays all the matches that contain the typed characters in the ItemsSource of the autocomplete editor. This strategy is case-insensitive.
+Displays all the matches that contain the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
 {% tabs %}
 {% highlight C# %}
@@ -1116,16 +1115,16 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {
     if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
     {
-        autoCompleteItem.TextSearchMode = DataFormTextSearchMode.Contains;
+        autoComplete.TextSearchMode = DataFormTextSearchMode.Contains;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Changing the maximum height of autocomplete drop down
+#### Changing the maximum height of autocomplete drop down 
 
-By default, the autocomplete drop down list item height is `400d`. You can change the size of the drop down list item by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html#Syncfusion_Maui_DataForm_DataFormAutoCompleteItem_MaxDropDownHeight) property in the [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1).
+By default the autocomplete drop down list item height is `400d`. You can change the size for the drop down list item size by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html#Syncfusion_Maui_DataForm_DataFormAutoCompleteItem_MaxDropDownHeight) property in the [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight C# %}
@@ -1136,7 +1135,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {
     if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
     {
-        autoCompleteItem.MaxDropDownHeight = 300;
+        autoComplete.MaxDropDownHeight = 300;
     }
 }
 
@@ -1199,7 +1198,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {
     if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormPickerItem pickerItem)
     {
-        List<string> list = new List<string>()
+        List<string> list = new Lisvt<string>()
         {
             "Home",
             "Food",
@@ -1397,7 +1396,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {
     if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormSegmentItem segmentItem)
     {
-        List<string> list = new List<string>()
+        List<string> list = new Lisvt<string>()
         {
             "Home",
             "Food",
@@ -1571,6 +1570,6 @@ public class NumericTextEditor : IDataFormEditor
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/CustomEditorSample)
 
-If [SfDataForm.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidationMode) is set to [ValidationMode.Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidationMode.html#Syncfusion_Maui_DataForm_DataFormValidationMode_Manual), then update the [DataFormCustomItem.EditorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCustomItem.html#Syncfusion_Maui_DataForm_DataFormCustomItem_EditorValue) property once the value is committed to its respective model property. This value will be used for the [DataFormValidateFormEventArgs.NewValues](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_NewValue) on manual validation.
+If [SfDataForm.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidationMode) is set to [ValidationMode.Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidationMode.html#Syncfusion_Maui_DataForm_DataFormValidationMode_Manual), then update [DataFormCustomItem.EditorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCustomItem.html#Syncfusion_Maui_DataForm_DataFormCustomItem_EditorValue) property once the value is committed to its respective model property. This value will be used for the [DataFormValidateFormEventArgs.NewValues](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_NewValue) on manual validation.
 
 N> If custom validation is required, you can set error and valid messages using the [SfDataForm.ValidateProperty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty) event.
