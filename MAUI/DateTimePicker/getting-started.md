@@ -10,12 +10,6 @@ documentation: ug
 # Getting Started with the .NET MAUI DateTimePicker
 This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Time Picker. Follow the steps below to add a .NET MAUI Date Time Picker to your project.
 
-N>
-* **Required package:** `Syncfusion.Maui.Picker` (latest stable).
-* **Minimum runtime:** .NET 9 (for the Liquid Glass feature, .NET 10 is required).
-* **Supported platforms:** Android, iOS, Mac Catalyst, and Windows (WinUI 3).
-* **Licensing:** Syncfusion controls require a license key. Register it in `MauiProgram.cs` by passing the key to `ConfigureSyncfusionCore` — for example, `builder.ConfigureSyncfusionCore("YOUR_LICENSE_KEY")`. Community License users must also register a valid community license key. See [Register Syncfusion license](https://help.syncfusion.com/maui/licensing/how-to-register-in-an-application) for details.
-
 To get start quickly with our .NET MAUI Date Time Picker, you can check the below video.
 
 {% youtube
@@ -37,7 +31,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI DateTimePicker NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Picker NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
