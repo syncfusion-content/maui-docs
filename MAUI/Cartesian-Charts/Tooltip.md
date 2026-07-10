@@ -1,16 +1,18 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Cartesian Chart control | Syncfusion
-description: This section explains about how to enable tooltip and its customization in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+description: This section explains about how to enable tooltip and its customization in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
-keywords: .net maui chart tooltip, maui chart tooltip, .net maui chart tooltip customization, syncfusion maui chart tooltip, cartesian tooltip maui, .net maui chart hover info, .net maui chart tooltip options.
+keywords: .net maui chart tooltip, maui chart tooltip, .net maui chart tooltip customization, syncfusion maui chart tooltip, cartesian tooltip maui, .net maui chart hover info, .net maui chart tooltip options
 ---
 
 # Tooltip in .NET MAUI Cartesian Chart
 
 Tooltip is used to display any information or metadata of the tapped segment. The Cartesian chart provides tooltip support for all series. 
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 To learn how to customize the tooltips in .NET MAUI Cartesian Charts quickly, you can check the below video.
 
@@ -25,7 +27,7 @@ To define the tooltip in the series, set the [EnableTooltip](https://help.syncfu
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Demand"
                         YBindingPath="Year2010" 
@@ -42,7 +44,7 @@ To define the tooltip in the series, set the [EnableTooltip](https://help.syncfu
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 ColumnSeries series1 = new ColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
@@ -67,7 +69,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Tooltip support in MAUI chart](Tooltip_images/maui_chart_tooltip.png)
+![Tooltip support in .NET MAUI Cartesian Chart](Tooltip_images/maui_chart_tooltip.png)
 
 The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) and set it to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html). The following properties are used to customize the tooltip:
 
@@ -91,7 +93,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
     <chart:SfCartesianChart.TooltipBehavior>
         <chart:ChartTooltipBehavior/>
     </chart:SfCartesianChart.TooltipBehavior>
-    . . .
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -100,7 +102,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.TooltipBehavior = new ChartTooltipBehavior();
-. . .
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
@@ -116,7 +118,7 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.TooltipBehavior>
         <chart:ChartTooltipBehavior Duration="5000"/>
     </chart:SfCartesianChart.TooltipBehavior>
@@ -137,7 +139,7 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 chart.TooltipBehavior = new ChartTooltipBehavior()
 {
     Duration = 5000
@@ -199,9 +201,9 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
                        VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
-        . . .          
+        <!-- code omitted for brevity -->
     </chart:SfCartesianChart.Resources>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.TooltipBehavior>
         <chart:ChartTooltipBehavior/>
     </chart:SfCartesianChart.TooltipBehavior>
@@ -221,7 +223,7 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 ColumnSeries series1 = new ColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
@@ -248,7 +250,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Tooltip template in MAUI Chart](Tooltip_images/maui_chart_tooltip_customization.png)
+![Tooltip template in .NET MAUI Cartesian Chart](Tooltip_images/maui_chart_tooltip_customization.png)
 
 ## Methods
 
@@ -263,11 +265,11 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    .....
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.TooltipBehavior>
         <chart:ChartTooltipBehavior x:Name="tooltip"/>
     </chart:SfCartesianChart.TooltipBehavior>
-    .....
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 <Button Text="Show tooltip" Clicked="Button_Clicked"/>
