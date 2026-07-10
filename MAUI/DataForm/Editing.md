@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data handling in .NET MAUI DataForm control | Syncfusion®
-description: Learn about the commit feature in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+description: Learn about data editing features in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control, including commit modes, value converters, and read only mode, in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in .NET MAUI DataForm (SfDataForm)
 
-The data form commits the data and user input to update the value in the underlying data object.
+The data form commits the user input to update the value in the underlying data object.
 
 ## Commit mode
 
@@ -101,7 +101,7 @@ this.dataForm.Commit();
 {% endhighlight %}
 {% endtabs %}
 
-N> On manual commit, manual validation will be called to validate the properties before the commit.
+N> On manual commit, manual validation will be called to validate the properties before committing them.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualCommit)
 
@@ -113,6 +113,9 @@ To show the original value in a different format or as a different value, use th
 
 {% tabs %}
 {% highlight C# %}
+using System.ComponentModel.DataAnnotations;
+using System.Globalization;
+using Syncfusion.Maui.DataForm;
 
 [DataFormValueConverter(typeof(StringToDateTimeConverter))]
 [DataType(DataType.Date)]
@@ -138,7 +141,6 @@ public class StringToDateTimeConverter : IValueConverter
         return value.ToString();
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -157,7 +159,7 @@ The `DataForm` can be disabled by setting the [IsReadOnly](https://help.syncfusi
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm" 
-        IsReadOnly="True">
+        IsReadOnly="true">
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
@@ -170,7 +172,7 @@ this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 
-The particular editor can be disabled using attributes and [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
+The specific editor can be disabled using attributes and the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 #### Using attribute
 
@@ -178,13 +180,11 @@ An editor can be disabled using the [EditableAttribute](https://learn.microsoft.
 
 {% tabs %}
 {% highlight C# %}
-
 [Editable(false)]
 public string Name { get; set; }
 
 [ReadOnly(true)]
 public string Password { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
