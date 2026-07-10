@@ -1,64 +1,31 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Image Editor Control | Syncfusion
-description: Learn here about performing actions using accessibility in Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor (SfImageEditor) control.
-platform: MAUI
-control: SfImageEditor
+title: Accessibility in .NET MAUI DataForm Control | Syncfusion
+description: Learn here about accessibility support with the Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+platform: maui
+control: SfDataForm
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Image Editor (SfImageEditor)
+# Accessibility in .NET MAUI DataForm (SfDataForm)
 
-The Image Editor works effectively with the icons and sliders on its toolbar, providing voice descriptions of their names and functions.
+Accessibility support in `DataForm` is designed to provide voice descriptions of its field name, editor text, and validation text.
 
-## Keyboard shortcuts
-
-The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports keyboard shortcuts for user interaction. The following table outlines the available shortcuts and their associated functions.
-
-N> The [`ToolbarItemSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event is triggered when a toolbar item is tapped.
-
-### Toolbar
+## Keyboard shortcuts in .NET MAUI DataForm (SfDataForm)
 
 <table>
 <tr>
 <td>
-<b> Shortcut Keys </b> <br/><br/></td><td>
+<b> Navigation Shortcut Keys </b> <br/><br/></td><td>
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Tab<br/><br/></td><td>Moves selection to the next focusable toolbar item.
-<br/><br/></td></tr>
+Tab or Enter<br/><br/></td><td>Moves to the next editor in the DataForm.<br/><br/></td></tr>
 <tr>
 <td>
 Shift + Tab<br/><br/></td><td>
-Moves selection to the previous focusable toolbar item.
-<br/><br/></td></tr>
-<tr>
-<td>
-Enter<br/><br/></td><td>
-Triggers the {{'[ToolbarItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected)'| markdownify}} event.
-<br/><br/></td></tr>
-<tr>
-<td>
-Ctrl + Z<br/><br/></td><td>
-Reverses the most recent action performed on the image editor.
-<br/><br/></td></tr>
-<tr>
-<td>
-Ctrl + Y<br/><br/></td><td>
-Restores the last undone action.
-<br/><br/></td></tr>
-<tr>
-<td>
-Ctrl + S<br/><br/></td><td>
-Saves the current image.
-<br/><br/></td></tr>
-<tr>
-<td>
-Ctrl + O<br/><br/></td><td>
-Opens the image browser to import a new image inside the ImageEditor.
-<br/><br/></td></tr>
+Moves to the previous editor in the DataForm.<br/><br/></td></tr>
 </table>
 
-N>In the DataForm multiline editor, the Enter key is not functioning to move to the next editor.
+N> In the DataForm's multiline editor, the Enter key does not function to move to the next editor.
 
