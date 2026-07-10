@@ -131,9 +131,9 @@ Initialize the `Rotator` control and we can populate the rotator’s items by us
 
 * Through [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTemplate)
 
-The below is an simple example for adding rotator items using SfRotatorItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/rotator/Populating-data)
+Below is a simple example for adding rotator items using SfRotatorItem. For more details on populating data, click [Here](https://help.syncfusion.com/maui/rotator/Populating-data)
 
-The following code example illustrates to add list of Images in Rotator ,
+The following code example illustrates how to add a list of Images in a Rotator ,
 
 N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
 
@@ -189,6 +189,7 @@ public Rotator()
             set { _image = value; }
         }
     }
+    
     // ViewModel class for Rotator.
 
     public class RotatorViewModel
