@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Time Picker Control | Syncfusion
-description: Learn about customizations in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
+title: Customizations in .NET MAUI Time Picker Control | Syncfusion®
+description: Learn about customizations in Syncfusion® .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
 documentation: ug
@@ -34,19 +34,19 @@ The SfTimePicker control allows you to add the header text by setting the [Text]
 {% highlight c# tabtitle="C#" %}
 
 SfTimePicker timePicker = new SfTimePicker();
-timepicker.HeaderView = new PickerHeaderView()
+timePicker.HeaderView = new PickerHeaderView()
 {
     Height = 40,
     Text = "Time Picker"
 };
 
-this.Content = TimePicker;
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Set header text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-text.png)
+![Set header text in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-header-text.png)
 
 ### Set the divider color
 
@@ -67,7 +67,7 @@ The SfTimePicker control allows you to customize the header divider color by set
 {% highlight c# tabtitle="C#" %}
 
 SfTimePicker timePicker = new SfTimePicker();
-timepicker.HeaderView = new PickerHeaderView()
+timePicker.HeaderView = new PickerHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -78,11 +78,11 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set header divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-divider-color.png)
+![Set header divider color in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-header-divider-color.png)
 
 ### Customization of the header
 
-Customize the header text style and background color of the `Time picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HeaderView) in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+Customize the header text style and background color of the `Time Picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HeaderView) in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
 {% tabs %}
 
@@ -119,9 +119,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom header in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-header.png)
+![Custom header in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-header.png)
 
-### Custom Header Appearance using Datatemplate
+### Custom Header Appearance using DataTemplate
 
 You can customize the time picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
@@ -143,7 +143,7 @@ You can customize the time picker header appearance by using the [HeaderTemplate
 
 {% endtabs %}
 
-![Set header template in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-template.png)
+![Set header template in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-header-template.png)
 
 N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
 
@@ -204,7 +204,7 @@ Customize the time picker column header by using the `ColumnHeaderView` property
 
 ### Set the custom column header
 
-The [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) provides a custom text to its column header by setting the [ColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_ColumnHeaderView) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). It contains [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText), [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText), [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText), and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) properties of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html). The default value of the [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText) property is "Hour", [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText) is "Minute", [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText) is "Second", [MilliSecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MilliSecondHeaderText) is "MilliSecond", and [MerdiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) is "string.Empty".
+The [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) provides a custom text to its column header by setting the [ColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_ColumnHeaderView) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). It contains [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText), [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText), [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText), and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) properties of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html). The default value of the [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText) property is "Hour", [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText) is "Minute", [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText) is "Second", [MilliSecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MilliSecondHeaderText) is "MilliSecond", and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) is "string.Empty".
 
 {% tabs %}
 
@@ -230,7 +230,7 @@ timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
     HourHeaderText = "Hour Column",
     MinuteHeaderText = "Minute Column",
     SecondHeaderText = "Second Column",
-    MilliSecondHeaderText = "MilliSecond Column"
+    MilliSecondHeaderText = "MilliSecond Column",
     MeridiemHeaderText = "Meridiem Column"
 };
 
@@ -240,7 +240,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set Column header text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-column-header-text.png)
+![Set column header text in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-column-header-text.png)
 
 ### Set the divider color
 
@@ -261,7 +261,7 @@ The SfTimePicker control allows you to customize the column header divider color
 {% highlight c# tabtitle="C#" %}
 
 SfTimePicker timePicker = new SfTimePicker();
-timepicker.ColumnHeaderView = new TimePickerColumnHeaderView()
+timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -272,7 +272,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set column header divider in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-column-header-divider-color.png)
+![Set column header divider in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-column-header-divider-color.png)
 
 ### Customization of the column header
 
@@ -313,9 +313,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom column header in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-column-header.png)
+![Custom column header in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-column-header.png)
 
-### Custom Column Header Appearance using Datatemplate
+### Custom Column Header Appearance using DataTemplate
 
 You can customize the time picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
@@ -344,7 +344,7 @@ You can customize the time picker column header appearance by using the [ColumnH
 
 {% endtabs %}
 
-![Set column header template in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-header-template.png)
+![Set column header template in .NET MAUI Time Picker.](images/customizations/maui-time-picker-column-header-template.png)
 
 N> If a template is applied to the column header in the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_DividerColor).
 
@@ -451,7 +451,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set footer text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-text.png)
+![Set footer text in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-footer-text.png)
 
 ### Set the divider color
 
@@ -472,7 +472,7 @@ The SfTimePicker control allows you to customize the footer divider color by set
 {% highlight c# tabtitle="C#" %}
 
 SfTimePicker timePicker = new SfTimePicker();
-timepicker.FooterView = new PickerFooterView()
+timePicker.FooterView = new PickerFooterView()
 {
     DividerColor = Colors.Red,
 };
@@ -483,7 +483,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-divider-color.png)
+![Set divider color in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-footer-divider-color.png)
 
 ### Customization of the footer
 
@@ -524,9 +524,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom footer .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-footer.png)
+![Custom footer in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-footer.png)
 
-### Custom Footer Appearance using Datatemplate
+### Custom Footer Appearance using DataTemplate
 
 You can customize the time picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
@@ -553,7 +553,7 @@ You can customize the time picker footer appearance by using the [FooterTemplate
 
 {% endtabs %}
 
-![Set footer template in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-template.png)
+![Set footer template in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-footer-template.png)
 
 N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
 
@@ -620,7 +620,7 @@ public class TimeTemplateSelector : DataTemplateSelector
 
 ## Set height and width to the Time Picker
 
-The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+The `SfTimePicker` control allows you to change the height and width by using the `HeightRequest` and `WidthRequest` properties on the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
@@ -644,7 +644,7 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
+![Set height and width in .NET MAUI Time Picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
 
 ## Selection View Customization
 
@@ -673,7 +673,7 @@ timePicker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
     Stroke = Color.FromArgb("#36454F"),
-    Pading = new Thickness(10, 5, 10, 5),
+    Padding = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
 
@@ -683,7 +683,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom selection shape in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-selection-shape.png)
+![Custom selection shape in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-selection-shape.png)
 
 ### Customization of the selected item
 
@@ -706,11 +706,8 @@ Customize the selected view text style of the `Time Picker` using the [SelectedT
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SelectedTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.White,
-        FontSize = 15,
-    }
+    TextColor = Colors.White,
+    FontSize = 15,
 };
 
 this.Content = timePicker;
@@ -719,7 +716,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom Selection view in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-selection-view.png)
+![Custom selection view in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-selection-view.png)
 
 ## Column divider color
 
@@ -737,12 +734,12 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.ColumnDividerColor = Colors.Red;
-this.Content = picker;
+this.Content = timePicker;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Time picker coloumn divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
+![Time picker column divider color in .NET MAUI Time Picker.](images/customizations/maui-time-picker-column-divider-color.png)
 
 ## CloseButtonIcon
 
@@ -755,9 +752,9 @@ You can enable or disable the close button in the [SfTimePicker](https://help.sy
 {% highlight xaml tabtitle="XAML" %}
 
 <Grid>
-    <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True">
+    <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="true">
         <picker:SfTimePicker.HeaderView >
-            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+            <picker:PickerHeaderView Height="40" Text="Time Picker"/>
         </picker:SfTimePicker.HeaderView>
     </picker:SfTimePicker>
     <Button Text="Open Picker" 
@@ -776,7 +773,7 @@ You can enable or disable the close button in the [SfTimePicker](https://help.sy
 
 private void Button_Clicked(object sender, EventArgs e)
 {
-    timePicker.IsOpen = true;
+    this.timePicker.IsOpen = true;
 }
 
 {% endhighlight %}
@@ -785,7 +782,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ![Enable CloseButton in the .NET MAUI Time Picker](images/customizations/maui-time-picker-enable-closebutton.png)
 
-N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+N> For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
 
 ### Close Button Icon
 
@@ -798,7 +795,7 @@ You can customize the close button icon in the [SfTimePicker](https://help.syncf
 <Grid>
     <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="closeicon.png">
         <picker:SfTimePicker.HeaderView >
-            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+            <picker:PickerHeaderView Height="40" Text="Time Picker"/>
         </picker:SfTimePicker.HeaderView>
     </picker:SfTimePicker>
     <Button Text="Open Picker" 
@@ -826,7 +823,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ![Enable CloseButtonIcon in the .NET MAUI Time Picker](images/customizations/maui-time-picker-enable-closebuttonicon.png)
 
-N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
+N> The `ShowCloseButton` property must be set to `true` for the close button icon to be displayed.
 
 ## Column Customization
 
