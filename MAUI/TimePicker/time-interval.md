@@ -7,14 +7,14 @@ control: SfTimePicker
 documentation: ug
 ---
 
-# Time Interval in .NET MAUI Time Picker(SfTimePicker)
+# Time Interval in .NET MAUI Time Picker (SfTimePicker)
 
-The `SfTimePicker` provides three intervals in [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker).
+The `SfTimePicker` provides four intervals in [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker).
 
- * [`HourInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HourInterval)
- * [`MinuteInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinuteInterval)
- * [`SecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SecondInterval)
-  * [`MilliSecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MilliSecondInterval)
+* [`HourInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HourInterval).
+* [`MinuteInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinuteInterval).
+* [`SecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SecondInterval).
+* [`MilliSecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MilliSecondInterval).
 
 ## Hour interval
 
@@ -42,7 +42,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Hour interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-hour-interval.png)
+![Hour interval in .NET MAUI Time picker.](images/intervals/maui-time-picker-hour-interval.png)
 
 ## Minute interval
 
@@ -70,7 +70,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Minute interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-minute-interval.png)
+![Minute interval in .NET MAUI Time picker.](images/intervals/maui-time-picker-minute-interval.png)
 
 ## Second interval
 
@@ -98,7 +98,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Second interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-second-interval.png)
+![Second interval in .NET MAUI Time picker.](images/intervals/maui-time-picker-second-interval.png)
 
 ## MilliSecond interval
 
@@ -126,4 +126,4 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![MilliSecond interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-millisecond-interval.png)
+![MilliSecond interval in .NET MAUI Time picker.](images/intervals/maui-time-picker-millisecond-interval.png)
