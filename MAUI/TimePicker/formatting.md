@@ -50,12 +50,12 @@ The following example demonstrates the Time Picker with the custom format [Picke
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="timePicker" 
+<picker:SfTimePicker x:Name="timePicker"
                      Format="hh_mm_ss_tt"/>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 
 SfTimePicker timePicker = new SfTimePicker()
 {
@@ -68,4 +68,4 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Formatting in .NET MAUI Time picker.](images/formatting/maui-time-picker-formatting.png)
+![Formatting in .NET MAUI Time Picker.](images/formatting/maui-time-picker-formatting.png)
