@@ -17,25 +17,41 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {%tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" View="Week" />
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Week" />
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
 
-// Creating an instance for the scheduler appointment collection.
-var appointment = new ObservableCollection<SchedulerAppointment>();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-//Adding scheduler appointment in the scheduler appointment collection. 
-appointment.Add(new SchedulerAppointment()
+. . .
+public partial class MainPage : ContentPage
 {
-    StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(11),
-    Subject = "Client Meeting",
-    Location = "Hutchison road",
-});
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating an instance for the scheduler appointment collection.
+        var appointment = new ObservableCollection<SchedulerAppointment>();
 
-//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointment;
+        //Adding scheduler appointment in the scheduler appointment collection. 
+        appointment.Add(new SchedulerAppointment()
+        {
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(11),
+            Subject = "Client Meeting",
+            Location = "Hutchison road",
+        });
+
+        //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = appointment;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -122,37 +138,52 @@ The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 {% tabs %}
 {% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12 13" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week" >
-    <scheduler:SfScheduler.AppointmentMapping>
-        <scheduler:SchedulerAppointmentMapping
-                Subject="EventName"
-                StartTime="From"
-                EndTime="To"
-                Background="Background"
-                IsAllDay="IsAllDay"
-                StartTimeZone="StartTimeZone"
-                EndTimeZone="EndTimeZone"
-                TextColorMapping="TextColor"/>
-    </scheduler:SfScheduler.AppointmentMapping>
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week" >
+        <scheduler:SfScheduler.AppointmentMapping>
+            <scheduler:SchedulerAppointmentMapping
+                    Subject="EventName"
+                    StartTime="From"
+                    EndTime="To"
+                    Background="Background"
+                    IsAllDay="IsAllDay"
+                    StartTimeZone="StartTimeZone"
+                    EndTimeZone="EndTimeZone"
+                    TextColorMapping="TextColor"/>
+        </scheduler:SfScheduler.AppointmentMapping>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="3 11" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
-appointmentMapping.Subject = "EventName";
-appointmentMapping.StartTime = "From";
-appointmentMapping.EndTime = "To";
-appointmentMapping.Background = "Background";
-appointmentMapping.IsAllDay = "IsAllDay";
-appointmentMapping.StartTimeZone = "StartTimeZone";
-appointmentMapping.EndTimeZone = "EndTimeZone";
-appointmentMapping.TextColorMapping = "TextColor";
-scheduler.AppointmentMapping = appointmentMapping;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
+        appointmentMapping.Subject = "EventName";
+        appointmentMapping.StartTime = "From";
+        appointmentMapping.EndTime = "To";
+        appointmentMapping.Background = "Background";
+        appointmentMapping.IsAllDay = "IsAllDay";
+        appointmentMapping.StartTimeZone = "StartTimeZone";
+        appointmentMapping.EndTimeZone = "EndTimeZone";
+        appointmentMapping.TextColorMapping = "TextColor";
+        scheduler.AppointmentMapping = appointmentMapping;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -162,24 +193,34 @@ Create meetings of type `ObservableCollection<Meeting>` and assign those appoint
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
 
-// Creating an instance for the business object class.
-Meeting meeting = new Meeting();
-// Setting the start time of an event.
-meeting.From = DateTime.Today.Date.AddHours(9);
-// Setting the end time of an event.
-meeting.To = meeting.From.AddHours(2);
-// Setting the subject for an event.
-meeting.EventName = "Meeting";
-// Setting the background color for an event.
-meeting.Background = Brush.Orange;
-// Setting the text color for an event.
-meeting.TextColor = Colors.White;
-// Creating an instance for the collection of business objects.
-var Meetings = new ObservableCollection<Meeting>();
-// Adding a business object to the business object Collection.
-Meetings.Add(meeting);
-// Adding business object in the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = Meetings;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating an instance for the business object class.
+        Meeting meeting = new Meeting();
+        // Setting the start time of an event.
+        meeting.From = DateTime.Today.Date.AddHours(9);
+        // Setting the end time of an event.
+        meeting.To = meeting.From.AddHours(2);
+        // Setting the subject for an event.
+        meeting.EventName = "Meeting";
+        // Setting the background color for an event.
+        meeting.Background = Brush.Orange;
+        // Setting the text color for an event.
+        meeting.TextColor = Colors.White;
+        // Creating an instance for the collection of business objects.
+        var Meetings = new ObservableCollection<Meeting>();
+        // Adding a business object to the business object Collection.
+        Meetings.Add(meeting);
+        // Adding business object in the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = Meetings;
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -198,42 +239,57 @@ A spanned appointment is one that lasts longer than 24 hours. The spanned appoin
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week" >
-    <scheduler:SfScheduler.AppointmentMapping>
-        <scheduler:SchedulerAppointmentMapping
-                Subject="EventName"
-                StartTime="From"
-                EndTime="To"
-                Background="Background"
-                TextColorMapping="TextColor"
-                IsAllDay="IsAllDay"
-                StartTimeZone="StartTimeZone"
-                EndTimeZone="EndTimeZone"/>
-    </scheduler:SfScheduler.AppointmentMapping>
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week" >
+        <scheduler:SfScheduler.AppointmentMapping>
+            <scheduler:SchedulerAppointmentMapping
+                    Subject="EventName"
+                    StartTime="From"
+                    EndTime="To"
+                    Background="Background"
+                    TextColorMapping="TextColor"
+                    IsAllDay="IsAllDay"
+                    StartTimeZone="StartTimeZone"
+                    EndTimeZone="EndTimeZone"/>
+        </scheduler:SfScheduler.AppointmentMapping>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 6" %}
 
-// Creating an instance for the business object class.
-Meeting meeting = new Meeting();
-// Setting the start time of an event.
-meeting.From = DateTime.Today.Date.AddHours(9);
-// Setting the end time of an event.
-meeting.To = meeting.From.AddDays(2).AddHours(2);
-// Setting the subject for an event.
-meeting.EventName = "Meeting";
-// Setting the background color for an event.
-meeting.Background = Brush.Orange;
-// Setting the text color for an event.
-meeting.TextColor = Colors.Blue;
-// Creating an instance for the collection of business objects.
-var Meetings = new ObservableCollection<Meeting>();
-// Adding a business object to the business object Collection.
-Meetings.Add(meeting);
-// Adding business object in the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = Meetings;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating an instance for the business object class.
+        Meeting meeting = new Meeting();
+        // Setting the start time of an event.
+        meeting.From = DateTime.Today.Date.AddHours(9);
+        // Setting the end time of an event.
+        meeting.To = meeting.From.AddDays(2).AddHours(2);
+        // Setting the subject for an event.
+        meeting.EventName = "Meeting";
+        // Setting the background color for an event.
+        meeting.Background = Brush.Orange;
+        // Setting the text color for an event.
+        meeting.TextColor = Colors.Blue;
+        // Creating an instance for the collection of business objects.
+        var Meetings = new ObservableCollection<Meeting>();
+        // Adding a business object to the business object Collection.
+        Meetings.Add(meeting);
+        // Adding business object in the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = Meetings;
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -252,21 +308,32 @@ Appointments that are scheduled for a whole day are known as all-day appointment
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
 
-// Creating an instance for the scheduler appointment collection.
-var appointment = new ObservableCollection<SchedulerAppointment>();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-//Adding scheduler appointment in the scheduler appointment collection. 
-appointment.Add(new SchedulerAppointment()
+. . .
+public partial class MainPage : ContentPage
 {
-    StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(10),
-    Subject = "Client Meeting",
-    Location = "Hutchison road",
-    IsAllDay = true
-});
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating an instance for the scheduler appointment collection.
+        var appointment = new ObservableCollection<SchedulerAppointment>();
 
-//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointment;
+        //Adding scheduler appointment in the scheduler appointment collection. 
+        appointment.Add(new SchedulerAppointment()
+        {
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(10),
+            Subject = "Client Meeting",
+            Location = "Hutchison road",
+            IsAllDay = true
+        });
+
+        //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = appointment;
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -288,23 +355,34 @@ A read-only appointment can be created with [IsReadOnly](https://help.syncfusion
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 
-this.Scheduler.View = SchedulerView.Week;
-// Creating an instance for the scheduler appointment collection.
-var appointment = new ObservableCollection<SchedulerAppointment>();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-//Adding scheduler appointment in the scheduler appointment collection. 
-appointment.Add(new SchedulerAppointment()
+. . .
+public partial class MainPage : ContentPage
 {
-    StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(10),
-    Subject = "Client Meeting",
-    Background = Brush.Orange,
-    TextColor = Colors.White,
-    IsReadOnly = true,
-});
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Week;
+        // Creating an instance for the scheduler appointment collection.
+        var appointment = new ObservableCollection<SchedulerAppointment>();
 
-//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointment;
+        //Adding scheduler appointment in the scheduler appointment collection. 
+        appointment.Add(new SchedulerAppointment()
+        {
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(10),
+            Subject = "Client Meeting",
+            Background = Brush.Orange,
+            TextColor = Colors.White,
+            IsReadOnly = true,
+        });
+
+        //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = appointment;
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -352,24 +430,35 @@ A recurrence rule for `.NET MAUI Scheduler` is used to populate the recurring ap
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
-// Creating an instance for the scheduler appointment collection.
-var appointment = new ObservableCollection<SchedulerAppointment>();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-//Adding scheduler appointment in the scheduler appointment collection. 
-var schedulerAppointment = new SchedulerAppointment()
+. . .
+public partial class MainPage : ContentPage
 {
-    StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(10),
-    Subject = "Occurs every alternate day",
-    Id = 1,
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating an instance for the scheduler appointment collection.
+        var appointment = new ObservableCollection<SchedulerAppointment>();
 
-//Creating a recurrence rule
-schedulerAppointment.RecurrenceRule = "FREQ=DAILY;INTERVAL=2;COUNT=10";
-//Adding the scheduler appointment to the scheduler appointment collection.
-appointment.Add(schedulerAppointment);
-//Adding the appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointment;
+        //Adding scheduler appointment in the scheduler appointment collection. 
+        var schedulerAppointment = new SchedulerAppointment()
+        {
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(10),
+            Subject = "Occurs every alternate day",
+            Id = 1,
+        };
+
+        //Creating a recurrence rule
+        schedulerAppointment.RecurrenceRule = "FREQ=DAILY;INTERVAL=2;COUNT=10";
+        //Adding the scheduler appointment to the scheduler appointment collection.
+        appointment.Add(schedulerAppointment);
+        //Adding the appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = appointment;
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -417,42 +506,57 @@ The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 {% tabs %}
 {% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15 16" %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                       View="Week" >
-    <scheduler:SfScheduler.AppointmentMapping>
-        <scheduler:SchedulerAppointmentMapping
-                Subject="EventName"
-                StartTime="From"
-                EndTime="To"
-                Background="Background"
-                IsAllDay="IsAllDay"
-                StartTimeZone="StartTimeZone"
-                EndTimeZone="EndTimeZone"
-                Id="Id"      
-                RecurrenceRule="RecurrenceRule"
-                RecurrenceId="RecurrenceId"
-                TextColorMapping="TextColor"/>
-    </scheduler:SfScheduler.AppointmentMapping>
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Week" >
+        <scheduler:SfScheduler.AppointmentMapping>
+            <scheduler:SchedulerAppointmentMapping
+                    Subject="EventName"
+                    StartTime="From"
+                    EndTime="To"
+                    Background="Background"
+                    IsAllDay="IsAllDay"
+                    StartTimeZone="StartTimeZone"
+                    EndTimeZone="EndTimeZone"
+                    Id="Id"      
+                    RecurrenceRule="RecurrenceRule"
+                    RecurrenceId="RecurrenceId"
+                    TextColorMapping="TextColor"/>
+        </scheduler:SfScheduler.AppointmentMapping>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="3 11" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
+using Syncfusion.Maui.Scheduler;
 
-//Schedule data mapping for business objects.
-SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
-appointmentMapping.Subject = "EventName";
-appointmentMapping.StartTime = "From";
-appointmentMapping.EndTime = "To";
-appointmentMapping.Background = "Background";
-appointmentMapping.IsAllDay = "IsAllDay";
-appointmentMapping.StartTimeZone = "StartTimeZone";
-appointmentMapping.EndTimeZone = "EndTimeZone";
-appointmentMapping.TextColorMapping = "TextColor";
-scheduler.AppointmentMapping = appointmentMapping;
-this.Content = scheduler;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+
+        //Schedule data mapping for business objects.
+        SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
+        appointmentMapping.Subject = "EventName";
+        appointmentMapping.StartTime = "From";
+        appointmentMapping.EndTime = "To";
+        appointmentMapping.Background = "Background";
+        appointmentMapping.IsAllDay = "IsAllDay";
+        appointmentMapping.StartTimeZone = "StartTimeZone";
+        appointmentMapping.EndTimeZone = "EndTimeZone";
+        appointmentMapping.TextColorMapping = "TextColor";
+        scheduler.AppointmentMapping = appointmentMapping;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -462,28 +566,38 @@ The [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedul
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 16 18 20" %}
 
-// Creating an instance for the business object class.
-Meeting meeting = new Meeting();
-// Setting the start time of an event.
-meeting.From = DateTime.Today.Date.AddHours(9);
-// Setting the end time of an event.
-meeting.To = meeting.From.AddHours(1);
-// Setting the subject for an event.
-meeting.EventName = "Meeting";
-// Setting the background color for an event.
-meeting.Background = Brush.Orange;
-// Setting the text color for an event.
-meeting.TextColor = Colors.White;
-//Creating a recurrence rule.
-meeting.RecurrenceRule = "FREQ=DAILY;INTERVAL=2;COUNT=10";
-// Setting the Id of an event.
-meeting.Id = 1;
-// Creating an instance for the collection of business objects.
-var Meetings = new ObservableCollection<Meeting>();
-// Adding a business object to the business object Collection.
-Meetings.Add(meeting);
-// Adding business object in the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = Meetings;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating an instance for the business object class.
+        Meeting meeting = new Meeting();
+        // Setting the start time of an event.
+        meeting.From = DateTime.Today.Date.AddHours(9);
+        // Setting the end time of an event.
+        meeting.To = meeting.From.AddHours(1);
+        // Setting the subject for an event.
+        meeting.EventName = "Meeting";
+        // Setting the background color for an event.
+        meeting.Background = Brush.Orange;
+        // Setting the text color for an event.
+        meeting.TextColor = Colors.White;
+        //Creating a recurrence rule.
+        meeting.RecurrenceRule = "FREQ=DAILY;INTERVAL=2;COUNT=10";
+        // Setting the Id of an event.
+        meeting.Id = 1;
+        // Creating an instance for the collection of business objects.
+        var Meetings = new ObservableCollection<Meeting>();
+        // Adding a business object to the business object Collection.
+        Meetings.Add(meeting);
+        // Adding business object in the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = Meetings;
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -499,15 +613,25 @@ The [RRuleParser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
-var dateTime = DateTime.Today.AddHours(10);
-var recurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3";
-var recurrenceProperties = SchedulerRecurrenceManager.ParseRRule(recurrenceRule, dateTime);
+using Syncfusion.Maui.Scheduler;
 
-// The recurrence properties retrieved from above method,
-recurrenceProperties.RecurrenceType = SchedulerRecurrenceType.Daily;
-recurrenceProperties.Interval = 1;
-recurrenceProperties.RecurrenceCount = 3;
-recurrenceProperties.RecurrenceRange = SchedulerRecurrenceRange.Count;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var dateTime = DateTime.Today.AddHours(10);
+        var recurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3";
+        var recurrenceProperties = SchedulerRecurrenceManager.ParseRRule(recurrenceRule, dateTime);
+
+        // The recurrence properties retrieved from above method,
+        recurrenceProperties.RecurrenceType = SchedulerRecurrenceType.Daily;
+        recurrenceProperties.Interval = 1;
+        recurrenceProperties.RecurrenceCount = 3;
+        recurrenceProperties.RecurrenceRange = SchedulerRecurrenceRange.Count;
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -519,14 +643,24 @@ The [GetDateTimeOccurrences](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
-var dateTime = DateTime.Today.AddHours(10);
-var recurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3";
-var dateCollection = SchedulerRecurrenceManager.GetDateTimeOccurrences(recurrenceRule, dateTime);
+using Syncfusion.Maui.Scheduler;
 
-// The following occurrence dates can be retrieved from the given RRULE:
-// 12/14/2021 10:00:00 AM
-// 12/15/2021 10:00:00 AM
-// 12/16/2021 10:00:00 AM
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var dateTime = DateTime.Today.AddHours(10);
+        var recurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3";
+        var dateCollection = SchedulerRecurrenceManager.GetDateTimeOccurrences(recurrenceRule, dateTime);
+
+        // The following occurrence dates can be retrieved from the given RRULE:
+        // 12/14/2021 10:00:00 AM
+        // 12/15/2021 10:00:00 AM
+        // 12/16/2021 10:00:00 AM
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -538,8 +672,18 @@ The [GetOccurrenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
-var dateTime = new DateTime(2022,07,22,9,0,0);
-var occurrenceAppointment = SchedulerRecurrenceManager.GetOccurrenceAppointment(Scheduler, appointment, dateTime);
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var dateTime = new DateTime(2022,07,22,9,0,0);
+        var occurrenceAppointment = SchedulerRecurrenceManager.GetOccurrenceAppointment(Scheduler, appointment, dateTime);
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}
@@ -552,8 +696,18 @@ The [GetOccurrenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-var dateTime = new DateTime(2022,07,22,9,0,0);
-var patternAppointment = SchedulerRecurrenceManager.GetPatternAppointment(Scheduler,appointment);
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var dateTime = new DateTime(2022,07,22,9,0,0);
+        var patternAppointment = SchedulerRecurrenceManager.GetPatternAppointment(Scheduler,appointment);
+    }
+}
 
 {% endhighlight %}
 {% endtabs%}

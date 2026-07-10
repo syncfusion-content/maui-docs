@@ -29,23 +29,38 @@ You can set the month view appointments display as follows.
 * [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text):  Appointment subject will be displayed in the month cell.
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="6" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView 
-                       AppointmentDisplayMode="Indicator"/>
-    </scheduler:SfScheduler.MonthView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView 
+                           AppointmentDisplayMode="Indicator"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="4" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -61,22 +76,37 @@ N>
 The scheduler month view appointment indicator count allows you to customize the count of the appointment indicator by using the [AppointmentIndicatorCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorCount) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the [AppointmentIndicatorCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorCount) is set to 5.
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="6" %}
 
-<schedule:SfScheduler x:Name="Scheduler"
-                        View="Month" >
-    <schedule:SfScheduler.MonthView>
-        <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" 
-                                     AppointmentIndicatorCount="2"/>
-    </schedule:SfScheduler.MonthView>
-</schedule:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Month" >
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView AppointmentDisplayMode="Indicator" 
+                                         AppointmentIndicatorCount="2"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="5" %}
 
-this.Scheduler.View = SchedulerView.Month;
-this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Month;
+        this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+        this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -88,21 +118,36 @@ this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
 The scheduler month view allows you to customize the size of the appointment indicator by using the [AppointmentIndicatorSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorSize) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the [AppointmentIndicatorSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorSize) is set to 6d.
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="6" %}
 
-<schedule:SfScheduler x:Name="Scheduler"
-                        View="Month" >
-        <schedule:SfScheduler.MonthView>
-            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="10"/>
-        </schedule:SfScheduler.MonthView>
-</schedule:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Month" >
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="10"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="5" %}
 
-this.Scheduler.View = SchedulerView.Month;
-this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Month;
+        this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+        this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -114,23 +159,38 @@ this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
 The scheduler month view allows you to customize the appointment indicator rendering mode by using the [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) property supports three different types: [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_Fill), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_Stroke) and [FillAndStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_FillAndStroke). By default, the [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) is set to Fill.
 
 {% tabs %}  
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="5" %}
 
-<schedule:SfScheduler x:Name="Scheduler"
-                        View="Month" >
-        <schedule:SfScheduler.MonthView>
-            <schedule:SchedulerMonthView AppointmentIndicatorRenderMode="Stroke" AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="15" AppointmentIndicatorCount="2" />
-        </schedule:SfScheduler.MonthView>
-</schedule:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Month" >
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView AppointmentIndicatorRenderMode="Stroke" AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="15" AppointmentIndicatorCount="2" />
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="6" %}
 
-this.Scheduler.View = SchedulerView.Month;
-this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.Stroke;
-this.Scheduler.MonthView.AppointmentIndicatorSize = 15;
-this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Month;
+        this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+        this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.Stroke;
+        this.Scheduler.MonthView.AppointmentIndicatorSize = 15;
+        this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -142,23 +202,38 @@ this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
 The scheduler month view allows you to customize the appointment indicator stroke thickness by using the [AppointmentIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorStrokeThickness) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the [AppointmentIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorStrokeThickness) is set to 1d.
 
 {% tabs %}  
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="5" %}
 
-<schedule:SfScheduler x:Name="Scheduler"
-                        View="Month" >
-        <schedule:SfScheduler.MonthView>
-            <schedule:SchedulerMonthView AppointmentIndicatorStrokeThickness="4" AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="20" AppointmentIndicatorRenderMode="Stroke" />
-        </schedule:SfScheduler.MonthView>
-</schedule:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Month" >
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView AppointmentIndicatorStrokeThickness="4" AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="20" AppointmentIndicatorRenderMode="Stroke" />
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# hl_lines="6" %}
 
-this.Scheduler.View = SchedulerView.Month;
-this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.Stroke;
-this.Scheduler.MonthView.AppointmentIndicatorSize = 20;
-this.Scheduler.MonthView.AppointmentIndicatorStrokeThickness = 4;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Month;
+        this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+        this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.Stroke;
+        this.Scheduler.MonthView.AppointmentIndicatorSize = 20;
+        this.Scheduler.MonthView.AppointmentIndicatorStrokeThickness = 4;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -170,23 +245,38 @@ this.Scheduler.MonthView.AppointmentIndicatorStrokeThickness = 4;
 The previous and next month dates from a Scheduler month view can be hidden by using the [ShowLeadingAndTrailingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowLeadingAndTrailingDates) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `ShowLeadingAndTrailingDates` property defaults to `true.`
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="6" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView  
-                       ShowLeadingAndTrailingDates="False"/>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView  
+                           ShowLeadingAndTrailingDates="False"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="4" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.ShowLeadingAndTrailingDates = false;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.ShowLeadingAndTrailingDates = false;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -198,19 +288,38 @@ this.Content = scheduler;
 The [DateHorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_DateHorizontalAlignment) property specifies how the date text is aligned horizontally within each cell of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. Its default value is `Center`, but you can set it to `Left`, `Right` or `Justified` to adjust the placement of the date numbers.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="4" %}
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView DateHorizontalAlignment="Left"/>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+{% highlight XAML tabtitle="xaml" hl_lines="5" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView DateHorizontalAlignment="Left"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="3" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.DateHorizontalAlignment = HorizontalAlignment.Left;
-this.Content = scheduler;
+{% highlight C# tabtitle="c#" hl_lines="4" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.DateHorizontalAlignment = HorizontalAlignment.Left;
+        this.Content = scheduler;
+    }
+}
+
 {% endhighlight %}  
 {% endtabs %}
 
@@ -221,23 +330,38 @@ this.Content = scheduler;
 The number of week visible in the month view can be changed by setting the [NumberOfVisibleWeeks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NumberOfVisibleWeeks) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). 
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="6" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView  
-                       NumberOfVisibleWeeks="2"/>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView  
+                           NumberOfVisibleWeeks="2"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="4" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.NumberOfVisibleWeeks = 2;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.NumberOfVisibleWeeks = 2;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -249,19 +373,38 @@ this.Content = scheduler;
 The scheduler allows you to define non-working days in the Month view using the [NonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NonWorkingDays) property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of `NonWorkingDays` property is [SchedulerMonthWeekDays.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthWeekDays.html#Syncfusion_Maui_Scheduler_SchedulerMonthWeekDays_None). You can configure this property to include one or more days of the week.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="4" %}
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday"/>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+{% highlight XAML tabtitle="xaml" hl_lines="5" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="3" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
-this.Content = scheduler;
+{% highlight C# tabtitle="c#" hl_lines="4" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
+        this.Content = scheduler;
+    }
+}
+
 {% endhighlight %}  
 {% endtabs %}
 
@@ -270,20 +413,39 @@ this.Content = scheduler;
 The [HideNonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_HideNonWorkingDays) property is used to control the visibility of non-working days in the Month view. When `HideNonWorkingDays` is `false` (default), the specified non-working days are displayed in the MonthView. When `HideNonWorkingDays` is `true`, the specified non-working days are hidden from the MonthView.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="4" %}
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday" HideNonWorkingDays="True"/>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+{% highlight XAML tabtitle="xaml" hl_lines="5" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday" HideNonWorkingDays="True"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="3 4" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
-scheduler.MonthView.HideNonWorkingDays = true;
-this.Content = scheduler;
+{% highlight C# tabtitle="c#" hl_lines="5 6" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
+        scheduler.MonthView.HideNonWorkingDays = true;
+        this.Content = scheduler;
+    }
+}
+
 {% endhighlight %}  
 {% endtabs %}
 
@@ -294,41 +456,60 @@ this.Content = scheduler;
 Non-working days in the MonthView can be customized using the [NonWorkingDaysBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_NonWorkingDaysBackground) and [NonWorkingDaysTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_NonWorkingDaysTextStyle) properties of the [SchedulerMonthCellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html). These properties allow you to visually differentiate non-working days with custom background and text styles.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="6 7 8 9" %}
-<scheduler:SfScheduler x:Name="scheduler"
-                       View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday">
-            <scheduler:SchedulerMonthView.CellStyle>
-                <scheduler:SchedulerMonthCellStyle NonWorkingDaysBackground="Azure">
-                    <scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
-                        <scheduler:SchedulerTextStyle TextColor="Black" FontSize="12" />
-                    </scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
-                </scheduler:SchedulerMonthCellStyle>
-            </scheduler:SchedulerMonthView.CellStyle>
-        </scheduler:SchedulerMonthView>
-    </scheduler:SfScheduler.MonthView>
-</scheduler:SfScheduler>
+{% highlight XAML tabtitle="xaml" hl_lines="7 8 9 10" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler"
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView NonWorkingDays="Saturday,Sunday">
+                <scheduler:SchedulerMonthView.CellStyle>
+                    <scheduler:SchedulerMonthCellStyle NonWorkingDaysBackground="Azure">
+                        <scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
+                            <scheduler:SchedulerTextStyle TextColor="Black" FontSize="12" />
+                        </scheduler:SchedulerMonthCellStyle.NonWorkingDaysTextStyle>
+                    </scheduler:SchedulerMonthCellStyle>
+                </scheduler:SchedulerMonthView.CellStyle>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="5 7 8 11 13 14 17" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
+{% highlight C# tabtitle="c#" hl_lines="6 8 9 12 14 15 18" %}
 
-SchedulerTextStyle nonWorkTextStyle = new SchedulerTextStyle()
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    TextColor = Colors.Black,
-    FontSize = 12,
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.NonWorkingDays = SchedulerMonthWeekDays.Saturday | SchedulerMonthWeekDays.Sunday;
 
-SchedulerMonthCellStyle monthCellStyle = new SchedulerMonthCellStyle()
-{
-    NonWorkingDaysBackground = Brush.Azure,
-    NonWorkingDaysTextStyle = nonWorkTextStyle
-};
+        SchedulerTextStyle nonWorkTextStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.Black,
+            FontSize = 12,
+        };
 
-scheduler.MonthView.CellStyle = monthCellStyle;
-this.Content = scheduler;
+        SchedulerMonthCellStyle monthCellStyle = new SchedulerMonthCellStyle()
+        {
+            NonWorkingDaysBackground = Brush.Azure,
+            NonWorkingDaysTextStyle = nonWorkTextStyle
+        };
+
+        scheduler.MonthView.CellStyle = monthCellStyle;
+        this.Content = scheduler;
+    }
+}
+
 {% endhighlight %}  
 {% endtabs %}
 
@@ -339,19 +520,38 @@ this.Content = scheduler;
 Appointments can be displayed inline within the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the [ShowAppointmentsInline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowAppointmentsInline) property. When `ShowAppointmentsInline` is `false` (default), appointments are not shown inline in the MonthView. When `ShowAppointmentsInline` is `true`, tapping a date cell displays all appointments for that date inline below the tapped row. This provides a quick way to view daily schedules without switching to another view. Inline appointments are rendered in a collection view, allowing customization of styles such as background, text color, and layout.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="4" %}
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView ShowAppointmentsInline="True"/>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+{% highlight XAML tabtitle="xaml" hl_lines="5" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView ShowAppointmentsInline="True"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.ShowAppointmentsInline = true;
-this.Content = scheduler;
+{% highlight C# hl_lines="4" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.ShowAppointmentsInline = true;
+        this.Content = scheduler;
+    }
+}
+
 {% endhighlight %}  
 {% endtabs %}
 
@@ -362,26 +562,45 @@ this.Content = scheduler;
 The [TimeTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_TimeTextFormat) property in [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html) defines the string format used to display appointment time value in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, appointment time is shown in the "hh:mm tt" format (12‑hour clock with AM/PM). 
 
 {% tabs %}  
-{% highlight XAML tabtitle="XAML" hl_lines="6" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      View="Month">
-    <schedule:SfScheduler.MonthView>
-        <schedule:SchedulerMonthView ShowAppointmentsInline="True">
-            <schedule:SchedulerMonthView.MonthInlineViewStyle>
-                <schedule:MonthInlineViewStyle TimeTextFormat="HH:mm"/>
-            </schedule:SchedulerMonthView.MonthInlineViewStyle>
-        </schedule:SchedulerMonthView>
-    </schedule:SfScheduler.MonthView>
-</schedule:SfScheduler>
+{% highlight XAML tabtitle="XAML" hl_lines="7" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler"
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView ShowAppointmentsInline="True">
+                <scheduler:SchedulerMonthView.MonthInlineViewStyle>
+                    <scheduler:MonthInlineViewStyle TimeTextFormat="HH:mm"/>
+                </scheduler:SchedulerMonthView.MonthInlineViewStyle>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight C# tabtitle="C#" hl_lines="6" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.ShowAppointmentsInline = true;
-scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
+{% highlight C# tabtitle="C#" hl_lines="7" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    TimeTextFormat = "HH:mm"
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.ShowAppointmentsInline = true;
+        scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
+        {
+            TimeTextFormat = "HH:mm"
+        };
+    }
+}
+
 {% endhighlight %}   
 {% endtabs %}
 
@@ -392,26 +611,45 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 The [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_ItemHeight) property in [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html) specifies the vertical height of each appointment item displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, each appointment item has a height of 50 units. You can increase or decrease this value to adjust how compact or spacious the inline appointment list appears.
 
 {% tabs %}  
-{% highlight XAML tabtitle="XAML" hl_lines="6" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      View="Month">
-    <schedule:SfScheduler.MonthView>
-        <schedule:SchedulerMonthView ShowAppointmentsInline="True">
-            <schedule:SchedulerMonthView.MonthInlineViewStyle>
-                <schedule:MonthInlineViewStyle ItemHeight="70"/>
-            </schedule:SchedulerMonthView.MonthInlineViewStyle>
-        </schedule:SchedulerMonthView>
-    </schedule:SfScheduler.MonthView>
-</schedule:SfScheduler>
+{% highlight XAML tabtitle="XAML" hl_lines="7" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler"
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView ShowAppointmentsInline="True">
+                <scheduler:SchedulerMonthView.MonthInlineViewStyle>
+                    <scheduler:MonthInlineViewStyle ItemHeight="70"/>
+                </scheduler:SchedulerMonthView.MonthInlineViewStyle>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight C# tabtitle="C#" hl_lines="6" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.ShowAppointmentsInline = true;
-scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
+{% highlight C# tabtitle="C#" hl_lines="7" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    ItemHeight = 70
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.ShowAppointmentsInline = true;
+        scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
+        {
+            ItemHeight = 70
+        };
+    }
+}
+
 {% endhighlight %}   
 {% endtabs %}
 
@@ -424,37 +662,56 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 The [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_MonthInlineViewStyle) property allows you to customize the appearance of inline view in the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_TextStyle) properties.
 
 {% tabs %}  
-{% highlight XAML tabtitle="XAML" hl_lines="6 7 8 9 10" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      View="Month">
-    <schedule:SfScheduler.MonthView>
-        <schedule:SchedulerMonthView ShowAppointmentsInline="True">
-            <schedule:SchedulerMonthView.MonthInlineViewStyle>
-                <schedule:MonthInlineViewStyle Background="Yellow">
-                    <schedule:MonthInlineViewStyle.TextStyle>
-                        <schedule:SchedulerTextStyle TextColor="White"
-                                                     FontSize="14"/>
-                    </schedule:MonthInlineViewStyle.TextStyle>
-                </schedule:MonthInlineViewStyle>
-            </schedule:SchedulerMonthView.MonthInlineViewStyle>
-        </schedule:SchedulerMonthView>
-    </schedule:SfScheduler.MonthView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight C# tabtitle="C#" hl_lines="4 6 7 9 10" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.ShowAppointmentsInline = true;
-scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
-{
-    Background = Colors.Yellow,
-    TextStyle = new SchedulerTextStyle()
-    {
-        TextColor = Colors.White,
-        FontSize = 14,
-    }
+{% highlight XAML tabtitle="XAML" hl_lines="7 8 9 10 11" %}
 
-};
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler"
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView ShowAppointmentsInline="True">
+                <scheduler:SchedulerMonthView.MonthInlineViewStyle>
+                    <scheduler:MonthInlineViewStyle Background="Yellow">
+                        <scheduler:MonthInlineViewStyle.TextStyle>
+                            <scheduler:SchedulerTextStyle TextColor="White"
+                                                         FontSize="14"/>
+                        </scheduler:MonthInlineViewStyle.TextStyle>
+                    </scheduler:MonthInlineViewStyle>
+                </scheduler:SchedulerMonthView.MonthInlineViewStyle>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# tabtitle="C#" hl_lines="5 7 8 10 11" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.ShowAppointmentsInline = true;
+        scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
+        {
+            Background = Colors.Yellow,
+            TextStyle = new SchedulerTextStyle()
+            {
+                TextColor = Colors.White,
+                FontSize = 14,
+            }
+
+        };
+    }
+}
+
 {% endhighlight %}   
 {% endtabs %}
 
@@ -465,32 +722,39 @@ scheduler.MonthView.MonthInlineViewStyle = new MonthInlineViewStyle()
 The [MonthInlineViewItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_MonthInlineViewItemTemplate) property allows you to define a custom DataTemplate to customize the appearance of appointment items displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
 
 {% tabs %}  
-{% highlight XAML hl_lines="5 21" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      View="Month">
-    <schedule:SfScheduler.MonthView>
-        <schedule:SchedulerMonthView ShowAppointmentsInline="True">
-            <schedule:SchedulerMonthView.MonthInlineViewItemTemplate>
-                <DataTemplate>
-                    <Grid BackgroundColor="MediumOrchid" Padding="8">
-                        <HorizontalStackLayout HorizontalOptions="Center"
-                                               VerticalOptions="Center"
-                                               Spacing="6">
-                        <Label Text="&#xE71D;"
-                               FontFamily="MauiMaterialAssets"
-                               TextColor="White"
-                               VerticalOptions="Center"/>
-                        <Label Text="{Binding Subject}"
-                               TextColor="White"
-                               FontFamily="Bold"
-                               VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
-                    </Grid>
-                </DataTemplate>
-            </schedule:SchedulerMonthView.MonthInlineViewItemTemplate>
-        </schedule:SchedulerMonthView>
-    </schedule:SfScheduler.MonthView>
-</schedule:SfScheduler>
+{% highlight XAML hl_lines="6 22" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler"
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView ShowAppointmentsInline="True">
+                <scheduler:SchedulerMonthView.MonthInlineViewItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="MediumOrchid" Padding="8">
+                            <HorizontalStackLayout HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   Spacing="6">
+                                <Label Text="&#xE71D;"
+                                       FontFamily="MauiMaterialAssets"
+                                       TextColor="White"
+                                       VerticalOptions="Center"/>
+                                <Label Text="{Binding Subject}"
+                                       TextColor="White"
+                                       FontFamily="Bold"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </scheduler:SchedulerMonthView.MonthInlineViewItemTemplate>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}  
 {% endtabs %}
 
@@ -509,20 +773,39 @@ This event provides details about the tapped appointment and the selected date t
 * [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineAppointmentTappedEventArgs.html#Syncfusion_Maui_Scheduler_MonthInlineAppointmentTappedEventArgs_SelectedDate): Gets the date of the month cell where the inline view was opened.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Month" 
-                       MonthInlineAppointmentTapped="Scheduler_MonthInlineAppointmentTapped" >
-</scheduler:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 5 6" %}
-this.Scheduler.MonthInlineAppointmentTapped += Scheduler_MonthInlineAppointmentTapped;
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 
-private void Scheduler_MonthInlineAppointmentTapped(object sender, MonthInlineAppointmentTappedEventArgs e)
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month" 
+                           MonthInlineAppointmentTapped="Scheduler_MonthInlineAppointmentTapped" >
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 4 6 7" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    var appointment = e.Appointment;
-    var date = e.SelectedDate;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.MonthInlineAppointmentTapped += Scheduler_MonthInlineAppointmentTapped;
+    }
+
+    private void Scheduler_MonthInlineAppointmentTapped(object sender, MonthInlineAppointmentTappedEventArgs e)
+    {
+        var appointment = e.Appointment;
+        var date = e.SelectedDate;
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -535,26 +818,41 @@ You can customize the default appearance of view header in a month view by setti
 Customize the day format of Scheduler view header by using the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) property of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderSettings) in [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html).
 
 {% tabs %}  
-{% highlight XAML hl_lines="6" %}
+{% highlight XAML hl_lines="7" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView>
-            <scheduler:SchedulerMonthView.ViewHeaderSettings>
-                <scheduler:SchedulerViewHeaderSettings DayFormat="dddd" />
-            </scheduler:SchedulerMonthView.ViewHeaderSettings>
-        </scheduler:SchedulerMonthView>
-    </scheduler:SfScheduler.MonthView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView>
+                <scheduler:SchedulerMonthView.ViewHeaderSettings>
+                    <scheduler:SchedulerViewHeaderSettings DayFormat="dddd" />
+                </scheduler:SchedulerMonthView.ViewHeaderSettings>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="4" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.ViewHeaderSettings.DayFormat = "dddd";
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.ViewHeaderSettings.DayFormat = "dddd";
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -566,27 +864,41 @@ this.Content = scheduler;
 The height of the ViewHeader can be customized by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height) property of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderSettings) in [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="6" %}
+{% highlight XAML hl_lines="7" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView>
-            <scheduler:SchedulerMonthView.ViewHeaderSettings>
-                <scheduler:SchedulerViewHeaderSettings Height="100" />
-            </scheduler:SchedulerMonthView.ViewHeaderSettings>
-        </scheduler:SchedulerMonthView>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView>
+                <scheduler:SchedulerMonthView.ViewHeaderSettings>
+                    <scheduler:SchedulerViewHeaderSettings Height="100" />
+                </scheduler:SchedulerMonthView.ViewHeaderSettings>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="4" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.ViewHeaderSettings.Height = 100;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
 
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.ViewHeaderSettings.Height = 100;
+        this.Content = scheduler;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -601,28 +913,43 @@ The view header appearance customization can be achieved by using the `TextStyle
 Customize the month view header day text style, day format and background color by using the [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle), [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background) of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderSettings) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) respectively.
 
 {% tabs %}  
-{% highlight XAML hl_lines="6 7" %}
+{% highlight XAML hl_lines="7 8" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView>
-            <scheduler:SchedulerMonthView.ViewHeaderSettings>
-                <scheduler:SchedulerViewHeaderSettings DayFormat="dddd"
-                                                       Background="LightSkyBlue"/>
-            </scheduler:SchedulerMonthView.ViewHeaderSettings>
-        </scheduler:SchedulerMonthView>
-    </scheduler:SfScheduler.MonthView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView>
+                <scheduler:SchedulerMonthView.ViewHeaderSettings>
+                    <scheduler:SchedulerViewHeaderSettings DayFormat="dddd"
+                                                           Background="LightSkyBlue"/>
+                </scheduler:SchedulerMonthView.ViewHeaderSettings>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3 4" %}
+{% highlight C# hl_lines="4 5" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-scheduler.MonthView.ViewHeaderSettings.Background = Brush.LightSkyBlue;
-scheduler.MonthView.ViewHeaderSettings.DayFormat = "dddd";
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        scheduler.MonthView.ViewHeaderSettings.Background = Brush.LightSkyBlue;
+        scheduler.MonthView.ViewHeaderSettings.DayFormat = "dddd";
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -634,22 +961,27 @@ this.Content = scheduler;
 You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11" %}    
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7 8 9 10 11 12" %}    
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView>
-            <scheduler:SchedulerMonthView.ViewHeaderTemplate>
-                <DataTemplate>
-                    <Grid Background = "MediumPurple" >
-                        <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}" TextColor="White" FontSize="Subtitle" FontFamily="Bold" />
-                    </Grid>
-                </DataTemplate>
-            </scheduler:SchedulerMonthView.ViewHeaderTemplate>
-        </scheduler:SchedulerMonthView>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView>
+                <scheduler:SchedulerMonthView.ViewHeaderTemplate>
+                    <DataTemplate>
+                        <Grid Background = "MediumPurple" >
+                            <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}" TextColor="White" FontSize="Subtitle" FontFamily="Bold" />
+                        </Grid>
+                    </DataTemplate>
+                </scheduler:SchedulerMonthView.ViewHeaderTemplate>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -663,27 +995,32 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
- <Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="normaldatesTemplate">
-            <Grid Background = "lightBlue">
-                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Red" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="todayDatesTemplate">
-            <Grid Background = "LightGreen" >
-                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Orange" />
-            </Grid>
-        </DataTemplate>
-        <local:MonthViewHeaderTemplateSelector x:Key="monthViewHeaderTemplateSelector"  TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
-    </Grid.Resources>
-    <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="Month">
-        <scheduler:SfScheduler.MonthView>
-            <scheduler:SchedulerMonthView ViewHeaderTemplate = "{StaticResource monthViewHeaderTemplateSelector}"/>
-        </scheduler:SfScheduler.MonthView>
-    </scheduler:SfScheduler>
- </Grid>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="normaldatesTemplate">
+                <Grid Background = "lightBlue">
+                    <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Red" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="todayDatesTemplate">
+                <Grid Background = "LightGreen" >
+                    <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Orange" />
+                </Grid>
+            </DataTemplate>
+            <local:MonthViewHeaderTemplateSelector x:Key="monthViewHeaderTemplateSelector"  TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
+        </Grid.Resources>
+        <scheduler:SfScheduler x:Name="Scheduler" 
+                               View="Month">
+            <scheduler:SfScheduler.MonthView>
+                <scheduler:SchedulerMonthView ViewHeaderTemplate = "{StaticResource monthViewHeaderTemplateSelector}"/>
+            </scheduler:SfScheduler.MonthView>
+        </scheduler:SfScheduler>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MonthViewHeaderTemplateSelector.cs" %}
@@ -717,16 +1054,31 @@ The [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.Sc
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="schedule" View="Month">
-    <scheduler:SfScheduler.MonthView >
-        <scheduler:SchedulerMonthView NavigationDirection="Vertical"/>
-    </scheduler:SfScheduler.MonthView> 
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="schedule" View="Month">
+        <scheduler:SfScheduler.MonthView >
+            <scheduler:SchedulerMonthView NavigationDirection="Vertical"/>
+        </scheduler:SfScheduler.MonthView> 
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="4" %}
 
-schedule.MonthView.NavigationDirection = SchedulerMonthNavigationDirection.Vertical;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        schedule.MonthView.NavigationDirection = SchedulerMonthNavigationDirection.Vertical;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -744,44 +1096,59 @@ By using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Month">
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="31" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="32" %}
 
-this.Scheduler.View = SchedulerView.Month;
-var textStyle = new SchedulerTextStyle()
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    TextColor = Colors.DarkBlue,
-    FontSize = 14,
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Month;
+        var textStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.DarkBlue,
+            FontSize = 14,
+        };
 
-var leadingMonthTextStyle = new SchedulerTextStyle()
-{
-    TextColor = Colors.Red,
-    FontSize = 14,
-};
+        var leadingMonthTextStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.Red,
+            FontSize = 14,
+        };
 
-var trailingMonthTextStyle = new SchedulerTextStyle()
-{
-    TextColor = Colors.Red,
-    FontSize = 14,
-};
+        var trailingMonthTextStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.Red,
+            FontSize = 14,
+        };
 
-var monthCellStyle = new SchedulerMonthCellStyle()
-{
-    Background = Brush.LightSkyBlue,
-    TodayBackground = Brush.LightBlue,
-    LeadingMonthBackground = Brush.LightGreen,
-    TrailingMonthBackground = Brush.LightYellow,
-    TextStyle = textStyle,
-    LeadingMonthTextStyle = leadingMonthTextStyle,
-    TrailingMonthTextStyle = trailingMonthTextStyle
-};
+        var monthCellStyle = new SchedulerMonthCellStyle()
+        {
+            Background = Brush.LightSkyBlue,
+            TodayBackground = Brush.LightBlue,
+            LeadingMonthBackground = Brush.LightGreen,
+            TrailingMonthBackground = Brush.LightYellow,
+            TextStyle = textStyle,
+            LeadingMonthTextStyle = leadingMonthTextStyle,
+            TrailingMonthTextStyle = trailingMonthTextStyle
+        };
 
-this.Scheduler.MonthView.CellStyle = monthCellStyle;
+        this.Scheduler.MonthView.CellStyle = monthCellStyle;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -793,22 +1160,27 @@ this.Scheduler.MonthView.CellStyle = monthCellStyle;
 You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7 8 9 10 11 12" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Month">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView>
-            <scheduler:SchedulerMonthView.CellTemplate>
-                <DataTemplate>
-                    <Grid Background = "MediumPurple">
-                        <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
-                    </Grid>
-                </DataTemplate>
-            </scheduler:SchedulerMonthView.CellTemplate>
-        </scheduler:SchedulerMonthView>
-    </scheduler:SfScheduler.MonthView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView>
+                <scheduler:SchedulerMonthView.CellTemplate>
+                    <DataTemplate>
+                        <Grid Background = "MediumPurple">
+                            <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
+                        </Grid>
+                    </DataTemplate>
+                </scheduler:SchedulerMonthView.CellTemplate>
+            </scheduler:SchedulerMonthView>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -823,29 +1195,34 @@ N>
 You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It allows you to choose a different data template for each month cell, as well as customize the appearance of a particular month cell based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
 
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="normalDateTemplate">
-            <Grid Background = "MediumPurple">
-                <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="todayDateTemplate">
-            <Grid Background = "MediumPurple">
-                <Label HorizontalTextAlignment="Center" TextColor="Yellow" Text="{Binding DateTime.Day}"/>
-            </Grid>
-        </DataTemplate>
-        <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
-    </Grid.Resources>
-    <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="Month" >
-        <scheduler:SfScheduler.MonthView>
-            <scheduler:SchedulerMonthView CellTemplate="{StaticResource monthCellTemplateSelector}" />
-        </scheduler:SfScheduler.MonthView>
-    </scheduler:SfScheduler>
- </Grid>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="normalDateTemplate">
+                <Grid Background = "MediumPurple">
+                    <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="todayDateTemplate">
+                <Grid Background = "MediumPurple">
+                    <Label HorizontalTextAlignment="Center" TextColor="Yellow" Text="{Binding DateTime.Day}"/>
+                </Grid>
+            </DataTemplate>
+            <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+        </Grid.Resources>
+        <scheduler:SfScheduler x:Name="Scheduler" 
+                               View="Month" >
+            <scheduler:SfScheduler.MonthView>
+                <scheduler:SchedulerMonthView CellTemplate="{StaticResource monthCellTemplateSelector}" />
+            </scheduler:SfScheduler.MonthView>
+        </scheduler:SfScheduler>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MonthCellTemplateSelector.cs" %}
@@ -867,11 +1244,20 @@ public class MonthCellTemplateSelector : DataTemplateSelector
     }
 }
 
-{% endhighlight %}  
+{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Scheduler.View = SchedulerView.Month;
+using Syncfusion.Maui.Scheduler;
 
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Month;
+    }
+}
 {% endhighlight %} 
 {% endtabs %}
 

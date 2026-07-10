@@ -22,10 +22,10 @@ By default, `AppointmentEditorMode` is set to `None`. To enable the Appointment 
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="5" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit">
@@ -35,15 +35,13 @@ By default, `AppointmentEditorMode` is set to `None`. To enable the Appointment 
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            this.scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
-        }
+        InitializeComponent();
+        this.scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
     }
 }
 {% endhighlight %}
@@ -61,10 +59,10 @@ To allow appointment creation, configure the [AppointmentEditorMode](https://hel
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="5" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Add">
@@ -74,15 +72,13 @@ To allow appointment creation, configure the [AppointmentEditorMode](https://hel
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            this.scheduler.AppointmentEditorMode = AppointmentEditorMode.Add;
-        }
+        InitializeComponent();
+        this.scheduler.AppointmentEditorMode = AppointmentEditorMode.Add;
     }
 }
 {% endhighlight %}
@@ -96,10 +92,10 @@ Existing appointments can be modified through the appointment editor. To allow e
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="5" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Edit">
@@ -109,15 +105,13 @@ Existing appointments can be modified through the appointment editor. To allow e
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            this.scheduler.AppointmentEditorMode = AppointmentEditorMode.Edit;
-        }
+        InitializeComponent();
+        this.scheduler.AppointmentEditorMode = AppointmentEditorMode.Edit;
     }
 }
 {% endhighlight %}
@@ -139,10 +133,10 @@ When the scheduler is bound to a data source, the updated values are automatical
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -160,17 +154,15 @@ When the scheduler is bound to a data source, the updated values are automatical
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            var appointments = new ObservableCollection<SchedulerAppointment>();
-            // Assign SchedulerAppointment properties (Subject, StartTime, EndTime, etc.)
-            this.scheduler.ItemsSource = appointments;
-        }
+        InitializeComponent();
+        var appointments = new ObservableCollection<SchedulerAppointment>();
+        // Assign SchedulerAppointment properties (Subject, StartTime, EndTime, etc.)
+        this.scheduler.ItemsSource = appointments;
     }
 }
 {% endhighlight %}
@@ -195,10 +187,10 @@ The [AppointmentEditorOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -209,19 +201,17 @@ The [AppointmentEditorOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEditorOpeningEventArgs e)
-        {
-            e.Cancel = true;
-        }
+    private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEditorOpeningEventArgs e)
+    {
+        e.Cancel = true;
     }
 }
 {% endhighlight %}
@@ -237,10 +227,10 @@ The [AppointmentEditorOpeningEventArgs](https://help.syncfusion.com/cr/maui/Sync
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -251,24 +241,22 @@ The [AppointmentEditorOpeningEventArgs](https://help.syncfusion.com/cr/maui/Sync
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEditorOpeningEventArgs e)
-        {
-            var appointment = e.Appointment;
-            var dateTime = e.DateTime;
-            var resource = e.Resource;
-            var recurringAppointmentEditMode = e.RecurringAppointmentEditMode;
-            // To prevent the editor from opening, uncomment the line below.
-            // e.Cancel = true;
-        }
+    private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEditorOpeningEventArgs e)
+    {
+        var appointment = e.Appointment;
+        var dateTime = e.DateTime;
+        var resource = e.Resource;
+        var recurringAppointmentEditMode = e.RecurringAppointmentEditMode;
+        // To prevent the editor from opening, uncomment the line below.
+        // e.Cancel = true;
     }
 }
 {% endhighlight %}
@@ -280,10 +268,10 @@ The [AppointmentEditorClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -294,19 +282,17 @@ The [AppointmentEditorClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
-        {
-            e.Cancel = true;
-        }
+    private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
+    {
+        e.Cancel = true;
     }
 }
 {% endhighlight %}
@@ -322,10 +308,10 @@ The [AppointmentEditorClosingEventArgs](https://help.syncfusion.com/cr/maui/Sync
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -336,25 +322,23 @@ The [AppointmentEditorClosingEventArgs](https://help.syncfusion.com/cr/maui/Sync
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
-        {
-            var appointment = e.Appointment;
-            var action = e.Action;
-            var resources = e.Resources;
+    private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
+    {
+        var appointment = e.Appointment;
+        var action = e.Action;
+        var resources = e.Resources;
 
-            // Example: take responsibility for saving and stop the scheduler from applying the change itself.
-            // e.Handled = true;
-            // MyAppointmentRepository.Save(appointment);
-        }
+        // Example: take responsibility for saving and stop the scheduler from applying the change itself.
+        // e.Handled = true;
+        // MyAppointmentRepository.Save(appointment);
     }
 }
 {% endhighlight %}
@@ -376,10 +360,10 @@ The [RecurringAppointmentBeginningEditEventArgs](https://help.syncfusion.com/cr/
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -390,22 +374,20 @@ The [RecurringAppointmentBeginningEditEventArgs](https://help.syncfusion.com/cr/
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void Scheduler_RecurringAppointmentBeginningEdit(object? sender, RecurringAppointmentBeginningEditEventArgs e)
-        {
-            var editMode = e.EditMode;
+    private void Scheduler_RecurringAppointmentBeginningEdit(object? sender, RecurringAppointmentBeginningEditEventArgs e)
+    {
+        var editMode = e.EditMode;
 
-            // Example: bypass the dialog and always edit the entire series.
-            // e.EditMode = RecurringAppointmentEditMode.Series;
-        }
+        // Example: bypass the dialog and always edit the entire series.
+        // e.EditMode = RecurringAppointmentEditMode.Series;
     }
 }
 {% endhighlight %}

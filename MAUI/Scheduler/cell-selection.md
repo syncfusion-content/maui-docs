@@ -18,15 +18,32 @@ The cell selection border color can be customized by using the [Stroke](https://
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
-<scheduler:SfScheduler x:Name="Scheduler">
-    <scheduler:SfScheduler.CellSelectionView>
-            <scheduler:SchedulerCellSelectionView Stroke="Red"/>
-    </scheduler:SfScheduler.CellSelectionView>
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler">
+        <scheduler:SfScheduler.CellSelectionView>
+                <scheduler:SchedulerCellSelectionView Stroke="Red"/>
+        </scheduler:SfScheduler.CellSelectionView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
-this.Scheduler.CellSelectionView.Stroke = Brush.Green;
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.CellSelectionView.Stroke = Brush.Green;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,15 +59,32 @@ N> By default, the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
-<scheduler:SfScheduler x:Name="Scheduler">
-    <scheduler:SfScheduler.CellSelectionView>
-            <scheduler:SchedulerCellSelectionView Background="Red" Stroke="Transparent"/>
-    </scheduler:SfScheduler.CellSelectionView>
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler">
+        <scheduler:SfScheduler.CellSelectionView>
+                <scheduler:SchedulerCellSelectionView Background="Red" Stroke="Transparent"/>
+        </scheduler:SfScheduler.CellSelectionView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
-this.Scheduler.CellSelectionView.Background = Brush.Green;
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.CellSelectionView.Background = Brush.Green;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,16 +97,33 @@ The corner radius of cell selection view can be customized by using the [CornerR
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
-<scheduler:SfScheduler x:Name="Scheduler">
-    <scheduler:SfScheduler.CellSelectionView>
-            <scheduler:SchedulerCellSelectionView  Background="Red" CornerRadius="2"/>
-    </scheduler:SfScheduler.CellSelectionView>
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler">
+        <scheduler:SfScheduler.CellSelectionView>
+                <scheduler:SchedulerCellSelectionView  Background="Red" CornerRadius="2"/>
+        </scheduler:SfScheduler.CellSelectionView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
-this.Scheduler.CellSelectionView.Stroke = Brush.Green;
-this.Scheduler.CellSelectionView.CornerRadius = 2;
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.CellSelectionView.Stroke = Brush.Green;
+        this.Scheduler.CellSelectionView.CornerRadius = 2;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,16 +138,33 @@ N> The [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedul
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
-<scheduler:SfScheduler x:Name="Scheduler">
-    <scheduler:SfScheduler.CellSelectionView>
-            <scheduler:SchedulerCellSelectionView  Stroke="Red" StrokeWidth="2"/>
-    </scheduler:SfScheduler.CellSelectionView>
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler">
+        <scheduler:SfScheduler.CellSelectionView>
+                <scheduler:SchedulerCellSelectionView  Stroke="Red" StrokeWidth="2"/>
+        </scheduler:SfScheduler.CellSelectionView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
-this.Scheduler.CellSelectionView.Stroke = Brush.Green;
-this.Scheduler.CellSelectionView.StrokeWidth = 2;
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.CellSelectionView.Stroke = Brush.Green;
+        this.Scheduler.CellSelectionView.StrokeWidth = 2;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,19 +177,24 @@ The scheduler allows you to use the custom view as a selection view by using the
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
-<scheduler:SfScheduler x:Name="Scheduler">
-    <scheduler:SfScheduler.CellSelectionView>
-        <scheduler:SchedulerCellSelectionView>
-            <scheduler:SchedulerCellSelectionView.Template>
-                <DataTemplate>
-                    <Button BackgroundColor = "#FF9800"
-                            Text="+ Add event"
-                            TextColor="White"/>
-                </DataTemplate>
-            </scheduler:SchedulerCellSelectionView.Template>
-        </scheduler:SchedulerCellSelectionView>
-    </scheduler:SfScheduler.CellSelectionView>
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler">
+        <scheduler:SfScheduler.CellSelectionView>
+            <scheduler:SchedulerCellSelectionView>
+                <scheduler:SchedulerCellSelectionView.Template>
+                    <DataTemplate>
+                        <Button BackgroundColor = "#FF9800"
+                                Text="+ Add event"
+                                TextColor="White"/>
+                    </DataTemplate>
+                </scheduler:SchedulerCellSelectionView.Template>
+            </scheduler:SchedulerCellSelectionView>
+        </scheduler:SfScheduler.CellSelectionView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}

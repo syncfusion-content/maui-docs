@@ -35,41 +35,57 @@ The [CellContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedu
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      AppointmentEditorMode="Add,Edit"
-                      View="Week">
-    <schedule:SfScheduler.CellContextMenu>
-        <schedule:MenuItemCollection>
-            <schedule:MenuItem Text="Add"
-                               Command="{x:Static schedule:SchedulerCommands.Add}"
-                               CommandParameter="{Binding}">
-                <schedule:MenuItem.Icon>
-                    <FontImageSource Glyph="&#xE70D;"
-                                     FontFamily="MauiMaterialAssets"/>
-                </schedule:MenuItem.Icon>
-            </schedule:MenuItem>
-        </schedule:MenuItemCollection>
-    </schedule:SfScheduler.CellContextMenu>
-</schedule:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <schedule:SfScheduler x:Name="scheduler"
+                          AppointmentEditorMode="Add,Edit"
+                          View="Week">
+        <schedule:SfScheduler.CellContextMenu>
+            <schedule:MenuItemCollection>
+                <schedule:MenuItem Text="Add"
+                                   Command="{x:Static schedule:SchedulerCommands.Add}"
+                                   CommandParameter="{Binding}">
+                    <schedule:MenuItem.Icon>
+                        <FontImageSource Glyph="&#xE70D;"
+                                         FontFamily="MauiMaterialAssets"/>
+                    </schedule:MenuItem.Icon>
+                </schedule:MenuItem>
+            </schedule:MenuItemCollection>
+        </schedule:SfScheduler.CellContextMenu>
+    </schedule:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3 4 6 8 9 10 11 13 14" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
-scheduler.CellContextMenu = new MenuItemCollection()
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    new Syncfusion.Maui.Scheduler.MenuItem
+    public MainPage()
     {
-        Text = "Add",
-        Command = SchedulerCommands.Add,
-        CommandParameter = new Binding("."),
-        Icon = new FontImageSource
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
+        scheduler.CellContextMenu = new MenuItemCollection()
         {
-            FontFamily = "MauiMaterialAssets",
-            Glyph = "&#xE70D;",
-        }
-    },
-};
+            new Syncfusion.Maui.Scheduler.MenuItem
+            {
+                Text = "Add",
+                Command = SchedulerCommands.Add,
+                CommandParameter = new Binding("."),
+                Icon = new FontImageSource
+                {
+                    FontFamily = "MauiMaterialAssets",
+                    Glyph = "&#xE70D;",
+                }
+            },
+        };
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,70 +97,86 @@ The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27" %}
-        <schedule:SfScheduler x:Name="scheduler"
-                              AppointmentEditorMode="Edit"
-                              View="Week">
-            <schedule:SfScheduler.AppointmentContextMenu>
-                <schedule:MenuItemCollection>
-                    <schedule:MenuItem Text="Edit"
-                                       Command="{x:Static schedule:SchedulerCommands.Edit}"
-                                       CommandParameter="{Binding}">
-                        <schedule:MenuItem.Icon>
-                            <FontImageSource Glyph="&#xE710;"
-                                             FontFamily="MauiMaterialAssets"
-                                             Color="Blue" 
-                                             Size="16"/>
-                        </schedule:MenuItem.Icon>
-                    </schedule:MenuItem>
-                    <schedule:MenuItem Text="Delete"
-                                       Command="{x:Static schedule:SchedulerCommands.Delete}"
-                                       CommandParameter="{Binding}">
-                        <schedule:MenuItem.Icon>
-                            <FontImageSource Glyph="&#xE70F;"
-                                             FontFamily="MauiMaterialAssets"
-                                             Color="Blue" 
-                                             Size="16"/>
-                        </schedule:MenuItem.Icon>
-                    </schedule:MenuItem>
-                </schedule:MenuItemCollection>
-            </schedule:SfScheduler.AppointmentContextMenu>
-        </schedule:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <schedule:SfScheduler x:Name="scheduler"
+                          AppointmentEditorMode="Edit"
+                          View="Week">
+        <schedule:SfScheduler.AppointmentContextMenu>
+            <schedule:MenuItemCollection>
+                <schedule:MenuItem Text="Edit"
+                                   Command="{x:Static schedule:SchedulerCommands.Edit}"
+                                   CommandParameter="{Binding}">
+                    <schedule:MenuItem.Icon>
+                        <FontImageSource Glyph="&#xE710;"
+                                         FontFamily="MauiMaterialAssets"
+                                         Color="Blue" 
+                                         Size="16"/>
+                    </schedule:MenuItem.Icon>
+                </schedule:MenuItem>
+                <schedule:MenuItem Text="Delete"
+                                   Command="{x:Static schedule:SchedulerCommands.Delete}"
+                                   CommandParameter="{Binding}">
+                    <schedule:MenuItem.Icon>
+                        <FontImageSource Glyph="&#xE70F;"
+                                         FontFamily="MauiMaterialAssets"
+                                         Color="Blue" 
+                                         Size="16"/>
+                    </schedule:MenuItem.Icon>
+                </schedule:MenuItem>
+            </schedule:MenuItemCollection>
+        </schedule:SfScheduler.AppointmentContextMenu>
+    </schedule:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3 4 6 8 9 10 11 13 14 15 16 20 22 23 24 25 26 27 28 29" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
-scheduler.AppointmentContextMenu = new MenuItemCollection()
-{
-    new Syncfusion.Maui.Scheduler.MenuItem
-    {
-        Text = "Edit",
-        Command = SchedulerCommands.Edit,
-        CommandParameter = new Binding("."),
-        Icon = new FontImageSource
-        {
-            FontFamily = "MauiMaterialAssets",
-            Glyph = "&#xE710;",
-            Color = Colors.Blue,
-            Size = 16
-        }
-    },
 
-    new Syncfusion.Maui.Scheduler.MenuItem
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        Text = "Delete",
-        Command = SchedulerCommands.Delete,
-        CommandParameter = new Binding("."),
-        Icon = new FontImageSource
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        scheduler.AppointmentEditorMode = AppointmentEditorMode.Add | AppointmentEditorMode.Edit;
+        scheduler.AppointmentContextMenu = new MenuItemCollection()
         {
-            FontFamily = "MauiMaterialAssets",
-            Glyph = "&#xE70F;",
-            Color = Colors.Blue,
-            Size = 16
-            
-        }
-    },
-};
+            new Syncfusion.Maui.Scheduler.MenuItem
+            {
+                Text = "Edit",
+                Command = SchedulerCommands.Edit,
+                CommandParameter = new Binding("."),
+                Icon = new FontImageSource
+                {
+                    FontFamily = "MauiMaterialAssets",
+                    Glyph = "&#xE710;",
+                    Color = Colors.Blue,
+                    Size = 16
+                }
+            },
+
+            new Syncfusion.Maui.Scheduler.MenuItem
+            {
+                Text = "Delete",
+                Command = SchedulerCommands.Delete,
+                CommandParameter = new Binding("."),
+                Icon = new FontImageSource
+                {
+                    FontFamily = "MauiMaterialAssets",
+                    Glyph = "&#xE70F;",
+                    Color = Colors.Blue,
+                    Size = 16
+                    
+                }
+            },
+        };
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,24 +190,40 @@ You can modify the background and text appearance of the context menu displayed 
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 4 5 6 7" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      ContextMenuBackground="LightGreen"
-                      View="Week">
-    <schedule:SfScheduler.ContextMenuTextStyle>
-        <schedule:SchedulerTextStyle TextColor="Red"
-                                     FontSize="20"/>
-    </schedule:SfScheduler.ContextMenuTextStyle>
-</schedule:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <schedule:SfScheduler x:Name="scheduler"
+                          ContextMenuBackground="LightGreen"
+                          View="Week">
+        <schedule:SfScheduler.ContextMenuTextStyle>
+            <schedule:SchedulerTextStyle TextColor="Red"
+                                         FontSize="20"/>
+        </schedule:SfScheduler.ContextMenuTextStyle>
+    </schedule:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3 4 6 7" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.ContextMenuBackground = new SolidColorBrush(Colors.LightGreen);
-scheduler.ContextMenuTextStyle = new SchedulerTextStyle()
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    TextColor = Colors.Black,
-    FontSize = 14,
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        scheduler.ContextMenuBackground = new SolidColorBrush(Colors.LightGreen);
+        scheduler.ContextMenuTextStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.Black,
+            FontSize = 14,
+        };
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -198,23 +246,39 @@ The [SchedulerContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/S
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      View="Week"
-                      ContextMenuOpening="scheduler_ContextMenuOpening">
-</schedule:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <schedule:SfScheduler x:Name="scheduler"
+                          View="Week"
+                          ContextMenuOpening="scheduler_ContextMenuOpening">
+    </schedule:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="1 3 5 6 7 8 9 10 11" %}
-this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening;
 
-private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    var contextMenu = e.ContextMenu;
-    var menuType = e.MenuType;
-    var menuInfo = e.MenuInfo;
-    var appointment = menuInfo?.Appointment;
-    var dateTime = menuInfo?.DateTime;
-    var resource = menuInfo?.Resource;
-    var scheduler = menuInfo?.Scheduler;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening;
+    }
+
+    private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
+    {
+        var contextMenu = e.ContextMenu;
+        var menuType = e.MenuType;
+        var menuInfo = e.MenuInfo;
+        var appointment = menuInfo?.Appointment;
+        var dateTime = menuInfo?.DateTime;
+        var resource = menuInfo?.Resource;
+        var scheduler = menuInfo?.Scheduler;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -225,17 +289,33 @@ The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
-<schedule:SfScheduler x:Name="scheduler"
-                      View="Week"
-                      ContextMenuOpening="scheduler_ContextMenuOpening">
-</schedule:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <schedule:SfScheduler x:Name="scheduler"
+                          View="Week"
+                          ContextMenuOpening="scheduler_ContextMenuOpening">
+    </schedule:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="1 3 5" %}
-this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening;
 
-private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    e.Cancel = true; // Cancel the context menu from opening
+    public MainPage()
+    {
+        InitializeComponent();
+        this.scheduler.ContextMenuOpening += scheduler_ContextMenuOpening;
+    }
+
+    private void scheduler_ContextMenuOpening(object sender, SchedulerContextMenuOpeningEventArgs e)
+    {
+        e.Cancel = true; // Cancel the context menu from opening
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -255,48 +335,53 @@ The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
-<schedule:SfScheduler x:Name="Scheduler" 
-                      x:DataType="local:SchedulerClipboardViewModel"
-                      AppointmentsSource="{Binding Events}"
-                      AppointmentEditorMode="Add,Edit"
-                      DisplayDate="{Binding DisplayDate}"
-                      ShowDatePickerButton="True"
-                      AllowAppointmentDrag="False"
-                      AllowedViews="Day,Week,WorkWeek,Month"
-                      View="Month">
-    <schedule:SfScheduler.AppointmentContextMenu>
-        <schedule:MenuItemCollection>
-            <schedule:MenuItem Text="Copy"
-                               Command="{x:Static local:ClipboardCommands.Copy}"
-                               CommandParameter="{Binding}">
-                <schedule:MenuItem.Icon>
-                    <FontImageSource Glyph="&#xE7A0;"
-                                     FontFamily="MauiMaterialAssets"/>
-                </schedule:MenuItem.Icon>
-            </schedule:MenuItem>
-            <schedule:MenuItem Text="Cut"
-                               Command="{x:Static local:ClipboardCommands.Cut}"
-                               CommandParameter="{Binding}">
-                <schedule:MenuItem.Icon>
-                    <FontImageSource Glyph="&#xE7F1;"
-                                     FontFamily="MauiMaterialAssets"/>
-                </schedule:MenuItem.Icon>
-            </schedule:MenuItem>
-        </schedule:MenuItemCollection>
-    </schedule:SfScheduler.AppointmentContextMenu>
-    <schedule:SfScheduler.CellContextMenu>
-        <schedule:MenuItemCollection>
-            <schedule:MenuItem Text="Paste"
-                               Command="{x:Static local:ClipboardCommands.Paste}"
-                               CommandParameter="{Binding}">
-                <schedule:MenuItem.Icon>
-                    <FontImageSource Glyph="&#xE7F2;"
-                                     FontFamily="MauiMaterialAssets"/>
-                </schedule:MenuItem.Icon>
-            </schedule:MenuItem>
-        </schedule:MenuItemCollection>
-    </schedule:SfScheduler.CellContextMenu>
-</schedule:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <schedule:SfScheduler x:Name="Scheduler" 
+                          x:DataType="local:SchedulerClipboardViewModel"
+                          AppointmentsSource="{Binding Events}"
+                          AppointmentEditorMode="Add,Edit"
+                          DisplayDate="{Binding DisplayDate}"
+                          ShowDatePickerButton="True"
+                          AllowAppointmentDrag="False"
+                          AllowedViews="Day,Week,WorkWeek,Month"
+                          View="Month">
+        <schedule:SfScheduler.AppointmentContextMenu>
+            <schedule:MenuItemCollection>
+                <schedule:MenuItem Text="Copy"
+                                   Command="{x:Static local:ClipboardCommands.Copy}"
+                                   CommandParameter="{Binding}">
+                    <schedule:MenuItem.Icon>
+                        <FontImageSource Glyph="&#xE7A0;"
+                                         FontFamily="MauiMaterialAssets"/>
+                    </schedule:MenuItem.Icon>
+                </schedule:MenuItem>
+                <schedule:MenuItem Text="Cut"
+                                   Command="{x:Static local:ClipboardCommands.Cut}"
+                                   CommandParameter="{Binding}">
+                    <schedule:MenuItem.Icon>
+                        <FontImageSource Glyph="&#xE7F1;"
+                                         FontFamily="MauiMaterialAssets"/>
+                    </schedule:MenuItem.Icon>
+                </schedule:MenuItem>
+            </schedule:MenuItemCollection>
+        </schedule:SfScheduler.AppointmentContextMenu>
+        <schedule:SfScheduler.CellContextMenu>
+            <schedule:MenuItemCollection>
+                <schedule:MenuItem Text="Paste"
+                                   Command="{x:Static local:ClipboardCommands.Paste}"
+                                   CommandParameter="{Binding}">
+                    <schedule:MenuItem.Icon>
+                        <FontImageSource Glyph="&#xE7F2;"
+                                         FontFamily="MauiMaterialAssets"/>
+                    </schedule:MenuItem.Icon>
+                </schedule:MenuItem>
+            </schedule:MenuItemCollection>
+        </schedule:SfScheduler.CellContextMenu>
+    </schedule:SfScheduler>
+</ContentPage>
 {% endhighlight %}
 {% endtabs %}
 

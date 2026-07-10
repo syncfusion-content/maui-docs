@@ -14,10 +14,10 @@ The appointment tooltip provides a quick, contextual preview of scheduled events
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="scheduler" 
                            View="Day" 
                            IsAppointmentToolTipEnabled="True">
@@ -27,15 +27,13 @@ The appointment tooltip provides a quick, contextual preview of scheduled events
 {% highlight c# tabtitle="C#" hl_lines="7" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            this.scheduler.IsAppointmentToolTipEnabled = true;
-        }
+        InitializeComponent();
+        this.scheduler.IsAppointmentToolTipEnabled = true;
     }
 }
 {% endhighlight %}
@@ -61,10 +59,10 @@ The [AppointmentToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4 5 6 7 8 9 10 11 12 13" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="scheduler" 
                            View="Day" 
                            IsAppointmentToolTipEnabled="True">
@@ -81,27 +79,25 @@ The [AppointmentToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight c# tabtitle="C#" hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27" %}
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
+        InitializeComponent();
+        this.scheduler.IsAppointmentToolTipEnabled = true;
+        this.scheduler.AppointmentToolTipSettings = new AppointmentToolTipSettings()
         {
-            InitializeComponent();
-            this.scheduler.IsAppointmentToolTipEnabled = true;
-            this.scheduler.AppointmentToolTipSettings = new AppointmentToolTipSettings()
+            Background = Colors.PaleGreen,
+            Padding = new Thickness(5),
+            ToolTipPosition = SchedulerToolTipPosition.Right,
+            TextStyle = new SchedulerTextStyle
             {
-                Background = Colors.PaleGreen,
-                Padding = new Thickness(5),
-                ToolTipPosition = SchedulerToolTipPosition.Right,
-                TextStyle = new SchedulerTextStyle
-                {
-                    TextColor = Colors.Purple,
-                    FontSize = 15,
-                    FontAttributes = FontAttributes.Bold
-                }
-            };
-        }
+                TextColor = Colors.Purple,
+                FontSize = 15,
+                FontAttributes = FontAttributes.Bold
+            }
+        };
     }
 }
 {% endhighlight %}
@@ -115,10 +111,10 @@ The [AppointmentToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4 5 6 7 8 9 10 11 12 13 50 51 52" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <scheduler:SfScheduler x:Name="scheduler" 
                            View="Day" 
                            IsAppointmentToolTipEnabled="True">
@@ -184,24 +180,22 @@ Because the template uses `x:DataType="scheduler:SchedulerAppointment"`, the `Ap
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
+        InitializeComponent();
+        scheduler.AppointmentsSource = new ObservableCollection<SchedulerAppointment>
         {
-            InitializeComponent();
-            scheduler.AppointmentsSource = new ObservableCollection<SchedulerAppointment>
+            new SchedulerAppointment
             {
-                new SchedulerAppointment
-                {
-                    Subject = "Team Sync",
-                    StartTime = DateTime.Today.AddHours(10),
-                    EndTime   = DateTime.Today.AddHours(11),
-                    Background = new SolidColorBrush(Colors.Teal)
-                }
-            };
-        }
+                Subject = "Team Sync",
+                StartTime = DateTime.Today.AddHours(10),
+                EndTime   = DateTime.Today.AddHours(11),
+                Background = new SolidColorBrush(Colors.Teal)
+            }
+        };
     }
 }
 ```
@@ -215,26 +209,24 @@ You can also set `AppointmentToolTipTemplate` programmatically using `DataTempla
 ```csharp
 using Syncfusion.Maui.Scheduler;
 
-namespace GettingStarted
+. . .
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
+        InitializeComponent();
+        this.scheduler.IsAppointmentToolTipEnabled = true;
+        this.scheduler.AppointmentToolTipTemplate = new DataTemplate(() =>
         {
-            InitializeComponent();
-            this.scheduler.IsAppointmentToolTipEnabled = true;
-            this.scheduler.AppointmentToolTipTemplate = new DataTemplate(() =>
+            var subject = new Label
             {
-                var subject = new Label
-                {
-                    FontAttributes = FontAttributes.Bold,
-                    FontSize = 12,
-                    TextColor = Colors.White
-                };
-                subject.SetBinding(Label.TextProperty, "Subject");
-                return subject;
-            });
-        }
+                FontAttributes = FontAttributes.Bold,
+                FontSize = 12,
+                TextColor = Colors.White
+            };
+            subject.SetBinding(Label.TextProperty, "Subject");
+            return subject;
+        });
     }
 }
 ```

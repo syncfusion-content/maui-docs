@@ -38,10 +38,19 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.NumberOfVisibleDays = 3;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.NumberOfVisibleDays = 3;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,10 +75,19 @@ The time interval between the time slots in the timeline day, timeline week, and
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.TimeInterval = new TimeSpan(2, 0, 0);
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.TimeInterval = new TimeSpan(2, 0, 0);
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -96,10 +114,19 @@ The Time interval width can be customized for each time slot cell of the timelin
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.TimeIntervalWidth = 120;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.TimeIntervalWidth = 120;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,10 +153,19 @@ The [NonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedul
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,11 +190,20 @@ The [HideNonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineMonth;
-scheduler.TimelineView.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
-scheduler.TimelineView.HideNonWorkingDays = true;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineMonth;
+        scheduler.TimelineView.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
+        scheduler.TimelineView.HideNonWorkingDays = true;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -186,11 +231,20 @@ The default values for [StartHour](https://help.syncfusion.com/cr/maui/Syncfusio
 {% endhighlight %}
 {% highlight C# hl_lines="3 4" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.StartHour = 9;
-scheduler.TimelineView.EndHour = 16;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.StartHour = 9;
+        scheduler.TimelineView.EndHour = 16;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -228,22 +282,31 @@ You can enable or disable the touch interaction of TimeRegion using the [EnableP
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+. . .
+public partial class MainPage : ContentPage
 {
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+        this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
     var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
     var timeRegion = new SchedulerTimeRegion()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        EnablePointerInteraction = false,
+    StartTime = DateTime.Today.Date.AddHours(13),
+    EndTime = DateTime.Today.Date.AddHours(14),
+    Text = "Lunch",
+    EnablePointerInteraction = false,
     };
-
     timeRegions.Add(timeRegion);
     return timeRegions;
+    }
+    }
 }
 
 {% endhighlight %}
@@ -267,23 +330,32 @@ The recurring time region recurs on a daily, weekly, monthly, or yearly interval
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+. . .
+public partial class MainPage : ContentPage
 {
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+        this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
     var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
     var timeRegion = new SchedulerTimeRegion()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        EnablePointerInteraction = false,
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+    StartTime = DateTime.Today.Date.AddHours(13),
+    EndTime = DateTime.Today.Date.AddHours(14),
+    Text = "Lunch",
+    EnablePointerInteraction = false,
+    RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
     };
-
     timeRegions.Add(timeRegion);
     return timeRegions;
+    }
+    }
 }
 
 {% endhighlight %}
@@ -303,28 +375,37 @@ Any occurrence that is an exception from the recurrence pattern time region can 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 15 16 17 18" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+. . .
+public partial class MainPage : ContentPage
 {
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+        this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
     var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
     var recurrenceExceptionDates = DateTime.Now.Date.AddDays(3);
     var timeRegion = new SchedulerTimeRegion()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        EnablePointerInteraction = false,
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
-        RecurrenceExceptionDates = new ObservableCollection<DateTime>()
-        {
-            recurrenceExceptionDates,
+    StartTime = DateTime.Today.Date.AddHours(13),
+    EndTime = DateTime.Today.Date.AddHours(14),
+    Text = "Lunch",
+    EnablePointerInteraction = false,
+    RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+    RecurrenceExceptionDates = new ObservableCollection<DateTime>()
+    {
+    recurrenceExceptionDates,
+    }
+        };
+        timeRegions.Add(timeRegion);
+        return timeRegions;
         }
-    };
-
-    timeRegions.Add(timeRegion);
-    return timeRegions;
+    }
 }
 
 {% endhighlight %}
@@ -346,30 +427,38 @@ The specialTimeRegion background and text style can be customized by using the [
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+. . .
+public partial class MainPage : ContentPage
 {
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+        this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
     var textStyle = new SchedulerTextStyle()
     {
-        TextColor = Colors.DarkBlue,
-        FontSize = 14,
+    TextColor = Colors.DarkBlue,
+    FontSize = 14,
     };
-
     var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
     var timeRegion = new SchedulerTimeRegion()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        EnablePointerInteraction = false,
-        Background = Brush.Orange,
-        TextStyle = textStyle
+    StartTime = DateTime.Today.Date.AddHours(13),
+    EndTime = DateTime.Today.Date.AddHours(14),
+    Text = "Lunch",
+    EnablePointerInteraction = false,
+    Background = Brush.Orange,
+    TextStyle = textStyle
     };
-
     timeRegions.Add(timeRegion);
     return timeRegions;
+    }
+    }
 }
 
 {% endhighlight %}
@@ -402,23 +491,32 @@ You can customize the time region appearance by using the [TimeRegionTemplate](h
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+. . .
+public partial class MainPage : ContentPage
 {
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+        this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
     var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
     var timeRegion = new SchedulerTimeRegion()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        EnablePointerInteraction = false,
-        Background = Brush.Orange,
+    StartTime = DateTime.Today.Date.AddHours(13),
+    EndTime = DateTime.Today.Date.AddHours(14),
+    Text = "Lunch",
+    EnablePointerInteraction = false,
+    Background = Brush.Orange,
     };
-
     timeRegions.Add(timeRegion);
     return timeRegions;
+    }
+    }
 }
 
 {% endhighlight %}
@@ -477,32 +575,42 @@ public class TimeRegionTemplateSelector : DataTemplateSelector
 {% endhighlight %}  
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+. . .
+public partial class MainPage : ContentPage
 {
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+        this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
     var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
     var timeRegion = new SchedulerTimeRegion()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
-        EnablePointerInteraction = true,
+    StartTime = DateTime.Today.Date.AddHours(13),
+    EndTime = DateTime.Today.Date.AddHours(14),
+    Text = "Lunch",
+    RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+    EnablePointerInteraction = true,
     };
     var timeRegion1 = new SchedulerTimeRegion()
     {
-        StartTime = DateTime.Today.Date.AddHours(17),
-        EndTime = DateTime.Today.Date.AddHours(18),
-        Text = "Break",
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
-        Background = Brush.Red,
-        EnablePointerInteraction = false,
+    StartTime = DateTime.Today.Date.AddHours(17),
+    EndTime = DateTime.Today.Date.AddHours(18),
+    Text = "Break",
+    RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+    Background = Brush.Red,
+    EnablePointerInteraction = false,
     };
     timeRegions.Add(timeRegion);
     timeRegions.Add(timeRegion1);
     return timeRegions;
+    }
+    }
 }
 
 {% endhighlight %} 
@@ -530,25 +638,36 @@ This property is only applicable when the [View](https://help.syncfusion.com/cr/
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="4" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineMonth;
-scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
-scheduler.TimelineView.ShowMonthTimeRegions = true;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
 {
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.TimelineMonth;
+        scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+        scheduler.TimelineView.ShowMonthTimeRegions = true;
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
     var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
     var timeRegion = new SchedulerTimeRegion()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Holiday",
-        EnablePointerInteraction = false,
+    StartTime = DateTime.Today.Date.AddHours(13),
+    EndTime = DateTime.Today.Date.AddHours(14),
+    Text = "Holiday",
+    EnablePointerInteraction = false,
     };
-
     timeRegions.Add(timeRegion);
     return timeRegions;
+    }
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -572,10 +691,19 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineDay;
-scheduler.TimelineView.TimeIntervalWidth = -1;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineDay;
+        scheduler.TimelineView.TimeIntervalWidth = -1;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -600,10 +728,19 @@ You can show or hide the current time indicator in timeline day, timeline week, 
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.ShowCurrentTimeIndicator = false;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.ShowCurrentTimeIndicator = false;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -626,10 +763,19 @@ The current time indicator can be customized by using the [CurrentTimeIndicatorB
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.CurrentTimeIndicatorBrush = Brush.Green;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.CurrentTimeIndicatorBrush = Brush.Green;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -657,10 +803,19 @@ The [TimeRulerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedu
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.TimeRulerHeight = 100;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.TimeRulerHeight = 100;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -685,10 +840,19 @@ The [MinimumAppointmentDuration](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.MinimumAppointmentDuration = new TimeSpan(0, 30, 0);
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.MinimumAppointmentDuration = new TimeSpan(0, 30, 0);
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -731,11 +895,20 @@ The date and day format of SfScheduler view header can be customized by using th
 {% endhighlight %}
 {% highlight C# hl_lines="3 4" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.ViewHeaderSettings.DayFormat = "dddd";
-scheduler.TimelineView.ViewHeaderSettings.DateFormat = "MMMM dd";
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.ViewHeaderSettings.DayFormat = "dddd";
+        scheduler.TimelineView.ViewHeaderSettings.DateFormat = "MMMM dd";
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -763,10 +936,19 @@ The height of the ViewHeader can be customized by setting the `Height` property 
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.ViewHeaderSettings.Height = 100;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.ViewHeaderSettings.Height = 100;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -798,22 +980,30 @@ The background color and text style for the labels mentioning the time can be cu
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 16" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
-var dateTextStyle = new SchedulerTextStyle()
-{
-    TextColor = Colors.Red,
-    FontSize = 12,
-};
+using Syncfusion.Maui.Scheduler;
 
-this.Scheduler.TimelineView.ViewHeaderSettings.DateTextStyle = dateTextStyle;
-var dayTextStyle = new SchedulerTextStyle()
+. . .
+public partial class MainPage : ContentPage
 {
-    TextColor = Colors.Red,
-    FontSize = 12,
-};
-
-this.Scheduler.TimelineView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
-this.Scheduler.TimelineView.ViewHeaderSettings.Background = Brush.LightGreen;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+        var dateTextStyle = new SchedulerTextStyle()
+        {
+        TextColor = Colors.Red,
+        FontSize = 12,
+        };
+        this.Scheduler.TimelineView.ViewHeaderSettings.DateTextStyle = dateTextStyle;
+        var dayTextStyle = new SchedulerTextStyle()
+        {
+        TextColor = Colors.Red,
+        FontSize = 12,
+        };
+        this.Scheduler.TimelineView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
+        this.Scheduler.TimelineView.ViewHeaderSettings.Background = Brush.LightGreen;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -933,7 +1123,17 @@ public class ViewHeaderTemplateSelector : DataTemplateSelector
 {% endhighlight %}  
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+    }
+}
 
 {% endhighlight %} 
 {% endtabs %}
@@ -960,10 +1160,19 @@ The format for the labels mentioning the time can be customized by setting the [
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.TimelineView.TimeFormat = "hh:mm";
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.TimelineView.TimeFormat = "hh:mm";
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -985,14 +1194,23 @@ The text style for the labels mentioning the time can be customized by setting t
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
-var timeRulerTextStyle = new SchedulerTextStyle()
-{
-    TextColor = Colors.Red,
-    FontSize = 12,
-};
+using Syncfusion.Maui.Scheduler;
 
-this.Scheduler.TimelineView.TimeRulerTextStyle = timeRulerTextStyle;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.TimelineWeek;
+        var timeRulerTextStyle = new SchedulerTextStyle()
+        {
+        TextColor = Colors.Red,
+        FontSize = 12,
+        };
+        this.Scheduler.TimelineView.TimeRulerTextStyle = timeRulerTextStyle;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}

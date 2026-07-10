@@ -18,22 +18,37 @@ You can customize the default [Height](https://help.syncfusion.com/cr/maui/Syncf
 {% tabs %}  
 {% highlight XAML hl_lines="5" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-    <scheduler:SfScheduler.HeaderView>
-        <scheduler:SchedulerHeaderView 
-                       Height="100">
-        </scheduler:SchedulerHeaderView>
-    </scheduler:SfScheduler.HeaderView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week">
+        <scheduler:SfScheduler.HeaderView>
+            <scheduler:SchedulerHeaderView 
+                           Height="100">
+            </scheduler:SchedulerHeaderView>
+        </scheduler:SfScheduler.HeaderView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.HeaderView.Height = 100;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        scheduler.HeaderView.Height = 100;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -47,24 +62,39 @@ The header date format can be customized by using the [TextFormat](https://help.
 {% tabs %}  
 {% highlight XAML hl_lines="5" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-    <scheduler:SfScheduler.HeaderView>
-        <scheduler:SchedulerHeaderView 
-                       TextFormat="MMM yy">
-        </scheduler:SchedulerHeaderView>
-    </scheduler:SfScheduler.HeaderView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week">
+        <scheduler:SfScheduler.HeaderView>
+            <scheduler:SchedulerHeaderView 
+                           TextFormat="MMM yy">
+            </scheduler:SchedulerHeaderView>
+        </scheduler:SfScheduler.HeaderView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.HeaderView.TextFormat = "MMM yy";
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
 
-{% endhighlight %}
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        scheduler.HeaderView.TextFormat = "MMM yy";
+        this.Content = scheduler;
+    }
+}
+
+{% endhighlight %}  
 {% endtabs %}
 
 ![customize-header-date-format-in-maui-scheduler](images/header-view/customize-header-date-format-in-maui-scheduler.png)
@@ -80,27 +110,42 @@ You can style the background color and textStyle by using the properties such as
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Week">
-    <scheduler:SfScheduler.HeaderView>
-        <scheduler:SchedulerHeaderView 
-                        Background="LightGreen">
-        </scheduler:SchedulerHeaderView>
-    </scheduler:SfScheduler.HeaderView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week">
+        <scheduler:SfScheduler.HeaderView>
+            <scheduler:SchedulerHeaderView 
+                           Background="LightGreen">
+            </scheduler:SchedulerHeaderView>
+        </scheduler:SfScheduler.HeaderView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 9" %}
 
-var textStyle = new SchedulerTextStyle()
-{
-    TextColor = Colors.DarkBlue,
-    FontSize = 14,
-};
+using Syncfusion.Maui.Scheduler;
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.HeaderView.TextStyle = textStyle;
-this.Scheduler.HeaderView.Background = Brush.LightGreen;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var textStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.DarkBlue,
+            FontSize = 14,
+        };
+
+        this.Scheduler.View = SchedulerView.Week;
+        this.Scheduler.HeaderView.TextStyle = textStyle;
+        this.Scheduler.HeaderView.Background = Brush.LightGreen;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -114,28 +159,33 @@ You can customize the header appearance by using the [HeaderTemplate](https://he
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
 
-  <scheduler:SfScheduler x:Name="Scheduler" 
-                         View="Week">
-    <scheduler:SfScheduler.HeaderView>
-        <scheduler:SchedulerHeaderView>
-            <scheduler:SchedulerHeaderView.HeaderTemplate>
-                <DataTemplate>
-                    <Grid Background = "LightGreen">
-                        <Label x:Name="label" TextColor="DarkBlue" HorizontalOptions="Center" VerticalOptions="Center">
-                            <Label.Text>
-                                <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}">
-                                    <Binding Path="StartDate" />
-                                    <Binding Path = "EndDate" />
-                                </MultiBinding>
-                            </Label.Text>
-                        </Label>
-                        <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
-                    </Grid>
-                </DataTemplate>
-            </scheduler:SchedulerHeaderView.HeaderTemplate>
-        </scheduler:SchedulerHeaderView>
-    </scheduler:SfScheduler.HeaderView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week">
+        <scheduler:SfScheduler.HeaderView>
+            <scheduler:SchedulerHeaderView>
+                <scheduler:SchedulerHeaderView.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid Background = "LightGreen">
+                            <Label x:Name="label" TextColor="DarkBlue" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.Text>
+                                    <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}">
+                                        <Binding Path="StartDate" />
+                                        <Binding Path = "EndDate" />
+                                    </MultiBinding>
+                                </Label.Text>
+                            </Label>
+                            <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
+                        </Grid>
+                    </DataTemplate>
+                </scheduler:SchedulerHeaderView.HeaderTemplate>
+            </scheduler:SchedulerHeaderView>
+        </scheduler:SfScheduler.HeaderView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -149,43 +199,48 @@ You can customize the header appearance by using the [HeaderTemplate](https://he
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="34" %}
 
- <Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="todayDatesTemplate">
-            <Grid Background = "LightBlue" >
-                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label.Text>
-                        <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
-                            <Binding Path="StartDate" />
-                            <Binding Path = "EndDate" />
-                        </MultiBinding >
-                    </Label.Text >
-                </Label>
-                <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="normaldatesTemplate">
-            <Grid Background = "LightGreen" >
-                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label.Text>
-                        <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
-                            <Binding Path="StartDate" />
-                            <Binding Path = "EndDate" />
-                        </MultiBinding >
-                    </Label.Text >
-                </Label>
-                <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Orange" />
-            </Grid>
-        </DataTemplate>
-        <local:HeaderTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
-    </Grid.Resources>
-    <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="Week">
-        <scheduler:SfScheduler.HeaderView>
-            <scheduler:SchedulerHeaderView HeaderTemplate = "{StaticResource headerTemplateSelector}" />
-        </scheduler:SfScheduler.HeaderView>
-    </scheduler:SfScheduler>
- </Grid>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="todayDatesTemplate">
+                <Grid Background = "LightBlue" >
+                    <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label.Text>
+                            <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
+                                <Binding Path="StartDate" />
+                                <Binding Path = "EndDate" />
+                            </MultiBinding >
+                        </Label.Text >
+                    </Label>
+                    <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="normaldatesTemplate">
+                <Grid Background = "LightGreen" >
+                    <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label.Text>
+                            <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
+                                <Binding Path="StartDate" />
+                                <Binding Path = "EndDate" />
+                            </MultiBinding >
+                        </Label.Text >
+                    </Label>
+                    <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Orange" />
+                </Grid>
+            </DataTemplate>
+            <local:HeaderTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
+        </Grid.Resources>
+        <scheduler:SfScheduler x:Name="Scheduler" 
+                               View="Week">
+            <scheduler:SfScheduler.HeaderView>
+                <scheduler:SchedulerHeaderView HeaderTemplate = "{StaticResource headerTemplateSelector}" />
+            </scheduler:SfScheduler.HeaderView>
+        </scheduler:SfScheduler>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="HeaderTemplateSelector.cs" %}

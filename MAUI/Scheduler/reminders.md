@@ -43,11 +43,18 @@ N>
 Reminders can be enabled by setting the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminders. The reminders can be set by using the [Reminders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Reminders) property of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<syncfusion:SfScheduler x:Name="Scheduler"
-                        View ="Week"
-                        EnableReminder="True" >
-</syncfusion:SfScheduler>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View ="Week"
+                           EnableReminder="True" >
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,14 +78,21 @@ Configure the appointment reminders with [SchedulerReminder](https://help.syncfu
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6" %}
- <syncfusion:SfScheduler x:Name="Schedule" 
-                AppointmentsSource="{Binding Events}"
-                EnableReminder="True">
-        <syncfusion:SfScheduler.BindingContext>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Schedule" 
+                           AppointmentsSource="{Binding Events}"
+                           EnableReminder="True">
+        <scheduler:SfScheduler.BindingContext>
             <local:SchedulerViewModel/>
-        </syncfusion:SfScheduler.BindingContext>
-  </syncfusion:SfScheduler>
+        </scheduler:SfScheduler.BindingContext>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="ReminderViewModel.cs" %}
  public class ReminderViewModel 
@@ -201,15 +215,20 @@ public class Reminder
 Map those properties of the `Event` class with the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [SchedulerAppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) and map `CustomReminder` properties with the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) by using [SchedulerReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 19 20 21 22 23" %}
-  <syncfusion:SfScheduler x:Name="Schedule" 
-                AppointmentsSource="{Binding Events}"
-                EnableReminder="True">
-        <syncfusion:SfScheduler.BindingContext>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 20 21 22 23 24" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Schedule" 
+                           AppointmentsSource="{Binding Events}"
+                           EnableReminder="True">
+        <scheduler:SfScheduler.BindingContext>
             <local:SchedulerViewModel/>
-        </syncfusion:SfScheduler.BindingContext>
-        <syncfusion:SfScheduler.AppointmentMapping>
-            <syncfusion:SchedulerAppointmentMapping
+        </scheduler:SfScheduler.BindingContext>
+        <scheduler:SfScheduler.AppointmentMapping>
+            <scheduler:SchedulerAppointmentMapping
                     Subject="EventName"
                     StartTime="From"
                     EndTime="To"
@@ -221,13 +240,15 @@ Map those properties of the `Event` class with the [SfScheduler](https://help.sy
                     RecurrenceRule="RecurrenceRule"
                     RecurrenceId="RecurrenceId"
                     Reminders="Reminders">
-                <syncfusion:SchedulerAppointmentMapping.ReminderMapping>
-                    <syncfusion:SchedulerReminderMapping IsDismissed="IsDismissed"
+                <scheduler:SchedulerAppointmentMapping.ReminderMapping>
+                    <scheduler:SchedulerReminderMapping IsDismissed="IsDismissed"
                     TimeBeforeStart="TimeBeforeStart"/>
-                </syncfusion:SchedulerAppointmentMapping.ReminderMapping>
-            </syncfusion:SchedulerAppointmentMapping>
-        </syncfusion:SfScheduler.AppointmentMapping>
-    </syncfusion:SfScheduler>
+                </scheduler:SchedulerAppointmentMapping.ReminderMapping>
+            </scheduler:SchedulerAppointmentMapping>
+        </scheduler:SfScheduler.AppointmentMapping>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="ReminderViewModel.cs" %}
 public class ReminderViewModel 
@@ -295,13 +316,25 @@ Scheduler notifies the appointment's reminders by [ReminderAlertOpening](https:/
 * [Reminders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Reminders): Gets a list of reminders that are used to notify the appointment reminders.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    bool snooze = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss"); 
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+    }
+
+    private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+    {
+        bool snooze = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss"); 
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 ## Handle dismiss property of reminders
@@ -313,53 +346,66 @@ private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOp
 * If only occurrence dismissed, then the changed icon will not be updated for dismissed changed occurrence
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    bool dismiss = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
-    if (dismiss)
+    public MainPage()
     {
-        // For a Recurrence appointment, if the current occurrence needs to be dismissed, add a changed occurrence for the dismissed reminder occurrence
-        if (!string.IsNullOrEmpty(e.Reminders[0].Appointment.RecurrenceRule))
-        {
-            ObservableCollection<SchedulerAppointment> appointments = scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>;
-            SchedulerAppointment patternAppointment = appointments.FirstOrDefault(x => x.Id == e.Reminders[0].Appointment.Id);
-            DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
-            DateTime endDate = e.Reminders[0].Appointment.EndTime;
-            patternAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
-                {
-                    changedExceptionDate,
-                };
-            // Clone parent details
-            SchedulerAppointment exceptionAppointment = new SchedulerAppointment()
-            {
-                Id = 2,
-                Subject = patternAppointment.Subject,
-                StartTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, changedExceptionDate.Hour, 0, 0),
-                EndTime = new DateTime(endDate.Year, endDate.Month, endDate.Day, endDate.Hour, 0, 0),
-                Background = patternAppointment.Background,
-                RecurrenceId = 1,
-                Reminders = patternAppointment.Reminders,
-            };
-            if (!appointments.Contains(exceptionAppointment))
-            {
-                exceptionAppointment.Reminders[0].IsDismissed = true;
-                appointments.Add(exceptionAppointment);
-            }
-        }
-        // To dismiss normal reminder
-        else
-        {
-            for (int i = e.Reminders.Count - 1; i >= 0; i--)
-            {
-                e.Reminders[i].IsDismissed = true;
-            }
-        }
-    }    
+        InitializeComponent();
+        scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+    }
 
+    private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+    {
+        bool dismiss = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
+        if (dismiss)
+        {
+            // For a Recurrence appointment, if the current occurrence needs to be dismissed, add a changed occurrence for the dismissed reminder occurrence
+            if (!string.IsNullOrEmpty(e.Reminders[0].Appointment.RecurrenceRule))
+            {
+                ObservableCollection<SchedulerAppointment> appointments = scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>;
+                SchedulerAppointment patternAppointment = appointments.FirstOrDefault(x => x.Id == e.Reminders[0].Appointment.Id);
+                DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
+                DateTime endDate = e.Reminders[0].Appointment.EndTime;
+                patternAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
+                    {
+                        changedExceptionDate,
+                    };
+                // Clone parent details
+                SchedulerAppointment exceptionAppointment = new SchedulerAppointment()
+                {
+                    Id = 2,
+                    Subject = patternAppointment.Subject,
+                    StartTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, changedExceptionDate.Hour, 0, 0),
+                    EndTime = new DateTime(endDate.Year, endDate.Month, endDate.Day, endDate.Hour, 0, 0),
+                    Background = patternAppointment.Background,
+                    RecurrenceId = 1,
+                    Reminders = patternAppointment.Reminders,
+                };
+                if (!appointments.Contains(exceptionAppointment))
+                {
+                    exceptionAppointment.Reminders[0].IsDismissed = true;
+                    appointments.Add(exceptionAppointment);
+                }
+            }
+            // To dismiss normal reminder
+            else
+            {
+                for (int i = e.Reminders.Count - 1; i >= 0; i--)
+                {
+                    e.Reminders[i].IsDismissed = true;
+                }
+            }
+        }    
+
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -373,14 +419,25 @@ If Snooze time is set to 5 minutes, then the value of reminder [TimeBeforeStart]
 * For All day appointment, `TimeBeforeStart = Appointment.StartTime.Date.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime`.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    bool snooze = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+    }
 
-    if (snooze)
+    private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+    {
+        bool snooze = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
+
+        if (snooze)
         {
             TimeSpan snoozeTime = new TimeSpan(0, 5, 0);
             // Future appointment reminder
@@ -426,7 +483,9 @@ private async void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOp
                 }
             }          
         }
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 

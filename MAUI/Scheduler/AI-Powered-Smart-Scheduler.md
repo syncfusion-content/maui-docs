@@ -32,24 +32,17 @@ To connect your .NET MAUI app to Azure OpenAI, create a service class that handl
 
 {% highlight c# %}
 
-using Azure.AI.OpenAI;
-using OpenAI.Chat;
-using System.ClientModel;
-
-namespace GettingStarted
+/// <summary>
+/// Represents Class to interact with Azure AI.
+/// </summary>
+public class AzureAIServices : AzureBaseService
 {
     /// <summary>
-    /// Represents Class to interact with Azure AI.
+    /// Initializes a new instance of the <see cref="AzureAIServices"/> class.
     /// </summary>
-    public class AzureAIServices : AzureBaseService
+    public AzureAIServices()
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AzureAIServices"/> class.
-        /// </summary>
-        public AzureAIServices()
-        {
-            
-        }
+        
     }
 }
 
@@ -63,12 +56,6 @@ In this service, define a method called `GetResultsFromAI`. This method takes a 
 
 {% highlight c# %}
 
-using Azure.AI.OpenAI;
-using OpenAI.Chat;
-using System.ClientModel;
-
-namespace GettingStarted
-{
     /// <summary>
     /// Represents Class to interact with Azure AI.
     /// </summary>
@@ -121,109 +108,63 @@ Within the base service class (AzureBaseService), initialize the OpenAIClient wi
 
 {% highlight c# %}
 
-using Azure;
-using Azure.AI.OpenAI;
-using OpenAI.Chat;
-using System.ClientModel;
+ public abstract class AzureBaseService
+ {
+     #region Fields
+     /// <summary>
+     /// The EndPoint
+     /// </summary>
+     internal const string Endpoint = "YOUR_END_POINT_NAME";
 
-namespace GettingStarted
-{
-    public abstract class AzureBaseService
+     /// <summary>
+     /// The Deployment name
+     /// </summary>
+     internal const string DeploymentName = "DEPLOYMENT_NAME";
+
+     /// <summary>
+     /// The Image Deployment name
+     /// </summary>
+     internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
+
+     /// <summary>
+     /// The API key
+     /// </summary>
+     internal const string Key = "API_KEY";
+
+     /// <summary>
+     /// The already credential validated field
+     /// </summary>
+     private static bool isAlreadyValidated = false;
+
+     /// <summary>
+     /// Indicating whether an credentials are valid or not
+     /// </summary>
+     private static bool _isCredentialValid;
+
+     #endregion
+
+     public AzureBaseService()
+     {
+         ValidateCredential();
+     }
+
+    internal IChatClient? Client { get; set; }
+
+    /// <summary>
+    /// To get the Azure open ai method
+    /// </summary>
+    private void GetAzureOpenAI()
     {
-        #region Fields
-        /// <summary>
-        /// The EndPoint
-        /// </summary>
-        internal const string Endpoint = "YOUR_END_POINT_NAME";
-
-        /// <summary>
-        /// The Deployment name
-        /// </summary>
-        internal const string DeploymentName = "DEPLOYMENT_NAME";
-
-        /// <summary>
-        /// The Image Deployment name
-        /// </summary>
-        internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
-
-        /// <summary>
-        /// The API key
-        /// </summary>
-        internal const string Key = "API_KEY";
-
-        /// <summary>
-        /// The already credential validated field
-        /// </summary>
-        private static bool isAlreadyValidated = false;
-
-        /// <summary>
-        /// Indicating whether an credentials are valid or not
-        /// </summary>
-        private static bool _isCredentialValid;
-
-        #endregion
-
-        public AzureBaseService()
+        try
         {
-            ValidateCredential();
+            var client = new AzureOpenAIClient(new Uri(Endpoint), new AzureKeyCredential(Key)).AsChatClient(modelId: DeploymentName);
+            this.Client = client;
         }
-
-        /// <summary>
-        /// Gets or sets the chat history string used to build the prompt.
-        /// </summary>
-        internal string ChatHistory { get; set; } = string.Empty;
-
-        /// <summary>
-        /// Gets a value indicating whether the Azure OpenAI credentials are valid.
-        /// </summary>
-        internal static bool IsCredentialValid
+        catch (Exception)
         {
-            get => _isCredentialValid;
-        }
-
-        internal IChatClient? Client { get; set; }
-
-        /// <summary>
-        /// Validates the supplied Azure OpenAI credentials by attempting to instantiate the client.
-        /// </summary>
-        private void ValidateCredential()
-        {
-            if (isAlreadyValidated)
-            {
-                return;
-            }
-
-            if (!string.IsNullOrEmpty(Endpoint) && !string.IsNullOrEmpty(Key) &&
-                !Endpoint.Contains("YOUR_END_POINT_NAME") && !Key.Contains("API_KEY"))
-            {
-                GetAzureOpenAI();
-                _isCredentialValid = this.Client != null;
-            }
-            else
-            {
-                _isCredentialValid = false;
-            }
-
-            isAlreadyValidated = true;
-        }
-
-        /// <summary>
-        /// To get the Azure open ai method
-        /// </summary>
-        private void GetAzureOpenAI()
-        {
-            try
-            {
-                var client = new AzureOpenAIClient(new Uri(Endpoint), new AzureKeyCredential(Key)).AsChatClient(modelId: DeploymentName);
-                this.Client = client;
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Azure OpenAI initialization failed: {ex.Message}");
-            }
         }
     }
-}
+ }
 
 {% endhighlight %}
 
@@ -241,69 +182,65 @@ The Scheduler supports multiple calendar views allowing users to manage their sc
 
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             x:Class="GettingStarted.MainPage">
-    
-    <Grid.BindingContext>
-        <local:SchedulerViewModel />
-    </Grid.BindingContext>
+xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
 
-    <scheduler:SfScheduler x:Name="scheduler" View="TimelineDay">
-        <scheduler:SfScheduler.TimelineView>
-            <scheduler:SchedulerTimelineView StartHour="9"
-                                             TimeInterval="0:30:0"
-                                             TimeIntervalWidth="90"
-                                             TimeFormat="hh:mm"
-                                             EndHour="18" />
-        </scheduler:SfScheduler.TimelineView>
+<Grid.BindingContext>
+  <local:SchedulerViewModel />
+</Grid.BindingContext>
 
-        <scheduler:SfScheduler.ResourceView>
-            <scheduler:SchedulerResourceView Resources="{Binding Resources}">
-                <scheduler:SchedulerResourceView.Mapping>
-                    <scheduler:SchedulerResourceMapping Name="Name"
-                                                        Id="Id"
-                                                        Background="Background"
-                                                        Foreground="Foreground" />
-                </scheduler:SchedulerResourceView.Mapping>
+<scheduler:SfScheduler x:Name="scheduler" View="TimelineDay">
+  <scheduler:SfScheduler.TimelineView>
+    <scheduler:SchedulerTimelineView StartHour="9"
+                                     TimeInterval="0:30:0"
+                                     TimeIntervalWidth="90"
+                                     TimeFormat="hh:mm"
+                                     EndHour="18" />
+  </scheduler:SfScheduler.TimelineView>
 
-                <scheduler:SchedulerResourceView.HeaderTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5"
-                                     Orientation="Vertical"
-                                     VerticalOptions="Center"
-                                     HorizontalOptions="Fill">
-                            <Grid>
-                                <Border StrokeThickness="2"
-                                        Background="{Binding Background}"
-                                        HorizontalOptions="Center"
-                                        HeightRequest="{OnPlatform WinUI=70, MacCatalyst=70, Android=65, iOS=65}"
-                                        WidthRequest="{OnPlatform WinUI=70, MacCatalyst=70, Android=65, iOS=65}">
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="150" />
-                                    </Border.StrokeShape>
-                                </Border>
+  <scheduler:SfScheduler.ResourceView>
+    <scheduler:SchedulerResourceView Resources="{Binding Resources}">
+      <scheduler:SchedulerResourceView.Mapping>
+        <scheduler:SchedulerResourceMapping Name="Name"
+                                            Id="Id"
+                                            Background="Background"
+                                            Foreground="Foreground" />
+      </scheduler:SchedulerResourceView.Mapping>
 
-                                <Image WidthRequest="{OnPlatform WinUI=55, MacCatalyst=55, Android=50, iOS=50}"
-                                       HeightRequest="{OnPlatform WinUI=55, MacCatalyst=55, Android=50, iOS=50}"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center"
-                                       Source="{Binding DataItem.ImageName, Converter={StaticResource imageConverter}}"
-                                       Aspect="Fill" />
-                            </Grid>
+      <scheduler:SchedulerResourceView.HeaderTemplate>
+        <DataTemplate>
+          <StackLayout Padding="5"
+                       Orientation="Vertical"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Fill">
+            <Grid>
+              <Border StrokeThickness="2"
+                      Background="{Binding Background}"
+                      HorizontalOptions="Center"
+                      HeightRequest="{OnPlatform WinUI=70, MacCatalyst=70, Android=65, iOS=65}"
+                      WidthRequest="{OnPlatform WinUI=70, MacCatalyst=70, Android=65, iOS=65}">
+                <Border.StrokeShape>
+                  <RoundRectangle CornerRadius="150" />
+                </Border.StrokeShape>
+              </Border>
 
-                            <Label Text="{Binding Name}"
-                                   FontSize="{OnPlatform WinUI=12, MacCatalyst=12, Android=10, iOS=10}"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalTextAlignment="Center" />
-                        </StackLayout>
-                    </DataTemplate>
-                </scheduler:SchedulerResourceView.HeaderTemplate>
-            </scheduler:SchedulerResourceView>
-        </scheduler:SfScheduler.ResourceView>
-    </scheduler:SfScheduler>
-</ContentPage>
+              <Image WidthRequest="{OnPlatform WinUI=55, MacCatalyst=55, Android=50, iOS=50}"
+                     HeightRequest="{OnPlatform WinUI=55, MacCatalyst=55, Android=50, iOS=50}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Source="{Binding DataItem.ImageName, Converter={StaticResource imageConverter}}"
+                     Aspect="Fill" />
+            </Grid>
+
+            <Label Text="{Binding Name}"
+                   FontSize="{OnPlatform WinUI=12, MacCatalyst=12, Android=10, iOS=10}"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center" />
+          </StackLayout>
+        </DataTemplate>
+      </scheduler:SchedulerResourceView.HeaderTemplate>
+    </scheduler:SchedulerResourceView>
+  </scheduler:SfScheduler.ResourceView>
+</scheduler:SfScheduler>
  
 {% endhighlight %}
 
@@ -313,30 +250,26 @@ The AIAssistView provides a chat-like interface that allows users to interact wi
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight c# %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:aiassistview="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-             x:Class="GettingStarted.MainPage">
-    
-    <Grid.BindingContext>
-        <local:SchedulerViewModel />
-    </Grid.BindingContext>
+xmlns:aiassistview="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
 
-    <aiassistview:SfAIAssistView Grid.Column="{OnPlatform Android='0',iOS='0', Default='1'}"
-                                 Margin="0,100,0,0"
-                                 IsVisible="{Binding ShowAssistView, Mode=TwoWay}"
-                                 HorizontalOptions="{OnPlatform Android=Fill, iOS=Fill, Default=End}"
-                                 MaximumWidthRequest="{OnPlatform WinUI=700}"
-                                 x:Name="aiAssistView"
-                                 ShowHeader="{Binding ShowHeader}"
-                                 AssistItems="{Binding Messages}">
-        <aiassistview:SfAIAssistView.Shadow>
-            <Shadow Brush="Black" Offset="0,0" Radius="1" Opacity="0.5" />
-        </aiassistview:SfAIAssistView.Shadow>
-    </aiassistview:SfAIAssistView>
-</ContentPage>
+<Grid.BindingContext>
+ <local:SchedulerViewModel />
+</Grid.BindingContext>
+
+<aiassistview:SfAIAssistView Grid.Column="{OnPlatform Android='0',iOS='0', Default='1'}"
+                             Margin="0,100,0,0"
+                             IsVisible="{Binding ShowAssistView, Mode=TwoWay}"
+                             HorizontalOptions="{OnPlatform Android=Fill, iOS=Fill, Default=End}"
+                             MaximumWidthRequest="{OnPlatform WinUI=700}"
+                             x:Name="aiAssistView"
+                             ShowHeader="{Binding ShowHeader}"
+                             AssistItems="{Binding Messages}">
+ <aiassistview:SfAIAssistView.Shadow>
+   <Shadow Brush="Black" Offset="0,0" Radius="1" Opacity="0.5" />
+ </aiassistview:SfAIAssistView.Shadow>
+</aiassistview:SfAIAssistView>
  
 {% endhighlight %}
 
@@ -352,46 +285,26 @@ When the user enters text in the SfAIAssistView chat panel, the request is passe
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Scheduler;
-using Syncfusion.Maui.AIAssistView;
-using System.Text.RegularExpressions;
+this.assistView.Request += this.OnAssistViewRequest;
 
-namespace GettingStarted
+private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 {
-    public partial class MainPage : ContentPage
+    if (azureAIServices.Client != null)
     {
-        private readonly AzureAIServices azureAIServices;
-        private readonly SchedulerViewModel SchedulerViewModel;
-
-        public MainPage()
+        if (string.IsNullOrEmpty(e.RequestItem.Text))
         {
-            InitializeComponent();
-            this.azureAIServices = new AzureAIServices();
-            this.SchedulerViewModel = new SchedulerViewModel();
-            this.assistView.Request += this.OnAssistViewRequest;
+            return;
         }
 
-        private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
+        string pattern = @"\b\d{2}:\d{2} (AM|PM)\b";
+        bool isValidPattern = Regex.IsMatch(requeststring, pattern);
+        if (!isValidPattern)
         {
-            if (this.azureAIServices.Client != null)
-            {
-                if (string.IsNullOrEmpty(e.RequestItem.Text))
-                {
-                    return;
-                }
-
-                string requestString = e.RequestItem.Text;
-                string pattern = @"\b\d{2}:\d{2} (AM|PM)\b";
-                bool isValidPattern = Regex.IsMatch(requestString, pattern);
-                if (!isValidPattern)
-                {
-                    await this.SchedulerViewModel.GetAIResults(e.RequestItem.Text).ConfigureAwait(true);
-                }
-            }
+            await this.SchedulerViewModel.GetAIResults(e.RequestItem.Text).ConfigureAwait(true);
         }
     }
 }
-
+ 
 {% endhighlight %}
 
 {% endtabs %}
@@ -404,38 +317,19 @@ The SchedulerViewModel contains logic to process the request and fetch AI-genera
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Scheduler;
-using Syncfusion.Maui.AIAssistView;
-
-namespace GettingStarted
+///<summary>
+/// Method to get the AI response.
+///</summary>
+///<param name="query">The query</param>
+///<returns></returns>
+public async Task GetAIResults(string query)
 {
-    public partial class MainPage : ContentPage
-    {
-        private readonly AzureAIServices azureAIServices;
-        private readonly SchedulerViewModel SchedulerViewModel;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.azureAIServices = new AzureAIServices();
-            this.SchedulerViewModel = new SchedulerViewModel();
-        }
-
-        ///<summary>
-        /// Method to get the AI response.
-        ///</summary>
-        ///<param name="query">The user query to send to the AI service.</param>
-        ///<returns>A task that represents the asynchronous operation.</returns>
-        public async Task GetAIResults(string query)
-        {
-            await Task.Delay(1000).ConfigureAwait(true);
-            var reply = await this.GetRecommendation(query);
-            AssistItem botMessage = new AssistItem() { Text = reply, ShowAssistItemFooter = false };
-            this.SchedulerViewModel.Messages.Add(botMessage);
-        }
-    }
+    await Task.Delay(1000).ConfigureAwait(true);
+    var reply = await this.GetRecommendation(query);
+    AssistItem botMessage = new AssistItem() { Text = reply, ShowAssistItemFooter = false };
+    this.Messages.Add(botMessage);
 }
-
+ 
 {% endhighlight %}
 
 {% endtabs %}
@@ -450,51 +344,30 @@ The core logic for finding available slots is inside the `GetRecommendation` met
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Scheduler;
-using Syncfusion.Maui.AIAssistView;
-using Newtonsoft.Json.Linq;
-
-namespace GettingStarted
+///<summary>
+/// Method to handle the AI response and apply updates.
+///</summary>
+///<param name="userInput">The user input</param>
+///<returns></returns>
+private async Task<string> GetRecommendation(string userInput)
 {
-    public partial class MainPage : ContentPage
-    {
-        private readonly AzureAIServices azureAIServices;
-        private readonly SchedulerViewModel SchedulerViewModel;
-        private string returnMessage = string.Empty;
+    DateTime todayDate = DateTime.Today;
+    string prompt = $"Given data: {userInput}. Based on the given data, provide 10 appointment time details for Doctor1 and Doctor2 on {todayDate}." +
+                    $"Availability time is 9AM to 6PM." +
+                    $"In 10 appointments, split the time details as 5 for Doctor1 and 5 for Doctor2." +
+                    $"Provide complete appointment time details for both Doctor1 and Doctor2 without missing any fields." +
+                    $"It should be 30 minutes appointment duration." +
+                    $"Doctor1 time details should not collide with Doctor2." +
+                    $"Provide ResourceID for Doctor1 as 1000 and for Doctor2 as 1001." +
+                    $"Do not repeat the same time. Generate the following fields: StartDate, EndDate, Subject, Location, and ResourceID." +
+                    $"The return format should be the following JSON format: Doctor1[StartDate, EndDate, Subject, Location, ResourceID], Doctor2[StartDate, EndDate, Subject, Location, ResourceID]." +
+                    $"Condition: provide details without any explanation. Don't include any special characters like ```";
 
-        public MainPage()
-        {
-            InitializeComponent();
-            this.azureAIServices = new AzureAIServices();
-            this.SchedulerViewModel = new SchedulerViewModel();
-        }
-
-        ///<summary>
-        /// Method to contain AI response and updates.
-        ///</summary>
-        ///<param name="userInput">The user input.</param>
-        ///<returns>The AI-generated recommendation string.</returns>
-        private async Task<string> GetRecommendation(string userInput)
-        {
-            DateTime todayDate = DateTime.Today;
-            string prompt = $"Given data: {userInput}. Based on the given data, provide 10 appointment time details for Doctor1 and Doctor2 on {todayDate}." +
-                            $"Availability time is 9AM to 6PM." +
-                            $"In 10 appointments, split the time details as 5 for Doctor1 and 5 for Doctor2." +
-                            $"Provide complete appointment time details for both Doctor1 and Doctor2 without missing any fields." +
-                            $"It should be 30 minutes appointment duration." +
-                            $"Doctor1 time details should not collide with Doctor2." +
-                            $"Provide ResourceID for Doctor1 as 1000 and for Doctor2 as 1001." +
-                            $"Do not repeat the same time. Generate the following fields: StartDate, EndDate, Subject, Location, and ResourceID." +
-                            $"The return format should be the following JSON format: Doctor1[StartDate, EndDate, Subject, Location, ResourceID], Doctor2[StartDate, EndDate, Subject, Location, ResourceID]." +
-                            $"Condition: provide details without any explanation. Don't include any special characters like ```";
-
-            this.returnMessage = await this.azureAIServices.GetResultsFromAI(prompt);
-            var jsonObj = JObject.Parse(this.returnMessage);
-            return this.GenerateFinalTimeSlots(userInput);
-        }
-    }
+    returnMessage = await azureAIServices.GetResultsFromAI(prompt);
+    var jsonObj = JObject.Parse(returnMessage);
+    ...
 }
-
+ 
 {% endhighlight %}
 
 {% endtabs %}
@@ -509,64 +382,44 @@ Once the AI returns JSON, it is parsed into usable Scheduler collections for bot
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Scheduler;
-using Syncfusion.Maui.AIAssistView;
-using Newtonsoft.Json.Linq;
+var jsonObj = JObject.Parse(returnMessage);
 
-namespace GettingStarted
+var doctorAppointments = new Dictionary<string, (List<DateTime> StartTimes, List<DateTime> EndTimes, List<string> Subjects, List<string> Locations, List<string> ResourceIds)>
 {
-    public partial class MainPage : ContentPage
+    { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) },
+    { "Doctor2", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) }
+};
+
+foreach (var doctor in doctorAppointments.Keys)
+{
+    foreach (var appointment in jsonObj[doctor])
     {
-        private readonly AzureAIServices azureAIServices;
-        private readonly SchedulerViewModel SchedulerViewModel;
-        private string returnMessage = string.Empty;
-
-        public MainPage()
+        if (DateTime.TryParse((string)appointment["StartDate"], out DateTime startTime) && DateTime.TryParse((string)appointment["EndDate"], out DateTime endTime))
         {
-            InitializeComponent();
-            this.azureAIServices = new AzureAIServices();
-            this.SchedulerViewModel = new SchedulerViewModel();
-            // Add csharp codes here
-            var jsonObj = JObject.Parse(this.returnMessage);
-
-            var doctorAppointments = new Dictionary<string, (List<DateTime> StartTimes, List<DateTime> EndTimes, List<string> Subjects, List<string> Locations, List<string> ResourceIds)>
-            {
-                { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) },
-                { "Doctor2", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) }
-            };
-
-            foreach (var doctor in doctorAppointments.Keys)
-            {
-                foreach (var appointment in jsonObj[doctor])
-                {
-                    if (DateTime.TryParse((string)appointment["StartDate"], out DateTime startTime) && DateTime.TryParse((string)appointment["EndDate"], out DateTime endTime))
-                    {
-                        doctorAppointments[doctor].StartTimes.Add(startTime);
-                        doctorAppointments[doctor].EndTimes.Add(endTime);
-                    }
-
-                    doctorAppointments[doctor].Subjects.Add((string)appointment["Subject"]);
-                    doctorAppointments[doctor].Locations.Add((string)appointment["Location"]);
-                    doctorAppointments[doctor].ResourceIds.Add((string)appointment["ResourceID"]);
-                }
-            }
-            this.SchedulerViewModel.SophiaStartTimeCollection = doctorAppointments["Doctor1"].StartTimes;
-            this.SchedulerViewModel.SophiaEndTimeCollection = doctorAppointments["Doctor1"].EndTimes;
-            this.SchedulerViewModel.SophiaSubjectCollection = doctorAppointments["Doctor1"].Subjects;
-            this.SchedulerViewModel.SophiaLocationCollection = doctorAppointments["Doctor1"].Locations;
-            this.SchedulerViewModel.SophiaResourceIDCollection = doctorAppointments["Doctor1"].ResourceIds;
-            this.SchedulerViewModel.JohnStartTimeCollection = doctorAppointments["Doctor2"].StartTimes;
-            this.SchedulerViewModel.JohnEndTimeCollection = doctorAppointments["Doctor2"].EndTimes;
-            this.SchedulerViewModel.JohnSubjectCollection = doctorAppointments["Doctor2"].Subjects;
-            this.SchedulerViewModel.JohnLocationCollection = doctorAppointments["Doctor2"].Locations;
-            this.SchedulerViewModel.JohnResourceIDCollection = doctorAppointments["Doctor2"].ResourceIds;
-
-            this.SchedulerViewModel.SophiaAvailableTimeSlots = this.GenerateTimeSlots(this.SchedulerViewModel.SophiaStartTimeCollection);
-            this.SchedulerViewModel.JohnAvailableTimeSlots = this.GenerateTimeSlots(this.SchedulerViewModel.JohnStartTimeCollection);
+            doctorAppointments[doctor].StartTimes.Add(startTime);
+            doctorAppointments[doctor].EndTimes.Add(endTime);
         }
+
+        doctorAppointments[doctor].Subjects.Add((string)appointment["Subject"]);
+        doctorAppointments[doctor].Locations.Add((string)appointment["Location"]);
+        doctorAppointments[doctor].ResourceIds.Add((string)appointment["ResourceID"]);
     }
 }
+this.SophiaStartTimeCollection = doctorAppointments["Doctor1"].StartTimes;
+this.SophiaEndTimeCollection = doctorAppointments["Doctor1"].EndTimes;
+this.SophiaSubjectCollection = doctorAppointments["Doctor1"].Subjects;
+this.SophiaLocationCollection = doctorAppointments["Doctor1"].Locations;
+this.SophiaResourceIDCollection = doctorAppointments["Doctor1"].ResourceIds;
+this.JohnStartTimeCollection = doctorAppointments["Doctor2"].StartTimes;
+this.JohnEndTimeCollection = doctorAppointments["Doctor2"].EndTimes;
+this.JohnSubjectCollection = doctorAppointments["Doctor2"].Subjects;
+this.JohnLocationCollection = doctorAppointments["Doctor2"].Locations;
+this.JohnResourceIDCollection = doctorAppointments["Doctor2"].ResourceIds;
 
+this.SophiaAvailableTimeSlots = GenerateTimeSlots(SophiaStartTimeCollection);
+this.JohnAvailableTimeSlots = GenerateTimeSlots(JohnStartTimeCollection);
+return GenerateFinalTimeSlots(userInput);
+ 
 {% endhighlight %}
 
 {% endtabs %}
@@ -581,48 +434,29 @@ The parsed results are then shown to the user in natural text format via AssistV
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Scheduler;
-using Syncfusion.Maui.AIAssistView;
-
-namespace GettingStarted
+///<summary>
+/// Method to generate the final time slots.
+///</summary>
+///<param name="userInput">The user input</param>
+///<returns></returns>
+private string GenerateFinalTimeSlots(string userInput)
 {
-    public partial class MainPage : ContentPage
+    string SophiaAvailedTimeSlots = string.Join(" \n ", this.SophiaAvailableTimeSlots);
+    string johnAvailedTimeSlots = string.Join(" \n ", this.JohnAvailableTimeSlots);
+    if (userInput.Contains("Sophia"))
     {
-        private readonly AzureAIServices azureAIServices;
-        private readonly SchedulerViewModel SchedulerViewModel;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.azureAIServices = new AzureAIServices();
-            this.SchedulerViewModel = new SchedulerViewModel();
-        }
-
-        ///<summary>
-        /// Method to generate the final time slots string for display in the AIAssistView.
-        ///</summary>
-        ///<param name="userInput">The user input.</param>
-        ///<returns>A formatted string listing the available appointment slots.</returns>
-        private string GenerateFinalTimeSlots(string userInput)
-        {
-            string SophiaAvailedTimeSlots = string.Join(" \n ", this.SchedulerViewModel.SophiaAvailableTimeSlots);
-            string johnAvailedTimeSlots = string.Join(" \n ", this.SchedulerViewModel.JohnAvailableTimeSlots);
-            if (userInput.Contains("Sophia"))
-            {
-                return $"Doctor Sophia available appointment slots are\n {SophiaAvailedTimeSlots} \nEnter the time (hh:mm tt) to book an appointment.";
-            }
-            else if (userInput.Contains("John"))
-            {
-                return $"Doctor John available appointment slots are\n {johnAvailedTimeSlots} \nEnter the time (hh:mm tt) to book an appointment.";
-            }
-            else
-            {
-                return $"Doctor Sophia available appointment slots are\n {SophiaAvailedTimeSlots}\nDoctor John available appointment slots are\n {johnAvailedTimeSlots}\nEnter the time (hh:mm tt) to book an appointment.";
-            }
-        }
+        return $"Doctor Sophia available appointment slots are\n {SophiaAvailedTimeSlots} \nEnter the time (hh:mm tt) to book an appointment.";
+    }
+    else if (userInput.Contains("John"))
+    {
+        return $"Doctor John available appointment slots are\n {johnAvailedTimeSlots} \nEnter the time (hh:mm tt) to book an appointment.";
+    }
+    else
+    {
+        return $"Doctor Sophia available appointment slots are\n {SophiaAvailedTimeSlots}\nDoctor John available appointment slots are\n {johnAvailedTimeSlots}\nEnter the time (hh:mm tt) to book an appointment.";
     }
 }
-
+ 
 {% endhighlight %}
 
 {% endtabs %}
@@ -637,53 +471,33 @@ The communication with Azure OpenAI is handled in the `GetResultsFromAI` method:
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Scheduler;
-using Syncfusion.Maui.AIAssistView;
-
-namespace GettingStarted
+/// <summary>
+/// Retrieves an answer from the deployment name model using the provided user prompt.
+/// </summary>
+/// <param name="userPrompt">The user prompt.</param>
+/// <returns>The AI response.</returns>
+public async Task<string> GetResultsFromAI(string userPrompt)
 {
-    public partial class MainPage : ContentPage
+    if (IsCredentialValid && Client != null)
     {
-        private readonly AzureAIServices azureAIServices;
-        private readonly SchedulerViewModel SchedulerViewModel;
-
-        public MainPage()
+        ChatHistory = string.Empty;
+        // Add the system message and user message to the options
+        ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+        ChatHistory = ChatHistory + userPrompt;
+        try
         {
-            InitializeComponent();
-            this.azureAIServices = new AzureAIServices();
-            this.SchedulerViewModel = new SchedulerViewModel();
+            var response = await Client.CompleteAsync(ChatHistory);
+            return response.ToString();
         }
-
-        /// <summary>
-        /// Retrieves an answer from the deployment name model using the provided user prompt.
-        /// </summary>
-        /// <param name="userPrompt">The user prompt to send to the AI model.</param>
-        /// <returns>The AI response as a string, or an empty string if the call fails.</returns>
-        public async Task<string> GetResultsFromAI(string userPrompt)
+        catch
         {
-            if (AzureBaseService.IsCredentialValid && this.azureAIServices.Client != null)
-            {
-                string chatHistory = string.Empty;
-                // Add the system message and user message to the options
-                chatHistory = chatHistory + "You are a predictive analytics assistant.";
-                chatHistory = chatHistory + userPrompt;
-                try
-                {
-                    var response = await this.azureAIServices.Client.CompleteAsync(chatHistory);
-                    return response.ToString();
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine($"GetResultsFromAI failed: {ex.Message}");
-                    return string.Empty;
-                }
-            }
-
             return string.Empty;
         }
     }
-}
 
+    return string.Empty;
+}
+ 
 {% endhighlight %}
 
 {% endtabs %}
@@ -698,92 +512,71 @@ Once the user selects or confirms a suggested slot, the AI finalizes the appoint
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Scheduler;
-using Syncfusion.Maui.AIAssistView;
-using System.Text.RegularExpressions;
-
-namespace GettingStarted
+private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 {
-    public partial class MainPage : ContentPage
-    {
-        private readonly AzureAIServices azureAIServices;
-        private readonly SchedulerViewModel SchedulerViewModel;
-        private SfScheduler? Scheduler;
+    string requestString = e.RequestItem.Text;
+    DateTime SophiaStartTime;
+    DateTime SophiaEndTime;
+    string SophiaSubject = string.Empty;
+    string SophiaLocation = string.Empty;
+    string SophiaResourceID = string.Empty;
+    DateTime johnStartTime;
+    DateTime johnEndTime;
+    string johnSubject = string.Empty;
+    string johnLocation = string.Empty;
+    string johnResourceID = string.Empty;
 
-        public MainPage()
+    if (azureAIServices.Client != null)
+    {
+        if (string.IsNullOrEmpty(e.RequestItem.Text))
         {
-            InitializeComponent();
-            this.azureAIServices = new AzureAIServices();
-            this.SchedulerViewModel = new SchedulerViewModel();
+            return;
         }
 
-        private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
+        string pattern = @"\b\d{2}:\d{2} (AM|PM)\b";
+        bool isValidPattern = Regex.IsMatch(requestString, pattern);
+
+        if (!isValidPattern)
         {
-            string requestString = e.RequestItem.Text;
-            DateTime SophiaStartTime;
-            DateTime SophiaEndTime;
-            string SophiaSubject = string.Empty;
-            string SophiaLocation = string.Empty;
-            string SophiaResourceID = string.Empty;
-            DateTime johnStartTime;
-            DateTime johnEndTime;
-            string johnSubject = string.Empty;
-            string johnLocation = string.Empty;
-            string johnResourceID = string.Empty;
-
-            if (this.azureAIServices.Client != null)
+            await this.SchedulerViewModel.GetAIResults(e.RequestItem.Text).ConfigureAwait(true);
+        }
+        else
+        {
+            for (int i = 0; i < this.SchedulerViewModel.SophiaAvailableTimeSlots?.Count; i++)
             {
-                if (string.IsNullOrEmpty(e.RequestItem.Text))
+                if (requestString == this.SchedulerViewModel.SophiaAvailableTimeSlots[i].ToString())
                 {
-                    return;
+                    SophiaStartTime = this.SchedulerViewModel.SophiaStartTimeCollection[i];
+                    SophiaEndTime = this.SchedulerViewModel.SophiaEndTimeCollection[i];
+                    SophiaSubject = this.SchedulerViewModel.SophiaSubjectCollection[i];
+                    SophiaLocation = this.SchedulerViewModel.SophiaLocationCollection[i];
+                    SophiaResourceID = this.SchedulerViewModel.SophiaResourceIDCollection[i];
+                    this.AppointmentBooking(SophiaStartTime, SophiaEndTime, SophiaSubject, SophiaLocation, SophiaResourceID);
+                    await Task.Delay(1000);
+                    AssistItem botMessage = new AssistItem() { Text = "Doctor Sophia appointment successfully booked.\nThank you!", ShowAssistItemFooter = false };
+                    this.SchedulerViewModel.Messages.Add(botMessage);
                 }
+            }
 
-                string pattern = @"\b\d{2}:\d{2} (AM|PM)\b";
-                bool isValidPattern = Regex.IsMatch(requestString, pattern);
-
-                if (!isValidPattern)
+            for (int j = 0; j < this.SchedulerViewModel.JohnAvailableTimeSlots?.Count; j++)
+            {
+                if (requestString == this.SchedulerViewModel.JohnAvailableTimeSlots[j].ToString())
                 {
-                    await this.SchedulerViewModel.GetAIResults(e.RequestItem.Text).ConfigureAwait(true);
-                }
-                else
-                {
-                    for (int i = 0; i < this.SchedulerViewModel.SophiaAvailableTimeSlots?.Count; i++)
-                    {
-                        if (requestString == this.SchedulerViewModel.SophiaAvailableTimeSlots[i].ToString())
-                        {
-                            SophiaStartTime = this.SchedulerViewModel.SophiaStartTimeCollection[i];
-                            SophiaEndTime = this.SchedulerViewModel.SophiaEndTimeCollection[i];
-                            SophiaSubject = this.SchedulerViewModel.SophiaSubjectCollection[i];
-                            SophiaLocation = this.SchedulerViewModel.SophiaLocationCollection[i];
-                            SophiaResourceID = this.SchedulerViewModel.SophiaResourceIDCollection[i];
-                            this.AppointmentBooking(SophiaStartTime, SophiaEndTime, SophiaSubject, SophiaLocation, SophiaResourceID);
-                            await Task.Delay(1000);
-                            AssistItem botMessage = new AssistItem() { Text = "Doctor Sophia appointment successfully booked.\nThank you!", ShowAssistItemFooter = false };
-                            this.SchedulerViewModel.Messages.Add(botMessage);
-                        }
-                    }
-
-                    for (int j = 0; j < this.SchedulerViewModel.JohnAvailableTimeSlots?.Count; j++)
-                    {
-                        if (requestString == this.SchedulerViewModel.JohnAvailableTimeSlots[j].ToString())
-                        {
-                            johnStartTime = this.SchedulerViewModel.JohnStartTimeCollection[j];
-                            johnEndTime = this.SchedulerViewModel.JohnEndTimeCollection[j];
-                            johnSubject = this.SchedulerViewModel.JohnSubjectCollection[j];
-                            johnLocation = this.SchedulerViewModel.JohnLocationCollection[j];
-                            johnResourceID = this.SchedulerViewModel.JohnResourceIDCollection[j];
-                            this.AppointmentBooking(johnStartTime, johnEndTime, johnSubject, johnLocation, johnResourceID);
-                            await Task.Delay(1000);
-                            AssistItem botMessage = new AssistItem() { Text = "Doctor John appointment successfully booked.\nThank you!", ShowAssistItemFooter = false };
-                            this.SchedulerViewModel.Messages.Add(botMessage);
-                        }
-                    }
+                    johnStartTime = this.SchedulerViewModel.JohnStartTimeCollection[j];
+                    johnEndTime = this.SchedulerViewModel.JohnEndTimeCollection[j];
+                    johnSubject = this.SchedulerViewModel.JohnSubjectCollection[j];
+                    johnLocation = this.SchedulerViewModel.JohnLocationCollection[j];
+                    johnResourceID = this.SchedulerViewModel.JohnResourceIDCollection[j];
+                    this.AppointmentBooking(johnStartTime, johnEndTime, johnSubject, johnLocation, johnResourceID);
+                    await Task.Delay(1000);
+                    AssistItem botMessage = new AssistItem() { Text = "Doctor John appointment successfully booked.\nThank you!", ShowAssistItemFooter = false };
+                    this.SchedulerViewModel.Messages.Add(botMessage);
                 }
             }
         }
     }
 }
-
+ 
 {% endhighlight %}
 
 {% endtabs %}
@@ -792,51 +585,30 @@ namespace GettingStarted
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Scheduler;
-using Syncfusion.Maui.AIAssistView;
-using System.Collections.ObjectModel;
+ /// <summary>
+ /// Method to book the online appointments.
+ /// </summary>
+ /// <param name="startTime">The start time</param>
+ /// <param name="endTime">The end time</param>
+ /// <param name="subject">The subject</param>
+ /// <param name="location">The location</param>
+ /// <param name="resourceID">The resource id</param>
+ private void AppointmentBooking(DateTime startTime, DateTime endTime, string subject, string location, string resourceID)
+ {
+     this.Scheduler!.DisplayDate = startTime;
+     this.SchedulerViewModel?.Appointments?.Add(new SchedulerAppointment()
+     {
+         StartTime = startTime,
+         EndTime = endTime,
+         Subject = subject,
+         Location = location,
+         ResourceIds = new ObservableCollection<object>() { resourceID },
+         Background = resourceID == "1000" ? new SolidColorBrush(Color.FromArgb("#36B37B")) : new SolidColorBrush(Color.FromArgb("#8B1FA9")),
+     });
 
-namespace GettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        private readonly AzureAIServices azureAIServices;
-        private readonly SchedulerViewModel SchedulerViewModel;
-        private SfScheduler? Scheduler;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            this.azureAIServices = new AzureAIServices();
-            this.SchedulerViewModel = new SchedulerViewModel();
-        }
-
-        /// <summary>
-        /// Method to book the online appointments.
-        /// </summary>
-        /// <param name="startTime">The start time of the appointment.</param>
-        /// <param name="endTime">The end time of the appointment.</param>
-        /// <param name="subject">The subject of the appointment.</param>
-        /// <param name="location">The location of the appointment.</param>
-        /// <param name="resourceID">The resource id (e.g., "1000" for Doctor1, "1001" for Doctor2).</param>
-        private void AppointmentBooking(DateTime startTime, DateTime endTime, string subject, string location, string resourceID)
-        {
-            this.Scheduler!.DisplayDate = startTime;
-            this.SchedulerViewModel.Appointments?.Add(new SchedulerAppointment()
-            {
-                StartTime = startTime,
-                EndTime = endTime,
-                Subject = subject,
-                Location = location,
-                ResourceIds = new ObservableCollection<object>() { resourceID },
-                Background = resourceID == "1000" ? new SolidColorBrush(Color.FromArgb("#36B37B")) : new SolidColorBrush(Color.FromArgb("#8B1FA9")),
-            });
-
-            (this.Scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>)?.AddRange(this.SchedulerViewModel.Appointments!);
-        }
-    }
-}
-
+     (this.Scheduler!.AppointmentsSource as ObservableCollection<SchedulerAppointment>)?.AddRange(this.SchedulerViewModel?.Appointments!);
+ }
+ 
 {% endhighlight %}
 
 {% endtabs %}

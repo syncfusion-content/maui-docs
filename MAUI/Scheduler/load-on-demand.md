@@ -35,85 +35,102 @@ This [QueryAppointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Week"
-                        QueryAppointments="OnSchedulerQueryAppointments">
- </scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week"
+                           QueryAppointments="OnSchedulerQueryAppointments">
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.QueryAppointments += OnSchedulerQueryAppointments;
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
-private async void OnSchedulerQueryAppointments(object sender, SchedulerQueryAppointmentsEventArgs e)
+. . .
+public partial class MainPage : ContentPage
 {
-    this.Scheduler.ShowBusyIndicator = true;
-    await Task.Delay(1500);
-    var appCollection = this.GenerateSchedulerAppointments(e.VisibleDates);
-    if (this.Scheduler.View != SchedulerView.Agenda)
+    public MainPage()
     {
-        this.Scheduler.AppointmentsSource = appCollection;
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Week;
+        this.Scheduler.QueryAppointments += OnSchedulerQueryAppointments;
     }
-    else
+
+    private async void OnSchedulerQueryAppointments(object sender, SchedulerQueryAppointmentsEventArgs e)
     {
-        foreach (var app in appCollection)
+        this.Scheduler.ShowBusyIndicator = true;
+        await Task.Delay(1500);
+        var appCollection = this.GenerateSchedulerAppointments(e.VisibleDates);
+        if (this.Scheduler.View != SchedulerView.Agenda)
         {
-            ((ObservableCollection<SchedulerAppointment>)this.Scheduler.AppointmentsSource).Add(app);
+            this.Scheduler.AppointmentsSource = appCollection;
         }
-    }
-    this.Scheduler.ShowBusyIndicator = false;
-}
-
-private ObservableCollection<SchedulerAppointment> GenerateSchedulerAppointments(List<DateTime> visibleDates)
-{
-    var brush = new ObservableCollection<Brush>
-    {
-        new SolidColorBrush(Color.FromArgb("#FF8B1FA9")),
-        new SolidColorBrush(Color.FromArgb("#FFD20100")),
-        new SolidColorBrush(Color.FromArgb("#FFFC571D")),
-        new SolidColorBrush(Color.FromArgb("#FF36B37B")),
-        new SolidColorBrush(Color.FromArgb("#FF3D4FB5")),
-        new SolidColorBrush(Color.FromArgb("#FFE47C73")),
-        new SolidColorBrush(Color.FromArgb("#FF636363")),
-        new SolidColorBrush(Color.FromArgb("#FF85461E")),
-        new SolidColorBrush(Color.FromArgb("#FF0F8644")),
-        new SolidColorBrush(Color.FromArgb("#FF01A1EF"))
-    };
-
-    var subjectCollection = new ObservableCollection<string>
-    {
-        "Business Meeting",
-        "Conference",
-        "Medical check up",
-        "Performance Check",
-        "Consulting",
-        "Project Status Discussion",
-        "Client Meeting",
-        "General Meeting",
-        "Yoga Therapy",
-        "GoToMeeting",
-        "Plan Execution",
-        "Project Plan"
-    };
-
-    Random ran = new();
-    int daysCount = visibleDates.Count;
-    DateTime visibleStartDate = visibleDates.FirstOrDefault();
-    var appointments = new ObservableCollection<SchedulerAppointment>();
-    for (int i = 0; i < 25; i++)
-    {
-        var startTime = visibleStartDate.AddDays(ran.Next(0, daysCount + 1)).AddHours(ran.Next(9, 16));
-        appointments.Add(new SchedulerAppointment()
+        else
         {
-            StartTime = startTime,
-            EndTime = startTime.AddHours(1),
-            Subject = subjectCollection[ran.Next(0, subjectCollection.Count)],
-            Background = brush[ran.Next(0, brush.Count)]
-        });
+            foreach (var app in appCollection)
+            {
+                ((ObservableCollection<SchedulerAppointment>)this.Scheduler.AppointmentsSource).Add(app);
+            }
+        }
+        this.Scheduler.ShowBusyIndicator = false;
     }
 
-    return appointments;
+    private ObservableCollection<SchedulerAppointment> GenerateSchedulerAppointments(List<DateTime> visibleDates)
+    {
+        var brush = new ObservableCollection<Brush>
+        {
+            new SolidColorBrush(Color.FromArgb("#FF8B1FA9")),
+            new SolidColorBrush(Color.FromArgb("#FFD20100")),
+            new SolidColorBrush(Color.FromArgb("#FFFC571D")),
+            new SolidColorBrush(Color.FromArgb("#FF36B37B")),
+            new SolidColorBrush(Color.FromArgb("#FF3D4FB5")),
+            new SolidColorBrush(Color.FromArgb("#FFE47C73")),
+            new SolidColorBrush(Color.FromArgb("#FF636363")),
+            new SolidColorBrush(Color.FromArgb("#FF85461E")),
+            new SolidColorBrush(Color.FromArgb("#FF0F8644")),
+            new SolidColorBrush(Color.FromArgb("#FF01A1EF"))
+        };
+
+        var subjectCollection = new ObservableCollection<string>
+        {
+            "Business Meeting",
+            "Conference",
+            "Medical check up",
+            "Performance Check",
+            "Consulting",
+            "Project Status Discussion",
+            "Client Meeting",
+            "General Meeting",
+            "Yoga Therapy",
+            "GoToMeeting",
+            "Plan Execution",
+            "Project Plan"
+        };
+
+        Random ran = new();
+        int daysCount = visibleDates.Count;
+        DateTime visibleStartDate = visibleDates.FirstOrDefault();
+        var appointments = new ObservableCollection<SchedulerAppointment>();
+        for (int i = 0; i < 25; i++)
+        {
+            var startTime = visibleStartDate.AddDays(ran.Next(0, daysCount + 1)).AddHours(ran.Next(9, 16));
+            appointments.Add(new SchedulerAppointment()
+            {
+                StartTime = startTime,
+                EndTime = startTime.AddHours(1),
+                Subject = subjectCollection[ran.Next(0, subjectCollection.Count)],
+                Background = brush[ran.Next(0, brush.Count)]
+            });
+        }
+
+        return appointments;
+    }
 }
 
 {% endhighlight %}
@@ -136,19 +153,30 @@ The [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sche
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 7" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Week"
-                        AppointmentsSource="{Binding Events}"
-                        ShowBusyIndicator="{Binding ShowBusyIndicator}"
-                        QueryAppointmentsCommand="{Binding QueryAppointmentsCommand}">
-    <scheduler:SfScheduler.BindingContext>
-        <local:LoadOnDemandViewModel/>
-    </scheduler:SfScheduler.BindingContext>
- </scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week"
+                           AppointmentsSource="{Binding Events}"
+                           ShowBusyIndicator="{Binding ShowBusyIndicator}"
+                           QueryAppointmentsCommand="{Binding QueryAppointmentsCommand}">
+        <scheduler:SfScheduler.BindingContext>
+            <local:LoadOnDemandViewModel/>
+        </scheduler:SfScheduler.BindingContext>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="LoadOnDemandViewModel.cs" %}
 
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Input;
+
+. . .
 public class LoadOnDemandViewModel : INotifyPropertyChanged
 {
     private bool showBusyIndicator;
@@ -268,18 +296,33 @@ The `Scheduler` supports to show the busy indicator view by using the [ShowBusyI
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Week"
-                        ShowBusyIndicator="True">
- </scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week"
+                           ShowBusyIndicator="True">
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="3" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.ShowBusyIndicator = true;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        scheduler.ShowBusyIndicator = true;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -295,17 +338,22 @@ You can customize the busy indicator appearance by using the [BusyIndicatorTempl
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7 8 9 10" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Week"
-                        ShowBusyIndicator="True">
-    <scheduler:SfScheduler.BusyIndicatorTemplate>
-        <DataTemplate>
-            <Grid Background="LightGray" Opacity="0.2">
-                <Label Text="Loading..." HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
-            </Grid>
-        </DataTemplate>
-    </scheduler:SfScheduler.BusyIndicatorTemplate>
- </scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week"
+                           ShowBusyIndicator="True">
+        <scheduler:SfScheduler.BusyIndicatorTemplate>
+            <DataTemplate>
+                <Grid Background="LightGray" Opacity="0.2">
+                    <Label Text="Loading..." HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
+                </Grid>
+            </DataTemplate>
+        </scheduler:SfScheduler.BusyIndicatorTemplate>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}

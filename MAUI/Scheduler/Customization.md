@@ -17,14 +17,29 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="scheduler" View="Month"/>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" View="Month"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Month;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Month;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -40,17 +55,32 @@ The following code shows the Scheduler with `Tuesday` as the first day of the we
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="scheduler" FirstDayOfWeek="Tuesday"/>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" FirstDayOfWeek="Tuesday"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
-{% endtabs %}  
+{% endtabs %}
 
 ![change-first-day-of-week-in-maui-scheduler](images/getting-started/change-first-day-of-week-in-maui-scheduler.png)
 
@@ -62,17 +92,32 @@ The today highlight brush of the Scheduler can be customized by using the [Today
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="scheduler" TodayHighlightBrush="Orange"/>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" TodayHighlightBrush="Orange"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.TodayHighlightBrush = Brush.Orange;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.TodayHighlightBrush = Brush.Orange;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
-{% endtabs %} 
+{% endtabs %}
 
 ![change-today-highlight-brush-in-maui-scheduler](images/getting-started/change-today-highlight-brush-in-maui-scheduler.png)
 
@@ -83,17 +128,32 @@ The vertical and horizontal line color of the Scheduler can be customized by usi
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="scheduler" CellBorderBrush="Orange"/>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" CellBorderBrush="Orange"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.CellBorderBrush = Brush.Orange;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.CellBorderBrush = Brush.Orange;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
-{% endtabs %} 
+{% endtabs %}
 
 ![change-cell-border-brush-in-maui-scheduler](images/getting-started/change-cell-border-brush-in-maui-scheduler.png)
 
@@ -104,14 +164,29 @@ The Scheduler background color can be customized by using the `BackgroundColor` 
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="scheduler" BackgroundColor="LightBlue"/>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" BackgroundColor="LightBlue"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.BackgroundColor = Colors.LightBlue;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.BackgroundColor = Colors.LightBlue;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -123,14 +198,29 @@ By using the [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusi
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="scheduler" ShowNavigationArrows="False"/>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" ShowNavigationArrows="False"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.ShowNavigationArrows = false;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.ShowNavigationArrows = false;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -144,14 +234,29 @@ Display the week number of the year in all Scheduler views of the [SfScheduler](
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="scheduler" ShowWeekNumber="True"/>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" ShowWeekNumber="True"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.ShowWeekNumber = true;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.ShowWeekNumber = true;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}  
 {% endtabs %}
@@ -167,28 +272,43 @@ The Week number text style of the Scheduler can be customized by using the [Week
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="scheduler" ShowWeekNumber="True"/>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" ShowWeekNumber="True"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 14" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.ShowWeekNumber = true;
+using Syncfusion.Maui.Scheduler;
 
-var schedulerTextStyle = new SchedulerTextStyle()
+. . .
+public partial class MainPage : ContentPage
 {
-    TextColor = Colors.Red,
-    FontSize = 14
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.ShowWeekNumber = true;
 
-var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
-{
-    Background = Brush.LightGreen,
-    TextStyle = schedulerTextStyle
-};
+        var schedulerTextStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.Red,
+            FontSize = 14
+        };
 
-scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
-this.Content = scheduler;
+        var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
+        {
+            Background = Brush.LightGreen,
+            TextStyle = schedulerTextStyle
+        };
+
+        scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
