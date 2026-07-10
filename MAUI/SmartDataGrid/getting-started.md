@@ -10,7 +10,7 @@ keywords: maui smart datagrid getting started, ai datagrid maui, .net maui smart
 
 # Getting Started with .NET MAUI Smart DataGrid
 
-This section provides a quick overview for working with the `SfSmartDataGrid` for .NET MAUI. Follow the steps below to add a basic Smart DataGrid to your projectf and configure AI-powered features.
+This section provides a quick overview for working with the `SfSmartDataGrid` for .NET MAUI. Follow the steps below to add a basic Smart DataGrid to your project and configure AI-powered features.
 
 > **Note:** The Smart DataGrid is distributed as part of the `Syncfusion.Maui.SmartDataGrid` package and supports AI-assisted interactions such as intelligent sorting, filtering, grouping, and highlighting. Ensure your application has the required AI service configuration to enable these features.
 
