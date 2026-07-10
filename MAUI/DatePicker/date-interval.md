@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Interval in .NET MAUI Date Picker Control | Syncfusion
+title: Date Interval in .NET MAUI Date Picker Control | Syncfusion®
 description: Learn about date interval in Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -23,7 +23,9 @@ Date Picker provides an option to give an interval between days using the [DayIn
 
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
-<ContentPage xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <picker:SfDatePicker x:Name="datePicker"
                          DayInterval="2"/>
 </ContentPage>
@@ -32,6 +34,9 @@ Date Picker provides an option to give an interval between days using the [DayIn
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     DayInterval = 2
@@ -53,13 +58,20 @@ Date Picker provides an option to give an interval between months using the [Mon
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="datePicker"
-                     MonthInterval="2"/>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="datePicker"
+                         MonthInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     MonthInterval = 2
@@ -81,13 +93,20 @@ Date Picker provides an option to give an interval between years using the [Year
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="datePicker"
-                     YearInterval="2"/>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="datePicker"
+                         YearInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     YearInterval = 2
