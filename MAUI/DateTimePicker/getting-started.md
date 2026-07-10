@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with the .NET MAUI DateTimePicker
-This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Time Picker. Follow the steps below to add a .NET MAUI Date time picker to your project.
+This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Time Picker. Follow the steps below to add a .NET MAUI Date Time Picker to your project.
 
 To get start quickly with our .NET MAUI Date Time Picker, you can check the below video.
 
@@ -120,22 +120,37 @@ using Syncfusion.Maui.Picker;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the DateTimepicker component
+## Step 5: Add the Date Time Picker component
 
-Create an instance of DateTimepicker control.
+Create an instance of the Date Time Picker control inside a `ContentPage` so it renders on screen.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
-    <picker:SfDateTimePicker />
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker" />
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-SfDateTimePicker picker = new SfDateTimePicker();
+
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        this.Content = picker;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code.
+The following image illustrates the result of the above code.
 
-![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
+![Add Date Time Picker component in .NET MAUI.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
 
 You can download the DateTimePicker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-datetimepicker-sample)
 
