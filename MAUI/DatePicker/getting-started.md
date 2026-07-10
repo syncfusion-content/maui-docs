@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Date Picker control | Syncfusion
-description: Learn how to create a .NET MAUI Date Picker (SfDatePicker) in a new or existing .NET MAUI application and add it to a page.
+description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to add the [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) control. It covers only the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Date Picker. Follow the steps below to add a .NET MAUI Date Picker control to your project.
 
-The following video demonstrates the steps described in this article.
+To get start quickly with our .NET MAUI Date Picker, you can check the below video.
 
 {% youtube "youtube:https://youtu.be/PeQf-5pPCWo?si=KlwcdMcLN634G_AA" %}
 
@@ -24,7 +24,6 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 v17.12 or later.
-3. A valid Syncfusion<sup>&reg;</sup> license. See [Register the Syncfusion license key](https://help.syncfusion.com/maui/licensing/overview) for details.
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -35,7 +34,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Picker NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest stable version (a minimum of 30.x.x is required for the APIs shown in this documentation).
+2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly and the project is restored.
 
 {% endtabcontent %}
@@ -48,7 +47,6 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
-4. A valid Syncfusion<sup>&reg;</sup> license. See [Register the Syncfusion license key](https://help.syncfusion.com/maui/licensing/overview) for details.
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -74,7 +72,6 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
 3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
-4. A valid Syncfusion<sup>&reg;</sup> license. See [Register the Syncfusion license key](https://help.syncfusion.com/maui/licensing/overview) for details.
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -85,15 +82,15 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Picker NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest stable version (a minimum of 30.x.x is required for the APIs shown in this documentation).
+2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly and the project is restored. If not, open the Terminal in Rider and manually run `dotnet restore`.
 
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register the Syncfusion<sup>&reg;</sup> handler
-
-Add the following `using` directive to the `MauiProgram.cs` file.
+## Step 3: Register Syncfusion handler
+ 
+Make sure to add the namespace.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -145,6 +142,6 @@ this.Content = picker;
 
 The following screenshot illustrates the result of the above code.
 
-![Getting started with .NET MAUI Date Picker.](images/getting-started/maui-date-picker-set-height-and-width.png)
+![Set Height and width in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-height-and-width.png)
 
 You can download the Date Picker Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-datepicker-sample).

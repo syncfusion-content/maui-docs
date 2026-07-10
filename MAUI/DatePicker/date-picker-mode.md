@@ -9,25 +9,11 @@ documentation: ug
 
 # Date Picker mode in .NET MAUI Date Picker (SfDatePicker)
 
-The `Mode` property specifies how the date picker is displayed. It supports the following values of the [`PickerMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html) enum. The default value is `Default`.
-
-| Mode | Description | Default value |
-|------|-------------|---------------|
-| `Default` | Embeds the picker directly in the page layout. | Yes |
-| `Dialog` | Displays the picker in a pop-up. | No |
-| `RelativeDialog` | Displays the picker in a pop-up aligned to a target view. Supported on iOS, Android, and Windows. | No |
-
-## Default mode
-
-In the default mode, the date picker is embedded directly in the page layout and is always visible. No additional configuration is required.
-
-```xaml
-<picker:SfDatePicker x:Name="datePicker" />
-```
+The date picker mode is specified in the picker property enumeration, which is used to display the date picker based on the modes. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 ## Dialog mode
 
-Displays the date picker in a pop-up. Set the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`Dialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_Dialog).
+The dialog mode is used to display the date picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`Dialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_Dialog) in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
@@ -57,7 +43,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-Open the dialog programmatically by setting the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true`. The default value is `false`.
+Open the dialog programmatically by setting the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The default value is `false`.
 
 N> The `IsOpen` property is automatically reset to `false` when you close the dialog by clicking outside of it.
 
@@ -98,24 +84,14 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ## Relative dialog mode
 
-Displays the date picker in a pop-up aligned to a target view. Set the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog) and use the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property to choose the alignment.
-
-N> `RelativeDialog` mode is supported on iOS, Android, and Windows.
+The relative dialog mode displays the date picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 ### Relative position
 
-The [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property aligns the picker relative to the target view. The default value is `AlignTop`. The following table lists the supported values.
+The [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight positions such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
-| Value | Description |
-|-------|-------------|
-| `AlignTop` | Places the picker above the target view. |
-| `AlignTopLeft` | Places the picker above and to the left of the target view. |
-| `AlignTopRight` | Places the picker above and to the right of the target view. |
-| `AlignBottom` | Places the picker below the target view. |
-| `AlignBottomLeft` | Places the picker below and to the left of the target view. |
-| `AlignBottomRight` | Places the picker below and to the right of the target view. |
-| `AlignToLeftOf` | Places the picker to the left of the target view. |
-| `AlignToRightOf` | Places the picker to the right of the target view. |
+
+The Date Picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). By default, the `IsOpen` property is `false`.
 
 N> The `IsOpen` property is automatically reset to `false` when you close the dialog by clicking outside of it.
 
@@ -155,9 +131,10 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### Relative view
 
-The [RelativeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativeView) property specifies the view that the picker is positioned relative to. The default value is `null`, in which case the picker base is used as the default relative view.
+The [RelativeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativeView) is specified in the picker's property enumeration and is used to display the picker dialog relative to a view by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
-N> `RelativeView` is only applicable in `RelativeDialog` mode.
+
+N> It is only applicable in `RelativeDialog` mode. If `no relative view` is specified, the picker base will be set as the `default` relative view.
 
 {% tabs %}
 
@@ -201,7 +178,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### Custom popup size
 
-Render the pop-up at a custom size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties. Both properties are of type `double` (in device-independent units) and apply to both `Dialog` and `RelativeDialog` modes.
+SfDatePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties.
 
 {% tabs %}
 
@@ -226,10 +203,3 @@ this.datePicker.PopupHeight = 400;
 {% endhighlight %}
 
 {% endtabs %}
-
-## See also
-
-- [Selection in .NET MAUI Date Picker](selection.md)
-- [Formatting in .NET MAUI Date Picker](formatting.md)
-- [Events in .NET MAUI Date Picker](events.md)
-- [Customizations in .NET MAUI Date Picker](customizations.md)

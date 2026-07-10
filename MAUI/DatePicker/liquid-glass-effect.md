@@ -9,36 +9,7 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI Date Picker (SfDatePicker)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Date Picker (SfDatePicker) control.
-
-## Prerequisites
-
-Before applying the Liquid Glass Effect, ensure the following NuGet packages are installed in your .NET MAUI project:
-
-* [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker)
-* [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) (version `26.1.42` or higher, which contains the `SfGlassEffectView` class)
-
-Register the Syncfusion handlers in `MauiProgram.cs`:
-
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" %}
-
-using Syncfusion.Maui.Core.Hosting;
-
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore();
-        return builder.Build();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Date Picker (SfDatePicker) control.
 
 ## Apply liquid glass effect
 
@@ -46,10 +17,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Date P
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [Date Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class. Configure the glass effect using these key properties:
-
-* `EffectType`: Specifies the glass effect style. Available values are `Regular` (standard glass appearance) and other styles defined by the `LiquidGlassEffectType` enum.
-* `CornerRadius`: Sets the corner radius of the glass effect view, allowing you to control the shape of the glass surface.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [Date Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
 For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
@@ -59,7 +27,7 @@ Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion
 
 ### Step 3: Customize the background
 
-To achieve a glass-like background in the Date Picker, set the `Background` property to `Transparent`. The background will then be applied as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass like background in the Date Picker, set the `Background` property to `Transparent`. The background will then be applied as a tinted color, ensuring a consistent glass effect across the controls.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) control:
 
@@ -162,9 +130,3 @@ this.Content = mainGrid;
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
-
-## Troubleshooting
-
-* **Effect not visible at runtime:** Confirm the target platform is `iOS 26+` or `macOS 26+`, the target framework is `net10.0`, and the Syncfusion.Maui.Core package version is `26.1.42` or higher.
-* **Compile error: `SfGlassEffectView` not found:** Ensure the `Syncfusion.Maui.Core` NuGet package is installed and the Syncfusion handlers are registered with `.ConfigureSyncfusionCore()` in `MauiProgram.cs`.
-* **Glass effect appears solid (not translucent):** Make sure the parent layout has a non-solid background (gradient or image) and that the `Background` of the `SfDatePicker` and its column header view are set to `Transparent`.

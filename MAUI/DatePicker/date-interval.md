@@ -17,7 +17,7 @@ The `SfDatePicker` provides three intervals in [.NET MAUI Date Picker](https://w
 
 ## Day interval
 
-Date Picker provides an option to set an interval between days using the [DayInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_DayInterval) property. The default value is `1`; the value must be a positive integer.
+Date Picker provides an option to give an interval between days using the [DayInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_DayInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
@@ -44,8 +44,6 @@ this.Content = datePicker;
 {% endtabs %}
 
 ![Day interval in .NET MAUI Date picker.](images/intervals/maui-date-picker-day-interval.png)
-
-> **See also**: [Month interval](#month-interval) · [Year interval](#year-interval)
 
 ## Month interval
 

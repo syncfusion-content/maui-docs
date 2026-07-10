@@ -11,7 +11,7 @@ documentation: ug
 
 The [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) header, column header, footer, and selection views can be customized.
 
-N> Before proceeding, ensure the required Syncfusion MAUI package is installed and the namespace is registered. See the [Getting Started](getting-started.md) documentation for prerequisites and setup.
+N> Before proceeding, ensure the required Syncfusion MAUI package is installed and the namespace is registered. See the [Getting Started](https://help.syncfusion.com/maui/datepicker/getting-started) documentation for prerequisites and setup.
 
 ## Header Customization
 
@@ -152,8 +152,6 @@ N> If a template is applied to the header in the [PickerHeaderView](https://help
 ### Custom Header appearance using DataTemplateSelector
 
 You can customize the date picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
-
-N> The `HeaderTemplateSelector` C# class shown below should be added to a code file in your project (for example, a `Selectors/HeaderTemplateSelector.cs` file). Ensure the `xmlns:local` namespace is declared in the parent XAML to point to that namespace (for example, `xmlns:local="clr-namespace:MyApp.Selectors"`).
 
 {% tabs %}
 
@@ -354,8 +352,6 @@ N> If a template is applied to the column header in the [DatePickerColumnHeaderV
 
 You can customize the date picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker column header. This lets you apply a custom data template to the column header and customize its appearance based on specific conditions.
 
-N> The `ColumnHeaderTemplateSelector` C# class shown below should be added to a code file in your project (for example, a `Selectors/ColumnHeaderTemplateSelector.cs` file). Ensure the `xmlns:local` namespace is declared in the parent XAML to point to that namespace (for example, `xmlns:local="clr-namespace:MyApp.Selectors"`).
-
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
@@ -425,7 +421,7 @@ Customize the date picker footer view by using the FooterView property of the Sf
 
 ### Set the footer with OK and Cancel button customizations
 
-In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date. The OK button visibility can be controlled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). Similarly, the Cancel button visibility can be controlled using the [ShowCancelButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowCancelButton) property.
+In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date. The OK button visibility can be controlled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
 The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel". To enable the footer view, set the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html) to a value greater than 0. The default value of the Height property is 0.
 
 {% tabs %}
@@ -567,8 +563,6 @@ N> If a template is applied to the footer in the [PickerFooterView](https://help
 ### Custom Footer appearance using DataTemplateSelector
 
 You can customize the date picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
-
-N> The `FooterTemplateSelector` C# class shown below should be added to a code file in your project (for example, a `Selectors/FooterTemplateSelector.cs` file). Ensure the `xmlns:local` namespace is declared in the parent XAML to point to that namespace (for example, `xmlns:local="clr-namespace:MyApp.Selectors"`).
 
 {% tabs %}
 
@@ -730,8 +724,6 @@ this.Content = datePicker;
 ### Show Close Button
 
 You can enable or disable the CloseButton in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
-
-N> The close button is only displayed when the picker is opened in [Dialog mode](date-picker-mode.md). In the example below, the `Mode="Dialog"` property and the `IsOpen` property are used to open the picker from the host page. See [Date picker mode](date-picker-mode.md) for more information.
 
 {% tabs %}
 
@@ -919,7 +911,7 @@ this.Content = datePicker;
 
 ### Customization of the day column width
 
-Customize the day column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property. This property controls the width of the day column. The default value of the `DayColumnWidth` property is `-1`, which means the column is sized to fit its content.
+Customize the day column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property. This property controls the width of the day column.
 
 {% tabs %}
 
@@ -942,7 +934,7 @@ this.Content = datePicker;
 
 ### Customization of the month column width
 
-Customize the month column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnWidth) property. This property controls the width of the month column. The default value of the `MonthColumnWidth` property is `-1`, which means the column is sized to fit its content.
+Customize the month column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnWidth) property. This property controls the width of the month column.
 
 {% tabs %}
 
@@ -965,7 +957,7 @@ this.Content = datePicker;
 
 ### Customization of the year column width
 
-Customize the year column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property. This property controls the width of the year column. The default value of the `YearColumnWidth` property is `-1`, which means the column is sized to fit its content.
+Customize the year column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property. This property controls the width of the year column.
 
 {% tabs %}
 

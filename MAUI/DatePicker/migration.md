@@ -11,16 +11,6 @@ documentation: ug
 
 To make the migration from the [Xamarin SfDatePicker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datepicker) to [.NET MAUI SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker) easier, most of the APIs from the Xamarin SfDatePicker are kept in the .NET MAUI SfDatePicker. However, to maintain the consistency of API naming in the .NET MAUI SfDatePicker, some of the APIs have been renamed. Please find the difference in the following topics.
 
-## Prerequisites
-
-Before migrating, ensure the following are in place:
-
-* Install the [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker) NuGet package (replaces the Xamarin `Syncfusion.SfPicker.XForms` package).
-* Register the Syncfusion core handler in `MauiProgram.cs` by calling `.ConfigureSyncfusionCore()` inside the `CreateMauiApp` builder.
-* Initialize the control on a `ContentPage` and add the MAUI XAML namespace (`xmlns="http://schemas.microsoft.com/dotnet/2021/maui"`) on the page root.
-
-For full setup, see the [Getting Started](getting-started.md) documentation.
-
 ## Namespaces 
 
 <table>
@@ -88,7 +78,7 @@ using Syncfusion.Maui.Picker;
 ...
 
 SfDatePicker datePicker = new SfDatePicker();
-Content = datePicker;
+this.Content = datePicker;
 
 {% endhighlight %}
 
@@ -175,7 +165,7 @@ using Syncfusion.Maui.Picker;
 
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.Format = PickerDateFormat.MM_dd_yyyy;
-Content = datePicker;
+this.Content = datePicker;
 
 {% endhighlight %}
 
@@ -515,39 +505,3 @@ Content = datePicker;
 <td>Occurs whenever the footer Cancel button is clicked in the date picker.</td>
 </tr>
 </table>
-
-The following example shows how to subscribe to the new `SelectionChanged` event in .NET MAUI.
-
-{% tabs %}
-
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-using Syncfusion.Maui.Picker;
-...
-
-SfDatePicker datePicker = new SfDatePicker();
-datePicker.SelectionChanged += OnDatePickerSelectionChanged;
-Content = datePicker;
-
-private void OnDatePickerSelectionChanged(object sender, DatePickerSelectionChangedEventArgs e)
-{
-    // e.NewValue - newly selected date
-    // e.OldValue - previously selected date
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Unsupported properties and recommended alternatives
-
-The following Xamarin `PickerBase` properties are not supported in .NET MAUI `SfDatePicker`. Use the recommended alternatives below to achieve the same behavior.
-
-| Xamarin property | MAUI alternative |
-|---|---|
-| `ShowHeader` | Set the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Height) of [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html) to `0` to hide the header. |
-| `ShowFooter` | Set the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) of [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html) to `0` to hide the footer. |
-| `ShowColumnHeader` | Set the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_Height) of [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html) to `0` to hide the column header. |
-| `PickerHeight` / `PickerWidth` | Use MAUI layout properties such as `HeightRequest` and `WidthRequest` on the host. |
-| `BackgroundColor` / `BorderColor` | Apply `Background` and `Stroke` on the corresponding child views (header, footer, column header, selection). |
-| `CommandParameter` | Pass parameters through the `Command` instance bound to the `AcceptCommand` or `DeclineCommand`. |
