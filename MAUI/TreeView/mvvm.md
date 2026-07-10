@@ -15,23 +15,38 @@ This section explains about how to work with MVVM pattern in TreeView.
 
 ### Binding SelectedItem
 
-TreeView support to select the items through binding the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem) property from view model by implementing the `INotifyPropertyChanged` interface that gives the call back notification to UI.
+TreeView supports selecting the items through binding the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem) property from view model by implementing the `INotifyPropertyChanged` interface that gives the call back notification to UI.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml hl_lines="5" %}
+<ContentPage.BindingContext>
+    <local:CountriesViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
 <syncfusion:SfTreeView x:Name="treeView" 
                        SelectedItem="{Binding SelectedPlace}"
                        ChildPropertyName="States"
-                       ItemsSource="{Binding CountriesInfo}"/>
+                       ItemsSource="{Binding CountriesInfo}" />
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
-SfTreeView treeView = new SfTreeView();
-treeView.SetBinding(SfTreeView.SelectedItemProperty, new Binding("SelectedPlace", BindingMode.TwoWay));
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.TreeView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfTreeView treeView = new SfTreeView();
+        treeView.SetBinding(SfTreeView.SelectedItemProperty, new Binding("SelectedPlace", BindingMode.TwoWay));
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="CountriesViewModel.cs" %}
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.TreeView;
 
 public class CountriesViewModel
 {
@@ -78,22 +93,36 @@ public class CountriesViewModel
 The TreeView supports selecting multiple items by binding the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItems) property from the view model with the `ObservableCollection<object>` type.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight xaml hl_lines="6" %}
+<ContentPage.BindingContext>
+    <local:CountriesViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
 <syncfusion:SfTreeView x:Name="treeView"
                        SelectionMode="Multiple"
                        SelectedItems="{Binding SelectedCountries}"
                        ChildPropertyName="States"
-                       ItemsSource="{Binding CountriesInfo}"/>
+                       ItemsSource="{Binding CountriesInfo}" />
 {% endhighlight %}
-{% highlight c# hl_lines="3" %}
-SfTreeView treeView = new SfTreeView();
-treeView.SelectionMode = TreeViewSelectionMode.Multiple;
-treeView.SetBinding(SfTreeView.SelectedItemsProperty, new Binding("SelectedCountries", BindingMode.TwoWay));
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.TreeView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfTreeView treeView = new SfTreeView();
+        treeView.SelectionMode = TreeViewSelectionMode.Multiple;
+        treeView.SetBinding(SfTreeView.SelectedItemsProperty, new Binding("SelectedCountries", BindingMode.TwoWay));
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="CountriesViewModel.cs" %}
+using System.Collections.ObjectModel;
 
 public class CountriesViewModel
 {
@@ -143,12 +172,31 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ### Tap command
 
-The [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_TapCommand) will be triggered whenever tapping the item and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as command a parameter.
+The [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_TapCommand) will be triggered whenever tapping the item and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as command parameter.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.TreeView;
+using Syncfusion.TreeView.Engine;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfTreeView treeView = new SfTreeView();
+        CommandViewModel viewModel = new CommandViewModel();
+        treeView.TapCommand = viewModel.TappedCommand;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="CommandViewModel.cs" %}
-
-treeView.TapCommand = viewModel.TappedCommand;
+using Microsoft.Maui.Controls;
+using Syncfusion.TreeView.Engine;
 
 public class CommandViewModel
 {
@@ -161,14 +209,14 @@ public class CommandViewModel
     }
 
     public CommandViewModel()
-    {            
+    {
         TappedCommand = new Command<object>(TappedCommandMethod);
     }
 
     private void TappedCommandMethod(object obj)
     {
         App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is Tapped","OK");
-    }   
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -178,9 +226,28 @@ public class CommandViewModel
 The [RightTapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_RightTapCommand) will be triggered whenever you right tap the item and pass the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a parameter.
 
 {% tabs %}
-{% highlight c# tabtitle="CommandViewModel.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.TreeView;
+using Syncfusion.TreeView.Engine;
 
-treeView.RightTapCommand = viewModel.RightTapCommand;
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfTreeView treeView = new SfTreeView();
+        CommandViewModel viewModel = new CommandViewModel();
+        treeView.RightTapCommand = viewModel.RightTapCommand;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="CommandViewModel.cs" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.TreeView.Engine;
 
 public class CommandViewModel
 {
@@ -193,14 +260,14 @@ public class CommandViewModel
     }
 
     public CommandViewModel()
-    {            
+    {
         RightTapCommand = new Command<object>(RightTapCommandMethod);
     }
 
     private void RightTapCommandMethod(object obj)
     {
         App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is right tapped","OK");
-    }   
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -210,13 +277,32 @@ public class CommandViewModel
 The [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_LongPressCommand) will be triggered whenever an item is long pressed and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as command parameter.
 
 {% tabs %}
-{% highlight c# tabtitle="CommandViewModel.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.TreeView;
+using Syncfusion.TreeView.Engine;
 
-treeView.LongPressCommand = viewModel.LongPressCommand;
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfTreeView treeView = new SfTreeView();
+        CommandViewModel viewModel = new CommandViewModel();
+        treeView.LongPressCommand = viewModel.LongPressCommand;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="CommandViewModel.cs" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.TreeView.Engine;
 
 public class CommandViewModel
 {
-    private Command<Object> longPressCommand;
+    private Command<object> longPressCommand;
 
     public Command<object> LongPressCommand
     {
@@ -225,14 +311,14 @@ public class CommandViewModel
     }
 
     public CommandViewModel()
-    {            
+    {
         LongPressCommand = new Command<object>(LongPressCommandMethod);
     }
 
     private void LongPressCommandMethod(object obj)
-    {          
+    {
         App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is LongPressed","OK");
-    }   
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -242,29 +328,23 @@ public class CommandViewModel
 The [ExpandCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandCommand) will be triggered while expanding the node and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a command parameter. TreeView expands the node based on the return value of the `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding the node.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-             xmlns:local="clr-namespace:Selection"
-             x:Class="Selection.MainPage">
-    <ContentPage.BindingContext>
-        <local:CommandViewModel x:Name="viewModel"/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <syncfusion:SfTreeView x:Name="treeView"
-                               ExpandCommand="{Binding ExpandingCommand}"/> 
-    </ContentPage.Content>
-</ContentPage>  
-{% endhighlight %}  
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+<ContentPage.BindingContext>
+    <local:CommandViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+<syncfusion:SfTreeView x:Name="treeView"
+                       ExpandCommand="{Binding ExpandingCommand}"/>
+{% endhighlight %}
 {% highlight c# tabtitle="CommandViewModel.cs" %}
-/// <summary>
-/// CommandViewModel class that implements command. 
-/// </summary>
+using Microsoft.Maui.Controls;
+using Syncfusion.TreeView.Engine;
 
+/// <summary>
+/// CommandViewModel class that implements command.
+/// </summary>
 public class CommandViewModel
 {
-    private Command<Object> expandingCommand;
+    private Command<object> expandingCommand;
 
     public Command<object> ExpandingCommand
     {
@@ -273,7 +353,7 @@ public class CommandViewModel
     }
 
     public CommandViewModel()
-    {            
+    {
         ExpandingCommand = new Command<object>(ExpandCommandAction, CanExecute);
     }
 
@@ -305,42 +385,37 @@ public class CommandViewModel
 The [CollapseCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CollapseCommand) will be triggered while collapsing the node and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a command parameter. TreeView collapses the node based on the return value of the `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. Execute method implementation of `CollapseCommand` will be called after the node has collapsed.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-             xmlns:local="clr-namespace:Selection"
-             x:Class="Selection.MainPage">
-    <ContentPage.BindingContext>
-        <local:CommandViewModel x:Name="viewModel"/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <syncfusion:SfTreeView x:Name="treeView"
-                               CollapseCommand="{Binding CollapsingCommand}"/> 
-    </ContentPage.Content>
-</ContentPage>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+<ContentPage.BindingContext>
+    <local:CommandViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+<syncfusion:SfTreeView x:Name="treeView"
+                       CollapseCommand="{Binding CollapsingCommand}"/>
 {% endhighlight %}
 {% highlight c# tabtitle="CommandViewModel.cs" %}
+using Microsoft.Maui.Controls;
+using Syncfusion.TreeView.Engine;
+
 /// <summary>
 /// CommandViewModel class that implements command.
 /// </summary>
 public class CommandViewModel
 {
     private Command<object> collapsingCommand;
-    
+
     public Command<object> CollapsingCommand
     {
         get { return collapsingCommand; }
         set { collapsingCommand = value; }
     }
-    
+
     public CommandViewModel()
     {
         CollapsingCommand = new Command<object>(CollapseCommandAction, CanExecute);
     }
-    
+
     /// <summary>
-    /// CanExecute method is called before collapsing of node. 
+    /// CanExecute method is called before collapsing of node.
     /// </summary>
     /// <returns>Handle collapse action by returning true or false. </returns>
     /// <param name="obj">TreeViewNode is passed as command parameter. </param>
@@ -367,7 +442,10 @@ public class CommandViewModel
 The `TreeView` event can be converted into commands using [Behaviors](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/behaviors). To achieve this, create a command in the `ViewModel` class and associate it to the TreeView event using `Behaviors`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="10" %}
+<ContentPage.BindingContext>
+    <local:CountriesViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
 <syncfusion:SfTreeView x:Name="treeView"
                        SelectionMode="Multiple"
                        SelectedItems="{Binding SelectedCountries}"
@@ -379,9 +457,14 @@ The `TreeView` event can be converted into commands using [Behaviors](https://le
 </syncfusion:SfTreeView>
 {% endhighlight %}
 {% highlight c# tabtitle="CountriesViewModel.cs" %}
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.TreeView;
+
 public class CountriesViewModel : INotifyPropertyChanged
 {
-     private Command<object> selectionChangedCommand;
+    private Command<object> selectionChangedCommand;
 
     public CountriesViewModel()
     {

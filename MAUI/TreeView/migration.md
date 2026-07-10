@@ -9,7 +9,10 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfTreeView to .NET MAUI SfTreeView 
 
-To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treeview) to [.NET MAUI SfTreeView](https://www.syncfusion.com/maui-controls/maui-treeview), we kept most of the APIs from Xamarin SfTreeView in MAUI SfTreeView. However, to maintain the consistency of API naming in MAUI SfTreeView, we renamed some of the APIs. The APIs that have been changed in MAUI SfTreeView from Xamarin SfTreeView are detailed as follows.
+To make it easier to migrate from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treeview) to [.NET MAUI SfTreeView](https://www.syncfusion.com/maui-controls/maui-treeview), we retained most of the APIs from the Xamarin SfTreeView in the .NET MAUI SfTreeView. To keep API naming consistent in the .NET MAUI SfTreeView, however, we renamed some APIs. The APIs that have changed from the Xamarin SfTreeView to the .NET MAUI SfTreeView are detailed as follows.
+
+> **NOTE**  
+> The tables below list only the APIs whose names changed. All other APIs from the Xamarin SfTreeView are retained in the .NET MAUI SfTreeView under the new namespace.
 
 ## Namespaces 
 
@@ -22,7 +25,15 @@ To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-u
 <td>Syncfusion.Maui.TreeView</td></tr>
 </table>
 
+> The C# namespace changes from `Syncfusion.XForms.TreeView` to `Syncfusion.Maui.TreeView`. The following XAML `xmlns` declarations must also be updated:
+>
+> | API scope | Xamarin SfTreeView | .NET MAUI SfTreeView |
+> | --- | --- | --- |
+> | XAML namespace | `xmlns:syncfusion="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"` | `xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"` |
+
 ## Properties
+
+The following table lists the properties whose names changed in the .NET MAUI SfTreeView:
 
 <table> 
 <tr>
@@ -32,11 +43,11 @@ To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[HoldCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.SfTreeView.html#Syncfusion_XForms_TreeView_SfTreeView_HoldCommand)'| markdownify }}</td>
 <td>{{'[LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_LongPressCommand)'| markdownify }}</td>
-<td>Gets or sets System.Windows.Input.ICommand which will be executed when hold on the TreeViewItem.</td></tr>
+<td>Gets or sets a System.Windows.Input.ICommand that will be executed when the TreeViewItem is long-pressed. Note: In MAUI, the command parameter is of type `TreeViewLongPressCommandParameter`; update command bindings accordingly.</td></tr>
 <tr>
 <td>{{'[IsScrollBarVisible](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.SfTreeView.html#Syncfusion_XForms_TreeView_SfTreeView_IsScrollBarVisible)'| markdownify }}</td>
 <td>{{'[ScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ScrollBarVisibility)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether or not the scrollbar should be displayed.</td></tr>
+<td>Gets or sets a value indicating whether the scrollbar should be displayed. Note: The property type changed from a Boolean (`IsScrollBarVisible`) in Xamarin to the [`ScrollBarVisibility`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ScrollBarVisibility.html) enum in MAUI — set it to `Default`, `Always`, `Never`, or `Disabled`.</td></tr>
 <tr>
 <td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.SfTreeView.html#Syncfusion_XForms_TreeView_SfTreeView_SelectionBackgroundColor)' | markdownify }}</td>
 <td>{{'[SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionBackground)'| markdownify }}</td>
@@ -44,11 +55,13 @@ To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[SelectionForegroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.SfTreeView.html#Syncfusion_XForms_TreeView_SfTreeView_SelectionForegroundColor)'| markdownify }}</td>
 <td>{{'[SelectionForeground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionForeground)'| markdownify }}</td>
-<td>Gets or sets the selected item foreground color. Note: It will applicable for unbound mode only.</td>
+<td>Gets or sets the selected item's foreground color. Note: It is applicable in unbound mode only. The same restriction applies to the .NET MAUI SfTreeView — `SelectionForeground` is applied only in unbound mode.</td>
 </tr>
 </table> 
 
 ## Enums
+
+The following table lists the enums whose names changed in the .NET MAUI SfTreeView. The enum members themselves are unchanged from Xamarin to MAUI; only the type names changed:
 
 <table>
 <tr>
@@ -58,30 +71,32 @@ To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[ItemType](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.ItemType.html)'| markdownify }}</td>
 <td>{{'[TreeViewItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewItemType.html)'| markdownify }}</td>
-<td>Defines the item type for the TreeViewItemInfoBase.</td></tr>
+<td>Defines the item type for a TreeViewItemInfoBase.</td></tr>
 <tr>
 <td>{{'[ExpandActionTarget](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.ExpandActionTarget.html)'| markdownify }}</td>
 <td>{{'[TreeViewExpandActionTarget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewExpandActionTarget.html)'| markdownify }}</td>
-<td>Defines that the expanding and collapsing of nodes can be performed only by tapping in expander view or in both expander view and content view.</td></tr>
+<td>Defines whether expanding and collapsing of nodes can be performed only by tapping the expander view, or by tapping both the expander view and the content view.</td></tr>
 <tr>
 <td>{{'[ExpanderPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.ExpanderPosition.html)'| markdownify }}</td>
 <td>{{'[TreeViewExpanderPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewExpanderPosition.html)'| markdownify }}</td>
-<td>Defines the expander position of the SfTreeView. The expander can be positioned either start or end of the item.</td></tr>
+<td>Defines the expander position of the SfTreeView. The expander can be positioned at either the start or the end of the item.</td></tr>
 <tr>
 <td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.SelectionMode.html)'| markdownify }}</td>
 <td>{{'[TreeViewSelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html)'| markdownify }}</td>
-<td>Defines constants that specify the selections that are supported by a SfTreeView control.</td></tr>
+<td>Defines constants that specify the selection modes supported by the SfTreeView control.</td></tr>
 <tr>
 <td>{{'[AutoExpandMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.TreeView.Engine.AutoExpandMode.html)'| markdownify }}</td>
 <td>{{'[TreeViewAutoExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_AutoExpandMode)'| markdownify }}</td>
-<td>Defines the possible expand modes while loading the nodes in the SfTreeView.</td></tr>
+<td>Defines the possible expand modes while loading the nodes in the SfTreeView. Note: In Xamarin, this enum lived in the `Syncfusion.TreeView.Engine` namespace; in .NET MAUI, it has moved to `Syncfusion.Maui.TreeView` and been renamed.</td></tr>
 <tr>
 <td>{{'[NotificationSubscriptionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.TreeView.Engine.NotificationSubscriptionMode.html)'| markdownify }}</td>
 <td>{{'[TreeViewNotificationSubscriptionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NotificationSubscriptionMode)'| markdownify }}</td>
-<td>Defines the constants that specify whether need to listen the PropertyChanging and `System.ComponentModel.INotifyPropertyChanged.PropertyChanged` events of data object and `System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged` event of source collection.</td></tr>
+<td>Defines the constants that specify whether to listen for the PropertyChanging and `System.ComponentModel.INotifyPropertyChanged.PropertyChanged` events of the data object, and the `System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged` event of the source collection. Note: In Xamarin, this enum lived in the `Syncfusion.TreeView.Engine` namespace; in .NET MAUI, it has moved to `Syncfusion.Maui.TreeView` and been renamed.</td></tr>
 </table>
 
 ## Events
+
+The only renamed event in the .NET MAUI SfTreeView is listed below. Its associated event-arguments class is also renamed:
 
 <table>
 <tr>
@@ -91,5 +106,13 @@ To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[ItemHolding](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.SfTreeView.html#Syncfusion_XForms_TreeView_SfTreeView_ItemHolding)'| markdownify }}</td>
 <td>{{'[ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemLongPress)'| markdownify }}</td>
-<td>Occurs when the TreeViewItem's ContentView is long pressed.</td></tr>
-</table> 
+<td>Occurs when the TreeViewItem's content view is long-pressed.</td></tr>
+<tr>
+<td>{{'[ItemHoldingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TreeView.ItemHoldingEventArgs.html)'| markdownify }}</td>
+<td>{{'[ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemLongPressEventArgs.html)'| markdownify }}</td>
+<td>Provides data for the `ItemHolding` (Xamarin) and `ItemLongPress` (.NET MAUI) events.</td></tr>
+</table>
+
+## Methods, interfaces, and attached properties
+
+No public methods, interfaces, or bindable (attached) properties were renamed in the .NET MAUI SfTreeView. They are retained from the Xamarin SfTreeView under the new namespace. For any API not listed in the tables above, simply update its namespace from `Syncfusion.XForms.TreeView` to `Syncfusion.Maui.TreeView`. 
