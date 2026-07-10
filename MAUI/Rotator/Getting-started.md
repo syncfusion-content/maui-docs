@@ -139,6 +139,24 @@ N> Ensure that the images mentioned in the code snippets are located in the **Re
 
 {% tabs %}
 
+{% highlight xaml %}
+
+ <ContentPage.BindingContext>
+     <local:RotatorViewModel />
+ </ContentPage.BindingContext>
+ <StackLayout HeightRequest="300">
+     <syncfusion:SfRotator x:Name="rotator" 
+                     ItemsSource="{Binding ImageCollection}" >
+         <syncfusion:SfRotator.ItemTemplate>
+             <DataTemplate>
+                 <Image Source="{Binding Image}"/>
+             </DataTemplate>
+         </syncfusion:SfRotator.ItemTemplate>
+     </syncfusion:SfRotator>
+ </StackLayout>
+ 
+ {% endhighlight %}
+ 
 {% highlight C# %}
 
 SfRotator rotator = new SfRotator();
