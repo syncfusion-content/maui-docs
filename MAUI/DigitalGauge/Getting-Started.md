@@ -11,10 +11,9 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> DigitalGauge. Follow the steps below to add .NET MAUI DigitalGauge control to your project.
 
-To get start quickly with our .NET MAUI DigitalGauge, you can check the below video.
+To get started quickly with our .NET MAUI DigitalGauge, you can check the below video.
 
-{% youtube
-"youtube:https://youtu.be/kYZtmp3Mtkk?si=FUhFxyrNdpzRbxxC"%}
+{% youtube "https://youtu.be/kYZtmp3Mtkk?si=FUhFxyrNdpzRbxxC" %}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -95,7 +94,9 @@ Make sure to add the namespace.
  
 {% tabs %}
 {% highlight c# %}
+
 using Syncfusion.Maui.Core.Hosting;
+
 {% endhighlight %}
 {% endtabs %}
  
@@ -103,7 +104,29 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
  
 {% tabs %}
 {% highlight c# %}
-builder.ConfigureSyncfusionCore();
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
+
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif
+
+        return builder.Build();
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
  
@@ -114,7 +137,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
  
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+xmlns:gauge = "clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
  
 {% endhighlight %}
 {% highlight c# %}
@@ -132,23 +155,23 @@ Initialize the [SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-di
 
 {% highlight xaml %}
 
-   <gauge:SfDigitalGauge Text="SYNCFUSION"/> 
+<gauge:SfDigitalGauge Text = "SYNCFUSION"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfDigitalGauge digitalGauge = new SfDigitalGauge();
+digitalGauge.Text = "SYNCFUSION";
+this.Content = digitalGauge;
 
-digital.Text = "SYNCFUSION";
- 
 {% endhighlight %}
 
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
-![getting-started](Images\getting-started.png)
+![getting-started in .NET MAUI Digital Gauge](Images\getting-started.png)
 
 You can download the DigitalGauge Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-digital-gauge).
 
