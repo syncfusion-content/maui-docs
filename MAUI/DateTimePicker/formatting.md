@@ -8,10 +8,12 @@ documentation: ug
 ---
 
 # Formatting in .NET MAUI Date Time Picker (SfDateTimePicker)
-Format is a way to represent the date and time value in a different string format.
+Format is a way to represent the date and time value in a different string format. The columns shown in the picker are controlled by the [PickerMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html) property; `DateFormat` and `TimeFormat` apply only to their respective columns. The available values are defined by the [PickerDateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html) and [PickerTimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html) enums in the `Syncfusion.Maui.Picker` namespace.
+
+> The XAML snippets below require `xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"` in the parent element, and the C# snippets require `using Syncfusion.Maui.Picker;`.
 
 ## Date format
-You can customize the date format of the date time picker by using the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_DateFormat) property of type [PickerDateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html) in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default format is `yyyy_MM_dd`.
+You can customize the date format of the date time picker by using the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_DateFormat) property of type [PickerDateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html) in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default format is `yyyy_MM_dd`. To render the date using the current culture's format, set the property to `Default`.
 
 
 The different types of formats are:
@@ -64,24 +66,37 @@ The different types of formats are:
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         DateFormat="dd_MMM_yyyy">
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             DateFormat="dd_MMM_yyyy">
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.DateFormat = PickerDateFormat.dd_MMM_yyyy;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.DateFormat = PickerDateFormat.dd_MMM_yyyy;
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
    ![Date format in .NET MAUI Date Time picker.](images/formatting/maui-date-time-picker-date-format.png)
 
 ## Time format
-You can customize the time format of the date time picker by using the [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_TimeFormat) property of type [PickerTimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html) in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default format is `HH_mm_ss`.
+You can customize the time format of the date time picker by using the [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_TimeFormat) property of type [PickerTimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html) in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default format is `HH_mm_ss`. To render the time using the current culture's format, set the property to `Default`.
 
 
 The different types of formats are:
@@ -119,18 +134,31 @@ The different types of formats are:
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         TimeFormat="hh_mm_ss_tt">
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             TimeFormat="hh_mm_ss_tt">
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
    ![Time format in .NET MAUI Date Time picker.](images/formatting/maui-date-time-picker-time-format.png)
