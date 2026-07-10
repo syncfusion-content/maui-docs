@@ -21,19 +21,31 @@ Fade mode fades out unselected items relative to the selected item. Set the [Tex
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<dateTimePicker:SfDateTimePicker x:Name="dateTimePicker"
-                 TextDisplayMode="Fade"/>
+<ContentPage
+    . . .
+    xmlns:dateTimePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <dateTimePicker:SfDateTimePicker x:Name="dateTimePicker"
+                                     TextDisplayMode="Fade"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
-SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    TextDisplayMode = PickerTextDisplayMode.Fade
-};
-
-this.Content = dateTimePicker;
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+        {
+            TextDisplayMode = PickerTextDisplayMode.Fade
+        };
+        this.Content = dateTimePicker;
+    }
+}
 
 {% endhighlight %}
 
@@ -49,19 +61,31 @@ Shrink mode reduces the font size of unselected items relative to the selected i
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<dateTimePicker:SfDateTimePicker x:Name="dateTimePicker"
-                 TextDisplayMode="Shrink"/>
+<ContentPage
+    . . .
+    xmlns:dateTimePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <dateTimePicker:SfDateTimePicker x:Name="dateTimePicker"
+                                     TextDisplayMode="Shrink"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
-SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    TextDisplayMode = PickerTextDisplayMode.Shrink
-};
-
-this.Content = dateTimePicker;
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+        {
+            TextDisplayMode = PickerTextDisplayMode.Shrink
+        };
+        this.Content = dateTimePicker;
+    }
+}
 
 {% endhighlight %}
 
@@ -77,19 +101,31 @@ Fade and shrink mode reduces both the opacity and the font size of unselected it
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<dateTimePicker:SfDateTimePicker x:Name="dateTimePicker"
-                 TextDisplayMode="FadeAndShrink"/>
+<ContentPage
+    . . .
+    xmlns:dateTimePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <dateTimePicker:SfDateTimePicker x:Name="dateTimePicker"
+                                     TextDisplayMode="FadeAndShrink"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
-SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    TextDisplayMode = PickerTextDisplayMode.FadeAndShrink
-};
-
-this.Content = dateTimePicker;
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+        {
+            TextDisplayMode = PickerTextDisplayMode.FadeAndShrink
+        };
+        this.Content = dateTimePicker;
+    }
+}
 
 {% endhighlight %}
 

@@ -17,19 +17,31 @@ To enable looping in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="dateTimePicker"
-                     EnableLooping="True"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="dateTimePicker"
+                             EnableLooping="True"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}  
 
-SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    EnableLooping = true,
-};
-
-this.Content = dateTimePicker;
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+        {
+            EnableLooping = true,
+        };
+        this.Content = dateTimePicker;
+    }
+}
 
 {% endhighlight %}
 

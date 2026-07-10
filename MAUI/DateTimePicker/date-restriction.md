@@ -19,18 +19,31 @@ The Date Time Picker restricts selection to dates and times on or after the [Min
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         MinimumDate="2000/5/6 3:34:12 AM">
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             MinimumDate="2000/5/6 3:34:12 AM">
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.MinimumDate = new DateTime(2000, 5, 6, 3, 34, 12);
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.MinimumDate = new DateTime(2000, 5, 6, 3, 34, 12);
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
    ![Minimum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-minimum-date.png)
@@ -41,18 +54,31 @@ The Date Time Picker restricts selection to dates and times on or before the [Ma
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         MaximumDate="2042/10/10 12:15:03 PM">
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             MaximumDate="2042/10/10 12:15:03 PM">
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.MaximumDate = new DateTime(2042, 10, 10, 12, 15, 03);
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.MaximumDate = new DateTime(2042, 10, 10, 12, 15, 03);
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
    ![Maximum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-maximum-date.png)
@@ -64,46 +90,60 @@ The [Blackout Date times](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDateTimePicker x:Name="picker">
-   <picker:SfDateTimePicker.BlackoutDateTimes>
-      <date:DateTime>2001-08-10</date:DateTime>
-      <date:DateTime>2001-08-12</date:DateTime>
-      <date:DateTime>2001-08-14</date:DateTime>
-      <date:DateTime>2001-08-17</date:DateTime>
-      <date:DateTime>2001-08-18</date:DateTime>
-      <date:DateTime>2001-08-20</date:DateTime>
-      <date:DateTime>2001-08-23</date:DateTime>
-      <date:DateTime>2001-08-27</date:DateTime>
-      <date:DateTime>2001-08-03</date:DateTime>
-      <date:DateTime>2001-08-15 12:11:00</date:DateTime>
-      <date:DateTime>2001-08-15 12:12:00</date:DateTime>
-      <date:DateTime>2001-08-15 12:08:00</date:DateTime>
-      <date:DateTime>2001-08-15 12:06:00</date:DateTime>
-      <date:DateTime>2001-08-15 12:14:00</date:DateTime>
-   </picker:SfDateTimePicker.BlackoutDateTimes>
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+    xmlns:date="clr-namespace:System;assembly=mscorlib">
+    <picker:SfDateTimePicker x:Name="picker">
+        <picker:SfDateTimePicker.BlackoutDateTimes>
+            <date:DateTime>2001-08-10</date:DateTime>
+            <date:DateTime>2001-08-12</date:DateTime>
+            <date:DateTime>2001-08-14</date:DateTime>
+            <date:DateTime>2001-08-17</date:DateTime>
+            <date:DateTime>2001-08-18</date:DateTime>
+            <date:DateTime>2001-08-20</date:DateTime>
+            <date:DateTime>2001-08-23</date:DateTime>
+            <date:DateTime>2001-08-27</date:DateTime>
+            <date:DateTime>2001-08-03</date:DateTime>
+            <date:DateTime>2001-08-15 12:11:00</date:DateTime>
+            <date:DateTime>2001-08-15 12:12:00</date:DateTime>
+            <date:DateTime>2001-08-15 12:08:00</date:DateTime>
+            <date:DateTime>2001-08-15 12:06:00</date:DateTime>
+            <date:DateTime>2001-08-15 12:14:00</date:DateTime>
+        </picker:SfDateTimePicker.BlackoutDateTimes>
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 10));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 12));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 14));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 17));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 18));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 20));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 23));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 27));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 3));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 11, 0));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 12, 0));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 8, 0));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 6, 0));
-picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 14, 0));
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 10));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 12));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 14));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 17));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 18));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 20));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 23));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 27));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 3));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 11, 0));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 12, 0));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 8, 0));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 6, 0));
+        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 14, 0));
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
 ![Blackout date times day columns in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-blackout-date-times-day.png)

@@ -22,18 +22,31 @@ The dialog mode is used to display the date time picker in a popup by setting th
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         Mode="Dialog">
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             Mode="Dialog">
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.Mode = PickerMode.Dialog;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.Mode = PickerMode.Dialog;
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
 The Date Time picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). By default, the `IsOpen` property is `false`.
@@ -43,29 +56,42 @@ Note: This property automatically changes to `false` when you close the dialog b
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <picker:SfDateTimePicker x:Name="picker" 
-                             Mode="Dialog">
-    </picker:SfDateTimePicker>
-    <Button Text="Open Date Time picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfDateTimePicker x:Name="picker" 
+                                 Mode="Dialog">
+        </picker:SfDateTimePicker>
+        <Button Text="Open Date Time picker" 
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-private void Button_Clicked(object sender, EventArgs e)
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    this.picker.IsOpen = true;
+    public MainPage()
+    {
+        InitializeComponent();
+    }
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        this.picker.IsOpen = true;
+    }
 }
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
    ![Dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-dialog-mode.gif)
@@ -95,30 +121,43 @@ Note: This property is automatically changed to `false` when you close the dialo
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <picker:SfDateTimePicker x:Name="picker" 
-                             Mode="RelativeDialog"
-                             RelativePosition="AlignTopLeft">
-    </picker:SfDateTimePicker>
-    <Button Text="Open Date Time picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfDateTimePicker x:Name="picker" 
+                                 Mode="RelativeDialog"
+                                 RelativePosition="AlignTopLeft">
+        </picker:SfDateTimePicker>
+        <Button Text="Open Date Time picker" 
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-private void Button_Clicked(object sender, EventArgs e)
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    this.picker.IsOpen = true;
+    public MainPage()
+    {
+        InitializeComponent();
+    }
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        this.picker.IsOpen = true;
+    }
 }
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
 ### Relative view
@@ -131,30 +170,43 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<Grid>
-    <picker:SfDateTimePicker x:Name="picker" 
-                             Mode="RelativeDialog"
-                             RelativePosition="AlignTopLeft"
-                             RelativeView = "{x:Reference pickerButton}">
-    </picker:SfDateTimePicker>
-    <Button Text="Open Date Time picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfDateTimePicker x:Name="picker" 
+                                 Mode="RelativeDialog"
+                                 RelativePosition="AlignTopLeft"
+                                 RelativeView = "{x:Reference pickerButton}">
+        </picker:SfDateTimePicker>
+        <Button Text="Open Date Time picker" 
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="4" %}
 
-private void Button_Clicked(object sender, EventArgs e)
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    this.picker.IsOpen = true;
-    this.picker.RelativeView = pickerButton;
+    public MainPage()
+    {
+        InitializeComponent();
+    }
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        this.picker.IsOpen = true;
+        this.picker.RelativeView = pickerButton;
+    }
 }
 
 {% endhighlight %}
@@ -173,18 +225,33 @@ When using `Dialog` or `RelativeDialog` mode, control the size of the popup with
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         Mode="Dialog"
-                         PopupWidth="300"
-                         PopupHeight="400"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             Mode="Dialog"
+                             PopupWidth="300"
+                             PopupHeight="400"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-this.picker.PopupWidth = 300;
-this.picker.PopupHeight = 400;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.PopupWidth = 300;
+        picker.PopupHeight = 400;
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %} 
+{% endhighlight %}
 
 {% endtabs %}
