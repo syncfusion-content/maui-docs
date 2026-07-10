@@ -141,29 +141,25 @@ N> Ensure that the images mentioned in the code snippets are located in the **Re
 
 {% highlight xaml %}
 
- <ContentPage.BindingContext>
-     <local:RotatorViewModel />
- </ContentPage.BindingContext>
- <StackLayout HeightRequest="300">
-     <syncfusion:SfRotator x:Name="rotator" 
-                     ItemsSource="{Binding ImageCollection}" >
-         <syncfusion:SfRotator.ItemTemplate>
-             <DataTemplate>
-                 <Image Source="{Binding Image}"/>
-             </DataTemplate>
-         </syncfusion:SfRotator.ItemTemplate>
-     </syncfusion:SfRotator>
- </StackLayout>
+<syncfusion:SfRotator x:Name="rotator" 
+                    ItemsSource="{Binding ImageCollection}" >
+    <syncfusion:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </syncfusion:SfRotator.BindingContext>
+    <syncfusion:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}"/>
+        </DataTemplate>
+    </syncfusion:SfRotator.ItemTemplate>
+</syncfusion:SfRotator>
  
  {% endhighlight %}
  
 {% highlight C# %}
 
 SfRotator rotator = new SfRotator();
-StackLayout stackLayout = new StackLayout();
 public Rotator()
 {
-    stackLayout.HeightRequest = 300;
     List<SfRotatorItem> collectionOfItems = new List<SfRotatorItem>();
     collectionOfItems.Add(new SfRotatorItem() { Image = "image1.png" });
     collectionOfItems.Add(new SfRotatorItem() { Image = "image2.png" });
@@ -171,12 +167,53 @@ public Rotator()
     collectionOfItems.Add(new SfRotatorItem() { Image = "image4.png" });
     collectionOfItems.Add(new SfRotatorItem() { Image = "image5.png" });
     rotator.ItemsSource = collectionOfItems;
-    stackLayout.Children.Add(rotator);
-    this.Content = stackLayout;
+    this.Content = rotator;
 }
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="ViewModel" %}
+
+    // Model Class for Rotator.
+
+    public class RotatorModel
+    {
+        public RotatorModel(string imageString)
+        {
+            Image = imageString;
+        }
+        private string _image;
+        public string Image
+        {
+            get { return _image; }
+            set { _image = value; }
+        }
+    }
+    // ViewModel class for Rotator.
+
+    public class RotatorViewModel
+    {
+        public RotatorViewModel()
+        {
+            imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+        }
+
+        private List<RotatorModel> imageCollection;
+        public List<RotatorModel> ImageCollection
+        {
+            get { return imageCollection; }
+            set { imageCollection = value; }
+        }
+    }
+
+{% endhighlight %}
 {% endtabs %}
 
 ![Rotator Items](images/RotatorItems.png)
