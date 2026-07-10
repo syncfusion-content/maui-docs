@@ -9,7 +9,7 @@ documentation: ug
 
 # Load More in .NET MAUI Chat (SfChat)
 
-In `SfChat`, scroll to the top of the message list to fetch the old messages on demand in run-time either automatically or manually(by tapping the load more button) by setting the [LoadMoreBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreBehavior) as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommand) using the [LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommandParameter) property. Use the [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) property to show the busy indicator denoting the loading operation in SfChat.
+In `SfChat`, scroll to the top of the message list to fetch the old messages on demand at runtime, either automatically or manually (by tapping the load more button), by setting the [LoadMoreBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreBehavior) as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommand) using the [LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommandParameter) property. Use the [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) property to display a busy indicator while messages are loading in SfChat.
 
 N> SfChat does not support LoadMore when [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) is enabled. Because SfListView has a limitation that [LoadMoreOption.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto) or [LoadMoreOption.AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_AutoOnScroll) works only when [LoadMorePosition.End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMorePosition.html#Syncfusion_Maui_ListView_LoadMorePosition_End) is `enabled`.
 
@@ -23,21 +23,21 @@ By default, upon reaching the top of the chat list, a load more button will be d
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-             xmlns:local="clr-namespace:GettingStarted"
-             x:Class="GettingStarted.MainPage">
+             xmlns:local="clr-namespace:LoadMore"
+             x:Class="LoadMore.MainPage">
     
     <ContentPage.BindingContext>
         <local:LoadMoreViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>   
     
     <ContentPage.Content>       
-            <sfChat:SfChat x:Name="sfChat" 
-                           LoadMoreBehavior="Manual"
-                           LoadMoreCommand="{Binding LoadMoreCommand}"
-                           IsLazyLoading="{Binding IsBusy}"  
-                           Messages="{Binding Messages}" 
-                           CurrentUser="{Binding CurrentUser}" > 
-            </sfChat:SfChat>        
+        <sfChat:SfChat x:Name="sfChat" 
+                        LoadMoreBehavior="Manual"
+                        LoadMoreCommand="{Binding LoadMoreCommand}"
+                        IsLazyLoading="{Binding IsBusy}"  
+                        Messages="{Binding Messages}" 
+                        CurrentUser="{Binding CurrentUser}" > 
+        </sfChat:SfChat>        
     </ContentPage.Content>
 </ContentPage>
 
@@ -47,99 +47,168 @@ By default, upon reaching the top of the chat list, a load more button will be d
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+
 public partial class LoadMoreViewModel : INotifyPropertyChanged
-{      
-        private bool isBusy = false;
-        private ObservableCollection<object> messages;
+{
+    private bool isBusy = false;
+    private ObservableCollection<object> messages;
+    private ObservableCollection<object> oldMessages;
+    private Author currentUser;
 
-        /// <summary>
-        /// Gets or sets the load more command of SfChat.
-        /// </summary>
-        public ICommand LoadMoreCommand { get; set; }
+    /// <summary>
+    /// Occurs when a property value changes.
+    /// </summary>
+    public event PropertyChangedEventHandler PropertyChanged;
 
-        /// <summary>
-        /// Gets or sets the IsBusy of the chat control.
-        /// </summary>
-        public bool IsBusy
+    /// <summary>
+    /// Gets or sets the load more command of SfChat.
+    /// </summary>
+    public ICommand LoadMoreCommand { get; set; }
+
+    /// <summary>
+    /// Gets or sets the IsBusy of the chat control.
+    /// </summary>
+    public bool IsBusy
+    {
+        get { return this.isBusy; }
+        set
         {
-            get { return this.isBusy; }
-            set
-            {
-                this.isBusy = value;
-                RaisePropertyChanged("IsBusy");
-            }
+            this.isBusy = value;
+            RaisePropertyChanged("IsBusy");
         }
+    }
 
-        /// <summary>
-        /// Gets or sets the message conversation of SfChat.
-        /// </summary>
-        public ObservableCollection<object> Messages
+    /// <summary>
+    /// Gets or sets the message conversation of SfChat.
+    /// </summary>
+    public ObservableCollection<object> Messages
+    {
+        get { return this.messages; }
+        set
         {
-            get{ return this.messages; }
-            set
-            {
-                this.messages = value;
-                RaisePropertyChanged("Messages");
-            }
+            this.messages = value;
+            RaisePropertyChanged("Messages");
         }
+    }
 
-        public LoadMoreViewModel()
+    /// <summary>
+    /// Gets or sets the older message collection that is loaded on demand.
+    /// </summary>
+    public ObservableCollection<object> OldMessages
+    {
+        get { return this.oldMessages; }
+        set
         {
-            this.Messages = CreateMessages();
-            LoadMoreCommand = new Command<object>(LoadMoreItems, CanLoadMoreItems);
+            this.oldMessages = value;
+            RaisePropertyChanged("OldMessages");
         }
+    }
 
-        /// <summary>
-        /// Returns whether the load more command can execute.
-        /// </summary>        
-        private bool CanLoadMoreItems(object obj)
+    /// <summary>
+    /// Gets or sets the current user of the chat.
+    /// </summary>
+    public Author CurrentUser
+    {
+        get { return this.currentUser; }
+        set
         {
-            // If messages are still there in the old message collection, then execute the load more command.
-            if (this.OldMessages.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                IsBusy = false;
-                return false;
-            }
+            this.currentUser = value;
+            RaisePropertyChanged("CurrentUser");
+        }
+    }
 
+    public LoadMoreViewModel()
+    {
+        this.Messages = CreateMessages();
+        this.OldMessages = CreateOldMessages();
+        this.CurrentUser = new Author { Name = "Nancy" };
+        LoadMoreCommand = new Command<object>(LoadMoreItems, CanLoadMoreItems);
+    }
+
+    /// <summary>
+    /// Raises the PropertyChanged event for the specified property name.
+    /// </summary>
+    private void RaisePropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    /// <summary>
+    /// Creates the initial message collection displayed in SfChat.
+    /// </summary>
+    private ObservableCollection<object> CreateMessages()
+    {
+        var collection = new ObservableCollection<object>();
+        // Populate the most recent messages to be shown when the chat loads.
+        // For example: collection.Add(new TextMessage { ... });
+        return collection;
+    }
+
+    /// <summary>
+    /// Creates the older message collection that will be loaded when the user reaches the top.
+    /// </summary>
+    private ObservableCollection<object> CreateOldMessages()
+    {
+        var collection = new ObservableCollection<object>();
+        // Populate the older messages kept aside for the load-more operation.
+        // For example: collection.Add(new TextMessage { ... });
+        return collection;
+    }
+
+    /// <summary>
+    /// Returns whether the load more command can execute.
+    /// </summary>
+    private bool CanLoadMoreItems(object obj)
+    {
+        // If messages are still there in the old message collection, then execute the load more command.
+        if (this.OldMessages.Count > 0)
+        {
             return true;
         }
-
-        /// <summary>
-        /// Action raised when the load more command is executed.
-        /// </summary>
-        private async void LoadMoreItems(object obj)
+        else
         {
-            try
-            {
-                // Set is busy as true to show the busy indicator.
-                IsBusy = true;
-                await Task.Delay(3000);
-                LoadMoreMessages();
-            }
-            catch{ }
-            finally
-            {
-                // Set is busy as false to hide the busy indicator.
-                IsBusy = false;
-            }
+            IsBusy = false;
+            return false;
         }
+    }
 
-        /// <summary>
-        /// Adds the next ten messages from the older messages of the conversation to see the messages.
-        /// </summary>
-        private void LoadMoreMessages()
-        {        
-            for (int i = 1; i <= 10 ; i++)
-            {
-                var oldMessage = this.OldMessages[this.OldMessages.Count - 1];
-                this.Messages.Insert(0, oldMessage);
-                this.OldMessages.Remove(oldMessage);
-            }
+    /// <summary>
+    /// Action raised when the load more command is executed.
+    /// </summary>
+    private async void LoadMoreItems(object obj)
+    {
+        try
+        {
+            // Set is busy as true to show the busy indicator.
+            IsBusy = true;
+            await Task.Delay(3000);
+            LoadMoreMessages();
         }
+        catch { }
+        finally
+        {
+            // Set is busy as false to hide the busy indicator.
+            IsBusy = false;
+        }
+    }
+
+    /// <summary>
+    /// Adds the next ten messages from the older messages of the conversation to see the messages.
+    /// </summary>
+    private void LoadMoreMessages()
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            var oldMessage = this.OldMessages[this.OldMessages.Count - 1];
+            this.Messages.Insert(0, oldMessage);
+            this.OldMessages.Remove(oldMessage);
+        }
+    }
 }
 
 {% endhighlight %}
@@ -149,9 +218,9 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 
 ## Load more automatically
 
-Set the `LoadMoreBehavior` to [LoadMoreOption.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto), a busy indicator will appear automatically when you reach the top of the chat list. Unlike [LoadMoreOption.Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Manual), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommand) executes automatically without needing any additional clicks when you reach the top of the chat list. 
+Set the `LoadMoreBehavior` to [`LoadMoreOption.Auto`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto), a busy indicator will appear automatically when you scroll to the top of the chat list. Unlike [`LoadMoreOption.Manual`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Manual), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommand) executes automatically without needing any additional clicks when you scroll to the top of the chat list. 
 
-N> When the `LoadMoreBehavior` is set to `Auto`, [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) will be `true` by default. So, to cancel the load more operation and remove the load more view from the chat, set the `LoadMoreBehavior` as [LoadMoreOption.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_None).
+N> When the `LoadMoreBehavior` is set to `Auto`, [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) will be `true` by default. So, to cancel the load more operation and remove the load more view from the chat, set the `LoadMoreBehavior` as [`LoadMoreOption.None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_None).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -159,21 +228,21 @@ N> When the `LoadMoreBehavior` is set to `Auto`, [IsLazyLoading](https://help.sy
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-             xmlns:local="clr-namespace:GettingStarted"
-             x:Class="GettingStarted.MainPage">
+             xmlns:local="clr-namespace:LoadMore"
+             x:Class="LoadMore.MainPage">
     
     <ContentPage.BindingContext>
-        <local:LoadMoreViewModel x:Name="viewModel"/>
-    </ContentPage.BindingContext>   
-    
-    <ContentPage.Content>       
-            <sfChat:SfChat x:Name="sfChat" 
-                           LoadMoreCommand="{Binding LoadMoreCommand}"
-                           IsLazyLoading="{Binding IsBusy}"
-                           LoadMoreBehavior="{Binding LoadMoreBehavior}"
-                           Messages="{Binding Messages}" 
-                           CurrentUser="{Binding CurrentUser}" > 
-            </sfChat:SfChat>        
+        <local:LoadMoreViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                       LoadMoreCommand="{Binding LoadMoreCommand}"
+                       IsLazyLoading="{Binding IsBusy}"
+                       LoadMoreBehavior="{Binding LoadMoreBehavior}"
+                       Messages="{Binding Messages}"
+                       CurrentUser="{Binding CurrentUser}" >
+        </sfChat:SfChat>
     </ContentPage.Content>
 </ContentPage>
 
@@ -181,10 +250,27 @@ N> When the `LoadMoreBehavior` is set to `Auto`, [IsLazyLoading](https://help.sy
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="3" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}
+
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.ListView;
+
 public partial class LoadMoreViewModel : INotifyPropertyChanged
-{      
+{
+    private bool isBusy = false;
+    private ObservableCollection<object> messages;
+    private ObservableCollection<object> oldMessages;
+    private Author currentUser;
     private LoadMoreOption loadMoreBehavior = LoadMoreOption.Auto;
+
+    /// <summary>
+    /// Occurs when a property value changes.
+    /// </summary>
+    public event PropertyChangedEventHandler PropertyChanged;
 
     /// <summary>
     /// Gets or sets the load more command of SfChat.
@@ -192,9 +278,22 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
     public ICommand LoadMoreCommand { get; set; }
 
     /// <summary>
+    /// Gets or sets the IsBusy of the chat control.
+    /// </summary>
+    public bool IsBusy
+    {
+        get { return this.isBusy; }
+        set
+        {
+            this.isBusy = value;
+            RaisePropertyChanged("IsBusy");
+        }
+    }
+
+    /// <summary>
     /// Gets or sets the load more behavior of the chat control.
     /// </summary>
-    public bool LoadMoreBehavior
+    public LoadMoreOption LoadMoreBehavior
     {
         get { return this.loadMoreBehavior; }
         set
@@ -209,7 +308,7 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
     /// </summary>
     public ObservableCollection<object> Messages
     {
-        get{ return this.messages; }
+        get { return this.messages; }
         set
         {
             this.messages = value;
@@ -217,15 +316,71 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
         }
     }
 
+    /// <summary>
+    /// Gets or sets the older message collection that is loaded on demand.
+    /// </summary>
+    public ObservableCollection<object> OldMessages
+    {
+        get { return this.oldMessages; }
+        set
+        {
+            this.oldMessages = value;
+            RaisePropertyChanged("OldMessages");
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the current user of the chat.
+    /// </summary>
+    public Author CurrentUser
+    {
+        get { return this.currentUser; }
+        set
+        {
+            this.currentUser = value;
+            RaisePropertyChanged("CurrentUser");
+        }
+    }
+
     public LoadMoreViewModel()
     {
         this.Messages = CreateMessages();
+        this.OldMessages = CreateOldMessages();
+        this.CurrentUser = new Author { Name = "Nancy" };
         LoadMoreCommand = new Command<object>(LoadMoreItems, CanLoadMoreItems);
     }
 
     /// <summary>
+    /// Raises the PropertyChanged event for the specified property name.
+    /// </summary>
+    private void RaisePropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    /// <summary>
+    /// Creates the initial message collection displayed in SfChat.
+    /// </summary>
+    private ObservableCollection<object> CreateMessages()
+    {
+        var collection = new ObservableCollection<object>();
+        // Populate the most recent messages to be shown when the chat loads.
+        return collection;
+    }
+
+    /// <summary>
+    /// Creates the older message collection that will be loaded when the user reaches the top.
+    /// </summary>
+    private ObservableCollection<object> CreateOldMessages()
+    {
+        var collection = new ObservableCollection<object>();
+        // Populate the older messages kept aside for the load-more operation.
+        return collection;
+    }
+
+    /// <summary>
     /// Returns whether the load more command can execute.
-    /// </summary>        
+    /// </summary>
     private bool CanLoadMoreItems(object obj)
     {
         // If messages are still there in the old message collection, then execute the load more command.
@@ -239,8 +394,6 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
             this.LoadMoreBehavior = LoadMoreOption.None;
             return false;
         }
-
-        return true;
     }
 
 
@@ -253,7 +406,7 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
             await Task.Delay(3000);
             LoadMoreMessages();
         }
-        catch{ }
+        catch { }
         finally
         {
             // Set is busy as false to hide the busy indicator.
@@ -266,8 +419,8 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
     /// Adds the next ten messages from the older messages of the conversation to see messages.
     /// </summary>
     private void LoadMoreMessages()
-    {        
-        for (int i = 1; i <= 10 ; i++)
+    {
+        for (int i = 1; i <= 10; i++)
         {
             var oldMessage = this.OldMessages[this.OldMessages.Count - 1];
             this.Messages.Insert(0, oldMessage);
@@ -286,6 +439,39 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 `SfChat` allows you to customize the load more view to display any custom button or indicator when loading more messages. This feature automatically adjusts the size of the load more view based on the content inside.
 
 You can use the [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) property to determine whether to display the custom button or the busy indicator. In the code sample below, a custom view and a busy indicator are added as children of a grid, which is then set as the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreTemplate). When `IsLazyLoading` is `false`, the custom view is shown, and the busy indicator is hidden. When `IsLazyLoading` is `true`, the custom view is hidden, and the busy indicator is shown. 
+
+N> The samples below reference the `cloud.jpg` image. Add this image to your project's `Resources/Images` folder (and register the `MauiImage` item in your `.csproj`) so the `Image.Source` resolves at runtime.
+
+N> The `InverseBoolConverter` used in the XAML sample is shown below. The code-behind sample also uses the same converter when wiring up bindings in C#.
+
+{% tabs %}
+{% highlight c# tabtitle="InverseBoolConverter.cs" %}
+using System.Globalization;
+
+public class InverseBoolConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        if (value is bool boolValue)
+        {
+            return !boolValue;
+        }
+
+        return false;
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        if (value is bool boolValue)
+        {
+            return !boolValue;
+        }
+
+        return false;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight xaml hl_lines="26" %}
@@ -349,9 +535,11 @@ You can use the [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% highlight c# hl_lines="10" %}
 public partial class MainPage : ContentPage
 {
+
     public MainPage()
     {
         InitializeComponent();
+        LoadMoreViewModel viewModel = new LoadMoreViewModel();
         sfChat.Messages = viewModel.Messages;
         sfChat.CurrentUser = viewModel.CurrentUser;
         Label LoadMoreLabel;

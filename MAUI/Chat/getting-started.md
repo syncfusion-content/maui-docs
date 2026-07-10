@@ -88,7 +88,7 @@ Before proceeding, ensure the following are set up:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion handler
+## Step 3: Register Syncfusion Core Handler
  
 Make sure to add the namespace.
  
@@ -114,6 +114,7 @@ Create a simple message collection as shown in the following code example in a n
 
 {% tabs %}
 {% highlight c# %}
+using System.Collections.ObjectModel;
 
 public class GettingStartedViewModel : INotifyPropertyChanged
 {
@@ -153,7 +154,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         }
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     public void RaisePropertyChanged(string propName)
     {
@@ -192,7 +193,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         this.messages.Add(new TextMessage()
         {
             Author = currentUser,
-            Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.\",",
+            Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.",
         });
     }
 }
@@ -217,17 +218,25 @@ using Syncfusion.Maui.Chat;
 
 Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This enables property binding from `ViewModel` class.
 
-To load the messages to SfChat, bind the message collection to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property of Chat and bind the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) to differentiate the incoming & outgoing messages.
+To load the messages to SfChat, bind the message collection to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property of Chat and bind the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) to differentiate the incoming and outgoing messages.
 
 {% tabs %} 
 {% highlight xaml %}
-<syncfusion:SfChat x:Name="sfChat"
-                Messages="{Binding Messages}"
-                CurrentUser="{Binding CurrentUser}"/>
-    <syncfusion:SfDataGrid.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+            xmlns:local="clr-namespace:MauiChat"             
+            x:Class="MauiChat.MainPage">
+
+    <ContentPage.BindingContext>
         <local:GettingStartedViewModel />
-    </syncfusion:SfDataGrid.BindingContext>
-</syncfusion:SfChat>
+    </ContentPage.BindingContext>
+
+    <syncfusion:SfChat x:Name="sfChat"
+                    Messages="{Binding Messages}"
+                    CurrentUser="{Binding CurrentUser}"/>
+    </syncfusion:SfChat>
+</ContentPage>
 {% endhighlight %} 
 
 {% highlight c# %}

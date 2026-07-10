@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Overview of .NET MAUI TreeView (SfTreeView)
+# Overview of .NET MAUI TreeView
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeView](https://www.syncfusion.com/maui-controls/maui-treeview) is a data-oriented control that displays the hierarchical data,such as organizational structures and nested connections, within your application. It provides a user-friendly way to interact with complex data structures and navigate through different levels of information by allowing users to expand and collapse nodes to reveal or hide underlying information.
 
@@ -16,7 +16,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeView](https://www.syncfusion.com/m
 ## Business use cases
 
 - Applications that require displaying hierarchical data such as folders, organizational structures, or category trees.  
-- File explorer and document management systems that support navigation through nested directories and items.  
+- File Explorer and Document Management systems that support navigation through nested directories and items.  
 - Data-driven applications that organize related information into expandable and collapsible groups.  
 - Business applications that require intuitive navigation through multi-level structured data.  
 
@@ -27,7 +27,9 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeView](https://www.syncfusion.com/m
 - **Selection** allows selecting nodes using multiple selection modes and keyboard navigation.  
 - **Item templating** allows customizing the appearance of each node for rich UI design.  
 - **Expand and collapse** allows revealing or hiding child nodes for better navigation.  
-- **Drag and drop support** allows reordering or reorganizing nodes interactively.  
+- **Drag and drop** allows reordering or reorganizing nodes interactively.  
+- **Filtering** allows locating nodes quickly using built-in text matching or custom predicates.  
+- **Sorting** allows ordering nodes in ascending or descending order using one or more sort descriptors.  
 
 ## Globalization
 

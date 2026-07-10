@@ -128,7 +128,7 @@ Create an instance for the Calendar control. The [.NET MAUI Calendar](https://he
 {% tabs %}
 {% highlight xaml %}
 <calendar:SfCalendar  x:Name="calendar" 
-                        View="Month">
+                      View="Month">
 </calendar:SfCalendar>
 {% endhighlight %}
 {% highlight c# %}

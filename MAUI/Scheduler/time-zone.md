@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time Zone in .NET MAUI Scheduler control | Syncfusion
+title: Time Zone in .NET MAUI Scheduler control | Syncfusion®
 description: Learn here all about Time Zone support in Syncfusion<sup>&reg;</sup> MAUI Scheduler (SfScheduler) control, it's elements and more.
 platform: maui
 control: SfScheduler
@@ -884,13 +884,13 @@ this.scheduler.AppointmentsSource = appointments;
 * The time zone support is applicable for custom appointments too, so map the corresponding property.
 * Use [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) for custom appointments by mapping the [StartTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_StartTimeZone) and [EndTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_EndTimeZone) custom properties of [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html).
 
-## Display appointments based on client’s  time zone
+## Display appointments based on client’s time zone
 
-Display the appointments based on the client’s local time zone in scheduler. For example, consider a scenario that you are in North Carolina and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 5.30 A.M. in Chennai. When each view your Scheduler, you need to see the appointment displayed relative to your local time zones 5.30 A.M., 10 A.M., and 3 P.M., respectively. It can be achieved by setting schedule time zone to default (it will consider your device’s local time zone as schedule time zone) and appointment’s time zone to `North Carolina` region [as you are in North Carolina and it's time zone is Eastern Standard Time].
+Display the appointments based on the client’s local time zone in the scheduler. For example, consider a scenario where you are in North Carolina and you want to set up a meeting at 10:00 A.M. North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3:00 P.M. (15:00) in London and 5:30 A.M. in Chennai. When each views your Scheduler, they need to see the appointment displayed relative to their local time zones: 5:30 A.M., 10:00 A.M., and 3:00 P.M., respectively. It can be achieved by setting the schedule time zone to default (it will consider your device’s local time zone as the schedule time zone) and the appointment’s time zone to the `North Carolina` region [as you are in North Carolina and its time zone is Eastern Standard Time].
 
 ## Display appointments based on scheduler time zone
 
-Set the specific time zone to schedule using the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) property of scheduler. On this scenario, the appointments will be displayed in UTC time when the `StartTimeZone` and `EndTimeZone` properties of `SchedulerAppointment` are set to null. The appointments will be displayed in UTC time based on the given scheduler time zone.
+Set the specific time zone to schedule using the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) property of the scheduler. In this scenario, the appointments will be displayed in UTC time when the `StartTimeZone` and `EndTimeZone` properties of `SchedulerAppointment` are set to null. The appointments will be displayed in UTC time based on the given scheduler time zone.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -900,7 +900,7 @@ Set the specific time zone to schedule using the [TimeZone](https://help.syncfus
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="SchedulerViewModel.cs" hl_lines="5"%}
+{% highlight c# tabtitle="SchedulerViewModel.cs" hl_lines="5" %}
 
 public class SchedulerViewModel
 {

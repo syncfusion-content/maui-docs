@@ -112,7 +112,7 @@ Add the following namespace in your XAML or C#.
 
 {% tabs %}
 {% highlight xaml %}
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.Accordion;
