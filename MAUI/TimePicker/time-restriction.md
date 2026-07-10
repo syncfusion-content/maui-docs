@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Time Restriction in .NET MAUI Time Picker Control | Syncfusion
-description: Learn about time restriction support in Syncfusion .NET MAUI Time Picker (SfTImePicker) control and its basic features.
+title: Time Restriction in .NET MAUI Time Picker Control | Syncfusion®
+description: Learn about time restriction support in Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
 documentation: ug
@@ -30,11 +30,11 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Minimum time in .NET MAUI Time picker.](images/time-restriction/maui-timepicker-timerestriction-minimumtime.png)
+![Minimum time in .NET MAUI Time Picker.](images/time-restriction/maui-timepicker-timerestriction-minimumtime.png)
 
 ## Maximum Time
 
-The time picker provides an option to restrict the selection of time items using the [MaximumTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MaximumTime) property. This ensures that times beyond the specified minimum time range cannot be selected. The `MaximumTime` value must be higher than the `MinimumTime` value. When setting the minimum time, only the hour and minute components are considered.
+The time picker provides an option to restrict the selection of time items using the [MaximumTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MaximumTime) property. This ensures that times beyond the specified maximum time range cannot be selected. The `MaximumTime` value must be higher than the `MinimumTime` value. When setting the maximum time, only the hour and minute components are considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -53,7 +53,7 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Maximum time in .NET MAUI Time picker.](images/time-restriction/maui-timepicker-timerestriction-maximumtime.png)
+![Maximum time in .NET MAUI Time Picker.](images/time-restriction/maui-timepicker-timerestriction-maximumtime.png)
 
 ## Blackout Times
 
@@ -92,6 +92,6 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Blackout times in .NET MAUI Time picker.](images/time-restriction/maui-timepicker-timerestriction-blackouttimes.png)
+![Blackout times in .NET MAUI Time Picker.](images/time-restriction/maui-timepicker-timerestriction-blackouttimes.png)
 
 N> The `Selection View` will not be applicable when setting `Blackout times`.
