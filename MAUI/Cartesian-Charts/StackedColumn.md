@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Stacked Column Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about stacked column and bar chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Stacked Column Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about stacked column and bar chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui stacked column chart, maui stacked column chart, stacked column chart customization .net maui, syncfusion maui stacked column chart, cartesian stacked column chart maui, .net maui chart stacked column visualization, .net maui cumulative column chart.
 ---
 
-# Stacked Column Chart in .NET MAUI Chart
+# Stacked Column Chart in .NET MAUI Cartesian Chart
 
 ## Stacked Column Chart
 
 The stacked column chart represents data values in a stacked format, where the columns are stacked on each other to indicate the cumulative value of the data points.
 
 To render a stacked column chart, create an instance of the [StackingColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -87,7 +89,7 @@ N> If the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ....
+    <!-- code omitted for brevity -->
     <chart:StackingColumnSeries ItemsSource="{Binding Data1}"
                                 XBindingPath="Name"
                                 YBindingPath="Value"

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range Column Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about range column and range bar chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Range Column Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about range column and range bar chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui range column chart, maui range column chart, range column chart customization .net maui, syncfusion maui range column chart, cartesian range column chart maui, .net maui chart range column visualization, .net maui interval column chart.
 ---
 
-# Range Column Chart in .NET MAUI Chart
+# Range Column Chart in .NET MAUI Cartesian Chart
 
 ## Range Column Chart
 
@@ -68,7 +68,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Range column chart type in MAUI Chart](Chart-Types-images/maui_range_column.png)
+![Range column chart type in MAUI Chart](Chart-types-images/maui_range_column.png)
 
 ## Spacing and Width
 
@@ -127,4 +127,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Range column segment spacing in MAUI Chart](Chart-Types-images/maui_rangeColumn_space_width.png)
+![Range column segment spacing in .NET MAUI Cartesian Chart](Chart-types-images/maui_rangeColumn_space_width.png)

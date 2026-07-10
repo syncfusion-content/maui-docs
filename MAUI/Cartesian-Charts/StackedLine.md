@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Stacked Line Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about stacked line chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Stacked Line Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about stacked line chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Stacked Line Chart in .NET MAUI Chart
+# Stacked Line Chart in .NET MAUI Cartesian Chart
 
 ## Stacked Line Chart
 
 The stacked line chart is a type of chart that displays multiple line series stacked on top of each other, with the values of each series combined to show a cumulative value of the data points.
 
 To render a stacked line chart, create an instance of the [StackingLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -98,7 +100,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacking Line Chart in .NET MAUI Cartesian Charts.](chart-types-images\net-maui-cartesian-charts-stacked-line-chart.png)
+![Stacking Line Chart in .NET MAUI Cartesian Chart](chart-types-images\net-maui-cartesian-charts-stacked-line-chart.png)
 
 ## Dashed Stacked Line
 
@@ -164,7 +166,7 @@ ViewModel viewModel = new ViewModel();
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(5);
 doubleCollection.Add(2);
-. . .
+
 StackingLineSeries series1 = new  StackingLineSeries()
 {
     ItemsSource = viewModel.Data1,
@@ -208,7 +210,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Dashed Stacked Line chart in MAUI](Chart-types-images/maui_dashed_stacked_line_chart.png)
+![Dashed Stacked Line chart in .NET MAUI Cartesian Chart](Chart-types-images/maui_dashed_stacked_line_chart.png)
 
 ## Enable Marker
 
@@ -219,7 +221,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:StackingLineSeries ItemsSource="{Binding Data1}"
                               XBindingPath="Month"
                               YBindingPath="Value"
@@ -249,7 +251,7 @@ SfCartesianChart chart = new SfCartesianChart();
 
 ViewModel viewModel = new ViewModel();
 
-...
+// code omitted for brevity
 StackingLineSeries series1 = new  StackingLineSeries()
 {
     ItemsSource = viewModel.Data1,
@@ -293,7 +295,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacked Line Marker support in MAUI Chart](Chart-types-images/stacked_line_marker_support.png)
+![Stacked Line Marker support in .NET MAUI Cartesian Chart](Chart-types-images/stacked_line_marker_support.png)
 
 ### Marker customization
 
@@ -311,7 +313,7 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:StackingLineSeries ItemsSource="{Binding Data1}"
                                 XBindingPath="Month"
                                 YBindingPath="Value"
@@ -334,7 +336,7 @@ SfCartesianChart chart = new SfCartesianChart();
 
 ViewModel viewModel = new ViewModel();
 
-...
+// code omitted for brevity
 ChartMarkerSettings chartMarker= new ChartMarkerSettings()
 {
     Type = ShapeType.Diamond,

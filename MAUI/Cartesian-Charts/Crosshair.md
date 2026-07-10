@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Crosshair in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to enable crosshair and its customization in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Crosshair in .NET MAUI Cartesian Chart control | Syncfusion
+description: This section explains how to enable the crosshair and its customization in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart crosshair, maui chart crosshair, .net maui crosshair customization, syncfusion maui crosshair chart, cartesian crosshair maui, .net maui crosshair visualization.
 ---
 
-# Crosshair in .NET MAUI Chart
+# Crosshair in .NET MAUI Cartesian Chart
 
 Crosshair allows you to view exact values on the chart by showing vertical and horizontal lines at the interaction point. These lines help you read the corresponding axis values clearly. On mobile, long‑press the chart to show the crosshair and drag to change its position. On desktop, move the cursor over the chart area to display the crosshair.
 
-## Enable Crosshair 
+## Enable Crosshair
 
 To enable the crosshair in the chart, create an instance of the [ChartCrosshairBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCrosshairBehavior.html) and set it to the [CrosshairBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_CrosshairBehavior) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 
 {% tabs %}
@@ -22,11 +24,10 @@ To enable the crosshair in the chart, create an instance of the [ChartCrosshairB
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.CrosshairBehavior>
         <chart:ChartCrosshairBehavior/>
     </chart:SfCartesianChart.CrosshairBehavior>
-    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -34,19 +35,19 @@ To enable the crosshair in the chart, create an instance of the [ChartCrosshairB
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+
 ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
 chart.CrosshairBehavior = crosshair;
-...
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Show Crosshair axis labels
+## Show crosshair axis labels
 
-To view the axis labels then set the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to true as shown in the below code snippet. The default value of the [ChartAxis.ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) is False.
+To view the axis labels, set the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to `true` as shown in the following code snippet. The default value of the [ChartAxis.ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) is `false`.
 
 
 {% tabs %}
@@ -54,7 +55,7 @@ To view the axis labels then set the [ShowTrackballLabel](https://help.syncfusio
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.CrosshairBehavior>
         <chart:ChartCrosshairBehavior/>
     </chart:SfCartesianChart.CrosshairBehavior> 
@@ -66,7 +67,7 @@ To view the axis labels then set the [ShowTrackballLabel](https://help.syncfusio
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis ShowTrackballLabel="True"/>
     </chart:SfCartesianChart.YAxes>
-    ...
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -74,7 +75,7 @@ To view the axis labels then set the [ShowTrackballLabel](https://help.syncfusio
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+
 ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
 chart.CrosshairBehavior = crosshair;
 
@@ -89,21 +90,21 @@ NumericalAxis chartYAxis = new NumericalAxis()
 };
 chart.XAxes.Add(chartXAxis);
 chart.YAxes.Add(chartYAxis);
-...
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Crosshair Behavior support in MAUI chart](Crosshair_images/maui_chart_crosshair.png)
+![Crosshair behavior support in .NET MAUI Cartesian Chart](Crosshair_images/maui_chart_crosshair.png)
 
 
-## Vertical and Horizontal Line Customization
+## Horizontal and Vertical Line Customization
 
 When you add the [ChartCrosshairBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCrosshairBehavior.html) to a chart, horizontal and vertical lines appear. These lines can be customized individually using the [HorizontalLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCrosshairBehavior.html#Syncfusion_Maui_Charts_ChartCrosshairBehavior_HorizontalLineStyle) and [VerticalLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCrosshairBehavior.html#Syncfusion_Maui_Charts_ChartCrosshairBehavior_VerticalLineStyle) properties.
 
-The appearance of the track line in crosshair can be customized using the following properties.
+The appearance of the crosshair lines can be customized using the following properties. These properties apply to both the horizontal and vertical line styles.
 
 * [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html#Syncfusion_Maui_Charts_ChartLineStyle_StrokeWidth), of type `double`, used to change the stroke width of the line.
 * [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html#Syncfusion_Maui_Charts_ChartLineStyle_Stroke), of type `Brush`, used to change the stroke color of the line.
@@ -119,7 +120,7 @@ The following code snippet demonstrates how to configure the line style for the 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.CrosshairBehavior>
         <chart:ChartCrosshairBehavior>
             <chart:ChartCrosshairBehavior.HorizontalLineStyle>
@@ -130,7 +131,7 @@ The following code snippet demonstrates how to configure the line style for the 
             </chart:ChartCrosshairBehavior.HorizontalLineStyle>
         </chart:ChartCrosshairBehavior>
     </chart:SfCartesianChart.CrosshairBehavior>
-    ...
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -138,7 +139,7 @@ The following code snippet demonstrates how to configure the line style for the 
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+
 ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
 chart.CrosshairBehavior = crosshair;
 
@@ -153,14 +154,14 @@ ChartLineStyle horizontalLineStyle = new ChartLineStyle()
     StrokeDashArray = doubleCollection
 };
 crosshair.HorizontalLineStyle = horizontalLineStyle;
-...
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Crosshair HorizontalLineStyle Customization support in MAUI chart](Crosshair_images/maui_chart_crosshair_horizontal_linestyle.png)
+![Crosshair horizontal line style customization in .NET MAUI Cartesian Chart](Crosshair_images/maui_chart_crosshair_horizontal_linestyle.png)
 
 ### VerticalLineStyle
 
@@ -172,7 +173,7 @@ The following code snippet demonstrates how to configure the line style for the 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.CrosshairBehavior>
         <chart:ChartCrosshairBehavior>
             <chart:ChartCrosshairBehavior.VerticalLineStyle>
@@ -183,7 +184,7 @@ The following code snippet demonstrates how to configure the line style for the 
             </chart:ChartCrosshairBehavior.VerticalLineStyle>
         </chart:ChartCrosshairBehavior>
     </chart:SfCartesianChart.CrosshairBehavior>
-    ...
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -191,7 +192,7 @@ The following code snippet demonstrates how to configure the line style for the 
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+
 ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
 chart.CrosshairBehavior = crosshair;
 
@@ -206,16 +207,16 @@ ChartLineStyle verticalLineStyle = new ChartLineStyle()
     StrokeDashArray = doubleCollection
 };
 crosshair.VerticalLineStyle = verticalLineStyle;
-...
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Crosshair VerticalLineStyle Customization support in MAUI chart](Crosshair_images/maui_chart_crosshair_vertical_linestyle.png)
+![Crosshair vertical line style customization in .NET MAUI Cartesian Chart](Crosshair_images/maui_chart_crosshair_vertical_linestyle.png)
 
-## Crosshair Axis Labels Customization
+## Crosshair axis labels customization
 
 The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_LabelStyle) property allows you to customize the appearance of crosshair axis labels. These options are:
 
@@ -225,9 +226,9 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 * [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_StrokeWidth), of type `double`, used to change the stroke thickness of the label.
 * [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Stroke), of type `Brush`, used to customize the border of the label.
 * [LabelFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_LabelFormat), of type `string`, used to change the format of the label.
-* [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_LabelFormat), of type `string`, used to change the font family for the trackball label.
-* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontAttributes), of type `FontAttributes`, used to change the font style for the trackball label.
-* [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontSize), of type `double`, used to change the font size for the trackball label.
+* [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontFamily), of type `string`, used to change the font family for the crosshair label.
+* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontAttributes), of type `FontAttributes`, used to change the font style for the crosshair label.
+* [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontSize), of type `double`, used to change the font size for the crosshair label.
 * [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_CornerRadius), of type `CornerRadius`, used to set the rounded corners for labels.
 
 
@@ -236,7 +237,7 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:CategoryAxis>
         <chart:CategoryAxis.TrackballLabelStyle>
             <chart:ChartAxisLabelStyle Background="LightBlue"   
@@ -246,7 +247,7 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
                                        Stroke="Gray"/>
         </chart:CategoryAxis.TrackballLabelStyle>
     </chart:CategoryAxis>
-    ...
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -254,7 +255,7 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+
 ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
 chart.CrosshairBehavior = crosshair;
 
@@ -268,11 +269,12 @@ ChartAxisLabelStyle axisLabelStyle = new ChartAxisLabelStyle()
     Stroke = Colors.Gray
 };
 categoryAxis.TrackballLabelStyle = axisLabelStyle;
-. . .
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Crosshair Axis Labels Customization support in MAUI chart](Crosshair_images/maui_chart_crosshair_label_customia.png)
+![Crosshair axis labels customization in .NET MAUI Cartesian Chart](Crosshair_images/maui_chart_crosshair_label_customization.png)
+

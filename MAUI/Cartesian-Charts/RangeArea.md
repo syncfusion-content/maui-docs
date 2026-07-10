@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range Area Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about range area chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Range Area Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about range area chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui range area chart, maui range area chart, .net maui chart range area type, range area chart customization .net maui, syncfusion maui range area chart, cartesian range area chart maui, .net maui chart range area visualization.
 ---
 
-# Range Area Chart in .NET MAUI Chart
+# Range Area Chart in .NET MAUI Cartesian Chart
 
 ## Range Area Chart
 
@@ -27,7 +27,7 @@ N> The Cartesian chart has the [Series](https://help.syncfusion.com/cr/maui/Sync
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
@@ -69,7 +69,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Range Area chart type in MAUI Chart](Chart-types-images/maui_range_area.png)
+![Range Area chart type in .NET MAUI Cartesian Chart](Chart-types-images/maui_range_area.png)
 
 ## Enable Marker
 
@@ -80,7 +80,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:RangeAreaSeries ItemsSource="{Binding Data}"
                            XBindingPath="XValue"
                            High="HighValue"
@@ -93,7 +93,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+// code omitted for brevity
 RangeAreaSeries series = new RangeAreaSeries()
 {
     ItemsSource = new ViewModel().Data,
@@ -126,7 +126,7 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:RangeAreaSeries ItemsSource="{Binding Data}"
                            XBindingPath="XValue"
                            High="HighValue"
@@ -148,7 +148,7 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+// code omitted for brevity
 ChartMarkerSettings chartMarker= new ChartMarkerSettings()
 {
     Type = ShapeType.Diamond,

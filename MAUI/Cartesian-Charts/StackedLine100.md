@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Stacked Line 100 Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about stacked line 100 chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Stacked Line 100 Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about stacked line 100 chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Stacked Line 100 Chart in .NET MAUI Chart
+# Stacked Line 100 Chart in .NET MAUI Cartesian Chart
 
 ## Stacked Line 100
 
 The stacked line 100 chart is a type of chart that displays multiple line series stacked on top of each other, to indicate the cumulative value of the data points at 100%.
 
 To render a stacked line 100 chart, create an instance of the [StackingLine100Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLine100Series.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -103,7 +105,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacking Line 100 Chart in .NET MAUI Cartesian Charts.](chart-types-images\net-maui-cartesian-charts-stacked-line-100-chart.png)
+![Stacking Line 100 Chart in .NET MAUI Cartesian Charts](chart-types-images\net-maui-cartesian-charts-stacked-line-100-chart.png)
 
 ## Dashed Stacked Line 100
 
@@ -168,7 +170,7 @@ ViewModel viewModel = new ViewModel();
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(5);
 doubleCollection.Add(2);
-. . .
+
 StackingLine100Series series1 = new  StackingLine100Series()
 {
     ItemsSource = viewModel.Data1,
@@ -212,7 +214,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Dashed Stacked 100 Line chart in MAUI](Chart-types-images/maui_dashed_stacked_line_100_chart.png)
+![Dashed Stacked 100 Line chart in .NET MAUI Cartesian Chart](Chart-types-images/maui_dashed_stacked_line_100_chart.png)
 
 ## Enable Marker
 
@@ -223,7 +225,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:StackingLine100Series ItemsSource="{Binding Data1}"
                                  XBindingPath="Month"
                                  YBindingPath="Value"
@@ -253,7 +255,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 SfCartesianChart chart = new SfCartesianChart();
 
 ViewModel viewModel = new ViewModel();
-...
+// code omitted for brevity
 StackingLine100Series series1 = new  StackingLine100Series()
 {
     ItemsSource = viewModel.Data1,
@@ -297,7 +299,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacked Line 100 Marker support in MAUI Chart](Chart-types-images/stacked_line_100_marker_support.png)
+![Stacked Line 100 Marker support in .NET MAUI Cartesian Chart](Chart-types-images/stacked_line_100_marker_support.png)
 
 ### Marker customization
 
@@ -315,7 +317,7 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:StackingLine100Series ItemsSource="{Binding Data1}"
                                 XBindingPath="Month"
                                 YBindingPath="Value"
@@ -337,7 +339,7 @@ In order to change the series markers appearance, create an instance of the [Mar
 SfCartesianChart chart = new SfCartesianChart();
 
 ViewModel viewModel = new ViewModel();
-...
+// code omitted for brevity
 ChartMarkerSettings chartMarker= new ChartMarkerSettings()
 {
     Type = ShapeType.Diamond,
