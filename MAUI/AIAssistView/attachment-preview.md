@@ -23,7 +23,7 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 * [FilePreviewIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FilePreviewIcon) : Displays the preview icon for the file.
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml hl_lines="2" %}
 
 <ContentPage.BindingContext>
     <local:ViewModel/>
@@ -32,7 +32,7 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            Attachments="{Binding Attachments}"/>
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -116,8 +116,6 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView attachment preview in editor](Images/attachment-preview/maui-aiassistview-preview.gif)
-
 ### Setting the maximum number of attachments in SfAIAssistView
 
 The `SfAIAssistView` control allows you to control the number of attachments using the [MaxAttachmentCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_MaxAttachmentCount) property. This feature allows us to restrict the number of attachments that can be added to the `Attachments`. The default value is 10.
@@ -132,7 +130,7 @@ The `SfAIAssistView` control allows you to control the number of attachments usi
                            Attachments = "{Binding Attachments}"
                            MaxAttachmentCount = 8/>
 {% endhighlight %}
-{% highlight c#  hl_lines="12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -203,7 +201,7 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
                            Attachments = "{Binding Attachments}"
                            AttachmentItemTemplate = "{StaticResource attachmentItemTemplate}"/>
 {% endhighlight %}
-{% highlight c#  hl_lines="12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 using Syncfusion.Maui.AIAssistView;
 
 public partial class MainPage : ContentPage

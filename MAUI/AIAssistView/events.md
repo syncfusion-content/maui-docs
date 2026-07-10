@@ -193,7 +193,7 @@ These are triggered whenever a user taps on an image within the control. The tap
                            ImageTapped="sfAIAssistView_ImageTapped" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.AIAssistView;
@@ -277,10 +277,12 @@ public class ViewModel : INotifyPropertyChanged
                            CardTapped="sfAIAssistView_CardTapped" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.AIAssistView;
+
+namespace MauiAssistViewSample;
 
 public partial class MainPage : ContentPage
 {
@@ -519,7 +521,7 @@ The [ItemCopyCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
                            ItemCopyCommand="{Binding CopyCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -562,7 +564,7 @@ The [ItemRetryCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAss
                            ItemRetryCommand="{Binding RetryCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -605,7 +607,7 @@ The [ItemRatingChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                            ItemRatingChangedCommand="{Binding RatingChangedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -645,13 +647,13 @@ To cancel the response using the `StopRespondingCommand` or `StopResponding` eve
 #### StopResponding Event
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            StopResponding="OnStopResponding" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using System;
 using Microsoft.Maui.Controls;
@@ -678,13 +680,13 @@ public partial class MainPage : ContentPage
 #### StopResponding Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
                            StopRespondingCommand="{Binding StopRespondingCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="17" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -813,7 +815,7 @@ public partial class MainPage : ContentPage
                            ConversationItemTappedCommand="{Binding ConversationItemTappedCommand}"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}
 
 using System.ComponentModel;
 using System.Windows.Input;
@@ -854,7 +856,7 @@ The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIA
                            ContextMenuOpening="OnContextMenuOpening">
 </syncfusion:SfAIAssistView>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.AIAssistView;

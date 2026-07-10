@@ -21,10 +21,9 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1 2 3" %}
 
-<syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
-                           ShowToolbar="True"
+<syncfusion:SfAIAssistView ShowToolbar="True"
                            ToolbarTitle="AI AssistView"
                            ToolbarHeight="50" />
 
@@ -57,7 +56,7 @@ public partial class MainPage : ContentPage
 In the Syncfusion .NET MAUI AI AssistView, you can provide toolbar menu items using the [ToolbarMenuOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToolbarMenuOptions) collection on `SfAIAssistView`. Each item can be an [ActionButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtons) (or any suitable view) and bound to a command on your view model.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView">
     <syncfusion:SfAIAssistView.ToolbarMenuOptions>
@@ -115,8 +114,6 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
-
-![Syncfusion .NET MAUI AI AssistView Temporary Chat Banner](Images/toolbar/maui-aiassistview-temporary-chat-banner.png)
 
 ### Events for chat mode
 

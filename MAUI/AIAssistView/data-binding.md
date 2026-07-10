@@ -130,7 +130,7 @@ public partial class MainPage : ContentPage
         AssistItemConverter assistItemConverter = new AssistItemConverter();
 
         SfAIAssistView assistView = new SfAIAssistView();
-        assistView.ItemsSource = viewModel.AssistItemsCollection;
+        assistView.ItemsSource = viewModel.AssistItems;
         assistView.ItemsSourceConverter = assistItemConverter;
         this.Content = assistView;
     }
