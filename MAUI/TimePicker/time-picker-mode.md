@@ -122,6 +122,8 @@ private void Button_Clicked(object sender, System.EventArgs e)
     this.timePicker.IsOpen = true;
 }
 
+{% endhighlight %}
+
 {% endtabs %}
 
 ### Relative view

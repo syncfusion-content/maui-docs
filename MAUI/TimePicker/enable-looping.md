@@ -61,7 +61,7 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-![Set selected time in .NET MAUI Time Picker.](images/enable-looping/maui-time-picker-set-selected-time.png)
+![Set selected time in .NET MAUI Time Picker.](images/getting-started/maui-time-picker-set-selected-time.png)
 
 ## Clear selection
 

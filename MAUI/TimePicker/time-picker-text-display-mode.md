@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Display Mode in .NET MAUI Time Picker Control | Syncfusion<sup>&reg;</sup>
+title: Text Display Mode in .NET MAUI Time Picker Control | Syncfusion®
 description: Learn about the time picker text display mode in Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
