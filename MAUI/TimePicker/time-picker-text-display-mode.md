@@ -1,15 +1,19 @@
 ---
 layout: post
-title: Text Dispaly Mode in .NET MAUI Time Picker Control | Syncfusion<sup>&reg;</sup>
+title: Text Display Mode in .NET MAUI Time Picker Control | Syncfusion<sup>&reg;</sup>
 description: Learn about the time picker text display mode in Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
-# Time Picker Text display mode in .NET MAUI Picker (SfTimePicker)
+# Time Picker Text Display Mode in .NET MAUI Time Picker (SfTimePicker)
 
 The time picker text display mode is specified in the time picker property enumeration, which is used to display the time picker items based on the modes. It offers four modes: [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default), [Fade](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Fade), [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink) and [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink). The default time picker text display mode is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default) in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+## Default Mode
+
+The default mode displays all time picker items at the same opacity and font size. This is the default value of the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property in [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) and requires no additional configuration.
 
 ## Fade Mode
 
@@ -37,7 +41,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Fade Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-fade-mode.png)
+![Fade mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-fade-mode.png)
 
 ## Shrink Mode
 
@@ -65,7 +69,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-shrink-mode.png)
+![Shrink mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-shrink-mode.png)
 
 ## FadeAndShrink Mode
 
@@ -93,4 +97,4 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Fade and Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-fade-shrink-mode.png)
+![Fade and shrink mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-fade-shrink-mode.png)
