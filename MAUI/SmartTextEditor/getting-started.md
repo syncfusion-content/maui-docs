@@ -36,122 +36,6 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Register the AI Service
-
-To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
-
-{% highlight c# hl_lines="6 31" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.SmartComponents.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            string key = "<MENTION-YOUR-KEY>";
-            Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
-            string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
-
-            // Shows how to configure Azure AI service to the Smart Components.
-            AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
-            IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
-
-            builder.Services.AddChatClient(azureChatClient);
-            builder.ConfigureSyncfusionAIServices();
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-
-N>
-- You can refer to [Configure Chat Client](https://help.syncfusion.com/maui/common/configure-ai-service) for services like `Azure`, `OpenAI`, and `Ollama`.
-- You can also refer to the [Custom AI Service](https://help.syncfusion.com/maui/common/custom-ai-service) section to configure your own services, such as `Claude`, `Gemini`, `DeepSeek`, `Groq`, etc.
-- If you are using a custom AI service, there is no need to register `ConfigureSyncfusionAIServices()` in `MauiProgram`.
-
-## Step 5: Add .NET MAUI Smart Text Editor control
-
-1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
-2. Initialize [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
-
-    <smarttexteditor:SfSmartTextEditor />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.SmartComponents;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSmartTextEditor smarttexteditor = new SfSmartTextEditor();
-        this.Content = smarttexteditor;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -174,120 +58,6 @@ Before proceeding, ensure the following are set up:
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.SmartComponents` to install the Syncfusion<sup>®</sup> .NET MAUI SmartComponents NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
-
-## Step 3: Register the handler
-
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Register the AI Service
-
-To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
-
-{% highlight c# hl_lines="6 31" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.SmartComponents.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            string key = "<MENTION-YOUR-KEY>";
-            Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
-            string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
-
-            // Shows how to configure Azure AI service to the Smart Components.
-            AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
-            IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
-
-            builder.Services.AddChatClient(azureChatClient);
-            builder.ConfigureSyncfusionAIServices();
-
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %}
-
-N>
-- You can refer to [Configure Chat Client](https://help.syncfusion.com/maui/common/configure-ai-service) for services like `Azure`, `OpenAI`, and `Ollama`.
-- You can also refer to the [Custom AI Service](https://help.syncfusion.com/maui/common/custom-ai-service) section to configure your own services, such as `Claude`, `Gemini`, `DeepSeek`, `Groq`, etc.
-- If you are using a custom AI service, there is no need to register `ConfigureSyncfusionAIServices()` in `MauiProgram`.
-
-## Step 5: Add .NET MAUI Smart Text Editor control
-
-1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
-2. Initialize [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html).
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
-
-    <smarttexteditor:SfSmartTextEditor />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.SmartComponents;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSmartTextEditor smarttexteditor = new SfSmartTextEditor();
-        this.Content = smarttexteditor;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 {% endtabcontent %}
 
@@ -313,156 +83,100 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+{% endtabcontent %}
+{% endtabcontents %}
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+## Step 3: Register Syncfusion handler
+
+Make sure to add the namespace.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
 {% endhighlight %}
+{% endtabs %}
+
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+
+{% tabs %}
+{% highlight c# %}
+builder.ConfigureSyncfusionCore();
+{% endhighlight %} 
 {% endtabs %}
 
 ## Step 4: Register the AI Service
 
+Make sure to add the namespace.
+
+{% tabs %}
+{% highlight c# %}
+using Syncfusion.Maui.SmartComponents.Hosting;
+{% endhighlight %}
+{% endtabs %}
+
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
-{% highlight c# hl_lines="6 31" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.SmartComponents.Hosting;
+{% tabs %}
+{% highlight c# %}
+string key = "<MENTION-YOUR-KEY>";
+Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
+string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
 
-namespace GettingStarted
-{
-    public class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+// Shows how to configure Azure AI service to the Smart Components.
+AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
+IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
 
-            string key = "<MENTION-YOUR-KEY>";
-            Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
-            string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
-
-            // Shows how to configure Azure AI service to the Smart Components.
-            AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
-            IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
-
-            builder.Services.AddChatClient(azureChatClient);
-            builder.ConfigureSyncfusionAIServices();
-
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %}
+builder.Services.AddChatClient(azureChatClient);
+builder.ConfigureSyncfusionAIServices();
+{% endhighlight %} 
+{% endtabs %}
 
 N>
 - You can refer to [Configure Chat Client](https://help.syncfusion.com/maui/common/configure-ai-service) for services like `Azure`, `OpenAI`, and `Ollama`.
 - You can also refer to the [Custom AI Service](https://help.syncfusion.com/maui/common/custom-ai-service) section to configure your own services, such as `Claude`, `Gemini`, `DeepSeek`, `Groq`, etc.
 - If you are using a custom AI service, there is no need to register `ConfigureSyncfusionAIServices()` in `MauiProgram`.
 
-## Step 5: Add .NET MAUI Smart Text Editor control
+## Step 5: Import the namespace
 
-1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
-2. Initialize [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html).
+Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+{% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
-
-    <smarttexteditor:SfSmartTextEditor />
-</ContentPage>
+xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents"
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+{% highlight c# %}
 
 using Syncfusion.Maui.SmartComponents;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSmartTextEditor smarttexteditor = new SfSmartTextEditor();
-        this.Content = smarttexteditor;
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
-{% endtabcontent %}
-{% endtabcontents %}
 
-## Step 6: Configure user role and phrases for suggestions
+## Step 6: Add the Smart TextEditor component
 
 Set the writing context and preferred expressions to guide completions:
 - **UserRole** (required): Describes who is typing and the intent, shaping the tone and relevance of suggestions.
 - **UserPhrases** (optional): A list of reusable statements that reflect your brand or frequent responses. Used for offline suggestions and to bias completions.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="7 8" %}
+{% highlight xaml %}
 
-<ContentPage
-    .....
-    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
-
-    <smarttexteditor:SfSmartTextEditor
-        Placeholder="Type your reply..."
-        UserRole="Support engineer responding to customer tickets">
-        <smarttexteditor:SfSmartTextEditor.UserPhrases>
-            <x:String>Thanks for reaching out.</x:String>
-            <x:String>Please share a minimal reproducible sample.</x:String>
-            <x:String>We’ll update you as soon as we have more details.</x:String>
-        </smarttexteditor:SfSmartTextEditor.UserPhrases>
-    </smarttexteditor:SfSmartTextEditor>
-</ContentPage>
+<smarttexteditor:SfSmartTextEditor Placeholder="Type your reply..."
+                                   UserRole="Support engineer responding to customer tickets">
+    <smarttexteditor:SfSmartTextEditor.UserPhrases>
+        <x:String>Thanks for reaching out.</x:String>
+        <x:String>Please share a minimal reproducible sample.</x:String>
+        <x:String>We’ll update you as soon as we have more details.</x:String>
+    </smarttexteditor:SfSmartTextEditor.UserPhrases>
+</smarttexteditor:SfSmartTextEditor>
 
 {% endhighlight %}
 {% endtabs %}
 
 N> If no AI inference service is configured, the editor generates offline suggestions from your UserPhrases.
 
-## Step 7: Running the Application
-
-Press **F5** to build and run the application. Once compiled, the Smart Text Editor will be displayed with the provided content, and AI-powered editing features will be available after configuration.
-
-Here is the result of the previous codes,
+Here is the result of the above codes,
 
 ![Getting Started in .NET MAUI Smart Text Editor.](images/getting-started/maui-smarttexteditor-getting-started.gif)
 

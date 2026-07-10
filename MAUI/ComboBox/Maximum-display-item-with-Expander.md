@@ -316,9 +316,6 @@ SfComboBox comboBox = new SfComboBox
 comboBox.LoadMoreButtonTapped += OnComboBoxLoadMoreButtonTapped;
 Content = comboBox;
 
-{% endhighlight %}
-{% highlight c# %}
-
 private void OnComboBoxLoadMoreButtonTapped(object? sender, EventArgs e)
 {
     // Load additional items into the bound collection here.

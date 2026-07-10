@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in .NET MAUI Circular Chart control | Syncfusion
-description: Learn here all about appearance customization in .NET MAUI Chart (SfCircularChart), its elements and more.
+description: Learn here all about appearance customization in .NET MAUI Circular Chart (SfCircularChart), its elements and more.
 platform: maui
 control: SfCircularChart
 documentation: ug
@@ -10,6 +10,8 @@ documentation: ug
 # Appearance in .NET MAUI Circular Chart
 
 The appearance of the [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCircularChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/circular-charts/getting-started)** guide.
 
 ## Add a title
 
@@ -23,19 +25,19 @@ The title of the chart acts as the title to provide quick information to the use
     <chart:SfCircularChart.Title>
         <Label Text="PRODUCT SALES"/>
     </chart:SfCircularChart.Title>
-    . . .
+    <!-- code omitted for brevity -->
 </chart:SfCircularChart>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfCircularChart chart = new SfCircularChart();
 chart.Title = new Label()
 {
     Text = "PRODUCT SALES"
 };
-. . .
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
@@ -51,7 +53,7 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:PieSeries ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
                      YBindingPath="YValue"
@@ -62,29 +64,36 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 {% highlight c# %}
 
+public class Model
+{
+    public string XValue { get; set; }
+    public double YValue { get; set; }
+}
+
 public class ViewModel
 {
-	public ObservableCollection<Model> Data { get; set; }
+    public ObservableCollection<Model> Data { get; set; }
 
-	public List<Brush> CustomBrushes { get; set; }
-	public ViewModel()
-	{
-		CustomBrushes = new List<Brush>();
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(38, 198, 218)));
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 188, 212)));
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 172, 193)));
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 151, 167)));
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
-	}
+    public List<Brush> CustomBrushes { get; set; }
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+        // code omitted for brevity
 
-. . .
+        CustomBrushes = new List<Brush>();
+        CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(38, 198, 218)));
+        CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 188, 212)));
+        CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 172, 193)));
+        CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 151, 167)));
+        CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
+    }
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Custom PaletteBrushes in MAUI Chart](Appearance_images/MAUI_Circular_chart_Custom_palette.png)
+![Custom PaletteBrushes in .NET MAUI Circular Chart](Appearance_images/MAUI_Circular_chart_Custom_palette.png)
 
 ## Applying Gradient
 
@@ -95,7 +104,7 @@ The gradient for the circular chart can be set by using the [PaletteBrushes](htt
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:PieSeries ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
                      YBindingPath="YValue"
@@ -108,61 +117,63 @@ The gradient for the circular chart can be set by using the [PaletteBrushes](htt
 
 public class ViewModel
 {
-	public ObservableCollection<Model> Data { get; set; }
+    public ObservableCollection<Model> Data { get; set; }
+    public List<Brush> CustomBrushes { get; set; }
 
-	public List<Brush> CustomBrushes { get; set; }
-	public ViewModel()
-	{
-		CustomBrushes = new List<Brush>();
-		LinearGradientBrush gradientColor1 = new LinearGradientBrush();
-		gradientColor1.GradientStops = new GradientStopCollection()
-		{
-			new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
-			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
-		};
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+        // code omitted for brevity
 
-		LinearGradientBrush gradientColor2 = new LinearGradientBrush();
-		gradientColor2.GradientStops = new GradientStopCollection()
-		{
-			new GradientStop() { Offset = 1, Color = Color.FromRgb(250, 221, 125) },
-			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 204, 45) }
-		};
+        CustomBrushes = new List<Brush>();
+        LinearGradientBrush gradientColor1 = new LinearGradientBrush();
+        gradientColor1.GradientStops = new GradientStopCollection()
+        {
+            new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
+            new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
+        };
 
-		LinearGradientBrush gradientColor3 = new LinearGradientBrush();
-		gradientColor3.GradientStops = new GradientStopCollection()
-		{
-			new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
-			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
-		};
+        LinearGradientBrush gradientColor2 = new LinearGradientBrush();
+        gradientColor2.GradientStops = new GradientStopCollection()
+        {
+            new GradientStop() { Offset = 1, Color = Color.FromRgb(250, 221, 125) },
+            new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 204, 45) }
+        };
 
-		LinearGradientBrush gradientColor4 = new LinearGradientBrush();
-		gradientColor4.GradientStops = new GradientStopCollection()
-		{
-			new GradientStop() { Offset = 1, Color = Color.FromRgb(221, 214, 243) },
-			new GradientStop() { Offset = 0, Color = Color.FromRgb(250, 172, 168) }
-		};
+        LinearGradientBrush gradientColor3 = new LinearGradientBrush();
+        gradientColor3.GradientStops = new GradientStopCollection()
+        {
+            new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
+            new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
+        };
 
-		LinearGradientBrush gradientColor5 = new LinearGradientBrush();
-		gradientColor5.GradientStops = new GradientStopCollection()
-		{
-			new GradientStop() { Offset = 1, Color = Color.FromRgb(168, 234, 238) },
-			new GradientStop() { Offset = 0, Color = Color.FromRgb(123, 176, 249) }
-		};
+        LinearGradientBrush gradientColor4 = new LinearGradientBrush();
+        gradientColor4.GradientStops = new GradientStopCollection()
+        {
+            new GradientStop() { Offset = 1, Color = Color.FromRgb(221, 214, 243) },
+            new GradientStop() { Offset = 0, Color = Color.FromRgb(250, 172, 168) }
+        };
 
-		CustomBrushes.Add(gradientColor1);
-		CustomBrushes.Add(gradientColor2);
-		CustomBrushes.Add(gradientColor3);
-		CustomBrushes.Add(gradientColor4);
-		CustomBrushes.Add(gradientColor5);
-	}
-. . .
+        LinearGradientBrush gradientColor5 = new LinearGradientBrush();
+        gradientColor5.GradientStops = new GradientStopCollection()
+        {
+            new GradientStop() { Offset = 1, Color = Color.FromRgb(168, 234, 238) },
+            new GradientStop() { Offset = 0, Color = Color.FromRgb(123, 176, 249) }
+        };
+
+        CustomBrushes.Add(gradientColor1);
+        CustomBrushes.Add(gradientColor2);
+        CustomBrushes.Add(gradientColor3);
+        CustomBrushes.Add(gradientColor4);
+        CustomBrushes.Add(gradientColor5);
+    }
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Gradient support in MAUI Chart](Appearance_images/MAUI_pie_chart_gradient.png)
+![Gradient support in .NET MAUI Circular Chart](Appearance_images/MAUI_pie_chart_gradient.png)
 
 ## Plotting Area Customization
 
@@ -174,27 +185,28 @@ public class ViewModel
 
 <chart:SfCircularChart>
     <chart:SfCircularChart.PlotAreaBackgroundView>
-      	<AbsoluteLayout>
-       		<Border Stroke="red"
-			StrokeThickness="2"
-			AbsoluteLayout.LayoutBounds="0,0,1,1"
-			AbsoluteLayout.LayoutFlags="All"/>
-       		<Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
-		       FontSize="18"
-		       AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-		       AbsoluteLayout.LayoutFlags="PositionProportional"
-		       Opacity="0.4"/>
-       		<Label Text="CONFIDENTIAL"
-		       Rotation="340"
-		       FontSize="80"
-		       FontAttributes="Bold,Italic"
-		       TextColor="Gray"
-		       Margin="10,0,0,0"
-		       AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-		       AbsoluteLayout.LayoutFlags="PositionProportional"
-	               Opacity="0.3"/>
-    	</AbsoluteLayout>
+        <AbsoluteLayout>
+            <Border Stroke="red"
+                    StrokeThickness="2"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"/>
+            <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
+                   FontSize="18"
+                   AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Opacity="0.4"/>
+            <Label Text="CONFIDENTIAL"
+                   Rotation="340"
+                   FontSize="80"
+                   FontAttributes="Bold,Italic"
+                   TextColor="Gray"
+                   Margin="10,0,0,0"
+                   AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Opacity="0.3"/>
+        </AbsoluteLayout>
     </chart:SfCircularChart.PlotAreaBackgroundView>
+    <!-- code omitted for brevity -->
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -203,7 +215,7 @@ public class ViewModel
 
 SfCircularChart chart = new SfCircularChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var border = new Border() 
+var border = new Border()
 {
     Stroke = Colors.Red,
     StrokeThickness = 2
@@ -212,7 +224,7 @@ var border = new Border()
 AbsoluteLayout.SetLayoutBounds(border, new Rect(0, 0, 1, 1));
 AbsoluteLayout.SetLayoutFlags(border, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
 absoluteLayout.Children.Add(border);
-var copyRight = new Label() 
+var copyRight = new Label()
 {
     Text = "Copyright @ 2001 - 2022 Syncfusion Inc",
     FontSize = 18,
@@ -224,22 +236,23 @@ AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFl
 absoluteLayout.Children.Add(copyRight);
 var watermark = new Label()
 {
-	Text = "CONFIDENTIAL", 
-	Rotation = 340,
-	FontSize = 80,
-	FontAttributes = FontAttributes.Bold,
-	TextColor = Colors.Gray,
-	Opacity = 0.3
+    Text = "CONFIDENTIAL",
+    Rotation = 340,
+    FontSize = 80,
+    FontAttributes = FontAttributes.Bold,
+    TextColor = Colors.Gray,
+    Opacity = 0.3
 };
 
 AbsoluteLayout.SetLayoutBounds(watermark, new Rect(0.5, 0.5, -1, -1));
 AbsoluteLayout.SetLayoutFlags(watermark, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(watermark);
 chart.PlotAreaBackgroundView = absoluteLayout;
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Watermark in .NET MAUI Charts](Appearance_images/water_mark.jpg)
+![Watermark in .NET MAUI Circular Chart](Appearance_images/water_mark.jpg)

@@ -14,14 +14,13 @@ The Liquid Glass Effect introduces a modern, translucent design with adaptive co
 
 ## Prerequisites
 
-Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet packages are installed in your .NET MAUI project:
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
-- `Syncfusion.Maui.Inputs`
-- `Syncfusion.Maui.Core` (for [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html))
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
-For step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation and the [Liquid Glass Getting Started](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started) page.
-
-N> **Platform support**: The Liquid Glass Effect is supported only on .NET 10 with iOS 26 and macOS 26. On other platforms the effect is a no-op.
+N>
+* The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
+* It is not supported on Android or Windows.
 
 ## Apply Liquid Glass Effect
 

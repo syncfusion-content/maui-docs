@@ -125,7 +125,7 @@ Create an instance of Date Picker control.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
-    <picker:SfDatePicker />
+<picker:SfDatePicker />
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 SfDatePicker picker = new SfDatePicker();

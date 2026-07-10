@@ -530,13 +530,34 @@ private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
 }
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
-{% highlight c# %}
-
-private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
+// ViewModel
+public class SocialMediaViewModel
 {
-    // Set e.Cancel = true to cancel the selection change.
-    e.Cancel = false;
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
 }
 
 {% endhighlight %}
@@ -583,13 +604,41 @@ SfComboBox comboBox = new SfComboBox
 comboBox.SelectionChanged += OnSelectionChanged;
 Content = comboBox;
 
-{% endhighlight %}
-{% highlight c# %}
-
 private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
     // e.AddedItems contains the newly selected items.
     // e.RemovedItems contains the items that were unselected.
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
 }
 
 {% endhighlight %}
@@ -674,6 +723,37 @@ public partial class MainPage : ContentPage
             selectedValue.Text = comboBox.SelectedValue.ToString();
         }
     }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
 }
 
 {% endhighlight %}
@@ -780,6 +860,37 @@ public partial class MainPage : ContentPage
 }
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -814,6 +925,37 @@ SfComboBox comboBox = new SfComboBox
     DisplayMemberPath = "Name",
     TextMemberPath = "Name"
 };
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}

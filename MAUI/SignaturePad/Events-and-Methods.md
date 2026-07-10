@@ -19,7 +19,13 @@ This section covers the events and methods exposed by the .NET MAUI SignaturePad
   * [ToImageSource](#toimagesource)
   * [Clear](#clear)
 
-For prerequisites and initial setup, refer to the [Getting Started with .NET MAUI SignaturePad](getting-started.md) documentation.
+## Prerequisites
+
+Before using the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.SignaturePad`
+
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
 ## Events
 
