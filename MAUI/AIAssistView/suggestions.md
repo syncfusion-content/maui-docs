@@ -93,7 +93,7 @@ To populate the Suggestions, bind the item collection from its BindingContext to
                            ShowHeader="True"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="12" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -173,7 +173,7 @@ using Syncfusion.Maui.AIAssistView;
 
 public partial class MainPage : ContentPage
 {
-    private readonly SfAIAssistView sfAIAssistView;
+    SfAIAssistView sfAIAssistView;
 
     public MainPage()
     {
@@ -244,7 +244,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="27" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="44" %}
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -304,7 +304,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 You can add an image to the suggestion item by setting the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html#Syncfusion_Maui_AIAssistView_AssistSuggestion_ImageSource) property in the [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) object.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="16 17" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="22 23" %}
 
 using System.Collections.ObjectModel;
 using Syncfusion.Maui.AIAssistView;
@@ -348,7 +348,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_Orientation) property allows you to display suggestions horizontally or vertically. By default, the orientation is vertical.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="19" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
 
 using System.Collections.ObjectModel;
 using Syncfusion.Maui.AIAssistView;
@@ -396,7 +396,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_ItemSpacing) property allows you to control the spacing between adjacent suggestion items. By default, the spacing is 8 device-independent units.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="20" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
 
 using System.Collections.ObjectModel;
 using Syncfusion.Maui.AIAssistView;
@@ -444,7 +444,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 The `SfAIAssistView` control allows you to define the header text for each response suggestion by setting a custom string to the [AssistItem.SuggestionHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_SuggestionHeaderText) property. This ensures clear identification and context for each suggestion group displayed to users.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="27" %}
 
 using System.Collections.ObjectModel;
 using Syncfusion.Maui.AIAssistView;
@@ -505,7 +505,7 @@ The `SfAIAssistView` control allows you to fully customize the appearance of the
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="12" %}
+{% highlight c# hl_lines="11" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -595,6 +595,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Syncfusion .NET MAUI AI AssistView Footer Suggestions](Images/suggestions/maui-aiassistview-footer-suggestions.png)
+
 ## Event and Commands
 
 When a user selects a suggestion, both the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelected) event and the [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelectedCommand) are triggered. They provide a [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html) instance that contains the following details about the selected suggestion item.
@@ -651,7 +653,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="28" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="31" %}
 
 using System.Windows.Input;
 using Syncfusion.Maui.AIAssistView;
