@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Digital Gauge control | Syncfusion
+title: Getting Started with in .NET MAUI Digital Gauge | Syncfusion
 description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Digital Gauge (SfDigitalGauge) control, its elements and more.
 platform: maui
 control: DigitalGauge

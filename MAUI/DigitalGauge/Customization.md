@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Character Segments in .NET MAUI Digital Gauge | Syncfusion<sup>&reg;</sup>
+title: Customize Character Segments in in .NET MAUI Digital Gauge | Syncfusion
 description: Learn here all about Customize Character Segments support in Syncfusion<sup>&reg;</sup> .NET MAUI Digital Gauge (SfDigitalGauge) control and more.
 platform: maui
 control: DigitalGauge
@@ -152,7 +152,7 @@ this.Content = digital;
 
 ## Customize background color of digital gauge
 
-The background color of the digital gauge can be customized using the [BackgroundColor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/visual-element#background-color) property.
+The background color of the digital gauge can be customized using the `BackgroundColor` property.
 
 
 {% tabs %}
