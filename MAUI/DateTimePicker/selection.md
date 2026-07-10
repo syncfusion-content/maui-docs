@@ -16,21 +16,33 @@ The SfDateTimePicker control lets you select a date and time using the [Selected
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker" 
-                         SelectedDate="9/7/2023 10:15:22">
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker" 
+                             SelectedDate="9/7/2023 10:15:22">
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3 4" %}
 
-SfDateTimePicker picker = new SfDateTimePicker()
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    SelectedDate = new DateTime(2023, 09, 07, 10, 15, 22),
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker()
+        {
+            SelectedDate = new DateTime(2023, 09, 07, 10, 15, 22),
+        };
+        this.Content = picker;
+    }
+}
 
-this.Content = picker;
-
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
    ![Set selected date in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-selected-date.png)
@@ -42,12 +54,25 @@ The [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<picker:SfDateTimePicker x:Name="picker" />
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker" />
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.picker.SelectedDate = null;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.picker.SelectedDate = null;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}

@@ -66,18 +66,31 @@ The different types of formats are:
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         DateFormat="dd_MMM_yyyy">
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             DateFormat="dd_MMM_yyyy">
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.DateFormat = PickerDateFormat.dd_MMM_yyyy;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.DateFormat = PickerDateFormat.dd_MMM_yyyy;
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
    ![Date format in .NET MAUI Date Time picker.](images/formatting/maui-date-time-picker-date-format.png)
@@ -121,18 +134,31 @@ The different types of formats are:
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         TimeFormat="hh_mm_ss_tt">
-</picker:SfDateTimePicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             TimeFormat="hh_mm_ss_tt">
+    </picker:SfDateTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
+        this.Content = picker;
+    }
+}
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
    ![Time format in .NET MAUI Date Time picker.](images/formatting/maui-date-time-picker-time-format.png)

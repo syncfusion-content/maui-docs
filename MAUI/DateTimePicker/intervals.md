@@ -24,15 +24,28 @@ Sets the interval between days using the [DayInterval](https://help.syncfusion.c
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         DayInterval="2"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             DayInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.DayInterval = 2;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.DayInterval = 2;
+        this.Content = picker;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,15 +58,28 @@ Sets the interval between months using the [MonthInterval](https://help.syncfusi
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         MonthInterval="2"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             MonthInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.MonthInterval = 2;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.MonthInterval = 2;
+        this.Content = picker;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,15 +92,28 @@ Sets the interval between years using the [YearInterval](https://help.syncfusion
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         YearInterval="2"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             YearInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.YearInterval = 2;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.YearInterval = 2;
+        this.Content = picker;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,15 +126,28 @@ Sets the interval between hours using the [HourInterval](https://help.syncfusion
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         HourInterval="2"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             HourInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}  
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.HourInterval = 2;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.HourInterval = 2;
+        this.Content = picker;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -108,15 +160,28 @@ Sets the interval between minutes using the [MinuteInterval](https://help.syncfu
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         MinuteInterval="2"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             MinuteInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}  
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.MinuteInterval = 2;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.MinuteInterval = 2;
+        this.Content = picker;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,15 +194,28 @@ Sets the interval between seconds using the [SecondInterval](https://help.syncfu
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         SecondInterval="2"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             SecondInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}  
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.SecondInterval = 2;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.SecondInterval = 2;
+        this.Content = picker;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -150,17 +228,30 @@ Sets the interval between milliseconds using the [MilliSecondInterval](https://h
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker"
-                         TimeFormat="hh_mm_ss_fff_tt"
-                         MilliSecondInterval="2"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="picker"
+                             TimeFormat="hh_mm_ss_fff_tt"
+                             MilliSecondInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}  
 
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.TimeFormat = "hh_mm_ss_fff_tt";
-picker.MilliSecondInterval = 2;
-this.Content = picker;
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        picker.TimeFormat = "hh_mm_ss_fff_tt";
+        picker.MilliSecondInterval = 2;
+        this.Content = picker;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}

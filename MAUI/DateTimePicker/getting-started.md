@@ -126,16 +126,25 @@ Create an instance of the Date Time Picker control inside a `ContentPage` so it 
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="MauiApp1.MainPage">
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <picker:SfDateTimePicker x:Name="picker" />
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-SfDateTimePicker picker = new SfDateTimePicker();
-this.Content = picker;
+
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        this.Content = picker;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 

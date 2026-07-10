@@ -45,9 +45,8 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:datetimepicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     x:Class="AcrylicDateTimePickerPage">
     <Grid>
@@ -86,53 +85,62 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-// Outer grid with gradient background
-var mainGrid = new Grid()
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    Background = new LinearGradientBrush()
+    public MainPage()
     {
-        StartPoint = new Point(0, 0),
-        EndPoint = new Point(0, 1),
-        GradientStops =
+        InitializeComponent();
+        // Outer grid with gradient background
+        var mainGrid = new Grid()
         {
-            new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-            new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-            new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
-        }
+            Background = new LinearGradientBrush()
+            {
+                StartPoint = new Point(0, 0),
+                EndPoint = new Point(0, 1),
+                GradientStops =
+                {
+                    new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+                    new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+                    new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+                }
+            }
+        };
+
+        // Inner grid container
+        var innerGrid = new Grid();
+
+        var glassView = new SfGlassEffectView()
+        {
+            EffectType = GlassEffectType.Regular,
+            CornerRadius = 20,
+            WidthRequest = 350,
+            HeightRequest = 350
+        };
+
+        var dateTimePicker = new SfDateTimePicker()
+        {
+            EnableLiquidGlassEffect = true,
+            Background = Colors.Transparent,
+            WidthRequest = 350,
+            HeightRequest = 350,
+            ColumnHeaderView = new DateTimePickerColumnHeaderView()
+            {
+                Background = Colors.Transparent
+            },
+            HeaderView = new DateTimePickerHeaderView()
+            {
+                Background = Colors.Transparent
+            }
+        };
+
+        glassView.Content = dateTimePicker;
+        innerGrid.Children.Add(glassView);
+        mainGrid.Children.Add(innerGrid);
+        this.Content = mainGrid;
     }
-};
-
-// Inner grid container
-var innerGrid = new Grid();
-
-var glassView = new SfGlassEffectView()
-{
-    EffectType = GlassEffectType.Regular,
-    CornerRadius = 20,
-    WidthRequest = 350,
-    HeightRequest = 350
-};
-
-var dateTimePicker = new SfDateTimePicker()
-{
-    EnableLiquidGlassEffect = true,
-    Background = Colors.Transparent,
-    WidthRequest = 350,
-    HeightRequest = 350,
-    ColumnHeaderView = new DateTimePickerColumnHeaderView()
-    {
-        Background = Colors.Transparent
-    },
-    HeaderView = new DateTimePickerHeaderView()
-    {
-        Background = Colors.Transparent
-    }
-};
-
-glassView.Content = dateTimePicker;
-innerGrid.Children.Add(glassView);
-mainGrid.Children.Add(innerGrid);
-this.Content = mainGrid;
+}
 
 {% endhighlight %}
 {% endtabs %}
