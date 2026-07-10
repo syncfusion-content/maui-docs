@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Overview of .NET MAUI TreeView (SfTreeView)
+# Overview of .NET MAUI TreeView
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeView](https://www.syncfusion.com/maui-controls/maui-treeview) is a data-oriented control that displays the hierarchical data,such as organizational structures and nested connections, within your application. It provides a user-friendly way to interact with complex data structures and navigate through different levels of information by allowing users to expand and collapse nodes to reveal or hide underlying information.
 

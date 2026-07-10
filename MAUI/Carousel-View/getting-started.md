@@ -182,17 +182,17 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
             <Image Source="{Binding Image}" 
-                    Aspect="AspectFit"/>
+                   Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 <ContentPage.Resources>
 
 <carousel:SfCarousel x:Name="carousel"
-                        ItemTemplate="{StaticResource itemTemplate}" 
-                        ItemsSource="{Binding ImageCollection}"
-                        ItemHeight="170"
-                        ItemWidth="270"
-                        SelectedIndex="4">
+                     ItemTemplate="{StaticResource itemTemplate}" 
+                     ItemsSource="{Binding ImageCollection}"
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     SelectedIndex="4">
     <carousel:SfCarousel.BindingContext>
         <local:CarouselViewModel/>
     </carousel:SfCarousel.BindingContext>
