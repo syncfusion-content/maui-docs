@@ -120,8 +120,6 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Axis title customization in .NET MAUI Cartesian Chart](Axis_images/maui_chart_axis_title_customization.jpg)
-
 ## Label extent
 
 The [LabelExtent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelExtent) property, of type `double` and measured in pixels (px), allows you to set the gap between the axis labels and the title. The default value is `0`. This is typically used to maintain a fixed gap between the axis labels and the title when the axis values change during live updates.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add custom labels to the Cartesian chart axis in .NET MAUI Cartesian Chart | Syncfusion
+title: Add custom labels to the chart axis in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about how to add custom labels to the chart axis in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
@@ -8,7 +8,7 @@ documentation: ug
 Keywords: .net maui chart custom axis labels, .net maui chart axis label customization, sfCartesianchart custom axis labels in .net maui, .net maui chart axis label customization.
 ---
 
-# Add custom labels to the Cartesian chart axis in .NET MAUI Cartesian Chart
+# Add custom labels to the chart axis in .NET MAUI Cartesian Chart
 
 [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnCreateLabels) override method, called whenever new labels are generated (e.g., during layout, data update, zoom, or pan). The following properties are available when adding custom labels.
 
