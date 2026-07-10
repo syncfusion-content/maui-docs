@@ -13,7 +13,9 @@ This section explains how to change the value format of the [SfNumericEntry](htt
 
 ## Prerequisites
 
-Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html),  Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) NuGet package in your .NET MAUI project.
+Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
 
 For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 

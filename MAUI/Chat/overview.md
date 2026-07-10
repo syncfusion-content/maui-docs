@@ -7,7 +7,7 @@ control: Chat
 documentation: ug
 ---
 
-# Overview of .NET MAUI Chat (SfChat)
+# Overview of .NET MAUI Chat
 
 The Syncfusion® [.NET MAUI Chat](https://www.syncfusion.com/maui-controls/maui-chat) control offers a contemporary conversational chatbot experience, allowing for flexible customization of the layout to display conversations between two or more users.
 
@@ -24,7 +24,7 @@ The Syncfusion® [.NET MAUI Chat](https://www.syncfusion.com/maui-controls/maui-
 
 - **Rich message types** including text, images, cards, calendar, and hyperlinks.
 - **Message grouping** with time breaks for better readability.
-- **Typing indicators** to show real‑time user activity.
+- **Typing indicators** to show real-time user activity.
 - **Quick suggestions** for faster replies and reduced typing effort.
 - **Load more messages** to handle long chat histories smoothly.
 
@@ -80,14 +80,14 @@ The following table summarizes the globalization support available in this contr
 
 ## Related Controls
 
-- [AI AssistView](https://help.syncfusion.com/maui/aiassistview/overview) enhance conversations with AI‑driven suggestions and guided responses. 
-- [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) speed up message composition with predictive text input.
-- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) provide flexible selection options within chat workflows.
+- [The AI AssistView](https://help.syncfusion.com/maui/aiassistview/overview) enhances conversations with AI‑driven suggestions and guided responses. 
+- [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) speeds up message composition with predictive text input.
+- [ComboBox](https://help.syncfusion.com/maui/combobox/overview) provides flexible selection options within chat workflows.
 
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/chat/getting-started) shows how to begin using the Chat control step by step.
-- [Styles Guide](https://help.syncfusion.com/maui/chat/styles) shows how to customize message styles, editor appearance, and layout.
+- [Styles in .NET MAUI Chat](https://help.syncfusion.com/maui/chat/styles) shows how to customize message styles, editor appearance, and layout.
 - [Suggestions](https://help.syncfusion.com/maui/chat/suggestions) show how to provide quick reply options.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
@@ -302,10 +302,6 @@ Search KB's
 Read Blogs
   <span class="card-icon card-arrow"></span>
 </a>
-<<<<<<< HEAD
-=======
   </div>
 </div>
-
->>>>>>> 0db85cb2c85193a2c646a813fcf82840a20310a1
 </div>

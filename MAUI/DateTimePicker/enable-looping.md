@@ -9,27 +9,39 @@ documentation: ug
 
 # Looping support in .NET MAUI Date Time Picker (SfDateTimePicker)
 
-The [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property allows you to enable looping support in the date time picker control. With looping enabled, the control seamlessly navigates from the last item to the first item and back again, iterating in both forward and backward directions.
+The [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property enables cyclic navigation in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). When enabled, supported columns wrap from the last item to the first item and vice versa during both forward and backward navigation.
 
-To enable the looping in date time picker by setting the [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property as `true`. The default value is `false`.
+To enable looping in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), set the [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property to `true`. The default value is `false`.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="dateTimePicker"
-                     EnableLooping="True"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDateTimePicker x:Name="dateTimePicker"
+                             EnableLooping="True"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}  
 
-SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+using Syncfusion.Maui.Picker;
+. . .
+public partial class MainPage : ContentPage
 {
-    EnableLooping = True,
-};
-
-this.Content = dateTimePicker;
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker()
+        {
+            EnableLooping = true,
+        };
+        this.Content = dateTimePicker;
+    }
+}
 
 {% endhighlight %}
 

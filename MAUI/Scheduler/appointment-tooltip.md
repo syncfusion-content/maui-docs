@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appointment Tooltip in .NET MAUI Scheduler | Syncfusion
-description: Learn how to show appointment tooltips in the Syncfusion .NET MAUI Scheduler to quickly view details and customize tooltip appearance and behavior.
+title: Appointment Tooltip in .NET MAUI Scheduler | Syncfusion®
+description: Learn how to show appointment tooltips in the Syncfusion® .NET MAUI Scheduler to quickly view details and customize tooltip appearance and behavior.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -35,7 +35,7 @@ public partial class MainPage : ContentPage
 
 N>
 - **Desktop platforms**: A tooltip is shown when you hover the mouse over an appointment.
-- **Mobile platforms**: A tooltip is shown when you tap or long‑press an appointment. For long‑press interactions, the tooltip appears only when appointment dragging is disabled.
+- **Mobile platforms**: A tooltip is shown when you tap or long‑press an appointment. The tooltip appears on long‑press only when appointment dragging is disabled.
 
 ## Appointment Tooltip Settings
 
@@ -53,7 +53,7 @@ The [AppointmentToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight xaml tabtitle="XAML" hl_lines="4 5 6 7 8 9 10" %}
 <scheduler:SfScheduler x:Name="scheduler" 
                        View="Day" 
-                       EnableAppointmentToolTip="True">
+                       IsAppointmentToolTipEnabled="True">
     <scheduler:SfScheduler.AppointmentToolTipSettings>
         <scheduler:AppointmentToolTipSettings Background="PaleGreen" Padding="5" ToolTipPosition="Right">
             <scheduler:AppointmentToolTipSettings.TextStyle>
@@ -69,7 +69,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.scheduler.EnableAppointmentToolTip = true;
+        this.scheduler.IsAppointmentToolTipEnabled = true;
         this.scheduler.AppointmentToolTipSettings = new AppointmentToolTipSettings()
         {
             Background = Colors.PaleGreen,

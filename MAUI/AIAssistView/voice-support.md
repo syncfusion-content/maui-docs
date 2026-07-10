@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Voice and Text-to-Speech Support in .NET MAUI AI AssistView | Syncfusion®
+title: Voice Support in .NET MAUI AI AssistView | Syncfusion®
 description: Learn how to enable and configure voice input and text-to-speech support in the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Enable Voice and Text-to-Speech Support in .NET MAUI SfAIAssistView?
+# How to Enable Voice Support in .NET MAUI SfAIAssistView?
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides built-in voice input and text-to-speech capabilities. Voice input allows users to interact using speech through a microphone button, while text-to-speech enables users to listen to AI responses.
 
 ## Voice Input Support in SfAIAssistView
 
-The `SfAIAssistView` control provides built-in voice input support through a microphone button in the editor. By default, the microphone view is visible. To hide it, set the `EnableVoiceInput` property to `false`.
+The `SfAIAssistView` control provides built-in voice input support through a microphone button in the editor. By default, the microphone button is visible. To hide it, set the `EnableVoiceInput` property to `false`.
 
 ### Permission Required for Voice Input
 
@@ -31,7 +31,7 @@ Provide audio permission in the `AndroidManifest.xml` file:
 {% endhighlight %}
 {% endtabs %}
 
-#### iOS and macOS Platform
+#### iOS and macOS Platforms
 
 Add the following permissions to the `Info.plist` file:
 
@@ -76,14 +76,23 @@ You can disable the microphone button by setting the `EnableVoiceInput` property
                            EnableVoiceInput="False" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines="9" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.EnableVoiceInput = false;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.EnableVoiceInput = false;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Text-to-Speech Support in SfAIAssistView
 
-The `SfAIAssistView` control provides built-in text-to-speech support for each response. This allows users to listen to generated responses and control playback using playback actions such as play, pause, and stop.
+The `SfAIAssistView` control provides built-in text-to-speech support for each response. This allows users to listen to generated responses and to control playback using actions such as play, pause, and stop.

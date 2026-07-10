@@ -13,20 +13,29 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 ## Controlling header display in SfAIAssistView
 
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to display a header using the [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader)  property. By default, the value of ShowHeader is `true`, so the header is displayed at the top of the assist view.
-If the ShowHeader property is set to `false`, the header will not be displayed.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to display a header using the [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader) property. By default, the value of ShowHeader is `true`, so the header is displayed at the top of the assist view. If the ShowHeader property is set to `false`, the header will not be displayed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               ShowHeader="False"/>  
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowHeader="False" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.ShowHeader = false;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ShowHeader = false;
+        this.Content = sfAIAssistView;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -38,17 +47,26 @@ The `SfAIAssistView` control allows you to customize the header text using the [
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               HeaderText="Ask AI"
-                               ShowHeader="True"/>  
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           HeaderText="Ask AI"
+                           ShowHeader="True" />
 
 {% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
-{% highlight c# hl_lines="2" %}
+using Syncfusion.Maui.AIAssistView;
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.HeaderText = "Ask AI";
-    sfAIAssistView.ShowHeader = true;
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.HeaderText = "Ask AI";
+        sfAIAssistView.ShowHeader = true;
+        this.Content = sfAIAssistView;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -60,68 +78,68 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="62" %}
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="headerTemplate">
-                <Grid RowDefinitions="Auto,30,Auto"
-                      RowSpacing="2"
-                      Padding="0,2,0,0">
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="headerTemplate">
+            <Grid RowDefinitions="Auto,30,Auto"
+                  RowSpacing="2"
+                  Padding="0,2,0,0">
 
-                    <Image Source="aiassistview.png"
-                           HeightRequest="40"
-                           WidthRequest="40"
-                           HorizontalOptions="Center" />
+                <Image Source="aiassistview.png"
+                       HeightRequest="40"
+                       WidthRequest="40"
+                       HorizontalOptions="Center" />
 
-                    <Label Grid.Row="1"
-                           Text="Ask AI Anything!"
-                           FontSize="16"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"
-                           Padding="0,5,0,0" />
+                <Label Grid.Row="1"
+                       Text="Ask AI Anything!"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Padding="0,5,0,0" />
 
-                    <FlexLayout Grid.Row="2"
-                                Wrap="Wrap"
-                                JustifyContent="Center"
-                                AlignItems="Start"
-                                Margin="2"
-                                BindableLayout.ItemsSource="{Binding HeaderInfoCollection}">
+                <FlexLayout Grid.Row="2"
+                            Wrap="Wrap"
+                            JustifyContent="Center"
+                            AlignItems="Start"
+                            Margin="2"
+                            BindableLayout.ItemsSource="{Binding HeaderInfoCollection}">
 
-                        <BindableLayout.ItemTemplate>
-                            <DataTemplate>
-                                <Border WidthRequest="130"
-                                        HeightRequest="88"
-                                        StrokeShape="RoundRectangle 10"
-                                        BackgroundColor="#E6E8F5"
-                                        Margin="2">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Border WidthRequest="130"
+                                    HeightRequest="88"
+                                    StrokeShape="RoundRectangle 10"
+                                    BackgroundColor="#E6E8F5"
+                                    Margin="2">
 
-                                    <Grid>
-                                        <Image Source="{Binding Image}"
-                                               Aspect="AspectFill" />
+                                <Grid>
+                                    <Image Source="{Binding Image}"
+                                           Aspect="AspectFill" />
 
-                                        <Border VerticalOptions="End"
-                                                BackgroundColor="#CCFFFFFF"
-                                                StrokeShape="RoundRectangle 10"
-                                                Margin="2"
-                                                Padding="2">
+                                    <Border VerticalOptions="End"
+                                            BackgroundColor="#CCFFFFFF"
+                                            StrokeShape="RoundRectangle 10"
+                                            Margin="2"
+                                            Padding="2">
 
-                                            <Label Text="{Binding Title}"
-                                                   FontSize="14"
-                                                   HorizontalOptions="Center"
-                                                   HorizontalTextAlignment="Center" />
-                                        </Border>
-                                    </Grid>
-                                </Border>
-                            </DataTemplate>
-                        </BindableLayout.ItemTemplate>
-                    </FlexLayout>
-                </Grid>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+                                        <Label Text="{Binding Title}"
+                                               FontSize="14"
+                                               HorizontalOptions="Center"
+                                               HorizontalTextAlignment="Center" />
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                 ShowHeader="True"
-                                 HeaderTemplate="{StaticResource headerTemplate}"/>
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           ShowHeader="True"
+                           HeaderTemplate="{StaticResource headerTemplate}" />
 
 {% endhighlight %}
 {% endtabs %}

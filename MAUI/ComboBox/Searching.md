@@ -1,52 +1,102 @@
 ---
 layout: post
 title: Searching in .NET MAUI ComboBox control | Syncfusion®
-description: Learn how to perform the searching operation in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more.
+description: Learn how to perform the searching operation in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
 platform: maui
 control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui combobox searching.
 ---
 
-# Searching in .NET MAUI ComboBox (SfComboBox)
+# Searching in .NET MAUI ComboBox
 
-The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides rich text searching functionality. The `TextSearchMode` property of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) can be used to regulate how the control behaves when it receives user input.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides rich text searching functionality. Use the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property to control how the drop-down is filtered when the user types into the editor.
+
+N> Searching only applies when `IsFilteringEnabled` is `true` and `IsEditable` is `true`. The `TextSearchMode` setting has no effect if filtering is disabled.
+
+## Prerequisites
+
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
 ## Search based on member path
 
-The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) and [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) properties of ComboBox control specify the property path, by which the searching must be done when a custom data is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
+The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) and [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) properties specify which property path is used to display and search items when a custom data type is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
 
- * `DisplayMemberPath` - Specifies the property path whose value is displayed as text in the drop-down menu. The default value is `string.Empty`.
+* `DisplayMemberPath` - Specifies the property path whose value is displayed as text in the drop-down. The default value is `string.Empty`.
+* `TextMemberPath` - Specifies the property path whose value is used to perform searching based on user input in the editor. The default value is `string.Empty`. When `TextMemberPath` is `null` or `string.Empty`, searching is performed based on `DisplayMemberPath`.
 
- * `TextMemberPath` - Specifies the property path whose value is used to perform searching based on user input received in the selection box portion of the `ComboBox` control. The default value is `string.Empty`. When `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
+N> `DisplayMemberPath` and `TextMemberPath` apply only when the bound collection item has two or more properties.
 
-N> `DisplayMemberPath` and `TextMemberPath` will be effective for the collection item that holds two or more properties in it.
+N> When both `DisplayMemberPath` and `TextMemberPath` are `null` or `string.Empty`, searching is performed against the class name (with namespace) of the item.
 
-N> When both the `DisplayMemberPath` and `TextMemberPath` properties have a `null` or `string.Empty` value, searching will be performed based on the class name with namespace of the item.
+## Edit mode searching based on TextMemberPath
 
-## Edit mode Searching based on TextMemberPath
-
-In edit mode, searching will be performed based on the [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) property while entering the text into the selection box. When TextMemberPath is `null` or `string.Empty`, searching will be performed based on [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath). 
+In edit mode, searching is performed against the [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) value as the user types into the editor. When `TextMemberPath` is `null` or `string.Empty`, searching falls back to [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath).
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
                     IsEditable="true"
+                    IsFilteringEnabled="true"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="ID"
-                    DisplayMemberPath="Name" />
+                    DisplayMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
-    SfComboBox comboBox = new SfComboBox() 
+{% highlight c# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
+{
+    IsEditable = true,
+    IsFilteringEnabled = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "ID",
+    DisplayMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
+};
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
     {
-        IsEditable = true,
-        ItemsSource = socialMediaViewModel.SocialMedias,
-        TextMemberPath = "ID",
-        DisplayMemberPath = "Name"
-    };
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,39 +105,83 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox search based on TextMemberPath](Images/Searching/SearchTextMemberPath.png)
 
-N> Auto appending of text is supported only in `Editable` mode and `TextSearchMode` property should be `StartsWith`.
+N> Auto-appending of text is supported only in `Editable` mode and when `TextSearchMode` is `StartsWith`.
 
-## Text Search Mode
+## Text search mode
 
-The [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) can be used to regulate how the control behaves when it receives user input. The default text searching type is [StartWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith), ignoring accent and it is case insensitive. The available text search modes are:
+The [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) controls how the drop-down is filtered when the user types. The default value is `StartsWith`. Matching is case-insensitive and accent-insensitive. For a complete walkthrough of the available modes, see [Filtering in .NET MAUI ComboBox](Filtering.md#filter-mode).
 
-* StartsWith
-* Contains
+The available modes are:
+
+* `StartsWith` - Filters items whose value starts with the typed text. The first match is auto-appended to the editor (in editable mode).
+* `Contains` - Filters items whose value contains the typed text anywhere. The first match is highlighted but not auto-appended.
 
 ### Search with beginning text
 
-Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property value to [StartWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) to search the matching items based on the starting text, and the first item which fits the user input in the drop-down list, will be highlighted.
+Set [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) to [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) to filter items whose value starts with the typed text. The first match is highlighted in the drop-down.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
+                    IsEditable="true"
+                    IsFilteringEnabled="true"
                     TextSearchMode="StartsWith"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
-                    TextMemberPath="Name" />
+                    TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-    SfComboBox comboBox = new SfComboBox() 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
+{
+    IsEditable = true,
+    IsFilteringEnabled = true,
+    TextSearchMode = ComboBoxTextSearchMode.StartsWith,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
+};
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
     {
-        TextSearchMode = ComboBoxTextSearchMode.StartsWith,
-        ItemsSource = socialMediaViewModel.SocialMedias,
-        TextMemberPath = "Name",
-        DisplayMemberPath = "Name",
-    };
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,30 +192,70 @@ The following image illustrates the result of the above code:
 
 ### Search with contains text
 
-Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property value to [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_Contains) to search the matching items containing specific text, and the first item which fits the user input in the drop-down list, will be highlighted.
+Set [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) to [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_Contains) to filter items whose value contains the typed text anywhere. The first match is highlighted in the drop-down but is not auto-appended to the editor.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    IsEditable="True"
+                    IsEditable="true"
+                    IsFilteringEnabled="true"
                     TextSearchMode="Contains"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="Name"
-                    DisplayMemberPath="Name" />
+                    DisplayMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-SfComboBox comboBox = new SfComboBox() 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
 {
     IsEditable = true,
+    IsFilteringEnabled = true,
     TextSearchMode = ComboBoxTextSearchMode.Contains,
     ItemsSource = socialMediaViewModel.SocialMedias,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
 };
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -130,38 +264,83 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox TextSearchMode Contains](Images/Searching/TextSearchModeContains.gif)
 
-### Prefix characters constraint
+## Minimum prefix characters
 
-Instead of displaying suggestion list on every character entry, matches can be filtered and displayed after a few character entries. This can be done by [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MinimumPrefixCharacters) property and its default value is 1.
+By default, the suggestion list is updated on every character entry. Use the [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MinimumPrefixCharacters) `int` property to defer the update until the user has typed the specified number of characters. The default value is `1` (filtering starts immediately).
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox" 
+<editors:SfComboBox x:Name="comboBox"
                     IsFilteringEnabled="True"
-                    IsEditable="True" 
+                    IsEditable="True"
                     ItemsSource="{Binding SocialMedias}"
                     MinimumPrefixCharacters="3"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-SfComboBox comboBox = new SfComboBox() 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
 {
     IsFilteringEnabled = true,
     IsEditable = true,
     ItemsSource = socialMediaViewModel.SocialMedias,
     MinimumPrefixCharacters = 3,
     TextMemberPath = "Name",
-    DisplayMemberPath = "Name"
+    DisplayMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
 };
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-The following image illustrates the result of the above code.
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox MinimumPrefixCharacters](Images/Searching/MinimumPrefixCharacters.png)
+
+## See Also
+
+* [Getting started with .NET MAUI ComboBox](getting-started.md)
+* [Highlighting matched text in .NET MAUI ComboBox](Highlighting-matched-text.md)
+* [Editing in .NET MAUI ComboBox](Editing.md)
+* [Filtering in .NET MAUI ComboBox](Filtering.md)

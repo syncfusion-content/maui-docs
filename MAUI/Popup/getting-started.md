@@ -142,7 +142,7 @@ Refer to the following code example for displaying popup using Button's Click ev
 
 {% highlight c# %}
 
-private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+private void ClickToShowPopup_Clicked(object? sender, EventArgs e)
 {
     popup.Show();
 }
