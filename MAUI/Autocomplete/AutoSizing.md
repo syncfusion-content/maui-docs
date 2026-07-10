@@ -65,7 +65,7 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 };
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 // ViewModel
 public class SocialMediaViewModel
