@@ -9,155 +9,202 @@ documentation: ug
 
 # Empty view in .NET MAUI TreeView (SfTreeView)
 
-The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) control allows you to display and customize the empty view content when no data is available. The [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EmptyView) property can be set to either a string or a view, and it will be displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) is empty or null, or the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) collection is empty. [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EmptyViewTemplate) is used to customize the appearance of `EmptyView`.
+The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) control allows you to display and customize the empty view content when no data is available. The [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EmptyView) property can be set to either a string or a view. It is shown when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) is empty or null, or when the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) collection is empty. Use the [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EmptyViewTemplate) property to customize the appearance of `EmptyView`.
 
 ## Display a string when TreeView has no items
 
 The `EmptyView` property in `SfTreeView` can be set to a string, which will be displayed when no items are present in the tree view.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight xaml hl_lines="7" %}
 <ContentPage>
-  <syncfusion:SfTreeView x:Name="treeView"
-                         ItemsSource="{Binding Items}"
-                         EmptyView="No Items">
-  </syncfusion:SfTreeView>
+    <ContentPage.BindingContext>
+        <local:FileManagerViewModel/>
+    </ContentPage.BindingContext>
+    <syncfusion:SfTreeView x:Name="treeView"
+                           ItemsSource="{Binding Items}"
+                           EmptyView="No Items"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="3" %}
-SfTreeView treeView = new SfTreeView();
-treeView.ItemsSource = viewModel.Items;
-treeView.EmptyView = "No Items";
+{% highlight c# hl_lines="12" %}
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+    SfTreeView treeView;
+    public MainPage()
+    {
+        InitializeComponent();
+        treeView = new SfTreeView();
+        FileManagerViewModel viewModel = new FileManagerViewModel();
+        treeView.ItemsSource = viewModel.Items;
+        treeView.EmptyView = "No Items";
+        this.Content = treeView;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
-## Display views when TreeView has no items
+## Display a custom view when TreeView has no items
 
 The `SfTreeView` control uses the `EmptyView` property to display a custom view when the tree view has no items.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
-<syncfusion:SfTreeView x:Name="treeView"
-                        ItemsSource="{Binding Items}">
-    <syncfusion:SfTreeView.EmptyView>
+{% highlight xaml hl_lines="7" %}
+<ContentPage>
+    <ContentPage.BindingContext>
+        <local:FileManagerViewModel/>
+    </ContentPage.BindingContext>
+    <syncfusion:SfTreeView x:Name="treeView"
+                           ItemsSource="{Binding Items}">
+        <syncfusion:SfTreeView.EmptyView>
             <Border Padding="10" Stroke="Purple" StrokeThickness="2" HorizontalOptions="Center" VerticalOptions="Center">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="6"/>
                 </Border.StrokeShape>
-                <Label Text="No Items Found" 
-                    HorizontalTextAlignment="Center" 
-                    VerticalTextAlignment="Center" 
-                    FontSize="16" FontAttributes="Bold" TextColor="Blue"/>
+                <Label Text="No Items Found"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="16" FontAttributes="Bold" TextColor="Blue"/>
             </Border>
-    </syncfusion:SfTreeView.EmptyView>                       
-</syncfusion:SfTreeView>
+        </syncfusion:SfTreeView.EmptyView>
+    </syncfusion:SfTreeView>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="3" %}
-SfTreeView treeView = new SfTreeView();
-treeView.ItemsSource = viewModel.Items;
-treeView.EmptyView = new Border
+{% highlight c# hl_lines="12" %}
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
 {
-    Padding = 10,
-    Stroke = Colors.Purple,
-    StrokeThickness = 2,
-    HorizontalOptions = LayoutOptions.Center,
-    VerticalOptions = LayoutOptions.Center,
-    StrokeShape = new RoundRectangle { CornerRadius = 6 },
-    Content = new Label
+    SfTreeView treeView;
+    public MainPage()
     {
-        Text = "No Items Found",
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        FontSize = 16,
-        FontAttributes = FontAttributes.Bold,
-        TextColor = Colors.Blue
+        InitializeComponent();
+        treeView = new SfTreeView();
+        FileManagerViewModel viewModel = new FileManagerViewModel();
+        treeView.ItemsSource = viewModel.Items;
+        treeView.EmptyView = new Border
+        {
+            Padding = 10,
+            Stroke = Colors.Purple,
+            StrokeThickness = 2,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center,
+            StrokeShape = new RoundRectangle { CornerRadius = 6 },
+            Content = new Label
+            {
+                Text = "No Items Found",
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                FontSize = 16,
+                FontAttributes = FontAttributes.Bold,
+                TextColor = Colors.Blue
+            }
+        };
+        this.Content = treeView;
     }
-};
+}
 {% endhighlight %}
 {% endtabs %}
 
-N> The view displayed by the `EmptyView` can be a single view or a view that includes multiple child views.
+N> The `EmptyView` can be a single view or a layout that contains multiple child views.
 
 ![Syncfusion .NET MAUI TreeView EmptyView](images/empty-view/maui-treeview-empty-view.gif)
 
 ## Empty view customization
 
-The `SfTreeView` control allows you to fully customize the empty view appearance by using the `EmptyViewTemplate` property. This property lets you define a custom view and style for the `EmptyView`.
+The `SfTreeView` control allows you to fully customize the appearance of the empty view by using the `EmptyViewTemplate` property, which lets you define a custom view and style for the `EmptyView`.
 
 {% tabs %}
-{% highlight xaml hl_lines="14" %}
-<Grid RowDefinitions="Auto,*">
-    <SearchBar x:Name="filterText"
-               Placeholder="Search here"
-               TextChanged="filterText_TextChanged" />
-    <syncfusion:SfTreeView x:Name="treeView"
-                           ItemsSource="{Binding FilteredFolders}"
-                           AutoExpandMode="AllNodesExpanded"
-                           NotificationSubscriptionMode="CollectionChange"
-                           Grid.Row="1">
-        <syncfusion:SfTreeView.EmptyView>
-            <local:FilterItem Filter="{Binding Source={x:Reference filterText}, Path=Text}" />
-        </syncfusion:SfTreeView.EmptyView>
-
-        <syncfusion:SfTreeView.EmptyViewTemplate>
-            <DataTemplate>
-                <Border>
-                      ....
-                </Border>
-            </DataTemplate>
-        </syncfusion:SfTreeView.EmptyViewTemplate>
-    </syncfusion:SfTreeView>
-</Grid>
-
+{% highlight xaml hl_lines="17" %}
+<ContentPage>
+    <ContentPage.BindingContext>
+        <local:FileManagerViewModel/>
+    </ContentPage.BindingContext>
+    <Grid RowDefinitions="Auto,*">
+        <SearchBar x:Name="filterText"
+                   Placeholder="Search here"
+                   TextChanged="FilterText_TextChanged" />
+        <syncfusion:SfTreeView x:Name="treeView"
+                               ItemsSource="{Binding FilteredFolders}"
+                               AutoExpandMode="AllNodesExpanded"
+                               NotificationSubscriptionMode="CollectionChange"
+                               Grid.Row="1">
+            <syncfusion:SfTreeView.EmptyView>
+                <local:FilterItem Filter="{Binding Source={x:Reference filterText}, Path=Text}" />
+            </syncfusion:SfTreeView.EmptyView>
+            <syncfusion:SfTreeView.EmptyViewTemplate>
+                <DataTemplate>
+                    <Border>
+                        <!-- ... -->
+                    </Border>
+                </DataTemplate>
+            </syncfusion:SfTreeView.EmptyViewTemplate>
+        </syncfusion:SfTreeView>
+    </Grid>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="34" %}
+{% highlight c# hl_lines="44" %}
+using Syncfusion.Maui.TreeView;
 
-var grid = new Grid();
-grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
-grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-
-var filterText = new SearchBar
+public class MainPage : ContentPage
 {
-    Placeholder = "Search here"
-};
-filterText.TextChanged += FilterText_TextChanged;
-
-// Add SearchBar to Grid (Row 0)
-grid.Children.Add(filterText);
-Grid.SetRow(filterText, 0);
-
-var treeView = new SfTreeView
-{
-    ItemsSource = viewModel.FilteredFolders,
-    AutoExpandMode = AutoExpandMode.AllNodesExpanded,
-    NotificationSubscriptionMode = NotificationSubscriptionMode.CollectionChange
-};
-
-Grid.SetRow(treeView, 1);
-grid.Children.Add(treeView);
-
-var filterItem = new FilterItem();
-filterItem.SetBinding(FilterItem.FilterProperty, new Binding
-{
-    Source = filterText,
-    Path = "Text"
-});
-treeView.EmptyView = filterItem;
-
-// Define the EmptyViewTemplate
-treeView.EmptyViewTemplate = new DataTemplate(() =>
-{
-    return new Border
+    SfTreeView treeView;
+    Grid grid;
+    SearchBar filterText;
+    public MainPage()
     {
-        ...
-    };
-});
+        InitializeComponent();
+        grid = new Grid();
+        grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
 
+        filterText = new SearchBar
+        {
+            Placeholder = "Search here"
+        };
+        filterText.TextChanged += FilterText_TextChanged;
+
+        // Add SearchBar to Grid (Row 0)
+        grid.Children.Add(filterText);
+        Grid.SetRow(filterText, 0);
+
+        FileManagerViewModel viewModel = new FileManagerViewModel();
+        treeView = new SfTreeView
+        {
+            ItemsSource = viewModel.FilteredFolders,
+            AutoExpandMode = AutoExpandMode.AllNodesExpanded,
+            NotificationSubscriptionMode = NotificationSubscriptionMode.CollectionChange
+        };
+
+        Grid.SetRow(treeView, 1);
+        grid.Children.Add(treeView);
+
+        var filterItem = new FilterItem();
+        filterItem.SetBinding(FilterItem.FilterProperty, new Binding
+        {
+            Source = filterText,
+            Path = "Text"
+        });
+        treeView.EmptyView = filterItem;
+
+        // Define the EmptyViewTemplate
+        treeView.EmptyViewTemplate = new DataTemplate(() =>
+        {
+            return new Border
+            {
+                ...
+            };
+        });
+
+        this.Content = grid;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
 N>
-* The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
-* `EmptyView` can be set to custom data model and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
+* The `EmptyViewTemplate` is applied only when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
+* `EmptyView` can be set to a custom data model, and its appearance can be customized by using `EmptyViewTemplate`.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-display-empty-view-when-.net-maui-treeview-has-no-items)
+N>>[View sample in GitHub](https://github.com/SyncfusionExamples/how-to-display-empty-view-when-.net-maui-treeview-has-no-items)
