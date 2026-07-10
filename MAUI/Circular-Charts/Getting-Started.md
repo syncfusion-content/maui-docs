@@ -146,7 +146,7 @@ Now, define a simple data model that represents a data point in the chart. Add t
 
 public class SalesModel
 {
-    public string Product { get; set; }
+    public string? Product { get; set; }
     public double SalesRate { get; set; }
 }
 
