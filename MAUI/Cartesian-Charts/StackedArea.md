@@ -5,7 +5,7 @@ description: Learn here all about stacked area chart support in Syncfusion® .NE
 platform: maui
 control: SfCartesianChart
 documentation: ug
-keywords: .net maui stacked area chart, maui stacked area chart, stacked area chart customization .net maui, syncfusion maui stacked area chart, cartesian stacked area chart maui, .net maui chart stacked area visualization, .net maui cumulative area chart.
+keywords: .net maui stacked area chart, maui stacked area chart, stacked area chart customization .net maui, syncfusion maui stacked area chart, cartesian stacked area chart maui, .net maui chart stacked area visualization, .net maui cumulative area chart
 ---
 
 # Stacked Area Chart in .NET MAUI Cartesian Chart
@@ -66,44 +66,45 @@ chart.YAxes.Add(secondaryAxis);
 
 ViewModel viewModel = new ViewModel();
 
-StackingAreaSeries series1 = new  StackingAreaSeries()
+StackingAreaSeries series1 = new StackingAreaSeries()
 {
-    ItemsSource = viewModel.Data1
+    ItemsSource = viewModel.Data1,
     XBindingPath = "Year",
     YBindingPath = "Value",
 };
 
 StackingAreaSeries series2 = new StackingAreaSeries()
 {
-    ItemsSource = viewModel.Data2
+    ItemsSource = viewModel.Data2,
     XBindingPath = "Year",
     YBindingPath = "Value",
 };
+
 StackingAreaSeries series3 = new StackingAreaSeries()
 {
-    ItemsSource = viewModel.Data3
+    ItemsSource = viewModel.Data3,
     XBindingPath = "Year",
     YBindingPath = "Value",
 };
 
 StackingAreaSeries series4 = new StackingAreaSeries()
 {
-    ItemsSource = viewModel.Data4
+    ItemsSource = viewModel.Data4,
     XBindingPath = "Year",
     YBindingPath = "Value",
 };
 
 chart.Series.Add(series1);
-chart.Series.Add(series2);     
-chart.Series.Add(series3); 
-chart.Series.Add(series4); 
+chart.Series.Add(series2);
+chart.Series.Add(series3);
+chart.Series.Add(series4);
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Stacking Area Chart in .NET MAUI Cartesian Chart](chart-types-images\net-maui-cartesian-charts-stacked-area-chart.png)
+![Stacking Area Chart in .NET MAUI Cartesian Chart](Chart-types-images/net-maui-cartesian-charts-stacked-area-chart.png)
 
 ## Enable Marker
 
@@ -136,7 +137,7 @@ StackingAreaSeries series = new StackingAreaSeries()
 };
 
 chart.Series.Add(series);
-this.Content= chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -144,7 +145,7 @@ this.Content= chart;
 
 ### Marker customization
 
-In order to change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingAreaSeries.html#Syncfusion_Maui_Charts_StackingAreaSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
+To change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingAreaSeries.html#Syncfusion_Maui_Charts_StackingAreaSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
 
 * [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Type), of type `ShapeType`, describes the shape of the series marker. The default value of this property is the [ShapeType.Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeType.html#Syncfusion_Maui_Charts_ShapeType_Circle).
 * [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Stroke), of type `Brush`, indicates the brush used to paint the marker border.

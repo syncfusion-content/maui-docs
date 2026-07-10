@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Box and whisker Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about box and whisker chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Box and whisker Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about box and whisker chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui box and whisker chart, maui box and whisker chart, box and whisker chart customization .net maui, syncfusion maui box and whisker chart, .net maui chart box plot visualization, .net maui chart box and whisker , .net maui box plot chart.
 ---
 
-# Box and Whisker Chart in .NET MAUI Chart
+# Box and Whisker Chart in .NET MAUI Cartesian Chart
 
 ## Box and Whisker Chart
 
-Box plot chart is used to show the distribution of data within a population. To render a box plot chart, create an instance of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+A box plot chart is used to show the distribution of data within a population. To render a box plot chart, create an instance of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 Box plots are great for comparing the distribution of multiple datasets side by side. By comparing the median, quartiles, and range of the boxes, you can quickly identify differences in the center, spread, and skewness of the distributions. The following code illustrates how to define the series in chart.
 
@@ -64,7 +66,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![BoxAndWhisker chart type in MAUI Chart](Chart-types-images/BoxBasicRendering.png)
+![BoxAndWhisker chart type in .NET MAUI Cartesian Chart](Chart-types-images/BoxBasicRendering.png)
 
 ## Customize the series Box mode
 The series box plotting mode can be changed by using [BoxPlotMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode) property of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html). The plotting mode of series can be calculated as follows:
@@ -128,7 +130,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![BoxPlotMode Normal in MAUI Chart](Chart-types-images/BoxModeNormal.png)
+![BoxPlotMode Normal in .NET MAUI Cartesian Chart](Chart-types-images/BoxModeNormal.png)
 
 ## Inclusive
 In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers. The following code illustrate how to define property [BoxPlotMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode) value as [Inclusive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxPlotMode.html#Syncfusion_Maui_Charts_BoxPlotMode_Inclusive).
@@ -181,7 +183,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![BoxPlotMode Inclusive in MAUI Chart](Chart-types-images/BoxModeInclusive.png)
+![BoxPlotMode Inclusive in .NET MAUI Cartesian Chart](Chart-types-images/BoxModeInclusive.png)
 
 ## ShowMedian
 The Median values of given dataset is viewed by enabling the [ShowMedian](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian) property of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html). By default, the ShowMedian property value is False. The following code illustrates how to enable the [ShowMedian](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian) property.
@@ -234,7 +236,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![ShowMedian in MAUI chart](Chart-types-images/ShowMedian.png)
+![ShowMedian in .NET MAUI Cartesian Chart](Chart-types-images/ShowMedian.png)
 
 N> * The middle number of data points is the median for the odd number of data points.
  * The average of the middle two numbers is a median for the even number of data points.
@@ -292,7 +294,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Outlier Segment in MAUI chart](Chart-types-images/ShowOutlier.png)
+![Outlier Segment in .NET MAUI Cartesian Chart](Chart-types-images/ShowOutlier.png)
 
 ## OutlierShapeType
 
@@ -346,4 +348,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![OutlierShapeType in MAUI chart](Chart-types-images/OutlierShape.png)
+![OutlierShapeType in .NET MAUI Cartesian Chart](Chart-Types-images/OutlierShape.png)

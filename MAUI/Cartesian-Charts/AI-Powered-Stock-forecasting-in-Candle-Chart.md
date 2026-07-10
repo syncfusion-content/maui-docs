@@ -1,16 +1,18 @@
 ---
 layout: post
-title: AI powered stock forecasting in Candle chart | Syncfusion
-description: Learn here how to implement AI-powered smart stock data forecasting using .NET MAUI Syncfusion® Candle Chart.
+title: AI powered stock forecasting in Candle chart in .NET MAUI Cartesian Chart | Syncfusion
+description: Learn here how to implement AI-powered smart stock data forecasting using .NET MAUI Syncfusion® Cartesian Chart Candle series.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart AI forecasting, maui chart stock, .net maui chart data options, syncfusion maui chart AI prediction, .net maui chart stock visualization, .net maui cartesian chart AI stock forecasting support.
 ---
 
-# AI Powered Stock Forecasting in Candle Chart
+# AI Powered Stock Forecasting in .NET MAUI Cartesian Chart
 
-This guide demonstrates how to build an AI-powered [.NET MAUI Candle Chart](https://help.syncfusion.com/maui/cartesian-charts/candle) that forecasts stock prices for the next 45 days, helping traders make informed decisions using Syncfusion controls and Azure OpenAI.
+This guide demonstrates how to build an AI-powered [.NET MAUI Cartesian Chart Candle series](https://help.syncfusion.com/maui/cartesian-charts/candle) that forecasts stock prices for the next 45 days, helping traders make informed decisions using Syncfusion controls and Azure OpenAI.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 ## Integrating Azure OpenAI for Stock Forecasting
 
@@ -22,7 +24,7 @@ Ensure you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/produ
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 internal class AzureOpenAIService
 {
@@ -45,11 +47,11 @@ internal class AzureOpenAIService
 
 {% endtabs %}
 
-To set up a connection to the Azure OpenAI service, Create an `OpenAIClient` instance when needed:
+To set up a connection to the Azure OpenAI service, create an `OpenAIClient` instance when needed:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 //At the time of required.
 var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
@@ -60,11 +62,11 @@ var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
 
 ### 2. Generate Prompts and Retrieve AI Predictions
 
-Prepare a structured prompt with historical data for the AI model, this helps to get the more accurate predicted values.
+Prepare a structured prompt with historical data for the AI model, this helps to get more accurately predicted values.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 //AI service.
 
@@ -87,11 +89,11 @@ Request predictions from Azure OpenAI using the 'GetChatCompletionsAsync':
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 //AI service.
 
-. . .
+//code omitted for brevity
 public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt, ViewModel viewModel, int index)
 {
     try
@@ -119,18 +121,18 @@ public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt,
 
 {% endtabs %}
 
-### 3. Implement the Syncfusion .NET MAUI Candle chart to display forecasted data.
+### 3. Implement the Syncfusion .NET MAUI Cartesian Chart to display forecasted data.
 
-The [Syncfusion .NET MAUI Candle chart](https://help.syncfusion.com/maui/cartesian-charts/candle) allows you to display the financial data's. Define the data Model that hold the financial data (High, Low, Open, Close) and ViewModel that hold the collection of data for binding.
+The [Syncfusion .NET MAUI Cartesian Chart Candle series](https://help.syncfusion.com/maui/cartesian-charts/candle) allows you to display financial data. Define the data Model that holds the financial data (High, Low, Open, Close) and ViewModel that holds the collection of data for binding.
 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 //Model
 
-. . .
+//code omitted for brevity
 public class DataModel
 {
     public double High { get; set; }
@@ -163,10 +165,10 @@ public class ViewModel : INotifyPropertyChanged
 
     public ViewModel()
     {
-        stockData = GenerateColection(msftStockSource);
+        stockData = GenerateCollection(msftStockSource);
     }
 
-    private ObservableCollection<DataModel> GenerateColection(string dataSource)
+    private ObservableCollection<DataModel> GenerateCollection(string dataSource)
     {
         string[] alphapetRows = dataSource.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
         ObservableCollection<DataModel> alphabetCollection = new ObservableCollection<DataModel>();
@@ -186,7 +188,7 @@ public class ViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-### 4. Display Data Using Syncfusion Candle Chart
+### 4. Display Data Using Syncfusion Cartesian Chart
 
 Bind your ViewModel to the chart and display both historical and forecasted data:
 
@@ -194,22 +196,15 @@ Bind your ViewModel to the chart and display both historical and forecasted data
 
 {% highlight xaml %}
 
-<ContentPage.BindingContext>
- <local:ViewModel x:Name="viewModel"/>
-</ContentPage.BindingContext>
-. . . 
+<!-- code omitted for brevity -->
 <chart:SfCartesianChart x:Name="chart" >
 
  <chart:SfCartesianChart.XAxes>
-
   <chart:DateTimeAxis x:Name="dateTime" LabelExtent="30" IntervalType="Months" ShowMajorGridLines="False" >
-
  </chart:SfCartesianChart.XAxes>
             
  <chart:SfCartesianChart.YAxes>
-
    <chart:NumericalAxis EdgeLabelsVisibilityMode="AlwaysVisible"  EdgeLabelsDrawingMode="Center">
-
    </chart:NumericalAxis>
  </chart:SfCartesianChart.YAxes>
 
@@ -228,8 +223,6 @@ Bind your ViewModel to the chart and display both historical and forecasted data
                       Low="Low"
                       Close="Close"   />
 
-
-            
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -264,8 +257,8 @@ private async void AIButtonClicked(object sender, EventArgs e)
 
 After receiving the AI-predicted stock trends, the chart updates to display both historical and forecasted data, providing a visual representation of potential market movements.
 
-The following image demonstrates the output of the above AI powered stock forecasting .NET MAUI Candle chart.
+The following image demonstrates the output of the above AI powered stock forecasting .NET MAUI Cartesian Chart.
 
-![.NET MAUI Candle chart AI Stock forecasting.](Chart_Smart_component_images/stock_forecasting.gif) 
+![.NET MAUI Cartesian Chart AI Stock forecasting](Chart_Smart_component_images/stock_forecasting.gif) 
 
 For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/StockForecasting)

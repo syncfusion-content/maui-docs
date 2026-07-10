@@ -62,7 +62,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Column chart type in .NET MAUI Cartesian Chart](Chart-Types-images/maui_column_chart.png)
+![Column chart type in .NET MAUI Cartesian Chart](Chart-types-images/maui_column_chart.png)
 
 ## Spacing and Width
 
@@ -120,7 +120,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Column segment spacing in .NET MAUI Cartesian Chart](Chart-Types-images/maui_column_chart_with_segment_spacing.png)
+![Column segment spacing in .NET MAUI Cartesian Chart](Chart-types-images/maui_column_chart_with_segment_spacing.png)
 
 ## Overlapped series placement
 
@@ -185,4 +185,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Visualize column overlapped in .NET MAUI Cartesian Chart](Chart-Types-images/EnableSidebySidePlacement.png)
+![Visualize column overlapped in .NET MAUI Cartesian Chart](Chart-types-images/EnableSidebySidePlacement.png)

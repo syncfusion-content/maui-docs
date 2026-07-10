@@ -10,9 +10,11 @@ keywords: .net maui chart performance, maui chart optimization, .net maui fast l
 
 # Performance in .NET MAUI Cartesian Chart
 
-The .NET MAUI Chart provides performance optimization techniques to efficiently handle large datasets and dynamic data updates. Whether we are rendering thousands of data points or pushing real-time updates, the following strategies help us get the best rendering performance from `SfCartesianChart`.
+The .NET MAUI Cartesian Chart provides performance optimization techniques to efficiently handle large datasets and dynamic data updates. Whether you are rendering thousands of data points or pushing real-time updates, the following strategies help you get the best rendering performance from `SfCartesianChart`.
 
-## Fast Chart in .NET MAUI Cartesian Charts
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
+
+## Fast chart in .NET MAUI Cartesian Charts
 
 A fast series is a special kind of chart series that can render a collection with a huge number of data points efficiently. Unlike standard series, fast series render all data points using a single segment, which significantly reduces the rendering overhead and improves frame rates when dealing with large datasets.
 
@@ -21,7 +23,7 @@ A fast series is a special kind of chart series that can render a collection wit
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:FastLineSeries ItemsSource="{Binding Data}"
                           XBindingPath="XValue"
                           YBindingPath="YValue"/>
@@ -32,7 +34,7 @@ A fast series is a special kind of chart series that can render a collection wit
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+//code omitted for brevity
 FastLineSeries series = new FastLineSeries()
 {
     ItemsSource = new ViewModel().Data,
@@ -47,30 +49,30 @@ this.Content = chart;
 
 {% endtabs %}
 
-![FastLine chart type in MAUI Chart](Chart-types-images/maui_fastline_chart.png)
+![FastLine chart type in .NET MAUI Cartesian Chart](Chart-types-images/maui_fastline_chart.png)
 
 **When to use fast series:**
 
-* Use fast series when we need to plot continuous time-series or sensor data with thousands of points.
+* Use fast series when you need to plot continuous time-series or sensor data with thousands of points.
 * Prefer fast series over standard series whenever rendering performance is a priority and advanced per-point customization is not required.
 
-## ListenPropertyChange in .NET MAUI Charts
+## ListenPropertyChange in .NET MAUI Cartesian Charts
 
 The `ListenPropertyChange` property allows the chart to update dynamically when the underlying data source properties change. This enables real-time data visualization with responsive updates. By leveraging `INotifyPropertyChanged`, the data points automatically reflect changes, ensuring the chart remains responsive to data updates.
 
-Use `ListenPropertyChange` with our series when our data model implements `INotifyPropertyChanged`:
+Use `ListenPropertyChange` with your series when your data model implements `INotifyPropertyChanged`:
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:LineSeries ItemsSource="{Binding DataSource}"
                       XBindingPath="Category"
                       YBindingPath="Metric"
                       ListenPropertyChange="True" />
-    ...
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -128,7 +130,7 @@ N> To optimize performance and avoid unnecessary event registration, the `Listen
 
 ## Deferred Real-Time Updates
 
-When performing bulk or real-time updates such as adding, removing, or modifying multiple data points, the chart refreshes for every change, which may impact performance. To optimize this, use chart-level or series-level suspend and resume notification methods to batch updates and reduce unnecessary refresh cycles based on our requirements.
+When performing bulk or real-time updates such as adding, removing, or modifying multiple data points, the chart refreshes for every change, which may impact performance. To optimize this, use chart-level or series-level suspend and resume notification methods to batch updates and reduce unnecessary refresh cycles based on your requirements.
 
 ### Series-Level Suspend and Resume
 
@@ -139,7 +141,7 @@ Use `SuspendNotification` and `ResumeNotification` methods on a specific series 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Series>
         <chart:FastLineSeries x:Name="series"
                               ItemsSource="{Binding Data}"
@@ -178,7 +180,7 @@ Use `SuspendSeriesNotification` and `ResumeSeriesNotification` methods on the ch
 {% highlight xaml %}
 
 <chart:SfCartesianChart x:Name="chart">
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Series>
         <chart:FastLineSeries ItemsSource="{Binding Data1}"
                               XBindingPath="XValue"

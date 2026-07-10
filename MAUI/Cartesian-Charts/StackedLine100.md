@@ -5,6 +5,7 @@ description: Learn here all about stacked line 100 chart support in Syncfusion®
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui stacked line 100 chart, maui stacked line 100 chart, stacked line 100 chart customization .net maui, syncfusion maui stacked line 100 chart, cartesian stacked line 100 chart maui, .net maui chart stacked line 100 visualization, .net maui 100% stacked line chart
 ---
 
 # Stacked Line 100 Chart in .NET MAUI Cartesian Chart
@@ -61,51 +62,54 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
 ViewModel viewModel = new ViewModel();
 
-StackingLine100Series series1 = new  StackingLine100Series()
+StackingLine100Series series1 = new StackingLine100Series()
 {
-    ItemsSource = viewModel.Data1
+    ItemsSource = viewModel.Data1,
     XBindingPath = "Month",
     YBindingPath = "Value",
 };
 
 StackingLine100Series series2 = new StackingLine100Series()
 {
-    ItemsSource = viewModel.Data2
+    ItemsSource = viewModel.Data2,
     XBindingPath = "Month",
     YBindingPath = "Value",
 };
+
 StackingLine100Series series3 = new StackingLine100Series()
 {
-    ItemsSource = viewModel.Data3
+    ItemsSource = viewModel.Data3,
     XBindingPath = "Month",
     YBindingPath = "Value",
 };
 
 StackingLine100Series series4 = new StackingLine100Series()
 {
-    ItemsSource = viewModel.Data4
+    ItemsSource = viewModel.Data4,
     XBindingPath = "Month",
     YBindingPath = "Value",
 };
 
 chart.Series.Add(series1);
-chart.Series.Add(series2);     
-chart.Series.Add(series3); 
-chart.Series.Add(series4); 
+chart.Series.Add(series2);
+chart.Series.Add(series3);
+chart.Series.Add(series4);
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Stacking Line 100 Chart in .NET MAUI Cartesian Charts](chart-types-images\net-maui-cartesian-charts-stacked-line-100-chart.png)
+![Stacking Line 100 Chart in .NET MAUI Cartesian Chart](Chart-types-images/net-maui-cartesian-charts-stacked-line-100-chart.png)
 
 ## Dashed Stacked Line 100
 
@@ -256,12 +260,12 @@ SfCartesianChart chart = new SfCartesianChart();
 
 ViewModel viewModel = new ViewModel();
 // code omitted for brevity
-StackingLine100Series series1 = new  StackingLine100Series()
+StackingLine100Series series1 = new StackingLine100Series()
 {
     ItemsSource = viewModel.Data1,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ShowMarkers= true,
+    ShowMarkers = true,
 };
 
 StackingLine100Series series2 = new StackingLine100Series()
@@ -269,15 +273,15 @@ StackingLine100Series series2 = new StackingLine100Series()
     ItemsSource = viewModel.Data2,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ShowMarkers= true,
+    ShowMarkers = true,
 };
 
-StackingLine100Series series3 = new StackingLine100Series()       
+StackingLine100Series series3 = new StackingLine100Series()
 {
     ItemsSource = viewModel.Data3,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ShowMarkers= true,
+    ShowMarkers = true,
 };
 
 StackingLine100Series series4 = new StackingLine100Series()
@@ -285,13 +289,13 @@ StackingLine100Series series4 = new StackingLine100Series()
     ItemsSource = viewModel.Data4,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ShowMarkers= true, 
+    ShowMarkers = true,
 };
 
 chart.Series.Add(series1);
-chart.Series.Add(series2);     
-chart.Series.Add(series3); 
-chart.Series.Add(series4); 
+chart.Series.Add(series2);
+chart.Series.Add(series3);
+chart.Series.Add(series4);
 
 this.Content = chart;
 
@@ -303,7 +307,7 @@ this.Content = chart;
 
 ### Marker customization
 
-In order to change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLineSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
+To change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLineSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
 
 * [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Type), of type `ShapeType`, describes the shape of the series marker. The default value of this property is [ShapeType.Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeType.html#Syncfusion_Maui_Charts_ShapeType_Circle).
 * [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Stroke), of type `Brush`, indicates the brush used to paint the marker border.

@@ -5,7 +5,7 @@ description: Learn here all about stacked column and bar chart support in Syncfu
 platform: maui
 control: SfCartesianChart
 documentation: ug
-keywords: .net maui stacked column chart, maui stacked column chart, stacked column chart customization .net maui, syncfusion maui stacked column chart, cartesian stacked column chart maui, .net maui chart stacked column visualization, .net maui cumulative column chart.
+keywords: .net maui stacked column chart, maui stacked column chart, stacked column chart customization .net maui, syncfusion maui stacked column chart, cartesian stacked column chart maui, .net maui chart stacked column visualization, .net maui cumulative column chart
 ---
 
 # Stacked Column Chart in .NET MAUI Cartesian Chart
@@ -55,21 +55,22 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingColumnSeries  series1 = new  StackingColumnSeries()
+StackingColumnSeries series1 = new StackingColumnSeries()
 {
-    ItemsSource = new ViewModel().Data1
+    ItemsSource = new ViewModel().Data1,
     XBindingPath = "Name",
     YBindingPath = "Value",
 };
+
 StackingColumnSeries series2 = new StackingColumnSeries()
 {
-    ItemsSource = new ViewModel().Data2
+    ItemsSource = new ViewModel().Data2,
     XBindingPath = "Name",
     YBindingPath = "Value",
 };
 
 chart.Series.Add(series1);
-chart.Series.Add(series2);     
+chart.Series.Add(series2);
 this.Content = chart;
 
 {% endhighlight %}
@@ -80,7 +81,7 @@ this.Content = chart;
 ## Grouping Series
 
 Each series in a stacked chart with several series may be difficult to compare. To solve that problem, grouping is used.
-The [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) property used to group the series, which allows users to assign a label to each stacked column series. This label identifies the specific group to which the stacked column series belongs and can be used to group similar series.
+The [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) property is used to group the series, which allows users to assign a label to each stacked column series. This label identifies the specific group to which the stacked column series belongs and can be used to group similar series.
 
 N> If the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) is not provided, the stacked column will consider all series as a single group.
 
@@ -119,31 +120,33 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingColumnSeries  series1 = new  StackingColumnSeries()
+StackingColumnSeries series1 = new StackingColumnSeries()
 {
     ItemsSource = new ViewModel().Data1,
     XBindingPath = "Name",
     YBindingPath = "Value",
-    GroupingLabel="GroupOne"
+    GroupingLabel = "GroupOne"
 };
+
 StackingColumnSeries series2 = new StackingColumnSeries()
 {
     ItemsSource = new ViewModel().Data2,
     XBindingPath = "Name",
     YBindingPath = "Value",
-    GroupingLabel="GroupTwo"
+    GroupingLabel = "GroupTwo"
 };
-StackingColumnSeries series3 = new  StackingColumnSeries()
+
+StackingColumnSeries series3 = new StackingColumnSeries()
 {
     ItemsSource = new ViewModel().Data3,
     XBindingPath = "Name",
     YBindingPath = "Value",
-    GroupingLabel="GroupOne"
+    GroupingLabel = "GroupOne"
 };
 
 chart.Series.Add(series1);
-chart.Series.Add(series2); 
-chart.Series.Add(series3);      
+chart.Series.Add(series2);
+chart.Series.Add(series3);
 this.Content = chart;
 
 {% endhighlight %}

@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Annotations in .NET MAUI Chart control | Syncfusion
-description: Learn here all about annotation support and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Annotations in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about annotation support and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
-keywords: .net maui chart annotations, .net maui annotations customization, syncfusion maui chart annotations, .net maui chart text annotation, .net maui chart shape annotation,  .net maui chart view annotation.
+keywords: .net maui cartesian chart annotations, .net maui annotations customization, syncfusion maui cartesian chart annotations, .net maui cartesian chart text annotation, .net maui cartesian chart shape annotation, .net maui cartesian chart view annotation.
 ---
 
-# Annotations in .NET MAUI Chart
+# Annotations in .NET MAUI Cartesian Chart
 
 [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides annotation support that allows you to mark specific areas of interest in the chart area. This feature enables you to add text, images, and custom views using the following annotations.
 
 * Text annotation
 * Shape annotation
 * View annotation
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 To learn how to add and customize annotations in .NET MAUI Cartesian Charts quickly, you can check the below video.
 
@@ -29,7 +31,7 @@ To add annotations, create an instance of any type of annotation and add it to t
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Text="Ellipse"/>        
     </chart:SfCartesianChart.Annotations>    
@@ -40,7 +42,7 @@ To add annotations, create an instance of any type of annotation and add it to t
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+//code omitted for brevity
 var ellipse = new EllipseAnnotation()
 {
     X1 = 2,
@@ -57,7 +59,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Annotations in MAUI Chart](Annotation_image/Adding_annotation.png)
+![Annotations in .NET MAUI Cartesian Chart](Annotation_image/Adding_annotation.png)
 
 ## Positioning the annotation
 
@@ -68,7 +70,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>        
         <chart:RectangleAnnotation X1="0" Y1="100" X2="300" Y2="400" Text="Pixel value" CoordinateUnit="Pixel"/>
     </chart:SfCartesianChart.Annotations>
@@ -79,7 +81,7 @@ this.Content = chart;
 {% highlight c# %}
     
 SfCartesianChart chart = new SfCartesianChart(); 
-. . .    
+//code omitted for brevity
 var rectangle = new RectangleAnnotation()
 {
     X1 = 0,
@@ -97,7 +99,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Annotations in pixel value in MAUI Chart](Annotation_image/Rectangle_with_pixel.png)
+![Annotations in pixel value in .NET MAUI Cartesian Chart](Annotation_image/Rectangle_with_pixel.png)
 
 ## Adding annotation for multiple axes
 
@@ -108,7 +110,7 @@ When there are multiple axes, annotations can be added to a particular axis usin
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis Minimum="0" Maximum="1"/>
         <chart:NumericalAxis Name="YAxis" CrossesAt="{Static x:Double.MaxValue}"/>
@@ -124,7 +126,7 @@ When there are multiple axes, annotations can be added to a particular axis usin
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .    
+//code omitted for brevity
 NumericalAxis yAxis1 = new NumericalAxis();
 yAxis1.Minimum = 0;
 yAxis1.Maximum = 1;
@@ -152,7 +154,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Annotations in multiple axes in MAUI Chart](Annotation_image/Annotation_with_multiple_axes.png)
+![Annotations in multiple axes in .NET MAUI Cartesian Chart](Annotation_image/Annotation_with_multiple_axes.png)
 
 ## Text annotation
 
@@ -163,7 +165,7 @@ The [TextAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:TextAnnotation X1="2" Y1="25" Text="Text Annotation"/>
     </chart:SfCartesianChart.Annotations>
@@ -174,7 +176,7 @@ The [TextAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .    
+//code omitted for brevity
 var text = new TextAnnotation()
 {
     X1 = 2,
@@ -189,7 +191,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Text annotation in MAUI Chart](Annotation_image/Text_annotation.png)
+![Text annotation in .NET MAUI Cartesian Chart](Annotation_image/Text_annotation.png)
 
 ## Text Customization
 
@@ -234,7 +236,7 @@ The [RectangleAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:RectangleAnnotation X1="1" Y1="40" X2="2" Y2="20"/>
     </chart:SfCartesianChart.Annotations>
@@ -245,13 +247,13 @@ The [RectangleAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . . 
+//code omitted for brevity
 var rectangle = new RectangleAnnotation()
 {
     X1 = 1,
     Y1 = 40,
     X2 = 2,
-    Y2 = 20,                
+    Y2 = 20,
 };
 
 chart.Annotations.Add(rectangle);
@@ -261,7 +263,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Rectangle annotation in MAUI Chart](Annotation_image/Rectangle_annotation.png)
+![Rectangle annotation in .NET MAUI Cartesian Chart](Annotation_image/Rectangle_annotation.png)
 
 ## Ellipse annotation
 
@@ -272,7 +274,7 @@ The [EllipseAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Width="20" Height="20"/>
     </chart:SfCartesianChart.Annotations>
@@ -283,13 +285,13 @@ The [EllipseAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 var ellipse = new EllipseAnnotation()
 {
     X1 = 2,
     Y1 = 10,
     X2 = 4,
-    Y2 = 15,    
+    Y2 = 15,
     Width = 20,
     Height = 20
 };
@@ -301,7 +303,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Ellipse annotation in MAUI Chart](Annotation_image/Ellipse_annotation.png)
+![Ellipse annotation in .NET MAUI Cartesian Chart](Annotation_image/Ellipse_annotation.png)
 
 N> When the [X2](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeAnnotation.html#Syncfusion_Maui_Charts_ShapeAnnotation_X2) and [Y2](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeAnnotation.html#Syncfusion_Maui_Charts_ShapeAnnotation_Y2) properties of the [EllipseAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EllipseAnnotation.html) are set, the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EllipseAnnotation.html#Syncfusion_Maui_Charts_EllipseAnnotation_Height) and [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EllipseAnnotation.html#Syncfusion_Maui_Charts_EllipseAnnotation_Width) properties become ineffective.
 
@@ -314,7 +316,7 @@ The [LineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:LineAnnotation X1="0.5" Y1="10" X2="3.5" Y2="20" Text="Line"/>
     </chart:SfCartesianChart.Annotations>
@@ -325,7 +327,7 @@ The [LineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . . 
+//code omitted for brevity
 var line = new LineAnnotation()
 {
     X1 = 0.5,
@@ -342,7 +344,7 @@ this.Content = chart;
 
 {% endtabs %}
    
-![Line Annotation in MAUI Chart](Annotation_image/Line_annotation.png)
+![Line Annotation in .NET MAUI Cartesian Chart](Annotation_image/Line_annotation.png)
 
 ## Vertical and Horizontal line annotations
 
@@ -353,7 +355,7 @@ The [VerticalLineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:VerticalLineAnnotation X1="2"/>
         <chart:HorizontalLineAnnotation Y1="20"/>
@@ -365,7 +367,7 @@ The [VerticalLineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 var verticalLineAnnotation = new VerticalLineAnnotation()
 {
     X1 = 2,
@@ -384,7 +386,7 @@ this.Content = chart;
 
 {% endtabs %}  
 
-![Vertical and horizontal Line Annotation in MAUI Chart](Annotation_image/Horizontal_vertical_annotation.png)
+![Vertical and horizontal Line Annotation in .NET MAUI Cartesian Chart](Annotation_image/Horizontal_vertical_annotation.png)
 
 ## Displaying axis label for vertical and horizontal line annotations
 
@@ -395,7 +397,7 @@ The [VerticalLineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:VerticalLineAnnotation X1="2.5" ShowAxisLabel="True"/>
         <chart:HorizontalLineAnnotation Y1="25" ShowAxisLabel="True"/>
@@ -407,7 +409,7 @@ The [VerticalLineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 var verticalLineAnnotation = new VerticalLineAnnotation()
 {
     X1 = 2.5,
@@ -428,7 +430,7 @@ this.Content = chart;
 
 {% endtabs %}  
 
-![Vertical and horizontal Line Annotation with axis label in MAUI Chart](Annotation_image/axis_label.png)
+![Vertical and horizontal Line Annotation with axis label in .NET MAUI Cartesian Chart](Annotation_image/axis_label.png)
 
 ## Axis label customization
 
@@ -450,7 +452,7 @@ To display a single-headed arrow, set the [LineCap](https://help.syncfusion.com/
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:VerticalLineAnnotation X1="2.5" LineCap="Arrow"/>
         <chart:HorizontalLineAnnotation Y1="25" LineCap="Arrow"/>
@@ -462,7 +464,7 @@ To display a single-headed arrow, set the [LineCap](https://help.syncfusion.com/
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 var verticalLineAnnotation = new VerticalLineAnnotation()
 {
     X1 = 2.5,
@@ -483,7 +485,7 @@ this.Content = chart;
 
 {% endtabs %}  
 
-![Vertical and horizontal Line Annotations with linecap in MAUI Chart](Annotation_image/Horizontal_vertical_with_cap.png)
+![Vertical and horizontal Line Annotations with linecap in .NET MAUI Cartesian Chart](Annotation_image/Horizontal_vertical_with_cap.png)
 
 N> The [LineCap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineAnnotation.html#Syncfusion_Maui_Charts_LineAnnotation_LineCap) is applicable to line, horizontal, and vertical annotations.
 
@@ -496,7 +498,7 @@ For all shape annotations, the text can be displayed using the [Text](https://he
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Text="Ellipse"/>
     </chart:SfCartesianChart.Annotations>
@@ -507,7 +509,7 @@ For all shape annotations, the text can be displayed using the [Text](https://he
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+//code omitted for brevity
 var ellipseAnnotation = new EllipseAnnotation()
 {
     X1 = 2,
@@ -524,7 +526,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Annotation in MAUI Chart](Annotation_image/Adding_annotation.png)
+![Annotation in .NET MAUI Cartesian Chart](Annotation_image/Adding_annotation.png)
 
 ## Text customization in shape annotation
 
@@ -548,7 +550,7 @@ The [ViewAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:ViewAnnotation X1="3" Y1="30">
             <chart:ViewAnnotation.View>
@@ -563,12 +565,12 @@ The [ViewAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-...
+//code omitted for brevity
 var viewAnnotation = new ViewAnnotation()
 {
     X1 = 3,
     Y1 = 30,
-    View = new Image() { Source = "cloud.png" };
+    View = new Image() { Source = "cloud.png" }
 };
 
 chart.Annotations.Add(viewAnnotation);
@@ -577,7 +579,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![View Annotation in MAUI Chart](Annotation_image/View_annotation.png)
+![View Annotation in .NET MAUI Cartesian Chart](Annotation_image/View_annotation.png)
 
 ## Annotation Visibility
 
@@ -588,7 +590,7 @@ The [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Annotations>
         <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Text="Ellipse" IsVisible="False"/>
     </chart:SfCartesianChart.Annotations>
