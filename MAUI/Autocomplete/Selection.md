@@ -43,42 +43,6 @@ The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 | `SelectionChanging` | Raised when the selection is about to change. Use the `Cancel` property of the event args to prevent the change. |
 | `SelectionChanged` | Raised after the selection has changed. Exposes the `AddedItems` and `RemovedItems` collections. |
 
-## Model and ViewModel
-
-The samples on this page use the following `SocialMedia` model and view model.
-
-{% tabs %}
-{% highlight C# %}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; } = new ObservableCollection<SocialMedia>
-    {
-        new SocialMedia { Name = "Facebook", ID = 0 },
-        new SocialMedia { Name = "Google Plus", ID = 1 },
-        new SocialMedia { Name = "Instagram", ID = 2 },
-        new SocialMedia { Name = "LinkedIn", ID = 3 },
-        new SocialMedia { Name = "Skype", ID = 4 },
-        new SocialMedia { Name = "Telegram", ID = 5 },
-        new SocialMedia { Name = "Tik Tok", ID = 6 },
-        new SocialMedia { Name = "Twitter", ID = 7 },
-        new SocialMedia { Name = "WhatsApp", ID = 8 },
-        new SocialMedia { Name = "YouTube", ID = 9 }
-    };
-
-    public ObservableCollection<SocialMedia> SelectedItemsList { get; set; } = new ObservableCollection<SocialMedia>();
-    public ObservableCollection<object> SelectedValueList { get; set; } = new ObservableCollection<object>();
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Single selection
 
 The SfAutocomplete allows the user to type a value and then select an item from the drop-down. The selected item is exposed by the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem) property.
