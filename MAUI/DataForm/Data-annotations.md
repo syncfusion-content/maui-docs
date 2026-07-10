@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data annotations in .NET MAUI DataForm control | Syncfusion®
-description: Data annotations support in Syncfusion® Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+description: Data annotations support in Syncfusion® MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Data annotations in .NET MAUI DataForm (SfDataForm)
 
-The data form supports the following attribute to handle the data, and these attributes can be accessed using the [System.ComponentModel.DataAnnotation](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) assembly.
+The DataForm supports the following attributes to handle the data, and these attributes can be accessed using the [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) assembly.
 
 ## Display attribute
 
@@ -78,10 +78,10 @@ Specifies the order of field in the data form.
 
 {% tabs %}
 {% highlight C# %}
+using System.ComponentModel.DataAnnotations;
 
-[Display(Name = "First Name", GroupName = "Name", Prompt="Enter your name")]
+[Display(Name = "First Name", GroupName = "Name", Prompt = "Enter your name")]
 public string FirstName { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,60 +141,48 @@ Specifies the enum type for the data field.
 
 {% tabs %}
 {% highlight C# %}
-
 [MinLength(5, ErrorMessage = "Password length must be greater than 5 characters")]
 public string Password { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight C# %}
-
 [MaxLength(20, ErrorMessage = "Maximum password length should be less than 20")]
 public string Password { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight C# %}
-
 [Required(AllowEmptyStrings = false, ErrorMessage = "Name is required")]
 public string Name { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight C# %}
-
 [StringLength(20, ErrorMessage = "Name should not exceed 20 characters")]
 public string Name { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
 
 {% tabs %}
 {% highlight C# %}
-
 [EnumDataType(typeof(Gender), ErrorMessage = "Please select Gender")]
 public Gender Gender { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Bindable attribute
 
-It specifies whether the field should be auto-generated or not. If bindable is set to false, the field will not be auto-generated. 
+It specifies whether the field should be auto-generated or not. If bindable is set to `false`, the field will not be auto-generated.
 
 {% tabs %}
 {% highlight C# %}
-
 [Bindable(false)]
 public string Name { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -204,10 +192,8 @@ It specifies whether the data field is editable or not.
 
 {% tabs %}
 {% highlight C# %}
-
 [Editable(false)]
 public string Name { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -217,34 +203,32 @@ It specifies whether the data field is read only or not.
 
 {% tabs %}
 {% highlight C# %}
-
 [ReadOnly(true)]
 public string Name { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
-N> The `ReadOnlyAttribute` takes higher priority than `EditableAttribute`
+N> The `ReadOnlyAttribute` takes higher priority than the `EditableAttribute`.
 
 ## DataType attribute
 
 It specifies the data type for the field.
 
-The Supported data types are Text, MultilineText, Date, DateTime and Time.
+The supported data types are Text, MultilineText, Date, DateTime, and Time.
 
 {% tabs %}
 {% highlight C# %}
-
 [DataType(DataType.MultilineText)]
 public string Address { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Custom attribute
-The data form supports the following custom attribute, and these attributes can be accessed using the [Syncfusion.Maui.DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) assembly.
+
+The DataForm supports the following custom attribute, and these attributes can be accessed using the [Syncfusion.Maui.DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) assembly.
 
 #### DataFormDisplayOptions attribute
+
 
 <table>
 <tr>
@@ -310,7 +294,6 @@ Specifies the ItemsOrderInRow property to display multiple editors in a single r
 
 [DataFormDisplayOptions(Rowspan = 2, ColumnSpan = 2, RowOrder = 1, ItemsOrderInRow = 0)]
 public string Name { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -322,14 +305,12 @@ N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembe
 
 {% tabs %}
 {% highlight C# %}
-
 [DataFormValueConverter(typeof(StringToDateConverter))]
 public string Name { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
-#### DateFormDateRange attribute
+#### DataFormDateRange attribute
 
 <table>
 <tr>
@@ -361,7 +342,7 @@ Specifies the minimum date that can be selected in the date editor.
 {{'[DisplayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_DisplayFormat)'| markdownify }}
 </td>
 <td>
-Specifies the format of the {{'[MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MaximumDate)'| markdownify }} and {{'[MinumumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MinimumDate)'| markdownify }} used in attribute.
+Specifies the format of the {{'[MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MaximumDate)'| markdownify }} and {{'[MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MinimumDate)'| markdownify }} used in the attribute.
 </td>
 </tr>
 </table>
@@ -371,7 +352,6 @@ Specifies the format of the {{'[MaximumDate](https://help.syncfusion.com/cr/maui
 
 [DataFormDateRange(DisplayFormat="yyyy/mm/dd", MaximumDate ="2022/07/01", MaximumDate ="2022/07/07")]
 public DateTime EventDate { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
