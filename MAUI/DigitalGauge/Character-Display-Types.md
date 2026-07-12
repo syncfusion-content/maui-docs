@@ -36,7 +36,7 @@ this.Content = digital;
 
 {% endtabs %}
 
-c#display-number in .NET MAUI Digital Gauge](Images\display-number.png)
+![display-number in .NET MAUI Digital Gauge](Images\display-number.png)
 
 
 ## Display alphabets
@@ -63,7 +63,7 @@ this.Content = digital;
 
 {% endtabs %}
 
-c#display-character in .NET MAUI Digital Gauge](Images\display-character.png)
+![display-character in .NET MAUI Digital Gauge](Images\display-character.png)
 
 ## Display special characters
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in in .NET MAUI Digital Gauge | Syncfusion
+title: Events in .NET MAUI Digital Gauge | Syncfusion
 description: Learn about events in the Syncfusion® .NET MAUI Digital Gauge (SfDigitalGauge) control, its introduction, elements, and more.
 platform: maui
 control: DigitalGauge
