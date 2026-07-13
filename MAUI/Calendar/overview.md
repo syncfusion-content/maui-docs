@@ -40,7 +40,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Calendar ([SfCalendar](https://www.syncfusi
 
 - **Right to left (RTL)** allows adapting the layout for RTL languages such as Arabic and Hebrew.
 
-- **Globalization** ensure that date and time values are displayed based on regional and cultural settings.
+- **Globalization** ensures that date and time values are displayed based on regional and cultural settings.
 
 ## Globalization
 
