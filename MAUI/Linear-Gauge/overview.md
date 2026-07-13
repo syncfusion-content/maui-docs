@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here all about introduction of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control, its features, and more.
+title: About .NET MAUI Linear Gauge control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control, its features, and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the [.NET MAUI Linear Gauge](https://help.syncfusion.com/maui/linear-gauge/getting-started) control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
 
-Syncfusion<sup>&reg;</sup> [.NET MAUI Linear Gauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) is a data visualization control to display values on a linear scale. Use this control to craft high-quality mobile app user interfaces. The .NET MAUI Linear Gauge is supported on Windows, macOS, iOS, and Android.
+Syncfusion® [.NET MAUI Linear Gauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) is a data visualization control to display values on a linear scale. Use this control to craft high-quality mobile app user interfaces. The .NET MAUI Linear Gauge is supported on Windows, macOS, iOS, and Android.
 
 ![Overview .NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
 
@@ -86,7 +86,7 @@ The following table summarizes the globalization support available in this contr
 
 - [Radial Gauge](https://help.syncfusion.com/maui/radial-gauge/overview) for visualizing values using circular gauge representation.
 - [Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview) for visualizing proportional data using circular charts.
-- [Digital Gauge](https://help.syncfusion.com/maui/digital-gauge/overview) for displaying numeric or character values using segmented digital display styles.
+- [Digital Gauge](https://help.syncfusion.com/maui/digitalgauge/overview) for displaying numeric or character values using segmented digital display styles.
 
 ## See Also
 

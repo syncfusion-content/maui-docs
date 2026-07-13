@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pointers and interaction in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about the pointers and interactions in Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: Pointers and interaction in .NET MAUI Linear Gauge control | Syncfusion®
+description: Learn here all about the pointers and interactions in Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug
