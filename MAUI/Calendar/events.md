@@ -51,7 +51,7 @@ Whenever a calendar view is changed, the `SelectableDayPredicate` function must 
 
 ## SelectionChanged
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged) event is used to notify when the cell selection is changed onto the view in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged) event is used to notify when the cell selection is changed onto the view in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -72,7 +72,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calen
 
 this.calendar.SelectionChanged += this.OnCalendarSelectionChanged;
 
-private void OnCalendarSelectionChanged(object sender,  private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
+private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
     {
         var oldDateTime = e.OldValue;
         var newDateTime = e.NewValue;
@@ -82,11 +82,11 @@ private void OnCalendarSelectionChanged(object sender,  private void OnCalendarS
 {% endtabs %}
 
 N>
-The `Tapped` event is triggered first, followed by 'selection-changed' event will be performed.
+The `Tapped` event is triggered first, followed by the `SelectionChanged` event.
 
 ## Tapped
 
-A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Tapped) event is triggered, each time a calendar view is tapped. The following are the list of arguments:
+The [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Tapped) event is triggered each time a calendar view is tapped. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -119,7 +119,7 @@ private void OnCalendarTapped(object sender, CalendarTappedEventArgs e)
 
 ## DoubleTapped
 
-Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped onto the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTapped) event occurs. The following are the list of arguments:
+Whenever a [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) element is double-tapped, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTapped) event occurs. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -153,7 +153,7 @@ private void OnCalendarDoubleTapped(object sender, CalendarDoubleTappedEventArgs
 
 ## LongPressed
 
-Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are long-pressed onto the view, the [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressed) event is triggered. The following are the list of arguments:
+Whenever a [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) element is long-pressed, the [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressed) event is triggered. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -189,7 +189,7 @@ private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e
 
 ### ViewChangedCommand
 
-The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
+The `SfCalendar` includes a built-in event called `ViewChanged`, which is triggered whenever the calendar is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
