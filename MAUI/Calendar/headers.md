@@ -16,15 +16,24 @@ You can customize the header height `Calendar` by using the `Height` property.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                       View="Month">
-            <Calendar:SfCalendar.HeaderView>
-                <Calendar:CalendarHeaderView Height="70" />
-            </Calendar:SfCalendar.HeaderView>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.HeaderView>
+            <calendar:CalendarHeaderView Height="70" />
+        </calendar:SfCalendar.HeaderView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.HeaderView.Height = 70;
 
@@ -39,19 +48,28 @@ You can customize the header style of the `Calendar` by using the [Background](h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                       View="Month">
-            <Calendar:SfCalendar.HeaderView>
-                <Calendar:CalendarHeaderView Background="Grey" TextFormat="MMM yy" ShowNavigationArrows="True">
-                    <Calendar:CalendarHeaderView.TextStyle>
-                        <Calendar:CalendarTextStyle TextColor="Black" FontSize="14" />
-                    </Calendar:CalendarHeaderView.TextStyle>
-                </Calendar:CalendarHeaderView>
-            </Calendar:SfCalendar.HeaderView>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.HeaderView>
+            <calendar:CalendarHeaderView Background="Grey" TextFormat="MMM yy" ShowNavigationArrows="True">
+                <calendar:CalendarHeaderView.TextStyle>
+                    <calendar:CalendarTextStyle TextColor="Black" FontSize="14" />
+                </calendar:CalendarHeaderView.TextStyle>
+            </calendar:CalendarHeaderView>
+        </calendar:SfCalendar.HeaderView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 CalendarTextStyle textStyle = new CalendarTextStyle()
 {
@@ -77,11 +95,15 @@ this.calendar.HeaderView = new CalendarHeaderView()
 You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_HeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 21" %}
 
-  <Calendar:SfCalendar x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                          View="Month">
-        <Calendar:SfCalendar.HeaderTemplate>
+        <calendar:SfCalendar.HeaderTemplate>
             <DataTemplate>
                 <Grid Background = "#987D9A">
                     <Label x:Name="label" TextColor="White" HorizontalOptions="Center" VerticalOptions="Start">
@@ -95,8 +117,10 @@ You can customize the header appearance by using the [HeaderTemplate](https://he
                     <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="White" />
                 </Grid>
             </DataTemplate>
-        </Calendar:SfCalendar.HeaderTemplate>
- </Calendar:SfCalendar>
+        </calendar:SfCalendar.HeaderTemplate>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -108,43 +132,47 @@ You can customize the header appearance by using the [HeaderTemplate](https://he
 You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_HeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar header. This lets you select a different data template for each header and customize the appearance of a specific header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="33" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="36" %}
 
- <Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="todayDatesTemplate">
-            <Grid Background = "LightBlue" >
-                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label.Text>
-                        <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
-                            <Binding Path="StartDateRange" />
-                            <Binding Path = "EndDateRange" />
-                        </MultiBinding>
-                    </Label.Text>
-                </Label>
-                <Label HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="normaldatesTemplate">
-            <Grid Background = "LightGreen" >
-                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label.Text>
-                        <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
-                            <Binding Path="StartDateRange" />
-                            <Binding Path = "EndDateRange" />
-                        </MultiBinding>
-                    </Label.Text>
-                </Label>
-                <Label HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Orange" />
-            </Grid>
-        </DataTemplate>
-        <local:HeaderTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
-    </Grid.Resources>
-    <Calendar:SfCalendar x:Name="calendar"
-                           View="Month"
-                           HeaderTemplate ="{StaticResource headerTemplateSelector}">
-    </Calendar:SfCalendar>
- </Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="todayDatesTemplate">
+                <Grid Background = "LightBlue" >
+                    <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label.Text>
+                            <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
+                                <Binding Path="StartDateRange" />
+                                <Binding Path = "EndDateRange" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                    <Label HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="normaldatesTemplate">
+                <Grid Background = "LightGreen" >
+                    <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label.Text>
+                            <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
+                                <Binding Path="StartDateRange" />
+                                <Binding Path = "EndDateRange" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                    <Label HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Orange" />
+                </Grid>
+            </DataTemplate>
+            <local:HeaderTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
+        </Grid.Resources>
+        <calendar:SfCalendar x:Name="calendar"
+                               View="Month"
+                               HeaderTemplate ="{StaticResource headerTemplateSelector}">
+        </calendar:SfCalendar>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="HeaderTemplateSelector.cs" %}
@@ -183,19 +211,28 @@ You can customize the view header height of the `Calendar` by using the `Height`
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                       View="Month">
-            <Calendar:SfCalendar.MonthView>
-                <Calendar:CalendarMonthView>
-                    <Calendar:CalendarMonthView.HeaderView>
-                        <Calendar:CalendarMonthHeaderView Height="50" />
-                    </Calendar:CalendarMonthView.HeaderView>
-                </Calendar:CalendarMonthView>
-            </Calendar:SfCalendar.MonthView>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.MonthView>
+            <calendar:CalendarMonthView>
+                <calendar:CalendarMonthView.HeaderView>
+                    <calendar:CalendarMonthHeaderView Height="50" />
+                </calendar:CalendarMonthView.HeaderView>
+            </calendar:CalendarMonthView>
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.MonthView.HeaderView.Height = 50;
 
@@ -210,23 +247,32 @@ You can customize the view header style of the `Calendar` by using the [Backgrou
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                       View="Month">
-            <Calendar:SfCalendar.MonthView>
-                <Calendar:CalendarMonthView>
-                    <Calendar:CalendarMonthView.HeaderView>
-                        <Calendar:CalendarMonthHeaderView Background="Grey" TextFormat="ddd">
-                            <Calendar:CalendarMonthHeaderView.TextStyle>
-                                <Calendar:CalendarTextStyle TextColor="Black" FontSize="14" />
-                            </Calendar:CalendarMonthHeaderView.TextStyle>
-                        </Calendar:CalendarMonthHeaderView>
-                    </Calendar:CalendarMonthView.HeaderView>
-                </Calendar:CalendarMonthView>
-            </Calendar:SfCalendar.MonthView>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.MonthView>
+            <calendar:CalendarMonthView>
+                <calendar:CalendarMonthView.HeaderView>
+                    <calendar:CalendarMonthHeaderView Background="Grey" TextFormat="ddd">
+                        <calendar:CalendarMonthHeaderView.TextStyle>
+                            <calendar:CalendarTextStyle TextColor="Black" FontSize="14" />
+                        </calendar:CalendarMonthHeaderView.TextStyle>
+                    </calendar:CalendarMonthHeaderView>
+                </calendar:CalendarMonthView.HeaderView>
+            </calendar:CalendarMonthView>
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 CalendarTextStyle textStyle = new CalendarTextStyle()
 {
@@ -251,18 +297,24 @@ this.calendar.MonthView.HeaderView = new CalendarMonthHeaderView
 You can customize the view header appearance by using the [MonthViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MonthViewHeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 9" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 13" %}
 
- <Calendar:SfCalendar x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                         View="Month">
-        <Calendar:SfCalendar.MonthViewHeaderTemplate>
+        <calendar:SfCalendar.MonthViewHeaderTemplate>
             <DataTemplate>
                 <Grid Background ="#BB9AB1" >
                     <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}" TextColor="White" FontSize="14" FontFamily="Bold" />
                 </Grid>
             </DataTemplate>
-        </Calendar:SfCalendar.MonthViewHeaderTemplate>
- </Calendar:SfCalendar>
+        </calendar:SfCalendar.MonthViewHeaderTemplate>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -274,27 +326,31 @@ You can customize the view header appearance by using the [MonthViewHeaderTempla
 You can customize the view header appearance by using the [MonthViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MonthViewHeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar view header. This lets you select a different data template for each view header and customize the appearance of a specific view header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="20" %}
 
- <Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="normaldatesTemplate">
-            <Grid Background = "lightBlue">
-                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Red" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="todayDatesTemplate">
-            <Grid Background = "LightGreen" >
-                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Orange" />
-            </Grid>
-        </DataTemplate>
-        <local:MonthViewHeaderTemplateSelector x:Key="monthViewHeaderTemplateSelector"  TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
-    </Grid.Resources>
-    <Calendar:SfCalendar x:Name="calendar"
-                           View="Month"
-                           MonthViewHeaderTemplate ="{StaticResource monthViewHeaderTemplateSelector}">
-    </Calendar:SfCalendar>
- </Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="normaldatesTemplate">
+                <Grid Background = "lightBlue">
+                    <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Red" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="todayDatesTemplate">
+                <Grid Background = "LightGreen" >
+                    <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Orange" />
+                </Grid>
+            </DataTemplate>
+            <local:MonthViewHeaderTemplateSelector x:Key="monthViewHeaderTemplateSelector"  TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
+        </Grid.Resources>
+        <calendar:SfCalendar x:Name="calendar"
+                               View="Month"
+                               MonthViewHeaderTemplate ="{StaticResource monthViewHeaderTemplateSelector}">
+        </calendar:SfCalendar>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MonthViewHeaderTemplateSelector.cs" %}
