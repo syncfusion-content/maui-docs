@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Headers in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup> | Calendar
+title: Headers in .NET MAUI Calendar control | Syncfusion®
 description: Learn here all about Headers feature of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
@@ -34,7 +34,7 @@ this.calendar.HeaderView.Height = 70;
 ![Month view Header height Changed in .NET MAUI Calendar.](images/header/maui-month-view-header-height-changed.png)
 
 ## Header appearance
-You can customize the header style of the `Calendar` by using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_Background), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle), and [TextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextFormat) properties of [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_ShowNavigationArrows).
+You can customize the header style of the `Calendar` by using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_Background), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle), and [TextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextFormat) properties, along with the [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_ShowNavigationArrows) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -70,7 +70,7 @@ this.calendar.HeaderView = new CalendarHeaderView()
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Header appearnce Changed in .NET MAUI Calendar.](images/header/maui-month-view-header-appearance-changed.png)
+![Month view Header appearance Changed in .NET MAUI Calendar.](images/header/maui-month-view-header-appearance-changed.png)
 
 ## Header appearance using DataTemplate
 
@@ -178,7 +178,7 @@ N>
 You can customize all the properties of the View Header using [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_HeaderView). By using this property, you can customize the Background, Height, TextFormat, and TextStyle of the Calendar.
 
 ### Customize view header height
-You can customize the view Header height `Calendar` by using the `Height` property.
+You can customize the view header height of the `Calendar` by using the `Height` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -244,7 +244,7 @@ this.calendar.MonthView.HeaderView = new CalendarMonthHeaderView
 {% endhighlight %}
 {% endtabs %}
 
-![Month view View Header appearnce Changed in .NET MAUI Calendar.](images/header/maui-month-view-view-header-appearance-changed.png)
+![Month view View Header appearance Changed in .NET MAUI Calendar.](images/header/maui-month-view-view-header-appearance-changed.png)
 
 ### View header appearance using DataTemplate
 
@@ -315,7 +315,7 @@ public class MonthViewHeaderTemplateSelector : DataTemplateSelector
     }
 }
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
 N>
