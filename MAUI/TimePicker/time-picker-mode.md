@@ -17,14 +17,21 @@ The dialog mode is used to display the time picker in a pop-up by setting the [M
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="timePicker"
-                     Mode="Dialog"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker"
+                         Mode="Dialog"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker()
 {
@@ -45,18 +52,22 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <picker:SfTimePicker x:Name="timePicker"
-                         Mode="Dialog"/>
-    <Button Text="Open Picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfTimePicker x:Name="timePicker"
+                             Mode="Dialog"/>
+        <Button Text="Open Picker" 
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -98,20 +109,24 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <picker:SfTimePicker x:Name="timePicker" 
-                         Mode="RelativeDialog"
-                         RelativePosition="AlignTopLeft">
-    </picker:SfTimePicker>
-    <Button Text="Open picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfTimePicker x:Name="timePicker"
+                             Mode="RelativeDialog"
+                             RelativePosition="AlignTopLeft">
+        </picker:SfTimePicker>
+        <Button Text="Open picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -135,23 +150,27 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="8" %}
 
-<Grid>
-    <picker:SfTimePicker x:Name="timePicker" 
-                         Mode="RelativeDialog"
-                         RelativePosition="AlignTopLeft"
-                         RelativeView = "{x:Reference pickerButton}">
-    </picker:SfTimePicker>
-    <Button Text="Open picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfTimePicker x:Name="timePicker" 
+                             Mode="RelativeDialog"
+                             RelativePosition="AlignTopLeft"
+                             RelativeView="{x:Reference pickerButton}">
+        </picker:SfTimePicker>
+        <Button Text="Open picker" 
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -179,10 +198,30 @@ SfTimePicker allows the display of the popup to render at any desired size by se
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" 
                          Mode="Dialog"
                          PopupWidth="300"
                          PopupHeight="400"/>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
+
+SfTimePicker timePicker = new SfTimePicker()
+{
+    Mode = PickerMode.Dialog,
+    PopupWidth = 300,
+    PopupHeight = 400
+};
+
+this.Content = timePicker;
 
 {% endhighlight %}
 
@@ -191,6 +230,6 @@ SfTimePicker allows the display of the popup to render at any desired size by se
 this.timePicker.PopupWidth = 300;
 this.timePicker.PopupHeight = 400;
 
-{% endhighlight %} 
+{% endhighlight %}
 
 {% endtabs %}

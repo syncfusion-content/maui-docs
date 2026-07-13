@@ -23,17 +23,26 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="picker"
-                     SelectionChanged="OnTimePickerSelectionChanged">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker"
+                         SelectionChanged="OnTimePickerSelectionChanged">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
 
-this.picker.SelectionChanged += this.OnTimePickerSelectionChanged;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
+picker.SelectionChanged += this.OnTimePickerSelectionChanged;
+this.Content = picker;
 
 private void OnTimePickerSelectionChanged(object sender, TimePickerSelectionChangedEventArgs e)
 {
@@ -68,17 +77,26 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="picker"
-                     Opened="OnTimePickerPopUpOpened">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker"
+                         Opened="OnTimePickerPopUpOpened">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
 
-this.picker.Opened += this.OnTimePickerPopUpOpened;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
+picker.Opened += this.OnTimePickerPopUpOpened;
+this.Content = picker;
 
 private void OnTimePickerPopUpOpened(object sender, EventArgs e)
 {
@@ -102,17 +120,26 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="picker"
-                     Closing="OnTimePickerPopUpClosing">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker"
+                         Closing="OnTimePickerPopUpClosing">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
 
+using Syncfusion.Maui.Picker;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
 this.picker.Closing += this.OnTimePickerPopUpClosing;
+this.Content = picker;
 
 private void OnTimePickerPopUpClosing(object sender, CancelEventArgs e)
 {
@@ -134,17 +161,26 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="picker"
-                     Closed="OnTimePickerPopUpClosed">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker"
+                         Closed="OnTimePickerPopUpClosed">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
 
-this.picker.Closed += this.OnTimePickerPopUpClosed;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
+picker.Closed += this.OnTimePickerPopUpClosed;
+this.Content = picker;
 
 private void OnTimePickerPopUpClosed(object sender, EventArgs e)
 {
@@ -173,17 +209,26 @@ The `SfTimePicker` footer view provides two events. These events are not raised 
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="picker"
-                     OkButtonClicked="OnTimePickerOkButtonClicked">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker"
+                         OkButtonClicked="OnTimePickerOkButtonClicked">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
 
-this.picker.OkButtonClicked += this.OnTimePickerOkButtonClicked;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
+picker.OkButtonClicked += this.OnTimePickerOkButtonClicked;
+this.Content = picker;
 
 private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 {
@@ -204,17 +249,26 @@ private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="picker"
-                     CancelButtonClicked="OnTimePickerCancelButtonClicked">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker"
+                         CancelButtonClicked="OnTimePickerCancelButtonClicked">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
 
-this.picker.CancelButtonClicked += this.OnTimePickerCancelButtonClicked;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
+picker.CancelButtonClicked += this.OnTimePickerCancelButtonClicked;
+this.Content = picker;
 
 private void OnTimePickerCancelButtonClicked(object sender, EventArgs e)
 {
@@ -234,18 +288,28 @@ N> Add `using System.Windows.Input;` to use the `ICommand` type shown in the fol
 The SfTimePicker includes a built-in event called `SelectionChanged` that is triggered whenever the time selection changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectionChangedCommand). The bound command does not receive any parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>
-<picker:SfTimePicker x:Name="picker"
-                    SelectionChangedCommand="{Binding SelectionChangedCommand}">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfTimePicker x:Name="picker"
+                        SelectionChangedCommand="{Binding SelectionChangedCommand}">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 12" %}
 
+using Syncfusion.Maui.Picker;
+using System.Windows.Input;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
+this.Content = picker;
 public class ViewModel
 {
     public ICommand SelectionChangedCommand { get; set; }
@@ -267,18 +331,28 @@ public class ViewModel
 The SfTimePicker includes a built-in event called `OkButtonClicked`, which is triggered when the confirm button is tapped. This event can be invoked through the [AcceptCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_AcceptCommand).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>
-<picker:SfTimePicker x:Name="picker"
-                    AcceptCommand="{Binding AcceptCommand}">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfTimePicker x:Name="picker"
+                        AcceptCommand="{Binding AcceptCommand}">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 12" %}
 
+using Syncfusion.Maui.Picker;
+using System.Windows.Input;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
+this.Content = picker;
 public class ViewModel
 {
     public ICommand AcceptCommand { get; set; }
@@ -300,18 +374,28 @@ public class ViewModel
 The SfTimePicker includes a built-in event called `CancelButtonClicked`, which is triggered when the cancel button is tapped. This event can be invoked through the [DeclineCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DeclineCommand). The bound command does not receive any parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>
-<picker:SfTimePicker x:Name="picker"
-                    DeclineCommand="{Binding DeclineCommand}">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfTimePicker x:Name="picker"
+                        DeclineCommand="{Binding DeclineCommand}">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 12" %}
 
+using Syncfusion.Maui.Picker;
+using System.Windows.Input;
+. . .
+
+SfTimePicker picker = new SfTimePicker();
+this.Content = picker;
 public class ViewModel
 {
     public ICommand DeclineCommand { get; set; }
