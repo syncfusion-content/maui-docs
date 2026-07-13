@@ -17,12 +17,21 @@ The Month view displays the days of the current month, plus a few days from the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.View = CalendarView.Month;
 
@@ -40,14 +49,23 @@ The following code explains how to show the Calendar with `Monday` as the first 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="calendar">
-    <calendar:SfCalendar.MonthView>
-        <calendar:CalendarMonthView FirstDayOfWeek="Monday"/>
-    </calendar:SfCalendar.MonthView>
- </calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar">
+        <calendar:SfCalendar.MonthView>
+            <calendar:CalendarMonthView FirstDayOfWeek="Monday"/>
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.MonthView.FirstDayOfWeek = DayOfWeek.Monday;
 
@@ -64,15 +82,24 @@ The following code explains how to show the Calendar month view with `NumberOfVi
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                       View="Month">
-                      <Calendar:SfCalendar.MonthView>
-                        <Calendar:CalendarMonthView NumberOfVisibleWeeks = 3/>
-                      </Calendar:SfCalendar.MonthView>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.MonthView>
+            <calendar:CalendarMonthView NumberOfVisibleWeeks = 3/>
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.MonthView.NumberOfVisibleWeeks = 3;
 
@@ -87,14 +114,23 @@ By setting the `ShowWeekNumber` property, it displays the week number for the cu
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" View="Month">
-                      <Calendar:SfCalendar.MonthView>
-                        <Calendar:CalendarMonthView ShowWeekNumber="True"/>
-                      </Calendar:SfCalendar.MonthView>
-</calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" View="Month">
+        <calendar:SfCalendar.MonthView>
+            <calendar:CalendarMonthView ShowWeekNumber="True"/>
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.MonthView.ShowWeekNumber = true;
 
@@ -110,22 +146,31 @@ Week number Background and TextStyle can be customized in the month view. Backgr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"  View="Month">
-            <Calendar:SfCalendar.MonthView>
-                <Calendar:CalendarMonthView ShowWeekNumber="True">
-                    <Calendar:CalendarMonthView.WeekNumberStyle>
-                        <Calendar:CalendarWeekNumberStyle Background="DeepSkyBlue">
-                            <Calendar:CalendarWeekNumberStyle.TextStyle>
-                                <Calendar:CalendarTextStyle TextColor="White" FontSize="12" />
-                            </Calendar:CalendarWeekNumberStyle.TextStyle>
-                        </Calendar:CalendarWeekNumberStyle>
-                    </Calendar:CalendarMonthView.WeekNumberStyle>
-                </Calendar:CalendarMonthView>
-            </Calendar:SfCalendar.MonthView>
-</calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"  View="Month">
+        <calendar:SfCalendar.MonthView>
+            <calendar:CalendarMonthView ShowWeekNumber="True">
+                <calendar:CalendarMonthView.WeekNumberStyle>
+                    <calendar:CalendarWeekNumberStyle Background="DeepSkyBlue">
+                        <calendar:CalendarWeekNumberStyle.TextStyle>
+                            <calendar:CalendarTextStyle TextColor="White" FontSize="12" />
+                        </calendar:CalendarWeekNumberStyle.TextStyle>
+                    </calendar:CalendarWeekNumberStyle>
+                </calendar:CalendarMonthView.WeekNumberStyle>
+            </calendar:CalendarMonthView>
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 CalendarTextStyle textStyle = new CalendarTextStyle()
 {
@@ -162,22 +207,29 @@ Autofit is Not applicable when
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <calendar:SfCalendar x:Name="calendar"
-                     Mode="Dialog"
-                     ShowTrailingAndLeadingDates="False"/>
-    <Button Text="Open Calendar"
-        x:Name="calendarButton"
-        Clicked="Button_Clicked"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        HeightRequest="50"
-        WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <calendar:SfCalendar x:Name="calendar"
+                         Mode="Dialog"
+                         ShowTrailingAndLeadingDates="False"/>
+        <Button Text="Open Calendar"
+            x:Name="calendarButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50"
+            WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 private void Button_Clicked(object sender, EventArgs e)
 {
@@ -195,12 +247,21 @@ The Year view displays the current year's month. A calendar year is a one-year p
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Year">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.View = CalendarView.Year;
 
@@ -215,12 +276,21 @@ The Decade view shows the period of ten years and some years ahead. By default, 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Decade">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.View = CalendarView.Decade;
 
@@ -235,12 +305,21 @@ The Century view displays a period of a hundred years and some years ahead. By d
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Century">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.View = CalendarView.Century;
 
