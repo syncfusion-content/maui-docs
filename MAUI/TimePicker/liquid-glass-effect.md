@@ -37,7 +37,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:timepicker="clr-namespace:Syncfusion.Maui.TimePicker;assembly=Syncfusion.Maui.TimePicker"
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     x:Class="AcrylicTimePickerPage">
     <Grid>
@@ -72,6 +72,10 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Picker;
+. . .
 
 // Outer grid with gradient background
 var mainGrid = new Grid()
