@@ -50,14 +50,22 @@ N>
 * The view header shows the full weekday name for all the calendar identifiers except `Gregorian Calendar` when the text format is "ddddd".
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="6" %}
 
-<calendar:SfCalendar x:Name="calendar"
-					   Identifier="Hijri">
-</calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
+                         Identifier="Hijri" />
+
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="5" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 SfCalendar calendar = new SfCalendar();
 calendar.Identifier = CalendarIdentifier.Hijri;
@@ -74,10 +82,19 @@ All the DateTime properties of the calendar can be given in two ways when the ca
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="calendar" />
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" />
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.Identifier = CalendarIdentifier.Hijri;
 this.calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalendar());
@@ -90,10 +107,19 @@ this.calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalenda
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="calendar" />
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" />
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.Identifier = CalendarIdentifier.Hijri;
 this.calendar.DisplayDate = new DateTime(2023, 6, 9);
