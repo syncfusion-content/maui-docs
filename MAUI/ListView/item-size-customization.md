@@ -87,7 +87,7 @@ listView.AutoFitMode = AutoFitMode.Height;
 
 ### AutoFitMode as DynamicHeight
 
-Unlike `Height`, which measures the item only once, `DynamicHeight` re-measures and re-fits items at runtime whenever the content size changes (for example, when text wraps or a font size is updated). As with `Height`, the dimension considered depends on `SfListView.Orientation`, and the [SfListView.GridLayout](https://help.syncfusion.com/maui/listview/layouts#grid-layout) autofits all items in a row to the maximum item height of that row.
+Unlike `Height`, which measures the item only once, `DynamicHeight` re-measures and re-fits items at runtime whenever the content size changes (for example, when text wraps or a font size is updated). As with `Height`, the dimension considered depends on `SfListView.Orientation`, and the [SfListView.GridLayout](https://help.syncfusion.com/maui/listview/layouts#grid-layout) auto-fits all items in a row to the maximum item height of that row.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}

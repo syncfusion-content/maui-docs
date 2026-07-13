@@ -71,30 +71,28 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 2 };
 
 In the `SfListView`, the [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html) allows you to change the `SpanCount` based on the application's view size and orientation (portrait or landscape).
 
-> NOTE: `ItemSize` represents a single dimension of the item. In a `GridLayout`, divide the available width by the per-cell width to compute the number of columns. In vertical orientation, use the item height; in horizontal orientation, use the item width.
+N> `ItemSize` represents a single dimension of the item. In a `GridLayout`, divide the available width by the per-cell width to compute the number of columns. In vertical orientation, use the item height; in horizontal orientation, use the item width.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13 14 15 16" 
-{%}
-  public partial class GridLayoutPage : ContentPage
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13 14 15 16" %}
+public partial class GridLayoutPage : ContentPage
+{
+  public GridLayoutPage()
   {
-    public GridLayoutPage()
-    {
-        InitializeComponent();
-        this.PropertyChanged += GridLayoutPage_PropertyChanged;
-    }
+      InitializeComponent();
+      this.PropertyChanged += GridLayoutPage_PropertyChanged;
+  }
 
-    private void GridLayoutPage_PropertyChanged(object sender, PropertyChangedEventArgs e)
-    {
-        if (e.PropertyName == nameof(Width))
-        {
-            // Use the item's per-cell width to compute the number of columns.
-            var cellWidth = listView.ItemSize;
-            var size = Application.Current.MainPage.Width / cellWidth;
-            gridLayout.SpanCount = Math.Max(1, (int)size);
-            listView.ItemsLayout = gridLayout;
-        }
-    }
+  private void GridLayoutPage_PropertyChanged(object sender, PropertyChangedEventArgs e)
+  {
+      if (e.PropertyName == "Width")
+      {
+          // Use the item's per-cell width to compute the number of columns.
+          var cellWidth = listView.ItemSize;
+          var size = Application.Current.MainPage.Width / cellWidth;
+          gridLayout.SpanCount = Math.Max(1, (int)size);
+          listView.ItemsLayout = gridLayout;
+      }
   }
 }
 {% endhighlight %}
