@@ -35,7 +35,7 @@ N> `ShowAttachmentButton`, `AttachmentButtonClicked`, `AttachmentButtonCommand`,
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="14" %}
 
 using Syncfusion.Maui.Chat;
 
@@ -293,7 +293,7 @@ Pass a value to the `AttachmentButtonCommand` by binding it to the `AttachmentBu
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="8 23" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 using System.ComponentModel;
 using System.Windows.Input;
@@ -448,3 +448,6 @@ You can add the desired image in to the chat by opening the device’s gallery w
 ![Attach image from gallery in .NET MAUI Chat](images/attachment-button/maui-chat-attach-image-from-gallery.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/how-to-attach-image-from-gallery-in-.net-maui-chat)
+
+
+

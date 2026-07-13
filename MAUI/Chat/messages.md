@@ -1265,7 +1265,7 @@ To enable pinning, set the `AllowPinning` property to `true`.
                AllowPinning="True" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="16" %}
+{% highlight c# hl_lines="17" %}
 
 using Syncfusion.Maui.Chat;
 
@@ -1388,28 +1388,28 @@ You can customize pinned message appearance using the
 [`PinnedMessageTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedMessageTemplate) property.
 
 {% tabs %}
-{% highlight xaml hl_lines="12" %}
+{% highlight xaml hl_lines="16" %}
 
-    <ContentPage.Resources>
-        <DataTemplate x:Key="PinnedTemplate">
-            <Grid Padding="8">
-                <Label Text="{Binding Text}"
-                       FontAttributes="Bold"
-                       TextColor="DarkRed" />
-            </Grid>
-        </DataTemplate>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <DataTemplate x:Key="PinnedTemplate">
+        <Grid Padding="8">
+            <Label Text="{Binding Text}"
+                    FontAttributes="Bold"
+                    TextColor="DarkRed" />
+        </Grid>
+    </DataTemplate>
+</ContentPage.Resources>
 
-    <ContentPage.Content>
-        <sfChat:SfChat x:Name="sfChat"
-                Messages="{Binding Messages}"
-                CurrentUser="{Binding CurrentUser}"
-                AllowPinning="True"
-                PinnedMessageTemplate="{StaticResource PinnedTemplate}" />
-    </ContentPage.Content>
+<ContentPage.Content>
+    <sfChat:SfChat x:Name="sfChat"
+            Messages="{Binding Messages}"
+            CurrentUser="{Binding CurrentUser}"
+            AllowPinning="True"
+            PinnedMessageTemplate="{StaticResource PinnedTemplate}" />
+</ContentPage.Content>
 
 {% endhighlight %}
-{% highlight c# hl_lines="13" %}
+{% highlight c# hl_lines="16" %}
 
 using Syncfusion.Maui.Chat;
 
@@ -1455,12 +1455,12 @@ The `SfChat` control triggers the [MessagePinned](https://help.syncfusion.com/cr
 {% tabs %}
 {% highlight xaml hl_lines="5, 6" %}
 
-    <sfChat:SfChat x:Name="sfChat"
-                   Messages="{Binding Messages}"
-                   CurrentUser="{Binding CurrentUser}"
-                   AllowPinning="True"
-                   MessagePinned="OnMessagePinned"
-                   MessageUnpinned="OnMessageUnpinned" />
+<sfChat:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"
+                CurrentUser="{Binding CurrentUser}"
+                AllowPinning="True"
+                MessagePinned="OnMessagePinned"
+                MessageUnpinned="OnMessageUnpinned" />
 
 {% endhighlight %}
 {% highlight c# hl_lines="1, 2" %}
@@ -2140,7 +2140,7 @@ The `SfChat` allows you specify the format in which timestamps are shown for out
                 IncomingMessageTimestampFormat="hh:mm tt"
                 OutgoingMessageTimestampFormat="hh:mm tt" />
 {% endhighlight %}
-{% highlight c# hl_lines="2 3" %}
+{% highlight c# hl_lines="4 5" %}
 
 using Syncfusion.Maui.Chat;
 
@@ -2341,3 +2341,6 @@ You can add drop down icon to the incoming messages in `SfChat` by writing custo
 ![Syncfusion .NET MAUI Chat Drop down menu](images/messages/maui-chat-show-drop-down-menu.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-show-drop-down-menu-in-.net-maui-chat)
+
+
+
