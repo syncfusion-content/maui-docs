@@ -23,7 +23,7 @@ The [FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSour
 The `FilterContacts` method filters the data that contains the specified text. Assign the `FilterContacts` method to the `SfListView.DataSource.Filter` predicate to filter the `ContactName`. The following code example shows how to apply filtering in the SfListView:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="10" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
@@ -48,7 +48,7 @@ The `FilterContacts` method filters the data that contains the specified text. A
 The following code example illustrates how to filter the data using the `FilterContacts` method in the code-behind:
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 4 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 SearchBar searchBar;
 SfListView listView;
 public MainPage()
@@ -94,7 +94,7 @@ The following screenshot shows the output rendered when the items are filtered:
 The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) allows filtering the items based on multiple criteria. The following code example shows how to filter the data using multiple properties combined with logical operators:
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 6 7 8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private bool FilterContacts(object obj)
 {
   if (searchBar == null || searchBar.Text == null)
@@ -122,7 +122,7 @@ You can get filtered items from the view and modify it in the [SfListView.DataSo
 Subscribe to the `FilterChanged` event during page initialization (e.g., in the `MainPage` constructor) so that the handler is registered before any filter is applied:
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 public MainPage()
 {
     InitializeComponent();

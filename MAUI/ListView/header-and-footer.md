@@ -152,7 +152,7 @@ The `StickyFooterPosition` property accepts values of type [ListViewFooterPositi
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" IsStickyFooter="true" StickyFooterPosition="Body"/>
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" IsStickyFooter="True" StickyFooterPosition="Body"/>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.IsStickyFooter = true;

@@ -24,7 +24,7 @@ The [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview)
 The `SfListView` allows selecting items on different gestures such as tap, double tap, and hold by setting the [SfListView.SelectionGesture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionGesture). The default value for the `SelectionGesture` is [TouchGesture.Tap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.TouchGesture.html#Syncfusion_Maui_ListView_TouchGesture_Tap).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
                         ItemsSource="{Binding MusicInfo}"
@@ -59,7 +59,7 @@ listView.SelectedItem = viewModel.Items[5];
 When the selection mode is `Multiple`, programmatically select more than one item by adding the underlying object to the `SfListView.SelectedItems` property. 
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="42 43" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 //Perform multiple selection using selected items
 public class SelectionViewModel : INotifyPropertyChanged
@@ -236,7 +236,7 @@ N> `SelectedItemTemplate` is a separate `DataTemplate` that is applied **only to
 To customize the appearance of the selected item or items, use the appearance of [SfListView.SelectedItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItemTemplate). The following customizations should give you an idea to customize the appearance of selected items in the control.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding MusicInfo}">
    <syncfusion:SfListView.SelectedItemTemplate>
@@ -270,7 +270,7 @@ To customize the appearance of the selected item or items, use the appearance of
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.SelectedItemTemplate = new DataTemplate(() =>
 {
   var grid1 = new Grid();
@@ -442,7 +442,7 @@ The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="13 14 15 16 17" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 public class CommandViewModel
 {
@@ -479,7 +479,7 @@ public class CommandViewModel
 The selection of a particular set of items can be disabled based on the [SfListView.SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) of the underlying collections. 
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 9 10 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 public partial class MainPage : ContentPage
 {
   public MainPage()

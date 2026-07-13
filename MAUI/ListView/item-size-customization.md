@@ -113,7 +113,7 @@ listView.AutoFitMode = AutoFitMode.DynamicHeight;
 .NET MAUI ListView (SfListView) allows you to resize the item size in response to runtime changes in the font size of a label element when `SfListView.AutoFitMode` is [DynamicHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.AutoFitMode.html#Syncfusion_Maui_ListView_AutoFitMode_DynamicHeight).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 13" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 14" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">       
  <Grid>
     <Grid.RowDefinitions>

@@ -343,7 +343,7 @@ You can refresh the view by using the [RefreshView](https://help.syncfusion.com/
 To filter the ListView items based on the item selection in another ListView, use the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_Filter) property.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void ItemTapped(Syncfusion.Maui.ListView.ItemTappedEventArgs e)
 {
     tappedPinedInfo = e.DataItem as PinnedInfo;

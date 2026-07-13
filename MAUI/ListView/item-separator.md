@@ -18,7 +18,7 @@ The SfListView displays separators between items when the `ShowItemSeparator` pr
 Separators for group headers can be enabled using the `ShowGroupItemSeparator` property. `ShowGroupItemSeparator` has no visible effect unless the SfListView is grouped (that is, `IsGrouped` is `true` and a `GroupTemplate` or grouping logic is configured). Both can be styled independently using the properties below.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3,4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4,5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              x:Class="ListViewSample.MainPage">
     <syncfusion:SfListView x:Name="listView"

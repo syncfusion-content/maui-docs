@@ -29,7 +29,7 @@ Here, an [ItemsCacheLimit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.L
 Create a custom class that inherits from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfListView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
 {% tabs %}
-{% highlight c# tabtitle="DataTemplateSelector.cs" hl_lines="13 14 15 16 17 18 19" %}
+{% highlight c# tabtitle="DataTemplateSelector.cs" hl_lines="13 14 15 16 17" %}
 
 public class MyDataTemplateSelector : DataTemplateSelector
 {

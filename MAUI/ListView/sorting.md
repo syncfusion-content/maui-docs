@@ -182,7 +182,7 @@ listView.HeaderTemplate = new DataTemplate(() =>
 When the `ItemTapped` event is raised for the header, add the [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html) and refresh the view.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8 9 10 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8 9 10" %}
 private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
 {
   //Apply sorting when the header is tapped.
@@ -231,7 +231,7 @@ Sort and group the items by using [KeySelector](https://help.syncfusion.com/cr/m
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20 21 22 23" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 public partial class MainPage : ContentPage
 {
    public MainPage()
