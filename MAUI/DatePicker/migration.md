@@ -37,10 +37,9 @@ To initialize the control, import the date picker namespace and initialize `SfDa
 {% highlight xaml %}
 
 <ContentPage
-xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-
+    ...
+    xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
     <datePicker:SfDatePicker />
-
 </ContentPage>
 
 {% endhighlight %}
@@ -64,10 +63,9 @@ this.Content = datePicker;
 {% highlight xaml %}
 
 <ContentPage
-xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
+    ...
+    xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <datePicker:SfDatePicker />
-
 </ContentPage>
 
 {% endhighlight %}
@@ -96,12 +94,12 @@ this.Content = datePicker;
 <tr>
 <td>{{'[PickerBase](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html)'| markdownify }}</td>
 <td>{{'[PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html)'| markdownify }}</td>
-<td>Represents a base used to achieve the date picker custom view.</td>
+<td>Represents the base class used to achieve the date picker custom view.</td>
 </tr>
 <tr>
 <td>{{'[DateChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.DateChangedEventArgs.html)' | markdownify }}</td>
 <td>{{'[DatePickerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerSelectionChangedEventArgs.html)' | markdownify }}</td>
-<td>Represents a class which is used to hold the selection changed event details.</td>
+<td>Provides data for the selection changed event, including the new and old selected dates.</td>
 </tr> 
 </table>
 
@@ -122,17 +120,16 @@ The following code example, explains how to initialize the properties of the `Xa
 {% highlight xaml %}
 
 <ContentPage
-xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-    
+    ...
+    xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
     <datePicker:SfDatePicker Format="yyyy_MM_dd"/>
-
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.SfPicker.XForms;
+using Syncfusion.XForms.Pickers;
 ...
 
 SfDatePicker datePicker = new SfDatePicker();
@@ -150,10 +147,9 @@ this.Content = datePicker;
 {% highlight xaml %}
 
 <ContentPage
-xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
+    ...
+    xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <datePicker:SfDatePicker Format="MM_dd_yyyy"/>
-
 </ContentPage>
 
 {% endhighlight %}
@@ -186,7 +182,7 @@ this.Content = datePicker;
 </tr>
 <tr>
 <td>{{'[CancelCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_CancelCommandProperty)'| markdownify }}</td>
-<td>{{'[DeclineCommand]()'| markdownify }}</td>
+<td>{{'[DeclineCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DeclineCommand)'| markdownify }}</td>
 <td>Gets or sets a command to decline a selected date of SfDatePicker.</td>
 </tr>
 <tr>
@@ -207,7 +203,7 @@ this.Content = datePicker;
 <tr>
 <td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_FormatProperty)'| markdownify }}</td>
 <td>{{'[Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_Format)'| markdownify }}</td>
-<td>Gets or set the format that is used to change the format of SfDatePicker.</td>
+<td>Gets or sets the format that is used to change the format of SfDatePicker.</td>
 </tr>
 <tr>
 <td>{{'[MaximumDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_MaximumDateProperty)'| markdownify }}</td>
@@ -231,7 +227,7 @@ this.Content = datePicker;
 </tr>
 <tr>
 <td>{{'[OkCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_OkCommandProperty)'| markdownify }}</td>
-<td>{{'[AcceptCOmmand]()'| markdownify }}</td>
+<td>{{'[AcceptCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_AcceptCommand)'| markdownify }}</td>
 <td>Gets or sets a command to accept a selected date of SfDatePicker.</td>
 </tr>
 <tr>
@@ -326,7 +322,7 @@ this.Content = datePicker;
 </tr>
 <tr>
 <td>{{'[HeaderFontAttribute](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontAttributeProperty)'| markdownify }}</td>
-<td>{{'[FontAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_FontAttributes)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) of [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html))'| markdownify }}</td>
+<td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_FontAttributes)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) of [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html))'| markdownify }}</td>
 <td>Gets or sets the font attribute of the header text style.</td>
 </tr>
 <tr>
@@ -357,7 +353,7 @@ this.Content = datePicker;
 <tr>
 <td>{{'[IsOpen](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_IsOpenProperty)'| markdownify }}</td>
 <td>{{'[IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen)'| markdownify }}</td>
-<td>Gets or sets the open to allow the dialog mode.</td>
+<td>Gets or sets a value indicating whether the picker is opened in dialog mode.</td>
 </tr>
 <tr>
 <td>{{'[ItemHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ItemHeightProperty)'| markdownify }}</td>
@@ -427,22 +423,22 @@ this.Content = datePicker;
 <tr>
 <td>{{'[UnSelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontAttributeProperty)'| markdownify }}</td>
 <td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_FontAttributes)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html))'| markdownify }}</td>
-<td>Gets or sets the font attributes of the unselected text style..</td>
+<td>Gets or sets the font attributes of the unselected text style.</td>
 </tr>
 <tr>
 <td>{{'[UnSelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontFamilyProperty)'| markdownify }}</td>
 <td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_FontFamily)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html))'| markdownify }}</td>
-<td>Gets or sets the font family of the unselected text style..</td>
+<td>Gets or sets the font family of the unselected text style.</td>
 </tr>
 <tr>
 <td>{{'[UnSelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontSizeProperty)'| markdownify }}</td>
 <td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_FontSize)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html))'| markdownify }}</td>
-<td>Gets or sets the font size of the unselected text style..</td>
+<td>Gets or sets the font size of the unselected text style.</td>
 </tr>
 <tr>
 <td>{{'[UnSelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemTextColorProperty)'| markdownify }}</td>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_TextColor)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html))'| markdownify }}</td>
-<td>Gets or sets the text color of the unselected text style..</td>
+<td>Gets or sets the text color of the unselected text style.</td>
 </tr>
 </table>
 
@@ -477,31 +473,31 @@ this.Content = datePicker;
 <tr>
 <td>{{'[Opened](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_Opened)'| markdownify }}</td>
 <td>{{'[Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened)'| markdownify }}</td>
-<td>Occurs whenever opened on the date picker. </td>
+<td>Occurs whenever the date picker is opened.</td>
 </tr>
 <tr>
 <td>{{'[Closed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_Closed)'| markdownify }}</td>
 <td>{{'[Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closed)'| markdownify }}</td>
-<td>Occurs whenever closed on the date picker.</td>
+<td>Occurs whenever the date picker is closed.</td>
 </tr>
 <tr>
 <td>{{'[Closing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_Closing)'| markdownify }}</td>
 <td>{{'[Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing)'| markdownify }}</td>
-<td>Occurs whenever closing on the date picker.</td>
+<td>Occurs whenever the date picker is closing.</td>
 </tr>
 <tr>
-<td>{{'[DateSelection](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_DateSelected)'| markdownify }}</td>
+<td>{{'[DateSelected](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_DateSelected)'| markdownify }}</td>
 <td>{{'[SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_SelectionChanged)'| markdownify }}</td>
-<td>Occurs whenever selection changed on the the date picker. </td>
+<td>Occurs whenever selection is changed in the date picker.</td>
 </tr>
 <tr>
 <td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_OkButtonClicked)'| markdownify }}</td>
 <td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked)'| markdownify }}</td>
-<td>Occurs whenever footer ok button is clicked in the date picker.</td>
+<td>Occurs whenever the footer OK button is clicked in the date picker.</td>
 </tr>
 <tr>
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_CancelButtonClicked)'| markdownify }}</td>
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked)'| markdownify }}</td>
-<td>Occurs whenever footer cancel button is clicked in the date picker.</td>
+<td>Occurs whenever the footer Cancel button is clicked in the date picker.</td>
 </tr>
 </table>
