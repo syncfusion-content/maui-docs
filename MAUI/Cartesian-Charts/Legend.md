@@ -1,16 +1,18 @@
 ---
 layout: post
 title: Legend in .NET MAUI Cartesian Chart control | Syncfusion
-description: This section explains about how to initialize legend and its customization in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+description: This section explains how to initialize the legend and customize its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart, chart legend, legend-wrap, legend view, legend layout, chart legend items, legend alignment.
 ---
 
-# Legend in .NET MAUI Chart (SfCartesianChart)
+# Legend in .NET MAUI Cartesian Chart
 
 The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of series or data points, helping to identify the corresponding data series in the chart. Here's a detailed guide on how to define and customize the legend in the chart.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 To learn how to add and customize the legend in .NET MAUI Cartesian Charts quickly, you can check the video below.
 
@@ -27,7 +29,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
     <chart:SfCartesianChart.Legend>
         <chart:ChartLegend/>
     </chart:SfCartesianChart.Legend>
-     . . .
+     <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 
@@ -37,7 +39,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.Legend = new ChartLegend();
-. . .
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
@@ -50,7 +52,7 @@ N> Additionally, set label for each series using the `Label` property of chart s
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource="{Binding Data}"
                         XBindingPath="Name" 
                         YBindingPath="Height"
@@ -59,11 +61,11 @@ N> Additionally, set label for each series using the `Label` property of chart s
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart()
-. . .
-ColumnSeries series = new ColumnSeries (); 
+SfCartesianChart chart = new SfCartesianChart();
+//code omitted for brevity
+ColumnSeries series = new ColumnSeries(); 
 series.ItemsSource = (new PersonViewModel()).Data;
 series.XBindingPath = "Name"; 
 series.YBindingPath = "Height"; 
@@ -98,7 +100,7 @@ chart.Legend = new ChartLegend()
 { 
     IsVisible = true 
 };
-. . .
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
@@ -138,7 +140,7 @@ LineSeries series = new LineSeries()
 };
 
 chart.Series.Add(series);
-this.Content=chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -173,7 +175,7 @@ The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cartesi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 chart.Legend = new ChartLegend()
 {
     LabelStyle = new ChartLegendLabelStyle()
@@ -183,15 +185,15 @@ chart.Legend = new ChartLegend()
         FontAttributes = FontAttributes.Bold,
         Margin = 5,
         FontFamily = "PlaywriteAR-Regular"
-    };
-}
+    }
+};
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Legend labels customization support in Maui Chart](Legend-images/legend_label_style.png)
+![Legend labels customization support in .NET MAUI Cartesian Chart](Legend-images/legend_label_style.png)
 
 ## Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
@@ -228,7 +230,7 @@ ColumnSeries columnSeries = new ColumnSeries()
 };
 
 chart.Series.Add(columnSeries);
-this.Content=chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -252,7 +254,7 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 chart.Legend = new ChartLegend()
 { 
     Placement = LegendPlacement.Bottom 
@@ -286,13 +288,13 @@ The floating legend feature allows you to position the legend inside the chart a
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 chart.Legend = new ChartLegend()
 { 
-    Placement = LegendPlacement.Top
-    IsFloating = true
-    OffsetX = -170;
-    OffsetY = 30; 
+    Placement = LegendPlacement.Top,
+    IsFloating = true,
+    OffsetX = -170,
+    OffsetY = 30
 };
 
 this.Content = chart;
@@ -301,7 +303,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Floating Legend support in MAUI Cartesian Chart](Legend-images/floating_legend.png)
+![Floating legend support in .NET MAUI Cartesian Chart](Legend-images/floating_legend.png)
 
 ## Toggle the series visibility
 The visibility of series can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
@@ -314,7 +316,7 @@ The visibility of series can be controlled by tapping the legend item using the 
     <chart:SfCartesianChart.Legend>
         <chart:ChartLegend ToggleSeriesVisibility="True"/>
     </chart:SfCartesianChart.Legend>
-    . . .
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -322,7 +324,7 @@ The visibility of series can be controlled by tapping the legend item using the 
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 chart.Legend = new ChartLegend()
 { 
     ToggleSeriesVisibility = true 
@@ -392,7 +394,7 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 ChartLegend legend = new ChartLegend();
 legend.Placement = LegendPlacement.Bottom;
 
@@ -411,7 +413,7 @@ this.Content = chart;
 {% endtabs %}
 
 ## Item template
-The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate) property. The default value of ItemsTemplate is `null`.
+The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate) property. The default value of ItemTemplate is `null`.
 
 N> The BindingContext of the template is the corresponding underlying legend item provided in the `ChartLegendItem` class.
 
@@ -445,7 +447,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 SfCartesianChart chart = new SfCartesianChart();
 ChartLegend legend = new ChartLegend();
 legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
-...
+//code omitted for brevity
 chart.Legend = legend;
 this.Content = chart;
         
@@ -453,7 +455,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Legend layout for cartesian chart](Legend-images/cartesian_chart.png)
+![Legend layout for .NET MAUI Cartesian Chart](Legend-images/cartesian_chart.png)
 
 ## Event 
 
