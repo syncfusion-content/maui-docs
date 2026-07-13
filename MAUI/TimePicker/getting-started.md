@@ -128,16 +128,23 @@ using Syncfusion.Maui.Picker;
 Initialize the `SfTimePicker` control and configure its properties. The `SfTimePicker` allows you to add header text by setting the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). Enable the header view by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Height) property of the `PickerHeaderView` to a value greater than `0`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 
-<picker:SfTimePicker x:Name="picker">
-    <picker:SfTimePicker.HeaderView>
-        <picker:PickerHeaderView Text="Time Picker" Height="40" />
-    </picker:SfTimePicker.HeaderView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker">
+        <picker:SfTimePicker.HeaderView>
+            <picker:PickerHeaderView Text="Time Picker" Height="40" />
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4 5" %}
+{% highlight c# tabtitle="C#" hl_lines="7 8" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker picker = new SfTimePicker();
 picker.HeaderView = new PickerHeaderView()
