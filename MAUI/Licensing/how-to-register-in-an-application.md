@@ -29,7 +29,7 @@ I> Syncfusion<sup>®</sup> license keys can be validated during the Continuous I
 
 ### 1. Registering license key in App.xaml.cs
 
-You can register the license key in **App.xaml.cs** constructor before InitializeComponent(). If App constructor not available in **App.xaml.cs**, create the "App()" constructor in **App.xaml.cs** and register the license key inside the constructor.
+You can register the license key in **App.xaml.cs** constructor before `InitializeComponent()`. If the `App()` constructor is not available in **App.xaml.cs**, create the `App()` constructor in **App.xaml.cs** and register the license key inside the constructor.
 
 {% tabs %}
 {% highlight c# %}
