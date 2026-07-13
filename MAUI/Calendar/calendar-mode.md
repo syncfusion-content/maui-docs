@@ -76,7 +76,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ## Relative Dialog Mode
 
-The relative dialog mode displays the calendar in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_RelativeDialog). It is used to align the calendar in a specific position. You can set the position by using the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RelativePosition) property in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+The relative dialog mode displays the calendar in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_RelativeDialog). It is used to position the calendar relative to a host element. You can set the position by using the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RelativePosition) property in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 ### Relative position
 
@@ -120,16 +120,16 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### Custom Popup Size
 
-SfCalendar allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupHeight) properties.
+SfCalendar allows the popup to be rendered at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupHeight) properties.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<calendar:SfCalendar x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar"
                          Mode="Dialog"
                          PopupWidth="300"
-                         PopupHeight=400/>
+                         PopupHeight="400"/>
 
 {% endhighlight %}
 
@@ -138,7 +138,7 @@ SfCalendar allows the display of the Popup to render at any desired size by sett
 this.calendar.PopupWidth = 300;
 this.calendar.PopupHeight = 400;
 
-{% endhighlight %} 
+{% endhighlight %}
 
 {% endtabs %}
 
