@@ -14,7 +14,7 @@ documentation: ug
 The SfDatePicker control allows you to select the date using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_SelectedDate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The default value of the `SelectedDate` is the current date.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -25,7 +25,7 @@ The SfDatePicker control allows you to select the date using the [SelectedDate](
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 
@@ -47,7 +47,7 @@ this.Content = picker;
 The SfDatePicker provides clear selection support, allowing you to clear the selected date by setting the `SelectedDate` property to `null`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
              . . .

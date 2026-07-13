@@ -17,7 +17,7 @@ The dialog mode is used to display the date picker in a pop-up by setting the [M
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -28,7 +28,7 @@ The dialog mode is used to display the date picker in a pop-up by setting the [M
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 
@@ -50,7 +50,7 @@ N> The `IsOpen` property is automatically reset to `false` when you close the di
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
              . . .
@@ -70,7 +70,7 @@ N> The `IsOpen` property is automatically reset to `false` when you close the di
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Picker;
 
@@ -101,7 +101,7 @@ N> The `IsOpen` property is automatically reset to `false` when you close the di
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
              . . .
@@ -122,7 +122,7 @@ N> The `IsOpen` property is automatically reset to `false` when you close the di
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Picker;
 
@@ -145,7 +145,7 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="8" %}
 
 <ContentPage
              . . .
@@ -167,7 +167,7 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="7" %}
 
 using Syncfusion.Maui.Picker;
 

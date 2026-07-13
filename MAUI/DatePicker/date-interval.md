@@ -21,7 +21,7 @@ Date Picker provides an option to give an interval between days using the [DayIn
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -32,7 +32,7 @@ Date Picker provides an option to give an interval between days using the [DayIn
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 
@@ -56,7 +56,7 @@ Date Picker provides an option to give an interval between months using the [Mon
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -67,7 +67,7 @@ Date Picker provides an option to give an interval between months using the [Mon
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 
@@ -91,7 +91,7 @@ Date Picker provides an option to give an interval between years using the [Year
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -102,7 +102,7 @@ Date Picker provides an option to give an interval between years using the [Year
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 

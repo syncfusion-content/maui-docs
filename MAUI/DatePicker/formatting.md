@@ -61,7 +61,7 @@ The following example demonstrates the Date Picker with the custom format [Picke
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="4" %}
 
 <ContentPage
              . . .
@@ -71,7 +71,7 @@ The following example demonstrates the Date Picker with the custom format [Picke
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="C#" hl_lines="3" %}
+{% highlight C# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 

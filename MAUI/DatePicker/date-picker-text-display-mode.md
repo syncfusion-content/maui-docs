@@ -17,7 +17,7 @@ The fade mode in the date picker gradually decreases the visibility of unselecte
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -28,7 +28,7 @@ The fade mode in the date picker gradually decreases the visibility of unselecte
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 
@@ -52,7 +52,7 @@ The shrink mode reduces the font size of date picker items relative to the selec
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -63,7 +63,7 @@ The shrink mode reduces the font size of date picker items relative to the selec
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 
@@ -87,7 +87,7 @@ The fade and shrink mode decreases both the opacity and font size of date picker
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -98,7 +98,7 @@ The fade and shrink mode decreases both the opacity and font size of date picker
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 

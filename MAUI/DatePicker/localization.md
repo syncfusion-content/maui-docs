@@ -37,6 +37,7 @@ public partial class App : Application
 		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
 		// ResXPath => Full path of the resx file; For example:
 		// SfPickerResources.ResourceManager = new ResourceManager("DatePicker.Resources.SfDatePicker", Application.Current.GetType().Assembly);
+
 		SfPickerResources.ResourceManager = new ResourceManager("ResxPath", Application.Current.GetType().Assembly);
 		MainPage = new MainPage();
 	}

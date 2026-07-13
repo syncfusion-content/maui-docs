@@ -15,7 +15,7 @@ Enable looping by setting the [EnableLooping](https://help.syncfusion.com/cr/mau
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
              . . .
@@ -26,7 +26,7 @@ Enable looping by setting the [EnableLooping](https://help.syncfusion.com/cr/mau
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
 using Syncfusion.Maui.Picker;
 
