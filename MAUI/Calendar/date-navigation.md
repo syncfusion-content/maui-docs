@@ -184,11 +184,11 @@ By using the `ShowNavigationArrows` property of the `Calendar`, you can navigate
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar  x:Name="calendar"
                         View="Month">
-                        <Calendar:SfCalendar.HeaderView>
-                            <Calendar:CalendarHeaderView ShowNavigationArrows="False" />
-                        </Calendar:SfCalendar.HeaderView>
+                        <calendar:SfCalendar.HeaderView>
+                            <calendar:CalendarHeaderView ShowNavigationArrows="False" />
+                        </calendar:SfCalendar.HeaderView>
 </calendar:SfCalendar>
 
 {% endhighlight %}
