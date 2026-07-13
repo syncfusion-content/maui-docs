@@ -14,13 +14,11 @@ The `SfTreeView` control supports displaying its content in a right-to-left (RTL
 ## Enabling right-to-left
 
 {% tabs %}
-{% tab title="XAML" hl_lines="2" %}
-
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 <syncfusion:SfTreeView x:Name="treeView"
                        FlowDirection="RightToLeft"/>
-{% endtab %}
-{% tab title="C#" hl_lines="9" %}
-
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 using Syncfusion.Maui.TreeView;
 
 public partial class MainPage : ContentPage
@@ -32,6 +30,5 @@ public partial class MainPage : ContentPage
         treeView.FlowDirection = FlowDirection.RightToLeft;
     }
 }
-
-{% endtab %}
+{% endhighlight %}
 {% endtabs %}
