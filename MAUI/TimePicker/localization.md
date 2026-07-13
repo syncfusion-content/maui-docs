@@ -26,6 +26,7 @@ The application culture can be changed by setting `CurrentUICulture` in the `App
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 11 15" %}
 
 using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Picker;
 using System.Globalization;
 using System.Resources;
 
