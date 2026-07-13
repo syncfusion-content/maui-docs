@@ -162,9 +162,7 @@ The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
 
 * To show the context menu.
 
-N>
-* Interaction events of the `SfListView` will be triggered for all the `ListViewItems` like `HeaderItem`, `FooterItem`, `GroupHeaderItem`, `LoadMoreItem`, and `RecordItem`. Handle the interaction actions based on the `ItemType` of the event args. 
-* The `LongPress` interaction with the mouse is not supported on the Windows (WinUI) platform. For more details about this, refer to the [`UIElement.Holding`](/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.uielement.holding) documentation in the Windows App SDK.
+N> Interaction events of the `SfListView` will be triggered for all the `ListViewItems` like `HeaderItem`, `FooterItem`, `GroupHeaderItem`, `LoadMoreItem`, and `RecordItem`. Handle the interaction actions based on the `ItemType` of the event args. 
 
 ### ItemAppearing
 

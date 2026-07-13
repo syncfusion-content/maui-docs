@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Item Border Customization in .NET MAUI ListView (SfListView) | Syncfusion®
+title: Item Border Customization in .NET MAUI ListView | Syncfusion®
 description: Learn here all about Item Border Customization support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView

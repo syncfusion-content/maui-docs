@@ -457,7 +457,7 @@ The `totalItems` field is the size of the data source the view model is paging t
 The following snippet shows the **only** changes required to disable load more at runtime relative to the [Load more automatically](#load-more-automatically) sample. Everything else (the SfListView XAML, the `AddProducts` helper, the `LoadMoreItems` method) stays the same and is not repeated here.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs (delta) %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 //New: the upper bound on the number of items in the data source.
 public int totalItems = 22;
 
@@ -478,9 +478,6 @@ private bool CanLoadMoreItems(object obj)
 }
 {% endhighlight %}
 {% endtabs %}
-
-N> When `CanLoadMoreItems` returns `false`, the [CommandManager](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.commandmanager) re-evaluates the command. The `Load More` view is automatically hidden once the predicate reports no more items.
-
 
 ## Limitations
 
