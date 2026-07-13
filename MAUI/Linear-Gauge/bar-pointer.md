@@ -307,9 +307,3 @@ this.Content = gauge;
 {% endtabs %}
 
 ![Child support in bar pointers in .NET MAUI Linear Gauge](images/bar-pointer/bar_pointer_child_support.PNG)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Child support in bar pointers in a linear gauge](images/bar-pointer/bar_pointer_child_support.PNG)
