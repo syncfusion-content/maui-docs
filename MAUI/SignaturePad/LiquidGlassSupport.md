@@ -13,15 +13,13 @@ The Liquid Glass Effect introduces a modern, translucent design with adaptive co
 
 ## Prerequisites
 
-Before proceeding, ensure the following are set up:
+Before using the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html), Install the [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
-1. Install the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) and target `net10.0` in your .NET MAUI project.
-2. Install the [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad) NuGet package.
-3. Install the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet package, which provides the `SfGlassEffectView` class.
-4. Register the Syncfusion core handler in the `CreateMauiApp` method of `MauiProgram.cs`. For details, see [Getting Started with .NET MAUI SignaturePad](getting-started.md).
-5. The Liquid Glass Effect is supported only on iOS 26 and macOS 26.
+For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
 
-> **Note:** The Liquid Glass Effect is supported only on .NET 10 together with iOS 26 and macOS 26.
+N>
+* The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
+* It is not supported on Android or Windows.
 
 ## Apply the Liquid Glass Effect
 

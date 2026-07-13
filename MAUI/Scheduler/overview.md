@@ -9,11 +9,11 @@ documentation: ug
 keywords : .net maui scheduler, maui appointment scheduling, .net maui agenda view.
 ---
 
-# Overview of .NET MAUI Scheduler (SfScheduler)
+# Overview of .NET MAUI Scheduler
 
 The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) has nine different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
 
-![overview-in-maui-scheduler](images/overview/overview-in-maui-scheduler.png)
+![built-in-views-in-maui-scheduler](images/overview/overview_scheduler.png)
 
 ## Business use cases
 
@@ -26,15 +26,9 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 
 - **Built‑in views** switch between Day, Week, WorkWeek, Month, Agenda, and Timeline views for flexible scheduling.
 
- ![built-in-views-in-maui-scheduler](images/overview/built-in-views-in-maui-scheduler.png)
-
 - **Appointments** create and manage events with start/end time, subject, and notes
 
- ![appointment-events-in-maui-scheduler](images/overview/appointment-events-in-maui-scheduler.png)
-
 - **Recurrence events** schedule repeating events daily, weekly, monthly, or yearly with exceptions
-
- ![recurring-events-with-exceptions-dates-in-maui-scheduler](images/overview/recurring-events-with-exceptions-dates-in-maui-scheduler.png)
 
 - **Appointment mapping** bind custom data objects to appointments for seamless integration
 
@@ -42,15 +36,9 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 
 - **Agenda view** view appointments in a simple list format grouped by week
 
- ![agenda-view-events-in-maui-scheduler](images/overview/agenda-view-events-in-maui-scheduler.png)
-
 - **Timeline month view** display appointments horizontally across days for long‑term planning
 
- ![timeline-month-view-in-maui-scheduler](images/overview/timeline-month-view-in-maui-scheduler.png)
-
 - **First day of the week** customize the start day (e.g., Monday or Sunday) to match regional preferences
-
- ![first-day-of-week-in-maui-scheduler](images/overview/first-day-of-week-in-maui-scheduler.png)
 
 - **Flexible working days** define working and non‑working days for realistic business schedules
 
@@ -58,19 +46,11 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 
 - **Special time regions** block or highlight unavailable slots such as holidays or breaks
 
- ![recurring-special-time-region-in-maui-scheduler](images/overview/recurring-special-time-region-in-maui-scheduler.png)
-
 - **Blackout dates** disable specific dates to prevent scheduling on restricted days
-
- ![selectable-day-predicate-or-blackout-dates-in-maui-scheduler](images/overview/selectable-day-predicate-or-blackout-dates-in-maui-scheduler.png)
 
 - **Hide leading & Trailing dates** remove extra month dates for a cleaner calendar view
 
- ![hide-leading-and-trailing-dates-in-maui-scheduler](images/overview/hide-leading-and-trailing-dates-in-maui-scheduler.png)
-
 - **Custom start & End hours** show only relevant time ranges by hiding unnecessary hours
-
- ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
 
  N> Looking for the full .NET MAUI Scheduler component overview, features, pricing, and documentation? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) page. 
 

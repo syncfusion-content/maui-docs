@@ -55,7 +55,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 // ViewModel
 public class SocialMediaViewModel
@@ -120,7 +120,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 // ViewModel
 public class SocialMediaViewModel
@@ -209,7 +209,7 @@ autocomplete.LoadMoreTemplate = new DataTemplate(() =>
 });
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 // ViewModel
 public class SocialMediaViewModel
@@ -280,7 +280,7 @@ private void Autocomplete_LoadMoreButtonTapped(object? sender, EventArgs e)
 }
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 // ViewModel
 public class SocialMediaViewModel

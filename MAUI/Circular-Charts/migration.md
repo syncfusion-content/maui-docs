@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCircularChart
 
-The Circular Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
+The Circular Chart was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
 
 <table>
 <tr>
@@ -44,17 +44,18 @@ To initialize the control, import the Chart namespace and Initialize [SfCircular
 <td>
 {% tabs %} 
 {% highlight xaml %}
+
 <ContentPage
-    . . .
     xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
     <chart:SfChart/>
 </ContentPage>
+
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
+
 using Syncfusion.SfChart.XForms;
-...
 
 SfChart chart = new SfChart(); 
 this.Content = chart;
@@ -73,7 +74,6 @@ this.Content = chart;
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
     <chart:SfCircularChart/>
@@ -81,10 +81,10 @@ this.Content = chart;
  
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Maui.Charts;
-. . .
+
 SfCircularChart chart = new SfCircularChart(); 
 this.Content = chart; 
 
@@ -116,9 +116,8 @@ The following table illustrates the API migration for the chart.
 
 <table>
 <tr>
-<tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
+<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>Color</td>
@@ -154,15 +153,17 @@ The following code example explains how to migrate the series of Xamarin [SfChar
  </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
+// code omitted for brevity
 PieSeries series = new PieSeries();
 series.ItemsSource = viewModel.Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -184,9 +185,10 @@ this.Content = chart;
 </chart:SfCircularChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfCircularChart chart = new SfCircularChart();
-. . .
+// code omitted for brevity
 ChartViewModel viewModel = new ChartViewModel();
 chart.BindingContext = viewModel;
 PieSeries series = new PieSeries();
@@ -195,6 +197,7 @@ series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -284,11 +287,13 @@ The following code example shows how to enable legend in chart.
 </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
+// code omitted for brevity
 chart.Legend = new ChartLegend();
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -303,7 +308,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCircularChart.Legend>
         <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
@@ -311,10 +316,10 @@ this.Content = chart;
 
 {% endhighlight %} 
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfCircularChart chart = new SfCircularChart();
-. . .
+// code omitted for brevity
 chart.Legend = new ChartLegend();
 this.Content = chart;
 
@@ -355,14 +360,15 @@ To customize the data label appearance, create an instance of the [ChartDataMark
             </chart:ChartDataMarker>
 	</chart:PieSeries.DataMarker>
     </chart:PieSeries>
+    <!-- code omitted for brevity -->
 </chart:SfChart>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
 PieSeries series = new PieSeries();
-. . .
+// code omitted for brevity
 series.DataMarker = new ChartDataMarker();
 series.DataMarker.ShowLabel = true;
 
@@ -393,7 +399,6 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    . . .
     <chart:PieSeries ShowDataLabels="True"
                      ItemsSource ="{Binding Data}" 
                      XBindingPath="Expense"
@@ -413,27 +418,29 @@ this.Content = chart;
             </chart:CircularDataLabelSettings>
         </chart:PieSeries.DataLabelSettings>  
     </chart:PieSeries>
+    <!-- code omitted for brevity -->
 </chart:SfCircularChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfCircularChart chart = new SfCircularChart();
-. . .
 PieSeries series = new PieSeries();
+// code omitted for brevity
 series.ShowDataLabels = true;
-. . .
-series.CircularDataLabelSettings = new CircularDataLabelSettings();
+series.DataLabelSettings = new CircularDataLabelSettings();
 var style = new ChartDataLabelStyle();
-style.TextColor = Color.Blue;
-style.Stroke = Color.Red;
+style.TextColor = Colors.Blue;
+style.Stroke = new SolidColorBrush(Colors.Red);
 style.StrokeWidth = 2;
-style.Background = Color.Aqua;
+style.Background = new SolidColorBrush(Colors.Aqua);
 style.Angle = 315;
 style.Margin = 5;
 style.FontSize = 18;
-series.CircularDataLabelSettings.LabelStyle = style;
+series.DataLabelSettings.LabelStyle = style;
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -455,7 +462,6 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% highlight xaml %}
 
 <chart:SfChart>
-    . . . 
     <chart:SfChart.ChartBehaviors>
 	    <chart:ChartTooltipBehavior BackgroundColor="Blue" 
                                     TextColor="White" 
@@ -471,11 +477,11 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 
 {% endhighlight %} 
 
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
 PieSeries  series = new PieSeries ();
-. . .
+// code omitted for brevity
 series.EnableTooltip = true;
 chart.Series.Add(series);
 
@@ -502,7 +508,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCircularChart.TooltipBehavior>
         <chart:ChartTooltipBehavior Background="Blue" 
                                     TextColor="White" 
@@ -517,16 +523,16 @@ this.Content = chart;
 </chart:SfCircularChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfCircularChart chart = new SfCircularChart();
-. . .
 PieSeries series = new PieSeries();
-. . .
+// code omitted for brevity
 series.EnableTooltip = true;
 chart.Series.Add(series);
 
 ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
-tooltip.BackgroundColor = Colors.Blue;
+tooltip.Background = new SolidColorBrush(Colors.Blue);
 tooltip.TextColor = Colors.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
 tooltip.FontSize = 15;
@@ -542,7 +548,7 @@ this.Content = chart;
 
 ### Selection
 
-Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html), you can directly set the [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the below code sample.
+Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html), you can directly set the [DataPointSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataPointSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehavior) property, as shown in the below code sample.
 
 <table>
 <tr>
@@ -554,34 +560,34 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 {% highlight xaml %}
 
 <chart:SfChart>
-    ...
     <chart:SfChart.ChartBehaviors>
         <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
     <chart:PieSeries EnableDataPointSelection="True" 
                      SelectedDataPointIndex="2" 
-                     electedDataPointColor="Red" 
+                     SelectedDataPointColor="Red" 
                      ItemsSource ="{Binding Data}" 
                      XBindingPath="Demand" 
                      YBindingPath="Year2010"/>
 </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
 PieSeries series = new PieSeries();
-. . .
+// code omitted for brevity
 series.EnableDataPointSelection = true;
 series.SelectedDataPointIndex = 2;
-series.SelectedDataPointColor = "Red";
+series.SelectedDataPointColor = Color.Red;
 
 chart.Series.Add(series);
 ChartSelectionBehavior selectionBehavior = new ChartSelectionBehavior();
 
 chart.ChartBehaviors.Add(selectionBehavior);
 this.Content = chart;
+
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -602,19 +608,22 @@ this.Content = chart;
             </chart:PieSeries.SelectionBehavior>
         </chart:PieSeries>
     </chart:SfCircularChart.Series>
+    <!-- code omitted for brevity -->
 </chart:SfCircularChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfCircularChart chart = new SfCircularChart();
-...
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
-selection.SelectionBrush="#314A6E";
+selection.SelectionBrush = new SolidColorBrush(Color.FromArgb("#314A6E"));
+// code omitted for brevity
 
 PieSeries series = new PieSeries();
 series.SelectionBehavior = selection;
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -642,7 +651,7 @@ N> For more information about selection check [here](https://help.syncfusion.com
 ## Unsupported features from Xamarin.Forms
 
 * Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
-* In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
+* In .NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html) model class was no longer available. Instead, create your own model.
 
 ## Support and feedback
 

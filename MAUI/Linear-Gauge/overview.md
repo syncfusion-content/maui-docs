@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# .NET MAUI Linear Gauge (SfLinearGauge) Overview
+# Overview of .NET MAUI Linear Gauge
 
 Syncfusion<sup>&reg;</sup> [.NET MAUI Linear Gauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) is a data visualization control to display data on a linear scale. Use this control to craft high-quality mobile app user interfaces.
 
