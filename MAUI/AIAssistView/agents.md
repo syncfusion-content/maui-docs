@@ -20,24 +20,32 @@ The `SfAIAssistView` control provides the [Agents](https://help.syncfusion.com/c
 * [Instructions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAgent.html#Syncfusion_Maui_AIAssistView_AssistAgent_Instructions) : Determines the agent's behavior associated with AI.
 * [Icon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAgent.html#Syncfusion_Maui_AIAssistView_AssistAgent_Icon) : Displays the agent's image.
 
-### Define the view model
+### Define the View Model
 
 Create a simple view model as shown in the following code example and save it as `ViewModel.cs`.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using Syncfusion.Maui.AIAssistView;
 
 public class GettingStartedViewModel : INotifyPropertyChanged
 {
-
     private ObservableCollection<AssistAgent> agentCollections;
+    private AssistAgent agent;
 
     public GettingStartedViewModel()
     {
         this.agentCollections = new ObservableCollection<AssistAgent>();
         this.InitializeAgentCollection();
+        
+        // Default selected agent
+        if (this.AgentCollection.Count > 0)
+        {
+            this.Agent = this.AgentCollection[0];
+        }
     }
 
     public ObservableCollection<AssistAgent> AgentCollection
@@ -47,6 +55,16 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         {
             this.agentCollections = value;
             this.OnPropertyChanged(nameof(AgentCollection));
+        }
+    }
+
+    public AssistAgent Agent
+    {
+        get => this.agent;
+        set
+        {
+            this.agent = value;
+            this.OnPropertyChanged(nameof(Agent));
         }
     }
 
@@ -64,7 +82,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         {
             Name = "Art Assistant",
             Description = "Creates images based on user descriptions and ideas",
-            Instructions = "You are an image generation assistant that creates visual content from user prompts. Understand the user's description clearly and generate accurate, creative, and high-quality images. If needed, refine the prompt for better results. Keep responses simple and confirm the type of image before generating when require",
+            Instructions = "You are an image generation assistant that creates visual content from user prompts. Understand the user's description clearly and generate accurate, creative, and high-quality images. If needed, refine the prompt for better results. Keep responses simple and confirm the type of image before generating when required.",
             Icon = "imageeditor.png"
         };
 
@@ -83,65 +101,110 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-### Binding agent collection to AI AssistView
+### Binding Agent Collection to AI AssistView
 
-To populate the agent collection, bind the collection from its `BindingContext` to the [Agents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Agents) property.
+To populate the agent collection, first assign the view model as the `BindingContext` of the page, then bind the collection to the [Agents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Agents) property.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               Agents="{Binding AgentCollection}"/>
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Agents="{Binding AgentCollection}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.Agents = viewModel.AgentCollection;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var viewModel = new GettingStartedViewModel();
+        this.BindingContext = viewModel;
+
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.Agents = viewModel.AgentCollection;
+        this.Content = sfAIAssistView;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Syncfusion .NET MAUI AI AssistView Agents](Images/agents/maui-aiassitview-agentview.png)
 
-### Selecting an agent
+### Selecting an Agent
 
-The `SfAIAssistView` control supports setting a current agent using the [SelectedAgent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SelectedAgent) property. User can directly set the `SelectedAgent` in the `SfAIAssistView`, or user can select one from the editor by typing `@`, which reveals all available agents in the [Agents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Agents) collection.
+The `SfAIAssistView` control supports setting a current agent using the [SelectedAgent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SelectedAgent) property. A user can directly set the `SelectedAgent` in the `SfAIAssistView`, or select one from the editor by typing `@`, which reveals all available agents in the [Agents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Agents) collection.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
+
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel />
+</ContentPage.BindingContext>
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            Agents="{Binding AgentCollection}"
-                           SelectedAgent="{Binding Agent}"/>  
+                           SelectedAgent="{Binding Agent}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="3" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.Agents = viewModel.AgentCollection;
-    sfAIAssistView.SelectedAgent = viewModel.Agent;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var viewModel = new GettingStartedViewModel();
+        this.BindingContext = viewModel;
+
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.Agents = viewModel.AgentCollection;
+        sfAIAssistView.SelectedAgent = viewModel.Agent;
+        this.Content = sfAIAssistView;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Syncfusion .NET MAUI AI AssistView Selected Agent](Images/agents/maui-aiassitview-selected-agent.png)
 
-### Show selected agent in view
+### Show Selected Agent in View
 
-The `SfAIAssistView` control supports showing the selected agent in the editor view. By default, the `SelectedAgent` is displayed. To hide the selected agent, set the [ShowSelectedAgent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowSelectedAgent) property to `false`.
+The `SfAIAssistView` control supports showing the `SelectedAgent` in the editor view. By default, `ShowSelectedAgent` is `true` and the `SelectedAgent` is displayed. To hide the `SelectedAgent`, set the [ShowSelectedAgent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowSelectedAgent) property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           ShowSelectedAgent="False"/>  
+                           ShowSelectedAgent="False" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# hl_lines="10" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.ShowSelectedAgent = false;
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ShowSelectedAgent = false;
+        this.Content = sfAIAssistView;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +216,7 @@ The `SfAIAssistView` control supports showing the selected agent in the editor v
 The `SfAIAssistView` control allows you to fully customize the `SelectedAgent` appearance in the editor using the [SelectedAgentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SelectedAgentTemplate) property. This property lets you define a custom layout and style.
 
 {% tabs %}
-{% highlight xaml hl_lines="11" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
 <ContentPage.Resources>
     <ResourceDictionary>
@@ -169,10 +232,20 @@ The `SfAIAssistView` control allows you to fully customize the `SelectedAgent` a
                            SelectedAgentTemplate="{StaticResource agentTemplate}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
-    SfAIAssistView sfAIAssistView = new SfAIAssistView();
-    sfAIAssistView.SelectedAgentTemplate = this.CreateAgentTemplate();
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.SelectedAgentTemplate = this.CreateAgentTemplate();
+        this.Content = sfAIAssistView;
+    }
 
     private DataTemplate CreateAgentTemplate()
     {
@@ -181,6 +254,7 @@ The `SfAIAssistView` control allows you to fully customize the `SelectedAgent` a
             ...
         });
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
