@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Calendar Control | Syncfusion<sup>&reg;</sup>
+title: Accessibility in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
 description: Learn here all about the accessibility features of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Accessibility in .NET Maui SfCalendar
+# Accessibility in .NET MAUI SfCalendar
 
 Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
 
@@ -45,9 +45,9 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 <td>Today</td>
 </tr>
 <tr>
-<td>Ok button</td>
+<td>OK button</td>
 <td>string</td>
-<td>Ok</td>
+<td>OK</td>
 </tr>
 <tr>
 <td>Cancel button</td>
@@ -136,7 +136,7 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 <tr>
 <td>Disabled cell</td>
 <td>yyyy, Disabled cell</td>
-<td>2019 Disabled cell</td>
+<td>2019, Disabled cell</td>
 </tr>
 </table>
 
@@ -162,8 +162,8 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 <tr>
 <td>Disabled cell</td>
-<td>yyyy - yyyy</td>
-<td>2010 to 2019, Disabled cell</td>
+<td>yyyy – yyyy</td>
+<td>2010 – 2019, Disabled cell</td>
 </tr>
 </table>
 
