@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control, its elements, and more. 
+title: Getting started with .NET MAUI Linear Gauge control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control, its elements, and more. 
 platform: maui
 control: SfLinearGauge
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Linear Gauge
 
-This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> linear gauge control. Follow the steps below to add a .NET MAUI Linear gauge control to your project.
+This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with the Syncfusion® .NET MAUI Linear Gauge control. The .NET MAUI Linear Gauge is supported on Windows, macOS, iOS, and Android. Follow the steps below to add a .NET MAUI Linear Gauge control to your project.
 
-To get start quickly with our .NET MAUI Linear Gauge, you can check the below video.
+To get started quickly with our .NET MAUI Linear Gauge, you can check the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=wclf360zOPc"%}
@@ -51,10 +51,10 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET: New Project** and press Enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press Enter.
-4. Then choose **Create project**
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Gauges NuGet package
 
@@ -76,7 +76,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution**. Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
@@ -84,14 +84,14 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion handler
-
-Make sure to add the namespace.
+## Step 3: Register the Syncfusion handler
+ 
+Add the following namespace in the `MauiProgram.cs` file.
  
 {% tabs %}
 {% highlight c# %}
@@ -99,7 +99,7 @@ using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
  
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+Register the Syncfusion core handler in the `CreateMauiApp` method of the `MauiProgram.cs` file to use Syncfusion controls.
  
 {% tabs %}
 {% highlight c# %}
@@ -124,35 +124,36 @@ using Syncfusion.Maui.Gauges;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add a Linear Gauge with Pointers and Ranges
+## Step 5: Add a Linear Gauge with Pointers, Ranges, and Bar Pointers
 
-Initialize the [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) to show values on a linear scale, with ranges highlighting value segments and pointers indicating specific values clearly.
+Initialize the [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) to show values on a linear scale, with [ranges](https://help.syncfusion.com/maui/linear-gauge/range) highlighting value segments and [pointers](https://help.syncfusion.com/maui/linear-gauge/pointers) indicating specific values clearly. The [LinearRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html) highlights a value segment, the [LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html) and [LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html) are marker pointers, and the [BarPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html) is a shaded bar from the minimum scale value to the specified value.
+
+N> The image used in the `LinearContentPointer` source (e.g., `pin.png`) must be added to your project's resources.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-  <gauge:SfLinearGauge x:Name="gauge" >
-                <gauge:SfLinearGauge.Ranges>
-                    <gauge:LinearRange/>
-                </gauge:SfLinearGauge.Ranges>
+<gauge:SfLinearGauge x:Name="gauge">
+    <gauge:SfLinearGauge.Ranges>
+        <gauge:LinearRange/>
+    </gauge:SfLinearGauge.Ranges>
 
-                <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="70"/>
+    <gauge:SfLinearGauge.MarkerPointers>
+        <gauge:LinearShapePointer Value="70"/>
 
-                    <gauge:LinearContentPointer Value="80">
-                        <gauge:LinearContentPointer.Content>
-                            <Image Source="pin.png" HeightRequest="20" 
-                                   WidthRequest="20"/>
-                        </gauge:LinearContentPointer.Content>
-                    </gauge:LinearContentPointer>
-                </gauge:SfLinearGauge.MarkerPointers>
+        <gauge:LinearContentPointer Value="80">
+            <gauge:LinearContentPointer.Content>
+                <Image Source="pin.png" HeightRequest="20" 
+                       WidthRequest="20"/>
+            </gauge:LinearContentPointer.Content>
+        </gauge:LinearContentPointer>
+    </gauge:SfLinearGauge.MarkerPointers>
 
-                <gauge:SfLinearGauge.BarPointers>
-                    <gauge:BarPointer Value = "60"/>
-                </gauge:SfLinearGauge.BarPointers>
-            </gauge:SfLinearGauge>
-
+    <gauge:SfLinearGauge.BarPointers>
+        <gauge:BarPointer Value="60"/>
+    </gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -175,12 +176,14 @@ BarPointer barPointer = new BarPointer();
 barPointer.Value = 60;
 gauge.BarPointers.Add(barPointer);
 
+this.Content = gauge;
+
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
+![Getting started with .NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
 
 You can download the Linear Gauge Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-linear-gauge).
 
