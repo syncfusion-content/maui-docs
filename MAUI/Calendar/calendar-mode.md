@@ -17,14 +17,23 @@ The dialog mode is used to display the calendar in a pop-up by setting the [Mode
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 
-<calendar:SfCalendar x:Name="calendar"
-                     Mode="Dialog"/>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
+                         Mode="Dialog" />
+
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 SfCalendar calendar = new SfCalendar()
 {
@@ -45,22 +54,29 @@ N> This property is automatically changed to `false` when you close the dialog b
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <calendar:SfCalendar x:Name="calendar"
-                         Mode="Dialog"/>
-    <Button Text="Open Calendar" 
-            x:Name="calendarButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <calendar:SfCalendar x:Name="calendar"
+                             Mode="Dialog" />
+        <Button Text="Open Calendar" 
+                x:Name="calendarButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -90,24 +106,31 @@ N> This property is automatically changed to `false` when you close the dialog b
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <calendar:SfCalendar x:Name="calendar" 
-                         Mode="RelativeDialog"
-                         RelativePosition="AlignTopLeft">
-    </calendar:SfCalendar>
-    <Button Text="Open calendar" 
-            x:Name="calendarButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <calendar:SfCalendar x:Name="calendar" 
+                             Mode="RelativeDialog"
+                             RelativePosition="AlignTopLeft">
+        </calendar:SfCalendar>
+        <Button Text="Open calendar" 
+                x:Name="calendarButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -126,14 +149,23 @@ SfCalendar allows the popup to be rendered at any desired size by setting the [P
 
 {% highlight xaml tabtitle="XAML" %}
 
-<calendar:SfCalendar x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                          Mode="Dialog"
                          PopupWidth="300"
-                         PopupHeight="400"/>
+                         PopupHeight="400" />
+
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.PopupWidth = 300;
 this.calendar.PopupHeight = 400;
