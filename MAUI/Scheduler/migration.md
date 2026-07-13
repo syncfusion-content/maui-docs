@@ -64,8 +64,7 @@ this.Content = schedule;
 {% highlight xaml %}
 
 <ContentPage
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
 
     <scheduler:SfScheduler />
 
@@ -77,16 +76,8 @@ this.Content = schedule;
 
 using Syncfusion.Maui.Scheduler;
 
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfScheduler scheduler = new SfScheduler();
-        this.Content = scheduler;
-    }
-}
+SfScheduler scheduler = new SfScheduler();
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -310,33 +301,17 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
 <scheduler:SfScheduler  View="Week"
                         FirstDayOfWeek="Tuesday"/>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        SfScheduler scheduler = new SfScheduler();
-        scheduler.View = SchedulerView.Week;
-        scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
-        this.Content = scheduler;
-    }
-}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -609,62 +584,45 @@ schedule.DataSource = scheduleAppointmentCollection;
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
-        <scheduler:SfScheduler.ResourceView>
-            <scheduler:SchedulerResourceView Resources="{Binding Resources}" />
-        </scheduler:SfScheduler.ResourceView>
-    </scheduler:SfScheduler>
-</ContentPage>
+<scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView Resources="{Binding Resources}" />
+    </scheduler:SfScheduler.ResourceView>
+</scheduler:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
+public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
-. . .
-public partial class MainPage : ContentPage
+SfScheduler scheduler = new SfScheduler();
+//Creating an instance for the scheduler appointment collection.
+this.Appointments = new ObservableCollection<SchedulerAppointment>();
+
+//Adding scheduler appointment in the schedule appointment collection.  
+Appointments.Add(new SchedulerAppointment()
 {
-    public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
-
-    public MainPage()
-    {
-        InitializeComponent();
-
-        SfScheduler scheduler = new SfScheduler();
-        //Creating an instance for the scheduler appointment collection.
-        this.Appointments = new ObservableCollection<SchedulerAppointment>();
-
-        //Adding scheduler appointment in the schedule appointment collection.  
-        Appointments.Add(new SchedulerAppointment()
-        {
-            StartTime = DateTime.Today.AddHours(9),
-            EndTime = DateTime.Today.AddHours(11),
-            Subject = "Client Meeting",
-            Background = Brush.LightSkyBlue,
-        });
-            
-        //Adding the scheduler appointment collection to the AppointmentsSource of the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler).
-        scheduler.AppointmentsSource = Appointments;
-        this.Content = scheduler;	
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(11),
+    Subject = "Client Meeting",
+    Background = Brush.LightSkyBlue,
+});
 	
-        //Adding schedule resource in the scheduler resource collection.
-        var Resources = new ObservableCollection<SchedulerResource>()
-        {
-        new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
-        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
-        new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
-        };
+//Adding the scheduler appointment collection to the AppointmentsSource of the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler).
+scheduler.AppointmentsSource = Appointments;
+this.Content = scheduler;	
+	
+//Adding schedule resource in the scheduler resource collection.
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
+   new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
+};
 
-        //Adding the scheduler resource collection to the schedule resources of the SfSchedule.
-        this.Scheduler.ResourceView.Resources = Resources;
-    }
-}
+//Adding the scheduler resource collection to the schedule resources of the SfSchedule.
+this.Scheduler.ResourceView.Resources = Resources;
 
 {% endhighlight %}
 
@@ -884,47 +842,30 @@ this.Content = schedule;
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding Appointments}"/>
-</ContentPage>
+<scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding Appointments}"/>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
+public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
-. . .
-public partial class MainPage : ContentPage
+SfScheduler scheduler = new SfScheduler();
+// Creating an instance for the scheduler appointment collection.
+this.Appointments = new ObservableCollection<SchedulerAppointment>();
+
+// Adding scheduler appointment in the schedule appointment collection. 
+Appointments.Add(new SchedulerAppointment()
 {
-    public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(11),
+    Subject = "Client Meeting",
+    Background = Brush.LightSkyBlue,
+});
 
-    public MainPage()
-    {
-        InitializeComponent();
-
-        SfScheduler scheduler = new SfScheduler();
-        // Creating an instance for the scheduler appointment collection.
-        this.Appointments = new ObservableCollection<SchedulerAppointment>();
-
-        // Adding scheduler appointment in the schedule appointment collection. 
-        Appointments.Add(new SchedulerAppointment()
-        {
-            StartTime = DateTime.Today.AddHours(9),
-            EndTime = DateTime.Today.AddHours(11),
-            Subject = "Client Meeting",
-            Background = Brush.LightSkyBlue,
-        });
-
-        // Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-        scheduler.AppointmentsSource = Appointments;
-        this.Content = scheduler;
-    }
-}
+// Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+scheduler.AppointmentsSource = Appointments;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -1295,38 +1236,22 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
 <scheduler:SfScheduler View="Month" 
                        ShowWeekNumber="false">			
     <scheduler:SfScheduler.MonthView>
         <scheduler:SchedulerMonthView AppointmentDisplayMode="Indicator"/>
     </scheduler:SfScheduler.MonthView>						
 </scheduler:SfScheduler>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        SfScheduler scheduler = new SfScheduler();
-        scheduler.View = SchedulerView.Month:
-        scheduler.ShowWeekNumber = true;
-        scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-        this.Content = scheduler;
-    }
-}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Month:
+scheduler.ShowWeekNumber = true;
+scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -1467,41 +1392,25 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler View="Day">
-        <scheduler:SfScheduler.DaysView>
-            <scheduler:SchedulerDaysView       
-                        StartHour="9"
-                        EndHour="16"
-                        ShowCurrentTimeIndicator="False"/>
-        </scheduler:SfScheduler.DaysView>					
-    </scheduler:SfScheduler>
-</ContentPage>
+<scheduler:SfScheduler View="Day">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView       
+                       StartHour="9"
+                       EndHour="16"
+					   ShowCurrentTimeIndicator="False"/>
+    </scheduler:SfScheduler.DaysView>					
+</scheduler:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        SfScheduler scheduler = new SfScheduler();
-        scheduler.View = SchedulerView.Day;
-        scheduler.DaysView.StartHour = 9;
-        scheduler.DaysView.EndHour = 16;
-        scheduler.DaysView.ShowCurrentTimeIndicator = false;
-        this.Content = scheduler;
-    }
-}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Day;
+scheduler.DaysView.StartHour = 9;
+scheduler.DaysView.EndHour = 16;
+scheduler.DaysView.ShowCurrentTimeIndicator = false;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -1653,41 +1562,25 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler View="TimelineWeek">
-        <scheduler:SfScheduler.TimelineView>
-            <scheduler:SchedulerTimelineView       
-                        StartHour="9"
-                        EndHour="16"
-                        ShowCurrentTimeIndicator="False"/>
-        </scheduler:SfScheduler.TimelineView>					
-    </scheduler:SfScheduler>
-</ContentPage>
+<scheduler:SfScheduler View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineView>
+        <scheduler:SchedulerTimelineView       
+                       StartHour="9"
+                       EndHour="16"
+					   ShowCurrentTimeIndicator="False"/>
+    </scheduler:SfScheduler.TimelineView>					
+</scheduler:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        SfScheduler scheduler = new SfScheduler();
-        scheduler.View = SchedulerView.TimelineWeek;
-        scheduler.TimelineView.StartHour = 9;
-        scheduler.TimelineView.EndHour = 16;
-        scheduler.TimelineView.ShowCurrentTimeIndicator = false;
-        this.Content = scheduler;
-    }
-}
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.TimelineWeek;
+scheduler.TimelineView.StartHour = 9;
+scheduler.TimelineView.EndHour = 16;
+scheduler.TimelineView.ShowCurrentTimeIndicator = false;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -1832,64 +1725,47 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler View="Week">
-        <scheduler:SfScheduler.DaysView>
-            <scheduler:SchedulerDaysView>
-                <scheduler:SchedulerDaysView.TimeRegions>
-                    <scheduler:SchedulerTimeRegion 
-                        StartTime="{Binding StartTime}"
-                        EndTime="{Binding EndTime}"
-                        Text="Lunch"
-                        EnablePointerInteraction="False"
-                        Background="Gray"/>
-                </scheduler:SchedulerDaysView.TimeRegions>
-            </scheduler:SchedulerDaysView>
-        </scheduler:SfScheduler.DaysView>
-    </scheduler:SfScheduler>
-</ContentPage>
+<scheduler:SfScheduler View="Week">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView>
+            <scheduler:SchedulerDaysView.TimeRegions>
+                <scheduler:SchedulerTimeRegion 
+                    StartTime="{Binding StartTime}"
+                    EndTime="{Binding EndTime}"
+                    Text="Lunch"
+                    EnablePointerInteraction="False"
+                    Background="Gray"/>
+            </scheduler:SchedulerDaysView.TimeRegions>
+        </scheduler:SchedulerDaysView>
+    </scheduler:SfScheduler.DaysView>
+</scheduler:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
+public DateTime StartTime { get; set; } = DateTime.Now.Date.AddHours(13);
+public DateTime EndTime { get; set; } = DateTime.Now.Date.AddHours(14);
 
-. . .
-public partial class MainPage : ContentPage
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {
-    public DateTime StartTime { get; set; } = DateTime.Now.Date.AddHours(13);
-    public DateTime EndTime { get; set; } = DateTime.Now.Date.AddHours(14);
-
-    public MainPage()
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
     {
-        InitializeComponent();
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+    };
 
-        SfScheduler scheduler = new SfScheduler();
-        scheduler.View = SchedulerView.Week;
-        scheduler.DaysView.TimeRegions = this.GetTimeRegion();
-
-        private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
-        {
-            var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-            var timeRegion = new SchedulerTimeRegion()
-            {
-                StartTime = DateTime.Today.Date.AddHours(13),
-                EndTime = DateTime.Today.Date.AddHours(14),
-                Text = "Lunch",
-                EnablePointerInteraction = false,
-            };
-
-            timeRegions.Add(timeRegion);
-            return timeRegions;
-        }
-        this.Content = scheduler;
-    }
+    timeRegions.Add(timeRegion);
+    return timeRegions;
 }
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -1984,45 +1860,28 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler View="Week">
-        <scheduler:SfScheduler.HeaderView>
-            <scheduler:SchedulerHeaderView 
-                            Background="LightGreen">
-            </scheduler:SchedulerHeaderView>
-        </scheduler:SfScheduler.HeaderView>
-    </scheduler:SfScheduler>
-</ContentPage>
+<scheduler:SfScheduler View="Week">
+    <scheduler:SfScheduler.HeaderView>
+        <scheduler:SchedulerHeaderView 
+                        Background="LightGreen">
+        </scheduler:SchedulerHeaderView>
+    </scheduler:SfScheduler.HeaderView>
+ </scheduler:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
-
-. . .
-public partial class MainPage : ContentPage
+SfScheduler scheduler = new SfScheduler();
+var textStyle = new SchedulerTextStyle()
 {
-    public MainPage()
-    {
-        InitializeComponent();
-    }
+    TextColor = Colors.DarkBlue,
+    FontSize = 14,
+};
 
-    SfScheduler scheduler = new SfScheduler();
-    var textStyle = new SchedulerTextStyle()
-    {
-        TextColor = Colors.DarkBlue,
-        FontSize = 14,
-    };
-
-    scheduler.HeaderView.TextStyle = textStyle;
-    scheduler.HeaderView.Background = Brush.LightGreen;
-    this.Content = scheduler;
-}
+scheduler.HeaderView.TextStyle = textStyle;
+scheduler.HeaderView.Background = Brush.LightGreen;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -2109,54 +1968,38 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler>
-        <scheduler:SfScheduler.DaysView>
-            <scheduler:SchedulerDaysView>
-                <scheduler:SchedulerDaysView.ViewHeaderSettings>
-                    <scheduler:SchedulerViewHeaderSettings Background="LightGreen" />
-                </scheduler:SchedulerDaysView.ViewHeaderSettings>
-            </scheduler:SchedulerDaysView>
-        </scheduler:SfScheduler.DaysView>
-    </scheduler:SfScheduler>
-</ContentPage>
+<scheduler:SfScheduler>
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView>
+            <scheduler:SchedulerDaysView.ViewHeaderSettings>
+                <scheduler:SchedulerViewHeaderSettings Background="LightGreen" />
+            </scheduler:SchedulerDaysView.ViewHeaderSettings>
+        </scheduler:SchedulerDaysView>
+    </scheduler:SfScheduler.DaysView>
+</scheduler:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-
-. . .
-public partial class MainPage : ContentPage
+SfScheduler scheduler = new SfScheduler();
+var dateTextStyle = new SchedulerTextStyle()
 {
-    public MainPage()
-    {
-        InitializeComponent();
+    TextColor = Colors.Red,
+    FontFamily = "Arial",
+};
 
-        SfScheduler scheduler = new SfScheduler();
-        var dateTextStyle = new SchedulerTextStyle()
-        {
-            TextColor = Colors.Red,
-            FontFamily = "Arial",
-        };
+scheduler.DaysView.ViewHeaderSettings.DateTextStyle = dateTextStyle;
 
-        scheduler.DaysView.ViewHeaderSettings.DateTextStyle = dateTextStyle;
+var dayTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontFamily = "Arial",
+};
 
-        var dayTextStyle = new SchedulerTextStyle()
-        {
-            TextColor = Colors.Red,
-            FontFamily = "Arial",
-        };
-
-        scheduler.DaysView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
-        scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
-        this.Content = scheduler;
-    }
-}
+scheduler.DaysView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
+scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -2284,59 +2127,42 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler AppointmentsSource="{Binding Appointments}">
-        <scheduler:SfScheduler.AppointmentTextStyle>
-            <scheduler:SchedulerTextStyle
-                TextColor="Orange"
-                FontFamily="Arial"
-                FontSize="12"
-                FontAttributes="Italic"/>
-        </scheduler:SfScheduler.AppointmentTextStyle>
-    </scheduler:SfScheduler>
-</ContentPage>
+<schedule:SfScheduler AppointmentsSource="{Binding Appointments}">
+    <schedule:SfScheduler.AppointmentTextStyle>
+        <schedule:SchedulerTextStyle
+            TextColor="Orange"
+            FontFamily="Arial"
+            FontSize="12"
+            FontAttributes="Italic"/>
+    </schedule:SfScheduler.AppointmentTextStyle>
+</schedule:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
+public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
-. . .
-public partial class MainPage : ContentPage
+SfScheduler scheduler = new SfScheduler();
+this.Appointments = new ObservableCollection<SchedulerAppointment>();
+this.Appointments.Add(new SchedulerAppointment()
 {
-    public MainPage()
-    {
-        InitializeComponent();
+    Subject = "meeting",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+});
+scheduler.AppointmentsSource = this.Appointments;
 
-        public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
+var appointmentTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontFamily ="Arial",
+    FontSize = 12,
+    FontAttributes = FontAttributes.Bold
+};
 
-        SfScheduler scheduler = new SfScheduler();
-        this.Appointments = new ObservableCollection<SchedulerAppointment>();
-        this.Appointments.Add(new SchedulerAppointment()
-        {
-            Subject = "meeting",
-            StartTime = DateTime.Now,
-            EndTime = DateTime.Now.AddHours(1),
-        });
-        scheduler.AppointmentsSource = this.Appointments;
-
-        var appointmentTextStyle = new SchedulerTextStyle()
-        {
-            TextColor = Colors.Red,
-            FontFamily ="Arial",
-            FontSize = 12,
-            FontAttributes = FontAttributes.Bold
-        };
-
-        scheduler.AppointmentTextStyle = appointmentTextStyle;
-        this.Content = scheduler;
-    }
-}
+scheduler.AppointmentTextStyle = appointmentTextStyle;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -2445,50 +2271,34 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler View="Month">
-        <scheduler:SfScheduler.MonthView>
-            <scheduler:SchedulerMonthView>
-                <scheduler:SchedulerMonthView.CellStyle>
-                    <scheduler:SchedulerMonthCellStyle 
-                        TodayBackground="LightBlue"
-                        Background="Orange"
-                        LeadingMonthBackground="Brown"
-                        TrailingMonthBackground="Yellow"/>
-                </scheduler:SchedulerMonthView.CellStyle>
-            </scheduler:SchedulerMonthView>
-        </scheduler:SfScheduler.MonthView>
-    </scheduler:SfScheduler>
-</ContentPage>
+<schedule:SfScheduler View="Month">
+    <schedule:SfScheduler.MonthView>
+        <schedule:SchedulerMonthView>
+            <schedule:SchedulerMonthView.CellStyle>
+                <schedule:SchedulerMonthCellStyle 
+                    TodayBackground="LightBlue"
+                    Background="Orange"
+                    LeadingMonthBackground="Brown"
+                    TrailingMonthBackground="Yellow"/>
+            </schedule:SchedulerMonthView.CellStyle>
+        </schedule:SchedulerMonthView>
+    </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-
-. . .
-public partial class MainPage : ContentPage
+SfScheduler scheduler = new SfScheduler();
+var monthCellStyle = new SchedulerMonthCellStyle()
 {
-    public MainPage()
-    {
-        InitializeComponent();
-
-        SfScheduler scheduler = new SfScheduler();
-        var monthCellStyle = new SchedulerMonthCellStyle()
-        {
-            Background = Brush.LightSkyBlue,
-            TodayBackground = Brush.LightBlue,
-            LeadingMonthBackground = Brush.LightGreen,
-            TrailingMonthBackground = Brush.LightYellow,
-        };
-        scheduler.MonthView.CellStyle = monthCellStyle;
-        this.Content = scheduler;
-    }
-}
+    Background = Brush.LightSkyBlue,
+    TodayBackground = Brush.LightBlue,
+    LeadingMonthBackground = Brush.LightGreen,
+    TrailingMonthBackground = Brush.LightYellow,
+};
+scheduler.MonthView.CellStyle = monthCellStyle;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -2607,45 +2417,28 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler
-            ShowWeekNumber="True"
-            View="Month">
-        <scheduler:SfScheduler.WeekNumberStyle>
-            <scheduler:SchedulerWeekNumberStyle 
-                                    Background="Red"/>
-        </scheduler:SfScheduler.WeekNumberStyle>
-    </scheduler:SfScheduler>
-</ContentPage>
+<schedule:SfScheduler
+        ShowWeekNumber="True"
+        View="Month">
+    <schedule:SfScheduler.WeekNumberStyle>
+        <schedule:SchedulerWeekNumberStyle 
+                                Background="Red"/>
+    </schedule:SfScheduler.WeekNumberStyle>
+</schedule:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
-
-. . .
-public partial class MainPage : ContentPage
+SfScheduler scheduler = new SfScheduler();
+scheduler.ShowWeekNumber = true;
+var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
 {
-    public MainPage()
-    {
-        InitializeComponent();
-
-        SfScheduler scheduler = new SfScheduler();
-        scheduler.ShowWeekNumber = true;
-        var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
-        {
-            Background = Brush.LightGreen,
-            TextStyle = schedulerTextStyle
-        };
-        scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
-        this.Content = scheduler;
-    }
-}
+    Background = Brush.LightGreen,
+    TextStyle = schedulerTextStyle
+};
+scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -2719,38 +2512,21 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler x:Name="scheduler" View="Week" 
-                            AllowAppointmentDrag="True" >
-        <scheduler:SfScheduler.DragDropSettings>
-            <scheduler:DragDropSettings AllowNavigation="False" />
-        </scheduler:SfScheduler.DragDropSettings>
-    </scheduler:SfScheduler>
-</ContentPage>
+<scheduler:SfScheduler x:Name="scheduler" View="Week" 
+                        AllowAppointmentDrag="True" >
+    <scheduler:SfScheduler.DragDropSettings>
+        <scheduler:DragDropSettings AllowNavigation="False" />
+    </scheduler:SfScheduler.DragDropSettings>
+</scheduler:SfScheduler>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
-
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-    }
-
-    SfScheduler scheduler = new SfScheduler();
-    scheduler.DragDropSettings.AllowNavigation = false;
-    scheduler.DragDropSettings.AllowScroll = false;
-    this.Content = scheduler;
-}
+SfScheduler scheduler = new SfScheduler();
+scheduler.DragDropSettings.AllowNavigation = false;
+scheduler.DragDropSettings.AllowScroll = false;
+this.Content = scheduler;
 
 {% endhighlight %}
 
