@@ -60,6 +60,8 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.SmartDataGrid` to install the Syncfusion<sup>®</sup> .NET MAUI Smart DataGrid package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
+{% endtabcontent %}
+
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
