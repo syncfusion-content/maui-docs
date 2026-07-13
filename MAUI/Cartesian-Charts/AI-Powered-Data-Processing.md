@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AI-Powered Data Cleaning in .NET MAUI Charts | Syncfusion
-description: Learn here how to create a .NET MAUI Syncfusion® smart Chart using Azure OpenAI to assist in data cleaning and preprocessing for data. 
+title: AI-Powered Data Cleaning in .NET MAUI Cartesian Chart | Syncfusion
+description: Learn here how to create a .NET MAUI Syncfusion® smart Cartesian Chart using Azure OpenAI to assist in data cleaning and preprocessing.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -12,7 +12,9 @@ keywords: .net maui chart AI data cleaning, maui chart data, .net maui chart dat
 
 Raw datasets often contain missing values, outliers, or noise that can distort visualizations and analysis. This is common in web traffic data, which may have gaps or spikes. Before visualizing such data, it’s essential to clean it.
 
-This guide shows how to use Azure OpenAI to clean and preprocessing e-commerce website traffic data, then visualize the results using [Syncfusion .NET MAUI Charts](https://help.syncfusion.com/maui/cartesian-charts/getting-started).
+This guide shows how to use Azure OpenAI to clean and preprocessing e-commerce website traffic data, then visualize the results using [Syncfusion .NET MAUI Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/getting-started).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 ## Integrating Azure OpenAI for cleaning and preprocessing the data
 
@@ -24,7 +26,7 @@ To get started, ensure you have access to [Azure OpenAI](https://azure.microsoft
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 internal class AzureOpenAIService
 {
@@ -47,11 +49,11 @@ internal class AzureOpenAIService
 
 {% endtabs %}
 
-To set up a connection to the Azure OpenAI service, Create an `OpenAIClient` instance when needed. This connection allows you to send prompts to the model and receive responses, which you can use for data-cleaning tasks.
+To set up a connection to the Azure OpenAI service, create an `OpenAIClient` instance when needed. This connection allows you to send prompts to the model and receive responses, which you can use for data-cleaning tasks.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 //At the time of required.
 var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
@@ -60,7 +62,7 @@ var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
 
 {% endtabs %}
 
-### 2. Generate Prompts for clean the raw data
+### 2. Generate Prompts to clean the raw data
 
 Prepare your raw data and format a prompt for Azure OpenAI. The prompt should describe the cleaning task and provide the data in a clear format.
 
@@ -78,7 +80,7 @@ Send the prompt and receive the cleaned data from Azure OpenAI. Here’s an exam
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 var prompt = $"Clean the following e-commerce website traffic data, resolve outliers, and fill missing values:\n{string.Join("\n", rawData.Select(d => $"{d.DateTime:yyyy-MM-dd-HH-m-ss}: {d.Visitors}"))} and the output cleaned data should be in the yyyy-MM-dd-HH-m-ss:Value";
 
@@ -91,13 +93,13 @@ var response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
 
 You can use this approach for any time-series or tabular data that needs preprocessing before visualization.
 
-### 3. Implement the Syncfusion .NET MAUI chart to disply data.
+### 3. Implement the Syncfusion .NET MAUI Cartesian Chart to display data.
 
-Define classes to represent your website traffic data and manage both raw and cleaned datasets.This structure allows you to easily bind both raw and cleaned data to your chart.
+Define classes to represent your website traffic data and manage both raw and cleaned datasets. This structure allows you to easily bind both raw and cleaned data to your chart.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 // Data model.
 public class WebsiteTrafficData
@@ -124,7 +126,7 @@ public class ViewModel : INotifyPropertyChanged
     public ViewModel() 
     { 
         IsBusy = false; 
-        RawData = new ObservableCollection() 
+        RawData = new ObservableCollection<WebsiteTrafficData>() 
         { 
            new WebsiteTrafficData{ DateTime = new DateTime(2024, 07, 01, 00, 00, 00), Visitors = 150 }, 
            new WebsiteTrafficData{ DateTime = new DateTime(2024, 07, 01, 01, 00, 00), Visitors = 160 }, 
@@ -135,7 +137,7 @@ public class ViewModel : INotifyPropertyChanged
            new WebsiteTrafficData{ DateTime = new DateTime(2024, 07, 01, 04, 00, 00), Visitors = 170 }, 
            
            // Some more data. 
-           … 
+           //code omitted for brevity
         }; 
 
         CleanedData = new ObservableCollection<WebsiteTrafficData>(); 
@@ -146,7 +148,7 @@ public class ViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-### 4. Display Data Using Syncfusion Chart
+### 4. Display Data Using Syncfusion Cartesian Chart
 
 Bind your ViewModel to the chart and display raw data and cleaned data. 
 
@@ -214,8 +216,8 @@ Now that your chart is set up with the cleaned data, you’ll see a smooth and a
 You can also provide a button or menu option for users to trigger data cleaning on demand, allowing them to refresh the chart with newly cleaned data whenever needed.
 
 
-The following image demonstrates the output of the above AI Powered data cleaning and preprocessing .NET MAUI chart.
+The following image demonstrates the output of the above AI Powered data cleaning and preprocessing .NET MAUI Cartesian Chart.
 
-![Ai smart data processing in .NET MAUI Chart](Chart_Smart_component_images/dataprocessing.gif)
+![AI-powered smart data cleaning and preprocessing in .NET MAUI Cartesian Chart](Chart_Smart_component_images/dataprocessing.gif)
 
 For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/DataPreprocessing)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about appearance customization in .NET MAUI Chart (SfCartesianChart), its elements and more.
+description: Learn here all about appearance customization in .NET MAUI Cartesian Chart (SfCartesianChart), its elements and more.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -10,6 +10,8 @@ keywords: .net maui cartesian chart appearance, .net maui chart appearance custo
 
 # Appearance in .NET MAUI Cartesian Chart
 The appearance of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) can be customized by using the predefined brushes, custom brushes and gradient, which allows to enrich the application.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 ## Add a title
 
@@ -27,7 +29,7 @@ The title of the chart provide quick information to the user about the data bein
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.Title = new Label()
@@ -61,7 +63,7 @@ By default, chart applies a set of predefined brushes to the series in a predefi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 List<Brush> CustomBrushes = new List<Brush>();
 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(38, 198, 218)));
 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 172, 193)));
@@ -69,14 +71,14 @@ CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 151, 167)));
 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
 
 this.chart.PaletteBrushes = CustomBrushes;
-. . .
+//code omitted for brevity
 Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Custom PaletteBrushes in MAUI Chart](Appearance_images/MAUI_chart_custom_palette.png)
+![Custom PaletteBrushes in .NET MAUI Cartesian Chart](Appearance_images/MAUI_chart_custom_palette.png)
 
 ## Applying PaletteBrushes for Series
 
@@ -87,7 +89,7 @@ Cartesian chart provides support to set the palette to series for applying prede
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource="{Binding Data}"  
                         XBindingPath="XValue" 
                         YBindingPath="YValue" 
@@ -113,14 +115,14 @@ public class ViewModel
 		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
 	}
 
-. . .
+//code omitted for brevity
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Custom PaletteBrushes in MAUI Chart Series](Appearance_images/MAUI_chart_custom_palette_series.png)
+![Custom PaletteBrushes in .NET MAUI Cartesian Chart Series](Appearance_images/MAUI_chart_custom_palette_series.png)
 
 ## Applying Gradient
 
@@ -133,7 +135,7 @@ The following code sample and screenshot illustrates how to apply the gradient b
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource="{Binding Data}"  
                         XBindingPath="XValue" 
                         YBindingPath="YValue" 
@@ -194,14 +196,14 @@ public class ViewModel
 		CustomBrushes.Add(gradientColor5);
 	}
 
-. . .
+//code omitted for brevity
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Gradient support in MAUI Chart](Appearance_images/MAUI_chart_gradient_color.png)
+![Gradient support in .NET MAUI Cartesian Chart](Appearance_images/MAUI_chart_gradient_color.png)
 
 ## Point Color Path
 
@@ -249,7 +251,7 @@ Set `ItemsSource` to your data collection and map `XBindingPath`, `YBindingPath`
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource = "{Binding Data}"  
                         XBindingPath = "XValue" 
                         YBindingPath = "YValue" 
@@ -261,7 +263,7 @@ Set `ItemsSource` to your data collection and map `XBindingPath`, `YBindingPath`
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 ColumnSeries series = new ColumnSeries()
 {   
     ItemsSource =  new PointColorViewModel().Data,
@@ -277,7 +279,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![PointColorPath in MAUI Chart](Appearance_images/MAUI_chart_pointcolorpath.png)
+![PointColorPath in .NET MAUI Cartesian Chart](Appearance_images/MAUI_chart_pointcolorpath.png)
 
 N> The property is not applicable to area-based series, fast series, financial series, box plot, error bar, waterfall, and histogram types.
 
@@ -346,4 +348,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Watermark in .NET MAUI Charts](Appearance_images/water_mark.jpg)
+![Watermark in .NET MAUI Cartesian Chart](Appearance_images/water_mark.jpg)
