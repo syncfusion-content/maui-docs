@@ -326,8 +326,7 @@ You can customize the view header appearance by using the [MonthViewHeaderTempla
 You can customize the view header appearance by using the [MonthViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MonthViewHeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar view header. This lets you select a different data template for each view header and customize the appearance of a specific view header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="20
-" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="20" %}
 
 <ContentPage
     . . .
@@ -362,13 +361,13 @@ public class MonthViewHeaderTemplateSelector : DataTemplateSelector
     {
     }
     public DataTemplate TodayDatesTemplate { get; set; }
-    public DataTemplate NormaldatesTemplate { get; set; }
+    public DataTemplate NormalDatesTemplate { get; set; }
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
         var viewHeaderDetails = (DateTime)item;
         if (viewHeaderDetails.Date.Month == DateTime.Today)
             return TodayDatesTemplate;
-        return NormaldatesTemplate;
+        return NormalDatesTemplate;
     }
 }
 
