@@ -64,7 +64,7 @@ The different types of formats are:
 
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -75,7 +75,7 @@ The different types of formats are:
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -132,7 +132,7 @@ The different types of formats are:
 [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_Default) - Represents the hour minute second meridiem in default culture based format.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -143,7 +143,7 @@ The different types of formats are:
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Picker;
 . . .

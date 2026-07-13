@@ -15,7 +15,7 @@ To enable looping in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -26,7 +26,7 @@ To enable looping in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight c# tabtitle="C#" hl_lines="10" %}  
 
 using Syncfusion.Maui.Picker;
 . . .

@@ -20,7 +20,7 @@ In `Default` mode, the Date Time Picker renders inline in the page layout and th
 The dialog mode is used to display the date time picker in a popup by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [Dialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_Dialog) in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -31,7 +31,7 @@ The dialog mode is used to display the date time picker in a popup by setting th
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -168,7 +168,7 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -192,7 +192,7 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="12" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -223,7 +223,7 @@ When using `Dialog` or `RelativeDialog` mode, control the size of the popup with
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6 7" %}
 
 <ContentPage
     . . .
@@ -236,7 +236,7 @@ When using `Dialog` or `RelativeDialog` mode, control the size of the popup with
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" hl_lines="9 10" %}
 
 using Syncfusion.Maui.Picker;
 . . .

@@ -22,7 +22,7 @@ The `SfDateTimePicker` provides seven intervals in [.NET MAUI Date Time Picker](
 Sets the interval between days using the [DayInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_DayInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -32,7 +32,7 @@ Sets the interval between days using the [DayInterval](https://help.syncfusion.c
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -56,7 +56,7 @@ public partial class MainPage : ContentPage
 Sets the interval between months using the [MonthInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MonthInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -66,7 +66,7 @@ Sets the interval between months using the [MonthInterval](https://help.syncfusi
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -90,7 +90,7 @@ public partial class MainPage : ContentPage
 Sets the interval between years using the [YearInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_YearInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -100,7 +100,7 @@ Sets the interval between years using the [YearInterval](https://help.syncfusion
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -124,7 +124,7 @@ public partial class MainPage : ContentPage
 Sets the interval between hours using the [HourInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_HourInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -134,7 +134,7 @@ Sets the interval between hours using the [HourInterval](https://help.syncfusion
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}  
+{% highlight c# tabtitle="C#" hl_lines="9" %}  
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -158,7 +158,7 @@ public partial class MainPage : ContentPage
 Sets the interval between minutes using the [MinuteInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MinuteInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -168,7 +168,7 @@ Sets the interval between minutes using the [MinuteInterval](https://help.syncfu
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}  
+{% highlight c# tabtitle="C#" hl_lines="9" %}  
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -192,7 +192,7 @@ public partial class MainPage : ContentPage
 Sets the interval between seconds using the [SecondInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SecondInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -202,7 +202,7 @@ Sets the interval between seconds using the [SecondInterval](https://help.syncfu
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}  
+{% highlight c# tabtitle="C#" hl_lines="9" %}  
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -226,7 +226,7 @@ public partial class MainPage : ContentPage
 Sets the interval between milliseconds using the [MilliSecondInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MilliSecondInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). To display milliseconds, the `TimeFormat` must include a fractional component such as `fff`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 
 <ContentPage
     . . .
@@ -237,7 +237,7 @@ Sets the interval between milliseconds using the [MilliSecondInterval](https://h
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}  
+{% highlight c# tabtitle="C#" hl_lines="10" %}  
 
 using Syncfusion.Maui.Picker;
 . . .

@@ -22,7 +22,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -33,7 +33,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -76,7 +76,7 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 * `EventArgs`: In SfDateTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -87,7 +87,7 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -119,7 +119,7 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 * `Cancel` : Indicating whether we should cancel the operation or not.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -130,7 +130,7 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -160,7 +160,7 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 * `EventArgs`: In SfDateTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -171,7 +171,7 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -208,7 +208,7 @@ The `SfDateTimePicker` footer view provides two events. These events are not app
 * `EventArgs`: In SfDateTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -219,7 +219,7 @@ The `SfDateTimePicker` footer view provides two events. These events are not app
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -248,7 +248,7 @@ public partial class MainPage : ContentPage
 * `EventArgs`: In SfDateTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -259,7 +259,7 @@ public partial class MainPage : ContentPage
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -288,7 +288,7 @@ The events documented above can also be invoked through bindable commands for us
 The SfDateTimePicker includes a built-in `SelectionChanged` event that is raised whenever the selected date or time changes. The event can also be handled through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectionChangedCommand), which passes a `DateTimePickerSelectionChangedEventArgs` instance as the command parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -302,7 +302,7 @@ The SfDateTimePicker includes a built-in `SelectionChanged` event that is raised
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -327,7 +327,7 @@ public class ViewModel
 The SfDateTimePicker includes a built-in `OkButtonClicked` event that is raised when the user taps the confirmation button in the date-time picker. This action can also be handled using the [AcceptCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_AcceptCommand), which is invoked when the confirmation button is clicked.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -341,7 +341,7 @@ The SfDateTimePicker includes a built-in `OkButtonClicked` event that is raised 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -366,7 +366,7 @@ public class ViewModel
 The SfDateTimePicker includes a built-in `CancelButtonClicked` event that is raised when the user taps the Cancel button in the date-time picker. This action can also be handled using the [DeclineCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DeclineCommand), which is invoked when the Cancel button is clicked.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -380,7 +380,7 @@ The SfDateTimePicker includes a built-in `CancelButtonClicked` event that is rai
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
