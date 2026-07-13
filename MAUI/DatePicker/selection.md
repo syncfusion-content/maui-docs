@@ -56,7 +56,7 @@ The SfDatePicker provides clear selection support, allowing you to clear the sel
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Picker;
 

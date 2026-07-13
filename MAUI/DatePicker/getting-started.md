@@ -93,7 +93,7 @@ Before proceeding, ensure the following are set up:
 Make sure to add the namespace.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +101,7 @@ using Syncfusion.Maui.Core.Hosting;
 Register the Syncfusion<sup>&reg;</sup> core handler in the `CreateMauiApp` method of the `MauiProgram.cs` file to enable Syncfusion<sup>&reg;</sup> controls.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 {% endtabs %}
@@ -111,10 +111,10 @@ builder.ConfigureSyncfusionCore();
 Add the following namespace declaration in XAML, and the matching `using` directive in C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
 xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
 {% endhighlight %}
-{% highlight C# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.Picker;
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +134,7 @@ Create an instance of the Date Picker control and add it to your page.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.Picker;
 

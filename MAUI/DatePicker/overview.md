@@ -58,7 +58,7 @@ The following table summarizes the globalization support available in this contr
 
 <div class="legend">
 <span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../images/full-support.svg" width="16"> Full Support
+<img src="../Images/full-support.svg" width="16"> Full Support
 </span>
 </div>
 
@@ -73,11 +73,11 @@ The following table summarizes the globalization support available in this contr
 </tr>
 <tr>
 <td><a href="/maui/datepicker/overview">DatePicker</a></td>
-<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr>
 </table>
 

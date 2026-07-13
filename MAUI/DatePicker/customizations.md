@@ -102,7 +102,7 @@ Customize the header text style and background color of the `Date picker` using 
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
              . . .
@@ -120,7 +120,7 @@ Customize the header text style and background color of the `Date picker` using 
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Picker;
 

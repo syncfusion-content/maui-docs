@@ -34,18 +34,17 @@ To initialize the control, import the date picker namespace and initialize `SfDa
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-
+<ContentPage
+    ...
+    xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
     <datePicker:SfDatePicker />
-
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 using Syncfusion.XForms.Pickers;
 ...
@@ -61,18 +60,17 @@ this.Content = datePicker;
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
+<ContentPage
+    ...
+    xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <datePicker:SfDatePicker />
-
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 using Syncfusion.Maui.Picker;
 ...
@@ -119,18 +117,17 @@ The following code example, explains how to initialize the properties of the `Xa
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-
+<ContentPage
+    ...
+    xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
     <datePicker:SfDatePicker Format="yyyy_MM_dd"/>
-
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 using Syncfusion.XForms.Pickers;
 ...
@@ -147,18 +144,17 @@ this.Content = datePicker;
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-
+<ContentPage
+    ...
+    xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <datePicker:SfDatePicker Format="MM_dd_yyyy"/>
-
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 using Syncfusion.Maui.Picker;
 ...
