@@ -119,6 +119,12 @@ public class BookInfo : INotifyPropertyChanged
     private string bookName;
     private string bookDesc;
 
+    public BookInfo(string bookName, string bookDesc)
+    {
+        this.bookName = bookName;
+        this.bookDesc = bookDesc;
+    }
+
     public string BookName
     {
         get { return bookName; }
@@ -139,12 +145,12 @@ public class BookInfo : INotifyPropertyChanged
         }
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     public void OnPropertyChanged(string name)
     {
         if (this.PropertyChanged != null)
-           this.PropertyChanged(this, new PropertyChangedEventArgs(name));
+            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
     }
 }
  
@@ -172,22 +178,27 @@ public class BookInfoRepository
 
     public BookInfoRepository()
     {
+        bookInfo = new ObservableCollection<BookInfo>();
         GenerateBookInfo();
     }
 
     internal void GenerateBookInfo()
     {
-        bookInfo = new ObservableCollection<BookInfo>();
-        bookInfo.Add(new BookInfo() { BookName = "Object-Oriented Programming in C#", BookDescription = "Object-oriented programming is a programming paradigm based on the concept of objects" });
-        bookInfo.Add(new BookInfo() { BookName = "C# Code Contracts", BookDescription = "Code Contracts provide a way to convey code assumptions" });
-        bookInfo.Add(new BookInfo() { BookName = "Machine Learning Using C#", BookDescription = "You will learn several different approaches to applying machine learning" });
-        bookInfo.Add(new BookInfo() { BookName = "Neural Networks Using C#", BookDescription = "Neural networks are an exciting field of software development" });
-        bookInfo.Add(new BookInfo() { BookName = "Visual Studio Code", BookDescription = "It is a powerful tool for editing code and serves for end-to-end programming" });
-        bookInfo.Add(new BookInfo() { BookName = "Android Programming", BookDescription = "It provides a useful overview of the Android application life cycle" });
-        bookInfo.Add(new BookInfo() { BookName = "iOS Succinctly", BookDescription = "It is for developers looking to step into frightening world of iPhone" });
-        bookInfo.Add(new BookInfo() { BookName = "Visual Studio 2015", BookDescription = "The new version of the widely-used integrated development environment" });
-        bookInfo.Add(new BookInfo() { BookName = "Xamarin.Forms", BookDescription = "It creates mappings from its C# classes and controls directly" });
-        bookInfo.Add(new BookInfo() { BookName = "Windows Store Apps", BookDescription = "Windows Store apps present a radical shift in Windows development" });
+        bookInfo.Add(new BookInfo( "Object-Oriented Programming in C# ", "Object-oriented programming is the de facto programming paradigm" ));
+		bookInfo.Add(new BookInfo( "C# Code Contracts", "Code Contracts provide a way to convey code assumptions" ));
+		bookInfo.Add(new BookInfo( "Machine Learning Using C#", "You’ll learn several different approaches to applying machine learning" ));
+		bookInfo.Add(new BookInfo( "Neural Networks Using C#", "Neural networks are an exciting field of software development" ));
+		bookInfo.Add(new BookInfo( "Visual Studio Code", "It is a powerful tool for editing code and serves for end-to-end programming" ));
+		bookInfo.Add(new BookInfo( "Android Programming", "It is provides a useful overview of the Android application lifecycle" ));
+		bookInfo.Add(new BookInfo( "iOS Succinctly", "It is for developers looking to step into frightening world of iPhone" ));
+		bookInfo.Add(new BookInfo( "Visual Studio 2015", "The new version of the widely-used integrated development environment" ));
+		bookInfo.Add(new BookInfo( "Xamarin.Forms", "Its creates mappings from its C# classes and controls directly" ));
+		bookInfo.Add(new BookInfo( "Windows Store Apps", "Windows Store apps present a radical shift in Windows development" ));
+		bookInfo.Add(new BookInfo( "Agile Software Development",  "Learning new development processes can be difficult" ));
+		bookInfo.Add(new BookInfo( "Assembly Language", "Assembly language is as close to writing machine code" ));
+		bookInfo.Add(new BookInfo( "Cryptography in .NET", "Cryptography is used throughout software to protect all kinds of information" ));
+		bookInfo.Add(new BookInfo( "Entity Framework Code First", "Follow author Ricardo Peres as he introduces the newest development mode" ));
+		bookInfo.Add(new BookInfo( "Localization for .NET", "Learn to write applications that support different languages and cultures" ));
     }
 }
 

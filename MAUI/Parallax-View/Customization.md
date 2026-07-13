@@ -19,7 +19,7 @@ The [`Speed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.S
 
 <parallax:SfParallaxView Source="{x:Reference Name=listview}" x:Name="parallaxview" Speed="0.5">
     <parallax:SfParallaxView.Content>
-        <Image BackgroundColor="Transparent" Source="{Binding Image}" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+        <Image BackgroundColor="Transparent" Source="{Binding Image}" Aspect="AspectFill" />
     </parallax:SfParallaxView.Content>
 </parallax:SfParallaxView>
 
@@ -44,8 +44,6 @@ namespace ParallaxViewGettingStarted
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
             image.Source = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);
             image.BackgroundColor = Colors.Transparent;
-            image.HorizontalOptions = LayoutOptions.Fill;
-            image.VerticalOptions = LayoutOptions.Fill;
             image.Aspect = Aspect.AspectFill;
             parallax.Content = image;
             parallax.Speed = 0.5;
