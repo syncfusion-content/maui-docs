@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfCalendar to .NET MAUI SfCalendar
+title: Migrate from Syncfusion® Xamarin SfCalendar to .NET MAUI SfCalendar
 description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin calendar to Syncfusion<sup>&reg;</sup> .NET MAUI Calendar control.
 platform: maui
 control: SfCalendar
