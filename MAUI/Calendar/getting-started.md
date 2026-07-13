@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the .NET MAUI Calendar
 
-This section explains how to add the [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) control. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Calendar. Follow the steps below to add .NET MAUI calendar control to your project.
+This section explains how to add the [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) control and covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Calendar. Follow the steps below to add the .NET MAUI Calendar control to your project.
 
 To get start quickly with our .NET MAUI Calendar, you can check the below video.
 
@@ -139,6 +139,6 @@ calendar.View = CalendarView.Month;
 
 The following screenshot illustrates the result of the above code.
 
-![Change different calendar views in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-month-view.png)
+![Default Month view of the .NET MAUI Calendar.](images/getting-started/net-maui-calendar-month-view.png)
 
 You can download the Calendar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-calendar-control).
