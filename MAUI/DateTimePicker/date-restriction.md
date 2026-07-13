@@ -17,7 +17,7 @@ N> The `MinimumDate` and `MaximumDate` properties are of type `DateTime`. The de
 The Date Time Picker restricts selection to dates and times on or after the [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MinimumDate) property. The `MinimumDate` value must be less than or equal to `MaximumDate`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -28,7 +28,7 @@ The Date Time Picker restricts selection to dates and times on or after the [Min
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -52,7 +52,7 @@ public partial class MainPage : ContentPage
 The Date Time Picker restricts selection to dates and times on or before the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MaximumDate) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -63,7 +63,7 @@ The Date Time Picker restricts selection to dates and times on or before the [Ma
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Picker;
 . . .

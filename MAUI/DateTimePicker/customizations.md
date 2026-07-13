@@ -37,7 +37,7 @@ The SfDateTimePicker control allows you to customize the header divider color by
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7" %}
+{% highlight c# tabtitle="C#" hl_lines="11" %}
 
 using Syncfusion.Maui.Picker;
 . . .

@@ -19,7 +19,7 @@ Fade mode fades out unselected items relative to the selected item. Set the [Tex
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -30,7 +30,7 @@ Fade mode fades out unselected items relative to the selected item. Set the [Tex
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -59,7 +59,7 @@ Shrink mode reduces the font size of unselected items relative to the selected i
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -70,7 +70,7 @@ Shrink mode reduces the font size of unselected items relative to the selected i
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -99,7 +99,7 @@ Fade and shrink mode reduces both the opacity and the font size of unselected it
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -110,7 +110,7 @@ Fade and shrink mode reduces both the opacity and the font size of unselected it
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Picker;
 . . .

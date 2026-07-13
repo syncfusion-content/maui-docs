@@ -14,7 +14,7 @@ documentation: ug
 The SfDateTimePicker control lets you select a date and time using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) property of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default value of `SelectedDate` is the current date and time.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <ContentPage
     . . .
@@ -25,7 +25,7 @@ The SfDateTimePicker control lets you select a date and time using the [Selected
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -61,7 +61,7 @@ The [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
 using Syncfusion.Maui.Picker;
 . . .
