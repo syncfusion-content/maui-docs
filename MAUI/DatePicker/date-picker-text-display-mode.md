@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Display Mode in .NET MAUI Date Picker Control | Syncfusion
+title: Text Display Mode in .NET MAUI Date Picker Control | Syncfusion®
 description: Learn about the date picker text display mode in Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -19,13 +19,20 @@ The fade mode in the date picker gradually decreases the visibility of unselecte
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<datePicker:SfDatePicker x:Name="datePicker"
-                 TextDisplayMode="Fade"/>
+<ContentPage
+             . . .
+             xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <datePicker:SfDatePicker x:Name="datePicker"
+                             TextDisplayMode="Fade"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     TextDisplayMode = PickerTextDisplayMode.Fade
@@ -47,13 +54,20 @@ The shrink mode reduces the font size of date picker items relative to the selec
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<datePicker:SfDatePicker x:Name="datePicker"
-                 TextDisplayMode="Shrink"/>
+<ContentPage
+             . . .
+             xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <datePicker:SfDatePicker x:Name="datePicker"
+                             TextDisplayMode="Shrink"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     TextDisplayMode = PickerTextDisplayMode.Shrink
@@ -75,13 +89,20 @@ The fade and shrink mode decreases both the opacity and font size of date picker
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<datePicker:SfDatePicker x:Name="datePicker"
-                 TextDisplayMode="FadeAndShrink"/>
+<ContentPage
+             . . .
+             xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <datePicker:SfDatePicker x:Name="datePicker"
+                             TextDisplayMode="FadeAndShrink"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     TextDisplayMode = PickerTextDisplayMode.FadeAndShrink

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection in .NET MAUI Date Picker Control | Syncfusion
+title: Selection in .NET MAUI Date Picker Control | Syncfusion®
 description: Learn about Selection in Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and more.
 platform: maui
 control: SfDatePicker
@@ -16,8 +16,10 @@ The SfDatePicker control allows you to select the date using the [SelectedDate](
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<ContentPage xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="picker" 
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="picker"
                          SelectedDate="9/7/2023">
     </picker:SfDatePicker>
 </ContentPage>
@@ -25,6 +27,9 @@ The SfDatePicker control allows you to select the date using the [SelectedDate](
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker picker = new SfDatePicker()
 {
     SelectedDate = new DateTime(2023, 9, 7).Date,
@@ -32,7 +37,7 @@ SfDatePicker picker = new SfDatePicker()
 
 this.Content = picker;
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
 ![Set Selected date in .NET MAUI Date picker.](images/getting-started/maui-date-picker-selected-date.png)
@@ -42,16 +47,21 @@ this.Content = picker;
 The SfDatePicker provides clear selection support, allowing you to clear the selected date by setting the `SelectedDate` property to `null`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<ContentPage xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <picker:SfDatePicker x:Name="picker" />
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    this.picker.SelectedDate = null;
+using Syncfusion.Maui.Picker;
 
-{% endhighlight %}  
+. . .
+this.picker.SelectedDate = null;
+
+{% endhighlight %}
 {% endtabs %}

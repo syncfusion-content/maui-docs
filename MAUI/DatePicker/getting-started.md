@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Date Picker control | Syncfusion
+title: Getting started with .NET MAUI Date Picker control | Syncfusion®
 description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -125,11 +125,14 @@ Create an instance of the Date Picker control and add it to your page.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
+
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
     <picker:SfDatePicker />
 </ContentPage>
+
 {% endhighlight %}
 {% highlight C# tabtitle="C#" %}
 

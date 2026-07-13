@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Picker Mode in .NET MAUI Date Picker Control | Syncfusion
-description: Learn about the date picker mode in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
+title: Date Picker Mode in .NET MAUI Date Picker Control | Syncfusion®
+description: Learn about the date picker mode in Syncfusion® .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -19,8 +19,8 @@ The dialog mode is used to display the date picker in a pop-up by setting the [M
 
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
+             . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <picker:SfDatePicker x:Name="datePicker"
                          Mode="Dialog"/>
@@ -32,6 +32,7 @@ The dialog mode is used to display the date picker in a pop-up by setting the [M
 
 using Syncfusion.Maui.Picker;
 
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     Mode = PickerMode.Dialog
@@ -49,10 +50,10 @@ N> The `IsOpen` property is automatically reset to `false` when you close the di
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
+             . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <Grid>
         <picker:SfDatePicker x:Name="datePicker"
@@ -69,8 +70,11 @@ N> The `IsOpen` property is automatically reset to `false` when you close the di
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 private void Button_Clicked(object sender, System.EventArgs e)
 {
     this.datePicker.IsOpen = true;
@@ -97,10 +101,10 @@ N> The `IsOpen` property is automatically reset to `false` when you close the di
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
+             . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <Grid>
         <picker:SfDatePicker x:Name="datePicker"
@@ -118,8 +122,11 @@ N> The `IsOpen` property is automatically reset to `false` when you close the di
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 private void Button_Clicked(object sender, System.EventArgs e)
 {
     this.datePicker.IsOpen = true;
@@ -140,8 +147,8 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% highlight xaml tabtitle="XAML" hl_lines="6" %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
+             . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <Grid>
         <picker:SfDatePicker x:Name="datePicker"
@@ -162,6 +169,9 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% highlight c# tabtitle="C#" hl_lines="4" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 private void Button_Clicked(object sender, System.EventArgs e)
 {
     this.datePicker.IsOpen = true;
@@ -184,8 +194,8 @@ SfDatePicker allows the display of the Popup to render at any desired size by se
 
 {% highlight xaml tabtitle="XAML" %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
+             . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <picker:SfDatePicker x:Name="datePicker"
                          Mode="Dialog"
@@ -197,6 +207,9 @@ SfDatePicker allows the display of the Popup to render at any desired size by se
 
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 this.datePicker.PopupWidth = 300;
 this.datePicker.PopupHeight = 400;
 

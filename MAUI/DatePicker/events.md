@@ -22,16 +22,23 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                     SelectionChanged="OnDatePickerSelectionChanged">
-</picker:SfDatePicker>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="picker"
+                         SelectionChanged="OnDatePickerSelectionChanged">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="1" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 this.picker.SelectionChanged += this.OnDatePickerSelectionChanged;
 
 private void OnDatePickerSelectionChanged(object sender, DatePickerSelectionChangedEventArgs e)
@@ -66,16 +73,23 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 * `EventArgs`: `EventArgs` is used for this event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                     Opened="OnDatePickerPopUpOpened">
-</picker:SfDatePicker>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="picker"
+                         Opened="OnDatePickerPopUpOpened">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="1" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 this.picker.Opened += this.OnDatePickerPopUpOpened;
 
 private void OnDatePickerPopUpOpened(object sender, EventArgs e)
@@ -99,16 +113,23 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
     * `Cancel` : Indicates whether the close operation should be cancelled.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                     Closing="OnDatePickerPopUpClosing">
-</picker:SfDatePicker>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="picker"
+                         Closing="OnDatePickerPopUpClosing">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="1" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 this.picker.Closing += this.OnDatePickerPopUpClosing;
 
 private void OnDatePickerPopUpClosing(object sender, CancelEventArgs e)
@@ -131,16 +152,23 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                     Closed="OnDatePickerPopUpClosed">
-</picker:SfDatePicker>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="picker"
+                         Closed="OnDatePickerPopUpClosed">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="1" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 this.picker.Closed += this.OnDatePickerPopUpClosed;
 
 private void OnDatePickerPopUpClosed(object sender, EventArgs e)
@@ -170,16 +198,23 @@ The `SfDatePicker` footer view provides two events. These events are not applica
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                     OkButtonClicked="OnDatePickerOkButtonClicked">
-</picker:SfDatePicker>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="picker"
+                         OkButtonClicked="OnDatePickerOkButtonClicked">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="1" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 this.picker.OkButtonClicked += this.OnDatePickerOkButtonClicked;
 
 private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
@@ -201,16 +236,23 @@ private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                     CancelButtonClicked="OnDatePickerCancelButtonClicked">
-</picker:SfDatePicker>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="picker"
+                         CancelButtonClicked="OnDatePickerCancelButtonClicked">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="1" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 this.picker.CancelButtonClicked += this.OnDatePickerCancelButtonClicked;
 
 private void OnDatePickerCancelButtonClicked(object sender, EventArgs e)
@@ -229,18 +271,26 @@ private void OnDatePickerCancelButtonClicked(object sender, EventArgs e)
 The SfDatePicker includes a built-in event called `SelectionChanged` that is triggered whenever the selection index in the picker changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_SelectionChangedCommand), which passes the `DatePickerSelectionChangedEventArgs` as a command parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                    SelectionChangedCommand="{Binding SelectionChangedCommand}">
-</picker:SfDatePicker>
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>
+<ContentPage
+             . . .
+             xmlns:local="clr-namespace:YourNamespace"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfDatePicker x:Name="picker"
+                         SelectionChangedCommand="{Binding SelectionChangedCommand}">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="3 6" %}
+{% highlight c# tabtitle="C#" hl_lines="3 6" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 public class ViewModel
 {
     public ICommand SelectionChangedCommand { get; set; }
@@ -262,18 +312,26 @@ public class ViewModel
 The SfDatePicker includes a built-in event called `OkButtonClicked`, which is triggered when the confirm button is tapped on the date picker. This event can be invoked through the [AcceptCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_AcceptCommand).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                    AcceptCommand="{Binding AcceptCommand}">
-</picker:SfDatePicker>
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>
+<ContentPage
+             . . .
+             xmlns:local="clr-namespace:YourNamespace"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfDatePicker x:Name="picker"
+                         AcceptCommand="{Binding AcceptCommand}">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="3 6" %}
+{% highlight c# tabtitle="C#" hl_lines="3 6" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 public class ViewModel
 {
     public ICommand AcceptCommand { get; set; }
@@ -295,18 +353,26 @@ public class ViewModel
 The SfDatePicker includes a built-in event called `CancelButtonClicked`, which is triggered when the cancel button is tapped on the date picker. This event can be invoked through the [DeclineCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DeclineCommand).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="picker"
-                    DeclineCommand="{Binding DeclineCommand}">
-</picker:SfDatePicker>
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>
+<ContentPage
+             . . .
+             xmlns:local="clr-namespace:YourNamespace"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfDatePicker x:Name="picker"
+                         DeclineCommand="{Binding DeclineCommand}">
+    </picker:SfDatePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="3 6" %}
+{% highlight c# tabtitle="C#" hl_lines="3 6" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 public class ViewModel
 {
     public ICommand DeclineCommand { get; set; }
