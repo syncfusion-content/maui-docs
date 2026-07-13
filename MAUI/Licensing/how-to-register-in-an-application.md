@@ -12,9 +12,29 @@ documentation: UG
 
 To ensure proper use of Syncfusion<sup>®</sup> controls, the generated license key needs to be registered before initiating any control. Use the following code snippet to register the license:
 
+**Registering a single license key**
+
 {% tabs %}
 {% highlight c# %}
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+{% endhighlight %}
+{% endtabs %}
+
+**Registering multiple license keys**
+
+You can register multiple license keys using either a comma (,) or a semicolon (;) as the separator between keys.
+
+{% tabs %}
+{% highlight c# %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY_1,YOUR LICENSE KEY_2,...");
+{% endhighlight %}
+{% endtabs %}
+
+or
+
+{% tabs %}
+{% highlight c# %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY_1;YOUR LICENSE KEY_2;...");
 {% endhighlight %}
 {% endtabs %}
 
