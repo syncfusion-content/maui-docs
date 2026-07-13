@@ -25,7 +25,7 @@ The [ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
     * [OldView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html#Syncfusion_Maui_Calendar_CalendarViewChangedEventArgs_OldView) : Returns the old calendar view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <calendar:SfCalendar  x:Name="calendar" 
                       ViewChanged="OnCalendarViewChanged">
