@@ -34,22 +34,26 @@ The following sections show how to validate the Syncfusion<sup>®</sup> license 
 * Open the `LicenseKeyValidation.ps1` script in a text or code editor. The default contents are shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="PowerShell" %}
+{% highlight c# tabtitle="v34.1.29 and later" %}
 # Replace the parameters with the desired platform, version, and actual license key.
-# It is recommended to read the license key from a CI secret rather than hard-coding it.
 
-$licenseKey = $env:SYNCFUSION_LICENSE_KEY # Read from an environment variable or CI secret
-$result = & "$PSScriptRoot\LicenseKeyValidatorConsole.exe" /platform:"MAUI" /version:"26.2.4" /licensekey:$licenseKey
+$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"UIComponent" /version:"34.1.29" /licensekey:"Your License Key"
+
+Write-Host $result
+{% endhighlight %}
+
+{% highlight c# tabtitle="Before v34.1.29" %}
+# Replace the parameters with the desired platform, version, and actual license key.
+
+$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"MAUI" /version:"26.2.4" /licensekey:"Your License Key"
 
 Write-Host $result
 {% endhighlight %}
 {% endtabs %}
 
-![LicenseKeyValidation script](licensing-images/license-validation.png)
-
-* Update the parameters in the LicenseKeyValidation.ps1 script file as described below. 
-
-  **Platform:** Modify the value for /platform: to the actual platform "MAUI". 
+* Update the parameters in the script:
+  
+  **Platform:** Set /platform:"**UIComponent**" for v34.1.29 and later, or /platform:"**MAUI**" for earlier versions (use the relevant Syncfusion platform as needed).
   
   **Version:**  Change the value for /version: to the required version (e.g., "26.2.4").
   
@@ -144,7 +148,7 @@ SyncfusionLicenseProvider.RegisterLicense("Your License Key");
 
 // Validate the registered license key.
 // The array overload allows validating against multiple platforms in a single call.
-bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.MAUI });
+bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.UIComponent });
 {% endhighlight %}
 
 {% highlight c# tabtitle="Before v34.1.29" %}
@@ -158,11 +162,7 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.MAUI);
 {% endhighlight %}
 {% endtabs %}
 
-**v34.1.29 and later:**
-![LicenseKeyValidationMethod](licensing-images/license-validation-method-new.png)
-
-**Before v34.1.29:**
-![LicenseKeyValidationMethod](licensing-images/license-validation-method.png)
+N> Use `Platform.UIComponent` for UI component license validation in v34.1.29 and later. `Platform.MAUI` is not supported from v34.1.29 onwards.
 
 * If the `ValidateLicense()` method returns `true`, the registered license key is valid and you can proceed with deployment.
 
@@ -188,31 +188,20 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.MAUI);
 
 {% tabs %}
 {% highlight c# %}
-using NUnit.Framework;
-using Syncfusion.Licensing;
-
-[TestFixture]
-public class LicenseValidationTests
+public void TestSyncfusionMAUILicense()
 {
-    public TestContext TestContext { get; set; }
+	var platform = Platform.MAUI;
+	// Register the Syncfusion<sup>®</sup> license key
+	SyncfusionLicenseProvider.RegisterLicense("Your License Key");
 
-    [Test]
-    public void TestSyncfusionMAUILicense()
-    {
-        var platform = Platform.MAUI;
+	bool isValidLicense = SyncfusionLicenseProvider.ValidateLicense(platform, out var validationMessage);
+	Assert.That(isValidLicense, Is.True, $"Validation failed for {platform}." + $" Validation Message: {validationMessage}");
 
-        // Register the Syncfusion license key
-        SyncfusionLicenseProvider.RegisterLicense("<Your License Key>");
-
-        bool isValidLicense = SyncfusionLicenseProvider.ValidateLicense(platform, out var validationMessage);
-        Assert.That(isValidLicense, Is.True, $"Validation failed for {platform}. Validation Message: {validationMessage}");
-
-        // Log validation messages to TestContext output
-        if (isValidLicense)
-        {
-            TestContext.Out.WriteLine($"Platform {platform} is correctly licensed for version {typeof(SyncfusionLicenseProvider).Assembly.GetName().Version}");
-        }
-    }
+	// Log validation messages to TestContext output
+	if (isValidLicense)
+	{
+		TestContext.Out.WriteLine($"Platform {platform} is correctly licensed for version " + $"{typeof(SyncfusionLicenseProvider).Assembly.GetName().Version}");
+	}
 }
 {% endhighlight %}
 {% endtabs %}
