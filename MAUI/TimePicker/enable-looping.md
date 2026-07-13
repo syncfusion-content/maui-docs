@@ -15,14 +15,21 @@ To enable looping in the Time Picker, set the [EnableLooping](https://help.syncf
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="timePicker"
-                     EnableLooping="True"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker"
+                         EnableLooping="True"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker()
 {
@@ -42,14 +49,21 @@ this.Content = timePicker;
 The `SfTimePicker` control allows you to select the time using the [SelectedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectedTime) property, which is a nullable `TimeSpan?`. The default value is the current local time (`DateTime.Now.TimeOfDay`).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="picker"
-                     SelectedTime="07:22:01">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker"
+                         SelectedTime="07:22:01">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker picker = new SfTimePicker()
 {
@@ -70,12 +84,23 @@ The .NET MAUI Time Picker provides clear selection support, allowing you to clea
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<picker:SfTimePicker x:Name="picker" />
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker" />
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.picker.SelectedTime = null;
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.picker.SelectedTime = null;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
