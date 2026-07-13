@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here all about introduction of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control, its features, and more.
+title: About .NET MAUI Linear Gauge control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control, its features, and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug
@@ -9,31 +9,33 @@ documentation: ug
 
 # Overview of .NET MAUI Linear Gauge
 
-Syncfusion<sup>&reg;</sup> [.NET MAUI Linear Gauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) is a data visualization control to display data on a linear scale. Use this control to craft high-quality mobile app user interfaces.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the [.NET MAUI Linear Gauge](https://help.syncfusion.com/maui/linear-gauge/getting-started) control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
 
-![Overview .NET MAUI linear gauge](images/getting-started/maui-linear-gauge.PNG)
+Syncfusion® [.NET MAUI Linear Gauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) is a data visualization control to display values on a linear scale. Use this control to craft high-quality mobile app user interfaces. The .NET MAUI Linear Gauge is supported on Windows, macOS, iOS, and Android.
+
+![Overview .NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
 
 ## Business use cases
 
-- Dashboard applications that display performance metrics and progress values using linear indicators.  
-- Industrial and monitoring systems that track measurements such as temperature, pressure, or speed.  
-- Business applications that visualize target versus actual values with clear range indicators.  
-- Data-driven apps that require threshold-based representation for alerts and analysis.  
+- Dashboard applications that display performance metrics and progress values using linear indicators.
+- Industrial and monitoring systems that track measurements such as temperature, pressure, or speed.
+- Business applications that visualize target versus actual values with clear range indicators.
+- Data-driven apps that require threshold-based representation for alerts and analysis.
 
 ## Key features
 
-- **Orientation** allows displaying the gauge in horizontal or vertical layouts based on UI requirements.  
-- **Customizable scale** allows configuring thickness, edge styles, and reversing the scale direction.  
-- **Labels and ticks** allows styling labels, major ticks, and minor ticks for better readability.  
-- **Range support** allows highlighting value intervals on the scale with different visual styles.  
-- **Pointer support** allows using shape marker, content marker, and bar pointers to indicate values.  
-- **Mirror mode** allows rendering gauge elements in a mirrored layout for alternate visual representation.  
-- **Animation** allows animating gauge elements during load or value changes for better user experience.  
-- **Interactive pointer** allows adjusting values dynamically through drag or swipe gestures.  
+- **Orientation** enables displaying the gauge in horizontal or vertical layouts based on UI requirements.
+- **Customizable scale** enables configuring thickness, edge styles, and reversing the scale direction.
+- **Labels and ticks** enables styling labels, major ticks, and minor ticks for better readability.
+- **[Range support](https://help.syncfusion.com/maui/linear-gauge/range)** enables highlighting value intervals on the scale with different visual styles.
+- **[Pointer support](https://help.syncfusion.com/maui/linear-gauge/pointers)** enables using shape marker, content marker, and bar pointers to indicate values.
+- **[Mirror mode](https://help.syncfusion.com/maui/linear-gauge/mirror-linear-gauge)** enables rendering gauge elements in a mirrored layout for alternate visual representation.
+- **[Animation](https://help.syncfusion.com/maui/linear-gauge/animation)** enables animating gauge elements during load or value changes for better user experience.
+- **Interactive pointer** enables you to adjust values dynamically through drag or swipe gestures.
 
 ## Globalization
 
-The following table summarizes the globalization support available in this control.
+The following table summarizes the globalization support available in this control. Localization refers to translating the control's built-in text into different languages; this is currently not supported. Keyboard navigation is partially supported, allowing tab focus navigation to the control, but specific key-based interactions (such as arrow keys for value adjustment) are not available.
 
 <style>
 .img{
@@ -71,7 +73,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/linear-gauge/overview">Linear Gauge</a></td>
+<td>Linear Gauge</td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -82,16 +84,16 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Radial Gauge](https://help.syncfusion.com/maui/radial-gauge/overview) for visualizing values using circular gauge representation.  
-- [Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview) for visualizing proportional data using circular charts.   
+- [Radial Gauge](https://help.syncfusion.com/maui/radial-gauge/overview) for visualizing values using circular gauge representation.
+- [Circular Charts](https://help.syncfusion.com/maui/circular-charts/overview) for visualizing proportional data using circular charts.
 - [Digital Gauge](https://help.syncfusion.com/maui/digitalgauge/overview) for displaying numeric or character values using segmented digital display styles.
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started) shows a step‑by‑step guide to begin using the Linear Gauge control.  
-- [Range](https://help.syncfusion.com/maui/linear-gauge/range) explains how to configure ranges and scale visualization.  
-- [Pointers](https://help.syncfusion.com/maui/linear-gauge/pointers) helps customize pointer types and behavior.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started) shows a step-by-step guide to begin using the Linear Gauge control.
+- [Range](https://help.syncfusion.com/maui/linear-gauge/range) explains how to configure ranges and scale visualization.
+- [Pointers](https://help.syncfusion.com/maui/linear-gauge/pointers) helps customize pointer types and behavior.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
 
@@ -206,7 +208,7 @@ The following table summarizes the globalization support available in this contr
 .explore-link {
   margin-top: auto;
   color: #0A76FF;
-  font-size: 12;
+  font-size: 12px;
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -262,7 +264,7 @@ Explore Features
     <h3 class="form-title">Tutorial Videos</h3>
 </div>
     <div class="form-description">
-      Watch step‑by‑step video guides to quickly understand concepts and implementation.
+      Watch step-by-step video guides to quickly understand concepts and implementation.
     </div>
     <a href="https://www.syncfusion.com/tutorial-videos/maui/linear-gauge" class="explore-link">
     Watch now
@@ -280,7 +282,7 @@ Explore Features
     <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
-       Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
+       Find practical solutions, troubleshooting tips and how-to guides for common scenarios.
     </div>
     <a href="https://support.syncfusion.com/kb/cross-platforms/section/1221" class="explore-link">
 Search KB's
@@ -298,7 +300,7 @@ Search KB's
     <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
-      Discover in‑depth articles, use cases and expert insights from our developers.
+      Discover in-depth articles, use cases and expert insights from our developers.
     </div>
     <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
 Read Blogs

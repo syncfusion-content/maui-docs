@@ -1,14 +1,16 @@
 ---
 layout: post
 title: Multi-Level Labels in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about multi-level labels and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control and more.
+description: Learn here all about multi-level labels and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control and more.
 platform: maui
 control: SfCartesianChart
 documentation: ug
-keywords: .net maui cartesian charts, .net maui multi-level labels, cartesian chart multi-level labels, syncfusion cartesian charts maui, maui chart axis labels, .net maui chart axis, multilevel label customization, .net maui sfCartesianChart axis labels.
+keywords: .net maui cartesian charts, .net maui multi-level labels, cartesian chart multi-level labels, syncfusion cartesian charts maui, maui cartesian chart axis labels, .net maui cartesian chart axis, multilevel label customization, .net maui sfCartesianChart axis labels.
 ---
 
 # Multi-Level Labels in .NET MAUI Cartesian Chart
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 Multi-level labels allow you to display multiple hierarchy levels of labels on the chart axes. This feature is particularly useful for categorizing data at different levels of detail, providing better organization and readability of large datasets. Multi-level labels can be applied to any [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) in the Cartesian chart.
 
@@ -16,19 +18,19 @@ Multi-level labels allow you to display multiple hierarchy levels of labels on t
 
 Multi-level labels can be added to any axis in the .NET MAUI Cartesian Chart, such as [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html), [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html), [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html), [DateTimeCategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeCategoryAxis.html), or [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html).
 
-To add multi-level labels to an axis, use the [MultiLevelLabels](#) collection of the axis. Each multi-level label is defined using the following properties:
+To add multi-level labels to an axis, use the [MultiLevelLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MultiLevelLabels) collection of the axis. Each multi-level label is defined using the following properties, of the [ChartMultiLevelLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelLabel.html) class:
 
-* **Start** - The starting value of the label range.
-* **End** - The ending value of the label range.
-* **Text** - The text displayed for the label.
-* **Level** - Indicates the hierarchy level (for example, 1 for the top level, 2 for sub-levels, and so on).
+* [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelLabel.html#Syncfusion_Maui_Charts_MultiLevelLabel_Start), of type `object`, sets the starting value of the label range.
+* [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelLabel.html#Syncfusion_Maui_Charts_MultiLevelLabel_End), of type `object`, sets the ending value of the label range.
+* [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelLabel.html#Syncfusion_Maui_Charts_MultiLevelLabel_Text), of type `string`, sets the text displayed for the label.
+* [Level](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelLabel.html#Syncfusion_Maui_Charts_MultiLevelLabel_Level), of type `int`, sets the hierarchy level (for example, 1 for the top level, 2 for sub-levels, and so on).
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.MultiLevelLabels>
@@ -44,7 +46,7 @@ To add multi-level labels to an axis, use the [MultiLevelLabels](#) collection o
             </chart:NumericalAxis.MultiLevelLabels>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
-    . . .
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -52,7 +54,7 @@ To add multi-level labels to an axis, use the [MultiLevelLabels](#) collection o
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+// code omitted for brevity
 NumericalAxis secondaryAxis = new NumericalAxis();
 
 // Create first level multi-level labels
@@ -145,40 +147,38 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Multi-level labels on NumericalAxis in .NET MAUI Chart.](axis_images/multi_level_labels_numerical_axis.png)
+![Multi-level labels on NumericalAxis in .NET MAUI Cartesian Chart.](axis_images/multi_level_labels_numerical_axis.png)
 
 ## Customizing Label Appearance
 
-The appearance of multi-level labels can be customized using the [MultiLevelLabelStyle](#) property. The [MultiLevelLabelStyle](#) provides the following customization properties:
+The appearance of multi-level labels can be customized using the [MultiLevelLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MultiLevelLabelStyle) property. The [MultiLevelLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html) provides the following customization properties:
 
-| Property | Type | Description |
-|----------|------|-------------|
-| [BorderType](#) | `ChartMultiLevelBorderType` | Gets or sets the border type for multi-level labels |
-| [BorderColor](#) | `Color` | Gets or sets the border color |
-| [BorderWidth](#) | `double` | Gets or sets the border width |
-| [LabelStyle](#) | `ChartAxisLabelStyle` | Gets or sets the text styling for the multi-level label |
+* [BorderType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_BorderType), of type `ChartMultiLevelBorderType`, sets the border type for multi-level labels.
+* [BorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_BorderColor), of type `Color`, sets the border color.
+* [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_BorderWidth), of type `double`, sets the border width.
+* [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_LabelStyle), of type `ChartAxisLabelStyle`, sets the text styling for the multi-level label.
 
 ### Label Style
 
-The [LabelStyle](#) property supports the following [ChartAxisLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html) customization options:
+The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_LabelStyle) property supports the following [ChartAxisLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html) customization options:
 
-* **FontAttributes** – Gets or sets the font style for the label text.
-* **FontSize** – Gets or sets the size of the label text.
-* **Margin** – Gets or sets the space around the label text.  
-* **FontFamily** – Gets or sets the font family for the label text.
-* **TextColor** – Gets or sets the color of the label text.
-* **LabelAlignment** – Gets or sets the alignment of the label text within the label area.
+* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_FontAttributes), of type `FontAttributes`, sets the font style for the label text.
+* [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_FontSize), of type `double`, sets the size of the label text.
+* [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_Margin), of type `Thickness`, sets the space around the label text.
+* [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_FontFamily), of type `string`, sets the font family for the label text.
+* [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_TextColor), of type `Color`, sets the color of the label text.
+* [LabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_LabelAlignment), of type `ChartAxisLabelAlignment`, sets the alignment of the label text within the label area.
 
 ### Border Type
 
-The [BorderType](#) property supports the following [ChartMultiLevelBorderType](#) values:
+The [BorderType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_BorderType) property supports the following [ChartMultiLevelBorderType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelBorderType.html) values:
 
-* **Rectangle** - Displays the label with a rectangular border on all sides.
-* **WithoutTopAndBottom** - Displays the label with a border on left and right sides only (no top and bottom).
-* **SquareBrace** - Displays the label with a square brace border style.
-* **CurlyBrace** - Displays the label with a curly brace border style.
+* `Rectangle` - Displays the label with a rectangular border on all sides.
+* `WithoutTopAndBottom` - Displays the label with a border on left and right sides only (no top and bottom).
+* `SquareBrace` - Displays the label with a square brace border style.
+* `CurlyBrace` - Displays the label with a curly brace border style.
 
-The default value is [Rectangle](#).
+The default value is `Rectangle`.
 
 The following example demonstrates how to apply a square brace border style and label style:
 
@@ -187,7 +187,7 @@ The following example demonstrates how to apply a square brace border style and 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.MultiLevelLabels>
@@ -210,7 +210,7 @@ The following example demonstrates how to apply a square brace border style and 
             </chart:NumericalAxis.MultiLevelLabelStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
-    . . .
+    <!-- code omitted for brevity -->
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -218,7 +218,7 @@ The following example demonstrates how to apply a square brace border style and 
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+// code omitted for brevity
 NumericalAxis secondaryAxis = new NumericalAxis();
 
 // Create multi-level labels for level 1
@@ -310,7 +310,7 @@ ChartAxisLabelStyle labelStyle = new ChartAxisLabelStyle()
     TextColor = Colors.Green,
     FontAttributes = FontAttributes.Bold,
     FontSize = 13,
-    Stroke = Colors.DarkGreen,
+    Stroke = new SolidColorBrush(Colors.DarkGreen),
     StrokeWidth = 2
 };
 
@@ -331,4 +331,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Multi-level labels with Square Brace border in .NET MAUI Chart.](axis_images/multi_level_label_style.png)
+![Multi-level labels with Square Brace border in .NET MAUI Cartesian Chart.](axis_images/multi_level_label_style.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scale in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about adding and customizing scale of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: Scale in .NET MAUI Linear Gauge control | Syncfusion®
+description: Learn here all about adding and customizing scale of Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control and more.
 platform: maui
 control: SfLinearGauge
 
@@ -10,7 +10,9 @@ documentation: ug
 
 # Scale in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The Linear Gauge scale on which a set of values can be plotted. An scale can be customized by changing the thickness, color, and edge styles. Scale elements such as labels and ticks can also be easily customized and scale can be inversed.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Linear Gauge** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
+
+The Linear Gauge scale on which a set of values can be plotted. A scale can be customized by changing the thickness, color, and edge styles. Scale elements such as labels and ticks can also be easily customized and the scale can be inversed.
 
 ## Default scale
 
@@ -33,11 +35,11 @@ this.Content = gauge;
 
 {% endtabs %}
 
-![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.PNG)
+![Initialize .NET MAUI Linear Gauge for axis](images/getting-started/default_linear_gauge.PNG)
 
 ## Customize minimum and maximum scale values
 
-The [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Maximum) properties of a Linear Gauge can be used to customize the scale values. In the following code sample, the scale is customized to have the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Minimum) value of -50 to [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Maximum) value of 50. The scale values are displayed by the labels. Customizing these label styles are further explained in next topics.  
+The [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Maximum) properties of a Linear Gauge can be used to customize the scale values. In the following code sample, the scale is customized with a [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Minimum) value of -50 and a [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Maximum) value of 50. The scale values are displayed by the labels. Customizing these label styles are further explained in next topics.  
 
 {% tabs %}
 
@@ -58,11 +60,11 @@ this.Content = gauge;
 
 {% endtabs %}
 
-![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.PNG)
+![Update .NET MAUI Linear Gauge for axis scale](images/axis/minmax_axis_linear_gauge.PNG)
 
 ## Customize scale orientation
 
-The orientation of linear scale can be customized by using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Orientation) property of linear gauge.
+The orientation of linear scale can be customized by using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Orientation) property of linear gauge. The default value is `Horizontal`.
 
 When the Orientation property is Vertical, the scale will be rendered in bottom-to-top direction.
 
@@ -84,14 +86,14 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Update orientation for axis scale](images/axis/linear_gauge_orientation.PNG)
+![Update orientation for axis scale in .NET MAUI Linear Gauge](images/axis/linear_gauge_orientation.PNG)
 
 ## Customize scale track style
 
 The linear scale track can be customized using the [`LineStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html) property. The [`LineStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html) has the following properties.
 
 * [`Thickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_Thickness) – Customizes the thickness of the scale track.
-* [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_Fill) – Customizes the color of the scale track with a solid color.
+* [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_Fill) – Customizes the color of the scale track with any `Brush` (solid or gradient).
 * [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_GradientStops) - Customizes the color of the scale track with a gradient.
 * [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerRadius) - Customizes the scale track edge corners.
 * [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) - Customizes the scale track edge style as flat or curve.
@@ -121,7 +123,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change axis track thickness in linear gauge](images/axis/axis_thickness.PNG)
+![Change axis track thickness in .NET MAUI Linear Gauge](images/axis/axis_thickness.PNG)
 
 ## Apply solid color
 
@@ -149,7 +151,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Apply color to axis in linear guage](images/axis/axis_solid_color.PNG)
+![Apply color to axis in .NET MAUI Linear Gauge](images/axis/axis_solid_color.PNG)
 
 ## Apply gradient
 
@@ -185,7 +187,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Apply color to axis in linear guage](images/axis/axis_gradient.PNG)
+![Apply color to axis in linear gauge](images/axis/axis_gradient.PNG)
 
 ## Customize corners
 
@@ -245,7 +247,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ![Change axis track edge style](images/axis/axis_corner_radius.PNG)
 
-N> If you set both [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) and [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerRadius) in the [`LineStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html), [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) will be first priority for scale. 
+N> If you set both [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) and [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerRadius) in the [`LineStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html), [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) takes precedence over [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerRadius) for the scale. 
 
 ## Inverse the scale
 
@@ -273,7 +275,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 You can see that the scale values are displayed from 100 to 0 as the scale track is inversed.
 
-![Inverse linear gauge for axis](images/axis/axis_inversed.PNG)
+![Inverse .NET MAUI Linear Gauge for axis](images/axis/axis_inversed.PNG)
 
 ## Change scale track visibility
 
@@ -298,20 +300,27 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Hide linear gauge axis track](images/axis/hide_axis_track.PNG)
+![Hide .NET MAUI Linear Gauge axis track](images/axis/hide_axis_track.PNG)
 
-## Customize scale values
+## Customize scale values (logarithmic scale example)
 
-Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the [`GenerateVisibleLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_GenerateVisibleLabels), [`ValueToFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_ValueToFactor_System_Double_), and [`FactorToValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_FactorToValue_System_Double_) callbacks.
+Linear gauge allows you to display a set of values along with a custom scale based on your business logic. This is useful for scenarios such as a logarithmic scale. To do this, override the [`GenerateVisibleLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_GenerateVisibleLabels), [`ValueToFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_ValueToFactor_System_Double_), and [`FactorToValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_FactorToValue_System_Double_) methods of [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html).
+
+The [`GenerateVisibleLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_GenerateVisibleLabels) method returns a list of [`GaugeLabelInfo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelInfo.html) objects, where each `GaugeLabelInfo` has a `Value` (the scale value) and `Text` (the display text) property.
+
+N> Ensure that `GenerateVisibleLabels` is called before `ValueToFactor` or `FactorToValue`, as the latter two depend on values computed during label generation.
+
+Create a subclass of `SfLinearGauge` and override the methods as shown below.
 
 {% tabs %}
 
 {% highlight xaml %}
 
+ <!-- code omitted for brevity -->
  <local:LinearGauge Minimum="1" Maximum="10000">
-                <gauge:SfLinearGauge.MarkerPointers>
+                <local:LinearGauge.MarkerPointers>
                     <gauge:LinearShapePointer Value="1000" />
-                </gauge:SfLinearGauge.MarkerPointers>
+                </local:LinearGauge.MarkerPointers>
             </local:LinearGauge>
 
 {% endhighlight %}
@@ -320,7 +329,7 @@ Linear gauge allows you to display a set of values along with a custom scale bas
 
 public class LinearGauge : SfLinearGauge
 {
-    int labelsCount;
+    int labelsCount = 1;
     public override List<GaugeLabelInfo> GenerateVisibleLabels()
     {
         List<GaugeLabelInfo> labelInfos = new List<GaugeLabelInfo>();
