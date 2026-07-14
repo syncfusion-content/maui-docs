@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right To Left FlowDirection in .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
-description: Learn about Right To Left support in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase
+title: Right-to-Left FlowDirection in .NET MAUI DataForm | Syncfusion®
+description: Learn about Right-to-Left (RTL) support in Syncfusion® .NET MAUI DataForm (SfDataForm) for mobile and desktop apps using a shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
