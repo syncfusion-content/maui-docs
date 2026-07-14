@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of .NET MAUI DataForm control | Syncfusion
-description: Learn about the introduction of Syncfusion<sup>&reg;</sup> .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications.
+title: Overview of .NET MAUI DataForm control | Syncfusion®
+description: Learn about the introduction of Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
  
 # Overview of .NET MAUI DataForm (SfDataForm)
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) (SfDataForm) control is used to create or edit data form such as login, reservation, contact, employee form and more based on the business purpose. 
+The Syncfusion<sup>&reg;</sup> [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) (SfDataForm) control is used to create or edit forms such as login, reservation, contact, and employee forms for business purposes.
 
-![.NET MAUI dataform overview ](images/overview/dataform_overview.png)
+![.NET MAUI DataForm overview](images/overview/dataform_overview.png)
 
 ## Business use cases
 
@@ -22,12 +22,12 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI DataForm](https://www.syncfusion.com/m
 
 ## Key features
 
-- **Built-in editor support** allows using predefined editors such as text, password, multiline, combo box, autocomplete, date, time, checkbox, switch, and radio group based on data types.  
-- **Custom editor support** allows adding custom input controls when default editors do not meet specific requirements.  
-- **Validation** allows validating user input and displaying messages to ensure accurate data entry.  
-- **Commit mode configuration** allows controlling when user input is committed to the underlying data object.  
-- **Flexible layout and grouping** allows arranging fields using linear or grid layouts and organizing them into logical sections.  
-- **Appearance customization** allows styling editors, labels, and group headers to match application themes.  
+- **Built-in editor support** allows using predefined editors such as text, password, multiline, combo box, autocomplete, date, time, checkbox, switch, and radio group based on data types.
+- **Custom editor support** allows adding custom input controls when the default editors do not meet specific requirements.
+- **Validation** allows validating user input and displaying messages to ensure accurate data entry.
+- **Commit mode configuration** allows controlling when user input is committed to the underlying data object.
+- **Flexible layout and grouping** allows arranging fields using linear or grid layouts and organizing them into logical sections.
+- **Appearance customization** allows styling editors, labels, and group headers to match application themes.
 
 ## Globalization
 
