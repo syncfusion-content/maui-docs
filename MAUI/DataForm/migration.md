@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Xamarin to .NET MAUI DataForm (SfDataForm) | Syncfusion<sup>&reg;</sup>
-description: Learn about Migrating from Syncfusion<sup>&reg;</sup> Xamarin.Forms DataForm to Syncfusion .NET MAUI DataForm control.
+description: Learn about migrating from Syncfusion<sup>&reg;</sup> Xamarin.Forms DataForm to Syncfusion<sup>&reg;</sup> .NET MAUI DataForm control.
 platform: MAUI
 control: SfDataForm
 documentation: ug
@@ -22,7 +22,7 @@ To make the migration from the [Xamarin SfDataForm](https://www.syncfusion.com/x
 <td>Syncfusion.Maui.DataForm</td></tr>
 </table>
 
-## Initialize control
+## Initialize the control
 
 To initialize the control, import the DataForm namespace and initialize the `SfDataForm` as shown in the following code sample.
 
@@ -299,7 +299,7 @@ public class DataModel
 <tr>
 <td>{{'[DataObject](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_DataObject)'| markdownify }}</td>
 <td>{{'[DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject)'| markdownify }}</td>
-<td>Gets or sets the value which is used to set the editors to the data form.</td>
+<td>Gets or sets the value used to set the editors to the data form.</td>
 </tr>
 
 <tr>
@@ -323,7 +323,7 @@ public class DataModel
 <tr>
 <td>{{'[Items](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_Items)'| markdownify }}</td>
 <td>{{'[Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items)'| markdownify }}</td>
-<td>Gets or sets the value which used to set the DataFormViewItem collection in the SfDataForm.</td>
+<td>Gets or sets the value used to set the DataFormViewItem collection in the SfDataForm.</td>
 </tr>
 
 <tr>
@@ -347,7 +347,7 @@ public class DataModel
 <tr>
 <td>{{'[ItemManager](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_ItemManager)'| markdownify }}</td>
 <td>{{'[ItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ItemManager)'| markdownify }}</td>
-<td>Get or set the item manager.</td>
+<td>Gets or sets the item manager.</td>
 </tr>
 
 <tr>
@@ -923,31 +923,31 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <tr>
 <td>{{'[AllowNull](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericItemBase.html#Syncfusion_XForms_DataForm_DataFormNumericItemBase_AllowNull)'| markdownify }}</td>
 <td>{{'[AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html#Syncfusion_Maui_DataForm_DataFormNumericItem_AllowNull)'| markdownify }}</td>
-<td>Get or set a value indicating whether the DataFormNumericEditor allows a null value or not.</td>
+<td>Gets or sets a value indicating whether the DataFormNumericEditor allows a null value or not.</td>
 </tr>
 
 <tr>
 <td>{{'[FormatString](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericItemBase.html#Syncfusion_XForms_DataForm_DataFormNumericItemBase_FormatString)'| markdownify }}</td>
 <td>{{'[CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html#Syncfusion_Maui_DataForm_DataFormNumericItem_CustomFormat)'| markdownify }}</td>
-<td>Get or set the format used to specify the formatting of the editor value.</td>
+<td>Gets or sets the format used to specify the formatting of the editor value.</td>
 </tr>
 
 <tr>
 <td>{{'[Maximum](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericUpDownItem.html#Syncfusion_XForms_DataForm_DataFormNumericUpDownItem_Maximum)'| markdownify }}</td>
 <td>{{'[Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html#Syncfusion_Maui_DataForm_DataFormNumericItem_Maximum)'| markdownify }}</td>
-<td>Get or set the numerical maximum value for DataFormNumericEditor.</td>
+<td>Gets or sets the numerical maximum value for DataFormNumericEditor.</td>
 </tr>
 
 <tr>
 <td>{{'[Minimum](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericUpDownItem.html#Syncfusion_XForms_DataForm_DataFormNumericUpDownItem_Minimum)'| markdownify }}</td>
 <td>{{'[Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html#Syncfusion_Maui_DataForm_DataFormNumericItem_Minimum)'| markdownify }}</td>
-<td>Get or set the numerical minimum value for DataFormNumericEditor.</td>
+<td>Gets or sets the numerical minimum value for DataFormNumericEditor.</td>
 </tr>
 
 <tr>
 <td>{{'[CultureInfo](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericItemBase.html#Syncfusion_XForms_DataForm_DataFormNumericItemBase_CultureInfo)'| markdownify }}</td>
 <td>{{'[Culture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html#Syncfusion_Maui_DataForm_DataFormNumericItem_Culture)'| markdownify }}</td>
-<td>Get or set the culture for DataFormNumericEditor.</td>
+<td>Gets or sets the culture for DataFormNumericEditor.</td>
 </tr>
 
 </table>
@@ -963,31 +963,31 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <tr>
 <td>{{'[CultureInfo](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_CultureInfo)'| markdownify }}</td>
 <td>{{'[Culture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html#Syncfusion_Maui_DataForm_DataFormMaskedTextItem_Culture)'| markdownify }}</td>
-<td>Get or set the culture for mask values based on the given culture.</td>
+<td>Gets or sets the culture for mask values based on the given culture.</td>
 </tr>
 
 <tr>
 <td>{{'[Mask](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_Mask)'| markdownify }}</td>
 <td>{{'[Mask](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html#Syncfusion_Maui_DataForm_DataFormMaskedTextItem_Mask)'| markdownify }}</td>
-<td>Get or set the mask value which restricts the inputs provided in the control.</td>
+<td>Gets or sets the mask value which restricts the inputs provided in the control.</td>
 </tr>
 
 <tr>
 <td>{{'[MaskType](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_MaskType)'| markdownify }}</td>
 <td>{{'[MaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html#Syncfusion_Maui_DataForm_DataFormMaskedTextItem_MaskType)'| markdownify }}</td>
-<td>Get or set the mask type for the DataFormMaskedTextEditor.</td>
+<td>Gets or sets the mask type for the DataFormMaskedTextEditor.</td>
 </tr>
 
 <tr>
 <td>{{'[PromptChar](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_PromptChar)'| markdownify }}</td>
 <td>{{'[PromptChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html#Syncfusion_Maui_DataForm_DataFormMaskedTextItem_PromptChar)'| markdownify }}</td>
-<td>Get or set a char which is used as a prompt char of DataFormMaskedTextEditor.</td>
+<td>Gets or sets a char which is used as a prompt char of DataFormMaskedTextEditor.</td>
 </tr>
 
 <tr>
 <td>{{'[ValueMaskFormat](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_ValueMaskFormat)'| markdownify }}</td>
 <td>{{'[ValueMaskFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html#Syncfusion_Maui_DataForm_DataFormMaskedTextItem_ValueMaskFormat)'| markdownify }}</td>
-<td>Get or set the format for the value.</td>
+<td>Gets or sets the format for the value.</td>
 </tr>
 
 </table>
@@ -1003,7 +1003,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <tr>
 <td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormDateItem.html#Syncfusion_XForms_DataForm_DataFormDateItem_Format)'| markdownify }}</td>
 <td>{{'[Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html#Syncfusion_Maui_DataForm_DataFormDateItem_Format)'| markdownify }}</td>
-<td>Gets or sets the time format for time picker.</td>
+<td>Gets or sets the time format for the time picker.</td>
 </tr>
 
 <tr>
