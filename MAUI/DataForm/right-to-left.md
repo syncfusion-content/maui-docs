@@ -7,12 +7,12 @@ control: SfDataForm
 documentation: ug
 ---
 
-# Right To Left Flow Direction in .NET MAUI DataForm (SfDataForm)
+# Right-to-Left Flow Direction in .NET MAUI DataForm (SfDataForm)
 
-The `SfDataForm` supports changing the flow direction of the text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft`.
+The `SfDataForm` supports right-to-left text flow by setting the `FlowDirection` to `RightToLeft`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.xaml" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -23,7 +23,7 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 SfDataForm dataForm = new SfDataForm();
 dataForm.FlowDirection = FlowDirection.RightToLeft;
@@ -32,4 +32,4 @@ this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 
-![Right to left in .NET MAUI DataForm.](images/right-to-left/right-to-left.png)
+![Right-to-left in .NET MAUI DataForm.](images/right-to-left/right-to-left.png)
