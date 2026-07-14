@@ -35,7 +35,7 @@ You can style the elements of the [.NET MAUI Smart Scheduler](https://www.syncfu
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# hl_lines="7 8 9 10 11 12 13" %}
 
 using Syncfusion.Maui.SmartScheduler;
 

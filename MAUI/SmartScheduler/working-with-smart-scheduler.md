@@ -19,11 +19,12 @@ The assist button interaction and the default appearance of assist button can be
 The assist button interaction can be enabled or disabled by setting the [EnableAssistButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.SfSmartScheduler.html#Syncfusion_Maui_SmartScheduler_SfSmartScheduler_EnableAssistButton) property of the [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.html) control. By default, the [EnableAssistButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.SfSmartScheduler.html#Syncfusion_Maui_SmartScheduler_SfSmartScheduler_EnableAssistButton) property is set to true.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="5" %}
 <ContentPage   
     . . .
     xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartScheduler;assembly=Syncfusion.Maui.SmartScheduler">
-    <smartScheduler:SfSmartScheduler x:Name="smartScheduler" EnableAssistButton="False"/>
+    <smartScheduler:SfSmartScheduler x:Name="smartScheduler" 
+                                     EnableAssistButton="False"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -51,16 +52,16 @@ The assist button appearance can be customized by using the [AssistButtonTemplat
     xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartScheduler;assembly=Syncfusion.Maui.SmartScheduler">
     <smartScheduler:SfSmartScheduler x:Name="Scheduler">
         <smartScheduler:SfSmartScheduler.AssistButtonTemplate>
-        <DataTemplate>
-            <Grid BackgroundColor="#6750A4">
-                <Label Text="AI"
-                    FontAttributes="Bold"
-                    TextColor="#FFFFFF"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center" />
-            </Grid>
-        </DataTemplate>
-    </smartScheduler:SfSmartScheduler.AssistButtonTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="#6750A4">
+                    <Label Text="AI"
+                        FontAttributes="Bold"
+                        TextColor="#FFFFFF"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+        </smartScheduler:SfSmartScheduler.AssistButtonTemplate>
     </smartScheduler:SfSmartScheduler>
 </ContentPage>
 
@@ -283,6 +284,22 @@ The assist view suggested prompts can be customized by using the [SuggestedPromp
 </ContentPage>
 
 {% endhighlight %}
+{% highlight C# hl_lines="6 7 8 9 10 11" %}
+
+using Syncfusion.Maui.SmartScheduler;
+
+. . .
+ SfSmartScheduler smartScheduler = new SfSmartScheduler();
+ smartScheduler.AssistViewSettings.ShowAssistViewBanner = true;
+ smartScheduler.AssistViewSettings.SuggestedPrompts = new List<string>
+ {
+    "Summarize today's appointments",
+    "Find today's free timeslots",
+    "Conflict detection"
+ };
+ this.Content = smartScheduler;
+
+{% endhighlight %}
 {% highlight C# tabtitle="ViewModel.cs" %}
 
 public class ViewModel
@@ -305,22 +322,6 @@ public class ViewModel
         };
     }
 }
-
-{% endhighlight %}
-{% highlight C# hl_lines="6 7 8 9 10 11" %}
-
-using Syncfusion.Maui.SmartScheduler;
-
-. . .
- SfSmartScheduler smartScheduler = new SfSmartScheduler();
- smartScheduler.AssistViewSettings.ShowAssistViewBanner = true;
- smartScheduler.AssistViewSettings.SuggestedPrompts = new List<string>
- {
-    "Summarize today's appointments",
-    "Find today's free timeslots",
-    "Conflict detection"
- };
- this.Content = smartScheduler;
 
 {% endhighlight %}
 {% endtabs %}
