@@ -15,12 +15,21 @@ It allows you to navigate using the Dates programmatically in the calendar contr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
 
@@ -35,12 +44,21 @@ It allows you to navigate using the views programmatically in the calendar contr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.View = CalendarView.Month;
 
@@ -57,13 +75,22 @@ The following code shows when the [AllowViewNavigation](https://help.syncfusion.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         AllowViewNavigation="True">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.AllowViewNavigation = true;
 
@@ -78,13 +105,22 @@ The following code shows the Navigation by using `NavigateToAdjacentMonth` prope
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         NavigateToAdjacentMonth="true">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.NavigateToAdjacentMonth = true;
 
@@ -105,19 +141,26 @@ The `Forward` navigation allows you to view the next immediate date of the calen
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Calendar:SfCalendar x:Name="calendar"
+        <calendar:SfCalendar x:Name="calendar"
                              View="Month" />
         <Button x:Name="button" Grid.Row="1" Text="Forward"
                 Clicked="button_Clicked" />
-</Grid>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 private void button_Clicked(object sender, EventArgs e)
 {
@@ -133,19 +176,26 @@ The `Backward` navigation allows you to view the immediate previous date of the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Calendar:SfCalendar x:Name="calendar"
+        <calendar:SfCalendar x:Name="calendar"
                              View="Month" />
         <Button x:Name="button" Grid.Row="1" Text="Backward"
                 Clicked="button_Clicked" />
-</Grid>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 private void button_Clicked(object sender, EventArgs e)
 {
@@ -163,13 +213,22 @@ The following code shows the Navigation in the `Horizontal` direction.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         NavigationDirection="Horizontal">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
 
@@ -184,15 +243,24 @@ By using the `ShowNavigationArrows` property of the `Calendar`, you can navigate
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                         View="Month">
-                        <calendar:SfCalendar.HeaderView>
-                            <calendar:CalendarHeaderView ShowNavigationArrows="False" />
-                        </calendar:SfCalendar.HeaderView>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.HeaderView>
+            <calendar:CalendarHeaderView ShowNavigationArrows="False" />
+        </calendar:SfCalendar.HeaderView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.HeaderView.ShowNavigationArrows = false;
 

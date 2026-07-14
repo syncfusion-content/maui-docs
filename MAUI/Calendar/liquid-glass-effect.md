@@ -69,6 +69,9 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+using Syncfusion.Maui.Calendar;
+. . .
+
 // Outer grid with gradient background
 var mainGrid = new Grid()
 {

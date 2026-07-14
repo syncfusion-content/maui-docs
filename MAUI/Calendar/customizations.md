@@ -31,17 +31,26 @@ You can customize the calendar month view cell by using the `MonthView` property
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         Background="PaleGreen">
-            <Calendar:SfCalendar.MonthView>
-                <Calendar:CalendarMonthView
+        <calendar:SfCalendar.MonthView>
+            <calendar:CalendarMonthView
                 TodayBackground="Pink" DisabledDatesBackground="Grey" SpecialDatesBackground="#FFEFD2" WeekendDatesBackground="#E2F9F3"/>
-            </Calendar:SfCalendar.MonthView>
-</calendar:SfCalendar>
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+        using Syncfusion.Maui.Calendar;
+        . . .
 
         CalendarTextStyle textStyle = new CalendarTextStyle()
         {
@@ -95,11 +104,20 @@ You can customize the calendar month view cell by using the `MonthView` property
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"  View="Month">
-</calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"  View="Month">
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.MonthView.SpecialDayPredicate = (date) =>
 {
@@ -169,11 +187,20 @@ this.calendar.MonthView.SpecialDayPredicate = (date) =>
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"  View="Month">
-</calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"  View="Month">
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class MainPage : ContentPage
 {
@@ -254,16 +281,25 @@ You can customize the calendar `year`, `decade`, and `century` views by using th
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Decade"
                         Background="PaleGreen">
-            <Calendar:SfCalendar.YearView>
-                <Calendar:CalendarYearView TodayBackground="Pink" DisabledDatesBackground="Grey" LeadingDatesBackground="Red" />
-            </Calendar:SfCalendar.YearView>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.YearView>
+            <calendar:CalendarYearView TodayBackground="Pink" DisabledDatesBackground="Grey" LeadingDatesBackground="Red" />
+        </calendar:SfCalendar.YearView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+        using Syncfusion.Maui.Calendar;
+        . . .
 
         CalendarTextStyle textStyle = new CalendarTextStyle()
         {
@@ -302,15 +338,24 @@ You can customize the format used to display each month in the `Calendar` by usi
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                       View="Year">
-            <Calendar:SfCalendar.YearView>
-                <Calendar:CalendarYearView MonthFormat="MMMM" />
-            </Calendar:SfCalendar.YearView>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.YearView>
+            <calendar:CalendarYearView MonthFormat="MMMM" />
+        </calendar:SfCalendar.YearView>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.YearView = new CalendarYearView()
 {
@@ -339,14 +384,23 @@ You can customize the selection cell background and text style in Month, Year, D
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                       View="Month"
                       Background="PaleGreen"
                       StartRangeSelectionBackground="Purple" EndRangeSelectionBackground="Purple" SelectionBackground="Pink">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+        using Syncfusion.Maui.Calendar;
+        . . .
 
         CalendarTextStyle textStyle = new CalendarTextStyle()
         {
@@ -375,29 +429,36 @@ The month cell appearance can be customized using the [CellTemplate](https://hel
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
-        <calendar:SfCalendar x:Name="calendar"
-                                ShowTrailingAndLeadingDates="False"
-                                NavigationDirection="Horizontal"
-                                TodayHighlightBrush="#0A3A74"
-                                AllowViewNavigation="False">
-            <calendar:SfCalendar.MonthView>
-                <calendar:CalendarMonthView CellTemplate="{Binding Template}">
-                    <calendar:CalendarMonthView.HeaderView>
-                        <calendar:CalendarMonthHeaderView Background="#F1F7FF"/>
-                    </calendar:CalendarMonthView.HeaderView>
-                </calendar:CalendarMonthView>
-            </calendar:SfCalendar.MonthView>
-            <calendar:SfCalendar.BindingContext>
-                <local:MonthTemplate/>
-            </calendar:SfCalendar.BindingContext>
-        </calendar:SfCalendar>
-    </Frame>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
+            <calendar:SfCalendar x:Name="calendar"
+                                    ShowTrailingAndLeadingDates="False"
+                                    NavigationDirection="Horizontal"
+                                    TodayHighlightBrush="#0A3A74"
+                                    AllowViewNavigation="False">
+                <calendar:SfCalendar.MonthView>
+                    <calendar:CalendarMonthView CellTemplate="{Binding Template}">
+                        <calendar:CalendarMonthView.HeaderView>
+                            <calendar:CalendarMonthHeaderView Background="#F1F7FF"/>
+                        </calendar:CalendarMonthView.HeaderView>
+                    </calendar:CalendarMonthView>
+                </calendar:SfCalendar.MonthView>
+                <calendar:SfCalendar.BindingContext>
+                    <local:MonthTemplate/>
+                </calendar:SfCalendar.BindingContext>
+            </calendar:SfCalendar>
+        </Frame>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class MonthTemplate
 {
@@ -484,38 +545,45 @@ You can customize the month cell appearance using the [CellTemplate](https://hel
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="normalDateTemplate">
-            <Grid Background = "Pink" >
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="todayDateTemplate">
-            <Grid Background = "PaleGreen">
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="leadingTraililngDateTemplate">
-            <Grid Background = "Purple">
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
-            </Grid>
-        </DataTemplate>
-        <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" 
-                                         TodayDateTemplate="{StaticResource todayDateTemplate}" 
-                                         NormalDateTemplate="{StaticResource normalDateTemplate}" 
-                                         LeadingTrailingDateTemplate="{StaticResource leadingTraililngDateTemplate}"/>
-    </Grid.Resources>
-    <calendar:SfCalendar x:Name="calendar" 
-                        View="Month" >
-        <calendar:SfCalendar.MonthView>
-            <calendar:CalendarMonthView CellTemplate="{StaticResource monthCellTemplateSelector}" />
-        </calendar:SfCalendar.MonthView>
-    </calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="normalDateTemplate">
+                <Grid Background = "Pink" >
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="todayDateTemplate">
+                <Grid Background = "PaleGreen">
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="leadingTraililngDateTemplate">
+                <Grid Background = "Purple">
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
+                </Grid>
+            </DataTemplate>
+            <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" 
+                                             TodayDateTemplate="{StaticResource todayDateTemplate}" 
+                                             NormalDateTemplate="{StaticResource normalDateTemplate}" 
+                                             LeadingTrailingDateTemplate="{StaticResource leadingTraililngDateTemplate}"/>
+        </Grid.Resources>
+        <calendar:SfCalendar x:Name="calendar" 
+                            View="Month" >
+            <calendar:SfCalendar.MonthView>
+                <calendar:CalendarMonthView CellTemplate="{StaticResource monthCellTemplateSelector}" />
+            </calendar:SfCalendar.MonthView>
+        </calendar:SfCalendar>
     </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class MonthCellTemplateSelector : DataTemplateSelector
 {
@@ -541,6 +609,9 @@ public class MonthCellTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+using Syncfusion.Maui.Calendar;
+. . .
+
 this.calendar.View = CalendarView.Month;
 
 {% endhighlight %}
@@ -555,27 +626,34 @@ The year cell appearance can be customized using the [CellTemplate](https://help
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
-        <calendar:SfCalendar x:Name="calendar"
-                                View="Decade"
-                                ShowTrailingAndLeadingDates="False"
-                                NavigationDirection="Horizontal"
-                                TodayHighlightBrush="#0A3A74"
-                                AllowViewNavigation="False">
-            <calendar:SfCalendar.YearView>
-                <calendar:CalendarYearView CellTemplate="{Binding Template}">
-                </calendar:CalendarYearView>
-            </calendar:SfCalendar.YearView>
-            <calendar:SfCalendar.BindingContext>
-                <local:DecadeTemplate/>
-            </calendar:SfCalendar.BindingContext>
-        </calendar:SfCalendar>
-    </Frame>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
+            <calendar:SfCalendar x:Name="calendar"
+                                    View="Decade"
+                                    ShowTrailingAndLeadingDates="False"
+                                    NavigationDirection="Horizontal"
+                                    TodayHighlightBrush="#0A3A74"
+                                    AllowViewNavigation="False">
+                <calendar:SfCalendar.YearView>
+                    <calendar:CalendarYearView CellTemplate="{Binding Template}">
+                    </calendar:CalendarYearView>
+                </calendar:SfCalendar.YearView>
+                <calendar:SfCalendar.BindingContext>
+                    <local:DecadeTemplate/>
+                </calendar:SfCalendar.BindingContext>
+            </calendar:SfCalendar>
+        </Frame>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class DecadeTemplate
 {
@@ -662,38 +740,45 @@ You can customize the year cell appearance by using the [CellTemplate](https://h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="normalDateTemplate">
-            <Grid Background = "Pink" >
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="todayDateTemplate">
-            <Grid Background = "PaleGreen">
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="leadingDateTemplate">
-            <Grid Background = "Purple">
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
-            </Grid>
-        </DataTemplate>
-        <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" 
-                                         TodayDateTemplate="{StaticResource todayDateTemplate}" 
-                                         NormalDateTemplate="{StaticResource normalDateTemplate}" 
-                                         LeadingDateTemplate="{StaticResource leadingDateTemplate}"/>
-    </Grid.Resources>
-    <calendar:SfCalendar x:Name="calendar" 
-                        View="Decade">
-        <calendar:SfCalendar.YearView>
-            <calendar:CalendarYearView CellTemplate="{StaticResource yearCellTemplateSelector}" />
-        </calendar:SfCalendar.YearView>
-    </calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="normalDateTemplate">
+                <Grid Background = "Pink" >
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="todayDateTemplate">
+                <Grid Background = "PaleGreen">
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="leadingDateTemplate">
+                <Grid Background = "Purple">
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
+                </Grid>
+            </DataTemplate>
+            <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" 
+                                             TodayDateTemplate="{StaticResource todayDateTemplate}" 
+                                             NormalDateTemplate="{StaticResource normalDateTemplate}" 
+                                             LeadingDateTemplate="{StaticResource leadingDateTemplate}"/>
+        </Grid.Resources>
+        <calendar:SfCalendar x:Name="calendar" 
+                            View="Decade">
+            <calendar:SfCalendar.YearView>
+                <calendar:CalendarYearView CellTemplate="{StaticResource yearCellTemplateSelector}" />
+            </calendar:SfCalendar.YearView>
+        </calendar:SfCalendar>
     </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class YearCellTemplateSelector : DataTemplateSelector
 {
@@ -719,6 +804,9 @@ public class YearCellTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+using Syncfusion.Maui.Calendar;
+. . .
+
 this.calendar.View = CalendarView.Decade;
 
 {% endhighlight %}
@@ -733,15 +821,24 @@ The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.co
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar View="Month" WidthRequest="350" HeightRequest="400" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar View="Month" WidthRequest="350" HeightRequest="400" 
                         SelectionCellTemplate="{Binding Template}">
-    <calendar:SfCalendar.BindingContext>
-        <local:SelectionCellTemplateView/>
-    </calendar:SfCalendar.BindingContext>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.BindingContext>
+            <local:SelectionCellTemplateView/>
+        </calendar:SfCalendar.BindingContext>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 internal class SelectionCellTemplateView
 {
@@ -838,16 +935,25 @@ The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.co
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar View="Decade" AllowViewNavigation="False" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar View="Decade" AllowViewNavigation="False" 
                         WidthRequest="350" HeightRequest="400" 
                         SelectionCellTemplate="{Binding Template}">
-    <calendar:SfCalendar.BindingContext>
-        <local:SelectionCellTemplateView/>
-    </calendar:SfCalendar.BindingContext>
-</calendar:SfCalendar>
+        <calendar:SfCalendar.BindingContext>
+            <local:SelectionCellTemplateView/>
+        </calendar:SfCalendar.BindingContext>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 internal class SelectionCellTemplateView
 {
@@ -942,15 +1048,23 @@ The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://
 You can customize the corner radius of the calendar using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CornerRadius) property of the SfCalendar, allowing you to set the desired roundness for the corners of the calendar. The default value of the `CornerRadius` property is `20`.
 
 {% tabs %}  
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 
-<calendar:SfCalendar x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <calendar:SfCalendar x:Name="calendar" 
                      View="Month"
                      CornerRadius="15">
- </calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.CornerRadius = 15;
 

@@ -127,13 +127,23 @@ Create an instance for the Calendar control. The [.NET MAUI Calendar](https://he
 
 {% tabs %}
 {% highlight xaml %}
-<calendar:SfCalendar  x:Name="calendar" 
-                      View="Month">
-</calendar:SfCalendar>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" />
+
+</ContentPage>
 {% endhighlight %}
 {% highlight c# %}
+
+using Syncfusion.Maui.Calendar;
+. . .
+
 SfCalendar calendar = new SfCalendar();
 calendar.View = CalendarView.Month;
+this.Content = calendar;
+
 {% endhighlight %}
 {% endtabs %}
 

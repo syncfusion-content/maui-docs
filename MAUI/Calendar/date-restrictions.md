@@ -15,12 +15,21 @@ The [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+  using Syncfusion.Maui.Calendar;
+  . . .
 
   this.calendar.MinimumDate = DateTime.Now.AddDays(-5);
 
@@ -35,12 +44,21 @@ The [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.MaximumDate = DateTime.Now.AddDays(5);
 
@@ -55,13 +73,22 @@ Use the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ca
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         EnablePastDates="false">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.EnablePastDates = false;
 
@@ -76,12 +103,21 @@ The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectableDayPredicate = (date) =>
 {

@@ -18,13 +18,22 @@ The `Single` selection can be performed in the Calendar by setting the `Calendar
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Single">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionMode = CalendarSelectionMode.Single;
 
@@ -48,13 +57,22 @@ The `Multiple` selection can be performed in the Calendar by setting the `Calend
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Multiple">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
@@ -70,13 +88,22 @@ The `Range` selection can be performed in the Calendar by setting the `CalendarS
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionMode = CalendarSelectionMode.Range;
 
@@ -102,14 +129,23 @@ If you set the `RangeSelectionDirection` property to `Forward`, you can select o
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Forward">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionMode = CalendarSelectionMode.Range;
 this.calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Forward;
@@ -125,14 +161,23 @@ If you set the `RangeSelectionDirection` property to `Backward`, you can select 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Backward">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionMode = CalendarSelectionMode.Range;
 this.calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward;
@@ -148,14 +193,23 @@ If you set the `RangeSelectionDirection` property to `Both`, you can extend the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Both">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionMode = CalendarSelectionMode.Range;
 this.calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Both;
@@ -171,14 +225,23 @@ If you set the `RangeSelectionDirection` property to `None`, you can select only
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="None">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionMode = CalendarSelectionMode.Range;
 this.calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.None;
@@ -194,13 +257,22 @@ The `MultiRange` selection can be performed in the Calendar by setting the `Cale
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="MultiRange">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionMode = CalendarSelectionMode.MultiRange;
 
@@ -215,13 +287,22 @@ The selected date is rendered based on the `SelectionShape` property. The defaul
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                       View="Month"
                       SelectionShape="Rectangle">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionShape = CalendarSelectionShape.Rectangle;
 
@@ -236,13 +317,22 @@ You can select the dates by swiping using the `EnableSwipeSelection` property. B
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                       View="Month"
                       EnableSwipeSelection="true">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.EnableSwipeSelection = true;
 
@@ -255,13 +345,22 @@ You can deselect the date by using the `CanToggleDaySelection` property. By defa
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                       View="Month"
                       CanToggleDaySelection="true">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.CanToggleDaySelection = true;
 
