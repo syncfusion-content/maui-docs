@@ -1418,4 +1418,3 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Customize time ruler text style in .NET MAUI Scheduler](images/day-week-views/customize-time-ruler-text-style-in-net-maui-scheduler.png)
-

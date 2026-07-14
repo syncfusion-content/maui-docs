@@ -128,43 +128,6 @@ Selecting `Edit` opens the editor filled in with the current appointment details
  
 When the scheduler is bound to a data source, the updated values are automatically reflected in the underlying data object.
 
-{% tabs %}
-{% highlight xaml tabtitle="XAML" %}
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler x:Name="scheduler"
-                           View="Day"
-                           AppointmentEditorMode="Add,Edit"
-                           ItemsSource="{Binding Appointments}">
-        <scheduler:SfScheduler.Appointments>
-            <scheduler:SchedulerAppointmentMapping
-                     Subject="EventName"
-                     StartTime="From"
-                     EndTime="To" />
-        </scheduler:SfScheduler.Appointments>
-    </scheduler:SfScheduler>
-</ContentPage>
-{% endhighlight %}
-{% highlight c# tabtitle="C#" %}
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
-
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        var appointments = new ObservableCollection<SchedulerAppointment>();
-        // Assign SchedulerAppointment properties (Subject, StartTime, EndTime, etc.)
-        this.scheduler.ItemsSource = appointments;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
 ### Editing recurring appointment
 
 When editing a recurring appointment, a dialog appears requesting confirmation on whether to modify:

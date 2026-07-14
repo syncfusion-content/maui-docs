@@ -43,7 +43,6 @@ public partial class MainPage : ContentPage
 N>
 - Appointment resizing is supported only on desktop platforms.
 - Resizing works exclusively through mouse interactions, using the built‑in mouse resize cursors of the native platform.
-- The resize handles appear only on appointments added through the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) collection or appointments bound through the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property. Ensure `AllowAppointmentResize` is set to `true` if resize does not trigger.
 
 ## Appointment Resize Settings
 
@@ -122,7 +121,7 @@ N>
 
 ### Time Indicator Text Format
 
-The format of the time displayed in the time indicator while resizing an appointment can be customized using the [TimeIndicatorTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_TimeIndicatorTextFormat) property. The default value is `hh:mm tt`. Use standard .NET [date and time format strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings).
+The format of the time displayed in the time indicator while resizing an appointment can be customized using the [TimeIndicatorTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_TimeIndicatorTextFormat) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="8" %}
@@ -346,28 +345,6 @@ The [AppointmentResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusio
 - [Resource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_Resource) : Indicates the resource linked to the appointment when resource grouping is applied.
 - [ResizeEdge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_ResizeEdge) : Specifies the edge used for resizing the appointment. The values include Top, Bottom, Left, and Right.
 - [ResizingTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_ResizingTime) : Represents the date time value that corresponds to the current resize position.
-
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-using Syncfusion.Maui.Scheduler;
-
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-    }
-
-    private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEventArgs e)
-    {
-        var appointment = e.Appointment;
-        var resizeEdge = e.ResizeEdge;
-        var resizingTime = e.ResizingTime;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
 
 ### Appointment Resize End
 

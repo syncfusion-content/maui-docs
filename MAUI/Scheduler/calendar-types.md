@@ -152,4 +152,3 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet2 | UnOrderList_Indent_Level_1 }}
-
