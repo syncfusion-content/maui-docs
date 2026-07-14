@@ -12,13 +12,32 @@ Appointments can be rescheduled using the drag-and-drop operation. To perform dr
 
 {% tabs %}
 {% highlight xaml %}
-<scheduler:SfScheduler x:Name="scheduler"
-                       View="Week" 
-                       AllowAppointmentDrag="false">        
-</scheduler:SfScheduler>
+
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler"
+                           View="Week" 
+                           AllowAppointmentDrag="false">        
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
-this.scheduler.AllowAppointmentDrag = false;
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.scheduler.AllowAppointmentDrag = false;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,33 +55,53 @@ You can get the appointment details and handle whether the appointment can be dr
 
 {% tabs %}
 {% highlight c# %}
-scheduler.AppointmentDragStarting += OnSchedulerAppointmentDragStarting;
 
-...
+using Syncfusion.Maui.Scheduler;
 
-private void OnSchedulerAppointmentDragStarting(object? sender, AppointmentDragStartingEventArgs e)
+. . .
+public partial class MainPage : ContentPage
 {
-    var appointment = e.Appointment;
-    e.Cancel = false;
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.AppointmentDragStarting += OnSchedulerAppointmentDragStarting;
+    }
+
+    private void OnSchedulerAppointmentDragStarting(object? sender, AppointmentDragStartingEventArgs e)
+    {
+        var appointment = e.Appointment;
+        e.Cancel = false;
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
 Refer to the below code to cancel the all-day appointment dragging.
 {% tabs %}
 {% highlight c# %}
-scheduler.AppointmentDragStarting += OnSchedulerAppointmentDragStarting;
 
-...
+using Syncfusion.Maui.Scheduler;
 
-private void OnSchedulerAppointmentDragStarting(object? sender, AppointmentDragStartingEventArgs e)
+. . .
+public partial class MainPage : ContentPage
 {
-    var appointment = e.Appointment as SchedulerAppointment;
-    if (appointment.IsAllDay)
+    public MainPage()
     {
-        e.Cancel = true;
+        InitializeComponent();
+        scheduler.AppointmentDragStarting += OnSchedulerAppointmentDragStarting;
+    }
+
+    private void OnSchedulerAppointmentDragStarting(object? sender, AppointmentDragStartingEventArgs e)
+    {
+        var appointment = e.Appointment as SchedulerAppointment;
+        if (appointment.IsAllDay)
+        {
+            e.Cancel = true;
+        }
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,16 +117,26 @@ You can handle the dragging appointment details, position, and time of the parti
 
 {% tabs %}
 {% highlight c# %}
-scheduler.AppointmentDragOver += OnSchedulerAppointmentDragOver;
 
-...
+using Syncfusion.Maui.Scheduler;
 
-private void OnSchedulerAppointmentDragOver(object? sender, AppointmentDragOverEventArgs e)
+. . .
+public partial class MainPage : ContentPage
 {
-    var appointment = e.Appointment;
-    var draggingPoint = e.DragPoint;
-    var draggingTime = e.DragTime;
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.AppointmentDragOver += OnSchedulerAppointmentDragOver;
+    }
+
+    private void OnSchedulerAppointmentDragOver(object? sender, AppointmentDragOverEventArgs e)
+    {
+        var appointment = e.Appointment;
+        var draggingPoint = e.DragPoint;
+        var draggingTime = e.DragTime;
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,15 +151,24 @@ Using the [AppointmentDrop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% tabs %}
 {% highlight c# %}
-scheduler.AppointmentDrop += OnSchedulerAppointmentDrop;
 
-...
+using Syncfusion.Maui.Scheduler;
 
-private void OnSchedulerAppointmentDrop(object? sender, AppointmentDropEventArgs e)
+. . .
+public partial class MainPage : ContentPage
 {
-    var appointment = e.Appointment;
-    e.Cancel = false;
-    var dropTime = e.DropTime;
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.AppointmentDrop += OnSchedulerAppointmentDrop;
+    }
+
+    private void OnSchedulerAppointmentDrop(object? sender, AppointmentDropEventArgs e)
+    {
+        var appointment = e.Appointment;
+        e.Cancel = false;
+        var dropTime = e.DropTime;
+    }
 }
 
 {% endhighlight %}
@@ -122,14 +180,24 @@ You can prevent appointments from being dropped into the all-day panel by checki
 
 {% tabs %}
 {% highlight c# %}
-scheduler.AppointmentDrop += OnSchedulerAppointmentDrop;
-...
 
-private void OnSchedulerAppointmentDrop(object? sender, AppointmentDropEventArgs e)
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    if (e.IsDroppingToAllDay)
+    public MainPage()
     {
-        e.Cancel = true;
+        InitializeComponent();
+        scheduler.AppointmentDrop += OnSchedulerAppointmentDrop;
+    }
+
+    private void OnSchedulerAppointmentDrop(object? sender, AppointmentDropEventArgs e)
+    {
+        if (e.IsDroppingToAllDay)
+        {
+            e.Cancel = true;
+        }
     }
 }
 
@@ -141,26 +209,45 @@ You can change the appointment of drag and drop settings in Scheduler by using t
 
 {% tabs %}
 {% highlight xaml %}
-<scheduler:SfScheduler x:Name="scheduler"
-                       ShowBusyIndicator="True"
-                       AppointmentsSource="{Binding DragEvents}"
-                       View="Week"
-                       DisplayDate="{Binding DisplayDate}"
-                       AllowedViews="Day,Week,WorkWeek,Month">
+
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler"
+                           ShowBusyIndicator="True"
+                           AppointmentsSource="{Binding DragEvents}"
+                           View="Week"
+                           DisplayDate="{Binding DisplayDate}"
+                           AllowedViews="Day,Week,WorkWeek,Month">
         <scheduler:SfScheduler.DragDropSettings>
             <scheduler:DragDropSettings AllowNavigation="true" 
                                        AllowScroll="true" 
                                        ShowTimeIndicator="true"/>
         </scheduler:SfScheduler.DragDropSettings>
-</scheduler:SfScheduler>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
-scheduler.DragDropSettings = new DragDropSettings 
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    AllowNavigation = true,
-    AllowScroll = true,
-    ShowTimeIndicator = true,
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        scheduler.DragDropSettings = new DragDropSettings 
+        {
+            AllowNavigation = true,
+            AllowScroll = true,
+            ShowTimeIndicator = true,
+        };
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -169,17 +256,36 @@ Using the [AllowNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% tabs %}
 {% highlight xaml %}
-<schedule:SfScheduler x:Name="Scheduler"
-                      View="Week">
-<schedule:SfScheduler.DragDropSettings>
-    <schedule:DragDropSettings AllowNavigation="False">
-    </schedule:DragDropSettings>
-</schedule:SfScheduler.DragDropSettings>
-</schedule:SfScheduler>
+
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Week">
+        <scheduler:SfScheduler.DragDropSettings>
+            <scheduler:DragDropSettings AllowNavigation="False">
+            </scheduler:DragDropSettings>
+        </scheduler:SfScheduler.DragDropSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DragDropSettings.AllowNavigation = false;
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Week;
+        this.Scheduler.DragDropSettings.AllowNavigation = false;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -188,8 +294,20 @@ Using the [AutoNavigationDelay](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% tabs %}
 {% highlight c# %}
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DragDropSettings.AutoNavigationDelay = new TimeSpan(0, 0, 0, 0, 2000);
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Week;
+        this.Scheduler.DragDropSettings.AutoNavigationDelay = new TimeSpan(0, 0, 0, 0, 2000);
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -198,17 +316,36 @@ Using the [AllowScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sche
 
 {% tabs %}
 {% highlight xaml %}
-<schedule:SfScheduler x:Name="Scheduler"
-                      View="Week">
-<schedule:SfScheduler.DragDropSettings>
-    <schedule:DragDropSettings AllowScroll="False">
-    </schedule:DragDropSettings>
-</schedule:SfScheduler.DragDropSettings>
-</schedule:SfScheduler>
+
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Week">
+        <scheduler:SfScheduler.DragDropSettings>
+            <scheduler:DragDropSettings AllowScroll="False">
+            </scheduler:DragDropSettings>
+        </scheduler:SfScheduler.DragDropSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DragDropSettings.AllowScroll = false;
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Week;
+        this.Scheduler.DragDropSettings.AllowScroll = false;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -219,17 +356,36 @@ You can handle whether the drag and drop indicator should be displayed within th
 
 {% tabs %}
 {% highlight xaml %}
-<schedule:SfScheduler x:Name="Scheduler"
-                      View="Week">
-<schedule:SfScheduler.DragDropSettings>
-    <schedule:DragDropSettings ShowTimeIndicator="False">
-    </schedule:DragDropSettings>
-</schedule:SfScheduler.DragDropSettings>
-</schedule:SfScheduler>
+
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           View="Week">
+        <scheduler:SfScheduler.DragDropSettings>
+            <scheduler:DragDropSettings ShowTimeIndicator="False">
+            </scheduler:DragDropSettings>
+        </scheduler:SfScheduler.DragDropSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DragDropSettings.ShowTimeIndicator = false;
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Week;
+        this.Scheduler.DragDropSettings.ShowTimeIndicator = false;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -242,23 +398,42 @@ You can change the drag time indicator style by using the [TimeIndicatorStyle](h
 
 {% tabs %}
 {% highlight xaml %}
-<schedule:SfScheduler x:Name="scheduler" 
-                      ShowBusyIndicator="True"
-                      AppointmentsSource="{Binding DragEvents}"
-                      View="Week">
-        <schedule:SfScheduler.DragDropSettings>
-            <schedule:DragDropSettings 
-                TimeIndicatorStyle="{schedule:SchedulerTextStyle TextColor=Green}"/>
-        </schedule:SfScheduler.DragDropSettings>
-</schedule:SfScheduler>
+
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" 
+                           ShowBusyIndicator="True"
+                           AppointmentsSource="{Binding DragEvents}"
+                           View="Week">
+        <scheduler:SfScheduler.DragDropSettings>
+            <scheduler:DragDropSettings 
+                TimeIndicatorStyle="{scheduler:SchedulerTextStyle TextColor=Green}"/>
+        </scheduler:SfScheduler.DragDropSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
-this.Scheduler.View = SchedulerView.Week;
-var timeIndicatorStyle = new SchedulerTextStyle()
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-   TextColor = Colors.Green,
-};
-this.Scheduler.DragDropSettings.TimeIndicatorStyle = timeIndicatorStyle;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Week;
+        var timeIndicatorStyle = new SchedulerTextStyle()
+        {
+           TextColor = Colors.Green,
+        };
+        this.Scheduler.DragDropSettings.TimeIndicatorStyle = timeIndicatorStyle;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -267,8 +442,20 @@ You can change the drag time indicator format by using the [TimeIndicatorTextFor
 
 {% tabs %}
 {% highlight c# %}
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DragDropSettings.TimeIndicatorTextFormat = "hh:mm";
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.Scheduler.View = SchedulerView.Week;
+        this.Scheduler.DragDropSettings.TimeIndicatorTextFormat = "hh:mm";
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 

@@ -135,28 +135,38 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {% tabs %}
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                       View="Week"
-                       DisplayDate="{Binding DisplayDate}"
-                       AppointmentsSource="{Binding Events}"
-                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
-        <scheduler:SfScheduler.BindingContext>
-            <local:SchedulerViewModel />
-        </scheduler:SfScheduler.BindingContext>
-    </scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+ 
+    <scheduler:SfScheduler />
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
 
-var appointment = new ObservableCollection<SchedulerAppointment>();
-appointment.Add(new SchedulerAppointment()
-{
-    StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(11),
-    Subject = "Client Meeting",
-    Location = "Hutchison road",
-});
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-this.Scheduler.AppointmentsSource = appointment;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        var appointment = new ObservableCollection<SchedulerAppointment>();
+        appointment.Add(new SchedulerAppointment()
+        {
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(11),
+            Subject = "Client Meeting",
+            Location = "Hutchison road",
+        });
+
+        this.Scheduler.AppointmentsSource = appointment;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}

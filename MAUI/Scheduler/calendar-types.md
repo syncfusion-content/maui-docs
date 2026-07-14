@@ -49,16 +49,30 @@ N>
 * All calendar types are supported except the Lunar type calendars.
 
 {% tabs %}
-{% highlight XAML hl_lines="1" %}
-<scheduler:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
-</scheduler:SfScheduler>
+{% highlight XAML hl_lines="4" %}
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="11" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineMonth;
-scheduler.CalendarType = CalendarType.Hijri;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.TimelineMonth;
+        scheduler.CalendarType = CalendarType.Hijri;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -72,21 +86,33 @@ All the DateTime values can be given, such as [DisplayDate](https://help.syncfus
 
 {% capture codesnippet1 %}
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
-// Creating an instance for the schedule appointment collection.
-var appointments = new ObservableCollection<SchedulerAppointment>();
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19 20" %}
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+using System.Globalization;
 
-// Adding schedule appointment in the schedule appointment collection.
-appointments.Add(new SchedulerAppointment()
+. . .
+public partial class MainPage : ContentPage
 {
-	Subject = "Meeting",
-	// StartTime and EndTime value specified with calendar type and respective calendar date.
-	StartTime = new DateTime(1443, 02, 22, 10, 0, 0, new HijriCalendar()),
-	EndTime = new DateTime(1443, 02, 22, 11, 0, 0, new HijriCalendar()),
-});
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating an instance for the schedule appointment collection.
+        var appointments = new ObservableCollection<SchedulerAppointment>();
 
-// Adding the schedule appointment collection to the ItemsSource.
-this.Scheduler.AppointmentsSource = appointments;
+        // Adding schedule appointment in the schedule appointment collection.
+        appointments.Add(new SchedulerAppointment()
+        {
+            Subject = "Meeting",
+            // StartTime and EndTime value specified with calendar type and respective calendar date.
+            StartTime = new DateTime(1443, 02, 22, 10, 0, 0, new HijriCalendar()),
+            EndTime = new DateTime(1443, 02, 22, 11, 0, 0, new HijriCalendar()),
+        });
+
+        // Adding the schedule appointment collection to the ItemsSource.
+        this.Scheduler.AppointmentsSource = appointments;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
@@ -96,23 +122,33 @@ this.Scheduler.AppointmentsSource = appointments;
 
 {% capture codesnippet2 %}
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
-// Creating an instance for the schedule appointment collection.
-var appointments = new ObservableCollection<SchedulerAppointment>();
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18 19" %}
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-// Adding schedule appointment in the schedule appointment collection.
-appointments.Add(new SchedulerAppointment()
+. . .
+public partial class MainPage : ContentPage
 {
-	Subject = "Meeting",
-	//The StartTime and EndTime values specified with the local system date will be converted to the Hijiri calendar mentioned.
-	StartTime = new DateTime(2021, 09, 29, 10, 0, 0, 0),
-	EndTime = new DateTime(2021, 09, 29, 11, 0, 0, 0),
-});
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating an instance for the schedule appointment collection.
+        var appointments = new ObservableCollection<SchedulerAppointment>();
 
-// Adding the schedule appointment collection to the ItemsSource.
-this.Scheduler.AppointmentsSource = appointments;
+        // Adding schedule appointment in the schedule appointment collection.
+        appointments.Add(new SchedulerAppointment()
+        {
+            Subject = "Meeting",
+            //The StartTime and EndTime values specified with the local system date will be converted to the Hijiri calendar mentioned.
+            StartTime = new DateTime(2021, 09, 29, 10, 0, 0, 0),
+            EndTime = new DateTime(2021, 09, 29, 11, 0, 0, 0),
+        });
+
+        // Adding the schedule appointment collection to the ItemsSource.
+        this.Scheduler.AppointmentsSource = appointments;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
 {{ codesnippet2 | UnOrderList_Indent_Level_1 }}
-

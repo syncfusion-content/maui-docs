@@ -26,12 +26,22 @@ The [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="11" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.DisplayDate = DateTime.Today.AddMonths(-1).AddHours(9);
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        scheduler.DisplayDate = DateTime.Today.AddMonths(-1).AddHours(9);
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -49,12 +59,22 @@ You can programmatically select the dates in scheduler by using the [SelectedDat
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="11" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.Week;
-scheduler.SelectedDate = DateTime.Today.AddHours(9);
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.Week;
+        scheduler.SelectedDate = DateTime.Today.AddHours(9);
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -72,25 +92,39 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition />
-        <RowDefinition Height="30" />
-    </Grid.RowDefinitions>
-    <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="Week" >
-    </scheduler:SfScheduler>
-    <Button x:Name="button" Text="Forward" Clicked="OnButtonClicked" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-</Grid>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <scheduler:SfScheduler x:Name="Scheduler" 
+                               View="Week" >
+        </scheduler:SfScheduler>
+        <Button x:Name="button" Text="Forward" Clicked="OnButtonClicked" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 5" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 14" %}
+using Syncfusion.Maui.Scheduler;
 
-this.button.Clicked += OnButtonClicked;
-
-private void OnButtonClicked(object sender, EventArgs e)
+. . .
+public partial class MainPage : ContentPage
 {
-    this.Scheduler.Forward();
+    public MainPage()
+    {
+        InitializeComponent();
+        this.button.Clicked += OnButtonClicked;
+    }
+
+    private void OnButtonClicked(object sender, EventArgs e)
+    {
+        this.Scheduler.Forward();
+    }
 }
 
 {% endhighlight %}
@@ -103,25 +137,39 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition />
-        <RowDefinition Height="30" />
-    </Grid.RowDefinitions>
-    <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="Week" >
-    </scheduler:SfScheduler>
-    <Button x:Name="button" Text="Backward" Clicked="OnButtonClicked" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-</Grid>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <scheduler:SfScheduler x:Name="Scheduler" 
+                               View="Week" >
+        </scheduler:SfScheduler>
+        <Button x:Name="button" Text="Backward" Clicked="OnButtonClicked" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 5" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 14" %}
+using Syncfusion.Maui.Scheduler;
 
-this.button.Clicked += OnButtonClicked;
-
-private void OnButtonClicked(object sender, EventArgs e)
+. . .
+public partial class MainPage : ContentPage
 {
-    this.Scheduler.Backward();
+    public MainPage()
+    {
+        InitializeComponent();
+        this.button.Clicked += OnButtonClicked;
+    }
+
+    private void OnButtonClicked(object sender, EventArgs e)
+    {
+        this.Scheduler.Backward();
+    }
 }
 
 {% endhighlight %}
@@ -132,18 +180,33 @@ private void OnButtonClicked(object sender, EventArgs e)
 By using the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can quickly navigate to the respective day or timeline day view by tapping on the month cell or view header of the following scheduler views: week, work week, month, agenda, timeline week, timeline work week, and timeline month views.
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="6" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        AllowViewNavigation="True">
- </scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            AllowViewNavigation="True">
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="10" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.AllowViewNavigation = true;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.AllowViewNavigation = true;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,18 +222,33 @@ N>
 You can enable the date picker for the scheduler by using the [ShowDatePickerButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowDatePickerButton) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="6" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                       ShowDatePickerButton="True">
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           ShowDatePickerButton="True">
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="10" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.ShowDatePickerButton = true;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.ShowDatePickerButton = true;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -185,18 +263,33 @@ There will be more icons available for all platforms as this UI will be responsi
 The default value of [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property is [SchedulerViews.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_Default).
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="6" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth" >
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth" >
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2 3" %}
+{% highlight C# hl_lines="10" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -208,20 +301,35 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 N> When [ShowAllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowAllowedViews) is `false` the view navigation buttons in the scheduler header are hidden, but [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) still works for views added in the [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property. For [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) is set to `Default`, no scheduler view navigation buttons are added, so [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) does not work.
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="7" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth" 
-                       ShowAllowedViews="false">
-</scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth" 
+                           ShowAllowedViews="false">
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2 3" %}
+{% highlight C# hl_lines="11" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
-scheduler.ShowAllowedViews = false;
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
+        scheduler.ShowAllowedViews = false;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -231,14 +339,30 @@ this.Content = scheduler;
 The [EnableSwipeNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableSwipeNavigation) property determines whether users can navigate between dates using the scheduler's built-in navigation interactions. By default, `EnableSwipeNavigation` is set to `true`, allowing users to navigate using swipe gestures and the navigation buttons in the scheduler header. Setting `EnableSwipeNavigation` to `false` disables these navigation interactions.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="2" %}
-<scheduler:SfScheduler x:Name="scheduler" 
-                       EnableSwipeNavigation="False"/>
+{% highlight XAML tabtitle="xaml" hl_lines="6" %}
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="scheduler" 
+                           EnableSwipeNavigation="False"/>
+</ContentPage>
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="2" %}
-SfScheduler scheduler = new SfScheduler();
-scheduler.EnableSwipeNavigation = false;
-this.Content = scheduler;
+{% highlight C# tabtitle="c#" hl_lines="10" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.EnableSwipeNavigation = false;
+        this.Content = scheduler;
+    }
+}
 {% endhighlight %}  
 {% endtabs %}
 
@@ -256,11 +380,21 @@ The minimum date time will restrict backward navigation of date selections as we
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="10" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.MinimumDateTime = DateTime.Today.AddMonths(-3).AddHours(9);
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.MinimumDateTime = DateTime.Today.AddMonths(-3).AddHours(9);
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -275,11 +409,21 @@ The maximum date time will restrict forward navigation of date selections as wel
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="10" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.MaximumDateTime = DateTime.Today.AddMonths(3).AddHours(12);
-this.Content = scheduler;
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.MaximumDateTime = DateTime.Today.AddMonths(3).AddHours(12);
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -296,15 +440,23 @@ The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Scheduler.SelectableDayPredicate = (date) =>
+. . .
+public partial class MainPage : ContentPage
 {
-    if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
+    public MainPage()
     {
-        return false;
-    }
+        InitializeComponent();
+        this.Scheduler.SelectableDayPredicate = (date) =>
+        {
+            if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
+            {
+                return false;
+            }
 
-    return true;
-};
+            return true;
+        };
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -319,16 +471,26 @@ You can customize the background color and text style for the minimum date time,
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 16" %}
 
-var disabledDateTextStyle = new SchedulerTextStyle()
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
 {
-    TextColor = Colors.Red,
-    FontSize = 12,
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        var disabledDateTextStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.Red,
+            FontSize = 12,
+        };
 
-this.Scheduler.DisabledDateTextStyle = disabledDateTextStyle;
-this.Scheduler.DisabledDateBackground = Brush.LightSkyBlue;
+        this.Scheduler.DisabledDateTextStyle = disabledDateTextStyle;
+        this.Scheduler.DisabledDateBackground = Brush.LightSkyBlue;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
