@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data localization in .NET MAUI DataForm control | Syncfusion
-description: Learn about the data localization support in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Data localization in .NET MAUI DataForm control | Syncfusion®
+description: Learn about the data localization support in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Localization is translating the application resources into different languages for specific cultures. The `SfDataForm` can be localized by adding a `resource` file.
 
-Localize the [DataFormViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html) [DisplayAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#display-attribute) values and [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values by using the [ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-7.0#system-componentmodel-dataannotations-displayattribute-resourcetype) property of the attribute or using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when auto-generate true.
+Localize the [DataFormViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html) [DisplayAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#display-attribute) values and [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values by using the [ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-7.0#system-componentmodel-dataannotations-displayattribute-resourcetype) property of the attribute or by using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when `AutoGenerateItems` is `true`.
 
 ## Setting CurrentUICulture to the application
 
@@ -38,7 +38,7 @@ public partial class App : Application
 
 N> The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
-## Add Localization resx file in sample level
+## Add a localization resx file at the sample level
 
 Follow these steps to localize the `DataForm` based on the [CurrentUICulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentuiculture?view=net-7.0) using the `resource` files.
 
@@ -46,24 +46,24 @@ Follow these steps to localize the `DataForm` based on the [CurrentUICulture](ht
 
     ![Resources folder in .NET MAUI DataForm.](images/localization/resources-folder.png)
 
-2. Click `Add` and then `NewItem`.
-3. In the `Add New Item` wizard, select the `Resource File` option and name the filename as `DataFormLocalization.<culture name>.resx.` For example, give the name `DataFormLocalization.fr.resx` for French culture.
+2. Click `Add`, and then click `New Item`.
+3. In the `Add New Item` wizard, select the `Resource File` option and name the file as `DataFormLocalization.<culture name>.resx`. For example, give the name `DataFormLocalization.fr.resx` for the French culture.
 
     ![Adding resource file in .NET MAUI DataForm.](images/localization/adding-resource-file.png)
 
 4. The culture name indicates the name of the language and country.
 
-5. Now, click `Add` to add the resource file in the **Resources** folder.
+5. Click `Add` to add the resource file to the **Resources** folder.
 
     ![Added resource file in .NET MAUI DataForm.](images/localization/added-resource-file.png)
 
-6. Add the Name or Value pair in the Resource Designer of the `DataFormLocalization.fr.resx` file and change its corresponding value to the corresponding culture.
+6. Add the name-value pair in the Resource Designer of the `DataFormLocalization.fr.resx` file and change its corresponding value to the appropriate culture.
  
     ![Localization name value pair in .NET MAUI DataForm.](images/localization/name-value-pair.png)
 
-## Localizing data form display values
+## Localizing DataForm display values
 
-Here, the display attributes or data form item display values to get localized based on culture from the Localization Resource File (.Resx).
+Here, the display attributes or DataForm item display values get localized based on the culture from the Localization Resource File (.Resx).
 
 #### Using attribute
 
@@ -82,7 +82,7 @@ public string FirstName {​ get; set; }​
 
 Also, localize the DataFormItem's [LabelText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LabelText), [PlaceholderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_PlaceholderText), and [GroupName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_GroupName) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) by using the Resources (.Resx) file.
 
-Here, the string member of the .resx file will be accessed through the class (in resxFilename.Designer.cs), which will be auto-generated when the .resx file is created, and static string members get localized using the [ResourceManager](https://learn.microsoft.com/en-us/dotnet/api/system.resources.resourcemanager.getstring?view=net-7.0) based on culture.
+Here, the string member of the .resx file will be accessed through the class (in `resxFilename.Designer.cs`), which will be auto-generated when the .resx file is created, and static string members get localized using the [ResourceManager](https://learn.microsoft.com/en-us/dotnet/api/system.resources.resourcemanager.getstring?view=net-7.0) based on the culture.
 
 {% tabs %}
 {% highlight C# %}
@@ -111,11 +111,11 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Localizing validation error messages
 
-Here, the [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values or data form error messages get localized based on culture from Localization Resource File (.Resx).
+Here, the [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values or DataForm error messages get localized based on the culture from the Localization Resource File (.Resx).
 
 #### Using attribute
 
-The [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) error message can be localized using the [ErrorMessageResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?redirectedfrom=MSDN&view=net-5.0) and [ErrorMessageResourceName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?redirectedfrom=MSDN&view=net-5.0)  properties, which are used to get localized error messages from the Localization Resource File (.Resx) based on culture.
+The [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) error message can be localized using the [ErrorMessageResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?redirectedfrom=MSDN&view=net-5.0) and [ErrorMessageResourceName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?redirectedfrom=MSDN&view=net-5.0) properties, which are used to get localized error messages from the Localization Resource File (.Resx) based on the culture.
 
 {% tabs %}
 {% highlight C# %}
@@ -182,7 +182,7 @@ public enum Gender
 {% endhighlight %}
 {% endtabs %}
 
-Here, the radio group items source gets localized based on culture from Localization Resource File (.Resx).
+Here, the radio group items source gets localized based on the culture from the Localization Resource File (.Resx).
 
 ![Localization in .NET MAUI DataForm.](images/localization/localization.jpg)
 
