@@ -25,14 +25,23 @@ The [ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
     * [OldView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html#Syncfusion_Maui_Calendar_CalendarViewChangedEventArgs_OldView) : Returns the old calendar view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                       ViewChanged="OnCalendarViewChanged">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.ViewChanged += OnCalendarViewChanged;
 private void OnCalendarViewChanged(object sender, CalendarViewChangedEventArgs e)
@@ -51,7 +60,7 @@ Whenever a calendar view is changed, the `SelectableDayPredicate` function must 
 
 ## SelectionChanged
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged) event is used to notify when the cell selection is changed onto the view in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged) event is used to notify when the cell selection is changed onto the view in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -61,18 +70,27 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calen
     * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionChangedEventArgs.html#Syncfusion_Maui_Calendar_CalendarSelectionChangedEventArgs_OldValue) : Returns the old selected date.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                       SelectionChanged="OnCalendarSelectionChanged">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.SelectionChanged += this.OnCalendarSelectionChanged;
 
-private void OnCalendarSelectionChanged(object sender,  private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
+private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
     {
         var oldDateTime = e.OldValue;
         var newDateTime = e.NewValue;
@@ -82,11 +100,11 @@ private void OnCalendarSelectionChanged(object sender,  private void OnCalendarS
 {% endtabs %}
 
 N>
-The `Tapped` event is triggered first, followed by 'selection-changed' event will be performed.
+The `Tapped` event is triggered first, followed by the `SelectionChanged` event.
 
 ## Tapped
 
-A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Tapped) event is triggered, each time a calendar view is tapped. The following are the list of arguments:
+The [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Tapped) event is triggered each time a calendar view is tapped. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -97,14 +115,23 @@ A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalend
     * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_WeekNumber) : Returns the tapped `WeekNumber`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                       Tapped="OnCalendarTapped">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.Tapped += OnCalendarTapped;
 private void OnCalendarTapped(object sender, CalendarTappedEventArgs e)
@@ -119,7 +146,7 @@ private void OnCalendarTapped(object sender, CalendarTappedEventArgs e)
 
 ## DoubleTapped
 
-Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped onto the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTapped) event occurs. The following are the list of arguments:
+Whenever a [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) element is double-tapped, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTapped) event occurs. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -130,14 +157,23 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
     * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_WeekNumber) : Returns the double-tapped `WeekNumber`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                       DoubleTapped="OnCalendarDoubleTapped">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.DoubleTapped += this.OnCalendarDoubleTapped;
 
@@ -153,7 +189,7 @@ private void OnCalendarDoubleTapped(object sender, CalendarDoubleTappedEventArgs
 
 ## LongPressed
 
-Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are long-pressed onto the view, the [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressed) event is triggered. The following are the list of arguments:
+Whenever a [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) element is long-pressed, the [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressed) event is triggered. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -164,14 +200,23 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
     * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_WeekNumber) : Returns the long-pressed `WeekNumber`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar" 
                       LongPressed="OnCalendarLongPressed">
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 this.calendar.LongPressed += this.OnCalendarLongPressed;
 
@@ -189,20 +234,27 @@ private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e
 
 ### ViewChangedCommand
 
-The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
+The `SfCalendar` includes a built-in event called `ViewChanged`, which is triggered whenever the calendar is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <ContentPage.BindingContext>
+        <local:CalendarViewModel/>
+    </ContentPage.BindingContext>
+    <calendar:SfCalendar x:Name="calendar" 
                       ViewChangedCommand="ViewChangedCommand">
-<ContentPage.BindingContext>
-    <local:CalendarViewModel/>
-</ContentPage.BindingContext>					  
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6 9" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class CalendarViewModel
 {
@@ -225,17 +277,24 @@ public class CalendarViewModel
 The SfCalendar includes a built-in event called `SelectionChanged` that is triggered whenever the selection in the calendar changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChangedCommand), which passes the `CalendarSelectionChangedEventArgs` as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <ContentPage.BindingContext>
+        <local:CalendarViewModel/>
+    </ContentPage.BindingContext>
+    <calendar:SfCalendar x:Name="calendar" 
                      SelectionChangedCommand="SelectionChangedCommand">
-<ContentPage.BindingContext>
-    <local:CalendarViewModel/>
-</ContentPage.BindingContext>					  
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6 9" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class CalendarViewModel
 {
@@ -258,17 +317,24 @@ public class CalendarViewModel
 The SfCalendar includes a built-in event called `Tapped` that is triggered whenever the calendar view is tapped. This event can be invoked through the [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_TappedCommand) which passes the `CalendarTappedEventArgs` as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <ContentPage.BindingContext>
+        <local:CalendarViewModel/>
+    </ContentPage.BindingContext>
+    <calendar:SfCalendar x:Name="calendar" 
                      TappedCommand="TappedCommand">
-<ContentPage.BindingContext>
-    <local:CalendarViewModel/>
-</ContentPage.BindingContext>					  
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6 9" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class CalendarViewModel
 {
@@ -291,17 +357,24 @@ public class CalendarViewModel
 The SfCalendar includes a built-in event called `DoubleTapped` that is triggered whenever the calendar view is double-tapped. This event can be invoked through the [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTappedCommand), which passes the `CalendarDoubleTappedEventArgs` as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3,6,8" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <ContentPage.BindingContext>
+        <local:CalendarViewModel/>
+    </ContentPage.BindingContext>
+    <calendar:SfCalendar x:Name="calendar" 
                      DoubleTappedCommand="DoubleTappedCommand">
-<ContentPage.BindingContext>
-    <local:CalendarViewModel/>
-</ContentPage.BindingContext>					  
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6 9" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class CalendarViewModel
 {
@@ -324,17 +397,24 @@ public class CalendarViewModel
 The SfCalendar includes a built-in event called `LongPressed`, which is triggered when the calendar view is long pressed. This event can be invoked through the [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressedCommand), with the `CalendarLongPressedEventArgs` passed as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <ContentPage.BindingContext>
+        <local:CalendarViewModel/>
+    </ContentPage.BindingContext>
+    <calendar:SfCalendar x:Name="calendar" 
                      LongPressedCommand="LongPressedCommand">
-<ContentPage.BindingContext>
-    <local:CalendarViewModel/>
-</ContentPage.BindingContext>					  
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6 9" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 public class CalendarViewModel
 {
@@ -357,18 +437,23 @@ public class CalendarViewModel
 The SfCalendar includes a built-in event called `ActionButtonClicked`, which is triggered when the confirm button is tapped on the calendar. This event can be invoked through the [AcceptCommand]().
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <ContentPage.BindingContext>
+        <local:CalendarViewModel/>
+    </ContentPage.BindingContext>
+    <calendar:SfCalendar x:Name="calendar" 
                      AcceptCommand="AcceptCommand">
-<ContentPage.BindingContext>
-    <local:CalendarViewModel/>
-</ContentPage.BindingContext>					  
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 8" %}
+using Syncfusion.Maui.Calendar;
+. . .
 public class CalendarViewModel
 {
     public ICommand AcceptCommand { get; set; }
@@ -390,18 +475,23 @@ public class CalendarViewModel
 The SfCalendar includes a built-in event called `ActionButtonCanceled`, which is triggered when the cancel button is tapped on the calendar. This event can be invoked through the [DeclineCommand]().
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <ContentPage.BindingContext>
+        <local:CalendarViewModel/>
+    </ContentPage.BindingContext>
+    <calendar:SfCalendar x:Name="calendar" 
                      DeclineCommand="DeclineCommand">
-<ContentPage.BindingContext>
-    <local:CalendarViewModel/>
-</ContentPage.BindingContext>					  
-</calendar:SfCalendar>
+    </calendar:SfCalendar>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 8" %}
+using Syncfusion.Maui.Calendar;
+. . .
 public class CalendarViewModel
 {
     public ICommand DeclineCommand { get; set; }

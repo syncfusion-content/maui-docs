@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfCalendar to .NET MAUI SfCalendar
+title: Migrate from Syncfusion® Xamarin SfCalendar to .NET MAUI SfCalendar
 description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin calendar to Syncfusion<sup>&reg;</sup> .NET MAUI Calendar control.
 platform: maui
 control: SfCalendar
@@ -148,38 +148,38 @@ this.Content = calendar;
 <tr>
 <td>{{'[MonthEventParameters](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthEventParameters.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr> 
 <tr>
 <td>{{'[InlineEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineEventArgs.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
-</tr> 
+<td>Not supported.</td>
+</tr>
 <tr>
 <td>{{'[InlineItemTappedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineItemTappedEventArgs.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
-</tr> 
+<td>Not supported.</td>
+</tr>
 <tr>
 <td>{{'[InlineToggledEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineToggledEventArgs.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr> 
 <tr>
 <td>{{'[MonthCell](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthCell.html)' | markdownify }}</td>
 <td>Nil</td>
 <td>Use properties from {{'[MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#properties)' | markdownify }}</td>
-</tr> 
+</tr>
 <tr>
 <td>{{'[MonthCellLoadedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthCellLoadedEventArgs.html)' | markdownify }}</td>
 <td>Nil</td>
 <td>Use the {{'[ViewChanged](https://help.syncfusion.com/maui/calendar/events#viewchanged)' | markdownify}} event args.</td>
-</tr> 
+</tr>
 <tr>
 <td>{{'[MonthChangingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthChangingEventArgs.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
-</tr> 
+<td>Not supported.</td>
+</tr>
 <tr>
 <td>{{'[YearCell](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearCell.html)' | markdownify }}</td>
 <td>Nil</td>
@@ -329,7 +329,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[InlineViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_InlineViewMode)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[Locale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Locale)'| markdownify }}</td>
@@ -434,7 +434,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[ShowInlineEvents](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowInlineEvents)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[ShowLeadingAndTrailingDays](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowLeadingAndTrailingDays)'| markdownify }}</td>
@@ -464,7 +464,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[TransitionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_TransitionMode)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[ViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ViewMode)'| markdownify }}</td>
@@ -479,7 +479,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[YearViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_YearViewMode)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[YearViewSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_YearViewSettings)'| markdownify }}</td>
@@ -569,7 +569,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[AgendaSelectedDateColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_AgendaSelectedDateColor)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[BlackoutColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_BlackoutColor)'| markdownify }}</td>
@@ -614,7 +614,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[DayCellFont](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayCellFont)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[DayCellFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayCellFontFamily)'| markdownify }}</td>
@@ -639,7 +639,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[DayHeaderFont](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderFont)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[DayHeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderFont)'| markdownify }}</td>
@@ -694,7 +694,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[HeaderFont](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFont)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[HeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFontAttributes)'| markdownify }}</td>
@@ -719,17 +719,17 @@ this.Content = calendar;
 <tr>
 <td>{{'[InlineBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_InlineBackgroundColor)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[InlineItemTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_InlineItemTemplate)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[InlineTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_InlineTextColor)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[MonthLabelSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_MonthLabelSettings)'| markdownify }}</td>
@@ -754,7 +754,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[SelectionRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_SelectionRadius)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[SelectionShape](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_SelectionShape)'| markdownify }}</td>
@@ -950,17 +950,17 @@ this.Content = calendar;
 <tr>
 <td>{{'[DayLabelTextAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.DayLabelTextAlignment.html)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[InlineViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineViewMode.html)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[LabelAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.LabelAlignment.html)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[NavigationDirection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.NavigationDirection.html)'| markdownify }}</td>
@@ -980,7 +980,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[TransitionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.TransitionMode.html)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[ViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.ViewMode.html)'| markdownify }}</td>
@@ -990,7 +990,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[YearViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewMode.html)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 </table>
 
@@ -1005,12 +1005,12 @@ this.Content = calendar;
 <tr>
 <td>{{'[InlineItemTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_InlineItemTapped)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[InlineToggled](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_InlineToggled)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[MonthChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MonthChanged)'| markdownify }}</td>
@@ -1020,7 +1020,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[MonthChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MonthChanging)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[OnCalendarTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnCalendarTapped)'| markdownify }}</td>
@@ -1040,7 +1040,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[OnInlineLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnInlineLoaded)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[OnMonthCellLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnMonthCellLoaded)'| markdownify }}</td>
@@ -1090,12 +1090,12 @@ this.Content = calendar;
 <tr>
 <td>{{'[CollapseInlineView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_CollapseInlineView_System_DateTime_)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[ExpandInlineView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ExpandInlineView_System_DateTime_)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[Forward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Forward)'| markdownify }}</td>
@@ -1110,16 +1110,16 @@ this.Content = calendar;
 <tr>
 <td>{{'[Refresh](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Refresh)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[ResumeAppointmentUpdate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ResumeAppointmentUpdate)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[SuspendAppointmentUpdate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SuspendAppointmentUpdate)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Not supported.</td>
 </tr>
 </table>
