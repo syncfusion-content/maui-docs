@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in .NET MAUI Time Picker (SfTimePicker)
 
-Format is a way to represent the time in a different string format. You can customize the time format using the [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_Format) property in [PickerTimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html). The default format is `HH_mm_ss`.
+The `Format` property controls how the time is displayed. You can customize the time format using the [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_Format) property, which accepts a value from the [PickerTimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html) enumeration. The default format is `HH_mm_ss`.
 
 
 The different types of formats are:
@@ -48,18 +48,25 @@ The following example demonstrates the Time Picker with the custom format [Picke
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="timePicker" 
-                     Format="hh_mm_ss_tt"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker"
+                         Format="hh_mm_ss_tt"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight c# tabtitle="C#" hl_lines="6" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker()
 {
-    Format = PickerTimeFormat.hh_mm_ss_tt;
+    Format = PickerTimeFormat.hh_mm_ss_tt
 };
 
 this.Content = timePicker;
@@ -68,4 +75,4 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Formatting in .NET MAUI Time picker.](images/formatting/maui-time-picker-formatting.png)
+![Formatting in .NET MAUI Time Picker.](images/formatting/maui-time-picker-formatting.png)

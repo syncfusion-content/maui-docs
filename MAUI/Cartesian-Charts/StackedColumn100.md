@@ -1,22 +1,24 @@
 ---
 layout: post
-title: StackedColumn100 Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about StackedColumn100 chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: StackedColumn100 Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about StackedColumn100 chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui stacked column 100 chart, stacked column 100 chart customization .net maui, syncfusion maui stacked column 100 chart, cartesian stacked column 100 chart maui, .net maui chart stacked column 100 visualization, .net maui 100% stacked column chart, cartesian 100% stacked column chart maui.
 ---
 
-# StackedColumn100 Chart in .NET MAUI Chart
+# StackedColumn100 Chart in .NET MAUI Cartesian Chart
 
-The Stacked column 100 % series chart is a type of Stacked chart that is used to display the proportion of different categories within a single column. The columns are stacked on top of each other, and a cumulative portion of each stacked element always comes to a total of 100%.
+A stacked column 100% chart is a type of stacked chart that is used to display the proportion of different categories within a single column. The columns are stacked on top of each other, and a cumulative portion of each stacked element always comes to a total of 100%.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 ## StackedColumn100 Chart
 
 To render the StackedColumn100 chart, create an instance of the [StackingColumn100Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumn100Series.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
-N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
+N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
 {% tabs %}
 
@@ -46,7 +48,7 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 </chart:SfCartesianChart>
 
-{% endhighlight xaml %}
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -64,33 +66,35 @@ StackingColumn100Series series1 = new StackingColumn100Series()
     XBindingPath = "Name",
     YBindingPath = "Value",
 };
+
 StackingColumn100Series series2 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data2,
     XBindingPath = "Name",
     YBindingPath = "Value",
 };
+
 StackingColumn100Series series3 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data3,
     XBindingPath = "Name",
     YBindingPath = "Value",
 };
- 
+
 chart.Series.Add(series1);
 chart.Series.Add(series2);
 chart.Series.Add(series3);
 this.Content = chart;
 
-{% endhighlight C# %}
+{% endhighlight %}
 
 {% endtabs %}
 
-![Stacking Column 100 Chart in MAUI](Chart-types-images/StackedColumn100Chart.png)
+![Stacking Column 100 Chart in .NET MAUI Cartesian Chart](Chart-types-images/StackedColumn100Chart.png)
 
-## Grouping Series 
+## Grouping Series
 
-We can group and stack the similar stacked column 100 series type using the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) property. 
+You can group and stack similar stacked column 100 series types using the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) property.
 
 {% tabs %}
 
@@ -147,6 +151,7 @@ StackingColumn100Series series1 = new StackingColumn100Series()
     YBindingPath = "YValue",
     GroupingLabel = "GroupOne"
 };
+
 StackingColumn100Series series2 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data2,
@@ -154,6 +159,7 @@ StackingColumn100Series series2 = new StackingColumn100Series()
     YBindingPath = "YValue",
     GroupingLabel = "GroupOne"
 };
+
 StackingColumn100Series series3 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data3,
@@ -161,6 +167,7 @@ StackingColumn100Series series3 = new StackingColumn100Series()
     YBindingPath = "YValue",
     GroupingLabel = "GroupTwo"
 };
+
 StackingColumn100Series series4 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data4,
@@ -175,6 +182,6 @@ chart.Series.Add(series3);
 chart.Series.Add(series4);
 this.Content = chart;
 
-{% endhighlight C# %}
+{% endhighlight %}
 
 {% endtabs %}

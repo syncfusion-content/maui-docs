@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion
-description: This section explains the features available in the .NET MAUI Chart (SfCartesianChart) control over Xamarin SfChart.
-platform: MAUI
+title: Migration from Xamarin to .NET MAUI Cartesian Chart control | Syncfusion
+description: This section explains the features available in the .NET MAUI Cartesian Chart (SfCartesianChart) control over Xamarin SfChart.
+platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: migrate from xamarin.Forms sfChart to .net maui sfCartesianChart, transitioning from xamarin.Forms sfChart to .net maui sfCartesianChart, move from xamarin.Forms sfChart to .net maui sfCartesianChart, upgrading xamarin.Forms s to .net maui sfCartesianChart.
@@ -10,7 +10,7 @@ keywords: migrate from xamarin.Forms sfChart to .net maui sfCartesianChart, tran
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
 
-The Cartesian Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
+The Cartesian Chart was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
 
 <table>
 <tr>
@@ -53,9 +53,9 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 using Syncfusion.SfChart.XForms;
-...
+//code omitted for brevity
 
 SfChart chart = new SfChart(); 
 this.Content = chart;
@@ -73,8 +73,8 @@ this.Content = chart;
 
 {% highlight xaml %}
 
+<!-- code omitted for brevity -->
 <ContentPage
-    . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
     <chart:SfCartesianChart/>
@@ -82,10 +82,10 @@ this.Content = chart;
  
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Maui.Charts;
-. . .
+//code omitted for brevity
 SfCartesianChart chart = new SfCartesianChart(); 
 this.Content = chart; 
 
@@ -237,7 +237,7 @@ The following code example explains how to migrate the axis of Xamarin [SfChart]
 </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
 SfChart chart = new SfChart();
 
 CategoryAxis primaryAxis = new CategoryAxis();
@@ -272,7 +272,7 @@ this.Content = chart;
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
@@ -321,16 +321,16 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 {% highlight xaml %}
 
 <chart:SfChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Name" 
                         YBindingPath="Height"/>
 </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
 SfChart chart = new SfChart();
-. . .
+//code omitted for brevity
 
 ColumnSeries series = new ColumnSeries();
 series.SetBinding(ChartSeries.ItemsSourceProperty, "Data");
@@ -359,9 +359,9 @@ this.Content = chart;
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 ColumnSeries series = new ColumnSeries();
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name";
@@ -459,9 +459,9 @@ The following code example shows how to enable legend in chart.
 </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
 SfChart chart = new SfChart();
-. . .
+//code omitted for brevity
 chart.Legend = new ChartLegend();
 this.Content = chart;
 {% endhighlight %}
@@ -485,10 +485,10 @@ this.Content = chart;
 
 {% endhighlight %} 
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 chart.Legend = new ChartLegend();
 this.Content = chart;
 {% endhighlight %}
@@ -512,7 +512,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 {% highlight xaml %}
 
 <chart:SfChart>  
-    . . .
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Category"
                         YBindingPath="Value">
@@ -533,11 +533,11 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 </chart:SfChart>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 SfChart chart = new SfChart();
-. . .
+//code omitted for brevity
 ColumnSeries series = new ColumnSeries();
-. . .
+//code omitted for brevity
 series.DataMarker = new ChartDataMarker();
 series.DataMarker.ShowLabel = true;
 
@@ -568,7 +568,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Category" 
                         YBindingPath="Value" ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
@@ -589,11 +589,11 @@ this.Content = chart;
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 ColumnSeries series = new ColumnSeries();
-. . .
+//code omitted for brevity
 series.ShowDataLabels = true;
 series.CartesianDataLabelSettings = new CartesianDataLabelSettings();
 var style = new ChartDataLabelStyle();
@@ -629,7 +629,7 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% highlight xaml %}
 
 <chart:SfChart>
-    . . . 
+    <!-- code omitted for brevity --> 
     <chart:SfChart.ChartBehaviors>
         <chart:ChartTooltipBehavior BackgroundColor="Blue" 
                                     TextColor="White" 

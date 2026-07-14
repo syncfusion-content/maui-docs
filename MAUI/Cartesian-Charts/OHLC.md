@@ -1,20 +1,22 @@
 ---
 layout: post
-title: OHLC Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about ohlc chart and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: OHLC Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about the OHLC chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui ohlc chart, .net maui chart ohlc type, ohlc chart customization .net maui, syncfusion maui ohlc chart, .net maui chart ohlc visualization, .net maui bear and bull ohlc chart.
 ---
 
-# OHLC Chart in .NET MAUI Chart
+# OHLC Chart in .NET MAUI Cartesian Chart
 
-OHLC (Open-High-Low-Close) charts are the type of financial charts used to represent the price movement of an asset over a specific period. OHLC charts consist of four data points: the opening price, the high price, the low price, and the closing price for each period. To render an OHLC chart, create an instance of [HiLoOpenCloseSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HiLoOpenCloseSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+OHLC (Open-High-Low-Close) charts are a type of financial chart used to represent the price movement of an asset over a specific period. OHLC charts display four price values: the opening price, the high price, the low price, and the closing price for each period. To render an OHLC chart, create an instance of [HiLoOpenCloseSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HiLoOpenCloseSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
-A collection of five values is required to plot a point on an OHLC chart, including the X-value, open value, high value, low value, and close value. Use the following collection.
+A collection of five values is required to plot a point on an OHLC chart, including the X-value, open value, high value, low value, and close value. The binding properties are [Open](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_Open), [High](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_High), [Low](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_Low), and [Close](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_Close), all of type `string`, which map to the corresponding properties in the data model. Use the following collection.
 
 {% tabs %}
 
@@ -34,6 +36,12 @@ StockData.Add(new Model { Year = "2009", High = 45, Low = 30, Open = 35, Close =
 StockData.Add(new Model { Year = "2010", High = 50, Low = 40, Open = 40, Close = 35 });
 
 {% endhighlight %}
+
+{% endtabs %}
+
+The following code shows how to render the OHLC chart in XAML and C#.
+
+{% tabs %}
 
 {% highlight xaml %}
 
@@ -83,11 +91,11 @@ this.Content = chart;
 
 {% endtabs %}
 
-![OHLC chart type in MAUI Chart](Chart-types-images/OHLCBasicRendering.png)
+![OHLC chart type in .NET MAUI Cartesian Chart](Chart-types-images/OHLCBasicRendering.png)
 
-## Bull and Bear Color
+## Bullish and bearish fill colors
 
-In the OHLC chart, the [BullishFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BullishFill) property is used to specify a fill color for the segments that indicates an increase in the stock price in the measured time interval, and the [BearishFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BearishFill) property is used to specify a fill color for the segments that indicates a decrease in the stock price in the measured time interval.
+In the OHLC chart, the [BullishFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BullishFill) property is used to specify a fill color for the segments that indicate an increase in the stock price in the measured time interval, and the [BearishFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BearishFill) property is used to specify a fill color for the segments that indicate a decrease in the stock price in the measured time interval. By default, `BullishFill` is `Colors.Green` and `BearishFill` is `Colors.Red`.
 
 {% tabs %}
 
@@ -119,8 +127,10 @@ In the OHLC chart, the [BullishFill](https://help.syncfusion.com/cr/maui/Syncfus
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -143,4 +153,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![OHLC chart fill color in MAUI Chart](Chart-types-images/OhlcFillColor.png)
+![OHLC chart fill color in .NET MAUI Cartesian Chart](Chart-types-images/OhlcFillColor.png)

@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Candle Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about candle chart and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Candle Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about the candle chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui candle chart, candle chart customization .net maui, syncfusion maui candle chart, cartesian candle chart maui, .net maui chart candle visualization, .net maui stock chart, .net maui bear and bull candle chart.
 ---
 
-# Candle Chart in .NET MAUI Chart
+# Candle Chart in .NET MAUI Cartesian Chart
 
 ## Candle Chart
 
-Candle charts are a type of financial chart used to represent the price movement of an asset over time. The chart is made up of a series of rectangular bars, called candlesticks, that represent a specific time, typically one day. To render a candle chart, create an instance of [CandleSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+Candle charts are a type of financial chart used to represent the price movement of an asset over time. The chart is made up of a series of rectangular bars, called candlesticks, that represent a specific time, typically one day. To render a candle chart, create an instance of [CandleSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
-To plot a point on a candlestick chart, a collection of five values is required, including the X-value, open value, high value, low value, and close value. You can use the below collection.
+To plot a point on a candle chart, a collection of five values is required, including the X-value, open value, high value, low value, and close value.
 
 {% tabs %}
 
@@ -87,11 +89,11 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Candle chart type in MAUI Chart](Chart-types-images/CandleBasicRendering.png)
+![Candle chart type in .NET MAUI Cartesian Chart](Chart-types-images/CandleBasicRendering.png)
 
-## Bull and Bear Color
+## Bullish and bearish fill colors
 
-In the Candle chart, the [BullishFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BullishFill) property is used to specify a fill color for the segments that indicates an increase in the stock price in the measured time interval, and the [BearishFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BearishFill) property is used to specify a fill color for the segments that indicates a decrease in the stock price in the measured time interval.
+In the candle chart, the [BullishFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BullishFill) property is used to specify a fill color for the segments that indicate an increase in the stock price in the measured time interval, and the [BearishFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BearishFill) property is used to specify a fill color for the segments that indicate a decrease in the stock price in the measured time interval.
 
 {% tabs %}
 
@@ -149,11 +151,11 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Candle chart fill color in MAUI Chart](Chart-types-images/CandleFillColor.png)
+![Candle chart fill color in .NET MAUI Cartesian Chart](Chart-types-images/CandleFillColor.png)
 
-## EnableSolidCandle
+## Solid candle
 
-In Candle Series, the [EnableSolidCandle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html#Syncfusion_Maui_Charts_CandleSeries_EnableSolidCandleProperty) property is used to specify whether the candle segment should be filled or hollow. The default value of this property is `false`.
+In the `CandleSeries`, the [EnableSolidCandle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html#Syncfusion_Maui_Charts_CandleSeries_EnableSolidCandleProperty) property is used to specify whether the candle segment should be filled or hollow. The default value of this property is `false`. When `EnableSolidCandle` is `true`, the candle segments are filled with the `BullishFill` and `BearishFill` colors; when `false`, the segments are hollow with only the border drawn.
 
 {% tabs %}
 
@@ -209,4 +211,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Solid candle in MAUI Chart](Chart-types-images/SolidCandles.png)
+![Solid candle in .NET MAUI Cartesian Chart](Chart-types-images/SolidCandles.png)

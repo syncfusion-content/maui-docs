@@ -1,30 +1,34 @@
 ---
 layout: post
-title: Right To Left in .NET MAUI TreeView Control | Syncfusion®
-description: Learn here about Right To Left support in Syncfusion® .NET MAUI TreeView (SfTreeView) Control and more.
+title: Right-to-Left in .NET MAUI TreeView (SfTreeView) Control | Syncfusion®
+description: Learn how to enable Right-to-Left (RTL) layout support in the Syncfusion® .NET MAUI TreeView (SfTreeView) control for RTL languages.
 platform: MAUI
 control: SfTreeView
 documentation: ug
 ---
 
-# Right To Left in .NET MAUI TreeView (SfTreeView)
+# Right-to-Left in .NET MAUI TreeView (SfTreeView)
 
-`SfTreeView` supports changing the flow of text to the right-to-left direction by setting the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.device.flowdirection?view=net-maui-7.0) to `RightToLeft`. TreeView supports RTL when the flow direction of the device is changed.
+The `SfTreeView` control supports displaying its content in a right-to-left (RTL) layout for languages such as Arabic, Hebrew, and Urdu. To enable RTL, set the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-10.0) property to `RightToLeft`. The `FlowDirection` can be set directly on the `SfTreeView` or inherited from its parent layout. By default, the `FlowDirection` is set to `LeftToRight`.
+
+## Enabling right-to-left
 
 {% tabs %}
-{% highlight xaml hl_lines="7" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-             x:Class="Selection.MainPage">
-    <ContentPage.Content>
-       <syncfusion:SfTreeView x:Name="treeView" 
-                              FlowDirection="RightToLeft"/>
-    </ContentPage.Content>
-</ContentPage>
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+<syncfusion:SfTreeView x:Name="treeView"
+                       FlowDirection="RightToLeft"/>
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
-SfTreeView treeView = new SfTreeView();
-treeView.FlowDirection = FlowDirection.RightToLeft;
+{% highlight c# tabtitle="C#" hl_lines="9" %}
+using Syncfusion.Maui.TreeView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfTreeView treeView = new SfTreeView();
+        treeView.FlowDirection = FlowDirection.RightToLeft;
+    }
+}
 {% endhighlight %}
 {% endtabs %}

@@ -1,15 +1,19 @@
 ---
 layout: post
-title: About .NET MAUI Time Picker control | Syncfusion
+title: About .NET MAUI Time Picker control | Syncfusion®
 description: Learn here about the overview of Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control, its basic features, and time picker functionalities.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
-# Overview of .NET MAUI Time Picker (SfTimePicker)
+# Overview of .NET MAUI Time Picker
 
 Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker ([SfTimePicker](https://www.syncfusion.com/maui-controls/maui-timepicker)) control allows you to select the time and visualize its items inside a popup or a drop-down UI element. The Time Picker also enables you to set time formats and customize its dialog appearance by configuring its header, footer, and more.
+
+![Interactions in .NET MAUI Time picker.](images/overview/maui-time-picker-interactions.gif)
+
+For prerequisites (project template, target framework, and NuGet install), see the [Getting Started](https://help.syncfusion.com/maui/timepicker/getting-started) page.
 
 ## Business use cases
 
@@ -22,36 +26,19 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker ([SfTimePicker](https://www.syn
 
 - **Header view** allows adding and customizing header text for contextual information.
 
-   ![Header view in .NET MAUI Time picker.](images/overview/maui-time-picker-header-view.png)
-
 - **Column header** allows displaying and customizing labels for hours, minutes, and seconds.
-
-   ![Column header view in .NET MAUI Time picker.](images/overview/maui-time-picker-column-header-view.png)
 
 - **Footer view** allows providing confirmation actions such as OK and Cancel with customizable appearance. 
 
-   ![Footer view in .NET MAUI Time picker.](images/overview/maui-time-picker-footer-view.png)
-
 - **Selection view** allows displaying the selected time clearly with configurable UI.  
-
-   ![Selection view in .NET MAUI Time picker.](images/overview/maui-time-picker-selection-view.png)
 
 - **Time format** allows presenting values in predefined formats for better readability.  
 
-   ![.NET MAUI Time Picker with format h_mm_ss_tt.](images/overview/maui-time-picker-format_h_mm_ss_tt.png)
+- **Picker mode** allows displaying the control in `Default`, `Dialog`, or `RelativeDialog` modes with flexible positioning. 
 
-- **Picker mode** allows displaying the control in popup or dialog modes with flexible positioning. 
-
-   ![Picker mode in .NET MAUI Time picker.](images/overview/maui-time-picker-mode.gif)
-
-- **Interval** allows defining custom intervals for hours, minutes, and seconds.
-
-   ![Intervals in .NET MAUI Time picker.](images/overview/maui-time-picker-intervals.gif)
+- **Interval** allows defining custom intervals for hours, minutes, seconds, and milliseconds.
 
 - **User interaction** allows selecting time values through tap and scroll gestures. 
-
-   ![Interactions in .NET MAUI Time picker.](images/overview/maui-time-picker-interactions.gif)
- 
 
 ## Globalization
 
@@ -104,7 +91,12 @@ The following table summarizes the globalization support available in this contr
 
 - [Getting Started](https://help.syncfusion.com/maui/timepicker/getting-started) shows a step‑by‑step guide to begin using the Time Picker control.  
 - [Customization](https://help.syncfusion.com/maui/timepicker/customizations) explains how to customize layout and appearance.  
-- [Formatting](https://help.syncfusion.com/maui/timepicker/formatting) helps configure time formats and intervals.  
+- [Formatting](https://help.syncfusion.com/maui/timepicker/formatting) helps configure time formats and intervals.
+- [Time Restriction](https://help.syncfusion.com/maui/timepicker/time-restriction) explains how to set minimum, maximum, and blackout times.
+- [Time Interval](https://help.syncfusion.com/maui/timepicker/time-interval) shows how to define custom intervals for hours, minutes, seconds, and milliseconds.
+- [Time Picker Mode](https://help.syncfusion.com/maui/timepicker/time-picker-mode) covers dialog, relative dialog, and popup size options.
+- [Text Display Mode](https://help.syncfusion.com/maui/timepicker/time-picker-text-display-mode) describes fade, shrink, and fade-and-shrink text effects.
+- [Migration](https://help.syncfusion.com/maui/timepicker/migration) maps Xamarin SfTimePicker APIs to .NET MAUI SfTimePicker APIs.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
 ## Resources
