@@ -16,7 +16,7 @@ You can learn about `SfScheduler's` header height, date format, and appearance s
 You can customize the default [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height) property of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). By default, the header height is `50.`
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="9" %}
 
 <ContentPage
     . . .
@@ -33,7 +33,7 @@ You can customize the default [Height](https://help.syncfusion.com/cr/maui/Syncf
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -60,7 +60,7 @@ public partial class MainPage : ContentPage
 The header date format can be customized by using the [TextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_TextFormat) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). By default, the header text format is `MMMM yyyy.`
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="9" %}
 
 <ContentPage
     . . .
@@ -77,7 +77,7 @@ The header date format can be customized by using the [TextFormat](https://help.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -108,7 +108,7 @@ The header can be customized by using the [HeaderView](https://help.syncfusion.c
 You can style the background color and textStyle by using the properties such as [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_TextStyle) properties of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
 
 <ContentPage
     . . .
@@ -125,7 +125,7 @@ You can style the background color and textStyle by using the properties such as
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 9" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 17" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -157,7 +157,7 @@ public partial class MainPage : ContentPage
 You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_HeaderTemplate) property of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9 10 11 12 13 14 15 16 17 18 19 20 21 22 23" %}
 
 <ContentPage
     . . .
@@ -197,7 +197,7 @@ You can customize the header appearance by using the [HeaderTemplate](https://he
 You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_HeaderTemplate) property of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value bound to the scheduler header by using the `HeaderTemplate.` It allows you to choose a different data template for each header, as well as customize the appearance of a particular header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="34" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="38" %}
 
 <ContentPage
     . . .

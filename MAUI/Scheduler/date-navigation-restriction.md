@@ -26,7 +26,7 @@ The [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -59,7 +59,7 @@ You can programmatically select the dates in scheduler by using the [SelectedDat
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -109,7 +109,8 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 5" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 14" %}
+using Syncfusion.Maui.Scheduler;
 
 . . .
 public partial class MainPage : ContentPage
@@ -153,7 +154,8 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 5" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 14" %}
+using Syncfusion.Maui.Scheduler;
 
 . . .
 public partial class MainPage : ContentPage
@@ -178,7 +180,7 @@ public partial class MainPage : ContentPage
 By using the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can quickly navigate to the respective day or timeline day view by tapping on the month cell or view header of the following scheduler views: week, work week, month, agenda, timeline week, timeline work week, and timeline month views.
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="6" %}
 
 <ContentPage   
     . . .
@@ -190,7 +192,7 @@ By using the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusio
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -220,7 +222,7 @@ N>
 You can enable the date picker for the scheduler by using the [ShowDatePickerButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowDatePickerButton) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="6" %}
 
 <ContentPage   
     . . .
@@ -232,7 +234,7 @@ You can enable the date picker for the scheduler by using the [ShowDatePickerBut
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -261,7 +263,7 @@ There will be more icons available for all platforms as this UI will be responsi
 The default value of [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property is [SchedulerViews.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_Default).
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="6" %}
 
 <ContentPage   
     . . .
@@ -273,7 +275,7 @@ The default value of [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusi
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2 3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -299,7 +301,7 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 N> When [ShowAllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowAllowedViews) is `false` the view navigation buttons in the scheduler header are hidden, but [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) still works for views added in the [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property. For [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) is set to `Default`, no scheduler view navigation buttons are added, so [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) does not work.
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="7" %}
 
 <ContentPage   
     . . .
@@ -312,7 +314,7 @@ N> When [ShowAllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2 3" %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -337,7 +339,7 @@ public partial class MainPage : ContentPage
 The [EnableSwipeNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableSwipeNavigation) property determines whether users can navigate between dates using the scheduler's built-in navigation interactions. By default, `EnableSwipeNavigation` is set to `true`, allowing users to navigate using swipe gestures and the navigation buttons in the scheduler header. Setting `EnableSwipeNavigation` to `false` disables these navigation interactions.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="2" %}
+{% highlight XAML tabtitle="xaml" hl_lines="6" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -346,7 +348,7 @@ The [EnableSwipeNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                            EnableSwipeNavigation="False"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="2" %}
+{% highlight C# tabtitle="c#" hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -378,7 +380,7 @@ The minimum date time will restrict backward navigation of date selections as we
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -407,7 +409,7 @@ The maximum date time will restrict forward navigation of date selections as wel
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -469,7 +471,7 @@ You can customize the background color and text style for the minimum date time,
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 16" %}
 
 using Syncfusion.Maui.Scheduler;
 

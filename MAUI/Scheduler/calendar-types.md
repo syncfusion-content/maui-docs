@@ -49,16 +49,15 @@ N>
 * All calendar types are supported except the Lunar type calendars.
 
 {% tabs %}
-{% highlight XAML hl_lines="1" %}
+{% highlight XAML hl_lines="4" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -87,7 +86,7 @@ All the DateTime values can be given, such as [DisplayDate](https://help.syncfus
 
 {% capture codesnippet1 %}
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19 20" %}
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -123,7 +122,7 @@ public partial class MainPage : ContentPage
 
 {% capture codesnippet2 %}
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18 19" %}
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
 

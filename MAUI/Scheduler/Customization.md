@@ -280,7 +280,7 @@ The Week number text style of the Scheduler can be customized by using the [Week
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 14" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 24" %}
 
 using Syncfusion.Maui.Scheduler;
 

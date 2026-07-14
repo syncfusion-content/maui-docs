@@ -17,7 +17,7 @@ You can create a resource view by setting the [Name](https://help.syncfusion.com
 In the **Day**, **Week**, **Work Week**, and **Month** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week, and Timeline Month), resources are displayed **vertically**.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -31,7 +31,7 @@ In the **Day**, **Week**, **Work Week**, and **Month** views, resources are disp
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -77,7 +77,7 @@ Appointments associated with the `ResourceView` [Resources](https://help.syncfus
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -138,7 +138,7 @@ Multiple resources can share the same events or appointments by declaring resour
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -183,7 +183,7 @@ In the Day, Week, WorkWeek, and Month views, you can control whether dates are g
 The [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) is set to [`Resource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceGroupType.html#Syncfusion_Maui_Scheduler_SchedulerResourceGroupType_Resource) by default. In this mode, the scheduler arranges the dates under each resource.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -197,7 +197,7 @@ The [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -230,7 +230,7 @@ public partial class MainPage : ContentPage
 In [Month]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html)) View, grouping is supported only by Resource (ResourceGroupType="Resource"), where each resource is rendered with its own independent month calendar layout to clearly display appointments and availability; for example, if three resources are defined, the view will show three distinct monthly calendars side by side, each containing only the appointments assigned to that specific resource.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -244,7 +244,7 @@ In [Month]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.Schedu
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -277,7 +277,7 @@ public partial class MainPage : ContentPage
 When the [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) is set to [`Date`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceGroupType.html#Syncfusion_Maui_Scheduler_SchedulerResourceGroupType_Date), the scheduler arranges the resources under each date.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -291,7 +291,7 @@ When the [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -414,7 +414,7 @@ public partial class MainPage : ContentPage
 The hamburger icon color can be customized by using the [HamburgerIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_HamburgerIconColor) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -428,7 +428,7 @@ The hamburger icon color can be customized by using the [HamburgerIconColor](htt
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="10" %}
+{% highlight C# hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -461,7 +461,7 @@ public partial class MainPage : ContentPage
 The drawer resource selection color can be customized by using the [DrawerResourceSelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerResourceSelectionColor) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -475,7 +475,7 @@ The drawer resource selection color can be customized by using the [DrawerResour
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="10" %}
+{% highlight C# hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -508,7 +508,7 @@ public partial class MainPage : ContentPage
 The drawer background can be customized by using the [DrawerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerBackground) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -522,7 +522,7 @@ The drawer background can be customized by using the [DrawerBackground](https://
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="10" %}
+{% highlight C# hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -750,7 +750,7 @@ The number of resources shown in the day, week, work week, month, timelineday, t
 ### Days View 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -764,7 +764,7 @@ The number of resources shown in the day, week, work week, month, timelineday, t
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="25" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -802,7 +802,7 @@ public partial class MainPage : ContentPage
 ### Month View
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -816,7 +816,7 @@ public partial class MainPage : ContentPage
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -847,7 +847,7 @@ public partial class MainPage : ContentPage
 ### Timeline View 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -861,7 +861,7 @@ public partial class MainPage : ContentPage
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -901,7 +901,7 @@ N>
 In the day, week, work week, and month views, resources are arranged horizontally. The height of the resource headers can be customized using the [`ResourceHeaderHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderHeight) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
 
 <ContentPage
     . . .
@@ -917,7 +917,7 @@ In the day, week, work week, and month views, resources are arranged horizontall
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -952,7 +952,7 @@ public partial class MainPage : ContentPage
 In the timeline day, timeline week, and timeline work week views, resources are arranged vertically. The width of the resource headers can be customized using the [ResourceHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderWidth) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -966,7 +966,7 @@ In the timeline day, timeline week, and timeline work week views, resources are 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -999,7 +999,7 @@ public partial class MainPage : ContentPage
 You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_MinimumRowHeight) property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html) in [SfScheduler.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -1014,7 +1014,7 @@ You can customize resource minimum row height of visible resources in timeline d
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="12" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1063,7 +1063,7 @@ In the timeline views (timeline day, timeline week, and timeline work week), spe
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1123,7 +1123,7 @@ In Days View (day, week, and work week) special time regions can be applied to v
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1205,7 +1205,7 @@ N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembe
 
 
 {% tabs %}
-{% highlight XAML hl_lines="6 7 8 9" %}
+{% highlight XAML hl_lines="8 9 10 11 12 13" %}
 
 <ContentPage
     . . .
@@ -1226,7 +1226,7 @@ N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembe
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="6 11" %}
+{% highlight C# hl_lines="13 18" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1258,7 +1258,7 @@ public partial class MainPage : ContentPage
 Add the resources of `Employee` collection that can be assigned  to the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) in the `SchedulerResourceView` class which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7 8" %}
 
 <ContentPage
     . . .
@@ -1272,7 +1272,7 @@ Add the resources of `Employee` collection that can be assigned  to the [Resourc
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1322,7 +1322,7 @@ public class Meeting
 Map those properties of the `Meeting` class to schedule appointments by using the `SchedulerAppointmentMapping` properties.
 
 {%tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11 12 13 14 15" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8 9 10 11 12 13 14 15 16 17 18" %}
 
 <ContentPage
     . . .
@@ -1346,7 +1346,7 @@ Map those properties of the `Meeting` class to schedule appointments by using th
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPAge.xaml.cs" hl_lines="3 9" %}
+{% highlight c# tabtitle="MainPAge.xaml.cs" hl_lines="10 16" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1412,7 +1412,7 @@ The resource header text style can be customized by using the [TextStyle](https:
 The resource appearance customization can be achieved by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_HeaderTemplate) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 37" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19 40" %}
 
 <ContentPage
     . . .

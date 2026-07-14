@@ -21,18 +21,17 @@ You can control when the editor is available by using the [AppointmentEditorMode
 By default, `AppointmentEditorMode` is set to `None`. To enable the Appointment Editor for user interaction, set the AppointmentEditorMode property to `Add`, `Edit`, or both.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit">
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -58,18 +57,17 @@ Double-tapping a time slot opens the editor, where appointment details can be en
 To allow appointment creation, configure the [AppointmentEditorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorMode.html) property with the `Add` option. If the `AppointmentEditorMode` does not include `Add`, double‑tapping a time slot will not open the editor.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Add">
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -91,18 +89,17 @@ public partial class MainPage : ContentPage
 Existing appointments can be modified through the appointment editor. To allow editing, set the [AppointmentEditorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorMode.html) to `Edit`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Edit">
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -186,11 +183,10 @@ After selecting the required option, the appointment editor opens with the corre
 The [AppointmentEditorOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentEditorOpening) event is raised before the appointment editor dialog appears. It occurs when an appointment is double‑tapped for modification or when a time slot is double‑tapped to create a new appointment. Set the event args' `Cancel` property to `true` to prevent the editor from opening.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -198,7 +194,7 @@ The [AppointmentEditorOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="13" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -226,11 +222,10 @@ The [AppointmentEditorOpeningEventArgs](https://help.syncfusion.com/cr/maui/Sync
 - [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorOpeningEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentEditorOpeningEventArgs_Cancel) : Set to `true` to prevent the appointment editor from opening.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -238,7 +233,7 @@ The [AppointmentEditorOpeningEventArgs](https://help.syncfusion.com/cr/maui/Sync
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -267,11 +262,10 @@ public partial class MainPage : ContentPage
 The [AppointmentEditorClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentEditorClosing) event is triggered when the appointment editor is about to close after performing an action such as Add, Edit, Delete, or Cancel. This event allows you to control the close operation and optionally handle the performed action. Set the event args' `Cancel` property to `true` to stop the editor from closing.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -279,7 +273,7 @@ The [AppointmentEditorClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="13" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -307,11 +301,10 @@ The [AppointmentEditorClosingEventArgs](https://help.syncfusion.com/cr/maui/Sync
 - [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorClosingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentEditorClosingEventArgs_Cancel) : Set to `true` to keep the editor open and prevent it from closing.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -319,7 +312,7 @@ The [AppointmentEditorClosingEventArgs](https://help.syncfusion.com/cr/maui/Sync
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -335,10 +328,6 @@ public partial class MainPage : ContentPage
         var appointment = e.Appointment;
         var action = e.Action;
         var resources = e.Resources;
-
-        // Example: take responsibility for saving and stop the scheduler from applying the change itself.
-        // e.Handled = true;
-        // MyAppointmentRepository.Save(appointment);
     }
 }
 {% endhighlight %}
@@ -359,11 +348,10 @@ The [RecurringAppointmentBeginningEditEventArgs](https://help.syncfusion.com/cr/
 - [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.RecurringAppointmentEditMode.html#Syncfusion_Maui_Scheduler_RecurringAppointmentEditMode_Series) : Edits the entire recurring appointment series.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
     <scheduler:SfScheduler x:Name="scheduler"
                            View="Day"
                            AppointmentEditorMode="Add,Edit"
@@ -371,7 +359,7 @@ The [RecurringAppointmentBeginningEditEventArgs](https://help.syncfusion.com/cr/
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -385,9 +373,6 @@ public partial class MainPage : ContentPage
     private void Scheduler_RecurringAppointmentBeginningEdit(object? sender, RecurringAppointmentBeginningEditEventArgs e)
     {
         var editMode = e.EditMode;
-
-        // Example: bypass the dialog and always edit the entire series.
-        // e.EditMode = RecurringAppointmentEditMode.Series;
     }
 }
 {% endhighlight %}

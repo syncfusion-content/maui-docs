@@ -25,18 +25,22 @@ The timeline view displays the dates along the horizontal time axis with the des
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days in the timeline day, timeline week, and timeline workweek can be adjusted by changing the [NumberOfVisibleDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_NumberOfVisibleDaysProperty) property of the [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                        NumberOfVisibleDays="3"/>
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                            NumberOfVisibleDays="3"/>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -62,18 +66,22 @@ public partial class MainPage : ContentPage
 The time interval between the time slots in the timeline day, timeline week, and timeline workweek views can be customized by using the [TimeInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeInterval) property of the [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                       TimeInterval="2:0:0" />
-    </scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                        TimeInterval="2:0:0" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -101,18 +109,22 @@ N> To modify the `TimeInterval` value (in minutes), change the time labels forma
 The Time interval width can be customized for each time slot cell of the timeline day, timeline week, timeline workweek, and timeline month views by using the [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_TimeIntervalWidth) property of the [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                       TimeIntervalWidth="120" />
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                        TimeIntervalWidth="120" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -140,18 +152,22 @@ By default, the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfu
 The [NonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_NonWorkingDays) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) can also be used to show only the nonworking days of the week.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineWorkWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                       NonWorkingDays="Monday,Wednesday" />
-    </scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWorkWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                        NonWorkingDays="Monday,Wednesday" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -177,18 +193,22 @@ N> The `Timeline workweek` view displays exactly the defined working days on the
 The [HideNonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_HideNonWorkingDays) property of the [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) allows you to control the visibility of non-working days in `TimelineMonth`. By default, the [HideNonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_HideNonWorkingDays) property is set to false.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineMonth">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                       NonWorkingDays="Monday,Wednesday" HideNonWorkingDays = "True"/>
-    </scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineMonth">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                        NonWorkingDays="Monday,Wednesday" HideNonWorkingDays = "True"/>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -217,19 +237,23 @@ N> The `HideNonWorkingDays` property is applicable only for the `TimelineMonth` 
 The default values for [StartHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_StartHour) and [EndHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_EndHour) are `0` and `24` respectively, to show all the time slots for a timeline day, timeline week, or timeline workweek view. You may set these properties to show only the required time periods in [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html). You can set [StartHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_StartHour) and [EndHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_EndHour) in the time duration to show the required time duration in minutes.
 
 {% tabs %}
-{% highlight XAML hl_lines="5 6" %}
+{% highlight XAML hl_lines="8 9" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-            <scheduler:SchedulerTimelineView 
-                       StartHour="9"
-                       EndHour="16" />
-    </scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView 
+                        StartHour="9"
+                        EndHour="16" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3 4" %}
+{% highlight C# hl_lines="10 11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -280,7 +304,7 @@ You can enable or disable the touch interaction of TimeRegion using the [EnableP
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="22" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -293,19 +317,21 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         this.Scheduler.View = SchedulerView.TimelineWeek;
         this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    }
+
     private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
     {
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
-    {
-    StartTime = DateTime.Today.Date.AddHours(13),
-    EndTime = DateTime.Today.Date.AddHours(14),
-    Text = "Lunch",
-    EnablePointerInteraction = false,
-    };
-    timeRegions.Add(timeRegion);
-    return timeRegions;
-    }
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Lunch",
+            EnablePointerInteraction = false,
+        };
+
+        timeRegions.Add(timeRegion);
+        return timeRegions;
     }
 }
 
@@ -328,7 +354,7 @@ The recurring time region recurs on a daily, weekly, monthly, or yearly interval
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="22" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -341,20 +367,21 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         this.Scheduler.View = SchedulerView.TimelineWeek;
         this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    }
     private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
     {
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
-    {
-    StartTime = DateTime.Today.Date.AddHours(13),
-    EndTime = DateTime.Today.Date.AddHours(14),
-    Text = "Lunch",
-    EnablePointerInteraction = false,
-    RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
-    };
-    timeRegions.Add(timeRegion);
-    return timeRegions;
-    }
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Lunch",
+            EnablePointerInteraction = false,
+            RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+        };
+        
+        timeRegions.Add(timeRegion);
+        return timeRegions;
     }
 }
 
@@ -373,7 +400,7 @@ Any occurrence that is an exception from the recurrence pattern time region can 
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 15 16 17 18" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 24 25 26 27" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -386,25 +413,26 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         this.Scheduler.View = SchedulerView.TimelineWeek;
         this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    }
     private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
     {
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var recurrenceExceptionDates = DateTime.Now.Date.AddDays(3);
-    var timeRegion = new SchedulerTimeRegion()
-    {
-    StartTime = DateTime.Today.Date.AddHours(13),
-    EndTime = DateTime.Today.Date.AddHours(14),
-    Text = "Lunch",
-    EnablePointerInteraction = false,
-    RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
-    RecurrenceExceptionDates = new ObservableCollection<DateTime>()
-    {
-    recurrenceExceptionDates,
-    }
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var recurrenceExceptionDates = DateTime.Now.Date.AddDays(3);
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Lunch",
+            EnablePointerInteraction = false,
+            RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+            RecurrenceExceptionDates = new ObservableCollection<DateTime>()
+            {
+                recurrenceExceptionDates,
+            }
         };
+
         timeRegions.Add(timeRegion);
         return timeRegions;
-        }
     }
 }
 
@@ -425,7 +453,7 @@ The specialTimeRegion background and text style can be customized by using the [
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="29" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -438,26 +466,28 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         this.Scheduler.View = SchedulerView.TimelineWeek;
         this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    }
     private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
     {
-    var textStyle = new SchedulerTextStyle()
-    {
-    TextColor = Colors.DarkBlue,
-    FontSize = 14,
-    };
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
-    {
-    StartTime = DateTime.Today.Date.AddHours(13),
-    EndTime = DateTime.Today.Date.AddHours(14),
-    Text = "Lunch",
-    EnablePointerInteraction = false,
-    Background = Brush.Orange,
-    TextStyle = textStyle
-    };
-    timeRegions.Add(timeRegion);
-    return timeRegions;
-    }
+        var textStyle = new SchedulerTextStyle()
+        {
+            TextColor = Colors.DarkBlue,
+            FontSize = 14,
+        };
+        
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Lunch",
+            EnablePointerInteraction = false,
+            Background = Brush.Orange,
+            TextStyle = textStyle
+        };
+
+        timeRegions.Add(timeRegion);
+        return timeRegions;
     }
 }
 
@@ -471,22 +501,26 @@ public partial class MainPage : ContentPage
 You can customize the time region appearance by using the [TimeRegionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegionTemplate) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8 9 10 11 12 13 14" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView>
-            <scheduler:SchedulerTimelineView.TimeRegionTemplate>
-                <DataTemplate>
-                    <Grid Background="MediumPurple" >
-                        <Label HorizontalOptions="Center" TextColor="White" VerticalOptions="Center" Text="{Binding Text}" />
-                    </Grid>
-                </DataTemplate>
-            </scheduler:SchedulerTimelineView.TimeRegionTemplate>
-        </scheduler:SchedulerTimelineView>
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView>
+                <scheduler:SchedulerTimelineView.TimeRegionTemplate>
+                    <DataTemplate>
+                        <Grid Background="MediumPurple" >
+                            <Label HorizontalOptions="Center" TextColor="White" VerticalOptions="Center" Text="{Binding Text}" />
+                        </Grid>
+                    </DataTemplate>
+                </scheduler:SchedulerTimelineView.TimeRegionTemplate>
+            </scheduler:SchedulerTimelineView>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -502,20 +536,21 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         this.Scheduler.View = SchedulerView.TimelineWeek;
         this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    }
     private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
     {
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
-    {
-    StartTime = DateTime.Today.Date.AddHours(13),
-    EndTime = DateTime.Today.Date.AddHours(14),
-    Text = "Lunch",
-    EnablePointerInteraction = false,
-    Background = Brush.Orange,
-    };
-    timeRegions.Add(timeRegion);
-    return timeRegions;
-    }
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Lunch",
+            EnablePointerInteraction = false,
+            Background = Brush.Orange,
+        };
+        
+        timeRegions.Add(timeRegion);
+        return timeRegions;
     }
 }
 
@@ -529,29 +564,33 @@ public partial class MainPage : ContentPage
 You can customize the time region appearance by using the [TimeRegionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegionTemplate) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It allows you to choose a different data template for each time region, as well as customize the appearance of a particular time region based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="21" %}
 
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="timeRegiontemplate">
-            <Grid Background = "LightCyan" Opacity="0.5">
-                <Label x:Name="label" HorizontalOptions="Center" TextColor="Red" Text="{Binding Text}" VerticalOptions="Center" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="timeRegiontemplate1">
-            <Grid Background = "Lightgreen" Opacity="0.5">
-                <Label x:Name="label" HorizontalOptions="Center" TextColor="Orange" Text="{Binding Text}" VerticalOptions="Center" />
-            </Grid>
-        </DataTemplate>
-        <local:TimeRegionTemplateSelector x:Key="timeRegionTemplateSelector"  TimeRegionsTemplate="{StaticResource timeRegiontemplate}"  TimeRegionsTemplate1="{StaticResource timeRegiontemplate1}" />
-    </Grid.Resources>
-     <scheduler:SfScheduler x:Name="Scheduler" 
-                            View="TimelineWeek">
-        <scheduler:SfScheduler.TimelineView>
-            <scheduler:SchedulerTimelineView TimeRegionTemplate = "{StaticResource timeRegionTemplateSelector}"/>
-        </scheduler:SfScheduler.TimelineView>
-    </scheduler:SfScheduler>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="timeRegiontemplate">
+                <Grid Background = "LightCyan" Opacity="0.5">
+                    <Label x:Name="label" HorizontalOptions="Center" TextColor="Red" Text="{Binding Text}" VerticalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="timeRegiontemplate1">
+                <Grid Background = "Lightgreen" Opacity="0.5">
+                    <Label x:Name="label" HorizontalOptions="Center" TextColor="Orange" Text="{Binding Text}" VerticalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+            <local:TimeRegionTemplateSelector x:Key="timeRegionTemplateSelector"  TimeRegionsTemplate="{StaticResource timeRegiontemplate}"  TimeRegionsTemplate1="{StaticResource timeRegiontemplate1}" />
+        </Grid.Resources>
+        <scheduler:SfScheduler x:Name="Scheduler" 
+                                View="TimelineWeek">
+            <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView TimeRegionTemplate = "{StaticResource timeRegionTemplateSelector}"/>
+            </scheduler:SfScheduler.TimelineView>
+        </scheduler:SfScheduler>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="TimeRegionTemplateSelector.cs" %}
@@ -586,30 +625,33 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         this.Scheduler.View = SchedulerView.TimelineWeek;
         this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    }
+
     private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
     {
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
-    {
-    StartTime = DateTime.Today.Date.AddHours(13),
-    EndTime = DateTime.Today.Date.AddHours(14),
-    Text = "Lunch",
-    RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
-    EnablePointerInteraction = true,
-    };
-    var timeRegion1 = new SchedulerTimeRegion()
-    {
-    StartTime = DateTime.Today.Date.AddHours(17),
-    EndTime = DateTime.Today.Date.AddHours(18),
-    Text = "Break",
-    RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
-    Background = Brush.Red,
-    EnablePointerInteraction = false,
-    };
-    timeRegions.Add(timeRegion);
-    timeRegions.Add(timeRegion1);
-    return timeRegions;
-    }
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Lunch",
+            RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+            EnablePointerInteraction = true,
+        };
+
+        var timeRegion1 = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(17),
+            EndTime = DateTime.Today.Date.AddHours(18),
+            Text = "Break",
+            RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+            Background = Brush.Red,
+            EnablePointerInteraction = false,
+        };
+
+        timeRegions.Add(timeRegion);
+        timeRegions.Add(timeRegion1);
+        return timeRegions;
     }
 }
 
@@ -629,15 +671,19 @@ By default, the property is set to `false`, so time regions are hidden. Setting 
 This property is only applicable when the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_View) is set to [TimelineMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_TimelineMonth).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="4" %}
-<scheduler:SfScheduler x:Name="scheduler"
-                       View="TimelineMonth">
-<scheduler:SfScheduler.TimelineView>
-    <scheduler:SchedulerTimelineView ShowMonthTimeRegions="True"/>
-</scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+{% highlight xaml tabtitle="XAML" hl_lines="7" %}
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="scheduler"
+                        View="TimelineMonth">
+    <scheduler:SfScheduler.TimelineView>
+        <scheduler:SchedulerTimelineView ShowMonthTimeRegions="True"/>
+    </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="13" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -652,19 +698,21 @@ public partial class MainPage : ContentPage
         scheduler.View = SchedulerView.TimelineMonth;
         scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
         scheduler.TimelineView.ShowMonthTimeRegions = true;
+    }
+
     private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
     {
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
-    {
-    StartTime = DateTime.Today.Date.AddHours(13),
-    EndTime = DateTime.Today.Date.AddHours(14),
-    Text = "Holiday",
-    EnablePointerInteraction = false,
-    };
-    timeRegions.Add(timeRegion);
-    return timeRegions;
-    }
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Holiday",
+            EnablePointerInteraction = false,
+        };
+        
+        timeRegions.Add(timeRegion);
+        return timeRegions;
     }
 }
 
@@ -678,18 +726,22 @@ public partial class MainPage : ContentPage
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval width can be adjusted based on the screen width by changing the [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_TimeIntervalWidth) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) to `-1.` It will auto-fit the timeline day, timeline week, and timeline work week views to the screen width.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineDay">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                       TimeIntervalWidth="-1" />
-    </scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineDay">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                        TimeIntervalWidth="-1" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -715,18 +767,22 @@ public partial class MainPage : ContentPage
 You can show or hide the current time indicator in timeline day, timeline week, and timeline workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_ShowCurrentTimeIndicator) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html), and by default, its `true.`
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                       ShowCurrentTimeIndicator="False"/>
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                        ShowCurrentTimeIndicator="False"/>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -750,18 +806,22 @@ public partial class MainPage : ContentPage
 The current time indicator can be customized by using the [CurrentTimeIndicatorBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_CurrentTimeIndicatorBrush) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-            <scheduler:SchedulerTimelineView 
-                       CurrentTimeIndicatorBrush="Green" />
-    </scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView 
+                        CurrentTimeIndicatorBrush="Green" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -790,18 +850,22 @@ The current time indicator color is applied only when the`ShowCurrentTimeIndicat
 The [TimeRulerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_TimeRulerHeight) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) can be used to customize the size of the time ruler view where the labels with the time are placed.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                       TimeRulerHeight="100" />
-    </scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                        TimeRulerHeight="100" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -827,18 +891,22 @@ public partial class MainPage : ContentPage
 The [MinimumAppointmentDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_MinimumAppointmentDuration) property allows to set an arbitrary height to appointments which have a minimum duration in the timeline day, timeline week, and timeline workweek views so that the subject can be readable.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-            <scheduler:SchedulerTimelineView 
-                       MinimumAppointmentDuration="0:30:0" />
-    </scheduler:SfScheduler.TimelineView>
-</scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView 
+                        MinimumAppointmentDuration="0:30:0" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -878,22 +946,26 @@ You can customize the default appearance of view header in a timeline views by s
 The date and day format of SfScheduler view header can be customized by using the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DateFormat) and [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) properties of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="6 7" %}
+{% highlight XAML hl_lines="9 10" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView>
-            <scheduler:SchedulerTimelineView.ViewHeaderSettings>
-                <scheduler:SchedulerViewHeaderSettings DayFormat="dddd" 
-                                                       DateFormat="MMMM dd"/>
-            </scheduler:SchedulerTimelineView.ViewHeaderSettings>
-        </scheduler:SchedulerTimelineView>
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView>
+                <scheduler:SchedulerTimelineView.ViewHeaderSettings>
+                    <scheduler:SchedulerViewHeaderSettings DayFormat="dddd" 
+                                                        DateFormat="MMMM dd"/>
+                </scheduler:SchedulerTimelineView.ViewHeaderSettings>
+            </scheduler:SchedulerTimelineView>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3 4" %}
+{% highlight C# hl_lines="10 11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -920,21 +992,25 @@ public partial class MainPage : ContentPage
 The height of the ViewHeader can be customized by setting the `Height` property of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html) in [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="6" %}
+{% highlight XAML hl_lines="9" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView>
-            <scheduler:SchedulerTimelineView.ViewHeaderSettings>
-                <scheduler:SchedulerViewHeaderSettings Height="100" />
-            </scheduler:SchedulerTimelineView.ViewHeaderSettings>
-        </scheduler:SchedulerTimelineView>
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView>
+                <scheduler:SchedulerTimelineView.ViewHeaderSettings>
+                    <scheduler:SchedulerViewHeaderSettings Height="100" />
+                </scheduler:SchedulerTimelineView.ViewHeaderSettings>
+            </scheduler:SchedulerTimelineView>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -964,21 +1040,25 @@ The view header appearance customization can be achieved by using the `TextStyle
 The background color and text style for the labels mentioning the time can be customized by setting the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background), [DateTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DateTextStyle), and [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle) properties of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView>
-            <scheduler:SchedulerTimelineView.ViewHeaderSettings>
-                <scheduler:SchedulerViewHeaderSettings Background="LightGreen"/>
-            </scheduler:SchedulerTimelineView.ViewHeaderSettings>
-        </scheduler:SchedulerTimelineView>
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView>
+                <scheduler:SchedulerTimelineView.ViewHeaderSettings>
+                    <scheduler:SchedulerViewHeaderSettings Background="LightGreen"/>
+                </scheduler:SchedulerTimelineView.ViewHeaderSettings>
+            </scheduler:SchedulerTimelineView>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 16" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1017,37 +1097,41 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}    
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView>
-            <scheduler:SchedulerTimelineView.ViewHeaderTemplate>
-                <DataTemplate>
-                    <Grid x:Name="grid" Background="MediumPurple" >
-                        <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="White" >
-                            <Label.Text>
-                                <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
-                                    <Binding />
-                                    <Binding />
-                                </MultiBinding >
-                            </Label.Text >
-                            <Label.Triggers >
-                                <DataTrigger TargetType="Label" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
-                                    <Setter TargetName = "label" Property="TextColor" Value="Orange"/>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView>
+                <scheduler:SchedulerTimelineView.ViewHeaderTemplate>
+                    <DataTemplate>
+                        <Grid x:Name="grid" Background="MediumPurple" >
+                            <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="White" >
+                                <Label.Text>
+                                    <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
+                                        <Binding />
+                                        <Binding />
+                                    </MultiBinding >
+                                </Label.Text >
+                                <Label.Triggers >
+                                    <DataTrigger TargetType="Label" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
+                                        <Setter TargetName = "label" Property="TextColor" Value="Orange"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                            <Grid.Triggers>
+                                <DataTrigger TargetType = "Grid" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
+                                    <Setter TargetName = "grid" Property="Background" Value="LightGreen"/>
                                 </DataTrigger>
-                            </Label.Triggers>
-                        </Label>
-                        <Grid.Triggers>
-                            <DataTrigger TargetType = "Grid" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
-                                <Setter TargetName = "grid" Property="Background" Value="LightGreen"/>
-                            </DataTrigger>
-                        </Grid.Triggers>
-                    </Grid>
-                </DataTemplate>
-            </scheduler:SchedulerTimelineView.ViewHeaderTemplate>
-        </scheduler:SchedulerTimelineView>
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+                            </Grid.Triggers>
+                        </Grid>
+                    </DataTemplate>
+                </scheduler:SchedulerTimelineView.ViewHeaderTemplate>
+            </scheduler:SchedulerTimelineView>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1064,42 +1148,46 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="normalDateTemplate">
-            <Grid x:Name="grid" Background="MediumPurple" >
-                <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="White" >
-                    <Label.Text>
-                        <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
-                            <Binding />
-                            <Binding />
-                        </MultiBinding >
-                    </Label.Text >
-                </Label>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="todayDateTemplate">
-            <Grid x:Name="grid" Background="MediumPurple" >
-                <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="Yellow" >
-                    <Label.Text>
-                        <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
-                            <Binding />
-                            <Binding />
-                        </MultiBinding >
-                    </Label.Text >
-                </Label>
-            </Grid>
-        </DataTemplate>
-        <local:ViewHeaderTemplateSelector x:Key="viewHeaderTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
-    </Grid.Resources>
-    <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="TimelineWeek" >
-        <scheduler:SfScheduler.TimelineView>
-            <scheduler:SchedulerTimelineView ViewHeaderTemplate="{StaticResource viewHeaderTemplateSelector}" />
-        </scheduler:SfScheduler.TimelineView>
-    </scheduler:SfScheduler>
- </Grid>
- 
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="normalDateTemplate">
+                <Grid x:Name="grid" Background="MediumPurple" >
+                    <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="White" >
+                        <Label.Text>
+                            <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
+                                <Binding />
+                                <Binding />
+                            </MultiBinding >
+                        </Label.Text >
+                    </Label>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="todayDateTemplate">
+                <Grid x:Name="grid" Background="MediumPurple" >
+                    <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="Yellow" >
+                        <Label.Text>
+                            <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
+                                <Binding />
+                                <Binding />
+                            </MultiBinding >
+                        </Label.Text >
+                    </Label>
+                </Grid>
+            </DataTemplate>
+            <local:ViewHeaderTemplateSelector x:Key="viewHeaderTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+        </Grid.Resources>
+        <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek" >
+            <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView ViewHeaderTemplate="{StaticResource viewHeaderTemplateSelector}" />
+            </scheduler:SfScheduler.TimelineView>
+        </scheduler:SfScheduler>
+    </Grid>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="ViewHeaderTemplateSelector.cs" %}
 
@@ -1147,18 +1235,22 @@ N>
 The format for the labels mentioning the time can be customized by setting the [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeFormat) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                        TimeFormat="hh:mm" />
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
+                            TimeFormat="hh:mm" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1192,7 +1284,7 @@ The text style for the labels mentioning the time can be customized by setting t
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15" %}
 
 using Syncfusion.Maui.Scheduler;
 
