@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Right To Left FlowDirection in .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
-description: Learn about Right To Left support in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase
+title: Right-to-Left FlowDirection in .NET MAUI DataForm | Syncfusion®
+description: Learn about Right-to-Left (RTL) support in Syncfusion® .NET MAUI DataForm (SfDataForm) for mobile and desktop apps using a shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Right To Left Flow Direction in .NET MAUI DataForm (SfDataForm)
+# Right-to-Left Flow Direction in .NET MAUI DataForm (SfDataForm)
 
-The `SfDataForm` supports changing the flow direction of the text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft`.
+The `SfDataForm` supports right-to-left text flow by setting the `FlowDirection` to `RightToLeft`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.xaml" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -23,7 +23,7 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 SfDataForm dataForm = new SfDataForm();
 dataForm.FlowDirection = FlowDirection.RightToLeft;
@@ -32,4 +32,4 @@ this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 
-![Right to left in .NET MAUI DataForm.](images/right-to-left/right-to-left.png)
+![Right-to-left in .NET MAUI DataForm.](images/right-to-left/right-to-left.png)
