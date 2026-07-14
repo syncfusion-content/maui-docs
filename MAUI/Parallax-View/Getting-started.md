@@ -193,8 +193,8 @@ The following code sample demonstrates how to bind the Syncfusion<sup>®</sup> L
                             </Grid.ColumnDefinitions>
                             <Image BackgroundColor="Transparent" Source="{Binding ItemImage}" Grid.Column="0" Aspect="AspectFit" />
                             <StackLayout BackgroundColor="Transparent" Grid.Column="1">
-                                <Label HorizontalOptions="FillAndExpand" TextColor="White" Text="{Binding Name}"/>
-                                <Label HorizontalOptions="FillAndExpand" Text="{Binding Author}" TextColor="White"/>
+                                <Label TextColor="White" Text="{Binding Name}"/>
+                                <Label Text="{Binding Author}" TextColor="White"/>
                             </StackLayout>
                         </Grid>
                     </ViewCell>
@@ -229,14 +229,12 @@ listView.ItemTemplate = new DataTemplate(() =>
     var nameLabel = new Label
     {
         TextColor = Colors.White,
-        HorizontalOptions = LayoutOptions.FillAndExpand
     };
     nameLabel.SetBinding(Label.TextProperty, "Name");
 
     var authorLabel = new Label
     {
         TextColor = Colors.White,
-        HorizontalOptions = LayoutOptions.FillAndExpand
     };
     authorLabel.SetBinding(Label.TextProperty, "Author");
 

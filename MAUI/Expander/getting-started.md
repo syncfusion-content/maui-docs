@@ -196,7 +196,7 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
                            Text="Payment Details"
                            FontSize="14"
                            Grid.Column="1"
-                           VerticalOptions="CenterAndExpand" />
+                           VerticalOptions="Center" />
                 </Grid>
             </syncfusion:SfExpander.Header>
             <syncfusion:SfExpander.Content>

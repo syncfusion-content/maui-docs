@@ -69,7 +69,7 @@ The [`ParallaxScrollingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusio
 <Grid>
     <parallax:SfParallaxView Source="{x:Reference Name=listView}" x:Name="parallaxview">
         <parallax:SfParallaxView.Content>
-            <Image x:Name="image" Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+            <Image x:Name="image" Source="{Binding Image}" BackgroundColor="Transparent" Aspect="AspectFill" />
         </parallax:SfParallaxView.Content>
     </parallax:SfParallaxView>
     <local:CustomListView x:Name="listView">
