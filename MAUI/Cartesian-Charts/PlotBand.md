@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Plot Band in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about plot band and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control and more.
+title: Plot band in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about plot band and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control and more.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui plot band, maui plot band, .net maui chart plot band type, plot band customization .net maui, syncfusion maui plot band, cartesian plot band maui, .net maui chart plot band visualization, .net maui shaded region chart, .net maui recurrence plot band.
 ---
 
-# Plot bands in .NET MAUI Chart
+# Plot band in .NET MAUI Cartesian Chart
 
 A plot band, also known as a stripline, allows for shading specific regions or ranges in the plot area background at regular or custom intervals. It also provides options to customize the size of these bands. Text can be added to plot band and indicate the significance of each particular region.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html) and [DateTimePlotBand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html). Based on the axis, plot bands are drawn using these classifications. The following properties are used to configure the plot band:
 
@@ -33,7 +35,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity --> 
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.PlotBands>
@@ -44,7 +46,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
             </chart:NumericalAxis.PlotBands>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
-    . . .
+    <!-- code omitted for brevity --> 
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -52,7 +54,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 NumericalAxis numericalAxis = new NumericalAxis();
 NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
 NumericalPlotBand plotBand = new NumericalPlotBand
@@ -65,14 +67,14 @@ NumericalPlotBand plotBand = new NumericalPlotBand
 numericalPlotBandCollection.Add(plotBand);
 numericalAxis.PlotBands = numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
-...
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Plot band with category axis in MAUI Cartesian chart](Plot_band_images/category_plotband.png)
+![Plot band with category axis in .NET MAUI Cartesian Chart](Plot_band_images/category_plotband.png)
 
 ## DateTime PlotBand
 
@@ -83,7 +85,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->    
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis>
             <chart:DateTimeAxis.PlotBands>
@@ -106,14 +108,14 @@ this.Content = chart;
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 DateTimeAxis dateTimeAxis = new DateTimeAxis();
 DateTimePlotBandCollection dateTimePlotBandCollection = new DateTimePlotBandCollection();
 DateTimePlotBand plotBand = new DateTimePlotBand
 {
     Start = new DateTime(2023, 04, 01),
     End = new DateTime(2023,06,01),
-    Fill = Color.Orange
+    Fill = Colors.Orange
 };
 
 dateTimePlotBandCollection.Add(plotBand);
@@ -122,14 +124,14 @@ chart.XAxes.Add(dateTimeAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
-...
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Plot band with datetime axis in MAUI Cartesian chart](Plot_band_images/datetime_plotband.png)
+![Plot band with datetime axis in .NET MAUI Cartesian Chart](Plot_band_images/datetime_plotband.png)
 
 ## Recursive plot band
 
@@ -144,7 +146,7 @@ The Plot band recurrence feature enables plot bands to be drawn repeatedly at re
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->    
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
@@ -169,7 +171,7 @@ The Plot band recurrence feature enables plot bands to be drawn repeatedly at re
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
 
@@ -179,16 +181,16 @@ NumericalPlotBand plotBand = new NumericalPlotBand
 {
     Start = 20,
     End = 22,
-    IsRepeatable = true
-    RepeatUntil = 32
-    RepeatEvery = 4                                  
+    IsRepeatable = true,
+    RepeatUntil = 32,
+    RepeatEvery = 4,
     Fill = Colors.LightGray
 };
 
 numericalPlotBandCollection.Add(plotBand);
 numericalAxis.PlotBands = numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
-...
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
@@ -208,7 +210,7 @@ Suppose, you want to draw a plot band that should not stretch along its associat
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->    
     <chart:SfCartesianChart.XAxes>
        <chart:CategoryAxis/>
      </chart:SfCartesianChart.XAxes>
@@ -225,7 +227,7 @@ Suppose, you want to draw a plot band that should not stretch along its associat
 
                     <chart:NumericalPlotBand Start="25" 
                                              End="27" 
-                                             AssociatedAxisStart = "4.3",
+                                             AssociatedAxisStart="4.3"
                                              AssociatedAxisEnd="6.8"
                                              Fill="#B3FCD404"
                                              Text="Average"/>
@@ -239,7 +241,7 @@ Suppose, you want to draw a plot band that should not stretch along its associat
             </chart:NumericalAxis.PlotBands>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
-    . . .
+    <!-- code omitted for brevity -->    
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -247,7 +249,7 @@ Suppose, you want to draw a plot band that should not stretch along its associat
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
 
@@ -286,14 +288,14 @@ numericalPlotBandCollection.Add(plotBand2);
 numericalPlotBandCollection.Add(plotBand3); 
 numericalAxis.PlotBands = numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
-...
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Visualize segmented plot band in .NET MAUI](Plot_band_images/segmented_plotband.png)
+![Visualize segmented plot band in .NET MAUI Cartesian Chart](Plot_band_images/segmented_plotband.png)
 
 ## Plot Line
 When specifying the same value for both `start` and `end`, a plot line will be drawn.
@@ -303,8 +305,8 @@ When specifying the same value for both `start` and `end`, a plot line will be d
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
-    <chart:SfCartesianChart.XAxes>
+    <!-- code omitted for brevity -->    
+      <chart:SfCartesianChart.XAxes>
        <chart:CategoryAxis/>
      </chart:SfCartesianChart.XAxes>
 
@@ -336,7 +338,7 @@ When specifying the same value for both `start` and `end`, a plot line will be d
             </chart:NumericalAxis.PlotBands>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
-    . . .
+    <!-- code omitted for brevity -->    
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -344,7 +346,7 @@ When specifying the same value for both `start` and `end`, a plot line will be d
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
 
@@ -385,14 +387,14 @@ numericalPlotBandCollection.Add(plotBand2);
 numericalPlotBandCollection.Add(plotBand3); 
 numericalAxis.PlotBands = numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
-...
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Visualize plot line in .NET MAUI](Plot_band_images/plot_line.png)
+![Visualize plot line in .NET MAUI Cartesian Chart](Plot_band_images/plot_line.png)
 
 ## Text Customization 
 
@@ -409,7 +411,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->    
     <chart:SfCartesianChart.XAxes>
        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
@@ -432,7 +434,7 @@ this.Content = chart;
             </chart:NumericalAxis.PlotBands>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
-    . . .
+    <!-- code omitted for brevity -->    
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -440,7 +442,7 @@ this.Content = chart;
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
 
@@ -465,7 +467,7 @@ plotBand.LabelStyle = labelStyle;
 numericalPlotBandCollection.Add(plotBand);
 numericalAxis.PlotBands= numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
-...
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}

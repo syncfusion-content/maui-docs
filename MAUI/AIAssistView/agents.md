@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post 
 title: Agent in .NET MAUI AI AssistView Control | Syncfusion®
 description: Learn here all about Agent support in the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
 platform: MAUI

@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Cartesian Chart control | Syncfusion
-description: This section explains about the getting started with Syncfusion® MAUI Chart (SfCartesianChart) control.
+description: This section explains how to get started with the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart, .net maui charting, cartesian chart maui, syncfusion cartesian chart maui, maui chart control, .net maui data visualization, cartesian chart example maui.
 ---
 
-# Getting Started with .NET MAUI Cartesian Chart 
+# Getting started with .NET MAUI Cartesian Chart
 
 This section explains how to populate the Cartesian chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the chart.
 
-To get start quickly with our [.NET MAUI Cartesian Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can check the below video.
+To get started quickly with the [.NET MAUI Cartesian Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can check the following video.
 
 {% youtube "https://www.youtube.com/watch?v=o616GkzdPJk&t=7s" %}
 
@@ -98,7 +98,9 @@ Make sure to add the namespace.
  
 {% tabs %}
 {% highlight c# %}
+
 using Syncfusion.Maui.Core.Hosting;
+
 {% endhighlight %}
 {% endtabs %}
  
@@ -106,7 +108,29 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
  
 {% tabs %}
 {% highlight c# %}
-builder.ConfigureSyncfusionCore();
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
+
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif
+
+        return builder.Build();
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -161,10 +185,14 @@ Add the following namespace in your XAML or C#.
 
 {% tabs %}
 {% highlight xaml %}
+
 xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
+
 using Syncfusion.Maui.Charts;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -228,9 +256,10 @@ N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion
     </chart:SfCartesianChart.BindingContext>
 
 </chart:SfCartesianChart>
+
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 this.BindingContext = new PersonViewModel();   
 SfCartesianChart chart = new SfCartesianChart();
 
@@ -275,6 +304,6 @@ chart.Series.Add(series);
 
 The following screenshot illustrates the result of the above code.
 
-![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
+![Getting started for .NET MAUI Cartesian Chart](Getting-Started_Images/MAUI_chart.jpg)
 
 You can download the Cartesian Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_CartesianChart_MAUI).

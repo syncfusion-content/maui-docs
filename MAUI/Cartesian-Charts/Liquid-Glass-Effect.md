@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liquid Glass Effect in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Chart (SfCartesianChart) for stunning UI..
+description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) for stunning UI.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -12,9 +12,13 @@ keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, 
 
 The Liquid Glass Effect is a modern design style that provides a sleek, minimalist appearance with clean lines, subtle visual effects, and elegant styling. It features smooth rounded corners and sophisticated visual treatments that create a polished, professional look for your charts.
 
-N> The liquid glass effect is supported only on `.NET 10` and on `iOS` and `macOS` versions 26 or later
+N> **Prerequisite:** 
+- Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
+- To use **SfGlassEffectView**, ensure that the Syncfusion.Maui.Core package is installed and import the Syncfusion.Maui.Core namespace.
 
-## How it Enhances Chart UI on macOS and iOS
+N> The liquid glass effect is supported only on `.NET 10` and on `iOS` and `macOS` versions 26 or later.
+
+## How it enhances chart UI on macOS and iOS
 
 The Liquid Glass Effect enhances MAUI [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) with a sleek, glassy look and improved interactivity.
 
@@ -63,7 +67,7 @@ chart.YAxes.Add(new NumericalAxis());
 
 chart.Series.Add(new ColumnSeries
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Category",
     YBindingPath = "Value"
 });
@@ -77,24 +81,26 @@ var glass = new SfGlassEffectView
     Content = chart
 };
 
+this.Content = glass;
+
 {% endhighlight %}
 
 {% endtabs %}
 
 For detailed guidance on [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html), refer to the Getting Started [documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
-## Enable Liquid Glass Effect to SfCartesianChart Elements
+## Enable Liquid Glass effect to SfCartesianChart elements
 
 ### Tooltip
 
-To Enable Liquid Glass effect to the tooltip, set `True` to [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_EnableLiquidGlassEffect) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) and [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property of ChartSeries.
+To enable the Liquid Glass effect for the tooltip, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_EnableLiquidGlassEffect) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) to `true` and the [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property of `ChartSeries` to `true`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCartesianChart EnableLiquidGlassEffect="True">
-    . . .
+    <!-- code omitted for brevity -->
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Category"
                         YBindingPath="Value"
@@ -108,10 +114,10 @@ To Enable Liquid Glass effect to the tooltip, set `True` to [EnableLiquidGlassEf
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.EnableLiquidGlassEffect = true;
-. . .
+//code omitted for brevity
 ColumnSeries series = new ColumnSeries()
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Category",
     YBindingPath = "Value",
     EnableTooltip = true
@@ -124,18 +130,18 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Column Chart with Liquid Glass Tooltip](Liquid-Glass-Images/column_liquid_tooltip.png)
+![Column chart with liquid glass tooltip in .NET MAUI Cartesian Chart](Liquid-Glass-Images/column_liquid_tooltip.png)
 
 ### Trackball
 
-To Enable Liquid Glass effect to the trackball, set `True` to [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_EnableLiquidGlassEffect) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) and [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_ShowTrackballLabel) property of [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html).
+To enable the Liquid Glass effect for the trackball, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_EnableLiquidGlassEffect) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) to `true` and the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_ShowTrackballLabel) property of `ChartSeries` to `true`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCartesianChart EnableLiquidGlassEffect="True">
-    . . .
+    <!-- code omitted for brevity -->
     <chart:LineSeries ItemsSource="{Binding Data}" 
                       XBindingPath="Category"
                       YBindingPath="Value"
@@ -149,10 +155,10 @@ To Enable Liquid Glass effect to the trackball, set `True` to [EnableLiquidGlass
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.EnableLiquidGlassEffect = true;
-. . .
+//code omitted for brevity
 LineSeries series = new LineSeries()
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Category",
     YBindingPath = "Value",
     ShowTrackballLabel = true
@@ -165,9 +171,9 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Line Chart with Liquid Glass Trackball](Liquid-Glass-Images/line_liquid_trackball.png)
+![Line chart with liquid glass trackball in .NET MAUI Cartesian Chart](Liquid-Glass-Images/line_liquid_trackball.png)
 
-### Best Practices and Tips
+### Best practices and tips
 
 - Host the chart inside an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart body a glass appearance.
 - Liquid glass effects are most visible over images or colorful backgrounds.

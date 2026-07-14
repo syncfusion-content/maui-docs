@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in .NET MAUI TreeView Control | Syncfusion®
-description: Learn here about Selection support in Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements and more more.
+description: Learn here about Selection support in Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -12,20 +12,30 @@ documentation: ug
 This section explains how to perform selection and its related operations in the TreeView.
 
 ## UI selection
-The TreeView allows selecting the items either programmatically or touch interactions by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) property value to other than `None`. The control has different selection modes to perform selection operations as listed as follows.
+The TreeView allows selecting items programmatically or via touch interactions by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) property value to other than `None`. The control has different selection modes to perform selection operations as listed as follows.
 
-* [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_None): Allows disabling the selection.
-* [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Single): Allows selecting the single item only. When clicking on the selected item, the selection will not be cleared. This is the default value for `SelectionMode`.
-* [SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_SingleDeselect): Allows selecting the single item only. When clicking on the selected item, the selection gets cleared.
-* [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Multiple): Allows selecting more than one item. Selection is not cleared when selecting more than one items. When clicking on the selected item, selection gets cleared.
-* [Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Extended): Allows to select multiple items using the common key modifiers.
+* [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_None): Disables the selection.
+* [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Single): Allows selecting only a single item. When clicking on the selected item, the selection will not be cleared. This is the default value for `SelectionMode`.
+* [SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_SingleDeselect): Allows selecting only a single item. When clicking on the selected item, the selection is cleared.
+* [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Multiple): Allows selecting more than one item. Selection is not cleared when selecting more than one item. When clicking on the selected item, the selection is cleared.
+* [Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_Extended): Allows selecting multiple items using the common key modifiers.
 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" SelectionMode="Multiple"/>
 {% endhighlight %}
 {% highlight c# %}
-treeView.SelectionMode = TreeViewSelectionMode.Multiple;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectionMode = TreeViewSelectionMode.Multiple;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -33,14 +43,24 @@ treeView.SelectionMode = TreeViewSelectionMode.Multiple;
 
 ## Programmatic selection
 
-When the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) is other than `None`, the item or items in the TreeView can be selected from the code by setting the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem), or adding items to the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItems) property based on the `SelectionMode`.
+When the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) is other than `None`, an item or items in the TreeView can be selected from code by setting the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem), or by adding items to the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItems) property based on the `SelectionMode`. Ensure `SelectionMode` is configured before performing programmatic selection; selecting items while `SelectionMode` is `None` is not supported.
 
-When the selection mode is `Single` or `SingleDeselect`, programmatically select an item by setting the underlying object to the `SelectedItem` property.
+When the selection mode is `Single` or `SingleDeselect`, programmatically select an item by setting the underlying object to the `SelectedItem` property. The `SelectedItem` can also be bound from a view model.
 
 {% tabs %}
 {% highlight c# %}
 
-treeView.SelectedItem = viewModel.CountriesInfo[2];
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectedItem = viewModel.CountriesInfo[2];
+   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,42 +70,90 @@ When the selection mode is `Multiple`, programmatically select more than one ite
 {% tabs %}
 {% highlight c# %}
 
-treeView.SelectedItems.Add(viewModel.CountriesInfo[2]);
-treeView.SelectedItems.Add(viewModel.CountriesInfo[3]);
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectedItems.Add(viewModel.CountriesInfo[2]);
+      treeView.SelectedItems.Add(viewModel.CountriesInfo[3]);
+   }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-W> If an item is selected programmatically when `SelectionMode` is `None` and if multiple items are programmatically selected when `SelectionMode` is `Single` or `SingleDeselect`, then exception will be thrown internally.
+W> If an item is selected programmatically when `SelectionMode` is `None`, or if multiple items are programmatically selected when `SelectionMode` is `Single` or `SingleDeselect`, an exception will be thrown internally.
 
-## Selected items 
+## Manage selected items 
 
-### Gets selected items
-The TreeView gets all the selected items through the `SelectedItems` property and gets the single item by using the `SelectedItem` property.
+### Get selected items
+The TreeView exposes all selected items through the `SelectedItems` property, and exposes the single selected item through the `SelectedItem` property.
 
 ### Clear selected items
-The selected items can be cleared by calling the `SelectedItems.Clear()` method.
+The selected items can be cleared based on the selection mode. When the selection mode is `Multiple` or `Extended`, call the `SelectedItems.Clear()` method to clear all selected items.
 
 {% tabs %}
 {% highlight c# %}
-treeView.SelectedItems.Clear();
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectedItems.Clear();
+   }
+}
+{% endhighlight %}
+{% endtabs %}
+
+When the selection mode is `Single` or `SingleDeselect`, clear the selection by setting the `SelectedItem` property to `null` since `SelectedItems` does not track these selections.
+
+{% tabs %}
+{% highlight c# %}
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectedItem = null;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
  
 ### CurrentItem vs SelectedItem
 
-The TreeView gets the selected item by using the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem) and [CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CurrentItem) properties. Both `SelectedItem` and `CurrentItem` return the same data object when selecting a single item. When selecting more than one item, the `SelectedItem` property returns the first selected item, and the `CurrentItem` property returns the last selected item.
+The TreeView exposes the selected item through the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem) and [CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CurrentItem) properties. Both `SelectedItem` and `CurrentItem` return the same data object when a single item is selected. When more than one item is selected, `SelectedItem` returns the first item in the `SelectedItems` collection (that is, the earliest added item), and `CurrentItem` returns the most recently selected item.
 
 ## Select an entire row
 
-By default, the selection starts from the indent level only. You can select the full row by enabling the [FullRowSelect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_FullRowSelect) property. By setting the `FullRowSelect` to `true` the selection spans the width of tree view control.
+By default, selection applies only within the content area of the item (after the indent), not across the full width of the control. You can select the full row by enabling the [FullRowSelect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_FullRowSelect) property. When `FullRowSelect` is set to `true`, the selection spans the entire width of the TreeView control.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="TreeView" FullRowSelect="True" />
+<syncfusion:SfTreeView x:Name="treeView" FullRowSelect="True" />
 {% endhighlight %}
 {% highlight c# %}
-TreeView.FullRowSelect = true;
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.FullRowSelect = true;
+   }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,68 +163,149 @@ TreeView.FullRowSelect = true;
 
 ### Selection background
 
-The TreeView allows changing the selection background color for the selected items by using the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionBackground) property. You can also change the selection background color at runtime.
-
-### Selection foreground
-
-The TreeView allows changing the selection foreground color for the selected items by using the [SelectionForeground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionForeground) property. You can also change the selection foreground color at runtime.
-
-N> `SelectionForeground` is applicable only for unbound mode.
-
-## Events
-
-### SelectionChanging Event
-
-The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanging) event is raised while selecting an item at the execution time. The [ItemSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangingEventArgs.html) has the following members which provide the information for `SelectionChanging` event:
-
-* [AddedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangingEventArgs.html#Syncfusion_Maui_TreeView_ItemSelectionChangingEventArgs_AddedItems): Gets collection of the underlying data objects where the selection is going to process.
-* [RemovedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangingEventArgs.html#Syncfusion_Maui_TreeView_ItemSelectionChangingEventArgs_RemovedItems): Gets collection of the underlying data objects where the selection is going to remove.
-
-You can cancel the selection process within this event by setting the `ItemSelectionChangingEventArgs.Cancel` property to true.
+The TreeView allows you to change the selection background color for selected items by using the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionBackground) property. You can also change the selection background color at runtime.
 
 {% tabs %}
-{% highlight c# hl_lines="7" %}
-treeView.SelectionChanging += TreeView_SelectionChanging;  
+{% highlight xaml %}
+<syncfusion:SfTreeView x:Name="treeView" SelectionBackground="LightBlue" />
+{% endhighlight %}
+{% highlight c# %}
+using Syncfusion.Maui.TreeView;
 
-private void TreeView_SelectionChanging(object sender, ItemSelectionChangingEventArgs e)
+public class MainPage : ContentPage
 {
-   if (e.AddedItems.Count > 0 && e.AddedItems[0] == ViewModel.Items[0])
+   public MainPage()
    {
-      e.Cancel = true;
+      InitializeComponent();
+
+      treeView.SelectionBackground = Colors.LightBlue;
    }
 }
 {% endhighlight %}
 {% endtabs %}
 
-### SelectionChanged Event
+### Selection foreground
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanged) event will occur once selection process has been completed for the selected item in the TreeView. The [ItemSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs.html) has the following members which provides information for `SelectionChanged` event:
-
-* [AddedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs.html#Syncfusion_Maui_TreeView_ItemSelectionChangedEventArgs_AddedItems): Gets collection of the underlying data objects where the selection has been processed.
-* [RemovedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs.html#Syncfusion_Maui_TreeView_ItemSelectionChangedEventArgs_RemovedItems): Gets collection of the underlying data objects where the selection has been removed.
+The TreeView allows you to change the selection foreground color for selected items by using the [SelectionForeground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionForeground) property. You can also change the selection foreground color at runtime.
 
 {% tabs %}
+{% highlight xaml %}
+<syncfusion:SfTreeView x:Name="treeView" SelectionForeground="Red" />
+{% endhighlight %}
 {% highlight c# %}
-treeView.SelectionChanged += TreeView_SelectionChanged;  
+using Syncfusion.Maui.TreeView;
 
-private void TreeView_SelectionChanged(object sender, ItemSelectionChangedEventArgs e)
+public class MainPage : ContentPage
 {
-   treeView.SelectedItems.Clear();
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectionForeground = Colors.Red;
+   }
 }
 {% endhighlight %}
 {% endtabs %}
 
-N> `SelectionChanging` and `SelectionChanged` events will be triggered only on UI interactions.
+## Events
+
+N> `SelectionChanging` and `SelectionChanged` events are triggered only on UI interactions. To detect programmatic selection changes, observe the `SelectedItem` or `CurrentItem` property changes instead.
+
+### SelectionChanging Event
+
+The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanging) event is raised while selecting an item at runtime. The [ItemSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangingEventArgs.html) has the following members, which provide information for the `SelectionChanging` event:
+
+* [AddedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangingEventArgs.html#Syncfusion_Maui_TreeView_ItemSelectionChangingEventArgs_AddedItems): Gets the collection of underlying data objects that are about to be selected.
+* [RemovedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangingEventArgs.html#Syncfusion_Maui_TreeView_ItemSelectionChangingEventArgs_RemovedItems): Gets the collection of underlying data objects that are about to be deselected (removed from selection).
+
+You can cancel the selection process within this event by setting the `ItemSelectionChangingEventArgs.Cancel` property to true.
+
+{% tabs %}
+{% highlight c# hl_lines="10" %}
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectionChanging += TreeView_SelectionChanging;
+   }
+
+   private void TreeView_SelectionChanging(object sender, ItemSelectionChangingEventArgs e)
+   {
+      if (e.AddedItems.Count > 0 && e.AddedItems[0] == ViewModel.Items[0])
+      {
+         e.Cancel = true;
+      }
+   }
+}
+{% endhighlight %}
+{% endtabs %}
+
+You can also wire the event handler declaratively in XAML.
+
+{% tabs %}
+{% highlight xaml %}
+   <syncfusion:SfTreeView x:Name="treeView" 
+                          SelectionChanging="TreeView_SelectionChanging" />
+{% endhighlight %}
+{% endtabs %}
+
+### SelectionChanged Event
+
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanged) event occurs once the selection process has been completed for the selected item in the TreeView. The [ItemSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs.html) has the following members, which provide information for the `SelectionChanged` event:
+
+* [AddedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs.html#Syncfusion_Maui_TreeView_ItemSelectionChangedEventArgs_AddedItems): Gets the collection of underlying data objects that have been selected.
+* [RemovedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs.html#Syncfusion_Maui_TreeView_ItemSelectionChangedEventArgs_RemovedItems): Gets the collection of underlying data objects that have been deselected (removed from selection).
+
+{% tabs %}
+{% highlight c# %}
+using Syncfusion.Maui.TreeView;
+
+public class MainPage : ContentPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+
+      treeView.SelectionChanged += TreeView_SelectionChanged;
+   }
+
+   private void TreeView_SelectionChanged(object sender, ItemSelectionChangedEventArgs e)
+   {
+      treeView.SelectedItems.Clear();
+   }
+}
+{% endhighlight %}
+{% endtabs %}
+
+W> Avoid calling `SelectedItems.Clear()` directly inside the `SelectionChanged` handler without a guard, as clearing selection again raises `SelectionChanging` and `SelectionChanged`, which can lead to recursive calls.
 
 ## Key navigation
 
-The TreeView allows to select the items through keyboard interactions. Behavior of key navigation is explained as follows:
+The TreeView allows selecting items through keyboard interactions. The key navigation behavior is explained as follows:
 
-* When the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) is `Single` or `SingleDeselect`, the selected item is highlighted with focus border around the item while key navigation.
+* When the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) is `Single` or `SingleDeselect`, the selected item is highlighted with a focus border around the item during key navigation.
 
-* When the `SelectionMode` is `Multiple` or `Extended`, the focus border will set to the `CurrentItem`.
+* When the `SelectionMode` is `Multiple` or `Extended`, the focus border is set on the `CurrentItem`.
 
-## Limitation
+The following keys are supported for navigation and selection:
 
-* When a grid is loaded inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) with a background color, the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionBackground) will not displayed because it overlaps the `SelectionBackground`. In this case, set the background color for the TreeView instead of grid in the `ItemTemplate`.
-* When the `TreeView` contains duplicated items in the collection, only the first item whose instance was created initially will be selected or deselected.
+| Key | Behavior |
+|-----|----------|
+| `Up Arrow` | Moves the selection to the previous item. |
+| `Down Arrow` | Moves the selection to the next item. |
+| `Left Arrow` | Collapses the current node if it has children and is expanded; otherwise moves to the parent item. |
+| `Right Arrow` | Expands the current node if it has children and is collapsed; otherwise moves to the first child. |
+| `Home` | Moves the selection to the first item in the TreeView. |
+| `End` | Moves the selection to the last visible item in the TreeView. |
+| `Ctrl + Up/Down Arrow` | Moves focus without changing selection (Extended mode). |
+| `Shift + Up/Down Arrow` | Selects a contiguous range of items (Extended mode). |
+| `Space` | Toggles the selection of the focused item (Multiple and Extended modes). |
+| `Ctrl + Space` | Toggles the selection of the focused item without affecting other selections (Extended mode). |
+
+## Limitations
+
+* When a grid is loaded inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) with a background color, the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionBackground) will not be displayed because the grid background overlaps the `SelectionBackground`. In this case, set the background color on the TreeView instead of the grid in the `ItemTemplate`.

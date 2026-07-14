@@ -1,20 +1,22 @@
 ---
 layout: post
-title: StepLine Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about stepline chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: StepLine Chart in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about stepline chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui step line chart, maui step line chart, step line chart customization .net maui, syncfusion maui step line chart, cartesian step line chart maui, .net maui chart step line visualization.
 ---
 
-# Step Line Chart in .NET MAUI Chart
+# Step Line Chart in .NET MAUI Cartesian Chart
 
-Step line chart is used to display the data showing changes in values over time by connecting points on plots with a combination of horizontal and vertical lines. And it's used when it is necessary to highlight the irregularity changes. It appears to be steps.
+A step line chart is used to display the data showing changes in values over time by connecting points on plots with a combination of horizontal and vertical lines. And it's used when it is necessary to highlight the irregularity changes. It appears to be steps.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 ## Step Line Chart
 
-To render the Step line chart, create an instance of the [StepLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StepLineSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+To render the Step line chart, create an instance of the [StepLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StepLineSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -70,15 +72,15 @@ chart.Series.Add(series1);
 chart.Series.Add(series2);
 this.Content = chart;
 
-{% endhighlight C# %}
+{% endhighlight c# %}
 
 {% endtabs %}
 
-![StepLine Chart in MAUI](Chart-types-images/StepLineChart.png)
+![StepLine Chart in .NET MAUI Cartesian Chart](Chart-types-images/StepLineChart.png)
 
 ## Dashed Step Line Chart
 
-The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of the [StepLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StepLineSeries.html) is used to render the Step line series with dashes. An odd value is considered as rendering size, and an Even value is considered a gap.
+The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of the [StepLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StepLineSeries.html) is used to render the Step line series with dashes. Values at odd indices define the dash length, while values at even indices define the gap.
 
 {% tabs %}
 
@@ -106,16 +108,17 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
                           XBindingPath="Date"
                           YBindingPath="Value"/>
 
-<chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight xaml %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
 
 DatetimeAxis primaryAxis = new DatetimeAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -134,11 +137,11 @@ StepLineSeries steplineSeries = new StepLineSeries()
 chart.Series.Add(steplineSeries);
 this.Content = chart;
 
-{% endhighlight C# %}
+{% endhighlight c# %}
 
 {% endtabs %}
 
-![StepLine Chart in MAUI](Chart-types-images/DashedStepLine.png)
+![Dashed StepLine Chart in .NET MAUI Cartesian Chart](Chart-types-images/DashedStepLine.png)
 
 ## Vertical Step Line Chart 
 
@@ -158,7 +161,7 @@ The [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StepLineSeries ItemsSource=""{Binding Data}
+    <chart:StepLineSeries ItemsSource="{Binding Data}"
                           XBindingPath="Year"
                           YBindingPath="Value"/>
 
@@ -166,18 +169,19 @@ The [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
                           XBindingPath="Year"
                           YBindingPath="Value"/>
 
-<chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight xaml %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
 
-chart.isTransposed = True;
+chart.IsTransposed = true;
 
 DatetimeAxis primaryAxis = new DatetimeAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -185,22 +189,22 @@ StepLineSeries steplineSeries = new StepLineSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "Year",
-    YBindingPath = "Value"
+    YBindingPath = "Value",
 };
 
 StepLineSeries steplineSeries1 = new StepLineSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "Year",
-    YBindingPath = "Value"
+    YBindingPath = "Value",
 };
 
 chart.Series.Add(steplineSeries);
 chart.Series.Add(steplineSeries1);
 this.Content = chart;
 
-{% endhighlight C# %}
+{% endhighlight c# %}
 
 {% endtabs %}
 
-![StepLine Chart in MAUI](Chart-types-images/VerticalStepLine.png)
+![Vertical StepLine Chart in .NET MAUI Cartesian Chart](Chart-types-images/VerticalStepLine.png)
