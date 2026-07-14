@@ -145,7 +145,7 @@ public class BookInfo : INotifyPropertyChanged
         }
     }
 
-    public event PropertyChangedEventHandler? PropertyChanged
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     public void OnPropertyChanged(string name)
     {
