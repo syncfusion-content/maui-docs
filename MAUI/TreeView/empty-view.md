@@ -207,4 +207,4 @@ N>
 * The `EmptyViewTemplate` is applied only when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
 * `EmptyView` can be set to a custom data model, and its appearance can be customized by using `EmptyViewTemplate`.
 
-N>>[View sample in GitHub](https://github.com/SyncfusionExamples/how-to-display-empty-view-when-.net-maui-treeview-has-no-items)
+N>[View sample in GitHub](https://github.com/SyncfusionExamples/how-to-display-empty-view-when-.net-maui-treeview-has-no-items)
