@@ -502,8 +502,6 @@ The example below applies both [`MapCircle.Stroke`](https://help.syncfusion.com/
 
 {% highlight c# %}
 
-{% highlight c# %}
-
 var maps = new SfMaps();
 var layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
@@ -660,8 +658,6 @@ N> Animation is only applied at load time.
 </map:SfMaps>
 
 {% endhighlight %}
-
-{% highlight c# %}
 
 {% highlight c# %}
 
