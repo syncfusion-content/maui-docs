@@ -12,6 +12,8 @@ keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, 
 
 The Liquid Glass Effect is a modern design style that provides a sleek, minimalist appearance with clean lines, subtle visual effects, and elegant styling. It features smooth rounded corners and sophisticated visual treatments that create a polished, professional look for your charts.
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
+
 N> The liquid glass effect is supported only on `.NET 10` and on `iOS` and `macOS` versions 26 or later
 
 ## How it Enhances Chart UI on macOS and iOS
@@ -29,17 +31,17 @@ Wrap the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 
 {% highlight xaml %}
 
-<core:SfGlassEffectView CornerRadius="20"
-                        Padding="12"
-                        EffectType="Regular"
-                        EnableShadowEffect="True">
+<core:SfGlassEffectView CornerRadius = "20"
+                        Padding = "12"
+                        EffectType = "Regular"
+                        EnableShadowEffect = "True">
 
     <chart:SfPolarChart>
 
         <chart:PolarLineSeries
-            ItemsSource="{Binding Data}"
-            XBindingPath="Category"
-            YBindingPath="Value" />
+            ItemsSource = "{Binding Data}"
+            XBindingPath = "Category"
+            YBindingPath = "Value" />
     </chart:SfPolarChart>
 </core:SfGlassEffectView>
 
@@ -79,12 +81,12 @@ To Enable Liquid Glass Effect to the tooltip, set `True` to [EnableLiquidGlassEf
 
 {% highlight xaml %}
 
-<chart:SfPolarChart EnableLiquidGlassEffect="True">
+<chart:SfPolarChart EnableLiquidGlassEffect = "True">
     <!-- code omitted for brevity -->
-    <chart:PolarLineSeries ItemsSource="{Binding Data}"
-                           XBindingPath="Category"
-                           YBindingPath="Value"
-                           EnableTooltip="True">
+    <chart:PolarLineSeries ItemsSource = "{Binding Data}"
+                           XBindingPath = "Category"
+                           YBindingPath = "Value"
+                           EnableTooltip = "True">
     </chart:PolarLineSeries>
 </chart:SfPolarChart>
 
@@ -94,7 +96,7 @@ To Enable Liquid Glass Effect to the tooltip, set `True` to [EnableLiquidGlassEf
 
 SfPolarChart chart = new SfPolarChart();
 chart.EnableLiquidGlassEffect = true;
-//code omitted for brevity
+// code omitted for brevity
 PolarLineSeries series = new PolarLineSeries()
 {
     ItemsSource = viewModel.Data,

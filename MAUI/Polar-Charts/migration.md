@@ -45,17 +45,18 @@ To initialize the control, import the Chart namespace and Initialize [SfPolarCha
 {% tabs %} 
 {% highlight xaml %}
 <ContentPage
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
-
+    xmlns:chart = "clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
     <chart:SfChart/>
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
+
 using Syncfusion.SfChart.XForms;
-//code omitted for brevity
+
+
 SfChart chart = new SfChart();
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
@@ -72,19 +73,18 @@ this.Content = chart;
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
+    xmlns:chart = "clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <chart:SfPolarChart/>
 </ContentPage>
  
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Maui.Charts;
-//code omitted for brevity
+
 SfPolarChart chart = new SfPolarChart();
+// code omitted for brevity
 this.Content = chart; 
 
 {% endhighlight %}
@@ -193,12 +193,14 @@ The following code example explains how to migrate the axis of Xamarin [SfChart]
 
 {% endhighlight %} 
 {% highlight c# %}
+
 SfChart chart = new SfChart();
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis  =  new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -224,13 +226,15 @@ this.Content = chart;
 </chart:SfPolarChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfPolarChart chart = new SfPolarChart();
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis  =  new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -273,20 +277,22 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
     <!-- code omitted for brevity -->
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Tree">
     </chart:PolarAreaSeries>
 </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries();
 series.SetBinding(ChartSeries.ItemsSourceProperty, "PlantDetails");
 series.XBindingPath = "Direction";
 series.YBindingPath = "Tree";
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -302,14 +308,15 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" ShowDataLabels="True">
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Tree" ShowDataLabels = "True">
     </chart:PolarAreaSeries>
 </chart:SfPolarChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries();
 series.ItemsSource = (new ViewModel()).PlantDetails;
 series.XBindingPath = "Direction";
@@ -317,6 +324,7 @@ series.YBindingPath = "Tree";
 series.ShowDataLabels = true;
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -407,11 +415,13 @@ The following code example shows how to enable legend in chart.
 </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
+// code omitted for brevity
 chart.Legend = new ChartLegend();
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -433,12 +443,13 @@ this.Content = chart;
 
 {% endhighlight %} 
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 chart.Legend = new ChartLegend();
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -461,13 +472,13 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 <chart:SfChart>  
      <!-- code omitted for brevity -->
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Tree">
 	    <chart:PolarAreaSeries.DataMarker>
-	        <chart:ChartDataMarker ShowLabel="True">
+	        <chart:ChartDataMarker ShowLabel = "True">
 		        <chart:ChartDataMarker.LabelStyle>
-			        <chart:DataMarkerLabelStyle TextColor="Blue" BorderColor="Red" BorderThickness="2" 
-                                                            BackgroundColor="Aqua" Angle="315" Margin="5" 
-                                                            FontSize="18" FontAttributes="Italic"/>
+			        <chart:DataMarkerLabelStyle TextColor = "Blue" BorderColor = "Red" BorderThickness = "2" 
+                                                BackgroundColor = "Aqua" Angle = "315" Margin = "5" 
+                                                FontSize = "18" FontAttributes = "Italic"/>
 		        </chart:ChartDataMarker.LabelStyle>
 	        </chart:ChartDataMarker>
 	    </chart:PolarAreaSeries.DataMarker>
@@ -475,11 +486,12 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 </chart:SfChart>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries();
-. . .
+// code omitted for brevity
 series.DataMarker = new ChartDataMarker();
 series.DataMarker.ShowLabel = true;
 var style = new DataMarkerLabelStyle();
@@ -493,6 +505,7 @@ style.FontSize = 18;
 series.DataMarker.LabelStyle = style;
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %} 
@@ -508,14 +521,14 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                           ShowDataLabels="True">
+    <!-- code omitted for brevity --> 
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Tree" 
+                           ShowDataLabels = "True">
         <chart:PolarAreaSeries.DataLabelSettings>
             <chart:PolarDataLabelSettings>
                 <chart:PolarDataLabelSettings.LabelStyle>
-                    <chart:ChartDataLabelStyle TextColor="Blue" Stroke="Red" StrokeWidth="2" Background="Aqua" 
-                                               Angle="315" Margin="5" FontSize="18" FontAttributes="Italic"/>
+                    <chart:ChartDataLabelStyle TextColor = "Blue" Stroke = "Red" StrokeWidth = "2" Background = "Aqua" 
+                                               Angle = "315" Margin = "5" FontSize = "18" FontAttributes = "Italic"/>
                 </chart:PolarDataLabelSettings.LabelStyle>
             </chart:PolarDataLabelSettings>
         </chart:PolarAreaSeries.DataLabelSettings>  
@@ -523,11 +536,12 @@ this.Content = chart;
 </chart:SfPolarChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries();
-. . .
+// code omitted for brevity
 series.ShowDataLabels = true;
 series.PolarDataLabelSettings = new PolarDataLabelSettings();
 var style = new ChartDataLabelStyle();
@@ -541,6 +555,7 @@ style.FontSize = 18;
 series.PolarDataLabelSettings.LabelStyle = style;
 chart.Series.Add(series);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -564,21 +579,22 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 <chart:SfChart>
     <!-- code omitted for brevity --> 
     <chart:SfChart.ChartBehaviors>
-        <chart:ChartTooltipBehavior BackgroundColor="Blue" TextColor="White" Margin="5" 
-                                    FontSize="15"/>
+        <chart:ChartTooltipBehavior BackgroundColor = "Blue" TextColor = "White" Margin = "5" 
+                                    FontSize = "15"/>
     </chart:SfChart.ChartBehaviors>
     
-    <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"
-                           EnableTooltip="True"/>
+    <chart:PolarAreaSeries ItemsSource = "{Binding Data}" XBindingPath = "Demand" YBindingPath = "Year2010"
+                           EnableTooltip = "True"/>
 </chart:SfChart>
 
 {% endhighlight %} 
 
-{% highlight C# %}
+{% highlight c# %}
+
 SfChart chart = new SfChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries();
-. . .
+// code omitted for brevity
 series.EnableTooltip = true;
 chart.Series.Add(series);
 ChartTooltipBehavior tool = new ChartTooltipBehavior();
@@ -588,6 +604,7 @@ tool.Margin = new Thickness(5, 5, 5, 5);
 tool.FontSize = 15;
 chart.ChartBehaviors.Add(tool);
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -604,22 +621,23 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity --> 
    <chart:SfPolarChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior Background="Blue" TextColor="White" Margin="5" 
-                                    FontSize="15"/>
+        <chart:ChartTooltipBehavior Background = "Blue" TextColor = "White" Margin = "5" 
+                                    FontSize = "15"/>
    </chart:SfPolarChart.TooltipBehavior>
 
-   <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                          EnableTooltip="True"/>
+   <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Tree"
+                          EnableTooltip = "True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
+
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries();
-. . .
+// code omitted for brevity
 series.EnableTooltip = true;
 chart.Series.Add(series);
 

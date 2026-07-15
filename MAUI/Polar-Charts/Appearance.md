@@ -9,9 +9,9 @@ documentation: ug
 
 # Appearance in .NET MAUI Polar Chart
 
-N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
-
 The appearance of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) can be customized using the predefined brushes, custom brushes, and gradient, which allows for the enrichment of the application.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
 
 ## Default PaletteBrushes for chart
 
@@ -33,7 +33,7 @@ By default, the chart applies a set of predefined brushes to the series in a spe
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-//code omitted for brevity
+// code omitted for brevity
 PolarLineSeries series1 = new PolarLineSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -91,7 +91,7 @@ List<Brush> CustomBrushes = new List<Brush>()
 };
 
 this.chart.PaletteBrushes = CustomBrushes;
-//code omitted for brevity
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
@@ -169,7 +169,7 @@ public class ViewModel
 		CustomBrushes.Add(gradientColor4);
 		CustomBrushes.Add(gradientColor5);
 	}
-	//code omitted for brevity
+	// code omitted for brevity
 }
 
 {% endhighlight %}
@@ -190,14 +190,19 @@ public class ViewModel
    <chart:SfPolarChart.PlotAreaBackgroundView>
     	<AbsoluteLayout>
       		<Label Text = "Copyright @ 2001 - 2024 Syncfusion Inc"
-		       FontSize = "18" AbsoluteLayout.LayoutBounds = "1,1,-1,-1"
-		       AbsoluteLayout.LayoutFlags = "PositionProportional"
-		       Opacity = "0.4"/>
-       		<Label Text = "CONFIDENTIAL" Rotation = "340" FontSize = "80"
-		       FontAttributes = "Bold,Italic" TextColor = "Gray" Margin = "10,0,0,0"
+		           FontSize = "18"
+				   AbsoluteLayout.LayoutBounds = "1,1,-1,-1"
+		           AbsoluteLayout.LayoutFlags = "PositionProportional"
+		           Opacity = "0.4"/>
+       		<Label Text = "CONFIDENTIAL" 
+			       Rotation = "340" 
+				   FontSize = "80"
+		           FontAttributes = "Bold"
+				   TextColor = "Gray" 
+				   Margin = "10,0,0,0"
 	               AbsoluteLayout.LayoutBounds = "0.5,0.5,-1,-1"
-		       AbsoluteLayout.LayoutFlags = "PositionProportional"
-		       Opacity = "0.3"/>
+		           AbsoluteLayout.LayoutFlags = "PositionProportional"
+		           Opacity = "0.3"/>
     	</AbsoluteLayout>
    </chart:SfPolarChart.PlotAreaBackgroundView>
 </chart:SfPolarChart>

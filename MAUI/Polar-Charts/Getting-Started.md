@@ -94,7 +94,9 @@ Make sure to add the namespace.
  
 {% tabs %}
 {% highlight c# %}
+
 using Syncfusion.Maui.Core.Hosting;
+
 {% endhighlight %}
 {% endtabs %}
  
@@ -102,7 +104,29 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
  
 {% tabs %}
 {% highlight c# %}
-builder.ConfigureSyncfusionCore();
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
+
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif
+
+        return builder.Build();
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -166,7 +190,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
  
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+xmlns:chart = "clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
  
 {% endhighlight %}
 {% highlight c# %}
@@ -188,7 +212,7 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
 
 <chart:SfPolarChart>
     <chart:SfPolarChart.Title>
-        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
+        <Label Text = "Plant Analysis" HorizontalTextAlignment = "Center"/>
     </chart:SfPolarChart.Title>
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
@@ -197,14 +221,14 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
         <chart:CategoryAxis/>                    
     </chart:SfPolarChart.PrimaryAxis>
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis Maximum="100"/>                   
+        <chart:NumericalAxis Maximum = "100"/>                   
     </chart:SfPolarChart.SecondaryAxis>
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                           Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
-                           Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
-                           Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Tree" 
+                           Label = "Tree" EnableTooltip = "True" ShowDataLabels = "True"/>
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Weed" 
+                           Label = "Weed" EnableTooltip = "True" ShowDataLabels = "True"/>
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Flower" 
+                           Label = "Flower" EnableTooltip = "True" ShowDataLabels = "True"/>
 </chart:SfPolarChart>
  
 {% endhighlight %}
@@ -266,10 +290,6 @@ chart.Series.Add(series3);
 
 {% endtabs %}
 
-N> In the code-behind file of MainPage.xaml, set the BindingContext to the PlantViewModel instance to enable data binding:
-```csharp
-this.BindingContext = new PlantViewModel();
-```
 
 The following chart is created as a result of the previous code:
 

@@ -13,6 +13,8 @@ documentation: ug
 
 To display a line series in a polar chart, instantiate the [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html) and include it in the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) collection property of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -26,7 +28,9 @@ To display a line series in a polar chart, instantiate the [PolarLineSeries](htt
         <chart:NumericalAxis/>
     </chart:SfPolarChart.SecondaryAxis>   
 
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}"
+                           XBindingPath = "Direction"
+                           YBindingPath = "Tree"/>  
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -73,8 +77,11 @@ The following code example demonstrates line customization:
 
 <chart:SfPolarChart>
     <!-- code omitted for brevity -->
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                           Stroke="Blue" StrokeWidth="2"/>
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree"
+                           Stroke = "Blue" 
+                           StrokeWidth = "2"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -82,7 +89,7 @@ The following code example demonstrates line customization:
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-//code omitted for brevity
+// code omitted for brevity
 PolarLineSeries series = new PolarLineSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -107,9 +114,11 @@ The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 {% highlight xaml %}
 
-<chart:SfPolarChart GridLineType="Polygon"> 
+<chart:SfPolarChart GridLineType = "Polygon"> 
     <!-- code omitted for brevity -->
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -118,7 +127,7 @@ The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 SfPolarChart chart = new SfPolarChart();
 chart.GridLineType = PolarChartGridLineType.Polygon;
-//code omitted for brevity
+// code omitted for brevity
 PolarLineSeries series = new PolarLineSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -144,9 +153,11 @@ The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarS
 {% highlight xaml %}
 
 <chart:SfPolarChart> 
-    . . .
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                           IsClosed="False"/>  
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}"
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree"
+                           IsClosed = "False"/>  
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -154,7 +165,7 @@ The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarS
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarLineSeries series = new PolarLineSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -170,7 +181,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar open series in MAUI Chart](Chart-types_images/MAUI_polar_line_IsClosed.png)
+![Polar open series in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_line_IsClosed.png)
 
 ## Enable Marker
 
@@ -181,9 +192,11 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    ...
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                           ShowMarkers="True"/>
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree" 
+                           ShowMarkers = "True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -191,7 +204,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-...
+// code omitted for brevity
 PolarLineSeries series = new PolarLineSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -223,12 +236,18 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    ...
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                           ShowMarkers="True">
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree"
+                           ShowMarkers = "True">
         <chart:PolarLineSeries.MarkerSettings>
-            <chart:ChartMarkerSettings Type="Diamond" Fill="Brown" Stroke="Black"
-                                       StrokeWidth="1" Height="8" Width="8"/>
+            <chart:ChartMarkerSettings Type = "Diamond" 
+                                       Fill = "Brown" 
+                                       Stroke = "Black"
+                                       StrokeWidth = "1" 
+                                       Height = "8" 
+                                       Width = "8"/>
         </chart:PolarLineSeries.MarkerSettings>
     </chart:PolarLineSeries>
 </chart:SfPolarChart>
@@ -238,7 +257,7 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-...
+// code omitted for brevity
 ChartMarkerSettings chartMarker = new ChartMarkerSettings()
 {
     Type = ShapeType.Diamond,

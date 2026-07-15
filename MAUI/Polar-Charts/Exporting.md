@@ -13,6 +13,8 @@ documentation: ug
 
 You can export the chart view as an image in the desired file format using the [SaveAsImage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SaveAsImage_System_String_) method of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html). The supported image formats are **JPEG and PNG**. By default, if you don't mention any image format with the filename, the chart view will be exported as an image in the PNG format.
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
+
 N> The chart view can be exported as an image only when the chart view is added to the visual tree.
 
 The following code sample demonstrates the usage of this method:
@@ -22,7 +24,7 @@ The following code sample demonstrates the usage of this method:
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-...
+// code omitted for brevity 
 this.Content = chart;
 chart.SaveAsImage("ChartSample.jpeg");
 
@@ -52,7 +54,7 @@ To save images in the photo album on iOS devices, enable photo library access by
     <string>This App needs permission to access the Photos</string>    
     <key>NSPhotoLibraryAddUsageDescription</key>    
     <string>This App needs permission to access the Photos</string> 
-    ...
+    <!-- code omitted for brevity -->    
 </dict>
 
 {% endhighlight %}
@@ -72,7 +74,7 @@ The following code sample demonstrates the usage of this method:
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-...
+// code omitted for brevity 
 this.Content = chart;
 await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 

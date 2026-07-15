@@ -145,17 +145,25 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 <chart:SfPolarChart >
     <chart:SfPolarChart.Resources>
-        <DataTemplate x:Key="tooltipTemplate" x:Name="temp">
+        <DataTemplate x:Key = "tooltipTemplate" x:Name = "temp">
             <StackLayout>
-                <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center"  VerticalTextAlignment="Center"                       
-                       TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
-                <BoxView Color="Gray" HeightRequest="1" WidthRequest="90"/>
-                <StackLayout Orientation="Horizontal" VerticalOptions="Fill" Spacing="0" Padding="3" Margin="0" HorizontalOptions="Center">
-                    <Ellipse Stroke="White" StrokeThickness="2" HeightRequest="10" 
-                             WidthRequest="10" Fill="#48988B" Margin="0,1,3,0"/>
-                    <Label Text="Tree"  VerticalTextAlignment="Center" HorizontalOptions="Start" 
-                           TextColor="White" FontFamily="Helvetica" FontSize="12" Margin="3,0,3,0"/>
-                    <Label Text="{Binding Item.Tree,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="End" TextColor="White" FontFamily="Helvetica" Margin="0,0,3,0" FontSize="12"/>
+                <Label Text = "{Binding Item.Direction}" HorizontalTextAlignment = "Center" HorizontalOptions = "Center" 
+                       VerticalTextAlignment = "Center" TextColor = "White"  FontAttributes = "Bold" FontFamily = "Helvetica" 
+                       Margin = "0,2,0,2" FontSize = "12.5"/>
+                <BoxView Color = "Gray" 
+                         HeightRequest = "1" 
+                         WidthRequest = "90"/>
+                <StackLayout Orientation = "Horizontal" 
+                             VerticalOptions = "Fill" Spacing = "0" 
+                             Padding = "3"  Margin = "0" 
+                             HorizontalOptions = "Center">
+                    <Ellipse Stroke = "White" StrokeThickness = "2" 
+                             HeightRequest = "10" 
+                             WidthRequest = "10" Fill = "#48988B" Margin = "0,1,3,0"/>
+                    <Label Text = "Tree"  VerticalTextAlignment = "Center" HorizontalOptions = "Start" 
+                           TextColor = "White" FontFamily = "Helvetica" FontSize = "12" Margin = "3,0,3,0"/>
+                    <Label Text = "{Binding Item.Tree,StringFormat=' :  {0}'}" VerticalTextAlignment = "Center" HorizontalOptions = "End" 
+                           TextColor = "White" FontFamily = "Helvetica" Margin = "0,0,3,0" FontSize = "12"/>
                 </StackLayout>
             </StackLayout>
         </DataTemplate>
@@ -165,8 +173,11 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
         <chart:ChartTooltipBehavior/>
     </chart:SfPolarChart.TooltipBehavior>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"  XBindingPath="Direction" YBindingPath="Tree" 
-                           TooltipTemplate="{StaticResource tooltipTemplate}" EnableTooltip="True"/>
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}"  
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree" 
+                           TooltipTemplate = "{StaticResource tooltipTemplate}" 
+                           EnableTooltip = "True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -208,13 +219,13 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 <chart:SfPolarChart>
     <!-- code omitted for brevity -->  
     <chart:SfPolarChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior x:Name="tooltip">
+        <chart:ChartTooltipBehavior x:Name = "tooltip">
         </chart:ChartTooltipBehavior>
     </chart:SfPolarChart.TooltipBehavior>
     <!-- code omitted for brevity -->  
 </chart:SfPolarChart>
 
-<Button Text="Show tooltip" Clicked="Button_Clicked"/>
+<Button Text = "Show tooltip" Clicked = "Button_Clicked"/>
 
 {% endhighlight %}
 

@@ -9,16 +9,9 @@ documentation: ug
 
 # Rendering Position in .NET MAUI Polar Chart
 
-## Overview
-
 The rendering position in a .NET MAUI Polar Chart defines the starting angle from which the chart series is drawn on the polar coordinate system. By adjusting the rendering position, you can rotate the entire chart visualization to start from different angular points (0°, 90°, 180°, or 270°).
 
-## Prerequisites
-
-Ensure you have the following setup:
-- .NET MAUI project with Syncfusion Charts NuGet package installed
-- Required namespaces: `using Syncfusion.Maui.Charts;`
-- A BindingContext with a data source (e.g., PlantViewModel with PlantDetails collection)
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
 
 ## Start Angle
 
@@ -28,7 +21,7 @@ Adjust the rendering position of series on the polar chart by using the [StartAn
 
 {% highlight xaml %}
 
-<chart:SfPolarChart StartAngle="Rotate0">
+<chart:SfPolarChart StartAngle = "Rotate0">
     <chart:SfPolarChart.PrimaryAxis>
         <chart:CategoryAxis/>
     </chart:SfPolarChart.PrimaryAxis>
@@ -39,7 +32,9 @@ Adjust the rendering position of series on the polar chart by using the [StartAn
 
     <!-- code omitted for brevity -->
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}"
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree"/>  
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -61,7 +56,7 @@ PolarAreaSeries series = new PolarAreaSeries()
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
-//code omitted for brevity
+// code omitted for brevity
 chart.Series.Add(series);
 this.Content = chart;
 
