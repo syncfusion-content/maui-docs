@@ -175,7 +175,7 @@ public partial class MainPage : ContentPage
 The scheduler allows you to use the custom view as a selection view by using the [Template](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Template) property in the [CellSelectionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8 9 10 11 12 13 14" %}
 
 <ContentPage   
     . . .
