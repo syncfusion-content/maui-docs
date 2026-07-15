@@ -7,16 +7,19 @@ control: SfMaps
 documentation: ug
 ---
 
-# Zooming and Panning in .NET MAUI Maps (SfMaps)
+# Zooming and Panning in .NET MAUI Maps
 
-It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map or scrolling the mouse wheel or trackpad. Pan the map to navigate across the regions. You can also customize the zoom level of the rendering.
+You can zoom in and out on any layer to take a closer look at a specific region by pinching the map or scrolling the mouse wheel or trackpad. Pan the map to navigate across the regions. You can also customize the zoom level of the rendering.
 
 The procedure for zooming and panning for both layers is very similar.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfMaps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
 
 To learn more about the .NET MAUI Maps zoom and pan, you can check the following video.
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=uN9KUSpDMB0"%}
+"youtube:https://www.youtube.com/watch?v=uN9KUSpDMB0"
+%}
 
 
 **Shape layer**
@@ -27,7 +30,7 @@ To learn more about the .NET MAUI Maps zoom and pan, you can check the following
 
  <map:SfMaps>
      <map:SfMaps.Layer>
-         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+         <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
               <map:MapShapeLayer.ZoomPanBehavior>
                  <map:MapZoomPanBehavior ZoomLevel = "1" />
               </map:MapShapeLayer.ZoomPanBehavior>
@@ -85,13 +88,13 @@ this.Content = map;
 
 {% endtabs %}
 
-![Osm map default](images/zoom-pan/osm_map.png)
+![Default view in .NET MAUI Maps](images/zoom-pan/osm_map.png)
 
 ## Customizing the zoom level
 
 You can set the zoom level of the map layer by using the [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) property.
 
-The default [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) value is 1, which will show the whole map in the viewport for [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1).
+The default [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) value is 1, which will show the whole map in the viewport for both [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html) and [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html).
 
 {% tabs %}
 
@@ -102,7 +105,7 @@ The default [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui
         <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png" >
               <map:MapTileLayer.Center>
                   <map:MapLatLng Latitude = "27.1751"
-                                 Longitude="78.0421">
+                                 Longitude = "78.0421">
                   </map:MapLatLng>
               </map:MapTileLayer.Center>
               <map:MapTileLayer.ZoomPanBehavior>
@@ -130,7 +133,7 @@ this.Content = map;
 
 {% endtabs %}
 
-![OSM map zoomlevel](images/zoom-pan/osm_maps_zoomlevel.png)
+![Zoom level in .NET MAUI Maps](images/zoom-pan/osm_maps_zoomlevel.png)
 
 ## Enable zooming 
 
@@ -144,7 +147,7 @@ The zooming feature enables you to zoom in and zoom out the maps to show in-dept
    <map:SfMaps.Layer>
         <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png" >
               <map:MapTileLayer.ZoomPanBehavior>
-                  <map:MapZoomPanBehavior ZoomLevel = "2" EnableZooming="True" />
+                  <map:MapZoomPanBehavior ZoomLevel = "2" EnableZooming = "True" />
               </map:MapTileLayer.ZoomPanBehavior>
         </map:MapTileLayer>
    </map:SfMaps.Layer>
@@ -168,7 +171,7 @@ this.Content = map;
 
 {% endtabs %}
 
-## Enable Panning 
+## Enable panning 
 
 The panning feature allows you to move the visible area of the maps when it is zoomed in. To enable panning, set the [`EnablePanning`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnablePanning) property to `true`. The default value of the [`EnablePanning`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnablePanning) is `true`.
 
@@ -182,7 +185,7 @@ N> It is applicable for both tile layer and shape layer.
    <map:SfMaps.Layer>
         <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png" >
               <map:MapTileLayer.ZoomPanBehavior>
-                  <map:MapZoomPanBehavior ZoomLevel = "2" EnablePanning="True"/>
+                  <map:MapZoomPanBehavior ZoomLevel = "2" EnablePanning = "True"/>
               </map:MapTileLayer.ZoomPanBehavior>
         </map:MapTileLayer>
    </map:SfMaps.Layer>
@@ -210,7 +213,7 @@ this.Content = map;
 
 You can set the min and max zoom level of the map layer by setting the value to [`MapZoomPanBehavior.MinZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MinZoomLevel) and [`MapZoomPanBehavior.MaxZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel) properties. The minimum and maximum zooming levels can be restricted using these properties, respectively. The default values of [`MapZoomPanBehavior.MinZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MinZoomLevel) and [`MapZoomPanBehavior.MaxZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel) are 1 and 15, respectively.
 
-However, for [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1), the [`MapZoomPanBehavior.maxZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel) may vary slightly depending on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
+However, for [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html), the [`MapZoomPanBehavior.MaxZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel) may vary slightly depending on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
 
 {% tabs %}
 
@@ -221,13 +224,13 @@ However, for [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
         <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png" >
               <map:MapTileLayer.Center>
                   <map:MapLatLng Latitude = "27.1751"
-                                 Longitude="78.0421">
+                                 Longitude = "78.0421">
                   </map:MapLatLng>
               </map:MapTileLayer.Center>
               <map:MapTileLayer.ZoomPanBehavior>
                   <map:MapZoomPanBehavior ZoomLevel = "5" 
-                                          MinZoomLevel= "3"
-                                          MaxZoomLevel="10" />
+                                          MinZoomLevel = "3"
+                                          MaxZoomLevel = "10" />
               </map:MapTileLayer.ZoomPanBehavior>
         </map:MapTileLayer>
    </map:SfMaps.Layer>
@@ -257,14 +260,14 @@ this.Content = map;
 
 This feature is used to calculate the zoom level automatically in two ways:
 
-* Distance in radius(Meter/Kilometer/Mile)
-* Geo-bounds(Northeast, Southwest)
+* Distance in radius (Meter/Kilometer/Mile)
+* Geo-bounds (Northeast, Southwest)
 
 ### Distance in radius 
 
-Calculate the zoom level automatically based on the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) and [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) properties of imagery layer class.
+Calculate the zoom level automatically based on the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) and [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) properties of the [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html) class.
 
-N> [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) property default value is Kilometer.
+N> The [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) property default value is Kilometer. The [`MapDistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDistanceType.html) enum has the following values: `Meter`, `Kilometer` (default), and `Mile`.
 
 {% tabs %}
 
@@ -272,47 +275,47 @@ N> [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.Map
 
 <ContentPage.Resources>
     <ResourceDictionary>
-        <DataTemplate x:Key="MapMarkerTemplate">
-            <StackLayout HorizontalOptions="StartAndExpand"
-                         VerticalOptions="Center">
-                <Image Source="map.png"
-                       Scale="1"
-                       Aspect="AspectFit"
-                       HorizontalOptions="StartAndExpand"
-                       VerticalOptions="Center"
-                       HeightRequest="35"
-                       WidthRequest="25" />
-            </StackLayout>
+        <DataTemplate x:Key = "MapMarkerTemplate">
+            <VerticalStackLayout HorizontalOptions = "StartAndExpand"
+                         VerticalOptions = "Center">
+                <Image Source = "map.png"
+                       Scale = "1"
+                       Aspect = "AspectFit"
+                       HorizontalOptions = "StartAndExpand"
+                       VerticalOptions = "Center"
+                       HeightRequest = "35"
+                       WidthRequest = "25" />
+            </VerticalStackLayout>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
 
-<maps:SfMaps>
-    <maps:SfMaps.Layer>
-        <maps:MapTileLayer Radius="5"
-                           DistanceType="Kilometer"
-                           MarkerTemplate="{StaticResource MapMarkerTemplate}"
-                           UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapTileLayer Radius = "5"
+                           DistanceType = "Kilometer"
+                           MarkerTemplate = "{StaticResource MapMarkerTemplate}"
+                           UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png">
             
-            <maps:MapTileLayer.Center>
-                <maps:MapLatLng Latitude="38.909804"
-                                Longitude="-77.043442">
-                </maps:MapLatLng>
-            </maps:MapTileLayer.Center>
+            <map:MapTileLayer.Center>
+                <map:MapLatLng Latitude = "38.909804"
+                                Longitude = "-77.043442">
+                </map:MapLatLng>
+            </map:MapTileLayer.Center>
             
-            <maps:MapTileLayer.ZoomPanBehavior>
-                <maps:MapZoomPanBehavior ZoomLevel="1" />
-            </maps:MapTileLayer.ZoomPanBehavior>
+            <map:MapTileLayer.ZoomPanBehavior>
+                <map:MapZoomPanBehavior ZoomLevel = "1" />
+            </map:MapTileLayer.ZoomPanBehavior>
             
-            <maps:MapTileLayer.Markers>
-                <maps:MapMarkerCollection>
-                    <maps:MapMarker Latitude="38.909804"
-                                    Longitude="-77.043442" />
-                </maps:MapMarkerCollection>
-            </maps:MapTileLayer.Markers>
-        </maps:MapTileLayer>
-    </maps:SfMaps.Layer>
-</maps:SfMaps>
+            <map:MapTileLayer.Markers>
+                <map:MapMarkerCollection>
+                    <map:MapMarker Latitude = "38.909804"
+                                    Longitude = "-77.043442" />
+                </map:MapMarkerCollection>
+            </map:MapTileLayer.Markers>
+        </map:MapTileLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -344,13 +347,13 @@ private DataTemplate CreateDataTemplate()
 {
     return new DataTemplate(() =>
     {
-        var stackLayout = new StackLayout();
+        var stackLayout = new VerticalStackLayout();
         stackLayout.HorizontalOptions = LayoutOptions.StartAndExpand;
         stackLayout.VerticalOptions = LayoutOptions.Center;
         var image = new Image
         {
             Source = "map.png",
-            Scale =1,
+            Scale = 1,
             Aspect = Aspect.AspectFit,
             WidthRequest = 25,
             HeightRequest = 35,
@@ -366,11 +369,13 @@ private DataTemplate CreateDataTemplate()
 
 {% endtabs %}
 
-![SfMaps zoom level changed image](images/zoom-pan/distance_radius.png)
+![Zoom level changed in .NET MAUI Maps](images/zoom-pan/distance_radius.png)
+
+N> The `map.png` image used in the marker template must be added to your project (for example, in the `Resources/Images/` folder) and referenced as `Source = "map.png"`.
 
 ### Geo-bounds
 
-Calculate the zoom level automatically based on the [`LatLngBounds(Northeast, Southwest)`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) of the [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1) class.
+Calculate the zoom level automatically based on the [`MapTileLayer.LatLngBounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) property (Northeast and Southwest coordinates) of the [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html) class.
 
 {% tabs %}
 
@@ -378,59 +383,59 @@ Calculate the zoom level automatically based on the [`LatLngBounds(Northeast, So
 
    <ContentPage.Resources>
     <ResourceDictionary>
-        <DataTemplate x:Key="MapMarkerTemplate">
-            <StackLayout HorizontalOptions="StartAndExpand"
-                         VerticalOptions="Center">
-                <Image Source="map.png"
-                       Scale="1"
-                       Aspect="AspectFit"
-                       HorizontalOptions="StartAndExpand"
-                       VerticalOptions="Center"
-                       HeightRequest="35"
-                       WidthRequest="25" />
-            </StackLayout>
+        <DataTemplate x:Key = "MapMarkerTemplate">
+            <VerticalStackLayout HorizontalOptions = "StartAndExpand"
+                         VerticalOptions = "Center">
+                <Image Source = "map.png"
+                       Scale = "1"
+                       Aspect = "AspectFit"
+                       HorizontalOptions = "StartAndExpand"
+                       VerticalOptions = "Center"
+                       HeightRequest = "35"
+                       WidthRequest = "25" />
+            </VerticalStackLayout>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
     
-   <maps:SfMaps>
-    <maps:SfMaps.Layer>
-        <maps:MapTileLayer MarkerTemplate="{StaticResource MapMarkerTemplate}"
-                           UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
-            <maps:MapTileLayer.ZoomPanBehavior>
-                <maps:MapZoomPanBehavior MaxZoomLevel="19" />
-            </maps:MapTileLayer.ZoomPanBehavior>
-            <maps:MapTileLayer.Markers>
-                <maps:MapMarkerCollection>
-                    <maps:MapMarker Latitude="38.909804"
-                                    Longitude="-77.043442" />
-                    <maps:MapMarker Latitude="38.909148"
-                                    Longitude="-77.043610" />
-                </maps:MapMarkerCollection>
-            </maps:MapTileLayer.Markers>
-            <maps:MapTileLayer.LatLngBounds>
-                <maps:MapLatLngBounds>
-                    <maps:MapLatLngBounds.Northeast>
-                        <maps:MapLatLng>
+   <map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapTileLayer MarkerTemplate = "{StaticResource MapMarkerTemplate}"
+                           UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+            <map:MapTileLayer.ZoomPanBehavior>
+                <map:MapZoomPanBehavior MaxZoomLevel = "19" />
+            </map:MapTileLayer.ZoomPanBehavior>
+            <map:MapTileLayer.Markers>
+                <map:MapMarkerCollection>
+                    <map:MapMarker Latitude = "38.909804"
+                                    Longitude = "-77.043442" />
+                    <map:MapMarker Latitude = "38.909148"
+                                    Longitude = "-77.043610" />
+                </map:MapMarkerCollection>
+            </map:MapTileLayer.Markers>
+            <map:MapTileLayer.LatLngBounds>
+                <map:MapLatLngBounds>
+                    <map:MapLatLngBounds.Northeast>
+                        <map:MapLatLng>
                             <x:Arguments>
                                 <x:Double>38.909804</x:Double>
                                 <x:Double>-77.043442</x:Double>
                             </x:Arguments>
-                        </maps:MapLatLng>
-                    </maps:MapLatLngBounds.Northeast>
-                    <maps:MapLatLngBounds.Southwest>
-                        <maps:MapLatLng>
+                        </map:MapLatLng>
+                    </map:MapLatLngBounds.Northeast>
+                    <map:MapLatLngBounds.Southwest>
+                        <map:MapLatLng>
                             <x:Arguments>
                                 <x:Double>38.909148</x:Double>
                                 <x:Double>-77.043610</x:Double>
                             </x:Arguments>
-                        </maps:MapLatLng>
-                    </maps:MapLatLngBounds.Southwest>
-                </maps:MapLatLngBounds>
-            </maps:MapTileLayer.LatLngBounds>
-        </maps:MapTileLayer>
-    </maps:SfMaps.Layer>
-</maps:SfMaps>
+                        </map:MapLatLng>
+                    </map:MapLatLngBounds.Southwest>
+                </map:MapLatLngBounds>
+            </map:MapTileLayer.LatLngBounds>
+        </map:MapTileLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -468,13 +473,13 @@ private DataTemplate CreateDataTemplate()
 {
     return new DataTemplate(() =>
     {
-        var stackLayout = new StackLayout();
+        var stackLayout = new VerticalStackLayout();
         stackLayout.HorizontalOptions = LayoutOptions.StartAndExpand;
         stackLayout.VerticalOptions = LayoutOptions.Center;
         var image = new Image
         {
             Source = "map.png",
-            Scale =1,
+            Scale = 1,
             Aspect = Aspect.AspectFit,
             WidthRequest = 25,
             HeightRequest = 35,
@@ -490,9 +495,9 @@ private DataTemplate CreateDataTemplate()
 
 {% endtabs %}
 
-N> When setting [`LatLngBounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) and [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) at the same time, the priority is [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) and so calculate zoom level based on radius value.
+N> When setting [`LatLngBounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) and [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) at the same time, the priority is [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) and so the zoom level is calculated based on the radius value. If neither [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) nor [`LatLngBounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) is set, the zoom level is determined by the [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) property.
 
-![MAUI SfMaps zoom level changed image](images/zoom-pan/northSouth_Image.png)
+![Zoom level changed based on geo-bounds in .NET MAUI Maps](images/zoom-pan/northSouth_Image.png)
 
 ## Double tap zooming
 
@@ -506,9 +511,9 @@ N> It is applicable for both tile layer and shape layer.
 
  <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png">
             <map:MapTileLayer.ZoomPanBehavior>
-                <map:MapZoomPanBehavior ZoomLevel="2" EnableDoubleTapZooming="True"/>
+                <map:MapZoomPanBehavior ZoomLevel = "2" EnableDoubleTapZooming = "True"/>
             </map:MapTileLayer.ZoomPanBehavior>
         </map:MapTileLayer>
     </map:SfMaps.Layer>
@@ -532,11 +537,11 @@ this.Content = map;
 
 {% endtabs %}
 
-![Double tap zooming](images/zoom-pan/double_tap_zoom.gif)
+![Double tap zooming in .NET MAUI Maps](images/zoom-pan/double_tap_zoom.gif)
 
 ## Animation
 
-### Zoom level Animation
+### Zoom level animation
 
 To perform the animation on zoom level changing using the [`MapTileLayer.EnableZoomingAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_EnableZoomingAnimation) property. The default value of the [`EnableZoomingAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_EnableZoomingAnimation) is `true`.
 
@@ -548,8 +553,8 @@ N> It is applicable for both tile layer and shape layer.
 
  <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                          EnableZoomingAnimation="True" >
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                          EnableZoomingAnimation = "True" >
         </map:MapTileLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -569,9 +574,9 @@ this.Content = map;
 
 {% endtabs %}
 
-![Zoom animation](images/zoom-pan/zoom_animation.gif)
+![Zoom animation in .NET MAUI Maps](images/zoom-pan/zoom_animation.gif)
 
-### Center Animation
+### Center animation
 
 To perform the animation on center value changing using the [`MapTileLayer.EnableCenterAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_EnableCenterAnimation) property. The default value of the [`EnableCenterAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_EnableCenterAnimation) is `true`.
 
@@ -583,8 +588,8 @@ N> It is applicable only for tile layer.
 
  <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                          EnableCenterAnimation="True" >
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                          EnableCenterAnimation = "True" >
         </map:MapTileLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -604,37 +609,46 @@ this.Content = map;
 
 {% endtabs %}
 
-![Center animation](images/zoom-pan/center_zoom_animation.gif)
+![Center animation in .NET MAUI Maps](images/zoom-pan/center_zoom_animation.gif)
 
 ## Event
 
-The [`ZoomLevelChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ZoomLevelChanging) event triggers when the zoom level gets changing. Following arguments can be get from the ZoomLevelChanging event.
+**Zoom level changing event**
+
+The [`ZoomLevelChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ZoomLevelChanging) event triggers when the zoom level is changing. It is applicable for both tile layer and shape layer. The following arguments can be obtained from the `ZoomLevelChanging` event.
 
 * `Cancel` : Used to cancel the zooming.
-* [`OldZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ZoomLevelChangingEventArgs.html#Syncfusion_Maui_Maps_ZoomLevelChangingEventArgs_OldZoomLevel) : Returns the previous level after the zooming.
+* [`OldZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ZoomLevelChangingEventArgs.html#Syncfusion_Maui_Maps_ZoomLevelChangingEventArgs_OldZoomLevel) : Returns the previous level before the zooming.
 * [`NewZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ZoomLevelChangingEventArgs.html#Syncfusion_Maui_Maps_ZoomLevelChangingEventArgs_NewZoomLevel) : Returns the current level to be zoomed.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <maps:SfMaps>
-    <maps:SfMaps.Layer>
-        <maps:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                           ZoomLevelChanging="MapTileLayer_ZoomLevelChanging" />
-    </maps:SfMaps.Layer>
-</maps:SfMaps>
+ <map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                          ZoomLevelChanging = "MapTileLayer_ZoomLevelChanging" />
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
+
+SfMaps map = new SfMaps();
+MapTileLayer tileLayer = new MapTileLayer();
+tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+tileLayer.ZoomLevelChanging += MapTileLayer_ZoomLevelChanging;
+map.Layer = tileLayer;
+this.Content = map;
 
 private void MapTileLayer_ZoomLevelChanging(object sender, ZoomLevelChangingEventArgs e)
 {
     if (e.OldZoomLevel == 10) // Returns the previous zoom level
     {
         e.Cancel = true; // Cancels the zooming event
-        var NewZoomLevel = e.NewZoomLevel; // Returns the current zoomed level
+        var newZoomLevel = e.NewZoomLevel; // Returns the current zoomed level
     }
 }
 
@@ -642,4 +656,4 @@ private void MapTileLayer_ZoomLevelChanging(object sender, ZoomLevelChangingEven
 
 {% endtabs %}
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [`.NET MAUI Maps Zoom & Pan example`](https://github.com/syncfusion/maui-demos/) that shows how to configure Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [`.NET MAUI Maps Zoom & Pan example`](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Maps) that shows how to configure Maps in .NET MAUI.

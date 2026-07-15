@@ -1,13 +1,13 @@
----
+﻿---
 layout: post
-title: Migrate from Xamarin SfMaps to .NET MAUI SfMaps | Syncfusion<sup>&reg;</sup> 
-description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin SfMaps to Syncfusion<sup>&reg;</sup> .NET MAUI SfMaps control and more.
+title: Migrate from Xamarin SfMaps to .NET MAUI Maps | Syncfusion<sup>&reg;</sup> 
+description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin SfMaps to Syncfusion<sup>&reg;</sup> .NET MAUI Maps control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfMaps to .NET MAUI SfMaps
+# Migrate from Xamarin.Forms SfMaps to .NET MAUI Maps
 
 To make the migration from the [Xamarin SfMaps](https://www.syncfusion.com/xamarin-ui-controls/xamarin-maps) to [.NET MAUI SfMaps](https://www.syncfusion.com/maui-controls/maui-maps) easier, most of the APIs from the Xamarin SfMaps are kept in the.NET MAUI SfMaps. However, some APIs have been renamed to maintain the consistency of API naming in the .NET MAUI SfMaps. Please find the difference in the following topics.
 
@@ -25,23 +25,21 @@ To initialize the control, import the map namespace and initialize the SfMaps as
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
-
-        <syncfusion:SfMaps/>
-
+<ContentPage>
+    <!-- code omitted for brevity -->
+    xmlns:syncfusion = "clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
+   <syncfusion:SfMaps/>
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.SfMaps.XForms;
-...
+// code omitted for brevity
 
 SfMaps map = new SfMaps();
-...
+// code omitted for brevity
 
 {% endhighlight %}
 
@@ -55,22 +53,20 @@ SfMaps map = new SfMaps();
 
 {% highlight xaml %}
 
-<ContentPage …
-xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps">
-
+<ContentPage
+             xmlns:map = "clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps">
 <map:SfMaps />
-
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Maui.Maps;
-…
+// code omitted for brevity
 
-SfMaps map = new SfMaps();
-...
+SfMaps map  =  new SfMaps();
+// code omitted for brevity
 
 {% endhighlight %}
 
@@ -282,10 +278,10 @@ The following code example explains how to intialize the layer and customize the
 
 <maps:SfMaps>
     <maps:SfMaps.Layers >
-        <maps:ShapeFileLayer Uri="world.shp" >
+        <maps:ShapeFileLayer Uri = "world.shp" >
             <maps:ShapeFileLayer.ShapeSettings>
-                <maps:ShapeSetting  ShapeFill="#b5dcff"
-                                    ShapeStroke="#1585ed">
+                <maps:ShapeSetting  ShapeFill = "#b5dcff"
+                                    ShapeStroke = "#1585ed">
                 </maps:ShapeSetting>
             </maps:ShapeFileLayer.ShapeSettings>
         </maps:ShapeFileLayer>
@@ -294,7 +290,7 @@ The following code example explains how to intialize the layer and customize the
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     SfMaps maps = new SfMaps();
 
@@ -307,6 +303,7 @@ The following code example explains how to intialize the layer and customize the
     layer.ShapeSettings = shapeSetting;
 
     maps.Layers.Add(layer);
+    // code omitted for brevity
 
 {% endhighlight %}
 
@@ -319,31 +316,31 @@ The following code example explains how to intialize the layer and customize the
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           ShapeStroke="#1585ed"
-                           ShapeFill="#b5dcff">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke = "#1585ed"
+                           ShapeFill = "#b5dcff">
         </map:MapShapeLayer>
     </maps:SfMaps.Layer>
 </maps:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-    public MainPage()
-    {
-        InitializeComponent();
+public MainPage()
+{
+   InitializeComponent();
 
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-        layer.ShapeFill = Color.FromRgb(181, 220, 255);
-        layer.ShapeStroke = Color.FromRgb(21, 133, 237);
+   MapShapeLayer layer = new MapShapeLayer();
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+   layer.ShapeFill = Color.FromRgb(181, 220, 255);
+   layer.ShapeStroke = Color.FromRgb(21, 133, 237);
 
-        SfMaps maps = new SfMaps();
-        maps.Layer = layer;
+   SfMaps maps = new SfMaps();
+   maps.Layer = layer;
 
-        this.Content = maps;
-    }
+   this.Content = maps;
+}
 
 {% endhighlight %}
 
@@ -476,19 +473,19 @@ The following code example explains how to intialize the tile layer and it's cus
 
 <maps:SfMaps>
     <maps:SfMaps.Layers>
-        <maps:ImageryLayer GeoCoordinates="38.909804, -77.043442"
-                           Radius="5"
-                           DistanceType="KiloMeter">
+        <maps:ImageryLayer GeoCoordinates = "38.909804, -77.043442"
+                           Radius = "5"
+                           DistanceType = "KiloMeter">
             <maps:ImageryLayer.Markers>
-                <maps:MapMarker Latitude="38.909804"
-                                Longitude="-77.043442" />
+                <maps:MapMarker Latitude = "38.909804"
+                                Longitude = "-77.043442" />
             </maps:ImageryLayer.Markers>
         </maps:ImageryLayer>
     </maps:SfMaps.Layers>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfMaps maps = new SfMaps();
 ImageryLayer layer = new ImageryLayer();
@@ -513,12 +510,12 @@ this.Content = maps;
 
 <maps:SfMaps>
     <maps:SfMaps.Layer>
-        <maps:MapTileLayer Radius="5"
-                           DistanceType="Kilometer"
-                           UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+        <maps:MapTileLayer Radius = "5"
+                           DistanceType = "Kilometer"
+                           UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png">
             <maps:MapTileLayer.Center>
-                <maps:MapLatLng Latitude="38.909804"
-                                Longitude="-77.043442">
+                <maps:MapLatLng Latitude = "38.909804"
+                                Longitude = "-77.043442">
                 </maps:MapLatLng>
             </maps:MapTileLayer.Center>
             <maps:MapTileLayer.ZoomPanBehavior>
@@ -526,8 +523,8 @@ this.Content = maps;
             </maps:MapTileLayer.ZoomPanBehavior>
             <maps:MapTileLayer.Markers>
                 <maps:MapMarkerCollection>
-                    <maps:MapMarker Latitude="38.909804"
-                                    Longitude="-77.043442" />
+                    <maps:MapMarker Latitude = "38.909804"
+                                    Longitude = "-77.043442" />
                 </maps:MapMarkerCollection>
             </maps:MapTileLayer.Markers>
         </maps:MapTileLayer>
@@ -536,7 +533,7 @@ this.Content = maps;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -579,14 +576,14 @@ public MainPage()
 
 <maps:SfMaps>
     <maps:SfMaps.Layers>
-        <maps:ImageryLayer LayerType="Bing"
-                           BingMapKey="Your bing map key" />
+        <maps:ImageryLayer LayerType = "Bing"
+                           BingMapKey = "Your bing map key" />
     </maps:SfMaps.Layers>
 </maps:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfMaps maps = new SfMaps();
 ImageryLayer layer = new ImageryLayer();
@@ -601,7 +598,7 @@ this.Content = maps;
 </td>
 <td>
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -713,14 +710,14 @@ The following code example explains how to customize the bubble in the Xamarin S
 
 <maps:SfMaps>
     <maps:SfMaps.Layers >
-        <maps:ShapeFileLayer Uri="world.shp"
-                             ItemsSource="{Binding Data}"
-                             ShapeIDPath="State"
-                             ShapeIDTableField="name">
+        <maps:ShapeFileLayer Uri = "world.shp"
+                             ItemsSource = "{Binding Data}"
+                             ShapeIDPath = "State"
+                             ShapeIDTableField = "name">
             <maps:ShapeFileLayer.BubbleMarkerSettings>
-                <maps:BubbleMarkerSetting ShowBubbles="True"
-                                          ColorValuePath="Population"
-                                          ValuePath="Population"/>
+                <maps:BubbleMarkerSetting ShowBubbles = "True"
+                                          ColorValuePath = "Population"
+                                          ValuePath = "Population"/>
             </maps:ShapeFileLayer.BubbleMarkerSettings>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
@@ -728,7 +725,7 @@ The following code example explains how to customize the bubble in the Xamarin S
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
@@ -736,8 +733,8 @@ The following code example explains how to customize the bubble in the Xamarin S
 
     ShapeFileLayer layer = new ShapeFileLayer();
     layer.Uri = "world.shp";           
-    layer.ShapeIDPath="State"
-    layer.ShapeIDTableField="name"
+    layer.ShapeIDPath = "State"
+    layer.ShapeIDTableField = "name"
     layer.DataSource = viewModel.Data;
 
     BubbleMarkerSetting bubbleSetting = new BubbleMarkerSetting()
@@ -763,16 +760,16 @@ The following code example explains how to customize the bubble in the Xamarin S
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           DataSource="{Binding Data}"
-                           PrimaryValuePath="State"
-                           ShapeDataField="name"
-                           ShowBubbles="True"
-                           ShowBubbleTooltip="True">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource = "{Binding Data}"
+                           PrimaryValuePath = "State"
+                           ShapeDataField = "name"
+                           ShowBubbles = "True"
+                           ShowBubbleTooltip = "True">
 
             <map:MapShapeLayer.BubbleSettings>
-                <map:MapBubbleSettings ColorValuePath="Population" 
-                                       SizeValuePath="Population">
+                <map:MapBubbleSettings ColorValuePath = "Population" 
+                                       SizeValuePath = "Population">
                 </map:MapBubbleSettings>
             </map:MapShapeLayer.BubbleSettings>
         </map:MapShapeLayer>
@@ -781,7 +778,7 @@ The following code example explains how to customize the bubble in the Xamarin S
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -858,13 +855,13 @@ The following code example explains how to customize the data label in the Xamar
 
 <maps:SfMaps>
     <maps:SfMaps.Layers >
-        <maps:ShapeFileLayer Uri="world.shp"
-                             ItemsSource="{Binding Data}"
-                             ShapeIDPath="State"
-                             ShapeIDTableField="name"
-                             ShowMapItems="True">
+        <maps:ShapeFileLayer Uri = "world.shp"
+                             ItemsSource = "{Binding Data}"
+                             ShapeIDPath = "State"
+                             ShapeIDTableField = "name"
+                             ShowMapItems = "True">
             <maps:ShapeFileLayer.DataLabelSettings>
-                <maps:DataLabelSetting  SmartLabelMode="Trim" />
+                <maps:DataLabelSetting  SmartLabelMode = "Trim" />
             </maps:ShapeFileLayer.DataLabelSettings>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
@@ -872,7 +869,7 @@ The following code example explains how to customize the data label in the Xamar
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
@@ -880,8 +877,8 @@ The following code example explains how to customize the data label in the Xamar
 
     ShapeFileLayer layer = new ShapeFileLayer();
     layer.Uri = "world.shp";           
-    layer.ShapeIDPath="State"
-    layer.ShapeIDTableField="name"
+    layer.ShapeIDPath = "State"
+    layer.ShapeIDTableField = "name"
     layer.DataSource = viewModel.Data;
     layer.ShowMapItems = true;
 
@@ -903,19 +900,19 @@ The following code example explains how to customize the data label in the Xamar
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           DataSource="{Binding Data}"
-                           PrimaryValuePath="State" 
-                           ShapeDataField="name"
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource = "{Binding Data}"
+                           PrimaryValuePath = "State" 
+                           ShapeDataField = "name"
                            ShapeHoverFill = "Transparent" 
-                           ShapeHoverStroke="Transparent"
-                           ShowDataLabels="True">
+                           ShapeHoverStroke = "Transparent"
+                           ShowDataLabels = "True">
 
             <map:MapShapeLayer.DataLabelSettings>
-                <map:MapDataLabelSettings OverflowMode="Trim"
-                                          DataLabelPath="State">
+                <map:MapDataLabelSettings OverflowMode = "Trim"
+                                          DataLabelPath = "State">
                         <map:MapDataLabelSettings.DataLabelStyle>
-                                <map:MapLabelStyle FontSize="12"/>
+                                <map:MapLabelStyle FontSize = "12"/>
                         </map:MapDataLabelSettings.DataLabelStyle>
                 </map:MapDataLabelSettings>
             </map:MapShapeLayer.DataLabelSettings>
@@ -926,7 +923,7 @@ The following code example explains how to customize the data label in the Xamar
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -1060,15 +1057,15 @@ The following code example explains how to customize the shape color in the Xama
 
 <maps:SfMaps>
     <maps:SfMaps.Layers >
-        <maps:ShapeFileLayer Uri="world.shp"
-                             ItemsSource="{Binding Data}"
-                             ShapeIDPath="State"
-                             ShapeIDTableField="name">
+        <maps:ShapeFileLayer Uri = "world.shp"
+                             ItemsSource = "{Binding Data}"
+                             ShapeIDPath = "State"
+                             ShapeIDTableField = "name">
             <maps:ShapeFileLayer.ShapeSettings>
-                <maps:ShapeSetting ShapeValuePath="Count" ShapeColorValuePath="Count" >
+                <maps:ShapeSetting ShapeValuePath = "Count" ShapeColorValuePath = "Count" >
                     <maps:ShapeSetting.ColorMappings>
-                        <maps:EqualColorMapping Color="Blue" Value="100" Text="100"/>
-                        <maps:RangeColorMapping Color="Green" From="0" To="99" Text="0-99"/>
+                        <maps:EqualColorMapping Color = "Blue" Value = "100" Text = "100"/>
+                        <maps:RangeColorMapping Color = "Green" From = "0" To = "99" Text = "0-99"/>
                     </maps:ShapeSetting.ColorMappings>
                 </maps:ShapeSetting>
             </maps:ShapeFileLayer.ShapeSettings>
@@ -1078,7 +1075,7 @@ The following code example explains how to customize the shape color in the Xama
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
@@ -1086,8 +1083,8 @@ The following code example explains how to customize the shape color in the Xama
 
     ShapeFileLayer layer = new ShapeFileLayer();
     layer.Uri = "world.shp";           
-    layer.ShapeIDPath="State"
-    layer.ShapeIDTableField="name"
+    layer.ShapeIDPath = "State"
+    layer.ShapeIDTableField = "name"
     layer.DataSource = viewModel.Data;
 
     EqualColorMapping colorMapping = new EqualColorMapping();
@@ -1123,14 +1120,14 @@ The following code example explains how to customize the shape color in the Xama
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           DataSource="{Binding Data}"
-                           PrimaryValuePath="State"
-                           ShapeDataField="name"
-                           ShapeColorValuePath="Count">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource = "{Binding Data}"
+                           PrimaryValuePath = "State"
+                           ShapeDataField = "name"
+                           ShapeColorValuePath = "Count">
             <map:MapShapeLayer.ColorMappings>
-                <map:EqualColorMapping Color="Blue" Value="100" Text="100"/>
-                <map:RangeColorMapping Color="Green" From="0" To="99" Text="0-99"/>
+                <map:EqualColorMapping Color = "Blue" Value = "100" Text = "100"/>
+                <map:RangeColorMapping Color = "Green" From = "0" To = "99" Text = "0-99"/>
             </map:MapShapeLayer.ColorMappings>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
@@ -1138,7 +1135,7 @@ The following code example explains how to customize the shape color in the Xama
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -1264,14 +1261,14 @@ The following code example explains how to customize marker in the Xamarin SfMap
 
 <maps:SfMaps>
     <maps:SfMaps.Layers >
-        <maps:ShapeFileLayer Uri="world.shp"
-                             ShowMapItems="True">
+        <maps:ShapeFileLayer Uri = "world.shp"
+                             ShowMapItems = "True">
             <maps:ShapeFileLayer.Markers>
-                <maps:MapMarker Latitude="20.5595"
-                                Longitude="22.9375"/>
+                <maps:MapMarker Latitude = "20.5595"
+                                Longitude = "22.9375"/>
             </maps:ShapeFileLayer.Markers>
             <maps:ShapeFileLayer.MarkerSettings>
-                <maps:MapMarkerSetting IconColor="Red"/>
+                <maps:MapMarkerSetting IconColor = "Red"/>
             </maps:ShapeFileLayer.MarkerSettings>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
@@ -1279,7 +1276,7 @@ The following code example explains how to customize marker in the Xamarin SfMap
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     SfMaps maps = new SfMaps();
 
@@ -1308,12 +1305,12 @@ The following code example explains how to customize marker in the Xamarin SfMap
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
-                    <map:MapMarker Latitude="20.5595"
-                                   Longitude="22.9375"
-                                   IconFill="Red"/>
+                    <map:MapMarker Latitude = "20.5595"
+                                   Longitude = "22.9375"
+                                   IconFill = "Red"/>
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
         </map:MapShapeLayer>
@@ -1322,7 +1319,7 @@ The following code example explains how to customize marker in the Xamarin SfMap
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -1410,19 +1407,19 @@ The following code example explains how to customize legend in the Xamarin SfMap
 
 <maps:SfMaps>
     <maps:SfMaps.Layers >
-        <maps:ShapeFileLayer Uri="world.shp"
-                             ItemsSource="{Binding Data}"
-                             ShapeIDPath="State"
-                             ShapeIDTableField="name">
+        <maps:ShapeFileLayer Uri = "world.shp"
+                             ItemsSource = "{Binding Data}"
+                             ShapeIDPath = "State"
+                             ShapeIDTableField = "name">
             <maps:ShapeFileLayer.ShapeSettings>
-                <maps:ShapeSetting ShapeValuePath="Count" ShapeColorValuePath="Count" >
+                <maps:ShapeSetting ShapeValuePath = "Count" ShapeColorValuePath = "Count" >
                     <maps:ShapeSetting.ColorMappings>
-                        <map:EqualColorMapping Color="Blue" Value="100" Text="100"/>
+                        <map:EqualColorMapping Color = "Blue" Value = "100" Text = "100"/>
                     </maps:ShapeSetting.ColorMappings>
                 </maps:ShapeSetting>
             </maps:ShapeFileLayer.ShapeSettings>
             <maps:ShapeFileLayer.LegendSettings>
-                        <maps:MapLegendSetting ShowLegend="True" LegendType="Layers">
+                        <maps:MapLegendSetting ShowLegend = "True" LegendType = "Layers">
                         </maps:MapLegendSetting>
                     </maps:ShapeFileLayer.LegendSettings>
         </maps:ShapeFileLayer>
@@ -1431,7 +1428,7 @@ The following code example explains how to customize legend in the Xamarin SfMap
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
@@ -1439,8 +1436,8 @@ The following code example explains how to customize legend in the Xamarin SfMap
 
     ShapeFileLayer layer = new ShapeFileLayer();
     layer.Uri = "world.shp";           
-    layer.ShapeIDPath="State"
-    layer.ShapeIDTableField="name"
+    layer.ShapeIDPath = "State"
+    layer.ShapeIDTableField = "name"
     layer.DataSource = viewModel.Data;
 
     EqualColorMapping colorMapping = new EqualColorMapping();
@@ -1474,21 +1471,21 @@ The following code example explains how to customize legend in the Xamarin SfMap
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           DataSource="{Binding Data}"
-                           PrimaryValuePath="State"
-                           ShapeDataField="name"
-                           ShapeColorValuePath="Count">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource = "{Binding Data}"
+                           PrimaryValuePath = "State"
+                           ShapeDataField = "name"
+                           ShapeColorValuePath = "Count">
             <map:MapShapeLayer.ColorMappings>
-                <map:EqualColorMapping Color="Blue" Value="100" Text="100"/>
+                <map:EqualColorMapping Color = "Blue" Value = "100" Text = "100"/>
             </map:MapShapeLayer.ColorMappings>
             <map:MapShapeLayer.Legend>
-                <map:MapLegend SourceType="Shape"
-                               Placement="Top"
-                               IconSize="20, 20"
-                               IconType="Diamond">
+                <map:MapLegend SourceType = "Shape"
+                               Placement = "Top"
+                               IconSize = "20, 20"
+                               IconType = "Diamond">
                     <map:MapLegend.TextStyle>
-                        <map:MapLabelStyle FontSize="16"/>
+                        <map:MapLabelStyle FontSize = "16"/>
                     </map:MapLegend.TextStyle>
                 </map:MapLegend>
             </map:MapShapeLayer.Legend>
@@ -1498,7 +1495,7 @@ The following code example explains how to customize legend in the Xamarin SfMap
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -1553,7 +1550,7 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'[*MapTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html?tabs=tabid-1)'| markdownify }}
+      {{'[*MapTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1650,13 +1647,13 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 
 <maps:SfMaps>
     <maps:SfMaps.Layers >
-        <maps:ShapeFileLayer Uri="world.shp"
-                             ItemsSource="{Binding Data}"
-                             ShapeIDPath="State"
-                             ShapeIDTableField="name">
+        <maps:ShapeFileLayer Uri = "world.shp"
+                             ItemsSource = "{Binding Data}"
+                             ShapeIDPath = "State"
+                             ShapeIDTableField = "name">
             <maps:ShapeFileLayer.TooltipSettings>
-                <maps:TooltipSetting  ShowTooltip="True"
-                                      ValuePath="Count"/>
+                <maps:TooltipSetting  ShowTooltip = "True"
+                                      ValuePath = "Count"/>
     </maps:ShapeFileLayer.TooltipSettings>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
@@ -1664,7 +1661,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
@@ -1672,8 +1669,8 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 
     ShapeFileLayer layer = new ShapeFileLayer();
     layer.Uri = "world.shp";           
-    layer.ShapeIDPath="State"
-    layer.ShapeIDTableField="name"
+    layer.ShapeIDPath = "State"
+    layer.ShapeIDTableField = "name"
     layer.DataSource = viewModel.Data;
 
     shapeFileLayer.TooltipSettings.ShowTooltip = true;
@@ -1694,20 +1691,20 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           DataSource="{Binding Data}"
-                           PrimaryValuePath="State"
-                           ShapeDataField="name"
-                           ShapeColorValuePath="Count"
-                           ShowShapeToolTip="True">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource = "{Binding Data}"
+                           PrimaryValuePath = "State"
+                           ShapeDataField = "name"
+                           ShapeColorValuePath = "Count"
+                           ShowShapeToolTip = "True">
 
                   <map:MapShapeLayer.ShapeTooltipSettings>
-                    <map:MapTooltipSettings Background="#002080"
-                                            Padding="2">
+                    <map:MapTooltipSettings Background = "#002080"
+                                            Padding = "2">
                         <map:MapTooltipSettings.TextStyle>
-                            <map:MapLabelStyle FontSize="14"
-                                               TextColor="White"
-                                               FontAttributes="Bold">
+                            <map:MapLabelStyle FontSize = "14"
+                                               TextColor = "White"
+                                               FontAttributes = "Bold">
                             </map:MapLabelStyle>
                         </map:MapTooltipSettings.TextStyle>
                     </map:MapTooltipSettings>
@@ -1718,7 +1715,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     public ToolTip()
     {
@@ -1875,13 +1872,13 @@ The following code example explains how to initialize the shape sublayer and it'
 
 <maps:SfMaps>
     <maps:SfMaps.Layers>
-        <maps:ShapeFileLayer Uri="world1.shp">
+        <maps:ShapeFileLayer Uri = "world1.shp">
             <maps:ShapeFileLayer.Sublayers>
-                <maps:ShapeFileLayer Uri="usa_state.shp">
+                <maps:ShapeFileLayer Uri = "usa_state.shp">
                     <maps:ShapeFileLayer.ShapeSettings>
-                        <maps:ShapeSetting  ShapeFill="#8DCCF4"
-                                            ShapeStroke="#B1D8F5"
-                                            ShapeStrokeThickness="1">
+                        <maps:ShapeSetting  ShapeFill = "#8DCCF4"
+                                            ShapeStroke = "#B1D8F5"
+                                            ShapeStrokeThickness = "1">
                         </maps:ShapeSetting>
                     </maps:ShapeFileLayer.ShapeSettings>
                 </maps:ShapeFileLayer>
@@ -1892,7 +1889,7 @@ The following code example explains how to initialize the shape sublayer and it'
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfMaps map = new SfMaps();
 map.BackgroundColor = Color.White;
@@ -1919,12 +1916,12 @@ this.Content = map;
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer ShapeStroke="#B1D8F5"
-                                      ShapeFill="#8DCCF4"
+                <map:MapShapeSublayer ShapeStroke = "#B1D8F5"
+                                      ShapeFill = "#8DCCF4"
                                       ShapeStrokeThickness = "1"
-                                      ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json">
+                                      ShapesSource = "https://cdn.syncfusion.com/maps/map-data/africa.json">
                 </map:MapShapeSublayer>
             </map:MapShapeLayer.Sublayers>
         </map:MapShapeLayer>
@@ -1933,7 +1930,7 @@ this.Content = map;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -2046,17 +2043,17 @@ The following code example explains how to customize the bubble in the Xamarin S
 
 <maps:SfMaps>
     <maps:SfMaps.Layers>
-        <maps:ShapeFileLayer Uri="world1.shp">
+        <maps:ShapeFileLayer Uri = "world1.shp">
             <maps:ShapeFileLayer.Sublayers>
-                <maps:ShapeFileLayer Uri="usa_state.shp"
-                                     ItemsSource="{Binding DataSource}"
-                                     ShapeIDPath="Name"
-                                     ShapeIDTableField="STATE_NAME">
+                <maps:ShapeFileLayer Uri = "usa_state.shp"
+                                     ItemsSource = "{Binding DataSource}"
+                                     ShapeIDPath = "Name"
+                                     ShapeIDTableField = "STATE_NAME">
                     <maps:ShapeFileLayer.BubbleMarkerSettings>
-                        <maps:BubbleMarkerSetting ShowBubbles="True"
-                                                  ValuePath="index"
-                                                  Fill="Orange"
-                                                  Opacity="0.8" />
+                        <maps:BubbleMarkerSetting ShowBubbles = "True"
+                                                  ValuePath = "index"
+                                                  Fill = "Orange"
+                                                  Opacity = "0.8" />
                     </maps:ShapeFileLayer.BubbleMarkerSettings>
                 </maps:ShapeFileLayer>
             </maps:ShapeFileLayer.Sublayers>
@@ -2066,7 +2063,7 @@ The following code example explains how to customize the bubble in the Xamarin S
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
  ViewModel viewModel = new ViewModel();
 this.BindingContext = viewModel;
@@ -2103,16 +2100,16 @@ this.Content = maps;
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer  ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
-                                      ShapeDataField="name"
-                                      DataSource="{Binding Data}"
-                                      PrimaryValuePath="State"
-                                      ShowBubbles="True">
+                <map:MapShapeSublayer  ShapesSource = "https://cdn.syncfusion.com/maps/map-data/africa.json"
+                                      ShapeDataField = "name"
+                                      DataSource = "{Binding Data}"
+                                      PrimaryValuePath = "State"
+                                      ShowBubbles = "True">
                     <map:MapShapeSublayer.BubbleSettings>
-                        <map:MapBubbleSettings ColorValuePath="Size"
-                                               SizeValuePath="Size">
+                        <map:MapBubbleSettings ColorValuePath = "Size"
+                                               SizeValuePath = "Size">
                         </map:MapBubbleSettings>
                     </map:MapShapeSublayer.BubbleSettings>
                 </map:MapShapeSublayer>
@@ -2123,7 +2120,7 @@ this.Content = maps;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -2202,19 +2199,19 @@ The following code example explains how to customize the data label in the Xamar
 
 <maps:SfMaps>
     <maps:SfMaps.Layers>
-        <maps:ShapeFileLayer Uri="world1.shp">
+        <maps:ShapeFileLayer Uri = "world1.shp">
             <maps:ShapeFileLayer.Sublayers>
-                <maps:ShapeFileLayer Uri="usa_state.shp"
-                                     ItemsSource="{Binding DataSource}"
-                                     ShapeIDPath="Name"
-                                     ShapeIDTableField="STATE_NAME"
-                                     ShowMapItems="True">
+                <maps:ShapeFileLayer Uri = "usa_state.shp"
+                                     ItemsSource = "{Binding DataSource}"
+                                     ShapeIDPath = "Name"
+                                     ShapeIDTableField = "STATE_NAME"
+                                     ShowMapItems = "True">
                     <maps:ShapeFileLayer.ShapeSettings>
-                        <maps:ShapeSetting ShapeValuePath="Name" />
+                        <maps:ShapeSetting ShapeValuePath = "Name" />
                     </maps:ShapeFileLayer.ShapeSettings>
                     <maps:ShapeFileLayer.DataLabelSettings>
-                        <maps:DataLabelSetting  TextColor="Blue"
-                                                SmartLabelMode="None" />
+                        <maps:DataLabelSetting  TextColor = "Blue"
+                                                SmartLabelMode = "None" />
                     </maps:ShapeFileLayer.DataLabelSettings>
                 </maps:ShapeFileLayer>
             </maps:ShapeFileLayer.Sublayers>
@@ -2224,7 +2221,7 @@ The following code example explains how to customize the data label in the Xamar
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 ViewModel viewModel = new ViewModel();
 this.BindingContext = viewModel;
@@ -2260,17 +2257,17 @@ this.Content = maps;
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
-                                      ShapeDataField="name"
-                                      DataSource="{Binding Data}"
-                                      PrimaryValuePath="State"
-                                      ShowDataLabels="True">
+                <map:MapShapeSublayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/africa.json"
+                                      ShapeDataField = "name"
+                                      DataSource = "{Binding Data}"
+                                      PrimaryValuePath = "State"
+                                      ShowDataLabels = "True">
                     <map:MapShapeSublayer.DataLabelSettings>
-                        <map:MapDataLabelSettings DataLabelPath="State" >
+                        <map:MapDataLabelSettings DataLabelPath = "State" >
                         <map:MapDataLabelSettings.DataLabelStyle>
-                                <map:MapLabelStyle FontSize="6" />
+                                <map:MapLabelStyle FontSize = "6" />
                             </map:MapDataLabelSettings.DataLabelStyle>
                             </map:MapDataLabelSettings>
                     </map:MapShapeSublayer.DataLabelSettings>
@@ -2282,7 +2279,7 @@ this.Content = maps;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -2408,23 +2405,23 @@ The following code example explains how to customize the shape color in the Xama
 
 <maps:SfMaps>
     <maps:SfMaps.Layers>
-        <maps:ShapeFileLayer Uri="world1.shp">
+        <maps:ShapeFileLayer Uri = "world1.shp">
             <maps:ShapeFileLayer.Sublayers>
-                <maps:ShapeFileLayer Uri="usa_state.shp"
-                                     ItemsSource="{Binding DataSource}"
-                                     ShapeIDPath="Name"
-                                     ShapeIDTableField="STATE_NAME">
+                <maps:ShapeFileLayer Uri = "usa_state.shp"
+                                     ItemsSource = "{Binding DataSource}"
+                                     ShapeIDPath = "Name"
+                                     ShapeIDTableField = "STATE_NAME">
                     <maps:ShapeFileLayer.ShapeSettings>
-                        <maps:ShapeSetting ShapeValuePath="index"
-                                           ShapeColorValuePath="index">
+                        <maps:ShapeSetting ShapeValuePath = "index"
+                                           ShapeColorValuePath = "index">
                             <maps:ShapeSetting.ColorMappings>
-                                <maps:EqualColorMapping Color="Blue"
-                                                        Value="100"
-                                                        LegendLabel="100" />
-                                <maps:RangeColorMapping Color="Green"
-                                                        From="0"
-                                                        To="99"
-                                                        LegendLabel="100" />
+                                <maps:EqualColorMapping Color = "Blue"
+                                                        Value = "100"
+                                                        LegendLabel = "100" />
+                                <maps:RangeColorMapping Color = "Green"
+                                                        From = "0"
+                                                        To = "99"
+                                                        LegendLabel = "100" />
                             </maps:ShapeSetting.ColorMappings>
                         </maps:ShapeSetting>
                     </maps:ShapeFileLayer.ShapeSettings>
@@ -2436,7 +2433,7 @@ The following code example explains how to customize the shape color in the Xama
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
@@ -2447,8 +2444,8 @@ The following code example explains how to customize the shape color in the Xama
 
     ShapeFileLayer subShapeLayer = new ShapeFileLayer();
     subShapeLayer.Uri = "usa_state.shp";           
-    subShapeLayer.ShapeIDPath="Name"
-    subShapeLayer.ShapeIDTableField="STATE_NAME"
+    subShapeLayer.ShapeIDPath = "Name"
+    subShapeLayer.ShapeIDTableField = "STATE_NAME"
     subShapeLayer.DataSource = viewModel.DataSource;
 
     EqualColorMapping colorMapping = new EqualColorMapping();
@@ -2485,21 +2482,21 @@ The following code example explains how to customize the shape color in the Xama
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
-                                   DataSource="{Binding Data}"
-                                   PrimaryValuePath="State"
-                                   ShapeDataField="name"
-                                   ShapeColorValuePath="Count">
+                <map:MapShapeSublayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/africa.json"
+                                   DataSource = "{Binding Data}"
+                                   PrimaryValuePath = "State"
+                                   ShapeDataField = "name"
+                                   ShapeColorValuePath = "Count">
                     <map:MapShapeSublayer.ColorMappings>
-                        <map:EqualColorMapping Color="Blue"
-                                               Value="100"
-                                               Text="100" />
-                        <map:RangeColorMapping Color="Green"
-                                               From="0"
-                                               To="99"
-                                               Text="0-99" />
+                        <map:EqualColorMapping Color = "Blue"
+                                               Value = "100"
+                                               Text = "100" />
+                        <map:RangeColorMapping Color = "Green"
+                                               From = "0"
+                                               To = "99"
+                                               Text = "0-99" />
                     </map:MapShapeSublayer.ColorMappings>
                 </map:MapShapeSublayer>
             </map:MapShapeLayer.Sublayers>
@@ -2509,7 +2506,7 @@ The following code example explains how to customize the shape color in the Xama
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -2621,9 +2618,9 @@ The following code example explains how to intialize the polygon layer and it's 
 
 <maps:SfMaps>
     <maps:SfMaps.Layers>
-        <maps:ShapeFileLayer Uri="world1.shp">
+        <maps:ShapeFileLayer Uri = "world1.shp">
             <maps:ShapeFileLayer.Sublayers>
-                <maps:ShapeFileLayer ShapeType="Polygon">
+                <maps:ShapeFileLayer ShapeType = "Polygon">
                     <maps:ShapeFileLayer.Points>
                         <Point>
                             <Point.X>39.6737</Point.X>
@@ -2639,7 +2636,7 @@ The following code example explains how to intialize the polygon layer and it's 
                         </Point>
                     </maps:ShapeFileLayer.Points>
                     <maps:ShapeFileLayer.ShapeSettings>
-                        <maps:ShapeSetting  ShapeStrokeThickness="3" ShapeFill="Blue" />
+                        <maps:ShapeSetting  ShapeStrokeThickness = "3" ShapeFill = "Blue" />
                     </maps:ShapeFileLayer.ShapeSettings>
                 </maps:ShapeFileLayer>
             </maps:ShapeFileLayer.Sublayers>
@@ -2649,7 +2646,7 @@ The following code example explains how to intialize the polygon layer and it's 
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     SfMaps maps = new SfMaps();
 
@@ -2682,18 +2679,18 @@ The following code example explains how to intialize the polygon layer and it's 
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
                 <map:MapPolygonLayer>
                     <map:MapPolygonLayer.Polygons>
-                        <map:MapPolygon Stroke="DarkBule" Fill="blue" StrokeThickness="4">
+                        <map:MapPolygon Stroke = "DarkBule" Fill = "blue" StrokeThickness = "4">
                             <map:MapPolygon.Points>
-                                <map:MapLatLng Latitude="37.6173"
-                                               Longitude="55.7558" />
-                                <map:MapLatLng Latitude="87.1216"
-                                               Longitude="53.7596" />
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude = "37.6173"
+                                               Longitude = "55.7558" />
+                                <map:MapLatLng Latitude = "87.1216"
+                                               Longitude = "53.7596" />
+                                <map:MapLatLng Latitude = "105.3188"
+                                               Longitude = "61.5240" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
                     </map:MapPolygonLayer.Polygons>
@@ -2705,7 +2702,7 @@ The following code example explains how to intialize the polygon layer and it's 
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -2819,9 +2816,9 @@ The following code example explains how to intialize the polyline layer and it's
 
  <maps:SfMaps>
      <maps:SfMaps.Layers>
-         <maps:ShapeFileLayer Uri="world1.shp">
+         <maps:ShapeFileLayer Uri = "world1.shp">
              <maps:ShapeFileLayer.Sublayers>
-                 <maps:ShapeFileLayer ShapeType="Polyline">
+                 <maps:ShapeFileLayer ShapeType = "Polyline">
                      <maps:ShapeFileLayer.Points>
                          <Point>
                              <Point.X>39.6737</Point.X>
@@ -2837,7 +2834,7 @@ The following code example explains how to intialize the polyline layer and it's
                          </Point>
                      </maps:ShapeFileLayer.Points>
                      <maps:ShapeFileLayer.ShapeSettings>
-                         <maps:ShapeSetting  ShapeStrokeThickness="3" />
+                         <maps:ShapeSetting  ShapeStrokeThickness = "3" />
                      </maps:ShapeFileLayer.ShapeSettings>
                  </maps:ShapeFileLayer>
              </maps:ShapeFileLayer.Sublayers>
@@ -2847,7 +2844,7 @@ The following code example explains how to intialize the polyline layer and it's
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     SfMaps maps = new SfMaps();
 
@@ -2878,21 +2875,21 @@ The following code example explains how to intialize the polyline layer and it's
 
  <map:SfMaps>
      <map:SfMaps.Layer>
-         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json">
+         <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/india.json">
              <map:MapShapeLayer.Sublayers>
-                 <map:MapPolylineLayer AnimationDuration="3000"
-                                       AnimationEasing="{x:Static Easing.Linear}">
+                 <map:MapPolylineLayer AnimationDuration = "3000"
+                                       AnimationEasing = "{x:Static Easing.Linear}">
                      <map:MapPolylineLayer.Polylines>
-                         <map:MapPolyline StrokeThickness="3" Stroke="Blue">
+                         <map:MapPolyline StrokeThickness = "3" Stroke = "Blue">
                              <map:MapPolyline.Points>
-                                 <map:MapLatLng Latitude="80.2707"
-                                                Longitude="13.0827" />
-                                 <map:MapLatLng Latitude="79.6117"
-                                                Longitude="13.1746" />
-                                 <map:MapLatLng Latitude="79.5037"
-                                                Longitude="13.6373" />
-                                 <map:MapLatLng Latitude="78.8242"
-                                                Longitude="14.4673" />
+                                 <map:MapLatLng Latitude = "80.2707"
+                                                Longitude = "13.0827" />
+                                 <map:MapLatLng Latitude = "79.6117"
+                                                Longitude = "13.1746" />
+                                 <map:MapLatLng Latitude = "79.5037"
+                                                Longitude = "13.6373" />
+                                 <map:MapLatLng Latitude = "78.8242"
+                                                Longitude = "14.4673" />
                              </map:MapPolyline.Points>
                          </map:MapPolyline>
                      </map:MapPolylineLayer.Polylines>
@@ -2904,7 +2901,7 @@ The following code example explains how to intialize the polyline layer and it's
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
  public MainPage()
  {
@@ -3004,7 +3001,7 @@ The following code example explains how to intialize the polyline layer and it's
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_AnimationEasing)'| markdownify }} in {{'[MapLineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html?tabs=tabid-1)'| markdownify }} class
+      {{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_AnimationEasing)'| markdownify }} in {{'[MapLineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3012,7 +3009,7 @@ The following code example explains how to intialize the polyline layer and it's
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'[AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_AnimationDuration)'| markdownify }} in {{'[MapLineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html?tabs=tabid-1)'| markdownify }} class
+      {{'[AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_AnimationDuration)'| markdownify }} in {{'[MapLineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html)'| markdownify }} class
    </td>
 </tr>
 </table>
@@ -3034,20 +3031,20 @@ The following code example explains how to intialize the line layer and it's cus
 
  <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapLineLayer AnimationDuration="3000"
-                                  AnimationEasing="{x:Static Easing.Linear}">
+                <map:MapLineLayer AnimationDuration = "3000"
+                                  AnimationEasing = "{x:Static Easing.Linear}">
                     <map:MapLineLayer.Lines>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#8a8a8a">
+                        <map:MapLine StrokeThickness = "2"
+                                     Stroke = "#8a8a8a">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude = "77.1025"
+                                               Longitude = "28.7041" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-106.3468"
-                                               Longitude="56.1304" />
+                                <map:MapLatLng Latitude = "-106.3468"
+                                               Longitude = "56.1304" />
                             </map:MapLine.To>
                         </map:MapLine>
                     </map:MapLineLayer.Lines>
@@ -3059,7 +3056,7 @@ The following code example explains how to intialize the line layer and it's cus
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
  public MainPage()
 {
@@ -3177,21 +3174,21 @@ The following code example explains how to intialize the arc layer and it's cust
 
  <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
                 <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc StrokeThickness="2"
-                                    Stroke="#8a8a8a" 
-                                    ControlPointFactor="0.5" 
-                                    HeightFactor="0.2">
+                        <map:MapArc StrokeThickness = "2"
+                                    Stroke = "#8a8a8a" 
+                                    ControlPointFactor = "0.5" 
+                                    HeightFactor = "0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude = "77.1025"
+                                               Longitude = "28.7041" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="-106.3468"
-                                               Longitude="56.1304" />
+                                <map:MapLatLng Latitude = "-106.3468"
+                                               Longitude = "56.1304" />
                             </map:MapArc.To>
                         </map:MapArc>
                     </map:MapArcLayer.Arcs>
@@ -3203,7 +3200,7 @@ The following code example explains how to intialize the arc layer and it's cust
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
  public MainPage()
 {
@@ -3290,7 +3287,7 @@ The following code example explains how to intialize the arc layer and it's cust
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_AnimationEasing)'| markdownify }} in {{'[MapCircleLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html?tabs=tabid-1)'| markdownify }} class
+      {{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_AnimationEasing)'| markdownify }} in {{'[MapCircleLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3298,7 +3295,7 @@ The following code example explains how to intialize the arc layer and it's cust
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'[AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_AnimationDuration)'| markdownify }} in {{'[MapCircleLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html?tabs=tabid-1)'| markdownify }} class
+      {{'[AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_AnimationDuration)'| markdownify }} in {{'[MapCircleLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html)'| markdownify }} class
    </td>
 </tr>
 </table>
@@ -3320,18 +3317,18 @@ The following code example explains how to intialize the circle layer and it's c
 
  <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json">
+        <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/india.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapCircleLayer AnimationDuration="3000"
-                                    AnimationEasing="{x:Static Easing.Linear}">
+                <map:MapCircleLayer AnimationDuration = "3000"
+                                    AnimationEasing = "{x:Static Easing.Linear}">
                     <map:MapCircleLayer.Circles>
-                        <map:MapCircle Radius="10" 
-                                       Fill="LightGreen" 
-                                       Stroke="Green" 
-                                       StrokeThickness="2">
+                        <map:MapCircle Radius = "10" 
+                                       Fill = "LightGreen" 
+                                       Stroke = "Green" 
+                                       StrokeThickness = "2">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993"></map:MapLatLng>
+                                <map:MapLatLng Latitude = "74.1240"
+                                               Longitude = "15.2993"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -3343,7 +3340,7 @@ The following code example explains how to intialize the circle layer and it's c
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -3383,7 +3380,7 @@ public MainPage()
       {{'[ZoomLevel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_ZoomLevel)'| markdownify }}
    </td>
    <td>
-      {{'[ZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+      {{'[ZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3391,7 +3388,7 @@ public MainPage()
       {{'[MinZoom](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_MinZoom)'| markdownify }}
    </td>
    <td>
-      {{'[*MinZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MinZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+      {{'[*MinZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MinZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3399,7 +3396,7 @@ public MainPage()
       {{'[MaxZoom](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_MaxZoom)'| markdownify }} 
    </td>
    <td>
-      {{'[*MaxZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+      {{'[*MaxZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3407,7 +3404,7 @@ public MainPage()
       {{'[EnableZooming](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_EnableZooming)'| markdownify }} 
    </td>
    <td>
-      {{'[EnableZooming](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableZooming)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+      {{'[EnableZooming](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableZooming)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3415,7 +3412,7 @@ public MainPage()
       {{'[EnablePanning](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} 
    </td>
    <td>
-      {{'[EnablePanning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnablePanning)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+      {{'[EnablePanning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnablePanning)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3423,7 +3420,7 @@ public MainPage()
       {{'-'| markdownify }}  
    </td>
    <td>
-      {{'[EnableDoubleTapZooming](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableDoubleTapZooming)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+      {{'[EnableDoubleTapZooming](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableDoubleTapZooming)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3431,7 +3428,7 @@ public MainPage()
       {{'-'| markdownify }} 
    </td>
    <td>
-      {{'[EnableCenterAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_EnableCenterAnimation)'| markdownify }} in {{'[MapTileLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1)'| markdownify }} class
+      {{'[EnableCenterAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_EnableCenterAnimation)'| markdownify }} in {{'[MapTileLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html)'| markdownify }} class
    </td>
 </tr>
 <tr>
@@ -3439,7 +3436,7 @@ public MainPage()
      {{'-'| markdownify }} 
    </td>
    <td>
-      {{'[EnableZoomingAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_EnableZoomingAnimation)'| markdownify }} in {{'[MapLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html?tabs=tabid-1)'| markdownify }} class
+      {{'[EnableZoomingAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_EnableZoomingAnimation)'| markdownify }} in {{'[MapLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html)'| markdownify }} class
    </td>
 </tr>
 </table>
@@ -3458,11 +3455,11 @@ The following code example explains how to intialize the zooming and it's custom
 
 {% highlight xaml %}
 
-<maps:SfMaps EnablePanning="True"
-             EnableZooming="True"
-             ZoomLevel="5"
-             MinZoom="3"
-             MaxZoom="10">
+<maps:SfMaps EnablePanning = "True"
+             EnableZooming = "True"
+             ZoomLevel = "5"
+             MinZoom = "3"
+             MaxZoom = "10">
     <maps:SfMaps.Layers>
         <maps:ImageryLayer />
     </maps:SfMaps.Layers>
@@ -3470,7 +3467,7 @@ The following code example explains how to intialize the zooming and it's custom
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfMaps maps = new SfMaps();
 ImageryLayer layer = new ImageryLayer();
@@ -3492,13 +3489,13 @@ maps.ZoomLevel = 5;
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png">
             <map:MapTileLayer.ZoomPanBehavior>
-                <map:MapZoomPanBehavior ZoomLevel="5"
-                                        MinZoomLevel="3"
-                                        MaxZoomLevel="10"
-                                        EnablePanning="True"
-                                        EnableZooming="True" />
+                <map:MapZoomPanBehavior ZoomLevel = "5"
+                                        MinZoomLevel = "3"
+                                        MaxZoomLevel = "10"
+                                        EnablePanning = "True"
+                                        EnableZooming = "True" />
             </map:MapTileLayer.ZoomPanBehavior>
         </map:MapTileLayer>
     </map:SfMaps.Layer>
@@ -3507,7 +3504,7 @@ maps.ZoomLevel = 5;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
