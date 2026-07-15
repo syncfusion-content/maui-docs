@@ -43,24 +43,33 @@ The `FilterContacts` method filters the data that contains the specified text. A
   </Grid>
 </ContentPage>
 {% endhighlight %}
-{% endtabs %}
-
-The following code example illustrates how to filter the data using the `FilterContacts` method in the code-behind:
-
-{% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-SearchBar searchBar;
-SfListView listView;
 public MainPage()
 {
     InitializeComponent();
-    searchBar = this.filterText;
-    listView = this.listView;
-    listView.BindingContext = new ViewModel();
-    listView.ItemsSource = (listView.BindingContext as ViewModel).Items;
-    searchBar.TextChanged += OnFilterTextChanged;
-}
+    var grid = new Grid();
+    grid.RowDefinitions.Add(new RowDefinition());
+    grid.RowDefinitions.Add(new RowDefinition());
 
+    var searchBar = new SearchBar() { Placeholder = "Search here to filter" };
+    searchBar.TextChanged += OnFilterTextChanged;
+
+    var listView = new SfListView();
+    listView.ItemsSource = viewModel.Items;
+    listView.ItemSize = 60;
+
+    grid.Children.Add(searchBar);
+    grid.Children.Add(listView);
+    grid.SetRow(searchBar, 0);
+    grid.SetRow(listView, 1);
+}
+{% endhighlight %}
+{% endtabs %}
+
+The following code example illustrates how to filter the data using `FilterContacts` method in the ViewModel:
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 private void OnFilterTextChanged(object sender, TextChangedEventArgs e)
 {
     if (listView.DataSource != null)
