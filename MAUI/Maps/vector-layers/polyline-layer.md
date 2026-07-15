@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding Polylines in .NET MAUI Maps control | Syncfusion
-description: Learn here all about adding the Polylines feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+description: Learn here all about adding the Polylines feature of Syncfusion® .NET MAUI Maps (SfMaps) control to customize their appearances and more.
 platform: MAUI
 control: SfMaps
 documentation: ug

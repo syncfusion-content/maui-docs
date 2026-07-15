@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding Circle Layer in .NET MAUI Maps control | Syncfusion
-description: Learn here all about adding Circle Layer feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance and more.
+description: Learn here all about adding Circle Layer feature of Syncfusion® .NET MAUI Maps (SfMaps) control to customize its appearance and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
