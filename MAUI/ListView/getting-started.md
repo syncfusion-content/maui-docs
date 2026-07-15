@@ -119,6 +119,12 @@ public class BookInfo : INotifyPropertyChanged
     private string bookName;
     private string bookDesc;
 
+    public BookInfo(string bookName, string bookDesc)
+    {
+        this.bookName = bookName;
+        this.bookDesc = bookDesc;
+    }
+
     public string BookName
     {
         get { return bookName; }
@@ -139,7 +145,7 @@ public class BookInfo : INotifyPropertyChanged
         }
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     public void OnPropertyChanged(string name)
     {
@@ -171,6 +177,7 @@ public class BookInfoRepository
 
     public BookInfoRepository()
     {
+        bookInfo = new ObservableCollection<BookInfo>();
         GenerateBookInfo();
     }
 

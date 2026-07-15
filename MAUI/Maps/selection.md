@@ -1,21 +1,23 @@
 ---
 layout: post
-title: Shape Selection in .NET MAUI Maps control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about the Shape Selection feature of Syncfusion<sup>&reg;</sup> .NET MAUI Maps (SfMaps) control and more.
+title: Shape Selection in .NET MAUI Maps control | Syncfusion®
+description: Learn here all about the Shape Selection feature of Syncfusion® .NET MAUI Maps (SfMaps) control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Shape Selection in .NET MAUI Maps (SfMaps)
+# Shape Selection in .NET MAUI Maps
 
 You can select a shape to highlight that area on a map. You can use the event for performing any action during shape selection.
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfMaps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
+
 ## Enable shape selection
 
-You can enable shape selection on a map using the [`EnableSelection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_EnableSelection) property. The Selection allows you to select only one shape at a time. You can select a shape by tapping it. By default, the selection is disabled.
+You can enable shape selection on a map using the [`EnableSelection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_EnableSelection) property. The selection allows you to select only one shape at a time. You can select a shape by tapping it. By default, the selection is disabled.
 
-The [`ShapeSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected) event is used to perform any action on shape selected when the user is selects it by tapping or clicking or by programmatically.
+The [`ShapeSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected) event is used to perform any action on the shape selected when the user selects it by tapping, clicking, or programmatically.
 
 {% tabs %}
 
@@ -23,12 +25,12 @@ The [`ShapeSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.M
 
 <map:SfMaps>
    <map:SfMaps.Layer>
-      <map:MapShapeLayer x:Name="layer"
-                         ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
-                         SelectedShapeFill="#6189ff"
-                         ShapeSelected="layer_ShapeSelected" 
-                         ShapeStrokeThickness="0"
-                         EnableSelection="True">
+      <map:MapShapeLayer x:Name = "layer"
+                         ShapesSource = "https://cdn.syncfusion.com/maps/map-data/australia.json"
+                         SelectedShapeFill = "#6189ff"
+                         ShapeSelected = "layer_ShapeSelected" 
+                         ShapeStrokeThickness = "0"
+                         EnableSelection = "True">
 		
        </map:MapShapeLayer>
    </map:SfMaps.Layer>
@@ -38,29 +40,30 @@ The [`ShapeSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.M
 
 {% highlight c# %}
 
-public class MainPage()
+public class MainPage
 {
 	public MainPage()
 	{
 		InitializeComponent();
 		layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+		layer.ShapeSelected += layer_ShapeSelected;
 	}
-}
 
-private void layer_ShapeSelected(object sender, ShapeSelectedEventArgs e)
-{
-    
+	private void layer_ShapeSelected(object sender, ShapeSelectedEventArgs e)
+	{
+	    var dataItem = e.DataItem;
+	}
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Enable shape selection](images/selection/enable-shape-selection.png)
+![Enable shape selection in .NET MAUI Maps](images/selection/enable-shape-selection.png)
 
 ## Appearance customization
 
-You can customize the below appearance of the selected shape as below.
+You can customize the appearance of the selected shape using the following properties.
 
 * **SelectedShapeFill** - Change the background color of the selected shape using the [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) property. If the [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) is null, then the saturated color of the shape will be applied. If the [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) is Transparent, then the UI changes will not occur.
 * **SelectedShapeStrokeThickness** - Change the stroke width of the selected shape using the [`SelectedShapeStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeStrokeThickness) property.
@@ -72,15 +75,15 @@ You can customize the below appearance of the selected shape as below.
 
 <map:SfMaps>
    <map:SfMaps.Layer>
-      <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
-                         DataSource="{Binding Data}" 
-                         PrimaryValuePath="Country"
-                         ShapeDataField="STATE_NAME" 
+      <map:MapShapeLayer ShapesSource = "https://cdn.syncfusion.com/maps/map-data/australia.json"
+                         DataSource = "{Binding Data}" 
+                         PrimaryValuePath = "Country"
+                         ShapeDataField = "STATE_NAME" 
                          ShapeColorValuePath = "Color" 
-                         SelectedShapeFill="#1a35db"
-                         SelectedShapeStroke="DarkGrey" 
-                         SelectedShapeStrokeThickness="1" 
-                         EnableSelection="True">
+                         SelectedShapeFill = "#1a35db"
+                         SelectedShapeStroke = "DarkGrey" 
+                         SelectedShapeStrokeThickness = "1" 
+                         EnableSelection = "True">
 
        </map:MapShapeLayer>
    </map:SfMaps.Layer>
@@ -102,8 +105,8 @@ You can customize the below appearance of the selected shape as below.
         layer.DataSource = viewModel.Data;
         layer.PrimaryValuePath = "Country";
         layer.ShapeDataField = "STATE_NAME";
-        layer.SelectedShapeFill = Color.FromRgb(26, 53, 219);
-        layer.SelectedShapeStroke = Colors.DarkGray;
+        layer.SelectedShapeFill = new SolidColorBrush(Color.FromRgb(26, 53, 219));
+        layer.SelectedShapeStroke = new SolidColorBrush(Colors.DarkGray);
         layer.SelectedShapeStrokeThickness = 1;
         layer.EnableSelection = true;
         layer.ShapeColorValuePath = "Color";
@@ -160,6 +163,6 @@ You can customize the below appearance of the selected shape as below.
 
 {% endtabs %}
 
-![Selection customization](images/selection/selection-customization.png)
+![Selection customization in .NET MAUI Maps](images/selection/selection-customization.png)
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Selection example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Selection example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Maps) that shows how to configure a Maps in .NET MAUI.

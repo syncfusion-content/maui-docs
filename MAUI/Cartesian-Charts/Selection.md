@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Selection in .NET MAUI Chart control | Syncfusion
-description: Learn here all about selection and multi-selection support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Selection in .NET MAUI Cartesian Chart control | Syncfusion
+description: Learn here all about selection and multi-selection support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart selection, maui chart selection, .net maui chart selection customization, syncfusion maui chart selection, .net maui chart highlighting, .net maui chart highlighting visualization.
 ---
 
-# Selection in .NET MAUI Chart
+# Selection in .NET MAUI Cartesian Chart
 
 The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides selection behavior support, which allows you to select or highlight a segment (data points) or a series in the chart using the [DataPointSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataPointSelectionBehavior.html) and [SeriesSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SeriesSelectionBehavior.html).
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
 ## Enable data point selection
 
@@ -21,7 +23,7 @@ To enable the data point selection, create an instance of the series [SelectionB
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                             XBindingPath="Time"
@@ -38,9 +40,9 @@ To enable the data point selection, create an instance of the series [SelectionB
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
-selection.SelectionBrush=Color.FromArgb("#314A6E");
+selection.SelectionBrush = Color.FromArgb("#314A6E");
 
 ColumnSeries series = new ColumnSeries()
 {
@@ -65,7 +67,7 @@ To enable the series selection, create an instance of the Cartesian chart [Selec
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfCartesianChart.SelectionBehavior>
         <chart:SeriesSelectionBehavior SelectionBrush="#314A6E"/>
     </chart:SfCartesianChart.SelectionBehavior>
@@ -87,9 +89,9 @@ To enable the series selection, create an instance of the Cartesian chart [Selec
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+//code omitted for brevity
 SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
-selection.SelectionBrush=Color.FromArgb("#314A6E");
+selection.SelectionBrush = Color.FromArgb("#314A6E");
 chart.SelectionBehavior = selection;
 
 ColumnSeries series1 = new ColumnSeries()
@@ -99,9 +101,17 @@ ColumnSeries series1 = new ColumnSeries()
     YBindingPath = "Kids",
 };
 ColumnSeries series2 = new ColumnSeries()
-{ . . . };
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Country",
+    YBindingPath = "Adults",
+};
 ColumnSeries series3 = new ColumnSeries()
-{ . . . };
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Country",
+    YBindingPath = "Seniors",
+};
 
 chart.Series.Add(series1);
 chart.Series.Add(series2);

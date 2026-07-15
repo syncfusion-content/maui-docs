@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post 
 title: Agent in .NET MAUI AI AssistView Control | Syncfusion®
 description: Learn here all about Agent support in the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
 platform: MAUI
@@ -144,7 +144,7 @@ public partial class MainPage : ContentPage
 The `SfAIAssistView` control supports setting a current agent using the [SelectedAgent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SelectedAgent) property. A user can directly set the `SelectedAgent` in the `SfAIAssistView`, or select one from the editor by typing `@`, which reveals all available agents in the [Agents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Agents) collection.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
+{% highlight xaml hl_lines="7" %}
 
 <ContentPage.BindingContext>
     <local:GettingStartedViewModel />
@@ -216,7 +216,7 @@ public partial class MainPage : ContentPage
 The `SfAIAssistView` control allows you to fully customize the `SelectedAgent` appearance in the editor using the [SelectedAgentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SelectedAgentTemplate) property. This property lets you define a custom layout and style.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
 
 <ContentPage.Resources>
     <ResourceDictionary>

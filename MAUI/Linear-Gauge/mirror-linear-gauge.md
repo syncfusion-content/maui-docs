@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Mirror in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn how to use the IsMirrored property to mirror the Syncfusion<sup>&reg;</sup>.NET MAUI Linear Gauge (SfLinearGauge) control.
+title: Mirroring in .NET MAUI Linear Gauge control | Syncfusion®
+description: Learn how to use the IsMirrored property to mirror the Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control.
 platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Mirrored in .NET MAUI Linear Gauge (SfLinearGauge)
+# Mirroring in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) mirrors all the Gauge elements in the [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1). The following code sample demonstrates how to set the [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Linear Gauge** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
+
+The [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) mirrors all the Linear Gauge elements (scale, labels, ticks, and pointers) in the [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1). This is useful for right-to-left (RTL) layout support. The default value of this property is `false`. The following code sample demonstrates how to set the [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property.
 
 {% tabs %}
 
@@ -29,10 +31,10 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Mirror linear gauge](images/mirrored/mirrored.PNG)
+![Mirror .NET MAUI Linear Gauge](images/mirrored/mirrored.PNG)
 
-## Comparison for the mirrored and normal gauge
+## Comparison of Mirrored and Normal Gauge
 
-The following screenshot provides a comparison for the mirrored and normal Linear Gauge. 
+The following screenshot provides a comparison of the mirrored and normal Linear Gauge. In the image, the left side shows the normal gauge and the right side shows the mirrored gauge.
 
-![Mirrored linear gauge comparsion](images/mirrored/mirror_comparison.PNG)
+![Mirrored .NET MAUI Linear Gauge comparison](images/mirrored/mirror_comparison.PNG)
