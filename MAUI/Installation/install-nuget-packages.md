@@ -16,7 +16,7 @@ documentation: UG
 ## Prerequisites
 
 * Visual Studio 2022 (17.3 or later) with the **.NET Multi-platform App UI development** workload installed.
-* A .NET MAUI project that targets a Syncfusion<sup>®</sup> MAUI-supported target framework (see the [Syncfusion MAUI system requirements](https://help.syncfusion.com/maui/getting-started/requirements)).
+* A .NET MAUI project that targets a Syncfusion<sup>®</sup> MAUI-supported target framework (see the [Syncfusion MAUI system requirements](https://help.syncfusion.com/maui/system-requirements)).
 * An internet connection so Visual Studio can reach the `nuget.org` package source.
 
 ## Installation using Package Manager UI
