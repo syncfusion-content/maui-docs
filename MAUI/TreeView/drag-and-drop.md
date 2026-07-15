@@ -12,7 +12,7 @@ documentation: ug
 The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows items to be dragged and dropped within the TreeView control by setting the [AllowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_AllowDragging) property to `true`.
 
 {% tabs %}
-{% highlight xaml hl_lines="4" %}
+{% highlight xaml hl_lines="3" %}
 <syncfusion:SfTreeView x:Name="treeView" 
                        ItemsSource="{Binding Folders}"
                        AllowDragging="True" />
