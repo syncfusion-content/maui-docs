@@ -7,15 +7,15 @@ control: SfPopup
 documentation: ug
 ---
 
-# Modal Window in MAUI Popup (SfPopup)
+# Modal Window in .NET MAUI Popup (SfPopup)
 
-You can use the popup as a modal window using the built-in close icon and the [SfPopup.StaysOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_StaysOpen) property prevents interaction with your application until you close the window.
+You can use the popup as a modal window by enabling the built-in close icon. The [SfPopup.StaysOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_StaysOpen) property prevents interaction with your application until you close the window.
 
-`Modal`: Window loads under the parent window surrounded by an overlay which prevents clicking anywhere else on the screen apart from the control of the modal.
+`Modal`: A modal window loads over the parent window surrounded by an overlay which prevents clicking anywhere else on the screen except on the control of the modal.
 
-Modal does not require any action to open. It opens in the same window and gives callbacks when closing or opening the window.
+A modal popup does not require any user action to open. It opens in the same window and provides `Opening` and `Closing` callbacks.
 
-Refer to the following code example: the popup will only close if you click on the close icon.
+In the following example, the popup will only close when the close icon is clicked.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="11 13" %}
@@ -49,16 +49,16 @@ Refer to the following code example: the popup will only close if you click on t
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="13 14" %}
+using Microsoft.Maui.Controls;
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
 {
     SfPopup sfPopup;
     DataTemplate contentTemplateView;
-    Label popupContent;
     public MainPage()
     {
-        InitializeComponent(); 
+        InitializeComponent();
         clickToShowPopup.Clicked += ClickToShowPopup_Clicked;
         sfPopup = new SfPopup();
         sfPopup.StaysOpen = true;
@@ -69,7 +69,7 @@ public partial class MainPage : ContentPage
         sfPopup.HeaderHeight = 72;
         contentTemplateView = new DataTemplate(()=>
         {
-            popupContent = new Label();
+            var popupContent = new Label();
             popupContent.Text = "A modal window disables the parent window while the user interacts with the child (modal) window before they return to the parent application.";
             popupContent.LineBreakMode = LineBreakMode.WordWrap;
             popupContent.LineHeight = 1.2;

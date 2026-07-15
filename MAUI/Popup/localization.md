@@ -13,12 +13,14 @@ Localization is the process of translating the application resources into differ
 
 ## Setting CurrentUICulture to the application
 
-Application culture can be changed by setting the `CurrentUICulture` in the `App.xaml.cs` file.
+Application culture can be changed by setting the `CurrentUICulture` in the `App` constructor of the `App.xaml.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 13" %}
 
 using Syncfusion.Maui.Popup;
+using Syncfusion.Maui.Popup.Localization;
+using System.Globalization;
 using System.Resources;
 
 public partial class App : Application
@@ -38,27 +40,24 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-N>
-The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+N> Add the required `resx` files to the `Resources` folder, with the `Build Action` set to `EmbeddedResource`. The file name must contain the culture code.
 
-## Localize application level
+## Localize at the application level
 
-To localize the `Popup` based on the `CurrentUICulture` using the `resource` files, follow these steps.
+To localize the `Popup` based on the `CurrentUICulture` using the resource files, follow these steps.
 
-   1. Create a new folder named `Resources` in the application.
+   1. In the project's existing `Resources` folder, right-click and select `Add`, then `NewItem`.
 
-   2. Right-click on the `Resources` folder, select `Add`, then `NewItem`.
+   2. In the Add New Item wizard, select the Resource File option and name the filename as `SfPopup.<culture name>.resx`. For example, give the name as `SfPopup.fr-FR.resx` for French culture.
 
-   3. In the Add New Item wizard, select the Resource File option and name the filename as `SfPopup.<culture name>.resx`. For example, give the name as `SfPopup.fr-FR.resx` for French culture.
-
-   4. The culture name indicates the name of the language and country.
+   3. The culture name indicates the name of the language and country.
 
    ![Syncfusion .NET MAUI Popup shows the name of resource file to be added](Images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-popup.png)
 
-   5. Now, select `Add` option to add the resource file in the **Resources** folder.
+   4. Now, select the `Add` option to add the resource file in the **Resources** folder.
 
-   ![Syncfusion .NET MAUI Popupshows the added resource file for french language](Images/localization/shows-the-added-resource-file-for-french-language-in-maui-popup.png)
+   ![Syncfusion .NET MAUI Popup shows the added resource file for french language](Images/localization/shows-the-added-resource-file-for-french-language-in-maui-popup.png)
 
-   6. Add the Name or Value pair in the Resource Designer of `SfPopup.fr-FR.resx` file and change its corresponding value to corresponding culture.
+   5. Add the Name or Value pair in the Resource Designer of `SfPopup.fr-FR.resx` file and change its value to the localized text for the target culture.
 
    ![Syncfusion .NET MAUI Popup shows the added resource file name value pair in the resource designer](Images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-popup.png)
