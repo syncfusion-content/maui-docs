@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events and Commands in .NET MAUI Popup (SfPopup) | Syncfusion®
-description: Learn about the events and commands available in the Syncfusion® .NET MAUI Popup (SfPopup) control.
+description: Learn about the events and commands available in the Syncfusion® .NET MAUI Popup (SfPopup) control and more.
 platform: MAUI
 control: SfPopup
 documentation: ug

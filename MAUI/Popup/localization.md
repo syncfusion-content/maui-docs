@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in .NET MAUI SfPopup control | Syncfusion®
-description: Learn about Localization support in Syncfusion® .NET MAUI Popup (SfPopup) control and more.
+description: Learn about Localization support in the Syncfusion® .NET MAUI Popup (SfPopup) control and customize localized UI experiences.
 platform: MAUI
 control: SfPopup
 documentation: ug
