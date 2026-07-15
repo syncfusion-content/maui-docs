@@ -39,11 +39,11 @@ The `ResetAssistView` method clears the AI assistant view and resets it to its i
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5"  %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6"  %}
 
 using Syncfusion.Maui.SmartScheduler;
-
 . . .
+
 private void OnResetClicked(object sender, EventArgs e)
 {
     this.smartScheduler.ResetAssistView();
@@ -73,11 +73,11 @@ The `CloseAssistView` method hides the AI assistant panel while preserving its s
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5"  %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6"  %}
 
 using Syncfusion.Maui.SmartScheduler;
-
 . . .
+
 private void OnCloseClicked(object sender, EventArgs e)
 {
     this.smartScheduler.CloseAssistView();
@@ -107,11 +107,11 @@ The `OpenAssistView` method displays the AI assistant panel. Use this after call
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5"  %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6"  %}
 
 using Syncfusion.Maui.SmartScheduler;
-
 . . .
+
 private void OnOpenClicked(object sender, EventArgs e)
 {
     this.smartScheduler.OpenAssistView();

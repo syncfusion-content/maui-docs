@@ -91,7 +91,7 @@ All the DateTime properties of the calendar can be given in two ways when the ca
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 
 using Syncfusion.Maui.Calendar;
 . . .
@@ -116,7 +116,7 @@ this.calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalenda
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 
 using Syncfusion.Maui.Calendar;
 . . .
