@@ -114,7 +114,7 @@ public class CustomDateSortComparer : IComparer<object>
 When the `SortDescriptors` collection is cleared, the TreeView control restores the original order of its nodes, displaying them in the default sequence as defined in the underlying data source and effectively removing any applied sorting.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# hl_lines="1" %}
 treeView.SortDescriptors.Clear();
 {% endhighlight %}
 {% endtabs %}

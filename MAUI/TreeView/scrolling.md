@@ -47,7 +47,7 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 The following example scrolls a `TreeViewNode` into view by passing the node directly:
 
 {% tabs %}
-{% highlight c# hl_lines="5" %}
+{% highlight c# hl_lines="4" %}
 private void BringNodeIntoView_Clicked(object sender, EventArgs e)
 {
     var node = treeView.Nodes[0].Nodes[1];
@@ -135,7 +135,7 @@ The TreeView allows you to enable horizontal scrolling based on the content by s
 <syncfusion:SfTreeView x:Name="treeView" 
                        EnableHorizontalScrolling="True" />
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
+{% highlight c# hl_lines="10" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
@@ -165,7 +165,7 @@ The TreeView allows showing or hiding the scrollbars using the [VerticalScrollBa
                        VerticalScrollBarVisibility="Always" 
                        HorizontalScrollBarVisibility="Always" />
 {% endhighlight %}
-{% highlight c# hl_lines="8 9" %}
+{% highlight c# hl_lines="10 11" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage

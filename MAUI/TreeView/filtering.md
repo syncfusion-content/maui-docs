@@ -34,7 +34,7 @@ When `FilterMode` is `None` or `FilterText` is null/empty, no filtering is appli
 ### Setting filter mode
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 <ContentPage>
     <syncfusion:SfTreeView x:Name="treeView"
                            FilterMode="Contains"/>
@@ -70,7 +70,7 @@ N> When `FilterText` is `null` or empty, no filtering is applied, and all nodes 
 You can set the `FilterText` property programmatically to apply filtering:
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 11" %}
+{% highlight c# hl_lines="10 11" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
@@ -93,7 +93,7 @@ public class MainPage : ContentPage
 You can bind the `FilterText` property to a property in your ViewModel for MVVM scenarios:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
+{% highlight xaml hl_lines="11" %}
 <ContentPage>
     <ContentPage.BindingContext>
         <local:FileManagerViewModel x:Name="viewModel"/>
@@ -176,7 +176,7 @@ For advanced filtering scenarios, you can use `FilterMode.Custom` with the [Filt
 ### Setting a filter predicate
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# hl_lines="2" %}
 treeView.FilterMode = TreeViewFilterMode.Custom;
 treeView.FilterPredicate = (item) =>
 {
@@ -201,7 +201,7 @@ The [AutoExpandOnFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tre
                            FilterText="Report"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
@@ -223,7 +223,7 @@ public class MainPage : ContentPage
 The [RefreshFilter()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_RefreshFilter) method reapplies the current filter settings. This is useful when you have changed the filter criteria programmatically and need to update the filtered view.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11 12" %}
+{% highlight c# hl_lines="11" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
