@@ -264,7 +264,7 @@ N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consi
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to initialize the layer and customize the layer in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -457,7 +457,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the tile layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to initialize the tile layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <b>Adding OSM layer</b>
 
@@ -2604,7 +2604,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to initialize the polygon layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -2802,7 +2802,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the polyline layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to initialize the polyline layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -3014,7 +3014,7 @@ The following code example explains how to intialize the polyline layer and it's
 </tr>
 </table>
 
-The following code example explains how to intialize the line layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to initialize the line layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -3157,7 +3157,7 @@ The following code example explains how to intialize the line layer and it's cus
 </tr>
 </table>
 
-The following code example explains how to intialize the arc layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to initialize the arc layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -3300,7 +3300,7 @@ The following code example explains how to intialize the arc layer and it's cust
 </tr>
 </table>
 
-The following code example explains how to intialize the circle layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to initialize the circle layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -3443,7 +3443,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the zooming and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to initialize the zooming and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
