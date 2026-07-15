@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Legend in .NET MAUI Polar Chart control | Syncfusion
-description: This section explains about how to initialize legend and its customization in Syncfusion® .NET MAUI Chart (SfPolarChart) control.
+description: This section explains about how to initialize legend and its customization in Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
 keywords: .net maui polar chart, polar-chart, chart legend, legend-wrap, legend view, legend layout, chart legend items, legend alignment.
 ---
 
-# Legend in .NET MAUI Chart (SfPolarChart)
+# Legend in .NET MAUI Polar Chart (SfPolarChart)
 The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of polar series, helping to identify the corresponding data series in the chart. Here's a detailed guide on how to define and customize the legend in the polar chart.
 
 ## Defining the legend
@@ -22,7 +22,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
     </chart:SfPolarChart.Legend>
-    . . .
+    <!-- code omitted for brevity -->
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -31,21 +31,21 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 SfPolarChart chart = new SfPolarChart();
 chart.Legend = new ChartLegend();
-. . .
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-N> Additionally, set a label for each series using the `Label` property of the chart series, which will be displayed in the corresponding legend.
+N> Additionally, set a label for each series using the `Label` property of the chart series, which will be displayed in the corresponding legend. Set the BindingContext in the code-behind: `this.BindingContext = new PlantViewModel();`
 
 {% tabs %} 
 
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
                             Label="Tree"/>
     <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
@@ -56,7 +56,7 @@ N> Additionally, set a label for each series using the `Label` property of the c
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
 . . .
@@ -98,7 +98,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend IsVisible = "True"/>
     </chart:SfPolarChart.Legend>
-    ...
+    <!-- code omitted for brevity -->
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -125,7 +125,7 @@ The visibility of individual legend items for specific series can be controlled 
 {% highlight xaml %}
     
 <chart:SfPolarChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
     </chart:SfPolarChart.Legend> 
@@ -175,9 +175,9 @@ this.Content = chart;
 
 {% endtabs %}
 
-## Customizing labels
+## Customizing Labels
 
-The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_Label) property of [`PolarSeries`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html) is used to define the label for the corresponding polar series legend item. The appearance of the label can be customized using the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LabelStyle) property. 
+The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_Label) property of [`PolarSeries`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html) is used to define the label for the corresponding polar series legend item. The appearance of the label can be customized using the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LabelStyle) property.
 
 * [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_TextColor) – Gets or sets the color of the label.
 * [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_FontFamily) - Gets or sets the font family for the legend label. 
@@ -197,7 +197,7 @@ The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSe
             </chart:ChartLegend.LabelStyle>
         </chart:ChartLegend>
     </chart:SfPolarChart.Legend>
-    . . .
+    <!-- code omitted for brevity -->
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -214,14 +214,14 @@ ChartLegendLabelStyle labelStyle = new ChartLegendLabelStyle()
     FontFamily = "PlaywriteAR-Regular"
 };
 chart.Legend.LabelStyle = labelStyle;
-. . .
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Legend labels customization support in Maui Chart](Legend-images/legend_label_style.png)
+![Legend labels customization support in .NET MAUI Polar Chart](Legend-images/legend_label_style.png)
 
 ## Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
@@ -231,7 +231,7 @@ To specify the legend icon based on the associated series type, use the [LegendI
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
     </chart:SfPolarChart.Legend> 
@@ -305,10 +305,10 @@ The visibility of polar series can be controlled by tapping the legend item usin
 {% highlight xaml %}
     
 <chart:SfPolarChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend ToggleSeriesVisibility="True"/>
-    </chart:SfPolarChart.Legend> 
+    </chart:SfPolarChart.Legend>
     
     <chart:PolarAreaSeries ItemsSource="{Binding  PlantDetails}" 
                            XBindingPath="Direction"
@@ -401,7 +401,7 @@ An [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend>
             <chart:ChartLegend.ItemsLayout>
@@ -559,7 +559,25 @@ this.Content = chart;
 
 **LegendItemCreated**
 
-The [`LegendItemCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LegendItemCreated) event is triggered when the chart legend item is created. The argument contains the [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItemEventArgs.html#Syncfusion_Maui_Core_LegendItemEventArgs_LegendItem) object. The following properties are present in [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItemEventArgs.html#Syncfusion_Maui_Core_LegendItemEventArgs_LegendItem).
+The [`LegendItemCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LegendItemCreated) event is triggered when the chart legend item is created. Use this event to customize legend item properties dynamically. The following example shows how to change the legend item text color based on conditions:
+
+{% highlight c# %}
+
+ChartLegend legend = new ChartLegend();
+legend.LegendItemCreated += (sender, args) =>
+{
+    if (args.LegendItem.Text == "Tree")
+    {
+        args.LegendItem.TextColor = Colors.Green;
+        args.LegendItem.IconBrush = new SolidColorBrush(Colors.DarkGreen);
+    }
+};
+
+chart.Legend = legend;
+
+{% endhighlight %}
+
+The [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItemEventArgs.html#Syncfusion_Maui_Core_LegendItemEventArgs_LegendItem) object contains the following properties that can be modified in the event handler:
 
 * [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Text) – used to get or set the text of the label.
 * [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_TextColor) – used to get or set the color of the label.
@@ -576,9 +594,16 @@ The [`LegendItemCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 * [`Index`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Index) - used to get index position of the legend.
 * [`Item`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Item) - used to get the corresponding series for the legend item.
 
-## Limitations
-* Do not add items explicitly.
-* When using BindableLayouts, do not bind ItemsSource explicitly.
-* For better UX, arrange items vertically for left and right dock positions, and horizontally for top and bottom dock positions.
-* If the layout's measured size is larger than the MaximumHeightRequest, scrolling will be enabled.
-* If MaximumHeightRequest is set to 1 and the chart's available size is smaller than the layout's measured size, the series may not have enough space to draw properly.
+## Limitations and Workarounds
+
+| Limitation | Workaround |
+|-----------|-----------|
+| Cannot add items explicitly | Legend items are auto-generated from series; customize using LegendItemCreated event instead |
+| Cannot bind ItemsSource when using BindableLayouts | Use ItemsLayout property directly without explicit ItemsSource binding |
+| Space constraints with MaximumHeightRequest | Set MaximumHeightRequest to a reasonable percentage of chart height; enable scrolling for overflow items |
+| Limited space when MaximumHeightRequest=1 | Increase MaximumHeightRequest value proportionally or use vertical orientation for better readability |
+
+**Best Practices:**
+- Arrange items vertically for left and right legend positions; horizontally for top and bottom
+- Use LegendItemCreated event to dynamically style legend items based on series data
+- Test legend layout on different screen sizes to ensure optimal visibility

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Polar Area Chart in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about the Polar area chart type and its features in the Syncfusion® .NET MAUI Chart (SfPolarChart) control.
+title: Polar Area Chart in .NET MAUI Polar Chart Control | Syncfusion
+description: Learn here all about the Polar area chart type and its features in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# Polar Area Chart in .NET MAUI Chart
+# Polar Area Chart in .NET MAUI Polar Chart
 
 ## Polar Area Chart
 
@@ -55,18 +55,21 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar area chart type in MAUI Chart](Chart-types_images/MAUI_polar_area_chart.png)
+![Polar area chart type in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_area_chart.png)
 
 ## Grid line Type
 
-The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property used to customize the rendering style of axis grid lines. The default [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) is [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarChartGridLineType.html#Syncfusion_Maui_Charts_PolarChartGridLineType_Circle). Switching to the [Polygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarChartGridLineType.html#Syncfusion_Maui_Charts_PolarChartGridLineType_Polygon) grid line type transforms the polar chart appearance, resembling a spider, or web chart.
+The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property customizes the rendering style of axis grid lines:
+
+* **Circle** (default) — Renders concentric circular grid lines, creating a target-like appearance
+* **Polygon** — Renders polygonal grid lines, creating a web or spider chart appearance
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart GridLineType="Polygon"> 
-    . . .
+    <!-- code omitted for brevity -->
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
 </chart:SfPolarChart>
 
@@ -76,7 +79,7 @@ The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 SfPolarChart chart = new SfPolarChart();
 chart.GridLineType = PolarChartGridLineType.Polygon;
-. . .
+//code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -91,19 +94,21 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar gridline type in MAUI Chart](Chart-types_images/MAUI_polar_area_gridline.png)
+![Polar gridline type in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_area_gridline.png)
 
 ## Closed Series
 
-The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) property is used to render the series with or without closed path. The default value of [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) is `true`.
+The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) property is used to render the series with or without a closed path. The default value is `true`, which creates a closed polygon shape. Set to `false` to create an open path that doesn't connect the last point to the first.
+
+**Note:** Negative Y values are not recommended for polar area charts as they may produce unexpected visualizations. Ensure all Y values are non-negative for optimal results.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart> 
-    . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+    <!-- code omitted for brevity -->
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
                            IsClosed="False"/>  
 </chart:SfPolarChart>
 
@@ -112,7 +117,7 @@ The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarS
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+//code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -128,7 +133,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar open series in MAUI Chart](Chart-types_images/MAUI_polar_area_IsClosed.png)
+![Polar open series in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_area_IsClosed.png)
 
 ## Enable Marker
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from Xamarin to .NET MAUI Polar Chart control | Syncfusion
-description: Learn here all about the features available in the .NET MAUI Chart (SfPolarChart) control over Xamarin SfChart.
+description: Learn here all about the features available in the .NET MAUI Polar Chart (SfPolarChart) control over Xamarin SfChart.
 platform: MAUI
 control: SfPolarChart
 documentation: ug
@@ -54,8 +54,8 @@ To initialize the control, import the Chart namespace and Initialize [SfPolarCha
 
 {% highlight C# %}
 using Syncfusion.SfChart.XForms;
-...
-SfChart chart = new SfChart(); 
+//code omitted for brevity
+SfChart chart = new SfChart();
 this.Content = chart;
 
 {% endhighlight %}
@@ -74,8 +74,8 @@ this.Content = chart;
 <ContentPage
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-   
-    <chart:SfPolarChart/>  
+
+    <chart:SfPolarChart/>
 </ContentPage>
  
 {% endhighlight %}
@@ -83,8 +83,8 @@ this.Content = chart;
 {% highlight C# %}
 
 using Syncfusion.Maui.Charts;
-. . .
-SfPolarChart chart = new SfPolarChart(); 
+//code omitted for brevity
+SfPolarChart chart = new SfPolarChart();
 this.Content = chart; 
 
 {% endhighlight %}
@@ -182,17 +182,17 @@ The following code example explains how to migrate the axis of Xamarin [SfChart]
 {% highlight xaml %}
 
 <chart:SfChart>  
-    <chart:SfChart.PrimaryAxis>
-	     <chart:CategoryAxis/>
-    </chart:SfChart.PrimaryAxis>
+	<chart:SfChart.PrimaryAxis>
+		 <chart:CategoryAxis/>
+	</chart:SfChart.PrimaryAxis>
 
-    <chart:SfChart.SecondaryAxis>
-	     <chart:NumericalAxis/>
-    </chart:SfChart.SecondaryAxis>
+	<chart:SfChart.SecondaryAxis>
+		 <chart:NumericalAxis/>
+	</chart:SfChart.SecondaryAxis>
 </chart:SfChart>
 
 {% endhighlight %} 
-{% highlight C# %}
+{% highlight c# %}
 SfChart chart = new SfChart();
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
@@ -272,7 +272,7 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 {% highlight xaml %}
 
 <chart:SfChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
     </chart:PolarAreaSeries>
 </chart:SfChart>
@@ -460,7 +460,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 {% highlight xaml %}
 
 <chart:SfChart>  
-     . . .
+     <!-- code omitted for brevity -->
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
 	    <chart:PolarAreaSeries.DataMarker>
 	        <chart:ChartDataMarker ShowLabel="True">
@@ -562,7 +562,7 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% highlight xaml %}
 
 <chart:SfChart>
-    . . . 
+    <!-- code omitted for brevity --> 
     <chart:SfChart.ChartBehaviors>
         <chart:ChartTooltipBehavior BackgroundColor="Blue" TextColor="White" Margin="5" 
                                     FontSize="15"/>
@@ -667,10 +667,12 @@ this.Content = chart;
 
 * #FB49487 - Gradient Support for Line-Based Series in .NET MAUI Chart.
 
-## Unsupported features from Xamarin.Forms
+## Unsupported Features and Limitations in .NET MAUI
 
-* Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
-* In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html) model class was no longer available. Instead, create your own model.
+The following features from Xamarin.Forms are not supported in .NET MAUI:
+
+* Data label creation events — Create a custom data label handler instead by using the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method.
+* ChartDataPoint model class — Use your own custom data model instead.
 
 ## Limitations
 

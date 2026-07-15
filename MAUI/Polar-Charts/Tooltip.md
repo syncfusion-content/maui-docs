@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Polar Chart control | Syncfusion
-description: Learn here all about how to enable tooltips and customize them in the Syncfusion® .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about how to enable tooltips and customize them in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -10,6 +10,8 @@ documentation: ug
 # Tooltip in .NET MAUI Polar Chart
 
 A tooltip is used to display information or metadata of the tapped segment. The Polar chart provides tooltip support for all series.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
 
 ## Define Tooltip
 
@@ -20,9 +22,11 @@ To define the tooltip in the series, set the [EnableTooltip](https://help.syncfu
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                           EnableTooltip="True"/>
+    <!-- code omitted for brevity -->
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}"
+                           XBindingPath = "Direction"
+                           YBindingPath = "Tree"
+                           EnableTooltip = "True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -30,7 +34,7 @@ To define the tooltip in the series, set the [EnableTooltip](https://help.syncfu
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -46,7 +50,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Tooltip template in MAUI Chart](Tooltip_images/MAUI_polar_chart_tooltip.png)
+![Tooltip template in .NET MAUI Polar Chart](Tooltip_images/MAUI_polar_chart_tooltip.png)
 
 The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) and set it to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html). The following properties are used to customize the tooltip:
 
@@ -57,10 +61,9 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 * [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Duration) - Gets or sets the duration of the tooltip text in seconds.
 * [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Margin) - Gets or sets the margin of the label to customize the appearance of label.
 * [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_TextColor) - Used to set the color for the text of the label.
-* `Stroke` - Gets or sets the border color of the tooltip.
-* `StrokeWidth` - Gets or sets the thickness of the tooltip border.
-* `UseSeriesFillColor` - Gets or sets a value indicating whether the tooltip background should use the fill color of the associated series. When set to `true`, the tooltip adopts the series color as its background.
-
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Stroke) - Gets or sets the border color of the tooltip.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_StrokeWidth) - Gets or sets the thickness of the tooltip border.
+* [UseSeriesFillColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_UseSeriesFillColor) - Gets or sets a value indicating whether the tooltip background should use the fill color of the associated series. When set to `true`, the tooltip adopts the series color as its background.
 
 {% tabs %}
 
@@ -70,7 +73,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
     <chart:SfPolarChart.TooltipBehavior>
         <chart:ChartTooltipBehavior/>
     </chart:SfPolarChart.TooltipBehavior>
-    ...
+    <!-- code omitted for brevity -->
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -79,7 +82,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 SfPolarChart chart = new SfPolarChart();
 chart.TooltipBehavior = new ChartTooltipBehavior();
-. . .
+// code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
@@ -95,14 +98,15 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .  
+    <!-- code omitted for brevity -->  
     <chart:SfPolarChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior Duration="5000"/>
+        <chart:ChartTooltipBehavior Duration = "5000"/>
     </chart:SfPolarChart.TooltipBehavior>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-                           XBindingPath="Direction" YBindingPath="Tree" 
-                           EnableTooltip="True"/>               
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}"
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree" 
+                           EnableTooltip = "True"/>               
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -110,7 +114,7 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 chart.TooltipBehavior = new ChartTooltipBehavior()
 {
     Duration = 5000
@@ -155,9 +159,8 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
                 </StackLayout>
             </StackLayout>
         </DataTemplate>
-        . . .          
     </chart:SfPolarChart.Resources>
-    . . .
+    <!-- code omitted for brevity -->  
     <chart:SfPolarChart.TooltipBehavior>
         <chart:ChartTooltipBehavior/>
     </chart:SfPolarChart.TooltipBehavior>
@@ -171,7 +174,7 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -188,7 +191,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Tooltip template in MAUI Chart](Tooltip_images/MAUI_chart_tooltip_template.png)
+![Tooltip template in .NET MAUI Polar Chart](Tooltip_images/MAUI_chart_tooltip_template.png)
 
 ## Methods
 
@@ -203,12 +206,12 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    ...
+    <!-- code omitted for brevity -->  
     <chart:SfPolarChart.TooltipBehavior>
         <chart:ChartTooltipBehavior x:Name="tooltip">
         </chart:ChartTooltipBehavior>
     </chart:SfPolarChart.TooltipBehavior>
-    ...
+    <!-- code omitted for brevity -->  
 </chart:SfPolarChart>
 
 <Button Text="Show tooltip" Clicked="Button_Clicked"/>

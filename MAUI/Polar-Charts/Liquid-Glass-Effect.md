@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liquid Glass Effect in .NET MAUI Polar Chart control | Syncfusion
-description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Chart (SfPolarChart) for stunning UI..
+description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Polar Chart (SfPolarChart) for stunning UI..
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -80,8 +80,8 @@ To Enable Liquid Glass Effect to the tooltip, set `True` to [EnableLiquidGlassEf
 {% highlight xaml %}
 
 <chart:SfPolarChart EnableLiquidGlassEffect="True">
-    . . .
-    <chart:PolarLineSeries ItemsSource="{Binding Data}" 
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource="{Binding Data}"
                            XBindingPath="Category"
                            YBindingPath="Value"
                            EnableTooltip="True">
@@ -94,7 +94,7 @@ To Enable Liquid Glass Effect to the tooltip, set `True` to [EnableLiquidGlassEf
 
 SfPolarChart chart = new SfPolarChart();
 chart.EnableLiquidGlassEffect = true;
-. . .
+//code omitted for brevity
 PolarLineSeries series = new PolarLineSeries()
 {
     ItemsSource = viewModel.Data,

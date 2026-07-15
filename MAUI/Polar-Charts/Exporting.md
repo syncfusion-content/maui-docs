@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Exporting in .NET MAUI Chart Control | Syncfusion
-description: Learn here how to export the chart view as an image and stream in the Syncfusion® .NET MAUI Chart (SfPolarChart) control.
+title: Exporting in .NET MAUI Polar Chart Control | Syncfusion
+description: Learn here how to export the chart view as an image and stream in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# Exporting in .NET MAUI Chart
+# Exporting in .NET MAUI Polar Chart
 
 ## Export as an image
 
@@ -32,25 +32,23 @@ chart.SaveAsImage("ChartSample.jpeg");
 
 T> We can change the image formats in the above code by changing their extensions to .jpg or .png.
 
-The exported image will be saved in the different location across the platforms.
+The exported image will be saved in different locations across platforms:
 
-**Windows Phone, Android, and MAC** – The image will be saved inside the 'Pictures' directory of the file system.
+- **Windows and Android** – The image will be saved in the device's Pictures directory.
+- **iOS** – The image will be saved in the Photos/Album directory.
+- **macOS** – The image will be saved in the designated Pictures folder.
 
-**iOS** – The image will be saved inside the 'Photos/Album' directory of the file system.
+To save images on Android and Windows devices, enable file writing permissions in the device storage.
 
-To save the image on Android and Windows Phone devices, you must enable file writing permissions on the device storage.
-
-To save the image in the photo album on iOS devices, you must enable permission to access the device storage in the "Info" file. 
-
-Add the following code snippet to the "Info" file:
+To save images in the photo album on iOS devices, enable photo library access by adding the following keys to the **Info.plist** file:
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <dict>
-    ...    
-    <key>NSPhotoLibraryUsageDescription</key>    
+    <!-- code omitted for brevity -->    
+    <key>NSPhotoLibraryUsageDescription</key>
     <string>This App needs permission to access the Photos</string>    
     <key>NSPhotoLibraryAddUsageDescription</key>    
     <string>This App needs permission to access the Photos</string> 

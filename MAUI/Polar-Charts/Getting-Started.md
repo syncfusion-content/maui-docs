@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Polar Chart Control | Syncfusion
-description: This section explains about the getting started with Syncfusion® .NET MAUI Chart (SfPolarChart) control.
+description: This section explains about the getting started with Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to populate the Polar chart with data, a title, data labels, a legend, tooltips, and markers. It also covers the essential aspects of getting started with the chart.
 
-To get start quickly with our [.NET MAUI Polar Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html), you can check the below video.
+To get started quickly with our [.NET MAUI Polar Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html), you can check the below video.
 
 {% youtube "https://youtu.be/Ga9mytwCo_s" %}
 
@@ -126,6 +126,10 @@ public class PlantModel
 
 {% endtabs %} 
 
+**Data model properties:**
+- `Direction` — Category name displayed on the primary axis (N, NE, E, SE, etc.)
+- `Tree`, `Flower`, `Weed` — Numeric values plotted on the secondary (radial) axis for each direction
+
 Next, create a `PlantViewModel` class and initialize a list of `PlantModel` objects as follows.
 
 {% tabs %}  
@@ -205,7 +209,7 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
  
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
       
 SfPolarChart chart = new SfPolarChart();
 
@@ -262,8 +266,13 @@ chart.Series.Add(series3);
 
 {% endtabs %}
 
-The following chart is created as a result of the previous codes.
+N> In the code-behind file of MainPage.xaml, set the BindingContext to the PlantViewModel instance to enable data binding:
+```csharp
+this.BindingContext = new PlantViewModel();
+```
 
-![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_polar_chart.png)
+The following chart is created as a result of the previous code:
+
+![Getting started for .NET MAUI Polar Chart](Getting-Started_Images/MAUI_polar_chart.png)
 
 You can download the Polar Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Creating-a-Getting-Started-application-for-NET-MAUI-Polar-Chart).

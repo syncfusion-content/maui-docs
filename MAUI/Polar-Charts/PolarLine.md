@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Polar Line Chart in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about the Polar line chart type and its features in the Syncfusion® .NET MAUI Chart (SfPolarChart) control.
+title: Polar Line Chart in .NET MAUI Polar Chart Control | Syncfusion
+description: Learn here all about the Polar line chart type and its features in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# Polar Line Chart in .NET MAUI Chart
+# Polar Line Chart in .NET MAUI Polar Chart
 
 ## Polar Line Chart
 
@@ -55,7 +55,49 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar line chart type in MAUI Chart](Chart-types_images/MAUI_polar_line_chart.png)
+![Polar line chart type in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_line_chart.png)
+
+## Customizing Line Appearance
+
+You can customize the polar line series appearance using the following properties:
+
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Stroke) — Gets or sets the brush for the line color
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeWidth) — Gets or sets the thickness of the line
+* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeDashArray) — Gets or sets the pattern for dashed lines
+
+The following code example demonstrates line customization:
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
+                           Stroke="Blue" StrokeWidth="2"/>
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+//code omitted for brevity
+PolarLineSeries series = new PolarLineSeries()
+{
+    ItemsSource = new PlantViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+    Stroke = Colors.Blue,
+    StrokeWidth = 2
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Grid line Type
 
@@ -66,8 +108,8 @@ The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 {% highlight xaml %}
 
 <chart:SfPolarChart GridLineType="Polygon"> 
-    . . .
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -76,7 +118,7 @@ The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 SfPolarChart chart = new SfPolarChart();
 chart.GridLineType = PolarChartGridLineType.Polygon;
-. . .
+//code omitted for brevity
 PolarLineSeries series = new PolarLineSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -91,7 +133,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar gridline type in MAUI Chart](Chart-types_images/MAUI_polar_line_gridline.png)
+![Polar gridline type in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_line_gridline.png)
 
 ## Closed Series
 

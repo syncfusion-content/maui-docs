@@ -1,16 +1,19 @@
 ---
 layout: post
 title: Appearance in .NET MAUI Polar Chart control | Syncfusion
-description: Learn here all about appearance customization in Syncfusion® .NET MAUI Chart (SfPolarChart), including its elements, and more.
+description: Learn here all about appearance customization in Syncfusion® .NET MAUI Polar Chart (SfPolarChart), including its elements, and more.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
 # Appearance in .NET MAUI Polar Chart
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
+
 The appearance of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) can be customized using the predefined brushes, custom brushes, and gradient, which allows for the enrichment of the application.
 
-## Default PaletteBrushes for Chart
+## Default PaletteBrushes for chart
 
 By default, the chart applies a set of predefined brushes to the series in a specific order. The following screenshot displays the default appearance of multiple series.
 
@@ -19,10 +22,10 @@ By default, the chart applies a set of predefined brushes to the series in a spe
 {% highlight xaml %}
 
 <chart:SfPolarChart> 
-    . . .
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/> 
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/> 
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Tree"/> 
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Weed"/> 
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Flower"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -30,7 +33,7 @@ By default, the chart applies a set of predefined brushes to the series in a spe
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+//code omitted for brevity
 PolarLineSeries series1 = new PolarLineSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -47,7 +50,7 @@ PolarLineSeries series2 = new PolarLineSeries()
 
 PolarLineSeries series3 = new PolarLineSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Flower"
 };
@@ -61,7 +64,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Default PaletteBrushes in MAUI Chart](Appearance_images/MAUI_default_chart.png)
+![Default PaletteBrushes in .NET MAUI Polar Chart](Appearance_images/MAUI_default_chart.png)
 
 ### Custom PaletteBrushes
 
@@ -71,8 +74,8 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 {% highlight xaml %}
 
-<chart:SfPolarChart x:Name="chart" PaletteBrushes="{Binding CustomBrushes}">
-    . . .
+<chart:SfPolarChart x:Name = "chart" PaletteBrushes = "{Binding CustomBrushes}">
+    <!-- code omitted for brevity -->
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -82,20 +85,20 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 SfPolarChart chart = new SfPolarChart();
 List<Brush> CustomBrushes = new List<Brush>()
 {
-	new SolidColorBrush(Color.FromArgb("#25E739")),
-	new SolidColorBrush(Color.FromArgb("#F4890B")),
-	new SolidColorBrush(Color.FromArgb("#E2227E"))
+    new SolidColorBrush(Color.FromArgb("#25E739")),
+    new SolidColorBrush(Color.FromArgb("#F4890B")),
+    new SolidColorBrush(Color.FromArgb("#E2227E"))
 };
 
 this.chart.PaletteBrushes = CustomBrushes;
-. . .
+//code omitted for brevity
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Custom PaletteBrushes in MAUI Chart](Appearance_images/MAUI_polar_chart_custom_palette.png)
+![Custom PaletteBrushes in .NET MAUI Polar Chart](Appearance_images/MAUI_polar_chart_custom_palette.png)
 
 ## Applying Gradient
 
@@ -107,11 +110,11 @@ The following code sample and screenshot illustrates how to apply the gradient b
 
 {% highlight xaml %}
 
-<chart:SfPolarChart PaletteBrushes="{Binding CustomBrushes}">
-    . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/>
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
+<chart:SfPolarChart PaletteBrushes = "{Binding CustomBrushes}">
+    <!-- code omitted for brevity -->
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Tree"/>
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Weed"/>
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" XBindingPath = "Direction" YBindingPath = "Flower"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -166,16 +169,16 @@ public class ViewModel
 		CustomBrushes.Add(gradientColor4);
 		CustomBrushes.Add(gradientColor5);
 	}
-. . .
+	//code omitted for brevity
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Gradient in MAUI Chart](Appearance_images/MAUI_polar_chart_gradient.png)
+![Gradient in .NET MAUI Polar Chart](Appearance_images/MAUI_polar_chart_gradient.png)
 
-## Plotting Area Customization:
+## Plotting area customization
 
 [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 
@@ -186,15 +189,15 @@ public class ViewModel
 <chart:SfPolarChart>
    <chart:SfPolarChart.PlotAreaBackgroundView>
     	<AbsoluteLayout>
-      		<Label Text="Copyright @ 2001 - 2024 Syncfusion Inc"
-		       FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-		       AbsoluteLayout.LayoutFlags="PositionProportional"
-		       Opacity="0.4"/>
-       		<Label Text="CONFIDENTIAL" Rotation="340" FontSize="80"
-		       FontAttributes="Bold,Italic" TextColor="Gray" Margin="10,0,0,0"
-	               AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-		       AbsoluteLayout.LayoutFlags="PositionProportional"
-		       Opacity="0.3"/>
+      		<Label Text = "Copyright @ 2001 - 2024 Syncfusion Inc"
+		       FontSize = "18" AbsoluteLayout.LayoutBounds = "1,1,-1,-1"
+		       AbsoluteLayout.LayoutFlags = "PositionProportional"
+		       Opacity = "0.4"/>
+       		<Label Text = "CONFIDENTIAL" Rotation = "340" FontSize = "80"
+		       FontAttributes = "Bold,Italic" TextColor = "Gray" Margin = "10,0,0,0"
+	               AbsoluteLayout.LayoutBounds = "0.5,0.5,-1,-1"
+		       AbsoluteLayout.LayoutFlags = "PositionProportional"
+		       Opacity = "0.3"/>
     	</AbsoluteLayout>
    </chart:SfPolarChart.PlotAreaBackgroundView>
 </chart:SfPolarChart>
@@ -205,10 +208,11 @@ public class ViewModel
 
 SfPolarChart chart = new SfPolarChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var copyRight = new Label() 
+var copyRight = new Label()
 {
-	Text = "Copyright @ 2001 - 2024 Syncfusion Inc",
- 	FontSize = 18,Opacity = 0.4
+    Text = "Copyright @ 2001 - 2024 Syncfusion Inc",
+    FontSize = 18,
+    Opacity = 0.4
 };
 
 AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, -1, -1));
@@ -216,12 +220,12 @@ AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFl
 absoluteLayout.Children.Add(copyRight);
 var watermark = new Label()
 {
-	Text = "CONFIDENTIAL",
- 	Rotation = 340,
-  	FontSize = 80,
-   	FontAttributes = FontAttributes.Bold,
-    	TextColor = Colors.Gray, 
-     	Opacity = 0.3
+    Text = "CONFIDENTIAL",
+    Rotation = 340,
+    FontSize = 80,
+    FontAttributes = FontAttributes.Bold,
+    TextColor = Colors.Gray,
+    Opacity = 0.3
 };
 
 AbsoluteLayout.SetLayoutBounds(watermark, new Rect(0.5, 0.5, -1, -1));
@@ -234,7 +238,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Watermark in .NET MAUI Charts](Appearance_images/polar_water_mark.png)
+![Watermark in .NET MAUI Polar Chart](Appearance_images/polar_water_mark.png)
 
 
 ## Add a title
@@ -247,13 +251,13 @@ The title of the chart provides quick information to the user about the data bei
 
 <chart:SfPolarChart>
     <chart:SfPolarChart.Title>
-        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
+        <Label Text = "Plant Analysis" HorizontalTextAlignment = "Center"/>
     </chart:SfPolarChart.Title> 
 </chart:SfPolarChart>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
 chart.Title = new Label()
