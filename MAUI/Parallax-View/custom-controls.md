@@ -17,7 +17,7 @@ using Syncfusion.Maui.Core;
 
 namespace ParallaxViewCustomControl
 {
-    public class CustomListView : ListView, IParallaxView
+    public class CustomListView : CollectionView, IParallaxView
     {
         public Size ScrollableContentSize { get; set; }
 
@@ -37,7 +37,7 @@ using Syncfusion.Maui.Core;
 
 namespace ParallaxViewCustomControl
 {
-    public class CustomListView : ListView, IParallaxView
+    public class CustomListView : CollectionView, IParallaxView
     {
         public Size ScrollableContentSize { get; set; }
 
@@ -69,7 +69,7 @@ The [`ParallaxScrollingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusio
 <Grid>
     <parallax:SfParallaxView Source="{x:Reference Name=listView}" x:Name="parallaxview">
         <parallax:SfParallaxView.Content>
-            <Image x:Name="image" Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+            <Image x:Name="image" Source="{Binding Image}" BackgroundColor="Transparent" Aspect="AspectFill" />
         </parallax:SfParallaxView.Content>
     </parallax:SfParallaxView>
     <local:CustomListView x:Name="listView">
@@ -85,8 +85,18 @@ using Syncfusion.Maui.Core;
 
 namespace ParallaxViewCustomControl
 {
-    public class CustomListView : ListView, IParallaxView
+    public class CustomListView : CollectionView, IParallaxView
     {
+        // Creating RowHeight property for fixed item height and to calculate the ScrollableContentSize
+        public static readonly BindableProperty RowHeightProperty =
+            BindableProperty.Create(nameof(RowHeight), typeof(double), typeof(CustomListView), 0d);
+
+        public double RowHeight
+        {
+            get => (double)GetValue(RowHeightProperty);
+            set => SetValue(RowHeightProperty, value);
+        }
+
         public Size ScrollableContentSize { get; set; }
 
         public event EventHandler<ParallaxScrollingEventArgs>? Scrolling;
@@ -96,11 +106,11 @@ namespace ParallaxViewCustomControl
             this.Scrolled += CustomListView_Scrolled;
         }
 
-        private void CustomListView_Scrolled(object? sender, ScrolledEventArgs e)
+        private void CustomListView_Scrolled(object? sender, ItemsViewScrolledEventArgs e)
         {
-            if (sender is ListView listView && Scrolling != null)
+            if (sender is CollectionView collectionView && Scrolling != null)
             {
-                Scrolling.Invoke(this, new ParallaxScrollingEventArgs(e.ScrollX, e.ScrollY, false));
+                Scrolling.Invoke(this, new ParallaxScrollingEventArgs(e.HorizontalOffset, e.VerticalOffset, false));
             }
         }
 
@@ -109,12 +119,12 @@ namespace ParallaxViewCustomControl
             var minimumSize = new Size(40, 40);
             Size request = Size.Zero;
 
-            if (ItemsSource is IList list && HasUnevenRows == false && RowHeight > 0 && !IsGroupingEnabled)
+            if (ItemsSource is IList list && RowHeight > 0)
             {
                 request = new Size(widthConstraint, list.Count * RowHeight);
             }
 
-            this.ScrollableContentSize = new SizeRequest(request, minimumSize);
+            this.ScrollableContentSize = new Size(request.Width, Math.Max(request.Height, minimumSize.Height));
             return base.MeasureOverride(widthConstraint, heightConstraint);
         }
     }
