@@ -255,7 +255,7 @@ Scheduler commands allow to map Tapped event, Double tapped event, Long Pressed 
 The [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TappedCommand) will be triggered when you tap the scheduler view and passes the [SchedulerTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTappedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -267,7 +267,7 @@ The [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedule
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12" %}
 
 public class SchedulerInteractionViewModel
 {
@@ -303,7 +303,7 @@ The [RightTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
     </scheduler:SfScheduler.BindingContext>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 15 17 18 19 20 21" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 15 17 18 19 20 21" %}
 public class SchedulerInteractionViewModel
 {
     public ICommand SchedulerRightTappedCommand { get; set; }
@@ -335,7 +335,7 @@ public class SchedulerInteractionViewModel
 The [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTappedCommand) will be triggered when you double-tap the scheduler view and passes the [SchedulerDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDoubleTappedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -348,7 +348,7 @@ The [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12" %}
 
 public class SchedulerInteractionViewModel
 {
@@ -374,7 +374,7 @@ public class SchedulerInteractionViewModel
 The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_LongPressedCommand) will be triggered when you long-press the scheduler view and passes the [SchedulerLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerLongPressedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -387,7 +387,7 @@ The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12" %}
 
 public class SchedulerInteractionViewModel
 {
@@ -412,7 +412,7 @@ public class SchedulerInteractionViewModel
 The [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ViewChangedCommand) will be triggered when the scheduler view is changed and passes the [SchedulerViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -425,7 +425,7 @@ The [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12 13 14 15" %}
 
 public class SchedulerInteractionViewModel
 {
@@ -453,7 +453,7 @@ public class SchedulerInteractionViewModel
 The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChangedCommand) will be triggered when the cell selection is changed in the scheduler and passes the [SchedulerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerSelectionChangedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -465,7 +465,7 @@ The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12 13" %}
 
 public class SchedulerInteractionViewModel
 {

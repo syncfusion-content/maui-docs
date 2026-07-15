@@ -339,7 +339,7 @@ public partial class MainPage : ContentPage
 The [EnableSwipeNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableSwipeNavigation) property determines whether users can navigate between dates using the scheduler's built-in navigation interactions. By default, `EnableSwipeNavigation` is set to `true`, allowing users to navigate using swipe gestures and the navigation buttons in the scheduler header. Setting `EnableSwipeNavigation` to `false` disables these navigation interactions.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="6" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -348,7 +348,7 @@ The [EnableSwipeNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                            EnableSwipeNavigation="False"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="10" %}
+{% highlight C# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -439,6 +439,8 @@ The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Scheduler;
 
 . . .
 public partial class MainPage : ContentPage
