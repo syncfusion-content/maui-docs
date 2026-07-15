@@ -9,6 +9,8 @@ documentation: ug
 
 # Legend in .NET MAUI Maps (SfMaps)
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Maps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
+
 Using a legend, you can provide clear information on the data plotted on the map.
 
 To learn more about the .NET MAUI Maps legend, you can check the following video.
@@ -17,7 +19,7 @@ To learn more about the .NET MAUI Maps legend, you can check the following video
 
 ## Shape legend
 
-You can show shape legend by setting the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property as [`MapLegend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) with [`SourceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType) as [`Shape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.LegendSourceType.html#Syncfusion_Maui_Maps_LegendSourceType_Shape). The legend item’s default text is displayed based on the value of [`ColorMappings.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. The default value of the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property is `null` and hence the legend will not be shown by default.
+You can show a shape legend by setting the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property as a [`MapLegend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) with [`SourceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType) set to [`Shape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.LegendSourceType.html#Syncfusion_Maui_Maps_LegendSourceType_Shape). The available [`SourceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType) values are `Shape` and `Bubble`. The legend item's default text is displayed based on the value of the [`ColorMappings.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. The default value of the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property is `null`, so the legend is not shown by default. By default, the [`Placement`](#position) is `Top`.
 
 {% tabs %}
 
@@ -27,9 +29,9 @@ You can show shape legend by setting the [`Legend`](https://help.syncfusion.com/
     <map:SfMaps.Layer>
         <map:MapShapeLayer  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                             DataSource="{Binding Data}"
-                            PrimaryValuePath="State" 
-                            ShapeDataField="name" 
-                            ShapeStroke="DarkGrey">
+                            PrimaryValuePath="State"
+                            ShapeDataField="name"
+                            ShapeStroke="DarkGray">
                 
                 <map:MapShapeLayer.ColorMappings>
                     <map:EqualColorMapping Color="LightGray"
@@ -157,11 +159,11 @@ public class Model
 
 {% endtabs %}
 
-![Shape legend support](images/legend/default-legend.png)
+![.NET MAUI Maps shape legend](images/legend/default-legend.png)
 
 ## Bubble legend
 
-You can show bubble legend by setting the [`MapShapeLayer.Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) property as [`SourceType.Bubble`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.LegendSourceType.html#Syncfusion_Maui_Maps_LegendSourceType_Bubble). By default, the legend item's text is displayed based on the [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) value.
+You can show a bubble legend by setting the [`MapShapeLayer.Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) property as a [`MapLegend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) with [`SourceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType) set to [`Bubble`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.LegendSourceType.html#Syncfusion_Maui_Maps_LegendSourceType_Bubble). A bubble legend requires bubbles to be enabled by setting [`ShowBubbles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles) to `True`. By default, the legend item's text is displayed based on the [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) value.
 
 {% tabs %}
 
@@ -170,10 +172,10 @@ You can show bubble legend by setting the [`MapShapeLayer.Legend`](https://help.
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                            DataSource="{Binding Data}"  
-                            ShowBubbles="True" 
-                            PrimaryValuePath="State" 
-                            ShapeDataField="name" 
+                            DataSource="{Binding Data}"
+                            ShowBubbles="True"
+                            PrimaryValuePath="State"
+                            ShapeDataField="name"
                             ShapeStroke="DarkGray">
     
                 <map:MapShapeLayer.BubbleSettings>
@@ -287,43 +289,18 @@ public MainPage()
     this.Content = maps;
 }
 
-public class ViewModel
-{
-    public ObservableCollection<Model> Data { get; set; }
-	
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>();
-        Data.Add(new Model("India", 21));
-        Data.Add(new Model("United States", 58));
-        Data.Add(new Model("Kazakhstan", 41));
-        Data.Add(new Model("Italy", 48));
-        Data.Add(new Model("Korea", 14));
-        Data.Add(new Model("China", 23));
-    }
-}
-
-public class Model
-{
-    public String State { get; set; }
-    public int Population { get; set; }
-	
-    public Model(string state, int population)
-    {
-        State = state;
-        Population = population;
-    }
-}
-
+//code omitted for brevity
 {% endhighlight %}
 
 {% endtabs %}
 
-![Bubble legend support](images/legend/bubble_legend.png)
+![.NET MAUI Maps bubble legend](images/legend/bubble_legend.png)
 
 ## Legend text customization
 
-You can customize the legend item's text style using the [`MapLegend.TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle) property.
+You can customize the legend item's text style using the [`MapLegend.TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle) property, which accepts a [`MapLabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html). The supported properties include `FontSize`, `TextColor`, `FontFamily`, `FontAttributes`, and `FontAutoScalingEnabled`.
+
+The example below uses [`RangeColorMapping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html) and the [`ShapeColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeColorValuePath) property, which are part of shape color mapping (see the Shape color mapping documentation for details).
 
 {% tabs %}
 
@@ -494,11 +471,13 @@ You can customize the legend item's text style using the [`MapLegend.TextStyle`]
 
 {% endtabs %}
 
-![Legend text customization](images/legend/legend-text-customization.png)
+![.NET MAUI Maps legend text customization](images/legend/legend-text-customization.png)
 
 ## Position
 
-You can position the legend items in different directions using the [`MapLegend.Placement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_Placement) property. The default value of the [`Placement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_Placement) property is [`Placement.Top`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Top). The possible values are [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Left), [`Right`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Right), [`Top`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Top), and [`Bottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Bottom).
+You can position the legend items in different directions using the [`MapLegend.Placement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_Placement) property. The default value of the [`Placement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_Placement) property is [`Placement.Top`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Top). The possible values are [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Left), [`Right`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Right), [`Top`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Top), and [`Bottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html#Syncfusion_Maui_Core_LegendPlacement_Bottom). When the placement is `Top` or `Bottom`, the legend items are arranged in a row; when the placement is `Left` or `Right`, the items are arranged in a column.
+
+The example below reuses the base setup from the previous sections and applies a `Right` placement.
 
 {% tabs %}
 
@@ -662,14 +641,14 @@ public class Model
 
 {% endtabs %}
 
-![Legend position](images/legend/legend-position.png)
+![.NET MAUI Maps legend position](images/legend/legend-position.png)
 
 ## Appearance customization
 
 Customize the legend items using the following properties.
 
 * **IconType** - Used to change the icon shape. The default value of the [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_IconType) property is [`ShapeType.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ShapeType.html#Syncfusion_Maui_Core_ShapeType_Rectangle). The possible values are `Circle`, `Rectangle`, `Triangle`, and `Diamond`.
-* **IconSize** - Used to change the size of the icon. The default value of [`IconSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_IconSize) property is Size(12.0, 12.0).
+* **IconSize** - Used to change the size of the icon. The default value of the [`IconSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_IconSize) property is `Size(12.0, 12.0)`, measured in device-independent units. For fully custom item rendering, see [Customize items template](#customize-items-template).
 
 {% tabs %}
 
@@ -796,50 +775,21 @@ public MainPage()
     this.Content = maps;
 }
 
-public class ViewModel
-{
-    public ObservableCollection<Model> Data { get; set; }
-	
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>();
-        Data.Add(new Model("India", 205));
-        Data.Add(new Model("United States", 190));
-        Data.Add(new Model("Kazakhstan", 37));
-        Data.Add(new Model("Italy", 201));
-        Data.Add(new Model("Korea", 512));
-        Data.Add(new Model("Japan", 335));
-        Data.Add(new Model("Cuba", 103));
-        Data.Add(new Model("China", 148));
-    }
-}
-
-public class Model
-{
-    public String State { get; set; }
-    public int Population { get; set; }
-	
-    public Model(string state, int population)
-    {
-        State = state;
-        Population = population;
-    }
-}
-
+	//code omitted for brevity
 {% endhighlight %}
 
 {% endtabs %}
 
-![Legend icon customization](images/legend/legend-appearance.png)
+![.NET MAUI Maps legend icon customization](images/legend/legend-appearance.png)
 
 ## Customize items layout
 
-The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
+The [`ItemsLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any `Layout` type (for example, `FlexLayout`, `StackLayout`, or `Grid`). For fully custom item rendering, see [Customize items template](#customize-items-template).
 
 {% tabs %}
 {% highlight xaml %}
 
-<map:SfMaps x:Name="maps">
+<map:SfMaps>
     <map:SfMaps.BindingContext>
         <local:LegendViewModel />
     </map:SfMaps.BindingContext>
@@ -852,7 +802,7 @@ The `ItemsLayout` property is used to customize the arrangement and position of 
     </map:SfMaps.Resources>
 
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="mapShapeLayer" ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                DataSource="{Binding Data}"
                PrimaryValuePath="State"
                ShapeDataField="name" ShowShapeTooltip="True"
@@ -889,134 +839,100 @@ The `ItemsLayout` property is used to customize the arrangement and position of 
             </map:MapShapeLayer.ColorMappings>
 
             <map:MapShapeLayer.Legend>
-                <map:MapLegend ItemsLayout="{StaticResource legendLayout}">
+                <map:MapLegend SourceType="Shape" ItemsLayout="{StaticResource legendLayout}">
                     <map:MapLegend.TextStyle>
                         <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True" />
                     </map:MapLegend.TextStyle>
                 </map:MapLegend>
             </map:MapShapeLayer.Legend>
-            <map:MapShapeLayer.BubbleTooltipSettings>
-                <map:MapTooltipSettings>
-                    <map:MapTooltipSettings.TextStyle>
-                        <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True"/>
-                    </map:MapTooltipSettings.TextStyle>
-                </map:MapTooltipSettings>
-            </map:MapShapeLayer.BubbleTooltipSettings>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight c# hl_lines="2" %}
 
-this.BindingContext = viewModel;
-MapShapeLayer layer = new MapShapeLayer();
+var layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.DataSource = viewModel.Data;
 layer.PrimaryValuePath = "State";
 layer.ShapeDataField = "name";
-layer.ShapeStroke = Colors.DarkGrey;
+layer.ShapeStroke = Colors.DarkGray;
 layer.ShapeColorValuePath = "Population";
 
 layer.ColorMappings.Add(new RangeColorMapping()
 {
-    Color = Color.FromArgb(#809fff),
+    Color = Color.FromArgb("#809fff"),
     From = 0,
     To = 100,
     Text = "0-100"
 });
 layer.ColorMappings.Add(new RangeColorMapping()
 {
-    Color = Color.FromArgb(#3366ff),
-    From = 1000,
+    Color = Color.FromArgb("#3366ff"),
+    From = 100,
     To = 500,
     Text = "100-500"
 });
 layer.ColorMappings.Add(new RangeColorMapping()
 {
-    Color = Color.FromArgb(#0039e6),
+    Color = Color.FromArgb("#0039e6"),
     From = 500,
     To = 1000,
     Text = "500 - 1000"
 });
 layer.ColorMappings.Add(new RangeColorMapping()
 {
-    Color = Color.FromArgb(#002db3),
+    Color = Color.FromArgb("#002db3"),
     From = 1000,
     To = 5000,
     Text = "1000-5000"
 });
 layer.ColorMappings.Add(new RangeColorMapping()
 {
-    Color = Color.FromArgb(#001a66),
+    Color = Color.FromArgb("#001a66"),
     From = 5000,
     To = 50000,
     Text = "5000-50000"
 });
 
-MapLegend legendSet = new MapLegend();
+var legendSet = new MapLegend();
 legendSet.SourceType = LegendSourceType.Shape;
-legendSet.Placement = Syncfusion.Maui.Core.LegendPlacement.Top;
+legendSet.Placement = LegendPlacement.Top;
 legendSet.ItemsLayout = new FlexLayout
 {
-    Margin = new Thickness(10);
+    Margin = new Thickness(10),
     Background = new SolidColorBrush(Colors.LightBlue),
 };
 
 layer.Legend = legendSet;
-SfMaps maps = new SfMaps();
+var maps = new SfMaps();
 maps.Layer = layer;
 this.Content = maps;
 
-public class ViewModel
-{
-    public ObservableCollection<Model> Data { get; set; }
-	
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>();
-        Data.Add(new Model("India", 205));
-        Data.Add(new Model("United States", 190));
-        Data.Add(new Model("Kazakhstan", 37));
-        Data.Add(new Model("Italy", 201));
-        Data.Add(new Model("Korea", 512));
-        Data.Add(new Model("Japan", 335));
-        Data.Add(new Model("Cuba", 103));
-        Data.Add(new Model("China", 148));
-    }
-}
-
-public class Model
-{
-    public String State { get; set; }
-    public int Population { get; set; }
-	
-    public Model(string state, int population)
-    {
-        State = state;
-        Population = population;
-    }
-}
+//code omitted for brevity
 
 {% endhighlight %}
 {% endtabs %}
 
-![Legend ItemsLayout](images/legend/legend-layout.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![.NET MAUI Maps legend items layout](images/legend/legend-layout.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Customize items template
 
-You can customize the appearance of legend items with your template by using `ItemTemplate` property of `MapLegend`.
+You can customize the appearance of legend items with your own template by using the [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemTemplate) property of `MapLegend`. The binding context of the template is a `LegendItem`, which exposes bindable properties such as `Text` and `IconBrush`.
+
+The `core:` namespace below refers to `xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Maps"`, which must be declared on the `SfMaps` element to use `core:LegendItem` as the `DataTemplate` `x:DataType`.
 
 {% tabs %}
 {% highlight xaml %}
 
- <map:SfMaps x:Name="maps">
+ <map:SfMaps xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Maps">
     <map:SfMaps.BindingContext>
         <local:LegendViewModel />
     </map:SfMaps.BindingContext>
         
     <map:SfMaps.Resources>
-        <DataTemplate x:DataType="core:LegendItem" >
+        <DataTemplate x:Key="legendTemplate" x:DataType="core:LegendItem" >
             <Grid ColumnDefinitions="Auto,Auto" Padding="5,0,5,0" Margin="2">
                 <BoxView Grid.Column="0"
                         Color="{Binding IconBrush}"
@@ -1037,7 +953,7 @@ You can customize the appearance of legend items with your template by using `It
     </map:SfMaps.Resources>
 
      <map:SfMaps.Layer>
-         <map:MapShapeLayer x:Name="mapShapeLayer" ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                 DataSource="{Binding Data}"
                 PrimaryValuePath="State"
                 ShapeDataField="name" ShowShapeTooltip="True"
@@ -1074,19 +990,12 @@ You can customize the appearance of legend items with your template by using `It
              </map:MapShapeLayer.ColorMappings>
 
              <map:MapShapeLayer.Legend>
-                 <map:MapLegend ItemTemplate="{StaticResource legendTemplate}">
+                 <map:MapLegend SourceType="Shape" ItemTemplate="{StaticResource legendTemplate}">
                      <map:MapLegend.TextStyle>
                          <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True" />
                      </map:MapLegend.TextStyle>
                  </map:MapLegend>
              </map:MapShapeLayer.Legend>
-             <map:MapShapeLayer.BubbleTooltipSettings>
-                 <map:MapTooltipSettings>
-                     <map:MapTooltipSettings.TextStyle>
-                         <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True"/>
-                     </map:MapTooltipSettings.TextStyle>
-                 </map:MapTooltipSettings>
-             </map:MapShapeLayer.BubbleTooltipSettings>
          </map:MapShapeLayer>
      </map:SfMaps.Layer>
  </map:SfMaps>
@@ -1094,8 +1003,11 @@ You can customize the appearance of legend items with your template by using `It
 {% endhighlight %}
 {% endtabs %}
 
-N> The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the MapLegend class.
+N> The BindingContext of the `ItemTemplate` is the corresponding underlying legend item provided in the `MapLegend` class.
 
-![Legend template](images/legend/legend-template.png ){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![.NET MAUI Maps legend template](images/legend/legend-template.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+## See also
+
+* [Syncfusion .NET MAUI Maps control](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page.
+* [Syncfusion .NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) showing how to configure the Maps legend in .NET MAUI.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adding Polylines in Maps control | Syncfusion
+title: Adding Polylines in .NET MAUI Maps control | Syncfusion
 description: Learn here all about adding the Polylines feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
 platform: MAUI
 control: SfMaps
@@ -9,7 +9,9 @@ documentation: ug
 
 # Polylines in .NET MAUI Maps (SfMaps)
 
-Polyline layer is a sublayer that renders a group of [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) on [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). This section helps to learn about how to add the polylines and customize them.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfMaps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
+
+The polyline layer is a sublayer that renders a group of [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) on [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). This section explains how to add and customize polylines.
 
 ## Adding polylines
 
@@ -89,11 +91,11 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Default polyline shape](images/polyline-layer/default-polyline-shape.png)
+![.NET MAUI Maps default polyline shape](images/polyline-layer/default-polyline-shape.png)
 
 ## Stroke
 
-You can apply colors to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Stroke) property.
+You can apply a color to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Stroke) property. When [`MapPolyline.Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Stroke) is not set, the default stroke color is applied.
 
 {% tabs %}
 
@@ -170,11 +172,11 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline stroke color](images/polyline-layer/polyline-color.png)
+![.NET MAUI Maps polyline stroke color](images/polyline-layer/polyline-color.png)
 
 ## Stroke thickness
 
-You can apply different stroke thickness to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness) property. The default value of the [`MapPolyline.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness) property is `2`.
+You can apply different stroke thickness values to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness) property. The default value of the [`MapPolyline.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness) property is `2`, measured in device-independent units.
 
 {% tabs %}
 
@@ -253,11 +255,11 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline stroke thickness](images/polyline-layer/polyline-width.png)
+![.NET MAUI Maps polyline stroke thickness](images/polyline-layer/polyline-width.png)
 
 ## Stroke cap
 
-You can apply different stroke cap to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeLineCap) property. The default value of the [`MapPolyline.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeLineCap) property is `LineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
+You can apply different stroke cap styles to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeLineCap) property. The default value of the [`MapPolyline.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeLineCap) property is `LineCap.Butt`. The available values are `Butt`, `Round`, and `Square`, from the `Microsoft.Maui.Graphics.LineCap` enum. In XAML, the enum member name is set as a string (for example, `StrokeLineCap="Round"`), and in C#, the `LineCap` enum value is used (for example, `polyline.StrokeLineCap = LineCap.Round;`).
 
 {% tabs %}
 
@@ -338,13 +340,13 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline stroke cap](images/polyline-layer/polyline-stroke-cap.png)
+![.NET MAUI Maps polyline stroke cap](images/polyline-layer/polyline-stroke-cap.png)
 
 ## Dash array
 
 You can apply dash support for the polyline using the [`MapPolyline.StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeDashArray) property.
 
-A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the polyline.
+A sequence of dashes and gaps is rendered based on the values in this list. Once all the values in the list are rendered, the sequence repeats until the end of the polyline. When [`MapPolyline.StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeDashArray) is not set, a solid line is rendered. The values are specified in device-independent units that match the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness) coordinate space.
 
 {% tabs %}
 
@@ -430,78 +432,87 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline dash array](images/polyline-layer/polyline-dash-array.png)
+![.NET MAUI Maps polyline dash array](images/polyline-layer/polyline-dash-array.png)
 
 ## Animation
 
-You can apply animation for the [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) using the [`MapPolylineLayer.AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationDuration) and [`MapPolylineLayer.AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationEasing) properties.
+You can apply animation for the [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) using the [`MapPolylineLayer.AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationDuration) and [`MapPolylineLayer.AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationEasing) properties. [`MapPolylineLayer.AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationDuration) is specified in milliseconds. The available [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationEasing) values are the members of the `Microsoft.Maui.Easing` enum (for example, `Easing.SinInOut`, `Easing.CubicInOut`, `Easing.Linear`).
 
-By default, there will be no animation.
+By default, animation is disabled.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<maps:SfMaps>
-    <maps:SfMaps.Layer>
-        <maps:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
-            <maps:MapTileLayer.Center>
-                <maps:MapLatLng>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+            <map:MapTileLayer.Center>
+                <map:MapLatLng>
                     <x:Arguments>
                         <x:Double>51.4700</x:Double>
                         <x:Double>-0.2843</x:Double>
                     </x:Arguments>
-                </maps:MapLatLng>
-            </maps:MapTileLayer.Center>
-            <maps:MapTileLayer.ZoomPanBehavior>
-                <maps:MapZoomPanBehavior ZoomLevel="10"
-                                         MinZoomLevel="9"
-                                         MaxZoomLevel="12" />
-            </maps:MapTileLayer.ZoomPanBehavior>
-            <maps:MapTileLayer.Sublayers>
-                <maps:MapPolylineLayer AnimationDuration="3000"
-                                       AnimationEasing="{x:Static Easing.SinInOut}">
-                    <maps:MapPolylineLayer.Polylines>
-                        <maps:MapPolyline x:Name="polyline"
-                                          Stroke="#0066FF"
-                                          StrokeThickness="6" />
-                    </maps:MapPolylineLayer.Polylines>
-                </maps:MapPolylineLayer>
-            </maps:MapTileLayer.Sublayers>
-            <maps:MapTileLayer.Markers>
-                <maps:MapMarkerCollection>
-                    <maps:MapMarker Latitude="51.470012664794922"
-                                    Longitude="-0.45418000221252441"
-                                    IconWidth="14"
-                                    IconHeight="14"
-                                    IconFill="white"
-                                    IconStroke="black" />
-                    <maps:MapMarker Latitude="51.520004272460938"
-                                    Longitude="-0.12567600607872009"
-                                    IconWidth="14"
-                                    IconHeight="14"
-                                    IconFill="White"
-                                    IconStroke="black" />
-                </maps:MapMarkerCollection>
-            </maps:MapTileLayer.Markers>
-        </maps:MapTileLayer>
-    </maps:SfMaps.Layer>
-</maps:SfMaps>
+                </map:MapLatLng>
+            </map:MapTileLayer.Center>
+            <map:MapTileLayer.ZoomPanBehavior>
+                <map:MapZoomPanBehavior ZoomLevel="10"
+                                        MinZoomLevel="9"
+                                        MaxZoomLevel="12" />
+            </map:MapTileLayer.ZoomPanBehavior>
+            <map:MapTileLayer.Sublayers>
+                <map:MapPolylineLayer AnimationDuration="3000"
+                                      AnimationEasing="{x:Static Easing.SinInOut}">
+                    <map:MapPolylineLayer.Polylines>
+                        <map:MapPolyline x:Name="polyline"
+                                         Stroke="#0066FF"
+                                         StrokeThickness="6" />
+                    </map:MapPolylineLayer.Polylines>
+                </map:MapPolylineLayer>
+            </map:MapTileLayer.Sublayers>
+        </map:MapTileLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-public MainPage()
+SfMaps maps = new SfMaps();
+MapTileLayer tileLayer = new MapTileLayer();
+tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+tileLayer.Center = new MapLatLng(51.4700, -0.2843);
+tileLayer.ZoomPanBehavior = new MapZoomPanBehavior()
 {
-    InitializeComponent();
-    
-    // Added logic in sample level to get the polygon points.
-    polyline.Points = this.GetJsondata("MapDemo.ShapeFiles.london_to_british.json");
-}
+    ZoomLevel = 10,
+    MinZoomLevel = 9,
+    MaxZoomLevel = 12,
+};
+MapPolylineLayer polylineLayer = new MapPolylineLayer();
+polylineLayer.AnimationDuration = 3000;
+polylineLayer.AnimationEasing = Easing.SinInOut;
+MapPolyline polyline = new MapPolyline();
+polyline.Stroke = Color.FromRgb(0, 102, 255);
+polyline.StrokeThickness = 6;
+// Assign the polyline points from your data source (for example, a JSON/GeoJSON file or an in-memory collection).
+polyline.Points = new ObservableCollection<MapLatLng>()
+{
+    // code omitted for brevity
+};
+polylineLayer.Polylines.Add(polyline);
+tileLayer.Sublayers.Add(polylineLayer);
+maps.Layer = tileLayer;
+this.Content = maps;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Polyline animation support](images/polyline-layer/polyline_animation.gif)
+![.NET MAUI Maps polyline animation support](images/polyline-layer/polyline_animation.gif)
+
+## See also
+
+* [Arcs in .NET MAUI Maps (SfMaps)](arc-layer.md)
+* [Circles in .NET MAUI Maps (SfMaps)](circle-layer.md)
+* [Lines in .NET MAUI Maps (SfMaps)](line-layer.md)
+* [Polygons in .NET MAUI Maps (SfMaps)](polygon-layer.md)
