@@ -24,12 +24,19 @@ The fade mode in the picker gradually decreases the visibility of unselected ite
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfPicker x:Name="picker"
-                 TextDisplayMode="Fade"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker"
+                     TextDisplayMode="Fade"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfPicker picker = new SfPicker()
 {
@@ -52,12 +59,19 @@ The shrink mode is used to display the font size of picker items decreased from 
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfPicker x:Name="picker"
-                 TextDisplayMode="Shrink"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker"
+                     TextDisplayMode="Shrink"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfPicker picker = new SfPicker()
 {
@@ -80,12 +94,19 @@ The fade and shrink mode are used to decrease the opacity and font size of picke
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfPicker x:Name="picker"
-                 TextDisplayMode="FadeAndShrink"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker"
+                     TextDisplayMode="FadeAndShrink"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" hl_lines="3" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfPicker picker = new SfPicker()
 {
