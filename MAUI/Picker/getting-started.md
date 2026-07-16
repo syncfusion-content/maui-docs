@@ -161,17 +161,24 @@ Initialize the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6 10 11 12" %}
 
-<picker:SfPicker x:Name="picker">
-    <picker:SfPicker.HeaderView>
-        <picker:PickerHeaderView Text="Select a color" Height="40" />
-    </picker:SfPicker.HeaderView>
-    <picker:SfPicker.Columns>
-        <picker:PickerColumn ItemsSource="{Binding DataSource}" />
-    </picker:SfPicker.Columns>
-</picker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.HeaderView>
+            <picker:PickerHeaderView Text="Select a color" Height="40" />
+        </picker:SfPicker.HeaderView>
+        <picker:SfPicker.Columns>
+            <picker:PickerColumn ItemsSource="{Binding DataSource}" />
+        </picker:SfPicker.Columns>
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="1 8" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 ItemInfo itemInfo = new ItemInfo();
 SfPicker picker = new SfPicker()
@@ -184,6 +191,8 @@ SfPicker picker = new SfPicker()
         }
     }
 };
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}

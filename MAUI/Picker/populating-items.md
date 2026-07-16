@@ -14,33 +14,43 @@ In .NET MAUI, you can bind the SfPicker control to an external data source by se
 Set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html) class as shown in the following code to bind the item source in the picker.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="picker">
-    </sfPicker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    ObservableCollection<object> cityName = new ObservableCollection<object>();
-    cityName.Add("Chennai");
-    cityName.Add("Mumbai");
-    cityName.Add("Delhi");
-    cityName.Add("Kolkata");
-    cityName.Add("Bangalore");
-    cityName.Add("Hyderabad");
-    cityName.Add("Pune");
-    cityName.Add("Ahmedabad");
-    cityName.Add("Jaipur");
-    cityName.Add("Lucknow");
-    cityName.Add("Chandigarh");
-    PickerColumn pickerColumn = new PickerColumn()
-    {
-        HeaderText = "Select City",
-        ItemsSource = cityName,
-        SelectedIndex = 1,
-    };
-    this.picker.Columns.Add(pickerColumn);
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+ObservableCollection<object> cityName = new ObservableCollection<object>();
+cityName.Add("Chennai");
+cityName.Add("Mumbai");
+cityName.Add("Delhi");
+cityName.Add("Kolkata");
+cityName.Add("Bangalore");
+cityName.Add("Hyderabad");
+cityName.Add("Pune");
+cityName.Add("Ahmedabad");
+cityName.Add("Jaipur");
+cityName.Add("Lucknow");
+cityName.Add("Chandigarh");
+PickerColumn pickerColumn = new PickerColumn()
+{
+    HeaderText = "Select City",
+    ItemsSource = cityName,
+    SelectedIndex = 1,
+};
+picker.Columns.Add(pickerColumn);
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,51 +66,61 @@ A collection of items can be created and assigned to a Collection based on the i
 The following sample code demonstrates how to populate `Countries` and `Cities` in each column of the picker.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="picker">
-    </sfPicker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    ObservableCollection<object> countryName = new ObservableCollection<object>();
-    countryName.Add("Canada");
-    countryName.Add("United States");
-    countryName.Add("India");
-    countryName.Add("United Kingdom");
-    countryName.Add("Australia");
-    countryName.Add("Germany");
-    countryName.Add("France");
-    countryName.Add("Japan");
-    countryName.Add("China");
-    countryName.Add("Brazil");
-    PickerColumn countryColumn = new PickerColumn()
-    {
-        HeaderText = "Select Country",
-        ItemsSource = countryName,
-        SelectedIndex = 1,
-    };
-    ObservableCollection<object> cityName = new ObservableCollection<object>();
-    cityName.Add("Chennai");
-    cityName.Add("Mumbai");
-    cityName.Add("Delhi");
-    cityName.Add("Kolkata");
-    cityName.Add("Bangalore");
-    cityName.Add("Hyderabad");
-    cityName.Add("Pune");
-    cityName.Add("Ahmedabad");
-    cityName.Add("Jaipur");
-    cityName.Add("Lucknow");
-    cityName.Add("Chandigarh");
-    PickerColumn cityColumn = new PickerColumn()
-    {
-        HeaderText = "Select City",
-        ItemsSource = cityName,
-        SelectedIndex = 1,
-    };
-    this.picker.Columns.Add(countryColumn);
-    this.picker.Columns.Add(cityColumn);
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+ObservableCollection<object> countryName = new ObservableCollection<object>();
+countryName.Add("Canada");
+countryName.Add("United States");
+countryName.Add("India");
+countryName.Add("United Kingdom");
+countryName.Add("Australia");
+countryName.Add("Germany");
+countryName.Add("France");
+countryName.Add("Japan");
+countryName.Add("China");
+countryName.Add("Brazil");
+PickerColumn countryColumn = new PickerColumn()
+{
+    HeaderText = "Select Country",
+    ItemsSource = countryName,
+    SelectedIndex = 1,
+};
+ObservableCollection<object> cityName = new ObservableCollection<object>();
+cityName.Add("Chennai");
+cityName.Add("Mumbai");
+cityName.Add("Delhi");
+cityName.Add("Kolkata");
+cityName.Add("Bangalore");
+cityName.Add("Hyderabad");
+cityName.Add("Pune");
+cityName.Add("Ahmedabad");
+cityName.Add("Jaipur");
+cityName.Add("Lucknow");
+cityName.Add("Chandigarh");
+PickerColumn cityColumn = new PickerColumn()
+{
+    HeaderText = "Select City",
+    ItemsSource = cityName,
+    SelectedIndex = 1,
+};
+picker.Columns.Add(countryColumn);
+picker.Columns.Add(cityColumn);
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -118,19 +138,29 @@ The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfu
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="picker">
-        <sfPicker:SfPicker.SelectedTextStyle>
-            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="White">
-            </sfPicker:PickerTextStyle>
-        </sfPicker:SfPicker.SelectedTextStyle>
-    </sfPicker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.SelectedTextStyle>
+            <picker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="White">
+            </picker:PickerTextStyle>
+        </picker:SfPicker.SelectedTextStyle>
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.picker.SelectedTextStyle.FontSize = 16;
-    this.picker.SelectedTextStyle.FontAttributes = FontAttributes.Bold;
-    this.picker.SelectedTextStyle.TextColor = Colors.White;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+picker.SelectedTextStyle.FontSize = 16;
+picker.SelectedTextStyle.FontAttributes = FontAttributes.Bold;
+picker.SelectedTextStyle.TextColor = Colors.White;
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -144,19 +174,29 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="picker">
-        <sfPicker:SfPicker.TextStyle>
-            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Italic" TextColor="Black">
-            </sfPicker:PickerTextStyle>
-        </sfPicker:SfPicker.TextStyle>
-    </sfPicker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.TextStyle>
+            <picker:PickerTextStyle FontSize="16" FontAttributes="Italic" TextColor="Black">
+            </picker:PickerTextStyle>
+        </picker:SfPicker.TextStyle>
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.picker.TextStyle.FontSize = 16;
-    this.picker.TextStyle.FontAttributes = FontAttributes.Italic;
-    this.picker.TextStyle.TextColor = Colors.Black;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+picker.TextStyle.FontSize = 16;
+picker.TextStyle.FontAttributes = FontAttributes.Italic;
+picker.TextStyle.TextColor = Colors.Black;
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -168,45 +208,56 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
 In the picker control, items can be customized with a custom view for all items by using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_ItemTemplate) property and assigning a custom view to it.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
     <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="customView">
                 <Grid>
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" Text="{Binding Data}"/>    
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" Text="{Binding Data}"/>
                 </Grid>
             </DataTemplate>
         </Grid.Resources>
-    <sfPicker:SfPicker x:Name="picker" ItemTemplate="{StaticResource customView}">
-    </sfPicker:SfPicker>
+        <picker:SfPicker x:Name="picker" ItemTemplate="{StaticResource customView}">
+        </picker:SfPicker>
     </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    DataTemplate customView = new DataTemplate(() =>
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+
+DataTemplate customView = new DataTemplate(() =>
+{
+    Grid grid = new Grid
     {
-        Grid grid = new Grid
-        {
-            Padding = new Thickness(0, 1, 0, 1),
-        };
+        Padding = new Thickness(0, 1, 0, 1),
+    };
 
-        Label label = new Label
-        {
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center,
-            HorizontalTextAlignment = TextAlignment.Center,
-            VerticalTextAlignment = TextAlignment.Center,
-            TextColor = Colors.Black,
-        };
+    Label label = new Label
+    {
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        TextColor = Colors.Black,
+    };
 
-        label.SetBinding(Label.TextProperty, new Binding("Data"));
-        grid.Children.Add(label);
-        return grid;
-    });
+    label.SetBinding(Label.TextProperty, new Binding("Data"));
+    grid.Children.Add(label);
+    return grid;
+});
 
-    this.picker.ItemTemplate = customView;
+picker.ItemTemplate = customView;
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}

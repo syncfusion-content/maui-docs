@@ -32,11 +32,10 @@ To achieve a glass like background in the Picker, set the `Background` property 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    . . .
     xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     x:Class="AcrylicPickerPage">
@@ -68,13 +67,16 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
                     </picker:SfPicker.HeaderView>
                 </picker:SfPicker>
             </core:SfGlassEffectView>
- 
         </Grid>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+using Syncfusion.Maui.Core;
+. . .
 
 // Outer grid with gradient background
 var mainGrid = new Grid()

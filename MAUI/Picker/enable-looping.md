@@ -17,12 +17,19 @@ To enable looping in the picker, set the [EnableLooping](https://help.syncfusion
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfPicker x:Name="picker"
-                 EnableLooping="True"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker"
+                     EnableLooping="True"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight c# tabtitle="C#" hl_lines="3" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfPicker picker = new SfPicker()
 {

@@ -12,39 +12,49 @@ documentation: ug
 The DataTemplateSelector feature of `SfPicker` allows you to select a DataTemplate based on the data object.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="indianLanguage">
-            <Grid>
-                <Label Grid.Column="1" HorizontalTextAlignment="Center" BackgroundColor="#808080" VerticalTextAlignment="Center" Text="{Binding Data}"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="otherLanguage">
-            <Grid>
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#D3D3D3" Text="{Binding Data}"/>
-            </Grid>
-        </DataTemplate>
-        <local:PickerTemplate x:Key="pickerTemplate"
-                                IndianLanguages="{StaticResource indianLanguage}" 
-                                OtherLanguages="{StaticResource otherLanguage}"/>
-    </Grid.Resources>
-    <sfPicker:SfPicker x:Name="picker" ItemTemplate="{StaticResource pickerTemplate}">
-    </sfPicker:SfPicker>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="indianLanguage">
+                <Grid>
+                    <Label Grid.Column="1" HorizontalTextAlignment="Center" BackgroundColor="#808080" VerticalTextAlignment="Center" Text="{Binding Data}"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="otherLanguage">
+                <Grid>
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#D3D3D3" Text="{Binding Data}"/>
+                </Grid>
+            </DataTemplate>
+            <local:PickerTemplate x:Key="pickerTemplate"
+                                    IndianLanguages="{StaticResource indianLanguage}"
+                                    OtherLanguages="{StaticResource otherLanguage}"/>
+        </Grid.Resources>
+        <picker:SfPicker x:Name="picker" ItemTemplate="{StaticResource pickerTemplate}">
+        </picker:SfPicker>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    ObservableCollection<string> languages = new ObservableCollection<string> { "Spanish", "French", "Tamil", "English", "German", "Chinese", "Telegu", "Japanese", "Arabic", "Russian", "Portuguese", "Italian" };
-    PickerColumn pickerColumn = new PickerColumn()
-    {
-        HeaderText = "Select Languages",
-        ItemsSource = languages,
-        SelectedIndex = 1,
-    };
-    this.picker.Columns.Add(pickerColumn);
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+ObservableCollection<string> languages = new ObservableCollection<string> { "Spanish", "French", "Tamil", "English", "German", "Chinese", "Telegu", "Japanese", "Arabic", "Russian", "Portuguese", "Italian" };
+PickerColumn pickerColumn = new PickerColumn()
+{
+    HeaderText = "Select Languages",
+    ItemsSource = languages,
+    SelectedIndex = 1,
+};
+picker.Columns.Add(pickerColumn);
+
+this.Content = picker;
 
 {% endhighlight %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}

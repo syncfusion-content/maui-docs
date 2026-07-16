@@ -17,14 +17,21 @@ The dialog mode is used to display the picker in a pop-up by setting the [Mode](
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfPicker x:Name="Picker"
-                 Mode="Dialog"/>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="Picker"
+                     Mode="Dialog"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfPicker picker = new SfPicker()
 {
@@ -43,24 +50,31 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<Grid>
-    <picker:SfPicker x:Name="picker"
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfPicker x:Name="picker"
                          Mode="Dialog"/>
-    <Button Text="Open Picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+        <Button Text="Open Picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -90,24 +104,31 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid>
-    <picker:SfPicker x:Name="picker" 
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfPicker x:Name="picker"
                          Mode="RelativeDialog"
                          RelativePosition="AlignTopLeft">
-    </picker:SfPicker>
-    <Button Text="Open Picker"
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+        </picker:SfPicker>
+        <Button Text="Open Picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -127,27 +148,34 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 
-<Grid>
-    <picker:SfPicker x:Name="picker" 
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfPicker x:Name="picker"
                          Mode="RelativeDialog"
                          RelativePosition="AlignTopLeft"
-                         RelativeView = "{x:Reference pickerButton}">
-    </picker:SfPicker>
-    <Button Text="Open Picker"
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+                         RelativeView="{x:Reference pickerButton}">
+        </picker:SfPicker>
+        <Button Text="Open Picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -171,32 +199,39 @@ Use the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid>
-    <picker:SfPicker 
-            x:Name="picker"
-            Mode="Dialog"
-            IsOpen="True"
-            RelativePosition="AlignToRightOf"
-            PopupWidth="200"
-            PopupHeight="440">
-        <picker:SfPicker.HeaderView >
-            <picker:PickerHeaderView Height="40" Text="Select a color" />
-        </picker:SfPicker.HeaderView>
-        <picker:SfPicker.Columns>
-            <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding DataSource}"/>
-        </picker:SfPicker.Columns>
-        <picker:SfPicker.ColumnHeaderView >
-            <picker:PickerColumnHeaderView Height="40"/>
-        </picker:SfPicker.ColumnHeaderView>
-        <picker:SfPicker.FooterView>
-            <picker:PickerFooterView  Height="40"/>
-        </picker:SfPicker.FooterView>
-    </picker:SfPicker>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfPicker x:Name="picker"
+                         Mode="Dialog"
+                         IsOpen="True"
+                         RelativePosition="AlignToRightOf"
+                         PopupWidth="200"
+                         PopupHeight="440">
+            <picker:SfPicker.HeaderView>
+                <picker:PickerHeaderView Height="40" Text="Select a color" />
+            </picker:SfPicker.HeaderView>
+            <picker:SfPicker.Columns>
+                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding DataSource}"/>
+            </picker:SfPicker.Columns>
+            <picker:SfPicker.ColumnHeaderView>
+                <picker:PickerColumnHeaderView Height="40"/>
+            </picker:SfPicker.ColumnHeaderView>
+            <picker:SfPicker.FooterView>
+                <picker:PickerFooterView Height="40"/>
+            </picker:SfPicker.FooterView>
+        </picker:SfPicker>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
+
 
 private void pickerButton_Clicked(object sender, System.EventArgs e)
 {
