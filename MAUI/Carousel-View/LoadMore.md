@@ -1,7 +1,7 @@
 ---
 layout : post
-title: Load More in .NET MAUI Carousel View control | Syncfusion®
-description: Learn here all about Load More support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
+title : Load More in .NET MAUI Carousel View control | Syncfusion®
+description : Learn here all about Load More support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
 platform : maui
 control : Carousel
 documentation : ug
@@ -9,202 +9,462 @@ documentation : ug
 
 # Load More in .NET MAUI Carousel View (SfCarousel)
 
-To get start quickly to customize the Appearance of .NET MAUI Carousel, you can check on this video:
+## Prerequisites
+
+Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Carousel`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
+
+## Overview
+
+Watch this video to get started quickly with the Load More feature in .NET MAUI Carousel:
 
 {% youtube "https://www.youtube.com/watch?v=Q3eNppgpQ2Y" %}
 
-Virtualization can be achieved by using the Load More concept. This support is used to handle the numerous items in the carousel control. Items are maintained in the viewport based on the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property. The LoadMore view is added after the last item in the collection of the carousel view. When tapping the LoadMore view, the next set of items in the collection can be added to the carousel.
+Use the Load More feature to load items incrementally as the user requests more data. [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) defines how many items are displayed in the viewport at a time. The LoadMore view is added after the last item in the collection. When the user taps the LoadMore view, the next set of items is added to the carousel.
 
-The following properties are used to achieve this support:
+The following API members are used to achieve this support:
 
-*	[AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore)
-
-*	[LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount)
-
-*	[LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreView)
+| API | Type | Description |
+| --- | --- | --- |
+| [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) | `bool` | Enables or disables the LoadMore support. Default is `false`. |
+| [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) | `int` | Number of items displayed in the viewport at a time. Default is `3`. |
+| [LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreView) | `View` | Custom view displayed in place of the default `LoadMore` label. |
+| [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMore) | `void` | Method that loads the next set of items programmatically. |
 
 ## Allow Load More
 
-By enabling the [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) property, the LoadMore support works in the carousel view. 
+Enable the [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) property to activate LoadMore support in the carousel view.
 
-N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) property is false.
+N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) property is `false`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="itemTemplate">
+            <Grid>
+                <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 <carousel:SfCarousel x:Name="carousel"
-                     ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
-                     AllowLoadMore="True"
-                     ViewMode="Linear">
-</carousel:SfCarousel>
-	
+                    ItemsSource="{Binding ImageCollection}"
+                    ItemTemplate="{StaticResource itemTemplate}"
+                    AllowLoadMore="True"
+                    ItemHeight="170"
+                    ItemWidth="270"
+                    ViewMode="Linear"/>
+    
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
+    ItemHeight = 170,
+    ItemWidth = 270,
     AllowLoadMore = true,
-    ViewMode = ViewMode.Linear
+    ViewMode = ViewMode.Linear,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var grid = new Grid();
+        var nameLabel = new Image();
+        nameLabel.SetBinding(Image.SourceProperty, "Image");
+        grid.Children.Add(nameLabel);
+        return grid;
+    }),
 };
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
+
 
 ## Load More Items Count
 
-Number of items can be maintained in the carousel control using the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property. By using the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property, numerous items can be separated. 
+The number of items displayed in the carousel can be controlled using the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property. Use it to split a large collection into smaller, viewable chunks.
 
-N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property is 3.
+N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property is `3`. The value should be a positive integer.
 
 {% tabs %}
 
 {% highlight xaml %}
-
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="itemTemplate">
+            <Grid>
+                <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
+                     ItemHeight = "170"
+                     ItemWidth = "270"
                      AllowLoadMore="True"
-                     LoadMoreItemsCount="2" 
+                     LoadMoreItemsCount="2"
                      ViewMode="Linear"/>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
+    ItemHeight = 170,
+    ItemWidth = 270,
     AllowLoadMore = true,
+    ViewMode = ViewMode.Linear,
     LoadMoreItemsCount = 2,
-    ViewMode = ViewMode.Linear
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var grid = new Grid();
+        var nameLabel = new Image();
+        nameLabel.SetBinding(Image.SourceProperty, "Image");
+        grid.Children.Add(nameLabel);
+        return grid;
+    }),
 };
 
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
 
 {% endhighlight %}
-
 {% endtabs %}
+
 
 ## Load More View
 
-Custom view can be passed instead of the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMore) label using the [LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreView) property.
+Use the [LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreView) property to provide a custom view instead of the default `LoadMore` label. The custom view is rendered after the last visible item in the collection.
 
 {% tabs %}
 
 {% highlight xaml %}
 
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="itemTemplate">
+            <Grid>
+                <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
                      AllowLoadMore="True"
                      ViewMode="Linear"
-                     LoadMoreItemsCount="2" />
+                     LoadMoreItemsCount="2">
     <carousel:SfCarousel.LoadMoreView>
-        <Grid BackgroundColor="#FFFFFFFF">
-            <Label
-                Text="Load More..."
-                FontSize="14"
-                TextColor="#FF000000"
-                FontAttributes="Bold"
-                HorizontalTextAlignment="Center"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
+        <Grid BackgroundColor="#FFFFFF">
+            <Label Text="Load More..."
+                   FontSize="14"
+                   TextColor="#000000"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
         </Grid>
     </carousel:SfCarousel.LoadMoreView>
 </carousel:SfCarousel>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
     AllowLoadMore = true,
     LoadMoreItemsCount = 2,
-    ViewMode = ViewMode.Linear
+    ViewMode = ViewMode.Linear,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var grid = new Grid();
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        grid.Children.Add(image);
+        return grid;
+    }),
+    LoadMoreView = new Grid()
+    {
+        BackgroundColor = Color.FromArgb("#FFFFFF"),
+        Children =
+        {
+            new Label()
+            {
+                Text = "Load More...",
+                FontSize = 14,
+                TextColor = Color.FromArgb("#000000"),
+                FontAttributes = FontAttributes.Bold,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center
+            }
+        }
+    }
 };
-
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-
-Grid grid = new Grid()
-{
-    BackgroundColor = Color.White
-};
-
-Label label = new Label()
-{
-    Text = "Load More...",
-    FontSize = 14,
-    TextColor = Color.Black,
-    FontAttributes = FontAttributes.Bold,
-    HorizontalOptions = LayoutOptions.Center,
-    VerticalOptions = LayoutOptions.Center,
-    HorizontalTextAlignment = TextAlignment.Center,
-    VerticalTextAlignment = TextAlignment.Center
-};
-
-grid.Children.Add(label);
-
-carousel.LoadMoreView = grid;
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
+
+
+The following image shows the custom LoadMore view rendered after the last carousel item.
 
 ![Load more](images/LoadMore.png)
 
-## Load More method
+## Load More Method
 
-To load more items programmatically, the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMore) method can be called, which loads the items dynamically to the UI based on the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) API value.
+Call the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMore) method to load the next set of items programmatically. The number of items loaded is determined by [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount).
 
-{% tabs %}
+### XAML
 
 {% highlight xaml %}
 
-    <carousel:SfCarousel x:Name="carousel"
-                         ItemsSource="{Binding ImageCollection}"
-                         ItemTemplate="{StaticResource itemTemplate}"
-                         AllowLoadMore="True"
-                         ViewMode="Default"
-                         LoadMoreItemsCount="2" />
-    <Button Text="LoadMore Method" 
-            Clicked="Button_Clicked"/>
-	
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="itemTemplate">
+            <Grid>
+                <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<carousel:SfCarousel x:Name="carousel"
+                    ItemsSource="{Binding ImageCollection}"
+                    ItemTemplate="{StaticResource itemTemplate}"
+                    AllowLoadMore="True"
+                    ViewMode="Default"
+                    LoadMoreItemsCount="2"/>
+<Button Text="Load More" Clicked="Button_Clicked"/>
+
 {% endhighlight %}
 
-{% highlight c# %}
+### C#
 
+{% highlight C# %}
 
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
     AllowLoadMore = true,
     ViewMode = ViewMode.Default,
-    LoadMoreItemsCount = 2
+    LoadMoreItemsCount = 2,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var grid = new Grid();
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        grid.Children.Add(image);
+        return grid;
+    })
 };
 
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-
-Button button = new Button();
-button.Text = "LoadMore Method";
+Button button = new Button()
+{
+    Text = "Load More"
+};
 button.Clicked += Button_Clicked;
 
+this.Content = new StackLayout()
+{
+    Children =
+    {
+        carousel,
+        button
+    }
+};
 
 private void Button_Clicked(object sender, EventArgs e)
 {
     carousel.LoadMore();
 }
 
+
 {% endhighlight %}
 
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-Find the complete Load More sample from this [link](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/LoadMore/LoadMoreSample).
+Find the complete Load More sample on [GitHub](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/LoadMore/LoadMoreSample).
+
+## Troubleshooting
+
+* If tapping the LoadMore view does nothing, ensure that the `ItemsSource` collection supports adding items dynamically (for example, use `ObservableCollection<T>` rather than `List<T>`).
+* If the custom `LoadMoreView` is not visible, verify that `AllowLoadMore` is set to `True` and `LoadMoreItemsCount` is greater than `0`.
+
+## See also
+
+* [Getting Started with .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/getting-started)
+- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
+* [UI Virtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
+* [Overview of .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/overview)

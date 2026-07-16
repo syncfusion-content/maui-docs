@@ -185,7 +185,7 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
                    Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
-<ContentPage.Resources>
+</ContentPage.Resources>
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemTemplate="{StaticResource itemTemplate}" 

@@ -1,7 +1,7 @@
 ---
 layout : post
-title: UIVirtualization in .NET MAUI Carousel View control | Syncfusion®
-description: Learn here all about UIVirtualization support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
+title : UIVirtualization in .NET MAUI Carousel View control | Syncfusion®
+description : Learn how to enable UI virtualization in the Syncfusion® .NET MAUI Carousel View (SfCarousel) control to improve performance with large data sets.
 platform : maui
 control : Carousel
 documentation : ug
@@ -9,94 +9,239 @@ documentation : ug
 
 # UIVirtualization in .NET MAUI Carousel View (SfCarousel)
 
-UI virtualization in the `SfCarousel` control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
+## Prerequisites
 
-The following property has been used in UIVirtualization support:
+Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-* `EnableVirtualization`  
+- `Syncfusion.Maui.Carousel`
 
-## EnableVirtualization
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
 
-The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property in SfCarousel, supporting both Default and Linear view modes.
+## Overview
 
-N> The default value of the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property is false.
+UI virtualization in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
 
-### Default Mode
+The following property is used to enable UI virtualization:
+
+* [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization)
+
+## Enable UI Virtualization
+
+The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property of `SfCarousel`. The property applies to both the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default) and [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear) [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html) values.
+
+| Property | Type | Default Value | Description |
+|----------|------|---------------|-------------|
+| `EnableVirtualization` | `bool` | `false` | When `true`, only items visible in the viewport are realized, reducing memory usage for large collections. |
+
+> **Note:** The default value of the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property is `false`.
+
+> **Note:** `EnableVirtualization` is available from the initial release of the `Syncfusion.Maui.Carousel` package.
+
+## Default Mode
 
 {% tabs %}
 
 {% highlight xaml %}
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="itemTemplate">
+            <Grid>
+                <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
 <!-- Default View Mode -->
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemHeight="200"
-                     ItemWidth="200"
-                     ItemSpacing="2"
+                     ItemTemplate="{StaticResource itemTemplate}"
+                     ItemHeight="170"
+                     ItemWidth="270"
                      ViewMode="Default"
-                     EnableVirtualization="true">
-</carousel:SfCarousel>
+                     EnableVirtualization="True"/>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-// Default Mode Configuration
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 200,
-    ItemWidth = 200,
-    ItemSpacing = 2,
+    ItemHeight = 170,
+    ItemWidth = 270,
     EnableVirtualization = true,
-    ViewMode = ViewMode.Default
+    ViewMode = ViewMode.Default,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var grid = new Grid();
+        var nameLabel = new Image();
+        nameLabel.SetBinding(Image.SourceProperty, "Image");
+        grid.Children.Add(nameLabel);
+        return grid;
+    }),
 };
-
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-### Linear Mode
+## Linear Mode
 
 {% tabs %}
 
 {% highlight xaml %}
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="itemTemplate">
+            <Grid>
+                <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
 <!-- Linear View Mode -->
 <carousel:SfCarousel x:Name="linearCarousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemHeight="200"
-                     ItemWidth="200"
-                     ItemSpacing="2"
+                     ItemTemplate="{StaticResource itemTemplate}"
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     ItemSpacing="60"
                      ViewMode="Linear"
-                     EnableVirtualization="true">
-</carousel:SfCarousel>
+                     EnableVirtualization="True"/>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-// Linear Mode Configuration
-SfCarousel linearCarousel = new SfCarousel()
+CarouselViewModel carouselViewModel = new CarouselViewModel();
+SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 200,
-    ItemWidth = 200,
-    ItemSpacing = 2,
+    ItemHeight = 170,
+    ItemWidth = 270,
+    ItemSpacing = 60,
     EnableVirtualization = true,
-    ViewMode = ViewMode.Linear
+    ViewMode = ViewMode.Linear,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var grid = new Grid();
+        var nameLabel = new Image();
+        nameLabel.SetBinding(Image.SourceProperty, "Image");
+        grid.Children.Add(nameLabel);
+        return grid;
+    }),
 };
 
-linearCarousel.ItemTemplate = itemTemplate;
-linearCarousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-
 {% endhighlight %}
 
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![UIVirtualization](images/UIVirtualization.png)
 
 Find the complete UIVirtualization sample from this [link](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/UIVirtualization/VirtualizationSample).
+
+## Behavior
+
+When `EnableVirtualization` is set to `true`:
+
+- `SfCarousel` realizes only the items currently inside (or near) the viewport.
+- As the user swipes, items that move out of the viewport are recycled and replaced with upcoming items.
+- Memory usage stays roughly constant regardless of the total number of items in `ItemsSource`.
+
+When `EnableVirtualization` is `false` (the default), every item in the source collection is realized up front, which can increase memory usage and lengthen initial load time for large data sets.
+
+## Troubleshooting
+
+| Issue | Possible Cause | Suggested Fix |
+|-------|----------------|---------------|
+| Setting `EnableVirtualization="True"` has no visible performance change. | The data set is too small (virtualization only helps with large collections). | Test with a collection of several hundred items or more. |
+| Items appear to "pop" in and out while swiping. | Expected behavior when virtualization recycles containers. | Use a lightweight `DataTemplate` to minimize the cost of recycling. |
+| XAML build error about the `carousel:` namespace. | The `Syncfusion.Maui.Carousel` namespace and assembly are not declared. | Add `xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"` to the page root. |
+| Runtime error that `ViewMode` cannot be found. | The `Syncfusion.Maui.Carousel` namespace is missing in the C# file. | Add `using Syncfusion.Maui.Carousel;` at the top of the file. |
+
+## See Also
+
+- [Getting Started with .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/getting-started)
+- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
