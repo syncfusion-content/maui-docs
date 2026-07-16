@@ -60,7 +60,7 @@ The [`ParallaxScrollingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusio
 
 * [`ScrollY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_ScrollY): Denotes the Y position of the finished scroll.
 
-* [`CanAnimate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_CanAnimate): Defines whether to animate the scroll or not. The default value is false
+* [`CanAnimate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_CanAnimate): Defines whether to animate the scroll or not. The default value is false.
 
 {% tabs %}
 
