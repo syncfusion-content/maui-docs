@@ -9,12 +9,15 @@ documentation: UG
 
 # Events in .NET MAUI CheckBox
 
+**Requirements:** .NET MAUI workload installed; `Syncfusion.Maui.Buttons` NuGet package added to the project; Syncfusion .NET MAUI controls registered via `.ConfigureSyncfusionCore()` / `UseSyncfusion*()` in `MauiProgram.cs`.
+
 ## StateChanged event
 
-The `StateChanged` event occurs when the value or state of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is changed, either by interacting with the CheckBox or by setting the value programmatically using XAML or C# code. The event arguments are of type [`StateChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html), exposing the following property:
+The [`StateChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanged) event occurs when the value of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property changes, either by user interaction or programmatically through XAML or C# code. The event arguments are of type [`StateChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html), exposing the following property:
 
-* [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) : This represents the new state value of the CheckBox.
+* [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html#Syncfusion_Maui_Buttons_StateChangedEventArgs_IsChecked) (bool?) : The new checked state of the CheckBox. Returns `true` when checked, `false` when unchecked, and `null` when the CheckBox is in an indeterminate state (requires [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) to be enabled).
 
+N> The example below mutates the CheckBox's `Text` inside the handler to visually demonstrate the new state. Place the handler in the same code-behind class as the `x:Name="checkBox"` instance.
 
 {% tabs %}
 {% highlight xaml %}
@@ -42,35 +45,38 @@ private void CheckBox_StateChanged(object sender, Syncfusion.Maui.Buttons.StateC
     {
         checkBox.Text = "Checked State";
     }
-    else if(e.IsChecked.HasValue && !e.IsChecked.Value)
+    else if (e.IsChecked.HasValue && !e.IsChecked.Value)
     {
         checkBox.Text = "Unchecked State";
     }
     else
     {
-    checkBox.Text = "Indeterminate State";
+        checkBox.Text = "Indeterminate State";
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox](Images/Getting-Started/tristate.png)
+![.NET MAUI CheckBox showing the three states of SfCheckBox](Images/Events/tristate.png)
 
 ## StateChanging event
 
-The [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html) event is triggered when the state of the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is about to change by tapping the CheckBox control. The event arguments are of type [`StateChangingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html), providing the following properties:
+The [`StateChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanging) event is triggered when the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is about to change, either by user interaction (tapping) or programmatically. The event arguments are of type [`StateChangingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html), providing the following properties:
 
-* [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) : Represents the new state value of the CheckBox.
-* `Cancel` : Gets or sets a value indicating whether the event should be canceled.
+* [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html#Syncfusion_Maui_Buttons_StateChangingEventArgs_IsChecked) (bool?) : The new checked state the CheckBox is about to take.
 
 {% tabs %}
 {% highlight xaml %}
+
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
 <syncfusion:SfCheckBox x:Name="checkBox" Text="CheckBox" StateChanging="OnStateChanging"/>
 
 {% endhighlight %}
 {% highlight c# %}
+
+using Syncfusion.Maui.Buttons;
 
 SfCheckBox checkBox = new SfCheckBox();
 checkBox.Text = "CheckBox";
@@ -85,8 +91,11 @@ this.Content = checkBox;
 
 private void OnStateChanging(object sender, StateChangingEventArgs e)
 {
-    e.cancel=true;
+    // Cancel the state change.
+    e.Cancel = true;
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Use the `Cancel` property in `StateChanging` to prevent a state transition; use `StateChanged` to react after the transition has already occurred. For exception handling, wrap event handler logic in a try/catch so that an error in your handler does not interrupt the CheckBox state update.
