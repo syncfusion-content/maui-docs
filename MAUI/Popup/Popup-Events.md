@@ -191,7 +191,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-> **Note**: The `xmlns:sfPopup` namespace declaration is required for the `SfPopup` tag to resolve. See [Getting Started](getting-started.md) for the full namespace and NuGet package setup.
+N> The `xmlns:sfPopup` namespace declaration is required for the `SfPopup` tag to resolve. See [Getting Started](getting-started.md) for the full namespace and NuGet package setup.
 
 ## Closed event
 
