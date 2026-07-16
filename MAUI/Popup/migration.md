@@ -175,19 +175,19 @@ N> All the properties from the Xamarin.Forms PopupView class are moved to the .N
 
 </td></tr>
 <tr>
-<td>SfPopuplayoutResources.Title</td>
+<td>SfPopupLayoutResources.Title</td>
 <td>SfPopupResource.Title</td>
 <td>Resource key for the popup title text.</td></tr>
 <tr>
-<td>SfPopuplayoutResources.Popup_message</td>
+<td>SfPopupLayoutResources.Popup_message</td>
 <td>SfPopupResource.Message</td>
 <td>Resource key for the popup message text.</td></tr>
 <tr>
-<td>SfPopuplayoutResources.ACCEPT</td>
+<td>SfPopupLayoutResources.ACCEPT</td>
 <td>SfPopupResource.AcceptButtonText</td>
 <td>Resource key for the accept button text.</td></tr>
 <tr>
-<td>SfPopuplayoutResources.DECLINE</td>
+<td>SfPopupLayoutResources.DECLINE</td>
 <td>SfPopupResource.DeclineButtonText</td>
 <td>Resource key for the decline button text.</td></tr>
 </table>
