@@ -502,7 +502,7 @@ The specialTimeRegion background and text style can be customized by using the [
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 17 18 19 20 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 17 18 19 20 29" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
