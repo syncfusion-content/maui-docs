@@ -39,7 +39,7 @@ N> The indeterminate state is only reported when the [`IsThreeState`](https://he
 
 ## Defining visual states
 
-`SfCheckBox` exposes its three states through a single [`VisualStateGroup`](https://learn.microsoft.com/dotnet/maui/user-interface/visual-states) named `CommonStates`. Each `VisualState` (`Checked`, `Unchecked`, `Intermediate`) contains a list of `Setter` objects that target bindable properties on the CheckBox. Common target properties are `TextColor`, `CheckedColor`, `UncheckedColor`, and `Text`.
+`SfCheckBox` exposes its three states through a single `VisualStateGroup` named `CommonStates`. Each `VisualState` (`Checked`, `Unchecked`, `Intermediate`) contains a list of `Setter` objects that target bindable properties on the CheckBox. Common target properties are `TextColor`, `CheckedColor`, `UncheckedColor`, and `Text`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -118,6 +118,6 @@ this.Content = checkBox;
 
 ### Intermediate visual state
 
-![.NET MAUI CheckBox in the Intermediate visual state with blue fill and 'Intermediate State' caption](Images/VisualStates/intermediatevs.png)
+![.NET MAUI CheckBox in the Intermediate visual state with blue fill and Intermediate State caption](Images/VisualStates/intermediatevs.png)
 
 N> Troubleshooting: if a state is not applied, verify that the `VisualStateGroup` is named `CommonStates` and that each `VisualState` uses the exact names `Checked`, `Unchecked`, and `Intermediate`. Also confirm `IsThreeState` is `true` if you need the `Intermediate` state, and that the `xmlns:syncfusion` namespace maps to `Syncfusion.Maui.Buttons`. Wrap any code that changes `IsChecked` in a try/catch so a handler error does not interrupt the state transition.

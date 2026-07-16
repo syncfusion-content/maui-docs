@@ -124,7 +124,7 @@ The stroke thickness of the CheckBox can be customized using the [`StrokeThickne
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox showing three StrokeThickness values (2, 4, 6)](Images/Visual-Customization/strokethickness.png)
+![.NET MAUI CheckBox showing three StrokeThickness values](Images/Visual-Customization/strokethickness.png)
 
 ## Setting a caption text appearance
 
@@ -165,7 +165,7 @@ You can customize the appearance of the text in the [`SfCheckBox`](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox with custom text appearance (font, color, size, alignment)](Images/Visual-Customization/textappearance.png)
+![.NET MAUI CheckBox with custom text appearance](Images/Visual-Customization/textappearance.png)
 
 ## TickColor
 
@@ -249,7 +249,7 @@ The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox with wrapped text using LineBreakMode=WordWrap](Images/Visual-Customization/linebreakmode.png)
+![.NET MAUI CheckBox with wrapped text using LineBreakMode as WordWrap](Images/Visual-Customization/linebreakmode.png)
 
 This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-CheckBox).
 

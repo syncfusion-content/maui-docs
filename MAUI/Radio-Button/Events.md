@@ -9,18 +9,33 @@ documentation: UG
 
 # Events in .NET MAUI Radio Button (SfRadioButton)
 
+The [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control exposes the following events:
+
+* [StateChanged](#statechanged-event) - Raised after the checked state changes.
+* [StateChanging](#statechanging-event) - Raised before the checked state changes; can be canceled.
+
+> **Prerequisites:** Add the `Syncfusion.Maui.Buttons` NuGet package to your project and register the handler in `MauiProgram.cs`:
+> ```csharp
+> using Syncfusion.Maui.Buttons.Hosting;
+> builder.ConfigureSyncfusionButtons();
+> ```
+> Add the namespace to your XAML page:
+> ```xaml
+> xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+> ```
+
 ## StateChanged event
 
-The `StateChanged` event occurs when the value (state) of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property is changed, either by user interaction or programmatically via XAML or C# code. The event arguments are of type [`StateChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html) and expose the following property:
+The [`StateChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanged) event occurs when the value of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property is changed, either by user interaction or programmatically via XAML or C# code. The event arguments are of type [`StateChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html) and expose the following property:
 
-* [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) : The new value(state) of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property.
+* [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html#Syncfusion_Maui_Buttons_StateChangedEventArgs_IsChecked) : The new value of the `IsChecked` property. **Type:** `bool?` (`true` = checked, `false` = unchecked, `null` = indeterminate).
 
 {% tabs %}
 {% highlight xaml %}
 
 <syncfusion:SfRadioGroup x:Name="radioGroup">
     <syncfusion:SfRadioButton x:Name="check" Text="Checked State" IsChecked="True" StateChanged="RadioButton_StateChanged"/>
-    <syncfusion:SfRadioButton x:Name="uncheck" Text="Unchecked  State" StateChanged="RadioButton_StateChanged"/>
+    <syncfusion:SfRadioButton x:Name="uncheck" Text="Unchecked State" StateChanged="RadioButton_StateChanged"/>
 </syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -46,35 +61,34 @@ this.Content = radioGroup;
 
 private void RadioButton_StateChanged(object sender, Syncfusion.Maui.Buttons.StateChangedEventArgs e)
 {
-    if (e.IsChecked.HasValue && e.IsChecked.Value)
+    if (sender is SfRadioButton radioButton && e.IsChecked.HasValue)
     {
-        (sender as SfRadioButton).Text = "Checked State";
-    }
-    else if (e.IsChecked.HasValue && !e.IsChecked.Value)
-    {
-        (sender as SfRadioButton).Text = "Unchecked State";
+        radioButton.Text = e.IsChecked.Value ? "Checked State (selected)" : "Unchecked State";
     }
 }
- 
+
 {% endhighlight %}
 {% endtabs %}
+
+**Radio buttons after handling the StateChanged event**
 
 ![StateChanged event 1](Images/Event/statechanged1.png)
 ![StateChanged event 2](Images/Event/statechanged2.png)
 
 ## StateChanging event
 
-The [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html) event is triggered when the state of the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property is about to change, typically by tapping the Radio Button control. The event arguments are of type `StateChangingEventArgs` and provide the following properties:
+The [`StateChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanging) event is triggered when the value of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property is about to change, either by user interaction (tap) or programmatically. The event arguments are of type [`StateChangingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html) and expose the following properties:
 
-* [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) : The new value(state) of the `IsChecked` property.
-* `Cancel` : Gets or sets a value indicating whether the event should be canceled.
+* [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html#Syncfusion_Maui_Buttons_StateChangingEventArgs_IsChecked) : The new value of the `IsChecked` property. **Type:** `bool?`.
+
+> Use `StateChanging` when you need to validate or block a state transition before it happens; use `StateChanged` when you only need to react after the state has been applied.
 
 {% tabs %}
 {% highlight xaml %}
 
 <syncfusion:SfRadioGroup x:Name="radioGroup">
     <syncfusion:SfRadioButton x:Name="check" Text="Checked State" IsChecked="True" StateChanging="OnStateChanging"/>
-    <syncfusion:SfRadioButton x:Name="uncheck" Text="Unchecked State"/>
+    <syncfusion:SfRadioButton x:Name="uncheck" Text="Unchecked State" StateChanging="OnStateChanging"/>
 </syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -100,7 +114,11 @@ this.Content = radioGroup;
 
 private void OnStateChanging(object sender, StateChangingEventArgs e)
 {
-    e.cancel=true;
+    // Cancel the state change when the user attempts to select the second option.
+    if (sender is SfRadioButton radioButton && radioButton.Text.StartsWith("Unchecked"))
+    {
+        e.Cancel = true;
+    }
 }
 
 {% endhighlight %}
