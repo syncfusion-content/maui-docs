@@ -9,9 +9,7 @@ documentation: ug
 
 # Working with MVVM in MAUI Popup (SfPopup)
 
-`SfPopup` can be used in the MVVM architecture applications easily. In the below example, the [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) property is bound to a property in the `ViewModel` based on which the popup is opened or closed. Refer to the following code example to display the popup in MVVM.
-
-In the following code sample, note that the BindingContext is set for the page, and the property (IsOpen) of the ViewModel is bound to the [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen).
+`SfPopup` can be easily used in MVVM-based applications. In the following example, the [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) property is bound to a property in the `ViewModel` based on which the popup is opened or closed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 15" %}
@@ -24,14 +22,14 @@ In the following code sample, note that the BindingContext is set for the page, 
         <local:ViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
-                    VerticalOptions="Start" HorizontalOptions="Center" 
+        <VerticalStackLayout Padding="20">
+            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup"
+                    VerticalOptions="Start" HorizontalOptions="Center"
                     Command="{Binding OpenPopupCommand}" />
             <sfPopup:SfPopup x:Name="sfPopup"
                              IsOpen="{Binding IsOpen}">
             </sfPopup:SfPopup>
-        </StackLayout>
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
@@ -39,6 +37,10 @@ In the following code sample, note that the BindingContext is set for the page, 
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+
 public class ViewModel : INotifyPropertyChanged
 {
     private bool isOpen;
@@ -53,7 +55,7 @@ public class ViewModel : INotifyPropertyChanged
         set
         {
             isOpen = value;
-            RaisePropertyChanged("IsOpen");
+            OnPropertyChanged(nameof(IsOpen));
         }
     }
 
@@ -71,7 +73,7 @@ public class ViewModel : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    private void RaisePropertyChanged(string propertyName)
+    protected virtual void OnPropertyChanged(string propertyName)
     {
         if (this.PropertyChanged != null)
         {
@@ -84,7 +86,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-## How to use commands for popup buttons?
+## How to use commands with popup buttons?
 
 `SfPopup` provides command support for the popup buttons,
 
@@ -92,11 +94,11 @@ public class ViewModel : INotifyPropertyChanged
 
  * [SfPopup.DeclineCommand](https://help.syncfusion.com/maui/popup/popup-events#decline-command)
 
-## How to use MAUI popup as a page?
+## How to define a reusable popup view?
 
-To use the `SfPopup` as a page, create a new XAML file with `SfPopup`. You can use this XAML file instance (SfPopup view) across any file in your project wherever you may want to display a popup, thus allowing you to re-use the same instance of the popup where you can modify or change the required properties alone based on the current context to be displayed.
+To use the `SfPopup` as a page, create a new XAML file with an `SfPopup` instance. You can use this XAML file instance (SfPopup view) across any file in your project wherever you may want to display a popup, thus allowing you to re-use the same instance of the popup where you can modify or change the required properties alone based on the current context to be displayed.
 
-The following code sample shows how to create a popup in a XAML file. We have created a simple popup to display an error message popup to users on an unsuccessful login.
+The following code sample shows how to create a popup in a XAML file. We have created a simple popup to display an error message to users on an unsuccessful login.
 
 {% tabs %}
 {% highlight xaml tabtitle="PopupPage.xaml" %}
@@ -134,7 +136,7 @@ public partial class PopupPage : SfPopup
 {% endhighlight %}
 {% endtabs %}
 
-The following code sample shows how to consume the previously created SfPopup page from inside a different content page.
+The following sample shows how to consume the previously created SfPopup view from inside a different content page.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="29" %}
@@ -173,6 +175,8 @@ The following code sample shows how to consume the previously created SfPopup pa
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+using Microsoft.Maui.Controls;
+
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -185,13 +189,17 @@ public partial class MainPage : ContentPage
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+
 public class ViewModel : INotifyPropertyChanged
 {
     #region Fields
-    
+
     private bool isOpen;
     private string labelString, userName, password;
-    
+
     #endregion
 
     #region Properties
@@ -249,13 +257,18 @@ public class ViewModel : INotifyPropertyChanged
         if ((UserName != "Syncfusion") || (Password != "12345"))
         {
             // If credentials are incorrect show the error message as popup.
+            LabelString = "Login failed";
             IsOpen = true;
+        }
+        else
+        {
+            LabelString = "Login successful";
         }
     }
 
     #region PropertyChanged
 
-    void OnPropertyChanged(string propertyName)
+    protected virtual void OnPropertyChanged(string propertyName)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
@@ -267,11 +280,11 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-## How to retrieve text value from entry control in MAUI popup content template?
+## How to retrieve a text value from an Entry control in the popup's ContentTemplate?
 
-This can be done by binding the text property of the entry to a property in the view model class.
+This can be done by binding the `Text` property of the `Entry` to a property in the `ViewModel`.
 
-Refer to the following code example to retrieve text value from entry control in the MAUI popup content template.
+Refer to the following code example to retrieve a text value from an Entry control in the popup's `ContentTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -332,6 +345,8 @@ Refer to the following code example to retrieve text value from entry control in
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+using Microsoft.Maui.Controls;
+
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -344,13 +359,28 @@ public partial class MainPage : ContentPage
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+
 public class ViewModel : INotifyPropertyChanged
 {
-    private bool isOpen, visible;
-    private string labelString, userName, password, showdetail;
-    
+    #region Fields
+
+    private bool isOpen;
+    private bool visible;
+    private string labelString;
+    private string userName;
+    private string password;
+    private string showdetail;
+
+    #endregion
+
+    #region Properties
+
     public ICommand PopupAcceptCommand { get; set; }
     public ICommand ShowPopupCommand { get; set; }
+
     public string LabelString
     {
         get { return labelString; }
@@ -406,13 +436,21 @@ public class ViewModel : INotifyPropertyChanged
         }
     }
 
+    #endregion
+
+    #region Constructor
+
     public ViewModel()
     {
-        PopupAcceptCommand = new Command(PopupAccept); //CanExecute() will be call the PopupAccept method
-        ShowPopupCommand = new Command(Popup);  //CanExecute() will be call the Popup method.
+        PopupAcceptCommand = new Command(PopupAccept); // Invokes the PopupAccept method.
+        ShowPopupCommand = new Command(OnShowPopupClicked);  // Invokes the OnShowPopupClicked method.
     }
 
-    private void Popup()
+    #endregion
+
+    #region Methods
+
+    private void OnShowPopupClicked()
     {
         PopupOpen = true;
         LabelString = "User Login";
@@ -424,7 +462,7 @@ public class ViewModel : INotifyPropertyChanged
         // You can write your set of codes that needs to be executed.
         if ((UserName == "Syncfusion") && (Password == "12345"))
         {
-            ShowDetail = "Login Successfully...";
+            ShowDetail = "Login Successful";
             UserName = "";
             Password = "";
         }
@@ -436,11 +474,18 @@ public class ViewModel : INotifyPropertyChanged
         }
     }
 
+    #endregion
+
+    #region INotifyPropertyChanged
+
     public event PropertyChangedEventHandler PropertyChanged;
-    void OnPropertyChanged(string propertyName)
+
+    protected virtual void OnPropertyChanged(string propertyName)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
+    #endregion
 }
 {% endhighlight %}
 {% endtabs %}

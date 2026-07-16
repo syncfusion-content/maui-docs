@@ -9,26 +9,26 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI ListView (SfListView)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI ListView (SfListView) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI ListView (SfListView) control.
 
 ## Apply liquid glass effect
 
 Follow these steps to enable and configure the Liquid Glass Effect in the ListView control:
 
-### Step 1: Wrap the control inside glass effect view
+### Step 1: Wrap the control inside SfGlassEffectView
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `ListView` control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `ListView` control, wrap it inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html).
 
 For more details, refer to the `Liquid Glass Getting Started documentation`.
 
-### Step 2: Enable the liquid glass effect on ListView
+### Step 2: Enable the Liquid Glass Effect on `SfListView`
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfListView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfListView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls, such as the scrollbar and item template visuals, and provides responsive interaction for a smooth and engaging user experience.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfListView` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 <Grid>
       <core:SfGlassEffectView x:Name="glassview" EffectType="Regular">
           <ListView:SfListView x:Name="listView"

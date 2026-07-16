@@ -9,7 +9,7 @@ documentation: ug
 
 # Layout Customizations in MAUI Popup (SfPopup)
 
-## Popup appearance mode for footer
+## Footer button appearance mode
 
 The `SfPopup` supports two types of [AppearanceMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AppearanceMode). By default, the [OneButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_OneButton) is set. Change the appearance by using the `AppearanceMode` property.
 
@@ -118,7 +118,7 @@ public partial class MainPage : ContentPage
 
 ### Disable header
 
-Display the Popup without a header by using the property [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowHeader). The default value is true. Find the code example of the same as follows.
+Display the Popup without a header by using the property [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowHeader). The default value is true. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -163,7 +163,7 @@ public partial class MainPage : ContentPage
 
 ### Enable footer
 
-Display the Popup with the footer by using the [ShowFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowFooter) property. The default value is false. Find the code example of the same as follows.
+Display the Popup with the footer by using the [ShowFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowFooter) property. The default value is false. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -206,7 +206,7 @@ public partial class MainPage : ContentPage
 
 ## Enable close icon
 
-Show the Popup with a close icon by using the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowCloseButton) property. The default value is false. Find the code example of the same as follows. 
+Show the Popup with a close icon by using the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowCloseButton) property. The default value is false. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -278,7 +278,7 @@ Any view can be added as the header content using the [HeaderTemplate](https://h
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="24" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -287,14 +287,13 @@ public partial class MainPage : ContentPage
     Label headerContent;
     public MainPage()
     {
-        InitializeComponent(); 
-        clickToShowPopup.Clicked += ClickToShowPopup_Clicked;
+        InitializeComponent();
         headerTemplateView = new DataTemplate(() =>
         {
             headerContent = new Label();
             headerContent.Text = "Customized Header";
             headerContent.FontAttributes = FontAttributes.Bold;
-            headerContent.BackgroundColor = Color.FromArgb("#6750A4");
+            headerContent.BackgroundColor = Color.FromArgb("#FF6750A4");
             headerContent.FontSize = 16;
             headerContent.HorizontalTextAlignment = TextAlignment.Center;
             headerContent.VerticalTextAlignment = TextAlignment.Center;
@@ -317,7 +316,7 @@ public partial class MainPage : ContentPage
 
 ### Popup header height
 
-Customize the popup header height using [HeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderHeight) property. Find the code example of the same as follows.
+Customize the popup header height using [HeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderHeight) property. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -358,7 +357,7 @@ public partial class MainPage : ContentPage
 
 ### Popup header title
 
-Change the popup header title using [HeaderTitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderTitle) property. Find the code example of the same as follows.
+Change the popup header title using [HeaderTitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderTitle) property. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -428,7 +427,7 @@ Any view can be added as the footer content using the [FooterTemplate](https://h
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="25" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="24" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -437,15 +436,14 @@ public partial class MainPage : ContentPage
     Label footerContent;
     public MainPage()
     {
-        InitializeComponent(); 
-        clickToShowPopup.Clicked += ClickToShowPopup_Clicked;
+        InitializeComponent();
         sfPopup.ShowFooter = true;
         footerTemplateView = new DataTemplate(() =>
         {
             footerContent = new Label();
             footerContent.Text = "Customized Footer";
             footerContent.FontAttributes = FontAttributes.Bold;
-            footerContent.BackgroundColor = Color.FromArgb("#6750A4");
+            footerContent.BackgroundColor = Color.FromArgb("#FF6750A4");
             footerContent.FontSize = 16;
             footerContent.HorizontalTextAlignment = TextAlignment.Center;
             footerContent.VerticalTextAlignment = TextAlignment.Center;
@@ -468,7 +466,7 @@ public partial class MainPage : ContentPage
 
 ### Popup footer height
 
-Customize the popup footer height using [FooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_FooterHeight) property. Find the code example of the same as follows.
+Customize the popup footer height using [FooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_FooterHeight) property. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -510,7 +508,7 @@ public partial class MainPage : ContentPage
 
 ### Popup accept and decline buttons text
 
-Change the popup accept and decline buttons text using [AcceptButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AcceptButtonText) and [DeclineButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_DeclineButtonText) properties. Find the code example of the same as follows.
+Change the popup accept and decline button text using [AcceptButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AcceptButtonText) and [DeclineButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_DeclineButtonText) properties. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -580,7 +578,7 @@ Any view can be added as popup content by using the [ContentTemplate](https://he
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="24" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -589,8 +587,7 @@ public partial class MainPage : ContentPage
     Label popupContent;
     public MainPage()
     {
-        InitializeComponent(); 
-        clickToShowPopup.Clicked += ClickToShowPopup_Clicked;
+        InitializeComponent();
         sfPopup.ShowFooter = true;
         contentTemplateView = new DataTemplate(() =>
         {
@@ -619,7 +616,7 @@ public partial class MainPage : ContentPage
 
 ### Popup message
 
-Change the popup content message using [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Message) property. Find the code example of the same as follows.
+Change the popup content message using the [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Message) property, which sets a simple text message for the popup body. To display the default accept and decline buttons along with the message, set [ShowFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowFooter) to `True`. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -633,6 +630,7 @@ Change the popup content message using [Message](https://help.syncfusion.com/cr/
                     VerticalOptions="Start" HorizontalOptions="Center" 
                     Clicked="ClickToShowPopup_Clicked" />
             <sfPopup:SfPopup x:Name="sfPopup" 
+                             ShowFooter="True"
                              Message="Popup Message">                               
             </sfPopup:SfPopup>
         </StackLayout>
@@ -646,7 +644,8 @@ public partial class MainPage : ContentPage
 {
     public MainPage()
     {
-        InitializeComponent();        
+        InitializeComponent();
+        sfPopup.ShowFooter = true;
         sfPopup.Message = "Popup Message";
     }
 
@@ -658,9 +657,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-##  Load template view in the popup body
+## Load template view in the popup body
 
-Any view can be added as popup content by using the [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property to refresh it. Refer to the following code example in which a label is added as popup content. 
+Any view can be added as popup content by using the [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property to refresh it. Refer to the following code example in which a label is added as popup content.
 
 {% tabs %}
 
@@ -730,13 +729,13 @@ namespace GettingStarted
 
 {% endtabs %}
 
-![Syncfusion .NET Maui Popup with custom content](Images/getting-started//maui-popup-with-custom-content.png)
+![Syncfusion .NET MAUI Popup with custom content](Images/getting-started//maui-popup-with-custom-content.png)
 
 ## How to
 
-### Disable the overlay background in .NET MAUI Popup?
+### Disable the overlay background in .NET MAUI Popup
 
-Disable the overlay background by using the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `False`.Users can interact with the screen behind the popup.If you don’t want background interaction but also don’t want a visible overlay, keep [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `True` and set the overlay color to Transparent in the popup style. This blocks background input while showing no overlay on the screen.The default value of the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) is `True`.
+Disable the overlay background by using the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `False`. Users can interact with the screen behind the popup. If you don't want background interaction but also don't want a visible overlay, keep the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `True` and set the overlay color to Transparent in the popup style. This blocks background input while showing no overlay on the screen. The default value of the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) is `True`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -763,7 +762,7 @@ public partial class MainPage : ContentPage
 
 ![Syncfusion .NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-disable-overlay.png)
 
-### Display popup in Android native embedding?
+### Display popup in Android native embedding
 
 Enables showing `SfPopup` inside apps that embed MAUI content natively. Create the `SfPopup` by passing the current `Activity` and `IMauiContext`, convert the MAUI layout using ToPlatform, and set it as the Activity’s content.
 
@@ -813,7 +812,7 @@ namespace AndroidApp
 {% endhighlight %}
 {% endtabs %}
 
-### Display popup in iOS native embedding?
+### Display popup in iOS native embedding
 
 Allows showing `SfPopup` in an iOS app that embeds MAUI content natively. Create the popup using the native `UIWindow` and `MauiContext` in the `SceneDelegate`, convert the layout to a `UIView` using ToPlatform, and host it through the window’s `root controller`.
 
@@ -884,7 +883,7 @@ namespace iOSApp
 {% endhighlight %}
 {% endtabs %}
 
-### Show listView as a popup
+### Show ListView as a popup
 
 The `SfPopup` allows loading the `SfListView` as the content of the popup.
 
@@ -897,7 +896,7 @@ The `SfPopup` allows loading the `SfListView` as the content of the popup.
              xmlns:local="clr-namespace:PopupMauiLayout"
              x:Class="PopupMauiLayout.MainPage">
     <ContentPage.BindingContext>
-        <local:ContactsViewModel x:Name="viewModel"/>
+        <local:ContactsViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Padding="20">
@@ -948,81 +947,82 @@ The `SfPopup` allows loading the `SfListView` as the content of the popup.
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %} 
-namespace PopupMauiPositioning;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.Popup;
-
-public partial class MainPage : ContentPage
+namespace PopupMauiLayout
 {
-    SfListView listView;
-    ContactsViewModel viewModel;
-    SfPopup sfPopup;
-
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        listView = new SfListView();        
-        listView.ItemTemplate = new DataTemplate(() =>
-        {            
-            var grid = new Grid();
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 46 });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
-            var contactImage = new Image()
-            {
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Center,
-                HeightRequest = 30,
-                WidthRequest = 30
-            };
-            contactImage.SetBinding(Image.SourceProperty, new Binding("ContactImage"));
-            var contactName = new Label()
-            {
-                VerticalTextAlignment = TextAlignment.Center,
-                LineBreakMode = LineBreakMode.NoWrap,
-                FontSize = 14
-            };
-            contactName.SetBinding(Label.TextProperty, new Binding("ContactName"));
-            var contactType = new Image()
-            {
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.End,
-                HeightRequest = 15,
-                WidthRequest = 15,
-                Margin = new Thickness(0, 0, 8, 0)
-            };
-            contactType.SetBinding(Image.SourceProperty, new Binding("ContactType"));
-            grid.Children.Add(contactImage);
-            Grid.SetColumn(contactImage, 0);
-            Grid.SetRow(contactImage, 0);
-            grid.Children.Add(contactName);
-            Grid.SetColumn(contactName, 1);
-            Grid.SetRow(contactName, 0);
-            grid.Children.Add(contactType);
-            Grid.SetColumn(contactType, 2);
-            Grid.SetRow(contactType, 0);           
-            return grid;
-        });
-        viewModel = new ContactsViewModel();
-        listView.ItemsSource = viewModel.Items;
-        listView.ItemSize = 46;
-        sfPopup = new SfPopup();
-        sfPopup.HeaderTitle = "ListView";
-        sfPopup.ShowFooter = true;
-        sfPopup.HeightRequest = 300;
-        sfPopup.WidthRequest = 300;
-        sfPopup.ContentTemplate = new DataTemplate(() =>
+        SfListView listView;
+        ContactsViewModel viewModel;
+        SfPopup sfPopup;
+
+        public MainPage()
         {
-            return listView;
-        });
-        StackLayout stackLayout = new StackLayout() { Padding = 20};
-        Button OpenButton = new Button();
-        OpenButton.HorizontalOptions = LayoutOptions.Center;
-        OpenButton.Clicked += OpenButton_Clicked;
-        OpenButton.Text = "Click to show popup";
-        stackLayout.Children.Add(OpenButton); 
-        this.Content = stackLayout;
-    }  
+            InitializeComponent();
+            listView = new SfListView();        
+            listView.ItemTemplate = new DataTemplate(() =>
+            {            
+                var grid = new Grid();
+                grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 46 });
+                grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+                grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+                var contactImage = new Image()
+                {
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Center,
+                    HeightRequest = 30,
+                    WidthRequest = 30
+                };
+                contactImage.SetBinding(Image.SourceProperty, new Binding("ContactImage"));
+                var contactName = new Label()
+                {
+                    VerticalTextAlignment = TextAlignment.Center,
+                    LineBreakMode = LineBreakMode.NoWrap,
+                    FontSize = 14
+                };
+                contactName.SetBinding(Label.TextProperty, new Binding("ContactName"));
+                var contactType = new Image()
+                {
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.End,
+                    HeightRequest = 15,
+                    WidthRequest = 15,
+                    Margin = new Thickness(0, 0, 8, 0)
+                };
+                contactType.SetBinding(Image.SourceProperty, new Binding("ContactType"));
+                grid.Children.Add(contactImage);
+                Grid.SetColumn(contactImage, 0);
+                Grid.SetRow(contactImage, 0);
+                grid.Children.Add(contactName);
+                Grid.SetColumn(contactName, 1);
+                Grid.SetRow(contactName, 0);
+                grid.Children.Add(contactType);
+                Grid.SetColumn(contactType, 2);
+                Grid.SetRow(contactType, 0);           
+                return grid;
+            });
+            viewModel = new ContactsViewModel();
+            listView.ItemsSource = viewModel.Items;
+            listView.ItemSize = 46;
+            sfPopup = new SfPopup();
+            sfPopup.HeaderTitle = "ListView";
+            sfPopup.ShowFooter = true;
+            sfPopup.HeightRequest = 300;
+            sfPopup.WidthRequest = 300;
+            sfPopup.ContentTemplate = new DataTemplate(() =>
+            {
+                return listView;
+            });
+            StackLayout stackLayout = new StackLayout() { Padding = 20};
+            Button OpenButton = new Button();
+            OpenButton.HorizontalOptions = LayoutOptions.Center;
+            OpenButton.Clicked += OpenButton_Clicked;
+            OpenButton.Text = "Click to show popup";
+            stackLayout.Children.Add(OpenButton); 
+            this.Content = stackLayout;
+        }  
+    }
 }
 {% endhighlight %}
 {% endtabs %}

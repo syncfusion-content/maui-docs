@@ -234,7 +234,7 @@ To load the messages to SfChat, bind the message collection to the [Messages](ht
 
     <syncfusion:SfChat x:Name="sfChat"
                     Messages="{Binding Messages}"
-                    CurrentUser="{Binding CurrentUser}"/>
+                    CurrentUser="{Binding CurrentUser}">
     </syncfusion:SfChat>
 </ContentPage>
 {% endhighlight %} 
