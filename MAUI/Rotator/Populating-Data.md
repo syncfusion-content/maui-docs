@@ -95,19 +95,19 @@ The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.Sf
         <local:RotatorViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <syncfusion:SfRotator x:Name="rotator" 
+        <rotator:SfRotator x:Name="rotator" 
                         NavigationDelay="2000" 
                         ItemsSource="{Binding ImageCollection}" 
                         SelectedIndex="2"
                         NavigationDirection="Horizontal"
                         NavigationStripMode="Dots" 
                         BackgroundColor="#ececec">
-            <syncfusion:SfRotator.ItemTemplate>
+            <rotator:SfRotator.ItemTemplate>
                 <DataTemplate>
                     <Image  Source="{Binding Image}"/>
                 </DataTemplate>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
+            </rotator:SfRotator.ItemTemplate>
+        </rotator:SfRotator>
     </ContentPage.Content>
 </ContentPage>
 	  

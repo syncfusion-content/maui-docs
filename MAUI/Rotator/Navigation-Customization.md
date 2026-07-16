@@ -21,7 +21,7 @@ The [`DotsStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.S
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
             ItemsSource="{Binding ImageCollection}" 
             SelectedIndex="2"
             BackgroundColor="#ececec"
@@ -47,7 +47,7 @@ The [`SelectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rot
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
             ItemsSource="{Binding ImageCollection}" 
             SelectedIndex="2"
             BackgroundColor="#ececec"
@@ -75,7 +75,7 @@ The [`UnselectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.R
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
             ItemsSource="{Binding ImageCollection}" 
             SelectedIndex="2"
             BackgroundColor="#ececec"
@@ -109,7 +109,7 @@ The [`SelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
             ItemsSource="{Binding ImageCollection}" 
             SelectedIndex="2"
             BackgroundColor="#ececec"
@@ -137,7 +137,7 @@ The [`UnSelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
             ItemsSource="{Binding ImageCollection}" 
             SelectedIndex="2"
             BackgroundColor="#ececec"
@@ -178,7 +178,7 @@ The placement position of navigation strip items such as [Thumbnail](https://hel
         <local:RotatorViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <syncfusion:SfRotator x:Name="rotator" 
+        <rotator:SfRotator x:Name="rotator" 
                         NavigationDelay="2000" 
                         ItemsSource="{Binding ImageCollection}" 
                         SelectedIndex="2"
@@ -188,12 +188,12 @@ The placement position of navigation strip items such as [Thumbnail](https://hel
                         NavigationStripPosition="Top"
                         WidthRequest="550"
                         HeightRequest="550">
-            <syncfusion:SfRotator.ItemTemplate>
+            <rotator:SfRotator.ItemTemplate>
                 <DataTemplate>
                     <Image  Source="{Binding Image}"/>
                 </DataTemplate>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
+            </rotator:SfRotator.ItemTemplate>
+        </rotator:SfRotator>
     </ContentPage.Content>
 </ContentPage>	
 
@@ -268,7 +268,7 @@ The [`NavigationButtonIconColor`](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
             ItemsSource="{Binding ImageCollection}" 
             SelectedIndex="2"
             BackgroundColor="#ececec"
@@ -295,7 +295,7 @@ The [`NavigationButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Sync
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
             ItemsSource="{Binding ImageCollection}" 
             SelectedIndex="2"
             BackgroundColor="#ececec"
@@ -324,7 +324,7 @@ We can show or hide  Navigation Button using [`ShowNavigationButton`](https://he
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
             ItemsSource="{Binding ImageCollection}" 
             SelectedIndex="2"
             BackgroundColor="#ececec"

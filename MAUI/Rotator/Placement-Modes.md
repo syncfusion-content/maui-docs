@@ -33,7 +33,7 @@ The Display Type of Rotator can be modified using the `DotsPlacement` Mode. The 
         <local:RotatorViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <syncfusion:SfRotator x:Name="rotator" 
+        <rotator:SfRotator x:Name="rotator" 
                             ItemsSource="{Binding ImageCollection}" 
                             SelectedIndex="2"
                             BackgroundColor="#ececec"
@@ -41,12 +41,12 @@ The Display Type of Rotator can be modified using the `DotsPlacement` Mode. The 
                             DotPlacement="None"
                             WidthRequest="550"
                             HeightRequest="550" >
-            <syncfusion:SfRotator.ItemTemplate>
+            <rotator:SfRotator.ItemTemplate>
                 <DataTemplate>
                     <Image  Source="{Binding Image}"/>
                 </DataTemplate>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
+            </rotator:SfRotator.ItemTemplate>
+        </rotator:SfRotator>
     </ContentPage.Content>
 </ContentPage>
 

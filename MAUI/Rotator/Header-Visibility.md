@@ -27,17 +27,17 @@ N> By default, the property value is false.
     <local:RotatorViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-            <syncfusion:SfRotator x:Name="rotator" 
+            <rotator:SfRotator x:Name="rotator" 
                         BackgroundColor="#ececec"
                         IsTextVisible="True"
                         ItemsSource="{Binding ImageCollection}" 
                         VerticalOptions="Start">
-                <syncfusion:SfRotator.ItemTemplate>
+                <rotator:SfRotator.ItemTemplate>
                     <DataTemplate>
                             <Image Source="{Binding Image}" />
                     </DataTemplate>
-                </syncfusion:SfRotator.ItemTemplate>
-            </syncfusion:SfRotator>
+                </rotator:SfRotator.ItemTemplate>
+            </rotator:SfRotator>
     </ContentPage.Content>
 </ContentPage>
 

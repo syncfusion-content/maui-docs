@@ -9,9 +9,20 @@ documentation: ug
 
 # Events in .NET MAUI Rotator (SfRotator)
 
+This section explains the events supported by the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control and how to handle them in your .NET MAUI application. Before proceeding, ensure you have completed the setup described in [Getting Started with .NET MAUI Rotator](Getting-started.md).
+
+**Requirements:** .NET 9 SDK or later and the [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) NuGet package.
+
 ## Selected Index Changed Event
 
-The SelectedIndexChanged event is used to notify when the selection is changed by swiping or dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndex) property of the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+The [`SelectedIndexChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndexChanged) event is raised when the selection changes by swiping between items or by setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndex) property programmatically. The event provides a [`SelectedIndexChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SelectedIndexChangedEventArgs.html) instance with the following members:
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `Index` | `int` | Gets the currently selected index. |
+| `OldIndex` | `int` | Gets the previously selected index. |
+
+> **NOTE:** The images referenced in the following examples (image1.png through image5.png) should be added to the **Resources/Images** folder of your .NET MAUI project.
 
 {% tabs %}
 
@@ -23,21 +34,21 @@ The SelectedIndexChanged event is used to notify when the selection is changed b
             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
             xmlns:local="clr-namespace:Rotator"
             x:Class="Rotator.Rotator">
-    <rotator:SfRotator.BindingContext>
+    <ContentPage.BindingContext>
         <local:RotatorViewModel/>
-    </rotator:SfRotator.BindingContext>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
-            <rotator:SfRotator x:Name="rotator" 
+            <syncfusion:SfRotator x:Name="rotator"
                         SelectedIndexChanged="Rotator_SelectedIndexChanged"
-                        ItemsSource="{Binding ImageCollection}" 
+                        ItemsSource="{Binding ImageCollection}"
                         VerticalOptions="Start">
-                <rotator:SfRotator.ItemTemplate>
+                <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
-                            <Image Source="{Binding Image}" />
+                        <Image Source="{Binding Image}" />
                     </DataTemplate>
-                </rotator:SfRotator.ItemTemplate>
-            </rotator:SfRotator>
+                </syncfusion:SfRotator.ItemTemplate>
+            </syncfusion:SfRotator>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
@@ -46,21 +57,22 @@ The SelectedIndexChanged event is used to notify when the selection is changed b
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Core.Rotator;
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Rotator;
 
 namespace Rotator
 {
     public partial class Rotator : ContentPage
     {
+        RotatorViewModel viewModel = new RotatorViewModel();
 
-    RotatorViewModel viewmodel = new RotatorViewModel();
-        public MainPage()
+        public Rotator()
         {
             InitializeComponent();
             StackLayout layout = new StackLayout();
             SfRotator rotator = new SfRotator();
             rotator.SelectedIndexChanged += Rotator_SelectedIndexChanged;
-            rotator.ItemsSource = viewmodel.ImageCollection;
+            rotator.ItemsSource = viewModel.ImageCollection;
             var itemTemplate = new DataTemplate(() =>
             {
                 var grid = new Grid();
@@ -72,8 +84,7 @@ namespace Rotator
             rotator.ItemTemplate = itemTemplate;
             layout.Children.Add(rotator);
             this.Content = layout;
-            this.BindingContext = viewmodel;
-
+            this.BindingContext = viewModel;
         }
 
         private void Rotator_SelectedIndexChanged(object sender, SelectedIndexChangedEventArgs e)
@@ -88,19 +99,14 @@ namespace Rotator
         {
             Image = imageString;
         }
-        private String _image;
-        public String Image
+        private string _image;
+        public string Image
         {
             get { return _image; }
             set { _image = value; }
         }
     }
-}
 
-RotatorViewModel Class:
-
-namespace Rotator
-{
     public class RotatorViewModel
     {
         public RotatorViewModel()
@@ -129,7 +135,7 @@ namespace Rotator
 
 ## Item Tapped Event
 
-The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTapped) event will be triggered whenever tapping the item.
+The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTapped) event is raised when an item in the SfRotator is tapped. The event provides a standard `EventArgs` instance, since the tapped item's data can be retrieved through the `SfRotator.ItemsSource` collection using the currently selected index.
 
 {% tabs %}
 
@@ -141,21 +147,21 @@ The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.S
             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
             xmlns:local="clr-namespace:Rotator"
             x:Class="Rotator.Rotator">
-    <rotator:SfRotator.BindingContext>
+    <ContentPage.BindingContext>
         <local:RotatorViewModel/>
-    </rotator:SfRotator.BindingContext>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
-            <rotator:SfRotator x:Name="rotator" 
+            <syncfusion:SfRotator x:Name="rotator"
                             ItemTapped="Rotator_ItemTapped"
-                        ItemsSource="{Binding ImageCollection}" 
+                        ItemsSource="{Binding ImageCollection}"
                         VerticalOptions="Start">
-                <rotator:SfRotator.ItemTemplate>
+                <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
-                            <Image Source="{Binding Image}" />
+                        <Image Source="{Binding Image}" />
                     </DataTemplate>
-                </rotator:SfRotator.ItemTemplate>
-            </rotator:SfRotator>
+                </syncfusion:SfRotator.ItemTemplate>
+            </syncfusion:SfRotator>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
@@ -164,21 +170,22 @@ The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.S
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Core.Rotator;
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Rotator;
 
 namespace Rotator
 {
     public partial class Rotator : ContentPage
     {
+        RotatorViewModel viewModel = new RotatorViewModel();
 
-    RotatorViewModel viewmodel = new RotatorViewModel();
-        public MainPage()
+        public Rotator()
         {
             InitializeComponent();
             StackLayout layout = new StackLayout();
             SfRotator rotator = new SfRotator();
             rotator.ItemTapped += Rotator_ItemTapped;
-            rotator.ItemsSource = viewmodel.ImageCollection;
+            rotator.ItemsSource = viewModel.ImageCollection;
             var itemTemplate = new DataTemplate(() =>
             {
                 var grid = new Grid();
@@ -190,8 +197,7 @@ namespace Rotator
             rotator.ItemTemplate = itemTemplate;
             layout.Children.Add(rotator);
             this.Content = layout;
-            this.BindingContext = viewmodel;
-
+            this.BindingContext = viewModel;
         }
 
         private void Rotator_ItemTapped(object sender, EventArgs e)
@@ -206,19 +212,14 @@ namespace Rotator
         {
             Image = imageString;
         }
-        private String _image;
-        public String Image
+        private string _image;
+        public string Image
         {
             get { return _image; }
             set { _image = value; }
         }
     }
-}
 
-RotatorViewModel Class:
-
-namespace Rotator
-{
     public class RotatorViewModel
     {
         public RotatorViewModel()
@@ -244,6 +245,13 @@ namespace Rotator
 {% endtabs %}
 
 ![Rotator_ItemTapped](images/ItemTapped.png)
+
+## See also
+
+- [Getting Started with .NET MAUI Rotator](Getting-started.md)
+- [Populating Data in .NET MAUI Rotator](Populating-Data.md)
+- [SelectedIndexChangedEventArgs API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SelectedIndexChangedEventArgs.html)
+- [SfRotator API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html)
 
 
 

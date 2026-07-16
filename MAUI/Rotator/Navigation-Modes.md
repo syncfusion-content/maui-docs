@@ -31,19 +31,19 @@ The slider items will also be loaded in the thumbnail view. When a thumbnail ite
         <local:RotatorViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <syncfusion:SfRotator x:Name="rotator" 
+        <rotator:SfRotator x:Name="rotator" 
                         NavigationDelay="2000" 
                         ItemsSource="{Binding ImageCollection}" 
                         SelectedIndex="2"
                         NavigationDirection="Horizontal"
                         NavigationStripMode="Thumbnail" 
                         BackgroundColor="#ececec">
-            <syncfusion:SfRotator.ItemTemplate>
+            <rotator:SfRotator.ItemTemplate>
                 <DataTemplate>
                     <Image  Source="{Binding Image}"/>
                 </DataTemplate>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
+            </rotator:SfRotator.ItemTemplate>
+        </rotator:SfRotator>
     </ContentPage.Content>
 </ContentPage>
 	
@@ -121,19 +121,19 @@ namespace Rotator
         <local:RotatorViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <syncfusion:SfRotator x:Name="rotator" 
+        <rotator:SfRotator x:Name="rotator" 
                         NavigationDelay="2000" 
                         ItemsSource="{Binding ImageCollection}" 
                         SelectedIndex="2"
                         NavigationDirection="Horizontal"
                         NavigationStripMode="Dots" 
                         BackgroundColor="#ececec">
-            <syncfusion:SfRotator.ItemTemplate>
+            <rotator:SfRotator.ItemTemplate>
                 <DataTemplate>
                     <Image  Source="{Binding Image}"/>
                 </DataTemplate>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
+            </rotator:SfRotator.ItemTemplate>
+        </rotator:SfRotator>
     </ContentPage.Content>
 </ContentPage>
 
@@ -218,7 +218,7 @@ There are four available positions,
         <local:RotatorViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <syncfusion:SfRotator x:Name="rotator" 
+        <rotator:SfRotator x:Name="rotator" 
                         NavigationDelay="2000" 
                         ItemsSource="{Binding ImageCollection}" 
                         SelectedIndex="2"
@@ -226,12 +226,12 @@ There are four available positions,
                         NavigationStripMode="Dots" 
                         BackgroundColor="#ececec"
                         NavigationStripPosition="Bottom">
-            <syncfusion:SfRotator.ItemTemplate>
+            <rotator:SfRotator.ItemTemplate>
                 <DataTemplate>
                     <Image  Source="{Binding Image}"/>
                 </DataTemplate>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
+            </rotator:SfRotator.ItemTemplate>
+        </rotator:SfRotator>
     </ContentPage.Content>
 </ContentPage>	
 
