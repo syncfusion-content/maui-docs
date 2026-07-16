@@ -18,16 +18,26 @@ The SfPicker enables or disables the column header section via the [Height](http
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="picker">
-        <sfPicker:SfPicker.ColumnHeaderView>
-            <sfPicker:PickerColumnHeaderView Height="40"/>
-        </sfPicker:SfPicker.ColumnHeaderView>
-    </sfPicker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.ColumnHeaderView>
+            <picker:PickerColumnHeaderView Height="40"/>
+        </picker:SfPicker.ColumnHeaderView>
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.picker.ColumnHeaderView.Height= 40;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+picker.ColumnHeaderView.Height = 40;
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,16 +55,26 @@ The column header [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="picker">
-        <sfPicker:SfPicker.ColumnHeaderView>
-            <sfPicker:PickerColumnHeaderView Background="#E5E4E2"/>
-        </sfPicker:SfPicker.ColumnHeaderView>
-    </sfPicker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.ColumnHeaderView>
+            <picker:PickerColumnHeaderView Background="#E5E4E2"/>
+        </picker:SfPicker.ColumnHeaderView>
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.picker.ColumnHeaderView.Background = Color.FromArgb("#E5E4E2"),
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+picker.ColumnHeaderView.Background = Color.FromArgb("#E5E4E2");
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -68,27 +88,37 @@ Customize the column header [TextStyle](https://help.syncfusion.com/cr/maui/Sync
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="picker">
-      <sfPicker:SfPicker.ColumnHeaderView>
-          <sfPicker:PickerColumnHeaderView>
-              <sfPicker:PickerColumnHeaderView.TextStyle>
-                  <sfPicker:PickerTextStyle TextColor="Gray" 
-                  FontSize="18" 
-                  FontAttributes="Italic"/>
-              </sfPicker:PickerColumnHeaderView.TextStyle>
-          </sfPicker:PickerColumnHeaderView>
-      </sfPicker:SfPicker.ColumnHeaderView>
-    </sfPicker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.ColumnHeaderView>
+            <picker:PickerColumnHeaderView>
+                <picker:PickerColumnHeaderView.TextStyle>
+                    <picker:PickerTextStyle TextColor="Gray"
+                                            FontSize="18"
+                                            FontAttributes="Italic"/>
+                </picker:PickerColumnHeaderView.TextStyle>
+            </picker:PickerColumnHeaderView>
+        </picker:SfPicker.ColumnHeaderView>
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.picker.ColumnHeaderView.TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.Gray,
-        FontSize = 18,
-        FontAttributes = FontAttributes.Italic
-    };
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+picker.ColumnHeaderView.TextStyle = new PickerTextStyle()
+{
+    TextColor = Colors.Gray,
+    FontSize = 18,
+    FontAttributes = FontAttributes.Italic
+};
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -102,16 +132,26 @@ The column header separator line is customized by setting the `SfPicker.ColumnHe
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="picker">
-        <sfPicker:SfPicker.ColumnHeaderView>
-            <sfPicker:PickerColumnHeaderView DividerColor="Red"/>
-        </sfPicker:SfPicker.ColumnHeaderView>
-    </sfPicker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.ColumnHeaderView>
+            <picker:PickerColumnHeaderView DividerColor="Red"/>
+        </picker:SfPicker.ColumnHeaderView>
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.picker.ColumnHeaderView.DividerColor = Colors.Red;
+using Syncfusion.Maui.Picker;
+. . .
+
+SfPicker picker = new SfPicker();
+picker.ColumnHeaderView.DividerColor = Colors.Red;
+
+this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,15 +166,19 @@ You can customize the picker column header appearance by using the [ColumnHeader
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfPicker x:Name="picker" >
-    <picker:SfPicker.ColumnHeaderTemplate>
-    <DataTemplate>
-        <Grid BackgroundColor="#BB9AB1">
-            <Label Text="Colors" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-        </Grid>
-    </DataTemplate>
-</picker:SfPicker.ColumnHeaderTemplate>
-</picker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.ColumnHeaderTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="#BB9AB1">
+                    <Label Text="Colors" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </Grid>
+            </DataTemplate>
+        </picker:SfPicker.ColumnHeaderTemplate>
+    </picker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -152,21 +196,25 @@ You can customize the picker column header appearance by using the [ColumnHeader
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid.Resources>
-    <DataTemplate x:Key="selectedItemTemplate">
-        <Grid Background = "LightBlue" >
-            <Label Text="Colors"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Red"/>
-        </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="nonSelectedItemTemplate">
-        <Grid Background="LightGreen" >
-            <Label Text="Colors"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Orange"/>
-        </Grid>
-    </DataTemplate>
-    <local:PickerTemplateSelector x:Key="columnHeaderTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
-    <picker:SfPicker x:Name="picker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
-    </picker:SfPicker>
-</Grid.Resources>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid.Resources>
+        <DataTemplate x:Key="selectedItemTemplate">
+            <Grid Background="LightBlue">
+                <Label Text="Colors" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Red"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="nonSelectedItemTemplate">
+            <Grid Background="LightGreen">
+                <Label Text="Colors" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Orange"/>
+            </Grid>
+        </DataTemplate>
+        <local:PickerTemplateSelector x:Key="columnHeaderTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}" NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
+        <picker:SfPicker x:Name="picker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
+        </picker:SfPicker>
+    </Grid.Resources>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -180,7 +228,7 @@ public class PickerTemplateSelector : DataTemplateSelector
     public DataTemplate SelectedItemTemplate { get; set; }
     public DataTemplate NonSelectedItemTemplate { get; set; }
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
-    {  
+    {
         var Details = item as PickerColumn;
         if (Details != null)
         {
