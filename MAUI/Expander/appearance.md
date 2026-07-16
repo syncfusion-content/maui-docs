@@ -352,7 +352,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Syncfusion .NET MAUI Expander with HeaderIconPosition Start" src="Images/appearance/maui-expander-with-headericonposition.png" width="404" />
+![Syncfusion .NET MAUI Expander with HeaderIconPosition Start](Images/appearance/maui-expander-with-headericonposition.png)
 
 ## Header background color customization
 
@@ -693,7 +693,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Syncfusion .NET MAUI Expander Header Background color" src="Images/appearance/maui-expander-with-header-background.png" width="404" />
+![Syncfusion .NET MAUI Expander Header Background color](Images/appearance/maui-expander-with-header-background.png)
 
 ## Icon color customization
 
@@ -1036,7 +1036,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Syncfusion .NET MAUI Expander Header Icon Color customization" src="Images/appearance/maui-expander-header-iconcolor.png" width="404" /> 
+![Syncfusion .NET MAUI Expander Header Icon Color customization](Images/appearance/maui-expander-header-iconcolor.png) 
 
 ## Visual State Manager
 
@@ -1219,6 +1219,6 @@ To implement Visual State Manager with SfExpander, add the `VisualStateManager.V
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Syncfusion .NET MAUI Expander Expanded and collapsed visual states" src="Images/appearance/maui-expander-with-vsm.png" width="404" /> 
+![Syncfusion .NET MAUI Expander Expanded and collapsed visual states](Images/appearance/maui-expander-with-vsm.png)
 
-Note: [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-appearance-using-visual-state-manager-in-.net-maui-expander).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-appearance-using-visual-state-manager-in-.net-maui-expander).

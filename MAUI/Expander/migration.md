@@ -28,7 +28,7 @@ This topic documents the API changes currently identified for SfExpander migrati
 
 ## Properties
 
-> **Note:** The `DynamicSizeMode` property available in Xamarin.Forms SfExpander is not supported in .NET MAUI SfExpander. Use the default layout and sizing behavior provided by the MAUI control.
+N> The `DynamicSizeMode` property available in Xamarin.Forms SfExpander is not supported in .NET MAUI SfExpander. Use the default layout and sizing behavior provided by the MAUI control.
 
 > **Important:** Before migrating your code, ensure that the Syncfusion .NET MAUI Expander package is installed and that your application targets a supported .NET MAUI version.
 
@@ -76,31 +76,11 @@ This topic documents the API changes currently identified for SfExpander migrati
 
 </table>
 
-> **Migration Note:** The enum types have been renamed in .NET MAUI. When migrating, verify the enum member names used in your application and update them if required. Refer to the API reference documentation for the complete list of available enum members.
+N>  The enum types have been renamed in .NET MAUI. When migrating, verify the enum member names used in your application and update them if required. Refer to the API reference documentation for the complete list of available enum members.
 
 ## Events and methods
 
 At the time of writing, no additional events or methods renames are documented for SfExpander migration. If your application uses events, commands, behaviors, or custom styling, verify those APIs against the corresponding .NET MAUI documentation during migration.
-
-## Example: property and enum renaming
-
-### Xamarin.Forms
-
-```xml
-<sfexpander:SfExpander
-    HeaderBackgroundColor="Red"
-    IconColor="White"
-    IconPosition="Left" />
-```
-
-### .NET MAUI
-
-```xml
-<sfexpander:SfExpander
-    HeaderBackground="Red"
-    HeaderIconColor="White"
-    HeaderIconPosition="Start" />
-```
 
 ## Summary
 

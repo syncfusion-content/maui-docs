@@ -412,7 +412,7 @@ For more information on customizing the Expander control, refer to the [Expander
 
 The following screenshot illustrates the result of the above code.
 
-<img alt="Syncfusion .NET MAUI Expander Defining the Header and Content" src="Images/maui-expander-getting_started.png" width="404" /> 
+![Syncfusion .NET MAUI Expander Defining the Header and Content](Images/maui-expander-getting_started.png)
 
 N> You can download the Expander Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 

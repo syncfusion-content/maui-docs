@@ -537,7 +537,7 @@ this.Content = root;
 
 The following screenshot illustrates SfExpander within SfGlassEffectView.
 
-<img alt="Syncfusion .NET MAUI Expander with liquid glass support" src="Images/liquid-glass-effect/maui-expander-liquid-glass-effect.png" Width="404" />   
+![Syncfusion .NET MAUI Expander with liquid glass support](Images/liquid-glass-effect/maui-expander-liquid-glass-effect.png) 
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
