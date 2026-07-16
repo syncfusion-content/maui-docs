@@ -117,7 +117,7 @@ The events are fired in sequence when the expander state changes:
 2. If the action is not canceled, the collapse animation runs.
 3. `Collapsed` is triggered after the expander is fully collapsed.
 
-These events can be used together to validate user actions, prevent state changes, log activity, update UI elements, or execute custom business logic during the expand and collapse lifecycle.
+These events can be used together to validate user actions, prevent state changes, log activity, update UI elements, or execute custom business logic during the expand and collapse life cycle.
 
 ### Expanding Event
 
