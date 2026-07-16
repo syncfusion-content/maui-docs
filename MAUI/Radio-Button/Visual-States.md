@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visual States in .NET MAUI Radio Button Control | Syncfusion®
-description: Learn about Visual States support in Syncfusion® .NET MAUI Radio Button (SfRadioButton) control.
+description: Learn how to use visual states to customize the .NET MAUI Radio Button (SfRadioButton) control's appearance per state.
 platform: MAUI
 control: SfRadioButton
 documentation: UG
