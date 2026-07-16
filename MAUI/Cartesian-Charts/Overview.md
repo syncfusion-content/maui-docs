@@ -316,3 +316,5 @@ Read Blogs
 </div>
 
 </div>
+
+N> Looking for the full .NET MAUI Charts component overview, features, and pricing? Visit the [.NET MAUI Chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) page.
