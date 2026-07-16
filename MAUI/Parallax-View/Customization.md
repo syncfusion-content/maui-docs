@@ -28,6 +28,7 @@ The [`Speed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.S
 {% highlight c# %}
 
 using Syncfusion.Maui.ParallaxView;
+using Syncfusion.Maui.ListView;
 
 namespace ParallaxViewGettingStarted
 {
@@ -58,9 +59,9 @@ namespace ParallaxViewGettingStarted
 
 {% endtabs %}
 
-## Orientation 
+## Orientation
 
-The orientation of the content scrolling can be customized to vertical or horizontal using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Orientation) property.
+The Scrolling orientation of the content can be either set to vertical or horizontal using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Orientation) property.
 
 {% tabs %}
 
@@ -83,6 +84,7 @@ The orientation of the content scrolling can be customized to vertical or horizo
 {% highlight c# %}
 
 using Syncfusion.Maui.ParallaxView;
+using Syncfusion.Maui.ListView;
 
 namespace ParallaxViewGettingStarted
 {
@@ -94,7 +96,7 @@ namespace ParallaxViewGettingStarted
             ParallaxViewModel view = new ParallaxViewModel();
             BindingContext = view;
             SfParallaxView parallax = new SfParallaxView();
-            ListView listview = new ListView();
+            SfListView listview = new SfListView();
             Image image = new Image();
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
             image.Source = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);

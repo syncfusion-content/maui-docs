@@ -56,7 +56,7 @@ N> When the `CheckBoxMode` is enabled, the `ItemTapped` and `ItemDoubleTapped` e
 
 ## CheckBox Width
 
-The `CheckBoxWidth` property reserves the width for the built-in checkbox in the tree view items. Its default value is `42`.
+The [CheckBoxWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckBoxWidth) property reserves the width for the built-in checkbox in the tree view items. Its default value is `42`.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -73,7 +73,7 @@ N> The checkbox column is reserved only when the [CheckBoxMode](https://help.syn
 
 ## CheckBox Position
 
-The `CheckBoxPosition` property determines the position of the built-in checkbox in the tree view item. The checkbox can be placed on the start or end side of the content. Its default value is `Start`. The `TreeViewCheckBoxPosition` enumeration defines the available options:
+The [CheckBoxPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckBoxPosition) property determines the position of the built-in checkbox in the tree view item. The checkbox can be placed on the start or end side of the content. Its default value is `Start`. The [TreeViewCheckBoxPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewCheckBoxPosition.html) enumeration defines the available options:
 
 * `Start`: Specifies the checkbox position on the start side of the content.
 * `End`: Specifies the checkbox position on the end side of the content.
@@ -91,7 +91,7 @@ treeView.CheckBoxPosition = TreeViewCheckBoxPosition.End;
 
 ## CheckAction Target
 
-The `CheckActionTarget` property determines whether a node can be checked or unchecked by tapping only the checkbox or by tapping the entire node. Its default value is `CheckBox`. The `TreeViewCheckActionTarget` enumeration defines the available options:
+The [CheckActionTarget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckActionTarget) property determines whether a node can be checked or unchecked by tapping only the checkbox or by tapping the entire node. Its default value is `CheckBox`. The [TreeViewCheckActionTarget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewCheckActionTarget.html) enumeration defines the available options:
 
 * `CheckBox`: Specifies that nodes can only be checked and unchecked by tapping the checkbox.
 * `Node`: Specifies that nodes can be checked and unchecked by tapping either the checkbox or the content view.

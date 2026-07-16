@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Parallax View (SfParallaxView) Overview
 
-The [SfParallaxView](https://www.syncfusion.com/maui-controls/maui-parallax-view) for .NET MAUI provides an optimal way to scroll any control that implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface with a background element that translates more slowly than the foreground element. The SfParallaxView control binds the scroll position of a foreground element (such as a list) to a background element and moves the background element at a varying speed.
+The [SfParallaxView](https://www.syncfusion.com/maui-controls/maui-parallax-view) for .NET MAUI provides an optimal way to scroll any control that implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface with a background element that translates more slowly than the foreground element. The SfParallaxView control binds the scroll position of a foreground element (such as a list) to a background element and moves the background element at a varying speed creating a parallax effect.
 
    ![Syncfusion .NET MAUI Parallax View Overview image](ParallaxView_Images/maui_parallaxview_overview.gif)
 
@@ -81,7 +81,7 @@ The following table summarizes the globalization support available in this contr
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/parallax-view/getting-started) shows a step‑by‑step guide to begin using the Parallax View control.  
-- [Customization](https://help.syncfusion.com/maui/parallax-view/customization) explains how to customize appearance and parallax settings.  
+- [Customization](https://help.syncfusion.com/maui/parallax-view/customization) explains how to configure appearance and parallax settings.  
 - [Scrolling](https://help.syncfusion.com/maui/parallax-view/custom-controls) helps configure scrolling behavior and effects.  
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
