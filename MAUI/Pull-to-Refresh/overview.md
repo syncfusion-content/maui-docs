@@ -5,31 +5,95 @@ description: Learn about the introduction of Syncfusion® .NET MAUI PullToRefres
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
---- 
+---
 
 # Overview of .NET MAUI PullToRefresh (SfPullToRefresh)
 
-Syncfusion® [.NET MAUI PullToRefresh](https://www.syncfusion.com/maui-controls/maui-pull-to-refresh) is a refresh control that allows you to interact and refresh the view loaded in it. The PullToRefresh control allows you to refresh the view upon performing the pull-to-refresh action. A progress indicator will be shown while starting the pulling. The application will be refreshed once you have pulled down a certain distance and released the touch.
+Syncfusion® [.NET MAUI PullToRefresh](https://www.syncfusion.com/maui-controls/maui-pull-to-refresh) is a refresh control that enables users to interact with and refresh content using a pull gesture. The control displays a progress indicator as the user pulls the content. Once the configured pull threshold is reached and the gesture is released, the refresh action is triggered.
 
-![Syncfusion .NET MAUI pull to refresh overview](Images/overview/pulltorefresh_overview.gif)
+The refresh distance required to trigger an update is configurable through the `PullingThreshold` property. This allows you to adjust the pull experience based on your application's needs.
+
+## Common properties and commands
+
+The following properties are commonly used when working with `SfPullToRefresh`:
+
+| Property | Description |
+|-----------|-------------|
+| `IsRefreshing` | Indicates whether a refresh operation is currently running. |
+| `RefreshCommand` | Executes a command when a refresh is triggered. |
+| `RefreshCommandParameter` | Passes data to the refresh command. |
+| `PullingThreshold` | Specifies the distance that must be pulled before refresh is triggered. |
+| `TransitionMode` | Configures the animation behavior used during refresh transitions. |
+| `PullingView` | Displays a custom view while the user is pulling. |
+| `RefreshingView` | Displays a custom view while a refresh operation is running. |
+
+For detailed usage and customization options, see:
+
+- [Customization](https://help.syncpull-to-refresh/customization
+- [MVVM Support](https://help.syncfusion.com/maui/pmvvm
 
 ## Business use cases
 
-- Mobile applications that require refreshing list or grid data using pull gestures.  
-- Social and content apps that update feeds, messages, or notifications dynamically.  
-- Dashboard applications that refresh data points, metrics, or live information on demand.  
-- Business and enterprise apps that allow users to reload data efficiently without navigating away from the screen.  
+- Mobile applications that require refreshing list or grid data using pull gestures.
+- Social and content apps that update feeds, messages, or notifications dynamically.
+- Dashboard applications that update metrics, data points, or live information on demand.
+- Business and enterprise apps that allow users to reload data efficiently without navigating away from the screen.
 
 ## Key features
 
-- **Transition mode** allows configuring animation behavior between the pulling action and refresh indicator.  
-- **Pullable content** allows integrating controls such as ListView, DataGrid, and layouts within the refresh container.  
-- **Appearance customization** allows modifying properties such as stroke color, thickness, background, and size of the refresh indicator.  
-- **View templating** allows displaying custom UI elements during pulling and refreshing actions.  
+### Transition mode
+
+Configure animation behavior between the pull gesture and refresh indicator using the `TransitionMode` property.
+
+For available transition options and examples, refer to the customization documentation:
+
+- https://help.syncfusion.com/maui/pull-to-refresh/customization
+
+### Pullable content
+
+`SfPullToRefresh` acts as a container that wraps the content to be refreshed. The content is placed inside the `PullableContent` property.
+
+Commonly used pullable content includes:
+
+- ListView
+- DataGrid
+- CollectionView
+- Layout containers such as Grid, StackLayout, and VerticalStackLayout
+- Custom views
+
+For supported content types and implementation details, refer to:
+
+- [Getting Started](https://help.syncfusion.com/maui/tting-started
+
+### Appearance customization
+
+Customize the appearance of the refresh indicator through properties such as:
+
+- `ProgressColor`
+- `ProgressThickness`
+- `ProgressBackground`
+- `ProgressCircleSize`
+
+For detailed configuration examples, refer to:
+
+- [Customization](https://help.syncfusion.com/maui/customization
+
+### View templating
+
+Display custom UI elements during pulling and refreshing operations using:
+
+- `PullingView`
+- `RefreshingView`
+
+These template-based properties enable you to replace the default refresh visuals with custom content and branding.
+
+For examples, refer to:
+
+- [ttps://help.syncfusion.com/maui/pull-to-refresh/customization
 
 ## Globalization
 
-The following table summarizes the globalization support available in this control.
+The following table summarizes globalization and accessibility support available in this control.
 
 <style>
 .img{
@@ -72,20 +136,38 @@ The following table summarizes the globalization support available in this contr
 </tr> 
 </table>
 
+### RTL Support
+
+`SfPullToRefresh` provides RTL (Right-to-Left) layout support. RTL support applies to the control's layout and interaction behavior when the application flow direction is configured for right-to-left languages.
+
+### Accessibility testing
+
+Since `SfPullToRefresh` is a gesture-based container, screen reader and keyboard navigation support are generally dependent on the child content hosted within the control.
+
+To validate accessibility behavior:
+
+- Test with platform accessibility tools such as TalkBack (Android), VoiceOver (iOS), and Narrator (Windows).
+- Verify that child controls expose appropriate accessibility properties.
+- Verify focus order and announced content within the hosted controls.
+
+For additional accessibility guidance, see the .NET MAUI accessibility documentation and platform accessibility guidelines.
+
 ## Related controls
 
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying refreshable data in list-based layouts.
-- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for refreshing tabular data with grid-based views.  
-- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for showing loading feedback during refresh operations.  
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview for refreshing tabular data with grid-based views.
+- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview for showing loading feedback during refresh operations.
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/pull-to-refresh/getting-started) shows a step‑by‑step guide to begin using the PullToRefresh control.  
-- [Customization](https://help.syncfusion.com/maui/pull-to-refresh/customization) explains how to customize appearance and interaction behavior.  
-- [MVVM](https://help.syncfusion.com/maui/pull-to-refresh/mvvm) shows how to integrate cleanly with MVVM for data binding and commands.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
+- [Getting Started](https://help.syncfusion.com/maui/pull-to-refresh/getting-started) shows a step-by-step guide to begin using the PullToRefresh control.
+- [MVVM Support](https://help.syncfusion.com/maui/pull-to-refresh/mvvm) explains how to use commands, data binding, and refresh state management.
+- [Customization](https://help.syncfusion.com/maui/pull-to-refresh/customization) explains how to customize appearance, templates, and interaction behavior.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
+
+The following resources provide additional learning materials. Internal documentation links are listed above where available, while the following links point to external Syncfusion resources.
 
 <style>
 
