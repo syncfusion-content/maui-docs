@@ -1042,10 +1042,12 @@ public partial class MainPage : ContentPage
 
 The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) can be customized using the following `VisualStates`:
 
-* Expanded
-* Collapsed
-* PointerOver
-* Normal
+* **Expanded**: Applied when the expander is expanded/open
+* **Collapsed**: Applied when the expander is collapsed/closed
+* **PointerOver**: Applied when the mouse pointer is over the expander header
+* **Normal**: Default state of the expander header
+
+To implement Visual State Manager with SfExpander, add the `VisualStateManager.VisualStateGroups` property to your SfExpander control. Within this property, define a `VisualStateGroup` containing the different states you want to customize. Each `VisualState` can have `Setters` that modify properties like `HeaderBackground` and `HeaderIconColor` based on the current state of the expander.
 
 {% tabs %}
 {% highlight xaml hl_lines="20 49 131 160" %}
@@ -1219,5 +1221,4 @@ The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusio
 
 <img alt="Syncfusion .NET MAUI Expander Expanded and collapsed visual states" src="Images/appearance/maui-expander-with-vsm.png" width="404" /> 
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-appearance-using-visual-state-manager-in-.net-maui-expander).
-
+Note: [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-appearance-using-visual-state-manager-in-.net-maui-expander).
