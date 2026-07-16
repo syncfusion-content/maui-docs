@@ -28,7 +28,7 @@ Syncfusion.Maui.ParallaxView
 </tr>
 </table>
 
-To facilitate easier migration, most of the APIs from the Xamarin [SfParallaxView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ParallaxView.SfParallaxView.html) have been preserved in the .NET MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html). Please refer to the following details and API migration information.
+To facilitate easier migration, most APIs from the Xamarin [SfParallaxView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ParallaxView.SfParallaxView.html) have been preserved in the .NET MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html). Please refer to the following details and API migration information.
 
 ## Initialize control
 

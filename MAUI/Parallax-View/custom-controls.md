@@ -9,7 +9,7 @@ documentation: ug
 
 # Scrolling support for custom controls in .NET MAUI Parallax View
 
-The Parallax View supports custom scrollable controls using the [`IParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface. This interface implements the [`ScrollableContentSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_ScrollableContentSize) property and the [`Scrolling`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_Scrolling) event.
+The Parallax View supports custom scrollable controls using the [`IParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface. This interface Exposes the [`ScrollableContentSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_ScrollableContentSize) property and the [`Scrolling`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_Scrolling) event.
 
 {% highlight c# %}
 
@@ -29,7 +29,7 @@ namespace ParallaxViewCustomControl
 
 ## Scrollable ContentSize
 
-The [`ScrollableContentSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_ScrollableContentSize) represents the total content size of the scrollable custom control.
+The [`ScrollableContentSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_ScrollableContentSize) represents the total scrollable content size of the scrollable custom control.
 
 {% highlight c# %}
 
@@ -60,7 +60,7 @@ The [`ParallaxScrollingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusio
 
 * [`ScrollY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_ScrollY): Denotes the Y position of the finished scroll.
 
-* [`CanAnimate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_CanAnimate): Defines whether to animate the scroll or not.
+* [`CanAnimate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_CanAnimate): Defines whether to animate the scroll or not. The default value is false
 
 {% tabs %}
 
