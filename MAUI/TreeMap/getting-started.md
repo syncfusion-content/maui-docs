@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI TreeMap | Syncfusion<sup>&reg;</sup>
-description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (SfTreeMap) in mobile and desktop applications from a single shared codebase.
+title: Getting Started with .NET MAUI TreeMap | Syncfusion®
+description: Learn about getting started with Syncfusion® .NET MAUI TreeMap (SfTreeMap) in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug

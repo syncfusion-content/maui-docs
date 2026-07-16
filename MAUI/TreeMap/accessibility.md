@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI TreeMap (SfTreeMap) Control | Syncfusion<sup>&reg;</sup>
-description: Learn here about performing actions using accessibility in Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (SfTreeMap) control.
+title: Accessibility in .NET MAUI TreeMap (SfTreeMap) Control | Syncfusion®
+description: Learn here about performing actions using accessibility in Syncfusion® .NET MAUI TreeMap (SfTreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -68,13 +68,3 @@ this.Content = treeMap;
 
 {% endhighlight %}
 {% endtabs %}
-
-## Troubleshooting
-
-If `Tab` or `Shift + Tab` does not move focus between items, verify the following:
-
-- The TreeMap contains at least one item (`DataSource` is populated).
-- The control or one of its items currently has focus. If focus is outside the control, the shortcuts have no effect until focus is set on the control.
-- The application is running on a Windows or macOS target. Keyboard shortcuts are not supported on Android and iOS.
-
-N> Traversal order follows the visual order of items produced by the current layout. For more information about layouts, see [Layouts](layouts.md).
