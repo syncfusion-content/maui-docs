@@ -108,7 +108,7 @@ Add the following namespace to your XAML or C#.
 {% highlight xaml %}
 
 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView
+xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
 
 {% endhighlight %}
 {% highlight c# %}
