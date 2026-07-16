@@ -27,11 +27,6 @@ The following properties are commonly used when working with `SfPullToRefresh`:
 | `PullingView` | Displays a custom view while the user is pulling. |
 | `RefreshingView` | Displays a custom view while a refresh operation is running. |
 
-For detailed usage and customization options, see:
-
-- [Customization](https://help.syncpull-to-refresh/customization
-- [MVVM Support](https://help.syncfusion.com/maui/pmvvm
-
 ## Business use cases
 
 - Mobile applications that require refreshing list or grid data using pull gestures.
@@ -61,10 +56,6 @@ Commonly used pullable content includes:
 - Layout containers such as Grid, StackLayout, and VerticalStackLayout
 - Custom views
 
-For supported content types and implementation details, refer to:
-
-- [Getting Started](https://help.syncfusion.com/maui/tting-started
-
 ### Appearance customization
 
 Customize the appearance of the refresh indicator through properties such as:
@@ -74,10 +65,6 @@ Customize the appearance of the refresh indicator through properties such as:
 - `ProgressBackground`
 - `ProgressCircleSize`
 
-For detailed configuration examples, refer to:
-
-- [Customization](https://help.syncfusion.com/maui/customization
-
 ### View templating
 
 Display custom UI elements during pulling and refreshing operations using:
@@ -86,10 +73,6 @@ Display custom UI elements during pulling and refreshing operations using:
 - `RefreshingView`
 
 These template-based properties enable you to replace the default refresh visuals with custom content and branding.
-
-For examples, refer to:
-
-- [ttps://help.syncfusion.com/maui/pull-to-refresh/customization
 
 ## Globalization
 
@@ -155,8 +138,8 @@ For additional accessibility guidance, see the .NET MAUI accessibility documenta
 ## Related controls
 
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying refreshable data in list-based layouts.
-- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview for refreshing tabular data with grid-based views.
-- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview for showing loading feedback during refresh operations.
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for refreshing tabular data with grid-based views.
+- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for showing loading feedback during refresh operations.
 
 ## See Also
 

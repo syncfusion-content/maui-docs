@@ -46,7 +46,7 @@ private void OnPullToRefreshPulling(object sender, PullingEventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The `Progress` value is 0 when the pull starts and approaches 1 as the pull distance increases toward the refresh threshold.
+N>  The `Progress` value is 0 when the pull starts and approaches 1 as the pull distance increases toward the refresh threshold.
 
 ## Refreshing
 

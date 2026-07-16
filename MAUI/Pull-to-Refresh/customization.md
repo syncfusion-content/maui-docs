@@ -269,7 +269,7 @@ pullToRefresh.EndRefreshing();
 The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI DataGrid inside the `PullToRefresh`, follow these steps.
 <ol>
     <li> Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/datagrid/getting-started">DataGrid</a> and PullToRefresh.</li>
-    <li> Define the `OrdersInfo` collection in a ViewModel and implement a `RefreshItemsource(int count)` method that updates it. See the <a href="https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh">View sample in GitHub</a> for a complete example.</li>
+    <li> Define the `OrdersInfo` collection in a ViewModel and implement a `Refresh Item source(int count)` method that updates it. See the <a href="https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh">View sample in GitHub</a> for a complete example.</li>
     <li> Import PullToRefresh and DataGrid control namespace as follows.</li>
     <br/>
 {% tabs %}
