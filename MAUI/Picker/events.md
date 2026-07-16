@@ -50,24 +50,32 @@ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="picker" 
-                            Opened="picker_Opened" 
-                            Closed="picker_Closed"
-                            Closing="picker_Closing"
-                            SelectionChanged="picker_SelectionChanged"
-                            OkButtonClicked="picker_OkButtonClicked"
-                            CancelButtonClicked="picker_CancelButtonClicked">
-    </sfPicker:SfPicker>
-    
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfPicker x:Name="picker"
+                     Opened="picker_Opened"
+                     Closed="picker_Closed"
+                     Closing="picker_Closing"
+                     SelectionChanged="picker_SelectionChanged"
+                     OkButtonClicked="picker_OkButtonClicked"
+                     CancelButtonClicked="picker_CancelButtonClicked">
+    </picker:SfPicker>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.picker.Opened += Picker_Opened;
-    this.picker.Closing += Picker_Closing;
-    this.picker.Closed += Picker_Closed;
-    this.picker.SelectionChanged += Picker_SelectionChanged;
-    this.picker.OkButtonClicked += Picker_OkButtonClicked;
-    this.picker.CancelButtonClicked += Picker_CancelButtonClicked;
+using Syncfusion.Maui.Picker;
+. . .
+        SfPicker picker = new SfPicker();
+        picker.Opened += Picker_Opened;
+        picker.Closing += Picker_Closing;
+        picker.Closed += Picker_Closed;
+        picker.SelectionChanged += Picker_SelectionChanged;
+        picker.OkButtonClicked += Picker_OkButtonClicked;
+        picker.CancelButtonClicked += Picker_CancelButtonClicked;
+        this.Content = picker;
 
     private void Picker_Opened(object sender, EventArgs e)
     {
@@ -98,7 +106,7 @@ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
     {
         // Handle the Cancel button click.
     }
-    
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,15 +119,21 @@ The SfPicker includes a built-in event called `SelectionChanged` that is trigger
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfPicker x:Name="picker"
-                    SelectionChangedCommand="{Binding SelectionChangedCommand}">
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>					  
-</picker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfPicker x:Name="picker"
+                     SelectionChangedCommand="{Binding SelectionChangedCommand}"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 public class ViewModel
 {
@@ -144,15 +158,21 @@ The SfPicker includes a built-in event called `OkButtonClicked`, which is trigge
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfPicker x:Name="picker"
-                    AcceptCommand="{Binding AcceptCommand}">
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>					  
-</picker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfPicker x:Name="picker"
+                     AcceptCommand="{Binding AcceptCommand}"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 public class ViewModel
 {
@@ -177,15 +197,21 @@ The SfPicker includes a built-in event called `CancelButtonClicked`, which is tr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfPicker x:Name="picker"
-                    DeclineCommand="{Binding DeclineCommand}">
-<ContentPage.BindingContext>
-    <local:ViewModel/>
-</ContentPage.BindingContext>					  
-</picker:SfPicker>
+<ContentPage
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <picker:SfPicker x:Name="picker"
+                     DeclineCommand="{Binding DeclineCommand}"/>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 public class ViewModel
 {
