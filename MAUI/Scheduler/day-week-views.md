@@ -502,7 +502,7 @@ The specialTimeRegion background and text style can be customized by using the [
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 17 18 19 20 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 17 18 19 20 29" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -838,7 +838,7 @@ public partial class MainPage : ContentPage
 ![customize-current-time-indicator-appearance-in-timeslots-views-in-maui-scheduler](images/day-week-views/customize-current-time-indicator-appearance-in-timeslots-views-in-maui-scheduler.png)
 
 N>
-The current time indicator color is applied only when the`ShowCurrentTimeIndicator` property is enabled.
+The current time indicator color is applied only when the `ShowCurrentTimeIndicator` property is enabled.
 
 ## Change time ruler width
 
@@ -1263,7 +1263,7 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 ![customize-view-header-appearance-using-template-in-timeslot-view-in-maui-scheduler](images/day-week-views/customize-view-header-appearance-using-template-in-timeslot-view-in-maui-scheduler.png)
 
 N>
-* The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
+* The BindingContext of the `ViewHeaderTemplate` is the `DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
 
 #### Customize view header appearance using DataTemplateSelector
 
@@ -1335,7 +1335,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 N>
-* The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
+* The BindingContext of the `ViewHeaderTemplate` is the `DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 

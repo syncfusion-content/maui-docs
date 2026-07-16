@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Picker control | Syncfusion
+title: About .NET MAUI Picker control | Syncfusion®
 description: Learn about the overview of Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control, its basic features, and picker functionalities.
 platform: maui
 control: SfPicker
@@ -83,7 +83,7 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date values using a specialized picker interface.  
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting date values through a specialized interface.
 - [Date Time Picker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting combined date and time values.
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for searchable dropdown-based selection with text input.  
 

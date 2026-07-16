@@ -1346,7 +1346,7 @@ Map those properties of the `Meeting` class to schedule appointments by using th
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPAge.xaml.cs" hl_lines="10 16" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 16" %}
 
 using Syncfusion.Maui.Scheduler;
 

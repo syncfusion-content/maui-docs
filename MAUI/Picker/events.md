@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events with .NET MAUI Picker Control | Syncfusion
+title: Events with .NET MAUI Picker Control | Syncfusion®
 description: Learn here all about events with Syncfusion Essential .NET MAUI Picker (SfPicker) control, it's elements and more details.
 platform: maui
 control: SfPicker
@@ -9,10 +9,10 @@ documentation: ug
 
 # Events in .NET MAUI Picker (SfPicker)
 
-Three events have been used for a [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) when it is in the Dialog mode. They are, 
+Six events are available for a [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) when it is in Dialog mode:
 
- * Opened 
- * Closing 
+ * Opened
+ * Closing
  * Closed
  * SelectionChanged
  * OkButtonClicked
@@ -22,29 +22,30 @@ Three events have been used for a [.NET MAUI Picker](https://www.syncfusion.com/
 
 The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened) event occurs when the picker pop-up is opened.
 
-## Closing event
+## Closing
 
-The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing) event is raised when the picker pop-up is closing. Prevent the picker pop-up from closing by setting "e.cancel" to true.
+The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing) event is raised when the picker pop-up is closing. Prevent the picker pop-up from closing by setting `e.Cancel` to true.
 
-## Closed event
+## Closed
 
 The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closed) event is raised after the picker pop-up is closed.
 
-## SelectionChanged Event
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_SelectionChanged) is raised after the selected index changed on the `SfPicker`.
+## SelectionChanged
+
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_SelectionChanged) event is raised after the selected index changes on the `SfPicker`.
 
 N>
 * In `SfPicker`, the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) and [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedItem) properties are updated only when the OK button in the footer view is tapped. This behavior applies when the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) is set to `Dialog` or `RelativeDialog`, the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) of the PickerFooterView is greater than zero, and [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) is enabled. This applies only when there is a single picker column.
 * When [IsSelectionImmediate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsSelectionImmediate) is set to `true`, the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) and [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedItem) are updated immediately upon selection.
 * When [IsSelectionImmediate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsSelectionImmediate) is set to `false` by `default`, the selection is confirmed only when the OK button in the footer view is tapped.
 
-## OkButtonClicked Event
+## OkButtonClicked
 
-The [OkButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked) event is raised after the `ok` button clicked on the `SfPicker`. This event is not applicable while the footer view and `ok` button are not visible.
+The [OkButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked) event is raised after the `OK` button is clicked on the `SfPicker`. This event is not applicable while the footer view and `OK` button are not visible.
 
-## CancelButtonClicked Event
+## CancelButtonClicked
 
-The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked) is raised after the `Cancel` button clicked on the `SfPicker`. This event is not applicable while the footer view is not visible.
+The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked) is raised after the Cancel button is clicked on the `SfPicker`. This event is not applicable while the footer view is not visible.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -73,9 +74,9 @@ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
         // Handle the open action.
     }
 
-    private void Picker_Closing(object sender, Syncfusion.XForms.Core.CancelEventArgs e)
+    private void Picker_Closing(object sender, System.ComponentModel.CancelEventArgs e)
     {
-        // Stop the close action by setting the `e.cancel` to true.
+        // Stop the close action by setting `e.Cancel` to true.
     }
 
     private void Picker_Closed(object sender, EventArgs e)
@@ -90,12 +91,12 @@ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
 
     private void Picker_OkButtonClicked(object sender, EventArgs e)
     {
-        // Hit after the OK button is clicked.
+        // Handle the OK button click.
     }
 
     private void Picker_CancelButtonClicked(object sender, EventArgs e)
     {
-        // Hit after the Cancel button is clicked.
+        // Handle the Cancel button click.
     }
     
 {% endhighlight %}
