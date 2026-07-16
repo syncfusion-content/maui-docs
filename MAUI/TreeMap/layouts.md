@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layout types in .NET MAUI TreeMap Control | Syncfusion
-description: Learn here all about adding different layouts of the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (STreeMap) control and more.
+title: Layout Types in .NET MAUI TreeMap (SfTreeMap) Control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about adding different layouts of the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (SfTreeMap) control and more.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -11,35 +11,42 @@ documentation: ug
 
 The TreeMap control provides multiple layout types for organizing hierarchical data effectively. You can utilize the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LayoutType) property within the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) to switch between four distinct layouts: [Squarified](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_Squarified), [SliceAndDiceAuto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceAuto), [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceHorizontal), and [SliceAndDiceVertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceVertical).
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/tree-map/getting-started)** guide.
+
 ## Squarified
 
-The [Squarified](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_Squarified) layout visualizes data in square-like rectangles with an optimal aspect ratio. It divides rectangles considering both the height and width of the parent view. This layout, which is the default rendering type for TreeMap, determines the size of each rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value and the available size.
+The [Squarified](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_Squarified) layout visualizes data in square-like rectangles with an optimal aspect ratio. It divides rectangles considering both the height and width of the parent view. This layout is the default rendering type for TreeMap. The size of each rectangle is calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value and the available size.
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight xaml hl_lines="3" %}
 
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   LayoutType="Squarified"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
-    <treemap:SfTreeMap.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+             xmlns:local="clr-namespace:TreeMapSample">
+    <ContentPage.BindingContext>
         <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
+    </ContentPage.BindingContext>
+    <treemap:SfTreeMap x:Name="treeMap"
+                       DataSource="{Binding PopulationDetails}"
+                       LayoutType="Squarified"
+                       PrimaryValuePath="Population">
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+            </treemap:TreeMapLeafItemSettings>
+        </treemap:SfTreeMap.LeafItemSettings>
+        <treemap:SfTreeMap.LeafItemBrushSettings>
+            <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:SfTreeMap>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight c# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.BindingContext = viewModel;
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LayoutType = LayoutType.Squarified;
 treeMap.PrimaryValuePath = "Population";
@@ -97,36 +104,42 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![squarified-layout-type-in-maui-treemap](images/layouts/squarified-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
+![.NET MAUI TreeMap squarified layout](images/layouts/squarified-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
 
-## Slice and dice auto
+## Slice and Dice Auto
 
-The  [SliceAndDiceAuto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceAuto) layout visualizes data using long, thin rectangles arranged vertically or horizontally with a high aspect ratio, thereby offering a comprehensive view of the data. This layout will start to arrange each rectangle in a horizontal or vertical direction, and the size of the rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value.
+The [SliceAndDiceAuto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceAuto) layout visualizes data using long, thin rectangles arranged vertically or horizontally with a high aspect ratio, thereby offering a comprehensive view of the data. This layout will start to arrange each rectangle in a horizontal or vertical direction, and the size of the rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value.
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight xaml hl_lines="3" %}
 
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   LayoutType="SliceAndDiceAuto"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+             xmlns:local="clr-namespace:TreeMapSample">
+    <ContentPage.BindingContext>
         <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
+    </ContentPage.BindingContext>
+    <treemap:SfTreeMap x:Name="treeMap"
+                       DataSource="{Binding PopulationDetails}"
+                       LayoutType="SliceAndDiceAuto"
+                       PrimaryValuePath="Population">
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+            </treemap:TreeMapLeafItemSettings>
+        </treemap:SfTreeMap.LeafItemSettings>
+        <treemap:SfTreeMap.LeafItemBrushSettings>
+            <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:SfTreeMap>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight c# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.BindingContext = viewModel;
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceAuto;
 treeMap.PrimaryValuePath = "Population";
@@ -135,7 +148,7 @@ treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new 
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -145,7 +158,7 @@ public class PopulationDetails
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -184,36 +197,42 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![slice-and-dice-auto-layout-type-in-maui-treemap](images/layouts/slice-and-dice-auto-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
+![.NET MAUI TreeMap slice and dice auto layout](images/layouts/slice-and-dice-auto-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
 
-## Slice and dice horizontal
+## Slice and Dice Horizontal
 
 The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceHorizontal) layout arranges data into horizontal rectangles with a high aspect ratio and displays them sorted horizontally. This layout will start to arrange each rectangle in a horizontal direction, and the size of the rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value.
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight xaml hl_lines="3" %}
 
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   LayoutType="SliceAndDiceHorizontal"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+             xmlns:local="clr-namespace:TreeMapSample">
+    <ContentPage.BindingContext>
         <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
+    </ContentPage.BindingContext>
+    <treemap:SfTreeMap x:Name="treeMap"
+                       DataSource="{Binding PopulationDetails}"
+                       LayoutType="SliceAndDiceHorizontal"
+                       PrimaryValuePath="Population">
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+            </treemap:TreeMapLeafItemSettings>
+        </treemap:SfTreeMap.LeafItemSettings>
+        <treemap:SfTreeMap.LeafItemBrushSettings>
+            <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:SfTreeMap>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight c# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.BindingContext = viewModel;
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceHorizontal;
 treeMap.PrimaryValuePath = "Population";
@@ -271,37 +290,42 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![slice-and-dice-horizontal-layout-type-in-maui-treemap](images/layouts/slice-and-dice-horizontal-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
+![.NET MAUI TreeMap slice and dice horizontal layout](images/layouts/slice-and-dice-horizontal-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
 
-## Slice and dice vertical
+## Slice and Dice Vertical
 
 The [SliceAndDiceVertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceVertical) layout organizes data into vertical rectangles with a high aspect ratio and displays them sorted vertically. This layout will start to arrange each rectangle in a vertical direction, and the size of the rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value.
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight xaml hl_lines="3" %}
 
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   LayoutType="SliceAndDiceVertical"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
-    <treemap:SfTreeMap.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+             xmlns:local="clr-namespace:TreeMapSample">
+    <ContentPage.BindingContext>
         <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
+    </ContentPage.BindingContext>
+    <treemap:SfTreeMap x:Name="treeMap"
+                       DataSource="{Binding PopulationDetails}"
+                       LayoutType="SliceAndDiceVertical"
+                       PrimaryValuePath="Population">
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+            </treemap:TreeMapLeafItemSettings>
+        </treemap:SfTreeMap.LeafItemSettings>
+        <treemap:SfTreeMap.LeafItemBrushSettings>
+            <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:SfTreeMap>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight c# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.BindingContext = viewModel;
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceVertical;
 treeMap.PrimaryValuePath = "Population";
@@ -359,4 +383,4 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![slice-and-dice-vertical-layout-type-in-maui-treemap](images/layouts/slice-and-dice-vertical-layout-type-in-maui-treemap.jpeg){:width="313" height="444"}
+![.NET MAUI TreeMap slice and dice vertical layout](images/layouts/slice-and-dice-vertical-layout-type-in-maui-treemap.jpeg){:width="313" height="444"}

@@ -1,28 +1,32 @@
 ---
 layout: post
-title: Events in .NET MAUI TreeMap (SfTreemap) Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about the Events support in the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (SfTreemap) control and more.
+title: Events in .NET MAUI TreeMap (SfTreeMap) Control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the Events support in the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (SfTreeMap) control and more.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
 
-# Events in the .NET MAUI TreeMap (SfTreeMap)
+# Events in .NET MAUI TreeMap (SfTreeMap)
 
-## Notifying TreeMap selection changes
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/tree-map/getting-started)** guide.
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionChanged) event occurs when there is a change in the selection within a tree map item.
+## SelectionChanged event
 
-We can get the below details from the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionChanged) event.
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionChanged) event occurs when a TreeMap item is selected or deselected.
 
- * [OldItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_OldItems): Returns the previously selected items.
- * [NewItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_NewItems): Returns the newly selected items.
- * [Category](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_Category): Returns the hierarchical path of the selected item within its groups.
- * [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_IsSelected): Returns the items are selected or deselected.
- * [GroupLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_GroupLevel): Returns the level of grouping for the selected items.
+The following details can be obtained from the [TreeMapSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html):
+
+* [OldItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_OldItems): Gets the previously selected items.
+* [NewItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_NewItems): Gets the newly selected items.
+* [Category](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_Category): Gets the hierarchical path of the selected item within its groups.
+* [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_IsSelected): Gets whether the item was selected or deselected.
+* [GroupLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_GroupLevel): Gets the zero-based level of grouping for the selected item.
+
+N> The `SelectionChanged` event does not fire when [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None). For more information about selection, refer to the [Selection and highlights](selection-and-highlights.md) documentation.
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight xaml hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -38,26 +42,30 @@ We can get the below details from the [SelectionChanged](https://help.syncfusion
     <treemap:SfTreeMap.LeafItemBrushSettings>
         <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
+    <!-- code omitted for brevity -->
 </treemap:SfTreeMap>
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="1" %}
+{% highlight c# hl_lines="2 4" %}
 
 this.treeMap.SelectionChanged += this.OnTreeMapSelectionChanged;
-
- private void OnTreeMapSelectionChanged(object sender, TreeMapSelectionChangedEventArgs e)
- {
-     var oldItems = e.OldItems;
-     var newItems = e.NewItems;
-     string groupName = e.Category;
-     int groupLevel = e.GroupLevel;
-     bool isSelected = e.IsSelected;
- }
+//code omitted for brevity
+private void OnTreeMapSelectionChanged(object sender, TreeMapSelectionChangedEventArgs e)
+{
+    var oldItems = e.OldItems;
+    var newItems = e.NewItems;
+    string groupName = e.Category;
+    int groupLevel = e.GroupLevel;
+    bool isSelected = e.IsSelected;
+}
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -68,6 +76,9 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -104,3 +115,13 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![SelectionChanged event in .NET MAUI TreeMap](images/selection/single-selection-in-maui-tree-map.png)
+
+## Troubleshooting
+
+If the `SelectionChanged` event does not fire, verify the following:
+
+- [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is not set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None); see [Selection and highlights](selection-and-highlights.md) for details.
+- The event handler is subscribed before the user interacts with the TreeMap.
+- The `DataSource` is populated and the TreeMap is rendered on screen.
