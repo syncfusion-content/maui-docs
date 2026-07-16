@@ -29,19 +29,19 @@ The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ht
     </tr>
     <tr>
       <td>{{'[ItemBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderColorProperty)'| markdownify }}</td>
-      <td>Sets the color of the item border. <em>(Default: <code>Colors.Black</code>)</em></td>
+      <td>Sets the color of the item border.
     </tr>
     <tr>
       <td>{{'[ItemBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThicknessProperty)'| markdownify }}</td>
-      <td>Defines the border thickness for each side of the item (per-side <code>double</code> values). <em>(Default: <code>new Thickness(1)</code>)</em></td>
+      <td>Defines the border thickness for each side of the item (per-side <code>double</code> values).
     </tr>
     <tr>
       <td>{{'[ItemBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderMarginProperty)'| markdownify }}</td>
-      <td>Sets the margin around the border within the item. <em>(Default: <code>new Thickness(0)</code>)</em></td>
+      <td>Sets the margin around the border within the item.
     </tr>
     <tr>
       <td>{{'[ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty)'| markdownify}}</td>
-      <td>Sets the corner radius of the item border. <em>(Default: <code>new CornerRadius(0)</code>)</em></td>
+      <td>Sets the corner radius of the item border.
     </tr>
   </tbody>
 </table>
