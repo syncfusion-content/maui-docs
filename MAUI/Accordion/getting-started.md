@@ -284,7 +284,7 @@ mainPage.Content = accordion;
 
 The following screenshot illustrates the result of the above code.
 
-<img alt="Syncfusion Maui Accordion defining the items" src="Images/getting-started/maui-accordion-with-defining-accordion-items.png"/> 
+![Syncfusion Maui Accordion defining the items](Images/getting-started/maui-accordion-with-defining-accordion-items.png)
 
 You can download the Accordion Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 

@@ -26,22 +26,6 @@ To make migration easier from Xamarin.Forms SfAccordion to .NET MAUI SfAccordion
 
 N> `DynamicSizeMode` property from the Xamarin SfAccordion is not moved to the MAUI SfAccordion.
 
-The following code samples show how to migrate property usage from Xamarin to MAUI:
-
-**Xamarin SfAccordion:**
-```xml
-<syncfusion:SfAccordion>
-    <syncfusion:AccordionItem HeaderBackgroundColor="Blue" IconColor="White" />
-</syncfusion:SfAccordion>
-```
-
-**MAUI SfAccordion:**
-```xml
-<syncfusion:SfAccordion>
-    <syncfusion:AccordionItem HeaderBackground="Blue" HeaderIconColor="White" />
-</syncfusion:SfAccordion>
-```
-
 <table> 
 <tr>
 <th>Xamarin SfAccordion</th>
@@ -50,33 +34,19 @@ The following code samples show how to migrate property usage from Xamarin to MA
 </tr>
 
 <tr>
-<td>[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AccordionItem.html#Syncfusion_XForms_Accordion_AccordionItem_HeaderBackgroundColor)</td>
-<td>[HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderBackground)</td>
+<td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AccordionItem.html#Syncfusion_XForms_Accordion_AccordionItem_HeaderBackgroundColor)'| markdownify }}</td>
+<td>{{'[HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderBackground)'| markdownify }}</td>
 <td>Gets or sets the background color of the header in the Accordion control.</td>
 </tr>
 
 <tr>
-<td>[IconColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AccordionItem.html#Syncfusion_XForms_Accordion_AccordionItem_IconColor)</td>
-<td>[HeaderIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderIconColor)</td>
+<td>{{'[IconColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AccordionItem.html#Syncfusion_XForms_Accordion_AccordionItem_IconColor)'| markdownify }}</td>
+<td>{{'[HeaderIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderIconColor)'| markdownify }}</td>
 <td>Gets or sets the color of the header icon in the Accordion control.</td>
 </tr>
 </table>
 
 ## Enums
-
-The following code samples show how to migrate enum usage from Xamarin to MAUI:
-
-**Xamarin SfAccordion:**
-```csharp
-accordion.AutoScrollPosition = AutoScrollPosition.Start;
-accordion.ExpandMode = ExpandMode.Single;
-```
-
-**MAUI SfAccordion:**
-```csharp
-accordion.AutoScrollPosition = AccordionAutoScrollPosition.Start;
-accordion.ExpandMode = AccordionExpandMode.Single;
-```
 
 <table>
 <tr>
@@ -86,14 +56,14 @@ accordion.ExpandMode = AccordionExpandMode.Single;
 </tr>
 
 <tr>
-<td>[AutoScrollPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AutoScrollPosition.html)</td>
-<td>[AccordionAutoScrollPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionAutoScrollPosition.html)</td>
+<td>{{'[AutoScrollPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AutoScrollPosition.html)'| markdownify }}</td>
+<td>{{'[AccordionAutoScrollPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionAutoScrollPosition.html)'| markdownify }}</td>
 <td>Specifies the auto-scroll positions for the Accordion control.</td>
 </tr>
 
 <tr>
-<td>[ExpandMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.ExpandMode.html)</td>
-<td>[AccordionExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionExpandMode.html)</td>
+<td>{{'[ExpandMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.ExpandMode.html)'| markdownify }}</td>
+<td>{{'[AccordionExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionExpandMode.html)'| markdownify }}</td>
 <td>Specifies the expand mode for the items in the Accordion control.</td>
 </tr>
 </table>

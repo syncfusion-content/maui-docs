@@ -86,8 +86,7 @@ The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.S
                         Collapsing="accordion_Collapsing">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
-            ...
-            ...
+
         </syncfusion:AccordionItem>
     </syncfusion:SfAccordion.Items>
  </syncfusion:SfAccordion>
@@ -129,11 +128,4 @@ private void accordion_Collapsed(object sender, Syncfusion.Maui.Accordion.Expand
 }
 {% endhighlight %}
 {% endtabs %}
-
-> **NOTE**: To prevent memory leaks, remember to unsubscribe from event handlers when they are no longer needed, especially in page disposal scenarios:
-> ```c#
-> accordion.Expanding -= accordion_Expanding;
-> accordion.Expanded -= accordion_Expanded;
-> accordion.Collapsing -= accordion_Collapsing;
-> accordion.Collapsed -= accordion_Collapsed;
-> ```
+``

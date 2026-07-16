@@ -350,7 +350,7 @@ this.Content = grid;
 
 The following screenshot illustrates SfAccordion within SfGlassEffectView.
 
-<img alt="Syncfusion .NET Maui Accordion with liquid glass support" src="Images/liquid-glass-effect/maui-accordion-liquid-glass-effect.png" Width="404"/>   
+![Syncfusion .NET Maui Accordion with liquid glass support](Images/liquid-glass-effect/maui-accordion-liquid-glass-effect.png)  
 
 N>
 * Supported on `macOS 10.15 or higher` and `iOS 13.0 or higher`.

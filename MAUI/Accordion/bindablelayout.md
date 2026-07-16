@@ -442,7 +442,7 @@ BindableLayout.SetItemsSource(accordion, viewModel.Employees ?? new ObservableCo
 
 N> The `IsExpanded` property of the `EmployeeInfo` model is two-way bound to each `AccordionItem.IsExpanded`. Setting `IsExpanded = true` on a data item expands the corresponding accordion item at load, and the value is kept in sync when the user expands or collapses an item at runtime.
 
-<img alt="Syncfusion Maui Accordion with bound data" src="Images\bindablelayout\maui-accordion-with-bindablelayout.png" width="404" /> 
+![Syncfusion Maui Accordion with bound data](Images\bindablelayout\maui-accordion-with-bindablelayout.png) 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/binding-items-using-bindable-layout-in-.net-maui-accordion).
 

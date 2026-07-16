@@ -227,7 +227,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Syncfusion Maui Accordion Header icon position" src="Images\appearance\maui-accordion-header-position-start.png" width="404" /> 
+![Syncfusion Maui Accordion Header icon position] (Images\appearance\maui-accordion-header-position-start.png) 
 
 ## Header background color customization
 
@@ -430,7 +430,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Syncfusion Maui Accordion Header background color customization" src="Images\appearance\maui-accordion-header-background-color.png" width="404" /> 
+![Syncfusion Maui Accordion Header background color customization] (Images\appearance\maui-accordion-header-background-color.png)
 
 ## Icon color customization
 
@@ -634,7 +634,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Syncfusion Maui Accordion Icon color customization" src="Images\appearance\maui-accordion-icon-color.png" width="404" /> 
+![Syncfusion Maui Accordion Icon color customization](Images\appearance\maui-accordion-icon-color.png)
 
 ## Visual state manager
 
@@ -740,6 +740,6 @@ The following properties can be set through the `VisualState` setters:
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Syncfusion Maui Accordion Expanded and collapsed visual states" src="Images/appearance/maui-accordion-with-visual-state-manager.gif" width="404" /> 
+![Syncfusion Maui Accordion Expanded and collapsed visual states](Images/appearance/maui-accordion-with-visual-state-manager.gif) 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-ui-appearance-using-visual-states-in-.net-maui-accordion).
