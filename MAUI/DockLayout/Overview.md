@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI SfDockLayout Overview
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI SfDockLayout](https://www.syncfusion.com/maui-controls/maui-docklayout) is a versatile and powerful layout control that enables developers to arrange and dock child elements in a defined area, providing a robust framework for designing complex user interfaces in both mobile and desktop applications.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI SfDockLayout](https://www.syncfusion.com/maui-controls/maui-docklayout) is a versatile and powerful layout control that enables developers to arrange and dock child elements in a defined area, providing a robust framework for complex UIs across mobile and desktop.
 
    ![Syncfusion .NET MAUI DockLayout](DockLayout-Images/maui-docklayout.png)
 
@@ -23,7 +23,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI SfDockLayout](https://www.syncfusion.c
 ## Key features
 
 - **Flexible docking support** allows placing child elements at top, bottom, left, right, or center positions within the layout.  
-- **Adaptive layout behavior** allows automatically adjusting layout structure based on screen size and orientation.  
+- **Adaptive layout behavior** allows the layout to automatically adjusts based on screen size and orientation.  
 - **Custom spacing support** allows configuring horizontal and vertical spacing between docked elements for better layout control.
 
 ## Globalization
