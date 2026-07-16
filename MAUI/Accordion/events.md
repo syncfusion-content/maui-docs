@@ -75,7 +75,7 @@ private void accordion_Expanded(object sender, Syncfusion.Maui.Accordion.Expande
 
 ### Collapsing Event
 
-The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsing) event will be triggered when the expander control is being collapsed.It can cancel collapsing with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html) that contains the following property:
+The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsing) event will be triggered when the accordion item is being collapsed.It can cancel collapsing with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
 * `Cancel`: Indicates that the expansion or collapse action should be cancelled.
 * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index): Gets the index of the current collapsing accordion item.
@@ -129,3 +129,11 @@ private void accordion_Collapsed(object sender, Syncfusion.Maui.Accordion.Expand
 }
 {% endhighlight %}
 {% endtabs %}
+
+> **NOTE**: To prevent memory leaks, remember to unsubscribe from event handlers when they are no longer needed, especially in page disposal scenarios:
+> ```c#
+> accordion.Expanding -= accordion_Expanding;
+> accordion.Expanded -= accordion_Expanded;
+> accordion.Collapsing -= accordion_Collapsing;
+> accordion.Collapsed -= accordion_Collapsed;
+> ```

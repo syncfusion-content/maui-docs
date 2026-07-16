@@ -7,13 +7,22 @@ control: SfAccordion
 documentation: ug   
 ---
 
-# Appearance in Maui Accordion (SfAccordion)
+# Appearance in .NET MAUI Accordion (SfAccordion)
 
 The .NET MAUI SfAccordion comes with built-in support for customizing the appearance of the header.
 
-## Header icon position 
+The appearance customization samples use the custom `AccordionFontIcons` font for the header icon glyph. If you have not already registered this font in your application, see the [Getting Started](https://help.syncfusion.com/maui/accordion/getting-started) topic for the steps to add the font file and register it in `MauiProgram.cs`.
+
+## Header icon position
  
-The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) allows you to customize the position of the header icon in each accordion item using the [HeaderIconPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_HeaderIconPosition) property. By default, the header icon position is set to [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_End).
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) allows you to customize the position of the header icon in each accordion item using the [HeaderIconPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_HeaderIconPosition) property. This property accepts any value from the [ExpanderIconPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html) enumeration, whose members are listed below.
+
+| Members | Description |
+|---|---|
+| [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_Start) | Places the header icon at the start (left) of the header. |
+| [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_End) | Places the header icon at the end (right) of the header. |
+
+By default, the header icon position is set to [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_End).
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -46,7 +55,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
                         <Label Text="Location " Grid.Row="3" Grid.Column="1" Margin="6,0,0,0" />
                         <Label Text="Boston" Grid.Row="3" Grid.Column="2" />
                         <Label Padding="0,10,0,10" Grid.Row="4" Grid.ColumnSpan="3" LineBreakMode="WordWrap" FontSize="14" CharacterSpacing="0.25" VerticalTextAlignment="Center" 
-                               Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision.Under his guidance, the company thrives and continues to make a significant impact in the industry." />
+                               Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision. Under his guidance, the company thrives and continues to make a significant impact in the industry." />
                         <StackLayout Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,12">
                             <Label Text="&#xe700;" FontSize="16" Margin="0,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center" />
                             <Label Text="(617) 555-1234" Grid.Column="1" VerticalOptions="Center" CharacterSpacing="0.25" FontSize="14" />
@@ -55,7 +64,6 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
                 </Grid>
             </syncfusion:AccordionItem.Content>
         </syncfusion:AccordionItem>
-        ..........................
     </syncfusion:SfAccordion.Items>
 </syncfusion:SfAccordion>
 {% endhighlight %}
@@ -68,13 +76,13 @@ public partial class MainPage : ContentPage
 
         var accordion = new SfAccordion();
         accordion.HeaderIconPosition = Syncfusion.Maui.Expander.ExpanderIconPosition.Start;
-        var accordionItems = new AccordionItem
+        var accordionItem = new AccordionItem
         {
             Header = CreateHeader(),
             Content = CreateContent()
         };
 
-        accordion.Items.Add(accordionItems);
+        accordion.Items.Add(accordionItem);
         this.Content = accordion;
     }
 
@@ -177,7 +185,11 @@ public partial class MainPage : ContentPage
                 {
                     Text = "\ue700",
                     FontSize = 16,
-                    FontFamily = DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#" : "AccordionFontIcons",
+                    Margin = new Thickness(0, 2, 2, 2),
+                    FontFamily = DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#"
+                                 : DeviceInfo.Platform == DevicePlatform.WinUI ? "AccordionFontIcons.ttf#AccordionFontIcons"
+                                 : "AccordionFontIcons",
+                    VerticalOptions = LayoutOptions.Center,
                     VerticalTextAlignment = TextAlignment.Center
                 },
                 new Label
@@ -185,6 +197,7 @@ public partial class MainPage : ContentPage
                     Text = "(617) 555-1234",
                     FontSize = 14,
                     CharacterSpacing = 0.25,
+                    VerticalOptions = LayoutOptions.Center,
                     VerticalTextAlignment = TextAlignment.Center
                 }
             }
@@ -218,7 +231,7 @@ public partial class MainPage : ContentPage
 
 ## Header background color customization
 
-The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) allows you to customize the background color of the expander header by using the [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderBackground) property.
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) allows you to customize the background color of the accordion header by using the [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderBackground) property of the [AccordionItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html).
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -250,7 +263,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
                         <Label Text="Location " Grid.Row="3" Grid.Column="1" Margin="6,0,0,0" />
                         <Label Text="Boston" Grid.Row="3" Grid.Column="2" />
                         <Label Padding="0,10,0,10" Grid.Row="4" Grid.ColumnSpan="3" LineBreakMode="WordWrap" FontSize="14" CharacterSpacing="0.25" VerticalTextAlignment="Center" 
-                               Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision.Under his guidance, the company thrives and continues to make a significant impact in the industry." />
+                               Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision. Under his guidance, the company thrives and continues to make a significant impact in the industry." />
                         <StackLayout Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,12">
                             <Label Text="&#xe700;" FontSize="16" Margin="0,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center" />
                             <Label Text="(617) 555-1234" Grid.Column="1" VerticalOptions="Center" CharacterSpacing="0.25" FontSize="14" />
@@ -259,7 +272,6 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
                 </Grid>
             </syncfusion:AccordionItem.Content>
         </syncfusion:AccordionItem>
-        ..........................
     </syncfusion:SfAccordion.Items>
 </syncfusion:SfAccordion>
 {% endhighlight %}
@@ -271,14 +283,14 @@ public partial class MainPage : ContentPage
         InitializeComponent();
 
         var accordion = new SfAccordion();
-        var accordionItems = new AccordionItem
+        var accordionItem = new AccordionItem
         {
             HeaderBackground = Color.FromArgb("#5fa8d3"),
             Header = CreateHeader(),
             Content = CreateContent()
         };
 
-        accordion.Items.Add(accordionItems);
+        accordion.Items.Add(accordionItem);
         this.Content = accordion;
     }
 
@@ -454,7 +466,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
                         <Label Text="Location " Grid.Row="3" Grid.Column="1" Margin="6,0,0,0" />
                         <Label Text="Boston" Grid.Row="3" Grid.Column="2" />
                         <Label Padding="0,10,0,10" Grid.Row="4" Grid.ColumnSpan="3" LineBreakMode="WordWrap" FontSize="14" CharacterSpacing="0.25" VerticalTextAlignment="Center" 
-                               Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision.Under his guidance, the company thrives and continues to make a significant impact in the industry." />
+                               Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision. Under his guidance, the company thrives and continues to make a significant impact in the industry." />
                         <StackLayout Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,12">
                             <Label Text="&#xe700;" FontSize="16" Margin="0,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center" />
                             <Label Text="(617) 555-1234" Grid.Column="1" VerticalOptions="Center" CharacterSpacing="0.25" FontSize="14" />
@@ -475,14 +487,14 @@ public partial class MainPage : ContentPage
         InitializeComponent();
 
         var accordion = new SfAccordion();
-        var accordionItems = new AccordionItem
+        var accordionItem = new AccordionItem
         {
             HeaderIconColor = Colors.Brown,
             Header = CreateHeader(),
             Content = CreateContent()
         };
 
-        accordion.Items.Add(accordionItems);
+        accordion.Items.Add(accordionItem);
         this.Content = accordion;
     }
 
@@ -624,15 +636,23 @@ public partial class MainPage : ContentPage
 
 <img alt="Syncfusion Maui Accordion Icon color customization" src="Images\appearance\maui-accordion-icon-color.png" width="404" /> 
 
-## Visual State Manager
+## Visual state manager
 
 The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) can be customized using the following `VisualStates`:
 
-* Expanded
-* Collapsed
-* Focused
-* PointerOver
-* Normal
+| VisualState | Description |
+|---|---|
+| Expanded | Applied when the accordion item is expanded. |
+| Collapsed | Applied when the accordion item is collapsed. |
+| Focused | Applied when the accordion item receives focus. |
+| PointerOver | Applied when the pointer hovers over the accordion item (desktop platforms). |
+| Normal | Applied when the accordion item is in its default state with no interaction. |
+
+The following properties can be set through the `VisualState` setters:
+
+* [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderBackground)
+* [HeaderIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderIconColor)
+
 
 {% tabs %}
 {% highlight xaml %}
@@ -705,7 +725,7 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
                             <Label Text="Location " Grid.Row="3" Grid.Column="1" Margin="6,0,0,0" />
                             <Label Text="Boston" Grid.Row="3" Grid.Column="2" />
                             <Label Padding="0,10,0,10" Grid.Row="4" Grid.ColumnSpan="3" LineBreakMode="WordWrap" FontSize="14" CharacterSpacing="0.25" VerticalTextAlignment="Center" 
-                                   Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision.Under his guidance, the company thrives and continues to make a significant impact in the industry." />
+                                   Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision. Under his guidance, the company thrives and continues to make a significant impact in the industry." />
                             <StackLayout Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,12">
                                 <Label Text="&#xe700;" FontSize="16" Margin="0,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center" />
                                 <Label Text="(617) 555-1234" Grid.Column="1" VerticalOptions="Center" CharacterSpacing="0.25" FontSize="14" />
@@ -714,7 +734,6 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
                     </Grid>
                 </syncfusion:AccordionItem.Content>
             </syncfusion:AccordionItem>
-            ..........................
         </syncfusion:SfAccordion.Items>
     </syncfusion:SfAccordion>
 </ContentPage.Content>
