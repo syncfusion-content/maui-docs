@@ -281,5 +281,22 @@ Read Blogs
 </a>
   </div>
 </div>
-
+<!-- Card 5 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+  <div class="card-header">
+    <div class="icon-circle">
+    <span class="card-icon card-showcase"></span>
+    </div>
+    <h3 class="form-title">Use Case Samples</h3>
+</div>
+    <div class="form-description">
+      Explore a real-world application that demonstrates the practical use of the CheckBox.
+    </div>
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/CheckBox" class="explore-link">
+    View Samples
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
 </div>

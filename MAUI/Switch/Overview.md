@@ -237,9 +237,9 @@ Explore Features
     <div class="icon-circle">
     <span class="card-icon card-showcase"></span>
   </div>
-    <h3 class="form-title">Showcase Samples</h3>
+    <h3 class="form-title">Demos</h3>
 </div>
-    <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
+    <div class="form-description">Explore interactive demos that showcase key features and component capabilities.</div>
     <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI" class="explore-link">
     View Samples
   <span class="card-icon card-arrow"></span>
@@ -300,5 +300,22 @@ Read Blogs
 </a>
   </div>
 </div>
-
+<!-- Card 6 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+  <div class="card-header">
+    <div class="icon-circle">
+    <span class="card-icon card-showcase"></span>
+    </div>
+    <h3 class="form-title">Use Case Samples</h3>
+</div>
+    <div class="form-description">
+      Explore a real-world application that demonstrates the practical use of the Switch.
+    </div>
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/ListView" class="explore-link">
+    View Samples
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
 </div>
