@@ -257,7 +257,7 @@ BindableLayout.SetItemsSource(Accordion, viewModel.Employees ?? new ObservableCo
 
 The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) accepts the [AccordionItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html) as its child element. The appearance of each `AccordionItem` can be defined by setting the `BindableLayout.ItemTemplate` property.
 
-In the following template, an image file name (for example, `emp_01.png`) is bound to the `Image.Source` property through an `ImageConverter` that converts the file name into an [`ImageSource`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource). Define the converter in C# and expose it as a page resource with the key `imageconverter`, as shown below.
+In the following template, an image file name is bound to the `Image.Source` property through an `ImageConverter` that converts the file name into an `ImageSource`. Define the converter in C# and expose it as a page resource with the key `image converter`, as shown below.
 
 {% tabs %}
 {% highlight c# %}
