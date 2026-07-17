@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge(SfRadialGauge) control and more.
+title: Getting Started with .NET MAUI Radial Gauge control | Syncfusion®
+description: Learn here all about getting started with Syncfusion® .NET MAUI Radial Gauge (SfRadialGauge) control and more.
 platform: maui
 control: SfRadialGauge
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Radial Gauge
 
-This section explains the steps required to add the [`.NET MAUI Radial Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) control and its elements such as axis, range, pointer, and annotation. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> radial gauge control. Follow the steps below to add a .NET MAUI Radial gauge control to your project.
+This section explains the steps required to add the [`.NET MAUI Radial Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) control and its elements such as axis, range, pointer, and annotation. This section covers only the basic features needed to get started with the Syncfusion® Radial Gauge control. Follow the steps below to add a .NET MAUI Radial Gauge control to your project.
 
-To get start quickly with our .NET MAUI Radial Gauge, you can check the below video.
+To get started quickly with our .NET MAUI Radial Gauge, you can check the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=gagnYotFp48"%}
@@ -94,7 +94,9 @@ Make sure to add the namespace.
 
 {% tabs %}
 {% highlight c# %}
+
 using Syncfusion.Maui.Core.Hosting;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,7 +104,29 @@ Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProg
 
 {% tabs %}
 {% highlight c# %}
-builder.ConfigureSyncfusionCore();
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
+
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif
+
+        return builder.Build();
+    }
+}
+
 {% endhighlight %} 
 {% endtabs %}
 
@@ -113,7 +137,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+xmlns:gauge = "clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
 
 {% endhighlight %}
 {% highlight c# %}
@@ -132,32 +156,32 @@ Learn how to initialize the `Syncfusion .NET MAUI SfRadialGauge` control and con
 
 <gauge:SfRadialGauge>
     <gauge:SfRadialGauge.Axes>
-        <gauge:RadialAxis Interval="10"
-                          Maximum="150" >
+        <gauge:RadialAxis Interval = "10"
+                          Maximum = "150" >
             <gauge:RadialAxis.Ranges>
-                <gauge:RadialRange StartValue="0"
-                                  EndValue="50"
-                                  Fill="Red" />
-                <gauge:RadialRange StartValue="50"
-                                  EndValue="100"
-                                  Fill="Orange" />
-                <gauge:RadialRange StartValue="100"
-                                  EndValue="150"
-                                  Fill="Green" />
+                <gauge:RadialRange StartValue = "0"
+                                   EndValue = "50"
+                                   Fill = "Red" />
+                <gauge:RadialRange StartValue = "50"
+                                   EndValue = "100"
+                                   Fill = "Orange" />
+                <gauge:RadialRange StartValue = "100"
+                                   EndValue = "150"
+                                   Fill = "Green" />
             </gauge:RadialAxis.Ranges>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="90" />
+                <gauge:NeedlePointer Value = "90" />
             </gauge:RadialAxis.Pointers>
             <gauge:RadialAxis.Annotations>
-                <gauge:GaugeAnnotation x:Name="annotation"
-                                       DirectionUnit="Angle"
-                                       DirectionValue="90"
-                                       PositionFactor="0.5">
+                <gauge:GaugeAnnotation x:Name = "annotation"
+                                       DirectionUnit = "Angle"
+                                       DirectionValue = "90"
+                                       PositionFactor = "0.5">
                     <gauge:GaugeAnnotation.Content>
-                        <Label Text="90"
-                            FontSize="25"
-                            FontAttributes="Bold" 
-                            TextColor="Black"/>
+                         <Label Text = "90"
+                                FontSize = "25"
+                                FontAttributes = "Bold" 
+                                TextColor = "Black"/>
                     </gauge:GaugeAnnotation.Content>
                 </gauge:GaugeAnnotation>
             </gauge:RadialAxis.Annotations>
@@ -203,7 +227,7 @@ Content = gauge;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI Radial Gauge with Annotation" src="images/getting-started/maui-radial-gauge-gettingstarted.png" width="404" />
+<img alt = "MAUI Radial Gauge with Annotation" src = "images/getting-started/maui-radial-gauge-gettingstarted.png" width = "404" />
 
 You can download the Radial Gauge Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/MAUI-Radial-Gauge-Getting-Started-).
 
