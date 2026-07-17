@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI TreeMap (STreeMap) Control | Syncfusion<sup>&reg;</sup>
-description: Learn here about performing actions using accessibility in Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (STreeMap) control.
+title: Accessibility in .NET MAUI TreeMap (SfTreeMap) Control | Syncfusion®
+description: Learn here about performing actions using accessibility in Syncfusion® .NET MAUI TreeMap (SfTreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -9,29 +9,62 @@ documentation: ug
 
 # Accessibility in .NET MAUI TreeMap (SfTreeMap)
 
-The TreeMap is designed to effectively work with its elements, providing voice descriptions of the treemap items.
+The .NET MAUI TreeMap (SfTreeMap) control supports keyboard navigation and provides accessible descriptions of its items for assistive technologies such as Narrator and VoiceOver. This topic covers the keyboard shortcuts available in the control and explains how selection behavior interacts with keyboard focus.
+
+Keyboard navigation is enabled by default; no additional configuration is required to move focus between items. To interact with the control using the keyboard, first set focus on the TreeMap (for example, by clicking an item or by tabbing to the control from the previous focusable element). Keyboard shortcuts are supported on Windows and macOS only. On Android and iOS, the keyboard shortcuts have no effect and interaction is performed through touch gestures.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/treemap/getting-started)** guide.
 
 ## Keyboard shortcuts in .NET MAUI TreeMap (SfTreeMap)
 
-The [Syncfusion .NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) supports keyboard shortcuts for user interaction. This feature is only applicable for Windows and macOS platforms.
-
-The following is a table outlining the various shortcuts and their associated functions:
+The following table lists the keyboard shortcuts supported by the [Syncfusion .NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) and their associated actions. Only `Tab` and `Shift + Tab` are supported; arrow-key navigation is not available.
 
 <table>
 <tr>
 <td>
-<b> Navigation Shortcut Keys </b> <br/><br/></td><td>
-<b> Descriptions </b> <br/><br/></td></tr>
+<b>Navigation shortcut keys</b> <br/><br/></td><td>
+<b>Description</b> <br/><br/></td></tr>
 <tr>
 <td>
-Tab<br/><br/></td><td> 
-Moves selection to the next item on the right side of the TreeMap.
+Tab<br/><br/></td><td>
+Moves focus to the next item in traversal order.
 <br/><br/></td></tr>
 <tr>
 <td>
 Shift + Tab<br/><br/></td><td>
-Moves selection to the previous item on the left side of the TreeMap.
+Moves focus to the previous item in traversal order.
 <br/><br/></td></tr>
 </table>
 
-N> When [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single), each key press clears the previous focus and selects the new item. When [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple), the previously focused item remains selected while new items are selected with each key press. When [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None), the item remains unselected.
+The item that receives keyboard focus is also visually highlighted. Whether the previously focused item remains selected after focus moves depends on the `SelectionMode` configured for the control; see [Selection and highlights](selection-and-highlights.md) for details.
+
+## Selection behavior during keyboard navigation
+
+The `SelectionMode` property of the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) determines how items are selected while navigating with the keyboard:
+
+- When `SelectionMode` is [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single), each key press moves focus to a new item and selects it, clearing the selection of the previously focused item.
+- When `SelectionMode` is [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple), each key press moves focus to a new item and adds it to the selection; previously selected items remain selected.
+- When `SelectionMode` is [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None), focus can still be moved between items, but no item is selected.
+
+{% tabs %}
+{% highlight xaml hl_lines="5" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   SelectionMode="Single">
+    <!-- code omitted for brevity -->
+</treemap:SfTreeMap>
+
+{% endhighlight %}
+{% highlight c# hl_lines="4" %}
+
+SfTreeMap treeMap = new SfTreeMap();
+treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.SelectionMode = SelectionMode.Single;
+//code omitted for brevity
+this.Content = treeMap;
+
+{% endhighlight %}
+{% endtabs %}

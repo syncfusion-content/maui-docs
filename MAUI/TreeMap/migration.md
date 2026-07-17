@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI TreeMap (SfTreeMap) | Syncfusion<sup>&reg;</sup>
-description: Learn about Migrating from Syncfusion<sup>&reg;</sup> Xamarin.Forms TreeMap control to .NET MAUI TreeMap (SfTreeMap) control.
+title: Migrate from Xamarin to .NET MAUI TreeMap (SfTreeMap) | Syncfusion®
+description: Learn about Migrating from Syncfusion® Xamarin.Forms TreeMap control to .NET MAUI TreeMap (SfTreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -34,21 +34,18 @@ To initialize the control, import the treeMap control namespace and initialize t
 <td>
 
 {% tabs %}
-{% highlight XAML hl_lines="3 5" %}
+{% highlight xaml hl_lines="3 5" %}
 
-<ContentPage 
-    ...
-    xmlns:treemap="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
-
+<ContentPage xmlns:treemap="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
     <treemap:SfTreeMap x:Name="treeMap"/>
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="1 4 5" %}
+{% highlight c# hl_lines="1 4 5" %}
 
 using Syncfusion.SfTreeMap.XForms;
-...
+//code omitted for brevity.
 
 SfTreeMap treeMap = new SfTreeMap();
 this.Content = treeMap;
@@ -60,21 +57,18 @@ this.Content = treeMap;
 <td>
 
 {% tabs %}
-{% highlight XAML hl_lines="3 5" %}
+{% highlight xaml hl_lines="3 5" %}
 
-<ContentPage 
-    ...
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-
+<ContentPage xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
     <treemap:SfTreeMap x:Name="treeMap"/>
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="1 4 5" %}
+{% highlight c# hl_lines="1 4 5" %}
 
 using Syncfusion.Maui.TreeMap;
-...
+//code omitted for brevity.
 
 SfTreeMap treeMap = new SfTreeMap();
 this.Content = treeMap;
@@ -168,7 +162,7 @@ The following code example, explains how to initialize the properties of the .NE
 </tr>
 
 {% tabs %}
-{% highlight XAML hl_lines="2 3" %}
+{% highlight xaml hl_lines="2 3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -180,7 +174,7 @@ The following code example, explains how to initialize the properties of the .NE
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="3 4" %}
+{% highlight c# hl_lines="3 4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -189,7 +183,7 @@ treeMap.PrimaryValuePath = "Population";
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -377,7 +371,7 @@ public class PopulationViewModel
 The following code example, explains how to configure the leaf item settings in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="7 8 9 10" %}
+{% highlight xaml hl_lines="7 8 9 10" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -396,7 +390,7 @@ The following code example, explains how to configure the leaf item settings in 
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="5" %}
+{% highlight c# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -407,7 +401,7 @@ treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brus
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -506,7 +500,7 @@ public class PopulationViewModel
 The following code example, explains how to configure the legend settings in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="12 13 14 15" %}
+{% highlight xaml hl_lines="12 13 14 15" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -545,7 +539,7 @@ The following code example, explains how to configure the legend settings in .NE
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="7" %}
+{% highlight c# hl_lines="7" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -567,7 +561,7 @@ treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -665,7 +659,7 @@ public class PopulationViewModel
 The following code example, explains how to configure the uniform brush settings in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="11 12 13" %}
+{% highlight xaml hl_lines="11 12 13" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -684,7 +678,7 @@ The following code example, explains how to configure the uniform brush settings
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="5" %}
+{% highlight c# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -695,7 +689,7 @@ treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country"
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -763,7 +757,7 @@ public class PopulationViewModel
 The following code example, explains how to configure the desaturation brush settings in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="11 12 13" %}
+{% highlight xaml hl_lines="11 12 13" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -793,7 +787,7 @@ treeMap.LeafItemBrushSettings = new TreeMapDesaturationBrushSettings() { Brush =
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -873,7 +867,7 @@ public class PopulationViewModel
 The following code example, explains how to configure the palette brush settings in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="12 13 14 15 16 17 18 19 20 21 22 23" %}
+{% highlight xaml hl_lines="12 13 14 15 16 17 18 19 20 21 22 23" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -902,7 +896,7 @@ The following code example, explains how to configure the palette brush settings
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="7 8 9 10 11 12 13 14 15 16 17 18" %}
+{% highlight c# hl_lines="7 8 9 10 11 12 13 14 15 16 17 18" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -926,7 +920,7 @@ treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -998,7 +992,7 @@ To categorize leaf items in a TreeMap according to different ranges of backgroun
 The following code example explains how to configure the range brush in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
+{% highlight xaml hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -1037,7 +1031,7 @@ The following code example explains how to configure the range brush in .NET MAU
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="7 8 9 10 11 12 13 14 15" %}
+{% highlight c# hl_lines="7 8 9 10 11 12 13 14 15" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -1059,7 +1053,7 @@ treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -1145,7 +1139,7 @@ public class PopulationViewModel
 The following code example, explains how to configure the tooltip setting in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="4 15 16 17" %}
+{% highlight xaml hl_lines="4 15 16 17" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -1168,7 +1162,7 @@ The following code example, explains how to configure the tooltip setting in .NE
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="5 8" %}
+{% highlight c# hl_lines="5 8" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -1181,7 +1175,7 @@ treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Red 
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -1267,7 +1261,7 @@ public class PopulationViewModel
 The following code example, explains how to configure the tree map level in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="14 15 16" %}
+{% highlight xaml hl_lines="14 15 16" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -1289,7 +1283,7 @@ The following code example, explains how to configure the tree map level in .NET
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="7" %}
+{% highlight c# hl_lines="7" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -1301,7 +1295,7 @@ treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent"});
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {

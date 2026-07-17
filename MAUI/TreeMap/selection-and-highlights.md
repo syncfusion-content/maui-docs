@@ -1,26 +1,28 @@
 ---
 layout: post
-title: Selection and Highlights in .NET MAUI TreeMap | Syncfusion<sup>&reg;</sup>
-description: Learn about the functionality of selection and highlights within the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap(STreeMap) control.
+title: Selection and Highlights in .NET MAUI TreeMap | Syncfusion®
+description: Learn about the functionality of selection and highlights within the Syncfusion® .NET MAUI TreeMap (SfTreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
  
-# Selection in TreeMap control
+# Selection and Highlights in .NET MAUI TreeMap (SfTreeMap)
 
-The Treemap control enables users to select specific groups or items for distinction, with the tooltip feature providing additional information during interaction. However, when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None), interaction with treemap items is disabled.
+The TreeMap control enables users to select specific groups or items for distinction, with the tooltip feature providing additional information during interaction. However, when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None), interaction with treemap items is disabled.
 
-## Selection mode
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/treemap/getting-started)** guide.
+
+## Selection Mode
 
 The selection mode in the TreeMap control determines the interactivity level, enabling users to choose specific items. The default value of [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single).
 
 ### Single selection
 
-In the [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) selection mode, users can choose only one item at a time within the Treemap control.
+In the [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) selection mode, users can choose only one item at a time within the TreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight xaml hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -38,7 +40,7 @@ In the [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.Sele
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5"  %}
+{% highlight c# hl_lines="5"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -50,7 +52,7 @@ treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country"
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.
@@ -63,7 +65,7 @@ public class PopulationDetails
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 /// <summary>    
 /// Represents demographic information for countries in the Americas for the year 2023.
@@ -105,14 +107,14 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![single-selection-in-maui-tree-map](images/selection/single-selection-in-maui-tree-map.png)
+![.NET MAUI TreeMap Single selection](images/selection/single-selection-in-maui-tree-map.png)
 
 ### Multiple selection
 
-In the [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple) selection mode, users can select multiple items simultaneously within the Treemap control.
+In the [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple) selection mode, users can select multiple items simultaneously within the TreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight xaml hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -130,7 +132,7 @@ In the [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.Se
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5"  %}
+{% highlight c# hl_lines="5"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -142,11 +144,8 @@ treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country"
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -155,7 +154,7 @@ public class PopulationDetails
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 /// <summary>    
 /// Represents demographic information for countries in the Americas for the year 2023.
@@ -197,14 +196,14 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![multiple-selection-in-maui-tree-map](images/selection/multiple-selection-in-maui-tree-map.png)
+![.NET MAUI TreeMap Multiple selection](images/selection/multiple-selection-in-maui-tree-map.png)
 
-### None
+### None selection
 
 In the [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None) selection mode, interaction with treemap items is disabled.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight xaml hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -222,7 +221,7 @@ In the [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.Select
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5"  %}
+{% highlight c# hl_lines="5"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -234,11 +233,8 @@ treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country"
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -247,7 +243,7 @@ public class PopulationDetails
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 /// <summary>    
 /// Represents demographic information for countries in the Americas for the year 2023.
@@ -289,14 +285,14 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![none-selection-in-maui-tree-map](images/selection/none-selection-in-maui-tree-map.png)
+![.NET MAUI TreeMap None selection](images/selection/none-selection-in-maui-tree-map.png)
 
 ## Programmatic item selection
 
 You can programmatically select the tree map items by utilizing the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItems) property in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property holds a collection of the treemap items representing the currently selected ones. In the [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) selection mode, only the first item in the SelectedItems collection will be selected. In the [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple) selection mode, all items in the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItems) collection will be selected. When [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None), no items are selected.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -313,23 +309,21 @@ You can programmatically select the tree map items by utilizing the [SelectedIte
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="7"  %}
+{% highlight c# hl_lines="7"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
+treeMap.SelectionMode = SelectionMode.Multiple;
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.SelectedItems.Add(new TreeMapItemInfo() { Item = "Brazil", GroupLevel = -1 });
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -338,7 +332,7 @@ public class PopulationDetails
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 /// <summary>    
 /// Represents demographic information for countries in the Americas for the year 2023.
@@ -380,22 +374,25 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![selected-items-in-maui-tree-map](images/selection/selected-items-in-maui-tree-map.png)
+![.NET MAUI TreeMap Selected items](images/selection/selected-items-in-maui-tree-map.png)
 
 ## Customize selected item appearance
 
 The selected items appearance customization can be achieved by using the [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) and [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) properties in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
 
+N> The [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) and [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) properties are applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) or [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple).
+
 ### Customize selected item appearance using stroke
 
-The selected item stroke can be customized by using the [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). The default value of [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) is `new SolidColorBrush(Color.FromArgb("#1C1B1F")).`
+The selected item stroke can be customized by using the [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). The default value of [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) is `new SolidColorBrush(Color.FromArgb("#1C1B1F"))`.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight xaml hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    PrimaryValuePath="Population"
+                   SelectionMode="Single"
                    SelectedItemStroke="Red">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
@@ -409,23 +406,21 @@ The selected item stroke can be customized by using the [SelectedItemStroke](htt
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5"  %}
+{% highlight c# hl_lines="5"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
+treeMap.SelectionMode = SelectionMode.Single;
 treeMap.SelectedItemStroke = Colors.Red;
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -434,7 +429,7 @@ public class PopulationDetails
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 /// <summary>    
 /// Represents demographic information for countries in the Americas for the year 2023.
@@ -476,20 +471,19 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) or [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple).
-
-![selected-item-stroke-in-maui-tree-map](images/selection/selected-item-stroke-in-maui-tree-map.png)
+![.NET MAUI TreeMap Selected items stroke](images/selection/selected-item-stroke-in-maui-tree-map.png)
 
 ### Customize selected item appearance using stroke width
 
-The selected item stroke width can be customized by using the [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). The default value of [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) is `2.`
+The selected item stroke width can be customized by using the [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). The default value of [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) is `2`.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight xaml hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    PrimaryValuePath="Population"
+                   SelectionMode="Single"
                    SelectedItemStrokeWidth="3">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
@@ -503,23 +497,21 @@ The selected item stroke width can be customized by using the [SelectedItemStrok
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5"  %}
+{% highlight c# hl_lines="5"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
+treeMap.SelectionMode = SelectionMode.Single;
 treeMap.SelectedItemStrokeWidth = 3;
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -528,9 +520,9 @@ public class PopulationDetails
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>
+/// <summary>    
 /// Represents demographic information for countries in the Americas for the year 2023.
 /// </summary>
 public class PopulationViewModel
@@ -570,6 +562,4 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) or [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple).
-
-![selected-item-stroke-width-in-maui-tree-map](images/selection/selected-item-stroke-width-in-maui-tree-map.png)
+![.NET MAUI TreeMap Selected items stroke width](images/selection/selected-item-stroke-width-in-maui-tree-map.png)
