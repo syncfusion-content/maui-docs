@@ -9,12 +9,11 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI Accordion (SfAccordion)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Accordion (SfAccordion) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Accordion (SfAccordion) control.
 
 ## Apply liquid glass effect
 
 Follow these steps to enable and configure the Liquid Glass Effect in the Accordion control:
-
 ### Step 1: Wrap the control inside glass effect view
 
 To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html), wrap it inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html).
@@ -27,7 +26,7 @@ Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion
 
 ### Step 3: Customize the background
 
-To achieve a glass like background, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass-like background, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control:
 
@@ -91,7 +90,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
                                 <Label Text="Boston" Grid.Row="3" Grid.Column="2"/>
                                 <Label Padding="0,10,0,10" Grid.Row="4" Grid.ColumnSpan="3"  LineBreakMode="WordWrap"  
                                        FontSize="14" CharacterSpacing="0.25" VerticalTextAlignment="Center" 
-                                       Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision.Under his guidance, the company thrives and continues to make a significant impact in the industry.">
+                                       Text="Robin Rane, Chairman of ABC Inc., leads with dedication and vision. Under his guidance, the company thrives and continues to make a significant impact in the industry.">
                                 </Label>
                                 <StackLayout Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,12">
                                     <Label Text="&#xe700;" FontSize="16" Margin="0,2,2,2"
@@ -103,7 +102,62 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
                         </Grid>
                     </syncfusion:AccordionItem.Content>
                 </syncfusion:AccordionItem>
-                ..........................
+                <syncfusion:AccordionItem>
+                    <syncfusion:AccordionItem.Header>
+                        <Grid HeightRequest="48">
+                            <Label Text="John Doe" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
+                        </Grid>
+                    </syncfusion:AccordionItem.Header>
+                    <syncfusion:AccordionItem.Content>
+                        <Grid ColumnSpacing="10" RowSpacing="2">
+                            <Grid Margin="16,6,0,0">
+                                <Grid.Resources>
+                                    <Style TargetType="Label">
+                                        <Setter Property="FontFamily" Value="Roboto-Regular"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.RowDefinitions >
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="{OnPlatform Default=90,Android=90,WinUI=70, iOS=100,MacCatalyst=70 }"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.RowSpan="4"
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Padding="0"
+                                        Margin="0,0,0,7">
+                                    <Image Source="emp_02.png" />
+                                </Border>
+                                <Label Text="Position" Grid.Column="1" Grid.Row="0" Margin="6,0,0,0"/>
+                                <Label Text="Developer" Grid.Row="0" Grid.Column="2"/>
+                                <Label Text="Organization " Grid.Row="1" Grid.Column="1" Margin="6,0,0,0"/>
+                                <Label Text="XYZ Corp." Grid.Row="1" Grid.Column="2"/>
+                                <Label Text="Date Of Birth " Grid.Row="2" Grid.Column="1" Margin="6,0,0,0"/>
+                                <Label Text="05/22/1985" Grid.Row="2" Grid.Column="2"/>
+                                <Label Text="Location " Grid.Row="3" Grid.Column="1" Margin="6,0,0,0"/>
+                                <Label Text="San Francisco" Grid.Row="3" Grid.Column="2"/>
+                                <Label Padding="0,10,0,10" Grid.Row="4" Grid.ColumnSpan="3"  LineBreakMode="WordWrap"  
+                                       FontSize="14" CharacterSpacing="0.25" VerticalTextAlignment="Center" 
+                                       Text="John Doe, Senior Developer at XYZ Corp., brings over 10 years of experience in mobile application development. His expertise has been instrumental in delivering high-quality products.">
+                                </Label>
+                                <StackLayout Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,12">
+                                    <Label Text="&#xe700;" FontSize="16" Margin="0,2,2,2"
+                                           FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                           VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                    <Label Text="(415) 555-5678" Grid.Column="1" VerticalOptions="Center" CharacterSpacing="0.25" FontSize="14"/>
+                                </StackLayout>
+                            </Grid>
+                        </Grid>
+                    </syncfusion:AccordionItem.Content>
+                </syncfusion:AccordionItem>
             </syncfusion:SfAccordion.Items>
         </syncfusion:SfAccordion>
     </core:SfGlassEffectView>
@@ -249,7 +303,7 @@ var descriptionLabel = new Label
     FontSize = 14,
     CharacterSpacing = 0.25,
     VerticalTextAlignment = TextAlignment.Center,
-    Text = "Robin Rane, Chairman of ABC Inc., leads with dedication and vision.Under his guidance, the company thrives and continues to make a significant impact in the industry."
+    Text = "Robin Rane, Chairman of ABC Inc., leads with dedication and vision. Under his guidance, the company thrives and continues to make a significant impact in the industry."
 };
 
 Grid.SetRow(descriptionLabel, 4);
@@ -296,8 +350,17 @@ this.Content = grid;
 
 The following screenshot illustrates SfAccordion within SfGlassEffectView.
 
-<img alt="Syncfusion .NET Maui Accordion with liquid glass support" src="Images/liquid-glass-effect/maui-accordion-liquid-glass-effect.png" Width="404"/>   
+![Syncfusion .NET Maui Accordion with liquid glass support](Images/liquid-glass-effect/maui-accordion-liquid-glass-effect.png)  
 
 N>
-* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
+* Supported on `macOS 10.15 or higher` and `iOS 13.0 or higher`.
+* This feature is available only in `.NET 8.0` and later versions.
+
+## Customization Options
+
+The Liquid Glass Effect can be customized using the following properties:
+
+* `EffectType`: Choose from different glass effect types such as `Regular`, `Light`, or `Dark` to match your app's theme
+* `CornerRadius`: Adjust the corner radius of the glass effect view to match your design requirements
+* `TintOpacity`: Control the opacity of the tint color to achieve the desired level of transparency
+* `BlurRadius`: Adjust the blur radius to control the intensity of the glass effect
