@@ -149,4 +149,3 @@ this.Content = richTextEditor;
 
 You can download the Rich Text Editor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-richtexteditor-samples/tree/master).
 
-N> Looking for the full [.NET MAUI Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/maui-rich-text-editor) component overview, features, pricing, and documentation? Visit the .NET MAUI Rich Text Editor page.

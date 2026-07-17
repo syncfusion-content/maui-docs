@@ -308,4 +308,3 @@ The following screenshot illustrates the result of the above code.
 
 You can download the Cartesian Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_CartesianChart_MAUI).
 
-N> Looking for the full .NET MAUI Charts component overview, features, and pricing? Visit the [.NET MAUI Chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) page.

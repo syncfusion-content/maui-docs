@@ -305,4 +305,3 @@ Read Blogs
 
 </div>
 
-N> Looking for the full [.NET MAUI Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/maui-rich-text-editor) component overview, features, and pricing? Visit the .NET MAUI Rich Text Editor page.

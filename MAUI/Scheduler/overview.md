@@ -72,7 +72,6 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 
  ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
 
- N> Looking for the full .NET MAUI Scheduler component overview, features, and pricing? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) page. 
 
 ## Globalization
 
