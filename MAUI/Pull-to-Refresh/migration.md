@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin SfPullToRefresh to .NET MAUI SfPullToRefresh | Syncfusion
+title: Migrate Xamarin SfPullToRefresh to MAUI SfPullToRefresh | Syncfusion
 description: Learn here all about Migrating from Syncfusion Xamarin PullToRefresh to Syncfusion .NET MAUI SfPullToRefresh control and more.
 platform: MAUI
 control: SfPullToRefresh
