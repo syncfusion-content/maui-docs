@@ -25,7 +25,7 @@ These tools speed up development and reinforce best practices for Syncfusion com
 
 Before beginning, ensure the following prerequisites are met:
 
-- **.NET 8.0** or higher
+- Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
 - A **.NET MAUI application** (existing or new); see [MAUI application that includes Syncfusion MAUI](https://help.syncfusion.com/maui/introduction/overview)
@@ -48,7 +48,9 @@ Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the [
 
 ### Setting Up in MCP Clients
 
-Create a configuration file in your project folder to install the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.**
+Create a configuration file in your project folder to install the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.** The tabs below show a working configuration for each supported MCP client.
+
+**For .NET 10** :
 
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
@@ -136,6 +138,35 @@ Create a configuration file in your project folder to install the server for you
 
 {% endhighlight %}
 {% endtabs %}
+
+**For .NET 8 / .NET 9 (using a local tool):**
+
+You can install the Syncfusion MAUI MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
+
+1. Install the Syncfusion MAUI MCP tool locally:
+
+    ````bash
+    dotnet tool install Syncfusion.MAUI.MCP
+    ````
+
+2. In your MCP client config (`.vscode/mcp.json`, `.codestudio/mcp.json`, `.cursor/mcp.json`, or the JetBrains MCP settings), replace the server entry with:
+
+    ````json
+    {
+      "servers": {
+        "sf-maui-mcp": {
+          "type": "stdio",
+          "command": "dotnet",
+          "args": ["tool", "run", "syncfusion-maui-mcp"],
+          "env": {
+            "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+            // or
+            // "Syncfusion_API_Key": "YOUR_API_KEY"
+          }
+        }
+      }
+    }
+    ````
 
 **Verifying Installation** Check your editor's MCP Server list for `sf-maui-mcp` with a **Connected** status to confirm a successful installation.
 
