@@ -128,7 +128,7 @@ var innerGrid = new Grid();
 var glassEffectView = new SfGlassEffectView
 {
     CornerRadius = 20,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     Padding = 16,
     HeightRequest = 140,
     WidthRequest = 420
@@ -198,7 +198,7 @@ Grid.SetColumn(stackLayout, 1);
 var buttonGlass = new SfGlassEffectView
 {
     CornerRadius = 20,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     WidthRequest = 100,
     HeightRequest = 40
 };
