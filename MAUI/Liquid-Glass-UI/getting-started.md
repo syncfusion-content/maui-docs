@@ -128,7 +128,7 @@ var innerGrid = new Grid();
 var glassEffectView = new SfGlassEffectView
 {
     CornerRadius = 20,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     Padding = 16,
     HeightRequest = 140,
     WidthRequest = 420
@@ -151,7 +151,7 @@ var avatarGlass = new SfGlassEffectView
 {
     WidthRequest = 64,
     HeightRequest = 64,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     CornerRadius = 32
 };
 
@@ -198,7 +198,7 @@ Grid.SetColumn(stackLayout, 1);
 var buttonGlass = new SfGlassEffectView
 {
     CornerRadius = 20,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     WidthRequest = 100,
     HeightRequest = 40
 };
@@ -330,7 +330,7 @@ var innerGrid = new Grid();
 // Glass effect view (main card)
 var glassEffectView = new SfGlassEffectView
 {
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     CornerRadius = 30,
     EnableShadowEffect = true,
     Padding = 16,
@@ -355,7 +355,7 @@ var avatarGlass = new SfGlassEffectView
 {
     WidthRequest = 64,
     HeightRequest = 64,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     CornerRadius = 32
 };
 
@@ -401,7 +401,7 @@ Grid.SetColumn(stackLayout, 1);
 var buttonGlass = new SfGlassEffectView
 {
     CornerRadius = 20,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     WidthRequest = 100,
     HeightRequest = 40
 };
@@ -533,7 +533,7 @@ var innerGrid = new Grid();
 // Glass effect view
 var glassEffectView = new SfGlassEffectView
 {
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     CornerRadius = 20,
     EnableShadowEffect = true,
     Padding = 16,
@@ -558,7 +558,7 @@ var avatarGlass = new SfGlassEffectView
 {
     WidthRequest = 64,
     HeightRequest = 64,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     CornerRadius = 32
 };
 
@@ -604,7 +604,7 @@ Grid.SetColumn(stackLayout, 1);
 var buttonGlass = new SfGlassEffectView
 {
     CornerRadius = 20,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     WidthRequest = 100,
     HeightRequest = 40
 };
@@ -736,7 +736,7 @@ var innerGrid = new Grid();
 // Glass effect view
 var glassEffectView = new SfGlassEffectView
 {
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     CornerRadius = 20,
     Background = Colors.Orange,
     Padding = 16,
@@ -761,7 +761,7 @@ var avatarGlass = new SfGlassEffectView
 {
     WidthRequest = 64,
     HeightRequest = 64,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     CornerRadius = 32
 };
 
@@ -807,7 +807,7 @@ Grid.SetColumn(stackLayout, 1);
 var buttonGlass = new SfGlassEffectView
 {
     CornerRadius = 20,
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     WidthRequest = 100,
     HeightRequest = 40
 };
@@ -904,7 +904,7 @@ var innerGrid = new Grid();
 // Glass effect view
 var glassEffectView = new SfGlassEffectView
 {
-    EffectType = GlassEffectType.Clear,
+    EffectType = LiquidGlassEffectType.Clear,
     CornerRadius = 20,
     HeightRequest = 140,
     WidthRequest = 380
