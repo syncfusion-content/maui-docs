@@ -141,7 +141,7 @@ Create a configuration file in your project folder to install the server for you
 
 ## Common use cases
 
-The examples below showcase how the different MCP tools handle real-world MAUI development scenarios. Tools can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically select the most appropriate tool based on the request.
+The examples below showcase how the `search_docs` tool handles real-world MAUI development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
