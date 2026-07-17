@@ -46,9 +46,7 @@ The UI virtualization concept is implemented by enabling the [EnableVirtualizati
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -77,11 +75,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
     }),
 };
 
@@ -135,9 +131,7 @@ public class CarouselViewModel
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+           <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -168,11 +162,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
     }),
 };
 

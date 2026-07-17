@@ -47,9 +47,7 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -76,11 +74,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
     }),
 };
 
@@ -138,9 +134,7 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -169,11 +163,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
     }),
 };
 
@@ -230,9 +222,7 @@ Use the [LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carou
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -270,11 +260,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
         var image = new Image();
         image.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(image);
-        return grid;
+        return image;
     }),
     LoadMoreView = new Grid()
     {
@@ -354,9 +342,7 @@ Call the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -384,11 +370,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
         var image = new Image();
         image.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(image);
-        return grid;
+        return image;
     })
 };
 

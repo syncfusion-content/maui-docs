@@ -1,345 +1,900 @@
 ---
 layout: post
-title: Dots Customization in .NET MAUI Rotator control | Syncfusion®
+title: Navigation Customization in .NET MAUI Rotator control | Syncfusion®
 description: Learn about Navigation Customization support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
-platform: maui 
-control: Rotator 
+platform: maui
+control: Rotator
 documentation: ug
 ---
 
 # Navigation Customization in .NET MAUI Rotator (SfRotator)
 
-The Rotator control supports customizing dots, thumbnails and navigation buttons.
+## Prerequisites
+
+Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Rotator`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
+
+## Overview
+
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control supports customizing the appearance and visibility of the navigation bar, including the dot indicators, the thumbnail indicators, the navigation button, and the position of the strip.
+
+This page covers:
+
+* **Dots Customization** — stroke color, selected dot color, and unselected dot color.
+* **Thumbnails Customization** — stroke color of the selected and unselected thumbnail.
+* **Customizing Position** — placement of the navigation strip (Top, Bottom, Left, Right).
+* **Navigation Button Customization** — icon color and background color of the navigation buttons.
+* **Navigation Visibility** — showing or hiding the navigation buttons.
+
+## Properties Reference
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `DotsStroke` | `Color` | `#B3B3B3` | The stroke color of the dot indicators. |
+| `SelectedDotColor` | `Color` | `#F2C849` | The fill color of the currently selected dot. |
+| `UnselectedDotColor` | `Color` | `#B3B3B3` | The fill color of the unselected dots. |
+| `SelectedThumbnailStroke` | `Color` | `#F2C849` | The stroke color of the currently selected thumbnail. |
+| `UnselectedThumbnailStroke` | `Color` | `#B3B3B3` | The stroke color of the unselected thumbnails. |
+| `NavigationStripPosition` | `NavigationStripPosition` | `Bottom` | The placement of the navigation bar relative to the slider. |
+| `NavigationButtonIconColor` | `Color` | `#FFFFFF` | The icon color of the navigation buttons. |
+| `NavigationButtonBackgroundColor` | `Color` | `Transparent` | The background color of the navigation buttons. |
+| `ShowNavigationButton` | `bool` | `true` | Whether the navigation buttons are visible. |
 
 ## Dots Customization
 
-In Dot Customization we can customize the  dots' stroke, selected and unselected dots' color.
+Customize the dot stroke, the selected dot color, and the unselected dot color.
 
 ### DotsStroke Color
 
-The [`DotsStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotsStroke) property is used to customize the color of the dots stroke in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+The [`DotsStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotsStroke) property customizes the color of the dot stroke.
 
 {% tabs %}
+
 {% highlight xaml %}
-<rotator:SfRotator x:Name="rotator" 
-            ItemsSource="{Binding ImageCollection}" 
-            SelectedIndex="2"
-            BackgroundColor="#ececec"
-            NavigationStripPosition="Bottom"
-            DotsStroke="Aqua"
-            WidthRequest="550"
-            HeightRequest="550">
 
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    BackgroundColor="#ececec"
+                    NavigationStripPosition="Bottom"
+                    DotsStroke="Aqua"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+   
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
+    
+ RotatorViewModel rotatorViewModel = new RotatorViewModel();
+ SfRotator rotator = new SfRotator()
+ {
+    SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripPosition = NavigationStripPosition.Bottom,
+    DotsStroke = Colors.Aqua,
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
-rotator.DotsStroke = Colors.Aqua;
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with dots stroke color](images/DotsStroke.png)
+
+![SfRotator with custom dot stroke color](images/DotsStroke.png)
 
 ### Selected Dot Color
 
-The [`SelectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedDotColor) property is used to customize the color of selected dot in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+The [`SelectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedDotColor) property customizes the color of the selected dot.
 
 {% tabs %}
+
 {% highlight xaml %}
 
-<rotator:SfRotator x:Name="rotator" 
-            ItemsSource="{Binding ImageCollection}" 
-            SelectedIndex="2"
-            BackgroundColor="#ececec"
-            NavigationStripPosition="Bottom"
-            DotsStroke="Aqua" 
-            SelectedDotColor="Blue"
-            WidthRequest="550"
-            HeightRequest="550">
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    BackgroundColor="#ececec"
+                    NavigationStripPosition="Bottom"
+                    DotsStroke="Aqua"
+                    SelectedDotColor="Blue"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
 
 {% endhighlight %}
-{% highlight c# %}
-
-rotator.DotsStroke = Color.Aqua;
-rotator.SelectedDotColor = Color.Blue;
+{% highlight C# %}
+    
+ RotatorViewModel rotatorViewModel = new RotatorViewModel();
+ SfRotator rotator = new SfRotator()
+ {
+    SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripPosition = NavigationStripPosition.Bottom,
+    DotsStroke = Colors.Aqua,
+    SelectedDotColor = Colors.Blue,
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
  
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with selected dot color](images/SelectedDotColor.png)
+
+![SfRotator with custom selected dot color](images/SelectedDotColor.png)
 
 ### Unselected Dot Color
 
-The [`UnselectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_UnselectedDotColor) property is used to customize the color of unselected dots in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+The [`UnselectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_UnselectedDotColor) property customizes the color of the unselected dots.
 
 {% tabs %}
+
 {% highlight xaml %}
 
-<rotator:SfRotator x:Name="rotator" 
-            ItemsSource="{Binding ImageCollection}" 
-            SelectedIndex="2"
-            BackgroundColor="#ececec"
-            NavigationStripPosition="Bottom"
-            DotsStroke="Aqua" 
-            SelectedDotColor="Blue"
-            UnselectedDotColor="Gray"
-            WidthRequest="550"
-            HeightRequest="550">
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    BackgroundColor="#ececec"
+                    NavigationStripPosition="Bottom"
+                    DotsStroke="Aqua"
+                    SelectedDotColor="Blue"
+                    UnselectedDotColor="Gray"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
 
 {% endhighlight %}
-{% highlight c# %}
 
-rotator.DotsStroke = Color.Aqua;
-rotator.SelectedDotColor = Color.Blue;
-rotator.UnselectedDotColor = Color.Gray;
+{% highlight C# %}
+    
+ RotatorViewModel rotatorViewModel = new RotatorViewModel();
+ SfRotator rotator = new SfRotator()
+ {
+    SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripPosition = NavigationStripPosition.Bottom,
+    DotsStroke = Colors.Aqua,
+    SelectedDotColor = Colors.Blue,
+    UnselectedDotColor = Colors.Gray,
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with unselected dot color](images/UnselectedDotColor.png)
+
+![SfRotator with custom unselected dot color](images/UnselectedDotColor.png)
 
 ## Thumbnails Customization
 
-In Thumbnail Customization we can customize the  selected and unselected thumbnail's stroke.
+Customize the stroke of the selected and unselected thumbnails.
 
 ### Selected Thumbnail Stroke
 
-The [`SelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedThumbnailStroke) property is used to customize the color of the selected thumbnail stroke in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+The [`SelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedThumbnailStroke) property customizes the color of the selected thumbnail stroke. Set `NavigationStripMode` to `Thumbnail` for the navigation buttons and thumbnail strip to appear.
 
 {% tabs %}
+
 {% highlight xaml %}
 
-<rotator:SfRotator x:Name="rotator" 
-            ItemsSource="{Binding ImageCollection}" 
-            SelectedIndex="2"
-            BackgroundColor="#ececec"
-            NavigationStripPosition="Bottom"
-            NavigationStripMode="Thumbnail"
-            SelectedThumbnailStroke="Green"
-            WidthRequest="550"
-            HeightRequest="550">
-
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    BackgroundColor="#ececec"
+                    NavigationStripPosition="Bottom"
+                    NavigationStripMode="Thumbnail"
+                    SelectedThumbnailStroke="Green"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+    
 {% endhighlight %}
-{% highlight c# %}
 
-rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-rotator.SelectedThumbnailStroke = Colors.Green;
+{% highlight C# %}
+    
+ RotatorViewModel rotatorViewModel = new RotatorViewModel();
+ SfRotator rotator = new SfRotator()
+ {
+    SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripPosition = NavigationStripPosition.Bottom,
+    NavigationStripMode = NavigationStripMode.Thumbnail;
+    SelectedThumbnailStroke = Colors.Green,
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with selected thumbnail stroke](images/SelectedThumbnailStroke.png)
 
-### UnSelected Thumbnail Stroke
+![SfRotator with custom selected thumbnail stroke](images/SelectedThumbnailStroke.png)
 
-The [`UnSelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_UnselectedThumbnailStroke) property is used to customize the color of the unselected thumbnails stroke in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+### Unselected Thumbnail Stroke
+
+The [`UnselectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_UnselectedThumbnailStroke) property customizes the color of the unselected thumbnail strokes.
 
 {% tabs %}
+
 {% highlight xaml %}
 
-<rotator:SfRotator x:Name="rotator" 
-            ItemsSource="{Binding ImageCollection}" 
-            SelectedIndex="2"
-            BackgroundColor="#ececec"
-            NavigationStripPosition="Bottom"
-            NavigationStripMode="Thumbnail"
-            SelectedThumbnailStroke="Green"
-            UnselectedThumbnailStroke="Red"
-            WidthRequest="550"
-            HeightRequest="550">
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    BackgroundColor="#ececec"
+                    NavigationStripPosition="Bottom"
+                    NavigationStripMode="Thumbnail"
+                    SelectedThumbnailStroke="Green"
+                    UnselectedThumbnailStroke="Red"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
 
 {% endhighlight %}
-{% highlight c# %}
 
-rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-rotator.SelectedThumbnailStroke = Colors.Green;
-rotator.UnSelectedThumbnailStroke = Colors.Red;
+{% highlight C# %}
+    
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
+    SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripPosition = NavigationStripPosition.Bottom,
+    NavigationStripMode = NavigationStripMode.Thumbnail,
+    SelectedThumbnailStroke = Colors.Green,
+    UnselectedThumbnailStroke = Colors.Red,
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with unselected thumbnail stroke](images/UnSelectedThumbnailStroke.png)
+
+![SfRotator with custom unselected thumbnail stroke](images/UnSelectedThumbnailStroke.png)
 
 ## Customizing Position
 
-The placement position of navigation strip items such as [Thumbnail](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Thumbnail) or [Dots](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Dots) can be customized in [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1). This can be specified using [NavigationStripMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property.   
+The [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripPosition) property specifies the placement of the navigation strip (thumbnails or dots) relative to the slider area. The available values are `Bottom`, `Top`, `Left`, and `Right`. For a complete list of values and per-position examples, see [Navigation Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes).
+
+The following example sets the position to `Top`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="Rotator.Rotator">
-    <ContentPage.BindingContext>
-        <local:RotatorViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <rotator:SfRotator x:Name="rotator" 
-                        NavigationDelay="2000" 
-                        ItemsSource="{Binding ImageCollection}" 
-                        SelectedIndex="2"
-                        NavigationDirection="Horizontal"
-                        NavigationStripMode="Dots" 
-                        BackgroundColor="#ececec"
-                        NavigationStripPosition="Top"
-                        WidthRequest="550"
-                        HeightRequest="550">
-            <rotator:SfRotator.ItemTemplate>
-                <DataTemplate>
-                    <Image  Source="{Binding Image}"/>
-                </DataTemplate>
-            </rotator:SfRotator.ItemTemplate>
-        </rotator:SfRotator>
-    </ContentPage.Content>
-</ContentPage>	
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    NavigationStripMode="Dots"
+                    NavigationStripPosition="Top"
+                    BackgroundColor="#ececec"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+    
 
 {% endhighlight %}
 
-{% highlight C# %}	
-
-using Syncfusion.Maui.Core.Rotator;
-using Syncfusion.Maui.Rotator;
-
-namespace Rotator
+{% highlight C# %}
+    
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
 {
-    public partial class Rotator : ContentPage
+   SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripMode = NavigationStripMode.Dots,
+    NavigationStripPosition = NavigationStripPosition.Top,
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
     {
-        public Rotator()
-        {
-            InitializeComponent ();
-            SfRotator rotator = new SfRotator();
-            var ImageCollection = new List<RotatorModel> {
-            new RotatorModel ("image1.png"),
-            new RotatorModel ("image2.png"),
-            new RotatorModel ("image3.png"),
-            new RotatorModel ("image4.png"),
-            new RotatorModel ("image5.png")
-            };
-            var itemTemplate = new DataTemplate(() =>
-            {
-                var grid = new Grid();
-                var nameLabel = new Image();
-                nameLabel.SetBinding(Image.SourceProperty, "Image");
-                grid.Children.Add(nameLabel);
-                return grid;
-            });
-            rotator.ItemTemplate = itemTemplate;
-            rotator.NavigationStripMode = NavigationStripMode.Dots;
-            rotator.NavigationStripPosition = NavigationStripPosition.Top;
-            rotator.WidthRequest=550;
-            rotator.HeightRequest=550;
-            rotator.ItemsSource = ImageCollection;
-            this.Content = rotator;
-        }
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
     }
-    public class RotatorModel
+    private string _image;
+    public string Image
     {
-        public RotatorModel(string imageString)
-        {
-            Image = imageString;
-        }
-        private String _image;
-        public String Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
+        get { return _image; }
+        set { _image = value; }
     }
 }
-	
-{% endhighlight %}
 
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-![NavigationStripPosition](images/NavigationStripPosition.png)
+
+![SfRotator with navigation strip position set to Top](images/NavigationStripPosition.png)
 
 ## Navigation Button Customization
 
-In Navigation Button Customization we can customize the  navigation button's icon and Background color.
+Customize the icon color and background color of the navigation buttons. The navigation buttons are only visible when [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) is set to `Thumbnail`.
 
 ### Navigation Button Icon Color
 
-The [`NavigationButtonIconColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonIconColor) property is used to customize the color of the navigation buttons icon in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+The [`NavigationButtonIconColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonIconColor) property customizes the icon color of the navigation buttons.
 
 {% tabs %}
+
 {% highlight xaml %}
 
-<rotator:SfRotator x:Name="rotator" 
-            ItemsSource="{Binding ImageCollection}" 
-            SelectedIndex="2"
-            BackgroundColor="#ececec"
-            NavigationStripMode="Thumbnail"
-            NavigationButtonIconColor="Blue"
-            WidthRequest="550"
-            HeightRequest="550">
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    BackgroundColor="#ececec"
+                    NavigationStripMode="Thumbnail"
+                    NavigationButtonIconColor="Blue"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+    
+{% endhighlight %}
+{% highlight C# %}
+    
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
+    SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripMode = NavigationStripMode.Thumbnail;
+    NavigationButtonIconColor = Colors.Blue;
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
  
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="ViewModel" %}
 
-rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-rotator.NavigationButtonIconColor = Colors.Blue;
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with navigation button icon Color](images/NavigationButtonIconColor.png)
+
+![SfRotator with custom navigation button icon color](images/NavigationButtonIconColor.png)
 
 ### Navigation Button Background Color
 
-The [`NavigationButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonBackgroundColor) property is used to customize the color of the navigation buttons background in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+The [`NavigationButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonBackgroundColor) property customizes the background color of the navigation buttons.
 
 {% tabs %}
+
 {% highlight xaml %}
 
-<rotator:SfRotator x:Name="rotator" 
-            ItemsSource="{Binding ImageCollection}" 
-            SelectedIndex="2"
-            BackgroundColor="#ececec"
-            NavigationStripMode="Thumbnail"
-            NavigationButtonBackgroundColor="Pink"
-            NavigationButtonIconColor="Blue"
-            WidthRequest="550"
-            HeightRequest="550">
+
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    BackgroundColor="#ececec"
+                    NavigationStripMode="Thumbnail"
+                    NavigationButtonBackgroundColor="Pink"
+                    NavigationButtonIconColor="Blue"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+    
+
+{% endhighlight %}
+
+{% highlight C# %}
+    
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
+    SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripMode = NavigationStripMode.Thumbnail,
+    NavigationButtonBackgroundColor = Colors.Pink,
+    NavigationButtonIconColor = Colors.Blue,
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
  
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="ViewModel" %}
 
-rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-rotator.NavigationButtonBackgroundColor = Colors.Pink;
-rotator.NavigationButtonIconColor = Colors.Blue;
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with navigation button Background Color](images/NavigationButtonBackgroundColor.png)
+
+![SfRotator with custom navigation button background color](images/NavigationButtonBackgroundColor.png)
 
 ## Navigation Visibility
 
-We can show or hide  Navigation Button using [`ShowNavigationButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ShowNavigationButton) property.
+Use the [`ShowNavigationButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ShowNavigationButton) property to show or hide the navigation buttons. By default, this property is `true`. The buttons are only relevant when `NavigationStripMode` is set to `Thumbnail`.
 
 {% tabs %}
+
 {% highlight xaml %}
 
-<rotator:SfRotator x:Name="rotator" 
-            ItemsSource="{Binding ImageCollection}" 
-            SelectedIndex="2"
-            BackgroundColor="#ececec"
-            NavigationStripMode="Thumbnail"
-            ShowNavigationButton="False"
-            WidthRequest="550"
-            HeightRequest="550">
-{% endhighlight %}
-{% highlight c# %}
-
-rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-rotator.ShowNavigationButton = false;
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    BackgroundColor="#ececec"
+                    NavigationStripMode="Thumbnail"
+                    ShowNavigationButton="False"
+                    WidthRequest="550"
+                    HeightRequest="550">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
     
+{% endhighlight %}
+
+{% highlight C# %}
+    
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
+    SelectedIndex = 2,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationStripMode = NavigationStripMode.Thumbnail,
+    ShowNavigationButton = false,
+    WidthRequest = 550,
+    HeightRequest = 550,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with ShowNavigationButton property](images/ShowNavigationButton.png)
 
+![SfRotator with ShowNavigationButton set to false](images/ShowNavigationButton.png)
+
+## See also
+
+- [Getting Started with .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/getting-started)
+- [Navigation Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
+- [Sliding Direction in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/sliding-direction)
+- [Placement Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)
+- [Populating Data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)
+- [Adding Looping and Delays in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/adding-looping-and-delays)

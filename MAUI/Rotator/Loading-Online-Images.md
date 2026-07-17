@@ -2,141 +2,128 @@
 layout: post
 title: Loading Online Images in .NET MAUI Rotator control | Syncfusion®
 description: Learn about Loading Online Images support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
-platform: maui 
-control: Rotator 
+platform: maui
+control: Rotator
 documentation: ug
 ---
 
 # Loading Online Images in .NET MAUI Rotator (SfRotator)
 
-This section describes loading the online images in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) Control.
+## Prerequisites
+
+Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Rotator`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
+
+## Overview
+
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can load images from remote URLs by binding a collection of model objects whose `Image` property holds the URL. The `ItemTemplate` resolves the URL through the standard .NET MAUI `Image` control, which handles the network request, caching, and platform-specific configuration (such as ATS on iOS or cleartext traffic on Android).
+
+> **Note:** Loading online images requires the device to have network access. By default, .NET MAUI uses HTTPS. If you need to load `http://` images, enable cleartext traffic for the relevant platform (for example, by setting `android:usesCleartextTraffic="true"` in the Android `AndroidManifest.xml`).
+
+
+## Create the Model
+
+Create a `RotatorModel` class that holds the image URL.
 
 {% tabs %}
-{% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="Rotator.Rotator">
-    <ContentPage.BindingContext>
-        <local:RotatorViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout>
-            <rotator:SfRotator x:Name="rotator" 
-                        ItemsSource="{Binding ImageCollection}" 
-                        NavigationDirection="Horizontal">
-                <rotator:SfRotator.ItemTemplate>
-                    <DataTemplate>
-                            <Image Source="{Binding Image}"/>
-                    </DataTemplate>
-                </rotator:SfRotator.ItemTemplate>
-            </rotator:SfRotator>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+{% highlight C# %}
 
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Core.Rotator;
-using Syncfusion.Maui.Rotator;
-namespace Rotator
+public class RotatorModel
 {
-    public partial class Rotator : ContentPage
+    public RotatorModel(string image)
     {
-        public Rotator()
-        {
-            InitializeComponent();
-            SfRotator sfRotator = new SfRotator();
-            sfRotator.ItemsSource = GetDataSource();
-
-            var imageTemplate = new DataTemplate(() =>
-            {
-                Image image = new Image();
-                image.SetBinding(Image.SourceProperty, "Image");
-                return image;
-            });
-
-            sfRotator.ItemTemplate = imageTemplate;
-            this.Content = sfRotator;
-        }
-        List<CustomData> GetDataSource()
-        {
-            List<CustomData> list = new List<CustomData>();
-            list.Add(new CustomData("https://cdn.syncfusion.com/content/images/Images/Camtasia_Succinctly.png?v=22022017060923"));
-            list.Add(new CustomData("https://cdn.syncfusion.com/content/images/Images/SQL_Queries_Succinctly.png?v=04022017014551"));
-            list.Add(new CustomData("https://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg"));
-            list.Add(new CustomData("https://cdn.syncfusion.com/content/images/Images/Keystonejs_Succinctly.png?v=22022017060923"));
-            list.Add(new CustomData("https://cdn.syncfusion.com/content/images/Images/sql_server_for_c_sharp_developers_succinctly_cover_img.png?v=22022017060923"));
-            list.Add(new CustomData("https://cdn.syncfusion.com/content/images/Images/sql_server_for_c_sharp_developers_succinctly_cover_img.png?v=22022017060923"));
-            return list;
-        }
+        Image = image;
     }
+    public string Image { get; set; }
 }
-
-
-// ViewModel Class:
-
-    public class RotatorViewModel
-        {
-            public RotatorViewModel()
-            {
-                ImageCollection= = new ObservableCollection<RotatorModel>();
-                ImageCollection.Add(new RotatorModel("https://cdn.syncfusion.com/content/images/Images/Camtasia_Succinctly.png?v=22022017060923"));
-                ImageCollection.Add(new RotatorModel("https://cdn.syncfusion.com/content/images/Images/SQL_Queries_Succinctly.png?v=04022017014551"));
-                ImageCollection.Add(new RotatorModel("https://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg"));
-                ImageCollection.Add(new RotatorModel("https://cdn.syncfusion.com/content/images/Images/Keystonejs_Succinctly.png?v=22022017060923"));
-                ImageCollection.Add(new RotatorModel("https://cdn.syncfusion.com/content/images/Images/sql_server_for_c_sharp_developers_succinctly_cover_img.png?v=22022017060923"));
-                ImageCollection.Add(new RotatorModel("https://cdn.syncfusion.com/content/images/Images/sql_server_for_c_sharp_developers_succinctly_cover_img.png?v=22022017060923"));
-            }
-
-            private ObservableCollection<RotatorModel> imageCollection;
-            public ObservableCollection<RotatorModel> ImageCollection
-            {
-                get { return imageCollection; }
-                set { imageCollection = value; }
-            }
-        }
-
-    // Model Class:
-
-    public class RotatorModel
-        {
-            public RotatorModel(string imageString)
-            {
-                Image = imageString;
-            }
-            private String _image;
-            public String Image
-            {
-                get { return _image; }
-                set { _image = value; }
-            }
-        }
-
-    // Custom Data 
-
-    namespace Rotator
-    {
-        public class CustomData : ContentPage
-        {
-            public CustomData(string image)
-            {
-                Image = image;
-            }
-            public string Image
-            {
-                get;
-                set;
-            }
-        }
-    }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Loading URL Image](images/URLImage.png)
+## Create the ViewModel
+
+Create a `RotatorViewModel` that exposes a collection of `RotatorModel` items. Use `ObservableCollection<T>` so the UI updates automatically when the collection changes.
+
+{% tabs %}
+
+{% highlight C# %}
+
+using System.Collections.ObjectModel;
+
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        ImageCollection = new ObservableCollection<RotatorModel>
+        {
+            new RotatorModel("https://cdn.syncfusion.com/content/images/Images/Camtasia_Succinctly.png"),
+            new RotatorModel("https://cdn.syncfusion.com/content/images/Images/SQL_Queries_Succinctly.png"),
+            new RotatorModel("https://cdn.syncfusion.com/content/images/Images/Keystonejs_Succinctly.png"),
+            new RotatorModel("https://cdn.syncfusion.com/content/images/Images/sql_server_for_c_sharp_developers_succinctly_cover_img.png")
+        };
+    }
+
+    public ObservableCollection<RotatorModel> ImageCollection { get; set; }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Load Online Images
+
+Bind the `RotatorViewModel.ImageCollection` to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemsSource) property of [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) and use an [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTemplate) to display each image. The `Image.Source` binding resolves the URL for each item.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    NavigationDirection="Horizontal">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+
+{% endhighlight %}
+{% highlight C# %}
+    
+ RotatorViewModel rotatorViewModel = new RotatorViewModel();
+ SfRotator rotator = new SfRotator()
+ {
+    NavigationDirection = NavigationDirection.Horizontal,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% endtabs %}
+
+
+![SfRotator loading images from URLs](images/URLImage.png)
+
+## Troubleshooting
+
+* **Images do not load** — Verify the device has network access and that the URL is reachable from the device. Open the URL in a browser on the same network to confirm.
+* **HTTPS errors** — The .NET MAUI `Image` control requires HTTPS by default. If you must use `http://`, enable cleartext traffic for the relevant platform.
+* **Slow or memory-intensive loads** — For large images or many items, consider preloading and resizing images, or using a caching library such as FFImageLoading.
+
+## See also
+
+- [Getting Started with .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/getting-started)
+- [Populating Data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)
+- [Navigation Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
+- [Sliding Direction in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/sliding-direction)

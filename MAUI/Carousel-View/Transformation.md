@@ -58,9 +58,7 @@ The [RotationAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -86,11 +84,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
     }),
 };
 
@@ -149,9 +145,7 @@ The distance between the selected item and other items can be customized by usin
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -177,11 +171,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+       var image = new Image();
+       image.SetBinding(Image.SourceProperty, "Image");
+       return image;
     }),
 };
 
@@ -241,9 +233,7 @@ The [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCaro
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -269,11 +259,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
     }),
 };
 
@@ -332,9 +320,7 @@ The [ScaleOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.S
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -360,11 +346,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
     }),
 };
 
@@ -423,9 +407,7 @@ The spacing of all items in Linear mode can be configured by using the [ItemSpac
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="itemTemplate">
-            <Grid>
-                <Image Source="{Binding Image}" Aspect="AspectFit"/>
-            </Grid>
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -453,11 +435,9 @@ SfCarousel carousel = new SfCarousel()
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
     {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
     }),
 };
 

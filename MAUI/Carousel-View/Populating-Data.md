@@ -157,11 +157,9 @@ namespace CarouselSample
                 ItemsSource = carouselViewModel.ImageCollection,
                 ItemTemplate = new DataTemplate(() =>
                 {
-                    var grid = new Grid();
-                    var nameLabel = new Image();
-                    nameLabel.SetBinding(Image.SourceProperty, "Image");
-                    grid.Children.Add(nameLabel);
-                    return grid;
+                   var image = new Image();
+                   image.SetBinding(Image.SourceProperty, "Image");
+                   return image;
                 }),
             };
             this.Content = carousel;

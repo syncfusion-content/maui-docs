@@ -9,61 +9,18 @@ documentation: ug
 
 # Adding Looping and Delays in .NET MAUI Rotator (SfRotator)
 
-Looping and delay can be enabled in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control in .NET MAUI.
-
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-1. Install the [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) NuGet package in your .NET MAUI project.
-2. Register the Rotator handler in `MauiProgram.cs`:
+- `Syncfusion.Maui.Rotator`
 
-    ```csharp
-    builder.ConfigureSyncfusionRotator();
-    ```
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
 
-3. Add the required image assets (e.g., `image1.png` through `image5.png`) to the `Resources/Images` folder of your project.
-4. Define a `RotatorModel` and a `RotatorViewModel` to supply the image collection. For example:
+## Overview
 
-    ```csharp
-    using System.Collections.ObjectModel;
+Looping and delay can be enabled in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control in .NET MAUI.
 
-    namespace Rotator
-    {
-        public class RotatorModel
-        {
-            public RotatorModel(string imageString)
-            {
-                Image = imageString;
-            }
-            private string _image;
-            public string Image
-            {
-                get { return _image; }
-                set { _image = value; }
-            }
-        }
-
-        public class RotatorViewModel
-        {
-            public ObservableCollection<RotatorModel> ImageCollection { get; set; }
-
-            public RotatorViewModel()
-            {
-                ImageCollection = new ObservableCollection<RotatorModel>
-                {
-                    new RotatorModel("image1.png"),
-                    new RotatorModel("image2.png"),
-                    new RotatorModel("image3.png"),
-                    new RotatorModel("image4.png"),
-                    new RotatorModel("image5.png")
-                };
-            }
-        }
-    }
-    ```
-
-> **Note:** For complete setup steps, refer to the [Getting Started with .NET MAUI Rotator](https://help.syncfusion.com/maui/Rotator/getting-started) documentation.
 
 ## Properties Reference
 
@@ -84,88 +41,83 @@ N> By default, the property value is set to `false`.
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="Rotator.RotatorPage">
-    <ContentPage.BindingContext>
-        <local:RotatorViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <rotator:SfRotator x:Name="rotator" 
-                        ItemsSource="{Binding ImageCollection}" 
-                        SelectedIndex="2"
-                        NavigationDirection="Horizontal"
-                        NavigationStripMode="Thumbnail" 
-                        BackgroundColor="#ececec"
-                        EnableAutoPlay="true"
-                        NavigationStripPosition="Bottom">
-            <rotator:SfRotator.ItemTemplate>
-                <DataTemplate>
-                    <Image  Source="{Binding Image}"/>
-                </DataTemplate>
-            </rotator:SfRotator.ItemTemplate>
-        </rotator:SfRotator>
-    </ContentPage.Content>
-</ContentPage>
+<rotator:SfRotator x:Name="rotator" 
+                ItemsSource="{Binding ImageCollection}" 
+                SelectedIndex="2"
+                NavigationDirection="Horizontal"
+                NavigationStripMode="Thumbnail" 
+                BackgroundColor="#ececec"
+                EnableAutoPlay="true"
+                NavigationStripPosition="Bottom">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image  Source="{Binding Image}"/>
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
 
 {% endhighlight %}
-
 {% highlight C# %}
     
-using System.Collections.Generic;
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Rotator;
+ RotatorViewModel rotatorViewModel = new RotatorViewModel();
+ SfRotator rotator = new SfRotator()
+ {
+    SelectedIndex = 2,
+    NavigationDirection = NavigationDirection.Horizontal,
+    NavigationStripMode = NavigationStripMode.Thumbnail,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    EnableAutoPlay = true,
+    NavigationStripPosition = NavigationStripPosition.Bottom,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
-namespace Rotator
+// Model
+public class RotatorModel
 {
-    public partial class RotatorPage : ContentPage
+    public RotatorModel(string imageString)
     {
-        public RotatorPage()
-        {
-            InitializeComponent();
-            SfRotator rotator = new SfRotator();
-            var ImageCollection = new List<RotatorModel> {
-            new RotatorModel ("image1.png"),
-            new RotatorModel ("image2.png"),
-            new RotatorModel ("image3.png"),
-            new RotatorModel ("image4.png"),
-            new RotatorModel ("image5.png")
-            };
-            var itemTemplate = new DataTemplate(() =>
-            {
-                var grid = new Grid();
-                var nameLabel = new Image();
-                nameLabel.SetBinding(Image.SourceProperty, "Image");
-                grid.Children.Add(nameLabel);
-                return grid;
-            });
-            rotator.ItemTemplate = itemTemplate;
-            rotator.EnableAutoPlay = true;
-            rotator.NavigationDelay = 2000;
-            rotator.ItemsSource = ImageCollection;
-            this.Content = rotator;
-        }
+        Image = imageString;
     }
-    public class RotatorModel
+    private string _image;
+    public string Image
     {
-        public RotatorModel(string imageString)
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
         {
-            Image = imageString;
-        }
-        private string _image;
-        public string Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
     }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## Setting Navigation Delay
@@ -178,89 +130,87 @@ N> The property value should be in milliseconds. If `EnableAutoPlay` is `false`,
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?> 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="Rotator.RotatorPage">
-    <ContentPage.BindingContext>
-        <local:RotatorViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <rotator:SfRotator x:Name="rotator" 
-                        NavigationDelay="2000" 
-                        ItemsSource="{Binding ImageCollection}" 
-                        SelectedIndex="2"
-                        NavigationDirection="Horizontal"
-                        NavigationStripMode="Thumbnail" 
-                        BackgroundColor="#ececec"
-                        EnableAutoPlay="true"
-                        NavigationStripPosition="Bottom">
-            <rotator:SfRotator.ItemTemplate>
-                <DataTemplate>
-                    <Image  Source="{Binding Image}"/>
-                </DataTemplate>
-            </rotator:SfRotator.ItemTemplate>
-        </rotator:SfRotator>
-    </ContentPage.Content>
-</ContentPage>
+<rotator:SfRotator x:Name="rotator" 
+                NavigationDelay="2000" 
+                ItemsSource="{Binding ImageCollection}" 
+                SelectedIndex="2"
+                NavigationDirection="Horizontal"
+                NavigationStripMode="Thumbnail" 
+                BackgroundColor="#ececec"
+                EnableAutoPlay="true"
+                NavigationStripPosition="Bottom">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image  Source="{Binding Image}"/>
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+    
 	
 {% endhighlight %}
 
 {% highlight C# %}
+    
+ RotatorViewModel rotatorViewModel = new RotatorViewModel();
+ SfRotator rotator = new SfRotator()
+ {
+    SelectedIndex = 2,
+    NavigationDirection = NavigationDirection.Horizontal,
+    NavigationStripMode = NavigationStripMode.Thumbnail,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    NavigationDelay = 2000,
+    EnableAutoPlay = true,
+    NavigationStripPosition = NavigationStripPosition.Bottom,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
-using System.Collections.Generic;
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Rotator;
-
-namespace Rotator
+// Model
+public class RotatorModel
 {
-    public partial class RotatorPage : ContentPage
+    public RotatorModel(string imageString)
     {
-        public RotatorPage()
-        {
-            InitializeComponent();
-            SfRotator rotator = new SfRotator();
-            var ImageCollection = new List<RotatorModel> {
-            new RotatorModel ("image1.png"),
-            new RotatorModel ("image2.png"),
-            new RotatorModel ("image3.png"),
-            new RotatorModel ("image4.png"),
-            new RotatorModel ("image5.png")
-            };
-            var itemTemplate = new DataTemplate(() =>
-            {
-                var grid = new Grid();
-                var nameLabel = new Image();
-                nameLabel.SetBinding(Image.SourceProperty, "Image");
-                grid.Children.Add(nameLabel);
-                return grid;
-            });
-            rotator.ItemTemplate = itemTemplate;
-            rotator.EnableAutoPlay = true;
-            rotator.NavigationDelay = 2000;
-            rotator.ItemsSource = ImageCollection;
-            this.Content = rotator;
-        }
+        Image = imageString;
     }
-    public class RotatorModel
+    private string _image;
+    public string Image
     {
-        public RotatorModel(string imageString)
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
         {
-            Image = imageString;
-        }
-        private string _image;
-        public string Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
     }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## Looping Items
@@ -273,96 +223,94 @@ N> By default, the property value is set to `false`.
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?> 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="Rotator.RotatorPage">
-    <ContentPage.BindingContext>
-        <local:RotatorViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <rotator:SfRotator x:Name="rotator" 
-                        NavigationDelay="2000" 
-                        ItemsSource="{Binding ImageCollection}" 
-                        SelectedIndex="2"
-                        NavigationDirection="Horizontal"
-                        NavigationStripMode="Thumbnail" 
-                        BackgroundColor="#ececec"
-                        EnableAutoPlay="true"
-                        EnableLooping="true"
-                        NavigationStripPosition="Bottom">
-            <rotator:SfRotator.ItemTemplate>
-                <DataTemplate>
-                    <Image  Source="{Binding Image}"/>
-                </DataTemplate>
-            </rotator:SfRotator.ItemTemplate>
-        </rotator:SfRotator>
-    </ContentPage.Content>
-</ContentPage>
-	
+<rotator:SfRotator x:Name="rotator" 
+                NavigationDelay="2000" 
+                ItemsSource="{Binding ImageCollection}" 
+                SelectedIndex="2"
+                NavigationDirection="Horizontal"
+                NavigationStripMode="Thumbnail" 
+                BackgroundColor="#ececec"
+                EnableAutoPlay="true"
+                EnableLooping="true"
+                NavigationStripPosition="Bottom">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image  Source="{Binding Image}"/>
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+
 {% endhighlight %}
-
 {% highlight C# %}
+    
+ RotatorViewModel rotatorViewModel = new RotatorViewModel();
+ SfRotator rotator = new SfRotator()
+ {
+    SelectedIndex = 2,
+    NavigationDirection = NavigationDirection.Horizontal,
+    NavigationStripMode = NavigationStripMode.Thumbnail,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    EnableAutoPlay = true,
+    EnableLooping = true,
+    NavigationDelay = 2000,
+    NavigationStripPosition = NavigationStripPosition.Bottom,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
-using System.Collections.Generic;
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Rotator;
-
-namespace Rotator
+// Model
+public class RotatorModel
 {
-    public partial class RotatorPage : ContentPage
+    public RotatorModel(string imageString)
     {
-        public RotatorPage()
-        {
-            InitializeComponent();
-            SfRotator rotator = new SfRotator();
-            var ImageCollection = new List<RotatorModel> {
-            new RotatorModel ("image1.png"),
-            new RotatorModel ("image2.png"),
-            new RotatorModel ("image3.png"),
-            new RotatorModel ("image4.png"),
-            new RotatorModel ("image5.png")
-            };
-            var itemTemplate = new DataTemplate(() =>
-            {
-                var grid = new Grid();
-                var nameLabel = new Image();
-                nameLabel.SetBinding(Image.SourceProperty, "Image");
-                grid.Children.Add(nameLabel);
-                return grid;
-            });
-            rotator.ItemTemplate = itemTemplate;
-            rotator.EnableAutoPlay = true;
-            rotator.NavigationDelay = 2000;
-            rotator.EnableLooping = true;
-            rotator.ItemsSource = ImageCollection;
-            this.Content = rotator;
-        }
+        Image = imageString;
     }
-    public class RotatorModel
+    private string _image;
+    public string Image
     {
-        public RotatorModel(string imageString)
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
         {
-            Image = imageString;
-        }
-        private string _image;
-        public string Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
     }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## See Also
 
 - [Getting Started with .NET MAUI Rotator (SfRotator)](https://help.syncfusion.com/maui/Rotator/getting-started)
-- [Navigation Direction in .NET MAUI Rotator](https://help.syncfusion.com/maui/Rotator/navigation)
-- [Navigation Strip Mode in .NET MAUI Rotator](https://help.syncfusion.com/maui/Rotator/navigation-strip)
-- [.NET MAUI Rotator Release Notes](https://help.syncfusion.com/maui/Rotator/release-notes)
+- [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)
+- [Navigation Mode in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
+- [Populating data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)
+- [Events in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/events)
+- [Placement Modes in.NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)
