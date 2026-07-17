@@ -32,8 +32,6 @@ The Syncfusion® [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/ma
 - **Accessibility and keyboard** allows improving usability with keyboard navigation and inclusive design.  
 - **Appearance customization** allows modifying styles, layouts, and visual properties to match application requirements.
 
-    ![leaf-item-template-in-maui-tree-map](images/overview/leaf-item-template-in-maui-tree-map.png)
-
 ## Globalization
 
 The following table summarizes the globalization support available in this control.
