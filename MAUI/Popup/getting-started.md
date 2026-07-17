@@ -131,35 +131,20 @@ Refer to the following code example for displaying popup using Button's Click ev
 
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="GettingStarted.MainPage">
-    <StackLayout x:Name="mainLayout">
-        <Button x:Name="clickToShowPopup" Text="Show Popup"
-                VerticalOptions="Start" HorizontalOptions="Center"
-                Clicked="ClickToShowPopup_Clicked" />
-        <syncfusion:SfPopup x:Name="popup" />
-    </StackLayout>
-</ContentPage>
+<StackLayout x:Name="mainLayout">
+    <Button x:Name="clickToShowPopup" Text="Show Popup"
+            VerticalOptions="Start" HorizontalOptions="Center"
+            Clicked="ClickToShowPopup_Clicked" />
+    <syncfusion:SfPopup x:Name="popup" />
+</StackLayout>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-namespace GettingStarted;
-
-public partial class MainPage : ContentPage
+private void ClickToShowPopup_Clicked(object? sender, EventArgs e)
 {
-    public MainPage()
-    {
-        InitializeComponent();
-    }
-
-    private void ClickToShowPopup_Clicked(object sender, EventArgs e)
-    {
-        popup.Show();
-    }
+    popup.Show();
 }
 
 {% endhighlight %}

@@ -1,25 +1,29 @@
 ---
 layout: post
-title: Migrate from Xamarin SfPullToRefresh to .NET MAUI SfPullToRefresh | Syncfusion 
+title: Migrate Xamarin SfPullToRefresh to MAUI SfPullToRefresh | Syncfusion
 description: Learn here all about Migrating from Syncfusion Xamarin PullToRefresh to Syncfusion .NET MAUI SfPullToRefresh control and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefresh
+# Migrate from Xamarin SfPullToRefresh to .NET MAUI SfPullToRefresh
 
-To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefresh, we kept most of the APIs from Xamarin SfPullToRefresh in .NET MAUI SfPullToRefresh. However, to maintain the consistency of API naming in .NET MAUI SfPullToRefresh, we renamed some of the APIs. The APIs that have been changed in .NET MAUI SfPullToRefresh from Xamarin SfPullToRefresh are detailed as follows.
+To make migration easier from `Xamarin.Forms SfPullToRefresh` to `.NET MAUI SfPullToRefresh`, we kept most of the APIs from Xamarin `SfPullToRefresh` in `.NET MAUI SfPullToRefresh`. However, to maintain the consistency of API naming in .NET MAUI , we renamed some of the APIs.
 
-## Namespaces 
+## Namespaces
 
 <table>
 <tr>
-<th>Xamarin SfPullToRefresh </th>
-<th>.NET .NET MAUI SfPullToRefresh</th></tr>
+<th>Xamarin SfPullToRefresh</th>
+<th>.NET MAUI SfPullToRefresh</th>
+<th>Description</th>
+</tr>
 <tr>
 <td>Syncfusion.SfPullToRefresh.XForms</td>
-<td>Syncfusion.Maui.PullToRefresh</td></tr>
+<td>Syncfusion.Maui.PullToRefresh</td>
+<td>Namespace that contains the SfPullToRefresh class and its supporting types.</td>
+</tr>
 </table>
 
 ## Properties
@@ -28,7 +32,9 @@ To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefres
 <tr>
 <th>Xamarin SfPullToRefresh</th>
 <th>.NET MAUI SfPullToRefresh</th>
-<th>Description</th></tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
 <tr>
 <td>{{'[ProgressStrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_ProgressStrokeColor)'| markdownify }}</td>
 <td>{{'[ProgressColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_ProgressColor)'| markdownify }}</td>
@@ -66,15 +72,39 @@ To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefres
 </tr>
 </table>
 
-## Enums 
+## Enums
 
 <table>
 <tr>
 <th>Xamarin SfPullToRefresh</th>
 <th>.NET MAUI SfPullToRefresh</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 <tr>
 <td>{{'[TransitionType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.TransitionType.html)'| markdownify }}</td>
 <td>{{'[PullToRefreshTransitionType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html)'| markdownify }}</td>
-<td>Defines type of pulling animation can be perfomed.</td></tr>
+<td>Defines the type of pulling animation to be performed.</td>
+</tr>
+</table>
+
+### Enum Members
+
+The `TransitionType` (Xamarin) and `PullToRefreshTransitionType` (.NET MAUI) enums expose the following members, which have been preserved with the same values:
+
+<table>
+<tr>
+<th>Xamarin member</th>
+<th>.NET MAUI member</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>SlideOnTop</code></td>
+<td><code>SlideOnTop</code></td>
+<td>Slides the content on top of the pull-to-refresh indicator.</td>
+</tr>
+<tr>
+<td><code>PushOnTop</code></td>
+<td><code>PushOnTop</code></td>
+<td>Pushes the content down to make room for the pull-to-refresh indicator.</td>
+</tr>
 </table>

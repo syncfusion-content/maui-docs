@@ -112,7 +112,7 @@ builder.ConfigureSyncfusionCore();
 Now, define a simple data model of person with the name properties.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
 public class Person 
 { 
@@ -129,7 +129,7 @@ public class Person
 Next, create a view model class and initialize a collection of persons as shown in the following code sample.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
 public class ViewModel : INotifyPropertyChanged
 {
@@ -150,7 +150,7 @@ public class ViewModel : INotifyPropertyChanged
 		employees.Add(new Person() { Name = "Mark" });
 	} 
 
-	public event PropertyChangedEventHandler PropertyChanged;
+	public event PropertyChangedEventHandler? PropertyChanged;
 
 	public void OnPropertyChanged(string property)
 	{

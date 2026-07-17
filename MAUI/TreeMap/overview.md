@@ -1,53 +1,36 @@
 ---
 layout: post
 title: Overview of .NET MAUI TreeMap | Syncfusion
-description: Learn about the introduction of Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap(STreeMap) control, its basic features, and the functionalities of treemap.
+description: Learn about the introduction to Syncfusion® .NET MAUI TreeMap (SfTreeMap) control, its basic features, and the functionalities of treemap.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
  
-# Overview of .NET MAUI TreeMap (SfTreeMap)
+# Overview of .NET MAUI TreeMap
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) control allows you to visually represent hierarchical data with rectangles that are sized and colored based on underlying values. It efficiently displays grouped and nested data structures, offering various layout options, extensive customization options, supporting item selection, data binding to different sources, and more.
+The Syncfusion® [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) control allows you to visually represent hierarchical data with rectangles that are sized and colored based on underlying values. It efficiently displays grouped and nested data structures, offering various layout options, extensive customization options, and supports item selection, data binding to different sources, and more.
 
- ![overview-of-maui-tree-map](images/overview/overview-of-maui-tree-map.png)
+![overview-of-maui-tree-map](images/overview/legend-in-maui-tree-map.png)
 
 ## Business use cases
 
-- Business intelligence applications that require visualizing hierarchical data such as categories, subcategories, and performance metrics.  
+- Business intelligence applications that require visualizing hierarchical data, such as categories, subcategories, and performance metrics.  
 - Financial dashboards that display portfolio distribution, revenue contribution, or market segmentation.  
 - Analytics applications that require comparing proportional values across grouped datasets.  
 - Data-driven applications that need efficient visualization of large hierarchical datasets in a compact layout.  
   
-## Key features 
+## Key Features
  
 - **Data Binding** allows binding structured data with multiple levels and categories.
 - **Layout** allows choosing between layouts such as slice and dice or squarified for optimal visualization. 
-
-    ![layout-in-maui-tree-map](images/overview/layout-in-maui-tree-map.png)
-
 - **Levels** allows representing nested data structures with clear parent-child relationships. 
-
-    ![level-in-maui-tree-map](images/overview/level-in-maui-tree-map.png)
-
 - **Brush Settings** allows applying colors based on value ranges or categories for better interpretation.
-
-    ![brush-settings-in-maui-tree-map](images/overview/brush-settings-in-maui-tree-map.png)
-
 - **Legend** allows providing visual guidance for understanding color and data mapping. 
-
-    ![legend-in-maui-tree-map](images/overview/legend-in-maui-tree-map.png)
-
 - **Tooltip** allows displaying additional information on interaction with tree map items.
-
-    ![tool-tip-in-maui-tree-map](images/overview/tool-tip-in-maui-tree-map.gif)
-
 - **Interaction** allows selecting and highlighting items for focused analysis.  
 - **Accessibility and keyboard** allows improving usability with keyboard navigation and inclusive design.  
 - **Appearance customization** allows modifying styles, layouts, and visual properties to match application requirements.
-
-    ![leaf-item-template-in-maui-tree-map](images/overview/leaf-item-template-in-maui-tree-map.png)
 
 ## Globalization
 
@@ -91,25 +74,25 @@ The following table summarizes the globalization support available in this contr
 <tr>
 <td><a href="/maui/treemap/overview">TreeMap</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><a href="https://help.syncfusion.com/maui/treemap/right-to-left"><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><a href="https://help.syncfusion.com/maui/treemap/accessibility"><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
+<td align="center"><a href="https://help.syncfusion.com/maui/treemap/accessibility"><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
 </tr> 
 </table>
 
-## Related controls
+## Related Controls
 
 - [Sunburst Chart](https://help.syncfusion.com/maui/sunburstchart/overview) for visualizing hierarchical data using a radial layout.
-- [Cartesian Charts](https://help.syncfusion.com/maui/cartesian-charts/overview) for analyzing data trends using axis-based charts.
-- [Maps](https://help.syncfusion.com/maui/maps/overview) for visualizing location-based hierarchical data.  
+- [.NET MAUI Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/overview) for analyzing data trends using axis-based charts.
+- [Maps](https://help.syncfusion.com/maui/maps/overview) for visualizing location-based hierarchical data.
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/treemap/getting-started) shows a step‑by‑step guide to begin using the TreeMap control.  
-- [Layouts](https://help.syncfusion.com/maui/treemap/layouts) explains how to configure layout types and data arrangement.  
-- [Drilldown](https://help.syncfusion.com/maui/treemap/drilldown) helps dive into details by exploring data hierarchies step by step.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.  
+- [Getting Started](https://help.syncfusion.com/maui/treemap/getting-started) shows a step‑by‑step guide to begin using the TreeMap control.
+- [Layouts](https://help.syncfusion.com/maui/treemap/layouts) explains how to configure layout types and data arrangement.
+- [Drilldown](https://help.syncfusion.com/maui/treemap/drilldown) helps dive into details by exploring data hierarchies step by step.
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
 
 ## Resources
 
@@ -224,7 +207,7 @@ The following table summarizes the globalization support available in this contr
 .explore-link {
   margin-top: auto;
   color: #0A76FF;
-  font-size: 12;
+  font-size: 12px;
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -300,7 +283,7 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1415" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/maui" class="explore-link">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>

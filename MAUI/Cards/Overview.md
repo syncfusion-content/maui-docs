@@ -7,7 +7,7 @@ control : Cards
 documentation : ug
 ---
 
-# Overview of .NET MAUI Cards (SfCards)  
+# Overview of .NET MAUI Cards  
 
 The Syncfusion® .NET MAUI Cards ([SfCards](https://www.syncfusion.com/maui-controls/maui-cards)) control empowers you to generate either a removable card or a stack of cards, with only one card being visible initially, requires a swipe to reveal the subsequent card.
 

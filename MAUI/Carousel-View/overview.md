@@ -7,7 +7,7 @@ control: Carousel
 documentation: ug
 ---
 
-# .NET MAUI Carousel View (SfCarousel) Overview
+# Overview of .NET MAUI Carousel View
 
 The Syncfusion® [.NET MAUI Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) control allows users to navigate through image data in an interactive way so that it can be viewed or selected. It provides various customization options for its item arrangements.
 
