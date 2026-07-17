@@ -15,24 +15,13 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Enabling auto sizing
 
 Auto sizing can be enabled in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) so that the input area grows vertically to fit the selected tokens when the control is in multiple-selection mode.
 
 To enable auto sizing, set the [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_EnableAutoSize) property to `true`. The feature requires that the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_SelectionMode) is set to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteSelectionMode.html#Syncfusion_Maui_Inputs_AutocompleteSelectionMode_Multiple) and the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap); otherwise, the property has no visible effect. The default value of `EnableAutoSize` is `false`.
-
-### Properties
-
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `EnableAutoSize` | `bool` | `false` | Gets or sets a value that indicates whether the input area grows to fit the selected tokens. |
-| `MaxDropDownHeight` | `double` | `300` | Gets or sets the maximum height of the drop-down list. |
-| `SelectionMode` | `AutocompleteSelectionMode` | `Single` | Specifies single or multiple selection. Auto sizing requires `Multiple`. |
-| `TokensWrapMode` | `AutocompleteTokensWrapMode` | `None` | Specifies how selected tokens are arranged. Auto sizing requires `Wrap`. |
-
-### Example
 
 The following code example shows how to enable auto sizing in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html):
 
@@ -42,7 +31,6 @@ The following code example shows how to enable auto sizing in the [SfAutocomplet
 <editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         SelectionMode="Multiple"
-                        MaxDropDownHeight="250"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Enter Media"
@@ -56,7 +44,6 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 {
     ItemsSource = new SocialMediaViewModel().SocialMedias,
     SelectionMode = AutocompleteSelectionMode.Multiple,
-    MaxDropDownHeight = 250,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
@@ -104,6 +91,6 @@ The following image illustrates the auto-sized Autocomplete as the selected toke
 
 ## See also
 
-- [Selection](Selection.md)
-- [UI Customization](UI-Customization.md)
-- [Getting Started](Getting-Started.md)
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)
