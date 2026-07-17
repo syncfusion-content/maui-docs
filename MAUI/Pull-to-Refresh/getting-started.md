@@ -124,8 +124,6 @@ using Syncfusion.Maui.PullToRefresh;
 
 The `SfPullToRefresh` component lets users refresh content with a pull-down gesture. The [PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullableContent) property defines the area where the gesture is recognized. By default, the [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) is [SlideOnTop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_SlideOnTop).
 
-Add the following code to `MainPage.xaml` inside the existing root layout. The `x:Name` field is auto-generated in `MainPage.xaml.cs` by `InitializeComponent()`:
-
 {% tabs %}
 {% highlight xaml %}
 
