@@ -7,7 +7,7 @@ control: TreeMap (SfTreeMap)
 documentation: ug
 ---
 
-# Legend in .NET MAUI TreeMap (SfTreeMap)
+# Legend in .NET MAUI TreeMap
 
 The legend provides valuable information for interpreting TreeMap displays by presenting data through various colors, shapes, and other identifiers.
 
