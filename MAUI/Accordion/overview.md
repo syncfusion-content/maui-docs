@@ -15,15 +15,15 @@ The **[.NET MAUI Accordion](https://www.syncfusion.com/maui-controls/maui-accord
 
 ## Business use cases
 
-- FAQ or help sections with collapsible question‑answer visualization.  
-- Form sections grouped into expandable category layouts for structured input.  
-- Mobile apps with limited screen space needing compact, responsive UI design.  
-- Product descriptions and detail sections with expandable content presentation.  
+- FAQ or help sections with collapsible question-answer visualization.
+- Form sections grouped into expandable category layouts for structured input.
+- Mobile apps with limited screen space needing compact, responsive UI design.
+- Product descriptions and detail sections with expandable content presentation.
 
 ## Key features
 
-- **Data binding** populates Accordion items by binding collections using .NET MAUI BindableLayout.  
-- **Expand modes** support single or multiple item expansion.  
+- **Data binding** populates Accordion items by binding collections using .NET MAUI BindableLayout.
+- **Expand modes** support single or multiple item expansion.
 - **Animation support** provides smooth expand and collapse animations with customizable duration. 
 
 ## Globalization
