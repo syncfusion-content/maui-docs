@@ -7,9 +7,11 @@ control: SfDateTimePicker
 documentation: ug
 ---
 
-# Overview of .NET MAUI Date Time Picker (SfDateTimePicker)
+# Overview of .NET MAUI Date Time Picker
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) provides a way to pick a date, time, or date and time. The Date Time Picker also enables you to set date ranges and date and time formats and to customize its dialog appearance by configuring its header, footer, and more.
+
+![Overview of .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-interaction.gif)
 
 ## Business use cases
 
@@ -22,49 +24,25 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusi
 
 - **Header view support** allows displaying predefined or custom header text with date and time formatting.
 
-   ![Header view in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-header-view.png)
-
 - **Column header view support** allows separating and customizing headers for date and time elements.  
-
-   ![Column header view in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-column-header-view.png)
 
 - **Footer view support** provides OK and Cancel buttons with customizable text and appearance.  
 
-   ![Footer view in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-footer-view.png)
-
 - **Selection view support** allows displaying the selected date and time in a configurable section.
-
-   ![Selection view in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-selection-view.png)
 
 - **Date format support** allows representing date values using predefined formats.  
 
-   ![Date format in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-date-format.png)
-
 - **Time format support** allows configuring time values using predefined formats.  
-
-   ![Time format in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-time-format.png)
 
 - **Picker mode options** allow displaying the picker in popup or dialog modes with flexible positioning.
 
-   ![Picker mode in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-mode.gif)
-
 - **Date restriction support** allows limiting date selection within minimum and maximum values.  
-
-   ![Minimum date in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-minimum-date.png)
-
-   ![MAximum date in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-maximum-date.png)
 
 - **Date interval support** allows configuring intervals for days, months, and years. 
 
-   ![Date intervals in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-date-interval.gif)
-
 - **Time interval support** allows configuring intervals for hours, minutes, and seconds.
 
-   ![Time intervals in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-time-interval.gif)
-
 - **User interaction support** allows selecting values through intuitive tap and scroll gestures.
-
-   ![Picker interactions in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-interaction.gif)  
 
 ## Globalization
 

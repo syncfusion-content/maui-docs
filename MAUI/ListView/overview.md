@@ -7,7 +7,7 @@ control: ListView
 documentation: ug
 ---
 
-# Overview of .NET MAUI ListView (SfListView)
+# Overview of .NET MAUI ListView
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI ListView (SfListView)](https://www.syncfusion.com/maui-controls/maui-listview) renders a set of data items using .NET MAUI views or custom templates. Data can easily be grouped, sorted, and filtered.
 

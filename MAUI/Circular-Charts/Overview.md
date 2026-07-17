@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# .NET MAUI Circular Chart Overview
+# Overview of .NET MAUI Circular Chart
 
 Syncfusion® [.NET MAUI Charts](https://www.syncfusion.com/maui-controls/maui-circular-charts) (SfCircularChart) is used to create the chart with beautiful and enhanced UI visualization of data that are used in high-quality .NET MAUI applications.
 
