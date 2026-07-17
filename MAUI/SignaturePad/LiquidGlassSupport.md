@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI SignaturePad (SfSignaturePad)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI SignaturePad (SfSignaturePad) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® [.NET MAUI SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Signat
 2. Wrap the `SfSignaturePad` control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 3. Set the `Background` property of the `SfSignaturePad` to `Transparent` so that the glass-like effect is preserved across the control.
 
-For more information about the Liquid Glass Effect, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/overview).
+For more information about the Liquid Glass Effect, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
 ## Configure the SfGlassEffectView properties
 
@@ -38,7 +38,6 @@ The following table describes the key `SfGlassEffectView` properties used to con
 | Property | Type | Description |
 | --- | --- | --- |
 | `CornerRadius` | `double` | The radius of the rounded corners applied to the glass container. Default is `0`. |
-| `HeightRequest` | `double` | The height of the glass container. |
 | `EffectType` | `LiquidGlassEffectType` | The style of the Liquid Glass Effect. See the enum members below. |
 | `EnableShadowEffect` | `bool` | Indicates whether a drop shadow is rendered behind the glass container. Default is `false`. |
 

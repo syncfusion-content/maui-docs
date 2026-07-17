@@ -9,15 +9,15 @@ documentation: ug
 
 # Events and Methods in .NET MAUI SignaturePad
 
-This section covers the events and methods exposed by the .NET MAUI SignaturePad (SfSignaturePad) control:
+This section covers the events and methods exposed by the [.NET MAUI SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control:
 
-* [Events](#events)
-  * [DrawStarted](#drawstarted)
-  * [DrawCompleted](#drawcompleted)
-* [Methods](#methods)
-  * [GetSignaturePoints](#getsignaturepoints)
-  * [ToImageSource](#toimagesource)
-  * [Clear](#clear)
+* Events
+  * `DrawStarted`
+  * `DrawCompleted`
+* Methods
+  * `GetSignaturePoints`
+  * `ToImageSource`
+  * `Clear`
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Events
 
-The SignaturePad control raises the following events to notify you of user interaction with the pad.
+The SfSignaturePad control raises the following events to notify you of user interaction with the pad.
 
 ### DrawStarted
 
@@ -61,7 +61,7 @@ private void OnDrawStarted(object? sender, CancelEventArgs e)
 
 ### DrawCompleted
 
-The [DrawCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawCompleted) event is raised when the user completes a stroke on the SignaturePad. The event handler receives an `EventArgs` instance.
+The [DrawCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawCompleted) event is raised when the user completes a stroke on the SfSignaturePad. The event handler receives an `EventArgs` instance.
 
 {% tabs %}
 
@@ -88,7 +88,7 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 
 ## Methods
 
-The SignaturePad control exposes the following methods for reading, exporting, and clearing signature data.
+The SfSignaturePad control exposes the following methods for reading, exporting, and clearing signature data.
 
 ### GetSignaturePoints
 
@@ -96,13 +96,11 @@ The [GetSignaturePoints()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 
 {% tabs %}
 {% highlight xaml %}
-<VerticalStackLayout>
-    <signaturePad:SfSignaturePad x:Name="signaturePad"
-                                 StrokeColor="Red"
-                                 MinimumStrokeThickness="1"
-                                 MaximumStrokeThickness="6"
-                                 DrawCompleted="OnDrawCompleted" />
-</VerticalStackLayout>
+<signaturePad:SfSignaturePad x:Name="signaturePad"
+                             StrokeColor="Red"
+                             MinimumStrokeThickness="1"
+                             MaximumStrokeThickness="6"
+                             DrawCompleted="OnDrawCompleted" />
 {% endhighlight %}
 {% highlight C# %}
 
@@ -125,7 +123,7 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 
 ### ToImageSource
 
-Use the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method to save the signature drawn on the SignaturePad as a `ImageSource`. The method returns a nullable `ImageSource?`; if the pad is empty, `null` is returned. The resulting `ImageSource` can be assigned to an `Image` control, exported to a file, or shared with other applications.
+Use the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method to save the signature drawn on the SfSignaturePad as a `ImageSource`. The method returns a nullable `ImageSource?`; if the pad is empty, `null` is returned. The resulting `ImageSource` can be assigned to an `Image` control, exported to a file, or shared with other applications.
 
 {% tabs %}
 
@@ -190,8 +188,6 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
-
-N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.
 
 ## See Also
 
