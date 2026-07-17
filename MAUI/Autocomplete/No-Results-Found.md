@@ -15,22 +15,22 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Overview
 
-When the entered text does not match any item in the `SfAutocomplete`drop-down, the control displays a no-results-found message. You can customize the message text with the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property, or provide a fully custom UI with the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property.
+When the entered text does not match any item in the `SfAutocomplete` drop-down, the control displays a no-results-found message. You can customize the message text with the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property, or provide a fully custom UI with the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property.
 
 ### Properties
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
-| `NoResultsFoundText` | `string` | `No results found` | Gets or sets the message displayed when no matching items are found. |
+| `NoResultsFoundText` | `string` | `No Results Found` | Gets or sets the message displayed when no matching items are found. |
 | `NoResultsFoundTemplate` | `DataTemplate` | `null` | Gets or sets a custom template used to render the no-results-found message. Takes precedence over `NoResultsFoundText` when set. |
 
 ## NoResultsFoundText
 
-You can customize the text displayed when no results are found by setting the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property. The default value is `No results found`.
+You can customize the text displayed when no results are found by setting the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property. The default value is `No Results Found`.
 
 {% tabs %}
 
@@ -172,14 +172,8 @@ The following image illustrates a customized no-results-found template:
 
 ![Customized no-results-found template in the SfAutocomplete drop-down](Images/NoResultsFound/NoResultsFoundTemplate.png)
 
-## Notes
-
-N> **Hiding the message**: To hide the no-results-found message, set `NoResultsFoundText` to an empty string (`NoResultsFoundText = string.Empty`).
-
-N> **Template precedence**: When `NoResultsFoundTemplate` is set, the template is used instead of the `NoResultsFoundText` value. Leave the template unset to use the plain text message.
-
 ## See also
 
-- [Getting Started](Getting-Started.md)
-- [Selection](Selection.md)
-- [UI Customization](UI-Customization.md)
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)

@@ -15,19 +15,19 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Overview
 
 You can highlight the matching characters in each suggestion of the `SfAutocomplete` drop-down to help users identify the matching suggestion. There are two highlight modes:
 
-- `FirstOccurrence` — highlights the first match in each suggestion.
-- `MultipleOccurrence` — highlights every match in each suggestion.
+- `FirstOccurrence` - highlights the first match in each suggestion.
+- `MultipleOccurrence` - highlights every match in each suggestion.
 
 Use the following properties to customize the appearance of the highlighted text:
 
-- `HighlightedTextColor` — the color applied to the highlighted characters.
-- `HighlightedTextFontAttributes` — the font attributes applied to the highlighted characters (`None`, `Bold`, `Italic`, or `Bold, Italic`).
+- `HighlightedTextColor` - the color applied to the highlighted characters.
+- `HighlightedTextFontAttributes` - the font attributes applied to the highlighted characters (`None`, `Bold`, `Italic`, or `Bold, Italic`).
 
 ### Properties
 
@@ -40,7 +40,7 @@ Use the following properties to customize the appearance of the highlighted text
 
 ## First Occurrence
 
-Set `TextHighlightMode` to [FirstOccurrence](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.OccurrenceMode.html#Syncfusion_Maui_Inputs_OccurrenceMode_FirstOccurrence) to highlight the first match in each suggestion.
+Set [TextHighlightMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextHighlightMode) to [FirstOccurrence](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.OccurrenceMode.html#Syncfusion_Maui_Inputs_OccurrenceMode_FirstOccurrence) to highlight the first match in each suggestion.
 
 {% tabs %}
 
@@ -57,20 +57,11 @@ Set `TextHighlightMode` to [FirstOccurrence](https://help.syncfusion.com/cr/maui
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-using System.Collections.Generic;
-
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
-    ItemsSource = new List<SocialMedia>
-    {
-        new SocialMedia { Name = "Facebook" },
-        new SocialMedia { Name = "Twitter" },
-        new SocialMedia { Name = "Instagram" },
-        new SocialMedia { Name = "LinkedIn" }
-    },
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
     TextHighlightMode = OccurrenceMode.FirstOccurrence,
     HighlightedTextColor = Colors.Red,
     HighlightedTextFontAttributes = FontAttributes.Bold
@@ -123,7 +114,7 @@ The following image illustrates first-occurrence highlighting in the SfAutocompl
 
 ## Multiple Occurrence
 
-Set `TextHighlightMode` to [MultipleOccurrence](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.OccurrenceMode.html#Syncfusion_Maui_Inputs_OccurrenceMode_MultipleOccurrence) to highlight every match in each suggestion. This mode requires [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TextSearchMode) to be set to [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains); otherwise, only the first match is highlighted.
+Set [TextHighlightMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextHighlightMode)  to [MultipleOccurrence](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.OccurrenceMode.html#Syncfusion_Maui_Inputs_OccurrenceMode_MultipleOccurrence) to highlight every match in each suggestion. This mode requires [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TextSearchMode) to be set to [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains); otherwise, only the first match is highlighted.
 
 {% tabs %}
 
@@ -141,20 +132,11 @@ Set `TextHighlightMode` to [MultipleOccurrence](https://help.syncfusion.com/cr/m
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-using System.Collections.Generic;
-
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
-    ItemsSource = new List<SocialMedia>
-    {
-        new SocialMedia { Name = "Facebook" },
-        new SocialMedia { Name = "Twitter" },
-        new SocialMedia { Name = "Instagram" },
-        new SocialMedia { Name = "LinkedIn" }
-    },
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
     TextHighlightMode = OccurrenceMode.MultipleOccurrence,
     HighlightedTextColor = Colors.Red,
     HighlightedTextFontAttributes = FontAttributes.Bold,
@@ -203,6 +185,7 @@ The following image illustrates multiple-occurrence highlighting in the SfAutoco
 
 ## See also
 
-- [Searching and Filtering](Searching-Filtering.md)
-- [Selection](Selection.md)
-- [Getting Started](Getting-Started.md)
+- [Searching and Filtering](https://help.syncfusion.com/maui/autocomplete/searching-filtering)
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)

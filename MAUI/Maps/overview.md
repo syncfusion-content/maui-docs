@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Overview of .NET MAUI Maps Control | Syncfusion
-description: Learn here all about the introduction of Syncfusion<sup>&reg;</sup> .NET MAUI Maps (SfMaps) control, its features, and more.
+description: Learn here all about the introduction of Syncfusion® .NET MAUI Maps (SfMaps) control, its features, and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Overview of .NET MAUI Maps
+# .NET MAUI Maps (SfMaps) Overview
 
 The Syncfusion® [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) control is a powerful data visualization component that displays statistical information for a geographical area. It has highly interactive and customizable features such as selection, tooltip, legends, markers, bubbles, and color mapping. Using the Maps control, you can generate maps for population density, sales, political boundaries, weather, elections, and routes.
 
