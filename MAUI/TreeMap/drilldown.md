@@ -11,7 +11,7 @@ documentation: ug
 
 The drilldown feature in the .NET MAUI TreeMap provides a better visualization of hierarchical data by breaking a large dataset down into smaller, focused views. Each level of items can be drilled into, and the control animates the transition between levels during drilldown.
 
-N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/tree-map/getting-started)** guide.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/treemap/getting-started)** guide.
 
 N> Drilldown requires at least one [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) to be configured in the `Levels` collection. For more information about levels, refer to the [Levels](levels.md) documentation.
 

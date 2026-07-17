@@ -13,7 +13,7 @@ The .NET MAUI TreeMap (SfTreeMap) control supports keyboard navigation and provi
 
 Keyboard navigation is enabled by default; no additional configuration is required to move focus between items. To interact with the control using the keyboard, first set focus on the TreeMap (for example, by clicking an item or by tabbing to the control from the previous focusable element). Keyboard shortcuts are supported on Windows and macOS only. On Android and iOS, the keyboard shortcuts have no effect and interaction is performed through touch gestures.
 
-N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/tree-map/getting-started)** guide.
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/treemap/getting-started)** guide.
 
 ## Keyboard shortcuts in .NET MAUI TreeMap (SfTreeMap)
 

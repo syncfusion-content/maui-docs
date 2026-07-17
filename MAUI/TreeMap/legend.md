@@ -18,7 +18,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 To incorporate a legend for the TreeMap control, utilize the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) property within [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings). It is possible to customize the legend item’s color and text using the [LeafItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemBrushSettings) and [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings) properties of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
 
 {% tabs %}
-{% highlight xaml hl_lines="8 9 10" %}
+{% highlight xaml %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -55,7 +55,7 @@ To incorporate a legend for the TreeMap control, utilize the [ShowLegend](https:
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -171,7 +171,7 @@ You can position the legend items in different directions using the [Placement](
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -251,7 +251,7 @@ N> This property will only be applicable when the [ShowLegend](https://help.sync
 The [IconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_IconSize) property in the legend is used to change the size of the icon. Its default value is `new Size(16, 16).`
 
 {% tabs %}
-{% highlight xaml hl_lines="8 9 10 11" %}
+{% highlight xaml %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -289,7 +289,7 @@ The [IconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeM
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -383,7 +383,7 @@ Here are the available options to customize the legend icon type:
   * [VerticalLine](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LegendIconType.html#Syncfusion_Maui_TreeMap_LegendIconType_VerticalLine)
 
 {% tabs %}
-{% highlight xaml hl_lines="8 9 10 11" %}
+{% highlight xaml %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -421,7 +421,7 @@ Here are the available options to customize the legend icon type:
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -506,7 +506,7 @@ The [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLe
     * For Windows and macOS platforms, the default width is 200 units, and the height matches the layout height.
 
 {% tabs %}
-{% highlight xaml hl_lines="8 9 10 11" %}
+{% highlight xaml %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -544,7 +544,7 @@ The [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLe
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -625,7 +625,7 @@ N> This property will only be applicable when the [ShowLegend](https://help.sync
 The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                DataSource="{Binding PopulationDetails}"
@@ -667,7 +667,7 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.Tr
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -696,7 +696,7 @@ this.Content = treeMap;
 The `TreeMapLegend` supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ItemTemplate) property. The default value of `ItemTemplate` is null.
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml %}
 
  <treemap:SfTreeMap x:Name="treeMap"
                DataSource="{Binding PopulationDetails}"
@@ -763,7 +763,7 @@ The color and text of icons in the legend are by default determined by the [Brus
 You can assign colors to TreeMap items based on whether the value falls within the range specified by [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_From) and [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_To) properties of [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html) Subsequently, the corresponding [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_Brush) will be applied to the respective TreeMap item.
 
 {% tabs %}
-{% highlight xaml hl_lines="8 9 10 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32" %}
+{% highlight xaml %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -800,7 +800,7 @@ You can assign colors to TreeMap items based on whether the value falls within t
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight c# hl_lines="6 8 9 10 11 12 13 14 15 16" %}
+{% highlight c# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -880,7 +880,7 @@ N> This property will be applicable to only when the [ShowLegend](https://help.s
 You can customize the appearance of legend items text, including [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_TextColor), [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontFamily), and [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontAttributes) within the TreeMap by utilizing the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_TextStyle) property of [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings).
 
 {% tabs %}
-{% highlight xaml hl_lines="8 9 10 11 12 13 14 15 16" %}
+{% highlight xaml %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -923,7 +923,7 @@ You can customize the appearance of legend items text, including [TextColor](htt
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
