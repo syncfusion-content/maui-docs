@@ -243,7 +243,7 @@ this.Content = sfRadialGauge;
 
 ## Animation easing
 
-The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_AnimationEasing) property of pointer allows you to apply an easing function to the pointer animation. It uses the built-in [`Easing`](https://learn.microsoft.com/en-us/dotnet/maui/animation/easing) enum, which exposes the following values:
+The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_AnimationEasing) property of pointer allows you to apply an easing function to the pointer animation. It uses the built-in `Easing` enum, which exposes the following values:
 
 `Linear`, `SinIn`, `SinOut`, `SinInOut`, `CubicIn`, `CubicOut`, `CubicInOut`, `BounceIn`, `BounceOut`, `SpringIn`, and `SpringOut`.
 
