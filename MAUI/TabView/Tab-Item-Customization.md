@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure the Appearance of a Tab Item in .NET MAUI Tab View (SfTabView) | Syncfusion®
+title: Configure the Appearance of Tab Item in Syncfusion® .NET MAUI Tab View
 description: Learn all about color and font customization in the Syncfusion® .NET MAUI Tab View (SfTabView) control.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Configure the Appearance of a Tab Item in .NET MAUI Tab View (SfTabView)
+# Configure the Appearance of a Tab Item in .NET MAUI Tab View
 
 ## Prerequisites
 
