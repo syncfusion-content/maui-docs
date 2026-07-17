@@ -7,9 +7,11 @@ control: SfTimePicker
 documentation: ug
 ---
 
-# Overview of .NET MAUI Time Picker (SfTimePicker)
+# Overview of .NET MAUI Time Picker
 
 Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker ([SfTimePicker](https://www.syncfusion.com/maui-controls/maui-timepicker)) control allows you to select the time and visualize its items inside a popup or a drop-down UI element. The Time Picker also enables you to set time formats and customize its dialog appearance by configuring its header, footer, and more.
+
+![Interactions in .NET MAUI Time picker.](images/overview/maui-time-picker-interactions.gif)
 
 ## Business use cases
 
@@ -22,37 +24,20 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker ([SfTimePicker](https://www.syn
 
 - **Header view** allows adding and customizing header text for contextual information.
 
-   ![Header view in .NET MAUI Time picker.](images/overview/maui-time-picker-header-view.png)
-
 - **Column header** allows displaying and customizing labels for hours, minutes, and seconds.
-
-   ![Column header view in .NET MAUI Time picker.](images/overview/maui-time-picker-column-header-view.png)
 
 - **Footer view** allows providing confirmation actions such as OK and Cancel with customizable appearance. 
 
-   ![Footer view in .NET MAUI Time picker.](images/overview/maui-time-picker-footer-view.png)
-
 - **Selection view** allows displaying the selected time clearly with configurable UI.  
-
-   ![Selection view in .NET MAUI Time picker.](images/overview/maui-time-picker-selection-view.png)
 
 - **Time format** allows presenting values in predefined formats for better readability.  
 
-   ![.NET MAUI Time Picker with format h_mm_ss_tt.](images/overview/maui-time-picker-format_h_mm_ss_tt.png)
-
 - **Picker mode** allows displaying the control in popup or dialog modes with flexible positioning. 
-
-   ![Picker mode in .NET MAUI Time picker.](images/overview/maui-time-picker-mode.gif)
 
 - **Interval** allows defining custom intervals for hours, minutes, and seconds.
 
-   ![Intervals in .NET MAUI Time picker.](images/overview/maui-time-picker-intervals.gif)
-
 - **User interaction** allows selecting time values through tap and scroll gestures. 
-
-   ![Interactions in .NET MAUI Time picker.](images/overview/maui-time-picker-interactions.gif)
  
-
 ## Globalization
 
 The following table summarizes the globalization support available in this control.

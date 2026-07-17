@@ -8,7 +8,7 @@ documentation: ug
 keywords : .net maui smartScheduler, maui smart scheduler, ai scheduling, natural language scheduling, resource-aware booking, free time finder, appointment summarization.
 ---
 
-# Overview of .NET MAUI AI-Powered Scheduler (SfSmartScheduler)
+# Overview of .NET MAUI AI-Powered Scheduler
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI AI-Powered Scheduler](https://www.syncfusion.com/maui-controls/maui-smart-scheduler) combines the power of the Scheduler with AI-driven intent understanding. Users can create, update, delete, and explore appointments using plain language, reducing clicks and turning scheduling into a conversation. It respects current view context, resources, and availability, and can detect conflicts, find free time, and summarize schedules.
 

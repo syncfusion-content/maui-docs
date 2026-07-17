@@ -7,9 +7,11 @@ control: SfPicker
 documentation: ug
 ---
 
-# Overview of .NET MAUI Picker (SfPicker)
+# Overview of .NET MAUI Picker
 
 Syncfusion® .NET MAUI Picker ([SfPicker](https://www.syncfusion.com/maui-controls/maui-picker)) control allows you to select an item and visualize its items inside a popup or a drop-down UI element. It supports multiple-column layout, header, footer, and selection view customizations. It provides customization as a date picker, time picker, date-time picker, country picker, color picker, and more.
+
+![Header view in .NET MAUI Picker.](images/overview/maui-header-view.png)
 
 ## Business use cases
 
@@ -22,31 +24,17 @@ Syncfusion® .NET MAUI Picker ([SfPicker](https://www.syncfusion.com/maui-contro
 
 - **Header view** allows adding and customizing header text to provide context for the picker. 
 
-   ![Header view in .NET MAUI Picker.](images/overview/maui-header-view.png)
-
 - **Column header view** allows separating multiple columns with distinct headers for better clarity.
-
-   ![Column header view in .NET MAUI Picker.](images/overview/maui-column-header-view.png)
 
 - **Footer view** allows displaying validation buttons such as OK and Cancel with customizable appearance. 
 
-   ![Footer view in .NET MAUI Picker.](images/overview/maui-footer-view.png)
-
 - **Selection view** allows showing the selected item in a configurable display area.  
-
-   ![Selection view in .NET MAUI Picker.](images/overview/maui-selection-view.png)
 
 - **Picker mode** allows displaying the picker in popup or dialog mode with flexible positioning.
 
-   ![Picker mode in .NET MAUI Picker.](images/overview/maui-picker-mode.gif)
-
 - **User interaction** allows selecting items through tap and scroll gestures.  
 
-   ![Picker interactions in .NET MAUI Picker.](images/overview/maui-picker-interactions.gif)
-
-- **Item template support** allows customizing how items are displayed within the picker. 
-
-   ![Item template in .NET MAUI Picker.](images/overview/maui-picker-item-template.png ) 
+- **Item template support** allows customizing how items are displayed within the picker.  
 
 ## Globalization
 
