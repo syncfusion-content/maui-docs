@@ -554,7 +554,7 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
     {
         this.viewModel = new OrderInfoViewModel();
         this.progressbar = new SfCircularProgressBar();
-        this.frame = new border();
+        this.border = new Border();
         this.progressContent = new Label();
 
         this.progressContent.TextColor = Color.FromRgb(0, 124, 238);
@@ -562,12 +562,12 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
         this.progressContent.WidthRequest = 20;
         this.progressContent.HorizontalTextAlignment = TextAlignment.Center;
 
-        this.frame.Stroke = Colors.LightGray;
-        this.frame.Background = Colors.White;
-        this.frame.StrokeShape = new RoundRectangle { CornerRadius = new CornerRadius(30) };
-        this.frame.Content = this.progressbar;
-        this.frame.Padding = 0;
-        this.frame.Shadow = null;
+        this.border.Stroke = Colors.LightGray;
+        this.border.Background = Colors.White;
+        this.border.StrokeShape = new RoundRectangle { CornerRadius = new CornerRadius(30) };
+        this.border.Content = this.progressbar;
+        this.border.Padding = 0;
+        this.border.Shadow = null;
 
         this.progressbar.SegmentCount = 10;
         this.progressbar.ProgressThickness = 6;
@@ -587,7 +587,7 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
 
         var pullingTemplate = new DataTemplate(() =>
         {
-            return this.frame;
+            return this.border;
         });
 
         this.pullToRefresh.PullingViewTemplate = pullingTemplate;
