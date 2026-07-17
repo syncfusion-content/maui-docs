@@ -154,7 +154,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         }
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     public void RaisePropertyChanged(string propName)
     {
@@ -234,7 +234,7 @@ To load the messages to SfChat, bind the message collection to the [Messages](ht
 
     <syncfusion:SfChat x:Name="sfChat"
                     Messages="{Binding Messages}"
-                    CurrentUser="{Binding CurrentUser}"/>
+                    CurrentUser="{Binding CurrentUser}">
     </syncfusion:SfChat>
 </ContentPage>
 {% endhighlight %} 

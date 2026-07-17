@@ -11,25 +11,6 @@ documentation: ug
 
 In `SfChat`, typing indicator indicates with an animation that a user (or users) is currently typing, thereby providing an enhanced user experience. To show or hide the typing indicator, set the [ShowTypingIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTypingIndicator) property to `true` or `false`, respectively. To show the user image and text in the typing indicator, create a new instance of [ChatTypingIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TypingIndicator), set the [TypingIndicator.Authors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatTypingIndicator.html#Syncfusion_Maui_Chat_ChatTypingIndicator_Authors) and [TypingIndicator.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatTypingIndicator.html#Syncfusion_Maui_Chat_ChatTypingIndicator_Text) properties, and assign the typing indicator instance to the `TypingIndicator` property.
 
-## Prerequisites
-
-Before using the typing indicator, install the [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) NuGet package in your .NET MAUI project.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet add package Syncfusion.Maui.Chat
-
-{% endhighlight %}
-{% highlight c# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Maui.Chat
-
-{% endhighlight %}
-{% endtabs %}
-
-N> For a complete step-by-step setup of `SfChat` in a .NET MAUI application, refer to the [Getting Started documentation](https://help.syncfusion.com/maui/chat/getting-started).
-
 {% tabs %}
 {% highlight xaml hl_lines="15 16" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"

@@ -7,13 +7,11 @@ control: TreeMap (SfTreeMap)
 documentation: ug
 ---
  
-# Overview of .NET MAUI TreeMap (SfTreeMap)
+# Overview of .NET MAUI TreeMap
 
 The Syncfusion® [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) control allows you to visually represent hierarchical data with rectangles that are sized and colored based on underlying values. It efficiently displays grouped and nested data structures, offering various layout options, extensive customization options, and supports item selection, data binding to different sources, and more.
 
-![overview-of-maui-tree-map](images/overview/overview-of-maui-tree-map.png)
-
-N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/treemap/getting-started)** guide.
+![overview-of-maui-tree-map](images/overview/legend-in-maui-tree-map.png)
 
 ## Business use cases
 
@@ -24,30 +22,15 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
   
 ## Key Features
  
-- **Data Binding** allows binding structured data with multiple levels and categories. For more details, refer to [Getting Started](https://help.syncfusion.com/maui/treemap/getting-started).
-- **Layout** allows choosing between layouts such as slice and dice or squarified for optimal visualization. For more details, refer to [Layouts](https://help.syncfusion.com/maui/treemap/layouts).
-
-    ![layout-in-maui-tree-map](images/overview/layout-in-maui-tree-map.png)
-
-- **Levels** allows representing nested data structures with clear parent-child relationships. For more details, refer to [Levels](https://help.syncfusion.com/maui/treemap/levels).
-
-    ![level-in-maui-tree-map](images/overview/level-in-maui-tree-map.png)
-
-- **Brush Settings** allows applying colors based on value ranges or categories for better interpretation. For more details, refer to [Brush Settings](https://help.syncfusion.com/maui/treemap/brush-settings).
-
-    ![brush-settings-in-maui-tree-map](images/overview/brush-settings-in-maui-tree-map.png)
-
-- **Legend** allows providing visual guidance for understanding color and data mapping. For more details, refer to [Legend](https://help.syncfusion.com/maui/treemap/legend).
-
-    ![legend-in-maui-tree-map](images/overview/legend-in-maui-tree-map.png)
-
-- **Tooltip** allows displaying additional information on interaction with tree map items. For more details, refer to [Tooltip](https://help.syncfusion.com/maui/treemap/tooltip).
-
-    ![tool-tip-in-maui-tree-map](images/overview/tool-tip-in-maui-tree-map.gif)
-
-- **Interaction** allows selecting and highlighting items for focused analysis. For more details, refer to [Selection and Highlights](https://help.syncfusion.com/maui/treemap/selection-and-highlights).
-- **Accessibility and keyboard** allows improving usability with keyboard navigation and inclusive design. For more details, refer to [Accessibility](https://help.syncfusion.com/maui/treemap/accessibility).
-- **Appearance customization** allows modifying styles, layouts, and visual properties to match application requirements. For more details, refer to [Leaf Item Settings](https://help.syncfusion.com/maui/treemap/leaf-item-settings).
+- **Data Binding** allows binding structured data with multiple levels and categories.
+- **Layout** allows choosing between layouts such as slice and dice or squarified for optimal visualization. 
+- **Levels** allows representing nested data structures with clear parent-child relationships. 
+- **Brush Settings** allows applying colors based on value ranges or categories for better interpretation.
+- **Legend** allows providing visual guidance for understanding color and data mapping. 
+- **Tooltip** allows displaying additional information on interaction with tree map items.
+- **Interaction** allows selecting and highlighting items for focused analysis.  
+- **Accessibility and keyboard** allows improving usability with keyboard navigation and inclusive design.  
+- **Appearance customization** allows modifying styles, layouts, and visual properties to match application requirements.
 
     ![leaf-item-template-in-maui-tree-map](images/overview/leaf-item-template-in-maui-tree-map.png)
 

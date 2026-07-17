@@ -7,28 +7,29 @@ control: SfPopup
 documentation: ug
 --- 
 
-# MAUI Popup (SfPopup) Overview
+# Overview of .NET MAUI Popup
 
-Syncfusion® [.NET MAUI Popup](https://www.syncfusion.com/maui-controls/maui-popup) layout allows you to display an alert message with customizable buttons or load any desired view inside a popup. It provides options to fully customize the popup with custom header, body, and footer capabilities, allowing you to display important information precisely how users want to.
+Syncfusion® [.NET MAUI Popup](https://www.syncfusion.com/maui-controls/maui-popup) layout allows you to display an alert message with customizable buttons or load any desired view inside a popup. It provides options to fully customize the Popup with custom header, body, and footer capabilities, allowing you to display important information precisely how users want to.
 
-![Syncfusion .NET MAUI popup overview](Images/overview/popup_overview.png)
+![Syncfusion .NET MAUI Popup control showing an alert dialog with header, body content, and action buttons](Images/overview/popup_overview.png)
 
 ## Business use cases
 
-- Applications that require displaying alerts, confirmations, or notifications to users.  
-- Form-based workflows that use modal dialogs for validation, input confirmation, or action prompts.  
-- Mobile apps that present contextual content such as tips, menus, or additional details in overlays.  
-- Business applications that require custom popup layouts for interactive user experiences.  
+- Apps that need to display alerts, confirmations, or notifications to users.  
+- Forms that rely on modal dialogs for validation, input confirmation, or action prompts.  
+- Mobile apps that surface contextual content such as tips, menus, or additional details in overlays.  
+- Business apps that require custom popup layouts for interactive user experiences.  
 
 ## Key features
 
-- **Flexible positioning** allows displaying the popup at any location on the screen.  
-- **Relative positioning** allows aligning the popup based on a target UI element.  
-- **Full-screen mode** allows displaying popup content across the entire screen for engaging experiences.  
-- **Auto sizing** allows adjusting popup dimensions automatically based on loaded content.  
-- **Predefined layout** allows using built-in layouts such as single-button or two-button dialog styles.  
-- **Template** allows loading custom views for header, content, and footer using templates.  
-- **Modal behavior** allows preventing interaction with background content until the popup is closed.  
+- **Flexible positioning** lets you display the popup anywhere on the screen.  
+- **Relative positioning** aligns the popup to a target UI element.  
+- **Full-screen mode** expands popup content across the entire screen for engaging experiences.  
+- **Auto sizing** adjusts the popup's dimensions automatically based on the loaded content.  
+- **Predefined layouts** include built-in styles such as single-button or two-button dialogs.
+- **Templates** let you load custom views for the header, content, and footer.
+- **Modal behavior** blocks interaction with background content until the popup is closed.
+- **Liquid Glass effect** delivers a modern, translucent design with adaptive color tinting and light refraction for a glass‑like experience.
 
 ## Globalization
 
@@ -70,7 +71,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/popup/overview">Popup</a></td>
+<td>Popup</td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -82,8 +83,8 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
   
 - [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for creating sliding panels for navigation and content display.  
-- [Backdrop Page](https://help.syncfusion.com/maui/backdrop/overview) for implementing layered UI interactions with front and back panels.
-- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for displaying loading or status feedback within popup overlays.
+- [Backdrop (SfBackdrop)](https://help.syncfusion.com/maui/backdrop/overview) for implementing layered UI interactions with front and back panels.
+- [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for indicating loading or processing states in your application.
 
 ## See Also
 
@@ -116,10 +117,21 @@ The following table summarizes the globalization support available in this contr
 
 .card-icon {
   font-family: 'Toolkit Icons' !important;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
+  color: #0A76FF;
   display: inline-block;
   font-style: normal;
+}
+
+.card-ai:before,
+.card-showcase:before,
+.card-videos:before,
+.card-knowledge-base:before,
+.card-blogs:before,
+.card-feedback:before,
+.card-support:before {
+  font-size: 20px;
 }
 
 .card-ai:before { content: "\e720"; }
@@ -169,13 +181,6 @@ The following table summarizes the globalization support available in this contr
   justify-content: center;
 }
 
-.card-icon {
-  font-family: 'Toolkit Icons' !important;
-  font-size: 16px;
-  line-height: 1;
-  color: #0A76FF;
-}
-
 .form-title {
   font-size: 16px;
   font-weight: 500;
@@ -205,7 +210,7 @@ The following table summarizes the globalization support available in this contr
 .explore-link {
   margin-top: auto;
   color: #0A76FF;
-  font-size: 12;
+  font-size: 12px;
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -220,7 +225,7 @@ The following table summarizes the globalization support available in this contr
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
 <div class="card-header">
     <div class="icon-circle">
@@ -229,14 +234,14 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<a href="https://www.syncfusion.com/maui-controls/maui-popup" class="explore-link">
+<a href="https://www.syncfusion.com/maui-controls/maui-popup" class="explore-link" target="_blank" rel="noopener">
 Explore Features
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
 </div>
 <!-- Card 2 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
@@ -245,14 +250,14 @@ Explore Features
     <h3 class="form-title">Showcase Samples</h3>
 </div>
     <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Popup" class="explore-link">
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Popup" class="explore-link" target="_blank" rel="noopener">
     View Samples
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
 </div>
 <!-- Card 3 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
@@ -263,14 +268,14 @@ Explore Features
     <div class="form-description">
       Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
-    <a href="https://www.syncfusion.com/tutorial-videos/maui/popup" class="explore-link">
+    <a href="https://www.syncfusion.com/tutorial-videos/maui/popup" class="explore-link" target="_blank" rel="noopener">
     Watch now
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
 </div>
 <!-- Card 4 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
@@ -281,14 +286,14 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1297" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1297" class="explore-link" target="_blank" rel="noopener">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
 </div>
 <!-- Card 5 -->
-<div class="form-card" target="_blank">
+<div class="form-card">
   <div class="form-content">
    <div class="card-header">
     <div class="icon-circle">
@@ -299,7 +304,7 @@ Search KB's
     <div class="form-description">
       Discover in‑depth articles, use cases and expert insights from our developers.
     </div>
-    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
+    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link" target="_blank" rel="noopener">
 Read Blogs
   <span class="card-icon card-arrow"></span>
 </a>

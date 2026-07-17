@@ -9,7 +9,7 @@ documentation: ug
 
 # Features in .NET MAUI DockLayout Control
 
-## Expand LastChild
+## Expand Last Child
 The [ShouldExpandLastChild](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_ShouldExpandLastChild) property (of type `bool`) determines whether the last docked child should automatically occupy all remaining space after other docked children have been positioned. By default, this property is set to `True`. This feature is particularly valuable for ensuring that the last child element fully utilizes available space, resulting in a seamless and gap-free layout.
 
 {% tabs %}
@@ -25,7 +25,7 @@ The [ShouldExpandLastChild](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% highlight c# %}
 
 SfDockLayout dockLayout = new SfDockLayout() { ShouldExpandLastChild = false };
-dockLayout.Children.Add(new Label() { Text = "None", WidthRequest = 45 });
+dockLayout.Children.Add(new Label() { Text = "None", HeightRequest = 45 });
 
 {% endhighlight %}
 
@@ -65,6 +65,9 @@ SfDockLayout dockLayout = new SfDockLayout()
 The [GetDock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_GetDock_Microsoft_Maui_Controls_BindableObject_) method retrieves the docking position for a specified view within the layout.
 
 `GetDock(BindableObject view)`
+
+### Return Value
+Returns a `Dock` value indicating the current docking position of the view. Possible values are `Dock.Left`, `Dock.Right`, `Dock.Top`, and `Dock.Bottom`.
 
 ### Parameters
 - **view:** `BindableObject` - The targeted child view for docking evaluation.

@@ -7,7 +7,7 @@ control: SfTabView
 documentation: UG
 ---
 
-# Overview of .NET MAUI Tab View (SfTabView)
+# Overview of .NET MAUI Tab View
 
 The advanced Syncfusion® .NET MAUI Tab View [SfTabView](https://www.syncfusion.com/maui-controls/maui-tab-view) provides a simple and intuitive interface for tab navigation in both mobile and desktop applications. This allows users to explore and switch between different tabs efficiently.
 
