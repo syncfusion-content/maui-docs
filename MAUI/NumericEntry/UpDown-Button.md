@@ -7,7 +7,7 @@ control: SfNumericEntry
 documentation: ug
 ---
 
-# UpDown Button in .NET MAUI NumericEntry
+# UpDown Button in .NET MAUI Numeric Entry
 
 This section describes how to change the value of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the keyboard, the mouse scroll wheel, and the on-screen up-down buttons. It also covers placement, alignment, ordering, color, template customization, and auto-reverse behavior.
 
@@ -21,9 +21,9 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Increase or decrease value
 
-You can increment or decrement the value in the `NumericEntry` control using the `Up`, `Down`, `PageUp`, and `PageDown` keys. Control the step size for the arrow keys with the [SmallChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_SmallChange) property, and for the page keys with the [LargeChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_LargeChange) property. Both properties accept `double` values. The default value of `SmallChange` is `1`, and the default value of `LargeChange` is `10`.
+You can increment or decrement the value in the `Numeric Entry` control using the `Up`, `Down`, `PageUp`, and `PageDown` keys. Control the step size for the arrow keys with the [SmallChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_SmallChange) property, and for the page keys with the [LargeChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_LargeChange) property. Both properties accept `double` values. The default value of `SmallChange` is `1`, and the default value of `LargeChange` is `10`.
 
-N> The value in the `NumericEntry` can also be changed by mouse scrolling. The scroll wheel increments or decrements the value based on the `SmallChange` property.
+N> The value in the `Numeric Entry` can also be changed by mouse scrolling. The scroll wheel increments or decrements the value based on the `SmallChange` property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -55,7 +55,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 
 ## UpDown button placement
 
-You can increase or decrease the value of the `NumericEntry` control using the on-screen up-down buttons. By default, the value of the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownPlacementMode) property is `Hidden` (the buttons are not displayed). Set `UpDownPlacementMode` to `Inline` for a horizontal layout, or to `InlineVertical` for a vertical layout.
+You can increase or decrease the value of the `Numeric Entry` control using the on-screen up-down buttons. By default, the value of the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownPlacementMode) property is `Hidden` (the buttons are not displayed). Set `UpDownPlacementMode` to `Inline` for a horizontal layout, or to `InlineVertical` for a vertical layout.
 
 N> When the up-down buttons are visible, the value changes by the `SmallChange` step each time a button is pressed.
 
@@ -117,7 +117,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 
 ## UpDown button alignment
 
-You can adjust the alignment of the up-down buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [UpDownButtonAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonAlignment) property. Set its value to `Left`, `Right`, or `Both` to position the buttons on the left, right, or both sides of the entry field, respectively. The default value of `UpDownButtonAlignment` is `Right`.
+You can adjust the alignment of the up-down buttons in the [Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [UpDownButtonAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonAlignment) property. Set its value to `Left`, `Right`, or `Both` to position the buttons on the left, right, or both sides of the entry field, respectively. The default value of `UpDownButtonAlignment` is `Right`.
 
 ### UpDown button alignment: Left
 
@@ -204,7 +204,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 
 ## UpDown button order
 
-You can change the order of the up-down buttons in the `NumericEntry` control using the [UpDownOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownOrder) property. Set its value to `UpThenDown` or `DownThenUp` to position the up button above the down button, or vice-versa.
+You can change the order of the up-down buttons in the `Numeric Entry` control using the [UpDownOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownOrder) property. Set its value to `UpThenDown` or `DownThenUp` to position the up button above the down button, or vice-versa.
 
 > The default value of `UpDownOrder` is `UpThenDown`.
 
@@ -400,9 +400,9 @@ Content = verticalStackLayout;
 
 ![UpDownButtonTemplate support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonTemplate.png)
 
-## Auto reverse in SfNumericEntry
+## Auto reverse in Numeric Entry
 
-The [AutoReverse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AutoReverse) property causes the `NumericEntry` control to automatically switch direction when it reaches the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, the value progresses from `Minimum` to `Maximum`; when decrementing, it progresses from `Maximum` to `Minimum`. The default value of `AutoReverse` is `false`.
+The [AutoReverse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AutoReverse) property causes the `Numeric Entry` control to automatically switch direction when it reaches the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, the value progresses from `Minimum` to `Maximum`; when decrementing, it progresses from `Maximum` to `Minimum`. The default value of `AutoReverse` is `false`.
 
 {% tabs %}
 {% highlight XAML %}
