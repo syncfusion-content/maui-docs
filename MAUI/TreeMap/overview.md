@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) control allows you to visually represent hierarchical data with rectangles that are sized and colored based on underlying values. It efficiently displays grouped and nested data structures, offering various layout options, extensive customization options, supporting item selection, data binding to different sources, and more.
 
-![legend-in-maui-tree-map](images/overview/legend-in-maui-tree-map.png)
+![overview-of-maui-tree-map](images/overview/legend-in-maui-tree-map.png)
 
 ## Business use cases
 

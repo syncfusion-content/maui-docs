@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion® .NET MAUI Picker ([SfPicker](https://www.syncfusion.com/maui-controls/maui-picker)) control allows you to select an item and visualize its items inside a popup or a drop-down UI element. It supports multiple-column layout, header, footer, and selection view customizations. It provides customization as a date picker, time picker, date-time picker, country picker, color picker, and more.
 
-![Header view in .NET MAUI Picker.](images/overview/maui-header-view.png)
+![Overview of .NET MAUI Picker.](images/overview/maui-header-view.png)
 
 ## Business use cases
 
