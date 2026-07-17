@@ -15,7 +15,7 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Overview
 
@@ -33,7 +33,7 @@ You can add a header at the top of the SfAutocomplete drop-down. The [DropdownHe
 | `DropdownHeaderView` | `View` | `null` | Gets or sets the content of the drop-down header. |
 | `DropdownHeaderViewHeight` | `double` | `30` | Gets or sets the height of the drop-down header. |
 
-The following code example shows how to set a header view in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html):
+The following code example shows how to set a header view in the SfAutocomplete:
 
 {% tabs %}
 
@@ -60,10 +60,6 @@ The following code example shows how to set a header view in the [SfAutocomplete
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Inputs;
-using System.Collections.Generic;
-
 StackLayout stackLayout = new StackLayout
 {
     VerticalOptions = LayoutOptions.Start,
@@ -74,7 +70,7 @@ StackLayout stackLayout = new StackLayout
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     ShowDropdownHeaderView = true,
-    ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
     DisplayMemberPath = "Name",
     DropdownHeaderViewHeight = 50
 };
@@ -150,7 +146,7 @@ You can add a footer at the bottom of the SfAutocomplete drop-down. The [DropDow
 | `DropdownFooterView` | `View` | `null` | Gets or sets the content of the drop-down footer. |
 | `DropdownFooterViewHeight` | `double` | `30` | Gets or sets the height of the drop-down footer. |
 
-The following code example shows how to set a footer view in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html):
+The following code example shows how to set a footer view in the SfAutocomplete:
 
 {% tabs %}
 
@@ -176,10 +172,6 @@ The following code example shows how to set a footer view in the [SfAutocomplete
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Inputs;
-using System.Collections.Generic;
-
 StackLayout stackLayout = new StackLayout
 {
     VerticalOptions = LayoutOptions.Start,
@@ -190,7 +182,7 @@ StackLayout stackLayout = new StackLayout
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     ShowDropdownFooterView = true,
-    ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
     DisplayMemberPath = "Name",
     DropdownFooterViewHeight = 50
 };
@@ -256,6 +248,6 @@ The following image illustrates a footer view in the SfAutocomplete drop-down:
 
 ## See also
 
-- [Selection](Selection.md)
-- [UI Customization](UI-Customization.md)
-- [Getting Started](Getting-Started.md)
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)

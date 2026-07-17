@@ -15,7 +15,7 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Overview
 
@@ -26,13 +26,13 @@ You can restrict the number of suggestions shown in the drop-down of the `SfAuto
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | `MaximumSuggestion` | `int` | `0` (no limit) | Gets or sets the maximum number of suggestions to display before showing the LoadMore button. |
-| `LoadMoreText` | `string` | `Load more` | Gets or sets the text displayed on the LoadMore button. |
+| `LoadMoreText` | `string` | `LOAD MORE` | Gets or sets the text displayed on the LoadMore button. |
 | `LoadMoreTemplate` | `DataTemplate` | `null` | Gets or sets a custom template used to render the LoadMore button. |
 | `LoadMoreButtonTapped` | `EventHandler` | - | Raised when the user taps the LoadMore button. |
 
 ## MaximumSuggestion
 
-You can restrict the maximum number of suggestions displayed by setting the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) property. When more items are available, a LoadMore button is shown at the bottom of the drop-down.
+You can restrict the maximum number of suggestions displayed by setting the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) property. When more items are available, a `LoadMore` button is shown at the bottom of the drop-down.
 
 {% tabs %}
 {% highlight xaml %}
@@ -88,13 +88,13 @@ public class SocialMedia
 {% endhighlight %}
 {% endtabs %}
 
-The following image illustrates the LoadMore button shown after the maximum number of suggestions is reached:
+The following image illustrates the `LoadMore` button shown after the maximum number of suggestions is reached:
 
 ![LoadMore button shown after the maximum number of suggestions is reached](Images/Maximum-display-item-with-Expander/LoadMore.gif)
 
 ## LoadMore text customization
 
-The LoadMore feature exposes the [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText) property. You can set the desired text for the LoadMore button with this property.
+The `LoadMore` feature exposes the [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText) property. You can set the desired text for the LoadMore button with this property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -313,14 +313,8 @@ public class SocialMedia
 {% endhighlight %}
 {% endtabs %}
 
-## Notes
-
-N> **LoadMore visibility**: The LoadMore button is shown only when the `ItemsSource` contains more items than the value of `MaximumSuggestion`. If all items fit within `MaximumSuggestion`, the button is not displayed.
-
-N> **Loading more items**: In the `LoadMoreButtonTapped` event handler, add the remaining items to the same `ObservableCollection` (or to a backing list and reassign the `ItemsSource`) to make them visible.
-
 ## See also
 
-- [Selection](Selection.md)
-- [UI Customization](UI-Customization.md)
-- [Getting Started](Getting-Started.md)
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)
