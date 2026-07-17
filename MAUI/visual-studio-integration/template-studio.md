@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Studio in .NET MAUI - Syncfusion®
-description: Learn here about how to create the .NET MAUI application using Syncusion .NET MAUI Components with the help of template studio.
+description: Learn here about how to create the .NET MAUI application using Syncfusion<sup>®</sup> .NET MAUI Components with the help of template studio.
 platform: MAUI
 component: Syncfusion<sup>®</sup> Extensions
 documentation: ug
@@ -13,21 +13,21 @@ The .NET MAUI Template Studio, provided by Syncfusion<sup>®</sup>, helps you bu
 
 The following steps below will assist you to create your **Syncfusion<sup>®</sup> .NET MAUI Application** through **Visual Studio 2022**:
 
-N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whether the Syncfusion<sup>®</sup> .NET MAUI Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
+N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whether the Syncfusion<sup>®</sup> .NET MAUI Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions > Manage Extensions > Installed. If this extension is not installed, install the extension by following the steps from the [download and installation](download-and-installation) help topic.
 
-1. Open the Visual Studio 2022 or later.
+1. Open Visual Studio 2022 or later.
 
 2. To develop the Syncfusion<sup>®</sup> .NET MAUI application, select one of the following options:
 
      **Option 1**
 
-     Choose **Extension -> Syncfusion<sup>®</sup> -> Essential Studio<sup>®</sup> for .NET MAUI -> Create New Syncfusion<sup>®</sup> Project...** from the **Visual Studio menu**.
+     Choose **Extensions > Syncfusion<sup>®</sup> > Essential Studio<sup>®</sup> for .NET MAUI > Create New Syncfusion<sup>®</sup> Project...** from the **Visual Studio menu**.
 
      ![CreateMenu](images/MenuProject.png)
 
      **Option 2**
 
-     Choose **File -> New -> Project** from the menu. This launches a new dialogue for creating a new application. Filtering the application type by **Syncfusion** or typing **Syncfusion** as a keyword in the search option can help you to find the Syncfusion<sup>®</sup> templates for .NET MAUI.
+     Choose **File > New > Project** from the menu. This launches a new dialogue for creating a new application. Filtering the application type by **Syncfusion** or typing **Syncfusion** as a keyword in the search option can help you to find the Syncfusion<sup>®</sup> templates for .NET MAUI.
 
      ![CreateNewWindow](images/ProjectTemplates.png)
 
@@ -65,7 +65,7 @@ N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whet
 
      ![Choose required Project Details](images/ProjectDetails.png)
 
-7. Click the **Create** button to create the Syncfusion<sup>®</sup> .NET MAUI application The created Syncfusion<sup>®</sup> .NET MAUI application has the Syncfusion<sup>®</sup> NuGet packages,and the rendering code for the selected Syncfusion<sup>®</sup> components.
+7. Click the **Create** button to create the Syncfusion<sup>®</sup> .NET MAUI application. The created Syncfusion<sup>®</sup> .NET MAUI application has the Syncfusion<sup>®</sup> NuGet packages and the rendering code for the selected Syncfusion<sup>®</sup> components.
 
      ![Readme](images/MauiApplication.png)
 

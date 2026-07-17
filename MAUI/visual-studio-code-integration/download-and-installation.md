@@ -25,6 +25,8 @@ The following software prerequisites must be installed to install the Syncfusion
 
 * [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
 
+* [.NET 8.0 SDK or later](https://dotnet.microsoft.com/en-us/download) with the .NET MAUI workload (`dotnet workload install maui`)
+
 ## Install through the Visual Studio Code Extensions
 The following instructions outline the process of installing the Syncfusion<sup>®</sup> .NET MAUI extensions from Visual Studio Code Extensions.
 
@@ -48,7 +50,7 @@ The following instructions outline the process of installing the Syncfusion<sup>
 
 The following instructions outline the process of downloading and installing Syncfusion<sup>®</sup> .NET MAUI applications from the Visual Studio Code Marketplace.
 
-1.	Open [Syncfusion<sup>®</sup> .NET MAUI Code Extensions](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions) in Visual Studio Code Marketplace.
+1.	Open [Syncfusion .NET MAUI Code Extensions](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions) in Visual Studio Code Marketplace.
 
 2.	Select **Install** from the Visual Studio Code Marketplace. A popup window appears in your browser with information like **Open Visual Studio Code**. Clicking **Open Visual Studio Code** will launch the Syncfusion<sup>®</sup> .NET MAUI Extension in Visual Studio Code.
 
@@ -57,6 +59,7 @@ The following instructions outline the process of downloading and installing Syn
 4.	After installation, reload Visual Studio Code by executing the **Reload Window** command from the Visual Studio Code palette. Access the command palette by pressing **Ctrl+Shift+P** and locating the Reload Window command among the Visual Studio Code commands.
 
     ![Reload-Window](images/Reload-Window.png)
+
 5.	You can now initiate the creation of a new Syncfusion<sup>®</sup> .NET MAUI application using the Syncfusion<sup>®</sup> .NET MAUI extensions from the Visual Studio Code Palette. Locate the **Syncfusion<sup>®</sup> .NET MAUI Template Studio: Launch** option among the Visual Studio Code commands to open the Syncfusion<sup>®</sup> .NET MAUI Template Studio wizard.
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
@@ -65,7 +68,7 @@ The following instructions outline the process of downloading and installing Syn
 
 The following instructions detail the manual installation process of the Syncfusion<sup>®</sup> .NET MAUI extensions in Visual Studio Code.
 
-1.	To install the extension manually, download the **Syncfusion<sup>®</sup>Inc..NET-MAUI-VSCode-Extensions.vsix** file from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions). Then, install it from a local file within VS Code.
+1.	To install the extension manually, download the **SyncfusionInc.NET-MAUI-VSCode-Extensions.vsix** file from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions). Then, install it from a local file within VS Code.
 
 2.	In VS Code, navigate to the Extensions view by clicking on the Extensions icon located in the Activity Bar.
 
@@ -75,7 +78,7 @@ The following instructions detail the manual installation process of the Syncfus
   
     ![InstallVsix](images/InstallVsix.png)
 
-4.	Navigate to the location where you downloaded the Syncfusion<sup>®</sup>Inc..NET-MAUI-VSCode-Extensions.vsix file, then select and install it.
+4.	Navigate to the location where you downloaded the SyncfusionInc.NET-MAUI-VSCode-Extensions.vsix file, then select and install it.
 
     ![DownloadVsix](images/DownloadVsix.png)
     
@@ -83,7 +86,7 @@ The following instructions detail the manual installation process of the Syncfus
 ## Essential UI Kit
 Syncfusion<sup>®</sup> publishes the Visual Studio Code extension on the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-UI-Kit-VSCode-Extensions). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 
-## Install through the Visual Studio Code Extensions
+## Install the Essential UI Kit Extension through the Visual Studio Code Extensions
 The following instructions outline the process of installing the Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup> extensions from Visual Studio Code Extensions.
 
 1.	Open Visual Studio Code.
@@ -98,11 +101,11 @@ The following instructions outline the process of installing the Essential<sup>�
 
     ![Reload-Window](images/Reload-Window.png)
 
-## Install from the Visual Studio Code Marketplace
+## Install the Essential UI Kit Extension from the Visual Studio Code Marketplace
 
 The following instructions outline the process of downloading and installing Essential<sup>®</sup> UI Kit for .NET MAUI applications from the Visual Studio Code Marketplace.
 
-1.	Open [Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup>](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-UI-Kit-VSCode-Extensions) in Visual Studio Code Marketplace.
+1.	Open [Essential UI Kit for .NET MAUI - Syncfusion](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-UI-Kit-VSCode-Extensions) in Visual Studio Code Marketplace.
 
 2.	Select **Install** from the Visual Studio Code Marketplace. A popup window appears in your browser with information like **Open Visual Studio Code**. Clicking **Open Visual Studio Code** will launch the Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup> Extension in Visual Studio Code.
 
@@ -112,7 +115,7 @@ The following instructions outline the process of downloading and installing Ess
 
     ![Reload-Window](images/Reload-Window.png)
 
-## Manually Installing an Extension in Visual Studio Code
+## Manually Installing the Essential UI Kit Extension in Visual Studio Code
 
 The following instructions detail the manual installation process of the Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup> extensions in Visual Studio Code.
 

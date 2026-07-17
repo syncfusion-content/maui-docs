@@ -32,7 +32,7 @@ For Example, sf-datagrid-grouping
 
       ![Code Snippet](images/MAUI_CodeSnippets.gif)
 
-5.	After adding the Syncfusion<sup>®</sup> .NET MAUI component to the XAML file, We've included instructions in the **TODO** section for your reference. This will guide you in determining whether to add the the View Model file or if only add namespace and NuGet entries to run the Syncfusion<sup>®</sup> components.
+5.	After adding the Syncfusion<sup>®</sup> .NET MAUI component to the XAML file, we've included instructions in the **TODO** section for your reference. This will guide you in determining whether to add the View Model file or if only namespace and NuGet entries are needed to run the Syncfusion<sup>®</sup> components.
 
      ![Comment](images/Comment.png)
 
@@ -44,7 +44,7 @@ For Example, sf-datagrid-grouping
 
 The Syncfusion<sup>®</sup> .NET MAUI snippet inserts code into the XAML file. However, you need to configure the .NET MAUI project with Syncfusion<sup>®</sup> by installing the Syncfusion<sup>®</sup> .NET MAUI NuGet package and adding the appropriate namespace. To configure, follow these steps:
 
-1.	Open your .NET MAUI project file and manually add the required Syncfusion<sup>®</sup> .NET MAUI NuGet package(s) as package references for the components you want to use. We've provided commented code samples showing the corresponding NuGet entries for each component. Simply copy the relevant entry and paste it into your project file. The package will be automatically restored during the build or save process.
+1.	Open your .NET MAUI project file and manually add the required Syncfusion<sup>®</sup> .NET MAUI NuGet package(s) as package references for the components you want to use. The appropriate package name(s) are indicated in the **TODO** instructions added above the inserted sample. We've provided commented code samples showing the corresponding NuGet entries for each component. Simply copy the relevant entry and paste it into your project file. The package will be automatically restored during the build or save process.
 
      ![NuGet Package](images/NuGetEntry.gif)
 
