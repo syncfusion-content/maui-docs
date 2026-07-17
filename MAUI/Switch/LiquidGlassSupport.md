@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liquid Glass Support in .NET MAUI Switch | Syncfusion®
-description: Learn how to enable the Liquid Glass effect in the Syncfusion® .NET MAUI Switch (SfSwitch) control.
+description: Learn how to enable the Liquid Glass effect in the Syncfusion® .NET MAUI Switch (SfSwitch) control to render a modern glass UI.
 platform: MAUI
 control: SfSwitch
 documentation: UG

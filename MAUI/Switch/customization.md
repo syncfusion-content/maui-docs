@@ -137,7 +137,7 @@ In the .NET MAUI Switch control, the sizing of the thumb and track can be contro
 * [ThumbWidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbWidthRequest): Represents a double value used to define the thumb width.
 * [ThumbHeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbHeightRequest): Represents a double value used to define the thumb height.
 
-N> The [`TrackCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackCornerRadius) and [`ThumbCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbCornerRadius) properties accept a `CornerRadius` struct and can also be set with a single value (for example, `4`) that applies to all four corners.
+N> The [`TrackCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackCornerRadius) and [`ThumbCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbCornerRadius) properties accept a `CornerRadius` structure and can also be set with a single value (for example, `4`) that applies to all four corners.
 
 The following code example demonstrates how to customize the size of the track and thumb in a .NET MAUI Switch.
 
