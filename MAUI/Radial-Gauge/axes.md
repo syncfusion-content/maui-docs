@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis in .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about the Axis feature of Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge (SfRadialGauge) control using the custom scale support.
+title: Axis in .NET MAUI Radial Gauge control | Syncfusion®
+description: Learn here all about the Axis feature of Syncfusion® .NET MAUI Radial Gauge (SfRadialGauge) control using the custom scale support.
 platform: maui
 control: SfRadialGauge
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis in .NET MAUI Radial Gauge
 
-The [`Radial Axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html?tabs=tabid-1) is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as labels, ticks, and the axis line can be easily customized.
+The [`Radial Axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html) is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as labels, ticks, and the axis line can be easily customized.
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfRadialGauge** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/radial-gauge/getting-started)** guide.
 
@@ -19,7 +19,7 @@ This section will cover the axis customization options.
 
 ### Background content
 
-[`Radial axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html?tabs=tabid-1) allows you to add any visual contents as its background using the [`BackgroundContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_BackgroundContent) property.
+[`Radial axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html) allows you to add any visual contents as its background using the [`BackgroundContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_BackgroundContent) property.
 
 {% tabs %}
 

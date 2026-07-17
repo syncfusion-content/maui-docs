@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Needle Pointer in .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about Needle Pointer feature of Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge control using the customization support.
+title: Needle Pointer in .NET MAUI Radial Gauge control | Syncfusion®
+description: Learn here all about the Needle Pointer feature of Syncfusion® .NET MAUI Radial Gauge control using the customization support.
 platform: maui
 control: SfRadialGauge
 documentation: ug
@@ -9,7 +9,9 @@ documentation: ug
 
 # Needle Pointer in .NET MAUI Radial Gauge
 
-[`Needle Pointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html) contains three parts, namely needle, knob, and tail and that can be placed on a gauge to mark the values.
+The [`Needle Pointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html) contains three parts, namely needle, knob, and tail, and can be placed on a gauge to mark values.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfRadialGauge** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/radial-gauge/getting-started)** guide.
 
 {% tabs %}
 
@@ -19,7 +21,7 @@ documentation: ug
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="60" />
+                <gauge:NeedlePointer Value = "60" />
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
     </gauge:SfRadialGauge.Axes>
@@ -44,28 +46,29 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Default Needle Pointer](images/needle-pointer/maui-radial-gauge-default-needle-pointer.png)
+![Default Needle Pointer in .NET MAUI Radial Gauge](images/needle-pointer/maui-radial-gauge-default-needle-pointer.png)
 
 ## Needle customization
 
 The needle can be customized using the following properties:
 
-* [`NeedleLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLength) – Customizes the length of the needle. The length of the pointer can be set either in pixel or factor.
+* [`NeedleLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLength) - Specifies the length of the needle. The length can be set either in pixels or factor.
 
-* [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) – Specifies whether to set the length in pixel or factor. 
+* [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) - Specifies whether the length is set in pixels or factor.
 
-* [`NeedleStartWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleStartWidth) – Specifies the start width of the needle.
+* [`NeedleStartWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleStartWidth) - Specifies the start width of the needle.
 
-* [`NeedleEndWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleEndWidth) – Specifies the end width of the needle.
+* [`NeedleEndWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleEndWidth) - Specifies the end width of the needle.
 
-* [`NeedleFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleFill) – Specifies the needle color.
+* [`NeedleFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleFill) - Specifies the color of the needle.
 
 ### Needle length customization
 
 The needle length can be controlled using the [`NeedleLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLength) and [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) properties. The length can be set either in pixels or factor using [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit).
 
-If the [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) is set to pixel, the pixel value will be set to the [`NeedleLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLength) to calculate the needle length. 
-If the [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) is set to factor, then the factor value will be set to the [`NeedleLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLength). The factor value ranges from 0 to 1. For example, if the needle length is set to 0.5, the half of the radius value is set to the needle length. The default value of [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) is factor.
+If [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) is set to [`SizeUnit.Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel), the pixel value is set to the [`NeedleLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLength) to calculate the needle length.
+
+If [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) is set to [`SizeUnit.Factor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Factor), the factor value is set to the [`NeedleLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLength). The factor value ranges from 0 to 1. For example, if the needle length is set to 0.5, half of the axis radius is set as the needle length. The default value of [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_NeedleLengthUnit) is [`SizeUnit.Factor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Factor).
 
 {% tabs %}
 
@@ -75,9 +78,9 @@ If the [`NeedleLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="60"
-                                     NeedleLengthUnit="Pixel"
-                                     NeedleLength="130" />
+                <gauge:NeedlePointer Value = "60"
+                                     NeedleLengthUnit = "Pixel"
+                                     NeedleLength = "130" />
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
     </gauge:SfRadialGauge.Axes>
@@ -104,7 +107,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Needle Pointer Length](images/needle-pointer/maui-radial-gauge-needle-pointer-length.png)
+![Needle Pointer Length in .NET MAUI Radial Gauge](images/needle-pointer/maui-radial-gauge-needle-pointer-length.png)
 
 ### Needle width customization
 
@@ -118,12 +121,12 @@ The width of the needle pointer can be customized using the [`NeedleStartWidth`]
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="60"
-                                     NeedleLengthUnit="Factor"
-                                     NeedleLength="0.7"
-                                     NeedleStartWidth="10"
-                                     NeedleEndWidth="10"
-                                     NeedleFill="Red"/>
+                <gauge:NeedlePointer Value = "60"
+                                     NeedleLengthUnit = "Factor"
+                                     NeedleLength = "0.7"
+                                     NeedleStartWidth = "10"
+                                     NeedleEndWidth = "10"
+                                     NeedleFill = "Red"/>
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
     </gauge:SfRadialGauge.Axes>
@@ -153,25 +156,25 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Custom Needle Width](images/needle-pointer/maui-radial-gauge-custom-needle-width.png)
+![Custom Needle Width in .NET MAUI Radial Gauge](images/needle-pointer/maui-radial-gauge-custom-needle-width.png)
 
 ## Knob customization
 
 The knob can be customized using the following properties:
 
-* [`KnobRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobRadius) – Specifies the knob radius either in pixels or factor.
+* [`KnobRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobRadius) - Specifies the radius of the knob either in pixels or factor.
 
-* [`KnobFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobFill) – Specifies the knob color.
+* [`KnobFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobFill) - Specifies the color of the knob.
 
-* [`KnobStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobStrokeThickness) – Specifies the width of the knob stroke outline of knob either in pixels or factor.
+* [`KnobStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobStrokeThickness) - Specifies the width of the knob stroke outline either in pixels or factor.
 
-* [`KnobStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobStroke) – Specifies the knob border color.
+* [`KnobStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobStroke) - Specifies the border color of the knob.
 
-* [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) – Allows you to specify whether the value of knob radius and border width is in pixels or in factor.
+* [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) - Specifies whether the knob radius and stroke width values are in pixels or factor.
 
 ### Knob radius customization
 
-The radius of the knob can be customized using the [`KnobRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobRadius) and [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit). If [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) is pixel, the pixel value can be set to the [`KnobRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobRadius).
+The radius of the knob can be customized using the [`KnobRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobRadius) and [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit). If [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) is set to [`SizeUnit.Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel), the pixel value can be set to the [`KnobRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobRadius).
 
 {% tabs %}
 
@@ -181,10 +184,10 @@ The radius of the knob can be customized using the [`KnobRadius`](https://help.s
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="65"
-                                     KnobSizeUnit="Pixel"
-                                     KnobRadius="15"
-                                     KnobFill="Red" />
+                <gauge:NeedlePointer Value = "65"
+                                     KnobSizeUnit = "Pixel"
+                                     KnobRadius = "15"
+                                     KnobFill = "Red" />
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
     </gauge:SfRadialGauge.Axes>
@@ -212,13 +215,13 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Knob Radius](images/needle-pointer/maui-radial-gauge-knob-radius.png)
+![Knob Radius in .NET MAUI Radial Gauge](images/needle-pointer/maui-radial-gauge-knob-radius.png)
 
-If the [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) is set to factor, the factor value will be set to knob radius. The factor value ranges from 0 to 1. For example, if the needle length is set to 0.1, 10% of the radius value of axis will be set to knob radius. By default, the value of [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) is factor
+If [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) is set to [`SizeUnit.Factor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Factor), the factor value is set to the knob radius. The factor value ranges from 0 to 1. For example, if the knob radius is set to 0.1, 10% of the axis radius is set as the knob radius. By default, the value of [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) is [`SizeUnit.Factor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Factor).
 
 ### Knob stroke customization
 
-Like knob radius, the [`KnobStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobStrokeThickness) can be specified either in pixel or factor. The [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) property is common for both [`KnobRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobRadius) and [`KnobStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobStrokeThickness) properties.
+Like the knob radius, the [`KnobStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobStrokeThickness) can be specified either in pixel or factor. The [`KnobSizeUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobSizeUnit) property is common for both the [`KnobRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobRadius) and [`KnobStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobStrokeThickness) properties.
 
 {% tabs %}
 
@@ -228,13 +231,13 @@ Like knob radius, the [`KnobStrokeThickness`](https://help.syncfusion.com/cr/mau
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="65"
-                                     NeedleEndWidth="10"
-                                     NeedleFill="Black"
-                                     KnobRadius="0.06"
-                                     KnobStrokeThickness="0.02"
-                                     KnobStroke="Black"
-                                     KnobFill="White" />
+                <gauge:NeedlePointer Value = "65"
+                                     NeedleEndWidth = "10"
+                                     NeedleFill = "Black"
+                                     KnobRadius = "0.06"
+                                     KnobStrokeThickness = "0.02"
+                                     KnobStroke = "Black"
+                                     KnobFill = "White" />
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
     </gauge:SfRadialGauge.Axes>
@@ -265,27 +268,27 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Knob Stroke](images/needle-pointer/maui-radial-gauge-knob-stroke.png)
+![Knob Stroke in .NET MAUI Radial Gauge](images/needle-pointer/maui-radial-gauge-knob-stroke.png)
 
 ## Tail customization
 
 The tail of the needle can be customized using the following properties:
 
-* [`TailLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLength) – Specifies the length of tail either in pixels or factor.
+* [`TailLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLength) - Specifies the length of the tail either in pixels or factor.
 
-* [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) – Specifies whether the tail length value is defined in pixels or factor.
+* [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) - Specifies whether the tail length value is defined in pixels or factor.
 
-* [`TailWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailWidth) – Specifies the width for the tail.
+* [`TailWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailWidth) - Specifies the width of the tail.
 
-* [`TailFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailFill) -  Specifies the tail color.
+* [`TailFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailFill) - Specifies the color of the tail.
 
 ### Tail length customization
 
-The tail length can be controlled using the [`TailLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLength) and [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) properties. The length can be set either in pixels or factor using [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit). The default value of [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) is factor.
+The tail length can be controlled using the [`TailLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLength) and [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) properties. The length can be set either in pixels or factor using [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit). The default value of [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) is [`SizeUnit.Factor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Factor).
 
 ### Tail length in pixel
 
-If the [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) is set as a pixel, the tail will be rendered based on the pixel value given in [`TailLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLength).
+If [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) is set to [`SizeUnit.Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel), the tail is rendered based on the pixel value given in [`TailLength`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLength).
 
 {% tabs %}
 
@@ -295,9 +298,9 @@ If the [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ga
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="60"
-                                     TailLengthUnit="Pixel"
-                                     TailLength="40" />
+                <gauge:NeedlePointer Value = "60"
+                                     TailLengthUnit = "Pixel"
+                                     TailLength = "40" />
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
     </gauge:SfRadialGauge.Axes>
@@ -324,11 +327,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Tail Length in Pixel](images/needle-pointer/maui-radial-gauge-tail-length-in-pixel.png)
+![Tail Length in Pixel in .NET MAUI Radial Gauge](images/needle-pointer/maui-radial-gauge-tail-length-in-pixel.png)
 
 ### Tail length in factor
 
-If the [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) is set as a factor, the provided factor value in the tail length will be multiplied by the axis radius. The factor value ranges from 0 to 1. For example, if the tail length is set to 0.5, the half of the radius value of axis to tail length. 
+If [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) is set to [`SizeUnit.Factor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Factor), the provided factor value in the tail length is multiplied by the axis radius. The factor value ranges from 0 to 1. For example, if the tail length is set to 0.5, half of the axis radius is set as the tail length.
 
 {% tabs %}
 
@@ -338,9 +341,9 @@ If the [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ga
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="60"
-                                     TailLengthUnit="Factor"
-                                     TailLength="0.2" />
+                <gauge:NeedlePointer Value = "60"
+                                     TailLengthUnit = "Factor"
+                                     TailLength = "0.2" />
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
     </gauge:SfRadialGauge.Axes>
@@ -367,11 +370,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Tail Length in Factor](images/needle-pointer/maui-radial-gauge-tail-length-in-factor.png)
+![Tail Length in Factor in .NET MAUI Radial Gauge](images/needle-pointer/maui-radial-gauge-tail-length-in-factor.png)
 
 ### Tail width customization
 
-The width of the tail can be customized using the [`TailWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailWidth) property of needle pointer.
+The width of the tail can be customized using the [`TailWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailWidth) property of the needle pointer.
 
 {% tabs %}
 
@@ -381,9 +384,9 @@ The width of the tail can be customized using the [`TailWidth`](https://help.syn
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="60"
-                                     TailLength="0.15"
-                                     TailWidth="10" />
+                <gauge:NeedlePointer Value = "60"
+                                     TailLength = "0.15"
+                                     TailWidth = "10" />
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
     </gauge:SfRadialGauge.Axes>
@@ -410,5 +413,4 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Tail Width](images/needle-pointer/maui-radial-gauge-tail-width.png)
-
+![Tail Width in .NET MAUI Radial Gauge](images/needle-pointer/maui-radial-gauge-tail-width.png)

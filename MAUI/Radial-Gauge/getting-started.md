@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Radial Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge (SfRadialGauge) control and more.
+title: Getting Started with .NET MAUI Radial Gauge control | Syncfusion®
+description: Learn here all about getting started with Syncfusion® .NET MAUI Radial Gauge (SfRadialGauge) control and more.
 platform: maui
 control: SfRadialGauge
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Radial Gauge
 
-This section explains the steps required to add the [`.NET MAUI Radial Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) control and its elements such as axis, range, pointer, and annotation. This section covers only the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Radial Gauge control. Follow the steps below to add a .NET MAUI Radial Gauge control to your project.
+This section explains the steps required to add the [`.NET MAUI Radial Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) control and its elements such as axis, range, pointer, and annotation. This section covers only the basic features needed to get started with the Syncfusion® Radial Gauge control. Follow the steps below to add a .NET MAUI Radial Gauge control to your project.
 
 To get started quickly with our .NET MAUI Radial Gauge, you can check the following video.
 
