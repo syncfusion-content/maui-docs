@@ -977,6 +977,6 @@ comboBox.Clear();
 
 * [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
 * [Editing](https://help.syncfusion.com/maui/combobox/editing)
-* [Filtering](Fhttps://help.syncfusion.com/maui/combobox/filtering)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
 * [Searching](https://help.syncfusion.com/maui/combobox/searching)
 * [Highlighting matched text](https://help.syncfusion.com/maui/combobox/highlighting-matched-text)

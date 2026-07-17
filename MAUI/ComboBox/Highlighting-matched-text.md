@@ -199,5 +199,5 @@ public class SocialMedia
 * [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
 * [Searching](https://help.syncfusion.com/maui/combobox/searching)
 * [Editing](https://help.syncfusion.com/maui/combobox/editing)
-* [Filtering](Fhttps://help.syncfusion.com/maui/combobox/filtering)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
 * [Selection](https://help.syncfusion.com/maui/combobox/selection)

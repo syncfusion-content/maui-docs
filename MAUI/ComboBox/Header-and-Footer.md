@@ -258,6 +258,6 @@ public class SocialMedia
 
 * [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
 * [Selection](https://help.syncfusion.com/maui/combobox/selection)
-* [Filtering](Fhttps://help.syncfusion.com/maui/combobox/filtering)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
 * [No results found](https://help.syncfusion.com/maui/combobox/no-results-found)
 * [UI customization](https://help.syncfusion.com/maui/combobox/ui-customization)

@@ -343,4 +343,4 @@ The following image illustrates the result of the above code:
 * [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
 * [Highlighting matched text](https://help.syncfusion.com/maui/combobox/highlighting-matched-text)
 * [Editing](https://help.syncfusion.com/maui/combobox/editing)
-* [Filtering](Fhttps://help.syncfusion.com/maui/combobox/filtering)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)

@@ -337,5 +337,5 @@ You can find the complete sample from this [link.](https://github.com/Syncfusion
 ## See also
 
 * [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
-* [Filtering](Fhttps://help.syncfusion.com/maui/combobox/filtering)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
 * [Searching](https://help.syncfusion.com/maui/combobox/searching)
