@@ -276,7 +276,7 @@ this.Content = chart;
 
 ## Maximum labels
 
-The `MaximumLabels` property in [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) controls the number of axis labels rendered per 100 pixels of axis. By default, 3 labels are displayed per 100 pixels. Set this property to override the default density.
+The [MaximumLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MaximumLabels) property in [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) controls the number of axis labels rendered per 100 pixels of axis. By default, 3 labels are displayed per 100 pixels. Set this property to override the default density.
 
 N> `MaximumLabels` only applies during automatic interval calculation and has no effect if the `Interval` property is manually set on the axis.
 
@@ -315,11 +315,11 @@ this.Content = chart;
 
 ### AxisLabelTapped
 
-The `AxisLabelTapped` event occurs when a user taps on an axis label. The [AxisLabelTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html) class provides the following properties:
+The [AxisLabelTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AxisLabelTapped) event occurs when a user taps on an axis label. The [AxisLabelTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html) class provides the following properties:
 
-* `Axis` — Gets the associated axis where the label was tapped.
-* `AxisLabel` — Gets the `ChartAxisLabel` object containing details about the tapped label.
-* `Position` — Gets the screen coordinates (X, Y) of the tap location in device-independent pixels.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_Axis) — Gets the associated axis where the label was tapped.
+* [AxisLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_AxisLabel) — Gets the [ChartAxisLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabel.html) object containing details about the tapped label.
+* [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_Position) — Gets the screen coordinates (X, Y) of the tap location in device-independent pixels.
 
 {% tabs %}
 
