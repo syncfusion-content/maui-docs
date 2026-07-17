@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Add Syncfusion<sup>®</sup> .NET MAUI component in the .NET MAUI application
+# Add Syncfusion<sup>®</sup> .NET MAUI component to your app
 
 The Syncfusion<sup>®</sup> .NET MAUI Code Sample Utility for Visual Studio Code provides ready-to-use samples for easily inserting Syncfusion<sup>®</sup> .NET MAUI components with various features into the XAML editor of your .NET MAUI application.
 
