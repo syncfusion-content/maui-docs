@@ -13,7 +13,7 @@ The [MaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMask
 
 The following table summarizes the differences between the available mask types:
 
-| Mask type | When to use | Format syntax | [ValueMaskFormat](formatting-value.md) |
+| Mask type | When to use | Format syntax | [ValueMaskFormat](https://help.syncfusion.com/maui/masked-entry/formatting-value) |
 | --- | --- | --- | --- |
 | `Simple` | Fixed-format input such as phone numbers, dates, or product keys. | Mask elements (for example, `0`, `9`, `L`, `>`). | Supported. |
 | `RegEx` | Custom validation patterns such as email addresses, IP addresses, or custom rules. | Standard .NET regular expressions. | Not supported (the mask is treated as a regex). |
@@ -29,13 +29,13 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Simple
 
 Masks that use a combination of letters, digits, and special characters fall into the Simple group. Simple masks are mainly used for fixed-length inputs, such as phone numbers, dates, or product keys. The mask is built from the mask elements listed below.
 
-The [PromptChar](basic-features.md#setting-promptchar) and [ValueMaskFormat](formatting-value.md) properties are only supported by the `Simple` mask type.
+The [PromptChar](https://help.syncfusion.com/maui/masked-entry/basic-features#setting-promptchar) and [ValueMaskFormat](https://help.syncfusion.com/maui/masked-entry/formatting-value) properties are only supported by the `Simple` mask type.
 
 ### Simple mask elements
 
@@ -124,7 +124,7 @@ Typing `abcd1234` is rendered as `ABCD-1234`.
 
 RegEx masks use standard regular-expression patterns to validate input, for example `[0-9A-Z]` for alphanumeric values or `[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}` for an email address.
 
-> **Note:** When `MaskType` is `RegEx`, the [ValueMaskFormat](formatting-value.md) property is not applied because the mask is treated as a regular expression.
+> **Note:** When `MaskType` is `RegEx`, the [ValueMaskFormat](https://help.syncfusion.com/maui/masked-entry/formatting-value) property is not applied because the mask is treated as a regular expression.
 
 ### RegEx mask elements
 
@@ -247,7 +247,7 @@ The mask accepts strings such as `user@example.com` and rejects incomplete or ma
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Basic Features](basic-features.md)
-* [Formatting Value](formatting-value.md)
-* [Validation](validation.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Formatting Value](https://help.syncfusion.com/maui/masked-entry/formatting-value)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)

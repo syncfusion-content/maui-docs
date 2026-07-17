@@ -20,7 +20,7 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Search based on member path
 
@@ -340,7 +340,7 @@ The following image illustrates the result of the above code:
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Highlighting matched text in .NET MAUI ComboBox](Highlighting-matched-text.md)
-* [Editing in .NET MAUI ComboBox](Editing.md)
-* [Filtering in .NET MAUI ComboBox](Filtering.md)
+* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Highlighting matched text](https://help.syncfusion.com/maui/combobox/highlighting-matched-text)
+* [Editing](https://help.syncfusion.com/maui/combobox/editing)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)

@@ -18,7 +18,7 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Enable filtering
 
@@ -512,7 +512,7 @@ The following image illustrates the result of the above code:
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Editing in .NET MAUI ComboBox](Editing.md)
-* [Selection in .NET MAUI ComboBox](Selection.md)
-* [Searching in .NET MAUI ComboBox](searching.md)
+* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Editing](https://help.syncfusion.com/maui/combobox/editing)
+* [Selection](https://help.syncfusion.com/maui/combobox/selection)
+* [Searching](https://help.syncfusion.com/maui/combobox/searching)
