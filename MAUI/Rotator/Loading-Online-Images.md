@@ -19,9 +19,7 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Overview
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can load images from remote URLs by binding a collection of model objects whose `Image` property holds the URL. The `ItemTemplate` resolves the URL through the standard .NET MAUI `Image` control, which handles the network request, caching, and platform-specific configuration (such as ATS on iOS or cleartext traffic on Android).
-
-> **Note:** Loading online images requires the device to have network access. By default, .NET MAUI uses HTTPS. If you need to load `http://` images, enable cleartext traffic for the relevant platform (for example, by setting `android:usesCleartextTraffic="true"` in the Android `AndroidManifest.xml`).
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can load images from remote URLs by binding a collection of model objects whose `Image` property holds the URL. The `ItemTemplate` resolves the URL through the standard .NET MAUI `Image` control, which handles the network request, caching, and platform-specific configuration (such as ATS on iOS or clear text traffic on Android).
 
 
 ## Create the Model
@@ -118,8 +116,8 @@ Bind the `RotatorViewModel.ImageCollection` to the [`ItemsSource`](https://help.
 ## Troubleshooting
 
 * **Images do not load** — Verify the device has network access and that the URL is reachable from the device. Open the URL in a browser on the same network to confirm.
-* **HTTPS errors** — The .NET MAUI `Image` control requires HTTPS by default. If you must use `http://`, enable cleartext traffic for the relevant platform.
-* **Slow or memory-intensive loads** — For large images or many items, consider preloading and resizing images, or using a caching library such as FFImageLoading.
+* **HTTPS errors** — The .NET MAUI `Image` control requires HTTPS by default. If you must use `http://`, enable clear text traffic for the relevant platform.
+* **Slow or memory-intensive loads** — For large images or many items, consider pre loading and resizing images, or using a caching library such as FFImageLoading.
 
 ## See also
 

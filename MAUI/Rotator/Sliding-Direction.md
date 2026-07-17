@@ -113,8 +113,7 @@ public class RotatorViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
-![SfRotator sliding direction](images/SlidingDirection.png)
+![NavigationStripPosition gif](images/NavigationStripPosition.gif)
 
 ## See Also
 

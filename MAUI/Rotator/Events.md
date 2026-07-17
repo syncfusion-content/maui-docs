@@ -217,7 +217,7 @@ public class RotatorViewModel
 
 ![SfRotator ItemTapped event](images/ItemTapped.png)
 
-## Unsubscribing from Events
+## Unsubscribe from Events
 
 To avoid memory leaks, unsubscribe from `SfRotator` events when the page is no longer in use. Override `OnDisappearing` in the page and remove the handlers.
 

@@ -1,7 +1,7 @@
 ---
 layout : post
-title: Handling SelectionChanged in Syncfusion® Carousel Control in .NET MAUI.
-description: Learn how to perform an operation when the selected item changes in SfCarousel for .NET MAUI.
+title: Handling SelectionChanged in Syncfusion® .NET MAUISfCarousel
+description: Learn how to perform an operation when the selected item changes in SfCarousel control for .NET MAUI.
 platform : maui
 control : Carousel
 documentation : ug

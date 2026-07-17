@@ -19,11 +19,11 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Overview
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) supports [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0#create-a-datatemplateselector), with which you can choose a [`DataTemplate`](https://learn.microsoft.com/dotnet/maui/fundamentals/datatemplate) based on the underlying data object for each item.
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) supports [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0#create-a-datatemplateselector), with which you can choose a [`DataTemplate`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0) based on the underlying data object for each item.
 
 ## How it Works
 
-`DataTemplateSelector` exposes a single overridable method, `OnSelectTemplate`, which is invoked by the `SfRotator` once per item. The method receives the data object (`item`) and the parent `BindableObject` (`container`), and must return the `DataTemplate` to use for that item.
+`DataTemplateSelector` exposes a single over ridable method, `OnSelectTemplate`, which is invoked by the `SfRotator` once per item. The method receives the data object (`item`) and the parent `BindableObject` (`container`), and must return the `DataTemplate` to use for that item.
 
 | Member | Type | Description |
 |--------|------|-------------|

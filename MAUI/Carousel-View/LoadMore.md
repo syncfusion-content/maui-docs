@@ -1,7 +1,7 @@
 ---
 layout : post
-title : Load More in .NET MAUI Carousel View control | Syncfusion®
-description : Learn here all about Load More support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
+title: Load More in .NET MAUI Carousel View control | Syncfusion®
+description: Learn here all about Load More support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
 platform : maui
 control : Carousel
 documentation : ug
@@ -60,7 +60,6 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
                     ViewMode="Linear"/>
     
 {% endhighlight %}
-
 {% highlight C# %}
 
 CarouselViewModel carouselViewModel = new CarouselViewModel();
@@ -336,8 +335,9 @@ Call the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel
 
 ### XAML
 
-{% highlight xaml %}
+{% tabs %}
 
+{% highlight xaml %}
 
 <ContentPage.Resources>
     <ResourceDictionary>
