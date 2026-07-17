@@ -235,7 +235,7 @@ Use the programmatic API to start or stop the refresh indicator without user int
 
 ### StartRefreshing()
 
-The [StartRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_StartRefreshing) method is used to refresh the content without user interaction on the pullable content. When you invoke the `StartRefreshing()` method, the progress indicator is shown and the [Refreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) event is raised.
+The [StartRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_StartRefreshing) method is used to refresh the content without user interaction on the pullable content. When you invoke the `StartRefreshing()` method, the progress indicator is shown and the [Refreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_Refreshing) event is raised.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -265,7 +265,7 @@ pullToRefresh.EndRefreshing();
 
 ## Host .NET MAUI DataGrid as pullable content
 
-The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI DataGrid inside the `PullToRefresh`, follow these steps.
+The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI `DataGrid` inside the `PullToRefresh`, follow these steps.
 <ol>
     <li> Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/datagrid/getting-started">DataGrid</a> and PullToRefresh.</li>
     <li> Define the `OrdersInfo` collection in a ViewModel and implement a `Refresh Item source(int count)` method that updates it. See the <a href="https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh">View sample in GitHub</a> for a complete example.</li>
@@ -554,7 +554,7 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
     {
         this.viewModel = new OrderInfoViewModel();
         this.progressbar = new SfCircularProgressBar();
-        this.frame = new Border();
+        this.frame = new border();
         this.progressContent = new Label();
 
         this.progressContent.TextColor = Color.FromRgb(0, 124, 238);

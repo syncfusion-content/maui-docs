@@ -30,7 +30,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI PullToRefresh NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.PullToRefresh](https://www.nuget.org/packages/Syncfusion.Maui.PullToRefresh/) and install the latest version (v20.x or later).
+2. Search for [Syncfusion.Maui.PullToRefresh](https://www.nuget.org/packages/Syncfusion.Maui.PullToRefresh/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly and the project is restored. If not, open the **Package Manager Console** and run `dotnet restore`.
 
 {% endtabcontent %}
@@ -77,7 +77,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI PullToRefresh NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.PullToRefresh](https://www.nuget.org/packages/Syncfusion.Maui.PullToRefresh/) and install the latest version (v20.x or later).
+2. Search for [Syncfusion.Maui.PullToRefresh](https://www.nuget.org/packages/Syncfusion.Maui.PullToRefresh/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly and the project is restored. If not, open the integrated terminal and run `dotnet restore`.
 
 {% endtabcontent %}
@@ -199,4 +199,4 @@ For details on additional properties such as `ProgressColor`, `PullingThreshold`
 
 ## Layout considerations
 
-`SfPullToRefresh` does not render any content of its own, so you must set an explicit size or `LayoutOptions` when loading it inside a layout. Otherwise, the control will collapse to zero height. For example, use `VerticalOptions="FillAndExpand"` on `SfPullToRefresh` (as shown in the snippets above) or wrap it in a layout such as `Grid` that has defined row or column constraints.
+`SfPullToRefresh` does not render any content of its own, so you must set an explicit size or `LayoutOptions` when loading it inside a layout. Otherwise, the control will collapse to zero height.

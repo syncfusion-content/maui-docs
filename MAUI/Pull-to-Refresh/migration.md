@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin SfPullToRefresh to .NET MAUI SfPullToRefresh
+title: Migrate from Xamarin SfPullToRefresh to .NET MAUI SfPullToRefresh | Syncfusion
 description: Learn here all about Migrating from Syncfusion Xamarin PullToRefresh to Syncfusion .NET MAUI SfPullToRefresh control and more.
 platform: MAUI
 control: SfPullToRefresh
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin SfPullToRefresh to .NET MAUI SfPullToRefresh
 
-To make migration easier from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefresh, we kept most of the APIs from Xamarin SfPullToRefresh in .NET MAUI SfPullToRefresh. However, to maintain the consistency of API naming in .NET MAUI SfPullToRefresh, we renamed some of the APIs. The APIs that have been changed in .NET MAUI SfPullToRefresh from Xamarin SfPullToRefresh are detailed as follows.
+To make migration easier from `Xamarin.Forms SfPullToRefresh` to `.NET MAUI SfPullToRefresh`, we kept most of the APIs from Xamarin `SfPullToRefresh` in `.NET MAUI SfPullToRefresh`. However, to maintain the consistency of API naming in .NET MAUI , we renamed some of the APIs.
 
 ## Namespaces
 
