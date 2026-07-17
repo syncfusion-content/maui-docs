@@ -129,8 +129,7 @@ Add the following code to `MainPage.xaml` inside the existing root layout. The `
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
-                            VerticalOptions="FillAndExpand">
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh">
     <syncfusion:SfPullToRefresh.PullableContent>
         <StackLayout>
             <Label Text="sample page" />

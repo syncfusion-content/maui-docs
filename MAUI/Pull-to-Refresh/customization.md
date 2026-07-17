@@ -79,7 +79,7 @@ pullToRefresh.TransitionMode = PullToRefreshTransitionType.Push;
 
 ## RefreshViewThreshold
 
-The threshold value for the refresh view, indicating the starting position of the progress indicator within the view. This is a `double` value; the default is `0`.
+The threshold value for the refresh view, indicating the starting position of the progress indicator within the view.This is a `double` value; the default is `50`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -97,7 +97,7 @@ pullToRefresh.RefreshViewThreshold = 50d;
 
 ## PullingThreshold
 
-The threshold value for the refresh view, indicating the progress indicator's maximum pulling position in view. This is a `double` value; the default is `100`.
+The threshold value for the refresh view, indicating the progress indicator's maximum pulling position in view. This is a `double` value; the default is `200`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -135,8 +135,7 @@ pullToRefresh.IsRefreshing = true;
 
 ## ProgressBackground
 
-The color of the progress indicator's background. Accepts a `Color` value (or a color name in XAML); the default is `Colors.White`.
-
+The color of the progress indicator's background.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
@@ -154,7 +153,7 @@ pullToRefresh.ProgressBackground = Color.White;
 
 ## ProgressColor
 
-The color of the progress indicator's arc. Accepts a `Color` value (or a color name in XAML); the default is `Colors.Blue`.
+The color of the progress indicator's arc.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -174,7 +173,7 @@ pullToRefresh.ProgressColor = Color.Blue;
 
 ## ProgressThickness
 
-The width of the progress indicator's arc. This is a `double` value; the default is `2`.
+The width of the progress indicator's arc. This is a `double` value; the default is `3`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -193,7 +192,7 @@ pullToRefresh.ProgressThickness = 5d;
 
 ## RefreshViewWidth
 
-The width of the refresh view. This is a `double` value; the default is `50`.
+The width of the refresh view. This is a `double` value; the default is `48`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -213,7 +212,7 @@ pullToRefresh.RefreshViewWidth = 50d;
 
 ## RefreshViewHeight
 
-The height of the refresh view. This is a `double` value; the default is `50`.
+The height of the refresh view. This is a `double` value; the default is `48`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -293,8 +292,6 @@ using Syncfusion.Maui.PullToRefresh;
 </ol>
 
 This is how the final output will look like when hosting a Datagrid control as pullable content.
-
-![Syncfusion .NET MAUI PullToRefresh with DataGrid hosted with slide on top transition mode.](Images/customization/net-maui-datagrid-slideontop.gif)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="23 24 36 37" %}
@@ -409,8 +406,6 @@ using Syncfusion.Maui.PullToRefresh;
 </ol>
 
 This is how the final output will look like when hosting a SfListView control as pullable content.
-
-![Syncfusion .NET MAUI PullToRefresh with ListView hosted with slide on top transition mode.](Images/customization/net-maui-listview-slideontop.gif)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="21 23 33 35" %}
@@ -559,7 +554,7 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
     {
         this.viewModel = new OrderInfoViewModel();
         this.progressbar = new SfCircularProgressBar();
-        this.frame = new Frame();
+        this.frame = new Border();
         this.progressContent = new Label();
 
         this.progressContent.TextColor = Color.FromRgb(0, 124, 238);
@@ -567,12 +562,12 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
         this.progressContent.WidthRequest = 20;
         this.progressContent.HorizontalTextAlignment = TextAlignment.Center;
 
-        this.frame.BorderColor = Colors.LightGray;
-        this.frame.BackgroundColor = Colors.White;
-        this.frame.CornerRadius = 30;
+        this.frame.Stroke = Colors.LightGray;
+        this.frame.Background = Colors.White;
+        this.frame.StrokeShape = new RoundRectangle { CornerRadius = new CornerRadius(30) };
         this.frame.Content = this.progressbar;
         this.frame.Padding = 0;
-        this.frame.HasShadow = false;
+        this.frame.Shadow = null;
 
         this.progressbar.SegmentCount = 10;
         this.progressbar.ProgressThickness = 6;

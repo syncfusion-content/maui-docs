@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI PullToRefresh control | Syncfusion®
-description: Learn about Events support in the Syncfusion® .NET MAUI SfPullToRefresh control and more.
+description: Learn about the Pulling, Refreshing, and Refreshed events in the Syncfusion .NET MAUI SfPullToRefresh control.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
