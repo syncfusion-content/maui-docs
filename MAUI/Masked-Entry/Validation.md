@@ -17,7 +17,7 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Validation Mode
 
@@ -26,7 +26,7 @@ Use the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 - [`KeyPress`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_KeyPress): validation is triggered for each key press.
 - [`LostFocus`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_LostFocus): validation is performed only when the control loses focus.
 
-The default value is `KeyPress`. The selected mode works the same for both `Simple` and `RegEx` [MaskType](mask-types.md) values.
+The default value is `KeyPress`. The selected mode works the same for both `Simple` and `RegEx` [MaskType](https://help.syncfusion.com/maui/masked-entry/mask-types) values.
 
 {% tabs %}
 {% highlight XAML %}
@@ -104,7 +104,7 @@ The following image illustrates an invalid input that triggers `HasError = true`
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Basic Features](basic-features.md)
-* [Mask Types](Mask-Types.md)
-* [Formatting Value](formatting-value.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Mask Types](https://help.syncfusion.com/maui/masked-entry/mask-types)
+* [Formatting Value](https://help.syncfusion.com/maui/masked-entry/formatting-value)

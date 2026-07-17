@@ -15,7 +15,7 @@ Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) documentation.
 
 ## Setting Placeholder Text
 
@@ -520,9 +520,9 @@ The following screenshot illustrates the `AutomationId`s of the inner elements:
 
 ## See Also
 
-* [Formatting](formatting.md)
-* [Restriction](restriction.md)
-* [UpDown-Button](UpDown-Button.md)
+* [Formatting](https://help.syncfusion.com/maui/numericentry/formatting)
+* [Restriction](https://help.syncfusion.com/maui/numericentry/restriction)
+* [UpDown-Button](https://help.syncfusion.com/maui/numericentry/updown-button)
 
 ## Related resources
 

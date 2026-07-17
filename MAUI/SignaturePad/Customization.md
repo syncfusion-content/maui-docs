@@ -20,7 +20,7 @@ Before using the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.SignaturePad`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) documentation.
 
 ## Stroke Color
 
@@ -84,6 +84,5 @@ this.Content = signaturePad;
 
 ## See Also
 
-* [Getting Started with .NET MAUI SignaturePad](getting-started.md)
-* [Events in .NET MAUI SignaturePad](events.md)
-* [SfSignaturePad API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html)
+* [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started)
+* [Events and Methods](https://help.syncfusion.com/maui/signaturepad/events-and-methods)

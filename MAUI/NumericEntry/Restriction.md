@@ -17,7 +17,7 @@ Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) documentation.
 
 ## Restrict null value
 
@@ -114,6 +114,6 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 
 ## See Also
 
-* [Basic Features](Basic-Features.md)
-* [Formatting](Formatting.md)
-* [UpDown-Button](UpDown-Button.md)
+* [Basic Features](https://help.syncfusion.com/maui/numericentry/basic-features)
+* [Formatting](https://help.syncfusion.com/maui/numericentry/formatting)
+* [UpDown-Button](https://help.syncfusion.com/maui/numericentry/updown-button)

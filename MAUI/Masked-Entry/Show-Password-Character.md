@@ -17,7 +17,7 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Password Char
 
@@ -89,8 +89,8 @@ The following GIF demonstrates the password delay behavior: each typed character
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Basic Features](basic-features.md)
-* [Mask Types](Mask-Types.md)
-* [Formatting Value](formatting-value.md)
-* [Validation](validation.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Mask Types](https://help.syncfusion.com/maui/masked-entry/mask-types)
+* [Formatting Value](https://help.syncfusion.com/maui/masked-entry/formatting-value)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)

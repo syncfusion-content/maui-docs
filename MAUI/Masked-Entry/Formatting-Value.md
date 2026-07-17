@@ -26,7 +26,7 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Exclude prompts and literals
 
@@ -159,6 +159,6 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Basic Features](basic-features.md)
-* [Validation](validation.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)

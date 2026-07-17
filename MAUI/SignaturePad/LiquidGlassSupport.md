@@ -15,7 +15,7 @@ The Liquid Glass Effect introduces a modern, translucent design with adaptive co
 
 Before using the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html), Install the [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) documentation.
 
 N>
 * The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
@@ -116,6 +116,6 @@ The following screenshot illustrates the `SfSignaturePad` rendered inside a Liqu
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Customization](customization.md)
-* [Events and Methods](events-and-methods.md)
+* [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started)
+* [Customization](https://help.syncfusion.com/maui/signaturepad/customization)
+* [Events and Methods](https://help.syncfusion.com/maui/signaturepad/events-and-methods)

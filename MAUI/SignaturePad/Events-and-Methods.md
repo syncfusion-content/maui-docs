@@ -25,7 +25,7 @@ Before using the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.SignaturePad`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) documentation.
 
 ## Events
 
@@ -195,5 +195,5 @@ N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Customization](customization.md)
+* [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started)
+* [Customization](https://help.syncfusion.com/maui/signaturepad/customization)
