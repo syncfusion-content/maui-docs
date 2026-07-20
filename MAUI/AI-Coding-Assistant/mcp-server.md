@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The [SyncfusionMAUIAssistant](https://www.npmjs.com/package/@syncfusion/maui-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion's .NET MAUI component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building .NET MAUI applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+The [SyncfusionMAUIAssistant](https://www.npmjs.com/package/@syncfusion/maui-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion's .NET MAUI component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building .NET MAUI applications with Syncfusion<sup style="font-size:70%">&reg;</sup> component.
 
 ### Key Benefits
 
