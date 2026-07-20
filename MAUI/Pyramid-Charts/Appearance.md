@@ -171,7 +171,7 @@ public class ViewModel
 
 ## Point color path
 
-The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) supports using the [`PointColorPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PointColorPath) property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) supports using the [PointColorPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PointColorPath) property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
 
 The following code example demonstrates how to define a data model with a `PointColor` property and bind it to the chart series.
 
