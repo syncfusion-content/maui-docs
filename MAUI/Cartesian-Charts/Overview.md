@@ -256,7 +256,7 @@ Explore Features
 </div>
     <div class="form-description">Explore interactive demos that showcase key features and component capabilities.</div>
     <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/CartesianChart" class="explore-link">
-    View Samples
+    View Demos
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
@@ -322,13 +322,13 @@ Read Blogs
     <div class="icon-circle">
     <span class="card-icon card-use"></span>
     </div>
-    <h3 class="form-title">Use Case Samples</h3>
+    <h3 class="form-title">Use Case Sample</h3>
 </div>
     <div class="form-description">
       Explore a real-world application that demonstrates the practical use of the Cartesian Chart.
     </div>
     <a href="https://github.com/syncfusion/maui-weather-analysis" class="explore-link">
-    View Samples
+    View Sample
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
