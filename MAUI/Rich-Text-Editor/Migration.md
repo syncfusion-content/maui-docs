@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin RichTextEditor to .NET MAUI RichTextEditor
 
-To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.html) to [`.NET MAUI SfRichTextEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.html), we kept all the APIs from Xamarin SfRichTextEditor in MAUI SfRichTextEditor. However, to maintain the consistency of API naming in MAUI https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.html, we renamed some of the APIs. The APIs that have been changed in MAUI SfRichTextEditor from Xamarin SfRichTextEditor are detailed as follows.
+To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.html) to [`.NET MAUI SfRichTextEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.html), we kept all the APIs from Xamarin SfRichTextEditor in MAUI SfRichTextEditor. However, to maintain the consistency of API naming in MAUI, we renamed some of the APIs. The APIs that have been changed in MAUI SfRichTextEditor from Xamarin SfRichTextEditor are detailed as follows.
 
 ## Namespaces 
 
@@ -60,22 +60,22 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
     <tr>
         <td>{{'[PlaceHolderFontColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_PlaceHolderFontColor)'| markdownify }}</td>
         <td>PlaceholderColor</td>
-        <td>Gets or sets the value for place holder font color.</td>
+        <td>Gets or sets the value for placeholder font color.</td>
     </tr>
     <tr>
         <td>{{'[PlaceHolderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_PlaceHolderFontFamily)'| markdownify }}</td>
         <td>PlaceholderFontFamily</td>
-        <td>Gets or sets the value for place holder font family.</td>
+        <td>Gets or sets the value for placeholder font family.</td>
     </tr>
     <tr>
         <td>{{'[PlaceHolderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_PlaceHolderFontSize)'| markdownify }}</td>
         <td>PlaceholderFontSize</td>
-        <td>Gets or sets the value for place holder font size.</td>
+        <td>Gets or sets the value for placeholder font size.</td>
     </tr>
     <tr>
-        <td>{{'[WordWrap](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_PlaceHolderFontSize)'| markdownify }}</td>
+        <td>{{'[WordWrap](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_WordWrap)'| markdownify }}</td>
         <td>EnableWordWrap</td>
-        <td>Gets or sets the word-wrap that allows long words to be able to be broken and wrap onto the next line.</td>
+        <td>Gets or sets whether long words break and wrap onto the next line.</td>
     </tr>
 </table>
 
@@ -88,14 +88,14 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
         <th>Description</th>
     </tr>
     <tr>
-        <td>{{'[ImageInserted](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_ImageRequest)'| markdownify }}</td>
+        <td>{{'[ImageInserted](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_ImageInserted)'| markdownify }}</td>
         <td>ImageRequested</td>
         <td>Occurs when an image is about to be inserted, allowing for customization of the image source.</td>
     </tr>
     <tr>
-        <td>{{'[HyperlinkSelected](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_ImageInserted)'| markdownify }}</td>
+        <td>{{'[HyperlinkSelected](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_HyperlinkSelected)'| markdownify }}</td>
         <td>HyperlinkClicked</td>
-        <td>Occurs when a hyperlink is tapped, allowing for custom actions to be performed.</td>
+        <td>Occurs when a hyperlink is tapped, allowing custom actions.</td>
     </tr>
 </table>
 
@@ -115,7 +115,7 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
     <tr>
         <td>{{'[ApplyFont(string fontName)](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_ApplyFont_System_String_)'| markdownify }}</td>
         <td>ApplyFontFamily(string fontName)</td>
-        <td>JApplies the specified font family.</td>
+        <td>Applies the specified font family.</td>
     </tr>
     <tr>
         <td>{{'[EditHyperlink(string url, string text)](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_EditHyperlink_System_String_System_String_)'| markdownify }}</td>
@@ -124,13 +124,13 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
     </tr>
     <tr>
         <td>{{'[InsertHyperlink(string url, string displayText)](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_InsertHyperlink_System_String_System_String_)'| markdownify }}</td>
-        <td>InsertHyperlink(string displayText, string Url)</td>
+        <td>InsertHyperlink(string displayText, string url)</td>
         <td>Inserts the hyperlink.</td>
     </tr>
     <tr>
         <td>{{'[RemoveHyperlink()](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_RemoveHyperlink)'| markdownify }}</td>
-        <td>RemoveHyperlink(string text, string Url)</td>
-        <td>Removes the hyperlink.</td>
+        <td>RemoveHyperlink(string text, string url)</td>
+        <td>Removes the hyperlink matching the specified text and URL.</td>
     </tr>
     <tr>
         <td>{{'[InsertImage(ImageSource imageSource)](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_InsertImage_Syncfusion_XForms_RichTextEditor_ImageSource_)'| markdownify }}</td>
@@ -140,32 +140,32 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
     <tr>
         <td>{{'[SetFontColor(string fontColor)](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_SetFontColor_System_String_)'| markdownify }}</td>
         <td>ApplyTextColor(Color textColor)</td>
-        <td>Apply the text color.</td>
+        <td>Applies the text color.</td>
     </tr>
     <tr>
         <td>{{'[SetFontSize(string fontSize)](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_SetFontSize_System_String_)'| markdownify }}</td>
         <td>ApplyFontSize(double fontSize)</td>
-        <td>Apply the font size.</td>
+        <td>Applies the font size.</td>
     </tr>
     <tr>
         <td>{{'[SetHighlightColor(string color)](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_SetHighlightColor_System_String_)'| markdownify }}</td>
         <td>ApplyHighlightColor(Color highlightColor)</td>
-        <td>Highlights the background color.</td>
+        <td>Applies highlight color to the selected text.</td>
     </tr>
     <tr>
         <td>{{'[SetParagraphFormat(string heading)](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_SetParagraphFormat_System_String_)'| markdownify }}</td>
         <td>ApplyParagraphFormat(RichTextEditorParagraphFormat format)</td>
-        <td>Apply the paragraph formatting style.</td>
+        <td>Applies the paragraph formatting style.</td>
     </tr>
     <tr>
         <td>{{'[ToggleSubScript()](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_ToggleSubScript)'| markdownify }}</td>
         <td>ToggleSubscript()</td>
-        <td>Toggles the selected text as sub script format.</td>
+        <td>Toggles the selected text as subscript format.</td>
     </tr>
     <tr>
         <td>{{'[ToggleSuperScript()](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_ToggleSuperScript)'| markdownify }}</td>
         <td>ToggleSuperscript()</td>
-        <td>Toggles the selected text as super script format.</td>
+        <td>Toggles the selected text as superscript format.</td>
     </tr>
 </table>
 
