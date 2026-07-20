@@ -105,7 +105,7 @@ builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Import RadialMenu namespace
+## Step 4: Import Radial Menu namespace
 
 Add the following namespace in your XAML or C#.
 

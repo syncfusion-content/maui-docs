@@ -105,7 +105,7 @@ builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Import TabView namespace
+## Step 4: Import Tab View namespace
 
 Add the following namespace in your XAML or C#.
 
@@ -122,7 +122,7 @@ using Syncfusion.Maui.TabView;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the TabView Component
+## Step 5: Add the Tab View Component
 
 Configure the `TabView` control to organize content into multiple tabs, allowing you to switch between different views within a single page. Tab items can be added to the control using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 
@@ -206,7 +206,7 @@ this.Content = tabView;
 
 ![Getting started with .NET MAUI Tab View.](images/tab-view-gettingstarted.png)
 
-You can download the TabView Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-.net-maui-tab-view).
+You can download the Tab View Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-.net-maui-tab-view).
 
 N> You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
 

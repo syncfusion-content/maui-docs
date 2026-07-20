@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI TabView | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI TabView (SfTabView) control and more.
+title: Provide Liquid Glass Support for .NET MAUI Tab View | Syncfusion®
+description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
