@@ -173,10 +173,10 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Mult
 
 The [BorderType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_BorderType) property supports the following [ChartMultiLevelBorderType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelBorderType.html) values:
 
-* `Rectangle` - Displays the label with a rectangular border on all sides.
-* `WithoutTopAndBottom` - Displays the label with a border on left and right sides only (no top and bottom).
-* `SquareBrace` - Displays the label with a square brace border style.
-* `CurlyBrace` - Displays the label with a curly brace border style.
+* [Rectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelBorderType.html#Syncfusion_Maui_Charts_ChartMultiLevelBorderType_Rectangle) - Displays the label with a rectangular border on all sides.
+* [WithoutTopAndBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelBorderType.html#Syncfusion_Maui_Charts_ChartMultiLevelBorderType_WithoutTopAndBottom) - Displays the label with a border on left and right sides only (no top and bottom).
+* [SquareBrace](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelBorderType.html#Syncfusion_Maui_Charts_ChartMultiLevelBorderType_SquareBrace) - Displays the label with a square brace border style.
+* [CurlyBrace](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelBorderType.html#Syncfusion_Maui_Charts_ChartMultiLevelBorderType_CurlyBrace) - Displays the label with a curly brace border style.
 
 The default value is `Rectangle`.
 

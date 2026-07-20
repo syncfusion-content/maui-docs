@@ -263,12 +263,16 @@ this.Content = chart;
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
+<td>-</td>
+<td>IsFloating</td>
+</tr>
+<tr>
 <td>OffsetX</td>
-<td><em>Upcoming</em></td>
+<td>OffsetX</td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td><em>Upcoming</em></td>
+<td>OffsetY</td>
 </tr>
 </table>
 
@@ -739,7 +743,6 @@ this.Content = chart;
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend floating support.
 * Event or method to notify when a legend item is clicked.
 
 **Data label**
