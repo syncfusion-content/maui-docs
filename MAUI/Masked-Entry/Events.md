@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides information about the events available in the .NET MAUI Masked Entry control. Events are typically subscribed in the page constructor or in code-behind, and are raised on the UI thread.
 
-The events fire in the following order when the user enters a value:
+The following events are available in the Masked Entry control:
 
 1. `ValueChanging` - raised before the value is committed, and is cancelable.
 2. `ValueChanged` - raised after the value is committed.
@@ -134,7 +134,7 @@ private void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChangedEven
 
 ## Completed Event
 
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Completed) event is raised when the user finalizes the text in the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) editable mode by pressing the return key on the keyboard. The handler for the event is a generic `EventHandler`, taking the `sender` and `EventArgs` (the `EventArgs` value is `EventArgs.Empty`):
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Completed) event is raised when the user finalizes the text in the Masked Entry editable mode by pressing the return key on the keyboard. The handler for the event is a generic `EventHandler`, taking the `sender` and `EventArgs` (the `EventArgs` value is `EventArgs.Empty`):
 
 {% tabs %}
 {% highlight XAML %}
@@ -178,7 +178,7 @@ private void MaskedEntry_Completed(object sender, EventArgs e)
 
 ## ClearButtonClicked Event
 
-The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonClicked) event is raised when the user activates the clear button in the `SfMaskedEntry` editable mode by tapping the clear button. The handler for the event is a generic `EventHandler`, taking the `sender` and `EventArgs`.
+The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonClicked) event is raised when the user activates the clear button in the Masked Entry editable mode by tapping the clear button. The handler for the event is a generic `EventHandler`, taking the `sender` and `EventArgs`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -225,3 +225,4 @@ private void MaskedEntry_ClearButtonClicked(object sender, EventArgs e)
 
 * [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
 * [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)
