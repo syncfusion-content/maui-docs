@@ -135,6 +135,18 @@ The following table illustrates the API migration for the chart.
 <td>ChartBehaviors</td>
 <td>TooltipBehavior, SelectionBehavior, ZoomPanBehavior</td>
 </tr>
+<tr>
+<td>SuspendSeriesNotification</td>
+<td>SuspendSeriesNotification</td>
+</tr>
+<tr>
+<td>ResumeSeriesNotification</td>
+<td>ResumeSeriesNotification</td>
+</tr>
+<tr>
+<td>LabelClicked</td>
+<td>AxisLabelTapped</td>
+</tr>
 </table>
 
 ### Axis
@@ -193,16 +205,12 @@ The following table illustrates the API migration for the chart.
 <td>VisibleLabels</td>
 </tr>
 <tr>
-<td>LabelClicked</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
 <td>TickPosition</td>
 <td>TickPosition</td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
-<td><em>Upcoming</em></td>
+<td>MaximumLabels</td>
 </tr>
 <tr>
 <td>LabelsIntersectAction</td>
@@ -306,6 +314,18 @@ this.Content = chart;
 <tr>
 <td>DataMarker</td>
 <td>ShowDataLabels, DataLabelSettings</td>
+</tr>
+<tr>
+<td>SuspendNotification</td>
+<td>SuspendNotification</td>
+</tr>
+<tr>
+<td>ResumeNotification</td>
+<td>ResumeNotification</td>
+</tr>
+<tr>
+<td>ListenPropertyChange</td>
+<td>ListenPropertyChange</td>
 </tr>
 </table>
 
@@ -432,12 +452,16 @@ this.Content = chart;
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
+<td>-</td>
+<td>IsFloating</td>
+</tr>
+<tr>
 <td>OffsetX</td>
-<td><em>Upcoming</em></td>
+<td>OffsetX</td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td><em>Upcoming</em></td>
+<td>OffsetY</td>
 </tr>
 </table>
 
@@ -871,21 +895,16 @@ this.Content = chart;
 ## Upcoming features in .NET MAUI
 
 **Chart** 
- 
-* Suspend and resume notification support. 
+
 * Technical indicators for charts.
 
 **Series**
 
-* Listen to property change support for series.
 * Notify event or method when series are rendering.
-* Suspend and resume notification.
-* Trendlines support for continuous series. 
 
 **Axis**
 
 * Range style customization.
-* Event or method to notify the axis label click.
 * Support for axis draw labels as multiple lines using /n.
 * Support setting the maximum labels count for the chart axis.
 
