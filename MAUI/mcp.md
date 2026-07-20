@@ -62,7 +62,7 @@ Create a configuration file in your project folder to install the server for you
     "sf-maui-mcp": {
       "type": "stdio",
       "command": "dnx",
-      "args": ["Syncfusion.MAUI.MCP", "--yes"],
+      "args": ["Syncfusion.Maui.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -82,7 +82,7 @@ Create a configuration file in your project folder to install the server for you
     "sf-maui-mcp": {
       "type": "stdio",
       "command": "dnx",
-      "args": ["Syncfusion.MAUI.MCP", "--yes"],
+      "args": ["Syncfusion.Maui.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -103,7 +103,7 @@ Create a configuration file in your project folder to install the server for you
   "mcpServers": {
     "sf-maui-mcp": {
       "command": "dnx",
-      "args": ["Syncfusion.MAUI.MCP", "--yes"],
+      "args": ["Syncfusion.Maui.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -124,7 +124,7 @@ Create a configuration file in your project folder to install the server for you
   "mcpServers": {
     "sf-maui-mcp": {
       "command": "dnx",
-      "args": ["Syncfusion.MAUI.MCP", "--yes"],
+      "args": ["Syncfusion.Maui.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -149,7 +149,7 @@ You can install the Syncfusion MAUI MCP server as a local tool without a global 
     dotnet tool install Syncfusion.MAUI.MCP
     ````
 
-2. In your MCP client config (`.vscode/mcp.json`, `.codestudio/mcp.json`, `.cursor/mcp.json`, or the JetBrains MCP settings), replace the server entry with:
+2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
 
     ````json
     {
@@ -202,7 +202,7 @@ Get step-by-step help for adding specific features to components that are alread
 
 {% promptcards %}
 {% promptcard Kanban Features %}
-#search_docs How do I enable drag-and-drop and swimlane grouping in the MAUI Kanban component?
+#search_docs How do I enable drag-and-drop and custom scheduling in the Schedule control?
 {% endpromptcard %}
 {% endpromptcards %}
 
