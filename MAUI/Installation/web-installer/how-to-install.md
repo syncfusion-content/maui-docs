@@ -30,7 +30,7 @@ Follow these steps to install the Essential Studio<sup>®</sup> .NET MAUI Web In
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
 
-    >**Note:** The installer wizard extracts the `syncfusionessentialmauiwebinstaller_{version}.exe` dialog, which displays the package's unzip operation.
+    N> The installer wizard extracts the `syncfusionessentialmauiwebinstaller_{version}.exe` dialog, which displays the package's unzip operation.
 
 2. 	**Welcome wizard:** The welcome dialog for the Syncfusion<sup>®</sup> .NET MAUI Web Installer will appear. Click the **Next** button.
 
@@ -49,7 +49,7 @@ Follow these steps to install the Essential Studio<sup>®</sup> .NET MAUI Web In
 
     ![Platform selection wizard, Installed tab](images/Step-by-Step-Installation_img24.png)
 
-	>**Note:** If the required software for the selected product isn't installed, an **Additional Software Required** alert appears. You can continue and install the necessary software later.
+	N> If the required software for the selected product isn't installed, an **Additional Software Required** alert appears. You can continue and install the necessary software later.
 
 	**Required software**
 
@@ -60,7 +60,7 @@ Follow these steps to install the Essential Studio<sup>®</sup> .NET MAUI Web In
 
 	![Uninstall previous version wizard](images/Step-by-Step-Installation_img20.png)
 
-	>**Note:** From the 2021 Volume 1 release, there is an option to uninstall previous versions from 18.1 while installing the new version.
+	N> From the 2021 Volume 1 release, there is an option to uninstall previous versions from 18.1 while installing the new version.
 
 5.	**Confirmation wizard:** Confirm the uninstallation of selected previous versions.
 
@@ -71,7 +71,7 @@ Follow these steps to install the Essential Studio<sup>®</sup> .NET MAUI Web In
 
     ![Confirmation wizard with list of products](images/Step-by-Step-Installation_img15.png)
 
-	>**Note:** Click the **Download Size** and **Installation Size** links to approximate the download and installation size.
+	N> Click the **Download Size** and **Installation Size** links to approximate the download and installation size.
 
 
 7.  **Configuration wizard:** Customize download, install, and demo locations, and adjust the additional settings per product. Click **Next** to install with the default settings.
@@ -92,7 +92,7 @@ Follow these steps to install the Essential Studio<sup>®</sup> .NET MAUI Web In
 
     ![Login wizard with email and password fields](images/Step-by-Step-Installation_img9.png)
 
-	>**Note:** Products will install based on your Syncfusion<sup>®</sup> license (Trial or Licensed).
+	I> Products will install based on your Syncfusion<sup>®</sup> license (Trial or Licensed).
 
 10. **Progress display:** The progress of the download, installation, and uninstallation will be displayed.
 
@@ -129,7 +129,7 @@ You can uninstall all installed products by selecting the **Syncfusion<sup>®</s
 
 ![Windows Control Panel showing Syncfusion entries](images/Step-by-Step-Installation_img22.png)
 
->**Note:** If the **Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI {version}** entry is selected from the Windows Control Panel, only the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI will be removed, and the default MSI uninstallation window will be displayed.
+N> If the **Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI {version}** entry is selected from the Windows Control Panel, only the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI will be removed, and the default MSI uninstallation window will be displayed.
 
 
 1.  **Welcome wizard:** The Syncfusion<sup>®</sup> .NET MAUI Web Installer's welcome wizard will be displayed. Click the **Next** button.
@@ -160,7 +160,7 @@ You can uninstall all installed products by selecting the **Syncfusion<sup>®</s
 
     ![Confirmation for install or uninstall](images/Step-by-Step-Installation_img15.png)
 
-	>**Note:** By clicking the **Download Size** and **Installation Size** links, you can determine the approximate size of the download and installation.
+	N> By clicking the **Download Size** and **Installation Size** links, you can determine the approximate size of the download and installation.
 
 6.	**Configuration wizard:** Change the **Download**, **Install**, and **Demos** locations from here. You can also change the additional settings on a product-by-product basis. Click **Next** to install with the default settings.
 
@@ -172,7 +172,7 @@ You can uninstall all installed products by selecting the **Syncfusion<sup>®</s
 
     ![Login wizard for install or uninstall](images/Step-by-Step-Installation_img9.png)
 
-	>**Note:** The products you have chosen will be installed or uninstalled based on your Syncfusion<sup>®</sup> license (Trial or Licensed).
+	N> The products you have chosen will be installed or uninstalled based on your Syncfusion<sup>®</sup> license (Trial or Licensed).
 
 9.	The download, installation, and uninstallation progress will be displayed.
 
