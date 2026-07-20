@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion<sup>&reg;</sup> .NET MAUI Calendar ([SfCalendar](https://www.syncfusion.com/maui-controls/maui-calendar)) is a calendar control that allows users to select a Single date, Multiple dates, or a Range of dates. It provides various view options such as a Month, Year, Decade, and Century, which allow users to quickly navigate to the desired date. It also supports minimum dates, maximum dates, enable past dates, and disabled dates to restrict the date selection.
 
-![Multiple views in .NET MAUI Calendar.](images/overview/maui-multiple-views.png)
+![Overview of .NET MAUI Calendar](images/overview/maui-multiple-views.png)
 
 ## Business use cases
 
