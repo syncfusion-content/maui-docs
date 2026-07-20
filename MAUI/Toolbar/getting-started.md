@@ -113,7 +113,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:treemap="xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar""
+xmlns:treemap="xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
 
 {% endhighlight %}
 {% highlight c# %}
