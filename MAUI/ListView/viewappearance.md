@@ -29,7 +29,7 @@ Here, an [ItemsCacheLimit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.L
 Create a custom class that inherits from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfListView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
 {% tabs %}
-{% highlight c# tabtitle="DataTemplateSelector.cs" hl_lines="13 14 15 16 17" %}
+{% highlight c# tabtitle="DataTemplateSelector.cs" hl_lines="13 14 15 16 17 18 19" %}
 
 public class MyDataTemplateSelector : DataTemplateSelector
 {
@@ -210,7 +210,7 @@ public partial class MainPage : ContentPage
 
 ![Syncfusion .NET MAUI ListView Navigate across views](Images/appearance/maui-listview-navigate-across-views.jpg)
 
-## Horizontal list inside vertical list
+### Horizontal list inside vertical list
 
 The `SfListView` allows you to layout the items in a horizontal list within a vertical list. You can load the nested `SfListView` by customizing the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of outer `SfListView`. 
 
@@ -285,7 +285,8 @@ public partial class MainPage : ContentPage
 
 ![Syncfusion .NET MAUI ListView Horizontal list inside the vertical list](Images/appearance/maui-listview-horizontal-list-inside-vertical-list.jpg)
 
-## Item size
+## Item Customizations
+### Item size
 
 The `SfListView` allows customizing the size of items by setting the [ItemSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSize) property. The default value of this property is `48d`. This property can be customized at runtime.
 
@@ -298,7 +299,7 @@ listView.ItemSize = 60;
 {% endhighlight %}
 {% endtabs %}
 
-## Item spacing
+### Item spacing
 
 The `SfListView` allows specifying space between each item in the list by setting the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSpacing) property. This adds space around each item. The default value of this property is `0`. This property can be customized at runtime.
 
@@ -313,7 +314,233 @@ listView.ItemSpacing = new Thickness(5, 0, 0, 0);
 
 ![Syncfusion .NET MAUI ListView Item Spacing](Images/appearance/maui-listview-item-spacing.jpg)
 
-## Alternate row styling
+### Item Border Customization
+
+This section explains how to customize item borders in the `.NET MAUI ListView` (SfListView) using the built-in APIs.
+
+#### Enable Item Border
+
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows applying borders to each item by setting the [ShowItemBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowItemBorderProperty) property to `true`. By default, item borders are not displayed. You can customize the color, thickness, margin, and corner radius of the borders using the respective APIs.
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{'[ShowItemBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowItemBorderProperty)'| markdownify }}</td>
+      <td>Enables or disables the visibility of item borders. <em>(Default: false)</em></td>
+    </tr>
+    <tr>
+      <td>{{'[ItemBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderColorProperty)'| markdownify }}</td>
+      <td>Sets the color of the item border.</td>
+    </tr>
+    <tr>
+      <td>{{'[ItemBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThicknessProperty)'| markdownify }}</td>
+      <td>Defines the border thickness for each side of the item (per-side <code>double</code> values).</td>
+    </tr>
+    <tr>
+      <td>{{'[ItemBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderMarginProperty)'| markdownify }}</td>
+      <td>Sets the margin around the border within the item.</td>
+    </tr>
+    <tr>
+      <td>{{'[ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty)'| markdownify}}</td>
+      <td>Sets the corner radius of the item border.</td>
+    </tr>
+  </tbody>
+</table>
+
+N> `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+<syncfusion:SfListView x:Name="listView"
+                       ShowItemBorder="True"
+                       ItemsSource="{Binding BookInfo}">
+    <syncfusion:SfListView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="5">
+                <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                <Label Text="{Binding BookDescription}" />
+            </StackLayout>
+        </DataTemplate>
+    </syncfusion:SfListView.ItemTemplate>
+</syncfusion:SfListView>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+listView.ShowItemBorder = true;
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI ListView Border Example](Images/item-border/maui-listview-item-border-example.jpg)
+
+#### Border Customization
+
+After enabling the item border, you can customize its appearance using the following properties:
+
+- [ItemBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderColorProperty): Sets the border color.
+- [ItemBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThicknessProperty): Specifies the thickness of the border.
+- [ItemBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderMarginProperty): Adds margin around the border.
+- [ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty): Sets the corner radius of the border.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7" %}
+<syncfusion:SfListView x:Name="listView"
+                       ItemSize="60"
+                       ShowItemBorder="True"
+                       ItemBorderColor="Black"
+                       ItemBorderThickness="2"
+                       ItemBorderMargin="5,2,5,2"
+                       ItemBorderRadius="20,0,0,20"
+                       ItemsSource="{Binding BookInfo}">
+    <syncfusion:SfListView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="5">
+                <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                <Label Text="{Binding BookDescription}" />
+            </StackLayout>
+        </DataTemplate>
+    </syncfusion:SfListView.ItemTemplate>
+</syncfusion:SfListView>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 3 4 5" %}
+listView.ShowItemBorder = true;
+listView.ItemBorderColor = Colors.Black;
+listView.ItemBorderThickness = new Thickness(2);
+listView.ItemBorderMargin = new Thickness(5, 2, 5, 2);
+listView.ItemBorderRadius = new CornerRadius(20,0,0,20);
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI ListView Border Example](Images/item-border/maui-listview-border-customization.jpg)
+
+#### Limitations
+
+- Item borders are not supported when [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) is set to [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html).
+- [ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty) is applicable only when [ItemBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThicknessProperty) has uniform values on all sides.
+
+### Group Header Border Customization
+
+This section explains how to customize group header borders in the `.NET MAUI ListView` (SfListView) using the built-in APIs.
+
+#### Enable Group Header Border
+
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows applying borders to each group header by setting the `ShowGroupHeaderBorder` property to `true`. By default, group header borders are not displayed. You can customize the color, thickness, margin, and corner radius of the borders using the respective APIs.
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{'[ShowGroupHeaderBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowGroupHeaderBorderProperty)'| markdownify }}</td>
+      <td>Enables or disables the visibility of group header borders. <em>(Default: false)</em></td>
+    </tr>
+    <tr>
+      <td>{{'[GroupHeaderBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderColorProperty)'| markdownify }}</td>
+      <td>Sets the color of the group header border.</td>
+    </tr>
+    <tr>
+      <td>{{'[GroupHeaderBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderThicknessProperty)'| markdownify }}</td>
+      <td>Defines the border thickness for each side of the group header (per-side <code>double</code> values).</td>
+    </tr>
+    <tr>
+      <td>{{'[GroupHeaderBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderMarginProperty)'| markdownify }}</td>
+      <td>Sets the margin around the border within the group header.</td>
+    </tr>
+    <tr>
+      <td>{{'[GroupHeaderBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderRadiusProperty)'| markdownify }}</td>
+      <td>Sets the corner radius of the group header border.</td>
+    </tr>
+  </tbody>
+</table>
+
+N> `GroupHeaderBorderRadius` is applicable only when `GroupHeaderBorderThickness` has uniform values on all sides.
+
+#### XAML Example
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<syncfusion:SfListView x:Name="listView"
+                       GroupHeaderSize="50"
+                       ShowGroupHeaderBorder="True"
+                       AllowGroupExpandCollapse="True"
+                       ItemsSource="{Binding BookInfo}"
+                       GroupKeySelector="{Binding Category}">
+    <syncfusion:SfListView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="5">
+                <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                <Label Text="{Binding BookDescription}" />
+            </StackLayout>
+        </DataTemplate>
+    </syncfusion:SfListView.ItemTemplate>
+</syncfusion:SfListView>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+listView.ShowGroupHeaderBorder = true;
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI ListView Group Header Border Example](Images/item-border/maui-listview-groupheader-border-example.jpg)
+
+#### Border Customization
+
+After enabling the group header border, you can customize its appearance using the following properties:
+
+- `GroupHeaderBorderColor`: Sets the border color.
+- `GroupHeaderBorderThickness`: Specifies the thickness of the border.
+- `GroupHeaderBorderMargin`: Adds margin around the border.
+- `GroupHeaderBorderRadius`: Sets the corner radius of the border.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7" %}
+<syncfusion:SfListView x:Name="listView"
+                       GroupHeaderSize="60"
+                       ShowGroupHeaderBorder="True"
+                       GroupHeaderBorderColor="Black"
+                       GroupHeaderBorderThickness="2"
+                       GroupHeaderBorderMargin="5,2,5,2"
+                       GroupHeaderBorderRadius="20,0,0,20"
+                       ItemsSource="{Binding BookInfo}">
+    <syncfusion:SfListView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="5">
+                <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                <Label Text="{Binding BookDescription}" />
+            </StackLayout>
+        </DataTemplate>
+    </syncfusion:SfListView.ItemTemplate>
+</syncfusion:SfListView>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 3 4 5" %}
+listView.ShowGroupHeaderBorder = true;
+listView.GroupHeaderBorderColor = Colors.Black;
+listView.GroupHeaderBorderThickness = new Thickness(2);
+listView.GroupHeaderBorderMargin = new Thickness(2);
+listView.GroupHeaderBorderRadius = new CornerRadius(20,0,0,20);
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI ListView Group Header Border Customization Example](Images/item-border/maui-listview-groupheader-border-customization.jpg)
+
+#### Limitations
+
+- Group header borders are rendered on top of the group header template content and do not interfere with touch interactions.
+- `GroupHeaderBorderRadius` is applicable only when `GroupHeaderBorderThickness` has uniform values on all sides.
+- Group header borders are only supported with grouped data sources (when `GroupKeySelector` is set).
+
+### Alternate row styling
 
 The `SfListView` allows applying alternate row styling for items by using the `IValueConverter` to find the index of the underlying object.
 
@@ -366,7 +593,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-{% highlight c# tabtitle="IndexToColorConverter.cs" hl_lines="9 10 11" %}
+{% highlight c# tabtitle="IndexToColorConverter.cs" hl_lines="9" %}
 using System;
 using System.Collections;
 using System.Globalization;
@@ -395,7 +622,7 @@ public class IndexToColorConverter : IValueConverter
 
 ![Syncfusion .NET MAUI ListView Alternate row styling](Images/appearance/maui-listview-alternate-row-styling.jpg)
 
-## Rounded corner on items
+### Rounded corner on items
 
 The `SfListView` allows customizing the item appearance, such as rounded corners, by using the `Border` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of the border, you can apply rounded corners to items.
 
@@ -454,7 +681,7 @@ public partial class MainPage : ContentPage
 
 ![Syncfusion .NET MAUI ListView Rounded corner on items](Images/appearance/maui-listview-rounded-corner-on-items.jpg)
 
-## Drop shadow effect on items
+### Drop shadow effect on items
 
 The `SfListView` allows applying a shadow effect to items by using a `Border` inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
 
@@ -482,7 +709,7 @@ N> Define the border within any view inside `ItemTemplate` with some margin arou
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -521,6 +748,124 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Syncfusion .NET MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
+
+## Item separator customization
+
+This section explains how to enable and customize built-in item separators in the Syncfusion .NET MAUI SfListView control. The separator feature adds optional, cross-platform divider lines between list items and group headers.
+
+### Enable item separator
+
+The SfListView displays separators between items when the `ShowItemSeparator` property is set to `true`.
+
+Separators for group headers can be enabled using the `ShowGroupItemSeparator` property. `ShowGroupItemSeparator` has no visible effect unless the SfListView is grouped (that is, `IsGrouped` is `true` and a `GroupTemplate` or grouping logic is configured). Both can be styled independently using the properties below.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4,5" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             x:Class="ListViewSample.MainPage">
+    <syncfusion:SfListView x:Name="listView"
+                           ShowItemSeparator="True"
+                           ShowGroupItemSeparator="True"
+                           ItemsSource="{Binding BookInfo}">
+        <syncfusion:SfListView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="5">
+                    <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                    <Label Text="{Binding BookDescription}" />
+                </StackLayout>
+            </DataTemplate>
+        </syncfusion:SfListView.ItemTemplate>
+    </syncfusion:SfListView>
+</ContentPage>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2" %}
+listView.ShowItemSeparator = true;
+listView.ShowGroupItemSeparator = true;
+{% endhighlight %}
+{% endtabs %}
+
+![MAUI ListView with item and group separators enabled](Images/item-separator/maui-listview-item-separator-example.png)
+
+### Separator customization
+
+The styling properties listed in this section take effect only when the corresponding `ShowItemSeparator` or `ShowGroupItemSeparator` flag is also set to `true`. After enabling the appropriate flag, you can customize the appearance and behavior using the following properties:
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{'[ItemSeparatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSeparatorColorProperty)'| markdownify }}</td>
+      <td>Sets the color of the item separator line. Accepts any <code>Color</code> value, including named colors, hex values, and <code>Color.FromArgb</code>. <em>(Type: <code>Color</code>, Default: <code>Colors.LightGray</code>)</em></td>
+    </tr>
+    <tr>
+      <td>{{'[ItemSeparatorThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSeparatorThicknessProperty)'| markdownify }}</td>
+      <td>Specifies the thickness of the separator line as a single <code>double</code> value (device-independent units) applied uniformly on all sides. <em>(Type: <code>double</code>, Default: <code>1</code>)</em></td>
+    </tr>
+    <tr>
+      <td>{{'[ItemSeparatorMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSeparatorMarginProperty)'| markdownify }}</td>
+      <td>Specifies the margin applied to the separator to align it with the item content. <em>(Type: <code>Thickness</code>, Default: <code>new Thickness(0)</code>)</em> In XAML, a single value (for example, <code>"10"</code>) sets all four sides uniformly. In C#, use the <code>Thickness</code> structure (for example, <code>new Thickness(10)</code>). For <code>Vertical</code> orientation, only the left and right values are used; for <code>Horizontal</code>, only the top and bottom values are used.</td>
+    </tr>
+    <tr>
+      <td>{{'[GroupItemSeparatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupItemSeparatorColorProperty)'| markdownify }}</td>
+      <td>Sets the color of the separator rendered below group headers. Accepts any <code>Color</code> value, including named colors, hex values, and <code>Color.FromArgb</code>. <em>(Type: <code>Color</code>, Default: <code>Colors.LightGray</code>)</em></td>
+    </tr>
+    <tr>
+      <td>{{'[GroupItemSeparatorThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupItemSeparatorThicknessProperty)'| markdownify }}</td>
+      <td>Specifies the thickness of the group header separator as a single <code>double</code> value (device-independent units) applied uniformly on all sides. <em>(Type: <code>double</code>, Default: <code>1</code>)</em></td>
+    </tr>
+    <tr>
+      <td>{{'[GroupItemSeparatorMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupItemSeparatorMarginProperty)'| markdownify }}</td>
+      <td>Specifies the margin for the group header separator for alignment with headers or items. <em>(Type: <code>Thickness</code>, Default: <code>new Thickness(0)</code>)</em> In XAML, a single value (for example, <code>"40"</code>) sets all four sides uniformly. In C#, use the <code>Thickness</code> structure (for example, <code>new Thickness(40)</code>). For <code>Vertical</code> orientation, only the left and right values are used; for <code>Horizontal</code>, only the top and bottom values are used.</td>
+    </tr>
+  </tbody>
+</table>
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8 9 10 11" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             x:Class="ListViewSample.MainPage">
+    <syncfusion:SfListView x:Name="listView"
+                           ItemSize="60"
+                           ShowItemSeparator="True"
+                           ItemSeparatorColor="#D0BCFF"
+                           ItemSeparatorThickness="2"
+                           ItemSeparatorMargin="10"
+                           ShowGroupItemSeparator="True"
+                           GroupItemSeparatorColor="#6750A4"
+                           GroupItemSeparatorThickness="2"
+                           GroupItemSeparatorMargin="40"
+                           ItemsSource="{Binding BookInfo}">
+        <syncfusion:SfListView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="5">
+                    <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                    <Label Text="{Binding BookDescription}" />
+                </StackLayout>
+            </DataTemplate>
+        </syncfusion:SfListView.ItemTemplate>
+    </syncfusion:SfListView>
+</ContentPage>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 3 4 5 6 7 8" %}
+listView.ShowItemSeparator = true;
+listView.ItemSeparatorColor = Color.FromArgb("#D0BCFF");
+listView.ItemSeparatorThickness = 2;
+listView.ItemSeparatorMargin = new Thickness(10);
+listView.ShowGroupItemSeparator = true;
+listView.GroupItemSeparatorColor = Color.FromArgb("#6750A4");
+listView.GroupItemSeparatorThickness = 2;
+listView.GroupItemSeparatorMargin = new Thickness(40);
+{% endhighlight %}
+{% endtabs %}
+
+![MAUI ListView with customized separator colors, thickness, and margin](Images/item-separator/maui-listview-separator-customization.png)
 
 ## Visual State Manager
 
@@ -832,7 +1177,7 @@ The `SfListView` supports accordion view to display a list of items. Each item c
 `Accordion` view can be displayed by defining two different ItemTemplates. The ItemTemplates can be enabled or disabled in the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event.
 
 {% tabs %}
-{% highlight c# tabtitle="AccordionBehavior.cs" hl_lines="37 38 39 40 41 42 43 44 45 46 47 48 49 50 51" %}
+{% highlight c# tabtitle="AccordionBehavior.cs" hl_lines="36 37 38 39 40 41 42 43 44 45 46 47 48 49 50" %}
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ListView;
 
@@ -976,28 +1321,322 @@ Here `FadeTo` animation is applied for [ListViewItem](https://help.syncfusion.co
 
 ![Syncfusion .NET MAUI Extension of ListViewItem](Images/appearance/maui-listview-extension-of-listview-item.gif)
 
-### Right to left (RTL)
+## Empty view
 
-`SfListView` supports to change the flow of text to the right-to-left direction by setting the `FlowDirection` property.
+The `SfListView` allows you to display and customize empty view content when there is no data available, using the following properties:
+
+ * [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyView) is of type `object` and can be set to a `string`, a `View`, or a custom type. It is displayed when `SfListView` has no items. The default value is `null`.
+ * [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyViewTemplate) is of type `DataTemplate`. It is applied to the value of `EmptyView` to produce the final visual content, so the binding context of the template is the `EmptyView` value itself. The default value is `null`.
+
+### Display a string when ListView has no items
+
+The empty view is displayed whenever the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) is null, or whenever the collection assigned to the `ItemsSource` property is null or empty. In this section, the `EmptyView` property is set to a string.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
-                 ItemsSource="{Binding Products}"
-                 FlowDirection="RightToLeft"/>
+                         ItemsSource="{Binding Items}"
+                         ItemSize="56"
+                         EmptyView="No Items">
+  </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-this.FlowDirection = FlowDirection.RightToLeft;
+listView.EmptyView = "No Items";
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI ListView Right to Left](Images/appearance/maui-listview-right-to-left.jpg)
+### Display views when ListView has no items
 
-### Limitations
+The `EmptyView` property can be set to a view, which is displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property is null, or when the collection specified by the `ItemsSource` property is null or empty.
 
-* `SfListView` does not support the right-to-left (RTL) direction when `SfListView.Orientation` is `Horizontal`.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
+  <syncfusion:SfListView x:Name="listView"
+                         ItemsSource="{Binding Items}"
+                         ItemSize="56">
+    <syncfusion:SfListView.EmptyView>
+      <VerticalStackLayout VerticalOptions="Center">
+        <Label Text="&#xe725;" FontSize="40" HorizontalTextAlignment="Center"
+                               FontFamily="{OnPlatform iOS=ListViewFontIcons.ttf#ListViewFontIcons, MacCatalyst=ListViewFontIcons.ttf#ListViewFontIcons, Android=ListViewFontIcons.ttf#ListViewFontIcons, UWP=ListViewFontIcons.ttf#ListViewFontIcons}" />
+        <Label Text="No Items" FontSize="16" FontFamily="Roboto-Regular" HorizontalTextAlignment="Center" />
+      </VerticalStackLayout>
+    </syncfusion:SfListView.EmptyView>
+  </syncfusion:SfListView>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+VerticalStackLayout stackLayout = new VerticalStackLayout() { VerticalOptions = LayoutOptions.Center };
+
+var label1 = new Label()
+{
+  Text = "\ue725",
+  FontSize = 40,
+  HorizontalTextAlignment = TextAlignment.Center,
+  FontFamily = "ListViewFontIcons.ttf#ListViewFontIcons"
+};
+var label2 = new Label()
+{
+  Text = "No Items",
+  FontSize = 16,
+  FontFamily = "Roboto-Regular",
+  HorizontalTextAlignment = TextAlignment.Center,
+};
+stackLayout.Children.Add(label1);
+stackLayout.Children.Add(label2);
+
+listView.EmptyView = stackLayout;
+{% endhighlight %}
+{% endtabs %}
+
+N> View displayed by the `EmptyView` can be a single view or a view that contains multiple child views.
+
+![Syncfusion .NET MAUI ListView EmptyView](Images/emptyview/maui-listview-emptyview.jpg)
+
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-display-a-view-when-.net-maui-listview-has-no-items).
+
+### Display a custom type as the empty view
+
+The `EmptyView` property can be set to a custom type, which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:local="clr-namespace:EmptyViewTemplate">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <SearchBar x:Name="filterText" 
+               FontSize="16"                              
+               Placeholder="Filter Inventory" TextChanged="SearchBar_TextChanged"/>                                                   
+    <syncfusion:SfListView Grid.Row="1" x:Name="listView"
+                           ItemsSource="{Binding Items}"
+                           ItemSize="56">
+      <syncfusion:SfListView.EmptyView>
+        <local:FilterItem Filter="{Binding Source={x:Reference filterText},Path=Text}"/>
+      </syncfusion:SfListView.EmptyView>
+      <syncfusion:SfListView.EmptyViewTemplate>
+        <DataTemplate>
+          <Label Text="{Binding Filter,StringFormat='{0} is not found'}" HorizontalTextAlignment="Center"
+                 VerticalOptions="Center"
+                 FontSize="18" FontFamily="Roboto-Regular"/>
+        </DataTemplate>
+      </syncfusion:SfListView.EmptyViewTemplate>
+    </syncfusion:SfListView>
+  </Grid>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+listView.EmptyView = new FilterItem() { Filter = filterText.Text};
+
+listView.EmptyViewTemplate = new DataTemplate(() =>
+{
+  Label label = new Label()
+  {
+    FontSize = 18,
+    FontFamily = "Roboto-Regular",
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalTextAlignment = TextAlignment.Center
+  };
+  label.SetBinding(Label.TextProperty, new Binding("Filter", stringFormat : "{0} is not found"));
+  return label;
+});
+{% endhighlight %}
+{% endtabs %}
+
+The `FilterItem` type defines a `Filter` property. It inherits from `BindableObject` so that the `Filter` property can be backed by a `BindableProperty` and notify the template when the value changes, which keeps the `EmptyViewTemplate` in sync with the `SearchBar.Text` value at run time:
+
+{% tabs %}
+{% highlight c# tabtitle="FilterItem.cs" %}
+public class FilterItem : BindableObject
+{
+  public static readonly BindableProperty FilterProperty = BindableProperty.Create(nameof(Filter), typeof(string), typeof(FilterItem), null);
+
+  public string Filter
+  {
+      get { return (string)GetValue(FilterProperty); }
+      set { SetValue(FilterProperty, value); }
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When the `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.
+
+![Syncfusion .NET MAUI ListView EmptyView Template](Images/emptyview/maui-listview-emptyviewtemplate.jpg)
+
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-appearance-of-empty-view-using-empty-view-template-in-.net-maui-listview).
+
+### Change an empty view at runtime
+
+The `EmptyView` can be changed to a specific view at run time. Views can also be defined as [ContentView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.contentview?view=net-maui-7.0) objects in the [ResourceDictionary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.resourcedictionary?view=net-maui-7.0).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:local="clr-namespace:EmptyViewTemplate">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <ContentView x:Key="SingleView">
+        <ContentView.Content>
+          <Label Text="No Items" FontSize="18" FontFamily="Roboto-Regular"
+                 HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+        </ContentView.Content>
+      </ContentView>
+      <ContentView x:Key="MultiView">
+        <ContentView.Content>
+          <VerticalStackLayout VerticalOptions="Center">
+            <Label Text="&#xe725;" FontSize="40"
+                   FontFamily="{OnPlatform iOS=ListViewFontIcons.ttf#ListViewFontIcons, MacCatalyst=ListViewFontIcons.ttf#ListViewFontIcons, Android=ListViewFontIcons.ttf#ListViewFontIcons, UWP=ListViewFontIcons.ttf#ListViewFontIcons}"
+                   HorizontalTextAlignment="Center" />
+            <Label TextColor="#666666" Text="No Items" FontSize="16" FontFamily="Roboto-Regular" HorizontalTextAlignment="Center" />
+          </VerticalStackLayout>
+        </ContentView.Content>
+      </ContentView>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <SearchBar x:Name="filterText" 
+                 FontSize="16"                              
+                 Placeholder="Filter Inventory" TextChanged="SearchBar_TextChanged"/> 
+      <CheckBox Grid.Row="1" x:Name="checkBox" IsChecked="False" 
+                             CheckedChanged="CheckBox_CheckedChanged"/>                                                  
+      <syncfusion:SfListView Grid.Row="2" x:Name="listView"
+                             ItemsSource="{Binding Items}"
+                             ItemSize="56"
+                             EmptyView="{StaticResource SingleView}">                   
+      </syncfusion:SfListView>
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+listView.EmptyView = Resources["SingleView"];
+
+checkBox.CheckedChanged += CheckBox_CheckedChanged;
+{% endhighlight %}
+{% endtabs %}
+
+`EmptyView` is changed based on the value of the [CheckBox.IsChecked](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.checkbox.ischecked?view=net-maui-7.0) property at run time.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+{
+  if(e.Value)
+    listView.EmptyView = this.Resources["MultiView"];
+  else
+    listView.EmptyView = this.Resources["SingleView"];
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI ListView SingleView EmptyView](Images/emptyview/maui-listview-singleview-emptyview.jpg)
+
+![Syncfusion .NET MAUI ListView MultiView EmptyView](Images/emptyview/maui-listview-multiview-emptyview.jpg)
+
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-at-run-time-in-.net-maui-listview).
+
+### Change an empty view template at runtime
+
+The `EmptyView` appearance can be changed at run time based on the value of `EmptyView` by using the `EmptyViewTemplate` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:local="clr-namespace:EmptyViewTemplate">
+  <ContentPage.Resources>
+    <ResourceDictionary>          
+      <DataTemplate x:Key="BasicTemplate">
+        <Label Text="{Binding .,StringFormat='{0} is not found'}"
+               HorizontalTextAlignment="Center" VerticalOptions="Center"
+               FontSize="18" FontFamily="Roboto-Regular"/>
+      </DataTemplate>
+      <DataTemplate  x:Key="AdvancedTemplate">
+        <VerticalStackLayout VerticalOptions="Center">
+          <Label Text="&#xe725;"
+                 FontSize="40"
+                 FontFamily="{OnPlatform iOS=ListViewFontIcons, MacCatalyst=ListViewFontIcons, Android=ListViewFontIcons.ttf#, UWP=ListViewFontIcons.ttf#ListViewFontIcons}"
+                 HorizontalTextAlignment="Center"/>
+          <Label Text="{Binding .,StringFormat='{0} is not found'}"
+                 FontSize="16"
+                 FontFamily="Roboto-Regular"
+                 HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+      </DataTemplate>
+      <local:EmptyViewDataTemplateSelector x:Key="DataTemplateSelector" 
+                                           BasicTemplate="{StaticResource BasicTemplate}" 
+                                           AdvancedTemplate="{StaticResource AdvancedTemplate}"/>
+    </ResourceDictionary>
+  </ContentPage.Resources> 
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <SearchBar x:Name="filterText" 
+               FontSize="16"                              
+               Placeholder="Filter Inventory" TextChanged="SearchBar_TextChanged"/>                                                   
+    <syncfusion:SfListView Grid.Row="1" x:Name="listView"
+                           ItemsSource="{Binding Items}"
+                           ItemSize="56"
+                           EmptyView="{Binding Source={x:Reference filterText},Path=Text}"
+                           EmptyViewTemplate="{StaticResource DataTemplateSelector}">                         
+    </syncfusion:SfListView>
+  </Grid>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+listView.EmptyView = filterText.Text;
+
+listView.EmptyViewTemplate = new EmptyViewDataTemplateSelector() { BasicTemplate = this.Resources["BasicTemplate"] as DataTemplate, AdvancedTemplate = this.Resources["AdvancedTemplate"] as DataTemplate };
+{% endhighlight %}
+{% endtabs %}
+
+The `EmptyView` property is set to the `SearchBar.Text` property, and the `EmptyViewTemplate` property is set to an `EmptyViewDataTemplateSelector` object.
+
+{% tabs %}
+{% highlight c# tabtitle="EmptyViewDataTemplateSelector.cs" %}
+public class EmptyViewDataTemplateSelector : Microsoft.Maui.Controls.DataTemplateSelector
+{
+  public DataTemplate BasicTemplate { get; set; }
+  public DataTemplate AdvancedTemplate { get; set; }
+
+  public EmptyViewDataTemplateSelector()
+  {
+    
+  }
+
+  protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+  {
+    if (((string)item).Length > 10)
+        return AdvancedTemplate;
+    else
+        return BasicTemplate;
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+The template for `EmptyView` is set to `AdvancedTemplate` when the `SearchBar.Text` length is greater than 10; otherwise, it is set to `BasicTemplate`.
+
+![Syncfusion .NET MAUI ListView BasicTemplate EmptyView](Images/emptyview/maui-listview-singleview-emptyview-template.jpg)
+
+![Syncfusion .NET MAUI ListView AdvancedTemplate EmptyView](Images/emptyview/maui-listview-multiview-emptyview-template.jpg)
+
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-template-at-run-time-in-.net-maui-listview).
 
 ## How To
 
@@ -1029,6 +1668,8 @@ To disable the ripple effect when clicking a `ListViewItem`, set color value `Tr
 
 ## See also
 
-[How to change selected image in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11586/how-to-change-selected-image-in-net-maui-listview-sflistview)
-[How to apply alternate item background in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11575/how-to-apply-alternate-item-background-in-net-maui-listview-sflistview)
-[How to apply the item text color in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11526/how-to-apply-the-item-text-color-in-net-maui-listview-sflistview)
+- [How to change selected image in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11586/how-to-change-selected-image-in-net-maui-listview-sflistview)
+- [How to apply alternate item background in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11575/how-to-apply-alternate-item-background-in-net-maui-listview-sflistview)
+- [How to apply the item text color in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11526/how-to-apply-the-item-text-color-in-net-maui-listview-sflistview)
+- [Grouping in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/grouping)
+- [Syncfusion .NET MAUI ListView Item Size Customization](https://help.syncfusion.com/maui/listview/item-size-customization)
