@@ -1,544 +1,593 @@
 ---
 layout: post
-title: Chips Types in .NET MAUI Chips control | Syncfusion®
-description: Learn about Chips Types support in Syncfusion® Essential Studio® .NET MAUI Chips control, its elements and more.
+title: Chips Types in .NET MAUI Chips (SfChipGroup) control | Syncfusion®
+description: Learn about the four ChipType values (Input, Choice, Filter, Action) supported by the Syncfusion® .NET MAUI Chips (SfChipGroup) control.
 platform: maui
-control: Chips
+control: SfChipGroup
 documentation: ug
 ---
 
-# Chips Types in .NET MAUI Chips
+# Chips Types in .NET MAUI Chips (SfChipGroup)
+
+[`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) supports four `ChipType` values that determine how users interact with the chips. Use the table below to choose the type that matches your scenario.
+
+| ChipType | Use when | Key properties |
+|----------|----------|----------------|
+| `Input` | Users add and remove chips at runtime; an embedded `InputView` (such as an `Entry`) lets users type a new chip's text. | `InputView`, `ItemsSource`, `DisplayMemberPath` |
+| `Choice` | Users select a single chip from a group; selecting another chip deselects the previous one. | `ChoiceMode` (`Single` or `SingleOrNone`) |
+| `Filter` | Users select one or more chips; a check mark (selection indicator) marks the selected chips. | `SelectionIndicatorColor`, `SelectedItem`, `SelectedItems` |
+| `Action` | Each chip acts like a button; the `Command` is invoked when a chip is clicked. | `Command`, `CommandParameter` |
+
+## Prerequisites
+
+Before using the [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/chips/getting-started) documentation.
 
 ## Input
 
-Arranges the [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) in a layout and enables the close button for each chip. Using the close button, a chip can be removed from children and layout as well. Additionally, it has support to add an option at the end of the layout, from which users can obtain the chip text for creating a chip at run time.
+The `Input` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) arranges the [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) in a layout, enables a close button for each chip, and provides an embedded `InputView` (an `Entry` in the example below) where users can type the text for a new chip.
 
-The following code illustrates how to get an input type chip.
+### XAML
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<chip:SfChipGroup ItemsSource="{Binding Employees}" 
-                  DisplayMemberPath="Name" 
+<chip:SfChipGroup ItemsSource="{Binding Employees}"
+                  DisplayMemberPath="Name"
                   ChipType="Input">
-<chip:SfChipGroup.InputView>
-<Entry x:Name="entry"
-			VerticalOptions="Center" HeightRequest="40"
-			FontSize="15" 
-			WidthRequest="110" 
-			Completed="Entry_Completed" >
-</Entry>
-</chip:SfChipGroup.InputView>
-
+    <chip:SfChipGroup.InputView>
+        <Entry x:Name="entry"
+               VerticalOptions="Center"
+               HeightRequest="40"
+               FontSize="15"
+               WidthRequest="110"
+               Completed="OnEntryCompleted" />
+    </chip:SfChipGroup.InputView>
 </chip:SfChipGroup>
 
 {% endhighlight %}
+{% endtabs %}
 
+### Code-behind
+
+The following C# code wires up the `Completed` event so a new chip is added when the user presses Enter on the `Entry`. Required `using` directives: `Microsoft.Maui.Controls`, `Syncfusion.Maui.Core`, and your project's `EmployeeViewModel` namespace.
+
+{% tabs %}
 {% highlight c# %}
 
-[MainPage.cs]
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Core;
 
-var entry= new Entry 
-{
-    VerticalOptions = LayoutOptions.Center,
-    FontSize = 15,
-    WidthRequest = 110, 
-    HeightRequest = 40 
-};
-SfChipGroup chipGroup = new SfChipGroup()
-{
-    InputView = entry,
-    DisplayMemberPath = "Name",
-    ChipType = SfChipsType.Input,
-};
-chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-entry.Completed += Entry_Completed;
+namespace ChipsSample;
 
-private void Entry_Completed(object sender, EventArgs e)
+public partial class MainPage : ContentPage
 {
-    var viewModel = this.BindingContext as EmployeeViewModel;
-    var name = (sender as InputView).Text;
-    viewModel.Employees.Add(new Employee() { Name = name });
-    entry.Text = "";    
+    public MainPage()
+    {
+        InitializeComponent();
+        var entry = new Entry
+        {
+            VerticalOptions = LayoutOptions.Center,
+            FontSize = 15,
+            WidthRequest = 110,
+            HeightRequest = 40
+        };
+        entry.Completed += OnEntryCompleted;
+        SfChipGroup chipGroup = new SfChipGroup()
+        {
+            InputView = entry,
+            DisplayMemberPath = "Name",
+            ChipType = SfChipsType.Input,
+        };
+        chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+        this.Content = chipGroup;
+        BindingContext = new EmployeeViewModel();
+    }
+
+    private void OnEntryCompleted(object sender, EventArgs e)
+    {
+        if (sender is not Entry entry) return;
+        if (BindingContext is not EmployeeViewModel viewModel) return;
+
+        var name = entry.Text;
+        if (!string.IsNullOrWhiteSpace(name))
+        {
+            viewModel.Employees.Add(new Employee { Name = name });
+        }
+        entry.Text = string.Empty;
+    }
 }
-..
-[Model]
+
+{% endhighlight %}
+
+{% highlight Model & ViewModel %}
 
 public class Employee
 {
     public string Name { get; set; }
 }
 
-[ViewModel]
-
 public class EmployeeViewModel : INotifyPropertyChanged
 {
-
     private ObservableCollection<Employee> employees;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
     public ObservableCollection<Employee> Employees
     {
-        get { return employees; }
-        set { employees = value; OnPropertyChanged(nameof(Employees)); }
+        get => employees;
+        set
+        {
+            employees = value;
+            OnPropertyChanged();
+        }
     }
-
-    private string result;
-    public string Result
-    {
-        get { return result; }
-        set { result = value; OnPropertyChanged(); }
-    }
-
-     public void OnPropertyChanged([CallerMemberName] string name = null) =>
-
-     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
     public EmployeeViewModel()
     {
-        this.Employees = new ObservableCollection<Employee>();
-
-        Employees.Add(new Employee() { Name = "Joseph" });
-        Employees.Add(new Employee() { Name = "Anne Joseph" });
-        Employees.Add(new Employee() { Name = "Andrew Fuller  " });
-        Employees.Add(new Employee() { Name = "Emilio Alvaro" });
-        Employees.Add(new Employee() { Name = "Janet Leverling" });
+        Employees = new ObservableCollection<Employee>
+        {
+            new Employee { Name = "Joseph" },
+            new Employee { Name = "Anne Joseph" },
+            new Employee { Name = "Andrew Fuller" },
+            new Employee { Name = "Emilio Alvaro" },
+            new Employee { Name = "Janet Leverling" }
+        };
     }
 
+    public void OnPropertyChanged([CallerMemberName] string name = null) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }
 
 {% endhighlight %}
-
 {% endtabs %}
+
+The following image illustrates the `Input` `ChipType`:
 
 ![Input type in .NET MAUI SfChipGroup](images/items/Input.png)
 
 ## Choice
 
-Allows users to select a single chip from a group of items. Selecting a chip will automatically deselect the previously selected chips. 
+The `Choice` `ChipType` allows users to select a single chip from a group. Selecting a chip automatically deselects the previously selected chip. The visual treatment for the selected state is set via the `Selected` visual state in the `VisualStateManager`.
 
-Here, Add visual states to set ChipType to Choice.
-
-The following code illustrates how to get choice typed ChipGroup.
+### XAML
 
 {% tabs %}
-
 {% highlight xaml %}
-<chip:SfChipGroup    x:Name="sfChipGroup"
-                     ItemsSource="{Binding Employees}" 
-                     DisplayMemberPath="Name" 
-                     ChipType="Choice">
-			
-<VisualStateManager.VisualStateGroups>
-    <VisualStateGroup x:Name="CommonStates">
-        <VisualState x:Name="Normal">
-            <VisualState.Setters>
-                <Setter Property="ChipTextColor" Value="Black" />
-                <Setter Property="ChipBackground" Value="white" />
-            </VisualState.Setters>
-        </VisualState>
-        <VisualState x:Name="Selected">
-            <VisualState.Setters>
-                <Setter Property="ChipTextColor" Value="White" />
-                <Setter Property="ChipBackground" Value="#512dcd" />
-            </VisualState.Setters>
-        </VisualState>
-    </VisualStateGroup>
-</VisualStateManager.VisualStateGroups>
+
+<chip:SfChipGroup x:Name="sfChipGroup"
+                  ItemsSource="{Binding Employees}"
+                  DisplayMemberPath="Name"
+                  HeightRequest="50"
+                  ChipType="Choice">
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="ChipTextColor" Value="Black" />
+                    <Setter Property="ChipBackground" Value="White" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Selected">
+                <VisualState.Setters>
+                    <Setter Property="ChipTextColor" Value="White" />
+                    <Setter Property="ChipBackground" Value="#512dcd" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
 </chip:SfChipGroup>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
-SfChipGroup chipGroup = new SfChipGroup();
-chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-chipGroup.DisplayMemberPath = "Name";
-chipGroup.ChipType = SfChipsType.Choice;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Core;
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualState normalState = new VisualState() { Name="Normal"};
-
-VisualStateGroup commonStateGroup = new VisualStateGroup();
-if (sfChipGroup.ChipType == SfChipsType.Choice)
+SfChipGroup sfChipGroup = new SfChipGroup
 {
-    
-    normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
-    normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
-}
-
-VisualState selectedState = new VisualState
-{
-    Name = "Selected"
+    DisplayMemberPath = "Name",
+    HeightRequest = 50,
+    ChipType = SfChipsType.Choice
 };
-selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
-selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
+sfChipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+
+var visualStateGroupList = new VisualStateGroupList();
+var commonStateGroup = new VisualStateGroup();
+
+var normalState = new VisualState { Name = "Normal" };
+normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+
+var selectedState = new VisualState { Name = "Selected" };
+selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.White });
+selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Color.FromArgb("#512dcd") });
 
 commonStateGroup.States.Add(normalState);
 commonStateGroup.States.Add(selectedState);
 visualStateGroupList.Add(commonStateGroup);
 
 VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+this.Content = sfChipGroup;
+BindingContext = new EmployeeViewModel();
 
 {% endhighlight %}
 
-{% endtabs %}
-
-{% highlight c# %}
-
-[Model]
+{% highlight Model & ViewModel %}
 
 public class Employee
 {
     public string Name { get; set; }
 }
 
-[ViewModel]
-
 public class EmployeeViewModel : INotifyPropertyChanged
 {
-
     private ObservableCollection<Employee> employees;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
     public ObservableCollection<Employee> Employees
     {
-        get { return employees; }
-        set { employees = value; OnPropertyChanged(nameof(Employees));}
+        get => employees;
+        set
+        {
+            employees = value;
+            OnPropertyChanged();
+        }
     }
-
-    public void OnPropertyChanged([CallerMemberName] string name = null) =>
-
-    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
     public EmployeeViewModel()
     {
-        this.Employees = new ObservableCollection<Employee>();
-
-        Employees.Add(new Employee() { Name = "Joseph" });
-        Employees.Add(new Employee() { Name = "Anne Joseph" });
-        Employees.Add(new Employee() { Name = "Andrew Fuller  " });
-        Employees.Add(new Employee() { Name = "Emilio Alvaro" });
-        Employees.Add(new Employee() { Name = "Janet Leverling" });
-
+        Employees = new ObservableCollection<Employee>
+        {
+            new Employee { Name = "Joseph" },
+            new Employee { Name = "Anne Joseph" },
+            new Employee { Name = "Andrew Fuller" },
+            new Employee { Name = "Emilio Alvaro" },
+            new Employee { Name = "Janet Leverling" }
+        };
     }
 
+    public void OnPropertyChanged([CallerMemberName] string name = null) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }
 
 {% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the `Choice` `ChipType`:
 
 ![Choice typed in .NET MAUI SfChipGroup](images/items/Choice.png)
 
 ### ChoiceMode
 
-[`Single`] - At least, one item must be in selected state and the selected item cannot be deselected, if [`ChoiceMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChoiceMode) is Single.
+The [`ChoiceMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChoiceMode) property controls selection behavior for the `Choice` `ChipType`. The following values are available:
 
-[`SingleOrNone`] - Unlike [`Single`] it is possible to deselect the selected item and keep all the items in deselected state.
+| ChoiceMode | Behavior |
+|------------|----------|
+| `Single` | At least one chip must be selected; the selected chip cannot be deselected by the user. |
+| `SingleOrNone` | At most one chip is selected; the user can deselect the selected chip, leaving the group with no selection. |
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<chip:SfChipGroup >
-    <chip:SfChipGroup.Items ChipType="Choice" ChoiceMode="SingleOrNone">
-        <chip:SfChip Text="Extra Small"/>
-        <chip:SfChip Text="Small"/>
-        <chip:SfChip Text="Medium"/>
-        <chip:SfChip Text="Large"/>
-        <chip:SfChip Text="Extra Large"/>
-   </chip:SfChipGroup.Items>
+<chip:SfChipGroup ChipType="Choice" HeightRequest="50" ChoiceMode="SingleOrNone">
+    <chip:SfChip Text="Extra Small" />
+    <chip:SfChip Text="Small" />
+    <chip:SfChip Text="Medium" />
+    <chip:SfChip Text="Large" />
+    <chip:SfChip Text="Extra Large" />
 </chip:SfChipGroup>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
-SfChipGroup chipGroup = new SfChipGroup()
+using Syncfusion.Maui.Core;
+
+SfChipGroup chipGroup = new SfChipGroup
 {
-    ChipType = SfChipsType.Choice, 
+    ChipType = SfChipsType.Choice,
+    HeightRequest = 50,
     ChoiceMode = ChoiceMode.SingleOrNone
 };
-chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
-chipGroup.Items.Add(new SfChip(){Text="Small"});
-chipGroup.Items.Add(new SfChip(){Text="Medium"});
-chipGroup.Items.Add(new SfChip(){Text="Large"});
-chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
-		
-{% endhighlight %}
+chipGroup.Items.Add(new SfChip { Text = "Extra Small" });
+chipGroup.Items.Add(new SfChip { Text = "Small" });
+chipGroup.Items.Add(new SfChip { Text = "Medium" });
+chipGroup.Items.Add(new SfChip { Text = "Large" });
+chipGroup.Items.Add(new SfChip { Text = "Extra Large" });
+this.Content = chipGroup;
 
+{% endhighlight %}
 {% endtabs %}
 
 ## Filter
 
-Allows users to select more than one chip in a group of chips. The selected chips are indicated by selection indicator in this type. The selection indicator can be customized using the [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionIndicatorColor) property. Use the [`SelectedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedItem) property to get the list of selected chips.
+The `Filter` `ChipType` allows users to select one or more chips in a group. Selected chips are indicated by a check mark (the selection indicator). The indicator color can be customized using the [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionIndicatorColor) property. The currently selected chips are exposed through the [`SelectedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedItem) and `SelectedItems` properties, and selection changes are notified through the [`SelectionChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanging) and [`SelectionChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged) events.
 
-This selection changes are notified by using [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged) events.
-
-Here, Add visual states to set the ChipType to Filter.
-
-The following code illustrates how to get filter typed ChipGroup.
+### XAML
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <chip:SfChipGroup x:Name="sfChipGroup"
-                ItemsSource="{Binding Employees}"
-                SelectionIndicatorColor="White" 
-                ChipType="Filter" 
-                DisplayMemberPath="Name" >
-					 
-<VisualStateManager.VisualStateGroups>
-    <VisualStateGroup x:Name="CommonStates">
-        <VisualState x:Name="Normal">
-            <VisualState.Setters>
-                <Setter Property="ChipTextColor" Value="Black" />
-                <Setter Property="ChipBackground" Value="white" />
-            </VisualState.Setters>
-        </VisualState>
-        <VisualState x:Name="Selected">
-            <VisualState.Setters>
-                <Setter Property="ChipTextColor" Value="White" />
-                <Setter Property="ChipBackground" Value="#512dcd" />
-            </VisualState.Setters>
-        </VisualState>
-    </VisualStateGroup>
-</VisualStateManager.VisualStateGroups>
+                 ItemsSource="{Binding Employees}"
+                 HeightRequest="50"
+                 SelectionIndicatorColor="White"
+                 ChipType="Filter"
+                 DisplayMemberPath="Name">
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="ChipTextColor" Value="Black" />
+                    <Setter Property="ChipBackground" Value="White" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Selected">
+                <VisualState.Setters>
+                    <Setter Property="ChipTextColor" Value="White" />
+                    <Setter Property="ChipBackground" Value="#512dcd" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
 </chip:SfChipGroup>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
-SfChipGroup chipGroup = new SfChipGroup();
-chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-chipGroup.DisplayMemberPath = "Name";
-chipGroup.SelectionIndicatorColor = Colors.White;
-chipGroup.ChipType = SfChipsType.Filter;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Core;
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualState normalState = new VisualState() { Name="Normal"};
-
-VisualStateGroup commonStateGroup = new VisualStateGroup();
-if (sfChipGroup.ChipType == SfChipsType.Filter)
+SfChipGroup sfChipGroup = new SfChipGroup
 {
-    normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
-    normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
-}
-
-VisualState selectedState = new VisualState
-{
-    Name = "Selected"
+    DisplayMemberPath = "Name",
+    SelectionIndicatorColor = Colors.White,
+    HeightRequest = 50,
+    ChipType = SfChipsType.Filter
 };
-selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
-selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
+sfChipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+
+var visualStateGroupList = new VisualStateGroupList();
+var commonStateGroup = new VisualStateGroup();
+
+var normalState = new VisualState { Name = "Normal" };
+normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+
+var selectedState = new VisualState { Name = "Selected" };
+selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.White });
+selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Color.FromArgb("#512dcd") });
 
 commonStateGroup.States.Add(normalState);
 commonStateGroup.States.Add(selectedState);
 visualStateGroupList.Add(commonStateGroup);
 
 VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+this.Content = sfChipGroup;
+BindingContext = new EmployeeViewModel();
 
 {% endhighlight %}
 
-{% endtabs %}
-
-{% highlight c# %}
-
-[Model]
+{% highlight Model & ViewModel %}
 
 public class Employee
 {
     public string Name { get; set; }
 }
 
-[ViewModel]
-
 public class EmployeeViewModel : INotifyPropertyChanged
 {
-
     private ObservableCollection<Employee> employees;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    private ObservableCollection<string> items = new() { "Joseph", "Alazari", "Rocketuh", "Raja" };
-    public ObservableCollection<string> Items
-    {
-        get { return items; }
-        set { items = value; OnPropertyChanged(nameof(Items)); }
-    }
-
     public ObservableCollection<Employee> Employees
     {
-        get { return employees; }
-        set { employees = value; OnPropertyChanged(nameof(Employees));}
+        get => employees;
+        set
+        {
+            employees = value;
+            OnPropertyChanged();
+        }
     }
-
-    public void OnPropertyChanged([CallerMemberName] string name = null) =>
-
-    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
     public EmployeeViewModel()
     {
-        this.Employees = new ObservableCollection<Employee>();
-
-        Employees.Add(new Employee() { Name = "Joseph" });
-        Employees.Add(new Employee() { Name = "Anne Joseph" });
-        Employees.Add(new Employee() { Name = "Andrew Fuller  " });
-        Employees.Add(new Employee() { Name = "Emilio Alvaro" });
-        Employees.Add(new Employee() { Name = "Janet Leverling" });
-
+        Employees = new ObservableCollection<Employee>
+        {
+            new Employee { Name = "Joseph" },
+            new Employee { Name = "Anne Joseph" },
+            new Employee { Name = "Andrew Fuller" },
+            new Employee { Name = "Emilio Alvaro" },
+            new Employee { Name = "Janet Leverling" }
+        };
     }
 
+    public void OnPropertyChanged([CallerMemberName] string name = null) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }
 
 {% endhighlight %}
-
-![Filter type SfChipGroup in .NET MAUI](images/items/Filter.png)
+{% endtabs %}
 
 ## Action
 
-Action type of [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged) executes the [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Command) when clicking the chip in `SfChipGroup`. On its `Command` action, you can do our desired action.
+The `Action` `ChipType` of [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) executes the [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Command) when the user clicks a chip. The command only fires for the `Action` `ChipType`. You can pass a `CommandParameter` to the `Command` to provide context to the handler (for example, the clicked `Person`).
 
-The `Command` will execute only for action typed `SfChipGroup`.
-
-The following code illustrates how to get action typed ChipGroup.
+### XAML
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<chip:SfChipGroup
-    Command="{Binding ActionCommand}" 
-    ItemsSource="{Binding Employees}"
-    DisplayMemberPath="Name"
-    CloseButtonColor="Black"
-    ChipType="Action">
-</chip:SfChipGroup>
-<StackLayout Orientation="Horizontal">
-<Label Margin="10,60,0,0"
-	                Text="Name:" 
-				    FontAttributes="Bold" 
-				    FontSize="14" />
-<Label Margin="10,60,0,0"
-				Text="{Binding Result}"
-				FontAttributes="Bold" 
-				FontSize="14" />
-</StackLayout>
-{% endhighlight %}
+<VerticalStackLayout>
+    <chip:SfChipGroup Command="{Binding ActionCommand}"
+                      ItemsSource="{Binding Employees}"
+                      DisplayMemberPath="Name"
+                      CloseButtonColor="Black"
+                      ChipType="Action" />
+    <HorizontalStackLayout Margin="0,60,0,0" Spacing="10">
+        <Label Text="Name:"
+               FontAttributes="Bold"
+               FontSize="14" />
+        <Label Text="{Binding Result}"
+               FontAttributes="Bold"
+               FontSize="14" />
+    </HorizontalStackLayout>
+</VerticalStackLayout>
 
+{% endhighlight %}
 {% highlight c# %}
 
-ViewModel viewModel = new ViewModel();
-SfChipGroup chipGroup = new SfChipGroup()
-{
-    ItemsSource = viewModel.Employees,
-    DisplayMemberPath = "Name",
-    CloseButtonColor = Colors.Black,
-    ChipType = SfChipsType.Action,
-    
-};
-StackLayout stackLayout = new StackLayout()
-{
-    Orientation = StackOrientation.Horizontal
-};
-Label nameLabel = new Label()
-{
-    Margin = new Thickness(10, 60, 0, 0),
-    Text = "Name:",
-    FontAttributes = FontAttributes.Bold,
-    FontSize = 14
-};
-Label resultLabel = new Label()
-{
-    Margin = new Thickness(10, 60, 0, 0),
-    FontAttributes = FontAttributes.Bold,
-    FontSize = 14,
-    
-};
-chipGroup.SetBinding(SfChipGroup.CommandProperty,new Binding( "ActionCommand"));
-resultLabel.SetBinding(Label.TextProperty, new Binding("Result"));
-StackLayout stackLayout2 = new StackLayout();
-stackLayout.Children.Add(nameLabel);
-stackLayout.Children.Add(resultLabel);
-stackLayout2.Children.Add(chipGroup);
-stackLayout2.Children.Add(stackLayout);
-this.Content = stackLayout2;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Core;
 
-[Model]
+namespace ChipsSample;
 
-public class Person
+public partial class MainPage : ContentPage
 {
-    public string Name
+    public MainPage()
     {
-        get;
-        set;
+        InitializeComponent();
+        var viewModel = new ChipsViewModel();
+        BindingContext = viewModel;
+
+        var chipGroup = new SfChipGroup
+        {
+            ChipType = SfChipsType.Action,
+            DisplayMemberPath = nameof(Person.Name),
+            CloseButtonColor = Colors.Black,
+            ItemsSource = viewModel.Employees
+        };
+
+        chipGroup.SetBinding(
+            SfChipGroup.CommandProperty,
+            nameof(ChipsViewModel.ActionCommand));
+
+        var titleLabel = new Label
+        {
+            Text = "Name:",
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 14
+        };
+
+        var resultLabel = new Label
+        {
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 14
+        };
+
+        resultLabel.SetBinding(
+            Label.TextProperty,
+            nameof(ChipsViewModel.Result));
+
+        var resultLayout = new HorizontalStackLayout
+        {
+            Margin = new Thickness(0, 60, 0, 0),
+            Spacing = 10,
+            Children =
+            {
+                titleLabel,
+                resultLabel
+            }
+        };
+
+        Content = new VerticalStackLayout
+        {
+            Children =
+            {
+                chipGroup,
+                resultLayout
+            }
+        };
     }
 }
 
-[ViewModel]
+{% endhighlight %}
+{% highlight Model & ViewModel %}
 
-public class ViewModel : INotifyPropertyChanged
+public class ChipsViewModel : INotifyPropertyChanged
 {
-    private ICommand actionCommand;
-
-    private ObservableCollection<Person> employees;
-
     private string result;
 
-    public ICommand ActionCommand
-    {
-        get { return actionCommand; }
-        set { actionCommand = value; }
-    }
-    
-    public ObservableCollection<Person> Employees
-    {
-        get { return employees; }
-        set { Employees = value; OnPropertyChanged("Employees"); }
-    }
+    public ICommand ActionCommand { get; }
+    public ObservableCollection<Person> Employees { get; }
 
     public string Result
     {
-        get { return result; }
-        set { result = value; OnPropertyChanged("Result"); }
+        get => result;
+        set
+        {
+            result = value;
+            OnPropertyChanged();
+        }
     }
 
-    public ViewModel()
+    public ChipsViewModel()
     {
         ActionCommand = new Command(HandleAction);
-        employees = new ObservableCollection<Person>();
-        employees.Add(new Person() { Name = "John" });
-        employees.Add(new Person() { Name = "James" });
-        employees.Add(new Person() { Name = "Linda" });
-        employees.Add(new Person() { Name = "Rose" });
-        employees.Add(new Person() { Name = "Mark" });
-    }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    public void OnPropertyChanged(string property)
-    {
-        if (PropertyChanged != null)
+        Employees = new ObservableCollection<Person>
         {
-            PropertyChanged(this, new PropertyChangedEventArgs(property));
-        }
+            new Person { Name = "John" },
+            new Person { Name = "James" },
+            new Person { Name = "Linda" },
+            new Person { Name = "Rose" },
+            new Person { Name = "Mark" }
+        };
     }
 
     private void HandleAction(object obj)
     {
-        Result = (obj as Person).Name.ToString();
+        if (obj is Person person)
+        {
+            Result = person.Name;
+        }
     }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    public void OnPropertyChanged([CallerMemberName] string name = null) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+}
+
+public class Person
+{
+    public string Name { get; set; }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
+The following image illustrates the `Action` `ChipType`:
+
 ![Action typed in .NET MAUI SfChipGroup](images/items/Action.png)
+
+## Compatibility
+
+| Platform | Notes |
+|----------|-------|
+| .NET MAUI | Requires .NET MAUI 7.0 or later. |
+| iOS, macOS, Android, Windows | `SfChipGroup` is supported on all .NET MAUI target platforms. |
+
+## Troubleshooting
+
+| Issue | Possible cause | Fix |
+|------|---------------|-----|
+| Chips do not appear on the page. | The `BindingContext` is not set, or the `ItemsSource` is empty. | Set `BindingContext` to the ViewModel and ensure the collection is populated. |
+| The `Command` does not fire when a chip is clicked. | `ChipType` is not set to `Action`, or the `Command` property is not bound. | Set `ChipType="Action"` and confirm the `Command` binding path matches a public `ICommand` on the ViewModel. |
+| Visual states do not change when a chip is selected. | The `VisualStateManager` groups were set on a different `SfChipGroup` instance than the one displayed. | Call `VisualStateManager.SetVisualStateGroups` on the same `SfChipGroup` you add to the visual tree. |
+| `ChoiceMode` has no effect. | The `ChoiceMode` property is set, but `ChipType` is not `Choice`. | Set `ChipType="Choice"` in addition to `ChoiceMode`. |
+| The `Completed` event of the input `Entry` does not add a new chip. | The `BindingContext` is not the ViewModel, or the `Entry` is replaced by another control. | Verify the page's `BindingContext` is the ViewModel and the `Entry` is the one declared in the `InputView`. |
+
+## See Also
+
+- [Getting Started](https://help.syncfusion.com/maui/chips/getting-started)
+- [Customization](https://help.syncfusion.com/maui/chips/customization)
+- [Events](https://help.syncfusion.com/maui/chips/events)
 
 
 

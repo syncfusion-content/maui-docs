@@ -1,57 +1,164 @@
 ---
 layout: post
-title: Populating Items in .NET MAUI Chips control | Syncfusion®
-description: Learn about Populating Items support in Syncfusion® Essential Studio® .NET MAUI Chips control, its elements and more.
+title: Populating Items in .NET MAUI SfChipGroup | Syncfusion®
+description: Learn how to populate the Syncfusion® .NET MAUI SfChipGroup control with business objects (via ItemsSource) or with SfChip instances (via Items).
 platform: maui
-control: Chips
+control: SfChipGroup
 documentation: ug
+keywords: .net maui sfchipgroup populating items, syncfusion chips itemssource maui, sfchipgroup items maui, .net maui sfchip list binding, .net maui chip displaymemberpath, sfchipgroup chip type maui
 ---
 
-# Populating Items in .NET MAUI Chips
+# Populating Items in .NET MAUI SfChipGroup
 
-[.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) can be populated with either business objects and SfChip. This section explain how to populate the chips control with business objects and SfChip.
+[SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) supports two ways to populate its items:
 
-## Populating business objects as items
+- **Business objects** — bind a collection to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemsSource) property.
+- **SfChip instances** — add [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) controls to the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Items) collection.
 
-Business objects can be populated in Chips using the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemsSource) property.
-Refer to this `documentation` to know more details about populating the chips control with list of employee details.
+## Prerequisites
 
-## Populating SfChip as items
+Before using the [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-Chips control also provides support to create and set [`SfChip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) as item. It can be achieved using the [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Items) property.
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/chips/getting-started) documentation.
+
+## Data Source Options
+
+| Approach | Property | When to Use |
+|----------|----------|-------------|
+| Business objects | `ItemsSource` | Bind a list of model objects (e.g., `Employee`, `Tag`, `Category`). Supports change notification via `INotifyCollectionChanged`. |
+| SfChip instances | `Items` | Build chips entirely in XAML or code, with full control over each chip's appearance. |
+
+## Populate with business objects
+
+Bind any `IEnumerable` (such as an `ObservableCollection<T>`) to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemsSource) property. By default, the chip's `Text` is set to the string representation of each item. Use `DisplayMemberPath` to bind a specific property of the business object.
+
+The following example uses a simple `Employee` model and an `ObservableCollection<Employee>` exposed by a view model.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<chip:SfChipGroup >
-    <chip:SfChipGroup.Items>
-        <chip:SfChip Text="Extra Small" Background="Blue"/>
-        <chip:SfChip Text="Small" Background="Blue"/>
-        <chip:SfChip Text="Medium" Background="Blue"/>
-        <chip:SfChip Text="Large" Background="Blue"/>
-        <chip:SfChip Text="Extra Large" Background="Blue"/>
-   </chip:SfChipGroup.Items>
-</chip:SfChipGroup>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <ContentPage.BindingContext>
+        <local:EmployeeViewModel />
+    </ContentPage.BindingContext>
+
+    <chip:SfChipGroup x:Name="chipGroup"
+                      Type="Action"
+                      DisplayMemberPath="Name"
+                      ItemsSource="{Binding Employees}" />
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-SfChipGroup chipGroup = new SfChipGroup()
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Core;
+
+var viewModel = new EmployeeViewModel();
+BindingContext = viewModel;
+var chipGroup = new SfChipGroup
 {
-	ChipType = SfChipsType.Action
+    ChipType = SfChipsType.Action,
+    DisplayMemberPath = nameof(Employee.Name),
+    ItemsSource = viewModel.Employees
 };
-chipGroup.Items.Add(new SfChip(){Text="Extra Small", Background = Colors.Blue });
-chipGroup.Items.Add(new SfChip(){Text="Small", Background = Colors.Blue });
-chipGroup.Items.Add(new SfChip(){Text="Medium", Background = Colors.Blue });
-chipGroup.Items.Add(new SfChip(){Text="Large", Background = Colors.Blue });
-chipGroup.Items.Add(new SfChip(){Text="Extra Large", Background = Colors.Blue });
-		
-{% endhighlight %}
 
+Content = chipGroup;
+
+{% endhighlight %}
+{% highlight View & ViewModel %}
+
+using System.Collections.ObjectModel;
+
+public class Employee
+{
+    public string Name { get; set; } = string.Empty;
+}
+
+public class EmployeeViewModel
+{
+    public ObservableCollection<Employee> Employees { get; } = new()
+    {
+        new Employee { Name = "John" },
+        new Employee { Name = "Jane" },
+        new Employee { Name = "Alex" }
+    };
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-![Collection of items to chip group](images/items/chips_items.png)
+N> To render a custom view for each item, set the `ItemTemplate` property instead of `DisplayMemberPath`. The template receives each business object as its `BindingContext`.
+
+## Populate with SfChip instances
+
+Add [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) controls to the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Items) collection. Use this approach when you need full control over each chip's appearance or when the items are not derived from a data model.
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <VerticalStackLayout>
+        <chip:SfChipGroup x:Name="chipGroup" ChipType="Action">
+            <chip:SfChipGroup.Items>
+                <chip:SfChip Text="Extra Small" TextColor="White" Background="Blue" />
+                <chip:SfChip Text="Small" TextColor="White" Background="Blue" />
+                <chip:SfChip Text="Medium" TextColor="White" Background="Blue" />
+                <chip:SfChip Text="Large" TextColor="White" Background="Blue" />
+                <chip:SfChip Text="Extra Large" TextColor="White" Background="Blue" />
+            </chip:SfChipGroup.Items>
+        </chip:SfChipGroup>
+    </VerticalStackLayout>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Microsoft.Maui;
+using Syncfusion.Maui.Core;
+
+var chipGroup = new SfChipGroup
+{
+    ChipType = SfChipsType.Action,
+};
+
+chipGroup.Items.Add(new SfChip { Text = "Extra Small", Background = Colors.Blue, TextColor = Colors.White });
+chipGroup.Items.Add(new SfChip { Text = "Small", Background = Colors.Blue, TextColor = Colors.White });
+chipGroup.Items.Add(new SfChip { Text = "Medium", Background = Colors.Blue, TextColor = Colors.White });
+chipGroup.Items.Add(new SfChip { Text = "Large", Background = Colors.Blue, TextColor = Colors.White });
+chipGroup.Items.Add(new SfChip { Text = "Extra Large", Background = Colors.Blue, TextColor = Colors.White });
+
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        chipGroup
+    }
+};
+{% endhighlight %}
+{% endtabs %}
+
+![SfChipGroup populated with five SfChip instances using the Action chip type](images/items/chips_items.png)
+
+## Troubleshooting
+
+| Issue | Possible Cause | Recommended Action |
+|-------|----------------|--------------------|
+| The chips show the type name instead of the value. | `DisplayMemberPath` is not set, so the chip renders the object's `ToString()`. | Set `DisplayMemberPath` to a property of the business object (e.g., `Name`). |
+| The list does not update when items are added. | The `ItemsSource` collection does not implement `INotifyCollectionChanged`. | Use `ObservableCollection<T>` or another change-notifying collection. |
+| `Items.Add` throws a `NullReferenceException`. | The `Items` collection is initialized lazily and was never read. | Access `Items` once before adding (e.g., `var _ = chipGroup.Items;`) or set the `ItemsSource` instead. |
+
+## See Also
+
+- [Getting Started with .NET MAUI SfChipGroup/SfChip](https://help.syncfusion.com/maui/chips/getting-started)
+- [Chip Types](https://help.syncfusion.com/maui/chips/chips-types)
+- [Customization](https://help.syncfusion.com/maui/chips/customization)
 
 
