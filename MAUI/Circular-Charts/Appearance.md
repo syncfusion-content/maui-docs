@@ -175,6 +175,84 @@ public class ViewModel
 
 ![Gradient support in .NET MAUI Circular Chart](Appearance_images/MAUI_pie_chart_gradient.png)
 
+## Point Color Path
+
+The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) supports using the [PointColorPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_PointColorPath) property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+
+The following code example demonstrates how to define a data model with a `PointColor` property and bind it to the chart series.
+
+{% tabs %}
+
+{% highlight c# %}
+
+public class PointColorViewModel
+{
+public ObservableCollection<Model> Data { get; set; }
+
+public PointColorViewModel()
+{
+    Data = new ObservableCollection<Model>()
+    {
+        new() { XValue = "Purchases", YValue = 1000, PointColor = Color.FromArgb("#C695F0") },
+        new() { XValue = "Electronics", YValue = 1300, PointColor = Color.FromArgb("#A35DE5") },
+        new() { XValue = "Investment", YValue = 2000, PointColor = Color.FromArgb("#551E8B") },
+        new() { XValue = "Research", YValue = 1700, PointColor = Color.FromArgb("#8933DE") },
+        new() { XValue = "Jewelry", YValue = 1100, PointColor = Color.FromArgb("#D1A8F3") },
+        };
+    }
+}
+
+public class Model
+{
+    public string? XValue { get; set; }
+    public double YValue { get; set; }
+    public Color? PointColor { get; set; }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Set `ItemsSource` to your data collection and map `XBindingPath`, `YBindingPath`, and `PointColorPath` to the corresponding model properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+    <!-- code omitted for brevity -->
+    <chart:PieSeries ItemsSource = "{Binding Data}"
+                     XBindingPath = "XValue"
+                     YBindingPath = "YValue"
+                     PointColorPath = "PointColor"/>
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+
+<!-- code omitted for brevity -->
+PieSeries series = new PieSeries()      
+{
+    ItemsSource = new PointColorViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    PointColorPath = "PointColor"
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![PointColorPath in MAUI Chart](Appearance_images/MAUI_pie_chart_pointcolorpath.png)
+
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
+
 ## Plotting Area Customization
 
 [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html?tabs=tabid-1) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.

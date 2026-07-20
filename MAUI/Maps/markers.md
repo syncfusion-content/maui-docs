@@ -880,9 +880,9 @@ The .NET MAUI Maps control allows users to interact with markers. When a marker 
 
 ### Marker selected command
 
-The `MarkerSelectedCommand` property allows you to bind a command that is executed when a marker is selected. This eliminates the need for event handlers in code-behind and promotes clean architecture practices.
+The [MarkerSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerSelectedCommand) property allows you to bind a command that is executed when a marker is selected. This eliminates the need for event handlers in code-behind and promotes clean architecture practices.
 
-You can also pass a custom parameter using the `MarkerSelectedCommandParameter` property. If no parameter is specified, the selected marker instance is passed to the command by default.
+You can also pass a custom parameter using the [MarkerSelectedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerSelectedCommandParameter) property. If no parameter is specified, the selected marker instance is passed to the command by default.
 
 {% tabs %}  
 {% highlight xaml %}

@@ -262,6 +262,10 @@ this.Content = chart;
 <td>IsClosed</td>
 <td>IsClosed</td>
 </tr>
+<tr>
+<td>ListenPropertyChange</td>
+<td>ListenPropertyChange</td>
+</tr>
 </table>
 
 The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
@@ -388,12 +392,16 @@ this.Content = chart;
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
+<td>-</td>
+<td>IsFloating</td>
+</tr>
+<tr>
 <td>OffsetX</td>
-<td><em>Upcoming</em></td>
+<td>OffsetX</td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td><em>Upcoming</em></td>
+<td>OffsetY</td>
 </tr>
 </table>
 
@@ -664,7 +672,6 @@ this.Content = chart;
 
 **Series**
 
-* Listen to property change support for series.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 
@@ -678,7 +685,6 @@ this.Content = chart;
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend floating support.
 * Event or method to notify when a legend item is clicked.
 
 ## Known issue 
