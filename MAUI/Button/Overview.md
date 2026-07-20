@@ -123,7 +123,7 @@ The following table summarizes the globalization support available in this contr
 .card-knowledge-base:before { content: "\e725"; }
 .card-feedback:before { content: "\e726"; }
 .card-support:before { content: "\e727"; }
-.card-usecase:before { content: "\e728"; }
+.card-use:before { content: "\e728"; }
 
 .form-card {
   flex: 0 0 calc(33.33% - 14px);
@@ -304,14 +304,14 @@ Read Blogs
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
-    <span class="card-icon card-usecase"></span>
+    <span class="card-icon card-use"></span>
     </div>
     <h3 class="form-title">Use Case Samples</h3>
 </div>
     <div class="form-description">
       Explore a real-world application that demonstrates the practical use of the Button.
     </div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons" class="explore-link">
+    <a href="https://github.com/syncfusion/maui-car-dashboard" class="explore-link">
     View Samples
   <span class="card-icon card-arrow"></span>
 </a>

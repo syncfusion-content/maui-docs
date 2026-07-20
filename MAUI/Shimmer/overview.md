@@ -83,7 +83,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer ([SfShimmer](https://www.syncfusion
 .card-knowledge-base:before { content: "\e725"; }
 .card-feedback:before { content: "\e726"; }
 .card-support:before { content: "\e727"; }
-.card-usecase:before { content: "\e728"; }
+.card-use:before { content: "\e728"; }
 
 .form-card {
   flex: 0 0 calc(33.33% - 14px);
