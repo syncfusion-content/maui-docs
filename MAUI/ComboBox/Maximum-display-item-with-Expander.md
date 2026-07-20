@@ -18,7 +18,7 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Maximum suggestions
 
@@ -357,7 +357,7 @@ public class SocialMedia
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Editing in .NET MAUI ComboBox](Editing.md)
-* [Filtering in .NET MAUI ComboBox](Filtering.md)
-* [Selection in .NET MAUI ComboBox](Selection.md)
+* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Editing](https://help.syncfusion.com/maui/combobox/editing)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
+* [Selection](https://help.syncfusion.com/maui/combobox/selection)

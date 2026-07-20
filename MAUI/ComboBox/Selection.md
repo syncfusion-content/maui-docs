@@ -18,7 +18,7 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://helpstaging.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Single selection
 
@@ -975,8 +975,8 @@ comboBox.Clear();
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Editing in .NET MAUI ComboBox](Editing.md)
-* [Filtering in .NET MAUI ComboBox](Filtering.md)
-* [Searching in .NET MAUI ComboBox](Searching.md)
-* [Highlighting matched text in .NET MAUI ComboBox](Highlighting-matched-text.md)
+* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Editing](https://help.syncfusion.com/maui/combobox/editing)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
+* [Searching](https://help.syncfusion.com/maui/combobox/searching)
+* [Highlighting matched text](https://help.syncfusion.com/maui/combobox/highlighting-matched-text)

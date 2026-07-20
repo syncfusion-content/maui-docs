@@ -24,7 +24,7 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://helpstaging.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Placeholder
 
@@ -2800,6 +2800,6 @@ The following screenshot illustrates the AutomationIds of inner elements.
 
 ## See Also
 
-* [Header and Footer customization in .NET MAUI ComboBox](header-and-footer.md)
-* [No results found in .NET MAUI ComboBox](no-results-found.md)
-* [LiquidGlass support in .NET MAUI ComboBox](liquidglasssupport.md)
+* [Header and footer](https://help.syncfusion.com/maui/combobox/header-and-footer)
+* [No results found](https://help.syncfusion.com/maui/combobox/no-results-found)
+* [Liquid Glass support](https://help.syncfusion.com/maui/combobox/liquidglasssupport)

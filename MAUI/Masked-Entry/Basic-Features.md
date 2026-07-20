@@ -15,7 +15,7 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Setting ClearButtonVisibility
 
@@ -651,6 +651,6 @@ The following screenshot illustrates the AutomationIds of inner elements.
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Validation](validation.md)
-* [Events](events.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)
+* [Events](https://help.syncfusion.com/maui/masked-entry/events)

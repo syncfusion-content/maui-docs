@@ -7,7 +7,7 @@ control: SfNumericEntry
 documentation: ug
 ---
 
-# Value Change Restriction in .NET MAUI NumericEntry
+# Value Change Restriction in .NET MAUI Numeric Entry
 
 This section describes how to restrict value changes in the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull), [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum), and [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) properties, and how to prevent text editing with the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_IsEditable) property.
 
@@ -17,15 +17,15 @@ Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) documentation.
 
 ## Restrict null value
 
-By default, an empty or null value is set in the `NumericEntry` control when the input is cleared, because the default value of the [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull) property is `true`. The `Value` property is of type `double?`; when `AllowNull` is `true`, clearing the input sets `Value` to `null`. When `AllowNull` is `false`, the control restores the value to `0` (or to `Minimum`, if `Minimum` is greater than `0`) after the input is cleared.
+By default, an empty or null value is set in the `Numeric Entry` control when the input is cleared, because the default value of the [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull) property is `true`. The `Value` property is of type `double?`; when `AllowNull` is `true`, clearing the input sets `Value` to `null`. When `AllowNull` is `false`, the control restores the value to `0` (or to `Minimum`, if `Minimum` is greater than `0`) after the input is cleared.
 
 N> The behavior after clearing the input depends on the combination of `AllowNull` and `Minimum`:
-* When the value of the `Minimum` property is **15**, and the `AllowNull` property is **true**, the **null** value is returned in the `NumericEntry` control after clearing the input.
-* When the value of the Minimum property is **15**, and the `AllowNull` property is **false**, the `minimum` value is returned in `NumericEntry` control after clearing the input.
+* When the value of the `Minimum` property is **15**, and the `AllowNull` property is **true**, the **null** value is returned in the `Numeric Entry` control after clearing the input.
+* When the value of the Minimum property is **15**, and the `AllowNull` property is **false**, the `Minimum` value is returned in `Numeric Entry` control after clearing the input.
 
 {% tabs %}
 {% highlight XAML %}
@@ -114,6 +114,6 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 
 ## See Also
 
-* [Basic Features](Basic-Features.md)
-* [Formatting](Formatting.md)
-* [UpDown-Button](UpDown-Button.md)
+* [Basic Features](https://help.syncfusion.com/maui/numericentry/basic-features)
+* [Formatting](https://help.syncfusion.com/maui/numericentry/formatting)
+* [UpDown-Button](https://help.syncfusion.com/maui/numericentry/updown-button)
