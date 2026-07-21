@@ -59,7 +59,7 @@ Before proceeding, ensure the following are set up:
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you are in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Kanban` to install the Syncfusion<sup>®</sup> .NET MAUI Kanban package (v30.x.x or later for .NET 9 compatibility).
+3. Run the command `dotnet add package Syncfusion.Maui.Kanban` to install the Syncfusion<sup>®</sup> .NET MAUI Kanban package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 {% endtabcontent %}
