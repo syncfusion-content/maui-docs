@@ -16,7 +16,7 @@ One of the important features of the image editor control is to perform the `Und
 The [`Undo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Undo) method is used to revert the changes done previously over an image.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
    <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -27,12 +27,12 @@ The [`Undo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfI
     </Grid>  
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    private void OnUndoClicked(object sender, EventArgs e)
-    {
-        this.imageEditor.Undo();
-    }
+private void OnUndoClicked(object sender, EventArgs e)
+{
+    this.imageEditor.Undo();
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +42,7 @@ The [`Undo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfI
 The [`Redo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Redo) method is used to redo the changes that are reverted by undo operation.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
    <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -53,12 +53,12 @@ The [`Redo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfI
     </Grid>  
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    private void OnRedoClicked(object sender, EventArgs e)
-    {
-        this.imageEditor.Redo();
-    }
+private void OnRedoClicked(object sender, EventArgs e)
+{
+    this.imageEditor.Redo();
+}
 
 {% endhighlight %}
 {% endtabs %}

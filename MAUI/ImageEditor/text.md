@@ -12,7 +12,7 @@ documentation: ug
 The .NET MAUI Image Editor allows you to add text using the [`AddText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddText_System_String_Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_) method with customizable settings.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -23,7 +23,7 @@ The .NET MAUI Image Editor allows you to add text using the [`AddText`](https://
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -54,7 +54,7 @@ Use the [`ImageEditorTextSettings`](https://help.syncfusion.com/cr/maui/Syncfusi
 * [`TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_TextStyle) - Changes the text appearance, such as [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html#Syncfusion_Maui_ImageEditor_ImageEditorTextStyle_TextColor), [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html#Syncfusion_Maui_ImageEditor_ImageEditorTextStyle_FontSize), [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html#Syncfusion_Maui_ImageEditor_ImageEditorTextStyle_FontAttributes), and [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextStyle.html#Syncfusion_Maui_ImageEditor_ImageEditorTextStyle_FontFamily).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -65,7 +65,7 @@ Use the [`ImageEditorTextSettings`](https://help.syncfusion.com/cr/maui/Syncfusi
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;
@@ -73,20 +73,20 @@ using Syncfusion.Maui.ImageEditor;
 private void OnAddTextClicked(object sender, EventArgs e)
 {
     this.imageEditor.AddText("Good Day",
-        new ImageEditorTextSettings()
+    new ImageEditorTextSettings()
+    {
+        RotationAngle = 90,
+        IsRotatable = true,
+        IsEditable = true,
+        TextAlignment = TextAlignment.Start,
+        TextStyle = new ImageEditorTextStyle()
         {
-            RotationAngle = 90,
-            IsRotatable = true,
-            IsEditable = true,
-            TextAlignment = TextAlignment.Start,
-            TextStyle = new ImageEditorTextStyle()
-            {
-                FontSize = 14,
-                TextColor = Colors.Black.WithAlpha(0.5f),
-                FontFamily = "Arial",
-                FontAttributes = FontAttributes.Italic
-            }
-        });
+            FontSize = 14,
+            TextColor = Colors.Black.WithAlpha(0.5f),
+            FontFamily = "Arial",
+            FontAttributes = FontAttributes.Italic
+        }
+    });
 }
 
 {% endhighlight %}
@@ -100,7 +100,7 @@ You can select an annotation programmatically by passing the unique `ID` of the 
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid>
     <Grid.RowDefinitions>
@@ -121,7 +121,7 @@ You can select an annotation programmatically by passing the unique `ID` of the 
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;
@@ -149,7 +149,7 @@ private void imageEditor_ImageLoaded(object sender, EventArgs e)
 Customize the background color of the text annotation using the [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_Background) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -160,7 +160,7 @@ Customize the background color of the text annotation using the [`Background`](h
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;
@@ -185,7 +185,7 @@ private void OnTextBackgroundClicked(object sender, EventArgs e)
 Delete the selected text using the toolbar or the [`DeleteAnnotation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_DeleteAnnotation) method.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -196,7 +196,7 @@ Delete the selected text using the toolbar or the [`DeleteAnnotation`](https://h
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 private void OnDeleteAnnotationClicked(object sender, EventArgs e)
 {
@@ -213,7 +213,7 @@ Remove all the text annotations using the [`ClearAnnotations`](https://help.sync
 N> This also removes shape, pen, and custom view annotations.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -224,7 +224,7 @@ N> This also removes shape, pen, and custom view annotations.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 private void OnClearAnnotationsClicked(object sender, EventArgs e)
 {
@@ -242,13 +242,14 @@ N> This is common for Shape, Text, and CustomView annotations.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<imageEditor:SfImageEditor Source="image.png" AnnotationSelected="OnAnnotationSelected" />
+<imageEditor:SfImageEditor Source="image.png" 
+                           AnnotationSelected="OnAnnotationSelected" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;
@@ -273,13 +274,13 @@ N> This is common for Shape, Text, and CustomView annotations.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor Source="image.png" AnnotationUnselected="OnAnnotationUnSelected" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;
@@ -303,13 +304,15 @@ Add text on image loading using the [`ImageLoaded`](https://help.syncfusion.com/
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageLoaded="OnImageLoaded" />
+<imageEditor:SfImageEditor x:Name="imageEditor" 
+                           Source="image.png" 
+                           ImageLoaded="OnImageLoaded" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 private void OnImageLoaded(object sender, EventArgs e)
 {
@@ -328,13 +331,15 @@ The text can be added with user-defined view bounds. The [`Bounds`](https://help
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageLoaded="OnImageLoaded" />
+<imageEditor:SfImageEditor x:Name="imageEditor" 
+                           Source="image.png" 
+                           ImageLoaded="OnImageLoaded" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.ImageEditor;

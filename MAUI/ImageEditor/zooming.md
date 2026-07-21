@@ -17,13 +17,13 @@ Set the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageE
 
 {% tabs %}
 
-{% highlight XAML tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor Source="image.jpeg" AllowZoom="False" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;
@@ -43,13 +43,13 @@ Zoom the loaded image programmatically without any interaction by setting the [`
 
 {% tabs %}
 
-{% highlight XAML tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor Source="image.jpeg" ZoomLevel="2" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;
@@ -71,13 +71,13 @@ Use the [`MaximumZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% tabs %}
 
-{% highlight XAML tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor Source="image.jpeg" MaximumZoomLevel="5" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;
