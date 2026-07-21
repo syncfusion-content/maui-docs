@@ -54,7 +54,6 @@ The following example shows how to wire the [SwipeStarted](https://help.syncfusi
                         SwipeStarted="carousel_SwipeStarted"
                         SwipeEnded="carousel_SwipeEnded"
                         ItemsSource="{Binding ImageCollection}"
-                        ItemTemplate="{StaticResource itemTemplate}"
                         ItemHeight="170"
                         ItemWidth="270"
                         AllowLoadMore="True">

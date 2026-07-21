@@ -99,7 +99,6 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"  
-                        ItemTemplate="{StaticResource itemTemplate}" 
                         ItemsSource="{Binding ImageCollection}"
                         ItemHeight="170"
                         ItemWidth="270"

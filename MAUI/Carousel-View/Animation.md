@@ -27,7 +27,6 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCa
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemHeight="170"
                      ItemWidth="270"
                      SelectedIndex="2"

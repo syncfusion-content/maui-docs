@@ -44,7 +44,6 @@ The [RotationAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
                      RotationAngle="30">
@@ -132,7 +131,6 @@ The distance between the selected item and other items can be customized by usin
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
                      SelectedItemOffset="60">
@@ -220,7 +218,6 @@ The [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCaro
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
                      Offset="60">
@@ -309,7 +306,6 @@ The [ScaleOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.S
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
                      ScaleOffset="0.5">
@@ -398,7 +394,6 @@ The spacing of all items in Linear mode can be configured by using the [ItemSpac
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
                      ItemSpacing="60"

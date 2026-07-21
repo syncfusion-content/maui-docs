@@ -26,7 +26,6 @@ The following XAML sample binds `SfCarousel` to an `ImageCollection` and handles
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
-                        ItemTemplate="{StaticResource itemTemplate}"
                         ItemsSource="{Binding ImageCollection}"
                         ItemHeight="170"
                         ItemWidth="270"

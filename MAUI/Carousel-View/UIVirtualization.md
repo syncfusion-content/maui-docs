@@ -37,7 +37,6 @@ The UI virtualization concept is implemented by enabling the [EnableVirtualizati
 <!-- Default View Mode -->
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
                      ViewMode="Default"
@@ -123,7 +122,6 @@ public class CarouselViewModel
 <!-- Linear View Mode -->
 <carousel:SfCarousel x:Name="linearCarousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
                      ItemSpacing="60"

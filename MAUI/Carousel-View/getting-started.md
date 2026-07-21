@@ -180,7 +180,6 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
-                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemsSource="{Binding ImageCollection}"
                      ItemHeight="170"
                      ItemWidth="270"
@@ -233,7 +232,6 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
-                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemsSource="{Binding ImageCollection}"
                      SelectedIndex="4">
     <carousel:SfCarousel.BindingContext>

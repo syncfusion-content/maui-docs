@@ -46,7 +46,6 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
 
 <carousel:SfCarousel x:Name="carousel"
                     ItemsSource="{Binding ImageCollection}"
-                    ItemTemplate="{StaticResource itemTemplate}"
                     AllowLoadMore="True"
                     ItemHeight="170"
                     ItemWidth="270"
@@ -135,7 +134,6 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight = "170"
                      ItemWidth = "270"
                      AllowLoadMore="True"
@@ -226,7 +224,6 @@ Use the [LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carou
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}"
                      AllowLoadMore="True"
                      ViewMode="Linear"
                      LoadMoreItemsCount="2">
@@ -349,7 +346,6 @@ Call the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel
 <Grid>
     <carousel:SfCarousel x:Name="carousel"
                         ItemsSource="{Binding ImageCollection}"
-                        ItemTemplate="{StaticResource itemTemplate}"
                         AllowLoadMore="True"
                         ViewMode="Default"
                         LoadMoreItemsCount="2">

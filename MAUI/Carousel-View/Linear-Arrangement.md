@@ -31,7 +31,6 @@ The following example shows how to configure `SfCarousel` in `Linear` view mode 
 <carousel:SfCarousel x:Name="carousel"
                     ItemHeight="170"
                     ItemWidth="270"
-                    ItemTemplate="{StaticResource itemTemplate}"
                     ItemsSource="{Binding ImageCollection}"
                     ViewMode="Linear">
     <carousel:SfCarousel.BindingContext>
