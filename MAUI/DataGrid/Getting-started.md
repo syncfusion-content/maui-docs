@@ -94,9 +94,9 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
  
-To use Syncfusion controls, you must register the Syncfusion core handler in your application's startup configuration.
+To use Syncfusion controls, register the Syncfusion core handler in your application's startup configuration.
 
-In the `MauiProgram.cs` file (located at the root of your project), add the namespace and register the handler in the `CreateMauiApp` method:
+In the `MauiProgram.cs` file (located at the root of your project), add the following namespace:
  
 {% tabs %}
 {% highlight c# %}
@@ -104,7 +104,7 @@ using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
  
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+Then, register the Syncfusion core handler in the `CreateMauiApp` method:
  
 {% tabs %}
 {% highlight c# %}
