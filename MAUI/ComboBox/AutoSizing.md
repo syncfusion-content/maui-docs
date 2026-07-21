@@ -20,9 +20,9 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## EnableAutoSize
 
-The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_EnableAutoSize) property in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control automatically adjusts the editor height to fit the selected tokens, so the control grows to display all wrapped tokens without scrolling. It is a `bool` property and the default value is `false`.
+The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_EnableAutoSize) property in the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control automatically adjusts the editor height to fit the selected tokens, so the control grows to display all wrapped tokens without scrolling. It is a `bool` property and the default value is `false`.
 
-To make AutoSizing take effect, configure the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) with the following:
+To make AutoSizing take effect, configure the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) with the following:
 
 * [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) set to `Multiple`.
 * [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_MultiSelectionDisplayMode) set to `Token` (default).

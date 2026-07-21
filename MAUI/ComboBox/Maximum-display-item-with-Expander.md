@@ -10,7 +10,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Load More in .NET MAUI ComboBox
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports displaying a limited number of suggestions in the drop-down and loading additional items on demand through a `Load More` button. This is useful when binding a large data set and you want to keep the drop-down compact.
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports displaying a limited number of suggestions in the drop-down and loading additional items on demand through a `Load More` button. This is useful when binding a large data set and you want to keep the drop-down compact.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Maximum suggestions
 
-Use the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) `int` property to limit the number of suggestions displayed in the drop-down. When the filtered results exceed this value, a `Load More` button appears at the bottom of the drop-down so the user can load additional items. The default value is `0`.
+Use the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) property to limit the number of suggestions displayed in the drop-down. When the filtered results exceed this value, a `Load More` button appears at the bottom of the drop-down so the user can load additional items. The default value is `0`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -98,7 +98,7 @@ N> If `MaximumSuggestion` is set to a value greater than or equal to the number 
 
 ## Load More text customization
 
-Use the [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText) `string` property to customize the text shown on the `Load More` button. The default value is `"Load More"`.
+Use the [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText) property to customize the text shown on the `Load More` button. The default value is `"Load More"`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -174,7 +174,7 @@ The following image illustrates the result of the above code:
 
 ## Load More view customization
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows customizing the user interface of the `Load More` view. Use the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreTemplate) property to provide a custom `DataTemplate`. The `BindingContext` of the template is not set; the template's content is rendered as-is.
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows customizing the user interface of the `Load More` view. Use the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreTemplate) property to provide a custom `DataTemplate`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -279,7 +279,7 @@ The following image illustrates the result of the above code:
 
 ## Load More button tapped event
 
-The [LoadMoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreButtonTapped) event fires when the user taps the `Load More` button. The event handler receives the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) as `sender` and `EventArgs` as the event arguments. Use this event to load additional items into the bound collection.
+The [LoadMoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreButtonTapped) event fires when the user taps the `Load More` button. The event handler receives the `ComboBox` as sender and `EventArgs` as the event arguments. Use this event to load additional items into the bound collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -316,11 +316,6 @@ SfComboBox comboBox = new SfComboBox
 comboBox.LoadMoreButtonTapped += OnComboBoxLoadMoreButtonTapped;
 Content = comboBox;
 
-private void OnComboBoxLoadMoreButtonTapped(object? sender, EventArgs e)
-{
-    // Load additional items into the bound collection here.
-}
-
 {% endhighlight %}
 {% highlight C# tabtitle="ViewModel" %}
 
@@ -350,6 +345,20 @@ public class SocialMedia
 {
     public string Name { get; set; }
     public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `LoadMoreButtonTapped` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight xaml %}
+{% highlight c# %}
+
+private void OnComboBoxLoadMoreButtonTapped(object? sender, EventArgs e)
+{
+    // Load additional items into the bound collection here.
 }
 
 {% endhighlight %}

@@ -10,7 +10,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Highlighting matched text in .NET MAUI ComboBox
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control can highlight the characters that match the text typed into the editor, making items in the drop-down easier to identify. Highlighting is enabled through the `TextHighlightMode` property and is applied only when `IsEditable` and `IsFilteringEnabled` are `true`.
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control can highlight the characters that match the text typed into the editor, making items in the drop-down easier to identify. Highlighting is enabled through the [TextHighlightMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextHighlightMode) property and is applied only when `IsEditable` and `IsFilteringEnabled` are `true`.
 
 ## Prerequisites
 
@@ -33,8 +33,8 @@ The default value of `TextHighlightMode` is `FirstOccurrence`.
 
 The highlight style can be customized using the following properties:
 
-* `HighlightedTextColor` - Sets the color of the highlighted characters. Type: `Color`. Default: `Colors.Blue`.
-* `HighlightedTextFontAttributes` - Sets the font attributes (such as `Bold` or `Italic`) of the highlighted characters. Type: `FontAttributes`. Default: `None`.
+* [HighlightedTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_HighlightedTextColor) - Sets the color of the highlighted characters. Type: `Color`.
+* [HighlightedTextFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_HighlightedTextFontAttributes) - Sets the font attributes (such as `Bold` or `Italic`) of the highlighted characters. Type: `FontAttributes`.
 
 N> Highlighting is applied only when `IsEditable` is `true` and `IsFilteringEnabled` is `true`. If either is `false`, the matched text is not highlighted even if `TextHighlightMode` is set.
 
@@ -196,7 +196,6 @@ public class SocialMedia
 
 ## See Also
 
-* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
 * [Searching](https://help.syncfusion.com/maui/combobox/searching)
 * [Editing](https://help.syncfusion.com/maui/combobox/editing)
 * [Filtering](https://help.syncfusion.com/maui/combobox/filtering)

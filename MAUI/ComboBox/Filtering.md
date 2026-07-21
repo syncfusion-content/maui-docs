@@ -10,7 +10,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Filtering in .NET MAUI ComboBox
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) has built-in support to filter the items displayed in the drop-down based on the text typed into the editor. The filter operation starts as soon as the user types a character, and matching is performed against the value of [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath).
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) has built-in support to filter the items displayed in the drop-down based on the text typed into the editor. The filter operation starts as soon as the user types a character, and matching is performed against the value of [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath).
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Enable filtering
 
-To enable filtering in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), set the [IsFilteringEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsFilteringEnabled) `bool` property and the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) `bool` property to `true`. Both default to `false`. When both are enabled, the drop-down opens automatically as soon as the user types a character in the editor.
+To enable filtering in the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), set the [IsFilteringEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsFilteringEnabled) `bool` property and the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) `bool` property to `true`. Both default to `false`. When both are enabled, the drop-down opens automatically as soon as the user types a character in the editor.
 
 ### Step 1: Define the model and view model
 
@@ -86,8 +86,8 @@ public class CityViewModel
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    IsEditable="true"
-                    IsFilteringEnabled="true"
+                    IsEditable="True"
+                    IsFilteringEnabled="True"
                     ItemsSource="{Binding Cities}"
                     TextMemberPath="CityName"
                     DisplayMemberPath="CityName">
@@ -113,56 +113,6 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-public class CityInfo
-{
-    public string CityName { get; set; }
-    public string CountryName { get; set; }
-    public bool IsCapital { get; set; }
-}
-
-// ViewModel
-public class CityViewModel
-{
-    public ObservableCollection<CityInfo> Cities { get; set; }
-
-    public CityViewModel()
-    {
-        this.Cities = new ObservableCollection<CityInfo>
-        {
-            new CityInfo { CityName = "Chicago",    CountryName = "USA" },
-            new CityInfo { CityName = "Los Angeles",CountryName = "USA" },
-            new CityInfo { CityName = "Houston",    CountryName = "USA" },
-            new CityInfo { CityName = "New York",   CountryName = "USA" },
-            new CityInfo { CityName = "Washington", CountryName = "USA",      IsCapital = true },
-            new CityInfo { CityName = "Chennai",    CountryName = "India" },
-            new CityInfo { CityName = "Delhi",      CountryName = "India",    IsCapital = true },
-            new CityInfo { CityName = "Kolkata",    CountryName = "India" },
-            new CityInfo { CityName = "Mumbai",     CountryName = "India" },
-            new CityInfo { CityName = "Berlin",     CountryName = "Germany",  IsCapital = true },
-            new CityInfo { CityName = "Cologne",    CountryName = "Germany" },
-            new CityInfo { CityName = "Hamburg",    CountryName = "Germany" },
-            new CityInfo { CityName = "Munich",     CountryName = "Germany" },
-            new CityInfo { CityName = "Quebec City",CountryName = "Canada" },
-            new CityInfo { CityName = "Ottawa",     CountryName = "Canada",   IsCapital = true },
-            new CityInfo { CityName = "Toronto",    CountryName = "Canada" },
-            new CityInfo { CityName = "Vancouver",  CountryName = "Canada" },
-            new CityInfo { CityName = "Victoria",   CountryName = "Canada" },
-            new CityInfo { CityName = "London",     CountryName = "England",  IsCapital = true },
-            new CityInfo { CityName = "Bath",       CountryName = "England" },
-            new CityInfo { CityName = "Manchester", CountryName = "England" },
-            new CityInfo { CityName = "Oxford",     CountryName = "England" },
-            new CityInfo { CityName = "Bandung",    CountryName = "Indonesia" },
-            new CityInfo { CityName = "Jakarta",    CountryName = "Indonesia",IsCapital = true },
-            new CityInfo { CityName = "Depok",      CountryName = "Indonesia" },
-            new CityInfo { CityName = "Makassar",   CountryName = "Indonesia" },
-            new CityInfo { CityName = "Surabaya",   CountryName = "Indonesia" },
-        };
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 N> Filtering is supported only when `IsEditable` is `true`.
@@ -183,8 +133,8 @@ Filters items whose values starts with the typed text, and the first match is au
 
 <editors:SfComboBox x:Name="comboBox"
                     TextSearchMode="StartsWith"
-                    IsEditable="true"
-                    IsFilteringEnabled="true"
+                    IsEditable="True"
+                    IsFilteringEnabled="True"
                     ItemsSource="{Binding Cities}"
                     TextMemberPath="CityName"
                     DisplayMemberPath="CityName">
@@ -275,8 +225,8 @@ Filters items whose values contain the typed text anywhere.. The first match is 
 
 <editors:SfComboBox x:Name="comboBox"
                     TextSearchMode="Contains"
-                    IsEditable="true"
-                    IsFilteringEnabled="true"
+                    IsEditable="True"
+                    IsFilteringEnabled="True"
                     ItemsSource="{Binding Cities}"
                     TextMemberPath="CityName"
                     DisplayMemberPath="CityName">
@@ -363,7 +313,7 @@ N> Auto-appending the first suggested item to the typed input is not supported i
 
 ## Custom filtering
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports applying your own filter logic to suggest items based on custom criteria. Use the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property to plug in a custom behavior. The default value of `FilterBehavior` is `null`.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports applying your own filter logic to suggest items based on custom criteria. Use the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property to plug in a custom behavior. The default value of `FilterBehavior` is `null`.
 
 Follow these steps to create a custom filtering class and apply it to the ComboBox control.
 
@@ -383,7 +333,7 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Then, implement the [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterBehavior.html#Syncfusion_Maui_Inputs_ComboBoxFilterBehavior_GetMatchingIndexes_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxFilterInfo_) method of IComboBoxFilterBehavior interface to create your own suggestion list (containing the indices of the filtered items) based on the text entered in the ComboBox control that needs to be shown in drop-down. The **GetMatchingIndexes** method contains following arguments:
+**Step 2:** Then, implement the [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterBehavior.html#Syncfusion_Maui_Inputs_ComboBoxFilterBehavior_GetMatchingIndexes_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxFilterInfo_) method of `IComboBoxFilterBehavior` interface to create your own suggestion list (containing the indices of the filtered items) based on the text entered in the ComboBox control that needs to be shown in drop-down. The `GetMatchingIndexes` method contains following arguments:
 
 * [source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) - The owner of the filter behavior, which holds information about ItemsSource, Items properties, and so on.
 * [filterInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterInfo.html) - Contains details about the text entered in ComboBox control. Using this text, you can prepare a suggestion list, which gets displayed in the drop-down list. 
@@ -416,7 +366,7 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 {% endhighlight %}
 {% endtabs %}
 
-**Step3:** Apply custom filtering to the ComboBox control by using the **FilterBehavior** property. 
+**Step3:** Apply custom filtering to the ComboBox control by using the `FilterBehavior` property. 
 
 {% tabs %}
 {% highlight xaml %}
