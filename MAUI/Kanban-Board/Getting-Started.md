@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Kanban Board (SfKanban)
 
-This section provides a quick overview for working with Essential<sup>®</sup> Kanban for .NET MAUI. It is an efficient way to visualize the workflow at each stage along its path to completion.
+This section provides a quick overview for working with Essential<sup>®</sup> Kanban for .NET MAUI. It lets you visualize each stage of a workflow from start to finish.
 
-To get start quickly with our [.NET MAUI Kanban Board](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html), you can check the below video.
+To get started quickly with our [.NET MAUI Kanban Board](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html), you can check the below video.
 
 {% youtube "https://youtu.be/Mq55vjT7ZEA" %}
 
@@ -58,8 +58,8 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Kanban NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Kanban` to install the Syncfusion<sup>®</sup> .NET MAUI Kanban package.
+2. Ensure you are in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Kanban` to install the Syncfusion<sup>®</sup> .NET MAUI Kanban package (v30.x.x or later for .NET 9 compatibility).
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 {% endtabcontent %}
@@ -83,14 +83,14 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Kanban](https://www.nuget.org/packages/Syncfusion.Maui.Kanban/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
 
-Make sure to add the namespace.
+Add the following `using` directive to `MauiProgram.cs`:
  
 {% tabs %}
 {% highlight c# %}
@@ -98,7 +98,7 @@ using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
  
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+Then, register the Syncfusion core handler inside the `CreateMauiApp` method of `MauiProgram.cs` to enable Syncfusion controls:
  
 {% tabs %}
 {% highlight c# %}
@@ -127,6 +127,23 @@ using Syncfusion.Maui.Kanban;
 
 Initialize the .NET MAUI [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control and populate its `ItemsSource` by creating and binding task data models.
 
+### `KanbanModel` properties
+
+Each card in the Kanban Board is represented by a [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) instance. The commonly used properties are:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `ID` | `object` | Unique identifier for the card. |
+| `Title` | `string` | Title text shown on the card. |
+| `Category` | `object` | Value that maps the card to a column. |
+| `Description` | `string` | Detailed description shown on the card. |
+| `IndicatorFill` | `Color` | Color of the indicator stripe shown on the left edge of the card. |
+| `Tags` | `IList<string>` | Chip labels displayed on the card. |
+
+### Supported target platforms
+
+The [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control is supported on the following platforms: Android, iOS, macOS (Mac Catalyst), and Windows.
+
 ### Creating the default model tasks
 
 * **Define the View Model:** Create a view model class to set values for the properties listed in the [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) class as shown in the following example code. Each [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) instance represents a card in Kanban control.
@@ -135,33 +152,39 @@ Initialize the .NET MAUI [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfu
 
 * **Defining columns in the Kanban Board:** The columns are generated automatically based on the different values of [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Category) in the [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) class from [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource). However, you can manually define the columns by setting the [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) property to `false` and adding [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) instances to the [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). Define the categories of column using the [`Categories`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Categories) property of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html), and cards will be added to the respective columns.
 
-The following sample code demonstrates this process in action:
+The following sample demonstrates this:
 
 {% tabs %}
 
 {% highlight XAML %}
 
-<kanban:SfKanban x:Name="kanban"
-                 AutoGenerateColumns="False"
-                 ItemsSource="{Binding Cards}">
-    <kanban:SfKanban.Columns>
-        <kanban:KanbanColumn Title="To Do"
-                             Categories="Open">
-        </kanban:KanbanColumn>
-        <kanban:KanbanColumn Title="In Progress"
-                             Categories="In Progress">
-        </kanban:KanbanColumn>
-        <kanban:KanbanColumn Title="Code Review"
-                             Categories="Code Review">
-        </kanban:KanbanColumn>
-        <kanban:KanbanColumn Title="Done"
-                             Categories="Done">
-        </kanban:KanbanColumn>
-    </kanban:SfKanban.Columns>
-    <kanban:SfKanban.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
         <local:KanbanViewModel />
-    </kanban:SfKanban.BindingContext>
-</kanban:SfKanban>
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     AutoGenerateColumns="False"
+                     ItemsSource="{Binding Cards}">
+        <kanban:SfKanban.Columns>
+            <kanban:KanbanColumn Title="To Do"
+                                 Categories="Open">
+            </kanban:KanbanColumn>
+            <kanban:KanbanColumn Title="In Progress"
+                                 Categories="In Progress">
+            </kanban:KanbanColumn>
+            <kanban:KanbanColumn Title="Code Review"
+                                 Categories="Code Review">
+            </kanban:KanbanColumn>
+            <kanban:KanbanColumn Title="Done"
+                                 Categories="Done">
+            </kanban:KanbanColumn>
+        </kanban:SfKanban.Columns>
+    </kanban:SfKanban>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -198,6 +221,11 @@ kanban.ItemsSource = viewModel.Cards;
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Kanban;
 
 public class KanbanViewModel
 {
@@ -260,6 +288,6 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![defining-columns-using-default-modelin-maui-kanban](images/getting-started/defining-columns-using-default-modelin-maui-kanban.png)
+![defining-columns-using-default-model-in-maui-kanban](images/getting-started/defining-columns-using-default-model-in-maui-kanban.png)
 
-You can download the Kanban Board Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI).
+You can download the Kanban Board Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI). Clone the repository, run `dotnet restore`, and then run the sample on your desired platform (Android, iOS, macOS, or Windows).
