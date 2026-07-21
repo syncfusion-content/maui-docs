@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flow direction feature in .NET MAUI Kanban control | Syncfusion®
-description: Learn about Flow Direction support in the Syncfusion® .NET MAUI Kanban Board (SfKanban) control.
+description: Learn about Flow Direction support in the Syncfusion® .NET MAUI Kanban Board (SfKanban) control, including customization options and usage scenarios.
 platform: maui
 control: SfKanban
 documentation: ug
