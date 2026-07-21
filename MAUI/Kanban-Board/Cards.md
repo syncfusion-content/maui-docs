@@ -9,18 +9,18 @@ documentation: ug
 
 # Cards in .NET MAUI Kanban Board (SfKanban)
 
-The default elements of a card can be customized using the below properties of [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html).
+The default elements of a card can be customized using the following properties of [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html).
 
-* [`Title`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Title) - Used to set the title of a card.
-* [`ImageURL`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_ImageURL) - Used to set the image URL of a card. The image will be displayed at right side in default card template.
-* [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Category) - Used to set the category of a card. Based on the category the cards will be added to the respective columns. 
-* [`Description`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Description) - Used to set the description text of a card.
+* [`Title`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Title) (`string`) - Sets the title of a card.
+* [`ImageURL`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_ImageURL) (`string`) - Sets the image URL of a card. The image is displayed on the right side of the default card template.
+* [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Category) (`object`) - Sets the category of a card. Cards are added to the corresponding column based on the category.
+* [`Description`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Description) (`string`) - Sets the description text of a card.
 * [`IndicatorFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_IndicatorFill) - Used to specify the indicator color of a card.
-* [`Tags`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Tags) - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
-* [`ID`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_ID) - Used to set the ID of a card.
+* [`Tags`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Tags) (`List<string>`) - Specifies the tags of a card. Tags are displayed at the bottom of the default card template.
+* [`ID`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_ID) (`object`) - Sets the unique identifier of a card.
 
 N> 
-* The image URL can be set in two ways: using an assembly reference or a local assembly. Ensure that the image is stored in the `Resources/Images` folder for assembly references.
+* The image URL can be set in two ways: using an assembly reference or a local file path. For assembly references, store the image in the `Resources/Images` folder with the `MauiImage` build action.
 * When a custom data model is assigned to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of the [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control, each card's `BindingContext` is set to an instance of that model. Therefore, bindings within the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) must directly reference the properties defined in the custom model.
 * The default card UI is not applicable when using a custom data model. To render the card content correctly, you must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.
 
@@ -35,41 +35,51 @@ new KanbanModel()
     Description = "Analyze customer requirements",
     IndicatorFill = Colors.Red;
     Tags = new List<string> { "Incident", "Customer" }
-});
+}
 
 {% endhighlight %}
 
 ## Template
 
-You can replace the entire card template with your own design using [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). The following code snippet and screenshot illustrates this.
+You can replace the entire card template with your own design using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). Inside the template, the `BindingContext` is the card model. The following code snippet and screenshot illustrate this.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<kanban:SfKanban.CardTemplate >
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             x:Class="YourAppNamespace.MainPage">
+    <kanban:SfKanban x:Name="kanban">
+        <kanban:SfKanban.CardTemplate>
+            <DataTemplate>
+                <StackLayout WidthRequest="250" Orientation="Vertical" BackgroundColor="Gray" Padding="10,10,10,10">
 
-<DataTemplate>
-    <StackLayout WidthRequest="250" Orientation="Vertical" BackgroundColor="Gray" Padding="10,10,10,10"> 
-        
-        <StackLayout  Orientation="Horizontal"> 
+                    <StackLayout Orientation="Horizontal">
 
-            <Label Text="{Binding Title}" TextColor="Silver" HorizontalOptions="StartAndExpand" >
-            </Label>
+                        <Label Text="{Binding Title}"
+                               TextColor="Silver"
+                               HorizontalOptions="StartAndExpand" />
+                    </StackLayout>
 
-        </StackLayout>      
+                    <StackLayout Orientation="Horizontal">
 
-        <StackLayout  Orientation="Horizontal"> 
+                        <Label Text="{Binding Description}"
+                               WidthRequest="150"
+                               FontSize="14"
+                               TextColor="Silver"
+                               LineBreakMode="WordWrap" />
+                        <Image Source="{Binding ImageURL}"
+                               HeightRequest="50"
+                               WidthRequest="50" />
+                    </StackLayout>
 
-            <Label Text="{Binding Description}" WidthRequest="150" FontSize="14" TextColor="Silver" LineBreakMode="WordWrap" ></Label>                    
-            <Image Source="{Binding ImageURL}" HeightRequest="50" WidthRequest="50"  ></Image>
-
-        </StackLayout>
-        
-    </StackLayout>
-</DataTemplate>
-
-</kanban:SfKanban.CardTemplate>
+                </StackLayout>
+            </DataTemplate>
+        </kanban:SfKanban.CardTemplate>
+    </kanban:SfKanban>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -129,51 +139,55 @@ kanban.CardTemplate = cardTemplate;
 
 ## Creating a custom model
 
+For example, to render tasks with custom properties:
+
 You can also map a custom data model to the Kanban control. The following steps demonstrate how to render tasks using the [.NET MAUI Kanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control with corresponding custom data properties.
 
-* **Create a data model for Kanban:** Create a simple data model in a new class file as shown in the following example code.
-
-* **Create view model:** Create a view model class to set values for the properties listed in the model class as shown in the following example code.
-
-* **Bind item source for Kanban:** To populate the Kanban card items, utilize the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of the [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control. Additionally, ensure that the following properties of `SfKanban` are mapped from corresponding properties in the `ItemsSource` while initializing the Kanban control. 
-
-The [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) specifies the name of the property within the data object that is used to generate columns in the Kanban control when [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) is set to `true`.
-
+* **Create the data model:** Create a data model class in a new file as shown in the example below.
+* **Create the view model:** Create a view model class to populate values for the properties of the model class.
+* **Bind the item source:** Set the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) to the view model collection. Map the following `SfKanban` properties to the corresponding properties in `ItemsSource` when initializing the control:
+  * [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) - specifies the name of the property in the data object that is used to generate columns when [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) is set to `true`.
 * **Defining columns in the Kanban Board:** The [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) in the Kanban board are mapped based on the values of a specified property (e.g., "Status") from your custom data model. The [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) specifies the name of the property within the data object that is used to generate columns in the Kanban control when [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) is set to `true`.
 
-Alternatively, you can manually define columns by setting [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) to `false` and adding instances of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to the [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) collection of the [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control. Based on the property specified in [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath), the Kanban control will generate the columns and render the corresponding cards accordingly.
+Alternatively, you can manually define columns by setting [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) to `false` and adding instances of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to the [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) collection of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). The Kanban control generates the columns based on the property specified in [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) and renders the corresponding cards accordingly.
 
-Let’s look at the practical code example:
+The following example demonstrates this:
 
 {% tabs %}
 {% highlight XAML %}
 
-<kanban:SfKanban x:Name="kanban"
-                 ItemsSource="{Binding TaskDetails}"
-                 ColumnMappingPath="Status">
-    <kanban:SfKanban.CardTemplate>
-        <DataTemplate>
-            <Border Stroke="Black"
-                    StrokeThickness="1"
-                    Background="#F3CFCE">
-                <VerticalStackLayout Margin="10">
-                    <Label Text="{Binding Title}"
-                           HorizontalTextAlignment="Center"
-                           FontAttributes="Bold"
-                           FontSize="14" />
-                    <Label Text="{Binding Description}"
-                           HorizontalTextAlignment="Center"
-                           FontSize="12"
-                           LineBreakMode="WordWrap"
-                           Margin="5" />
-                </VerticalStackLayout>
-            </Border>
-        </DataTemplate>
-    </kanban:SfKanban.CardTemplate>
-    <kanban:SfKanban.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
         <local:KanbanViewModel />
-    </kanban:SfKanban.BindingContext>
-</kanban:SfKanban>
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     ItemsSource="{Binding TaskDetails}"
+                     ColumnMappingPath="Status">
+        <kanban:SfKanban.CardTemplate>
+            <DataTemplate>
+                <Border Stroke="Black"
+                        StrokeThickness="1"
+                        Background="#F3CFCE">
+                    <VerticalStackLayout Margin="10">
+                        <Label Text="{Binding Title}"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               FontSize="14" />
+                        <Label Text="{Binding Description}"
+                               HorizontalTextAlignment="Center"
+                               FontSize="12"
+                               LineBreakMode="WordWrap"
+                               Margin="5" />
+                    </VerticalStackLayout>
+                </Border>
+            </DataTemplate>
+        </kanban:SfKanban.CardTemplate>
+    </kanban:SfKanban>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -234,6 +248,8 @@ public class TaskDetails
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+using System.Collections.ObjectModel;
 
 public class KanbanViewModel
 {
@@ -319,7 +335,7 @@ You can customize the appearance of each card with different templates based on 
 
 ### Create a data template selector
 
-Create a custom class by inheriting `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfKanban invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class by deriving from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, `SfKanban` invokes the `OnSelectTemplate` method for each item, passing the data object as a parameter.
 
 {% tabs %}
 
@@ -360,7 +376,7 @@ public class KanbanTemplateSelector : DataTemplateSelector
 
 ### Applying the data template selector
 
-Assign custom `DataTemplateSelector` to the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) of the SfKanban in either XAML or C#.
+Assign the custom `DataTemplateSelector` to the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) of `SfKanban` in either XAML or C#.
 
 {% tabs %}
 
@@ -397,11 +413,13 @@ Assign custom `DataTemplateSelector` to the [`CardTemplate`](https://help.syncfu
 {% highlight c# %}
 
 SfKanban kanban = new SfKanban();
+KanbanViewModel viewModel = new KanbanViewModel();
 kanban.ItemsSource = viewModel.Cards;
 kanban.CardTemplate = new KanbanTemplateSelector();
-      
+this.Content = kanban;
+
 {% endhighlight %}
 
 {% endtabs %}
 
-N> When using a custom data model, the default card UI is not applicable. To render the card content, you must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.
+N> When using a custom data model, the default card UI is not applicable. To render the card content, you must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property. For the `DataTemplateSelector` example above, define the `MenuTemplate`, `OrderTemplate`, `ReadyToServeTemplate`, `DeliveryTemplate`, and `CustomKanbanModel` classes in your project.

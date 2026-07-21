@@ -35,7 +35,7 @@ N> The [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 Adjusts the overall lightness or darkness of the image. The value ranges from -1 to 1, with a default of 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -46,7 +46,7 @@ Adjusts the overall lightness or darkness of the image. The value ranges from -1
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -65,7 +65,7 @@ private void OnBrightnessClicked(object sender, EventArgs e)
 Creates a soft, unfocused appearance by reducing the image's sharpness. The value ranges from 0 to 1, with a default of 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -76,7 +76,7 @@ Creates a soft, unfocused appearance by reducing the image's sharpness. The valu
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -95,7 +95,7 @@ private void OnBlurClicked(object sender, EventArgs e)
 Increases or decreases the difference between the light and dark areas of the image, making it more visually distinct. The value ranges from -1 to 1, with a default of 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -106,7 +106,7 @@ Increases or decreases the difference between the light and dark areas of the im
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -125,7 +125,7 @@ private void OnContrastClicked(object sender, EventArgs e)
 Alters the overall brightness and darkness levels of the image. The value ranges from -1 to 1, with a default of 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -136,7 +136,7 @@ Alters the overall brightness and darkness levels of the image. The value ranges
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -155,7 +155,7 @@ private void OnExposureClicked(object sender, EventArgs e)
 Shifts the color spectrum of the image. The value ranges from -1 to 1, with a default of 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -166,7 +166,7 @@ Shifts the color spectrum of the image. The value ranges from -1 to 1, with a de
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -185,7 +185,7 @@ private void OnHueClicked(object sender, EventArgs e)
 Enhances or reduces the intensity and vividness of colors in the image. The value ranges from -1 to 1, with a default of 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -196,7 +196,7 @@ Enhances or reduces the intensity and vividness of colors in the image. The valu
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -215,7 +215,7 @@ private void OnSaturationClicked(object sender, EventArgs e)
 Enhances the clarity and definition of edges and details in the image. The value ranges from 0 to 6, with a default of 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -226,7 +226,7 @@ Enhances the clarity and definition of edges and details in the image. The value
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -245,7 +245,7 @@ private void OnSharpenClicked(object sender, EventArgs e)
 Controls the transparency or visibility of the image. The value ranges from 0 to 1, with a default of 1.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -256,7 +256,7 @@ Controls the transparency or visibility of the image. The value ranges from 0 to
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -275,7 +275,7 @@ private void OnOpacityClicked(object sender, EventArgs e)
 Call the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SaveEdits) method to save the applied effects to the view; otherwise, the effects will be reset on the next action.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -286,7 +286,7 @@ Call the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -301,7 +301,7 @@ private void OnSaveEditsClicked(object sender, EventArgs e)
 Cancel the applied effects by using the [CancelEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_CancelEdits) method or by calling the [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) method with [ImageEffect.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html#Syncfusion_Maui_ImageEditor_ImageEffect_None).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -312,7 +312,7 @@ Cancel the applied effects by using the [CancelEdits](https://help.syncfusion.co
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 

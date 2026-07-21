@@ -18,7 +18,7 @@ The [Rotate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfI
 N> The rotation angle cannot be specified in code.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -29,7 +29,7 @@ N> The rotation angle cannot be specified in code.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -52,7 +52,7 @@ The [Flip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfIma
 The following example uses the [Flip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Flip_Syncfusion_Maui_ImageEditor_ImageFlipDirection_) method to flip the image vertically.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -63,7 +63,7 @@ The following example uses the [Flip](https://help.syncfusion.com/cr/maui/Syncfu
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 

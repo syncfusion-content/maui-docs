@@ -13,17 +13,13 @@ The [SfImageEditor](https://www.syncfusion.com/maui-controls/maui-image-editor) 
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<ContentPage
-    . . .
     <imageEditor:SfImageEditor Source="image.jpeg" FlowDirection="RightToLeft" />
-    . . .
-</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ImageEditor;

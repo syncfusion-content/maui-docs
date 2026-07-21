@@ -8,27 +8,40 @@ documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
-# Editing in .NET MAUI ComboBox (SfComboBox)
+# Editing in .NET MAUI ComboBox
 
-The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports both editable and non-editable text boxes for selecting an item from a data source. To enable editing functionality, set [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property as `true`. The default value is `false`.
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports both editable and non-editable text boxes for selecting an item from a data source. The editing behavior is controlled by the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property. The default value of `IsEditable` is `false`.
+
+## Prerequisites
+
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Editable ComboBox
 
-In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to edit in the text box and it automatically appends the remaining letters to the entered text when it is valid.
+In editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to type into the editor; when the entered text matches an item, the control automatically appends the remaining letters to complete the selection. To enable this behavior, set the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property to `true`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    IsEditable="true"
+                    IsEditable="True"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
 </editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
 {
@@ -39,6 +52,37 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -47,25 +91,30 @@ The following image illustrates the result of the above code:
 
 ### Text
 
-The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode. The default value of the **Text** property is **string.Empty**.
+The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property gets or sets the user-submitted text in the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editor. The default value of `Text` is `string.Empty`.
 
 ## Non-editable ComboBox
 
-Non-editable mode prevents users from editing and instead allows them to select from the drop-down list.
+In non-editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editor is read-only; users can only pick an item from the drop-down list and cannot type into the editor. This is the default behavior when `IsEditable` is `false`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    IsEditable="false"
+                    IsEditable="False"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
 </editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
 {
@@ -76,18 +125,49 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox choose item using non editing mode](Images/Editing/NonEditableMode.gif)
 
-## Hide clear button in the editor
+## Clear button visibility
 
-By default, the clear button `X` will be displayed in the editor of the ComboBox control, which can be used to clear the entered input. Hide the clear button in ComboBox control using the [IsClearButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsClearButtonVisibleProperty) property. The default value of the IsClearButtonVisible property value is `true`.
+By default, the clear button `X` is displayed in the editor of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control and can be used to clear the entered input. Control the visibility of the clear button using the [IsClearButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsClearButtonVisible) property. The default value of `IsClearButtonVisible` is `true`, and it applies only to editable mode.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
                     IsEditable="true"
@@ -95,11 +175,16 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
 </editors:SfComboBox>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox
 {
@@ -111,10 +196,47 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight C# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 N> The `IsClearButtonVisible` property has no effect in non-editable mode.
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox clear button visibility](Images/Editing/IsClearButtonVisible.png)
+
+## See Also
+
+* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Selection](https://help.syncfusion.com/maui/combobox/selection)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
