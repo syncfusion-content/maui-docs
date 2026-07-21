@@ -21,9 +21,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 The [HidePromptOnLeave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HidePromptOnLeave) property of type `bool` controls whether unfilled prompt positions are displayed when the control does not have focus. The default value is `false`, which means prompt characters are always shown. When set to `true`, prompt characters are hidden when the control loses focus and restored when the control regains focus.
 
-The control is considered to have lost focus when the user taps outside the entry, navigates to another input, or moves focus programmatically via the `Unfocused` event. To programmatically focus the entry and restore the prompt, call `maskedEntry.Focus()`.
-
-> **Note:** Unlike setting [PromptChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PromptChar) to a space character, `HidePromptOnLeave` only hides the prompt when the control is unfocused and does not affect the value of the unfilled positions.
+The control is considered to have lost focus when the user taps outside the Entry, navigates to another input, or moves focus programmatically via the `Unfocused` event. To programmatically focus the Entry and restore the prompt, call `maskedEntry.Focus()`.
 
 The following example demonstrates how to hide prompt characters when the Masked Entry control loses focus:
 
