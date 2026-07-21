@@ -50,14 +50,6 @@ The following example shows how to wire the [SwipeStarted](https://help.syncfusi
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}"
-                    Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 <carousel:SfCarousel x:Name="carousel"
                         SwipeStarted="carousel_SwipeStarted"
                         SwipeEnded="carousel_SwipeEnded"
@@ -65,9 +57,16 @@ The following example shows how to wire the [SwipeStarted](https://help.syncfusi
                         ItemTemplate="{StaticResource itemTemplate}"
                         ItemHeight="170"
                         ItemWidth="270"
-                        ItemSpacing="2"
-                        AllowLoadMore="True"
-                        ViewMode="Default"/>
+                        AllowLoadMore="True">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -78,9 +77,7 @@ SfCarousel carousel = new SfCarousel()
 {
     ItemHeight = 170,
     ItemWidth = 270,
-    ItemSpacing = 2,
     AllowLoadMore = true,
-    ViewMode = ViewMode.Default,
     BindingContext = carouselViewModel,
     ItemsSource = carouselViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
@@ -146,14 +143,9 @@ public class CarouselViewModel
 
 ![Carousel Swiping events](images/CarouselSwiping_GIF.gif)
 
-## Troubleshooting
-
-* If the swipe events do not fire, ensure that the carousel contains more than one item, as swiping between items is required.
-* If the `IsSwipedLeft` value does not behave as expected, verify that the [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ViewMode) supports swiping (`Default` and `Linear` only).
-
 ## See Also
 
-* [Getting Started with .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/getting-started)
-* [Populating Data in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/populating-data)
-* [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
-* [Overview of .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/overview)
+- [Populating Data in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [Transformation in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/transformation)
+- [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
+

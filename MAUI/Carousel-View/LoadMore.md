@@ -44,20 +44,22 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 <carousel:SfCarousel x:Name="carousel"
                     ItemsSource="{Binding ImageCollection}"
                     ItemTemplate="{StaticResource itemTemplate}"
                     AllowLoadMore="True"
                     ItemHeight="170"
                     ItemWidth="270"
-                    ViewMode="Linear"/>
+                    ViewMode="Linear">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
     
 {% endhighlight %}
 {% highlight C# %}
@@ -130,13 +132,7 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
 {% tabs %}
 
 {% highlight xaml %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
+
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
@@ -144,7 +140,16 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
                      ItemWidth = "270"
                      AllowLoadMore="True"
                      LoadMoreItemsCount="2"
-                     ViewMode="Linear"/>
+                     ViewMode="Linear">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -218,13 +223,7 @@ Use the [LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carou
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
+
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
@@ -243,6 +242,14 @@ Use the [LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carou
                    VerticalOptions="Center"/>
         </Grid>
     </carousel:SfCarousel.LoadMoreView>
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
 </carousel:SfCarousel>
 
 {% endhighlight %}
@@ -339,20 +346,24 @@ Call the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
-<carousel:SfCarousel x:Name="carousel"
-                    ItemsSource="{Binding ImageCollection}"
-                    ItemTemplate="{StaticResource itemTemplate}"
-                    AllowLoadMore="True"
-                    ViewMode="Default"
-                    LoadMoreItemsCount="2"/>
-<Button Text="Load More" Clicked="Button_Clicked"/>
+<Grid>
+    <carousel:SfCarousel x:Name="carousel"
+                        ItemsSource="{Binding ImageCollection}"
+                        ItemTemplate="{StaticResource itemTemplate}"
+                        AllowLoadMore="True"
+                        ViewMode="Default"
+                        LoadMoreItemsCount="2">
+        <carousel:SfCarousel.BindingContext>
+            <local:CarouselViewModel/>
+        </carousel:SfCarousel.BindingContext>
+        <carousel:SfCarousel.ItemTemplate>
+            <DataTemplate >
+                <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            </DataTemplate>
+        </carousel:SfCarousel.ItemTemplate>
+    </carousel:SfCarousel>
+    <Button Text="Load More" Clicked="Button_Clicked"/>
+</Grid>
 
 {% endhighlight %}
 
@@ -441,14 +452,10 @@ public class CarouselViewModel
 
 Find the complete Load More sample on [GitHub](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/LoadMore/LoadMoreSample).
 
-## Troubleshooting
-
-* If tapping the LoadMore view does nothing, ensure that the `ItemsSource` collection supports adding items dynamically (for example, use `ObservableCollection<T>` rather than `List<T>`).
-* If the custom `LoadMoreView` is not visible, verify that `AllowLoadMore` is set to `True` and `LoadMoreItemsCount` is greater than `0`.
 
 ## See also
 
-* [Getting Started with .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/getting-started)
+- [Getting Started with .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/getting-started)
 - [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-* [UI Virtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
-* [Overview of .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/overview)
+- [UI Virtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
+- [Overview of .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/overview)

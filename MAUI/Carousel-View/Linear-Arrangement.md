@@ -17,35 +17,32 @@ Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
 
-## Overview
+## ViewMode
 
 Set [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ViewMode) to [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear) to display the carousel items in a stacked linear layout. When not set, the default value is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default), which places a single item in the center of the view.
 
 > **When to use:** Use the `Linear` view mode when you want multiple carousel items to be visible at once along a horizontal axis (similar to a stack of cards), rather than focusing on a single centered item.
 
-
-## XAML
-
 The following example shows how to configure `SfCarousel` in `Linear` view mode with a custom item template.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}"
-                    Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 <carousel:SfCarousel x:Name="carousel"
                     ItemHeight="170"
                     ItemWidth="270"
                     ItemTemplate="{StaticResource itemTemplate}"
                     ItemsSource="{Binding ImageCollection}"
-                    ViewMode="Linear"/>
+                    ViewMode="Linear">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -114,7 +111,5 @@ The following image shows the carousel items arranged in a stacked linear layout
 
 ## See also
 
-* [Getting Started with .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/getting-started)
 - [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-* [UI Virtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
-* [Overview of .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/overview)
+- [UI Virtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)

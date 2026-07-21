@@ -21,18 +21,6 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 The [.NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) provides several transformation options to customize the appearance and layout of its items. You can tilt the unselected items, adjust the spacing between the selected and unselected items, and scale items to a specified value. Most of these properties apply in the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default) [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html); spacing in the `Linear` mode is configured using a dedicated property.
 
-
-## View Modes
-
-The transformation behavior depends on the [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html) of `SfCarousel`:
-
-| ViewMode | Description |
-|----------|-------------|
-| `Default` | Items are arranged in a 3D-like stack. Supports `RotationAngle`, `Offset`, `SelectedItemOffset`, and `ScaleOffset`. |
-| `Linear`  | Items are arranged in a flat, linear layout. Supports `ItemSpacing`. |
-
-> **Note:** Transformation properties other than `ItemSpacing` apply only in the `Default` ViewMode.
-
 ## Properties Overview
 
 | Property | Type | Default Value | Applies To | Description |
@@ -43,7 +31,6 @@ The transformation behavior depends on the [ViewMode](https://help.syncfusion.co
 | `ScaleOffset` | `float` | 0 | Default | Scale factor applied to items (range: 0 to 1). |
 | `ItemSpacing` | `double` | 0 | Linear | Spacing between items in Linear mode. |
 
-> **Note:** All transformation properties are available from the initial release of `Syncfusion.Maui.Carousel`.
 
 ## Tilt Non-Selected Items
 
@@ -55,20 +42,21 @@ The [RotationAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
-
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
-                     RotationAngle="30"/>
+                     RotationAngle="30">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -142,20 +130,21 @@ The distance between the selected item and other items can be customized by usin
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
-
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
-                     SelectedItemOffset="60"/>
+                     SelectedItemOffset="60">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -225,25 +214,25 @@ public class CarouselViewModel
 
 The [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Offset) property is used to define the distance between unselected items in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) panel in the Default mode.
 
-> **Note:** The default value is `40` for desktop platforms and `18` for mobile platforms.
-
 {% tabs %}
 
 {% highlight xaml %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
-                     Offset="60"/>
+                     Offset="60">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -317,20 +306,22 @@ The [ScaleOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.S
 {% tabs %}
 
 {% highlight xaml %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
                      ItemHeight="170"
                      ItemWidth="270"
-                     ScaleOffset="0.5"/>
+                     ScaleOffset="0.5">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -404,13 +395,6 @@ The spacing of all items in Linear mode can be configured by using the [ItemSpac
 {% tabs %}
 
 {% highlight xaml %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
@@ -418,7 +402,16 @@ The spacing of all items in Linear mode can be configured by using the [ItemSpac
                      ItemHeight="170"
                      ItemWidth="270"
                      ItemSpacing="60"
-                     ViewMode="Linear"/>
+                     ViewMode="Linear">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -486,16 +479,7 @@ public class CarouselViewModel
 
 ![ItemSpacing in .NET MAUI Carousel View.](Images/net-maui-carousel-view-itemspacing.png)
 
-## Troubleshooting
-
-| Issue | Possible Cause | Suggested Fix |
-|-------|----------------|---------------|
-| `Offset`, `RotationAngle`, `SelectedItemOffset`, or `ScaleOffset` has no visible effect. | The carousel is in `Linear` ViewMode. | Switch to `ViewMode="Default"` (or `ViewMode = ViewMode.Default` in C#). |
-| `ItemSpacing` has no effect. | The carousel is in `Default` ViewMode. | Switch to `ViewMode="Linear"` (or `ViewMode = ViewMode.Linear` in C#). |
-| Items disappear when `ScaleOffset` is set. | A value close to `0` makes items invisible. | Use a value closer to `1` (e.g., `0.5` or `0.8`). |
-| XAML build error about the `carousel:` namespace. | The `Syncfusion.Maui.Carousel` namespace and assembly are not declared. | Add `xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"` to the page root. |
-
 ## See Also
 
-- [Getting Started with .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/getting-started)
 - [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [UIVirtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)

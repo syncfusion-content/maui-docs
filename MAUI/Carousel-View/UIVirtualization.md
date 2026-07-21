@@ -17,7 +17,6 @@ Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
 
-## Overview
 
 UI virtualization in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
 
@@ -27,29 +26,13 @@ The following property is used to enable UI virtualization:
 
 ## Enable UI Virtualization
 
-The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property of `SfCarousel`. The property applies to both the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default) and [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear) [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html) values.
-
-| Property | Type | Default Value | Description |
-|----------|------|---------------|-------------|
-| `EnableVirtualization` | `bool` | `false` | When `true`, only items visible in the viewport are realized, reducing memory usage for large collections. |
-
-> **Note:** The default value of the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property is `false`.
-
-> **Note:** `EnableVirtualization` is available from the initial release of the `Syncfusion.Maui.Carousel` package.
+The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property of `SfCarousel`. The property applies to both the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default) and [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear) [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html) values. The default value of the `EnableVirtualization` property is `false`.
 
 ## Default Mode
 
 {% tabs %}
 
 {% highlight xaml %}
-
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 
 <!-- Default View Mode -->
 <carousel:SfCarousel x:Name="carousel"
@@ -58,7 +41,16 @@ The UI virtualization concept is implemented by enabling the [EnableVirtualizati
                      ItemHeight="170"
                      ItemWidth="270"
                      ViewMode="Default"
-                     EnableVirtualization="True"/>
+                     EnableVirtualization="True">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -128,14 +120,6 @@ public class CarouselViewModel
 {% tabs %}
 
 {% highlight xaml %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-           <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
-
 <!-- Linear View Mode -->
 <carousel:SfCarousel x:Name="linearCarousel"
                      ItemsSource="{Binding ImageCollection}"
@@ -144,7 +128,16 @@ public class CarouselViewModel
                      ItemWidth="270"
                      ItemSpacing="60"
                      ViewMode="Linear"
-                     EnableVirtualization="True"/>
+                     EnableVirtualization="True">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -223,15 +216,6 @@ When `EnableVirtualization` is set to `true`:
 - Memory usage stays roughly constant regardless of the total number of items in `ItemsSource`.
 
 When `EnableVirtualization` is `false` (the default), every item in the source collection is realized up front, which can increase memory usage and lengthen initial load time for large data sets.
-
-## Troubleshooting
-
-| Issue | Possible Cause | Suggested Fix |
-|-------|----------------|---------------|
-| Setting `EnableVirtualization="True"` has no visible performance change. | The data set is too small (virtualization only helps with large collections). | Test with a collection of several hundred items or more. |
-| Items appear to "pop" in and out while swiping. | Expected behavior when virtualization recycles containers. | Use a lightweight `DataTemplate` to minimize the cost of recycling. |
-| XAML build error about the `carousel:` namespace. | The `Syncfusion.Maui.Carousel` namespace and assembly are not declared. | Add `xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"` to the page root. |
-| Runtime error that `ViewMode` cannot be found. | The `Syncfusion.Maui.Carousel` namespace is missing in the C# file. | Add `using Syncfusion.Maui.Carousel;` at the top of the file. |
 
 ## See Also
 

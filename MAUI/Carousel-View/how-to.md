@@ -1,13 +1,13 @@
 ---
 layout : post
-title: Handling SelectionChanged in Syncfusion® .NET MAUISfCarousel
-description: Learn how to perform an operation when the selected item changes in SfCarousel control for .NET MAUI.
+title: Interaction in Syncfusion® Carousel Control in .NET MAUI.
+description: Learn how to perform an operation while changing the carouselItem or Collection in Carousel for .NET MAUI.
 platform : maui
 control : Carousel
 documentation : ug
 ---
 
-# How to perform an operation when the selected carousel item changes?
+# How to perform an operation while changing the CarouselItem?
 
 ## Prerequisites
 
@@ -17,26 +17,14 @@ Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
 
-## Overview
 
 We can perform an operation when the selected carousel item changes by handling the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event. The `SelectionChanged` event provides the previously selected item through `e.OldItem` and the currently selected item through `e.NewItem`.
 
-## XAML
-
-The following XAML sample binds `SfCarousel` to an `ImageCollection` and handles the `SelectionChanged` event. Make sure to declare the `xmlns:carousel` namespace and define the `itemTemplate` resource in the page resources.
+The following XAML sample binds `SfCarousel` to an `ImageCollection` and handles the `SelectionChanged` event.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}"
-                    Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 <carousel:SfCarousel x:Name="carousel"
                         ItemTemplate="{StaticResource itemTemplate}"
                         ItemsSource="{Binding ImageCollection}"
@@ -46,18 +34,14 @@ The following XAML sample binds `SfCarousel` to an `ImageCollection` and handles
     <carousel:SfCarousel.BindingContext>
         <local:CarouselViewModel/>
     </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
 </carousel:SfCarousel>
 
 {% endhighlight %}
-
-{% endtabs %}
-
-## Code-behind
-
-The C# sample shows the equivalent code along with the `SelectionChanged` event handler. `DisplayAlert` is invoked on the page using `this.DisplayAlert`, so the handler must be placed inside the `ContentPage` code-behind.
-
-{% tabs %}
-
 {% highlight C# %}
 
 CarouselViewModel carouselViewModel = new CarouselViewModel();
@@ -127,18 +111,7 @@ public class CarouselViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
-> **Note:** The images referenced in the view model must be added to the `Resources` folder of the application.
-
-## Troubleshooting
-
-- **Handler not found error:** Ensure `ConfigureSyncfusionCore()` is called in `MauiProgram.cs` with `using Syncfusion.Maui.Core.Hosting;`.
-- **`SelectionChangedEventArgs` namespace error:** Use `Syncfusion.Maui.Carousel.SelectionChangedEventArgs` (not `Syncfusion.Maui.Core.Carousel`).
-- **`DisplayAlert` not recognized:** The handler must reside in a `ContentPage` code-behind; invoke it as `this.DisplayAlert(...)`.
-
 ## See also
 
-* [Getting Started with .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/getting-started)
 - [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-* [UI Virtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
-* [Overview of .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/overview)
+- [UI Virtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)

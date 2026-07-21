@@ -17,27 +17,13 @@ Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
 
-## Overview
-
-The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Duration) property of the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control specifies the time, in milliseconds, taken to move an item to the selected position when the carousel is in the Default mode. The default value is 600 ms.
-
-N> Before proceeding, ensure the SfCarousel control is set up in your project. For setup details, see the [Getting Started with .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
-
 ## Duration
 
-You can customize the animation duration by setting the [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Duration) property to the desired value in milliseconds. Setting the value close to 0 effectively disables the animation.
+The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Duration) property of the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control specifies the time, in milliseconds, taken to move an item to the selected position when the carousel is in the Default mode. The default value is 600 ms. You can customize the animation duration by setting the `Duration` property to the desired value in milliseconds. Setting the value close to 0 effectively disables the animation.
 
 {% tabs %}
 
 {% highlight xaml %}
-
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
@@ -45,7 +31,16 @@ You can customize the animation duration by setting the [Duration](https://help.
                      ItemHeight="170"
                      ItemWidth="270"
                      SelectedIndex="2"
-                     Duration="1000"/>
+                     Duration="1000">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
@@ -111,11 +106,8 @@ public class CarouselViewModel
 
 N> The `Duration` property applies only when the SfCarousel is in the Default mode. To use a different mode, see [LoadMore in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/loadmore).
 
-N> The `Duration` property is available starting with Syncfusion<sup>®</sup> .NET MAUI Carousel `v18.3.0.x` and later.
 
 ## See Also
 
-- [Getting Started with .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/getting-started)
 - [Populating Data in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
 - [LoadMore in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/loadmore)
-- [GitHub Sample: Getting Started with .NET MAUI SfCarousel](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel)

@@ -17,7 +17,6 @@ Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
 
-## Overview
 
 The [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control supports binding to different item sources such as `IList` and `ObservableCollection`. Use `ObservableCollection<T>` when the carousel items need to reflect live changes (add, remove, or update).
 
@@ -91,81 +90,53 @@ namespace CarouselSample
 
 {% endhighlight %}
 
-> **Tip:** Replace the `List<CarouselModel>` with `ObservableCollection<CarouselModel>` if the items need to be added or removed at runtime.
 
 ### Binding the Data with a Custom Template
 
 The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemTemplate) defines a custom view that is applied to every item. Item data is bound through the `BindingContext` of the templated view.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
-    <ContentPage.BindingContext>
+<carousel:SfCarousel x:Name="carousel"  
+                        ItemTemplate="{StaticResource itemTemplate}" 
+                        ItemsSource="{Binding ImageCollection}"
+                        ItemHeight="170"
+                        ItemWidth="270"
+                        ItemSpacing="2" 
+                        HeightRequest="400" 
+                        WidthRequest="800">
+    <carousel:SfCarousel.BindingContext>
         <local:CarouselViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="itemTemplate">
-                <Image Source="{Binding Image}" 
-                       Aspect="AspectFit"/>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.Content>
-        <carousel:SfCarousel x:Name="carousel"  
-                             ItemTemplate="{StaticResource itemTemplate}" 
-                             ItemsSource="{Binding ImageCollection}"
-                             ItemHeight="170"
-                             ItemWidth="270"
-                             ItemSpacing="2" 
-                             HeightRequest="400" 
-                             WidthRequest="800" />
-    </ContentPage.Content>
-</ContentPage>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-
-using Syncfusion.Maui.Carousel;
-using System.Collections.ObjectModel;
-
-namespace CarouselSample
+CarouselViewModel carouselViewModel = new CarouselViewModel();
+SfCarousel carousel = new SfCarousel()
 {
-    public partial class MainPage : ContentPage
+    ItemHeight = 170,
+    ItemWidth = 270,
+    ItemSpacing = 2,
+    HeightRequest = 400,
+    WidthRequest = 800
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            CarouselViewModel carouselViewModel = new CarouselViewModel();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemHeight = 170,
-                ItemWidth = 270,
-                ItemSpacing = 2,
-                HeightRequest = 400,
-                WidthRequest = 800
-                BindingContext = carouselViewModel,
-                ItemsSource = carouselViewModel.ImageCollection,
-                ItemTemplate = new DataTemplate(() =>
-                {
-                   var image = new Image();
-                   image.SetBinding(Image.SourceProperty, "Image");
-                   return image;
-                }),
-            };
-            this.Content = carousel;
-        }
-    }
-}
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -175,11 +146,6 @@ namespace CarouselSample
 The [SfCarouselItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html) class represents a single carousel item. Use its `ItemContent` or `ImageName` property to provide a view for each item.
 
 The following table summarizes the key `SfCarouselItem` properties:
-
-| Property | Type | Description |
-| --- | --- | --- |
-| [ItemContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html#Syncfusion_Maui_Carousel_SfCarouselItem_ItemContent) | `View` | Custom view rendered for the carousel item. |
-| [ImageName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html#Syncfusion_Maui_Carousel_SfCarouselItem_ImageName) | `string` | Name of the image (resolved from `Resources/Images/`) displayed as the item. |
 
 ### Using ItemContent
 
@@ -310,12 +276,11 @@ You can also create and customize each `SfCarouselItem` individually when a diff
 
 ## Troubleshooting
 
-* If the carousel is empty, verify that `ItemsSource` is set after `BindingContext`, and that the bound property name (`ImageCollection`) matches the view model exactly (case-sensitive).
-* If images do not render, confirm that the image files are added to `Resources/Images/` with the **MauiImage** build action and that the file names referenced in code or XAML match the actual file names (case-sensitive on Android and Windows).
-* If changes to the items collection are not reflected in the UI, replace `List<T>` with `ObservableCollection<T>` so the carousel is notified of additions and removals.
+- If the carousel is empty, verify that `ItemsSource` is set after `BindingContext`, and that the bound property name (`ImageCollection`) matches the view model exactly (case-sensitive).
+- If changes to the items collection are not reflected in the UI, replace `List<T>` with `ObservableCollection<T>` so the carousel is notified of additions and removals.
 
 ## See also
 
-* [Getting Started with .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/getting-started)
-* [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
-* [Overview of .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/overview)
+- [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
+- [Transformation in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/transformation)
+
