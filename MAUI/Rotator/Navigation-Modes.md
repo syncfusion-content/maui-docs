@@ -63,9 +63,9 @@ When the strip mode is `Thumbnail`, each slider item is loaded as a thumbnail pr
 
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     SelectedIndex = 2,
     NavigationDirection = NavigationDirection.Horizontal,
     NavigationStripMode = NavigationStripMode.Thumbnail,
@@ -150,9 +150,9 @@ When the strip mode is `Dots`, each slider item is represented by a small dot. W
 
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     SelectedIndex = 2,
     NavigationDirection = NavigationDirection.Horizontal,
     NavigationStripMode = NavigationStripMode.Dots,
@@ -250,9 +250,9 @@ The following example sets the position to `Top`.
 
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     SelectedIndex = 2,
     NavigationDirection = NavigationDirection.Horizontal,
     NavigationStripMode = NavigationStripMode.Dots,
@@ -315,7 +315,6 @@ public class RotatorViewModel
 
 ## See also
 
-- [Getting Started with .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/getting-started)
 - [Sliding Direction in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/sliding-direction)
 - [Placement Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)
 - [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)

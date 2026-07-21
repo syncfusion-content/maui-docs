@@ -90,12 +90,12 @@ The following examples show how to apply the `DataTemplateViewModel` selector to
 
 <ContentPage.Content>      
     <Grid >
-        <syncfusion:SfRotator x:Name="sfRotator" 
+        <rotator:SfRotator x:Name="sfRotator" 
                 ItemsSource="{Binding ImageCollection}" >
-            <syncfusion:SfRotator.ItemTemplate>
+            <rotator:SfRotator.ItemTemplate>
             <local:DataTemplateViewModel DefaultTemplate="{StaticResource DefaultTemplate}" SpecificTemplate="{StaticResource SpecificTemplate}"/>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
+            </rotator:SfRotator.ItemTemplate>
+        </rotator:SfRotator>
     </Grid>
   </ContentPage.Content>
 
@@ -196,22 +196,10 @@ The following screenshot illustrates the output of the above code:
 
 ![DataTemplateSelector](Images/DataTemplateSelector.png)
 
-## Troubleshooting
-
-| Issue | Likely Cause | Suggested Fix |
-|-------|--------------|---------------|
-| The selector is never invoked. | The `ItemTemplate` is set to a `DataTemplate` instead of a `DataTemplateSelector`. | Assign a `DataTemplateSelector` instance to `ItemTemplate`. |
-| All items render with the same template. | The condition in `OnSelectTemplate` never matches. | Verify the property used in the comparison (e.g., `Image == "image2.png"`) matches the actual data. |
-| The `DefaultTemplate` resource is not found. | Missing or mismatched `x:Key`. | Ensure the `x:Key` matches the `StaticResource` reference. |
-
 ## See Also
 
-- [Getting Started with .NET MAUI Rotator (SfRotator)](https://help.syncfusion.com/maui/Rotator/getting-started)
 - [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)
 - [Navigation Mode in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
-- [Populating data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)
-- [Events in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/events)
 - [Placement Modes in.NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)
-
 
 Find the complete `DataTemplateSelector` sample on [GitHub](https://github.com/SyncfusionExamples/data-template-selector-rotator/tree/main/DataTemplateSelectorSample).

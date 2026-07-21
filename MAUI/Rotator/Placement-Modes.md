@@ -21,8 +21,6 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 The [`DotPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotPlacement) property controls where the navigation dots are rendered for each item in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html). The property is of type `DotsPlacement` (enum) and the default value is `Default`.
 
-> **Note:** The XAML property is `DotPlacement` (one "s") and the C# enum type is `DotsPlacement` (with an "s"). The same `DotsPlacement` enum is used to set the value in C#.
-
 The following `DotsPlacement` values are available:
 
 * [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_Default) — Displays dots for each item inside the rotator area.
@@ -30,14 +28,6 @@ The following `DotsPlacement` values are available:
 * [`OutSide`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_OutSide) — Displays dots outside the rotator area, around the slider.
 
 Use `Default` for the standard appearance, `None` when the navigation indicator is not needed, and `OutSide` when you want the dots to appear around (above, below, or beside) the slider rather than over it.
-
-
-
-## Properties Reference
-
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `DotPlacement` (XAML) / `DotPlacement` (C#) | `DotsPlacement` | `Default` | Controls where the navigation dots are rendered for each item. |
 
 ## Set the DotPlacement
 
@@ -131,7 +121,6 @@ public class RotatorViewModel
 
 ## See also
 
-- [Getting Started with .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/getting-started)
 - [Navigation Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
 - [Sliding Direction in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/sliding-direction)
 - [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)

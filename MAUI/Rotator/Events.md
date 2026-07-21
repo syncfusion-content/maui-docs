@@ -17,20 +17,10 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
 
-## Overview
-
 The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control exposes events that you can handle to respond to user interaction and selection changes. This page covers:
 
 * **SelectedIndexChanged** — raised when the selected item changes.
 * **ItemTapped** — raised when an item is tapped.
-
-## Events Reference
-
-| Event | EventArgs | Description |
-|-------|-----------|-------------|
-| `SelectedIndexChanged` | [`SelectedIndexChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SelectedIndexChangedEventArgs.html) | Raised when the selected item changes (by swipe, tap, or by setting the `SelectedIndex` property). |
-| `ItemTapped` | `EventArgs` | Raised when an item is tapped. Use the `SelectedIndex` property to identify the tapped item. |
-
 
 ## SelectedIndexChanged Event
 
@@ -38,15 +28,8 @@ The [`SelectedIndexChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 The [`SelectedIndexChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SelectedIndexChangedEventArgs.html) provides the following members:
 
-| Member | Type | Description |
-|--------|------|-------------|
-| `Index` | `int` | The currently selected index. |
-| `OldIndex` | `int` | The previously selected index. |
-
 {% tabs %}
-
 {% highlight xaml %}
-
 
 <rotator:SfRotator x:Name="rotator"
                     ItemsSource="{Binding ImageCollection}"
@@ -62,9 +45,9 @@ The [`SelectedIndexChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfu
 {% endhighlight %}
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     VerticalOptions = LayoutOptions.Start,
     ItemsSource = rotatorViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
@@ -127,7 +110,6 @@ public class RotatorViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
 ![SfRotator SelectedIndexChanged event](images/SelectedIndexChanged.png)
 
 ## ItemTapped Event
@@ -135,7 +117,6 @@ public class RotatorViewModel
 The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTapped) event is raised when an item in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) is tapped. The event does not provide item data; use the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndex) property to identify the tapped item and retrieve the corresponding data from the `ItemsSource` collection.
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <rotator:SfRotator x:Name="rotator"
@@ -153,9 +134,9 @@ The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.S
 
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     VerticalOptions = LayoutOptions.Start,
     ItemsSource = rotatorViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
@@ -235,7 +216,6 @@ protected override void OnDisappearing()
 
 ## See Also
 
-- [Getting Started with .NET MAUI Rotator (SfRotator)](https://help.syncfusion.com/maui/Rotator/getting-started)
 - [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)
 - [Navigation Mode in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
 - [Populating data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)

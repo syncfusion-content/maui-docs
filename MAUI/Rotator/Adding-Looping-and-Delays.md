@@ -18,16 +18,14 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
 
 ## Overview
-
 Looping and delay can be enabled in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control in .NET MAUI.
-
 
 ## Properties Reference
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | `EnableAutoPlay` | `bool` | `false` | Specifies whether the items should navigate automatically. |
-| `NavigationDelay` | `double` | `2000` | Specifies the delay (in milliseconds) before switching to the next item. Effective only when `EnableAutoPlay` is `true`. |
+| `NavigationDelay` | `int` | `1000` | Specifies the delay (in milliseconds) before switching to the next item. Effective only when `EnableAutoPlay` is `true`. |
 | `EnableLooping` | `bool` | `false` | Specifies whether the items should loop back to the first item after reaching the last item. |
 | `EnableSwiping` | `bool` | `true` | Specifies whether the user can swipe between items. |
 
@@ -35,7 +33,7 @@ Looping and delay can be enabled in the [`SfRotator`](https://help.syncfusion.co
 
 The [`EnableAutoPlay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_EnableAutoPlay) property specifies whether the items should navigate automatically based on the [`NavigationDelay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationDelay) property when `EnableAutoPlay` is set to `true`.
 
-N> By default, the property value is set to `false`.
+N> By default, the `EnableAutoPlay` value is set to `false`.
 
 {% tabs %}
 
@@ -59,9 +57,9 @@ N> By default, the property value is set to `false`.
 {% endhighlight %}
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     SelectedIndex = 2,
     NavigationDirection = NavigationDirection.Horizontal,
     NavigationStripMode = NavigationStripMode.Thumbnail,
@@ -146,14 +144,13 @@ N> The property value should be in milliseconds. If `EnableAutoPlay` is `false`,
     </rotator:SfRotator.ItemTemplate>
 </rotator:SfRotator>
     
-	
 {% endhighlight %}
 
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     SelectedIndex = 2,
     NavigationDirection = NavigationDirection.Horizontal,
     NavigationStripMode = NavigationStripMode.Thumbnail,
@@ -217,7 +214,7 @@ public class RotatorViewModel
 
 The [`EnableLooping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_EnableLooping) property specifies whether the items should navigate to the first item once they reach the last item and vice-versa.
 
-N> By default, the property value is set to `false`.
+N> By default, the `EnableLooping` is set to `false`.
 
 {% tabs %}
 
@@ -243,9 +240,9 @@ N> By default, the property value is set to `false`.
 {% endhighlight %}
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     SelectedIndex = 2,
     NavigationDirection = NavigationDirection.Horizontal,
     NavigationStripMode = NavigationStripMode.Thumbnail,
@@ -308,9 +305,7 @@ public class RotatorViewModel
 
 ## See Also
 
-- [Getting Started with .NET MAUI Rotator (SfRotator)](https://help.syncfusion.com/maui/Rotator/getting-started)
 - [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)
 - [Navigation Mode in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
-- [Populating data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)
 - [Events in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/events)
 - [Placement Modes in.NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)
