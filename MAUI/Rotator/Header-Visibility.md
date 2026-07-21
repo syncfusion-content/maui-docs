@@ -9,6 +9,12 @@ documentation: ug
 
 # Header Visibility in .NET MAUI Rotator (SfRotator)
 
+The [`IsTextVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_IsTextVisible) property enables the text area at the bottom of the [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control, which displays additional information about each item.
+
+The text area is populated from the [`ItemText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_ItemText) property of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) when items are added through the `SfRotatorItem` collection. When items are populated through an `ItemTemplate`, the text area does not appear, even when `IsTextVisible` is `true`.
+
+> **Note:** By default, `IsTextVisible` is `false`.
+
 ## Prerequisites
 
 Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -17,22 +23,11 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
 
-
-The [`IsTextVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_IsTextVisible) property enables the text area at the bottom of the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control, which displays additional information about each item.
-
-The text area is populated from the [`ItemText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_ItemText) property of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) when items are added through the `SfRotatorItem` collection. When items are populated through an `ItemTemplate`, the text area does not appear, even when `IsTextVisible` is `true`.
-
-> **Note:** By default, `IsTextVisible` is `false`.
-
 ## Show the Header Text
 
-To display the header text, set `IsTextVisible` to `true` and populate the `ItemsSource` with `SfRotatorItem` objects that have their `ItemText` property set. The following example uses the C# code-behind to create the items.
-
-The corresponding XAML page is shown below. Note that the XAML approach uses `SfRotatorItem` instances in the code-behind; the `IsTextVisible` text area is not supported with `ItemTemplate`-based data binding.
-
+To display the header text, set `IsTextVisible` to `true` and populate the `ItemsSource` with `SfRotatorItem` objects that have their `ItemText` property set.
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <rotator:SfRotator x:Name="rotator"

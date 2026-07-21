@@ -9,6 +9,14 @@ documentation: ug
 
 # Navigation Modes in .NET MAUI Rotator (SfRotator)
 
+
+## Overview
+
+The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control uses two related properties to configure the navigation strip that lets users move between items:
+
+* [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) - controls the appearance of the navigation bar (for example, `Dots` or `Thumbnail`).
+* [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripPosition) - controls where the navigation bar is placed relative to the slider area (for example, `Bottom`, `Top`, `Left`, or `Right`).
+
 ## Prerequisites
 
 Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,16 +24,6 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 - `Syncfusion.Maui.Rotator`
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
-
-## Overview
-
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control uses two related properties to configure the navigation strip that lets users move between items:
-
-* [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) — controls the appearance of the navigation bar (for example, `Dots` or `Thumbnail`).
-* [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripPosition) — controls where the navigation bar is placed relative to the slider area (for example, `Bottom`, `Top`, `Left`, or `Right`).
-
-Use `NavigationStripMode` to choose how the navigation bar is rendered, and `NavigationStripPosition` to choose where it is placed. Both can be combined; for example, you can show thumbnails along the bottom or dots on the left.
-
 
 ## Properties Reference
 
@@ -36,7 +34,7 @@ Use `NavigationStripMode` to choose how the navigation bar is rendered, and `Nav
 
 ## Navigation Strip Mode
 
-The [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property specifies the appearance of the navigation bar items. The image data can be selected using either the [`Thumbnail`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Thumbnail) or the [`Dots`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Dots) mode.
+The [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property specifies the appearance of the navigation bar items. The image data can be selected using either the `Thumbnail` or the `Dots` mode.
 
 ### Thumbnail
 
@@ -220,10 +218,10 @@ The [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 The `NavigationStripPosition` enum exposes four values:
 
-* [`Bottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Bottom) — Places the navigation bar at the bottom of the slider.
-* [`Top`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Top) — Places the navigation bar at the top of the slider.
-* [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Left) — Places the navigation bar to the left of the slider.
-* [`Right`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Right) — Places the navigation bar to the right of the slider.
+* [`Bottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Bottom) - Places the navigation bar at the bottom of the slider.
+* [`Top`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Top) - Places the navigation bar at the top of the slider.
+* [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Left) - Places the navigation bar to the left of the slider.
+* [`Right`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Right) - Places the navigation bar to the right of the slider.
 
 The following example sets the position to `Top`.
 
@@ -232,12 +230,12 @@ The following example sets the position to `Top`.
 {% highlight xaml %}
 
 <rotator:SfRotator x:Name="rotator"
-                    ItemsSource="{Binding ImageCollection}"
-                    SelectedIndex="2"
-                    NavigationDirection="Horizontal"
-                    NavigationStripMode="Dots"
-                    NavigationStripPosition="Top"
-                    BackgroundColor="#ececec">
+                   ItemsSource="{Binding ImageCollection}"
+                   SelectedIndex="2"
+                   NavigationDirection="Horizontal"
+                   NavigationStripMode="Dots"
+                   NavigationStripPosition="Top"
+                   BackgroundColor="#ececec">
     <rotator:SfRotator.ItemTemplate>
         <DataTemplate>
             <Image Source="{Binding Image}" />

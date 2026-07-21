@@ -9,27 +9,9 @@ documentation: ug
 
 # DataTemplateSelector in .NET MAUI Rotator (SfRotator)
 
-## Prerequisites
+The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) supports [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0#create-a-datatemplateselector), with which you can choose a `DataTemplate` based on the underlying data object for each item.
 
-Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Rotator`
-
-For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
-
-## Overview
-
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) supports [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0#create-a-datatemplateselector), with which you can choose a [`DataTemplate`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0) based on the underlying data object for each item.
-
-## How it Works
-
-`DataTemplateSelector` exposes a single over ridable method, `OnSelectTemplate`, which is invoked by the `SfRotator` once per item. The method receives the data object (`item`) and the parent `BindableObject` (`container`), and must return the `DataTemplate` to use for that item.
-
-| Member | Type | Description |
-|--------|------|-------------|
-| `DefaultTemplate` | `DataTemplate` | The template returned when no specific template matches. |
-| `SpecificTemplate` | `DataTemplate` | A template applied when the data object matches a specific condition. |
-| `OnSelectTemplate(item, container)` | `DataTemplate` | Overridden method that returns the template to use for the given `item`. |
+`DataTemplateSelector` exposes a single over ridable method, `OnSelectTemplate`, which is invoked by the `Rotator` once per item. The method receives the data object (`item`) and the parent `BindableObject` (`container`), and must return the `DataTemplate` to use for that item.
 
 ## Creating the DataTemplateSelector
 
@@ -66,7 +48,7 @@ public class DataTemplateViewModel : DataTemplateSelector
 
 ## Applying the DataTemplateSelector
 
-The following examples show how to apply the `DataTemplateViewModel` selector to the `SfRotator` and supply the `DefaultTemplate` / `SpecificTemplate` resources.
+The following examples show how to apply the `DataTemplateViewModel` selector to the `Rotator` and supply the `DefaultTemplate` / `SpecificTemplate` resources.
 
 {% tabs %}
 
@@ -81,7 +63,9 @@ The following examples show how to apply the `DataTemplateViewModel` selector to
         </DataTemplate>
         <DataTemplate x:Key="SpecificTemplate">
             <Grid>
-            <Label Text="Not Available" FontSize="50" HorizontalOptions="Center" VerticalOptions="Center"/> 
+            <Label Text="Not Available" FontSize="50" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"/> 
             <Image Source="{Binding Image}" Opacity="0.5" >
             </Grid>
         </DataTemplate>
@@ -97,7 +81,7 @@ The following examples show how to apply the `DataTemplateViewModel` selector to
             </rotator:SfRotator.ItemTemplate>
         </rotator:SfRotator>
     </Grid>
-  </ContentPage.Content>
+</ContentPage.Content>
 
 
 {% endhighlight %}
@@ -188,9 +172,6 @@ public class RotatorViewModel
 
 {% endhighlight %}
 {% endtabs %}
-
-
-N> The `DataTemplateSelector` is invoked once per item. To update the selected template when the underlying data changes, recreate the selector and reassign `ItemTemplate`.
 
 The following screenshot illustrates the output of the above code:
 

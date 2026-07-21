@@ -9,6 +9,11 @@ documentation: ug
 
 # Events in .NET MAUI Rotator (SfRotator)
 
+The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control exposes events that you can handle to respond to user interaction and selection changes. This page covers:
+
+* **SelectedIndexChanged** - raised when the selected item changes.
+* **ItemTapped** - raised when an item is tapped.
+
 ## Prerequisites
 
 Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -17,16 +22,9 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control exposes events that you can handle to respond to user interaction and selection changes. This page covers:
-
-* **SelectedIndexChanged** — raised when the selected item changes.
-* **ItemTapped** — raised when an item is tapped.
-
 ## SelectedIndexChanged Event
 
 The [`SelectedIndexChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndexChanged) event is raised when the selected item changes, either by swiping between items, by tapping a thumbnail or dot, or by setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndex) property programmatically.
-
-The [`SelectedIndexChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SelectedIndexChangedEventArgs.html) provides the following members:
 
 {% tabs %}
 {% highlight xaml %}
@@ -58,14 +56,6 @@ SfRotator rotator = new SfRotator()
     }),
 };
 rotator.SelectedIndexChanged += Rotator_SelectedIndexChanged;
-
-private void Rotator_SelectedIndexChanged(object sender, SelectedIndexChangedEventArgs e)
-{
-    // e.Index is the new index; e.OldIndex is the previous index.
-    DisplayAlert("Notification",
-        $"Selected index changed from {e.OldIndex} to {e.Index}",
-        "OK");
-}
  
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -107,6 +97,22 @@ public class RotatorViewModel
     }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
+The `SelectedIndexChanged` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
+private void Rotator_SelectedIndexChanged(object sender, SelectedIndexChangedEventArgs e)
+{
+    // e.Index is the new index; e.OldIndex is the previous index.
+    DisplayAlert("Notification",
+        $"Selected index changed from {e.OldIndex} to {e.Index}",
+        "OK");
+}
+    
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,12 +152,7 @@ SfRotator rotator = new SfRotator()
         return image;
     }),
 };
-rotatorItemTapped += Rotator_ItemTapped;
-
-private void Rotator_ItemTapped(object sender, EventArgs e)
-{
-    DisplayAlert("Notification", "Rotator Item is Tapped", "Ok");
-}
+rotator.ItemTapped += Rotator_ItemTapped;
  
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -196,23 +197,20 @@ public class RotatorViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator ItemTapped event](images/ItemTapped.png)
-
-## Unsubscribe from Events
-
-To avoid memory leaks, unsubscribe from `SfRotator` events when the page is no longer in use. Override `OnDisappearing` in the page and remove the handlers.
+The `ItemTapped` event can be handled in C# as follows:
 
 {% tabs %}
-
 {% highlight C# %}
-protected override void OnDisappearing()
+
+private void Rotator_ItemTapped(object sender, EventArgs e)
 {
-    base.OnDisappearing();
-    rotator.SelectedIndexChanged -= Rotator_SelectedIndexChanged;
-    rotator.ItemTapped -= Rotator_ItemTapped;
+    DisplayAlert("Notification", "Rotator Item is Tapped", "Ok");
 }
+    
 {% endhighlight %}
 {% endtabs %}
+
+![SfRotator ItemTapped event](images/ItemTapped.png)
 
 ## See Also
 

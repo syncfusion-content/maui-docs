@@ -9,6 +9,18 @@ documentation: ug
 
 # Navigation Customization in .NET MAUI Rotator (SfRotator)
 
+## Overview
+
+The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control supports customizing the appearance and visibility of the navigation bar, including the dot indicators, the thumbnail indicators, the navigation button, and the position of the strip.
+
+This page covers:
+
+* **Dots Customization** - stroke color, selected dot color, and unselected dot color.
+* **Thumbnails Customization** - stroke color of the selected and unselected thumbnail.
+* **Customizing Position** - placement of the navigation strip (Top, Bottom, Left, Right).
+* **Navigation Button Customization** - icon color and background color of the navigation buttons.
+* **Navigation Visibility** - showing or hiding the navigation buttons.
+
 ## Prerequisites
 
 Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,18 +28,6 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 - `Syncfusion.Maui.Rotator`
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
-
-## Overview
-
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control supports customizing the appearance and visibility of the navigation bar, including the dot indicators, the thumbnail indicators, the navigation button, and the position of the strip.
-
-This page covers:
-
-* **Dots Customization** — stroke color, selected dot color, and unselected dot color.
-* **Thumbnails Customization** — stroke color of the selected and unselected thumbnail.
-* **Customizing Position** — placement of the navigation strip (Top, Bottom, Left, Right).
-* **Navigation Button Customization** — icon color and background color of the navigation buttons.
-* **Navigation Visibility** — showing or hiding the navigation buttons.
 
 ## Properties Reference
 
@@ -41,7 +41,6 @@ This page covers:
 | `NavigationStripPosition` | `NavigationStripPosition` | `Bottom` | The placement of the navigation bar relative to the slider. |
 | `NavigationButtonIconColor` | `Color` | `Color.FromRgb(73, 69, 79)` | The icon color of the navigation buttons. |
 | `NavigationButtonBackgroundColor` | `Color` | `Color.FromRgb(247, 242, 251)` | The background color of the navigation buttons. |
-| `ShowNavigationButton` | `bool` | `false` | Whether the navigation buttons are visible. |
 
 ## Dots Customization
 
@@ -518,9 +517,7 @@ public class RotatorViewModel
 
 ## Customizing Position
 
-The [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripPosition) property specifies the placement of the navigation strip (thumbnails or dots) relative to the slider area. The available values are `Bottom`, `Top`, `Left`, and `Right`. For a complete list of values and per-position examples, see [Navigation Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes).
-
-The following example sets the position to `Top`.
+The [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripPosition) property specifies the placement of the navigation strip (thumbnails or dots) relative to the slider area. The available values are `Bottom`, `Top`, `Left`, and `Right`. The following example sets the position to `Top`.
 
 {% tabs %}
 
@@ -801,7 +798,7 @@ public class RotatorViewModel
 
 ## Navigation Visibility
 
-Use the [`ShowNavigationButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ShowNavigationButton) property to show or hide the navigation buttons. By default, this property is `false`. The buttons are only relevant when `NavigationStripMode` is set to `Thumbnail`.
+Use the [`ShowNavigationButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ShowNavigationButton) property to show or hide the navigation buttons. The buttons are only relevant when `NavigationStripMode` is set to `Thumbnail`.
 
 {% tabs %}
 
@@ -892,7 +889,6 @@ public class RotatorViewModel
 
 ## See also
 
-- [Getting Started with .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/getting-started)
 - [Navigation Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
 - [Sliding Direction in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/sliding-direction)
 - [Placement Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)

@@ -9,6 +9,16 @@ documentation: ug
 
 # Placement Modes in .NET MAUI Rotator (SfRotator)
 
+## Overview
+
+The [`DotPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotPlacement) property controls where the navigation dots are rendered for each item in the [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html). The property is of type `DotsPlacement` (enum) and the default value is `Default`.
+
+The following `DotsPlacement` values are available:
+
+* [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_Default) - Displays dots for each item inside the rotator area.
+* [`None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_None) - Hides the dots, creating a clean appearance with no navigation indicators.
+* [`OutSide`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_OutSide) - Displays dots outside the rotator area, around the slider.
+
 ## Prerequisites
 
 Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,18 +26,6 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 - `Syncfusion.Maui.Rotator`
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
-
-## Overview
-
-The [`DotPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotPlacement) property controls where the navigation dots are rendered for each item in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html). The property is of type `DotsPlacement` (enum) and the default value is `Default`.
-
-The following `DotsPlacement` values are available:
-
-* [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_Default) — Displays dots for each item inside the rotator area.
-* [`None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_None) — Hides the dots, creating a clean appearance with no navigation indicators.
-* [`OutSide`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_OutSide) — Displays dots outside the rotator area, around the slider.
-
-Use `Default` for the standard appearance, `None` when the navigation indicator is not needed, and `OutSide` when you want the dots to appear around (above, below, or beside) the slider rather than over it.
 
 ## Set the DotPlacement
 
@@ -38,12 +36,12 @@ The `DotPlacement` property controls where the dots are rendered for the rotator
 {% highlight xaml %}
 
 <rotator:SfRotator x:Name="rotator"
-                    ItemsSource="{Binding ImageCollection}"
-                    SelectedIndex="2"
-                    BackgroundColor="#ececec"
-                    WidthRequest="550"
-                    HeightRequest="550"
-                    DotPlacement="None">
+                   ItemsSource="{Binding ImageCollection}"
+                   SelectedIndex="2"
+                   BackgroundColor="#ececec"
+                   WidthRequest="550"
+                   HeightRequest="550"
+                   DotPlacement="None">
     <rotator:SfRotator.ItemTemplate>
         <DataTemplate>
             <Image Source="{Binding Image}" />

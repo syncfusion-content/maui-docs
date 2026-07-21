@@ -9,15 +9,7 @@ documentation: ug
 
 # Sliding Direction in .NET MAUI Rotator (SfRotator)
 
-## Prerequisites
-
-Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Rotator`
-
-For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
-
-The [`NavigationDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html) property controls the direction in which [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) items are navigated. The property is of type `NavigationDirection` and the default value is [`Horizontal`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_Horizontal). When `EnableAutoPlay` is `true`, the rotator advances through the items in the selected direction.
+The [`NavigationDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html) property controls the direction in which [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) items are navigated. The property is of type `NavigationDirection` and the default value is `Horizontal`. When `EnableAutoPlay` is `true`, the rotator advances through the items in the selected direction.
 
 The following `NavigationDirection` values are available:
 
@@ -28,21 +20,26 @@ The following `NavigationDirection` values are available:
 - [`TopToBottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_TopToBottom) — Rotator items can be navigated from Top to Bottom only.
 - [`BottomToTop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_BottomToTop) — Rotator items can be navigated from Bottom to Top only.
 
-Use the generic `Horizontal` and `Vertical` options when you want the rotator to follow the swipe gesture. Use the directional options (`LeftToRight`, `RightToLeft`, `TopToBottom`, `BottomToTop`) to lock navigation to a specific direction regardless of swipe input.
+## Prerequisites
 
+Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Rotator`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
 
 ## Set the Sliding Direction
 
-Use the [`NavigationDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationDirection) property to set the sliding direction of [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html). The following example sets the direction to `BottomToTop`.
+Use the [`NavigationDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationDirection) property to set the sliding direction of `Rotator`. The following example sets the direction to `BottomToTop`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <rotator:SfRotator x:Name="rotator"
-                    ItemsSource="{Binding ImageCollection}"
-                    SelectedIndex="2"
-                    NavigationDirection="BottomToTop">
+                   ItemsSource="{Binding ImageCollection}"
+                   SelectedIndex="2"
+                   NavigationDirection="BottomToTop">
     <rotator:SfRotator.ItemTemplate>
         <DataTemplate>
             <Image Source="{Binding Image}" />

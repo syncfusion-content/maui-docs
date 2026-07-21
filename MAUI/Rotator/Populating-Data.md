@@ -9,6 +9,13 @@ documentation: ug
 
 # Populating Data in .NET MAUI Rotator (SfRotator)
 
+The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can be populated with items in two ways:
+
+* **Through Binding** - bind a collection (such as `IList`, `List<T>`, or `ObservableCollection<T>`) to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemsSource) property and supply a shared layout via `ItemTemplate`.
+* **Through Rotator Item** - create a list of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) objects when each item needs a different view, an image, or arbitrary content via the `ItemContent` property.
+
+Use **Through Binding** when all items share a common layout. Use **Through Rotator Item** when you need per-item customization, mixed content, or quick image-only items.
+
 ## Prerequisites
 
 Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,14 +23,6 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 - `Syncfusion.Maui.Rotator`
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
-
-
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can be populated with items in two ways:
-
-* **Through Binding** — bind a collection (such as `IList`, `List<T>`, or `ObservableCollection<T>`) to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemsSource) property and supply a shared layout via [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTemplate).
-* **Through Rotator Item** — create a list of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) objects when each item needs a different view, an image, or arbitrary content via the [`ItemContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_ItemContent) property.
-
-Use **Through Binding** when all items share a common layout. Use **Through Rotator Item** when you need per-item customization, mixed content, or quick image-only items.
 
 ## Properties Reference
 
@@ -93,11 +92,11 @@ The `SfRotator` provides support to add a custom view as Rotator items by design
 {% highlight xaml %}
 
 <rotator:SfRotator x:Name="rotator"
-                    ItemsSource="{Binding ImageCollection}"
-                    SelectedIndex="2"
-                    NavigationDirection="Horizontal"
-                    NavigationStripMode="Dots"
-                    BackgroundColor="#ececec">
+                   ItemsSource="{Binding ImageCollection}"
+                   SelectedIndex="2"
+                   NavigationDirection="Horizontal"
+                   NavigationStripMode="Dots"
+                   BackgroundColor="#ececec">
     <rotator:SfRotator.ItemTemplate>
         <DataTemplate>
             <Image Source="{Binding Image}" />
