@@ -288,6 +288,6 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![defining-columns-using-default-model-in-maui-kanban](images/getting-started/defining-columns-using-default-model-in-maui-kanban.png)
+![defining-columns-using-default-modelin-maui-kanban](images/getting-started/defining-columns-using-default-modelin-maui-kanban.png)
 
 You can download the Kanban Board Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI). Clone the repository, run `dotnet restore`, and then run the sample on your desired platform (Android, iOS, macOS, or Windows).
