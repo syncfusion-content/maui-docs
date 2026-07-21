@@ -41,23 +41,16 @@ The `PasswordVisibilityToggled` event fires when the user taps the password visi
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Password"
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Password"
                                    EnablePasswordVisibilityToggle="True"
                                    PasswordVisibilityToggled="OnPasswordVisibilityToggled">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -65,6 +58,14 @@ var inputLayout = new SfTextInputLayout
     EnablePasswordVisibilityToggle = true,
     Content = new Entry { IsPassword = true }
 };
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
+
 inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
 
 void OnPasswordVisibilityToggled(object? sender, PasswordVisibilityToggledEventArgs e)
@@ -89,7 +90,6 @@ void OnPasswordVisibilityToggled(object? sender, PasswordVisibilityToggledEventA
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfTextInputLayout](https://help.syncfusion.com/maui/textinputlayout/getting-started)
 - [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)
 - [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
 - [Custom Icons](https://help.syncfusion.com/maui/textinputlayout/custom-icons)

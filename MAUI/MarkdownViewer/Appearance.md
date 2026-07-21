@@ -75,58 +75,42 @@ The Source property of SfMarkdownViewer can be bound to a string property in the
 {% tabs %} 
 {% highlight xaml %}
 
-<ContentPage xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;assembly=Syncfusion.Maui.MarkdownViewer">
-    . . .
-    <ContentPage.BindingContext>
-        <local:MarkDownViewModel/>
-    </ContentPage.BindingContext>
-    <markdown:SfMarkdownViewer Source="{Binding MarkdownContent}">
-        <markdown:SfMarkdownViewer.Settings>
-            <markdown:MarkdownStyleSettings H1FontSize="32px"
-                                            H1Color="#8352FB"
-                                            H2Color="#9971FB"
-                                            H3Color="#A98AF7"
-                                            BodyFontSize="16px"
-                                            BodyTextColor="#2C3E50"
-                                            TableBackground="#FFE2ED"
-                                            TableHeaderTextColor="HotPink" />
-        </markdown:SfMarkdownViewer.Settings>
-    </markdown:SfMarkdownViewer>
-    . . .
-</ContentPage>
+<markdown:SfMarkdownViewer Source="{Binding MarkdownContent}">
+    <markdown:SfMarkdownViewer.Settings>
+        <markdown:MarkdownStyleSettings H1FontSize="32px"
+                                        H1Color="#8352FB"
+                                        H2Color="#9971FB"
+                                        H3Color="#A98AF7"
+                                        BodyFontSize="16px"
+                                        BodyTextColor="#2C3E50"
+                                        TableBackground="#FFE2ED"
+                                        TableHeaderTextColor="HotPink" />
+    </markdown:SfMarkdownViewer.Settings>
+</markdown:SfMarkdownViewer>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-public partial class MainPage : ContentPage
+var markDownViewModel = new MarkDownViewModel();
+BindingContext = markDownViewModel;
+SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+markdownViewer.Source = markDownViewModel.MarkdownContent;
+markdownViewer.Settings = new MarkdownStyleSettings()
 {
-
-    public MainPage()
-    {
-        InitializeComponent();
-        var markDownViewModel = new MarkDownViewModel();
-        BindingContext = markDownViewModel;
-        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-        markdownViewer.Source = markDownViewModel.MarkdownContent;
-        markdownViewer.Settings = new MarkdownStyleSettings()
-        {
-            H1FontSize = "32px",
-            H1Color = "#8352FB",
-            H2Color = "#9971FB",
-            H3Color = "#A98AF7",
-            BodyFontSize = "16px",
-            BodyTextColor = "#2C3E50",
-            TableBackground = "#FFE2ED",
-            TableHeaderTextColor = "HotPink"
-        };
-        Content = markdownViewer;
-    }
-}
-
+    H1FontSize = "32px",
+    H1Color = "#8352FB",
+    H2Color = "#9971FB",
+    H3Color = "#A98AF7",
+    BodyFontSize = "16px",
+    BodyTextColor = "#2C3E50",
+    TableBackground = "#FFE2ED",
+    TableHeaderTextColor = "HotPink"
+};
+Content = markdownViewer;
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
+
 public class MarkDownViewModel : INotifyPropertyChanged
 {
 
@@ -191,60 +175,42 @@ For more advanced styling, use the [CssStyleRules](https://help.syncfusion.com/c
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;assembly=Syncfusion.Maui.MarkdownViewer">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <x:String x:Key="CustomCss">
-                body { font-family: Segoe UI; } h1 { border-bottom: 2px solid #8352FB; } table { border-radius: 6px; }
-            </x:String>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.BindingContext>
-        <local:MarkDownViewModel/>
-    </ContentPage.BindingContext>
-    <markdown:SfMarkdownViewer Source="{Binding MarkdownContent}">
-        <markdown:SfMarkdownViewer.Settings>
-            <markdown:MarkdownStyleSettings CssStyleRules="{StaticResource CustomCss}" />
-        </markdown:SfMarkdownViewer.Settings>
-    </markdown:SfMarkdownViewer>
-    . . .
-</ContentPage>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <x:String x:Key="CustomCss">
+            body { font-family: Segoe UI; } h1 { border-bottom: 2px solid #8352FB; } table { border-radius: 6px; }
+        </x:String>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<markdown:SfMarkdownViewer Source="{Binding MarkdownContent}">
+    <markdown:SfMarkdownViewer.Settings>
+        <markdown:MarkdownStyleSettings CssStyleRules="{StaticResource CustomCss}" />
+    </markdown:SfMarkdownViewer.Settings>
+</markdown:SfMarkdownViewer>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.MarkdownViewer;
-
-namespace MarkdownViewerAppearance
+var markDownViewModel = new MarkDownViewModel();
+BindingContext = markDownViewModel;
+SfMarkdownViewer markdownViewer = new SfMarkdownViewer
 {
-    public partial class MainPage : ContentPage
+    Source = markDownViewModel.MarkdownContent,
+    Settings = new MarkdownStyleSettings
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            var markDownViewModel = new MarkDownViewModel();
-            BindingContext = markDownViewModel;
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer
-            {
-                Source = markDownViewModel.MarkdownContent,
-                Settings = new MarkdownStyleSettings
-                {
-                    CssStyleRules = "body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; } " +
-                                    "h1 { border-bottom: 2px solid #8352FB; padding-bottom: 4px; } " +
-                                    "table { border-radius: 6px; overflow: hidden; }"
-                }
-            };
-            Content = markdownViewer;
-        }
+        CssStyleRules = "body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; } " +
+                        "h1 { border-bottom: 2px solid #8352FB; padding-bottom: 4px; } " +
+                        "table { border-radius: 6px; overflow: hidden; }"
     }
-}
+};
+Content = markdownViewer;
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
+
 public class MarkDownViewModel : INotifyPropertyChanged
 {
-
     private string markdownContent;
 
     public string MarkdownContent
@@ -321,5 +287,5 @@ N> Always specify the font size with the "px" unit (e.g., H1FontSize="32px") to 
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/markdownviewer/gettingstarted)
 - [Content Retrieval](https://help.syncfusion.com/maui/markdownviewer/contentretrieval)
+- [Data Binding](https://help.syncfusion.com/maui/markdownviewer/databinding)

@@ -52,6 +52,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     ContainerType = ContainerType.Filled,
     Content = new Entry()
 };
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -64,8 +71,8 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
 {% highlight xaml %}
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                                IsHintAlwaysFloated="True"
-                                ContainerType="Outlined">
+                               IsHintAlwaysFloated="True"
+                               ContainerType="Outlined">
     <Entry />
 </inputLayout:SfTextInputLayout>
 
@@ -79,6 +86,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     ContainerType = ContainerType.Outlined,
     Content = new Entry()
 };
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -91,8 +105,8 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
 {% highlight xaml %}
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                                IsHintAlwaysFloated="True"
-                                ContainerType="None">
+                               IsHintAlwaysFloated="True"
+                               ContainerType="None">
     <Entry />
 </inputLayout:SfTextInputLayout>
 
@@ -105,6 +119,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     IsHintAlwaysFloated = true,
     ContainerType = ContainerType.None,
     Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
 };
 
 {% endhighlight %}

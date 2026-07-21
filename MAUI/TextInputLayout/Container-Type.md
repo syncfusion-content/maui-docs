@@ -37,21 +37,15 @@ The background of the input view is filled with the container color, and the bot
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <inputLayout:SfTextInputLayout Hint="Name"
-                                   HelperText="Enter the name"
-                                   ContainerType="Filled">
-        <Entry Text="John" />
-    </inputLayout:SfTextInputLayout>
-</ContentPage>
+<inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name"
+                               ContainerType="Filled">
+    <Entry Text="John" />
+</inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
 
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -81,22 +75,16 @@ When the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
                                    HelperText="Enter the name"
                                    ContainerType="Outlined">
-            <Entry Text="John" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+        <Entry Text="John" />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -125,23 +113,16 @@ The [OutlineCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
-                                       ContainerType="Outlined"
-                                       OutlineCornerRadius="8">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
+                                   ContainerType="Outlined"
+                                   OutlineCornerRadius="8">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -172,25 +153,17 @@ The space between the input view and the outline border can be customized with t
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Padding"
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Padding"
                                    InputViewPadding="0,5,0,5"
                                    ContainerType="Outlined"
                                    HelperText="Top and bottom padding is 5">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using Microsoft.Maui;
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -220,23 +193,16 @@ When the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
                                    HelperText="Enter the name"
                                    ContainerType="None">
-            <Entry Text="John" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+        <Entry Text="John" />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -269,6 +235,6 @@ Content = new VerticalStackLayout
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfTextInputLayout](https://help.syncfusion.com/maui/textinputlayout/getting-started)
 - [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)
+- [Flow Direction](https://help.syncfusion.com/maui/textinputlayout/right-to-left)
 - [ContainerType enum reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html)

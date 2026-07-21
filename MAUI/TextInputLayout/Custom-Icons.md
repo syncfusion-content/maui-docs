@@ -52,24 +52,18 @@ The following example shows a Unicode calendar emoji rendered as the leading ico
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Birth date"
-                                       LeadingViewPosition="Inside">
-            <inputLayout:SfTextInputLayout.LeadingView>
-                <Label Text="&#x1F5D3;" />
-            </inputLayout:SfTextInputLayout.LeadingView>
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Birth date"
+                                   LeadingViewPosition="Inside">
+        <inputLayout:SfTextInputLayout.LeadingView>
+            <Label Text="&#x1F5D3;" />
+        </inputLayout:SfTextInputLayout.LeadingView>
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -100,24 +94,18 @@ The following example shows a Unicode eye emoji rendered as the trailing icon, p
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Password"
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Password"
                                    TrailingViewPosition="Outside">
-            <inputLayout:SfTextInputLayout.TrailingView>
-                <Label Text="&#x1F5D3;" />
-            </inputLayout:SfTextInputLayout.TrailingView>
-            <Entry IsPassword="True" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+        <inputLayout:SfTextInputLayout.TrailingView>
+            <Label Text="&#x1F5D3;" />
+        </inputLayout:SfTextInputLayout.TrailingView>
+        <Entry IsPassword="True" />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -147,42 +135,34 @@ The [ShowLeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <ContentPage.BindingContext>
-        <local:TextInputLayoutViewModel/>
-    </ContentPage.BindingContext>
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Birth date"
-                                       ContainerType="Outlined"
-                                       ShowLeadingView="{Binding IsLeadingViewVisible}"
-                                       ShowTrailingView="{Binding IsTrailingViewVisible}">
-            <inputLayout:SfTextInputLayout.LeadingView>
-                <Label Text="&#x1F5D3;" />
-            </inputLayout:SfTextInputLayout.LeadingView>
-            <inputLayout:SfTextInputLayout.TrailingView>
-                <Label Text="&#x1F4C5;" />
-            </inputLayout:SfTextInputLayout.TrailingView>
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-        <HorizontalStackLayout Spacing="10">
-            <HorizontalStackLayout>
-                <CheckBox IsChecked="{Binding IsLeadingViewVisible}" />
-                <Label Text="ShowLeadingView" VerticalOptions="Center" />
-            </HorizontalStackLayout>
-            <HorizontalStackLayout>
-                <CheckBox IsChecked="{Binding IsTrailingViewVisible}" />
-                <Label Text="ShowTrailingView" VerticalOptions="Center" />
-            </HorizontalStackLayout>
+
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Birth date"
+                                   ContainerType="Outlined"
+                                   ShowLeadingView="{Binding IsLeadingViewVisible}"
+                                   ShowTrailingView="{Binding IsTrailingViewVisible}">
+        <inputLayout:SfTextInputLayout.LeadingView>
+            <Label Text="&#x1F5D3;" />
+        </inputLayout:SfTextInputLayout.LeadingView>
+        <inputLayout:SfTextInputLayout.TrailingView>
+            <Label Text="&#x1F4C5;" />
+        </inputLayout:SfTextInputLayout.TrailingView>
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+    <HorizontalStackLayout Spacing="10">
+        <HorizontalStackLayout>
+            <CheckBox IsChecked="{Binding IsLeadingViewVisible}" />
+            <Label Text="ShowLeadingView" VerticalOptions="Center" />
         </HorizontalStackLayout>
-    </VerticalStackLayout>
-</ContentPage>
+        <HorizontalStackLayout>
+            <CheckBox IsChecked="{Binding IsTrailingViewVisible}" />
+            <Label Text="ShowTrailingView" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+    </HorizontalStackLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var textInputLayoutViewModel = new TextInputLayoutViewModel();
 BindingContext = textInputLayoutViewModel;
@@ -247,7 +227,7 @@ Content = new VerticalStackLayout
 };
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class TextInputLayoutViewModel : INotifyPropertyChanged
 {
@@ -296,24 +276,20 @@ Attach a `TapGestureRecognizer` to the leading or trailing view to make it inter
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout x:Name="PasswordLayout"
-                                         Hint="Password">
-            <inputLayout:SfTextInputLayout.TrailingView>
-                <Label x:Name="EyeIcon"
-                   Text="&#x1F441;&#xFE0F;">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnEyeTapped" />
-                    </Label.GestureRecognizers>
-                </Label>
-            </inputLayout:SfTextInputLayout.TrailingView>
-            <Entry x:Name="PasswordEntry" IsPassword="True" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout x:Name="PasswordLayout"
+                                    Hint="Password">
+        <inputLayout:SfTextInputLayout.TrailingView>
+            <Label x:Name="EyeIcon"
+                Text="&#x1F441;&#xFE0F;">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnEyeTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </inputLayout:SfTextInputLayout.TrailingView>
+        <Entry x:Name="PasswordEntry" IsPassword="True" />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -353,6 +329,7 @@ public MainPage()
         }
     };
 }
+
 private void OnEyeTapped(object? sender, TappedEventArgs e)
 {
     passwordEntry.IsPassword = !passwordEntry.IsPassword;

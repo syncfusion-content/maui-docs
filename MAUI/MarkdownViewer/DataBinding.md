@@ -38,13 +38,10 @@ Assign a markdown-formatted string to the `Source` property of the [SfMarkdownVi
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;assembly=Syncfusion.Maui.MarkdownViewer">
-    <markdown:SfMarkdownViewer>
-        <markdown:SfMarkdownViewer.Source>
-            <x:String>
-                <![CDATA[
+<markdown:SfMarkdownViewer>
+    <markdown:SfMarkdownViewer.Source>
+        <x:String>
+            <![CDATA[
 # What is the Markdown Viewer?
 The Markdown Viewer is a UI control in .NET MAUI that allows developers to render markdown content with full formatting support. It was designed to work efficiently on both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks and more.
 
@@ -53,24 +50,17 @@ Used for the main title or top-level heading in a markdown document.
 
 ## Header 2
 Used to define major sections within your markdown content.
-                ]]>
-            </x:String>
-        </markdown:SfMarkdownViewer.Source>
-    </markdown:SfMarkdownViewer>
-</ContentPage>
+            ]]>
+        </x:String>
+    </markdown:SfMarkdownViewer.Source>
+</markdown:SfMarkdownViewer>
+
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.MarkdownViewer;
-
-namespace MarkdownViewerLoadingContent
-{
-    public partial class MainPage : ContentPage
-    {
-        // A const string is safe here because the value is a compile-time literal.
-        private const string markdownContent = @"
+// A const string is safe here because the value is a compile-time literal.
+private const string markdownContent = @"
 # What is the Markdown Viewer?
 The Markdown Viewer is a UI control in .NET MAUI that allows developers to render markdown content with full formatting support. It was designed to work efficiently on both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks and more.
 
@@ -80,15 +70,9 @@ Used for the main title or top-level heading in a markdown document.
 ## Header 2
 Used to define major sections within your markdown content.";
 
-        public MainPage()
-        {
-            InitializeComponent();
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-            markdownViewer.Source = markdownContent;
-            Content = markdownViewer;
-        }
-    }
-}
+
+SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+markdownViewer.Source = markdownContent;
 
 {% endhighlight %}
 {% endtabs %}
@@ -100,22 +84,11 @@ To load markdown content from a local `.md` file, read its contents using standa
 {% tabs %}
 {% highlight C# %}
 
-using System.IO;
-using Microsoft.Maui.Storage;
-using Syncfusion.Maui.MarkdownViewer;
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-        string filePath = Path.Combine(FileSystem.AppDataDirectory, "MarkdownContent.md");
-        string markdownContent = File.ReadAllText(filePath);
-        markdownViewer.Source = markdownContent;
-        Content = markdownViewer;
-    }
-}
+SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+string filePath = Path.Combine(FileSystem.AppDataDirectory, "MarkdownContent.md");
+string markdownContent = File.ReadAllText(filePath);
+markdownViewer.Source = markdownContent;
+Content = markdownViewer;
 
 {% endhighlight %}
 {% endtabs %}
@@ -131,35 +104,24 @@ Add the `.md` file to your project. You can place it under `Resources/Raw/` (rec
 {% tabs %}
 {% highlight C# %}
 
-using System.Text;
-using Microsoft.Maui.Storage;
-using Syncfusion.Maui.MarkdownViewer;
+private readonly SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+Content = markdownViewer;
+_ = LoadMarkdownAsync();
 
-public partial class MainPage : ContentPage
+
+private async Task LoadMarkdownAsync()
 {
-    private readonly SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-
-    public MainPage()
+    try
     {
-        InitializeComponent();
-        Content = markdownViewer;
-        _ = LoadMarkdownAsync();
+        using Stream stream = await FileSystem.OpenAppPackageFileAsync("MarkdownContent.md");
+        using StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+        string markdownContent = await reader.ReadToEndAsync();
+        markdownViewer.Source = markdownContent;
     }
-
-    private async Task LoadMarkdownAsync()
+    catch (FileNotFoundException ex)
     {
-        try
-        {
-            using Stream stream = await FileSystem.OpenAppPackageFileAsync("MarkdownContent.md");
-            using StreamReader reader = new StreamReader(stream, Encoding.UTF8);
-            string markdownContent = await reader.ReadToEndAsync();
-            markdownViewer.Source = markdownContent;
-        }
-        catch (FileNotFoundException ex)
-        {
-            // Verify the .md file is present, the build action is MauiAsset, and the file name (case-sensitive) matches.
-            System.Diagnostics.Debug.WriteLine($"Markdown file not found: {ex.FileName}");
-        }
+        // Verify the .md file is present, the build action is MauiAsset, and the file name (case-sensitive) matches.
+        System.Diagnostics.Debug.WriteLine($"Markdown file not found: {ex.FileName}");
     }
 }
 
@@ -172,40 +134,35 @@ N> The file name passed to `OpenAppPackageFileAsync` is case-sensitive and must 
 
 To load markdown content from a remote URL, download the markdown text using `HttpClient` and assign the result to the `Source` property. The internet permission is granted by default on Android, iOS, macOS, and Windows; no extra configuration is required for HTTPS endpoints.
 
+{% tabs %}
 {% highlight C# %}
 
-using System.Net.Http;
-using Syncfusion.Maui.MarkdownViewer;
+private readonly SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+private static readonly HttpClient httpClient = new HttpClient();
 
-public partial class MainPage : ContentPage
+public MainPage()
 {
-    private readonly SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-    private static readonly HttpClient httpClient = new HttpClient();
+    Content = markdownViewer;
+    _ = LoadMarkdownFromUrlAsync();
+}
 
-    public MainPage()
+private async Task LoadMarkdownFromUrlAsync()
+{
+    try
     {
-        InitializeComponent();
-        Content = markdownViewer;
-        _ = LoadMarkdownFromUrlAsync();
+        string url = "https://raw.githubusercontent.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI/refs/heads/master/README.md";
+        string markdownContent = await httpClient.GetStringAsync(url);
+        markdownViewer.Source = markdownContent;
     }
-
-    private async Task LoadMarkdownFromUrlAsync()
+    catch (HttpRequestException ex)
     {
-        try
-        {
-            string url = "https://raw.githubusercontent.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI/refs/heads/master/README.md";
-            string markdownContent = await httpClient.GetStringAsync(url);
-            markdownViewer.Source = markdownContent;
-        }
-        catch (HttpRequestException ex)
-        {
-            // The request failed (network error, non-success status code, or invalid URL).
-            System.Diagnostics.Debug.WriteLine($"Failed to load markdown: {ex.Message}");
-        }
+        // The request failed (network error, non-success status code, or invalid URL).
+        System.Diagnostics.Debug.WriteLine($"Failed to load markdown: {ex.Message}");
     }
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Only HTTPS URLs are guaranteed to work on all platforms because some platforms block plain HTTP by default. The fetched content is not cached automatically; cache the response in your own storage layer if you need to reduce repeated network calls.
 

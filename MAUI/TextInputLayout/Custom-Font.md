@@ -40,25 +40,6 @@ The following `LabelStyle` properties are available on `SfTextInputLayout`:
 | `FontAttributes` | [FontAttributes](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes) | `None` | One or more of `Bold` and `Italic` (combined with bitwise OR). |
 | `TextColor` | `Color` | Theme default | Text color (useful alongside the font properties). |
 
-## Register the Custom Font
-
-Before applying a custom font, register the font file in your .NET MAUI project:
-
-1. Add the font file (for example, `Lobster-Regular.ttf`) to the `Resources/Fonts` folder of your project.
-2. Register the font in your `.csproj` file using the `MauiFont` item:
-
-{% highlight xaml %}
-
-<ItemGroup>
-    <MauiFont Include="Resources\Fonts\Lobster-Regular.ttf" />
-</ItemGroup>
-
-{% endhighlight %}
-
-3. Reference the font by its file name **without** the extension. For example, `Lobster-Regular.ttf` is referenced as `Lobster-Regular`.
-
-For the full list of supported scenarios (Android assets, iOS Info.plist, and so on), see the [MAUI fonts documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts).
-
 ## Customize the Hint Label
 
 The floating hint label is rendered using [HintLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HintLabelStyle). The hint label is always visible.
@@ -67,8 +48,8 @@ The floating hint label is rendered using [HintLabelStyle](https://help.syncfusi
 {% highlight xaml %}
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                                ContainerType="Outlined"
-                                HelperText="Enter your name">
+                               ContainerType="Outlined"
+                               HelperText="Enter your name">
     <inputLayout:SfTextInputLayout.HintLabelStyle>
         <inputLayout:LabelStyle FontSize="16"
                                 FontFamily="Lobster-Regular" />
@@ -77,7 +58,6 @@ The floating hint label is rendered using [HintLabelStyle](https://help.syncfusi
 </inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
 SfTextInputLayout inputLayout = new SfTextInputLayout
@@ -92,6 +72,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     },
     Content = new Entry()
 };
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,19 +91,15 @@ The helper text below the input line is rendered using [HelperLabelStyle](https:
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <inputLayout:SfTextInputLayout Hint="Name"
-                                   ContainerType="Outlined"
-                                   HelperText="Enter your name">
-        <inputLayout:SfTextInputLayout.HelperLabelStyle>
-            <inputLayout:LabelStyle FontSize="12"
-                                    FontFamily="Lobster-Regular" />
-        </inputLayout:SfTextInputLayout.HelperLabelStyle>
-        <Entry />
-    </inputLayout:SfTextInputLayout>
-</ContentPage>
+<inputLayout:SfTextInputLayout Hint="Name"
+                               ContainerType="Outlined"
+                               HelperText="Enter your name">
+    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+        <inputLayout:LabelStyle FontSize="12"
+                                FontFamily="Lobster-Regular" />
+    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+    <Entry />
+</inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -133,6 +116,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     },
     Content = new Entry()
 };
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,9 +137,9 @@ The error text is rendered using [ErrorLabelStyle](https://help.syncfusion.com/c
 {% highlight xaml %}
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                                ContainerType="Outlined"
-                                HasError="True"
-                                ErrorText="Enter valid name">
+                               ContainerType="Outlined"
+                               HasError="True"
+                               ErrorText="Enter valid name">
     <inputLayout:SfTextInputLayout.ErrorLabelStyle>
         <inputLayout:LabelStyle FontSize="12"
                                 FontFamily="Lobster-Regular" />
@@ -173,6 +163,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     },
     Content = new Entry()
 };
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -187,9 +184,9 @@ Use `FontAttributes` to apply bold or italic styling. The flags can be combined 
 {% highlight xaml %}
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                                ContainerType="Outlined"
-                                HasError="True"
-                                ErrorText="Enter valid name">
+                               ContainerType="Outlined"
+                               HasError="True"
+                               ErrorText="Enter valid name">
     <inputLayout:SfTextInputLayout.ErrorLabelStyle>
         <inputLayout:LabelStyle FontFamily="Lobster-Regular"
                         FontSize="14"
@@ -214,6 +211,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
         FontAttributes = FontAttributes.Italic,
     },
     Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
 };
 
 {% endhighlight %}
@@ -253,6 +257,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     HelperLabelStyle = new LabelStyle { FontFamily = "Lobster-Regular", FontSize = 12 },
     ErrorLabelStyle = new LabelStyle { FontFamily = "Lobster-Regular", FontSize = 12 },
     Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
 };
 
 {% endhighlight %}

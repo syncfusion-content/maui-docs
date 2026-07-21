@@ -43,22 +43,16 @@ For single-line text input, host the MAUI [`Entry`](https://learn.microsoft.com/
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
-                                       HelperText="Enter the name"
-                                       ContainerType="Outlined">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
+                                   HelperText="Enter the name"
+                                   ContainerType="Outlined">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -87,23 +81,16 @@ For multi-line text input, host the MAUI [`Editor`](https://learn.microsoft.com/
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Notes"
-                                       HelperText="Enter the brief description"
-                                       ContainerType="Outlined">
-            <Editor AutoSize="TextChanges" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Notes"
+                                   HelperText="Enter the brief description"
+                                   ContainerType="Outlined">
+        <Editor AutoSize="TextChanges" />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Microsoft.Maui;
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -141,31 +128,23 @@ Host the Syncfusion [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfus
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:autocomplete="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Country" ContainerType="Outlined">
-            <autocomplete:SfAutocomplete>
-                <autocomplete:SfAutocomplete.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Uganda</x:String>
-                        <x:String>Ukraine</x:String>
-                        <x:String>United Arab Emirates</x:String>
-                        <x:String>United States</x:String>
-                    </x:Array>
-                </autocomplete:SfAutocomplete.ItemsSource>
-            </autocomplete:SfAutocomplete>
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Country" ContainerType="Outlined">
+        <autocomplete:SfAutocomplete>
+            <autocomplete:SfAutocomplete.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Uganda</x:String>
+                    <x:String>Ukraine</x:String>
+                    <x:String>United Arab Emirates</x:String>
+                    <x:String>United States</x:String>
+                </x:Array>
+            </autocomplete:SfAutocomplete.ItemsSource>
+        </autocomplete:SfAutocomplete>
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Inputs;
 
 var autocomplete = new SfAutocomplete
 {
@@ -196,62 +175,54 @@ Content = new VerticalStackLayout
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:autocomplete="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
-    <VerticalStackLayout Spacing="10">
-        <inputLayout:SfTextInputLayout Hint="Delimiter" ContainerType="Outlined">
-            <autocomplete:SfAutocomplete SelectionMode="Multiple"
-                                         Placeholder="Enter"
-                                         MultiSelectionDisplayMode="Delimiter">
-                <autocomplete:SfAutocomplete.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Uganda</x:String>
-                        <x:String>Ukraine</x:String>
-                        <x:String>United Arab Emirates</x:String>
-                        <x:String>United States</x:String>
-                    </x:Array>
-                </autocomplete:SfAutocomplete.ItemsSource>
-            </autocomplete:SfAutocomplete>
-        </inputLayout:SfTextInputLayout>
+<VerticalStackLayout Spacing="10">
+    <inputLayout:SfTextInputLayout Hint="Delimiter" ContainerType="Outlined">
+        <autocomplete:SfAutocomplete SelectionMode="Multiple"
+                                     Placeholder="Enter"
+                                     MultiSelectionDisplayMode="Delimiter">
+            <autocomplete:SfAutocomplete.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Uganda</x:String>
+                    <x:String>Ukraine</x:String>
+                    <x:String>United Arab Emirates</x:String>
+                    <x:String>United States</x:String>
+                </x:Array>
+            </autocomplete:SfAutocomplete.ItemsSource>
+        </autocomplete:SfAutocomplete>
+    </inputLayout:SfTextInputLayout>
 
-        <inputLayout:SfTextInputLayout Hint="Token-None" ContainerType="Outlined">
-            <autocomplete:SfAutocomplete SelectionMode="Multiple" Placeholder="Enter">
-                <autocomplete:SfAutocomplete.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Uganda</x:String>
-                        <x:String>Ukraine</x:String>
-                        <x:String>United Arab Emirates</x:String>
-                        <x:String>United States</x:String>
-                    </x:Array>
-                </autocomplete:SfAutocomplete.ItemsSource>
-            </autocomplete:SfAutocomplete>
-        </inputLayout:SfTextInputLayout>
+    <inputLayout:SfTextInputLayout Hint="Token-None" ContainerType="Outlined">
+        <autocomplete:SfAutocomplete SelectionMode="Multiple" Placeholder="Enter">
+            <autocomplete:SfAutocomplete.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Uganda</x:String>
+                    <x:String>Ukraine</x:String>
+                    <x:String>United Arab Emirates</x:String>
+                    <x:String>United States</x:String>
+                </x:Array>
+            </autocomplete:SfAutocomplete.ItemsSource>
+        </autocomplete:SfAutocomplete>
+    </inputLayout:SfTextInputLayout>
 
-        <inputLayout:SfTextInputLayout Hint="Token-AutoSize" ContainerType="Outlined">
-            <autocomplete:SfAutocomplete SelectionMode="Multiple"
-                                         Placeholder="Enter"
-                                         TokensWrapMode="Wrap"
-                                         EnableAutoSize="True">
-                <autocomplete:SfAutocomplete.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Uganda</x:String>
-                        <x:String>Ukraine</x:String>
-                        <x:String>United Arab Emirates</x:String>
-                        <x:String>United States</x:String>
-                    </x:Array>
-                </autocomplete:SfAutocomplete.ItemsSource>
-            </autocomplete:SfAutocomplete>
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+    <inputLayout:SfTextInputLayout Hint="Token-AutoSize" ContainerType="Outlined">
+        <autocomplete:SfAutocomplete SelectionMode="Multiple"
+                                     Placeholder="Enter"
+                                     TokensWrapMode="Wrap"
+                                     EnableAutoSize="True">
+            <autocomplete:SfAutocomplete.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Uganda</x:String>
+                    <x:String>Ukraine</x:String>
+                    <x:String>United Arab Emirates</x:String>
+                    <x:String>United States</x:String>
+                </x:Array>
+            </autocomplete:SfAutocomplete.ItemsSource>
+        </autocomplete:SfAutocomplete>
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Inputs;
 
 var items = new[] { "Uganda", "Ukraine", "United Arab Emirates", "United States" };
 
@@ -298,31 +269,23 @@ Host the Syncfusion [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:combobox="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
-    <VerticalStackLayout Spacing="10">
-        <inputLayout:SfTextInputLayout Hint="Country" ContainerType="Outlined">
-            <combobox:SfComboBox>
-                <combobox:SfComboBox.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Uganda</x:String>
-                        <x:String>Ukraine</x:String>
-                        <x:String>United Arab Emirates</x:String>
-                        <x:String>United States</x:String>
-                    </x:Array>
-                </combobox:SfComboBox.ItemsSource>
-            </combobox:SfComboBox>
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout Spacing="10">
+    <inputLayout:SfTextInputLayout Hint="Country" ContainerType="Outlined">
+        <combobox:SfComboBox>
+            <combobox:SfComboBox.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Uganda</x:String>
+                    <x:String>Ukraine</x:String>
+                    <x:String>United Arab Emirates</x:String>
+                    <x:String>United States</x:String>
+                </x:Array>
+            </combobox:SfComboBox.ItemsSource>
+        </combobox:SfComboBox>
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Inputs;
 
 var combobox = new SfComboBox
 {
@@ -353,62 +316,55 @@ Content = new VerticalStackLayout
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:combobox="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
-    <VerticalStackLayout Spacing="10">
-        <inputLayout:SfTextInputLayout Hint="Delimiter" ContainerType="Outlined">
-            <combobox:SfComboBox SelectionMode="Multiple"
-                                 Placeholder="Enter"
-                                 MultiSelectionDisplayMode="Delimiter">
-                <combobox:SfComboBox.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Uganda</x:String>
-                        <x:String>Ukraine</x:String>
-                        <x:String>United Arab Emirates</x:String>
-                        <x:String>United States</x:String>
-                    </x:Array>
-                </combobox:SfComboBox.ItemsSource>
-            </combobox:SfComboBox>
-        </inputLayout:SfTextInputLayout>
 
-        <inputLayout:SfTextInputLayout Hint="Token-None" ContainerType="Outlined">
-            <combobox:SfComboBox SelectionMode="Multiple" Placeholder="Enter">
-                <combobox:SfComboBox.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Uganda</x:String>
-                        <x:String>Ukraine</x:String>
-                        <x:String>United Arab Emirates</x:String>
-                        <x:String>United States</x:String>
-                    </x:Array>
-                </combobox:SfComboBox.ItemsSource>
-            </combobox:SfComboBox>
-        </inputLayout:SfTextInputLayout>
+<VerticalStackLayout Spacing="10">
+    <inputLayout:SfTextInputLayout Hint="Delimiter" ContainerType="Outlined">
+        <combobox:SfComboBox SelectionMode="Multiple"
+                             Placeholder="Enter"
+                             MultiSelectionDisplayMode="Delimiter">
+            <combobox:SfComboBox.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Uganda</x:String>
+                    <x:String>Ukraine</x:String>
+                    <x:String>United Arab Emirates</x:String>
+                    <x:String>United States</x:String>
+                </x:Array>
+            </combobox:SfComboBox.ItemsSource>
+        </combobox:SfComboBox>
+    </inputLayout:SfTextInputLayout>
 
-        <inputLayout:SfTextInputLayout Hint="Token-AutoSize" ContainerType="Outlined">
-            <combobox:SfComboBox SelectionMode="Multiple"
-                                 Placeholder="Enter"
-                                 TokensWrapMode="Wrap"
-                                 EnableAutoSize="True">
-                <combobox:SfComboBox.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Uganda</x:String>
-                        <x:String>Ukraine</x:String>
-                        <x:String>United Arab Emirates</x:String>
-                        <x:String>United States</x:String>
-                    </x:Array>
-                </combobox:SfComboBox.ItemsSource>
-            </combobox:SfComboBox>
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+    <inputLayout:SfTextInputLayout Hint="Token-None" ContainerType="Outlined">
+        <combobox:SfComboBox SelectionMode="Multiple" Placeholder="Enter">
+            <combobox:SfComboBox.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Uganda</x:String>
+                    <x:String>Ukraine</x:String>
+                    <x:String>United Arab Emirates</x:String>
+                    <x:String>United States</x:String>
+                </x:Array>
+            </combobox:SfComboBox.ItemsSource>
+        </combobox:SfComboBox>
+    </inputLayout:SfTextInputLayout>
+
+    <inputLayout:SfTextInputLayout Hint="Token-AutoSize" ContainerType="Outlined">
+        <combobox:SfComboBox SelectionMode="Multiple"
+                             Placeholder="Enter"
+                             TokensWrapMode="Wrap"
+                             EnableAutoSize="True">
+            <combobox:SfComboBox.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Uganda</x:String>
+                    <x:String>Ukraine</x:String>
+                    <x:String>United Arab Emirates</x:String>
+                    <x:String>United States</x:String>
+                </x:Array>
+            </combobox:SfComboBox.ItemsSource>
+        </combobox:SfComboBox>
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Inputs;
 
 var items = new[] { "Uganda", "Ukraine", "United Arab Emirates", "United States" };
 
@@ -451,25 +407,17 @@ Host the Syncfusion [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusi
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:maskedEntry="clr-namespace:Syncfusion.Maui.MaskedEntry;assembly=Syncfusion.Maui.MaskedEntry">
-    <VerticalStackLayout Spacing="10">
-        <inputLayout:SfTextInputLayout Hint="Card number"
-                                       HelperText="Required *"
-                                       ContainerType="Outlined">
-            <maskedEntry:SfMaskedEntry MaskType="Simple"
-                                       Mask="0000 0000 0000 0000" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout Spacing="10">
+    <inputLayout:SfTextInputLayout Hint="Card number"
+                                   HelperText="Required *"
+                                   ContainerType="Outlined">
+        <maskedEntry:SfMaskedEntry MaskType="Simple"
+                                   Mask="0000 0000 0000 0000" />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.MaskedEntry;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -508,26 +456,18 @@ Host the Syncfusion [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfus
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:numericEntry="clr-namespace:Syncfusion.Maui.NumericEntry;assembly=Syncfusion.Maui.NumericEntry">
-    <VerticalStackLayout Spacing="10">
-        <inputLayout:SfTextInputLayout Hint="Amount"
+<VerticalStackLayout Spacing="10">
+    <inputLayout:SfTextInputLayout Hint="Amount"
                                    HelperText="Enter the amount"
                                    ContainerType="Outlined">
-            <numericEntry:SfNumericEntry Value="100"
+        <numericEntry:SfNumericEntry Value="100"
                                      ShowClearButton="True"
                                      UpDownPlacementMode="Inline" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.NumericEntry;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -580,9 +520,6 @@ Host the MAUI [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interf
 {% endhighlight %}
 {% highlight C# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
-
 var picker = new Picker
 {
     ItemsSource = new[] { "Apple", "Orange", "Strawberry" }
@@ -617,20 +554,14 @@ Host the MAUI [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-in
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <inputLayout:SfTextInputLayout Hint="Time"
-                                   HelperText="Select a start time"
-                                   ContainerType="Outlined">
-        <TimePicker />
-    </inputLayout:SfTextInputLayout>
-</ContentPage>
+<inputLayout:SfTextInputLayout Hint="Time"
+                               HelperText="Select a start time"
+                               ContainerType="Outlined">
+    <TimePicker />
+</inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -661,22 +592,16 @@ Host the MAUI [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-in
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout Spacing="10">
-        <inputLayout:SfTextInputLayout Hint="Date of Birth"
+<VerticalStackLayout Spacing="10">
+    <inputLayout:SfTextInputLayout Hint="Date of Birth"
                                    HelperText="Select birth date"
                                    ContainerType="Outlined">
-            <DatePicker />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+        <DatePicker />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {

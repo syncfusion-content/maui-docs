@@ -35,26 +35,18 @@ The following example shows the shared setup used by the samples in this documen
 {% tabs %} 
 {% highlight C# %}
 
-using Syncfusion.Maui.MarkdownViewer;
+private readonly SfMarkdownViewer markdownViewer;
 
-namespace MarkdownViewerContentRetrieval
+public MainPage()
 {
-    public partial class MainPage : ContentPage
+    InitializeComponent();
+
+    markdownViewer = new SfMarkdownViewer
     {
-        private readonly SfMarkdownViewer markdownViewer;
+        Source = "# Welcome\n\nThis is **Markdown Viewer** running on .NET MAUI."
+    };
 
-        public MainPage()
-        {
-            InitializeComponent();
-
-            markdownViewer = new SfMarkdownViewer
-            {
-                Source = "# Welcome\n\nThis is **Markdown Viewer** running on .NET MAUI."
-            };
-
-            Content = markdownViewer;
-        }
-    }
+    Content = markdownViewer;
 }
 
 {% endhighlight %}

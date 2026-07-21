@@ -37,22 +37,15 @@ The password visibility toggle shows or hides the characters in the input view h
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Password"
-                                       EnablePasswordVisibilityToggle="True">
-            <Entry Text="1234" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Password"
+                                    EnablePasswordVisibilityToggle="True">
+        <Entry Text="1234" />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -82,21 +75,15 @@ Helper text conveys additional guidance about the input field, such as how the v
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
-                                       HelperText="Enter your name">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
+                                    HelperText="Enter your name">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -126,24 +113,18 @@ When the entered text is not accepted, an error message can be displayed below t
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Email"
-                                       ContainerType="Outlined"
-                                       HelperText="Enter your email address"
-                                       ErrorText="Invalid email"
-                                       HasError="True">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Email"
+                                    ContainerType="Outlined"
+                                    HelperText="Enter your email address"
+                                    ErrorText="Invalid email"
+                                    HasError="True">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -176,29 +157,23 @@ The following example shows how to flip `HasError` based on the result of a simp
 {% tabs %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Core;
-
-public MainPage()
+var inputLayout = new SfTextInputLayout
 {
-    InitializeComponent();
-    var inputLayout = new SfTextInputLayout
-    {
-        Hint = "Email",
-        HelperText = "Enter your email address",
-        ErrorText = "Invalid email"
-    };
+    Hint = "Email",
+    HelperText = "Enter your email address",
+    ErrorText = "Invalid email"
+};
 
-    var entry = new Entry();
-    entry.TextChanged += OnEmailTextChanged;
-    inputLayout.Content = entry;
-    Content = new VerticalStackLayout
+var entry = new Entry();
+entry.TextChanged += OnEmailTextChanged;
+inputLayout.Content = entry;
+Content = new VerticalStackLayout
+{
+    Children =
     {
-        Children =
-        {
-            inputLayout
-        }
-    };
-}
+        inputLayout
+    }
+};
 
 private void OnEmailTextChanged(object? sender, TextChangedEventArgs e)
 {
@@ -221,24 +196,18 @@ The character counter shows the number of characters entered and the configured 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Password"
-                                       ContainerType="Outlined"
-                                       ShowCharCount="True"
-                                       CharMaxLength="20"
-                                       HelperText="Enter 5 to 20 characters">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Password"
+                                    ContainerType="Outlined"
+                                    ShowCharCount="True"
+                                    CharMaxLength="20"
+                                    HelperText="Enter 5 to 20 characters">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -271,22 +240,16 @@ By default, the control reserves vertical space for assistive labels so that the
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout ContainerType="Outlined"
-                                       Hint="Name"
-                                       ReserveSpaceForAssistiveLabels="False">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout ContainerType="Outlined"
+                                    Hint="Name"
+                                    ReserveSpaceForAssistiveLabels="False">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -322,6 +285,6 @@ N> Set `ReserveSpaceForAssistiveLabels` to `false` only if the host page already
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfTextInputLayout](https://help.syncfusion.com/maui/textinputlayout/getting-started)
 - [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
 - [Custom Icons](https://help.syncfusion.com/maui/textinputlayout/custom-icons)
+- [Hint Position](https://help.syncfusion.com/maui/textinputlayout/fixed-hint-position)

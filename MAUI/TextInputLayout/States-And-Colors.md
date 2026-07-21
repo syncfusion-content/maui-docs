@@ -46,45 +46,37 @@ N> The cursor color of the inner input view follows the `Accent` color of the ap
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
-                                   Stroke="#00AFA0"
-                                   HelperText="Enter the name">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="Stroke" Value="#79747E" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState Name="Focused">
-                            <VisualState.Setters>
-                                <Setter Property="Stroke" Value="#6750A4" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState Name="Error">
-                            <VisualState.Setters>
-                                <Setter Property="Stroke" Value="#B3261E" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </VisualStateManager.VisualStateGroups>
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
+                                Stroke="#00AFA0"
+                                HelperText="Enter the name">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="#79747E" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="#6750A4" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Error">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="#B3261E" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -132,21 +124,15 @@ Disable the control by setting [IsEnabled](https://help.syncfusion.com/cr/maui/S
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
-                                       IsEnabled="False">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
+                                   IsEnabled="False">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -176,24 +162,17 @@ The [ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
-                                       Stroke="#0450C2"
-                                       ContainerType="Filled"
-                                       ContainerBackground="#E6EEF9">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
+                                   Stroke="#0450C2"
+                                   ContainerType="Filled"
+                                   ContainerBackground="#E6EEF9">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Microsoft.Maui;
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -221,26 +200,17 @@ Content = new VerticalStackLayout
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-        <local:TextInputLayoutViewModel/>
-    </ContentPage.BindingContext>-->
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
-                                       Stroke="#0450C2"
-                                       ContainerType="Outlined"
-                                       ContainerBackground="#E6EEF9">
-            <Entry />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
+                                   Stroke="#0450C2"
+                                   ContainerType="Outlined"
+                                   ContainerBackground="#E6EEF9">
+        <Entry />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Microsoft.Maui;
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {
@@ -270,34 +240,27 @@ Use the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Lab
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <inputLayout:SfTextInputLayout Hint="Name"
-                                       ContainerType="Outlined"
-                                       Stroke="Red"
-                                       HelperText="Enter your name"
-                                       ErrorText="Invalid text">
-            <inputLayout:SfTextInputLayout.HintLabelStyle>
-                <inputLayout:LabelStyle TextColor="Green" />
-            </inputLayout:SfTextInputLayout.HintLabelStyle>
-            <inputLayout:SfTextInputLayout.HelperLabelStyle>
-                <inputLayout:LabelStyle TextColor="Blue" />
-            </inputLayout:SfTextInputLayout.HelperLabelStyle>
-            <inputLayout:SfTextInputLayout.ErrorLabelStyle>
-                <inputLayout:LabelStyle TextColor="Maroon" />
-            </inputLayout:SfTextInputLayout.ErrorLabelStyle>
-            <Entry Text="John" />
-        </inputLayout:SfTextInputLayout>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <inputLayout:SfTextInputLayout Hint="Name"
+                                   ContainerType="Outlined"
+                                   Stroke="Red"
+                                   HelperText="Enter your name"
+                                   ErrorText="Invalid text">
+        <inputLayout:SfTextInputLayout.HintLabelStyle>
+            <inputLayout:LabelStyle TextColor="Green" />
+        </inputLayout:SfTextInputLayout.HintLabelStyle>
+        <inputLayout:SfTextInputLayout.HelperLabelStyle>
+            <inputLayout:LabelStyle TextColor="Blue" />
+        </inputLayout:SfTextInputLayout.HelperLabelStyle>
+        <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+            <inputLayout:LabelStyle TextColor="Maroon" />
+        </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+        <Entry Text="John" />
+    </inputLayout:SfTextInputLayout>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Microsoft.Maui;
-using Syncfusion.Maui.Core;
 
 var inputLayout = new SfTextInputLayout
 {

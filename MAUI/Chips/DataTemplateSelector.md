@@ -73,8 +73,6 @@ The following selector exposes two templates — `HappyEmojiTemplate` for chips 
 
 {% highlight C# %}
 
-using Microsoft.Maui.Controls;
-
 public class ChipDataTemplateSelector : DataTemplateSelector
 {
     public DataTemplate HappyEmojiTemplate { get; set; } = new DataTemplate();
@@ -178,15 +176,48 @@ var selector = new ChipDataTemplateSelector
     })
 };
 
+var chipViewModel = new ChipViewModel();
+
 var chipGroup = new SfChipGroup
 {
-    BindingContext = new ChipViewModel(),
+    BindingContext = chipViewModel,
     ChipBackground = Colors.Transparent,
-    ItemsSource = new ChipViewModel().Data,
+    ItemsSource = chipViewModel.Data,
     ItemTemplate = selector
 };
 
 Content = chipGroup;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+public class ChipViewModel
+{
+    public ObservableCollection<ChipModel> Data { get; set; }
+
+    public ChipViewModel()
+    {
+        Data = new ObservableCollection<ChipModel>()
+            {
+            new ChipModel(){Text ="Happy", CanSelect = true, ImageSource="dotnet_bot.png"},
+            new ChipModel(){Text ="Sad", CanSelect = false,ImageSource = "dotnet_bot.png"},
+            new ChipModel(){Text ="Love", CanSelect = true,ImageSource = "dotnet_bot.png"},
+            new ChipModel(){Text ="Sick", CanSelect = false,ImageSource="dotnet_bot.png"},
+            new ChipModel(){Text ="Angry", CanSelect = false, ImageSource ="dotnet_bot.png"},
+            new ChipModel(){Text ="Think", CanSelect = true,ImageSource="dotnet_bot.png"},
+            new ChipModel(){Text ="Wink", CanSelect = true,ImageSource="dotnet_bot.png"},
+            new ChipModel(){Text ="Freeze", CanSelect = false,ImageSource="dotnet_bot.png"},
+            };
+    }
+
+}
+
+public class ChipModel
+{
+    public bool CanSelect { get; set; }
+    public string Text { get; set; }
+    public ImageSource ImageSource { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}

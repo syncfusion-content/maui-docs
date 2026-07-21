@@ -56,6 +56,13 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     HelperText = "نام درج کریں",
     Content = new Entry()
 };
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,10 +73,8 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
 
 To enable RTL for the entire application, set `FlowDirection` on the root page or in the `MauiAppBuilder` configuration. This is the recommended approach for fully-localized apps.
 
+{% tabs %}
 {% highlight C# %}
-
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Hosting;
 
 var builder = MauiApp.CreateBuilder();
 builder.UseMauiApp<App>();
@@ -80,21 +85,21 @@ builder.ConfigureLifecycleEvents(events =>
 // Or set FlowDirection on the root page in App.xaml.cs.
 
 {% endhighlight %}
+{% endtabs %}
 
 You can also set `FlowDirection` on the root page in `App.xaml.cs`:
 
+{% tabs %}
 {% highlight C# %}
 
-public partial class App : Application
+public App()
 {
-    public App()
-    {
-        InitializeComponent();
-        MainPage = new MainPage { FlowDirection = FlowDirection.RightToLeft };
-    }
+    InitializeComponent();
+    MainPage = new MainPage { FlowDirection = FlowDirection.RightToLeft };
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Platform notes
 
@@ -119,7 +124,6 @@ To verify the layout without changing the system language, set `FlowDirection="R
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfTextInputLayout](https://help.syncfusion.com/maui/textinputlayout/getting-started)
 - [FlowDirection API reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-10.0)
 - [Custom Icons](https://help.syncfusion.com/maui/textinputlayout/custom-icons)
 

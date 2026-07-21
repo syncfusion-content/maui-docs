@@ -54,58 +54,54 @@ The following XAML example defines a CSS resource in `ContentPage.Resources` and
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;assembly=Syncfusion.Maui.MarkdownViewer">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <x:String x:Key="BaseCustomStyle">
-                body {
-                    background: #F5F7FA;
-                    font-family: 'Segoe UI', sans-serif;
-                    font-size: 16px;
-                    color: #2E2E2E;
-                    line-height: 1.7;
-                }
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <x:String x:Key="BaseCustomStyle">
+            body {
+                background: #F5F7FA;
+                font-family: 'Segoe UI', sans-serif;
+                font-size: 16px;
+                color: #2E2E2E;
+                line-height: 1.7;
+            }
 
-                h1 {
-                    font-weight: 700;
-                    font-size: 30px;
-                    line-height: 38px;
-                    letter-spacing: 0.5px;
-                    color: #1E3A8A;
-                    margin-bottom: 16px;
-                }
+            h1 {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 38px;
+                letter-spacing: 0.5px;
+                color: #1E3A8A;
+                margin-bottom: 16px;
+            }
 
-                h2 {
-                    font-weight: 600;
-                    font-size: 24px;
-                    line-height: 32px;
-                    letter-spacing: 0.4px;
-                    color: #3B5BAA;
-                    margin-top: 24px;
-                    margin-bottom: 12px;
-                }
+            h2 {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: 0.4px;
+                color: #3B5BAA;
+                margin-top: 24px;
+                margin-bottom: 12px;
+            }
 
-                h3 {
-                    font-weight: 500;
-                    font-size: 20px;
-                    line-height: 28px;
-                    letter-spacing: 0.3px;
-                    color: #6C83C1;
-                    margin-top: 20px;
-                    margin-bottom: 10px;
-                }
-            </x:String>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+            h3 {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: 0.3px;
+                color: #6C83C1;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        </x:String>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <markdown:SfMarkdownViewer Source="{Binding MarkdownContent}">
-        <markdown:SfMarkdownViewer.Settings>
-            <markdown:MarkdownStyleSettings CssStyleRules="{StaticResource BaseCustomStyle}" />
-        </markdown:SfMarkdownViewer.Settings>
-    </markdown:SfMarkdownViewer>
-</ContentPage>
+<markdown:SfMarkdownViewer Source="{Binding MarkdownContent}">
+    <markdown:SfMarkdownViewer.Settings>
+        <markdown:MarkdownStyleSettings CssStyleRules="{StaticResource BaseCustomStyle}" />
+    </markdown:SfMarkdownViewer.Settings>
+</markdown:SfMarkdownViewer>
 
 {% endhighlight %}
 {% endtabs %} 
@@ -123,8 +119,6 @@ The [CssStyleRules](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Markdown
 {% tabs %}
 {% highlight C# %}
 
-using Syncfusion.Maui.MarkdownViewer;
-
 var markdownViewer = new SfMarkdownViewer
 {
     Source = markdownContent,
@@ -137,6 +131,7 @@ var markdownViewer = new SfMarkdownViewer
             "h3 { font-weight: 500; font-size: 20px; color: #6C83C1; }"
     }
 };
+Content = markdownViewer;
 
 {% endhighlight %}
 {% endtabs %}
@@ -243,17 +238,6 @@ Example CSS for a modern, visible scrollbar:
 ![Scrollbar with custom thumb color, rounded corners, and hover state](Images/maui-markdownviewer-scrollbar.gif)
 
 You can further hide the scrollbar by setting `display: none;` in the `::-webkit-scrollbar` selector or by setting its width to 0, or match its color and thickness to seamlessly blend with your application's UI. Custom scrollbar styling is effective only on WebKit/Blink-based platforms (Windows and Android). On iOS and macOS the rule is ignored. Always verify cross-platform appearance for best results.
-
-## Merging Multiple Style Resources
-
-When you define more than one CSS resource, give each `x:String` a unique key (for example, `BaseCustomStyle`, `ImageCustomStyle`, `TableCustomStyle`, `ScrollbarCustomStyle`) and concatenate the strings before assigning the result to `CssStyleRules`. Defining two resources with the same key in the same `ResourceDictionary` causes a key-collision error.
-
-{% highlight C# %}
-
-string combinedCss = baseStyle + imageStyle + tableStyle + scrollbarStyle;
-markdownViewer.Settings.CssStyleRules = combinedCss;
-
-{% endhighlight %}
 
 ## Troubleshooting
 
