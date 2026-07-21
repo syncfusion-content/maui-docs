@@ -11,20 +11,34 @@ documentation: ug
 
 ## Customizing Column Size
 
-By default, columns are sized smartly to arrange the default elements of the cards with better readability. However, you can define the minimum and maximum width for the columns in [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) using [`MinimumColumnWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_MinimumColumnWidth) and [`MaximumColumnWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_MaximumColumnWidth) properties respectively. 
+By default, columns are sized automatically to present the default card elements with good readability. You can adjust this behavior using the [`MinimumColumnWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_MinimumColumnWidth) and [`MaximumColumnWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_MaximumColumnWidth) properties to define the allowable column width range.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<kanban:SfKanban x:Name="kanban" MinimumColumnWidth ="300" MaximumColumnWidth ="340"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             x:Class="YourAppNamespace.MainPage">
+    <kanban:SfKanban x:Name="kanban"
+                     MinimumColumnWidth="300"
+                     MaximumColumnWidth="340" />
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
-this.kanban.MinimumColumnWidth = 300;
-this.kanban.MaximumColumnWidth = 340;
+using Syncfusion.Maui.Kanban;
+using Microsoft.Maui.Controls;
+
+var kanban = new SfKanban
+{
+    MinimumColumnWidth = 300,
+    MaximumColumnWidth = 340
+};
+this.Content = kanban;
 
 {% endhighlight %}
 
@@ -36,11 +50,11 @@ You can also define the exact column width using [`ColumnWidth`](https://help.sy
 
 {% highlight xaml %}
 
-<kanban:SfKanban x:Name="kanban" ColumnWidth ="250"/>
+<kanban:SfKanban x:Name="kanban" ColumnWidth="250" />
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 this.kanban.ColumnWidth = 250;
 
@@ -60,7 +74,7 @@ To categorize columns based on a specific property, you must explicitly define t
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 this.kanban.ColumnMappingPath = "ID";
 
@@ -80,7 +94,7 @@ You can assign a specific category to a column by setting the [Categories](https
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 this.progressColumn.Categories = new List<object>() { "In Progress" };
 
@@ -90,42 +104,51 @@ this.progressColumn.Categories = new List<object>() { "In Progress" };
 
 ## Headers
 
-Header shows the category `Title`, `Items count`, `Min` and `Max` informations of a column. The UI of the header can be replaced entirely using [`HeaderTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_HeaderTemplate) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). The following code snippet and screenshot illustrates this.
+The header displays the column [`Title`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Title) (`string`), [`ItemsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_ItemsCount) (`int`), [`MinimumLimit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_MinimumLimit), and [`MaximumLimit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_MaximumLimit). Use [`HeaderTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_HeaderTemplate) to replace the header UI entirely. Inside the template, the `BindingContext` is the column instance. The following code snippet and screenshot illustrate this.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<kanban:SfKanban.HeaderTemplate >
-    <DataTemplate>
-        <StackLayout WidthRequest="300" HeightRequest="40" BackgroundColor="Silver">
-            <Label Margin="10" Text="{Binding Title}" TextColor="Purple" HorizontalOptions="Start" />
-        </StackLayout>
-    </DataTemplate>
-</kanban:SfKanban.HeaderTemplate>
+<kanban:SfKanban x:Name="kanban">
+    <kanban:SfKanban.HeaderTemplate>
+        <DataTemplate>
+            <StackLayout WidthRequest="300" HeightRequest="40" BackgroundColor="Silver">
+                <Label Margin="10"
+                       Text="{Binding Title}"
+                       TextColor="Purple"
+                       HorizontalOptions="Start" />
+            </StackLayout>
+        </DataTemplate>
+    </kanban:SfKanban.HeaderTemplate>
+</kanban:SfKanban>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
-var headerTemplate = new DataTemplate(() => 
+var kanban = new SfKanban();
+var headerTemplate = new DataTemplate(() =>
 {
-    StackLayout root = new StackLayout()
-    { 
-        WidthRequest = 300, 
-        HeightRequest = 40, 
-        BackgroundColor = Color.Silver 
+    var root = new StackLayout
+    {
+        WidthRequest = 300,
+        HeightRequest = 40,
+        BackgroundColor = Color.Silver
     };
-    Label label = new Label();
-    label.Margin = new Thickness(10); 
-    label.SetBinding(Label.TextProperty, new Binding("Title") );
-    label.TextColor = Color.Purple;
-    label.HorizontalOptions = LayoutOptions.Start; 
+    var label = new Label
+    {
+        Margin = new Thickness(10),
+        TextColor = Color.Purple,
+        HorizontalOptions = LayoutOptions.Start
+    };
+    label.SetBinding(Label.TextProperty, new Binding("Title"));
     root.Children.Add(label);
     return root;
 });
 
 kanban.HeaderTemplate = headerTemplate;
+this.Content = kanban;
 
 {% endhighlight %}
 
@@ -133,74 +156,83 @@ kanban.HeaderTemplate = headerTemplate;
 
 ## Expand/Collapse Column
 
-Columns can be expanded/collapsed by tapping the toggle button which is placed at top right corner of the Kanban header. [`IsExpanded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_IsExpanded) property of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) is used to programmatically expand/collapse the Kanban column. The following code example describes the above behavior.   
+Tap the toggle button in the top-right corner of a column header to expand or collapse the column. Use the [`IsExpanded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_IsExpanded) property (`bool`, default `true`) of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to programmatically expand or collapse the column. The property is bindable and reflects the current toggle state. The following code example shows this behavior.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<kanban:SfKanban.Columns>
-    <kanban:KanbanColumn x:Name="column1" Title="To Do" IsExpanded="false" />
-    <kanban:KanbanColumn x:Name="column2" Title="In Progress" IsExpanded="false" />
-</kanban:SfKanban.Columns>
+<kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False">
+    <kanban:SfKanban.Columns>
+        <kanban:KanbanColumn x:Name="column1" Title="To Do" IsExpanded="False" />
+        <kanban:KanbanColumn x:Name="column2" Title="In Progress" IsExpanded="False" />
+    </kanban:SfKanban.Columns>
+</kanban:SfKanban>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-KanbanColumn column1 = new KanbanColumn();
-column1.IsExpanded = false; 
-KanbanColumn column2 = new KanbanColumn();
-column2.IsExpanded = false;
-
+var kanban = new SfKanban { AutoGenerateColumns = false };
+KanbanColumn column1 = new KanbanColumn { Title = "To Do", IsExpanded = false };
+KanbanColumn column2 = new KanbanColumn { Title = "In Progress", IsExpanded = false };
 kanban.Columns.Add(column1);
 kanban.Columns.Add(column2);
+this.Content = kanban;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Enable/Disable Drag & Drop 
+## Enable/Disable Drag & Drop
 
-You can enable and disable the drag and drop operation of the cards for particular column using [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrag) and [`AllowDrop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrop) properties of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html).
+Enable or disable drag-and-drop operations for a particular column using the [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrag) and [`AllowDrop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrop) properties (`bool`, default `true`) of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html).
 
-The following code is used to disable the drag operation from progress column.
+The following code disables the drag operation from the `In Progress` column:
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<kanban:SfKanban.Columns>
-    <kanban:KanbanColumn AllowDrag="false"/>
-</kanban:SfKanban.Columns>
+<kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False">
+    <kanban:SfKanban.Columns>
+        <kanban:KanbanColumn Tittle="In Progress" AllowDrag="False" />
+    </kanban:SfKanban.Columns>
+</kanban:SfKanban>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-KanbanColumn progressColumn = new KanbanColumn();
-progressColumn.AllowDrag = false;
+var kanban = new SfKanban { AutoGenerateColumns = false };
+var progressColumn = new KanbanColumn { Title = "In Progress", AllowDrag = false };
+kanban.Columns.Add(progressColumn);
+this.Content = kanban;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-The following code is used to disable the drop operation of the cards into the progress column.
+The following code disables the drop operation of cards into the `In Progress` column:
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<kanban:SfKanban.Columns>
-    <kanban:KanbanColumn AllowDrop="false"/>
-</kanban:SfKanban.Columns>
+<kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False">
+    <kanban:SfKanban.Columns>
+        <kanban:KanbanColumn Title="In Progress" AllowDrop="False" />
+    </kanban:SfKanban.Columns>
+</kanban:SfKanban>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-KanbanColumn progressColumn = new KanbanColumn();
-progressColumn.AllowDrop = false; 
+var kanban = new SfKanban { AutoGenerateColumns = false };
+var progressColumn = new KanbanColumn { Title = "In Progress", AllowDrop = false };
+kanban.Columns.Add(progressColumn);
+this.Content = kanban;
 
 {% endhighlight %}
 
@@ -208,18 +240,18 @@ progressColumn.AllowDrop = false;
 
 ## Items Count
 
-[`ItemsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_ItemsCount) property is used to get the total cards count in each column.
+Use the [`ItemsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_ItemsCount) property (`int`) to get the total number of cards in a column. The value updates as cards are added, removed, or moved between columns.
 
 {% highlight C# %}
 
-int count = todoColumn.ItemsCount;         
+int count = todoColumn.ItemsCount;
 
 {% endhighlight %}
 
 
 ## Work In-Progress Limit
 
-[`MinimumLimit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_MinimumLimit) and [`MaximumLimit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_MaximumLimit) properties are used to define the minimum and maximum number of items in a column. If the actual items count is exceeded or lesser than the specified limits, the error bars are used to indicate this violation. Following properties of [`ErrorBarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_ErrorBarSettings) are used to customize the appearance of error bar.
+Use the [`MinimumLimit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_MinimumLimit) and [`MaximumLimit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_MaximumLimit) properties (`int`, default `0` meaning "no limit") to define the minimum and maximum number of items in a column. If the number of items exceeds `MaximumLimit` or falls below `MinimumLimit`, error bars indicate the violation. The following properties of [`ErrorBarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_ErrorBarSettings) customize the appearance of the error bar:
 
 * [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanErrorBarSettings.html#Syncfusion_Maui_Kanban_KanbanErrorBarSettings_Fill), of type `Brush`, used to change the default color of the error bar.
 * [MaxValidationFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanErrorBarSettings.html#Syncfusion_Maui_Kanban_KanbanErrorBarSettings_MaxValidationFill), of type `Brush`, used to change the maximum validation color of the error bar.
@@ -230,14 +262,15 @@ int count = todoColumn.ItemsCount;
 
 {% highlight xaml %}
 
-<kanban:KanbanColumn x:Name="todoColumn" Title="To Do" MinimumLimit="2" MaximumLimit="1"/>
+<kanban:KanbanColumn x:Name="todoColumn" Title="To Do" MinimumLimit="3" MaximumLimit="5" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-todoColumn.MinimumLimit = 2; 
-todoColumn.MaximumLimit = 1;   
+todoColumn.MinimumLimit = 3;
+todoColumn.MaximumLimit = 5;
+kanban.Columns.Add(todoColumn);
 
 {% endhighlight %}
 
@@ -249,7 +282,7 @@ todoColumn.MaximumLimit = 1;
 
 <kanban:KanbanColumn x:Name="todoColumn" Title="To Do" MinimumLimit="3" MaximumLimit="5">
     <kanban:KanbanColumn.ErrorBarSettings>
-        <kanban:KanbanErrorBarSettings Fill="Green" MinValidationFill="Orange" MaxValidationFill="Red" Height="4"/>
+        <kanban:KanbanErrorBarSettings Fill="Green" MinValidationFill="Orange" MaxValidationFill="Red" Height="4" />
     </kanban:KanbanColumn.ErrorBarSettings>
 </kanban:KanbanColumn>
 
@@ -257,11 +290,13 @@ todoColumn.MaximumLimit = 1;
 
 {% highlight C# %}
 
-KanbanColumn todoColumn = new KanbanColumn();
-todoColumn.Title = "To Do";
-todoColumn.MaximumLimit = 5;
-todoColumn.MinimumLimit = 3;
-KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
+KanbanColumn todoColumn = new KanbanColumn
+{
+    Title = "To Do",
+    MaximumLimit = 5,
+    MinimumLimit = 3
+};
+KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings
 {
     Fill = Colors.Green,
     MaxValidationFill = Colors.Red,
@@ -277,7 +312,7 @@ kanban.Columns.Add(todoColumn);
 
 ## Customize column appearance
 
-The .NET MAUI Kanban control provides flexible options to customize the appearance of each column. You can modify the column background, placeholder style, and the UI shown when no cards are present.
+Use the following options to customize the appearance of each column: the column background, the placeholder style, and the UI shown when no cards are present.
 
 ### Customize the column background
 
@@ -286,32 +321,46 @@ To change the background color of a column, use the [`Background`](https://help.
 {% tabs %}
 {% highlight XAML hl_lines="9 12 15 18" %}
 
-<kanban:SfKanban x:Name="kanban"
-                 AutoGenerateColumns="False"
-                 ItemsSource="{Binding Cards}">
-    <kanban:SfKanban.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
         <local:KanbanViewModel />
-    </kanban:SfKanban.BindingContext>
-    <kanban:KanbanColumn Title="To Do"
-                         Categories="Open,Postponed"
-                         Background="#D6EAF5"/>
-    <kanban:KanbanColumn Title="In Progress"
-                         Categories="In Progress"
-                         Background="#FFF8DC"/>
-    <kanban:KanbanColumn Title="Code Review"
-                         Categories="Code Review"
-                         Background="#FFE4E1"/>
-    <kanban:KanbanColumn Title="Done"
-                         Categories="Closed"
-                         Background="#DCEDDC"/>
-</kanban:SfKanban>
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     AutoGenerateColumns="False"
+                     ItemsSource="{Binding Cards}">
+        <kanban:SfKanban.Columns>
+            <kanban:KanbanColumn Title="To Do"
+                                 Categories="Open,Postponed"
+                                 Background="#D6EAF5" />
+            <kanban:KanbanColumn Title="In Progress"
+                                 Categories="In Progress"
+                                 Background="#FFF8DC" />
+            <kanban:KanbanColumn Title="Code Review"
+                                 Categories="Code Review"
+                                 Background="#FFE4E1" />
+            <kanban:KanbanColumn Title="Done"
+                                 Categories="Closed"
+                                 Background="#DCEDDC" />
+        </kanban:SfKanban.Columns>
+    </kanban:SfKanban>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="9 16 23 30" %}
 
-SfKanban kanban = new SfKanban();
-KanbanViewModel viewModel = new KanbanViewModel();
-kanban.AutoGenerateColumns = false; 
+using Syncfusion.Maui.Kanban;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+
+var kanban = new SfKanban
+{
+    AutoGenerateColumns = false,
+    ItemsSource = new KanbanViewModel().Cards
+};
 
 kanban.Columns.Add(new KanbanColumn
 {
@@ -341,11 +390,13 @@ kanban.Columns.Add(new KanbanColumn
     Background = Color.FromArgb("#DCEDDC")
 });
 
-kanban.ItemsSource = viewModel.Cards;
 this.Content = kanban;
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Kanban;
 
 public class KanbanViewModel
 {
@@ -384,7 +435,7 @@ public class KanbanViewModel
             Title = "iOS - 3",
             Category = "Postponed",
             Description = "Fix the filtering issues reported in Safari.",
-            IndicatorFill = Colors.Red,
+            IndicatorFill = new SolidColorBrush(Colors.Red),
             Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
         });
 
@@ -394,7 +445,7 @@ public class KanbanViewModel
             Title = "iOS - 21",
             Category = "Postponed",
             Description = "Add input validation for editing.",
-            IndicatorFill = Colors.Red,
+            IndicatorFill = new SolidColorBrush(Colors.Red),
             Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
         });
 
@@ -519,7 +570,7 @@ public class KanbanViewModel
 
 ### Customize no card appearance using DataTemplate
 
-The .NET MAUI Kanban control allows you to define a custom UI for columns that have no cards using the [`NoCardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_NoCardTemplate) property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html). This feature helps you display meaningful messages or visuals when a column is empty, improving the user experience.
+Use the [`NoCardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_NoCardTemplate) property of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to define a custom UI for empty columns. The template is rendered only when the column's `ItemsCount` equals `0`. This feature helps you display meaningful messages or visuals when a column is empty, improving the user experience.
 
 The following example shows how to define a custom **no card** template using a `DataTemplate`.
 
@@ -798,48 +849,62 @@ The .NET MAUI Kanban control supports styling the placeholder area, where cards 
 {% tabs %}
 {% highlight xaml hl_lines="4 5 6 7 8 9 10 11 12 13 20 24 28 32" %}
 
-<kanban:SfKanban x:Name="kanban"
-                 AutoGenerateColumns="False"
-                 ItemsSource="{Binding Cards}">
-    <kanban:SfKanban.Resources>
-        <kanban:KanbanPlaceholderStyle x:Key="PlaceholderStyle"
-                                       Background="#FAC7AD"
-                                       SelectionIndicatorBackground="#FAC7AD"
-                                       SelectionIndicatorStroke="#914C00">
-            <kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
-                <kanban:KanbanTextStyle TextColor="#914C00" />
-            </kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
-        </kanban:KanbanPlaceholderStyle>
-    </kanban:SfKanban.Resources>
-    <kanban:SfKanban.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
         <local:KanbanViewModel />
-    </kanban:SfKanban.BindingContext>
-    <kanban:KanbanColumn Title="To Do"
-                         Categories="Open,Postponed"
-                         Background="#D6EAF5"
-                         PlaceholderStyle="{StaticResource PlaceholderStyle}"/>
-    <kanban:KanbanColumn Title="In Progress"
-                         Categories="In Progress"
-                         Background="#FFF8DC"
-                         PlaceholderStyle="{StaticResource PlaceholderStyle}"/>
-    <kanban:KanbanColumn Title="Code Review"
-                         Categories="Code Review"
-                         Background="#FFE4E1"
-                         PlaceholderStyle="{StaticResource PlaceholderStyle}"/>
-    <kanban:KanbanColumn Title="Done"
-                         Categories="Closed"
-                         Background="#DCEDDC"
-                         PlaceholderStyle="{StaticResource PlaceholderStyle}"/>
-</kanban:SfKanban>
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     AutoGenerateColumns="False"
+                     ItemsSource="{Binding Cards}">
+        <kanban:SfKanban.Resources>
+            <kanban:KanbanPlaceholderStyle x:Key="PlaceholderStyle"
+                                           Background="#FAC7AD"
+                                           SelectionIndicatorBackground="#FAC7AD"
+                                           SelectionIndicatorStroke="#914C00">
+                <kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
+                    <kanban:KanbanTextStyle TextColor="#914C00" />
+                </kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
+            </kanban:KanbanPlaceholderStyle>
+        </kanban:SfKanban.Resources>
+        <kanban:SfKanban.Columns>
+            <kanban:KanbanColumn Title="To Do"
+                                 Categories="Open,Postponed"
+                                 Background="#D6EAF5"
+                                 PlaceholderStyle="{StaticResource PlaceholderStyle}" />
+            <kanban:KanbanColumn Title="In Progress"
+                                 Categories="In Progress"
+                                 Background="#FFF8DC"
+                                 PlaceholderStyle="{StaticResource PlaceholderStyle}" />
+            <kanban:KanbanColumn Title="Code Review"
+                                 Categories="Code Review"
+                                 Background="#FFE4E1"
+                                 PlaceholderStyle="{StaticResource PlaceholderStyle}" />
+            <kanban:KanbanColumn Title="Done"
+                                 Categories="Closed"
+                                 Background="#DCEDDC"
+                                 PlaceholderStyle="{StaticResource PlaceholderStyle}" />
+        </kanban:SfKanban.Columns>
+    </kanban:SfKanban>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="5 6 7 8 9 10 11 12 13 14 21 29 37 45" %}
 
-SfKanban kanban = new SfKanban();
-KanbanViewModel viewModel = new KanbanViewModel();
-kanban.AutoGenerateColumns = false; 
+using Syncfusion.Maui.Kanban;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
-KanbanPlaceholderStyle placeholderStyle = new KanbanPlaceholderStyle
+var kanban = new SfKanban
+{
+    AutoGenerateColumns = false,
+    ItemsSource = new KanbanViewModel().Cards
+};
+
+var placeholderStyle = new KanbanPlaceholderStyle
 {
     Background = Color.FromArgb("#FAC7AD"),
     SelectionIndicatorBackground = Color.FromArgb("#FAC7AD"),
@@ -882,11 +947,13 @@ kanban.Columns.Add(new KanbanColumn
     PlaceholderStyle = placeholderStyle
 });
 
-kanban.ItemsSource = viewModel.Cards;
 this.Content = kanban;
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Kanban;
 
 public class KanbanViewModel
 {

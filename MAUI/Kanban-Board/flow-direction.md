@@ -1,41 +1,49 @@
 ---
 layout: post
-title: Flow direction feature in .NET MAUI Kanban Control | Syncfusion®
-description: Learn here all about Flow Direction support in Syncfusion® .NET MAUI Kanban Board(SfKanban) control and more.
+title: Flow direction feature in .NET MAUI Kanban control | Syncfusion®
+description: Learn about Flow Direction support in the Syncfusion® .NET MAUI Kanban Board (SfKanban) control.
 platform: maui
 control: SfKanban
 documentation: ug
 ---
 
-# Right To Left Flow Direction in .NET MAUI Kanban (SfKanban)
+# Right-to-Left Flow Direction in .NET MAUI Kanban (SfKanban)
 
 The [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) supports changing the flow direction of items rendering in the right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 
-The following example illustrates how to apply the `RightToLeft` flow direction to the Kanban control.
+The following example applies `RightToLeft` flow direction to the Kanban control.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
 
-<kanban:SfKanban x:Name="kanban"
-                 AutoGenerateColumns="False"
-                 ItemsSource="{Binding Cards}"
-                 FlowDirection="RightToLeft" >
-    <kanban:SfKanban.BindingContext>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
         <local:KanbanViewModel />
-    </kanban:SfKanban.BindingContext>
-    <kanban:KanbanColumn Title="To Do"
-                         Categories="Open,Postponed"
-                         Background="#D6EAF5"/>
-    <kanban:KanbanColumn Title="In Progress"
-                         Categories="In Progress"
-                         Background="#FFF8DC"/>
-    <kanban:KanbanColumn Title="Code Review"
-                         Categories="Code Review"
-                         Background="#FFE4E1"/>
-    <kanban:KanbanColumn Title="Done"
-                         Categories="Closed"
-                         Background="#DCEDDC"/>
-</kanban:SfKanban>
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     AutoGenerateColumns="False"
+                     ItemsSource="{Binding Cards}"
+                     FlowDirection="RightToLeft">
+        <kanban:SfKanban.Columns>
+            <kanban:KanbanColumn Title="To Do"
+                                 Categories="Open,Postponed"
+                                 Background="#D6EAF5" />
+            <kanban:KanbanColumn Title="In Progress"
+                                 Categories="In Progress"
+                                 Background="#FFF8DC" />
+            <kanban:KanbanColumn Title="Code Review"
+                                 Categories="Code Review"
+                                 Background="#FFE4E1" />
+            <kanban:KanbanColumn Title="Done"
+                                 Categories="Closed"
+                                 Background="#DCEDDC" />
+        </kanban:SfKanban.Columns>
+    </kanban:SfKanban>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
@@ -43,7 +51,7 @@ The following example illustrates how to apply the `RightToLeft` flow direction 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
 kanban.AutoGenerateColumns = false;
-kanban.FlowDirection = FlowDirection.RightToLeft; 
+kanban.FlowDirection = FlowDirection.RightToLeft;
 
 kanban.Columns.Add(new KanbanColumn
 {
@@ -78,6 +86,9 @@ this.Content = kanban;
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Kanban;
 
 public class KanbanViewModel
 {

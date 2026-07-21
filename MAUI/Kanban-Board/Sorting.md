@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in .NET MAUI Kanban control | Syncfusion®
-description: Learn here all about Sorting support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control and more.
+description: Learn about Sorting support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control and more.
 platform: maui
 control: Kanban (SfKanban)
 documentation: ug
@@ -10,7 +10,7 @@ keywords: .net maui Kanban sorting, sfKanban sorting in .net maui, .net maui Kan
 
 # Card Item Sorting in .NET MAUI Kanban (SfKanban)
 
-The Kanban control supports customizable card sorting within columns based on specific data fields such as `Priority`, `DueDate`, or `Status`. Sorting can be configured programmatically and updated dynamically at runtime using the following properties:
+The Kanban control supports sorting cards within columns based on data fields such as `Priority`, `DueDate`, or `Status`. Configure sorting programmatically and update it dynamically at runtime using the following properties:
 
 * [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) - Used to map the sorting field to a property name in the [KanbanModel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) or `CustomModel`. The default value is `string.Empty`, in which case the cards will not be sorted.
 * [SortingOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingOrder) - Used to define the direction of cards sorting within each column.
@@ -28,83 +28,95 @@ Sorting in the Kanban control can be implemented using the following approaches.
 
 ### Custom Field Sorting
 
-To enable custom sorting behavior, a valid property name from the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) must be mapped using the [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) property. This mapping ensures that cards are loaded and repositioned based on the corresponding property value, allowing consistent sorting during both initialization and drag-and-drop operations.
+Map a valid property name from the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) to the [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) property to enable custom sorting. This mapping sorts cards by the corresponding property value during initialization and drag-and-drop operations.
 
-This example demonstrates how card positions are updated based on sorting configurations and property mappings.
+The following example shows how card positions are updated based on sorting configuration and property mapping.
 
 {% tabs %}
 {% highlight XAML hl_lines="2 3 5" %}
 
-<kanban:SfKanban x:Name="kanban"
-                 SortingMappingPath="Index"
-                 SortingOrder="Ascending"
-                 ItemsSource="{Binding Cards}"
-                 ColumnMappingPath="Category">
-    <kanban:SfKanban.CardTemplate>
-        <DataTemplate>
-            <Border Stroke="Black"
-                    StrokeThickness="1"
-                    StrokeShape="RoundRectangle 8"
-                    Background="#F3CFCE">
-                <Grid RowDefinitions="Auto,Auto,Auto"
-                      ColumnDefinitions="Auto,*"
-                      ColumnSpacing="8"
-                      Padding="8">
-                    <HorizontalStackLayout Grid.Row="0"
-                                           Grid.ColumnSpan="2"
-                                           Spacing="4"
-                                           VerticalOptions="Center"
-                                           HeightRequest="20">
-                        <Label Grid.Row="0"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
+        <local:SortingViewModel />
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     SortingMappingPath="Index"
+                     SortingOrder="Ascending"
+                     ItemsSource="{Binding Cards}"
+                     ColumnMappingPath="Category">
+        <kanban:SfKanban.CardTemplate>
+            <DataTemplate>
+                <Border Stroke="Black"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 8"
+                        Background="#F3CFCE">
+                    <Grid RowDefinitions="Auto,Auto,Auto"
+                          ColumnDefinitions="Auto,*"
+                          ColumnSpacing="8"
+                          Padding="8">
+                        <HorizontalStackLayout Grid.Row="0"
+                                               Grid.ColumnSpan="2"
+                                               Spacing="4"
+                                               VerticalOptions="Center"
+                                               HeightRequest="20">
+                            <Label Grid.Row="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Priority, StringFormat='• {0}'}"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="Orange"
+                                   VerticalOptions="Center"
+                                   VerticalTextAlignment="Center"
+                                   HeightRequest="20" />
+                        </HorizontalStackLayout>
+                        <Label Grid.Row="1"
                                Grid.ColumnSpan="2"
-                               Text="{Binding Priority, StringFormat='• {0}'}"
-                               FontSize="14"
+                               Text="{Binding Title}"
                                FontAttributes="Bold"
-                               TextColor="Orange"
-                               VerticalOptions="Center"
+                               FontSize="14"
+                               HorizontalTextAlignment="Center"
                                VerticalTextAlignment="Center"
-                               HeightRequest="20"/>
-                    </HorizontalStackLayout>
-                    <Label Grid.Row="1"
-                           Grid.ColumnSpan="2"
-                           Text="{Binding Title}"
-                           FontAttributes="Bold"
-                           FontSize="14"
-                           HorizontalTextAlignment="Center"
-                           VerticalTextAlignment="Center"
-                           Margin="5"/>
-                    <Label Grid.Row="2"
-                           Grid.ColumnSpan="2"
-                           Text="{Binding Description}"
-                           FontSize="12"
-                           HorizontalTextAlignment="Center"
-                           LineBreakMode="WordWrap"
-                           Margin="5"/>
-                </Grid>
-            </Border>
-        </DataTemplate>
-    </kanban:SfKanban.CardTemplate>
-    <kanban:KanbanColumn Title="Open"
-                         Categories="Open"/>
-    <kanban:KanbanColumn Title="In Progress"
-                         Categories="In Progress"/>
-    <kanban:KanbanColumn Title="Done"
-                         Categories="Done"
-                         AllowDrag="False"/>
-    <kanban:SfKanban.BindingContext>
-        <local:SortingViewModel/>
-    </kanban:SfKanban.BindingContext>
-</kanban:SfKanban>
+                               Margin="5" />
+                        <Label Grid.Row="2"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Description}"
+                               FontSize="12"
+                               HorizontalTextAlignment="Center"
+                               LineBreakMode="WordWrap"
+                               Margin="5" />
+                    </Grid>
+                </Border>
+            </DataTemplate>
+        </kanban:SfKanban.CardTemplate>
+        <kanban:SfKanban.Columns>
+            <kanban:KanbanColumn Title="Open"
+                                 Categories="Open" />
+            <kanban:KanbanColumn Title="In Progress"
+                                 Categories="In Progress" />
+            <kanban:KanbanColumn Title="Done"
+                                 Categories="Done"
+                                 AllowDrag="False" />
+        </kanban:SfKanban.Columns>
+    </kanban:SfKanban>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="2 6" %}
 
-this.kanban.ItemsSource = new SortingViewModel().Cards;
-this.kanban.DragEnd += this.OnCardDragEnd;
-
-private void OnCardDragEnd(object? sender, KanbanDragEndEventArgs e)
+var kanban = new SfKanban
 {
-    this.kanban.RefreshKanbanColumn();
+    ItemsSource = new SortingViewModel().Cards
+};
+kanban.DragEnd += OnCardDragEnd;
+this.Content = kanban;
+
+private void OnCardDragEnd(object sender, KanbanDragEndEventArgs e)
+{
+    kanban.RefreshKanbanColumn();
 }
 
 {% endhighlight %}
@@ -120,6 +132,8 @@ public class CardDetails
 
 {% endhighlight %}
 {% highlight c# tabtitle="SortingViewModel.cs" %}
+
+using System.Collections.ObjectModel;
 
 public class SortingViewModel
 {
@@ -156,95 +170,111 @@ N>
 
 ### Index-Based Sorting
 
-The index-based approach in the Kanban control allows cards to be dropped at precise positions within a column. Upon dropping, the card's index is updated based on the index of the previous card. Additionally, the index of the next card is incremented relative to the drop position to maintain continuous ordering.
+Use the index-based approach to drop cards at precise positions within a column. On drop, the card's `Index` is updated based on the index of the previous card. The index of the next card is also incremented to maintain continuous ordering. The `Index` property of the data model must always be set to a non-null value because the helper code uses `Convert.ToInt32` (which throws on `null`).
 
 N> The [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) property must be mapped to a valid numeric property name from the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) to enable index-based sorting updates.
 
-The following code example illustrates how cards numeric property updated using the index-based sorting approach.
+The following example updates a card's numeric property using the index-based sorting approach.
 
 {% tabs %}
 {% highlight XAML hl_lines="2 3 5" %}
 
-<kanban:SfKanban x:Name="kanban"
-                 SortingMappingPath="Index"
-                 SortingOrder="Ascending"
-                 ItemsSource="{Binding Cards}"
-                 ColumnMappingPath="Category">
-    <kanban:SfKanban.CardTemplate>
-        <DataTemplate>
-            <Border Stroke="Black"
-                    StrokeThickness="1"
-                    StrokeShape="RoundRectangle 8"
-                    Background="#F3EADC">
-                <Grid RowDefinitions="Auto,Auto,Auto"
-                      ColumnDefinitions="Auto,*"
-                      ColumnSpacing="8"
-                      Padding="8">
-                    <HorizontalStackLayout Grid.Row="0"
-                                           Grid.ColumnSpan="2"
-                                           Spacing="4"
-                                           VerticalOptions="Center"
-                                           HeightRequest="20"
-                                           HorizontalOptions="End">
-                        <Label Text="{Binding Index, StringFormat='Rank #{0}'}"
-                               FontSize="14"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
+        <local:SortingViewModel />
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     SortingMappingPath="Index"
+                     SortingOrder="Ascending"
+                     ItemsSource="{Binding Cards}"
+                     ColumnMappingPath="Category">
+        <kanban:SfKanban.CardTemplate>
+            <DataTemplate>
+                <Border Stroke="Black"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 8"
+                        Background="#F3EADC">
+                    <Grid RowDefinitions="Auto,Auto,Auto"
+                          ColumnDefinitions="Auto,*"
+                          ColumnSpacing="8"
+                          Padding="8">
+                        <HorizontalStackLayout Grid.Row="0"
+                                               Grid.ColumnSpan="2"
+                                               Spacing="4"
+                                               VerticalOptions="Center"
+                                               HeightRequest="20"
+                                               HorizontalOptions="End">
+                            <Label Text="{Binding Index, StringFormat='Rank #{0}'}"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#026B6E"
+                                   VerticalOptions="Center"
+                                   VerticalTextAlignment="Center"
+                                   HeightRequest="20" />
+                        </HorizontalStackLayout>
+                        <Label Grid.Row="1"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Title}"
                                FontAttributes="Bold"
-                               TextColor="#026B6E"
-                               VerticalOptions="Center"
+                               FontSize="14"
+                               HorizontalTextAlignment="Center"
                                VerticalTextAlignment="Center"
-                               HeightRequest="20"/>
-                    </HorizontalStackLayout>
-                    <Label Grid.Row="1"
-                           Grid.ColumnSpan="2"
-                           Text="{Binding Title}"
-                           FontAttributes="Bold"
-                           FontSize="14"
-                           HorizontalTextAlignment="Center"
-                           VerticalTextAlignment="Center"
-                           Margin="5"/>
-                    <Label Grid.Row="2"
-                           Grid.ColumnSpan="2"
-                           Text="{Binding Description}"
-                           FontSize="12"
-                           HorizontalTextAlignment="Center"
-                           LineBreakMode="WordWrap"
-                           Margin="5"/>
-                </Grid>
-            </Border>
-        </DataTemplate>
-    </kanban:SfKanban.CardTemplate>
-    <kanban:KanbanColumn Title="Open"
-                         Categories="Open"/>
-    <kanban:KanbanColumn Title="In Progress"
-                         Categories="In Progress"/>
-    <kanban:KanbanColumn Title="Done"
-                         Categories="Done"
-                         AllowDrag="False"/>
-    <kanban:SfKanban.BindingContext>
-        <local:SortingViewModel/>
-    </kanban:SfKanban.BindingContext>
-</kanban:SfKanban>
+                               Margin="5" />
+                        <Label Grid.Row="2"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Description}"
+                               FontSize="12"
+                               HorizontalTextAlignment="Center"
+                               LineBreakMode="WordWrap"
+                               Margin="5" />
+                    </Grid>
+                </Border>
+            </DataTemplate>
+        </kanban:SfKanban.CardTemplate>
+        <kanban:SfKanban.Columns>
+            <kanban:KanbanColumn Title="Open"
+                                 Categories="Open" />
+            <kanban:KanbanColumn Title="In Progress"
+                                 Categories="In Progress" />
+            <kanban:KanbanColumn Title="Done"
+                                 Categories="Done"
+                                 AllowDrag="False" />
+        </kanban:SfKanban.Columns>
+    </kanban:SfKanban>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="1 2 11 12" %}
 
-this.kanban.ItemsSource = new SortingViewModel().Cards;
-this.kanban.DragEnd += this.OnCardDragEnd;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Reflection;
+using Syncfusion.Maui.Kanban;
 
-private void OnCardDragEnd(object? sender, KanbanDragEndEventArgs e)
+var kanban = new SfKanban
 {
-    if (this.kanban == null)
-    {
-        return;
-    }
+    ItemsSource = new SortingViewModel().Cards
+};
+kanban.DragEnd += OnCardDragEnd;
+this.Content = kanban;
 
-    this.ApplySortingWithoutPositionChange(e);
-    this.kanban.RefreshKanbanColumn();
+private void OnCardDragEnd(object sender, KanbanDragEndEventArgs e)
+{
+    ApplySortingWithoutPositionChange(e);
+    kanban.RefreshKanbanColumn();
 }
 
 private void ApplySortingWithoutPositionChange(KanbanDragEndEventArgs eventArgs)
 {
-    if (this.kanban == null || eventArgs.Data == null || eventArgs.TargetColumn?.Items == null || eventArgs.SourceColumn == null || (eventArgs.SourceColumn == eventArgs.TargetColumn && eventArgs.SourceIndex == eventArgs.TargetIndex))
+    if (eventArgs.Data == null
+        || eventArgs.TargetColumn?.Items == null
+        || eventArgs.SourceColumn == null
+        || (eventArgs.SourceColumn == eventArgs.TargetColumn && eventArgs.SourceIndex == eventArgs.TargetIndex))
     {
         return;
     }
@@ -253,24 +283,23 @@ private void ApplySortingWithoutPositionChange(KanbanDragEndEventArgs eventArgs)
     var sortMappingPath = kanban.SortingMappingPath;
     var sortingOrder = kanban.SortingOrder;
 
-    // Extract and cast items from the target column
-    var targetColumnItems = eventArgs.TargetColumn.Items is IList<object> items
-        ? items.Cast<object>().ToList() : new List<object>();
-
-    // Proceed only if sorting path is defined
     if (string.IsNullOrEmpty(sortMappingPath))
     {
         return;
     }
 
+    // Extract and cast items from the target column
+    var targetColumnItems = eventArgs.TargetColumn.Items is IList<object> items
+        ? items.Cast<object>().ToList() : new List<object>();
+
     // Sort items based on the sorting order
     if (targetColumnItems.Count > 0)
     {
-        Func<object, object?> keySelector = item => this.GetPropertyInfo(item.GetType(), sortMappingPath);
+        Func<object, int> keySelector = item => Convert.ToInt32(GetPropertyInfo(item.GetType(), sortMappingPath)?.GetValue(item) ?? 0);
 
         targetColumnItems = sortingOrder == KanbanSortingOrder.Ascending
-            ? targetColumnItems.OrderBy(item => keySelector(item) ?? 0).ToList()
-            : targetColumnItems.OrderByDescending(item => keySelector(item) ?? 0).ToList();
+            ? targetColumnItems.OrderBy(keySelector).ToList()
+            : targetColumnItems.OrderByDescending(keySelector).ToList();
     }
 
     // Determine the index to insert the dragged card.
@@ -286,7 +315,7 @@ private void ApplySortingWithoutPositionChange(KanbanDragEndEventArgs eventArgs)
     }
 
     // Update index property of all items using smart positioning logic
-    this.ApplySmartIndexUpdate(targetColumnItems, sortingOrder, currentCardIndex);
+    ApplySmartIndexUpdate(targetColumnItems, sortingOrder, currentCardIndex);
 }
 
 private void ApplySmartIndexUpdate(List<object> items, KanbanSortingOrder sortingOrder, int currentCardIndex)
@@ -298,11 +327,11 @@ private void ApplySmartIndexUpdate(List<object> items, KanbanSortingOrder sortin
 
     if (sortingOrder == KanbanSortingOrder.Ascending)
     {
-        this.HandleAscendingIndexSorting(items, currentCardIndex);
+        HandleAscendingIndexSorting(items, currentCardIndex);
         return;
     }
 
-    this.HandleDescendingIndexSorting(items, currentCardIndex);
+    HandleDescendingIndexSorting(items, currentCardIndex);
 }
 
 private void HandleAscendingIndexSorting(List<object> items, int currentCardIndex)
@@ -325,7 +354,7 @@ private void HandleAscendingIndexSorting(List<object> items, int currentCardInde
             continue;
         }
 
-        PropertyInfo? propertyInfo = this.GetPropertyInfo(item.GetType(), "Index");
+        PropertyInfo? propertyInfo = GetPropertyInfo(item.GetType(), "Index");
         if (propertyInfo == null)
         {
             continue;
@@ -375,7 +404,7 @@ private void HandleDescendingIndexSorting(List<object> items, int currentCardInd
             continue;
         }
 
-        PropertyInfo? propertyInfo = this.GetPropertyInfo(item.GetType(), "Index");
+        PropertyInfo? propertyInfo = GetPropertyInfo(item.GetType(), "Index");
         if (propertyInfo == null)
         {
             continue;
@@ -411,7 +440,7 @@ private int? GetCardIndex(object cardDetails)
         return null;
     }
 
-    PropertyInfo? propertyInfo = this.GetPropertyInfo(cardDetails.GetType(), "Index");
+    PropertyInfo? propertyInfo = GetPropertyInfo(cardDetails.GetType(), "Index");
     if (propertyInfo == null)
     {
         return null;
@@ -428,7 +457,7 @@ private int? GetCardIndex(object cardDetails)
 
 private PropertyInfo? GetPropertyInfo(Type type, string key)
 {
-    return this.GetPropertyInfoCustomType(type, key);
+    return GetPropertyInfoCustomType(type, key);
 }
 
 private PropertyInfo? GetPropertyInfoCustomType([DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)] Type type, string key)
@@ -449,6 +478,8 @@ public class CardDetails
 
 {% endhighlight %}
 {% highlight c# tabtitle="SortingViewModel.cs" %}
+
+using System.Collections.ObjectModel;
 
 public class SortingViewModel
 {
