@@ -87,6 +87,38 @@ N> The **Essential<sup>®</sup> UI Kit for .NET MAUI** add-in will be shown when
    ![MAUI UI Kit Visual Studio Code](UI-Kit-images/visual-studio-code-maui-ui-kit.gif)
 
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+1. Before using the **Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup>**, ensure that the plugin is installed in JetBrains Rider. To check, go to **Settings > Plugins > Installed**. If the plugin is not installed, follow the steps in the [download and installation](download-and-installation) help guide to install it.
+
+2. Open your existing .NET MAUI project in JetBrains Rider.
+
+3. Right-click the project and choose **Tools → Essential UI Kit for .NET MAUI** as shown in the following screenshot.
+
+   ![Syncfusion Essential UI Kit for .NET MAUI Context menu in MAUI](UI-Kit-images/Menu.png)
+
+4. The category dialog wizard will open with pre-defined templates.
+
+   ![Add new item dialog box](UI-Kit-images/Maui-Wizard.png)
+
+5. Choose one or more page templates (for example, `About Us Page With Cards`), and then click **Next**.
+
+6. Enter a name for the new page and click **Add** to scaffold the XAML page, View, ViewModel, model classes, and resources.
+
+   ![Edit page Name in MAUI UI Kit Plugin](UI-Kit-images/Edit-Wizard.png)
+
+7. The selected pages will be added along with the **View, ViewModel, Model** classes, resource files, and the **Syncfusion<sup>®</sup> NuGet package** reference as shown in the following screenshots.
+
+   ![Added files in MAUI Project](UI-Kit-images/ViewFiles.png)
+
+   ![Added Resources in MAUI Project](UI-Kit-images/Resources.png)
+
+   ![Added NuGet in MAUI Project](UI-Kit-images/Packages.png)
+
+N> Syncfusion<sup>®</sup> licensing registration is required if you have installed the trial setup or NuGet packages, since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Refer to the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) to generate and register the license key in your project.
+
+{% endtabcontent %}
 {% endtabcontents %}
 
 ## How to Render the Added Page?
