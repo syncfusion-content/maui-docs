@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Linear ProgressBar Control | Syncfusion®
+title: Getting Started with .NET MAUI Linear ProgressBar | Syncfusion®
 description: Learn about getting started with the Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control, its elements, and more.
 platform: MAUI
 control: SfLinearProgressBar
