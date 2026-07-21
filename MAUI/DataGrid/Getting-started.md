@@ -92,7 +92,7 @@ Before proceeding, ensure the following are set up:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 3: Register Syncfusion Handler
+## Step 3: Register Syncfusion handler
  
 To use Syncfusion controls, register the Syncfusion core handler in your application's startup configuration.
 
