@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides a quick overview for working with Essential<sup>®</sup> Kanban for .NET MAUI. It is an efficient way to visualize the workflow at each stage along its path to completion.
 
-To get start quickly with our [.NET MAUI Kanban Board](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html), you can check the below video.
+To get started quickly with our [.NET MAUI Kanban Board](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html), you can check the below video.
 
 {% youtube "https://youtu.be/Mq55vjT7ZEA" %}
 
@@ -489,6 +489,12 @@ Let’s look at the practical code example:
 {% tabs %}
 {% highlight XAML hl_lines="2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22" %}
 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="SimpleSample.MainPage"
+            xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+            xmlns:local="clr-namespace:SimpleSample;assembly=SimpleSample">
+
 <kanban:SfKanban x:Name="kanban"
                  ItemsSource="{Binding TaskDetails}"
                  ColumnMappingPath="Status">
@@ -515,6 +521,8 @@ Let’s look at the practical code example:
         <local:KanbanViewModel />
     </kanban:SfKanban.BindingContext>
 </kanban:SfKanban>
+
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="3 4 5 6 7 8 9 10 11 13 15 16 17 18 19 20 21 23 25 26 27 28 29 31 32 33 34 35 36 37 39 40 42 43" %}
@@ -575,6 +583,9 @@ public class TaskDetails
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+using Syncfusion.Maui.Kanban;
+using System.Collections.ObjectModel;
 
 public class KanbanViewModel
 {
