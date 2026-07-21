@@ -9,26 +9,26 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI Linear Progress Bar
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Linear Progress Bar (SfLinearProgressBar) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Linear Progress Bar (SfLinearProgressBar) control.
 
-## Apply liquid glass effect
+## Apply the liquid glass effect
 
 Follow these steps to enable and configure the Liquid Glass Effect in the Linear Progress Bar control:
 
-### Step 1: Wrap the control inside glass effect view
+### Step 1: Wrap the control inside a glass effect view
 
 To apply the Liquid Glass Effect to the Syncfusion® .NET MAUI [LinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) control, wrap the control inside the `SfGlassEffectView` class.
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
+For more details, refer to the `Liquid Glass Getting Started` documentation.
 
 ### Step 2: Customize the background
 
-To achieve a glass like background in the Linear Progress Bar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass-like background in the Linear Progress Bar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfLinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) control:
 
 {% tabs %}
-{% highlight xaml hl_lines="14 15 16 25" %}
+{% highlight XAML hl_lines="14 15 16 25" %}
 
 <Grid>
     <Grid.Background>
@@ -59,7 +59,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="19 21 22 23 37 38" %}
+{% highlight C# hl_lines="19 21 22 23 37 38" %}
 
 var gradientBrush = new LinearGradientBrush
 {
@@ -107,4 +107,4 @@ this.Content = grid;
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
+* This feature is available only in `.NET 10`.
