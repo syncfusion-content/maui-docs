@@ -17,7 +17,6 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
 
-## Overview
 
 The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can be populated with items in two ways:
 
@@ -25,7 +24,6 @@ The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.Sf
 * **Through Rotator Item** — create a list of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) objects when each item needs a different view, an image, or arbitrary content via the [`ItemContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_ItemContent) property.
 
 Use **Through Binding** when all items share a common layout. Use **Through Rotator Item** when you need per-item customization, mixed content, or quick image-only items.
-
 
 ## Properties Reference
 
@@ -45,11 +43,9 @@ This section explains how to set the `ItemsSource` and apply a custom template t
 The `SfRotator` items can be populated with a collection of image data. Assign a collection to the `ItemsSource` property. Collections include arrays, `List<T>`, and `ObservableCollection<T>`. For example, you may want to create a `RotatorModel` with an `Image` property as follows.
 
 {% tabs %}
-
 {% highlight C# %}
 
 // Model Class for Rotator.
-
 public class RotatorModel
 {
     public RotatorModel(string imageString)
@@ -60,13 +56,11 @@ public class RotatorModel
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Create and populate the `SfRotator` collection as follows.
 
 {% tabs %}
-
 {% highlight C# %}
 
 // ViewModel class for Rotator.
@@ -84,12 +78,10 @@ public class RotatorViewModel
             new RotatorModel("image5.png")
         };
     }
-
     public List<RotatorModel> ImageCollection { get; set; }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ### Binding the Data with Custom Template
@@ -100,32 +92,29 @@ The `SfRotator` provides support to add a custom view as Rotator items by design
 
 {% highlight xaml %}
 
-
-<ContentPage.BindingContext>
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    SelectedIndex="2"
+                    NavigationDirection="Horizontal"
+                    NavigationStripMode="Dots"
+                    BackgroundColor="#ececec">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
+<rotator:SfRotator.BindingContext>
     <local:RotatorViewModel />
-</ContentPage.BindingContext>
-<ContentPage.Content>
-    <rotator:SfRotator x:Name="rotator"
-                        ItemsSource="{Binding ImageCollection}"
-                        SelectedIndex="2"
-                        NavigationDirection="Horizontal"
-                        NavigationStripMode="Dots"
-                        BackgroundColor="#ececec">
-        <rotator:SfRotator.ItemTemplate>
-            <DataTemplate>
-                <Image Source="{Binding Image}" />
-            </DataTemplate>
-        </rotator:SfRotator.ItemTemplate>
-    </rotator:SfRotator>
-</ContentPage.Content>
+</rotator:SfRotator.BindingContext>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+SfRotator rotator = new SfRotator()
+{
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
     NavigationStripMode = NavigationStripMode.Dots,
@@ -138,10 +127,8 @@ RotatorViewModel rotatorViewModel = new RotatorViewModel();
         return image;
     }),
 };
- 
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## Through Rotator Item
@@ -155,53 +142,40 @@ Use `SfRotatorItem.ItemContent` when each item must display a different view, su
 {% tabs %}
 
 {% highlight C# %}
-using Syncfusion.Maui.Rotator;
 
-namespace Rotator;
+List<SfRotatorItem> rotatorItem = new List<SfRotatorItem>();
 
-public partial class Rotator : ContentPage
+// Rotator Item as Label
+rotatorItem.Add(new SfRotatorItem()
 {
-    public Rotator()
+    ItemContent = new Label()
     {
-        InitializeComponent();
-
-        List<SfRotatorItem> rotatorItem = new List<SfRotatorItem>();
-
-        // Rotator Item as Label
-        rotatorItem.Add(new SfRotatorItem()
-        {
-            ItemContent = new Label()
-            {
-                Text = "RotatorItem as Label",
-                BackgroundColor = Colors.Aqua,
-                FontSize = 20,
-                VerticalTextAlignment = TextAlignment.Center,
-                HorizontalTextAlignment = TextAlignment.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        });
-
-        // Rotator Item as Image
-        rotatorItem.Add(new SfRotatorItem()
-        {
-            ItemContent = new Image()
-            {
-                Source = ImageSource.FromFile("image1.png"),
-                Aspect = Aspect.AspectFit,
-                VerticalOptions = LayoutOptions.Center,
-                HeightRequest = 400,
-                WidthRequest = 400
-            }
-        });
-
-        SfRotator rotator = new SfRotator()
-        {
-            ItemsSource = rotatorItem
-        };
-
-        this.Content = rotator;
+        Text = "RotatorItem as Label",
+        BackgroundColor = Colors.Aqua,
+        FontSize = 20,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalOptions = LayoutOptions.Center
     }
-}   
+});
+
+// Rotator Item as Image
+rotatorItem.Add(new SfRotatorItem()
+{
+    ItemContent = new Image()
+    {
+        Source = ImageSource.FromFile("image1.png"),
+        Aspect = Aspect.AspectFit,
+        VerticalOptions = LayoutOptions.Center,
+        HeightRequest = 400,
+        WidthRequest = 400
+    }
+});
+
+SfRotator rotator = new SfRotator()
+{
+    ItemsSource = rotatorItem
+};
 
 {% endhighlight %}
 
@@ -214,47 +188,30 @@ public partial class Rotator : ContentPage
 The `SfRotatorItem` class also provides an `Image` property for quickly displaying image-only items. When both `Image` and `ItemContent` are set, `ItemContent` takes precedence.
 
 {% tabs %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.Rotator;
-
-namespace Rotator;
-
-public partial class Rotator : ContentPage
+SfRotator rotator = new SfRotator()
 {
-    SfRotator rotator;
-    StackLayout stackLayout;
-
-    public Rotator()
+    ItemsSource = new List<SfRotatorItem>()
     {
-        InitializeComponent();
-        rotator = new SfRotator()
-        {
-            ItemsSource = new List<SfRotatorItem>()
-            {
-                new SfRotatorItem() { Image = "image1.png" },
-                new SfRotatorItem() { Image = "image2.png" },
-                new SfRotatorItem() { Image = "image3.png" },
-                new SfRotatorItem() { Image = "image4.png" },
-                new SfRotatorItem() { Image = "image5.png" }
-            }
-        };
-        stackLayout = new StackLayout()
-        {
-            HeightRequest = 300,
-            Children =
-            {
-                rotator
-            }
-        };
-
-        this.Content = stackLayout;
+        new SfRotatorItem() { Image = "image1.png" },
+        new SfRotatorItem() { Image = "image2.png" },
+        new SfRotatorItem() { Image = "image3.png" },
+        new SfRotatorItem() { Image = "image4.png" },
+        new SfRotatorItem() { Image = "image5.png" }
     }
-}
+};
+
+StackLayout stackLayout = new StackLayout()
+{
+    HeightRequest = 300,
+    Children =
+    {
+        rotator
+    }
+};
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ![SfRotator with image items](images/RotatorItems.png)
@@ -263,9 +220,7 @@ Similarly, every item can be created and customized when a different Rotator ite
 
 ## See also
 
-- [Getting Started with .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/getting-started)
 - [Sliding Direction in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/sliding-direction)
-- [Navigation Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
 - [Adding Looping and Delays in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/adding-looping-and-delays)
 - [DataTemplateSelector in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/datatemplateselector)
 - [Loading Online Images in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/loading-online-images)

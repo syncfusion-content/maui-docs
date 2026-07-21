@@ -17,22 +17,12 @@ Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
 
-## Overview
 
 The [`IsTextVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_IsTextVisible) property enables the text area at the bottom of the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control, which displays additional information about each item.
 
 The text area is populated from the [`ItemText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_ItemText) property of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) when items are added through the `SfRotatorItem` collection. When items are populated through an `ItemTemplate`, the text area does not appear, even when `IsTextVisible` is `true`.
 
 > **Note:** By default, `IsTextVisible` is `false`.
-
-> **Note:** Ensure that the images referenced in the code snippets (e.g., `image1.png` through `image5.png`) are located in the **Resources/Images** folder of your project.
-
-## Properties Reference
-
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `IsTextVisible` | `bool` | `false` | Controls whether the text area at the bottom of `SfRotator` is visible. |
-| `SfRotatorItem.ItemText` | `string` | `null` | The text shown in the text area for the item. Required for the text area to display. |
 
 ## Show the Header Text
 
@@ -61,9 +51,9 @@ The corresponding XAML page is shown below. Note that the XAML approach uses `Sf
 
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     VerticalOptions = LayoutOptions.Start,
     rotator.IsTextVisible = true,
     BackgroundColor = Color.FromArgb("#ececec"),
@@ -119,19 +109,11 @@ public class RotatorViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
 ![SfRotator with the header text area visible](images/IsTextVisible.png)
-
-## Troubleshooting
-
-* **Text does not appear** — Confirm that the `ItemsSource` is a collection of `SfRotatorItem` objects (not a generic model) and that each item has its `ItemText` property set. The text area is not supported with `ItemTemplate`-based binding.
-* **Dots overlap the text** — Set `DotPlacement` to `DotsPlacement.OutSide` to render the dots below the text area.
 
 ## See also
 
-- [Getting Started with .NET MAUI Rotator (SfRotator)](https://help.syncfusion.com/maui/Rotator/getting-started)
 - [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)
 - [Navigation Mode in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
 - [Populating data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)
-- [Events in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/events)
 - [Placement Modes in.NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)

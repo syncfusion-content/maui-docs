@@ -51,8 +51,6 @@ Create a `RotatorViewModel` that exposes a collection of `RotatorModel` items. U
 
 {% highlight C# %}
 
-using System.Collections.ObjectModel;
-
 public class RotatorViewModel
 {
     public RotatorViewModel()
@@ -94,9 +92,9 @@ Bind the `RotatorViewModel.ImageCollection` to the [`ItemsSource`](https://help.
 {% endhighlight %}
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
- {
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
+{
     NavigationDirection = NavigationDirection.Horizontal,
     ItemsSource = rotatorViewModel.ImageCollection,
     ItemTemplate = new DataTemplate(() =>
@@ -110,18 +108,9 @@ Bind the `RotatorViewModel.ImageCollection` to the [`ItemsSource`](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-
 ![SfRotator loading images from URLs](images/URLImage.png)
-
-## Troubleshooting
-
-* **Images do not load** — Verify the device has network access and that the URL is reachable from the device. Open the URL in a browser on the same network to confirm.
-* **HTTPS errors** — The .NET MAUI `Image` control requires HTTPS by default. If you must use `http://`, enable clear text traffic for the relevant platform.
-* **Slow or memory-intensive loads** — For large images or many items, consider pre loading and resizing images, or using a caching library such as FFImageLoading.
 
 ## See also
 
-- [Getting Started with .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/getting-started)
 - [Populating Data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)
-- [Navigation Modes in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
 - [Sliding Direction in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/sliding-direction)

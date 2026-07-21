@@ -73,8 +73,8 @@ The [`DotsStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.S
 {% endhighlight %}
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
  {
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
@@ -164,8 +164,8 @@ The [`SelectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rot
 {% endhighlight %}
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
  {
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
@@ -258,8 +258,8 @@ The [`UnselectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.R
 
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
  {
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
@@ -356,8 +356,8 @@ The [`SelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight C# %}
     
- RotatorViewModel rotatorViewModel = new RotatorViewModel();
- SfRotator rotator = new SfRotator()
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
  {
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
