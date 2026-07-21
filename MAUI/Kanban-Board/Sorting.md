@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in .NET MAUI Kanban control | Syncfusion®
-description: Learn about Sorting support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control and more.
+description: Learn about Sorting support in the Syncfusion® .NET MAUI Kanban Board (SfKanban) control, including customization options and usage scenarios.
 platform: maui
 control: Kanban (SfKanban)
 documentation: ug
