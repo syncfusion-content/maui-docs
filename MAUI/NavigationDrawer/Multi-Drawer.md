@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multi Drawer in .NET MAUI Navigation Drawer (SfNavigationDrawer) | Syncfusion®
+title: Multi Drawer in .NET MAUI Navigation Drawer | Syncfusion®
 description: Configure primary and secondary drawers on the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control to expose content on multiple sides.
 platform: MAUI
 control: SfNavigationDrawer
@@ -233,5 +233,5 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 - [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
-- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-size)
+- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
 - [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)

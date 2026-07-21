@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Side Pane Sizing in .NET MAUI Navigation Drawer (SfNavigationDrawer) | Syncfusion®
-description: Learn how to size the side pane in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control using DrawerWidth and DrawerHeight.
+title: Side Pane Sizing in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn how to size the side pane in the Syncfusion® .NET MAUI Navigation Drawer control using DrawerWidth and DrawerHeight.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG

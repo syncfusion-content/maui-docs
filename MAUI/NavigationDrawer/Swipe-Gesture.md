@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Swipe Gesture in .NET MAUI Navigation Drawer (SfNavigationDrawer) | Syncfusion®
+title: Swipe Gesture in .NET MAUI Navigation Drawer | Syncfusion®
 description: Learn how to enable and customize the swipe gesture in the Syncfusion® .NET MAUI Navigation Drawer control.
 platform: MAUI
 control: SfNavigationDrawer

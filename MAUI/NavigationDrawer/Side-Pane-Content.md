@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Side Pane Content in .NET MAUI Navigation Drawer (SfNavigationDrawer) | Syncfusion®
-description: Learn how to set the header, footer, and content areas of the side pane in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control.
+title: Side Pane Content in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn how to set the header, footer, and content areas of the side pane in the Syncfusion® .NET MAUI Navigation Drawer control.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
@@ -393,5 +393,5 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 - [Getting Started with .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/getting-started)
 - [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
-- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-size)
+- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
 - [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)

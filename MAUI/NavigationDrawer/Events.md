@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Navigation Drawer (SfNavigationDrawer) | Syncfusion®
-description: Learn about the built-in events in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and how to handle them.
+title: Events in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn about the built-in events in the Syncfusion® .NET MAUI Navigation Drawer control and how to handle them.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
@@ -31,7 +31,7 @@ The following five built-in events are available in the [SfNavigationDrawer](htt
 * [DrawerClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosed)
 * [DrawerToggled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerToggled)
 
-## Event lifecycle
+## Event life cycle
 
 The events fire in the following order during a state change:
 
@@ -216,7 +216,7 @@ The `DrawerOpening` and `DrawerClosing` events expose a `Cancel` property. Set `
 | Issue | Possible cause | Resolution |
 |-------|----------------|------------|
 | Events never fire | Swipe gesture disabled and the drawer is never toggled programmatically | Enable [SwipeGestureSettings](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) or call `IsOpen = true` |
-| `DrawerToggled` fires but `DrawerOpened` does not | The drawer was canceled by `DrawerOpening` or `DrawerClosing` | Inspect the cancellation logic and event order in the [Event lifecycle](#event-lifecycle) section |
+| `DrawerToggled` fires but `DrawerOpened` does not | The drawer was canceled by `DrawerOpening` or `DrawerClosing` | Inspect the cancellation logic and event order in the [Event life cycle](#event-life-cycle) section |
 | `e.Cancel = true` has no effect | `Cancel` is being read-only or set after the event has already completed | Ensure the assignment happens synchronously inside the event handler |
 
 ## See also
@@ -225,5 +225,5 @@ The `DrawerOpening` and `DrawerClosing` events expose a `Cancel` property. Set `
 - [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
-- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-size)
+- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
 - [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)

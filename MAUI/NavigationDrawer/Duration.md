@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Animation Duration in .NET MAUI Navigation Drawer (SfNavigationDrawer) | Syncfusion®
+title: Animation Duration in .NET MAUI Navigation Drawer | Syncfusion®
 description: Learn about the Duration property in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and how to customize the animation speed.
 platform: MAUI
 control: SfNavigationDrawer
@@ -78,5 +78,5 @@ For more details on configuring the drawer behavior, see [Toggling the Drawer](h
 - [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
-- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-size)
+- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
 - [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)

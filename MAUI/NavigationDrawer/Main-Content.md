@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Main Content in .NET MAUI Navigation Drawer (SfNavigationDrawer) | Syncfusion®
+title: Main Content in .NET MAUI Navigation Drawer | Syncfusion®
 description: Learn how to set the main content of the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and how it relates to the side pane.
 platform: MAUI
 control: SfNavigationDrawer
@@ -60,7 +60,7 @@ In this approach, the `SfNavigationDrawer` is declared in XAML and exposed to co
                                 HeightRequest="50"
                                 WidthRequest="50"
                                 HorizontalOptions="Start"
-                                Source="hamburgericon.png"
+                                Source="hamburger.png"
                                 BackgroundColor="#6750A4"
                                 Clicked="hamburgerButton_Clicked" />
                 <Label x:Name="headerLabel"
@@ -114,7 +114,7 @@ var hamburgerButton = new ImageButton
     WidthRequest = 50,
     HorizontalOptions = LayoutOptions.Start,
     BackgroundColor = Color.FromArgb("#6750A4"),
-    Source = "hamburgericon.png",
+    Source = "hamburger.png",
 };
 hamburgerButton.Clicked += hamburgerButton_Clicked;
 
@@ -189,7 +189,7 @@ Text and controls placed in the main content area are exposed to assistive techn
 | Issue | Possible cause | Resolution |
 |-------|----------------|------------|
 | `ContentView` does not appear | The property was never assigned, or the assigned view has zero size | Assign a non-null `View` with explicit dimensions or layout constraints |
-| `hamburgericon.png` does not load at runtime | The image is not in `Resources/Images` or not registered | Add the image to `Resources/Images` and verify the build action is `MauiImage` |
+| `hamburger.png` does not load at runtime | The image is not in `Resources/Images` or not registered | Add the image to `Resources/Images` and verify the build action is `MauiImage` |
 | Side pane opens but covers the header | `DrawerHeaderHeight` is `0` or `DrawerHeaderView` is empty | Set `DrawerHeaderHeight` and provide a `DrawerHeaderView` (see [Side Pane Content](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)) |
 | `ToggleDrawer` throws `NullReferenceException` | `ContentView` was never set | Initialize `ContentView` before calling `ToggleDrawer` |
 | `x:Name` collision between XAML and C# field | A field named `navigationDrawer` is declared in code-behind while XAML also uses `x:Name="navigationDrawer"` | Use only one of the two approaches shown above |
@@ -201,5 +201,5 @@ Text and controls placed in the main content area are exposed to assistive techn
 - [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
-- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-size)
+- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
 - [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)

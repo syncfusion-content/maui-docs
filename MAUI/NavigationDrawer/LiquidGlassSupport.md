@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Navigation Drawer (SfNavigationDrawer) | Syncfusion®
-description: Learn about the liquid glass effect in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control, including supported platforms, configuration, and styling tips.
+title: Liquid Glass Support for .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn about the liquid glass effect in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
@@ -108,5 +108,5 @@ The liquid glass effect is purely visual and does not alter the drawer's interac
 - [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
-- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-size)
+- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
 - [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)
