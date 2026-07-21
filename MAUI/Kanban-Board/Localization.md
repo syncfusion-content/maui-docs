@@ -10,11 +10,11 @@ keywords: .net maui Kanban localization, sfKanban localization in .net maui, .ne
 
 # Localization in .NET MAUI Kanban (SfKanban)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) can be localized by adding `resource` file. 
+Localization is the process of translating application resources for specific cultures. The [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) can be localized by adding `.resx` resource files.
 
-## Setting CurrentUICulture to the application
+## Setting the CurrentUICulture
 
-Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
+Set `CurrentUICulture` in `App.xaml.cs` to change the application culture.
 
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 15" %}
@@ -43,25 +43,25 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-N> The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+N> Add the required `.resx` files (with the culture code in the file name, for example `SfKanban.fr-FR.resx`) to the `Resources` folder, and set their build action to `EmbeddedResource` in the `.csproj`:
 
 ## Localize application level
 
-To localize the `Kanban` based on `CurrentUICulture` using `resource` files, follow the below steps.
+## Localize application level
 
-   1. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
+To localize the Kanban Board based on `CurrentUICulture`, follow these steps:
 
-   2. In Add New Item, select the Resource File option and name the filename as `SfKanban.<culture name>.resx.` For example, give the name as `SfKanban.fr-FR.resx` for French culture.
+   1. Right-click the `Resources` folder, then select **Add > New Item**.
 
-   3. The culture name indicates the name of the language and country.
+   2. In the **Add New Item** dialog, select **Resource File** and name the file `SfKanban.<culture name>.resx` (for example, `SfKanban.fr-FR.resx` for French). The culture name combines the language and country codes.
 
    ![shows-the-name-of-resource-file-to-be-added-for-maui-Kanban](Localization_images/name_of_resource_file.png)
 
-   4. Now, select `Add` option to add the resource file in **Resources** folder.
+   4. Click **Add** to add the resource file to the **Resources** folder.
 
-   ![shows-the-added-resource-file-for-french-language-in-maui-Kanban](Localization_images/shows-the-added-resource-file-for-french-language-in-maui-kanban.png)
+   ![shows-the-added-resource-file-for-french-language-in-maui-kanban](Localization_images/shows-the-added-resource-file-for-french-language-in-maui-kanban.png)
 
-   5. Add the Name/Value pair in Resource Designer of `SfKanban.fr-FR.resx` file and change its corresponding value to corresponding culture.
+   5. In the Resource Designer of `SfKanban.fr-FR.resx`, add a Name/Value pair and set the Value to the corresponding culture-specific string.
 
    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-kanban](Localization_images/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-Kanban.png)
 
