@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Glass Support in .NET MAUI Radial Menu (SfRadialMenu) | Syncfusion®
+title: Liquid Glass Support in .NET MAUI Radial Menu | Syncfusion®
 description: Learn how to enable the Liquid Glass visual effect on Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) and customize its appearance.
 platform: MAUI
 control: SfRadialMenu
@@ -23,7 +23,7 @@ The [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialM
 
 For an overview of Liquid Glass across Syncfusion controls, see [Liquid glass integration with Syncfusion® .NET MAUI controls](https://help.syncfusion.com/maui/liquid-glass-ui/glassy-controls).
 
-> NOTE: On Android and Windows, `EnableLiquidGlassEffect` is ignored and the menu uses its default rendering.
+> **Note** This feature is supported only on `.NET 10` along with `iOS 26` and `macOS 26`. On other platforms (Android, Windows, older iOS/macOS), the property has no effect and the Tab View renders with its default styling.
 
 ## Properties Summary
 

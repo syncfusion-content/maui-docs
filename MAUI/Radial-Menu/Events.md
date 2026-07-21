@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Radial Menu Control | Syncfusion®
-description: Learn about Events in Syncfusion® .NET MAUI Radial Menu control, its elements and more.
+description: Learn about Events in Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control, its elements and more.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
@@ -19,11 +19,11 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Overview
 
-`SfRadialMenu` raises a set of events that you can subscribe to in order to react to user interaction, navigation, and lifecycle changes. This document describes each event, the arguments it provides, and shows how to wire it up in both XAML and C#.
+`SfRadialMenu` raises a set of events that you can subscribe to in order to react to user interaction, navigation, and life cycle changes. This document describes each event, the arguments it provides, and shows how to wire it up in both XAML and C#.
 
 ## Events Summary
 
-| Event | Raised when | Cancellable | `EventArgs` |
+| Event | Raised when | Cancelable | `EventArgs` |
 | --- | --- | --- | --- |
 | `Navigating` | Before the menu moves to the next or previous level. | Yes | `NavigatingEventArgs` |
 | `Navigated` | After the menu has moved to a new level. | No | `NavigatedEventArgs` |
@@ -40,7 +40,7 @@ The two `ItemTapped`, `TouchDown`, and `TouchUp` events are raised by `SfRadialM
 
 ## Handle the Navigating and Navigated events
 
-Use these events to react when the Radial Menu moves between levels. The [`Navigating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigating) event occurs when moving from one level to another (and is cancellable), and the [`Navigated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigated) event triggers after reaching the new level. Events fire in this order: `Navigating` → `Navigated`.
+Use these events to react when the Radial Menu moves between levels. The [`Navigating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigating) event occurs when moving from one level to another (and is cancelable), and the [`Navigated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigated) event triggers after reaching the new level. Events fire in this order: `Navigating` → `Navigated`.
 
 {% tabs %}
 
@@ -119,7 +119,7 @@ private void SfRadialMenu_Navigating(object sender, NavigatingEventArgs e)
 
 ## Handle the Opening and Opened events
 
-You can react when the Radial Menu opens. The [`Opening`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opening) event occurs when the Radial Menu begins to open, and the [`Opened`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opened) event occurs once it is fully open. Neither event is cancellable.
+You can react when the Radial Menu opens. The [`Opening`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opening) event occurs when the Radial Menu begins to open, and the [`Opened`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opened) event occurs once it is fully open. Neither event is cancelable.
 
 {% tabs %}
 
@@ -172,11 +172,11 @@ private async void SfRadialMenu_Opened(object sender, OpenedEventArgs e)
 | `OpeningEventArgs` / `OpenedEventArgs` property | Description |
 | --- | --- |
 | `IsOpen` | `true` when the menu is in the open state (provided on `Opened`). |
-| `Cancel` | Reserved; setting this has no effect on the open lifecycle. |
+| `Cancel` | Reserved; setting this has no effect on the open life cycle. |
 
 ## Handle the Closing and Closed events
 
-You can perform an action when closing the Radial Menu. The [`Closing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closing) event occurs when the Radial Menu begins to close, and the [`Closed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closed) event occurs once it is completely closed. Neither event is cancellable; to stop the menu from closing, intercept the `Closing` event in a subclass and skip the base call.
+You can perform an action when closing the Radial Menu. The [`Closing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closing) event occurs when the Radial Menu begins to close, and the [`Closed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closed) event occurs once it is completely closed. Neither event is cancelable; to stop the menu from closing, intercept the `Closing` event in a subclass and skip the base call.
 
 {% tabs %}
 
@@ -227,7 +227,7 @@ private async void SfRadialMenu_Closed(object sender, ClosedEventArgs e)
 
 | `ClosingEventArgs` / `ClosedEventArgs` property | Description |
 | --- | --- |
-| `Cancel` | Reserved; setting this has no effect on the close lifecycle. |
+| `Cancel` | Reserved; setting this has no effect on the close life cycle. |
 | `IsOpen` | `false` when the menu has fully closed (provided on `Closed`). |
 
 ## Handle the CenterButtonBackTapped event
@@ -381,7 +381,7 @@ private async void SfRadialMenuItemTouchUp(object? sender, RadialMenuItemEventAr
 | Item-level event fires on every item instead of one. | The event was subscribed on the menu (`SfRadialMenu`) instead of the item (`SfRadialMenuItem`). | Subscribe on the `SfRadialMenuItem` instance, not on the menu. |
 | Unhandled exception in `async void` handler. | `DisplayAlert` was awaited without a `try`/`catch`. | Wrap the body in a `try`/`catch` and log or swallow the exception. |
 | `CenterButtonBackTapped` does not fire. | The menu is on the root level (no back button is shown). | Navigate to a sub-level before tapping the back button. |
-| `e.Cancel` has no effect. | The event is not cancellable (e.g., `Navigated`, `Opening`, `Closing`, `Closed`). | Only `Navigating` is cancellable in `SfRadialMenu`. |
+| `e.Cancel` has no effect. | The event is not cancelable (e.g., `Navigated`, `Opening`, `Closing`, `Closed`). | Only `Navigating` is cancelable in `SfRadialMenu`. |
 
 ## See also
 

@@ -203,8 +203,6 @@ namespace RadialSample
 
 {% endtabs %}
 
-![CenterButtonTextColor and CenterButtonBackTextColor](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-textcolor.png)
-
 ## CenterButtonBackgroundColor
 
 The [`CenterButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackgroundColor) changes the background color of the center button.

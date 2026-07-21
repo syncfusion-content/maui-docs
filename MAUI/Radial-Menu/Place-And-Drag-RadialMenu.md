@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Placing and Dragging in .NET MAUI Radial Menu (SfRadialMenu) | Syncfusion®
+title: Placing and Dragging in .NET MAUI Radial Menu | Syncfusion®
 description: Learn how to place and drag the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) and how to use the related drag events.
 platform: MAUI
 control: SfRadialMenu

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Populating Items in .NET MAUI Radial Menu (SfRadialMenu) | Syncfusion®
-description: Learn how to populate the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) using SfRadialMenuItem instances or by binding to an ItemsSource with an ItemTemplate.
+description: Learn about item population support in the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
@@ -380,8 +380,6 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 {% endhighlight %}
 {% endtabs %}
 
-![Rim color and radius](images/populating-items/maui-radialmenu-rim.png)
-
 ## DisplayMemberPath
 
 When the menu is bound to a data source via [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemsSource), use the [`DisplayMemberPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DisplayMemberPath) property to indicate which property of each data item is rendered as the item text. This is a simpler alternative to `ItemTemplate` when you do not need a custom view per item.
@@ -488,7 +486,7 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 | Issue | Likely cause | Fix |
 | --- | --- | --- |
 | Font icons appear as literal text (e.g. `&#xe710;`). | `Maui Material Assets` font is not registered. | Add the font's `.ttf` to `Resources/Fonts/`, set the build action to `MauiFont`, and register it in `MauiProgram.cs`. |
-| Images (`johnson.png` etc.) do not render. | The image is missing from `Resources/Images/` or the build action is wrong. | Add the image as a `MauiImage` and verify the `Source` matches the file name (case-sensitive on iOS/Android). |
+| Images (`johns.png` etc.) do not render. | The image is missing from `Resources/Images/` or the build action is wrong. | Add the image as a `MauiImage` and verify the `Source` matches the file name (case-sensitive on iOS/Android). |
 | `ItemsSource` is empty in the menu. | The view-model property is `null` at startup, or the `BindingContext` is not set on the page. | Set `<ContentPage.BindingContext><local:EmployeeViewModel/></ContentPage.BindingContext>` in XAML, or assign the view model in code-behind before the menu is shown. |
 | `RadialMenuItemsCollection` does not compile. | Missing `using Syncfusion.Maui.RadialMenu;`. | Add the `using` directive. |
 | `Color.FromHex` is obsolete. | `FromHex` was deprecated in .NET 7 in favor of `FromArgb`. | Replace `Color.FromHex("#RRGGBB")` with `Color.FromArgb("#RRGGBB")`. |

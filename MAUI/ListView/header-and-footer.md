@@ -114,7 +114,7 @@ N> This API is applicable when `IsStickyFooter` is enabled.
 
 ## How to
 
-### Tab View appearance using listview header
+### TabView appearance using listview header
 
 The `SfListView` allows you to perform tab view structure by customizing the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate) to load any view.
 
