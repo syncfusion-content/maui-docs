@@ -22,7 +22,7 @@ The following code sample demonstrates how to customize the color of a progress 
 {% highlight XAML %}
 
 <progressBar:SfLinearProgressBar x:Name="linearProgressBar"
-                                 ProgressChanged="LinearProgressBar_ProgressChanged"
+                                 ProgressChanged="OnProgressChanged"
                                  Progress="100" />
 
 {% endhighlight %}
@@ -31,7 +31,7 @@ The following code sample demonstrates how to customize the color of a progress 
 
 using Syncfusion.Maui.ProgressBar;
 
-private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEventArgs e)
+private void OnProgressChanged(object sender, ProgressValueEventArgs e)
 {
     if (e.Progress < 50)
     {
@@ -60,7 +60,7 @@ The following code sample demonstrates how to customize the progress bar when th
 {% highlight XAML %}
 
 <progressBar:SfLinearProgressBar x:Name="linearProgressBar"
-                                 ProgressCompleted="LinearProgressBar_ProgressCompleted"
+                                 ProgressCompleted="OnProgressCompleted"
                                  Progress="100" />
 
 {% endhighlight %}
@@ -69,7 +69,7 @@ The following code sample demonstrates how to customize the progress bar when th
 
 using Syncfusion.Maui.ProgressBar;
 
-private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+private void OnProgressCompleted(object sender, ProgressValueEventArgs e)
 {
     this.linearProgressBar.ProgressFill = Colors.Green;
 }

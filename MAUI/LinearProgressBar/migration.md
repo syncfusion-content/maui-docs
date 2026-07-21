@@ -182,8 +182,8 @@ The following code example explains how to use the properties in the Xamarin lin
                                  IndeterminateIndicatorWidth="0.7"
                                  ProgressColor="Red"
                                  TrackColor="Violet"
-                                 ValueChanged="LinearProgressBar_ValueChanged"
-                                 ProgressCompleted="LinearProgressBar_ProgressCompleted"
+                                 ValueChanged="OnLinearProgressBarValueChanged"
+                                 ProgressCompleted="OnLinearProgressBarProgressCompleted"
                                  Progress="100"
                                  IsIndeterminate="false"
                                  Minimum="10"
@@ -211,12 +211,12 @@ The following code example explains how to use the properties in the Xamarin lin
 
 using Syncfusion.XForms.ProgressBar;
 
-private void LinearProgressBar_ValueChanged(object sender, ProgressValueEventArgs e)
+private void OnLinearProgressBarValueChanged(object sender, ProgressValueEventArgs e)
 {
     var value = e.Progress;
 }
 
-private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+private void OnLinearProgressBarProgressCompleted(object sender, ProgressValueEventArgs e)
 {
     var value = e.Progress;
 }
@@ -244,8 +244,8 @@ private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEve
                                   IndeterminateIndicatorWidthFactor="0.7"
                                   ProgressFill="Red"
                                   TrackFill="Violet"
-                                  ProgressChanged="LinearProgressBar_ProgressChanged"
-                                  ProgressCompleted="LinearProgressBar_ProgressCompleted"
+                                  ProgressChanged="OnLinearProgressBarProgressChanged"
+                                  ProgressCompleted="OnLinearProgressBarProgressCompleted"
                                   Progress="100"
                                   IsIndeterminate="false"
                                   Minimum="10"
@@ -276,12 +276,12 @@ private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEve
 
 using Syncfusion.Maui.ProgressBar;
 
-private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEventArgs e)
+private void OnLinearProgressBarProgressChanged(object sender, ProgressValueEventArgs e)
 {
     var value = e.Progress;
 }
 
-private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+private void OnLinearProgressBarProgressCompleted(object sender, ProgressValueEventArgs e)
 {
     var value = e.Progress;
 }
