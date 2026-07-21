@@ -65,6 +65,7 @@ this.Content = imageEditor;
 xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
     <imageEditor:SfImageEditor x:Name="imageEditor"/>
 </ContentPage>
+
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}

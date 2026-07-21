@@ -175,7 +175,7 @@ private void OnDeleteAnnotationClicked(object sender, EventArgs e)
 
 Remove all the custom view annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
-N> This is common for Shape, Text, and CustomView annotations.
+N> This is common for Shape, Text and CustomView annotations.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -203,7 +203,7 @@ private void OnClearAnnotationsClicked(object sender, EventArgs e)
 
 Occurs when an annotation is selected.
 
-N> This is common for Shape, Text, and CustomView annotations.
+N> This is common for Shape, Text and CustomView annotations.
 
 {% tabs %}
 
