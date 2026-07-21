@@ -19,15 +19,11 @@ Before using the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rating/getting-started) documentation.
 
-## Overview
-
-[`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) prevents users from changing the rating value once it has been set, which is useful for displaying read-only feedback such as a product or service rating shown to all viewers.
-
-The [`IsReadOnly`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_IsReadOnly) property of type `bool` controls whether users can change the rating value. Setting it to `true` makes the value unchangeable. The default value is `false`. When `IsReadOnly` is `true`, tap and drag interactions that would normally modify the value are blocked, and the pointer feedback typically shown on touch or hover is suppressed.
-
 ## IsReadOnly
 
-Use the [`IsReadOnly`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_IsReadOnly) property to restrict user selection in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. The following code example demonstrates how to set this property in XAML and C#. The XAML snippet assumes the `xmlns:rating` namespace has been declared as shown in the [Getting Started](https://help.syncfusion.com/maui/rating/getting-started) documentation.
+[.NET MAUI Rating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) prevents users from changing the rating value once it has been set, which is useful for displaying read-only feedback such as a product or service rating shown to all viewers.
+
+The [`IsReadOnly`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_IsReadOnly) property of type `bool` controls whether users can change the rating value. Setting it to `true` makes the value unchangeable. The default value is `false`. When `IsReadOnly` is `true`, tap and drag interactions that would normally modify the value are blocked, and the pointer feedback typically shown on touch or hover is suppressed.
 
 {% tabs %}
 
