@@ -25,7 +25,7 @@ Looping and delay can be enabled in the [`SfRotator`](https://help.syncfusion.co
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | `EnableAutoPlay` | `bool` | `false` | Specifies whether the items should navigate automatically. |
-| `NavigationDelay` | `double` | `2000` | Specifies the delay (in milliseconds) before switching to the next item. Effective only when `EnableAutoPlay` is `true`. |
+| `NavigationDelay` | `int` | `1000` | Specifies the delay (in milliseconds) before switching to the next item. Effective only when `EnableAutoPlay` is `true`. |
 | `EnableLooping` | `bool` | `false` | Specifies whether the items should loop back to the first item after reaching the last item. |
 | `EnableSwiping` | `bool` | `true` | Specifies whether the user can swipe between items. |
 

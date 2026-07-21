@@ -33,15 +33,15 @@ This page covers:
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
-| `DotsStroke` | `Color` | `#B3B3B3` | The stroke color of the dot indicators. |
-| `SelectedDotColor` | `Color` | `#F2C849` | The fill color of the currently selected dot. |
-| `UnselectedDotColor` | `Color` | `#B3B3B3` | The fill color of the unselected dots. |
-| `SelectedThumbnailStroke` | `Color` | `#F2C849` | The stroke color of the currently selected thumbnail. |
-| `UnselectedThumbnailStroke` | `Color` | `#B3B3B3` | The stroke color of the unselected thumbnails. |
+| `DotsStroke` | `Color` | `Colors.Transparent` | The stroke color of the dot indicators. |
+| `SelectedDotColor` | `Color` | `Color.FromRgb(73, 69, 79)` | The fill color of the currently selected dot. |
+| `UnselectedDotColor` | `Color` | `Color.FromRgb(202, 196, 208)` | The fill color of the unselected dots. |
+| `SelectedThumbnailStroke` | `Color` | `Color.FromRgb(103, 80, 164)` | The stroke color of the currently selected thumbnail. |
+| `UnselectedThumbnailStroke` | `Color` | `Color.FromRgb(202, 196, 208)` | The stroke color of the unselected thumbnails. |
 | `NavigationStripPosition` | `NavigationStripPosition` | `Bottom` | The placement of the navigation bar relative to the slider. |
-| `NavigationButtonIconColor` | `Color` | `#FFFFFF` | The icon color of the navigation buttons. |
-| `NavigationButtonBackgroundColor` | `Color` | `Transparent` | The background color of the navigation buttons. |
-| `ShowNavigationButton` | `bool` | `true` | Whether the navigation buttons are visible. |
+| `NavigationButtonIconColor` | `Color` | `Color.FromRgb(73, 69, 79)` | The icon color of the navigation buttons. |
+| `NavigationButtonBackgroundColor` | `Color` | `Color.FromRgb(247, 242, 251)` | The background color of the navigation buttons. |
+| `ShowNavigationButton` | `bool` | `false` | Whether the navigation buttons are visible. |
 
 ## Dots Customization
 
@@ -75,7 +75,7 @@ The [`DotsStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.S
     
 RotatorViewModel rotatorViewModel = new RotatorViewModel();
 SfRotator rotator = new SfRotator()
- {
+{
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
     NavigationStripPosition = NavigationStripPosition.Bottom,
@@ -166,7 +166,7 @@ The [`SelectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rot
     
 RotatorViewModel rotatorViewModel = new RotatorViewModel();
 SfRotator rotator = new SfRotator()
- {
+{
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
     NavigationStripPosition = NavigationStripPosition.Bottom,
@@ -260,7 +260,7 @@ The [`UnselectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.R
     
 RotatorViewModel rotatorViewModel = new RotatorViewModel();
 SfRotator rotator = new SfRotator()
- {
+{
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
     NavigationStripPosition = NavigationStripPosition.Bottom,
@@ -358,7 +358,7 @@ The [`SelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.M
     
 RotatorViewModel rotatorViewModel = new RotatorViewModel();
 SfRotator rotator = new SfRotator()
- {
+{
     SelectedIndex = 2,
     BackgroundColor = Color.FromArgb("#ececec"),
     NavigationStripPosition = NavigationStripPosition.Bottom,
@@ -801,7 +801,7 @@ public class RotatorViewModel
 
 ## Navigation Visibility
 
-Use the [`ShowNavigationButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ShowNavigationButton) property to show or hide the navigation buttons. By default, this property is `true`. The buttons are only relevant when `NavigationStripMode` is set to `Thumbnail`.
+Use the [`ShowNavigationButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ShowNavigationButton) property to show or hide the navigation buttons. By default, this property is `false`. The buttons are only relevant when `NavigationStripMode` is set to `Thumbnail`.
 
 {% tabs %}
 
