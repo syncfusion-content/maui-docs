@@ -89,79 +89,63 @@ The following XAML and C# samples set the `Background` of the button for each of
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Buttons;
-
-namespace VisualStatesSample;
-
-public partial class MainPage : ContentPage
+InitializeComponent();
+SfButton button = new SfButton
 {
-    public MainPage()
-    {
-        InitializeComponent();
+    Text = "SfButton",
+    HeightRequest = 50,
+    WidthRequest = 200,
+    TextColor = Colors.White,
+    IsEnabled = true,
+    IsCheckable = true,
+    IsChecked = true,
+};
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
 
-        SfButton button = new SfButton
-        {
-            Text = "SfButton",
-            HeightRequest = 50,
-            WidthRequest = 200,
-            TextColor = Colors.White,
-            IsEnabled = true,
-            IsCheckable = true,
-            IsChecked = true,
-        };
+VisualState normalState = new VisualState { Name = "Normal" };
+normalState.Setters.Add(new Setter
+{
+    Property = SfButton.BackgroundProperty,
+    Value = Color.FromArgb("#6A4C9C")
+});
 
-        VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-        VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualState checkedState = new VisualState { Name = "Checked" };
+checkedState.Setters.Add(new Setter
+{
+    Property = SfButton.BackgroundProperty,
+    Value = Colors.Green
+});
 
-            VisualState normalState = new VisualState { Name = "Normal" };
-            normalState.Setters.Add(new Setter
-            {
-                Property = SfButton.BackgroundProperty,
-                Value = Color.FromArgb("#6A4C9C")
-            });
+VisualState hoveredState = new VisualState { Name = "Hovered" };
+hoveredState.Setters.Add(new Setter
+{
+    Property = SfButton.BackgroundProperty,
+    Value = Colors.DeepSkyBlue
+});
 
-            VisualState checkedState = new VisualState { Name = "Checked" };
-            checkedState.Setters.Add(new Setter
-            {
-                Property = SfButton.BackgroundProperty,
-                Value = Colors.Green
-            });
+VisualState pressedState = new VisualState { Name = "Pressed" };
+pressedState.Setters.Add(new Setter
+{
+    Property = SfButton.BackgroundProperty,
+    Value = Colors.MediumVioletRed
+});
 
-            VisualState hoveredState = new VisualState { Name = "Hovered" };
-            hoveredState.Setters.Add(new Setter
-            {
-                Property = SfButton.BackgroundProperty,
-                Value = Colors.DeepSkyBlue
-            });
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfButton.BackgroundProperty,
+    Value = Color.FromArgb("#BFC3C7")
+});
 
-            VisualState pressedState = new VisualState { Name = "Pressed" };
-            pressedState.Setters.Add(new Setter
-            {
-                Property = SfButton.BackgroundProperty,
-                Value = Colors.MediumVioletRed
-            });
-
-            VisualState disabledState = new VisualState { Name = "Disabled" };
-            disabledState.Setters.Add(new Setter
-            {
-                Property = SfButton.BackgroundProperty,
-                Value = Color.FromArgb("#BFC3C7")
-            });
-
-        commonStateGroup.States.Add(normalState);
-        commonStateGroup.States.Add(checkedState);
-        commonStateGroup.States.Add(hoveredState);
-        commonStateGroup.States.Add(pressedState);
-        commonStateGroup.States.Add(disabledState);
-        visualStateGroupList.Add(commonStateGroup);
-
-        VisualStateManager.SetVisualStateGroups(button, visualStateGroupList);
-
-        Content = button;
-    }
-}
+commonStateGroup.States.Add(normalState);
+commonStateGroup.States.Add(checkedState);
+commonStateGroup.States.Add(hoveredState);
+commonStateGroup.States.Add(pressedState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(button, visualStateGroupList);
+Content = button;
 
 {% endhighlight %}
 {% endtabs %}
@@ -198,6 +182,5 @@ N> The `Hovered` state is only triggered on platforms that report a pointer (des
 ## See Also
 
 - [Customization](https://help.syncfusion.com/maui/button/customization)
-- [Events](https://help.syncfusion.com/maui/button/events)
 - [Right-to-Left](https://help.syncfusion.com/maui/button/right-to-left)
 - [Liquid Glass Effect](https://help.syncfusion.com/maui/button/liquidglasssupport)

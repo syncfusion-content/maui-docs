@@ -30,32 +30,25 @@ The following code samples show how to set the `Content` of `SfButton` to a hori
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Content>
-    <VerticalStackLayout>
-        <buttons:SfButton  
-                 CornerRadius="10" 
-                 Text="SfButton" 
-                 Background="#4125BC">
-            <buttons:SfButton.Content>
-                <DataTemplate>
-                    <HorizontalStackLayout Spacing = "8" Padding="5">
-                        <ActivityIndicator Color = "White" IsRunning="True"/>
-                        <Label Text = "Loading..." 
-                               VerticalOptions="Center" 
-                               TextColor="White"/>
-                    </HorizontalStackLayout>
-                </DataTemplate>
-            </buttons:SfButton.Content>
-        </buttons:SfButton>
-    </VerticalStackLayout>
-</ContentPage.Content>
+<VerticalStackLayout>
+    <buttons:SfButton CornerRadius="10" 
+                      Text="SfButton" 
+                      Background="#4125BC">
+        <buttons:SfButton.Content>
+            <DataTemplate>
+                <HorizontalStackLayout Spacing = "8" Padding="5">
+                    <ActivityIndicator Color = "White" IsRunning="True"/>
+                    <Label Text = "Loading..." 
+                            VerticalOptions="Center" 
+                            TextColor="White"/>
+                </HorizontalStackLayout>
+            </DataTemplate>
+        </buttons:SfButton.Content>
+    </buttons:SfButton>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Core;
-
-. . . 
 
 var customTemplate = new DataTemplate(() =>
 {
@@ -91,7 +84,6 @@ Content = new VerticalStackLayout
 {
     Children = { button }
 };
-
 
 {% endhighlight %}
 {% endtabs %}

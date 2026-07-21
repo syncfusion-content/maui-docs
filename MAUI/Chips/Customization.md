@@ -39,8 +39,6 @@ The [`ShowCloseButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     Text = "James",
@@ -64,8 +62,6 @@ The [`ShowSelectionIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -91,9 +87,6 @@ The [`CloseButtonColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -121,9 +114,6 @@ The [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     Text = "James",
@@ -149,9 +139,6 @@ The [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     Text = "James",
@@ -175,9 +162,6 @@ The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBa
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -203,9 +187,6 @@ The [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -233,9 +214,6 @@ The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Bu
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     Text = "James",
@@ -261,8 +239,6 @@ The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     Text = "James",
@@ -286,8 +262,6 @@ The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -313,8 +287,6 @@ The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Button
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     Text = "James",
@@ -338,9 +310,6 @@ The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butto
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -367,8 +336,6 @@ The [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -397,9 +364,6 @@ The [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Button
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     Text = "James",
@@ -425,9 +389,6 @@ The [`ImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.But
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -455,9 +416,6 @@ The [`ImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butto
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
 
 SfChip chip = new SfChip
 {
@@ -487,9 +445,6 @@ The [`ImageAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     Text = "James",
@@ -515,9 +470,6 @@ The [`BackgroundImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
-
 SfChip chip = new SfChip
 {
     BackgroundImageSource = ImageSource.FromFile("lion.png")
@@ -535,10 +487,6 @@ The [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonB
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.BindingContext>
-    <local:CommandDemoViewModel />
-</ContentPage.BindingContext>
-
 <chip:SfChip x:Name="Chip"
              Text="James"
              WidthRequest="120"
@@ -546,14 +494,7 @@ The [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonB
              Command="{Binding ButtonCommand}" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
-using Microsoft.Maui.Graphics;
-
-namespace ChipsSample;
+{% highlight c# tabtitle="ViewModel" %}
 
 public class CommandDemoViewModel : INotifyPropertyChanged
 {
@@ -615,43 +556,26 @@ The [`InputView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
-
-namespace ChipsSample;
-
-public partial class MainPage : ContentPage
+var entry = new Entry
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        BindingContext = new ChipsViewModel();
+    Placeholder = "Enter Name",
+    Margin = new Thickness(10, 10, 0, 0),
+    WidthRequest = 110
+};
 
-        var entry = new Entry
-        {
-            Placeholder = "Enter Name",
-            Margin = new Thickness(10, 10, 0, 0),
-            WidthRequest = 110
-        };
-
-        var chipGroup = new SfChipGroup
-        {
-            InputView = entry,
-            DisplayMemberPath = "Name",
-            ChipPadding = new Thickness(8, 8, 0, 0),
-            ChipType = SfChipsType.Input
-        };
-        BindingContext = new EmployeeViewModel();
-        chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-
-        Content = chipGroup;
-    }
-}
+var chipGroup = new SfChipGroup
+{
+    InputView = entry,
+    DisplayMemberPath = "Name",
+    ChipPadding = new Thickness(8, 8, 0, 0),
+    ChipType = SfChipsType.Input
+};
+BindingContext = new EmployeeViewModel();
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+Content = chipGroup;
 
 {% endhighlight %}
-
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -727,7 +651,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 this.Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -798,10 +722,6 @@ To customize the background color of the **selected** chip, set `ChipType="Choic
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
-
 SfChipGroup chipGroup = new SfChipGroup
 {
     DisplayMemberPath = "Name",
@@ -826,7 +746,7 @@ VisualStateManager.SetVisualStateGroups(chipGroup, visualStateGroupList);
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -904,7 +824,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -976,7 +896,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1075,7 +995,7 @@ VisualStateManager.SetVisualStateGroups(chipGroup, visualStateGroupList);
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1155,7 +1075,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1229,7 +1149,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1300,7 +1220,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1373,7 +1293,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1444,7 +1364,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1516,7 +1436,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1590,7 +1510,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1641,54 +1561,39 @@ The `SfChipGroup` creates a chip for each item and arranges the chips in a `Stac
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Content>
-    <Grid>
-        <chip:SfChipGroup DisplayMemberPath="Name" ItemsSource="{Binding Employees}">
-            <chip:SfChipGroup.ChipLayout>
-                <FlexLayout HorizontalOptions="Start"
-                            VerticalOptions="Center" />
-            </chip:SfChipGroup.ChipLayout>
-        </chip:SfChipGroup>
-    </Grid>
-</ContentPage.Content>
+<Grid>
+    <chip:SfChipGroup DisplayMemberPath="Name" ItemsSource="{Binding Employees}">
+        <chip:SfChipGroup.ChipLayout>
+            <FlexLayout HorizontalOptions="Start"
+                        VerticalOptions="Center" />
+        </chip:SfChipGroup.ChipLayout>
+    </chip:SfChipGroup>
+</Grid>
 
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
-
-namespace ChipsSample;
-
-public partial class MainPage : ContentPage
+var layout = new FlexLayout
 {
-    public MainPage()
-    {
-        InitializeComponent();
+    HorizontalOptions = LayoutOptions.Start,
+    VerticalOptions = LayoutOptions.Center
+};
 
-        var layout = new FlexLayout
-        {
-            HorizontalOptions = LayoutOptions.Start,
-            VerticalOptions = LayoutOptions.Center
-        };
+var chipGroup = new SfChipGroup
+{
+    DisplayMemberPath = "Name",
+    ChipLayout = layout
+};
+BindingContext = new EmployeeViewModel();
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 
-        var chipGroup = new SfChipGroup
-        {
-            DisplayMemberPath = "Name",
-            ChipLayout = layout
-        };
-        BindingContext = new EmployeeViewModel();
-        chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-
-        Content = new Grid
-        {
-            Children = { chipGroup }
-        };
-    }
-}
+Content = new Grid
+{
+    Children = { chipGroup }
+};
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1744,9 +1649,6 @@ The [`ItemHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfCh
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
-
 BindingContext = new EmployeeViewModel();
 SfChipGroup chipGroup = new SfChipGroup
 {
@@ -1757,7 +1659,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1816,18 +1718,24 @@ The [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip
                   DisplayMemberPath="Name" />
 
 {% endhighlight %}
-{% endtabs %}
-
-### Model and ViewModel for the ShowIcon sample
-
-{% tabs %}
 {% highlight c# %}
 
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Core;
 
-namespace ChipsSample;
+SfChipGroup chipGroup = new SfChipGroup
+{
+    DisplayMemberPath = "Name",
+    ImageMemberPath = "Image",
+    ChipImageSize = 30,
+    ShowIcon = true,
+    ChipPadding = new Thickness(8, 8, 0, 0)
+};
+BindingContext = new EmployeeViewModel();
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Person
 {
@@ -1866,23 +1774,6 @@ public class ChipsViewModel : INotifyPropertyChanged
 }
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
-
-SfChipGroup chipGroup = new SfChipGroup
-{
-    DisplayMemberPath = "Name",
-    ImageMemberPath = "Image",
-    ChipImageSize = 30,
-    ShowIcon = true,
-    ChipPadding = new Thickness(8, 8, 0, 0)
-};
-BindingContext = new EmployeeViewModel();
-chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-
-{% endhighlight %}
 {% endtabs %}
 
 ![SfChipGroup with ShowIcon](images/customization-images/chipgroup_showicon_image.png)
@@ -1902,10 +1793,6 @@ The [`CloseButtonColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
-
 SfChipGroup chipGroup = new SfChipGroup
 {
     DisplayMemberPath = "Name",
@@ -1916,7 +1803,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -1975,10 +1862,6 @@ The [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Core;
-
 SfChipGroup chipGroup = new SfChipGroup
 {
     DisplayMemberPath = "Name",
@@ -1989,7 +1872,7 @@ chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -2049,9 +1932,6 @@ The [`ChipImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
-
 SfChipGroup chipGroup = new SfChipGroup
 {
     DisplayMemberPath = "Name",
@@ -2065,7 +1945,7 @@ Content = chipGroup;
 
 {% endhighlight %}
 
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -2134,9 +2014,6 @@ The [`IsSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfCh
 
 ## See Also
 
-- [Getting Started](Getting-Started.md)
-- [Chips Types](Chips-Types.md)
-- [Events](Events.md)
-
-
-
+- [Chips Types](https://help.syncfusion.com/maui/chips/chips-types)
+- [Events](https://help.syncfusion.com/maui/chips/events)
+- [DataTemplate Selector](https://help.syncfusion.com/maui/chips/datatemplateselector)

@@ -97,63 +97,48 @@ Assign the `ChipDataTemplateSelector` to the [`ItemTemplate`](https://help.syncf
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:local="clr-namespace:YourNamespace"
-             x:Class="YourNamespace.MainPage">
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="happyTemplate">
+            <chip:SfChip HeightRequest="40"
+                            WidthRequest="120"
+                            Text="{Binding Text}"
+                            BackgroundColor="#00bdae"
+                            ShowIcon="True"
+                            ImageSource="{Binding ImageSource}"
+                            ShowCloseButton="True"
+                            ShowSelectionIndicator="False"
+                            ImageAlignment="Left"
+                            CloseButtonColor="White" />
+        </DataTemplate>
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="happyTemplate">
-                <chip:SfChip HeightRequest="40"
-                             WidthRequest="120"
-                             Text="{Binding Text}"
-                             BackgroundColor="#00bdae"
-                             ShowIcon="True"
-                             ImageSource="{Binding ImageSource}"
-                             ShowCloseButton="True"
-                             ShowSelectionIndicator="False"
-                             ImageAlignment="Left"
-                             CloseButtonColor="White" />
-            </DataTemplate>
+        <DataTemplate x:Key="sadTemplate">
+            <chip:SfChip HeightRequest="40"
+                            WidthRequest="120"
+                            Text="{Binding Text}"
+                            BackgroundColor="#e56590"
+                            ShowIcon="True"
+                            ImageSource="{Binding ImageSource}"
+                            ShowCloseButton="True"
+                            ShowSelectionIndicator="False"
+                            ImageAlignment="Left"
+                            CloseButtonColor="White" />
+        </DataTemplate>
 
-            <DataTemplate x:Key="sadTemplate">
-                <chip:SfChip HeightRequest="40"
-                             WidthRequest="120"
-                             Text="{Binding Text}"
-                             BackgroundColor="#e56590"
-                             ShowIcon="True"
-                             ImageSource="{Binding ImageSource}"
-                             ShowCloseButton="True"
-                             ShowSelectionIndicator="False"
-                             ImageAlignment="Left"
-                             CloseButtonColor="White" />
-            </DataTemplate>
+        <local:ChipDataTemplateSelector x:Key="selector"
+                                        HappyEmojiTemplate="{StaticResource happyTemplate}"
+                                        SadEmojiTemplate="{StaticResource
+                                        sadTemplate}" />
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-            <local:ChipDataTemplateSelector x:Key="selector"
-                                            HappyEmojiTemplate="{StaticResource happyTemplate}"
-                                            SadEmojiTemplate="{StaticResource
-                                            sadTemplate}" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
-    <ContentPage.BindingContext>
-        <local:ChipViewModel />
-    </ContentPage.BindingContext>
-
-    <chip:SfChipGroup x:Name="chipGroup"
-                      ChipBackground="Transparent"
-                      ItemsSource="{Binding Data}"
-                      ItemTemplate="{StaticResource selector}" />
-</ContentPage>
+<chip:SfChipGroup x:Name="chipGroup"
+                    ChipBackground="Transparent"
+                    ItemsSource="{Binding Data}"
+                    ItemTemplate="{StaticResource selector}" />
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
 
 var selector = new ChipDataTemplateSelector
 {
@@ -226,7 +211,6 @@ Content = chipGroup;
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfChipGroup](https://help.syncfusion.com/maui/chips/getting-started)
 - [Customization](https://help.syncfusion.com/maui/chips/customization)
 - [MAUI DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector)
 - [MAUI DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate)

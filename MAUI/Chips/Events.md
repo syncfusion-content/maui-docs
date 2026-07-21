@@ -47,24 +47,18 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <chip:SfChipGroup x:Name="chipGroup"
-                            ChipType="Choice"
-                            SelectionChanging="OnSelectionChanging">
-            <chip:SfChip Text="Apple" />
-            <chip:SfChip Text="Banana" />
-            <chip:SfChip Text="Cherry" />
-        </chip:SfChipGroup>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <chip:SfChipGroup x:Name="chipGroup"
+                        ChipType="Choice"
+                        SelectionChanging="OnSelectionChanging">
+        <chip:SfChip Text="Apple" />
+        <chip:SfChip Text="Banana" />
+        <chip:SfChip Text="Cherry" />
+    </chip:SfChipGroup>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 // Folowing code comes under the main page constructor inside.
 // Create ChipGroup
@@ -126,10 +120,6 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 
 {% highlight C# %}
 
-
-using Syncfusion.Maui.Core;
-using SelectionChangedEventArgs = Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs;
-
 // Folowing code comes under the main page constructor inside.
 var chipGroup = new SfChipGroup
 {
@@ -175,10 +165,7 @@ The [ChipClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 </VerticalStackLayout>
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 // Folowing code comes under the main page constructor inside.
 var chipGroup = new SfChipGroup
@@ -213,10 +200,6 @@ The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 
 ### Event Arguments
 
-| Property | Type | Description |
-|----------|------|-------------|
-| `RemovedItem` | `object` | The chip that was removed. |
-
 {% tabs %}
 {% highlight xaml %}
 
@@ -229,10 +212,7 @@ The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 </VerticalStackLayout>
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var viewModel = new EmployeeViewModel();
 BindingContext = viewModel;
@@ -263,7 +243,7 @@ void OnChipItemRemoved(object sender, SelectionChangedEventArgs e)
 }
 
 {% endhighlight %}
-{% highlight Model & ViewModel %}
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -309,28 +289,18 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 The [CloseButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_CloseButtonClicked) event is raised when the close button of an `SfChip` is clicked. The event argument is of type `EventArgs`.
 
-### XAML Example
-
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <chip:SfChip x:Name="chip"
-                 Text="John"
-                 ShowCloseButton="True"
-                 CloseButtonClicked="OnCloseButtonClicked" />
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <chip:SfChip x:Name="chip"
+                Text="John"
+                ShowCloseButton="True"
+                CloseButtonClicked="OnCloseButtonClicked" />
+</VerticalStackLayout>
 
 {% endhighlight %}
 
-### C# Example
-
 {% highlight C# %}
-
-using Syncfusion.Maui.Core;
 
 var chip = new SfChip
 {

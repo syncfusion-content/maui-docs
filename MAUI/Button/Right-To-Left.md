@@ -36,9 +36,6 @@ You can set `FlowDirection` directly on the `SfButton` to enable RTL for that co
 {% endhighlight %}
 {% highlight c# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Buttons;
-
 SfButton button = new SfButton()
 {
     FlowDirection = FlowDirection.RightToLeft,
@@ -77,6 +74,5 @@ Alternatively, you can let the system apply RTL automatically by setting the dev
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/button/getting-started)
 - [Customization](https://help.syncfusion.com/maui/button/customization)
 - [Microsoft.Maui.Controls FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-11.0)

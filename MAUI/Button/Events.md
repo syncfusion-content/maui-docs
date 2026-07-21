@@ -25,8 +25,6 @@ The [`Clicked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonB
 
 The following code samples subscribe to the `Clicked` event and change the text color when the button is tapped.
 
-### XAML and code-behind
-
 {% tabs %}
 {% highlight xaml %}
 
@@ -75,7 +73,6 @@ N> In the XAML example above, the `button` instance is declared with `x:Name` so
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/button/getting-started)
 - [Customization](https://help.syncfusion.com/maui/button/customization)
 - [Visual States](https://help.syncfusion.com/maui/button/visual-states)
 

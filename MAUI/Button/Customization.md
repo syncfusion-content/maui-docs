@@ -764,8 +764,8 @@ In RTL flow direction, image alignment with [`End`](https://help.syncfusion.com/
                 ImageAlignment="Right"/>
 
 {% endhighlight %}
-
 {% highlight c# %}
+
 SfButton button = new SfButton()
 {
     Text = "Shopping",
@@ -781,7 +781,6 @@ SfButton button = new SfButton()
     ImageAlignment = Alignment.Right
 };
 this.Content = button;
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -904,10 +903,6 @@ Declare the ViewModel in the page's `BindingContext` and bind its properties to 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.BindingContext>
-    <local:CommandDemoViewModel />
-</ContentPage.BindingContext>
-
 <buttons:SfButton x:Name="button"
                 Text="Button"
                 Background="{Binding Background}"
@@ -967,6 +962,5 @@ public class CommandDemoViewModel : INotifyPropertyChanged
 
 ## See also
 
-- [Getting Started](https://help.syncfusion.com/maui/button/getting-started)
 - [Events](https://help.syncfusion.com/maui/button/events)
 - [Visual States](https://help.syncfusion.com/maui/button/visual-states)

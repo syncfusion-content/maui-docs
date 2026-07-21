@@ -39,25 +39,13 @@ The following example uses a simple `Employee` model and an `ObservableCollectio
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <ContentPage.BindingContext>
-        <local:EmployeeViewModel />
-    </ContentPage.BindingContext>
-
-    <chip:SfChipGroup x:Name="chipGroup"
-                      Type="Action"
-                      DisplayMemberPath="Name"
-                      ItemsSource="{Binding Employees}" />
-</ContentPage>
+<chip:SfChipGroup x:Name="chipGroup"
+                    Type="Action"
+                    DisplayMemberPath="Name"
+                    ItemsSource="{Binding Employees}" />
 
 {% endhighlight %}
-
 {% highlight C# %}
-
-using System.Collections.ObjectModel;
-using Syncfusion.Maui.Core;
 
 var viewModel = new EmployeeViewModel();
 BindingContext = viewModel;
@@ -67,13 +55,10 @@ var chipGroup = new SfChipGroup
     DisplayMemberPath = nameof(Employee.Name),
     ItemsSource = viewModel.Employees
 };
-
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight View & ViewModel %}
-
-using System.Collections.ObjectModel;
+{% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
 {
@@ -102,27 +87,20 @@ Add [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.htm
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <VerticalStackLayout>
-        <chip:SfChipGroup x:Name="chipGroup" ChipType="Action">
-            <chip:SfChipGroup.Items>
-                <chip:SfChip Text="Extra Small" TextColor="White" Background="Blue" />
-                <chip:SfChip Text="Small" TextColor="White" Background="Blue" />
-                <chip:SfChip Text="Medium" TextColor="White" Background="Blue" />
-                <chip:SfChip Text="Large" TextColor="White" Background="Blue" />
-                <chip:SfChip Text="Extra Large" TextColor="White" Background="Blue" />
-            </chip:SfChipGroup.Items>
-        </chip:SfChipGroup>
-    </VerticalStackLayout>
-</ContentPage>
+<VerticalStackLayout>
+    <chip:SfChipGroup x:Name="chipGroup" ChipType="Action">
+        <chip:SfChipGroup.Items>
+            <chip:SfChip Text="Extra Small" TextColor="White" Background="Blue" />
+            <chip:SfChip Text="Small" TextColor="White" Background="Blue" />
+            <chip:SfChip Text="Medium" TextColor="White" Background="Blue" />
+            <chip:SfChip Text="Large" TextColor="White" Background="Blue" />
+            <chip:SfChip Text="Extra Large" TextColor="White" Background="Blue" />
+        </chip:SfChipGroup.Items>
+    </chip:SfChipGroup>
+</VerticalStackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Microsoft.Maui;
-using Syncfusion.Maui.Core;
 
 var chipGroup = new SfChipGroup
 {

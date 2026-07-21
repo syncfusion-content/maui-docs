@@ -44,34 +44,26 @@ Create a `FontImageSource`, set its `Glyph`, `Size`, `Color`, and `FontFamily`, 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <chip:SfChip x:Name="chip"
-                 Text="Syncfusion"
-                 ShowIcon="True"
-                 FontSize="17"
-                 TextColor="White"
-                 Background="#512dcd"
-                 WidthRequest="120"
-                 HeightRequest="40"
-                 ImageSize="15"
-                 Padding="0,0,0,2">
-        <chip:SfChip.ImageSource>
-            <FontImageSource Glyph="&#xEB52;"
-                             Size="12"
-                             Color="White"
-                             FontFamily="Segoe MDL2 Assets" />
-        </chip:SfChip.ImageSource>
-    </chip:SfChip>
-</ContentPage>
+<chip:SfChip x:Name="chip"
+             Text="Syncfusion"
+             ShowIcon="True"
+             FontSize="17"
+             TextColor="White"
+             Background="#512dcd"
+             WidthRequest="120"
+             HeightRequest="40"
+             ImageSize="15"
+             Padding="0,0,0,2">
+    <chip:SfChip.ImageSource>
+        <FontImageSource Glyph="&#xEB52;"
+                         Size="12"
+                         Color="White"
+                         FontFamily="Segoe MDL2 Assets" />
+    </chip:SfChip.ImageSource>
+</chip:SfChip>
 
 {% endhighlight %}
 {% highlight C# %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
 
 var fontImageSource = new FontImageSource
 {
@@ -111,7 +103,6 @@ var chip = new SfChip
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfChip](https://help.syncfusion.com/maui/chips/getting-started)
 - [Customization](https://help.syncfusion.com/maui/chips/customization)
 - [MAUI FontImageSource](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontimagesource)
 - [MAUI fonts documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts)

@@ -57,39 +57,27 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+{% highlight C# %}
 
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Buttons;
-
-namespace LiquidGlassSample;
-
-public partial class MainPage : ContentPage
+var grid = new Grid();
+var image = new Image
 {
-    public MainPage()
-    {
-        var grid = new Grid();
-        var image = new Image
-        {
-            Source = "Wallpaper.png",
-            Aspect = Aspect.AspectFill
-        };
-        grid.Children.Add(image);
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
 
-        var glassButton = new SfButton
-        {
-            Text = "GlassButton",
-            Background = Colors.Transparent,
-            WidthRequest = 180,
-            HeightRequest = 48,
-            CornerRadius = 24,
-            EnableLiquidGlassEffect = true
-        };
-        grid.Children.Add(glassButton);
-
-        Content = grid;
-    }
-}
+var glassButton = new SfButton
+{
+    Text = "GlassButton",
+    Background = Colors.Transparent,
+    WidthRequest = 180,
+    HeightRequest = 48,
+    CornerRadius = 24,
+    EnableLiquidGlassEffect = true
+};
+grid.Children.Add(glassButton);
+Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,6 +108,4 @@ The following screenshot illustrates `SfButton` with the Liquid Glass effect ena
 ## See Also
 
 - [Customization](https://help.syncfusion.com/maui/button/customization)
-- [Getting Started](https://help.syncfusion.com/maui/button/getting-started)
-- [.NET MAUI Liquid Glass UI Overview](../Liquid-Glass-UI/)
-- [Apple Human Interface Guidelines: Liquid Glass](https://developer.apple.com/design/human-interface-guidelines/) 
+- [Apple Human Interface Guidelines: Liquid Glass](https://developer.apple.com/design/human-interface-guidelines/)

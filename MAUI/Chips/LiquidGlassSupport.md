@@ -47,32 +47,24 @@ The effect relies on the pixels behind the control. Place the `SfChipGroup` over
 The following example shows an `SfChipGroup` with the Liquid Glass Effect enabled, placed over a wallpaper image.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <Grid>
-        <Image Source="Wallpaper.png" Aspect="AspectFill" />
-        <chip:SfChipGroup x:Name="filterChips"
-                          EnableLiquidGlassEffect="True"
-                          Background="Transparent">
-            <chip:SfChip Text="Extra Small" />
-            <chip:SfChip Text="Small" />
-            <chip:SfChip Text="Medium" />
-            <chip:SfChip Text="Large" />
-            <chip:SfChip Text="Extra Large" />
-        </chip:SfChipGroup>
-    </Grid>
-</ContentPage>
+<Grid>
+    <Image Source="Wallpaper.png" Aspect="AspectFill" />
+    <chip:SfChipGroup x:Name="filterChips"
+                        EnableLiquidGlassEffect="True"
+                        Background="Transparent">
+        <chip:SfChip Text="Extra Small" />
+        <chip:SfChip Text="Small" />
+        <chip:SfChip Text="Medium" />
+        <chip:SfChip Text="Large" />
+        <chip:SfChip Text="Extra Large" />
+    </chip:SfChipGroup>
+</Grid>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
+{% highlight c# %}
 
 var grid = new Grid();
 grid.Children.Add(new Image
