@@ -9,17 +9,13 @@ documentation: UG
 
 # Visual States in .NET MAUI CheckBox (SfCheckBox)
 
-**Requirements:** .NET MAUI workload installed; `Syncfusion.Maui.Buttons` NuGet package added to the project; Syncfusion .NET MAUI controls registered via `.ConfigureSyncfusionCore()` / `UseSyncfusion*()` in `MauiProgram.cs`. Targets: .NET MAUI 7.0+ and Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> MAUI `Syncfusion.Maui.Buttons` package.
+## Prerequisites
 
-XAML examples use the following namespace declaration on the page root:
+Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+- `Syncfusion.Maui.Buttons`
 
-C# examples require the following imports:
-
-using Syncfusion.Maui.Buttons;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) documentation.
 
 The visual appearance of the CheckBox can be customized using the **Visual State Manager** (VSM). The [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control includes the following three visual states:
 
@@ -106,8 +102,6 @@ this.Content = checkBox;
 {% endhighlight %}
 {% endtabs %}
 
-## Result
-
 ### Checked visual state
 
 ![.NET MAUI CheckBox in the Checked visual state with blue text and fill](Images/VisualStates/checkedvs.png)
@@ -119,5 +113,3 @@ this.Content = checkBox;
 ### Intermediate visual state
 
 ![.NET MAUI CheckBox in the Intermediate visual state with blue fill and Intermediate State caption](Images/VisualStates/intermediatevs.png)
-
-N> Troubleshooting: if a state is not applied, verify that the `VisualStateGroup` is named `CommonStates` and that each `VisualState` uses the exact names `Checked`, `Unchecked`, and `Intermediate`. Also confirm `IsThreeState` is `true` if you need the `Intermediate` state, and that the `xmlns:syncfusion` namespace maps to `Syncfusion.Maui.Buttons`. Wrap any code that changes `IsChecked` in a try/catch so a handler error does not interrupt the state transition.

@@ -9,18 +9,13 @@ documentation: UG
 
 # Multiple Choice with .NET MAUI CheckBox (SfCheckBox)
 
-**Requirements:** .NET MAUI workload installed; `Syncfusion.Maui.Buttons` NuGet package added to the project; Syncfusion .NET MAUI controls registered via `.ConfigureSyncfusionCore()` / `UseSyncfusion*()` in `MauiProgram.cs`. Targets: .NET MAUI 7.0+ and Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> MAUI `Syncfusion.Maui.Buttons` package.
+## Prerequisites
 
-The [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) can be used as a single CheckBox or as part of a group. A single CheckBox is typically used for a binary yes/no choice, such as a "Remember me?" option, a login scenario, or a terms-of-service agreement.
+Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-XAML requires the `buttons` namespace:
+- `Syncfusion.Maui.Buttons`
 
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-
-C# requires the following imports:
-
-using Syncfusion.Maui.Buttons;
-using Microsoft.Maui.Controls;
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) documentation.
 
 ## Single CheckBox
 
@@ -111,57 +106,50 @@ The example listens to the [`StateChanged`](https://help.syncfusion.com/cr/maui/
 {% endhighlight %}
 {% highlight c# %}
 
-public partial class MainPage : ContentPage
-{
-    // Field shared by both event handlers to guard against re-entrant StateChanged calls.
-    bool skip = false;
-    SfCheckBox selectAll, pepperoni, beef, mushroom, onion;
+// Field shared by both event handlers to guard against re-entrant StateChanged calls.
+bool skip = false;
+SfCheckBox selectAll, pepperoni, beef, mushroom, onion;
 
-    public MainPage()
-    {
-        InitializeComponent();
-        StackLayout stackLayout = new StackLayout() { Padding = 20 };
-        Label label = new Label();
-        label.Text = "Pizza Toppings";
-        label.Margin = new Thickness(10);
-        selectAll = new SfCheckBox();
-        pepperoni = new SfCheckBox();
-        beef = new SfCheckBox();
-        onion = new SfCheckBox();
-        mushroom = new SfCheckBox();
+StackLayout stackLayout = new StackLayout() { Padding = 20 };
+Label label = new Label();
+label.Text = "Pizza Toppings";
+label.Margin = new Thickness(10);
+selectAll = new SfCheckBox();
+pepperoni = new SfCheckBox();
+beef = new SfCheckBox();
+onion = new SfCheckBox();
+mushroom = new SfCheckBox();
 
-        pepperoni.StateChanged += CheckBox_StateChanged;
-        pepperoni.Text = "Pepperoni";
-        pepperoni.Margin = new Thickness(30, 0);
+pepperoni.StateChanged += CheckBox_StateChanged;
+pepperoni.Text = "Pepperoni";
+pepperoni.Margin = new Thickness(30, 0);
 
-        beef.StateChanged += CheckBox_StateChanged;
-        beef.Text = "Beef";
-        beef.IsChecked = true;
-        beef.Margin = new Thickness(30, 0);
+beef.StateChanged += CheckBox_StateChanged;
+beef.Text = "Beef";
+beef.IsChecked = true;
+beef.Margin = new Thickness(30, 0);
 
-        mushroom.StateChanged += CheckBox_StateChanged;
-        mushroom.Text = "Mushrooms";
-        mushroom.Margin = new Thickness(30, 0);
+mushroom.StateChanged += CheckBox_StateChanged;
+mushroom.Text = "Mushrooms";
+mushroom.Margin = new Thickness(30, 0);
 
-        onion.StateChanged += CheckBox_StateChanged;
-        onion.Text = "Onions";
-        onion.Margin = new Thickness(30, 0);
-        onion.IsChecked = true;
+onion.StateChanged += CheckBox_StateChanged;
+onion.Text = "Onions";
+onion.Margin = new Thickness(30, 0);
+onion.IsChecked = true;
 
-        selectAll.StateChanged += SelectAll_StateChanged;
-        selectAll.Text = "Select All";
-        selectAll.IsThreeState = true;
-        selectAll.IsChecked = null;
+selectAll.StateChanged += SelectAll_StateChanged;
+selectAll.Text = "Select All";
+selectAll.IsThreeState = true;
+selectAll.IsChecked = null;
 
-        stackLayout.Children.Add(label);
-        stackLayout.Children.Add(selectAll);
-        stackLayout.Children.Add(pepperoni);
-        stackLayout.Children.Add(beef);
-        stackLayout.Children.Add(mushroom);
-        stackLayout.Children.Add(onion);
-        this.Content = stackLayout;
-    }
-}
+stackLayout.Children.Add(label);
+stackLayout.Children.Add(selectAll);
+stackLayout.Children.Add(pepperoni);
+stackLayout.Children.Add(beef);
+stackLayout.Children.Add(mushroom);
+stackLayout.Children.Add(onion);
+this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -206,10 +194,3 @@ private void CheckBox_StateChanged(object sender, Syncfusion.Maui.Buttons.StateC
 ![.NET MAUI CheckBox showing the Select all parent in the indeterminate state](Images/Multiple-Choice/selectalltoppings.png)
 
 You can download the multiple-choice checkbox project for this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-CheckBox).
-
-N> Troubleshooting: if events don't fire, verify the `xmlns:buttons` namespace maps to `Syncfusion.Maui.Buttons`, confirm Syncfusion is registered in `MauiProgram.cs`, and ensure `IsThreeState` is `true` before assigning `IsChecked = null` for the indeterminate state. Wrap handler logic in a try/catch so that an error in the handler does not interrupt the CheckBox state update.
-
-## See also
-
-- [How to achieve intermediate state in .NET MAUI CheckBox using MVVM?](https://support.syncfusion.com/kb/article/16162/how-to-achieve-intermediate-state-in-net-maui-checkbox-using-mvvm) — MVVM pattern for indeterminate state.
-- [How to set intermediate state in the .NET MAUI CheckBox?](https://support.syncfusion.com/kb/article/14110/how-to-set-intermediate-state-in-the-net-maui-checkbox) — Programmatically set the indeterminate state.

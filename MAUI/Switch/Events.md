@@ -10,12 +10,15 @@ keywords : .net maui switch, maui switch, .net maui switch events, maui switch e
 
 # Events in .NET MAUI Switch
 
-The .NET MAUI Switch (SfSwitch) control exposes the following events that are raised when the `IsOn` property changes:
+## Prerequisites
 
-* [`StateChanged`](#statechanged) — Raised after the state has changed.
-* [`StateChanging`](#statechanging) — Raised before the state changes; can be canceled.
+Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-N> Before proceeding, ensure that the Syncfusion<sup>®</sup> MAUI Buttons package is installed and the required namespace is registered. For more information, refer to the [Getting Started](Getting-Started.md) documentation.
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
+
+The .NET MAUI Switch (SfSwitch) control exposes the following events that are raised when the `IsOn` property changes.
 
 N> The `IsOn` property is `bool?` (nullable): `true` represents the `On` state, `false` represents the `Off` state, and `null` represents the `Indeterminate` state when [`AllowIndeterminateState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) is enabled.
 
@@ -30,10 +33,8 @@ The [`StateChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfSwitch x:Name="sfSwitch" StateChanged="SfSwitch_StateChanged"/>
-</ContentPage>
+<syncfusion:SfSwitch x:Name="sfSwitch"
+                     StateChanged="SfSwitch_StateChanged"/>
 	
 {% endhighlight %}
 
@@ -78,11 +79,9 @@ The [`StateChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfSwitch x:Name="sfSwitch" StateChanging="SfSwitch_StateChanging"/>
-</ContentPage>
-	
+<syncfusion:SfSwitch x:Name="sfSwitch"
+                     StateChanging="SfSwitch_StateChanging"/>
+
 {% endhighlight %}
 
 {% highlight c# %}

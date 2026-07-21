@@ -10,9 +10,15 @@ keywords : .net maui switch, maui switch, .net maui switch rtl, maui switch flow
 
 # Right-to-Left in .NET MAUI Switch (SfSwitch)
 
-The .NET MAUI Switch (SfSwitch) control supports a right-to-left (RTL) layout direction. Use the `FlowDirection` property to control the layout direction of the Switch.
+## Prerequisites
 
-N> Before proceeding, ensure that the Syncfusion<sup>®</sup> MAUI Buttons package is installed and the required namespace is registered. For more information, refer to the [Getting Started](Getting-Started.md) documentation.
+Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
+
+The .NET MAUI Switch (SfSwitch) control supports a right-to-left (RTL) layout direction. Use the `FlowDirection` property to control the layout direction of the Switch.
 
 The `FlowDirection` property accepts the following values:
 
@@ -28,16 +34,11 @@ The following example sets `FlowDirection` directly on the Switch:
 
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfSwitch x:Name="sfSwitch" FlowDirection="RightToLeft" />
-</ContentPage>
+<syncfusion:SfSwitch x:Name="sfSwitch" FlowDirection="RightToLeft" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Buttons;
 
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.FlowDirection = FlowDirection.RightToLeft;

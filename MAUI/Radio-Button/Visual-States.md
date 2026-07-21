@@ -9,29 +9,20 @@ documentation: UG
 
 # Visual States in .NET MAUI Radio Button (SfRadioButton)
 
-The visual appearance of the .NET MAUI Radio Button can be customized reactively using the `VisualStateManager` and `VisualState` types. The [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control exposes the following two visual states:
+## Prerequisites
+
+Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radio-button/getting-started) documentation.
+
+The visual appearance of the .NET MAUI Radio Button can be customized reactively using the `VisualStateManager` and `VisualState` types. The `SfRadioButton` control exposes the following two visual states:
 
 * [Checked](#checked-state)
 * [Unchecked](#unchecked-state)
 
 Visual states are applied automatically whenever the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property changes (whether by user interaction or programmatically), so no event handler is required.
-
-> **When to use visual states vs. `CheckedColor`/`UncheckedColor`:** the dedicated [`CheckedColor`](Visual-Customization.md#state-colors) and [`UncheckedColor`](Visual-Customization.md#state-colors) properties are the simplest way to change the circle color per state. Use **visual states** when you need to change more than one property at once (for example, text color, background color, and circle color) or when the changes are conditional (e.g., a different background only when checked).
-
-> **Prerequisites:** Add the `Syncfusion.Maui.Buttons` NuGet package to your project and register the handler in `MauiProgram.cs`:
->
-> ```csharp
-> using Syncfusion.Maui.Buttons.Hosting;
-> builder.ConfigureSyncfusionButtons();
-> ```
->
-> Add the namespace to your XAML page:
->
-> ```xaml
-> xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-> ```
-
-> **Version compatibility:** Visual-state support is available starting with `Syncfusion.Maui.Buttons` package version 19.4.0.x and requires .NET MAUI (.NET 6 or later).
 
 ## Common Visual State Group
 
@@ -40,35 +31,29 @@ Both states are defined inside a single `VisualStateGroup` named `CommonStates`.
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfRadioButton Text="Radio Button">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="Checked">
-                    <VisualState.Setters>
-                        <Setter Property="TextColor" Value="Blue"/>
-                        <Setter Property="BackgroundColor" Value="#8bc5fb"/>
-                        <Setter Property="CheckedColor" Value="Blue"/>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Unchecked">
-                    <VisualState.Setters>
-                        <Setter Property="TextColor" Value="#ea3737"/>
-                        <Setter Property="BackgroundColor" Value="#f6acac"/>
-                        <Setter Property="UncheckedColor" Value="#ea3737"/>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-    </syncfusion:SfRadioButton>
-</ContentPage>
+<syncfusion:SfRadioButton Text="Radio Button">
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="Checked">
+                <VisualState.Setters>
+                    <Setter Property="TextColor" Value="Blue"/>
+                    <Setter Property="BackgroundColor" Value="#8bc5fb"/>
+                    <Setter Property="CheckedColor" Value="Blue"/>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Unchecked">
+                <VisualState.Setters>
+                    <Setter Property="TextColor" Value="#ea3737"/>
+                    <Setter Property="BackgroundColor" Value="#f6acac"/>
+                    <Setter Property="UncheckedColor" Value="#ea3737"/>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</syncfusion:SfRadioButton>
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
 
 SfRadioButton radioButton = new SfRadioButton { Text = "Radio Button" };
 
@@ -118,57 +103,47 @@ In a typical scenario multiple `SfRadioButton` instances are wrapped in an [`SfR
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfRadioGroup>
-        <syncfusion:SfRadioButton Text="Net banking" IsChecked="True">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Checked">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="White"/>
-                            <Setter Property="BackgroundColor" Value="#2e7d32"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Unchecked">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="#2e7d32"/>
-                            <Setter Property="BackgroundColor" Value="Transparent"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-        </syncfusion:SfRadioButton>
-        <syncfusion:SfRadioButton Text="Debit card">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Checked">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="White"/>
-                            <Setter Property="BackgroundColor" Value="#2e7d32"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Unchecked">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="#2e7d32"/>
-                            <Setter Property="BackgroundColor" Value="Transparent"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-        </syncfusion:SfRadioButton>
-    </syncfusion:SfRadioGroup>
-</ContentPage>
+<syncfusion:SfRadioGroup>
+    <syncfusion:SfRadioButton Text="Net banking" IsChecked="True">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Checked">
+                    <VisualState.Setters>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="BackgroundColor" Value="#2e7d32"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Unchecked">
+                    <VisualState.Setters>
+                        <Setter Property="TextColor" Value="#2e7d32"/>
+                        <Setter Property="BackgroundColor" Value="Transparent"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </syncfusion:SfRadioButton>
+    <syncfusion:SfRadioButton Text="Debit card">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Checked">
+                    <VisualState.Setters>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="BackgroundColor" Value="#2e7d32"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Unchecked">
+                    <VisualState.Setters>
+                        <Setter Property="TextColor" Value="#2e7d32"/>
+                        <Setter Property="BackgroundColor" Value="Transparent"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </syncfusion:SfRadioButton>
+</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
 {% endtabs %}
 
 > **Tip:** to avoid duplicating the `VisualStateManager` markup on every Radio Button, define it once in a `Style` (via `Style.Setters` plus `VisualStateManager.VisualStateGroups`) and apply the style to all children of the `SfRadioGroup`.
-
-## Troubleshooting
-
-* **Visual state never changes** - Verify the `VisualState` `Name` matches one of the names recognized by the control (`Checked` or `Unchecked`). Misspelled names are silently ignored.
-* **`VisualStateGroup.Name` not set in C#** - The runtime uses the group's `Name` to identify which state set is active. Always set `Name = "CommonStates"` (or a custom name) on the `VisualStateGroup` instance so the manager can match it.
-* **Setters compile but don't apply** - In C#, the `Property` of a `Setter` must reference a `BindableProperty` identifier (for example, `SfRadioButton.TextColorProperty`), not the CLR property name. In XAML, the string form `"TextColor"` is resolved by the XAML parser.
-* **C# samples fail to compile** - Add `using Syncfusion.Maui.Buttons;`, `using Microsoft.Maui;` (for `Colors`/`Color`) and `using Microsoft.Maui.Controls;` (for `VisualStateManager`, `VisualStateGroupList`, `VisualStateGroup`, `VisualState`, `Setter`) to the code-behind file. The XAML snippet must be placed inside a `ContentPage` (or another `IView` host) so `this.Content` resolves.
-* **Mixing `Color.FromHex` and `Colors.*`** - Both are valid, but mixing them in a single state makes the code harder to read. Pick one form and use it throughout a single state.
 

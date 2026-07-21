@@ -10,6 +10,14 @@ keywords : .net maui switch, maui switch, .net maui switch visual states, maui s
 
 # Visual State Manager in .NET MAUI Switch (SfSwitch)
 
+## Prerequisites
+
+Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
+
 Use the `Visual State Manager (VSM)` to change Switch properties in response to visual state changes. The `CommonStates` group is automatically maintained by .NET MAUI and contains the following states:
 
 * `On`, `Off`, `Indeterminate` — the resting states.
@@ -17,200 +25,192 @@ Use the `Visual State Manager (VSM)` to change Switch properties in response to 
 * `OnPressed`, `OffPressed`, `IndeterminatePressed` — applied while the Switch is being tapped or clicked.
 * `OnDisabled`, `OffDisabled`, `IndeterminateDisabled` — applied when [`IsEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled) is `false`.
 
-N> Before proceeding, ensure that the Syncfusion<sup>®</sup> MAUI Buttons package is installed and the required namespace is registered. For more information, refer to the [Getting Started](Getting-Started.md) documentation.
-
 N> The `VisualStateGroup` must be named `CommonStates` for the .NET MAUI VSM to apply the states automatically. The `Indeterminate` family of states is only active when [`AllowIndeterminateState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) is set to `true`.
 
-The following example shows how to apply a different [`SwitchSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html) object to each state. For the full list of properties available on `SwitchSettings`, see [Customization in .NET MAUI Switch](customization.md).
+The following example shows how to apply a different [`SwitchSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html) object to each state. For the full list of properties available on `SwitchSettings`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfSwitch IsEnabled="True" IsOn="True">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="On">
-                    <VisualState.Setters>
-                        <Setter Property="SwitchSettings">
-                            <Setter.Value>
-                                <syncfusion:SwitchSettings
-                                    ThumbBackground="#F57B31"
-                                    ThumbCornerRadius="20"
-                                    ThumbHeightRequest="35"
-                                    ThumbStroke="#F78F50"
-                                    ThumbStrokeThickness="1"
-                                    ThumbWidthRequest="35"
-                                    TrackBackground="#F7D40D"
-                                    TrackHeightRequest="50"
-                                    TrackStroke="#DABA04"
-                                    TrackCornerRadius="25"
-                                    TrackStrokeThickness="1"
-                                    TrackWidthRequest="90"/>
-                            </Setter.Value>
-                        </Setter>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Off">
-                    <VisualState.Setters>
-                        <Setter Property="SwitchSettings">
-                            <Setter.Value>
-                                <syncfusion:SwitchSettings
-                                    ThumbBackground="#F0F5F8"
-                                    ThumbCornerRadius="20"
-                                    ThumbHeightRequest="35"
-                                    ThumbStroke="#C7C9C9"
-                                    ThumbStrokeThickness="1"
-                                    ThumbWidthRequest="35"
-                                    TrackBackground="#4FCFF7"
-                                    TrackHeightRequest="50"
-                                    TrackStroke="#359EBF"
-                                    TrackCornerRadius="25"
-                                    TrackStrokeThickness="1"
-                                    TrackWidthRequest="90"/>
-                            </Setter.Value>
-                        </Setter>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="OnHovered">
-                    <VisualState.Setters>
-                        <Setter Property="SwitchSettings">
-                            <Setter.Value>
-                                <syncfusion:SwitchSettings
-                                    ThumbBackground="#F57B31"
-                                    ThumbCornerRadius="20"
-                                    ThumbHeightRequest="35"
-                                    ThumbStroke="#E7600F"
-                                    ThumbStrokeThickness="1"
-                                    ThumbWidthRequest="35"
-                                    TrackBackground="#F7D40D"
-                                    TrackHeightRequest="50"
-                                    TrackStroke="#DABA04"
-                                    TrackCornerRadius="25"
-                                    TrackStrokeThickness="1"
-                                    TrackWidthRequest="90"/>
-                            </Setter.Value>
-                        </Setter>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="OffHovered">
-                    <VisualState.Setters>
-                        <Setter Property="SwitchSettings">
-                            <Setter.Value>
-                                <syncfusion:SwitchSettings
-                                    ThumbBackground="#FFFFFF"
-                                    ThumbCornerRadius="20"
-                                    ThumbHeightRequest="35"
-                                    ThumbStroke="#959595"
-                                    ThumbStrokeThickness="1"
-                                    ThumbWidthRequest="35"
-                                    TrackBackground="#72D4F3"
-                                    TrackHeightRequest="50"
-                                    TrackStroke="#359EBF"
-                                    TrackCornerRadius="25"
-                                    TrackStrokeThickness="1"
-                                    TrackWidthRequest="90"/>
-                            </Setter.Value>
-                        </Setter>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="OnPressed">
-                    <VisualState.Setters>
-                        <Setter Property="SwitchSettings">
-                            <Setter.Value>
-                                <syncfusion:SwitchSettings
-                                    ThumbBackground="#F57B31"
-                                    ThumbCornerRadius="24"
-                                    ThumbHeightRequest="48"
-                                    ThumbStroke="#E7600F"
-                                    ThumbStrokeThickness="1"
-                                    ThumbWidthRequest="48"
-                                    TrackBackground="#F7D40D"
-                                    TrackHeightRequest="50"
-                                    TrackStroke="#DABA04"
-                                    TrackCornerRadius="25"
-                                    TrackStrokeThickness="1"
-                                    TrackWidthRequest="90"/>
-                            </Setter.Value>
-                        </Setter>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="OffPressed">
-                    <VisualState.Setters>
-                        <Setter Property="SwitchSettings">
-                            <Setter.Value>
-                                <syncfusion:SwitchSettings
-                                    ThumbBackground="#FFFFFF"
-                                    ThumbCornerRadius="24"
-                                    ThumbHeightRequest="48"
-                                    ThumbStroke="#959595"
-                                    ThumbStrokeThickness="1"
-                                    ThumbWidthRequest="48"
-                                    TrackBackground="#72D4F3"
-                                    TrackHeightRequest="50"
-                                    TrackStroke="#359EBF"
-                                    TrackCornerRadius="25"
-                                    TrackStrokeThickness="1"
-                                    TrackWidthRequest="90"/>
-                            </Setter.Value>
-                        </Setter>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="OnDisabled">
-                    <VisualState.Setters>
-                        <Setter Property="SwitchSettings">
-                            <Setter.Value>
-                                <syncfusion:SwitchSettings
-                                    ThumbBackground="#B0AFB2"
-                                    ThumbCornerRadius="20"
-                                    ThumbHeightRequest="35"
-                                    ThumbStroke="#B0AFB2"
-                                    ThumbStrokeThickness="1"
-                                    ThumbWidthRequest="35"
-                                    TrackBackground="#FEF7FF"
-                                    TrackHeightRequest="50"
-                                    TrackStroke="#B0AFB2"
-                                    TrackCornerRadius="25"
-                                    TrackStrokeThickness="1"
-                                    TrackWidthRequest="90"/>
-                            </Setter.Value>
-                        </Setter>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="OffDisabled">
-                    <VisualState.Setters>
-                        <Setter Property="SwitchSettings">
-                            <Setter.Value>
-                                <syncfusion:SwitchSettings
-                                    ThumbBackground="#B0AFB2"
-                                    ThumbCornerRadius="20"
-                                    ThumbHeightRequest="35"
-                                    ThumbStroke="#B0AFB2"
-                                    ThumbStrokeThickness="1"
-                                    ThumbWidthRequest="35"
-                                    TrackBackground="#FEF7FF"
-                                    TrackHeightRequest="50"
-                                    TrackStroke="#B0AFB2"
-                                    TrackCornerRadius="25"
-                                    TrackStrokeThickness="1"
-                                    TrackWidthRequest="90"/>
-                            </Setter.Value>
-                        </Setter>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-    </syncfusion:SfSwitch>
-</ContentPage>
+<syncfusion:SfSwitch IsEnabled="True" IsOn="True">
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="On">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#F57B31"
+                                ThumbCornerRadius="20"
+                                ThumbHeightRequest="35"
+                                ThumbStroke="#F78F50"
+                                ThumbStrokeThickness="1"
+                                ThumbWidthRequest="35"
+                                TrackBackground="#F7D40D"
+                                TrackHeightRequest="50"
+                                TrackStroke="#DABA04"
+                                TrackCornerRadius="25"
+                                TrackStrokeThickness="1"
+                                TrackWidthRequest="90"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Off">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#F0F5F8"
+                                ThumbCornerRadius="20"
+                                ThumbHeightRequest="35"
+                                ThumbStroke="#C7C9C9"
+                                ThumbStrokeThickness="1"
+                                ThumbWidthRequest="35"
+                                TrackBackground="#4FCFF7"
+                                TrackHeightRequest="50"
+                                TrackStroke="#359EBF"
+                                TrackCornerRadius="25"
+                                TrackStrokeThickness="1"
+                                TrackWidthRequest="90"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="OnHovered">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#F57B31"
+                                ThumbCornerRadius="20"
+                                ThumbHeightRequest="35"
+                                ThumbStroke="#E7600F"
+                                ThumbStrokeThickness="1"
+                                ThumbWidthRequest="35"
+                                TrackBackground="#F7D40D"
+                                TrackHeightRequest="50"
+                                TrackStroke="#DABA04"
+                                TrackCornerRadius="25"
+                                TrackStrokeThickness="1"
+                                TrackWidthRequest="90"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="OffHovered">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#FFFFFF"
+                                ThumbCornerRadius="20"
+                                ThumbHeightRequest="35"
+                                ThumbStroke="#959595"
+                                ThumbStrokeThickness="1"
+                                ThumbWidthRequest="35"
+                                TrackBackground="#72D4F3"
+                                TrackHeightRequest="50"
+                                TrackStroke="#359EBF"
+                                TrackCornerRadius="25"
+                                TrackStrokeThickness="1"
+                                TrackWidthRequest="90"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="OnPressed">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#F57B31"
+                                ThumbCornerRadius="24"
+                                ThumbHeightRequest="48"
+                                ThumbStroke="#E7600F"
+                                ThumbStrokeThickness="1"
+                                ThumbWidthRequest="48"
+                                TrackBackground="#F7D40D"
+                                TrackHeightRequest="50"
+                                TrackStroke="#DABA04"
+                                TrackCornerRadius="25"
+                                TrackStrokeThickness="1"
+                                TrackWidthRequest="90"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="OffPressed">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#FFFFFF"
+                                ThumbCornerRadius="24"
+                                ThumbHeightRequest="48"
+                                ThumbStroke="#959595"
+                                ThumbStrokeThickness="1"
+                                ThumbWidthRequest="48"
+                                TrackBackground="#72D4F3"
+                                TrackHeightRequest="50"
+                                TrackStroke="#359EBF"
+                                TrackCornerRadius="25"
+                                TrackStrokeThickness="1"
+                                TrackWidthRequest="90"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="OnDisabled">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#B0AFB2"
+                                ThumbCornerRadius="20"
+                                ThumbHeightRequest="35"
+                                ThumbStroke="#B0AFB2"
+                                ThumbStrokeThickness="1"
+                                ThumbWidthRequest="35"
+                                TrackBackground="#FEF7FF"
+                                TrackHeightRequest="50"
+                                TrackStroke="#B0AFB2"
+                                TrackCornerRadius="25"
+                                TrackStrokeThickness="1"
+                                TrackWidthRequest="90"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="OffDisabled">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#B0AFB2"
+                                ThumbCornerRadius="20"
+                                ThumbHeightRequest="35"
+                                ThumbStroke="#B0AFB2"
+                                ThumbStrokeThickness="1"
+                                ThumbWidthRequest="35"
+                                TrackBackground="#FEF7FF"
+                                TrackHeightRequest="50"
+                                TrackStroke="#B0AFB2"
+                                TrackCornerRadius="25"
+                                TrackStrokeThickness="1"
+                                TrackWidthRequest="90"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</syncfusion:SfSwitch>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Buttons;
 
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.IsEnabled = true;

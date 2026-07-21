@@ -10,27 +10,20 @@ keywords : .net maui radio button, maui radio button, maui radio button group, m
 
 # Grouping in .NET MAUI Radio Button (SfRadioButton)
 
+## Prerequisites
+
+Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radio-button/getting-started) documentation.
+
 The [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control supports two approaches for grouping a set of Radio Buttons so that only one is selected at a time:
 
 * [GroupKey](#groupkey) - Share a single [`SfRadioGroupKey`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroupKey.html) instance across buttons located in any layout.
 * [.NET MAUI Radio Group](#net-maui-radio-group) - Wrap the buttons in an [`SfRadioGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) container for a richer set of features (`CheckedItem`, `SelectedValue`, `CheckedChanged`, `Orientation`).
 
 Use `GroupKey` when your Radio Buttons are scattered across different layouts or pages and must still be mutually exclusive. Use `SfRadioGroup` when the buttons are visually grouped and you need the additional properties and events.
-
-> **Prerequisites:** Add the `Syncfusion.Maui.Buttons` NuGet package to your project and register the handler in `MauiProgram.cs`:
->
-> ```csharp
-> using Syncfusion.Maui.Buttons.Hosting;
-> builder.ConfigureSyncfusionButtons();
-> ```
->
-> Add the namespace to your XAML page:
->
-> ```xaml
-> xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-> ```
-
-> **Version compatibility:** `SfRadioGroupKey`, `SfRadioGroup`, `CheckedChanged`, `SelectedValue`, and `Orientation` are available starting with `Syncfusion.Maui.Buttons` package version 19.4.0.x and require .NET MAUI (.NET 6 or later).
 
 ## Setting the Caption
 
@@ -39,14 +32,10 @@ The .NET MAUI Radio Button caption is defined using the [Text](https://help.sync
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button"/>
-</ContentPage>
+<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button"/>
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfRadioButton radioButton = new SfRadioButton();
 radioButton.Text = "Radio Button";
@@ -66,25 +55,20 @@ A single `SfRadioGroupKey` instance can be shared across multiple Radio Buttons 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <ContentPage.Resources>
+<StackLayout>
+    <StackLayout.Resources>
         <syncfusion:SfRadioGroupKey x:Key="carBrand"/>
         <syncfusion:SfRadioGroupKey x:Key="bikeBrand"/>
-    </ContentPage.Resources>
-
-    <StackLayout>
-        <syncfusion:SfRadioButton Text="Honda" GroupKey="{StaticResource carBrand}"/>
-        <syncfusion:SfRadioButton Text="Hyundai" GroupKey="{StaticResource carBrand}"/>
-        <syncfusion:SfRadioButton Text="Volkswagen" GroupKey="{StaticResource carBrand}"/>
-        <syncfusion:SfRadioButton Text="Yamaha" GroupKey="{StaticResource bikeBrand}"/>
-        <syncfusion:SfRadioButton Text="Bajaj" GroupKey="{StaticResource bikeBrand}"/>
-    </StackLayout>
-</ContentPage>
+    </StackLayout.Resources>
+    <syncfusion:SfRadioButton Text="Honda" GroupKey="{StaticResource carBrand}"/>
+    <syncfusion:SfRadioButton Text="Hyundai" GroupKey="{StaticResource carBrand}"/>
+    <syncfusion:SfRadioButton Text="Volkswagen" GroupKey="{StaticResource carBrand}"/>
+    <syncfusion:SfRadioButton Text="Yamaha" GroupKey="{StaticResource bikeBrand}"/>
+    <syncfusion:SfRadioButton Text="Bajaj" GroupKey="{StaticResource bikeBrand}"/>
+</StackLayout>
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfRadioGroupKey carBrand = new SfRadioGroupKey();
 SfRadioGroupKey bikeBrand = new SfRadioGroupKey();
@@ -117,18 +101,14 @@ this.Content = stackLayout;
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfRadioGroup>
-        <syncfusion:SfRadioButton Text="Net banking" />
-        <syncfusion:SfRadioButton Text="Debit card" />
-        <syncfusion:SfRadioButton Text="Credit card" />
-    </syncfusion:SfRadioGroup>
-</ContentPage>
+<syncfusion:SfRadioGroup>
+    <syncfusion:SfRadioButton Text="Net banking" />
+    <syncfusion:SfRadioButton Text="Debit card" />
+    <syncfusion:SfRadioButton Text="Credit card" />
+</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfRadioGroup radioGroup = new SfRadioGroup();
 SfRadioButton netBanking = new SfRadioButton() { Text = "Net banking" };
@@ -160,18 +140,14 @@ When any Radio Button in the group is checked, the `Value` of that Radio Button 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfRadioGroup x:Name="paymentGroup" SelectedValue="DebitCard">
-        <syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
-        <syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
-        <syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
-    </syncfusion:SfRadioGroup>
-</ContentPage>
+<syncfusion:SfRadioGroup x:Name="paymentGroup"            SelectedValue="DebitCard">
+    <syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
+    <syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
+    <syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
+</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfRadioGroup radioGroup = new SfRadioGroup
 {
@@ -209,24 +185,41 @@ this.Content = radioGroup;
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <ContentPage.BindingContext>
+<syncfusion:SfRadioGroup SelectedValue="{Binding SelectedPayment}">
+    <syncfusion:SfRadioGroup.BindingContext>
         <local:PaymentViewModel/>
-    </ContentPage.BindingContext>
-    <syncfusion:SfRadioGroup SelectedValue="{Binding SelectedPayment}">
-        <syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
-        <syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
-        <syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
-    </syncfusion:SfRadioGroup>
-</ContentPage>
+    </syncfusion:SfRadioGroup.BindingContext>
+    <syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
+    <syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
+    <syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
+</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.Maui.Buttons;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+var paymentViewModel = new PaymentViewModel();
 
+var radioGroup = new SfRadioGroup
+{
+    BindingContext = paymentViewModel
+};
+radioGroup.SetBinding(
+    SfRadioGroup.SelectedValueProperty,
+    nameof(PaymentViewModel.SelectedPayment));
+
+radioGroup.Children.Add(new SfRadioButton { Text = "Net banking", Value = "NetBanking" });
+radioGroup.Children.Add(new SfRadioButton { Text = "Debit card", Value = "DebitCard" });
+radioGroup.Children.Add(new SfRadioButton { Text = "Credit card", Value = "CreditCard" });
+
+ // Apply the initial selection via the view-model
+ paymentViewModel.SelectedPayment = "DebitCard";
+ 
+ this.Content = radioGroup;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
 public class PaymentViewModel : INotifyPropertyChanged
 {
     private string selectedPayment = "DebitCard";
@@ -261,18 +254,14 @@ The [`CheckedChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Butto
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfRadioGroup CheckedChanged="OnCheckedChanged">
-        <syncfusion:SfRadioButton x:Name="netBanking" Text="Net banking" />
-        <syncfusion:SfRadioButton x:Name="debitCard" Text="Debit card" />
-        <syncfusion:SfRadioButton x:Name="creditCard" Text="Credit card" />
-    </syncfusion:SfRadioGroup>
-</ContentPage>
+<syncfusion:SfRadioGroup CheckedChanged="OnCheckedChanged">
+    <syncfusion:SfRadioButton x:Name="netBanking" Text="Net banking" />
+    <syncfusion:SfRadioButton x:Name="debitCard" Text="Debit card" />
+    <syncfusion:SfRadioButton x:Name="creditCard" Text="Credit card" />
+</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfRadioGroup radioGroup = new SfRadioGroup();
 radioGroup.CheckedChanged += OnCheckedChanged;
@@ -307,18 +296,14 @@ private void OnCheckedChanged(object sender, Syncfusion.Maui.Buttons.CheckedChan
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfRadioGroup Orientation="Horizontal">
-        <syncfusion:SfRadioButton Text="Net banking" />
-        <syncfusion:SfRadioButton Text="Debit card" />
-        <syncfusion:SfRadioButton Text="Credit card" />
-    </syncfusion:SfRadioGroup>
-</ContentPage>
+<syncfusion:SfRadioGroup Orientation="Horizontal">
+    <syncfusion:SfRadioButton Text="Net banking" />
+    <syncfusion:SfRadioButton Text="Debit card" />
+    <syncfusion:SfRadioButton Text="Credit card" />
+</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfRadioGroup radioGroup = new SfRadioGroup() { Orientation = StackOrientation.Horizontal };
 SfRadioButton netBanking = new SfRadioButton() { Text = "Net banking" };
@@ -334,10 +319,3 @@ this.Content = radioGroup;
 {% endtabs %}
 
 ![.NET MAUI Radio Group horizontal orientation](Images/Grouping/radiogrouporientation.png)
-
-## Troubleshooting
-
-* **Buttons in the same layout are not mutually exclusive** - Ensure they all reference the **same** `SfRadioGroupKey` instance, not two separate `new SfRadioGroupKey()` objects.
-* **Setting `SelectedValue` has no visible effect** - The value must match the `Value` of one of the child `SfRadioButton` elements exactly (case-sensitive).
-* **`CheckedChanged` fires unexpectedly on initial load** - If `SelectedValue` is set in XAML or code, the event may fire as the matching button becomes checked. Use a flag if you need to skip this initial notification.
-* **C# samples fail to compile** - Make sure `using Syncfusion.Maui.Buttons;` is added to the code-behind file and that the snippet is placed inside a `ContentPage` (or another `IView` host) so `this.Content` resolves.

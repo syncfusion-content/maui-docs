@@ -9,20 +9,15 @@ documentation: UG
 
 # Events in .NET MAUI Radio Button (SfRadioButton)
 
-The [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control exposes the following events:
+## Prerequisites
 
-* [StateChanged](#statechanged-event) - Raised after the checked state changes.
-* [StateChanging](#statechanging-event) - Raised before the checked state changes; can be canceled.
+Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-> **Prerequisites:** Add the `Syncfusion.Maui.Buttons` NuGet package to your project and register the handler in `MauiProgram.cs`:
-> ```csharp
-> using Syncfusion.Maui.Buttons.Hosting;
-> builder.ConfigureSyncfusionButtons();
-> ```
-> Add the namespace to your XAML page:
-> ```xaml
-> xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-> ```
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radio-button/getting-started) documentation.
+
+The `SfRadioButton` control exposes the following events:
 
 ## StateChanged event
 

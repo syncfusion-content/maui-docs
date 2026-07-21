@@ -9,7 +9,13 @@ documentation: UG
 
 # Events in .NET MAUI CheckBox
 
-**Requirements:** .NET MAUI workload installed; `Syncfusion.Maui.Buttons` NuGet package added to the project; Syncfusion .NET MAUI controls registered via `.ConfigureSyncfusionCore()` / `UseSyncfusion*()` in `MauiProgram.cs`.
+## Prerequisites
+
+Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) documentation.
 
 ## StateChanged event
 
@@ -22,7 +28,8 @@ N> The example below mutates the CheckBox's `Text` inside the handler to visuall
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfCheckBox x:Name="checkBox" Text="Unchecked State" IsThreeState="True" StateChanged="CheckBox_StateChanged"/>
+<syncfusion:SfCheckBox x:Name="checkBox" 
+                       Text="Unchecked State" IsThreeState="True" StateChanged="CheckBox_StateChanged"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -76,8 +83,6 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.Maui.Buttons;
-
 SfCheckBox checkBox = new SfCheckBox();
 checkBox.Text = "CheckBox";
 checkBox.StateChanging += OnStateChanging;
@@ -97,5 +102,3 @@ private void OnStateChanging(object sender, StateChangingEventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Use the `Cancel` property in `StateChanging` to prevent a state transition; use `StateChanged` to react after the transition has already occurred. For exception handling, wrap event handler logic in a try/catch so that an error in your handler does not interrupt the CheckBox state update.

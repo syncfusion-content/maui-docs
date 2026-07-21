@@ -9,18 +9,13 @@ documentation: UG
 
 # Visual Customization in .NET MAUI CheckBox (SfCheckBox)
 
-**Requirements:** .NET MAUI workload installed; `Syncfusion.Maui.Buttons` NuGet package added to the project; Syncfusion .NET MAUI controls registered via `.ConfigureSyncfusionCore()` / `UseSyncfusion*()` in `MauiProgram.cs`. Targets: .NET MAUI 7.0+ and Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> MAUI `Syncfusion.Maui.Buttons` package.
+## Prerequisites
 
-XAML examples use the following namespace declaration on the page root:
+Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+- `Syncfusion.Maui.Buttons`
 
-C# examples require the following imports:
-
-using Syncfusion.Maui.Buttons;
-using Microsoft.Maui.Controls;
-
-N> Most of the visual properties shown here are inherited from the base [`ToggleButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html) class. `SfCheckBox` exposes `CornerRadius`, `TickColor`, and `LineBreakMode` directly.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) documentation.
 
 ## Customizing a shape
 
@@ -173,42 +168,23 @@ The [`TickColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.Sf
 
 {% tabs %}
 {% highlight xaml %}
-
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-                 x:Class="CheckBoxCustomization.MainPage">
-        <ContentPage.Content>
-            <StackLayout>
-                <syncfusion:SfCheckBox x:Name="checkBox" IsChecked="True" CheckedColor="Aqua" TickColor="Fuchsia" Text="CheckBox" />
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
+   
+<syncfusion:SfCheckBox x:Name="checkBox"        
+                       IsChecked="True"        CheckedColor="Aqua" 
+                       TickColor="Fuchsia" 
+                       Text="CheckBox" />
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using System;
-    using Syncfusion.Maui.Buttons;
-
-    namespace CheckBoxCustomization
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                StackLayout stackLayout = new StackLayout();
-                SfCheckBox checkBox = new SfCheckBox();
-                checkBox.IsChecked = true;
-                checkBox.Text = "CheckBox";
-                checkBox.CheckedColor = Colors.Aqua;
-                checkBox.TickColor = Colors.Fuchsia;
-                stackLayout.Children.Add(checkBox);
-                this.Content = stackLayout;
-            }
-        }
-    }
+StackLayout stackLayout = new StackLayout();
+SfCheckBox checkBox = new SfCheckBox();
+checkBox.IsChecked = true;
+checkBox.Text = "CheckBox";
+checkBox.CheckedColor = Colors.Aqua;
+checkBox.TickColor = Colors.Fuchsia;
+stackLayout.Children.Add(checkBox);
+this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}

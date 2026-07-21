@@ -9,11 +9,17 @@ documentation: UG
 
 # Liquid Glass Support in .NET MAUI Switch
 
+## Prerequisites
+
+Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
+
 The [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control renders a glass (also called acrylic or glass morphism) effect on the track and thumb when the [`EnableLiquidGlassEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_EnableLiquidGlassEffect) property is set to `true`. The effect is visible against vibrant images or colorful backgrounds and updates on user interaction.
 
 * [`EnableLiquidGlassEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_EnableLiquidGlassEffect): A `bool` property that enables the Liquid Glass effect on the Switch. The default value is `false`.
-
-N> Before proceeding, ensure that the Syncfusion<sup>®</sup> MAUI Buttons package is installed and the required namespace is registered. For more information, refer to the [Getting Started](Getting-Started.md) documentation.
 
 N> This feature is supported only on `.NET 10` together with `iOS 26` and `macOS 26`. It is not supported on Android, Windows, or earlier versions of iOS and macOS.
 
@@ -22,13 +28,11 @@ N> The `EnableLiquidGlassEffect` property is available in Syncfusion<sup>®</sup
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <Grid>
-        <!-- Background to make the glass effect visible while pressing the switch -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-        <syncfusion:SfSwitch x:Name="sfSwitch" EnableLiquidGlassEffect="True" />
-    </Grid>
-</ContentPage>
+<Grid>
+    <!-- Background to make the glass effect visible while pressing the switch -->
+    <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+    <syncfusion:SfSwitch x:Name="sfSwitch" EnableLiquidGlassEffect="True" />
+</Grid>
 
 {% endhighlight %}
 {% highlight c# %}

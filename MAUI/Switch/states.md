@@ -10,17 +10,15 @@ keywords : .net maui switch, maui switch, .net maui switch states, maui switch s
 
 # States in .NET MAUI Switch (SfSwitch)
 
+## Prerequisites
+
+Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
+
 The .NET MAUI Switch (SfSwitch) supports the following states: `On`, `Off`, `Indeterminate`, `Disabled On`, `Disabled Off`, and `Disabled Indeterminate`.
-
-N> Before proceeding, ensure that the Syncfusion<sup>®</sup> MAUI Buttons package is installed and the required namespace is registered. For more information, refer to the [Getting Started](Getting-Started.md) documentation.
-
-The state of the Switch is controlled by the following properties:
-
-* [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn): A `bool?` property that sets the current state. The default value is `false` (`Off`).
-* [`AllowIndeterminateState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState): A `bool` property that allows the Switch to display the `Indeterminate` state when `IsOn` is `null`. The default value is `false`.
-* [`IsEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled): A `bool` property that controls whether the Switch is interactive. The default value is `true`.
-
-N> The [`StateChanged`](Events.md) and [`StateChanging`](Events.md) events are raised when the `IsOn` property changes.
 
 ## On state
 
@@ -30,15 +28,11 @@ Set the [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfS
 
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfSwitch x:Name="sfSwitch" IsOn="true" />
-</ContentPage>
+<syncfusion:SfSwitch x:Name="sfSwitch" IsOn="true" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.IsOn = true;
@@ -60,15 +54,11 @@ Set the [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfS
 
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfSwitch x:Name="sfSwitch" IsOn="false" />
-</ContentPage>
+<syncfusion:SfSwitch x:Name="sfSwitch" IsOn="false" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.IsOn = false;
@@ -92,16 +82,12 @@ N> The `Indeterminate` state requires the `AllowIndeterminateState` property to 
 
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <syncfusion:SfSwitch x:Name="sfSwitch" IsOn="{x:Null}" AllowIndeterminateState="True" />
-</ContentPage>
+<syncfusion:SfSwitch x:Name="sfSwitch" IsOn="{x:Null}"
+                     AllowIndeterminateState="True" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.AllowIndeterminateState = true;
@@ -124,15 +110,12 @@ Set the [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfS
 
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfSwitch x:Name="sfSwitch" IsOn="true" IsEnabled="false" />
-</ContentPage>
+<syncfusion:SfSwitch x:Name="sfSwitch" IsOn="true"
+                     IsEnabled="false" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.IsOn = true;
@@ -155,15 +138,12 @@ Set the [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfS
 
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <syncfusion:SfSwitch x:Name="sfSwitch" IsOn="false" IsEnabled="false" />
-</ContentPage>
+<syncfusion:SfSwitch x:Name="sfSwitch" IsOn="false"
+                     IsEnabled="false" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.IsOn = false;
@@ -186,16 +166,13 @@ Set [`AllowIndeterminateState`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <syncfusion:SfSwitch x:Name="sfSwitch" AllowIndeterminateState="True" IsOn="{x:Null}" IsEnabled="False" />
-</ContentPage>
+<syncfusion:SfSwitch x:Name="sfSwitch"
+                     AllowIndeterminateState="True" IsOn="{x:Null}"
+                     IsEnabled="False" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.Buttons;
 
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.AllowIndeterminateState = true;

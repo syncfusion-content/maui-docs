@@ -10,9 +10,15 @@ keywords : .net maui switch, maui switch, .net maui switch customize, maui switc
 
 # Customization in .NET MAUI Switch (SfSwitch)
 
-The .NET MAUI Switch (SfSwitch) control provides options to customize its appearance, including color, sizing, and the thumb icon, across the `On`, `Off`, and `Indeterminate` states. The following sections describe how to customize the .NET MAUI Switch control.
+## Prerequisites
 
-N> Before proceeding, ensure that the Syncfusion<sup>®</sup> MAUI Buttons package is installed and the required namespace is registered. For more information, refer to the [Getting Started](Getting-Started.md) documentation.
+Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
+
+The .NET MAUI Switch (SfSwitch) control provides options to customize its appearance, including color, sizing, and the thumb icon, across the `On`, `Off`, and `Indeterminate` states. The following sections describe how to customize the .NET MAUI Switch control.
 
 ## Colors
 
@@ -356,9 +362,3 @@ this.Content = sfSwitch;
 ![CustomPath](Images/Path/Path.gif)
 
 N> Keep the size of the [`CustomPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath) within the dimensions of the thumb.
-
-N> The `CustomPath`, `IconColor`, and `SwitchSettings` features require Syncfusion<sup>®</sup> .NET MAUI Buttons package version 19.3.0.x or later.
-
-## See also 
-
-* [How to customize the .NET MAUI Switch control visual?](https://support.syncfusion.com/kb/article/16855/how-to-customize-the-net-maui-switch-control-visual)
