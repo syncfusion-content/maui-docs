@@ -14,7 +14,7 @@ documentation: ug
 The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream) method returns the edited image as a stream.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -25,7 +25,7 @@ The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Image
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using System.IO;
 using Syncfusion.Maui.ImageEditor;
@@ -45,7 +45,7 @@ N> The stream is available only after the image is loaded into the view.
 The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_OriginalImageSize) property gets the image's original size.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -56,7 +56,7 @@ The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Im
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.ImageEditor;
@@ -76,7 +76,7 @@ N> The size value is available only after the image is loaded into the view.
 The image editor uses `AspectFit` image scaling of the `Image` control to fit the entire image into the display area, adding blank space to the top or bottom depending on the image's aspect ratio. The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize) property gets the current rendered size of the image within the display area.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -87,7 +87,7 @@ The image editor uses `AspectFit` image scaling of the `Image` control to fit th
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.ImageEditor;
@@ -107,7 +107,7 @@ N> The size value is available only after the image is loaded into the view.
 The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property determines whether any editing action has been performed on the image.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -118,7 +118,7 @@ The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageE
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -138,7 +138,7 @@ private void OnIsImageEditedClicked(object sender, EventArgs e)
 Set the `Background` property to customize the background of the image editor.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor x:Name="imageEditor"
                            Source="imageeditordesktop.png"

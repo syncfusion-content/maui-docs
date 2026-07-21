@@ -21,7 +21,7 @@ The .NET MAUI Image Editor allows you to change the position of annotations arra
 Brings the selected annotation to the front of all annotations over the image.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -32,7 +32,7 @@ Brings the selected annotation to the front of all annotations over the image.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -49,7 +49,7 @@ private void OnBringToFrontClicked(object sender, EventArgs e)
 Sends the selected annotation to the back of all annotations.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -60,7 +60,7 @@ Sends the selected annotation to the back of all annotations.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -77,7 +77,7 @@ private void OnSendToBackClicked(object sender, EventArgs e)
 Brings the selected annotation one step forward over the image.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -88,7 +88,7 @@ Brings the selected annotation one step forward over the image.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -105,7 +105,7 @@ private void OnBringForwardClicked(object sender, EventArgs e)
 Sends the selected annotation one step backward over the image.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -116,7 +116,7 @@ Sends the selected annotation one step backward over the image.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 

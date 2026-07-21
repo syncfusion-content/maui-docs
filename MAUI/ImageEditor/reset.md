@@ -16,7 +16,7 @@ The .NET MAUI Image Editor allows you to reset the edited image to the originall
 The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Reset) method resets an image to its original state by discarding the changes performed on it.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -27,7 +27,7 @@ The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.Sf
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -49,13 +49,13 @@ You can control the reset functionality using the `Cancel` argument.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor Source="image.png" BeginReset="OnBeginReset" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using System.ComponentModel;
 using Syncfusion.Maui.ImageEditor;

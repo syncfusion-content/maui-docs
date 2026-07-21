@@ -17,7 +17,7 @@ The [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdi
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor x:Name="imageEditor"
                            Source="image.png"
@@ -25,7 +25,9 @@ The [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdi
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 private void OnImageLoaded(object sender, EventArgs e)
 {
@@ -45,14 +47,16 @@ The [`AnnotationsDeserialized`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 N> Serialization and deserialization are not applicable for custom annotation views.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
 <imageEditor:SfImageEditor x:Name="imageEditor"
                            Source="image.png"
                            AnnotationsDeserialized="OnAnnotationsDeserialized" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 private async void OnAnnotationsDeserialized(object sender, EventArgs e)
 {
@@ -70,14 +74,14 @@ N> This event is common for Shape and Text annotations.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor Source="image.png"
                            AnnotationSelected="OnAnnotationSelected" />
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.ImageEditor;
@@ -104,14 +108,14 @@ Restrict the default image browse picker from opening by setting the `Cancel` pr
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor Source="image.png"
                            BrowseImage="OnImageBrowse" />
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using System.ComponentModel;
 using Syncfusion.Maui.ImageEditor;

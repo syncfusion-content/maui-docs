@@ -32,7 +32,7 @@ To achieve a glass-like background in the Image Editor and its Toolbar control, 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfImageEditor` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5 9" %}
 
 <Grid BackgroundColor="Transparent">
     <core:SfGlassEffectView EffectType="Regular"
@@ -51,7 +51,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="C#" hl_lines="21 22 23 24 25 30" %}
 
 using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.Core;

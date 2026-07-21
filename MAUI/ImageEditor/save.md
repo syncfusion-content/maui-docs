@@ -16,7 +16,7 @@ The Image Editor control in .NET MAUI allows you to save the edited image as PNG
 To save the modified image, use the [`Save`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Save_System_Nullable_Syncfusion_Maui_ImageEditor_ImageFileType__System_String_System_String_System_Nullable_Microsoft_Maui_Graphics_Size__) method, which accepts parameters such as file name, file type, file path, and image size. The supported file types for saving are [`PNG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Png), [`JPG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Jpg), [`JPEG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Jpeg) and [`BMP`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Bmp). You can save the image by clicking Save on the toolbar.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -27,7 +27,7 @@ To save the modified image, use the [`Save`](https://help.syncfusion.com/cr/maui
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -138,7 +138,7 @@ Control the save functionality by setting the [`Cancel`](https://learn.microsoft
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor x:Name="imageEditor"
                            Source="image.png"
@@ -146,7 +146,7 @@ Control the save functionality by setting the [`Cancel`](https://learn.microsoft
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -168,7 +168,7 @@ Access the current image edits as a stream using the [`ImageStream`](https://hel
 
 {% tabs %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using System.IO;
 using Syncfusion.Maui.ImageEditor;
@@ -199,7 +199,7 @@ Save the edited image with the specified name using the [`FileName`](https://hel
 
 {% tabs %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -227,7 +227,7 @@ Change the file type of the saved image to [`ImageFileType.Png`](https://help.sy
 
 {% tabs %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -249,13 +249,13 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-#### CompressionQuality
+#### Compression Quality
 
 Optimize the saved image's file size on Android, iOS, and MacCatalyst devices, when the [`FileType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavingEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavingEventArgs_FileType) is set to [`ImageFileType.Jpeg`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Jpeg).
 
 {% tabs %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -285,13 +285,14 @@ The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdit
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<imageEditor:SfImageEditor Source="image.png" ImageSaved="OnImageSaved" />
+<imageEditor:SfImageEditor Source="image.png" 
+                           ImageSaved="OnImageSaved" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -314,13 +315,14 @@ Restrict the save picker opening by setting the `Cancel` argument to `true`. If 
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
-<imageEditor:SfImageEditor Source="image.png" SavePickerOpening="OnSavePickerOpening" />
+<imageEditor:SfImageEditor Source="image.png" 
+                           SavePickerOpening="OnSavePickerOpening" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using System.ComponentModel;
 using Syncfusion.Maui.ImageEditor;
@@ -344,7 +346,7 @@ The [`HasUnsavedEdits`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Imag
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.jpeg" />
@@ -356,7 +358,7 @@ The [`HasUnsavedEdits`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Imag
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 private void OnHasUnsavedEditsClicked(object sender, EventArgs e)
 {
@@ -376,7 +378,7 @@ The [`HasUnsavedDrawnAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.jpeg" />
@@ -388,7 +390,7 @@ The [`HasUnsavedDrawnAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 private void OnHasUnsavedDrawnAnnotationsClicked(object sender, EventArgs e)
 {

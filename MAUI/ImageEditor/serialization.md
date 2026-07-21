@@ -16,7 +16,7 @@ The Image Editor control supports serializing and deserializing the shape, text,
 The [`Serialize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Serialize_System_IO_Stream_) method serializes the current edits of annotations. Pass a stream as a parameter to store the [`SfImageEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) annotations in the stream.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -27,7 +27,7 @@ The [`Serialize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdito
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using System.IO;
 using Microsoft.Maui.Storage;
@@ -50,7 +50,7 @@ private void OnSerializeClicked(object sender, EventArgs e)
 The [`Deserialize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Deserialize_System_IO_Stream_) method deserialize the annotations over an image. It reloads the [`SfImageEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) control with the annotations stored in the stream.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -61,7 +61,7 @@ The [`Deserialize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdi
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using System.IO;
 using Microsoft.Maui.Storage;
