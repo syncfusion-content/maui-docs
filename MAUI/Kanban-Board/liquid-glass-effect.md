@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI Kanban Board (SfKanban)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Kanban Board (SfKanban) control.
+The Liquid Glass Effect provides a modern, translucent design with adaptive color tinting and light refraction for a clear, accessible, glass-like user experience. This section explains how to enable and customize the effect in the .NET MAUI Kanban Board (SfKanban) control.
 
 ## Apply liquid glass effect
 
@@ -23,41 +23,48 @@ For more details, refer to the [Liquid Glass Getting Started documentation](http
 
 ### Step 2: Enable the liquid glass effect on Kanban
 
-Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_EnableLiquidGlassEffect) property to `true` in the [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its child elements and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_EnableLiquidGlassEffect) property of [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) to `true` (default `false`) to apply the Liquid Glass Effect. When enabled, the effect is also applied to the child elements of the control, including cards and columns. The effect provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 
-To achieve a glass like background in the Kanban control, set its `Background` property to `Transparent` and apply theme keys with transparent values to enable the liquid glass effect for kanban child elements. This ensures a consistent look and feel across your application.
+Set the `Background` property to `Transparent` and apply transparent theme keys to child elements for a glass-like background. This keeps the look and feel consistent across your app.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [Kanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<Grid BackgroundColor="Transparent">
-    <core:SfGlassEffectView EffectType="Clear"
-                            CornerRadius="7">
-        <kanban:SfKanban x:Name="kanban"
-                         Background="Transparent"
-                         AutoGenerateColumns="False"
-                         ItemsSource="{Binding Cards}"
-                         EnableLiquidGlassEffect="True">
-            <kanban:SfKanban.Columns>
-                <kanban:KanbanColumn Title="To Do"
-                                     Categories="Open"/>
-                <kanban:KanbanColumn Title="In Progress"
-                                     Categories="In Progress"/>
-                <kanban:KanbanColumn Title="Code Review"
-                                     Categories="Code Review"/>
-                <kanban:KanbanColumn Title="Done"
-                                     Categories="Done"/>
-            </kanban:SfKanban.Columns>
-            <kanban:SfKanban.BindingContext>
-                <local:KanbanViewModel/>
-            </kanban:SfKanban.BindingContext>
-        </kanban:SfKanban>
-    </core:SfGlassEffectView>
-</Grid>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
+        <local:KanbanViewModel />
+    </ContentPage.BindingContext>
+    <Grid BackgroundColor="Transparent">
+        <core:SfGlassEffectView EffectType="Clear"
+                                CornerRadius="7">
+            <kanban:SfKanban x:Name="kanban"
+                             Background="Transparent"
+                             AutoGenerateColumns="False"
+                             ItemsSource="{Binding Cards}"
+                             EnableLiquidGlassEffect="True">
+                <kanban:SfKanban.Columns>
+                    <kanban:KanbanColumn Title="To Do"
+                                         Categories="Open" />
+                    <kanban:KanbanColumn Title="In Progress"
+                                         Categories="In Progress" />
+                    <kanban:KanbanColumn Title="Code Review"
+                                         Categories="Code Review" />
+                    <kanban:KanbanColumn Title="Done"
+                                         Categories="Done" />
+                </kanban:SfKanban.Columns>
+            </kanban:SfKanban>
+        </core:SfGlassEffectView>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 22 23 24 25 26" %}
@@ -95,6 +102,9 @@ this.Content = grid;
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Kanban;
 
 public class KanbanViewModel
 {

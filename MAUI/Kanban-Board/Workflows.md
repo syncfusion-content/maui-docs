@@ -9,9 +9,9 @@ documentation: ug
 
 # Workflows in .NET MAUI Kanban Board (SfKanban)
 
-This feature is used to define the flow of cards between columns, offering restrictions when moving cards from one column to another. It also supports preventing drag-and-drop actions on specific columns.
+Use workflows to define the allowed transitions of cards between columns and to restrict invalid moves. Workflows can also prevent drag-and-drop actions on specific columns (for finer control, use [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrag) and [`AllowDrop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrop) on `KanbanColumn`; see [Column](Column.md) for details).
 
-To define the flow of card transitions between different states, create an instance of the [KanbanWorkflow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html) class and add it to the [Workflows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Workflows) property of the [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) to define the workflow for each column. The [KanbanWorkflow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html) class contains the following properties to specify the source and target categories.
+Create a [`KanbanWorkflow`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html) instance and add it to the [`Workflows`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Workflows) collection of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) to define the allowed transitions for each column. The [`KanbanWorkflow`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html) class exposes the following properties to specify the source and target categories:
 
 * [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html#Syncfusion_Maui_Kanban_KanbanWorkflow_Category) - Used to define the source category/state.
 * [`AllowedTransitions`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html#Syncfusion_Maui_Kanban_KanbanWorkflow_AllowedTransitions) - Used to define the list of categories/states, the card with the state specified in KanbanWorkflow. Category is allowed to transit.
@@ -367,4 +367,4 @@ public class ViewModel
 
 ![workflow-in-maui-kanban](images/workflow/workflow-in-maui-kanban.gif)
 
-By following the code snippet, you will notice that the card picked from the `In Progress` state is not allowed to be dropped in the `Open` state because we have defined that the card can only move from the `In Progress` state to the `Code Review`, and `Postponed` states, and not to any other states.
+In the example above, a card in the `In Progress` column can be moved only to `Code Review` or `Postponed`; it cannot be moved to `Open` (or any other category not listed in its `AllowedTransitions`).
