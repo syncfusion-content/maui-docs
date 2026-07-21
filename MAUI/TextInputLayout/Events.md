@@ -1,47 +1,95 @@
 ---
 layout: post
-title: Events in MAUI TextInputLayout control | Syncfusion®
-description: Learn about Events support in Syncfusion® Essential Studio® MAUI TextInputLayout control, its elements, and more.
+title: Events in .NET MAUI SfTextInputLayout | Syncfusion®
+description: Learn about the events raised by the Syncfusion® .NET MAUI SfTextInputLayout control, including the PasswordVisibilityToggled event.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
+keywords: .net maui textinputlayout events, syncfusion text input layout password toggled maui, sftextinputlayout passwordvisibilitytoggled maui, .net maui text input layout eventargs, sftextinputlayout ispasswordvisible maui
 ---
 
-# Events in MAUI TextInputLayout
+# Events in .NET MAUI SfTextInputLayout
 
-## PasswordVisibilityToggled Event
+[SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) raises events to notify your application when the user interacts with the control. This page documents the events exposed directly by `SfTextInputLayout`. For events on the inner input view (such as `TextChanged`, `Focused`, and `Unfocused`), refer to the [MAUI Entry documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry).
 
-The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_PasswordVisibilityToggled) event will be triggered whenever you toggle the password toggle icon in the SfTextInputLayout. The event arguments are of type [PasswordVisibilityToggledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html) and expose the following property:
+## Prerequisites
 
-* [IsPasswordVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html#Syncfusion_Maui_Core_PasswordVisibilityToggledEventArgs_IsPasswordVisible): Its value is defined based on the visibility of the password.
+Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
+
+## Supported Events
+
+| Event | Trigger | EventArgs |
+|-------|---------|-----------|
+| [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_PasswordVisibilityToggled) | Raised when the user taps the password visibility toggle icon. | [PasswordVisibilityToggledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html) |
+
+N> The `PasswordVisibilityToggled` event fires only when [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_EnablePasswordVisibilityToggle) is `true`. If the toggle is disabled, the icon is not rendered and the event is never raised.
+
+## Password visibility toggled event
+
+The `PasswordVisibilityToggled` event fires when the user taps the password visibility toggle icon. The handler receives the `SfTextInputLayout` instance as the `sender` and a `PasswordVisibilityToggledEventArgs` instance.
+
+### Event Arguments
+
+| Property | Type | Description |
+|----------|------|-------------|
+| [IsPasswordVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html#Syncfusion_Maui_Core_PasswordVisibilityToggledEventArgs_IsPasswordVisible) | `bool` | `true` when the password is currently visible (shown in plain text); `false` when the password is hidden. The event fires after the visibility state has changed, so the value reflects the new state. |
 
 {% tabs %}
 {% highlight xaml %}
 
-<inputLayout:SfTextInputLayout  Hint="Password" 
-                                PasswordVisibilityToggled="OnPasswordVisibilityToggled">
-    <Entry Text="1234"/>
-</inputLayout:SfTextInputLayout>  
- 
-{% endhighlight %}
-{% highlight c# %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <VerticalStackLayout>
+        <inputLayout:SfTextInputLayout Hint="Password"
+                                   EnablePasswordVisibilityToggle="True"
+                                   PasswordVisibilityToggled="OnPasswordVisibilityToggled">
+            <Entry />
+        </inputLayout:SfTextInputLayout>
+    </VerticalStackLayout>
+</ContentPage>
 
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Password";
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+
+var inputLayout = new SfTextInputLayout
+{
+    Hint = "Password",
+    EnablePasswordVisibilityToggle = true,
+    Content = new Entry { IsPassword = true }
+};
 inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
-inputLayout.Content = new Entry() { Text = "1234" }; 
+
+void OnPasswordVisibilityToggled(object? sender, PasswordVisibilityToggledEventArgs e)
+{
+    bool isPasswordVisible = e.IsPasswordVisible;
+    if (sender is SfTextInputLayout layout)
+    {
+        layout.ShowHint = !isPasswordVisible;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight c# %}
-    
-    private void OnPasswordVisibilityToggled(object sender, PasswordVisibilityToggledEventArgs e)
-	{
-    	bool passwordVisbility = e.IsPasswordVisible;
-	}
+## Troubleshooting
 
-{% endhighlight %}
-{% endtabs %}
+| Issue | Possible Cause | Recommended Action |
+|-------|----------------|--------------------|
+| The `PasswordVisibilityToggled` event never fires. | `EnablePasswordVisibilityToggle` is `false`, or the inner control is not an `Entry`. | Set `EnablePasswordVisibilityToggle = true` and ensure the inner control is `Entry`. |
+| `e.IsPasswordVisible` always reports the same value. | The handler is caching the value, or the visibility state did not change. | Read the value from `e.IsPasswordVisible` inside the handler; do not store it across invocations. |
+| The handler is not invoked from XAML. | The event handler name in the XAML attribute does not match the method name in the code-behind. | Verify the `PasswordVisibilityToggled="OnPasswordVisibilityToggled"` attribute matches the method signature `void OnPasswordVisibilityToggled(object? sender, PasswordVisibilityToggledEventArgs e)`. |
+
+## See Also
+
+- [Getting Started with .NET MAUI SfTextInputLayout](https://help.syncfusion.com/maui/textinputlayout/getting-started)
+- [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)
+- [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
+- [Custom Icons](https://help.syncfusion.com/maui/textinputlayout/custom-icons)
