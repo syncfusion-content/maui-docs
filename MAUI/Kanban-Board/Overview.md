@@ -9,16 +9,16 @@ documentation: ug
 
 # Overview of .NET MAUI Kanban Board
 
-The Syncfusion® [.NET MAUI Kanban](https://www.syncfusion.com/maui-controls/maui-kanban) control is a highly interactive and customizable tool designed to streamline task management. It provides an efficient way to visualize workflows at various stages of completion. Kanban helps facilitate effective planning and offers a clear visualization of work progress.
+The Syncfusion® [.NET MAUI Kanban](https://www.syncfusion.com/maui-controls/maui-kanban) control is a highly interactive and customizable tool designed to streamline task management. It provides an efficient way to visualize workflows at every stage of completion. It facilitates effective planning and provides a clear visualization of work progress.
 
 ![.NET MAUI kanban overview ](images/overview/kanban-overview.png)
 
 ## Business use cases
 
-- Project management applications that require visual tracking of tasks across multiple workflow stages.  
-- Agile development tools that support Kanban-based planning and task organization.  
-- Business workflow systems that manage process stages such as pending, in progress, and completed.  
-- Team collaboration applications that require clear visibility of task status and progress.  
+- **Project management** - applications that require visual tracking of tasks across multiple workflow stages.
+- **Agile development** - tools that support Kanban-based planning and task organization.
+- **Business workflow** - systems that manage process stages such as `Pending`, `In Progress`, and `Completed`.
+- **Team collaboration** - applications that require clear visibility of task status and progress.
 
 ## Key features
 
@@ -38,7 +38,7 @@ The following table summarizes the globalization support available in this contr
 
 .legend{
   display: inline-flex !important;
-  flex-direction: row !important; 
+  flex-direction: row !important;
   gap: 16px !important;
 }
 </style>
@@ -47,7 +47,7 @@ The following table summarizes the globalization support available in this contr
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/full-support.svg" width="16"> Full Support
 </span>
- 
+
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
@@ -69,14 +69,14 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-</tr> 
+</tr>
 </table>
 
 ## Related controls
 
-- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing structured task data in tabular format.  
-- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying task lists in scrollable layouts.  
-- [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for managing timelines and scheduling tasks.  
+- [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing structured task data in tabular format.
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying task lists in scrollable layouts.
+- [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for managing timelines and scheduling tasks.
 
 ## See Also
 
@@ -220,7 +220,7 @@ The following table summarizes the globalization support available in this contr
     </div>
     <h3 class="form-title">Feature Tour</h3>
 </div>
-<div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
+<div class="form-description">Get a quick overview of the key features and capabilities to kick start your journey.</div>
 <a href="https://www.syncfusion.com/maui-controls/maui-kanban" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
