@@ -2,22 +2,22 @@
 layout: post
 title: Accessibility in .NET MAUI Image Editor Control | Syncfusion
 description: Learn here about performing actions using accessibility in Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor (SfImageEditor) control.
-platform: maui
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
 # Accessibility in .NET MAUI Image Editor (SfImageEditor)
 
-The Image Editor is designed to work effectively with the icons and sliders on its toolbar, providing voice descriptions of their names, and functions.
+The Image Editor works effectively with the icons and sliders on its toolbar, providing voice descriptions of their names and functions.
 
-## Keyboard shortcuts in .NET MAUI Image Editor (SfImageEditor)
+## Keyboard shortcuts
 
-The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports keyboard shortcuts for user interaction. The table provided outlines various shortcuts and their associated functions.
+The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports keyboard shortcuts for user interaction. The following table outlines the available shortcuts and their associated functions.
 
-N> [ToolbarItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event triggers for toolbar item tapped.
+N> The [`ToolbarItemSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event is triggered when a toolbar item is tapped.
 
-#### Toolbar
+### Toolbar
 
 <table>
 <tr>
@@ -59,4 +59,4 @@ Opens the image browser to import the new image inside ImageEditor.
 <br/><br/></td></tr>
 </table>
 
-N> Use the `Command` key instead of the `Ctrl` key in macOS.
+N> Use the `Command` key instead of the `Ctrl` key on macOS.
