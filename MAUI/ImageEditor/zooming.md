@@ -1,37 +1,37 @@
 ---
 layout: post
-title: Zoom image using .NET MAUI Image Editor Control | Syncfusion
-description: Learn here all about how to zoom image in the Syncfusion .NET MAUI Image Editor(SfImageEditor) control and more.
-platform: maui
+title: Zoom an image in .NET MAUI Image Editor Control | Syncfusion®
+description: Learn here all about how to zoom an image in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control and more.
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# The .NET MAUI Image Editor (SfImageEditor) Image Zooming
+# Image zooming in .NET MAUI Image Editor (SfImageEditor)
 
-The image editor control in the .NET MAUI provides support for zooming and panning actions on an image.
+The .NET MAUI Image Editor supports zooming and panning actions on an image.
 
 ## Allow image zooming
 
-To enable or disable the zooming functionality, set the value of the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom) property to true or false. By default, the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom) value is set to `true`.
+Set the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom) property to enable or disable the zooming functionality. By default, the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom) value is `true`.
 
 {% tabs %}
 
-{% highlight XAML %}
-  <ContentPage 
-            . . .
-            <imageEditor:SfImageEditor Source="image.jpeg" AllowZoom="False"/>
+{% highlight XAML tabtitle="MainPage.xaml" %}
 
-   </ContentPage>
-     
+<imageEditor:SfImageEditor Source="image.jpeg" AllowZoom="False" />
+
 {% endhighlight %}
 
-{% highlight C# %}
-   
-     SfImageEditor imageEditor = new SfImageEditor();
-     imageEditor.Source = "image.jpeg";
-     imageEditor.AllowZoom = false;
-     this.content = imageEditor;
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.jpeg");
+imageEditor.AllowZoom = false;
+this.Content = imageEditor;
 
 {% endhighlight %}
 
@@ -39,53 +39,53 @@ To enable or disable the zooming functionality, set the value of the [`AllowZoom
 
 ## Change the image zoom level
 
-Programmatically, you can zoom the loaded image without any interaction by setting a value to the [`ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ZoomLevel) property. 
+Zoom the loaded image programmatically without any interaction by setting the [`ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ZoomLevel) property.
 
 {% tabs %}
 
-{% highlight XAML %}
-  <ContentPage 
-            . . .
-            <imageEditor:SfImageEditor Source="image.jpeg" ZoomLevel="2"/>
+{% highlight XAML tabtitle="MainPage.xaml" %}
 
-   </ContentPage>
-     
+<imageEditor:SfImageEditor Source="image.jpeg" ZoomLevel="2" />
+
 {% endhighlight %}
 
-{% highlight C# %}
-   
-     SfImageEditor imageEditor = new SfImageEditor();
-     imageEditor.Source = "image.jpeg";
-     imageEditor.ZoomLevel = 2;
-     this.content = imageEditor;
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.jpeg");
+imageEditor.ZoomLevel = 2;
+this.Content = imageEditor;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Zooming in .NET Maui ImageEditor](images/zoom/imageeditor-zooming.gif)
+![Zooming in .NET MAUI Image Editor](images/zoom/imageeditor-zooming.gif)
 
 ### Change the maximum zoom level
 
-To define the maximum zoom level for the image, make use of the [`MaximumZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_MaximumZoomLevel) property.
+Use the [`MaximumZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_MaximumZoomLevel) property to define the maximum zoom level for the image.
 
 {% tabs %}
 
-{% highlight XAML %}
-  <ContentPage 
-            . . .
-            <imageEditor:SfImageEditor Source="image.jpeg" MaximumZoomLevel="5"/>
+{% highlight XAML tabtitle="MainPage.xaml" %}
 
-   </ContentPage>
-     
+<imageEditor:SfImageEditor Source="image.jpeg" MaximumZoomLevel="5" />
+
 {% endhighlight %}
 
-{% highlight C# %}
-   
-     SfImageEditor imageEditor = new SfImageEditor();
-     imageEditor.Source = "image.jpeg";
-     imageEditor.MaximumZoomLevel = 5;
-     this.content = imageEditor;
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.jpeg");
+imageEditor.MaximumZoomLevel = 5;
+this.Content = imageEditor;
 
 {% endhighlight %}
 

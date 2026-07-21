@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Working with .NET MAUI Image Editor Control | Syncfusion
-description: Learn here all about Working with Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor(SfImageEditor) control and more.
-platform: maui
+title: Working with .NET MAUI Image Editor Control | Syncfusion®
+description: Learn here all about working with Syncfusion® .NET MAUI Image Editor (SfImageEditor) control and more.
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
@@ -11,101 +11,116 @@ documentation: ug
 
 ## Get the image stream
 
-The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream) method is used to get the edited image in form of a image stream.
+The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream) method returns the edited image as a stream.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="Get Image Stream"
-                Clicked="OnGetStreamClicked" />
-    </Grid>  
+<Grid RowDefinitions="0.9*, 0.1*">
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               Source="image.jpeg" />
+    <Button Grid.Row="1"
+            Text="Get Image Stream"
+            Clicked="OnGetStreamClicked" />
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnGetStreamClicked(object sender, EventArgs e)
-    {
-        this.imageEditor.GetImageStream();
-    }
+using System.IO;
+using Syncfusion.Maui.ImageEditor;
+
+private void OnGetStreamClicked(object sender, EventArgs e)
+{
+    Stream stream = this.imageEditor.GetImageStream();
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Get the Image Original Size
-The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_OriginalImageSize) property is used to get the image's original size.
+N> The stream is available only after the image is loaded into the view.
+
+## Get the image's original size
+
+The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_OriginalImageSize) property gets the image's original size.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="Get Image Original Size"
-                Clicked="OnGetImageOriginalSize" />
-    </Grid>  
+<Grid RowDefinitions="0.9*, 0.1*">
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               Source="image.jpeg" />
+    <Button Grid.Row="1"
+            Text="Get Image Original Size"
+            Clicked="OnGetImageOriginalSizeClicked" />
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnGetImageOriginalSize(object sender, EventArgs e)
-    {
-        Size originalSize = this.imageEditor.OriginalImageSize;
-    }
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.ImageEditor;
+
+private void OnGetImageOriginalSizeClicked(object sender, EventArgs e)
+{
+    Size originalSize = this.imageEditor.OriginalImageSize;
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-N> The size value will only be available after the image has been loaded into view.
+N> The size value is available only after the image is loaded into the view.
 
-## Get the Image Rendered Size
-The image editor utilizes the `AspectFit` image scaling of Image control to fit the entire image into the display area, with blank space added to the top or bottom sides depending on whether the image is wide or tall. The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize) property is used to get the current rendered size of the image inside the display area.
+## Get the image's rendered size
+
+The image editor uses `AspectFit` image scaling of the `Image` control to fit the entire image into the display area, adding blank space to the top or bottom depending on the image's aspect ratio. The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize) property gets the current rendered size of the image within the display area.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="Get Image Rendered Size"
-                Clicked="OnGetImageRenderedSize" />
-    </Grid>  
+<Grid RowDefinitions="0.9*, 0.1*">
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               Source="image.jpeg" />
+    <Button Grid.Row="1"
+            Text="Get Image Rendered Size"
+            Clicked="OnGetImageRenderedSize" />
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnGetImageRenderedSize(object sender, EventArgs e)
-    {
-        Size imageSize = this.imageEditor.ImageRenderedSize;
-    }
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.ImageEditor;
+
+private void OnGetImageRenderedSize(object sender, EventArgs e)
+{
+    Size imageSize = this.imageEditor.ImageRenderedSize;
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-N> The size value will only be available after the image has been loaded into view.
+N> The size value is available only after the image is loaded into the view.
 
-## Check image edited status
+## Check the image edited status
 
-The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property is used to determine whether any editing action has been performed on the image.
+The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property determines whether any editing action has been performed on the image.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="IsImageEdited"
-                Clicked="OnIsImageEditedClicked" />
-    </Grid>  
+<Grid RowDefinitions="0.9*, 0.1*">
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               Source="image.jpeg" />
+    <Button Grid.Row="1"
+            Text="IsImageEdited"
+            Clicked="OnIsImageEditedClicked" />
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 private void OnIsImageEditedClicked(object sender, EventArgs e)
 {
@@ -118,16 +133,16 @@ private void OnIsImageEditedClicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Change the image editor background
-The background of the Image Editor can be customized by setting the `Background` property of the SfImageEditor.
+## Change the image editor's background
+
+Set the `Background` property to customize the background of the image editor.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <imageEditor:SfImageEditor x:Name="imageEditor"
-                              Source="imageeditordesktop.png"
-                              Background="LightGreen">
-   </imageEditor:SfImageEditor>
+<imageEditor:SfImageEditor x:Name="imageEditor"
+                           Source="imageeditordesktop.png"
+                           Background="LightGreen" />
 
 {% endhighlight %}
 {% endtabs %}

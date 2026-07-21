@@ -2,57 +2,60 @@
 layout: post
 title: Toolbar Customization in .NET MAUI Image Editor Control | Syncfusion
 description: Learn about toolbar customization support in the Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor (SfImageEditor) control.
-platform: maui
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Toolbar in .NET MAUI Image Editor (SfImageEditor)
+# Toolbar customization in .NET MAUI Image Editor (SfImageEditor)
 
-Customize the built-in toolbar appearance, visibility, position, and orientation of each toolbar and add new toolbars.
+Customize the built-in toolbar to adjust its appearance, visibility, position, and orientation, and add new toolbars.
 
 ## Show or hide toolbar
 
-To show or hide the toolbar, set the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property to either true or false. By default, the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property is set to `true`.
+To show or hide the toolbar, set the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property to either `true` or `false`. By default, the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property is set to `true`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage 
-            . . .
-            <imageEditor:SfImageEditor Source="image.jpeg" ShowToolbar="True" />
-
+<ContentPage
+    . . .
+    <imageEditor:SfImageEditor Source="image.jpeg" ShowToolbar="True" />
+    . . .
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.ImageEditor;
+
 namespace SyncfusionImageEditor;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
+    public MainPage()
+    {
         InitializeComponent();
         SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source = "image.jpeg";
+        imageEditor.Source = ImageSource.FromFile("image.jpeg");
         imageEditor.ShowToolbar = true;
-        this.content = imageEditor;
+        this.Content = imageEditor;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Built-in Toolbar
+## Built-in toolbar
 
-Customize each toolbar item using the [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name). Get or set the names of the built-in toolbar and dynamically add toolbar items using the [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) property.
+Customize each toolbar item using the [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) property. You can also get or set the names of the built-in toolbar and dynamically add toolbar items using the [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) property.
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 public MainPage()
-{			
+{
     InitializeComponent();
     SfImageEditor imageEditor = new SfImageEditor();
     imageEditor.Source = ImageSource.FromFile("image.png");
@@ -65,29 +68,36 @@ N> The following built-in toolbar item names are available in image editor: `Bro
 
 N> You cannot modify the names of existing built-in toolbar items or create toolbar items with this list.
 
-#### Get an item from the default top toolbar
+### Get an item from the default top toolbar
 
 The default top toolbar contains three groups, each containing its items. Get the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) and customize the properties.
-{% highlight C# %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Linq;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
-ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[0];
+ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[0];
 ImageEditorToolbarItem browseItem = browseGroup.Items.FirstOrDefault();
-ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[2];
+ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[2];
 ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == "Save");
 
 {% endhighlight %}
 
-#### Get an item from the default bottom toolbar
+### Get an item from the default bottom toolbar
 
 The default bottom toolbar contains [`ToolbarItems`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_ToolbarItems), and each item has [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_SubToolbars). Get the required [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) using the [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) and customize the default settings.
 
 Refer to the following code sample to customize the footer toolbar item.
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Linq;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -96,13 +106,16 @@ ImageEditorToolbarItem textItem = (ImageEditorToolbarItem)footerToolbar.ToolbarI
 
 {% endhighlight %}
 
-#### Get an item from the sub-toolbar
+### Get an item from the sub-toolbar
 
-The sub-toolbars contain their own items, and they can be retried as follows.
+The sub-toolbars contain their own items, which can be retrieved as follows.
 
-Refer to the following code snippet to customize sub items of bottom toolbar item.
+Refer to the following code snippet to customize the sub items of a bottom toolbar item.
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Linq;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -113,25 +126,27 @@ ImageEditorToolbarItem arrowItem = (ImageEditorToolbarItem)subtoolbar.ToolbarIte
 
 {% endhighlight %}
 
-N> Remove the existing toolbar items [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) from the image editor toolbarItems collection based on the index value. Change the icon and text values dynamically for any already added toolbar items based on the index.
+N> Remove the existing toolbar items by their [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) from the image editor's `ToolbarItems` collection using the index value. You can also change the icon and text values dynamically for any already added toolbar items based on the index.
 
 ### Change the crop toolbar options
 
-Show the required crop types alone in the crop types toolbar by using the [`CropTypes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_CropTypes) property in the [`ImageEditorToolbarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html) class.
+Show the required crop types alone in the crop toolbar by using the [`CropTypes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_CropTypes) property in the [`ImageEditorToolbarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html) class.
 
 {% tabs %}
 
-{% highlight XAML %}
-  
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
 <imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
         <imageEditor:ImageEditorToolbarSettings CropTypes="Circle, Square, Free" />
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
-      
+
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -141,7 +156,7 @@ imageEditor.ToolbarSettings.CropTypes = ImageCropType.Circle | ImageCropType.Squ
 
 {% endtabs %}
 
-![Custom Crop Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-croptypes.png)
+![Custom crop toolbar in .NET MAUI ImageEditor](images/toolbar/imageeditor-croptypes.png)
 
 ### Change the effect toolbar options
 
@@ -149,17 +164,19 @@ Show the required effect types alone in the effects toolbar by using the [`Effec
 
 {% tabs %}
 
-{% highlight XAML %}
-  
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
 <imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
         <imageEditor:ImageEditorToolbarSettings EffectTypes="Hue, Blur, Brightness" />
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
-      
+
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -169,7 +186,7 @@ imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Hue | ImageEffect.Blur | I
 
 {% endtabs %}
 
-![Custom Effect Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-effecttypes.png)
+![Custom effect toolbar in .NET MAUI ImageEditor](images/toolbar/imageeditor-effecttypes.png)
 
 ### Change the shapes toolbar options
 
@@ -177,8 +194,8 @@ Show the required shape types alone in the shapes toolbar by using the [`Shapes`
 
 {% tabs %}
 
-{% highlight XAML %}
-  
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
 <imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
         <imageEditor:ImageEditorToolbarSettings Shapes="Circle, Line, DottedArrow, DoubleArrow" />
@@ -187,7 +204,9 @@ Show the required shape types alone in the shapes toolbar by using the [`Shapes`
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -197,7 +216,7 @@ imageEditor.ToolbarSettings.Shapes = AnnotationShape.Circle | AnnotationShape.Li
 
 {% endtabs %}
 
-![Custom Shape Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-shapetypes.png)
+![Custom shape toolbar in .NET MAUI ImageEditor](images/toolbar/imageeditor-shapetypes.png)
 
 ### Change the color palette toolbar options
 
@@ -205,8 +224,8 @@ Change the default colors of the [`ColorPalette`](https://help.syncfusion.com/cr
 
 {% tabs %}
 
-{% highlight XAML %}
-  
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
 <imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
         <imageEditor:ImageEditorToolbarSettings>
@@ -218,24 +237,26 @@ Change the default colors of the [`ColorPalette`](https://help.syncfusion.com/cr
         </imageEditor:ImageEditorToolbarSettings>
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
-      
+
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromFile("image.png");
-    imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Yellow);
-    imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Pink);
-    imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Violet);
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.png");
+imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Yellow);
+imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Pink);
+imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Violet);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-N> Color palette colors are common for Text, Shape and Pen.
+N> Color palette colors are common for Text, Shape, and Pen.
 
-![Toolbar Color Palette in .NET Maui ImageEditor](images/toolbar/imageeditor-colorpalette.png)
+![Toolbar color palette in .NET MAUI ImageEditor](images/toolbar/imageeditor-colorpalette.png)
 
 ### Change the Toolbar Item to Enable or Disable State
 
@@ -243,17 +264,20 @@ Enable or disable the toolbar items by using the [`IsEnabled`](https://help.sync
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Linq;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
-ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[0];
+ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[0];
 ImageEditorToolbarItem browseItem = browseGroup.Items.FirstOrDefault();
 browseItem.IsEnabled = false;
 
-ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[2];
+ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[2];
 ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == "Save");
 saveItem.IsEnabled = false;
 
@@ -261,13 +285,17 @@ saveItem.IsEnabled = false;
 
 {% endtabs %}
 
-### Customize the Toolbar Item View
+### Customize the toolbar item view
 
 To customize the view of toolbar items, specify their icon names and set the view using the [`View`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_View) property in the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html).
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Linq;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -284,15 +312,19 @@ saveItem.View = image;
 
 {% endtabs %}
 
-![Customize Toolbar Item View in .NET Maui ImageEditor](images/toolbar/imageeditor-custom-item-view.png)
+![Customize toolbar item view in .NET MAUI ImageEditor](images/toolbar/imageeditor-custom-item-view.png)
 
-### Add the SubToolbar
+### Add the sub-toolbar
 
 Create [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_SubToolbars) within your toolbar items to organize related actions.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Collections.Generic;
+using System.Linq;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -316,15 +348,17 @@ cropItem.SubToolbars = new List<ImageEditorToolbar>()
 
 {% endtabs %}
 
-![Add SubToolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-subtoolbar.png)
+![Add sub-toolbar in .NET MAUI ImageEditor](images/toolbar/imageeditor-subtoolbar.png)
 
-### Add a Toolbar Item with the Existing Toolbar
+### Add a toolbar item to the existing toolbar
 
-Explicitly add the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) to the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) manually.
+Explicitly add the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) to the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html).
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -340,17 +374,23 @@ saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image 
 
 {% endtabs %}
 
-![Add Toolbar Item in .NET Maui ImageEditor](images/toolbar/imageeditor-add-item.png)
+![Add toolbar item in .NET MAUI ImageEditor](images/toolbar/imageeditor-add-item.png)
 
-## Add a Toolbar Item with the Text
+## Add a toolbar item with text
 
-Users can customize each toolbar item and its appearance, including the option to display text alongside icons for enhanced usability.
-Add the text to the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) manually.
+You can customize each toolbar item and its appearance, including the option to display text alongside icons for enhanced usability. Add the text to the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) manually.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+using System.Linq;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.png");
+ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
 ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[0];
 ImageEditorToolbarItem browseItem = browseGroup.Items.FirstOrDefault();
 browseItem.Text = "Browse";
@@ -366,15 +406,15 @@ imageEditor.ToolbarSettings.TextStyle = new ImageEditorTextStyle()
 
 {% endtabs %}
 
-## Explicitly Create Toolbars
+## Explicitly create toolbars
 
-The ImageEditor automatically generates the toolbars. To add the toolbars manually, you need to explicitly add them and change the [`AutoGenerateToolbarItems`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AutoGenerateToolbarItems) property to `false`.
+The `SfImageEditor` automatically generates the toolbars. To add the toolbars manually, explicitly add them and change the [`AutoGenerateToolbarItems`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AutoGenerateToolbarItems) property to `false`.
 
-N> When you create a new toolbar item, you can use the pre-existing built-in names for the item, which will automatically generate the icon view. If you want to introduce a new item view or modify the current one, you can use the [`View`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_View) property of the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) class to define the item view.
+N> When you create a new toolbar item, use the pre-existing built-in names for the item to automatically generate the icon view. To introduce a new item view or modify the current one, use the [`View`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_View) property of the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) class to define the item view.
 
 {% tabs %}
 
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <imageEditor:SfImageEditor Source="image.png"
                            AutoGenerateToolbarItems="False">
@@ -400,31 +440,34 @@ N> When you create a new toolbar item, you can use the pre-existing built-in nam
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Collections.Generic;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 imageEditor.AutoGenerateToolbarItems = false;
-ImageEditorToolbar editorToolbar = new ();
+ImageEditorToolbar editorToolbar = new();
 editorToolbar.Position = ToolbarPosition.End;
 
-ImageEditorToolbarGroupItem browseGroup = new ()
+ImageEditorToolbarGroupItem browseGroup = new()
 {
     Alignment = ToolbarGroupItemAlignment.Start,
     Items = new List<ImageEditorToolbarItem>()
         {
-            new ImageEditorToolbarItem(){ Name ="Browse"},
-            new ImageEditorToolbarItem(){ Name ="Reset"  }
+            new ImageEditorToolbarItem(){ Name = "Browse" },
+            new ImageEditorToolbarItem(){ Name = "Reset" }
         }
 };
 
-ImageEditorToolbarGroupItem saveGroup = new ()
+ImageEditorToolbarGroupItem saveGroup = new()
 {
     Alignment = ToolbarGroupItemAlignment.End,
     Items = new List<ImageEditorToolbarItem>()
         {
-            new ImageEditorToolbarItem(){ Name ="Save"},
-            new ImageEditorToolbarItem(){ Name ="SaveEdit"}
+            new ImageEditorToolbarItem(){ Name = "Save" },
+            new ImageEditorToolbarItem(){ Name = "SaveEdit" }
         }
 };
 
@@ -436,15 +479,15 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 {% endtabs %}
 
-![Explicit Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-explicit-create-toolbar.png)
+![Explicit toolbar in .NET MAUI ImageEditor](images/toolbar/imageeditor-explicit-create-toolbar.png)
 
 ### Create the sub-toolbar explicitly
 
-Create [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_SubToolbars) within our default toolbar items to organize related actions.
+Create [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_SubToolbars) within the default toolbar items to organize related actions.
 
 {% tabs %}
 
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <imageEditor:SfImageEditor Source="image.png"
                            AutoGenerateToolbarItems="False">
@@ -472,12 +515,15 @@ Create [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Image
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Collections.Generic;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 imageEditor.AutoGenerateToolbarItems = false;
-ImageEditorToolbar editorToolbar = new ();
+ImageEditorToolbar editorToolbar = new();
 editorToolbar.Orientation = ToolbarOrientation.Vertical;
 editorToolbar.Position = ToolbarPosition.End;
 editorToolbar.ToolbarItems = new List<IImageEditorToolbarItem>()
@@ -489,15 +535,15 @@ editorToolbar.ToolbarItems = new List<IImageEditorToolbarItem>()
             {
                 ToolbarItems = new List<IImageEditorToolbarItem>()
                 {
-                   new ImageEditorToolbarItem(){ Name = "AddText"},
-                   new ImageEditorToolbarItem(){ Name = "TextColor"},
-                   new ImageEditorToolbarItem(){ Name = "Delete"}
+                   new ImageEditorToolbarItem(){ Name = "AddText" },
+                   new ImageEditorToolbarItem(){ Name = "TextColor" },
+                   new ImageEditorToolbarItem(){ Name = "Delete" }
                 },
             }
         }
     },
-    new ImageEditorToolbarItem(){ Name = "Shape"},
-    new ImageEditorToolbarItem(){ Name = "Pen"}
+    new ImageEditorToolbarItem(){ Name = "Shape" },
+    new ImageEditorToolbarItem(){ Name = "Pen" }
 };
 
 imageEditor.Toolbars.Add(editorToolbar);
@@ -508,25 +554,27 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ExplicitToolbar)
 
-## Change the Toolbar Item Visibility
+## Change the toolbar item visibility
 
-Hide or show the toolbar items by specifying their icon names and setting the boolean values to true or false.
+Hide or show the toolbar items by specifying their icon names and setting the boolean values to `true` or `false`.
 
 N> Customize an icon by specifying its [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name).
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-        SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source = ImageSource.FromFile("image.png");
-        imageEditor.SetToolbarItemVisibility("Shape", false);
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.png");
+imageEditor.SetToolbarItemVisibility("Shape", false);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Toolbar Orientation
+## Toolbar orientation
 
 The toolbar orientation can be changed to achieve the desired design by using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Orientation) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class. The default value is [`ToolbarOrientation.Horizontal`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ToolbarOrientation.html#Syncfusion_Maui_ImageEditor_ToolbarOrientation_Horizontal).
 
@@ -534,55 +582,66 @@ For example, set the toolbar to a vertical orientation:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
 footerToolbar.Orientation = ToolbarOrientation.Vertical;
-    
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![Toolbar Orientation in .NET Maui ImageEditor](images/toolbar/imageeditor-orientation.png)
+![Toolbar orientation in .NET MAUI ImageEditor](images/toolbar/imageeditor-orientation.png)
 
-## Toolbar Position
+## Toolbar position
 
-The toolbar can be positioned before or after the image of the ImageEditor by using the [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Position) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class. The default value is [`ToolbarPosition.Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ToolbarPosition.html#Syncfusion_Maui_ImageEditor_ToolbarPosition_Start).
+The toolbar can be positioned before or after the image of the `SfImageEditor` by using the [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Position) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class. The default value is [`ToolbarPosition.Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ToolbarPosition.html#Syncfusion_Maui_ImageEditor_ToolbarPosition_Start).
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
 footerToolbar.Position = ToolbarPosition.Start;
-    
+
 {% endhighlight %}
 
 {% endtabs %}
 
-## Change the Toolbar Size 
+## Change the toolbar size
 
 The size of the toolbar can be adjusted by using the [`Size`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Size) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class.
 
-For horizontal orientation, the size will be considered as width, and for vertical orientation, it will be considered as height.
+For horizontal orientation, the size is treated as width. For vertical orientation, the size is treated as height.
 
-{% highlight C# %}
+{% tabs %}
 
-    SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromFile("image.png");
-    imageEditor.ToolbarSettings.Background = Brush.LightGreen;
-    imageEditor.Toolbars[0].Size = 80;
-    imageEditor.Toolbars[1].Size = 50;
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.png");
+imageEditor.ToolbarSettings.Background = Brush.LightGreen;
+imageEditor.Toolbars[0].Size = 80;
+imageEditor.Toolbars[1].Size = 50;
 
 {% endhighlight %}
 
-## Appearance Customization
+{% endtabs %}
 
-Customize the appearance of the toolbar by using the [`ToolbarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarSettings) property. The following are some of the properties you can customize:
+## Appearance customization
+
+Customize the appearance of the toolbar by using the [`ToolbarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarSettings) property. The following are the properties you can customize:
 
 * [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_Background): Specifies the background color of the toolbar.
 * [`IconColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_IconColor): Specifies the color of the icons in the toolbar.
@@ -591,8 +650,8 @@ Customize the appearance of the toolbar by using the [`ToolbarSettings`](https:/
 
 {% tabs %}
 
-{% highlight XAML %}
-  
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
 <imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
         <imageEditor:ImageEditorToolbarSettings Background="Pink"
@@ -601,14 +660,17 @@ Customize the appearance of the toolbar by using the [`ToolbarSettings`](https:/
                                                 IconSize="50, 50" />
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
-      
+
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
-imageEditor.ToolbarSettings.Background = Brush.pink;
+imageEditor.ToolbarSettings.Background = Brush.Pink;
 imageEditor.ToolbarSettings.IconColor = Colors.Black;
 imageEditor.ToolbarSettings.DisabledColor = Colors.Grey;
 imageEditor.ToolbarSettings.IconSize = new Size(50, 50);
@@ -619,28 +681,31 @@ imageEditor.ToolbarSettings.IconSize = new Size(50, 50);
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ToolbarCustomization)
 
-![Toolbar Customization in .NET Maui ImageEditor](images/toolbar/imageeditor-toolbar-settings.png)
+![Toolbar customization in .NET MAUI ImageEditor](images/toolbar/imageeditor-toolbar-settings.png)
 
-## Notifying the Toolbar Item Selected
+## Notifying the toolbar item selected
 
-Whenever you tap the toolbar menu item, the [`ToolbarItemSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event will be triggered, and you'll get the respective tapped toolbar item as an argument as shown in the following code sample.
+When you tap the toolbar menu item, the [`ToolbarItemSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event is triggered, and the tapped toolbar item is passed as an argument, as shown in the following code sample.
 
-The default toolbar item action can be restricted by setting the `e.cancel` to `true`.
+The default toolbar item action can be restricted by setting the `e.Cancel` property to `true`.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <imageEditor:SfImageEditor Source="image.png" ToolbarItemSelected = "OnImageEditorToolbarItemSelected" />
+<imageEditor:SfImageEditor Source="image.png"
+                           ToolbarItemSelected="OnImageEditorToolbarItemSelected" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
-            
-    private void OnImageEditorToolbarItemSelected(object sender, ToolbarItemSelectedEventArgs e)
-    {
-        DisplayAlert("Selected ToolbarItem is  " + e.ToolbarItem.Name, "Ok", "Cancel");
-    }
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.ImageEditor;
+
+private void OnImageEditorToolbarItemSelected(object sender, ToolbarItemSelectedEventArgs e)
+{
+    DisplayAlert("Selected ToolbarItem is " + e.ToolbarItem.Name, "Ok", "Cancel");
+}
 
 {% endhighlight %}
 
@@ -648,11 +713,14 @@ The default toolbar item action can be restricted by setting the `e.cancel` to `
 
 ## Show or hide the tooltip
 
-To show or hide the tooltip, set the [`ShowTooltip`] property to either true or false. By default, the [`ShowTooltip`] property is set to `true`.
+To show or hide the tooltip, set the [`ShowTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_ShowTooltip) property to either `true` or `false`. By default, the [`ShowTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_ShowTooltip) property is set to `true`.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using System.Linq;
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
@@ -660,7 +728,7 @@ imageEditor.Source = ImageSource.FromFile("image.png");
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
 if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem browseGroup)
 {
-    ImageEditorToolbarItem? browseItem = browseGroup.Items.FirstOrDefault();
+    ImageEditorToolbarItem browseItem = browseGroup.Items.FirstOrDefault();
     if (browseItem != null)
     {
         browseItem.ShowTooltip = false;
