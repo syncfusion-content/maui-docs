@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Columns with .NET MAUI Picker Control | Syncfusion
+title: Columns with .NET MAUI Picker Control | Syncfusion®
 description: Learn here all about the picker columns and its customization with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
@@ -13,7 +13,7 @@ This section explains the customization of picker columns.
 
 ## Columns customization 
 
-You can customize various properties, including `DisplayMemberPath`, `Width`, `SelectedIndex`, `ItemsSource`, and `HeaderText` for enhanced control and flexibility by the following code.
+The `PickerColumn` class exposes `DisplayMemberPath`, `Width`, `SelectedIndex`, `ItemsSource`, and `HeaderText` for enhanced control and flexibility by the following code.
 
 ## DisplayMemberPath
 
@@ -68,9 +68,9 @@ When you have a collection of objects, and you want to display a specific proper
 
    ![Picker display member path in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-display-member-path.png)
 
-### Width customization
+### Width
 
-Customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_Width) of every column by setting the `Width` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of width is `-1`.
+Set the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_Width) of each column through the `Width` property on the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of width is `-1`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -86,9 +86,9 @@ Customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker
 {% endhighlight %}
 {% endtabs %}
  
-### SelectedIndex customization
+### SelectedIndex
 
-Customize the SelectedIndex of every column by setting the `SelectedIndex` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) property is `0`.
+Set the `SelectedIndex` of each column through the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) property on the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value is `0`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -104,9 +104,9 @@ Customize the SelectedIndex of every column by setting the `SelectedIndex` prope
 {% endhighlight %}
 {% endtabs %}
 
-### SelectedItem customization
+### SelectedItem
 
-Customize the SelectedItem of every column by setting the `SelectedItem` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedItem) property is based on [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) default value.
+Set the `SelectedItem` of each column through the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedItem) property on the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value is derived from the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) default value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -123,12 +123,12 @@ Customize the SelectedItem of every column by setting the `SelectedItem` propert
 {% endtabs %}
 
 N> 
-* If you sets both the `Selected Item` and `Selected Index` properties, the picker will display the item corresponding to the `Selected Index` in the selection view. This ensures the index value takes precedence for display purposes.
+* If you set both the `SelectedItem` and `SelectedIndex` properties, the picker displays the item corresponding to the `SelectedIndex` in the selection view. The index value takes precedence for display purposes.
 * In multiple columns, if you set any one column's selected item as `null`, the selected item for the other columns will also become `null`.
 
-### HeaderText customization
+### HeaderText
 
-Customize the Header text of every column by setting the `HeaderText` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderText) property is `string.empty`.
+Set the `HeaderText` of each column through the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderText) property on the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value is `string.Empty`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -146,9 +146,9 @@ Customize the Header text of every column by setting the `HeaderText` property i
 
    ![Header text customization in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-custom-headertext.png)
 
-### ItemsSource customization
+### ItemsSource
 
-Customize the ItemSource of every column by setting the `ItemSource` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property is `null`.
+Set the `ItemsSource` of each column through the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property on the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value is `null`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -165,7 +165,7 @@ Customize the ItemSource of every column by setting the `ItemSource` property in
 {% endhighlight %}
 {% endtabs %}
 
-   ![Item souce customization in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-custom-item-source.png)
+   ![Item source customization in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-custom-item-source.png)
 
 ### Column divider color
 

@@ -15,7 +15,7 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Setting ClearButtonVisibility
 
@@ -54,7 +54,7 @@ The default value is `MaskedEntryMaskType.Simple`.
 
 ## Setting ClearButtonColor
 
-The clear button icon color can be changed by using the [ClearButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonColor) property of type `Color`. The default value of the ClearButtonColor property is the default icon color.
+The clear button icon color can be changed by using the [ClearButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonColor) property of type `Color`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -83,7 +83,7 @@ maskedEntry.ClearButtonColor = Colors.Red;
 
 ## Setting CursorPosition
 
-The cursor position in the masked entry can either be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_CursorPosition) property of type `int`. The default value of this property is `0`.
+The cursor position in the Masked Entry can either be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_CursorPosition) property of type `int`. The default value of this property is `0`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -110,7 +110,7 @@ maskedEntry.CursorPosition = 3;
 
 ## Setting FontSize
 
-The Masked Entry control allows the user to customize the font size of the text inside the entry part using the [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontSize) property of type `double`. The default value of the FontSize property is `14`.
+The Masked Entry control allows the user to customize the font size of the text inside the Entry part using the [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontSize) property of type `double`. The default value of the FontSize property is `14`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -138,7 +138,7 @@ maskedEntry.FontSize = 18;
 
 ## Setting FontAttributes
 
-The Masked Entry control allows the user to customize the font attribute of the text inside the entry part using the [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontAttributes) property of the type `FontAttributes`.
+The Masked Entry control allows the user to customize the font attribute of the text inside the Entry part using the [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontAttributes) property of the type `FontAttributes`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -166,7 +166,7 @@ maskedEntry.FontAttributes = FontAttributes.Bold;
 
 ## Setting FontFamily
 
-The Masked Entry control allows the user to customize the text's font family inside the entry part using the [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontFamily) property of the type `string`.
+The Masked Entry control allows the user to customize the text's font family inside the Entry part using the [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontFamily) property of the type `string`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -218,7 +218,7 @@ maskedEntry.Keyboard = Keyboard.Numeric;
 
 ## Setting Placeholder
 
-The Masked Entry control allows the user to define the text displayed when the Mask and Value are empty using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Placeholder) property of type `string`. The default value of the Placeholder property is string.Empty.
+The Masked Entry control allows the user to define the text displayed when the Mask and Value are empty using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Placeholder) property of type `string`. The default value of the Placeholder property is `string.Empty`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -240,7 +240,7 @@ maskedEntry.Placeholder = "Enter the value";
 
 ## Setting PlaceholderColor
 
-The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control allows the user to customize the color of the placeholder text using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PlaceholderColor) property of type `Color`. The default value of the PlaceholderColor property is Colors.Gray.
+The Masked Entry control allows the user to customize the color of the placeholder text using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PlaceholderColor) property of type `Color`. The default value of the PlaceholderColor property is `Colors.Gray`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -264,7 +264,7 @@ maskedEntry.PlaceholderColor = Colors.Green;
 
 ## Setting TextColor
 
-The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control allows the user to customize the color of the entered text using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_TextColor) property of type `Color`. The default value of the TextColor property is Colors.Black.
+The Masked Entry control allows the user to customize the color of the entered text using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_TextColor) property of type `Color`. The default value of the TextColor property is `Colors.Black`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -348,7 +348,7 @@ maskedEntry.Value = "12/02/2022";
 
 ## Setting Stroke
 
-The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Stroke) property. The default value of the Stroke property is `Colors.LightGray`.
+The Masked Entry border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Stroke) property. The default value of the Stroke property is `Colors.LightGray`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -375,7 +375,7 @@ The following image illustrates the result of the above code:
 
 ## Setting ShowBorder
 
-The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ShowBorder) property of [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) is used to modify the visibility of the border. Its default value is `true`. The following code example demonstrates how to change the border visibility:
+The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ShowBorder) property of Masked Entry is used to modify the visibility of the border. Its default value is `true`. The following code example demonstrates how to change the border visibility:
 
 {% tabs %}
 {% highlight XAML %}
@@ -402,7 +402,7 @@ The following image illustrates the result of the above code:
 
 ## Setting TextAlignment
 
-The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) provides support to customize the text alignment by using the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_VerticalTextAlignment) properties.
+The Masked Entry provides support to customize the text alignment by using the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_VerticalTextAlignment) properties.
 
 {% tabs %}
 {% highlight XAML %}
@@ -433,7 +433,7 @@ The following image illustrates the result of the above code:
 
 ## Setting SelectAllOnFocus
 
-The [SelectAllOnFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_SelectAllOnFocus) property allows you to automatically select all the text in the masked entry when the control gains focus. This can improve user efficiency by making it easy to replace the entire content. The default value of this property is `false`.
+The [SelectAllOnFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_SelectAllOnFocus) property allows you to automatically select all the text in the Masked Entry when the control gains focus. This can improve user efficiency by making it easy to replace the entire content. The default value of this property is `false`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -460,7 +460,7 @@ maskedEntry.SelectAllOnFocus = true;
 
 ## Setting IsReadOnly
 
-The [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_IsReadOnly) property (inherited from the `Entry` control) allows you to make the masked entry non-editable while keeping it focusable and selectable. When enabled, users can still focus and select text, but cannot modify the value via typing, cut, paste, or the keyboard. The default value of this property is `false`.
+The [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_IsReadOnly) property (inherited from the `Entry` control) allows you to make the Masked Entry non-editable while keeping it focusable and selectable. When enabled, users can still focus and select text, but cannot modify the value via typing, cut, paste, or the keyboard. The default value of this property is `false`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -487,9 +487,9 @@ maskedEntry.IsReadOnly = true;
 
 ## Setting ReturnType
 
-The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+The [ReturnType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ReturnType) property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
 
-You can define the return key type of [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) by using the ReturnType property. The available enum values are:
+You can define the return key type of Masked Entry by using the `ReturnType` property. The available enum values are:
 
 - `Default` - Default return key.
 - `Done` - Indicates the input is complete.
@@ -523,7 +523,7 @@ maskedEntry.ReturnType = ReturnType.Next;
 
 ## Setting ClearButtonPath
 
-The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) clear button.
+The [ClearButtonPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonPath) property allows users to set the path for customizing the appearance of the Masked Entry clear button.
 
 {% tabs %}
 {% highlight XAML %}
@@ -567,19 +567,18 @@ The following image illustrates the result of the above code:
 
 ## Setting Return Command and Return Command Parameter
 
-- `ReturnCommand`, of type `ICommand`, defines the command to be executed when the return key is pressed.
-- `ReturnCommandParameter`, of type `object`, specifies the parameter for the `ReturnCommand`.
+- [ReturnCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ReturnCommand), of type `ICommand`, defines the command to be executed when the return key is pressed.
+- [ReturnCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ReturnCommandParameter), of type `object`, specifies the parameter for the `ReturnCommand`.
 
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage.BindingContext>
-    <local:CommandDemoViewModel/>
-</ContentPage.BindingContext>
-
 <editors:SfMaskedEntry x:Name="maskedEntry"
-            ReturnCommand="{Binding AlertCommand}"
-            ReturnCommandParameter="Return key is pressed">
+                       ReturnCommand="{Binding AlertCommand}"
+                       ReturnCommandParameter="Return key is pressed">
+        <editors:SfMaskedEntry.BindingContext>
+            <local:CommandDemoViewModel/>
+        </editors:SfMaskedEntry.BindingContext>
 </editors:SfMaskedEntry>
 
 {% endhighlight %}
@@ -592,13 +591,10 @@ maskedEntry.ReturnCommand = viewModel.AlertCommand;
 maskedEntry.ReturnCommandParameter = "Return key is pressed";
 
 {% endhighlight %}
-{% endtabs %}
 
-{% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="ViewModel" %}
 
 //ViewModel.cs
-
 public class CommandDemoViewModel
 {
     public ICommand AlertCommand => new Command<string>(OnAlertCommandExecuted);
@@ -616,10 +612,9 @@ public class CommandDemoViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Automation ID
 
-The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control provides `AutomationId` support specifically for the `editable entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element's AutomationId is derived from the control's AutomationId to ensure uniqueness.
+The Masked Entry control provides `AutomationId` support specifically for the `editable Entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element's AutomationId is derived from the control's AutomationId to ensure uniqueness.
 
 For example, if the SfMaskedEntry's `AutomationId` is set to "Employee MaskedEntry," the editable entry can be targeted as "Employee MaskedEntry Entry" and the clear button as "Employee MaskedEntry Clear Button." This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements.
 
@@ -651,6 +646,6 @@ The following screenshot illustrates the AutomationIds of inner elements.
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Validation](validation.md)
-* [Events](events.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)
+* [Events](https://help.syncfusion.com/maui/masked-entry/events)

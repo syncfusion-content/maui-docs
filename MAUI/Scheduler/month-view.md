@@ -288,7 +288,7 @@ public partial class MainPage : ContentPage
 The [DateHorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_DateHorizontalAlignment) property specifies how the date text is aligned horizontally within each cell of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. Its default value is `Center`, but you can set it to `Left`, `Right` or `Justified` to adjust the placement of the date numbers.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="8" %}
+{% highlight XAML tabtitle="XAML" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -303,7 +303,7 @@ The [DateHorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="11" %}
+{% highlight C# tabtitle="C#" hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 

@@ -15,7 +15,7 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Selection
 
@@ -89,7 +89,7 @@ The following image illustrates the output:
 
 ![.NET MAUI Autocomplete with single selection mode](Images/GettingStarted/SingleSelection.gif)
 
-For more information about selection, refer to the [Selection](Selection.md) documentation.
+For more information about selection, refer to the [Selection](https://help.syncfusion.com/maui/autocomplete/selection) documentation.
 
 ## Text
 
@@ -101,10 +101,6 @@ The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 For example, if the SfAutocomplete’s `AutomationId` is set to “Employee Autocomplete,” the editable entry can be targeted as “Employee Autocomplete Entry” and the clear button as “Employee Autocomplete Clear Button.” This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements
 
-### Example
-
-For example, if the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html)'s `AutomationId` is set to "Employee Autocomplete", the input field can be targeted as "Employee Autocomplete Entry" and the clear button as "Employee Autocomplete Clear Button". This support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements.
-
 {% tabs %}
 {% highlight xaml %}
 
@@ -112,7 +108,7 @@ For example, if the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfus
                         AutomationId="Employee Autocomplete" />
 
 {% endhighlight %}
-{% highlight csharp %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Inputs;
 
@@ -130,6 +126,6 @@ The following screenshot illustrates the AutomationIds of the inner elements:
 
 ## See also
 
-- [Selection](Selection.md)
-- [UI Customization](UI-Customization.md)
-- [Getting Started](Getting-Started.md)
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)

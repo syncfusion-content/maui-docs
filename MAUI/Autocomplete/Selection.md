@@ -15,7 +15,7 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Overview
 
@@ -146,6 +146,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 public class SocialMediaViewModel
 {
     public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+    public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
 
     public SocialMediaViewModel()
     {
@@ -160,6 +161,12 @@ public class SocialMediaViewModel
             new SocialMedia { Name = "Twitter", ID = 6 },
             new SocialMedia { Name = "WhatsApp", ID = 7 },
             new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+
+        SelectedItemsList = new ObservableCollection<SocialMedia>
+        {
+            SocialMedias[0],
+            SocialMedias[2],
         };
     }
 }
@@ -864,15 +871,9 @@ autocomplete.Clear();
 {% endhighlight %}
 {% endtabs %}
 
-## Notes
-
-N> **Selection event args**: The `SelectionChangedEventArgs` exposes `AddedItems` and `RemovedItems` for new/removed items. The legacy `CurrentSelection` and `PreviousSelection` members are obsolete.
-
-N> **iOS AOT**: When publishing in AOT mode on iOS, add `[Preserve(AllMembers = true)]` to the model class. The attribute requires `using Foundation;`.
-
 ## See also
 
-- [Getting Started](Getting-Started.md)
-- [Basic Features](Basic-Features.md)
-- [UI Customization](UI-Customization.md)
-- [Searching and Filtering](Searching-Filtering.md)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)
+- [Basic Features](https://help.syncfusion.com/maui/autocomplete/basic-features)
+- [Searching and Filtering](https://help.syncfusion.com/maui/autocomplete/searching-filtering)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
