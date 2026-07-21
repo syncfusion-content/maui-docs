@@ -60,7 +60,7 @@ Sends the selected annotation to the back of all annotations.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="XAML" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 

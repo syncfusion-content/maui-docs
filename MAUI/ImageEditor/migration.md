@@ -60,15 +60,17 @@ this.Content = imageEditor;
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
-        <imageEditor:SfImageEditor x:Name="imageEditor"/>
+<ContentPage
+...
+xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
+    <imageEditor:SfImageEditor x:Name="imageEditor"/>
 </ContentPage>
-
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
+…
 
 SfImageEditor imageEditor = new SfImageEditor();
 this.Content = imageEditor;
@@ -125,9 +127,11 @@ this.Content = imageEditor;
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
+<ContentPage
+...
+xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
     <imageEditor:SfImageEditor x:Name="imageEditor"
-                               Source="syncfusion.png"/>
+                       Source="syncfusion.png"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -136,6 +140,7 @@ this.Content = imageEditor;
 
 using Syncfusion.Maui.ImageEditor;
 using Microsoft.Maui.Controls;
+...
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("syncfusion.png");
