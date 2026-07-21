@@ -34,6 +34,8 @@ The following code sample demonstrates the `CubicInOut` easing function of the l
 
 {% highlight C# %}
 
+using Syncfusion.Maui.ProgressBar;
+
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 75;
 linearProgressBar.AnimationEasing = Easing.CubicInOut;
@@ -71,6 +73,8 @@ The following code sample demonstrates the `BounceIn` easing function of the lin
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.IsIndeterminate = true;

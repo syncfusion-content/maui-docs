@@ -1,6 +1,6 @@
 ---
 layout: post
-title: States in .NET MAUI Linear ProgressBar control | Syncfusion<sup>&reg;</sup>
+title: States in .NET MAUI Linear ProgressBar control | Syncfusion®
 description: Learn all about states support in the Syncfusion<sup>&reg;</sup> .NET MAUI Linear ProgressBar (SfLinearProgressBar) control.
 platform: MAUI
 control: SfLinearProgressBar
@@ -29,6 +29,8 @@ By enabling the [`IsIndeterminate`](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight C# %}
 
+using Syncfusion.Maui.ProgressBar;
+
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { IsIndeterminate = true };
 this.Content = linearProgressBar;
 
@@ -52,6 +54,8 @@ The secondary task’s progress can be defined using the [`SecondaryProgress`](h
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 25;

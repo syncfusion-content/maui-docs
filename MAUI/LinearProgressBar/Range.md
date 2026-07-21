@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Define Range in .NET MAUI Linear ProgressBar control | Syncfusion<sup>&reg;</sup>
+title: Define Range in .NET MAUI Linear ProgressBar control | Syncfusion®
 description: Learn all about range support in the Syncfusion® .NET MAUI Linear ProgressBar control, its elements, and more.
 platform: MAUI
 control: SfLinearProgressBar
@@ -25,6 +25,8 @@ The following code sample demonstrates how to customize the range as factor valu
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Minimum = 0;

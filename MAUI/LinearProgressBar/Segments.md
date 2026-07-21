@@ -22,6 +22,8 @@ To visualize the progress of multiple sequential tasks, split the linear progres
 
 {% highlight C# %}
 
+using Syncfusion.Maui.ProgressBar;
+
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 25;
 linearProgressBar.SegmentCount = 4;
@@ -47,6 +49,8 @@ Customize the default spacing between the segments using the [`SegmentGapWidth`]
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 25;

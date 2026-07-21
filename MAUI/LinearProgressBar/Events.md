@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI Linear ProgressBar control | Syncfusion<sup>&reg;</sup>
+title: Events in .NET MAUI Linear ProgressBar Control | Syncfusion®
 description: Learn all about the events supported in the Syncfusion<sup>&reg;</sup> .NET MAUI Linear ProgressBar control, its elements, and more.
 platform: MAUI
 control: SfLinearProgressBar
@@ -28,6 +28,8 @@ The following code sample demonstrates how to customize the color of a progress 
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEventArgs e)
 {
@@ -64,6 +66,8 @@ The following code sample demonstrates how to customize the progress bar when th
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
 {

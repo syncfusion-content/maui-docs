@@ -80,6 +80,8 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 {% highlight C# %}
 
+using Syncfusion.Maui.ProgressBar;
+
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 100;
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
@@ -111,6 +113,8 @@ In the linear progress bar, the height of the track, progress, and secondary pro
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 30;
@@ -145,6 +149,8 @@ In the linear progress bar, the padding of the progress and the secondary progre
 
 {% highlight C# %}
 
+using Syncfusion.Maui.ProgressBar;
+
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 30;
 linearProgressBar.SecondaryProgress = 70;
@@ -177,6 +183,8 @@ In the linear progress bar, the corner radius of the track, progress, and second
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 50;
@@ -213,6 +221,8 @@ The following code sample demonstrates the color customization in progress and t
 
 {% highlight C# %}
 
+using Syncfusion.Maui.ProgressBar;
+
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 75;
 linearProgressBar.TrackFill = Color.FromArgb("3351483a");
@@ -239,6 +249,8 @@ The linear progress bar provides support to customize the color for the secondar
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 25;
