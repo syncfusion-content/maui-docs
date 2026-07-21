@@ -11,15 +11,7 @@ documentation: ug
 
 This section explains different UI customizations available in the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
 
-## Prerequisites
-
-Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Inputs`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
-
-To get started quickly on customizing the appearance of the .NET MAUI Autocomplete, you can check out this video:
+To get start quickly to customize the Appearance of .NET MAUI Autocomplete, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
 
@@ -48,37 +40,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -87,7 +48,7 @@ The following image illustrates the result of the above code:
 
 ## Placeholder Color
 
-The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. The default value of the PlaceholderColor property is `Colors.Black`.
+The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. The default value of the PlaceholderColor property is `Colors.Gray`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -112,37 +73,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 The following gif image illustrates the result of the above code:
@@ -151,7 +81,7 @@ The following gif image illustrates the result of the above code:
 
 ## Clear Button Icon Color
 
-The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property. The default value of the `ClearButtonIconColor` property is `Color.FromArgb("#49454F")`.
+The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property. The default value of the ClearButtonIconColor property is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -178,37 +108,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 The following gif image illustrates the result of the above code:
@@ -217,7 +116,7 @@ The following gif image illustrates the result of the above code:
 
 ## Stroke
 
-The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property. The default value of the `Stroke` property is `Colors.LightGray`.
+The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -244,46 +143,15 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Autocomplete border color](Images/UICustomization/BorderColor.png)
 
-## Customize the Selection Text Highlight Color
+## Customize the selection text highlightColor 
 
-The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the autocomplete control. The default value of the `SelectionTextHighlightColor` property is `Color.FromArgb("#6750A4")`.
+The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the autocomplete control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -309,37 +177,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete Selection Text Highlight Color](Images/UICustomization/SelectionTextHighlightColor.png)
@@ -354,7 +191,7 @@ N> If the `MaxDropDownHeight` is too small compared to the populated items, the 
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        MaxDropDownHeight="100"
+                        MaxDropDownHeight = "100"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name" />
@@ -369,37 +206,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
     DisplayMemberPath = "Name",
     TextMemberPath = "Name"
 };
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -528,7 +334,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         image.HorizontalOptions = LayoutOptions.Center;
         image.VerticalOptions = LayoutOptions.Center;
         image.Aspect = Aspect.AspectFit;
-        image.SetBinding(Image.SourceProperty, "ProfilePicture");
+        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
         Grid.SetColumn(image, 0);
 
         StackLayout stack = new();
@@ -562,43 +368,6 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
     });
     autoComplete.ItemTemplate = itemTemplate;
 
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-    //Model.cs
-    public class Employee
-    {
-        public string Name { get; set; }
-        public string ProfilePicture { get; set; }
-        public string Designation { get; set; }
-        public string ID { get; set; }
-    }
-
-    //ViewModel.cs
-    public class EmployeeViewModel
-    {
-        public ObservableCollection<Employee> Employees { get; set; }
-        public EmployeeViewModel()
-        {
-            this.Employees = new ObservableCollection<Employee>();
-            Employees.Add(new Employee
-            {
-                Name = "Anne Dodsworth",
-                ProfilePicture = "people_circle1.png",
-                Designation = "Developer",
-                ID = "E001",
-            });
-            Employees.Add(new Employee
-            {
-                Name = "Andrew Fuller",
-                ProfilePicture = "people_circle8.png", 
-                Designation = "Team Lead",
-                ID = "E002",
-            });
-            ...
-        }
-    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -642,37 +411,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete DropDown Item Text](Images/UICustomization/DropDownItemText.png)
@@ -706,44 +444,13 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete DropDown Background](Images/UICustomization/DropDownBackground.png)
 
-### Customize the DropDown Selected Item Background Color
+### Customize the DropDown selected item background color
 
-The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown. The default value is `new SolidColorBrush(Color.FromArgb("#1C1B1F14"))`.
+The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -761,43 +468,12 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    ItemsSource = socialMediaViewModel.SocialMedias,
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name",
-    Placeholder = "Enter Media",
-    SelectedDropDownItemBackground = Colors.LightSeaGreen
+    ItemsSource = socialMediaViewModel.SocialMedias;
+    DisplayMemberPath = "Name";
+    TextMemberPath = "Name";
+    Placeholder = "Enter Media";
+    SelectedDropDownItemBackground = Colors.LightSeaGreen;
 };
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -806,7 +482,7 @@ public class SocialMedia
 
 ### Customize the Selected DropDown Item Text Style
 
-The [SelectedDropDownItemTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemTextStyle) property in the `SfAutocomplete` control is used to customize the appearance of the selected item in the dropdown list.
+The [SelectedDropDownItemTextStyle]() property in the SfAutoComplete control allows developers to customize the appearance of the selected item in the dropdown list. This feature is useful for highlighting user selections and improving the overall UI experience.
 
 {% tabs %}
 {% highlight xaml %}
@@ -832,37 +508,6 @@ SfAutocomplete autoComplete = new SfAutocomplete
         FontAttributes = FontAttributes.Bold
     }
 };
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -895,37 +540,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete DropDown Stroke](Images/UICustomization/DropDownStroke.png)
@@ -955,50 +569,19 @@ SfAutocomplete autocomplete = new SfAutocomplete
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
-    DropDownStroke = Colors.DarkOrange,
+    DropDownStroke = Color.DarkOrange,
     DropDownStrokeThickness = 5
 };
 
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete DropDown Stroke Thickness](Images/UICustomization/DropDownStrokeThickness.png)
 
-### Customize the Dropdown Shadow Visibility
+### Customize the visibility of Dropdown Shadow
 
-The [IsDropDownShadowVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible) property is used to customize the visibility of the dropdown shadow. The default value of the `IsDropDownShadowVisible` property is `true`.
+The [IsDropDownShadowVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible) property is used to customize the visibility of the dropdown shadow.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1023,37 +606,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
     IsDropDownShadowVisible = False
 };
 
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1089,44 +641,13 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
-### Customize the DropDown Placement
+### Customize the DropDownPlacement
 
-The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the [DropDownPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownPlacement) property. The default value of the `DropDownPlacement` property is `Auto`.
+The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
 
 *   `Top` - Drop-down will be placed above the text box.
 
@@ -1160,44 +681,14 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
 
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete Dropdownplacement.](Images/UICustomization/placementauto.png)
 
-### Customize the DropDown Item Padding
+### Customize the DropDown ItemPadding
 
-The autocomplete enables the user to provide padding for the items inside dropdown using the [ItemPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemPadding) property. The default value of the `ItemPadding` property is `new Thickness(10, 0, 10, 0)`.
+The autocomplete enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1222,44 +713,14 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
 
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete Itempadding.](Images/UICustomization/Itempadding.png)
 
 ### Customize the DropDown Width
 
-The [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownWidth) property is used to modify the width of the dropdown.
+The `DropdownWidth` property is used to modify the Width of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1267,8 +728,8 @@ The [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.D
     <editors:SfAutocomplete x:Name="autocomplete"
                             ItemsSource="{Binding SocialMedias}"
                             DisplayMemberPath="Name"
-                            TextMemberPath="Name"
-                            DropDownWidth="400"/>
+                            TextMemberPath="Name"                           
+                            DropdownWidth="400"/>
 
 {% endhighlight %}
 
@@ -1284,45 +745,15 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
 
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete DropDownWidth.](Images/UICustomization/DropDownWidth.png)
 
 
-### Show Suggestion Box on Focus
+### Show suggestion box on focus
 
-Suggestion box can be shown whenever the control receives focus using the [ShowSuggestionsOnFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ShowSuggestionsOnFocus) property. At this time, suggestion list is the complete list of data source. The default value of the `ShowSuggestionsOnFocus` property is `false`.
+Suggestion box can be shown whenever the control receives focus using the `ShowSuggestionsOnFocus` property. At this time, suggestion list is the complete list of data source.
 
 {% tabs %}
 
@@ -1348,37 +779,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
 
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete OnFocus.](Images/UICustomization/OnFocus.png)
@@ -1582,7 +983,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         image.HorizontalOptions = LayoutOptions.Center;
         image.VerticalOptions = LayoutOptions.Center;
         image.Aspect = Aspect.AspectFit;
-        image.SetBinding(Image.SourceProperty, "ProfilePicture");
+        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
         Grid.SetColumn(image, 0);
 
         StackLayout stack = new();
@@ -1634,7 +1035,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         image.HorizontalOptions = LayoutOptions.Center;
         image.VerticalOptions = LayoutOptions.Center;
         image.Aspect = Aspect.AspectFit;
-        image.SetBinding(Image.SourceProperty, "ProfilePicture");
+        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
         Grid.SetColumn(image, 0);
 
         StackLayout stack = new();
@@ -1694,7 +1095,7 @@ The following image illustrates the result of the above code:
 
 ## Customize Dropdown corner radius
 
-The [DropDownCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownCornerRadius) property is used to modify the corner radius of the dropdown container for the `SfAutocomplete` control. The default value of the `DropDownCornerRadius` property is `0`.
+The [DropDownCornerRadius]() property is used to modify the corner radius of the dropdown container for the `SfAutoComplete` control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1720,37 +1121,6 @@ SfAutocomplete autocomplete = new SfAutocomplete()
     ItemsSource = socialMediaViewModel.SocialMedias,
     DropDownCornerRadius = 25
 };
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1800,7 +1170,7 @@ The following image illustrates the result of the above code:
 
 ## Completed Event
 
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing the return key on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`:
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
 
 {% tabs %}
 {% highlight xaml %}
@@ -1817,37 +1187,6 @@ The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropD
 private async void autoComplete_Completed(object sender, EventArgs e)
 {
     await DisplayAlert("Message", "Text entering Completed", "close");
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
 }
 
 {% endhighlight %}
@@ -1877,7 +1216,7 @@ N> The `Completed` event is not supported in the Android platform.
 
 ## DropDownOpening Event
 
-The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event is raised when the dropdown menu is about to open in the `SfAutocomplete`. The event uses `CancelEventArgs`, which exposes the following property:
+The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event will be fired whenever opening the dropdown menu in the SfAutocomplete. It can cancel dropdown opening with CancelEventArgs that contains the following property:
 
  * Cancel: Dropdown opening is based on this value.
 
@@ -1905,37 +1244,7 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
     autoComplete.DropdownOpening += Autocomplete_DropdownOpening;
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
 
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -1981,37 +1290,7 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
     
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
 
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -2053,37 +1332,6 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
     autoComplete.DropDownClosed += SfAutocomplete_DropDownClosed;
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -2116,7 +1364,7 @@ When the value of Autocomplete changes, the [ValueChanged](https://help.syncfusi
 
 {% highlight C# %}
 
-SfAutocomplete autocomplete = new SfAutocomplete
+SfAutoComplete autocomplete = new SfAutoComplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
@@ -2125,37 +1373,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 autocomplete.ValueChanged += OnValueChanged;
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
 
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 The ValueChanged event can be handled as follows:
@@ -2188,44 +1406,13 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% endhighlight %}
 {% highlight C# %}
 
-    SfAutocomplete autocomplete = new SfAutocomplete
+    SfAutoComplete autocomplete = new SfAutoComplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
         TextMemberPath = "Name",
         DisplayMemberPath = "Name"
     };
 autocomplete.ClearButtonClicked += autocomplete_ClearButtonClicked;
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -2267,7 +1454,7 @@ The cursor position in the input view can be obtained or updated using the [Curs
 
 N> Two way binding not supported in Android platform.
 
-## Border Visibility
+## Border visibility
 
 The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_ShowBorder) property of [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
@@ -2351,44 +1538,13 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI Autocomplete ReturnType](Images/UICustomization/ReturnType.png)
 
 ## Clear button customization
 
-The [ClearButtonPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonPath) property is used to customize the appearance of the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) clear button using a custom shape.
+The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) clear button.
 
 {% tabs %}
 {% highlight xaml %}
@@ -2417,42 +1573,11 @@ var path = new Path()
     Stroke = Colors.Red
 };
 
-SfAutocomplete autocomplete = new SfAutocomplete();
-autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+SfAutocomplte autocomplete = new SfAutocomplte();
+autocomplete.ItemsSource = viewModel.SocialMedia;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
 autocomplete.ClearButtonPath = path;
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -2489,37 +1614,6 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -2537,9 +1631,3 @@ public SocialMediaViewModel
 
 {% endhighlight %}
 {% endtabs %}
-
-## See also
-
-- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)
-- [Basic Features](https://help.syncfusion.com/maui/autocomplete/basic-features)
-- [Searching and Filtering](https://help.syncfusion.com/maui/autocomplete/searching-filtering)

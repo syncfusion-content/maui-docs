@@ -41,12 +41,12 @@ The [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToR
 * [SlideOnTop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_SlideOnTop)
 * [Push](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_Push)
 
-The default transition is `SlideOnTop` that draws the RefreshView on top of the `PullableContent`.
+The default transition is `SlideOnTop` that draws the RefreshView on top of the `PullableContent`. Choose `Push` when you want the refresh content and the main content to move together.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             TransitionMode="SlideOnTop" />
 
 {% endhighlight %}
@@ -64,7 +64,7 @@ The following code example shows how to set the `TransitionMode` as `Push` to Pu
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name=" pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             TransitionMode="Push" />
 
 {% endhighlight %}
@@ -79,12 +79,12 @@ pullToRefresh.TransitionMode = PullToRefreshTransitionType.Push;
 
 ## RefreshViewThreshold
 
-The threshold value for the refresh view, indicating the starting position of the progress indicator within the view.
+The threshold value for the refresh view, indicating the starting position of the progress indicator within the view.This is a `double` value; the default is `50`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             RefreshViewThreshold="50"/>
 
 {% endhighlight %}
@@ -97,12 +97,12 @@ pullToRefresh.RefreshViewThreshold = 50d;
 
 ## PullingThreshold
 
-The threshold value for the refresh view, indicating the progress indicator's maximum pulling position in view.
+The threshold value for the refresh view, indicating the progress indicator's maximum pulling position in view. This is a `double` value; the default is `200`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             PullingThreshold="200"/>
 
 {% endhighlight %}
@@ -116,12 +116,12 @@ pullToRefresh.PullingThreshold = 200d;
 
 ## IsRefreshing
 
-The view will get refresh while the [IsRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_IsRefreshing) property is set to `true,` and View refreshing will be stopped when you set the `IsRefreshing` to `false.`
- 
+The view gets refreshed while the [IsRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_IsRefreshing) property is set to `true`, and view refreshing is stopped when you set `IsRefreshing` to `false`. Use this together with the [Refreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) event to refresh your data.
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             IsRefreshing="True"/>
 
 {% endhighlight %}
@@ -135,12 +135,11 @@ pullToRefresh.IsRefreshing = true;
 
 ## ProgressBackground
 
-The color to the progress indicator's background.
-
+The color of the progress indicator's background.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             ProgressBackground = "White"/>
 
 {% endhighlight %}
@@ -154,12 +153,12 @@ pullToRefresh.ProgressBackground = Color.White;
 
 ## ProgressColor
 
-The color to the progress indicator's arc. 
+The color of the progress indicator's arc.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             ProgressColor = "Blue"/>
 
 {% endhighlight %}
@@ -174,12 +173,12 @@ pullToRefresh.ProgressColor = Color.Blue;
 
 ## ProgressThickness
 
-The width of the progress indicator's arc. 
+The width of the progress indicator's arc. This is a `double` value; the default is `3`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             ProgressThickness="5"/>
 
 {% endhighlight %}
@@ -193,12 +192,12 @@ pullToRefresh.ProgressThickness = 5d;
 
 ## RefreshViewWidth
 
-The width of the refresh view.
+The width of the refresh view. This is a `double` value; the default is `48`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             RefreshViewWidth="50"/>
 
 {% endhighlight %}
@@ -213,12 +212,12 @@ pullToRefresh.RefreshViewWidth = 50d;
 
 ## RefreshViewHeight
 
-The height to the refresh View.
+The height of the refresh view. This is a `double` value; the default is `48`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
+<syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                             RefreshViewHeight="50"/>
 
 {% endhighlight %}
@@ -232,14 +231,21 @@ pullToRefresh.RefreshViewHeight = 50d;
 
 ## Programmatic Support 
 
+Use the programmatic API to start or stop the refresh indicator without user interaction. After the data has been refreshed, call `EndRefreshing()` (or set `IsRefreshing` to `false`) to hide the progress indicator.
+
 ### StartRefreshing()
 
-The [StartRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_StartRefreshing) method is used to refresh the content without interaction in pullable content. When you invoke this StartRefreshing() method,then the Progress indicator will be shown. 
+The [StartRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_StartRefreshing) method is used to refresh the content without user interaction on the pullable content. When you invoke the `StartRefreshing()` method, the progress indicator is shown and the [Refreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_Refreshing) event is raised.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-pullToRefresh.StartRefreshing();
+private async void OnStartRefreshingClicked(object sender, EventArgs e)
+{
+    pullToRefresh.StartRefreshing();
+    await LoadDataAsync();
+    pullToRefresh.EndRefreshing();
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -259,9 +265,10 @@ pullToRefresh.EndRefreshing();
 
 ## Host .NET MAUI DataGrid as pullable content
 
-The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI Datagrid inside the PullToRefresh, follow these steps.
+The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI `DataGrid` inside the `PullToRefresh`, follow these steps.
 <ol>
     <li> Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/datagrid/getting-started">DataGrid</a> and PullToRefresh.</li>
+    <li> Define the `OrdersInfo` collection in a ViewModel and implement a `Refresh Item source(int count)` method that updates it. See the <a href="https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh">View sample in GitHub</a> for a complete example.</li>
     <li> Import PullToRefresh and DataGrid control namespace as follows.</li>
     <br/>
 {% tabs %}
@@ -285,8 +292,6 @@ using Syncfusion.Maui.PullToRefresh;
 </ol>
 
 This is how the final output will look like when hosting a Datagrid control as pullable content.
-
-![Syncfusion .NET MAUI PullToRefresh with DataGrid hosted with slide on top transition mode.](Images/customization/net-maui-datagrid-slideontop.gif)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="23 24 36 37" %}
@@ -323,8 +328,6 @@ This is how the final output will look like when hosting a Datagrid control as p
                                     ColumnWidthMode="Fill"
                                     HorizontalScrollBarVisibility="Always"
                                     VerticalScrollBarVisibility="Always">
-                        . . .
-                        . . . .
 
                     </sfgrid:SfDataGrid>
                 </pulltoRefresh:SfPullToRefresh.PullableContent>
@@ -376,9 +379,10 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-datagrid-a
 
 ## Host .NET MAUI ListView as pullable content
 
-To host the .NET MAUI `ListView` inside the `PullToRefresh`, which is used to update items in the list while performing the pull to refresh action.
+To host the .NET MAUI `ListView` inside the `PullToRefresh` to update items in the list while performing the pull to refresh action, follow these steps.
 <ol>
     <li>	Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/listview/getting-started">ListView</a> and PullToRefresh.</li>
+    <li>	Define the `InboxInfos` collection in a `ListViewInboxInfoViewModel` and implement an `AddItemsRefresh(int count)` method that adds new items. See the <a href="https://github.com/SyncfusionExamples/load-listview-as-pullable-content-of-.net-maui-pull-to-refresh">View sample in GitHub</a> for a complete example.</li>
     <li>	Import the SfPullToRefresh control and SfListView control namespace as follows.</li>
     <br/>
 {% tabs %}
@@ -402,8 +406,6 @@ using Syncfusion.Maui.PullToRefresh;
 </ol>
 
 This is how the final output will look like when hosting a SfListView control as pullable content.
-
-![Syncfusion .NET MAUI PullToRefresh with ListView hosted with slide on top transition mode.](Images/customization/net-maui-listview-slideontop.gif)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="21 23 33 35" %}
@@ -457,16 +459,22 @@ using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.PullToRefresh;
 namespace RefreshableListView
 {
-    protected override void OnAttachedTo(ContentPage bindable)
+    public class ListViewPullToRefreshBehavior : Behavior<ContentPage>
     {
-        ViewModel = new ListViewInboxInfoViewModel();
-        bindable.BindingContext = ViewModel;
-        pullToRefresh = bindable.FindByName<SfPullToRefresh>("pullToRefresh");
-        ListView = bindable.FindByName<SfListView>("listView");
-        pullToRefresh.Refreshing += PullToRefresh_Refreshing;
+        private SfPullToRefresh pullToRefresh;
+        private SfListView listView;
+        private ListViewInboxInfoViewModel ViewModel;
 
-        base.OnAttachedTo(bindable);
-    }
+        protected override void OnAttachedTo(ContentPage bindable)
+        {
+            ViewModel = new ListViewInboxInfoViewModel();
+            bindable.BindingContext = ViewModel;
+            pullToRefresh = bindable.FindByName<SfPullToRefresh>("pullToRefresh");
+            listView = bindable.FindByName<SfListView>("listView");
+            pullToRefresh.Refreshing += PullToRefresh_Refreshing;
+
+            base.OnAttachedTo(bindable);
+        }
 
     private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
     {
@@ -488,7 +496,7 @@ If you run the above sample with the [TransitionMode](https://help.syncfusion.co
 
 ## Pulling and refreshing template
 
-The `PullToRefresh` allows you to set a template for pulling and refreshing the view. The pulling and refreshing a template can be set using the [SfPullToRefresh.PullingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullingViewTemplate) and [SfPullToRefresh.RefreshingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_RefreshingViewTemplate) properties, respectively.
+The `PullToRefresh` allows you to set a template for the pulling and refreshing view. The pulling and refreshing templates can be set using the [SfPullToRefresh.PullingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullingViewTemplate) and [SfPullToRefresh.RefreshingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_RefreshingViewTemplate) properties, respectively. Both templates accept a `DataTemplate` and can be assigned independently if you need different views for each state. During the pulling gesture, the `Pulling` event provides a [PullingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullingEventArgs.html) `Progress` value whose sign indicates the direction; use `Math.Abs(e.Progress)` for an absolute value.
 
 Refer to the following code example in which a [SfCircularProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html?tabs=tabid-1) is loaded in the pulling view template and refreshing view template.
 
@@ -546,7 +554,7 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
     {
         this.viewModel = new OrderInfoViewModel();
         this.progressbar = new SfCircularProgressBar();
-        this.frame = new Frame();
+        this.border = new Border();
         this.progressContent = new Label();
 
         this.progressContent.TextColor = Color.FromRgb(0, 124, 238);
@@ -554,12 +562,12 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
         this.progressContent.WidthRequest = 20;
         this.progressContent.HorizontalTextAlignment = TextAlignment.Center;
 
-        this.frame.BorderColor = Colors.LightGray;
-        this.frame.BackgroundColor = Colors.White;
-        this.frame.CornerRadius = 30;
-        this.frame.Content = this.progressbar;
-        this.frame.Padding = 0;
-        this.frame.HasShadow = false;
+        this.border.Stroke = Colors.LightGray;
+        this.border.Background = Colors.White;
+        this.border.StrokeShape = new RoundRectangle { CornerRadius = new CornerRadius(30) };
+        this.border.Content = this.progressbar;
+        this.border.Padding = 0;
+        this.border.Shadow = null;
 
         this.progressbar.SegmentCount = 10;
         this.progressbar.ProgressThickness = 6;
@@ -579,7 +587,7 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
 
         var pullingTemplate = new DataTemplate(() =>
         {
-            return new ViewCell { View = this.frame };
+            return this.border;
         });
 
         this.pullToRefresh.PullingViewTemplate = pullingTemplate;

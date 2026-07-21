@@ -221,7 +221,7 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tree
 You can cancel the selection process within this event by setting the `ItemSelectionChangingEventArgs.Cancel` property to true.
 
 {% tabs %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="9" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage

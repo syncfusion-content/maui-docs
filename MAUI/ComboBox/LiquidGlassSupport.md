@@ -1,144 +1,95 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI ComboBox | Syncfusion®
+title: Liquid Glass Effect for .NET MAUI ComboBox | Syncfusion®
 description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
-platform: maui
+platform: MAUI
 control: SfComboBox
 documentation: ug
-keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, liquid glass combobox, maui glass effect, acrylic combobox.
 ---
 
-# Liquid Glass Effect in .NET MAUI ComboBox
+# Liquid Glass Effect in .NET MAUI ComboBox (SfComboBox)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
 
-## Prerequisites
+## Apply liquid glass effect
 
-Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
+Follow these steps to enable and configure the Liquid Glass Effect in the ComboBox control:
 
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
+### Step 1: Wrap the control inside glass effect view
 
-N>
-* The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
-* It is not supported on Android or Windows.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `ComboBox` control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-## Apply Liquid Glass Effect
+For more details, refer to the `Liquid Glass Getting Started documentation`.
 
-Follow these steps to enable and configure the Liquid Glass Effect in the ComboBox control.
+### Step 2: Enable the liquid glass effect on ComboBox
 
-### Step 1: Wrap the control inside SfGlassEffectView
-
-To apply the Liquid Glass Effect to the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control, wrap it inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class. The glass effect is applied to the wrapped content and any popups it opens (such as the drop-down).
-
-### Step 2: Enable the Liquid Glass Effect on the ComboBox
-
-Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_EnableLiquidGlassEffect) `bool` property to `true` on the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control. The default value is `false`. When enabled, the effect is also applied to the drop-down popup for a consistent glass-like appearance.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_EnableLiquidGlassEffect) property to `true` in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 
-To achieve a glass-like background, set the `Background` and `DropDownBackground` properties of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) to `Transparent`. The background is then treated as a tinted color, ensuring a consistent glass effect across the editor and the drop-down.
+To achieve a glass like background in the ComboBox, set the `Background` and `DropDownBackground` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control.
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfComboBox` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
 
 <Grid BackgroundColor="Transparent">
-    <Image Source="Wallpaper.png"
-           Aspect="AspectFill" />
-
+<Image Source="Wallpaper.png" Aspect="AspectFill">
     <core:SfGlassEffectView EffectType="Regular"
                             CornerRadius="20">
-        <editors:SfComboBox x:Name="comboBox"
-                            Background="Transparent"
-                            DropDownBackground="Transparent"
-                            EnableLiquidGlassEffect="True"
-                            ItemsSource="{Binding SocialMedias}">
-            <editors:SfComboBox.BindingContext>
-                <local:SocialMediaViewModel />
-            </editors:SfComboBox.BindingContext>
-        </editors:SfComboBox>
+        <ComboBox:SfComboBox x:Name="ComboBox"
+                                   Background="Transparent"
+                                   ItemsSource="{Binding SocialMedias}"
+                                   DropDownBackground="Transparent"
+                                   EnableLiquidGlassEffect="True">
+        </ComboBox:SfComboBox>
     </core:SfGlassEffectView>
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="26" %}
 
-// Run this code in a ContentPage code-behind file.
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Inputs;
 
-var grid = new Grid
-{
-    BackgroundColor = Colors.Transparent,
-};
-
-var image = new Image
-{
-    Source = "Wallpaper.png",
-    Aspect = Aspect.AspectFill,
-};
-grid.Children.Add(image);
-
-var glass = new SfGlassEffectView
-{
-    EffectType = LiquidGlassEffectType.Regular,
-    CornerRadius = 20,
-};
-
-var comboBox = new SfComboBox
-{
-    Background = Colors.Transparent,
-    DropDownBackground = Colors.Transparent,
-    EnableLiquidGlassEffect = true,
-    ItemsSource = socialMediaViewModel.SocialMedias,
-    BindingContext = socialMediaViewModel,
-};
-
-glass.Content = comboBox;
-grid.Children.Add(glass);
-Content = grid;
-
-{% endhighlight %}
-{% highlight C# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
+    var grid = new Grid
     {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
+        BackgroundColor = Colors.Transparent
+    };
 
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
+    var image = new Image
+    {
+        Source = "Wallpaper.png",
+        Aspect = Aspect.AspectFill
+    };
+    grid.Children.Add(image);
+
+    var glass = new SfGlassEffectView
+    {
+        EffectType = LiquidGlassEffectType.Regular,
+        CornerRadius = 20
+    };
+
+    var ComboBox = new SfComboBox
+    {
+        Background = Colors.Transparent,
+        DropDownBackground = Colors.Transparent,
+        EnableLiquidGlassEffect = true
+    };
+
+    ComboBox.SetBinding(SfComboBox.ItemsSourceProperty, "SocialMedias");
+
+    glass.Content = ComboBox;
+    grid.Children.Add(glass);
+    this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
 
-The following image illustrates the SfComboBox inside an acrylic container, with the drop-down using the glass effect.
+The following screenshot illustrates SfComboBox within an acrylic container, with the dropdown using the glass effect.
 
-![.NET MAUI ComboBox with Liquid Glass Effect](Images/UICustomization/Combobox_liquidglass.png)
+![ComboBox editor with liquid glass support](Images/UICustomization/Combobox_liquidglass.png)
 
-N> If `Background` or `DropDownBackground` is not set to `Transparent`, the glass effect may not render correctly. Both must be `Transparent` for the underlying content to show through the tinted glass.
-
-## See Also
-
-* [Header and footer](https://help.syncfusion.com/maui/combobox/header-and-footer)
-* [UI customization](https://help.syncfusion.com/maui/combobox/ui-customization)
+N>
+This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

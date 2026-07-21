@@ -6,34 +6,13 @@ platform: maui
 control: SfSignaturePad
 documentation: ug
 ---
-
-# Events and Methods in .NET MAUI SignaturePad
-
-This section covers the events and methods exposed by the [.NET MAUI SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control:
-
-* Events
-  * `DrawStarted`
-  * `DrawCompleted`
-* Methods
-  * `GetSignaturePoints`
-  * `ToImageSource`
-  * `Clear`
-
-## Prerequisites
-
-Before using the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.SignaturePad`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started) documentation.
+# Events and Methods in .NET MAUI Signature Pad
 
 ## Events
 
-The SfSignaturePad control raises the following events to notify you of user interaction with the pad.
-
 ### DrawStarted
 
-The [DrawStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawStarted) event is raised when the user starts a new stroke on the SignaturePad. The event handler receives a `CancelEventArgs` instance. Set `e.Cancel` to `true` to cancel the stroke before it is drawn.
+This event will be triggered when we start drawing in the SignaturePad. With this, [CancelEventArgs](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.-ctor?view=net-6.0#system-componentmodel-canceleventargs-ctor(system-boolean)) will be passed. Also, restrict the draw start action by setting [e.cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#system-componentmodel-canceleventargs-cancel) as **true**.
 
 {% tabs %}
 
@@ -47,12 +26,10 @@ The [DrawStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignatureP
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 signaturePad.DrawStarted += OnDrawStarted;
-this.Content = signaturePad;
 
 private void OnDrawStarted(object? sender, CancelEventArgs e)
 {
-    // Cancel the stroke so it is not drawn.
-    e.Cancel = true;
+    e.Cancel = false;
 }
 
 {% endhighlight %}
@@ -61,7 +38,7 @@ private void OnDrawStarted(object? sender, CancelEventArgs e)
 
 ### DrawCompleted
 
-The [DrawCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawCompleted) event is raised when the user completes a stroke on the SfSignaturePad. The event handler receives an `EventArgs` instance.
+This event will be triggered when we complete the drawing in the SignaturePad.
 
 {% tabs %}
 
@@ -75,32 +52,29 @@ The [DrawCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Signatur
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 signaturePad.DrawCompleted += OnDrawCompleted;
-this.Content = signaturePad;
 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
-    // Handle the completed stroke here.
+    // Trigger when the drawing is completed
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Methods
+## Method
 
-The SfSignaturePad control exposes the following methods for reading, exporting, and clearing signature data.
+### Get Signature Points
 
-### GetSignaturePoints
-
-The [GetSignaturePoints()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_GetSignaturePoints) method retrieves the points of every stroke drawn on the SignaturePad. It returns a `List<List<float>>` where each inner list represents the points of a single stroke in the order they were drawn. Coordinates are returned in the SignaturePad's local coordinate space, with the origin `(0, 0)` at the top-left corner of the pad.
+Users can use the **GetSignaturePoints** method to retrieve the drawn signature points from the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html).
 
 {% tabs %}
 {% highlight xaml %}
 <signaturePad:SfSignaturePad x:Name="signaturePad"
                              StrokeColor="Red"
                              MinimumStrokeThickness="1"
-                             MaximumStrokeThickness="6"
-                             DrawCompleted="OnDrawCompleted" />
+                             MaximumStrokeThickness="6" 
+                             DrawCompleted="OnDrawCompleted"/>
 {% endhighlight %}
 {% highlight C# %}
 
@@ -111,74 +85,68 @@ SfSignaturePad signaturePad = new SfSignaturePad()
     MaximumStrokeThickness = 6,
 };
 signaturePad.DrawCompleted += OnDrawCompleted;
-this.Content = signaturePad;
 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
-    List<List<float>> pointsCollection = signaturePad.GetSignaturePoints();
+    List<List<float>> pointsCollection = new List<List<float>>();
+    pointsCollection = signaturePad.GetSignaturePoints();
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-### ToImageSource
+N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.
 
-Use the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method to save the signature drawn on the SfSignaturePad as a `ImageSource`. The method returns a nullable `ImageSource?`; if the pad is empty, `null` is returned. The resulting `ImageSource` can be assigned to an `Image` control, exported to a file, or shared with other applications.
+## Saving the signature as an image
+
+Save the signature drawn in the SignaturePad as an [ImageSource](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method which can further be synchronized with your devices and documents that need your signature.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<VerticalStackLayout>
-    <signaturePad:SfSignaturePad x:Name="signaturePad" />
-    <Button Text="Save"
-            Clicked="OnSaveButtonClicked" />
-</VerticalStackLayout>
+<signaturePad:SfSignaturePad x:Name="signaturePad" />
+<Button Text="Save"
+        Clicked="OnSaveButtonClicked" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfSignaturePad signaturePad = new SfSignaturePad();
-Button saveButton = new Button { Text = "Save" };
+Button saveButton = new Button();
+saveButton.Text="Save";
 saveButton.Clicked += OnSaveButtonClicked;
-this.Content = new VerticalStackLayout { signaturePad, saveButton };
 
 private void OnSaveButtonClicked(object? sender, EventArgs e)
 {
     ImageSource? source = signaturePad.ToImageSource();
-    if (source is not null)
-    {
-        // Use the image source, for example, assign it to an Image control.
-    }
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Clear
+## Clear the existing signature in SignaturePad
 
-The [Clear()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_Clear) method removes every stroke from the SignaturePad. The method is a no-op when the pad is already empty.
+Clear the signature drawn in the SignaturePad using the [Clear()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_Clear) method as shown in the code snippet below:
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<VerticalStackLayout>
-    <signaturePad:SfSignaturePad x:Name="signaturePad" />
-    <Button Text="Clear"
-            Clicked="OnClearButtonClicked" />
-</VerticalStackLayout>
+<signaturePad:SfSignaturePad x:Name="signaturePad" />
+<Button Text="Clear"
+        Clicked="OnClearButtonClicked" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfSignaturePad signaturePad = new SfSignaturePad();
-Button clearButton = new Button { Text = "Clear" };
+Button clearButton = new Button();
+clearButton.Text = "Clear";
 clearButton.Clicked += OnClearButtonClicked;
-this.Content = new VerticalStackLayout { signaturePad, clearButton };
 
 private void OnClearButtonClicked(object? sender, EventArgs e)
 {
@@ -188,8 +156,3 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
-
-## See Also
-
-* [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started)
-* [Customization](https://help.syncfusion.com/maui/signaturepad/customization)

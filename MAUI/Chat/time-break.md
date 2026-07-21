@@ -20,7 +20,7 @@ Use the `Chat` control to display a time break between messages based on their c
 {% endhighlight %}
 
 {% highlight c# hl_lines="1" %}
- this.sfChat.ShowTimeBreak = true;
+this.sfChat.ShowTimeBreak = true;
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,8 +38,8 @@ To stick the time break view, enable the [StickyTimeBreak](https://help.syncfusi
 {% endhighlight %}
 
 {% highlight c# hl_lines="2" %}
- this.sfChat.ShowTimeBreak = true;
- this.sfChat.StickyTimeBreak = true;
+this.sfChat.ShowTimeBreak = true;
+this.sfChat.StickyTimeBreak = true;
    
 {% endhighlight %}
 {% endtabs %}

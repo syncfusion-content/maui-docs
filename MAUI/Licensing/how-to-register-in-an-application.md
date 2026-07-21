@@ -12,29 +12,9 @@ documentation: UG
 
 To ensure proper use of Syncfusion<sup>®</sup> controls, the generated license key needs to be registered before initiating any control. Use the following code snippet to register the license:
 
-**Registering a single license key**
-
 {% tabs %}
 {% highlight c# %}
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
-{% endhighlight %}
-{% endtabs %}
-
-**Registering multiple license keys**
-
-You can register multiple license keys using either a comma (,) or a semicolon (;) as the separator between keys.
-
-{% tabs %}
-{% highlight c# %}
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY_1,YOUR LICENSE KEY_2,...");
-{% endhighlight %}
-{% endtabs %}
-
-or
-
-{% tabs %}
-{% highlight c# %}
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY_1;YOUR LICENSE KEY_2;...");
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,7 +29,7 @@ I> Syncfusion<sup>®</sup> license keys can be validated during the Continuous I
 
 ### 1. Registering license key in App.xaml.cs
 
-You can register the license key in **App.xaml.cs** constructor before `InitializeComponent()`. If the `App()` constructor is not available in **App.xaml.cs**, create the `App()` constructor in **App.xaml.cs** and register the license key inside the constructor.
+You can register the license key in **App.xaml.cs** constructor before InitializeComponent(). If App constructor not available in **App.xaml.cs**, create the "App()" constructor in **App.xaml.cs** and register the license key inside the constructor.
 
 {% tabs %}
 {% highlight c# %}

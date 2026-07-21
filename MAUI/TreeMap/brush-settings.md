@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Brush Settings in .NET MAUI TreeMap Control | Syncfusion®
-description: Learn here how to apply brush settings for tree map items in Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap control, enhancing the tree map visualization.
+description: Learn here how to apply brush settings for tree map items in Syncfusion® .NET MAUI TreeMap control, enhancing the tree map visualization.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -9,16 +9,18 @@ documentation: ug
  
 # Brush Settings in .NET MAUI TreeMap (SfTreeMap)
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/treemap/getting-started)** guide.
+
 ## Leaf Item Brush Settings
 
-The brush settings are used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: [UniformBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html), [RangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html), [DesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html), and [PaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html). Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the treemap.
+The brush settings are used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: [UniformBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html), [RangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html), [DesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html), and [PaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html). Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the TreeMap. By default, no `LeafItemBrushSettings` is set, and the leaf items are rendered with the default fill color.
 
 ### Uniform brush settings
 
-The uniform brush settings in [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) assign a single color uniformly for leaf items representing data. Customize the background brush for treemap leaf items using the [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapUniformBrushSettings_Brush) property of [TreeMapUniformBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html).
+The uniform brush settings in [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) apply a single fill color to all leaf items. Use the [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapUniformBrushSettings_Brush) property of [TreeMapUniformBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html) to set the background brush for TreeMap leaf items.
 
 {% tabs %}
-{% highlight XAML hl_lines="11 12 13" %}
+{% highlight xaml hl_lines="10 11 12" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -37,18 +39,19 @@ The uniform brush settings in [SfTreeMap](https://help.syncfusion.com/cr/maui/Sy
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="6" %}
+{% highlight c# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xD2, 0x12, 0x43)) };
+//code omitted for brevity
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.
@@ -103,21 +106,23 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![uniform-brush-settings-in-maui-tree-map](images/brush-settings/uniform-brush-settings.png)
+ ![Uniform brush settings in .NET MAUI TreeMap](images/brush-settings/uniform-brush-settings.png)
 
 ### Range brush settings
 
-In [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html), the range brush settings assign a collection of range-based brushes. Utilize the [RangeBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrushSettings_RangeBrushes) property of [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html) to specify a list of [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html) instances. Each instance defines a specific range and its associated background brush.
+In [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html), the range brush settings assign a collection of range-based brushes. Use the [RangeBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrushSettings_RangeBrushes) property of [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html) to specify a list of [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html) instances. Each instance defines a specific range and its associated background brush.
 
 The [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html) includes the following properties:
 
-[Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_Brush): Specifies the background brush for the range in the SfTreeMap.
-[From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_From): Sets the starting value of the range for the background brush.
-[To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_To): Sets the ending value of the range for the background brush.
-[LegendLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_LegendLabel): Defines the text for the legend item associated with the range in the SfTreeMap.
+* [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_Brush): Specifies the background brush for the range in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
+* [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_From): Sets the starting value of the range for the background brush.
+* [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_To): Sets the ending value of the range for the background brush.
+* [LegendLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_LegendLabel): Defines the text for the legend item associated with the range in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
+
+N> The [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html) is only applicable when the [RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath) property of the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) is set. The `RangeColorValuePath` property maps a field from the data source whose value is compared against the `From` and `To` values of each range brush to determine the fill color of a leaf item. If a value does not fall within any defined range, the leaf item is rendered with the default fill color. To display legend items that share the same background color as the range brushes, set the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) property within [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings). For more information, refer to the [Legend](legend.md) documentation.
 
 {% tabs %}
-{% highlight XAML hl_lines="4 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
+{% highlight xaml hl_lines="4 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -156,7 +161,7 @@ The [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tree
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="5 7 8 9 10 11 12 13 14 15" %}
+{% highlight c# hl_lines="5 7 8 9 10 11 12 13 14 15" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -168,16 +173,17 @@ treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
     RangeBrushes = new List<TreeMapRangeBrush>()
     {
-        new TreeMapRangeBrush() { LegendLabel="50M - 1B", From=50000000, To=1000000000, Brush = new SolidColorBrush(Color.FromArgb("#F0A868")) },
-        new TreeMapRangeBrush() { LegendLabel="10M - 50M", From=10000000, To=50000000, Brush = new SolidColorBrush(Color.FromArgb("#F3BC8B")) },
-        new TreeMapRangeBrush() { LegendLabel="0.1M - 10M", From=100000, To=10000000, Brush = new SolidColorBrush(Color.FromArgb("#F8D7B9")) },
+        new TreeMapRangeBrush() { LegendLabel="50M - 1B", From=50000000, To=1000000000, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xF0, 0xA8, 0x68)) },
+        new TreeMapRangeBrush() { LegendLabel="10M - 50M", From=10000000, To=50000000, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xF3, 0xBC, 0x8B)) },
+        new TreeMapRangeBrush() { LegendLabel="0.1M - 10M", From=100000, To=10000000, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xF8, 0xD7, 0xB9)) },
     }
 };
 
+//code omitted for brevity
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.
@@ -232,26 +238,27 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> The [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html) is only applicable when the [RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath) property of the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) is enabled. Additionally, you can ensure that legend items share the same background color by setting the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) property within [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings).
-
- ![range-brush-settings-in-maui-tree-map](images/brush-settings/range-brush-settings.png)
+ ![Range brush settings in .NET MAUI TreeMap](images/brush-settings/range-brush-settings.png)
 
 ### Desaturation brush settings
 
-The desaturation brush settings in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) modify color saturation based on data values, enabling customization of the background brush and desaturation range.
+The desaturation brush settings in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) modify the color saturation of the background brush based on the value mapped through [RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath). The `From` and `To` properties define the saturation scale, where `1` represents the full-saturation brush color and `0` represents a fully desaturated (gray) color.
+
+N> The [TreeMapDesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html) is only applicable when the [RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath) property of the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) is set.
 
 The [TreeMapDesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html) includes the following properties:
 
-* [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_Brush): Sets the background brush for desaturation in the SfTreeMap.
-* [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_From): Sets the starting value for the desaturation range.
-* [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_To): Sets the ending value for the desaturation range.
+* [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_Brush): Sets the background brush for desaturation in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
+* [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_From): Sets the starting saturation value (between `0` and `1`) for the desaturation range.
+* [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_To): Sets the ending saturation value (between `0` and `1`) for the desaturation range.
 
 {% tabs %}
-{% highlight XAML hl_lines="11 12 13" %}
+{% highlight xaml hl_lines="10 11 12" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population">
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
@@ -266,18 +273,20 @@ The [TreeMapDesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncf
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="6" %}
+{% highlight c# hl_lines="6" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapDesaturationBrushSettings() { Brush = Brush.BlueViolet, From = 1, To = 0.2 };
+//code omitted for brevity
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.
@@ -332,14 +341,14 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![desaturation-brush-settings-in-maui-tree-map](images/brush-settings/desaturation-brush-settings.png)
+ ![Desaturation brush settings in .NET MAUI TreeMap](images/brush-settings/desaturation-brush-settings.png)
 
 ### Palette brush settings
 
-The leaf items are colored by using the [Brushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapPaletteBrushSettings_Brushes) property  within the colors collection of [TreeMapPaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html).
+Use the [Brushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapPaletteBrushSettings_Brushes) property of [TreeMapPaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html) to apply a collection of brushes to leaf items. When the number of leaf items exceeds the number of brushes in the collection, the brushes are applied cyclically.
 
 {% tabs %}
-{% highlight XAML hl_lines="11 12 13 14 15 16 17 18 19 20 21 22" %}
+{% highlight xaml hl_lines="11 12 13 14 15 16 17 18 19 20 21 22" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -354,12 +363,11 @@ The leaf items are colored by using the [Brushes](https://help.syncfusion.com/cr
     <treemap:SfTreeMap.LeafItemBrushSettings>
         <treemap:TreeMapPaletteBrushSettings>
             <treemap:TreeMapPaletteBrushSettings.Brushes>
-                <SolidColorBrush>#116DF9</SolidColorBrush>
-                <SolidColorBrush>#9215F3</SolidColorBrush>
-                <SolidColorBrush>#F4890B</SolidColorBrush>
-                <SolidColorBrush>#D21243</SolidColorBrush>
-                <SolidColorBrush>#E2227E</SolidColorBrush>
-                <SolidColorBrush>#9215F3</SolidColorBrush>
+                <SolidColorBrush Color="#116DF9"/>
+                <SolidColorBrush Color="#9215F3"/>
+                <SolidColorBrush Color="#F4890B"/>
+                <SolidColorBrush Color="#D21243"/>
+                <SolidColorBrush Color="#E2227E"/>
             </treemap:TreeMapPaletteBrushSettings.Brushes>
         </treemap:TreeMapPaletteBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
@@ -367,7 +375,7 @@ The leaf items are colored by using the [Brushes](https://help.syncfusion.com/cr
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="6 7 8 9 10 11 12 13 14 15 16 17" %}
+{% highlight c# hl_lines="5 6 7 8 9 10 11 12 13 14 15 16" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -378,19 +386,19 @@ treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
 {
     Brushes = new List<Brush>()
     {
-        new SolidColorBrush(Color.FromArgb("#116DF9")),
-        new SolidColorBrush(Color.FromArgb("#9215F3")),
-        new SolidColorBrush(Color.FromArgb("#F4890B")),
-        new SolidColorBrush(Color.FromArgb("#D21243")),
-        new SolidColorBrush(Color.FromArgb("#E2227E")),
-        new SolidColorBrush(Color.FromArgb("#9215F3")),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0x11, 0x6D, 0xF9)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0x92, 0x15, 0xF3)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0xF4, 0x89, 0x0B)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0xD2, 0x12, 0x43)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0xE2, 0x22, 0x7E)),
     }
 };
 
+//code omitted for brevity
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.
@@ -445,14 +453,16 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![palatte-brush-settings-in-maui-tree-map](images/brush-settings/palatte-brush-settings.png)
+ ![Palette brush settings in .NET MAUI TreeMap](images/brush-settings/palatte-brush-settings.png)
 
 ## Group Item Brush Settings
 
-The group items are colored using the [Brushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapPaletteBrushSettings_Brushes) property within the colors collection of [TreeMapPaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html) in the [GroupItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_GroupItemBrushSettings) of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
+Use the [GroupItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_GroupItemBrushSettings) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) to apply brush settings to group (level) items. Currently, only [TreeMapPaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html) is supported for group items. Use its [Brushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapPaletteBrushSettings_Brushes) property to specify the collection of brushes applied to group headers.
+
+N> Group item brush settings are applicable only when [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) is configured. For more information about levels, refer to the [Levels](levels.md) documentation.
 
 {% tabs %}
-{% highlight XAML hl_lines="14 15 16 17 18 19 20 21" %}
+{% highlight xaml hl_lines="13 14 15 16 17 18 19 20 21" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -464,14 +474,15 @@ The group items are colored using the [Brushes](https://help.syncfusion.com/cr/m
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <!-- code omitted for brevity -->
     <treemap:SfTreeMap.Levels>
         <treemap:TreeMapLevel GroupPath="Continent"/>
     </treemap:SfTreeMap.Levels>
     <treemap:SfTreeMap.GroupItemBrushSettings>
         <treemap:TreeMapPaletteBrushSettings>
             <treemap:TreeMapPaletteBrushSettings.Brushes>
-                <SolidColorBrush>#003790</SolidColorBrush>
-                <SolidColorBrush>#FF8F00</SolidColorBrush>
+                <SolidColorBrush Color="#003790"/>
+                <SolidColorBrush Color="#FF8F00"/>
             </treemap:TreeMapPaletteBrushSettings.Brushes>
         </treemap:TreeMapPaletteBrushSettings>
     </treemap:SfTreeMap.GroupItemBrushSettings>
@@ -479,28 +490,35 @@ The group items are colored using the [Brushes](https://help.syncfusion.com/cr/m
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="7 8 9 10 11 12 13 14" %}
+{% highlight c# hl_lines="6 7 8 9 10 11 12 13" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent" });
+treeMap.Levels = new List<TreeMapLevel>()
+{
+    new TreeMapLevel() { GroupPath = "Continent" }
+};
 treeMap.GroupItemBrushSettings = new TreeMapPaletteBrushSettings()
 {
     Brushes = new List<Brush>()
     {
-        new SolidColorBrush(Color.FromArgb("#003790")),
-        new SolidColorBrush(Color.FromArgb("#FF8F00")),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0x00, 0x37, 0x90)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0x8F, 0x00)),
     }
 };
 
+//code omitted for brevity
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -548,4 +566,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This is applicable only when [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) is enabled.
+For troubleshooting tips related to brush settings, such as brushes not appearing or range brushes not being applied, verify the following:
+
+- The `DataSource` is populated and `PrimaryValuePath` is set.
+- For range and desaturation brush settings, `RangeColorValuePath` is set to the field whose values should be compared against the brush ranges.
+- For group item brush settings, [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) is configured. For more information, refer to the [Levels](levels.md) documentation.

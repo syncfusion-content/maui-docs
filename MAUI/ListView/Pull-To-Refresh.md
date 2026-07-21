@@ -9,16 +9,16 @@ documentation: ug
 
 # Pull To Refresh in .NET MAUI ListView (SfListView)
 
-The [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) refreshing control allows interacting and refreshing the loaded view. When the SfListView is loaded inside the `SfPullToRefresh`, it refreshes the item when performing the pull-to-refresh action.
+The [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) control allows users to refresh the loaded view by performing a pull-to-refresh action. When SfListView is placed inside the `SfPullToRefresh`, it refreshes the items on the pull-to-refresh action.
 
-Refer [initializing pull-to-refresh](https://help.syncfusion.com/maui/pull-to-refresh/getting-started#register-the-handler) to launch pull-to-refresh on each platform.
+Refer to [initializing pull-to-refresh](https://help.syncfusion.com/maui/pull-to-refresh/getting-started#register-the-handler) to enable pull-to-refresh on each platform.
 
 ## SfListView inside the SfPullToRefresh 
 
 The `SfListView` supports refreshing the data in view when performing the pull-to-refresh action at runtime by loading it directly into the [SfPullToRefresh.PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullableContent) of the [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html).
 
 <ol>
-    <li>	Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/listview/getting-started">ListView</a> and PullToRefresh.</li>
+    <li>	Install the <a href="https://www.nuget.org/packages/Syncfusion.Maui.PullToRefresh/">Syncfusion.Maui.PullToRefresh</a> NuGet package alongside the <a href="https://help.syncfusion.com/maui/listview/getting-started">SfListView</a> NuGet package. Refer to the <a href="https://help.syncfusion.com/maui/pull-to-refresh/getting-started">SfPullToRefresh getting-started</a> guide for the full list of required packages and platform-specific handler registration.</li>
     <li>	Import the SfPullToRefresh control and SfListView control namespace as follows.</li>
     <br/>
 {% tabs %}
@@ -36,12 +36,12 @@ using Syncfusion.Maui.PullToRefresh;
 {% endhighlight %}
 {% endtabs %}
     <br/>
-    <li>	Define the ListView as PullableContent of the SfPullToRefresh.</li>
-    <li>	Handle the pull to refresh events for refreshing the data. </li>
-    <li>	Customize the required properties of ListView and PullToRefresh based on your requirement.</li>
+    <li>	Define the SfListView as PullableContent of the SfPullToRefresh.</li>
+    <li>	Handle the PullToRefresh events for refreshing the data. </li>
+    <li>	Customize the required properties of SfListView and SfPullToRefresh based on your requirements.</li>
 </ol>
 
-This is how the final output will look like when hosting a SfListView control as pullable content.
+The final output when hosting SfListView as pullable content is shown below.
 
 ![Syncfusion .NET MAUI ListView with PullToRefresh hosted with slide on top transition mode.](Images/pulltorefresh/net-maui-listview-slideontop.gif)
 
@@ -61,6 +61,11 @@ This is how the final output will look like when hosting a SfListView control as
 
     <ContentPage.Content>
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
             <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
                                         RefreshViewHeight="50"
                                         RefreshViewThreshold="30"
@@ -75,8 +80,7 @@ This is how the final output will look like when hosting a SfListView control as
                                             ItemsSource="{Binding InboxInfos}"
                                             ItemSize="102"
                                             SelectionMode="Single"
-                                            ScrollBarVisibility="Always"
-                                            AutoFitMode="Height">
+                                            ScrollBarVisibility="Always">
                             . . . 
                             . . . .
 
@@ -91,29 +95,56 @@ This is how the final output will look like when hosting a SfListView control as
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataSource;
-using Syncfusion.Maui.DataSource.Extensions;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.PullToRefresh;
+
 namespace RefreshableListView
 {
-    protected override void OnAttachedTo(ContentPage bindable)
+    public class ListViewPullToRefreshBehavior : Behavior<ContentPage>
     {
-        ViewModel = new ListViewInboxInfoViewModel();
-        bindable.BindingContext = ViewModel;
-        pullToRefresh = bindable.FindByName<SfPullToRefresh>("pullToRefresh");
-        ListView = bindable.FindByName<SfListView>("listView");
-        pullToRefresh.Refreshing += PullToRefresh_Refreshing;
+        private SfPullToRefresh? pullToRefresh;
+        private SfListView? listView;
+        private ListViewInboxInfoViewModel? ViewModel;
 
-        base.OnAttachedTo(bindable);
-    }
+        protected override void OnAttachedTo(ContentPage bindable)
+        {
+            ViewModel = new ListViewInboxInfoViewModel();
+            bindable.BindingContext = ViewModel;
+            pullToRefresh = bindable.FindByName<SfPullToRefresh>("pullToRefresh");
+            listView = bindable.FindByName<SfListView>("listView");
+            if (pullToRefresh != null)
+            {
+                pullToRefresh.Refreshing += PullToRefresh_Refreshing;
+            }
 
-    private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
-    {
-        pullToRefresh!.IsRefreshing = true;
-        await Task.Delay(2500);
-        ViewModel!.AddItemsRefresh(3);
-        pullToRefresh.IsRefreshing = false;
+            base.OnAttachedTo(bindable);
+        }
+
+        protected override void OnDetachingFrom(ContentPage bindable)
+        {
+            if (pullToRefresh != null)
+            {
+                pullToRefresh.Refreshing -= PullToRefresh_Refreshing;
+                pullToRefresh = null;
+            }
+
+            listView = null;
+            ViewModel = null;
+            base.OnDetachingFrom(bindable);
+        }
+
+        private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
+        {
+            if (pullToRefresh == null || ViewModel == null)
+            {
+                return;
+            }
+
+            pullToRefresh.IsRefreshing = true;
+            await Task.Delay(2500);
+            ViewModel.AddItemsRefresh(3);
+            pullToRefresh.IsRefreshing = false;
+        }
     }
 }
 
@@ -122,10 +153,10 @@ namespace RefreshableListView
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-listview-as-pullable-content-of-.net-maui-pull-to-refresh).
 
-If you run the above sample with the [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) as Push, the output will look as follows.
+If you run the above sample with the [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) as `Push`, the output will look like the following.
 
 ![Syncfusion .NET MAUI ListView with PullToRefresh hosted with push transition mode.](Images/pulltorefresh/net-maui-listview-push.gif)
 
 ## Limitation
 
-The `Horizontal` ListView does not support the [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html).
+The `Horizontal` SfListView does not support the pull-to-refresh action provided by the [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html).

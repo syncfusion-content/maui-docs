@@ -7,43 +7,27 @@ control: SfCombobox
 documentation: ug
 ---
 
-# Implementing AI-Powered Smart Search in .NET MAUI ComboBox
+# Implementing AI-Powered Smart Search in .NET MAUI Combobox
 
-This article walks you through the implementation of an advanced search experience in the Syncfusion [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control. The example uses Azure OpenAI to provide an intelligent, AI-driven search experience.
-
-## Prerequisites
-
-Before you begin, ensure you have the following:
-
-- A working .NET MAUI application with the `Syncfusion.Maui.Inputs` package installed.
-- An active Azure subscription with access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and a deployed model. If you don't have access, refer to the [create and deploy Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account. Note down the deployment name, endpoint URL, and API key.
-- The [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) NuGet package (version 2.x recommended for the `IChatClient` API used in this sample). Install it by running the following command in the Visual Studio Package Manager Console:
-
-    ```powershell
-    Install-Package Azure.AI.OpenAI -Version 2.0.0
-    ```
-    Or using the .NET CLI:
-    ```bash
-    dotnet add package Azure.AI.OpenAI --version 2.0.0
-    ```
+This document will walk you through the implementation of an advanced search functionality in the Syncfusion [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control. The example leverages the power of Azure OpenAI for an intelligent, AI-driven search experience.
 
 ## Integrating Azure OpenAI with your .NET MAUI App
 
-First, ensure that you have access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and have created a deployment in the Azure portal.
+First, ensure you have access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and have created a deployment in the Azure portal.
 
-If you do not have access, refer to the [Create and deploy an Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account.
+If you don’t have access, please refer to the [create and deploy Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account.
 
 Note down the deployment name, endpoint URL, and API key.
 
-We will use the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/). Before getting started, install the Azure.AI.OpenAI NuGet package in your .NET MAUI app.
+we’ll use the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/). So, before getting started, install the Azure.AI.OpenAI NuGet package in your .NET MAUI app.
 
 In your base service class (AzureBaseService), initialize the OpenAIClient. Replace the Endpoint, DeploymentName, Key with actual values from your Azure OpenAI resource.
 
 This creates a chat client using your endpoint, API key, and deployment name. It’s stored in the Client property for use in other methods.
 
-The ComboBoxAzureAIService uses this client to send prompts and receive completions.
+ComboBoxAzureAIService use this Client to send prompts and receive completions.
 
-In the `GetCompletion` method, we construct the prompt and send it to the Azure OpenAI service. The chat history helps maintain context, but it is cleared for each new prompt in this implementation to keep each search independent.
+In the `GetCompletion` method, we will construct the prompt and send it to the Azure OpenAI Service. The ChatHistory helps maintain context but is cleared for each new prompt in this implementation to ensure each search is independent.
 
 {% tabs %}
 {% highlight c# %}
@@ -132,7 +116,7 @@ public class ComboBoxAzureAIService : AzureBaseService
 
 {% endtabs %}
 
-## Implementing custom filtering in .NET MAUI ComboBox
+## Implementing custom filtering in .NET MAUI Combobox
 
 The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control allows you to apply custom filter logic to suggest items based on your specific filter criteria by utilizing the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property, which is the entry point for our smart search logic.
 
@@ -183,15 +167,16 @@ public class ComboBoxViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-**Step 2:** Connecting the custom filter to Azure OpenAI
+**Step 2:** Connecting the Custom Filter to Azure OpenAI
 
-Implement the [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterBehavior.html#Syncfusion_Maui_Inputs_ComboBoxFilterBehavior_GetMatchingIndexes_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxFilterInfo_) method from the interface. This method is the heart of the custom filter. It is invoked every time the text in the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control changes.
+ Implement the [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterBehavior.html#Syncfusion_Maui_Inputs_ComboBoxFilterBehavior_GetMatchingIndexes_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxFilterInfo_) method from the interface. This method is the heart of the custom filter. It is invoked every time the text in the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control changes. 
 
-The logic in [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterBehavior.html#Syncfusion_Maui_Inputs_ComboBoxFilterBehavior_GetMatchingIndexes_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxFilterInfo_) performs an online AI search based on the availability of Azure credentials.
+The logic within [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterBehavior.html#Syncfusion_Maui_Inputs_ComboBoxFilterBehavior_GetMatchingIndexes_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxFilterInfo_) intelligently perform an online AI search based on the availability of Azure credentials.
 
-To get accurate and structured results from the AI, we must provide a detailed prompt. This prompt is constructed inside the `FilterItemsUsingAzureAI` method.
+To get accurate and structured results from the AI, we must provide a detailed prompt. This is constructed inside the 
+`FilterItemsUsingAzureAI` method.
 
-The `FilterItemsUsingAzureAI` method uses prompt engineering to instruct the AI on how to filter the results, including asking it to handle spelling mistakes and provide the response in a clean format.
+The `FilterItemsUsingAzureAI` method uses prompt engineering to instruct the AI on how to filter the results, including asking it to handle spelling mistakes and providing the response in a clean format.
 
 {% tabs %}
 {% highlight c# %}
@@ -302,9 +287,9 @@ public class ComboBoxCustomFilter : IComboBoxFilterBehavior
 
 {% endtabs %}
 
-**Step 3:** Applying custom filtering to ComboBox
+**Step:3** Applying Custom Filtering to ComboBox
 
-Apply custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control by using the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property.
+Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control by using the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -334,8 +319,4 @@ The following image demonstrates the output of the above AI-based search using a
 
 You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/Smart-AI-Searching-using-.NET-MAUI-ComboBox)
 
-## See also
-
-* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
-* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
-* [Searching](https://help.syncfusion.com/maui/combobox/searching)
+By combining a powerful AI-driven online search with a robust you can create a truly smart and reliable search experience in your .NET MAUI applications.

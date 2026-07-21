@@ -93,7 +93,7 @@ Before proceeding, ensure the following are set up:
 Make sure to add the namespace.
  
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +101,7 @@ using Syncfusion.Maui.Core.Hosting;
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
  
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 {% endtabs %}
@@ -111,12 +111,12 @@ builder.ConfigureSyncfusionCore();
 Add the following namespace in your XAML or C#.
  
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
  
 xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
  
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
  
 using Syncfusion.Maui.Inputs;
  
@@ -128,7 +128,7 @@ using Syncfusion.Maui.Inputs;
 Initialize the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control. It allows you to enter numeric input and restricts the alphabetic input. Once the `Enter` key is pressed or control focus is lost, the value of the `NumericEntry` control is validated and updated based on the format applied.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HorizontalOptions="Center" 

@@ -1,124 +1,71 @@
 ---
 layout: post
-title: No Results Found in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn how to customize the no-results-found message in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
+title: No Results Found in .NET MAUI  Autocomplete control | Syncfusion®
+description: Learn about No Results Found support in .NET MAUI Autocomplete (SfAutocomplete) control and more details.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
-
 # No Results Found in .NET MAUI Autocomplete (SfAutocomplete)
 
-## Prerequisites
-
-Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Inputs`
-
-For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
-
-## Overview
-
-When the entered text does not match any item in the `SfAutocomplete` drop-down, the control displays a no-results-found message. You can customize the message text with the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property, or provide a fully custom UI with the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property.
-
-### Properties
-
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `NoResultsFoundText` | `string` | `No Results Found` | Gets or sets the message displayed when no matching items are found. |
-| `NoResultsFoundTemplate` | `DataTemplate` | `null` | Gets or sets a custom template used to render the no-results-found message. Takes precedence over `NoResultsFoundText` when set. |
+When the entered item is not in the suggestion list, [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) and [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) properties.
 
 ## NoResultsFoundText
-
-You can customize the text displayed when no results are found by setting the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property. The default value is `No Results Found`.
+We can customize the desire text to be displayed for indicating no results found by using the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property.
 
 {% tabs %}
 
 {% highlight xaml %}
-
+                  
 <editors:SfAutocomplete x:Name="autocomplete"
                         NoResultsFoundText="Not Found"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
-                        DisplayMemberPath="Name" />
+                        DisplayMemberPath="Name"/> 
 
 {% endhighlight %}
-{% highlight C# %}
 
-SfAutocomplete autocomplete = new SfAutocomplete
+{% highlight c# %}
+
+SfAutocomplete autocomplete = new SfAutocomplete()
 {
     NoResultsFoundText = "Not Found",
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
-    ItemsSource = new SocialMediaViewModel().SocialMedias
+    ItemsSource = socialMediaViewModel.SocialMedias
 };
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
 
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
-The following image illustrates a customized no-results-found message:
-
-![Customized no-results-found message in the SfAutocomplete drop-down](Images/NoResultsFound/NoResultsFoundText.png)
+![NoResultsFoundText](images/NoResultsFound/NoResultsFoundText.png)
 
 ## NoResultsFoundTemplate
 
-You can fully customize the appearance of the no-results-found message by setting the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property. When the template is set, it takes precedence over the `NoResultsFoundText` property.
+We can customize the appearance of the desire text to be displayed for indicating no results found by using the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autocomplete"
-                        ItemsSource="{Binding SocialMedias}"
-                        TextMemberPath="Name"
-                        DisplayMemberPath="Name">
-    <editors:SfAutocomplete.NoResultsFoundTemplate>
-        <DataTemplate>
-            <Label Text="Not Found"
-                   FontSize="20"
-                   FontAttributes="Italic"
-                   TextColor="Red"
-                   Margin="70,10,0,0" />
-        </DataTemplate>
-    </editors:SfAutocomplete.NoResultsFoundTemplate>
-</editors:SfAutocomplete>
-
+  <editors:SfAutocomplete x:Name="autocomplete"
+               ItemsSource="{Binding SocialMedias}"
+              TextMemberPath="Name"
+             DisplayMemberPath="Name" >
+      <editors:SfAutocomplete.NoResultsFoundTemplate>
+          <DataTemplate>
+              <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
+           </DataTemplate>
+      </editors:SfAutocomplete.NoResultsFoundTemplate>
+  </editors:SfAutocomplete>
 {% endhighlight %}
-{% highlight C# %}
 
-SfAutocomplete autocomplete = new SfAutocomplete
+{% highlight c# %}
+
+
+SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    ItemsSource = new SocialMediaViewModel().SocialMedias,
+    ItemsSource = socialMediaViewModel.SocialMedias
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
     NoResultsFoundTemplate = new DataTemplate(() =>
@@ -134,46 +81,11 @@ SfAutocomplete autocomplete = new SfAutocomplete
     })
 };
 
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class SocialMediaViewModel
-{
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-
-    public SocialMediaViewModel()
-    {
-        this.SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Twitter", ID = 6 },
-            new SocialMedia { Name = "WhatsApp", ID = 7 },
-            new SocialMedia { Name = "YouTube", ID = 8 }
-        };
-    }
-}
-
-public class SocialMedia
-{
-    public string Name { get; set; }
-    public int ID { get; set; }
-}
 
 {% endhighlight %}
+
 {% endtabs %}
 
-The following image illustrates a customized no-results-found template:
+![NoResultsFoundTemplate](images/NoResultsFound/NoResultsFoundTemplate.png)
 
-![Customized no-results-found template in the SfAutocomplete drop-down](Images/NoResultsFound/NoResultsFoundTemplate.png)
-
-## See also
-
-- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
-- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
-- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)
+N> By Default [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) is enabled we can restrict it by using [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) as Empty.

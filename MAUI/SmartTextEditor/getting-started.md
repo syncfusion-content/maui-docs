@@ -111,6 +111,8 @@ Make sure to add the namespace.
 {% tabs %}
 {% highlight c# %}
 using Syncfusion.Maui.SmartComponents.Hosting;
+using Azure.AI.OpenAI;
+using Azure;
 {% endhighlight %}
 {% endtabs %}
 

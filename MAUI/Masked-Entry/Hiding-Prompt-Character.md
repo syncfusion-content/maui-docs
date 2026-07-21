@@ -1,61 +1,40 @@
 ---
 layout: post
-title: Hiding Prompt Characters in .NET MAUI Masked Entry | Syncfusion®
+title: Hiding prompt characters in .NET MAUI Masked Entry | Syncfusion®
 description: Learn about hiding prompt characters support in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
 ---
 
-# Hiding Prompt Characters in .NET MAUI Masked Entry
+# Hiding Prompt Characters in .NET MAUI Masked Entry (SfMaskedEntry)
 
-## Prerequisites
-
-Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Inputs`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
-
-## Setting HidePromptOnLeave
-
-The [HidePromptOnLeave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HidePromptOnLeave) property of type `bool` controls whether unfilled prompt positions are displayed when the control does not have focus. The default value is `false`, which means prompt characters are always shown. When set to `true`, prompt characters are hidden when the control loses focus and restored when the control regains focus.
-
-The control is considered to have lost focus when the user taps outside the Entry, navigates to another input, or moves focus programmatically via the `Unfocused` event. To programmatically focus the Entry and restore the prompt, call `maskedEntry.Focus()`.
-
-The following example demonstrates how to hide prompt characters when the Masked Entry control loses focus:
+When the HidePromptOnLeave property is set to true, prompt characters are ignored when the control loses focus. Again, the prompt characters are restored when the control is focused.
 
 {% tabs %}
+
 {% highlight XAML %}
 
-<editors:SfMaskedEntry x:Name="maskedEntry"
+<editors:SfMaskedEntry x:Name="maskedEntry" 
                        Placeholder="Enter here"
                        MaskType="Simple"
-                       Mask="00/00/0000"
+                       Mask="00/00/0000" 
                        PromptChar="#"
-                       HidePromptOnLeave="True"/>
+                       HidePromptOnLeave="True" />
 
 {% endhighlight %}
+
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry = new SfMaskedEntry
-{
-    Placeholder = "Enter here",
-    MaskType = MaskedEntryMaskType.Simple,
-    Mask = "00/00/0000",
-    PromptChar = '#',
-    HidePromptOnLeave = true
-};
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.Placeholder="Enter here";
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "00/00/0000";
+maskedEntry.PromptChar = '#';
+maskedEntry.HidePromptOnLeave = true;
 
 {% endhighlight %}
+
 {% endtabs %}
 
-The following GIF shows the `HidePromptOnLeave` behavior: prompt characters are visible while the control is focused, and hidden when the control loses focus.
-
 ![HidePromptOnLeave](MaskedEntry_Images/maui_masked_entry_HidePromptOnLeave.gif)
-
-## See Also
-
-* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
-* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
-* [Formatting Value](https://help.syncfusion.com/maui/masked-entry/formatting-value)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drilldown support in .NET MAUI TreeMap Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Drilldown feature and the header customization of Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (SfTreeMap) control and more.
+title: Drilldown support in .NET MAUI TreeMap Control | Syncfusion®
+description: Learn here all about Drilldown feature and the header customization of Syncfusion® .NET MAUI TreeMap (SfTreeMap) control and more.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -9,27 +9,34 @@ documentation: ug
 
 # Drilldown in .NET MAUI TreeMap (SfTreeMap)
 
-The drilldown feature provides better visualization of hierarchy. A large set of data can be virtualized into minimal views. Each level of items can be drilled down. TreeMap provides animation along with the drilldown support.
+The drilldown feature in the .NET MAUI TreeMap provides a better visualization of hierarchical data by breaking a large dataset down into smaller, focused views. Each level of items can be drilled into, and the control animates the transition between levels during drilldown.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/treemap/getting-started)** guide.
+
+N> Drilldown requires at least one [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) to be configured in the `Levels` collection. For more information about levels, refer to the [Levels](levels.md) documentation.
 
 ## Enable drilldown
 
-The drilldown feature can be enabled or disabled using the [EnableDrilldown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_EnableDrillDown) property in TreeMap. The header with the group path label will be displayed above the leaf item once drilldown is enabled.
+The drilldown feature can be enabled or disabled using the [EnableDrilldown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_EnableDrillDown) property in TreeMap. The default value of `EnableDrilldown` is `false`. When enabled, a header containing the group path label is displayed above the leaf items, and tapping or clicking a group header drills down into that level. The header also supports drill-up (zoom out) navigation back to the previous level.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight xaml hl_lines="2" %}
 
-<treemap:SfTreeMap EnableDrillDown="True"/>
+<treemap:SfTreeMap EnableDrillDown="True">
+    <!-- code omitted for brevity -->
+</treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight c# hl_lines="2" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 treeMap.EnableDrilldown = true;
+//code omitted for brevity
 
 {% endhighlight %}
 {% endtabs %}
 
-![enable-drilldown-in-maui-tree-map](images\drilldown\maui-drilldown.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Drilldown enabled in .NET MAUI TreeMap](images/drilldown/maui-drilldown.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 The following code snippet is the complete code for drilldown.
 
@@ -61,11 +68,11 @@ The following code snippet is the complete code for drilldown.
     <treemap:SfTreeMap.LeafItemBrushSettings>
         <treemap:TreeMapPaletteBrushSettings>
             <treemap:TreeMapPaletteBrushSettings.Brushes>
-                <SolidColorBrush>#116DF9</SolidColorBrush>
-                <SolidColorBrush>#9215F3</SolidColorBrush>
-                <SolidColorBrush>#F4890B</SolidColorBrush>
-                <SolidColorBrush>#D21243</SolidColorBrush>
-                <SolidColorBrush>#E2227E</SolidColorBrush>
+                <SolidColorBrush Color="#116DF9"/>
+                <SolidColorBrush Color="#9215F3"/>
+                <SolidColorBrush Color="#F4890B"/>
+                <SolidColorBrush Color="#D21243"/>
+                <SolidColorBrush Color="#E2227E"/>
             </treemap:TreeMapPaletteBrushSettings.Brushes>
         </treemap:TreeMapPaletteBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
@@ -73,41 +80,48 @@ The following code snippet is the complete code for drilldown.
 </treemap:SfTreeMap>
 {% endhighlight %}
 
-{% highlight C# hl_lines="6" %}
+{% highlight c# hl_lines="6" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 DrillDownViewModel viewModel = new DrillDownViewModel();
 treeMap.DataSource = viewModel.DrillDownPopulationDetails;
-treeMap.EnableDrillDown = true;
+treeMap.EnableDrilldown = true;
 treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.ShowToolTip = true;
+treeMap.Margin = 8;
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.Levels = new List<TreeMapLevel>()
+{
+    new TreeMapLevel() { GroupPath = "Continent" },
+    new TreeMapLevel() { GroupPath = "Subregion" }
+};
 treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
 {
     Brushes = new List<Brush>()
     {
-        new SolidColorBrush(Color.FromArgb("#116DF9")),
-        new SolidColorBrush(Color.FromArgb("#9215F3")),
-        new SolidColorBrush(Color.FromArgb("#F4890B")),
-        new SolidColorBrush(Color.FromArgb("#D21243")),
-        new SolidColorBrush(Color.FromArgb("#E2227E")),
-        new SolidColorBrush(Color.FromArgb("#9215F3")),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0x11, 0x6D, 0xF9)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0x92, 0x15, 0xF3)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0xF4, 0x89, 0x0B)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0xD2, 0x12, 0x43)),
+        new SolidColorBrush(Color.FromArgb(0xFF, 0xE2, 0x22, 0x7E)),
     }
 };
 
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="DrillDownPopulationDetails.cs" %}
+{% highlight c# tabtitle="DrillDownPopulationDetails.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.
 /// </summary>
 public class DrillDownPopulationDetails
 {
-    public string country { get; set; }
-    public string subregion { get; set; }
-    public string continent { get; set; }
-    public double population { get; set; }
+    public string Country { get; set; }
+    public string Subregion { get; set; }
+    public string Continent { get; set; }
+    public double Population { get; set; }
 }
 
 {% endhighlight %}
@@ -223,7 +237,6 @@ public class DrillDownViewModel
             new DrillDownPopulationDetails() { Continent = "Asia", Subregion = "Southeastern Asia", Country = "Singapore", Population = 5861780 },
             new DrillDownPopulationDetails() { Continent = "Asia", Subregion = "Southeastern Asia", Country = "Brunei", Population = 483000 },
             new DrillDownPopulationDetails() { Continent = "Asia", Subregion = "Southeastern Asia", Country = "Timor-Leste", Population = 1863000 },
-            new DrillDownPopulationDetails() { Continent = "Asia", Subregion = "Southeastern Asia", Country = "Brunei Darussalam", Population = 462721 },
 
             new DrillDownPopulationDetails() { Continent = "Asia", Subregion = "Southern Asia", Country = "India", Population = 1439533831 },
             new DrillDownPopulationDetails() { Continent = "Asia", Subregion = "Southern Asia", Country = "Pakistan", Population = 243515000 },
@@ -265,7 +278,7 @@ public class DrillDownViewModel
 
             #endregion
 
-            #region SouthAmerica
+            #region South America
 
             new DrillDownPopulationDetails() { Continent = "South America", Subregion = "Eastern South America", Country = "Brazil", Population = 217637297 },
             new DrillDownPopulationDetails() { Continent = "South America", Subregion = "Northern South America", Country = "Colombia", Population = 52886363 },
@@ -347,40 +360,56 @@ public class DrillDownViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![Drilldown](images\drilldown\drilldown.gif){:width="325" height="580" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Drilldown in .NET MAUI TreeMap](images/drilldown/drilldown.gif){:width="325" height="580" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Header customization
 
-The drilldown header used for zoom out (i.e., drill up one level) operation can be customized by setting style using the [DrilldownHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DrillDownHeaderSettings) property in TreeMap. This property provides similar customization option as of the TreeMap level header.
+The drilldown header, which is displayed above the leaf items to support drill-up (zoom out) navigation, can be customized using the [DrilldownHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DrillDownHeaderSettings) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property provides similar customization options as the TreeMap level header; for more information, refer to the [Levels](levels.md) documentation.
 
-The `DrilldownHeaderSettings` include the following properties:
+The [TreeMapDrillDownHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html) includes the following properties:
 
-[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_Background): Specifies the background brush for the drilldown header in the SfTreeMap.
-[Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_Height): Specifies the height for the drilldown header in the SfTreeMap.
-[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_TextStyle): Specifies the text style for the drilldown header in the SfTreeMap.
+* [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_Background): Specifies the background brush for the drilldown header.
+* [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_Height): Specifies the height of the drilldown header.
+* [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_TextStyle): Specifies the text style of the drilldown header label.
 
 The following code snippet demonstrates how to define the drilldown header style.
 
 {% tabs %} 
 {% highlight xaml %}
 
- <treemap:SfTreeMap.DrillDownHeaderSettings>
-    <treemap:TreeMapDrillDownHeaderSettings Height="50" Background="Violet">
-        <treemap:TreeMapDrillDownHeaderSettings.TextStyle>
-            <treemap:TreeMapTextStyle TextColor="Blue"/>
-        </treemap:TreeMapDrillDownHeaderSettings.TextStyle>
-    </treemap:TreeMapDrillDownHeaderSettings>
-</treemap:SfTreeMap.DrillDownHeaderSettings>
+<treemap:SfTreeMap EnableDrillDown="True">
+    <treemap:SfTreeMap.DrillDownHeaderSettings>
+        <treemap:TreeMapDrillDownHeaderSettings Height="50" Background="Violet">
+            <treemap:TreeMapDrillDownHeaderSettings.TextStyle>
+                <treemap:TreeMapTextStyle TextColor="Blue"/>
+            </treemap:TreeMapDrillDownHeaderSettings.TextStyle>
+        </treemap:TreeMapDrillDownHeaderSettings>
+    </treemap:SfTreeMap.DrillDownHeaderSettings>
+    <!-- code omitted for brevity -->
+</treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
-SfTreeMap map = new SfTreeMap();
-map.DrillDownHeaderSettings.Height = 30;
-map.DrillDownHeaderSettings.Background = Colors.Violet;
-map.DrillDownHeaderSettings.TextStyle.TextColor = Colors.Blue;
+SfTreeMap treeMap = new SfTreeMap();
+treeMap.EnableDrilldown = true;
+treeMap.DrillDownHeaderSettings = new TreeMapDrillDownHeaderSettings()
+{
+    Height = 50,
+    Background = Colors.Violet,
+    TextStyle = new TreeMapTextStyle() { TextColor = Colors.Blue }
+};
+//code omitted for brevity
 
 {% endhighlight %}
 {% endtabs %} 
 
-![drilldown-headerstyle](images\drilldown\maui-drilldown-headerstyle.png){:width="313" height="444"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Drilldown header style in .NET MAUI TreeMap](images/drilldown/maui-drilldown-headerstyle.png){:width="313" height="444"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
+## Troubleshooting
+
+If drilldown does not work as expected, verify the following:
+
+- [EnableDrilldown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_EnableDrillDown) is set to `true`.
+- At least one [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) is configured in the `Levels` collection; see [Levels](levels.md) for details.
+- The `DataSource` is populated with hierarchical data and the `GroupPath` of each level matches a field on the data model.

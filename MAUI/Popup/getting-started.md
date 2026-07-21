@@ -27,8 +27,8 @@ Before proceeding, ensure the following are set up:
 ## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next.**
-3. Select the .NET framework version and click **Create.**
+2. Name the project and choose a location. Then, click **Next**.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Popup NuGet package
 
@@ -51,14 +51,14 @@ Before proceeding, ensure the following are set up:
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter.**
-4. Then choose **Create project.**
+3. Select the project location, type the project name and press **Enter**.
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Popup NuGet package
 
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) and install the latest version.
- 3. Ensure the necessary dependencies are installed correctly, and the project is restored
+ 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
@@ -73,22 +73,22 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution**, Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Popup NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the terminal in Rider and manually run: `dotnet restore`.
 
 {% endtabcontent %}
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
 
-Make sure to add the namespace.
+Add the following namespace to `MauiProgram.cs`:
 
 {% tabs %}
 {% highlight c# %}
@@ -123,7 +123,7 @@ using Syncfusion.Maui.Popup;
 
 ## Step 5: Add the Popup component
 
-Display a popup over your view by calling the [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method.
+Display a popup over your view by calling the [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method. The `Show` method accepts an optional `bool` parameter that indicates whether the popup is shown as a full-screen dialog (`true`) or as a non-full-screen popup (`false`, the default).
 
 Refer to the following code example for displaying popup using Button's Click event.
 
@@ -132,10 +132,10 @@ Refer to the following code example for displaying popup using Button's Click ev
 {% highlight xaml %}
 
 <StackLayout x:Name="mainLayout">
-<Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
-        VerticalOptions="Start" HorizontalOptions="Center"
-        Clicked="ClickToShowPopup_Clicked" />
-        <syncfusion:SfPopup x:Name="popup" />
+    <Button x:Name="clickToShowPopup" Text="Show Popup"
+            VerticalOptions="Start" HorizontalOptions="Center"
+            Clicked="ClickToShowPopup_Clicked" />
+    <syncfusion:SfPopup x:Name="popup" />
 </StackLayout>
 
 {% endhighlight %}
