@@ -1,166 +1,359 @@
 ---
 layout: post
 title: Commands in .NET MAUI Effects View Control | Syncfusion®
-description: Learn about Commands support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
+description: Learn about the commands available in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Commands and CommandParameter in .NET MAUI Effects View(SfEffectsView)
+# Commands and CommandParameter
 
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides the following Commands and CommandParameter :
+The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) exposes `ICommand` properties for each touch interaction, letting you bind view-model logic directly to the view. Each command is paired with an `object`-typed `CommandParameter` property so you can pass context to the bound logic.
 
-## LongPressedCommand
+## Command Summary
 
-The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressedCommand) property enables executing a command when the user performs a long‑press gesture on the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html).
+| Property | Type | Default | Fires on |
+| --- | --- | --- | --- |
+| [TouchDownCommand](#touchdowncommand) | `ICommand` | `null` | When the user presses the view. |
+| [TouchDownCommandParameter](#touchdowncommandparameter) | `object` | `null` | Passed to `TouchDownCommand`. |
+| [TouchUpCommand](#touchupcommand) | `ICommand` | `null` | When the user releases the press. |
+| [TouchUpCommandParameter](#touchupcommandparameter) | `object` | `null` | Passed to `TouchUpCommand`. |
+| [LongPressedCommand](#longpressedcommand) | `ICommand` | `null` | When the user long-presses the view. |
+| [LongPressedCommandParameter](#longpressedcommandparameter) | `object` | `null` | Passed to `LongPressedCommand`. |
 
-{% tabs %}
+> **Note**
+>
+> The long-press duration is platform-defined and cannot be customized in the current version.
 
-{% highlight xaml %}
+## Prerequisites
 
-<syncEffectsView:SfEffectsView
-    LongPressedCommand="{Binding LongPressedCommand}">
-</syncEffectsView:SfEffectsView>
+Before using the examples in this article, ensure the following are in place:
 
-{% endhighlight %}
+- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
+- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
+- Add `using Syncfusion.Maui.Core;`, `using Microsoft.Maui.Controls;`, and `using System.Windows.Input;` to your C# files.
+- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
+- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
 
-{% highlight C# %}
 
-var effectsView = new SfEffectsView
+## Defining the ICommand
+
+The examples below use a simple `RelayCommand` helper. Add this class to your project or replace it with your preferred MVVM toolkit (for example, `CommunityToolkit.Mvvm.Input.RelayCommand`).
+
+```csharp
+using System.Windows.Input;
+
+namespace MyApp;
+
+public class RelayCommand : ICommand
 {
-LongPressedCommand = ViewModel.LongPressedCommand
-};
+    private readonly Action<object?> execute;
+    private readonly Func<object?, bool>? canExecute;
 
-{% endhighlight %}
-{% endtabs %}
+    public RelayCommand(Action<object?> execute, Func<object?, bool>? canExecute = null)
+    {
+        this.execute = execute;
+        this.canExecute = canExecute;
+    }
 
-## LongPressedCommandParameter
+    public bool CanExecute(object? parameter) => canExecute?.Invoke(parameter) ?? true;
 
-The [LongPressedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressedCommandParameter) property allows you to pass a parameter to the LongPressedCommand when the long‑press gesture occurs.
+    public void Execute(object? parameter) => execute(parameter);
 
-{% tabs %}
-
-{% highlight xaml %}
-
-<syncEffectsView:SfEffectsView
-        LongPressedCommand="{Binding LongPressedCommand}"
-        LongPressedCommandParameter="{x:Reference sfEffectsView}">
-</syncEffectsView:SfEffectsView>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-var effectsView = new SfEffectsView
-{
-    LongPressedCommand = ViewModel.LongPressedCommand,
-    LongPressedCommandParameter = effectsView
-};
-
-{% endhighlight %}
-{% endtabs %}
+    public event EventHandler? CanExecuteChanged;
+}
+```
 
 ## TouchDownCommand
 
-The [TouchDownCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDownCommand) property executes a command when the user touches and presses down within the bounds of the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html).
+The [TouchDownCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDownCommand) property fires when the user presses the view.
 
-{% tabs %}
+### XAML
 
-{% highlight xaml %}
-
-<syncEffectsView:SfEffectsView
-TouchDownCommand="{Binding TouchDownCommand}">
+```xaml
+<syncEffectsView:SfEffectsView x:Name="effectsView"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               TouchDownCommand="{Binding TouchDownCommand}"
+                               TouchDownCommandParameter="{x:Reference effectsView}">
+    <syncEffectsView:SfEffectsView.BindingContext>
+        <local:EffectsViewModel/>
+    </syncEffectsView:SfEffectsView.BindingContext>
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" Offset="0.0" />
+                <GradientStop Color="#4ECDC4" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </syncEffectsView:SfEffectsView>
+```
 
-{% endhighlight %}
+### C#
 
-{% highlight C# %}
+```csharp
+var viewModel = new EffectsViewModel();
+this.BindingContext = viewModel; 
+
+var grid = new Grid
+{
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
 
 var effectsView = new SfEffectsView
 {
-TouchDownCommand = ViewModel.TouchDownCommand
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Content = grid
 };
 
-{% endhighlight %}
+effectsView.TouchDownCommand = viewModel.TouchDownCommand;
+effectsView.TouchDownCommandParameter = effectsView;
 
-{% endtabs %}
-
-## TouchDownCommandParameter
-
-The [TouchDownCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDownCommandParameter) property allows you to pass a parameter to the TouchDownCommand when the touch‑down interaction occurs.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<syncEffectsView:SfEffectsView
-    TouchDownCommand="{Binding TouchDownCommand}"
-    TouchDownCommandParameter="{x:Reference sfEffectsView}">
-</syncEffectsView:SfEffectsView>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-var effectsView = new SfEffectsView
-{
-    TouchDownCommand = ViewModel.TouchDownCommand,
-    TouchDownCommandParameter = effectsView
-};
-
-{% endhighlight %}
-
-{% endtabs %}
+this.Content = effectsView;
+```
 
 ## TouchUpCommand
 
-The [TouchUpCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUpCommand) property executes a command when the user releases the touch within the bounds of the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html).
+The [TouchUpCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUpCommand) property fires when the user releases the press.
 
-{% tabs %}
+### XAML
 
-{% highlight xaml %}
-
-<syncEffectsView:SfEffectsView
-    TouchUpCommand="{Binding TouchUpCommand}">
+```xaml
+<syncEffectsView:SfEffectsView x:Name="effectsView"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               TouchUpCommand="{Binding TouchUpCommand}"
+                               TouchUpCommandParameter="{x:Reference effectsView}">
+    <syncEffectsView:SfEffectsView.BindingContext>
+        <local:EffectsViewModel/>
+    </syncEffectsView:SfEffectsView.BindingContext>
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" Offset="0.0" />
+                <GradientStop Color="#4ECDC4" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </syncEffectsView:SfEffectsView>
+```
 
-{% endhighlight %}
+### C#
 
-{% highlight C# %}
+```csharp
+var viewModel = new EffectsViewModel();
+this.BindingContext = viewModel; 
+
+var grid = new Grid
+{
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
 
 var effectsView = new SfEffectsView
 {
-TouchUpCommand = ViewModel.TouchUpCommand
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Content = grid
 };
 
-{% endhighlight %}
+effectsView.TouchUpCommand = viewModel.TouchUpCommand;
+effectsView.TouchUpCommandParameter = effectsView;
 
-{% endtabs %}
+this.Content = effectsView;
+```
 
-## TouchUpCommandParameter
+## LongPressedCommand
 
-Enabling the [TouchUpCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUpCommandParameter) property allows you to pass a parameter to the TouchUpCommand when the touch‑up interaction occurs.
+The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressedCommand) property fires when the user long-presses the view.
 
-{% tabs %}
+### XAML
 
-{% highlight xaml %}
-
-<syncEffectsView:SfEffectsView
-        TouchUpCommand="{Binding TouchUpCommand}"
-        TouchUpCommandParameter="{x:Reference sfEffectsView}">
+```xaml
+<syncEffectsView:SfEffectsView x:Name="effectsView"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               LongPressedCommand="{Binding LongPressedCommand}"
+                               LongPressedCommandParameter="{x:Reference effectsView}" >
+    <syncEffectsView:SfEffectsView.BindingContext>
+        <local:EffectsViewModel/>
+    </syncEffectsView:SfEffectsView.BindingContext>
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" Offset="0.0" />
+                <GradientStop Color="#4ECDC4" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </syncEffectsView:SfEffectsView>
+```
 
-{% endhighlight %}
+### C#
 
-{% highlight C# %}
+```csharp
+var viewModel = new EffectsViewModel();
+this.BindingContext = viewModel; 
+
+var grid = new Grid
+{
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
 
 var effectsView = new SfEffectsView
 {
-TouchUpCommand = ViewModel.TouchUpCommand,
-TouchUpCommandParameter = effectsView
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Content = grid
 };
 
-{% endhighlight %}
+effectsView.LongPressedCommand = viewModel.LongPressedCommand;
+effectsView.LongPressedCommandParameter = effectsView;
 
-{% endtabs %}
+this.Content = effectsView;
+```
+
+## End-to-End Example
+
+The example below wires a complete view model and a XAML page together so the commands fire when the user interacts with the `SfEffectsView`.
+
+### ViewModel
+
+```csharp
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+
+namespace MyApp;
+
+public class EffectsViewModel : INotifyPropertyChanged
+{
+    public ICommand TouchDownCommand { get; }
+    public ICommand TouchUpCommand { get; }
+    public ICommand LongPressedCommand { get; }
+
+    public EffectsViewModel()
+    {
+        TouchDownCommand = new RelayCommand(p => OnTouchDown(p));
+        TouchUpCommand = new RelayCommand(p => OnTouchUp(p));
+        LongPressedCommand = new RelayCommand(p => OnLongPressed(p));
+    }
+
+    private void OnTouchDown(object? parameter)
+    {
+        // React to the touch-down here.
+    }
+
+    private void OnTouchUp(object? parameter)
+    {
+        // React to the touch-up here.
+    }
+
+    private void OnLongPressed(object? parameter)
+    {
+        // React to the long-press here.
+    }
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+}
+```
+
+### XAML
+
+```xaml
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:local="clr-namespace:MyApp"
+             x:Class="MyApp.CommandsPage">
+    <syncEffectsView:SfEffectsView x:Name="effectsView"
+                                   HorizontalOptions="Center" 
+                                   VerticalOptions="Center"
+                                   TouchDownCommand="{Binding TouchDownCommand}"
+                                   TouchUpCommand="{Binding TouchUpCommand}"
+                                   LongPressedCommand="{Binding LongPressedCommand}"
+                                   TouchDownCommandParameter="{x:Reference effectsView}"
+                                   TouchUpCommandParameter="{x:Reference effectsView}"
+                                   LongPressedCommandParameter="{x:Reference effectsView}" >
+        <syncEffectsView:SfEffectsView.BindingContext>
+            <local:EffectsViewModel/>
+        </syncEffectsView:SfEffectsView.BindingContext>
+        <Grid Padding="12" 
+            WidthRequest="350" 
+            HeightRequest="150"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,1">
+                    <GradientStop Color="#FF6B6B" Offset="0.0" />
+                    <GradientStop Color="#4ECDC4" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
+    </syncEffectsView:SfEffectsView>
+</ContentPage>
+```
+
+## Commands vs. Trigger Properties
+
+The command properties and the trigger properties (`TouchDownEffects`, `TouchUpEffects`, `LongPressEffects`, `Effects`) are independent. Commands fire alongside any visual effect you have configured, so you can use a trigger property to play the visual feedback and a command to run your view-model logic at the same time.
+
+## Troubleshooting
+
+- If a command does not fire, confirm the `BindingContext` is set on the page (or a parent element) and that the binding path resolves to a non-`null` `ICommand` property.
+- If `Command.CanExecute` returns `false`, the command will not fire even when the gesture occurs. Call `Command.ChangeCanExecute()` after the state changes to re-evaluate.
+- If `{x:Reference}` does not resolve, confirm the `SfEffectsView` has the matching `x:Name` and that the reference is on the same page.
+- If a command parameter is `null` in the handler, confirm the corresponding `*CommandParameter` property is set to a non-`null` value.
