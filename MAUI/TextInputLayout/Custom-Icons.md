@@ -36,7 +36,7 @@ Default values:
 
 ## Interactivity
 
-You can wire up gestures or commands on the leading/trailing view to make the icon interactive (for example, a clear-text button or a password show/hide toggle). See the [Handle icon taps](#handle-icon-taps) section below for a complete example.
+You can wire up gestures or commands on the leading/trailing view to make the icon interactive (for example, a clear-text button or a password show/hide toggle). 
 
 N> Refer to the following links to learn more about font icons:
 
@@ -373,8 +373,6 @@ private void OnEyeTapped(object? sender, TappedEventArgs e)
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfTextInputLayout](https://help.syncfusion.com/maui/text-input-layout/getting-started)
-- [Assistive Labels](https://help.syncfusion.com/maui/text-input-layout/assistive-labels)
-- [Container Types](https://help.syncfusion.com/maui/text-input-layout/container-types)
-- [Custom Font](https://help.syncfusion.com/maui/text-input-layout/custom-font)
+- [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
+- [Custom Font](https://help.syncfusion.com/maui/textinputlayout/custom-font)
 - [ViewPosition enum reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ViewPosition.html)

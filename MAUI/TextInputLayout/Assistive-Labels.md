@@ -1,206 +1,327 @@
 ---
 layout: post
-title: Assistive Labels in .NET MAUI Text Input Layout control | Syncfusion®
-description: Learn here all about Assistive Labels support in Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: Assistive Labels in .NET MAUI SfTextInputLayout | Syncfusion®
+description: Learn how to use assistive labels (helper text, error text, character counter, password toggle, and reserved space) in the Syncfusion® .NET MAUI SfTextInputLayout control.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui, .net maui error label, .net maui hint label.
+keywords: .net maui textinputlayout assistive labels, syncfusion text input layout helper text maui, sftextinputlayout error label maui, .net maui text input layout character counter, .net maui text input layout password toggle, sftextinputlayout reserve space maui
 ---
 
-# Assistive Labels in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Assistive Labels in .NET MAUI SfTextInputLayout
 
-Assistive labels provide additional information about text entered in the input view controls.
+Assistive labels provide additional information about the text entered in the input view hosted by the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control.
 
-## Enabling password visibility toggle
+## Prerequisites
 
-The password visibility toggle is used to show or hide the visibility of characters in the input view added to the control. You can enable this toggle by setting the [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_EnablePasswordVisibilityToggle) property to `true.`
+Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-{% tabs %} 
+- `Syncfusion.Maui.Core`
 
-{% highlight xaml %} 
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
 
-<inputLayout:SfTextInputLayout  Hint="Name" 
-                                EnablePasswordVisibilityToggle="true">
-    <Entry Text="1234"/>
-</inputLayout:SfTextInputLayout>  
- 
+## Assistive Labels Overview
+
+The following assistive labels are available:
+
+- **Password visibility toggle** — show or hide the characters in an [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
+- **Helper text** — additional guidance shown below the input line.
+- **Error text** — error message shown below the input line when `HasError` is set to `true`.
+- **Character counter** — live count of characters against a maximum length.
+- **Reserved space** — placeholder space reserved for assistive labels so the layout does not shift when they appear.
+
+## Password visibility toggle
+
+The password visibility toggle shows or hides the characters in the input view hosted by the control. Enable it by setting the [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_EnablePasswordVisibilityToggle) property to `true`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <VerticalStackLayout>
+        <inputLayout:SfTextInputLayout Hint="Password"
+                                       EnablePasswordVisibilityToggle="True">
+            <Entry Text="1234" />
+        </inputLayout:SfTextInputLayout>
+    </VerticalStackLayout>
+</ContentPage>
+
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Password";
-inputLayout.EnablePasswordVisibilityToggle = true;
-inputLayout.Content = new Entry() { Text = "1234" }; 
+using Syncfusion.Maui.Core;
+
+var inputLayout = new SfTextInputLayout
+{
+    Hint = "Password",
+    EnablePasswordVisibilityToggle = true,
+    Content = new Entry { Text = "1234" }
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![Enable password toggling image](images/GettingStarted/PasswordGettingStarted.png)
+![SfTextInputLayout with the password visibility toggle enabled for the Entry control](images/GettingStarted/PasswordGettingStarted.png)
 
-N> Password visibility toggle can be enabled only for [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
+N> The password visibility toggle can be enabled only for the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control. By default, the toggle is disabled.
 
 ## Helper text
 
-Helper text conveys additional guidance about the input field, such as how it will be used. It can be set using the [HelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HelperText) property.
+Helper text conveys additional guidance about the input field, such as how the value will be used. Set the helper text using the [HelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HelperText) property. Disable the helper text by setting [ShowHelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHelperText) to `false` (default: `true`).
 
-{% tabs %} 
+{% tabs %}
+{% highlight xaml %}
 
-{% highlight xaml %} 
-
-<inputLayout:SfTextInputLayout Hint="Name"
-                               HelperText="Enter your name">
-    <Entry />
-</inputLayout:SfTextInputLayout>   
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Name";
-inputLayout.HelperText = "Enter your name";
-inputLayout.Content = new Entry(); 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <VerticalStackLayout>
+        <inputLayout:SfTextInputLayout Hint="Name"
+                                       HelperText="Enter your name">
+            <Entry />
+        </inputLayout:SfTextInputLayout>
+    </VerticalStackLayout>
+</ContentPage>
 
 {% endhighlight %}
+{% highlight C# %}
 
+using Syncfusion.Maui.Core;
+
+var inputLayout = new SfTextInputLayout
+{
+    Hint = "Name",
+    HelperText = "Enter your name",
+    Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-The visibility of the helper text can be disabled by setting the [ShowHelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHelperText) property to false. By default, it is set to true.
+![SfTextInputLayout with helper text "Enter your name" displayed below the input line](images/AssistiveLabels/Maui-TextInputLayout-HelperText.jpg)
 
-![maui-textinputlayout-helpertext label](images/AssistiveLabels/Maui-TextInputLayout-HelperText.jpg)
-
-## Enabling password visibility toggle
-
-The password visibility toggle is used to show or hide the visibility of characters in the input view added to the control. You can enable this toggle by setting the [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_EnablePasswordVisibilityToggle) property to `true.`
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<inputLayout:SfTextInputLayout  Hint="Name" 
-                                EnablePasswordVisibilityToggle="true">
-    <Entry Text="1234"/>
-</inputLayout:SfTextInputLayout>  
- 
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Password";
-inputLayout.EnablePasswordVisibilityToggle = true;
-inputLayout.Content = new Entry() { Text = "1234" }; 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Enable password toggling image](images/GettingStarted/PasswordGettingStarted.png)
-
-N> Password visibility toggle can be enabled only for [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
+N> Helper text and error text share the same area below the input line. When `HasError` is `true`, the error text replaces the helper text.
 
 ## Error message
 
-When the text input is not accepted, an error message will display instructions to fix it. Error messages will be displayed below the input line till entering the correct text. It can be set using the [ErrorText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ErrorText) property, but it will be displayed only when the [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HasError) property is set to `true.`
+When the entered text is not accepted, an error message can be displayed below the input line until the user provides a valid value. Set the message with the [ErrorText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ErrorText) property. The error is rendered only when the [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HasError) property is set to `true`.
 
-{% tabs %} 
+{% tabs %}
+{% highlight xaml %}
 
-{% highlight xaml %} 
-
-<inputLayout:SfTextInputLayout Hint="Email" ContainerType="Outlined"
-                               HelperText="Enter your email address"
-                               ErrorText="Invalid email"
-                               HasError="true">
-    <Entry />
-</inputLayout:SfTextInputLayout>  
- 
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Email";
-inputLayout.ContainerType= ContainerType.Outlined;
-inputLayout.HelperText = "Enter your email address";
-inputLayout.ErrorText = "Invalid email";
-inputLayout.HasError = true; 
-inputLayout.Content = new Entry(); 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <VerticalStackLayout>
+        <inputLayout:SfTextInputLayout Hint="Email"
+                                       ContainerType="Outlined"
+                                       HelperText="Enter your email address"
+                                       ErrorText="Invalid email"
+                                       HasError="True">
+            <Entry />
+        </inputLayout:SfTextInputLayout>
+    </VerticalStackLayout>
+</ContentPage>
 
 {% endhighlight %}
+{% highlight C# %}
 
+using Syncfusion.Maui.Core;
+
+var inputLayout = new SfTextInputLayout
+{
+    Hint = "Email",
+    ContainerType = ContainerType.Outlined,
+    HelperText = "Enter your email address",
+    ErrorText = "Invalid email",
+    HasError = true,
+    Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![maui-textinputlayout-error label](images/AssistiveLabels/Maui-TextInputLayout-ErrorLabel.jpg)
+![SfTextInputLayout with the "Invalid email" error message displayed below the input line](images/AssistiveLabels/Maui-TextInputLayout-ErrorLabel.jpg)
 
-N> Error validations should be done in the application level.
+N> Validations must be performed in your application logic. Toggle `HasError` based on the validation result and clear the error by setting `HasError = false`.
+
+### Toggle the error programmatically
+
+The following example shows how to flip `HasError` based on the result of a simple email validation. The example uses the `TextChanged` event of the `Entry` control.
+
+{% tabs %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+
+public MainPage()
+{
+    InitializeComponent();
+    var inputLayout = new SfTextInputLayout
+    {
+        Hint = "Email",
+        HelperText = "Enter your email address",
+        ErrorText = "Invalid email"
+    };
+
+    var entry = new Entry();
+    entry.TextChanged += OnEmailTextChanged;
+    inputLayout.Content = entry;
+    Content = new VerticalStackLayout
+    {
+        Children =
+        {
+            inputLayout
+        }
+    };
+}
+
+private void OnEmailTextChanged(object? sender, TextChangedEventArgs e)
+{
+    var isValid = !string.IsNullOrWhiteSpace(e.NewTextValue)
+                    && e.NewTextValue.Contains('@')
+                    && e.NewTextValue.Contains('.');
+    if (sender is Entry parentEntry && parentEntry.Parent is SfTextInputLayout layout)
+    {
+        layout.HasError = !isValid;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Character counter
 
-Character counter is used when you need to limit the characters. Character limit can be set using the [CharMaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CharMaxLength) property.The character counter can be enabled by setting the [ShowCharCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowCharCount) property to true.
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<inputLayout:SfTextInputLayout Hint="Password" 
-                               ShowCharCount="true"
-                               CharMaxLength="20"
-                               ContainerType="Outlined"
-                               HelperText="Enter 5 to 20 characters">
-    <Entry />
-</inputLayout:SfTextInputLayout> 
-  
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Password";
-inputLayout.CharMaxLength = 20;
-inputLayout.ShowCharCount = true;
-inputLayout.ContainerType= ContainerType.Outlined;
-inputLayout.HelperText = "Enter 5 to 8 characters";
-inputLayout.Content = new Entry(); 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Character Maximum Length](images/AssistiveLabels/textinputlayout_showchar.gif)
-
-N> When character count reaches the maximum character length, the error color will be applied to hint, border, and counter label.
-
-## Reserve spaces for assistive labels
-
-The reserved spaces for assistive labels can be removed by setting the [ReserveSpaceForAssistiveLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ReserveSpaceForAssistiveLabels) property to false.
+The character counter shows the number of characters entered and the configured maximum. Enable it by setting [ShowCharCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowCharCount) to `true` (default: `false`) and set the limit with [CharMaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CharMaxLength). The counter updates live as the user types and is displayed in the format `current / max` (for example, `7 / 20`).
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<inputLayout:SfTextInputLayout ContainerType="Outlined" 
-                               Hint="Name" 
-                               ReserveSpaceForAssistiveLabels="False">
-    <Entry />
-</inputLayout:SfTextInputLayout>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <VerticalStackLayout>
+        <inputLayout:SfTextInputLayout Hint="Password"
+                                       ContainerType="Outlined"
+                                       ShowCharCount="True"
+                                       CharMaxLength="20"
+                                       HelperText="Enter 5 to 20 characters">
+            <Entry />
+        </inputLayout:SfTextInputLayout>
+    </VerticalStackLayout>
+</ContentPage>
 
 {% endhighlight %}
+{% highlight C# %}
 
-{% highlight c# %}
+using Syncfusion.Maui.Core;
 
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Name";
-inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ReserveSpaceForAssistiveLabels = false;
-inputLayout.Content = new Entry(); 
+var inputLayout = new SfTextInputLayout
+{
+    Hint = "Password",
+    ContainerType = ContainerType.Outlined,
+    ShowCharCount = true,
+    CharMaxLength = 20,
+    HelperText = "Enter 5 to 20 characters",
+    Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![Reserve space for assistive label image](images/AssistiveLabels/ReserveSpace.png)
+![SfTextInputLayout showing the live character counter as the user types](images/AssistiveLabels/textinputlayout_showchar.gif)
+
+N> When the character count reaches `CharMaxLength`, the error color is applied to the hint, border, and counter label. The counter itself does not prevent additional typing; combine it with `Entry.MaxLength` if you need to hard-cap input.
+
+## Reserve space for assistive labels
+
+By default, the control reserves vertical space for assistive labels so that the layout does not shift when helper text, error text, or the character counter appear. Disable this reserved space by setting [ReserveSpaceForAssistiveLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ReserveSpaceForAssistiveLabels) to `false` (default: `true`).
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <VerticalStackLayout>
+        <inputLayout:SfTextInputLayout ContainerType="Outlined"
+                                       Hint="Name"
+                                       ReserveSpaceForAssistiveLabels="False">
+            <Entry />
+        </inputLayout:SfTextInputLayout>
+    </VerticalStackLayout>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+
+var inputLayout = new SfTextInputLayout
+{
+    Hint = "Name",
+    ContainerType = ContainerType.Outlined,
+    ReserveSpaceForAssistiveLabels = false,
+    Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![SfTextInputLayout without reserved space for assistive labels; the layout collapses to fit only the input line](images/AssistiveLabels/ReserveSpace.png)
+
+N> Set `ReserveSpaceForAssistiveLabels` to `false` only if the host page already provides a fixed area for assistive labels. Otherwise, controls below the input may shift when an error or counter appears.
+
+## Troubleshooting
+
+| Issue | Possible Cause | Recommended Action |
+|-------|----------------|--------------------|
+| Password toggle icon does not appear. | The content is not an [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control, or `EnablePasswordVisibilityToggle` is `false`. | Ensure the inner control is `Entry` and set `EnablePasswordVisibilityToggle = true`. |
+| Helper text is not visible. | `ShowHelperText` is `false`, or the text is being replaced by `ErrorText` because `HasError` is `true`. | Set `ShowHelperText = true` and clear the error by setting `HasError = false`. |
+| Error text is not displayed. | `HasError` is `false`, so the control suppresses `ErrorText`. | Toggle `HasError = true` after your validation fails. |
+| Character counter does not appear. | `ShowCharCount` is `false` (default) or `CharMaxLength` is not set. | Set `ShowCharCount = true` and assign `CharMaxLength`. |
+| Counter shows error color before reaching the maximum. | The internal value reached `CharMaxLength`; the error state is automatic. | Reduce the input length or increase `CharMaxLength`. |
+
+## See Also
+
+- [Getting Started with .NET MAUI SfTextInputLayout](https://help.syncfusion.com/maui/textinputlayout/getting-started)
+- [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
+- [Custom Icons](https://help.syncfusion.com/maui/textinputlayout/custom-icons)
