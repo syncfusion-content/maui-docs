@@ -104,9 +104,6 @@ public class CarouselViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> The `Duration` property applies only when the SfCarousel is in the Default mode. To use a different mode, see [LoadMore in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/loadmore).
-
-
 ## See Also
 
 - [Populating Data in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
