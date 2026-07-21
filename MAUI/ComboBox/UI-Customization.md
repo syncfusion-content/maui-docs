@@ -10,11 +10,19 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # UI Customization in .NET MAUI ComboBox (SfComboBox)
 
-This section explains different UI customizations available in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
+This section explains the different UI customizations available in [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
 
-To get start quickly to customize the Appearance of .NET MAUI ComboBox, you can check on this video:
+To get started quickly with customizing the appearance of the .NET MAUI ComboBox, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=_yk7El0Seu8" %}
+
+## Prerequisites
+
+Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Placeholder
 
@@ -39,6 +47,37 @@ SfComboBox comboBox = new SfComboBox()
     DisplayMemberPath = "Name",
     Placeholder = "Select a social media"
 };
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -75,6 +114,37 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -106,15 +176,46 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox clear button color](Images/UICustomization/ClearButtonColor.png)
 
 ## DropDown Icon Color
 
-The DropDown icon color can be changed by using the [DropDownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownIconColor) property. The default value of the DropDownIconColor property is `Colors.Black`.
+The DropDown icon color can be changed by using the [DropDownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownIconColor) property. The default value of the `DropDownIconColor` property is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -137,9 +238,40 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox  drop-down icon color](Images/UICustomization/DropDownIconColor.png)
 
@@ -171,25 +303,56 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox border color](Images/UICustomization/BorderColor.png)
 
-## Customize the selection text highlightColor 
+## Customize the selection text highlight color
 
 The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the combobox control.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        SelectionTextHighlightColor="Green" />
+<editors:SfComboBox x:Name="comboBox"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    Placeholder="Enter Media"
+                    SelectionTextHighlightColor="Green" />
 
 {% endhighlight %}
 
@@ -197,12 +360,43 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 SfComboBox comboBox = new SfComboBox() 
 {
-    ItemsSource = socialMediaViewModel.SocialMedias
+    ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
     SelectionTextHighlightColor = Colors.Green,
 };
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -211,7 +405,7 @@ SfComboBox comboBox = new SfComboBox()
 
 ## CustomView for ComboBox
 
-[CustomView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_CustomView) property has used to provide the custom view instead of entry in ComboBox. It's default height and width has control height and width.
+[CustomView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_CustomView) property is used to provide a custom view instead of an Entry in the ComboBox. Its default height and width match the control height and width.
 
 {% tabs %}
 
@@ -219,7 +413,8 @@ SfComboBox comboBox = new SfComboBox()
 
 <editors:SfComboBox x:Name="comboBox">
     <editors:SfComboBox.CustomView>
-        <Label x:Name="customLabel"  Text="Custom View"  
+        <Label x:Name="customLabel"  
+               Text="Custom View"  
                TextColor="Red"
                HorizontalOptions="Center"
                VerticalTextAlignment="Center"/>
@@ -247,11 +442,11 @@ SfComboBox comboBox = new SfComboBox
 
 ![CustomView](images/UICustomization/CustomView.png)
 
-N> `SfComboBox` ClearButton will not be supported when using Custom View.
+N> `SfComboBox` clear button will not be supported when using Custom View.
 
 ## Maximum DropDown Height
 
-The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the ComboBox control. The default value of MaxDropDownHeight property is `400d`.
+The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the ComboBox control. The default value of `MaxDropDownHeight` property is `400d`.
 
  N> If the `MaxDropDownHeight` is too small compared to the populated items, the scroll viewer will be automatically shown to navigate the hidden items.
 
@@ -259,7 +454,7 @@ The maximum height of the drop-down can be changed by using the [MaxDropDownHeig
 {% highlight xaml %}
 
     <editors:SfComboBox x:Name="comboBox"
-                        IsEditable="true"
+                        IsEditable="True"
                         MaxDropDownHeight="150"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -271,11 +466,42 @@ The maximum height of the drop-down can be changed by using the [MaxDropDownHeig
 SfComboBox comboBox = new SfComboBox() 
 {
     IsEditable = true,
-    comboBox.MaxDropDownHeight = 150,
+    MaxDropDownHeight = 150,
     ItemsSource = socialMediaViewModel.SocialMedias,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
 };
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -286,7 +512,7 @@ The following image illustrates the result of the above code:
 
 ## Customize the DropDown (suggestion) item 
 
-The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using the custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
+The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates. The sample assumes a binding context with an `Employees` collection and image assets added to the project.
 
 {% tabs %}
 {% highlight C# %}
@@ -321,7 +547,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
                 Designation = "Team Lead",
                 ID = "E002",
             });
-            ...
+
         }
     }
 
@@ -331,115 +557,115 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox Placeholder="Select an employee"
-                        TextMemberPath="Name"
-                        DisplayMemberPath="Name"
-                        ItemsSource="{Binding Employees}"
-                        x:Name="comboBox">
-        <editors:SfComboBox.BindingContext>
-            <local:EmployeeViewModel/>
-        </editors:SfComboBox.BindingContext>
+<editors:SfComboBox Placeholder="Select an employee"
+                    TextMemberPath="Name"
+                    DisplayMemberPath="Name"
+                    ItemsSource="{Binding Employees}"
+                    x:Name="comboBox">
+    <editors:SfComboBox.BindingContext>
+        <local:EmployeeViewModel/>
+    </editors:SfComboBox.BindingContext>
 
-        <editors:SfComboBox.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid Margin="0,5"
-                          VerticalOptions="Center"
-                          HorizontalOptions="Center"
-                          ColumnDefinitions="48,220"
-                          RowDefinitions="50">
-                            <Image Grid.Column="0"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"
-                                   Source="{Binding ProfilePicture}"
-                                   Aspect="AspectFit"/>
-                            <StackLayout HorizontalOptions="Start"
-                                         VerticalOptions="Center"
-                                         Grid.Column="1"
-                                         Margin="15,0,0,0">
-                                <Label HorizontalTextAlignment="Start"
-                                       VerticalTextAlignment="Center"
-                                       Opacity=".87"
-                                       FontSize="14"
-                                       Text="{Binding Name}"/>
-                                <Label HorizontalOptions="Start"
-                                       VerticalTextAlignment="Center"
-                                       Opacity=".54"
-                                       FontSize="12"
-                                       Text="{Binding Designation}"/>
-                            </StackLayout>
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </editors:SfComboBox.ItemTemplate>
-    </editors:SfComboBox>
+    <editors:SfComboBox.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <Grid Margin="0,5"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      ColumnDefinitions="48,220"
+                      RowDefinitions="50">
+                    <Image Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Source="{Binding ProfilePicture}"
+                            Aspect="AspectFit"/>
+                    <StackLayout HorizontalOptions="Start"
+                                 VerticalOptions="Center"
+                                 Grid.Column="1"
+                                 Margin="15,0,0,0">
+                            <Label HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   Opacity=".87"
+                                   FontSize="14"
+                                   Text="{Binding Name}"/>
+                            <Label HorizontalOptions="Start"
+                                   VerticalTextAlignment="Center"
+                                   Opacity=".54"
+                                   FontSize="12"
+                                   Text="{Binding Designation}"/>
+                    </StackLayout>
+                </Grid>
+            </ViewCell>
+        </DataTemplate>
+    </editors:SfComboBox.ItemTemplate>
+</editors:SfComboBox>
 
 {% endhighlight %}
 {% highlight C# %}
 
-    EmployeeViewModel employee = new EmployeeViewModel();
+EmployeeViewModel employee = new EmployeeViewModel();
 
-    SfComboBox comboBox = new SfComboBox()
-        {
-            BindingContext = employee,
-            ItemsSource = employee.Employees,
-            DisplayMemberPath = "Name",
-            Placeholder = "Enter an employee",
-            TextMemberPath = "Name",
-        };
-
-    DataTemplate itemTemplate = new DataTemplate(() =>
+SfComboBox comboBox = new SfComboBox()
     {
-        Grid grid = new();
-        grid.Margin = new Thickness(0, 5);
-        grid.HorizontalOptions = LayoutOptions.Center;
-        grid.VerticalOptions = LayoutOptions.Center;
-        ColumnDefinition colDef1 = new ColumnDefinition() { Width = 48 };
-        ColumnDefinition colDef2 = new ColumnDefinition() { Width = 220 };
-        RowDefinition rowDef = new RowDefinition() { Height = 50 };
-        grid.ColumnDefinitions.Add(colDef1);
-        grid.ColumnDefinitions.Add(colDef2);
-        grid.RowDefinitions.Add(rowDef);
+        BindingContext = employee,
+        ItemsSource = employee.Employees,
+        DisplayMemberPath = "Name",
+        Placeholder = "Enter an employee",
+        TextMemberPath = "Name",
+    };
 
-        Image image = new();
-        image.HorizontalOptions = LayoutOptions.Center;
-        image.VerticalOptions = LayoutOptions.Center;
-        image.Aspect = Aspect.AspectFit;
-        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
-        Grid.SetColumn(image, 0);
+DataTemplate itemTemplate = new DataTemplate(() =>
+{
+    Grid grid = new();
+    grid.Margin = new Thickness(0, 5);
+    grid.HorizontalOptions = LayoutOptions.Center;
+    grid.VerticalOptions = LayoutOptions.Center;
+    ColumnDefinition colDef1 = new ColumnDefinition() { Width = 48 };
+    ColumnDefinition colDef2 = new ColumnDefinition() { Width = 220 };
+    RowDefinition rowDef = new RowDefinition() { Height = 50 };
+    grid.ColumnDefinitions.Add(colDef1);
+    grid.ColumnDefinitions.Add(colDef2);
+    grid.RowDefinitions.Add(rowDef);
 
-        StackLayout stack = new();
-        stack.Orientation = StackOrientation.Vertical;
-        stack.Margin = new Thickness(15, 0,0,0);
-        stack.HorizontalOptions = LayoutOptions.Start;
-        stack.VerticalOptions = LayoutOptions.Center;
-        Grid.SetColumn(stack, 1);
+    Image image = new();
+    image.HorizontalOptions = LayoutOptions.Center;
+    image.VerticalOptions = LayoutOptions.Center;
+    image.Aspect = Aspect.AspectFit;
+    image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
+    Grid.SetColumn(image, 0);
 
-        Label label = new();
-        label.SetBinding(Label.TextProperty, "Name");
-        label.FontSize = 14;
-        label.VerticalOptions = LayoutOptions.Center;
-        label.HorizontalTextAlignment = TextAlignment.Start;
-        label.Opacity = .87;
+    StackLayout stack = new();
+    stack.Orientation = StackOrientation.Vertical;
+    stack.Margin = new Thickness(15, 0,0,0);
+    stack.HorizontalOptions = LayoutOptions.Start;
+    stack.VerticalOptions = LayoutOptions.Center;
+    Grid.SetColumn(stack, 1);
 
-        Label label1 = new();
-        label1.SetBinding(Label.TextProperty, "Designation");
-        label1.FontSize = 12;
-        label1.VerticalOptions = LayoutOptions.Center;
-        label1.HorizontalTextAlignment = TextAlignment.Start;
-        label1.Opacity = .54;
+    Label label = new();
+    label.SetBinding(Label.TextProperty, "Name");
+    label.FontSize = 14;
+    label.VerticalOptions = LayoutOptions.Center;
+    label.HorizontalTextAlignment = TextAlignment.Start;
+    label.Opacity = .87;
 
-        stack.Children.Add(label);
-        stack.Children.Add(label1);
+    Label label1 = new();
+    label1.SetBinding(Label.TextProperty, "Designation");
+    label1.FontSize = 12;
+    label1.VerticalOptions = LayoutOptions.Center;
+    label1.HorizontalTextAlignment = TextAlignment.Start;
+    label1.Opacity = .54;
 
-        grid.Children.Add(image);
-        grid.Children.Add(stack);
+    stack.Children.Add(label);
+    stack.Children.Add(label1);
 
-        return new ViewCell { View = grid };
-    });
-    comboBox.ItemTemplate = itemTemplate;
+    grid.Children.Add(image);
+    grid.Children.Add(stack);
 
-    this.Content = comboBox;
+    return new ViewCell { View = grid };
+});
+comboBox.ItemTemplate = itemTemplate;
+
+this.Content = comboBox;
 
 {% endhighlight %}
 {% endtabs %}
@@ -482,6 +708,37 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox DropDown Item Text](Images/UICustomization/DropDownItemText.png)
@@ -494,11 +751,11 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% highlight xaml %}
 
     <editors:SfComboBox x:Name="comboBox"
-                            ItemsSource="{Binding SocialMedias}"
-                            DisplayMemberPath="Name"
-                            TextMemberPath="Name"
-                            Placeholder="Enter Media"
-                            DropDownBackground="YellowGreen" />
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownBackground="YellowGreen" />
 
 {% endhighlight %}
 
@@ -514,6 +771,37 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox DropDown Background](Images/UICustomization/DropDownBackground.png)
@@ -526,11 +814,11 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        SelectedDropDownItemBackground="LightSeaGreen" />
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    Placeholder="Enter Media"
+                    SelectedDropDownItemBackground="LightSeaGreen" />
 
 {% endhighlight %}
 
@@ -546,24 +834,57 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox Selected DropDown Item Background](Images/UICustomization/SelectedDropDownItemBackground.png)
 
 ### Customize the Selected DropDown Item Text Style
 
-The [SelectedDropDownItemTextStyle]() property in the SfComboBox control allows developers to customize the appearance of the selected item in the dropdown list. This feature is useful for highlighting user selections and improving the overall UI experience.
+The [SelectedDropDownItemTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemTextStyle) property in the ComboBox control allows developers to customize the appearance of the selected item in the dropdown list. This feature is useful for highlighting user selections and improving the overall UI experience.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media">
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    Placeholder="Enter Media">
     <editors:SfComboBox.SelectedDropDownItemTextStyle>
-        <editors:DropDownTextStyle TextColor="Orange" FontSize="16" FontAttributes="Bold"/>
+        <editors:DropDownTextStyle TextColor="Orange" 
+                                   FontSize="16" 
+                                   FontAttributes="Bold"/>
     </editors:SfComboBox.SelectedDropDownItemTextStyle>
 </editors:SfComboBox>
 
@@ -586,6 +907,37 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ### Customize the DropDown Border Color
@@ -596,11 +948,11 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
     <editors:SfComboBox x:Name="comboBox"
-                            ItemsSource="{Binding SocialMedias}"
-                            DisplayMemberPath="Name"
-                            TextMemberPath="Name"
-                            Placeholder="Enter Media"
-                            DropDownStroke="DarkOrange" />
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownStroke="DarkOrange" />
 
 {% endhighlight %}
 
@@ -616,6 +968,37 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox DropDown Stroke](Images/UICustomization/DropDownStroke.png)
@@ -628,12 +1011,12 @@ The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        DropDownStroke="DarkOrange"
-                        DropDownStrokeThickness="5" />
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    Placeholder="Enter Media"
+                    DropDownStroke="DarkOrange"
+                    DropDownStrokeThickness="5" />
 
 {% endhighlight %}
 
@@ -650,11 +1033,42 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox DropDown StrokeThickness](Images/UICustomization/DropDownStrokeThickness.png)
 
-### Customize the visibility of Dropdown Shadow
+### Customize the dropdown shadow visibility
 
 The [IsDropDownShadowVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible) property is used to customize the visibility of the dropdown shadow.
 
@@ -678,9 +1092,40 @@ SfComboBox comboBox = new SfComboBox()
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
-    IsDropDownShadowVisible = False
+    IsDropDownShadowVisible = false
 };
 
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -695,11 +1140,11 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        DropDownItemHeight="25" />
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    Placeholder="Enter Media"
+                    DropDownItemHeight="25" />
 
 {% endhighlight %}
 
@@ -715,13 +1160,44 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
 ### Customize the DropDownPlacement
 
-The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
+The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the [DropDownPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownPlacement) property.
 
 *   `Top` - Drop-down will be placed above the text box.
 
@@ -735,11 +1211,11 @@ The drop-down that shows the filtered items will be placed automatically based o
 {% tabs %}
 {% highlight xaml %}
 
- <editors:SfComboBox x:Name="comboBox"
-                         ItemsSource="{Binding SocialMedias}"
-                         DisplayMemberPath="Name"
-                         TextMemberPath = "Name"
-                         DropDownPlacement="Top"/>
+<editors:SfComboBox x:Name="comboBox"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath = "Name"
+                    DropDownPlacement="Top"/>
 
 {% endhighlight %}
 
@@ -754,23 +1230,53 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox Dropdownplacement.](Images/UICustomization/placementcombo.png)
 
 ### Customize the DropDown ItemPadding
 
-The comboBox enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
+The comboBox enables the user to provide padding for the items inside dropdown using [ItemPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemPadding) property.
 
 {% tabs %}
 {% highlight xaml %}
 
-   <editors:SfComboBox x:Name="comboBox"
-                         ItemsSource="{Binding SocialMedias}"
-                         DisplayMemberPath="Name"
-                         TextMemberPath = "Name"
-                         ItemPadding="10,20,0,0"/>
+<editors:SfComboBox x:Name="comboBox"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath = "Name"
+                    ItemPadding="10,20,0,0"/>
 
 {% endhighlight %}
 
@@ -792,16 +1298,16 @@ SfComboBox comboBox = new SfComboBox()
 
 ### Customize the DropDown Width
 
-The `DropdownWidth` property is used to modify the Width of the dropdown.
+The [DropdownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownWidth) property is used to modify the Width of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath = "Name"
-                        DropdownWidth="500"/>
+<editors:SfComboBox x:Name="comboBox"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath = "Name"
+                    DropdownWidth="500"/>
 
 {% endhighlight %}
 
@@ -816,7 +1322,37 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox DropDownWidth.](Images/UICustomization/DropDownWidth.png)
@@ -824,7 +1360,7 @@ SfComboBox comboBox = new SfComboBox()
 
 ### Show suggestion box on focus
 
-Suggestion box can be shown whenever the control receives focus using the `ShowSuggestionsOnFocus` property. At this time, suggestion list is the complete list of data source.
+Suggestion box can be shown whenever the control receives focus using the [ShowSuggestionsOnFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ShowSuggestionsOnFocus) property. At this time, suggestion list is the complete list of data source.
 
 {% tabs %}
 {% highlight xaml %}
@@ -849,7 +1385,37 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox OnFocus.](Images/UICustomization/OnFocus.png)
@@ -1171,7 +1737,7 @@ The following image illustrates the result of the above code:
 
 ## DropDown button customization
 
-We can customize the size of the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the `Width` and `Height` properties in [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings).
+We can customize the size of the drop down button in [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the `Width` and `Height` properties in [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings).
 
 {% tabs %}
 
@@ -1206,25 +1772,55 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox DropDown Button Size Customization](images/UICustomization/DropDownButtonSize.png)
 
 ## Customize Dropdown corner radius
 
-The [DropDownCornerRadius]() property is used to modify the corner radius of the dropdown container for the `SfComboBox` control.
+The [DropDownCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownCornerRadius) property is used to modify the corner radius of the dropdown container for the ComboBox control.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="250" 
-                        HeightRequest = "50"
-                        DropDownCornerRadius = "25"
-                        DisplayMemberPath = "Name"
-                        TextMemberPath = "Name"
-                        ItemsSource="{Binding SocialMedias}" />
+                    WidthRequest="250" 
+                    HeightRequest="50"
+                    DropDownCornerRadius="25"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    ItemsSource="{Binding SocialMedias}" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -1241,6 +1837,37 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -1249,7 +1876,7 @@ The following image illustrates the result of the above code:
 
 ### View for DropDown button
 
-We can set view to the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) using [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings) property.
+We can set `View` to the drop down button in ComboBox using [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings) property.
 {% tabs %}
 
 {% highlight xaml %}
@@ -1308,24 +1935,48 @@ SfComboBox comboBox = new SfComboBox
 
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox DropDown Button CustomView](images/UICustomization/DropDownButtonSettings_View.png)
 
 ## Styling token items
 
-The ComboBox control allows you to customize the style of TokenItem generated in the selection area by using the `TokenItemStyle` property. 
+The ComboBox control allows you to customize the style of TokenItem generated in the selection area by using the [TokenItemStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TokenItemStyle) property. 
 
 {% tabs %}
 
 {% highlight xaml %}
- ...
-
-  xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-  xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-
- ...
 
   <editors:SfComboBox SelectionMode="Multiple" 
              x:Name="comboBox" 
@@ -1347,7 +1998,37 @@ The ComboBox control allows you to customize the style of TokenItem generated in
  </editors:SfComboBox>
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code.
@@ -1357,34 +2038,22 @@ The following image illustrates the result of the above code.
 
 ## Completed Event
 
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the ComboBox editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
 
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="combobox"
-                        IsEditable="True"
-                        ItemsSource="{Binding SocialMedias}"
-                        TextMemberPath="Name"
-                        DisplayMemberPath="Name" 
-                        Completed="combobox_Completed"/>
+<editors:SfComboBox x:Name="combobox"
+                    IsEditable="True"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextMemberPath="Name"
+                    DisplayMemberPath="Name" 
+                    Completed="combobox_Completed"/>
 
 {% endhighlight %}
+
 {% highlight C# %}
 
-    private async void combobox_Completed(object sender, EventArgs e)
-    {
-        await DisplayAlert("Message", "Text entering Completed", "close");
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-Completed event can be subscribed in C# also:
-
-{% tabs %}
-{% highlight C# %}
-    
 SfComboBox combobox = new SfComboBox()
 {
     IsEditable = true,
@@ -1394,6 +2063,49 @@ SfComboBox combobox = new SfComboBox()
 };
 combobox.Completed += combobox_Completed;
 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Completed` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
+private async void combobox_Completed(object sender, EventArgs e)
+{
+    await DisplayAlert("Message", "Text entering Completed", "close");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1406,7 +2118,7 @@ N> The `Completed` event is not supported in the Android platform.
 
 ## DropDownOpening Event
 
-The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with CancelEventArgs that contains the following property:
+The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with `CancelEventArgs` that contains the following property:
 
  * Cancel: Dropdown opening is based on this value.
 
@@ -1435,8 +2147,40 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
+
+The `DropdownOpening` event can be handled in C# as follows:
 
 {% tabs %}
 
@@ -1453,44 +2197,76 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 ## DropDownOpened Event
 
-The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpened) event occurs when the SfComboBox drop-down is opened.
+The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpened) event occurs when the ComboBox drop-down is opened.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        DropdownOpened="comboBox_DropdownOpened"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name">   
-    </editors:SfComboBox>
+<editors:SfComboBox x:Name="comboBox"
+                    DropdownOpened="comboBox_DropdownOpened"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name">   
+</editors:SfComboBox>
  
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfComboBox comboBox = new SfComboBox
-    {
-        ItemsSource = socialMediaViewModel.SocialMedias,
-        DisplayMemberPath = "Name",
-        TextMemberPath = "Name"
-    };
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 comboBox.DropdownOpened += comboBox_DropdownOpened;
 
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
+
+The `DropdownOpened` event can be handled in C# as follows:
 
 {% tabs %}
 
 {% highlight c# %}
 
-      private void comboBox_DropdownOpened(object sender, EventArgs e)
-      {
-         // Triggered when dropdown is opened
-      }
+private void comboBox_DropdownOpened(object sender, EventArgs e)
+{
+    // Triggered when dropdown is opened
+}
 
 {% endhighlight %}
 
@@ -1498,38 +2274,70 @@ comboBox.DropdownOpened += comboBox_DropdownOpened;
 
 ## DropDownClosed Event
 
-The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownClosed) event occurs when the SfComboBox drop-down is closed.
+The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownClosed) event occurs when the ComboBox drop-down is closed.
 
 {% tabs %}
 {% highlight xaml %}
 
-    
-    <editors:SfComboBox x:Name="comboBox"
-                         ItemsSource="{Binding SocialMedias}"
-                         DisplayMemberPath="Name"
-                         TextMemberPath="Name"
-                         DropDownClosed="SfComboBox_DropDownClosed"/>
+<editors:SfComboBox x:Name="comboBox"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    DropDownClosed="SfComboBox_DropDownClosed"/>
 {% endhighlight %}
 {% highlight c# %}
 
-    SfComboBox comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
+comboBox.DropDownClosed += SfComboBox_DropDownClosed;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
     {
-        ItemsSource = socialMediaViewModel.SocialMedias,
-        DisplayMemberPath = "Name",
-        TextMemberPath = "Name"
-    };
-    comboBox.DropDownClosed += SfComboBox_DropDownClosed;
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
+The `DropDownClosed` event can be handled in C# as follows:
+
 {% tabs %}
 {% highlight c# %}
     
-    private void SfComboBox_DropDownClosed(object sender, EventArgs e)
-    {
-        DisplayAlert("Message", "DropDown Closed", "close");
-    }
+private void SfComboBox_DropDownClosed(object sender, EventArgs e)
+{
+    DisplayAlert("Message", "DropDown Closed", "close");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1539,8 +2347,8 @@ N> When `WindowSoftInputModeAdjust.Resize` is set in the sample and `SfComboBox`
 ## ValueChanged Event
 When the value of comboBox changes, the [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ValueChanged) event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
 
-* `OldValue` – Contains the previous text value before the change.
-* `NewValue` – Contains the new text value after the change.
+* `OldValue` - Contains the previous text value before the change.
+* `NewValue` - Contains the new text value after the change.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1564,10 +2372,40 @@ SfComboBox comboBox = new SfComboBox
 comboBox.ValueChanged += OnValueChanged;
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-The ValueChanged event can be handled as follows:
+The `ValueChanged` event can be handled as follows:
 
 {% tabs %}
 {% highlight C# %}
@@ -1583,24 +2421,22 @@ private async void OnValueChanged(object sender, ComboBoxValueChangedEventArgs e
  
 ## CursorPosition
 
-The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the SfComboBox.
+The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the ComboBox.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        IsEditable="True"
-                        CursorPosition = "4" />
+<editors:SfComboBox x:Name="comboBox"
+                    IsEditable="True"
+                    CursorPosition = "4" />
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
-    SfComboBox comboBox = new SfComboBox
-    {
-        IsEditable = true,
-        CursorPosition = 4
-    };
+SfComboBox comboBox = new SfComboBox
+{
+    IsEditable = true,
+    CursorPosition = 4
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -1609,22 +2445,20 @@ N> The cursor position support is available for editable mode only, and two-way 
 
 ## Border visibility
 
-The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ShowBorder) property of [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ShowBorder) property of ComboBox is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        ShowBorder="False"/>
+<editors:SfComboBox x:Name="comboBox"
+                    ShowBorder="False"/>
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
-    SfComboBox comboBox = new SfComboBox
-    {
-        ShowBorder = false
-    };
+SfComboBox comboBox = new SfComboBox
+{
+    ShowBorder = false
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -1635,24 +2469,24 @@ The following image illustrates the result of the above code:
 
 ## TextAlignment
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_VerticalTextAlignment) properties.
+The ComboBox provides support to customize the text alignment by using the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_VerticalTextAlignment) properties.
 
 N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        HorizontalTextAlignment="Center" 
-                        VerticalTextAlignment="Start"/>
+<editors:SfComboBox x:Name="comboBox"
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Start"/>
 {% endhighlight %}
 {% highlight c# %}
 
-    SfComboBox comboBox = new SfComboBox
-    {
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Start
-    };
+SfComboBox comboBox = new SfComboBox
+{
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Start
+};
 
 
 {% endhighlight %}
@@ -1664,9 +2498,9 @@ The following image illustrates the result of the above code:
 
 ## ReturnType
 
-The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+The [ReturnType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ReturnType) property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
 
-You can define the return key type of [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the ReturnType property.
+You can define the return key type of `SfComboBox` by using the `ReturnType` property.
 
 N> Default value of ReturnType is `Default`.
 
@@ -1674,10 +2508,10 @@ N> Default value of ReturnType is `Default`.
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-            ItemsSource="{Binding SocialMedias}"
-            DisplayMemberPath="Name"
-            TextMemberPath="Name" 
-            ReturnType="Next"/>
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name" 
+                    ReturnType="Next"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -1691,13 +2525,44 @@ SfComboBox comboBox = new SfComboBox()
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI ComboBox ReturnType](Images/UICustomization/ReturnType.png)
 
 ## Clear button customization
 
-The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) clear button.
+The [ClearButtonPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonPath) property allows users to set the path for customizing the appearance of the ComboBox clear button.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1734,6 +2599,37 @@ comboBox.TextMemberPath = "Name";
 comboBox.ClearButtonPath = path;
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
@@ -1742,27 +2638,58 @@ The following image illustrates the result of the above code:
 
 ## ClearButtonClicked Event
 
-The [ClearButtonClicked]() event is raised when the user activates the clear button in the `SfComboBox` editable mode by tapping or pressing the clear button on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`.
+The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ClearButtonClicked) event is raised when the user activates the clear button in the `ComboBox` editable mode by tapping or pressing the clear button on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        ItemsSource="{Binding SocialMedias}"
-                        TextMemberPath="Name"
-                        DisplayMemberPath="Name"
-                        ClearButtonClicked="comboBox_ClearButtonClicked"/>
+<editors:SfComboBox x:Name="comboBox"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextMemberPath="Name"
+                    DisplayMemberPath="Name"
+                    ClearButtonClicked="comboBox_ClearButtonClicked"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-    SfAutoComplete comboBox = new SfAutoComplete
-    {
-        ItemsSource = socialMediaViewModel.SocialMedias,
-        TextMemberPath = "Name",
-        DisplayMemberPath = "Name"
-    };
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name"
+};
 comboBox.ClearButtonClicked += comboBox_ClearButtonClicked;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1782,8 +2709,8 @@ private async void comboBox_ClearButtonClicked(object sender, EventArgs e)
 
 ## Return Command and Return Command Parameter
 
-- `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
-- `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
+- [ReturnCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ReturnCommand), of type ICommand, defines the command to be executed when the return key is pressed.
+- [ReturnCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ReturnCommandParameter), of type object, specifies the parameter for the `ReturnCommand`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1808,6 +2735,37 @@ SfComboBox comboBox = new SfComboBox
 };
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -1828,10 +2786,16 @@ public SocialMediaViewModel
 
 ## Automation ID
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides `AutomationId` support for the `editable entry`, the `clear button`, and the `dropdown button`, enabling UI automation frameworks to reliably target these primary elements. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides `AutomationId` support for the `editable entry`, the `clear button`, and the `dropdown button`, enabling UI automation frameworks to reliably target these primary elements. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness.
 
 For example, if the SfComboBox’s `AutomationId` is set to “Employee ComboBox,” the editable entry can be targeted as “Employee ComboBox Entry,” the clear button as “Employee ComboBox Clear Button,” and the dropdown button as “Employee ComboBox Dropdown Button.” This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements. The following screenshot illustrates the AutomationIds of inner elements.
 
 The following screenshot illustrates the AutomationIds of inner elements.
 
 ![.NET MAUI ComboBox AutomationId Image demonstration](Images/UICustomization/ComboBox_AutomationID.png)
+
+## See Also
+
+* [Header and footer](https://help.syncfusion.com/maui/combobox/header-and-footer)
+* [No results found](https://help.syncfusion.com/maui/combobox/no-results-found)
+* [Liquid Glass support](https://help.syncfusion.com/maui/combobox/liquidglasssupport)
