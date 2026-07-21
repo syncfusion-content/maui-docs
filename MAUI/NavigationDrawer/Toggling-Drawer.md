@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Programmatically Toggling the Drawer in .NET MAUI Navigation Drawer | Syncfusion®
+title: Toggling the Drawer in .NET MAUI Navigation Drawer | Syncfusion®
 description: Learn how to programmatically open and close the drawer in the Syncfusion® .NET MAUI Navigation Drawer.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Programmatically Toggling the Drawer in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Programmatically Toggling the Drawer in .NET MAUI Navigation Drawer
 
 ## Prerequisites
 

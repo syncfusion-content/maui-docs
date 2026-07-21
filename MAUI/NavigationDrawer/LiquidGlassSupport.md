@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Liquid Glass Support for .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Liquid Glass Support for .NET MAUI Navigation Drawer
 
 ## Prerequisites
 
