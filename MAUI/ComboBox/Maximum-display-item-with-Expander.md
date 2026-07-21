@@ -353,7 +353,6 @@ public class SocialMedia
 The `LoadMoreButtonTapped` event can be handled in C# as follows:
 
 {% tabs %}
-{% highlight xaml %}
 {% highlight c# %}
 
 private void OnComboBoxLoadMoreButtonTapped(object? sender, EventArgs e)

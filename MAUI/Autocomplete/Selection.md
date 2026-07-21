@@ -146,6 +146,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 public class SocialMediaViewModel
 {
     public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+    public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
 
     public SocialMediaViewModel()
     {
@@ -160,6 +161,12 @@ public class SocialMediaViewModel
             new SocialMedia { Name = "Twitter", ID = 6 },
             new SocialMedia { Name = "WhatsApp", ID = 7 },
             new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+
+        SelectedItemsList = new ObservableCollection<SocialMedia>
+        {
+            SocialMedias[0],
+            SocialMedias[2],
         };
     }
 }
