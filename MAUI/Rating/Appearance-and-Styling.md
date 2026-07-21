@@ -21,13 +21,11 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Overview
 
-When the default view is not needed, you can customize the view of the [.NET MAUI SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. The [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control provides support to customize the item size, item count, value, and space between rating items.
+When the default view is not needed, you can customize the view of the [.NET MAUI SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. The Rating control provides support to customize the item size, item count, value, and space between rating items.
 
 ## Set Size
 
-The [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize) property sets the size of the rating items, in device-independent units (DIU). The value must be greater than zero.
-
-N> The default value of this property is 50.
+The [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize) property sets the size of the rating items, in device-independent units (DIU). The value must be greater than zero. The default value of this property is 50.
 
 {% tabs %}
 
@@ -52,9 +50,7 @@ SfRating rating = new SfRating()
 
 ## Set Number of Items
 
-The [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property sets the number of rating items to be displayed. The value must be an integer greater than zero.
-
-N> The default value of this property is 5.
+The [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property sets the number of rating items to be displayed. The value must be an integer greater than zero. The default value of this property is 5.
 
 {% tabs %}
 
@@ -79,9 +75,7 @@ SfRating rating = new SfRating()
 
 ## Set Space between Items
 
-The [`ItemSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSpacing) property sets the spacing between the rating items, in device-independent units (DIU). The value must be greater than or equal to zero.
-
-N> The default value of this property is 5.
+The [`ItemSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSpacing) property sets the spacing between the rating items, in device-independent units (DIU). The value must be greater than or equal to zero. The default value of this property is 5.
 
 {% tabs %}
 
@@ -106,7 +100,7 @@ SfRating rating = new SfRating()
 
 ## Set Value
 
-The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property of the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control determines the rating selected among the items. The following code example sets a display value of three with five rating items. The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property accepts a `double`, so it also supports half and other fractional values when used with the [Precision](https://help.syncfusion.com/maui/rating/precision-mode) mode. The property is two-way bindable and fires the [`ValueChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ValueChanged) event when the value changes.
+The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property of the `Rating` control determines the rating selected among the items. The following code example sets a display value of three with five rating items. The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property accepts a `double`, so it also supports half and other fractional values when used with the [Precision](https://help.syncfusion.com/maui/rating/precision-mode) mode. The property is two-way bindable and fires the [`ValueChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ValueChanged) event when the value changes.
 
 N> The default value of this property is 0. The valid range is 0 to `ItemCount`.
 
@@ -131,9 +125,7 @@ SfRating rating = new SfRating()
 
 ## Rating Settings
 
-This section explains the rating settings available in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. Use the [`RatingSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html) class to customize the fill, stroke, and stroke thickness of the rated and unrated items.
-
-> **Note:** When setting `RatedStrokeThickness` or `UnratedStrokeThickness`, also set the corresponding `RatedStroke` or `UnratedStroke` color, otherwise the stroke will not be visible. For detailed per-property examples, see [Appearance Customization](https://help.syncfusion.com/maui/rating/appearance-customization).
+This section explains the rating settings available in the `Rating` control. Use the [`RatingSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html) class to customize the fill, stroke, and stroke thickness of the rated and unrated items.
 
 {% tabs %}
 
@@ -176,8 +168,6 @@ SfRating rating = new SfRating()
 
 ## See also
 
-* [Getting Started with .NET MAUI Rating](https://help.syncfusion.com/maui/rating/getting-started)
 * [Precision Mode in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/precision-mode)
 * [Rating Shape in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/rating-shape)
-* [Restrict User Selection in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/restrict-user-selection)
 * [Appearance Customization in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/appearance-customization)

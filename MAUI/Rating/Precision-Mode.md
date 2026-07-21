@@ -21,9 +21,7 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Overview
 
-The [`Precision`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html) mode defines the accuracy level of the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. It has [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard), [`Half`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Half), and [`Exact`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Exact) options. The default precision mode of the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control is [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard).
-
-The [`Precision`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html) mode is available in `Syncfusion.Maui.Inputs` from version 19.3.0.x and is supported in .NET MAUI (net6.0 and later).
+The [`Precision`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html) mode defines the accuracy level of the [` .NET MAUI Rating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. It has [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard), [`Half`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Half), and [`Exact`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Exact) options. The default precision mode of the `Rating` control is [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard).
 
 The following table summarizes the available precision modes and their typical use cases.
 
@@ -35,13 +33,14 @@ The following table summarizes the available precision modes and their typical u
 
 ## Standard
 
-When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) is set as [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard), rating items are filled completely based on the rating value. Only whole values are accepted; fractional values are rounded to the nearest whole number.
+When the precision mode of `Rating` is set as [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard), rating items are filled completely based on the rating value. Only whole values are accepted; fractional values are rounded to the nearest whole number.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<rating:SfRating Value="3" Precision="Standard" />
+<rating:SfRating Value="3" 
+                 Precision="Standard" />
 
 {% endhighlight %}
 
@@ -61,13 +60,14 @@ SfRating rating = new SfRating()
 
 ## Half
 
-When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) is set as [`Half`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Half), rating items are filled up to half of an item based on the rating value. Half values (for example, 0.5, 1.5, 2.5) are accepted, allowing partial fills of rating items.
+When the precision mode of `Rating` is set as [`Half`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Half), rating items are filled up to half of an item based on the rating value. Half values (for example, 0.5, 1.5, 2.5) are accepted, allowing partial fills of rating items.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<rating:SfRating Value="2.5" Precision="Half" />
+<rating:SfRating Value="2.5" 
+                 Precision="Half" />
 
 {% endhighlight %}
 
@@ -87,13 +87,14 @@ SfRating rating = new SfRating()
 
 ## Exact
 
-When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) is set as [`Exact`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Exact), rating items are filled precisely to match the exact rating value. Fractional values (for example, 3.7) are accepted and rating items are filled to the proportional amount.
+When the precision mode of `Rating` is set as [`Exact`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Exact), rating items are filled precisely to match the exact rating value. Fractional values (for example, 3.7) are accepted and rating items are filled to the proportional amount.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<rating:SfRating Value="3.7" Precision="Exact" />
+<rating:SfRating Value="3.7" 
+                 Precision="Exact" />
 
 {% endhighlight %}
 
@@ -113,7 +114,7 @@ SfRating rating = new SfRating()
 
 ## See Also
 
-- [Getting Started with .NET MAUI Rating](https://help.syncfusion.com/maui/rating/getting-started) — Step-by-step guide to configure the SfRating control in a .NET MAUI project.
-- [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) — Sets the current rating value.
-- [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_IsReadOnly) — Restricts user selection of rating items. 
+* [Restrict User Selection in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/restrict-user-selection)
+* [Appearance and Styling in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/appearance-and-styling)
+* [Rating Shape in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/rating-shape)
 

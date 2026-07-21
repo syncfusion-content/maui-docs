@@ -21,7 +21,7 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Overview
 
-The [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control supports five built-in rating shapes through the [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) property. The following shapes are available:
+The `Rating` control supports five built-in rating shapes through the [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) property. The following shapes are available:
 
 * [`Star`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Star)
 * [`Heart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Heart)
@@ -29,7 +29,7 @@ The [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRa
 * [`Circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Circle)
 * [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Custom)
 
-The default rating shape of the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control is [`Star`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Star).
+The default rating shape of the `Rating` control is `Star`.
 
 ![SfRating rating shapes](images/rating-shapes.png)
 
@@ -37,7 +37,7 @@ The `Star`, `Heart`, `Diamond`, and `Circle` shapes are built-in and require no 
 
 ## Custom
 
-When [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) is set to [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Custom), provide a custom SVG path to the [`Path`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Path) property. The `Path` value uses standard [SVG path data](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d) syntax (move, line, curve commands), and is rendered at the size defined by [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize). The fill color is determined by the `SfRating` [`RatedFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_RatedFill) and [`UnratedFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_UnratedFill) properties.
+When [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) is set to `Custom`, provide a custom SVG path to the [`Path`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Path) property. The `Path` value uses standard [SVG path data](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d) syntax (move, line, curve commands), and is rendered at the size defined by [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize). The fill color is determined by the `RatedFill` and `UnratedFill` properties.
 
 {% tabs %}
 
@@ -62,18 +62,12 @@ SfRating rating = new SfRating
 
 {% endtabs %}
 
-### Custom shape sizing
 
-The `ItemSize` should match the path's viewBox/size for the `Custom` rating shape. Mismatched values may cause the shape to be clipped, stretched, or rendered too small.
+N> The Item size should be the same as the path size for Custom Rating Shape
 
-N> Ensure the `Syncfusion.Maui.Inputs` NuGet package is installed and the project is restored before using `SfRating`. For setup details, see [Getting Started with .NET MAUI Rating](https://help.syncfusion.com/maui/Rating/Getting-Started).
-
-N> If the custom shape does not render, verify that the `Path` value is valid SVG path data and that the `xmlns:rating` namespace (XAML) or `using Syncfusion.Maui.Inputs;` directive (C#) is present.
 
 ## See also
 
-* [Getting Started with .NET MAUI Rating](https://help.syncfusion.com/maui/Rating/Getting-Started)
-* [ItemSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize)
-* [ItemCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount)
-* [Precision](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Precision)
-* [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSpacing)
+* [Appearance and Styling in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/appearance-and-styling)
+* [Precision Mode in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/precision-mode)
+* [Appearance Customization in .NET MAUI Rating](https://help.syncfusion.com/maui/rating/appearance-customization)
