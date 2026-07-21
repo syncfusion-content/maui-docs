@@ -9,6 +9,12 @@ documentation : ug
 
 # UIVirtualization in .NET MAUI Carousel View (SfCarousel)
 
+UI virtualization in the [.NET MAUI Carousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
+
+The following property is used to enable UI virtualization:
+
+* [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization)
+
 ## Prerequisites
 
 Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -17,18 +23,11 @@ Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
 
-
-UI virtualization in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
-
-The following property is used to enable UI virtualization:
-
-* [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization)
-
 ## Enable UI Virtualization
 
-The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property of `SfCarousel`. The property applies to both the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default) and [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear) [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html) values. The default value of the `EnableVirtualization` property is `false`.
+The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property of `Carousel` control. The property applies to both the `Default` and `Linear` [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html) values. The default value of the `EnableVirtualization` property is `false`.
 
-## Default Mode
+### Default Mode
 
 {% tabs %}
 
@@ -46,7 +45,8 @@ The UI virtualization concept is implemented by enabling the [EnableVirtualizati
     </carousel:SfCarousel.BindingContext>
     <carousel:SfCarousel.ItemTemplate>
         <DataTemplate >
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            <Image Source="{Binding Image}" 
+                   Aspect="AspectFit"/>
         </DataTemplate>
     </carousel:SfCarousel.ItemTemplate>
 </carousel:SfCarousel>
@@ -132,7 +132,8 @@ public class CarouselViewModel
     </carousel:SfCarousel.BindingContext>
     <carousel:SfCarousel.ItemTemplate>
         <DataTemplate >
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            <Image Source="{Binding Image}" 
+                   Aspect="AspectFit"/>
         </DataTemplate>
     </carousel:SfCarousel.ItemTemplate>
 </carousel:SfCarousel>
@@ -205,17 +206,9 @@ public class CarouselViewModel
 
 Find the complete UIVirtualization sample from this [link](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/UIVirtualization/VirtualizationSample).
 
-## Behavior
-
-When `EnableVirtualization` is set to `true`:
-
-- `SfCarousel` realizes only the items currently inside (or near) the viewport.
-- As the user swipes, items that move out of the viewport are recycled and replaced with upcoming items.
-- Memory usage stays roughly constant regardless of the total number of items in `ItemsSource`.
-
-When `EnableVirtualization` is `false` (the default), every item in the source collection is realized up front, which can increase memory usage and lengthen initial load time for large data sets.
-
 ## See Also
 
 - [Getting Started with .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/getting-started)
 - [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
+- [Transformation in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/transformation)

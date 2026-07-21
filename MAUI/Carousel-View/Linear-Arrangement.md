@@ -21,18 +21,16 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 Set [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ViewMode) to [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear) to display the carousel items in a stacked linear layout. When not set, the default value is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default), which places a single item in the center of the view.
 
-> **When to use:** Use the `Linear` view mode when you want multiple carousel items to be visible at once along a horizontal axis (similar to a stack of cards), rather than focusing on a single centered item.
-
 The following example shows how to configure `SfCarousel` in `Linear` view mode with a custom item template.
 
 {% tabs %}
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
-                    ItemHeight="170"
-                    ItemWidth="270"
-                    ItemsSource="{Binding ImageCollection}"
-                    ViewMode="Linear">
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     ItemsSource="{Binding ImageCollection}"
+                     ViewMode="Linear">
     <carousel:SfCarousel.BindingContext>
         <local:CarouselViewModel/>
     </carousel:SfCarousel.BindingContext>
@@ -111,4 +109,4 @@ The following image shows the carousel items arranged in a stacked linear layout
 ## See also
 
 - [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-- [UI Virtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
+- [UI Virtualization in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/uivirtualization)

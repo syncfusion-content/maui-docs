@@ -9,6 +9,15 @@ documentation: ug
 
 # Swipe Events in .NET MAUI Carousel View (SfCarousel)
 
+## Overview
+
+The [.NET MAUI Carousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control raises swipe events that allow you to respond to swipe gestures on carousel items. The following API members are used to handle swipe interactions:
+
+| Event | EventArgs Type | Description |
+| --- | --- | --- |
+| [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeStarted) | [SwipeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.SwipeStartedEventArgs.html#Syncfusion_Maui_Core_Carousel_SwipeStartedEventArgs__ctor) | Occurs when the swipe gesture starts on a carousel item. |
+| [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SwipeEnded) | EventArgs | Occurs after the swiping is completed on a carousel item.
+
 ## Prerequisites
 
 Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -17,20 +26,9 @@ Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
 
-## Overview
-
-The [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control raises swipe events that allow you to respond to swipe gestures on carousel items. The following API members are used to handle swipe interactions:
-
-| Event | EventArgs Type | Description |
-| --- | --- | --- |
-| [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeStarted) | [SwipeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.SwipeStartedEventArgs.html#Syncfusion_Maui_Core_Carousel_SwipeStartedEventArgs__ctor) | Occurs when the swipe gesture starts on a carousel item. |
-| [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SwipeEnded) | EventArgs | Occurs after the swiping is completed on a carousel item. |
-
-N> The `SwipeStarted` and `SwipeEnded` events are available starting with Syncfusion<sup>®</sup> .NET MAUI Carousel `v18.3.0.x` and later.
-
 ## SwipeStarted Event
 
-The [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeStarted) event occurs when the swipe gesture starts on a carousel item.
+The [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeStarted) event occurs when the swipe gesture starts on a Carousel item.
 
 The [SwipeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.SwipeStartedEventArgs.html#Syncfusion_Maui_Core_Carousel_SwipeStartedEventArgs__ctor) provides the following member:
 
@@ -40,29 +38,30 @@ The [SwipeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 ## SwipeEnded Event
 
-The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeEnded) event occurs after the swiping is completed on a carousel item.
+The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeEnded) event occurs after the swiping is completed on a Carousel item.
 
 ## Wiring Up the Swipe Events
 
-The following example shows how to wire the [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SwipeStarted) and [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SwipeEnded) events to the carousel.
+The following example shows how to wire the `SwipeStarted` and `SwipeEnded` events to the Carousel.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
-                        SwipeStarted="carousel_SwipeStarted"
-                        SwipeEnded="carousel_SwipeEnded"
-                        ItemsSource="{Binding ImageCollection}"
-                        ItemHeight="170"
-                        ItemWidth="270"
-                        AllowLoadMore="True">
+                     SwipeStarted="carousel_SwipeStarted"
+                     SwipeEnded="carousel_SwipeEnded"
+                     ItemsSource="{Binding ImageCollection}"
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     AllowLoadMore="True">
     <carousel:SfCarousel.BindingContext>
         <local:CarouselViewModel/>
     </carousel:SfCarousel.BindingContext>
     <carousel:SfCarousel.ItemTemplate>
         <DataTemplate >
-            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            <Image Source="{Binding Image}" 
+                   Aspect="AspectFit"/>
         </DataTemplate>
     </carousel:SfCarousel.ItemTemplate>
 </carousel:SfCarousel>
@@ -88,16 +87,6 @@ SfCarousel carousel = new SfCarousel()
 };
 carousel.SwipeStarted += carousel_SwipeStarted;
 carousel.SwipeEnded += carousel_SwipeEnded;
-
-private void carousel_SwipeStarted(object sender, Syncfusion.Maui.Core.Carousel.SwipeStartedEventArgs e)
-{
-    // Triggered when the swipe starts on a carousel item.
-}
-
-private void carousel_SwipeEnded(object sender, EventArgs e)
-{
-    // Triggered after the swipe ends on a carousel item.
-}
     
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -137,6 +126,25 @@ public class CarouselViewModel
     }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
+
+The `SwipeStarted` and `SwipeEnded` events can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
+private void carousel_SwipeStarted(object sender, SwipeStartedEventArgs e)
+{
+    // Triggered when the swipe starts on a carousel item.
+}
+
+private void carousel_SwipeEnded(object sender, EventArgs e)
+{
+    // Triggered after the swipe ends on a carousel item.
+}
+    
 {% endhighlight %}
 {% endtabs %}
 

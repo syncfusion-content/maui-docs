@@ -19,7 +19,7 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Duration
 
-The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Duration) property of the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control specifies the time, in milliseconds, taken to move an item to the selected position when the carousel is in the Default mode. The default value is 600 ms. You can customize the animation duration by setting the `Duration` property to the desired value in milliseconds. Setting the value close to 0 effectively disables the animation.
+The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Duration) property of the `Carousel` control specifies the time, in milliseconds, taken to move an item to the selected position when the carousel is in the Default mode. The default value is 600 ms. You can customize the animation duration by setting the `Duration` property to the desired value in milliseconds. Setting the value close to 0 effectively disables the animation.
 
 {% tabs %}
 
