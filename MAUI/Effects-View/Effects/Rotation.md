@@ -7,42 +7,28 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Rotation Effect
-
-The [SfEffects.Rotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Rotation) effect rotates the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) around its center by the specified [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle). Positive angles rotate clockwise; negative angles rotate counter-clockwise.
-
-> **Note**
->
-> `Rotation` cannot be combined with other effects on the same trigger property. Place other effects on a different trigger property (for example, `LongPressEffects`) so both effects can play. See [Combining Effects](Combinations.md) for the full set of rules.
-
-## Rotation Properties
-
-The `Rotation` effect is configured by the following properties on `SfEffectsView`:
-
-| Property | Description | Default |
-| --- | --- | --- |
-| [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle) | Rotation angle in degrees. Positive values rotate clockwise; negative values rotate counter-clockwise. | `0` |
-| [RotationAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RotationAnimationDuration) | Duration of the rotation animation, in milliseconds. | `200` |
-
-For more details, see [Customization](Customization.md).
+# Rotation Effect in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` and `using Microsoft.Maui.Controls;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
+
+The [SfEffects.Rotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Rotation) effect rotates the `SfEffectsView` around its center by the specified [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle). Positive angles rotate clockwise; negative angles rotate counter-clockwise.
+
+N> `Rotation` cannot be combined with other effects on the same trigger property. Place other effects on a different trigger property (for example, `LongPressEffects`) so both effects can play.
 
 ## Adding a Basic Rotation
 
 The example below rotates the `SfEffectsView` by 180 degrees when the user presses it.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border WidthRequest="36"
         HeightRequest="36"
         HorizontalOptions="Center"
@@ -67,11 +53,11 @@ The example below rotates the `SfEffectsView` by 180 degrees when the user press
         </HorizontalStackLayout>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var border = new Border
 {
     WidthRequest = 36,
@@ -119,7 +105,10 @@ var stackLayout = new HorizontalStackLayout
 effectsView.Content = stackLayout;
 border.Content = effectsView;
 this.Content = border;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Rotation effect rotating the view 180 degrees](Effects_images/net_maui_rotation_animation.gif)
 
@@ -127,9 +116,10 @@ this.Content = border;
 
 The example below slows the rotation to 800 milliseconds.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border WidthRequest="36"
         HeightRequest="36"
         HorizontalOptions="Center"
@@ -155,11 +145,11 @@ The example below slows the rotation to 800 milliseconds.
         </HorizontalStackLayout>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var border = new Border
 {
     WidthRequest = 36,
@@ -208,15 +198,19 @@ var stackLayout = new HorizontalStackLayout
 effectsView.Content = stackLayout;
 border.Content = effectsView;
 this.Content = border;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Combining with Other Effects
 
 `Rotation` cannot share a trigger property with other effects. Place another effect on a different trigger property so the two effects can play independently.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border WidthRequest="36"
         HeightRequest="36"
         HorizontalOptions="Center"
@@ -242,11 +236,11 @@ this.Content = border;
         </HorizontalStackLayout>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var border = new Border
 {
     WidthRequest = 36,
@@ -295,11 +289,7 @@ var stackLayout = new HorizontalStackLayout
 effectsView.Content = stackLayout;
 border.Content = effectsView;
 this.Content = border;
-```
 
-## Troubleshooting
+{% endhighlight %}
 
-- If no rotation occurs, confirm `TouchDownEffects` is set to `SfEffects.Rotation` (or the effect is started through `ApplyEffects`) and that `Angle` is non-zero.
-- If the rotation is too fast or too slow, adjust `RotationAnimationDuration` (in milliseconds).
-- If you set `TouchDownEffects="Rotation,Ripple"` (or another combination), only the first effect is applied; place other effects on a different trigger property.
-- If the rotation is hard to see, confirm the view is not constrained to a fixed size; rotation around the center is more visible on square views.
+{% endtabs %}

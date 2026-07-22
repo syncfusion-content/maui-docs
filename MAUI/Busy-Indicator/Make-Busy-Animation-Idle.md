@@ -9,27 +9,15 @@ keywords : .net maui busy indicator idle, maui busy indicator idle, maui busy in
 ---
 # Make Busy Animation Idle in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) lets you control whether the animation is running. **Type:** `bool`. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to `false` stops the animation and hides the indicator.
+## Prerequisites
 
-> **Prerequisites:** Add the `Syncfusion.Maui.Core` NuGet package to your .NET MAUI project. Refer to the [Getting Started](Getting-Started.md) documentation to set up the control.
+Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-N> Ensure that the following namespace is added in your XAML page for using SfBusyIndicator.
+- `Syncfusion.Maui.Core`
 
-{% tabs %}
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/busy-indicator/getting-started) documentation.
 
-{% highlight xaml %}
-
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Core;
-
-{% endhighlight %}
-
-{% endtabs %}
+The `.NET MAUI Busy Indicator` lets you control whether the animation is running. **Type:** `bool`. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to `false` stops the animation and hides the indicator.
 
 ## Stop the animation (idle)
 

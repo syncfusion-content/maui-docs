@@ -9,27 +9,15 @@ keywords : .net maui busy indicator size, maui busy indicator size
 ---
 # Sizing in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) lets you customize the size of the indicator using the [SizeFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_SizeFactor) property. **Type:** `double`. It sets both the height and width of the indicator. The default value is `0.5`, and the valid range is `0` to `1` (where `0` is the smallest and `1` is the largest).
+## Prerequisites
 
-> **Prerequisites:** Add the `Syncfusion.Maui.Core` NuGet package to your .NET MAUI project. Refer to the [Getting Started](Getting-Started.md) documentation to set up the control.
+Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-N> Ensure that the following namespace is added in your XAML page for using SfBusyIndicator.
+- `Syncfusion.Maui.Core`
 
-{% tabs %}
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/busy-indicator/getting-started) documentation.
 
-{% highlight xaml %}
-
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Core;
-
-{% endhighlight %}
-
-{% endtabs %}
+The `.NET MAUI Busy Indicator` lets you customize the size of the indicator using the [SizeFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_SizeFactor) property. **Type:** `double`. It sets both the height and width of the indicator. The default value is `0.5`, and the valid range is `0` to `1` (where `0` is the smallest and `1` is the largest).
 
 {% tabs %}
 

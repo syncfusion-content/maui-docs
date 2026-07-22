@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Indicator Color and Background in .NET MAUI Busy Indicator | Syncfusion®
+title: Indicator Color and Background in .NET MAUI Busy Indicator | Syncfusion
 description: Learn here about color support in Syncfusion® .NET MAUI Busy Indicator control (SfBusyIndicator) and more.
 platform: MAUI
 control: SfBusyIndicator
@@ -10,31 +10,19 @@ keywords : .net maui busy indicator color, maui busy indicator color, maui busy 
 
 # Indicator Color and Background in .NET MAUI Busy Indicator
 
+## Prerequisites
+
+Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/busy-indicator/getting-started) documentation.
+
 The .NET MAUI Busy Indicator lets you customize the indicator color and the overlay background. This section covers the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) and [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) properties.
-
-> **Prerequisites:** Add the `Syncfusion.Maui.Core` NuGet package to your .NET MAUI project. Refer to the [Getting Started](Getting-Started.md) documentation to set up the control.
-
-N> Ensure that the following namespaces are added in your XAML page for using SfBusyIndicator.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Core;
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## IndicatorColor
 
-The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) lets you customize the indicator's color using the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) property. **Type:** `Color`. The default value is the system accent color.
+The `.NET MAUI Busy Indicator` lets you customize the indicator's color using the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) property. **Type:** `Color`. The default value is the system accent color.
 
 {% tabs %}
 

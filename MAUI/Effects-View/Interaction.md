@@ -7,37 +7,26 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Interactions
-
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) exposes four trigger properties that decide when each effect runs. This page documents each trigger and shows how to assign effects to it.
-
-## Trigger Properties
-
-| Property | Triggered on | Type | Default | Example effect |
-| --- | --- | --- | --- | --- |
-| [TouchDownEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDownEffects) | When the user presses the view. | `SfEffects` flags | `SfEffects.None` | `SfEffects.Highlight` |
-| [TouchUpEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUpEffects) | When the user releases the press. | `SfEffects` flags | `SfEffects.None` | `SfEffects.Selection` |
-| [LongPressEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressEffects) | When the user long-presses the view. | `SfEffects` flags | `SfEffects.None` | `SfEffects.Scale` |
-
-You can combine multiple effects on a single trigger by using a comma-separated list in XAML or a bitwise `|` combination in C#. See [Combining Effects](Effects/Combinations.md) for valid combinations.
+# Interactions in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` and `using Microsoft.Maui.Controls;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
+
+The `SfEffectsView`exposes four trigger properties that decide when each effect runs. This page documents each trigger and shows how to assign effects to it.
 
 ## TouchDownEffects
 
 The [TouchDownEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDownEffects) property renders the effect when the user presses the view. Use it for immediate touch feedback.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -55,11 +44,11 @@ The [TouchDownEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -88,15 +77,18 @@ var effectsView = new SfEffectsView
 
 this.Content = effectsView;
 
-```
+{% endhighlight %}
+
+{% endtabs %}
 
 ## LongPressEffects
 
 The [LongPressEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressEffects) property renders the effect when the user long-presses the view. Use it for context menus or selection gestures.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -114,11 +106,11 @@ The [LongPressEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -147,15 +139,18 @@ var effectsView = new SfEffectsView
 
 this.Content = effectsView;
 
-```
+{% endhighlight %}
+
+{% endtabs %}
 
 ## TouchUpEffects
 
 The [TouchUpEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUpEffects) property renders the effect when the user releases the press. Use it to confirm the interaction has completed.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -173,11 +168,11 @@ The [TouchUpEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -206,15 +201,18 @@ var effectsView = new SfEffectsView
 
 this.Content = effectsView;
 
-```
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Combining Multiple Effects on One Interaction
 
 The example below applies both `Highlight` and `Ripple` on a single `TouchDownEffects` trigger.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -232,11 +230,11 @@ The example below applies both `Highlight` and `Ripple` on a single `TouchDownEf
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -264,11 +262,7 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
 
-## Troubleshooting
+{% endhighlight %}
 
-- If an effect does not fire on a touch, confirm the trigger property (`TouchDownEffects`, `TouchUpEffects`, or `LongPressEffects`) is set to a non-`None` value and that the view is not covered by another control that absorbs the touch.
-- If the same effect appears on more than one gesture, you have assigned the same `SfEffect` to multiple trigger properties. The first assignment wins.
-- If `Effects` does not animate on load, confirm the view is actually added to the visual tree before the load completes (for example, set the value in code after the page is shown).
-- If a long-press effect fires too early or too late, the long-press duration is platform-defined and cannot be customized in the current version.
+{% endtabs %}

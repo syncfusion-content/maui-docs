@@ -10,27 +10,15 @@ keywords : .net maui busy indicator title, maui busy indicator title, maui busy 
 
 # Set Header in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-The Syncfusion<sup>®</sup> .NET MAUI Busy Indicator lets you display a title and customize its font. This section covers the title, its color, placement, spacing, and font customization.
+## Prerequisites
 
-> **Prerequisites:** Add the `Syncfusion.Maui.Core` NuGet package to your .NET MAUI project. Refer to the [Getting Started](Getting-Started.md) documentation to set up the control.
+Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-N> Ensure that the following namespace is added in your XAML page for using SfBusyIndicator.
+- `Syncfusion.Maui.Core`
 
-{% tabs %}
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/busy-indicator/getting-started) documentation.
 
-{% highlight xaml %}
-
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Core;
-
-{% endhighlight %}
-
-{% endtabs %}
+The Syncfusion<sup>®</sup> `.NET MAUI Busy Indicator` lets you display a title and customize its font. This section covers the title, its color, placement, spacing, and font customization.
 
 ## Title
 

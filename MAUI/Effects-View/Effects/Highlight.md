@@ -7,40 +7,25 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Highlight Effect
-
-The [SfEffects.Highlight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Highlight) effect applies a smooth color transition to the background of the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) when the user touches the view. Use it to give users visual feedback for taps, long presses, and other interactions.
+# Highlight Effect in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` and `using Microsoft.Maui.Controls;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
 
-## Highlight Properties
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
 
-The `Highlight` effect is configured by the following properties on `SfEffectsView`:
-
-| Property | Description | Default value |
-| --- | --- | --- |
-| `HighlightBackground` | The brush applied to the background during the highlight. Accepts any `Brush` (for example, `SolidColorBrush`). | `SolidColorBrush(Color.FromArgb("#14000000"))` |
-| `HighlightDuration` | The duration of the highlight transition, in milliseconds. | `200` |
-| `AutoResetEffects` | When `true`, the effect is reset automatically when the touch ends. | `true` |
-| `ResetEffects` | Command-like method invoked to reset the effect programmatically. | N/A |
-
-For a list of all trigger properties that accept `SfEffects.Highlight`, see [Combining Effects](Combinations.md).
+The [SfEffects.Highlight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Highlight) effect applies a smooth color transition to the background of the `SfEffectsView` when the user touches the view. Use it to give users visual feedback for taps, long presses, and other interactions.
 
 ## Setting the Highlight Background
 
 The example below applies a red background to the `SfEffectsView` while the user is touching it.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
 
 <Border HorizontalOptions="Center" VerticalOptions="Center">
     <Border.StrokeShape>
@@ -72,11 +57,10 @@ The example below applies a red background to the `SfEffectsView` while the user
     </syncEffectsView:SfEffectsView>
 </Border>
 
-### C#
 
-```csharp
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.Core;
+{% endhighlight %}
+
+{% highlight c# %}
 
 var grid = new Grid
 {
@@ -148,14 +132,10 @@ var border = new Border
 
 this.Content = border;
 
-```
+{% endhighlight %}
+
+{% endtabs %}
 
 The XAML example uses the string `"Red"` (a named color), and the C# example uses `SolidColorBrush(Colors.Aqua)`. Both forms are equivalent; pick whichever matches your styling preference.
 
 ![Highlight effect with a custom background](Effects_images/net_maui_highlight_effect.png)
-
-## Troubleshooting
-
-- If the highlight is not visible, confirm `HighlightBackground` is set to a non-null `Brush` and that the view has a non-zero `Width` and `Height`.
-- If the highlight persists after the user releases the touch, set `AutoResetEffects="True"` or call `ResetEffects` manually.
-- If you assign `SfEffects.Highlight` to more than one trigger property, only the first assignment is applied.

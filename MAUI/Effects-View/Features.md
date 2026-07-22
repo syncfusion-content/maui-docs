@@ -7,36 +7,26 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Features
-
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides the following additional features that complement the built-in effects.
-
-## Feature Summary
-
-| Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| [FadeOutRipple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_FadeOutRipple) | `bool` | `false` | Fades the ripple to opacity 0 as it grows. |
-| [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_IsSelected) | `bool` | `false` | Marks the view as selected. Read by the `Selection` effect. |
-| [ShouldIgnoreTouches](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ShouldIgnoreTouches) | `bool` | `false` | Stops the view from handling touches itself. |
-| [AutoResetEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_AutoResetEffects) | `AutoResetEffects` flags | All supported effects | Selects which effects automatically return to rest after the touch ends. |
+# Features in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` and `using Microsoft.Maui.Controls;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
+
+The `SfEffectsView` control provides the following additional features that complement the built-in effects.
 
 ## FadeOutRipple
 
 When `FadeOutRipple` is `true`, the ripple fades to opacity 0 as it grows, producing a softer animation. The optional `RippleAnimationDuration` property controls how long the ripple animation runs, in milliseconds. The default value is `400`.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border HorizontalOptions="Center" VerticalOptions="Center">
     <Border.StrokeShape>
         <RoundRectangle CornerRadius="18" />
@@ -66,11 +56,11 @@ When `FadeOutRipple` is `true`, the ripple fades to opacity 0 as it grows, produ
         </Grid>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     ColumnDefinitions =
@@ -140,7 +130,10 @@ var border = new Border
 };
 
 this.Content = border;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Ripple fading out as it grows](Features_images/EffectsView_Fadeout_Ripple.gif)
 
@@ -148,9 +141,10 @@ this.Content = border;
 
 Setting `IsSelected` to `true` marks the `SfEffectsView` as selected. The `Selection` effect reads this property and applies the `SelectionBackground` brush.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -168,11 +162,11 @@ Setting `IsSelected` to `true` marks the `SfEffectsView` as selected. The `Selec
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -200,15 +194,19 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## ShouldIgnoreTouches
 
 When `ShouldIgnoreTouches` is `true`, the `SfEffectsView` does not handle touches itself. Use it when the view is hosted inside a scroll view, carousel, or other container that needs to receive the gesture, while still allowing the visual effects to fire.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -228,11 +226,11 @@ When `ShouldIgnoreTouches` is `true`, the `SfEffectsView` does not handle touche
 </syncEffectsView:SfEffectsView>
 <syncEffectsView:SfEffectsView ShouldIgnoreTouches="True">
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -260,7 +258,10 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## AutoResetEffects
 
@@ -268,9 +269,10 @@ this.Content = effectsView;
 
 Supported values include `Highlight`, `Ripple`, `Scale`, and `Selection`. Combine them with the bitwise `|` operator in C# or with a comma-separated list in XAML.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -288,11 +290,11 @@ Supported values include `Highlight`, `Ripple`, `Scale`, and `Selection`. Combin
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -320,15 +322,7 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
 
-> **Note**
->
-> The C# example disambiguates between the property name `AutoResetEffects` and the nested enum type by using the full type path `SfEffectsView.AutoResetEffects.Highlight`. In XAML, the parser resolves the string `"Highlight"` to the matching enum member.
+{% endhighlight %}
 
-## Troubleshooting
-
-- If `FadeOutRipple` has no visible effect, confirm the `Ripple` effect is applied to one of the trigger properties (`TouchDownEffects`, `TouchUpEffects`, or `LongPressEffects`) or started through `ApplyEffects`.
-- If setting `IsSelected` does not show a selection, confirm the `Selection` effect is assigned to a trigger property and that `SelectionBackground` is set to a non-null `Brush`.
-- If touches still reach the `SfEffectsView` after setting `ShouldIgnoreTouches`, check that no parent container is re-dispatching the events.
-- If an effect does not auto-reset, confirm its value is included in the `AutoResetEffects` flags.
+{% endtabs %}

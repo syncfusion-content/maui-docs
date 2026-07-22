@@ -7,30 +7,17 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Combining Effects
-
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination on a single view.
+# Combining Effects in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
 
-## Trigger Properties
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
 
-The `SfEffectsView` exposes four properties that accept one or more `SfEffects` flags. The trigger property you assign determines when each effect runs:
-
-| Property | Triggered on |
-| --- | --- |
-| `Effects` | Loaded automatically without user interaction. |
-| `TouchDownEffects` | When the user presses the view. |
-| `TouchUpEffects` | When the user releases the press. |
-| `LongPressEffects` | When the user long-presses the view. |
+The `SfEffectsView` control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination on a single view.
 
 ## Combination Rules
 
@@ -343,9 +330,3 @@ this.Content = effectsView;
 
 {% endhighlight %}
 {% endtabs %}
-
-## Troubleshooting
-
-- If no effect is visible, confirm the `SfEffectsView` has a non-zero `Width` and `Height` and is hosted inside a `ContentPage`.
-- If you assign the same `SfEffect` value to more than one trigger property, only the first assignment is applied. Reset by calling `ResetEffects` on the view.
-- Combined effects remain in their final state until the view is released; use `AutoResetEffects` to control the auto-reset behavior.

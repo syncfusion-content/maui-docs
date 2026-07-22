@@ -7,36 +7,26 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Scale Effect
-
-The [SfEffects.Scale](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Scale) effect smoothly scales the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) and its `Content` from the current size to a new size determined by the [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleFactor). The factor is a unitless multiplier: values below `1` shrink the view, values above `1` grow it.
-
-## Scale Properties
-
-The `Scale` effect is configured by the following properties on `SfEffectsView`:
-
-| Property | Description | Default |
-| --- | --- | --- |
-| [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleFactor) | Target scale applied to the view. Values below `1` shrink the view; values above `1` grow it. | `1.0` |
-| [ScaleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleAnimationDuration) | Duration of the scale animation, in milliseconds. | `200` |
+# Scale Effect in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` and `using Microsoft.Maui.Controls;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
+
+The [SfEffects.Scale](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Scale) effect smoothly scales the `SfEffectsView` and its `Content` from the current size to a new size determined by the [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleFactor). The factor is a unit-less multiplier: values below `1` shrink the view, values above `1` grow it.
 
 ## Adding a Basic Scale
 
 The example below shrinks the `SfEffectsView` to 85% of its current size when the user long-presses it. The other trigger properties are set to `None` so that only the `Scale` effect fires.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <HorizontalStackLayout HorizontalOptions="Center" Spacing="12">
     <syncEffectsView:SfEffectsView x:Name="EffectsView1"
                                    ScaleFactor="0.85"
@@ -110,11 +100,11 @@ The example below shrinks the `SfEffectsView` to 85% of its current size when th
         </Grid>
     </syncEffectsView:SfEffectsView>
 </HorizontalStackLayout>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 /// <summary>
 /// Handle LongPressed event for EffectsView1
 /// </summary>
@@ -150,17 +140,21 @@ private async void SelectImage(SfEffectsView effectsView, Border tickFrame)
     // Show the tick mark
     tickFrame.IsVisible = true;
 }
-```
 
-![Scale effect shrinking the view to 85% of its size](Effects_images/net_maui_scale_animation.png)
+{% endhighlight %}
+
+{% endtabs %}
+
+![Scale effect shrinking the view to eighty-five percent of its size](Effects_images/net_maui_scale_animation.png)
 
 ## Scaling a Child View
 
 The scale effect also scales the `Content` of the `SfEffectsView`. The example below wraps a styled card in an `SfEffectsView` and shrinks the entire card (border, gradient, and labels) when the user long-presses it.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView
     x:Name="effectsView"
     ScaleFactor="0.85"
@@ -192,11 +186,11 @@ The scale effect also scales the `Content` of the `SfEffectsView`. The example b
         </Grid>
     </Border>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var titleLabel = new Label
 {
     Text = "Long-press to scale",
@@ -258,15 +252,19 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Customizing the Duration
 
 The example below uses a longer animation duration so the scale is easier to see.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView
     x:Name="effectsView"
     ScaleFactor="0.7"
@@ -298,11 +296,11 @@ The example below uses a longer animation duration so the scale is easier to see
         </Grid>
     </Border>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var titleLabel = new Label
 {
     Text = "Long-press to scale",
@@ -364,15 +362,19 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Combining with Other Effects
 
 `Scale` can be combined with other effects on a different trigger property. The example below plays `Highlight` on press and `Scale` on long-press.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView
     x:Name="effectsView"
     ScaleFactor="0.85"
@@ -402,11 +404,11 @@ this.Content = effectsView;
         </Grid>
     </Border>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var titleLabel = new Label
 {
     Text = "Long-press to scale",
@@ -466,12 +468,7 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
 
-## Troubleshooting
+{% endhighlight %}
 
-- If the scale is not visible, confirm the `SfEffectsView` has a non-zero `Width` and `Height` (either through `Content`, `Background`, or explicit `WidthRequest`/`HeightRequest`).
-- If the scale appears too small or too large, adjust `ScaleFactor` toward `1.0` for a subtler effect.
-- If the animation feels too fast or too slow, adjust `ScaleAnimationDuration` (in milliseconds).
-- If you set the same trigger property on both `LongPressEffects` and another property (for example, `TouchDownEffects="Highlight"` and `LongPressEffects="Scale,Highlight"`), only the first assignment is applied. Use one effect per trigger.
-- If the scale does not reset, check that `AutoResetEffects` includes `Scale` (or that `ResetEffects` is called).
+{% endtabs %}

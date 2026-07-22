@@ -6,33 +6,17 @@ platform: MAUI
 control: SfEffectsView
 documentation: UG
 
-# Events
-
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) exposes events that fire when the user interacts with the view or when an animation completes. All events use the standard `EventHandler` signature with `sender` typed as `SfEffectsView`.
-
-## Event Summary
-
-| Event | Fires on | Applies to |
-| --- | --- | --- |
-| [AnimationCompleted](#animationcompleted-event) | When an effect's animation finishes. | All effects except `Selection`. |
-| [SelectionChanged](#selectionchanged-event) | When the `IsSelected` state changes. | The `Selection` effect. |
-| [LongPressed](#longpressed-event) | When the user long-presses the view. | Any configuration. |
-| [TouchDown](#touchdown-event) | When the user presses the view. | Any configuration. |
-| [TouchUp](#touchup-event) | When the user releases the press. | Any configuration. |
-
-> **Note**
->
-> The long-press duration is platform-defined and cannot be customized in the current version.
+# Events in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` and `using Microsoft.Maui.Controls;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
+
+The `SfEffectsView` exposes events that fire when the user interacts with the view or when an animation completes. All events use the standard `EventHandler` signature with `sender` typed as `SfEffectsView`.
 
 ## AnimationCompleted event
 
@@ -41,13 +25,12 @@ The [AnimationCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 - When the effect is triggered by direct user interaction, the event fires on touch up.
 - When the effect is applied programmatically (for example, with `ApplyEffects`), the event fires immediately on completion.
 
-> **Note**
->
-> The `AnimationCompleted` event is not raised for the `Selection` effect.
+N> The `AnimationCompleted` event is not raised for the `Selection` effect.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -66,11 +49,11 @@ The [AnimationCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -105,7 +88,10 @@ void OnEffectsViewAnimationCompleted(object sender, EventArgs e)
 {
     // Handle the animation completion here.
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## SelectionChanged event
 
@@ -113,13 +99,10 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 
 The `EventArgs` does not include the new selection state; read it from the `SfEffectsView` sender via the `IsSelected` property.
 
-> **Note**
->
-> The example below sets `TouchDownEffects` and `TouchUpEffects` to `None` so the long-press triggers only the `Selection` effect, without an accompanying ripple or scale.
+{% tabs %} 
 
-### XAML
+{% highlight xaml %}
 
-```xaml
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -140,11 +123,11 @@ The `EventArgs` does not include the new selection state; read it from the `SfEf
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -183,15 +166,19 @@ void OnEffectsViewSelectionChanged(object sender, EventArgs e)
     bool isNowSelected = view.IsSelected;
     // React to the new selection state here.
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## LongPressed event
 
 The [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressed) event fires when the user presses and holds the view for the platform-defined long-press duration.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -211,11 +198,11 @@ The [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEff
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -251,15 +238,19 @@ void OnEffectsViewLongPressed(object sender, EventArgs e)
 {
     // Handle the long-press here.
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## TouchDown event
 
 The [TouchDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDown) event fires when the user presses the view.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -278,11 +269,11 @@ The [TouchDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffec
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -317,15 +308,19 @@ void OnEffectsViewTouchDown(object sender, EventArgs e)
 {
     // Handle the touch-down here.
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## TouchUp event
 
 The [TouchUp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUp) event fires when the user releases the press.
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -344,11 +339,11 @@ The [TouchUp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -383,23 +378,25 @@ void OnEffectsViewTouchUp(object sender, EventArgs e)
 {
     // Handle the touch-up here.
 }
-```
 
-## Unsubscribing
+{% endhighlight %}
+
+{% endtabs %}
+
+## Unsubscribe
 
 Use the `-=` operator to remove an event handler when the subscription is no longer needed (for example, when the page is being torn down).
 
-```csharp
+{% tabs %} 
+
+{% highlight c# %}
+
 effectsView.AnimationCompleted -= OnEffectsViewAnimationCompleted;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Events vs. Commands
 
 Each event has a corresponding command (`TouchDownCommand`, `TouchUpCommand`, `LongPressedCommand`) for view-model scenarios. Choose events for code-behind handlers and commands when you want to bind to a view-model `ICommand`.
-
-## Troubleshooting
-
-- If an event does not fire, confirm the `SfEffectsView` is added to the visual tree (for example, by assigning it to `Content` of a `ContentPage`) and that the corresponding trigger property (`TouchDownEffects`, `TouchUpEffects`, `LongPressEffects`) is set to a non-`None` value.
-- If the `SelectionChanged` event fires but the new state is unclear, read `IsSelected` on the `sender` parameter.
-- If the `AnimationCompleted` event never fires for a `Selection` effect, that is expected; the event is not raised for `Selection`.
-- If you subscribe to the same event multiple times, the handler is called once per subscription; remember to unsubscribe with `-=` to avoid leaks.

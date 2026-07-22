@@ -7,23 +7,17 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Methods
-
-Effects can be applied and removed programmatically using the [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) and [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Reset) methods.
-
-> **Note**
->
-> Effects applied through the `ApplyEffects` method are not removed automatically. Call `ResetEffects` to return the view to its rest state.
+# Methods in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` and `using Microsoft.Maui.Controls;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
+
+Effects can be applied and removed programmatically using the [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) and [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Reset) methods.
 
 ## ApplyEffects
 
@@ -44,9 +38,10 @@ The [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEf
 
 The example below triggers a ripple from the top-left corner when the user clicks a button.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <VerticalStackLayout Padding="10" Spacing="10">
     <syncEffectsView:SfEffectsView x:Name="effectsView"
                                    HorizontalOptions="Center" 
@@ -72,11 +67,11 @@ The example below triggers a ripple from the top-left corner when the user click
             HeightRequest="40"
             Clicked="applyEffects_Button_Clicked"/>
 </VerticalStackLayout>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 
 private void applyEffects_Button_Clicked(object sender, EventArgs e)
 {
@@ -86,15 +81,18 @@ private void applyEffects_Button_Clicked(object sender, EventArgs e)
     }
 }
 
-```
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Apply a Ripple at a Custom Point
 
 Use `rippleStartPoint` to start the ripple at specific coordinates inside the view.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <VerticalStackLayout Padding="10" Spacing="10">
     <syncEffectsView:SfEffectsView x:Name="effectsView"
                                    HorizontalOptions="Center" 
@@ -120,11 +118,11 @@ Use `rippleStartPoint` to start the ripple at specific coordinates inside the vi
             HeightRequest="40"
             Clicked="applyEffects_Button_Clicked"/>
 </VerticalStackLayout>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 private void applyEffects_Button_Clicked(object sender, EventArgs e)
 {
     if (effectsView != null)
@@ -132,15 +130,19 @@ private void applyEffects_Button_Clicked(object sender, EventArgs e)
         effectsView.ApplyEffects(effects: SfEffects.Ripple, rippleStartPoint: new System.Drawing.Point(50, 75));
     }
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Repeat the Ripple
 
 Set `repeat: true` to keep the ripple animating until `ResetEffects` is called.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <VerticalStackLayout Padding="10" Spacing="10">
     <syncEffectsView:SfEffectsView x:Name="effectsView"
                                    HorizontalOptions="Center" 
@@ -166,11 +168,11 @@ Set `repeat: true` to keep the ripple animating until `ResetEffects` is called.
             HeightRequest="40"
             Clicked="applyEffects_Button_Clicked"/>
 </VerticalStackLayout>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 private void applyEffects_Button_Clicked(object sender, EventArgs e)
 {
     if (effectsView != null)
@@ -178,15 +180,19 @@ private void applyEffects_Button_Clicked(object sender, EventArgs e)
         effectsView.ApplyEffects(effects: SfEffects.Ripple, repeat: true);
     }
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Apply Multiple Effects
 
 You can pass a bitwise combination of effects to apply more than one at a time.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <VerticalStackLayout Padding="10" Spacing="10">
     <syncEffectsView:SfEffectsView x:Name="effectsView"
                                    HorizontalOptions="Center" 
@@ -212,11 +218,11 @@ You can pass a bitwise combination of effects to apply more than one at a time.
             HeightRequest="40"
             Clicked="applyEffects_Button_Clicked"/>
 </VerticalStackLayout>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 private void applyEffects_Button_Clicked(object sender, EventArgs e)
 {
     if (effectsView != null)
@@ -224,21 +230,23 @@ private void applyEffects_Button_Clicked(object sender, EventArgs e)
         effectsView.ApplyEffects(effects: SfEffects.Highlight | SfEffects.Ripple);
     }
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## ResetEffects
 
 The [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Reset) method clears any effect previously applied through `ApplyEffects`, returning the `SfEffectsView` to its rest state. The method takes no parameters and returns `void`.
 
-> **Note**
->
-> `Reset` only clears effects started by `ApplyEffects`. Effects started by the touch triggers (`TouchDownEffects`, `TouchUpEffects`, `LongPressEffects`, `Effects`) and the persistent `Selection` state are not affected.
+N> `Reset` only clears effects started by `ApplyEffects`. Effects started by the touch triggers (`TouchDownEffects`, `TouchUpEffects`, `LongPressEffects`, `Effects`) and the persistent `Selection` state are not affected.
 
 ### Apply and Reset
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <VerticalStackLayout Padding="10" Spacing="10" >
     <syncEffectsView:SfEffectsView x:Name="effectsView"
                                    HorizontalOptions="Center" 
@@ -271,11 +279,11 @@ The [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsVi
                 Clicked="reset_Button_Clicked"/>
     </HorizontalStackLayout>
 </VerticalStackLayout>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 private void reset_Button_Clicked(object sender, EventArgs e)
 {
     if (effectsView != null)
@@ -291,11 +299,7 @@ private void applyEffects_Button_Clicked(object sender, EventArgs e)
         effectsView.ApplyEffects( effects: SfEffects.Ripple, repeat: true );
     }
 }
-```
 
-## Troubleshooting
+{% endhighlight %}
 
-- If `ApplyEffects` has no visible effect, confirm the `SfEffectsView` has a non-zero `Width` and `Height` and that the effect's background brush (for example, `RippleBackground`) is set to a non-null `Brush`.
-- If `repeat: true` does not loop the effect, ensure you are passing `SfEffects.Ripple`; other effects ignore the `repeat` parameter.
-- If `ResetEffects` appears to do nothing, confirm the effect was originally started by `ApplyEffects`; `ResetEffects` does not clear `Selection` or touch-triggered effects.
-- If you pass `effects: SfEffects.None`, no effect is applied and no error is raised.
+{% endtabs %}

@@ -7,21 +7,17 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Customization
+# Customization in .NET MAUI Effects View
 
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control exposes properties that customize the duration, size, color, and angle of each effect.
+## Prerequisites
 
-## Customization Summary
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-| Property | Type | Default | Range | Description |
-| --- | --- | --- | --- | --- |
-| [RippleAnimationDuration](#rippleanimationduration) | `int` (ms) | `400` | Positive integer | Duration of the ripple animation. |
-| [ScaleAnimationDuration](#scaleanimationduration) | `int` (ms) | `200` | Positive integer | Duration of the scale animation. |
-| [RotationAnimationDuration](#rotationanimationduration) | `int` (ms) | `200` | Positive integer | Duration of the rotation animation. |
-| [InitialRippleFactor](#initialripplefactor) | `double` | `0.1` | `0` to `1` | Starting size of the ripple as a fraction of the view's smaller dimension. |
-| [ScaleFactor](#scalefactor) | `double` | `1.0` | `>0` | Target scale applied during the `Scale` effect. Values below `1` shrink the view; values above `1` grow it. |
-| [Angle](#angle) | `double` (degrees) | `0` | Any number | Rotation angle. Positive values rotate clockwise. |
-| [HighlightBackground](#highlightbackground) | `Brush` | `SolidColorBrush(Color.FromArgb("#14000000"))` | Any `Brush` | Background brush for the `Highlight` effect. |
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
+
+The `SfEffectsView` control exposes properties that customize the duration, size, color, and angle of each effect.
 
 ## Animation Durations
 
@@ -31,9 +27,10 @@ The three animation-duration properties control how long each effect takes to co
 
 The [RippleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RippleAnimationDuration) property sets the duration of the ripple animation. The default value is `400` milliseconds.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -51,11 +48,11 @@ The [RippleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -83,15 +80,19 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### ScaleAnimationDuration
 
 The [ScaleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleAnimationDuration) property sets the duration of the scale animation. The default value is `200` milliseconds.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -111,11 +112,11 @@ The [ScaleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -145,15 +146,19 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### RotationAnimationDuration
 
 The [RotationAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RotationAnimationDuration) property sets the duration of the rotation animation. The default value is `200` milliseconds.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center"
@@ -173,11 +178,11 @@ The [RotationAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.M
         </Grid.Background>
     </Grid>
 </syncEffectsView:SfEffectsView>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     Padding = new Thickness(12),
@@ -207,7 +212,10 @@ var effectsView = new SfEffectsView
 };
 
 this.Content = effectsView;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Size and Position
 
@@ -215,9 +223,10 @@ this.Content = effectsView;
 
 The [InitialRippleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_InitialRippleFactor) property sets the starting size of the ripple as a fraction of the view's smaller dimension. The default value is `0.1`. Valid range is `0` to `1`.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border HorizontalOptions="Center" VerticalOptions="Center">
     <Border.StrokeShape>
         <RoundRectangle CornerRadius="18" />
@@ -246,11 +255,11 @@ The [InitialRippleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
         </Grid>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     ColumnDefinitions =
@@ -319,7 +328,10 @@ var border = new Border
 };
 
 this.Content = border;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Initial ripple factor of 0.1](Customization_images/EffectsView_InitialRippleFactor.gif)
 
@@ -327,9 +339,10 @@ this.Content = border;
 
 The [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleFactor) property sets the target scale applied during the `Scale` effect. The default value is `1.0`. Values below `1` shrink the view; values above `1` grow it. See [Scale Effect](Effects/Scale.md) for details on the effect itself.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <HorizontalStackLayout HorizontalOptions="Center" Spacing="12">
     <syncEffectsView:SfEffectsView x:Name="EffectsView1"
                                    ScaleFactor="0.85"
@@ -403,11 +416,11 @@ The [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEff
         </Grid>
     </syncEffectsView:SfEffectsView>
 </HorizontalStackLayout>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 
 /// <summary>
 /// Handle LongPressed event for EffectsView1
@@ -444,7 +457,10 @@ private async void SelectImage(SfEffectsView effectsView, Border tickFrame)
     // Show the tick mark
     tickFrame.IsVisible = true;
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Scale factor of 0.85 during the Scale effect](Customization_images/EffectsView_Scale.gif)
 
@@ -456,9 +472,10 @@ The three `*Background` properties accept any `Brush`. The XAML examples below u
 
 The [HighlightBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_HighlightBackground) property sets the brush applied during the `Highlight` effect. The default value is `SolidColorBrush(Color.FromArgb("#14000000"))`.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border HorizontalOptions="Center" VerticalOptions="Center">
     <Border.StrokeShape>
         <RoundRectangle CornerRadius="18" />
@@ -488,11 +505,11 @@ The [HighlightBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
         </Grid>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     ColumnDefinitions =
@@ -562,7 +579,10 @@ var border = new Border
 };
 
 this.Content = border;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Highlight with a custom blue background](Customization_images/EffectsView_Highlight.png)
 
@@ -570,9 +590,10 @@ this.Content = border;
 
 The [RippleBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RippleBackground) property sets the brush applied during the `Ripple` effect. The default value is `SolidColorBrush(Color.FromArgb("#22FFFFFF"))`.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border HorizontalOptions="Center" VerticalOptions="Center">
     <Border.StrokeShape>
         <RoundRectangle CornerRadius="18" />
@@ -602,11 +623,11 @@ The [RippleBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
         </Grid>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     ColumnDefinitions =
@@ -675,7 +696,10 @@ var border = new Border
 };
 
 this.Content = border;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Ripple with a custom blue background](Customization_images/EffectsView_RippleColor.gif)
 
@@ -683,9 +707,10 @@ this.Content = border;
 
 The [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionBackground) property sets the brush applied during the `Selection` effect. The default value is `SolidColorBrush(Color.FromArgb("#14000000"))`.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border HorizontalOptions="Center" VerticalOptions="Center">
     <Border.StrokeShape>
         <RoundRectangle CornerRadius="18" />
@@ -716,11 +741,11 @@ The [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
         </Grid>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     ColumnDefinitions =
@@ -790,7 +815,10 @@ var border = new Border
 };
 
 this.Content = border;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Selection with a custom blue background](Customization_images/EffectsView_Selection.png)
 
@@ -800,9 +828,10 @@ this.Content = border;
 
 The [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle) property sets the rotation angle in degrees. The default value is `0`. Positive values rotate clockwise. See [Rotation Effect](Effects/Rotation.md) for details on the effect itself.
 
-#### XAML
+#{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <VerticalStackLayout VerticalOptions="Center"
                      Spacing="8">
     <Label x:Name="tagText"
@@ -834,11 +863,11 @@ The [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsVi
         </syncEffectsView:SfEffectsView>
     </Border>
 </VerticalStackLayout>
-```
 
-#### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 
 private Label tagText;
 
@@ -925,14 +954,9 @@ private void SfEffectsView_TouchDown(object sender, EventArgs e)
         }
     }
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Rotation angle of 180 degrees](Customization_images/EffectsView_Rotation.png)
-
-## Troubleshooting
-
-- If a customization has no visible effect, confirm the corresponding effect is assigned to a trigger property (`TouchDownEffects`, `TouchUpEffects`, or `LongPressEffects`) and that the view is added to the visual tree.
-- If `InitialRippleFactor` produces no ripple, the value must be greater than `0`.
-- If a `*Background` property accepts the value but no color is shown, confirm the `Brush` is not null and that the color is not fully transparent.
-- If `Angle` rotates the wrong way, use a negative value to rotate counter-clockwise.
-- If `ScaleFactor` does not appear to change the size, the value must be different from `1.0` (the default).

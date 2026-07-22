@@ -7,41 +7,28 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Selection Effect
-
-The [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) effect applies a smooth color transition to the background of the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) to indicate the selected or unselected state. Use it to give users clear visual feedback when an item is chosen, for example in a list or grid.
-
-Unlike the `Highlight` effect, which is a transient response to a touch, the `Selection` effect reflects a persistent state that you set with the `IsSelected` property.
+# Selection Effect in .NET MAUI Effects View
 
 ## Prerequisites
 
-Before using the examples in this article, ensure the following are in place:
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-- Install the `Syncfusion.Maui.Core` NuGet package in your .NET MAUI project.
-- Register the Syncfusion Core handler in `MauiProgram.cs` by calling `Syncfusion.Maui.Core.Hosting.SyncfusionCoreHostBuilderExtensions.ConfigureSyncfusionCore`.
-- Add `using Syncfusion.Maui.Core;` and `using Microsoft.Maui.Controls;` to your C# files.
-- Add the namespace `xmlns:syncEffectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"` to your XAML page.
-- See [Getting Started with .NET MAUI Effects View](https://help.syncfusion.com/maui/effects-view/getting-started) for full setup steps.
+- `Syncfusion.Maui.Core`
 
-## Selection Properties
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
 
-The `Selection` effect is configured by the following properties on `SfEffectsView`:
+The [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) effect applies a smooth color transition to the background of the `SfEffectsView` to indicate the selected or unselected state. Use it to give users clear visual feedback when an item is chosen, for example in a list or grid.
 
-| Property | Description | Default value |
-| --- | --- | --- |
-| `SelectionBackground` | The brush applied to the background when `IsSelected` is `true`. Accepts any `Brush` (for example, `SolidColorBrush`). | `SolidColorBrush(Color.FromArgb("#14000000"))` |
-| `AutoResetEffects` | When `true`, the effect is reset automatically when the touch ends. | `true` |
-| `ResetEffects` | Method invoked to reset the effect programmatically. | N/A |
-
-For a list of all trigger properties that accept `SfEffects.Selection`, see [Combining Effects](Combinations.md).
+Unlike the `Highlight` effect, which is a transient response to a touch, the `Selection` effect reflects a persistent state that you set with the `IsSelected` property.
 
 ## Setting the Selection Background
 
 The example below applies a red background to the `SfEffectsView` when the user long-presses it (and `IsSelected` is set to `true`).
 
-### XAML
+{% tabs %} 
 
-```xaml
+{% highlight xaml %}
+
 <Border HorizontalOptions="Center" VerticalOptions="Center">
     <Border.StrokeShape>
         <RoundRectangle CornerRadius="18" />
@@ -71,11 +58,11 @@ The example below applies a red background to the `SfEffectsView` when the user 
         </Grid>
     </syncEffectsView:SfEffectsView>
 </Border>
-```
 
-### C#
+{% endhighlight %}
 
-```csharp
+{% highlight c# %}
+
 var grid = new Grid
 {
     ColumnDefinitions =
@@ -145,11 +132,9 @@ var border = new Border
 };
 
 this.Content = border;
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![Selection effect with a red background](Effects_images/net_maui_selection_effect.png)
-
-## Troubleshooting
-
-- If the selection persists after you set `IsSelected = false`, call `ResetEffects` manually.
-- If you assign `SfEffects.Selection` to more than one trigger property, only the first assignment is applied.
