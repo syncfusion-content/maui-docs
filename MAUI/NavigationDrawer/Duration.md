@@ -20,11 +20,9 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) specifies the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
 
-
 The following code example illustrates how to set the animation duration of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html).
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -34,7 +32,6 @@ The following code example illustrates how to set the animation duration of the 
 </navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
 SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
@@ -45,8 +42,9 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
     }
 };
 {% endhighlight %}
-
 {% endtabs %}
+
+N> The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property for the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) is measured in milliseconds.
 
 The following screenshot illustrates the result of the above code.
 
