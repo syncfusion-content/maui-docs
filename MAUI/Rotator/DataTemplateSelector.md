@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DataTemplateSelector in .NET MAUI Rotator control | Syncfusion®
-description: Learn about DataTemplateSelector support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
+description: Learn how to use a DataTemplateSelector to choose a DataTemplate per item in the Syncfusion® .NET MAUI Rotator (SfRotator) control.
 platform: maui 
 control: Rotator 
 documentation: ug
@@ -9,108 +9,18 @@ documentation: ug
 
 # DataTemplateSelector in .NET MAUI Rotator (SfRotator)
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) supports DataTemplateSelector, from which you can choose a DataTemplate based on the data object.
+The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) supports [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0#create-a-datatemplateselector), with which you can choose a `DataTemplate` based on the underlying data object for each item.
 
-{% tabs %}
+`DataTemplateSelector` exposes a single over ridable method, `OnSelectTemplate`, which is invoked by the `Rotator` once per item. The method receives the data object (`item`) and the parent `BindableObject` (`container`), and must return the `DataTemplate` to use for that item.
 
-{% highlight xaml %}
+## Creating the DataTemplateSelector
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="DefaultTemplate">
-            <Grid>
-            <Image Source="{Binding Image}" HorizontalOptions="Center" VerticalOptions="Center"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="SpecificTemplate">
-            <Grid>
-            <Label Text="Not Available" FontSize="50" HorizontalOptions="Center" VerticalOptions="Center"/> 
-            <Image Source="{Binding Image}" Opacity="0.5" >
-            </Grid>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
-
-<ContentPage.Content>      
-    <Grid >
-        <syncfusion:SfRotator x:Name="sfRotator" 
-                ItemsSource="{Binding ImageCollection}" >
-            <syncfusion:SfRotator.ItemTemplate>
-            <local:DataTemplateViewModel DefaultTemplate="{StaticResource DefaultTemplate}" SpecificTemplate="{StaticResource SpecificTemplate}"/>
-            </syncfusion:SfRotator.ItemTemplate>
-        </syncfusion:SfRotator>
-    </Grid>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-public partial class MainPage : ContentPage
-    {
-    DataTemplate defaultTemplate;
-    DataTemplate specifictempalte;
-
-    public MainPage()
-    {
-        InitializeComponent();
-        this.BindingContext = new ViewModel();
-        SfRotator rotator = new SfRotator();
-
-        defaultTemplate = new DataTemplate(() =>
-        { 
-        Grid grid = new Grid();
-        Image image = new Image();
-        image.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(image);
-        return grid;
-    });
-
-        specifictempalte = new DataTemplate(() =>
-        {
-            Grid grid = new Grid();
-            Image image = new Image();
-            Label label = new Label();
-            image.SetBinding(Image.SourceProperty, "Image");
-            image.Opacity = 0.5;
-            label.Text = "Not Available";
-            label.FontSize = 50;
-            label.HorizontalOptions = LayoutOptions.Center;
-            label.VerticalOptions = LayoutOptions.Center;
-            grid.Children.Add(image);
-            grid.Children.Add(label);
-            return grid;
-        });
-        
-        var ImageCollection = new List<Model> {
-        new Model ("image1.png"),
-        new Model ("image2.png"),
-        new Model ("image3.png"),
-        new Model ("image4.png"),
-        new Model ("image5.png")
-        };
-        rotator.NavigationDirection = NavigationDirection.Horizontal;
-        rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-        rotator.BackgroundColor = Colors.White;
-        rotator.ItemsSource = ImageCollection;
-        rotator.ItemTemplate = new DataTemplateViewModel { DefaultTemplate = defaultTemplate, SpecificTemplate = specifictempalte};
-        this.Content = rotator;
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### OnSelectTemplate
-
-The OnSelectTemplate is an overridden method to return a particular DataTemplate, which is shown in the following code:
+Define a class that derives from `DataTemplateSelector` and overrides `OnSelectTemplate` to return a template based on the data object:
 
 {% tabs %}
 
 {% highlight C# %}
-	
+
 public class DataTemplateViewModel : DataTemplateSelector
 {
     public DataTemplate DefaultTemplate { get; set; }
@@ -118,7 +28,7 @@ public class DataTemplateViewModel : DataTemplateSelector
 
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        var rotatorModel = item as RotatorModel;
+        var rotatorModel = item as Model;
         if (rotatorModel == null)
             return DefaultTemplate;
 
@@ -136,8 +46,141 @@ public class DataTemplateViewModel : DataTemplateSelector
 
 {% endtabs %}
 
-The following screenshot illustrates the output of above code.
+## Applying the DataTemplateSelector
 
-![DataTemplateSelector](images/DataTemplateSelector.png)
+The following examples show how to apply the `DataTemplateViewModel` selector to the `Rotator` and supply the `DefaultTemplate` / `SpecificTemplate` resources.
 
-Find the complete DataTemplateSelector sample from this [link.](https://github.com/SyncfusionExamples/data-template-selector-rotator/tree/main/DataTemplateSelectorSample)
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="DefaultTemplate">
+            <Grid>
+            <Image Source="{Binding Image}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="SpecificTemplate">
+            <Grid>
+            <Label Text="Not Available" FontSize="50" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"/> 
+            <Image Source="{Binding Image}" Opacity="0.5" >
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<ContentPage.Content>      
+    <Grid >
+        <rotator:SfRotator x:Name="sfRotator" 
+                ItemsSource="{Binding ImageCollection}" >
+            <rotator:SfRotator.ItemTemplate>
+            <local:DataTemplateViewModel DefaultTemplate="{StaticResource DefaultTemplate}" SpecificTemplate="{StaticResource SpecificTemplate}"/>
+            </rotator:SfRotator.ItemTemplate>
+        </rotator:SfRotator>
+    </Grid>
+</ContentPage.Content>
+
+
+{% endhighlight %}
+{% highlight C# %}
+
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+DataTemplate defaultTemplate = new DataTemplate(() =>
+{
+    Grid grid = new Grid();
+    Image image = new Image();
+    image.SetBinding(Image.SourceProperty, "Image");
+    grid.Children.Add(image);
+    return grid;
+});
+
+DataTemplate specifictempalte = new DataTemplate(() =>
+{
+    Grid grid = new Grid();
+    Image image = new Image();
+    Label label = new Label();
+
+    image.SetBinding(Image.SourceProperty, "Image");
+    image.Opacity = 0.5;
+
+    label.Text = "Not Available";
+    label.FontSize = 50;
+    label.HorizontalOptions = LayoutOptions.Center;
+    label.VerticalOptions = LayoutOptions.Center;
+
+    grid.Children.Add(image);
+    grid.Children.Add(label);
+
+    return grid;
+});
+
+SfRotator rotator = new SfRotator()
+{
+    NavigationDirection = NavigationDirection.Horizontal,
+    NavigationStripMode = NavigationStripMode.Thumbnail,
+    BackgroundColor = Colors.White,
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplateViewModel()
+    {
+        DefaultTemplate = defaultTemplate,
+        SpecificTemplate = specifictempalte
+    }
+};
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot illustrates the output of the above code:
+
+![DataTemplateSelector](Images/DataTemplateSelector.png)
+
+## See Also
+
+- [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)
+- [Navigation Mode in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
+- [Placement Modes in.NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)
+
+Find the complete `DataTemplateSelector` sample on [GitHub](https://github.com/SyncfusionExamples/data-template-selector-rotator/tree/main/DataTemplateSelectorSample).

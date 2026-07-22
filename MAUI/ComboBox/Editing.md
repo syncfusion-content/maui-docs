@@ -10,7 +10,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Editing in .NET MAUI ComboBox
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports both editable and non-editable text boxes for selecting an item from a data source. The editing behavior is controlled by the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) `bool` property. The default value of `IsEditable` is `false`.
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports both editable and non-editable text boxes for selecting an item from a data source. The editing behavior is controlled by the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property. The default value of `IsEditable` is `false`.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Editable ComboBox
 
@@ -91,7 +91,7 @@ The following image illustrates the result of the above code:
 
 ### Text
 
-The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property gets or sets the user-submitted text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editor. The default value of `Text` is `string.Empty`.
+The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property gets or sets the user-submitted text in the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editor. The default value of `Text` is `string.Empty`.
 
 ## Non-editable ComboBox
 
@@ -237,6 +237,6 @@ The following image illustrates the result of the above code:
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Selection in .NET MAUI ComboBox](Selection.md)
-* [Filtering in .NET MAUI ComboBox](Filtering.md)
+* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Selection](https://help.syncfusion.com/maui/combobox/selection)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)

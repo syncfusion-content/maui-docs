@@ -113,7 +113,7 @@ Add the following namespace in your XAML or C#.
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+xmlns:rotator="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
 
 {% endhighlight %}
 {% highlight c# %}
@@ -141,17 +141,17 @@ N> Ensure that the images mentioned in the code snippets are located in the **Re
 
 {% highlight xaml %}
 
-<syncfusion:SfRotator x:Name="rotator" 
+<rotator:SfRotator x:Name="rotator" 
                     ItemsSource="{Binding ImageCollection}" >
-    <syncfusion:SfRotator.BindingContext>
+    <rotator:SfRotator.BindingContext>
         <local:RotatorViewModel />
-    </syncfusion:SfRotator.BindingContext>
-    <syncfusion:SfRotator.ItemTemplate>
+    </rotator:SfRotator.BindingContext>
+    <rotator:SfRotator.ItemTemplate>
         <DataTemplate>
             <Image Source="{Binding Image}"/>
         </DataTemplate>
-    </syncfusion:SfRotator.ItemTemplate>
-</syncfusion:SfRotator>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
  
  {% endhighlight %}
  

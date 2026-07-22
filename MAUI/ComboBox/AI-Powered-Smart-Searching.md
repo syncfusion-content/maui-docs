@@ -15,7 +15,7 @@ This article walks you through the implementation of an advanced search experien
 
 Before you begin, ensure you have the following:
 
-- A working .NET MAUI application with the Syncfusion.Maui.Inputs package installed.
+- A working .NET MAUI application with the `Syncfusion.Maui.Inputs` package installed.
 - An active Azure subscription with access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and a deployed model. If you don't have access, refer to the [create and deploy Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account. Note down the deployment name, endpoint URL, and API key.
 - The [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) NuGet package (version 2.x recommended for the `IChatClient` API used in this sample). Install it by running the following command in the Visual Studio Package Manager Console:
 
@@ -336,6 +336,6 @@ You can find the complete sample from this [link.](https://github.com/Syncfusion
 
 ## See also
 
-- [Getting Started](Getting-Started.md)
-- [Filtering](Filtering.md)
-- [Searching](Searching.md)
+* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
+* [Searching](https://help.syncfusion.com/maui/combobox/searching)

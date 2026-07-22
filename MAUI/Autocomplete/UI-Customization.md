@@ -17,7 +17,7 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 To get started quickly on customizing the appearance of the .NET MAUI Autocomplete, you can check out this video:
 
@@ -2537,3 +2537,9 @@ public SocialMediaViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)
+- [Basic Features](https://help.syncfusion.com/maui/autocomplete/basic-features)
+- [Searching and Filtering](https://help.syncfusion.com/maui/autocomplete/searching-filtering)

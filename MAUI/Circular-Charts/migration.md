@@ -131,6 +131,10 @@ The following table illustrates the API migration for the chart.
 <td>DataMarker</td>
 <td>ShowDataLabels, DataLabelSettings</td>
 </tr>
+<tr>
+<td>ListenPropertyChange</td>
+<td>ListenPropertyChange</td>
+</tr>
 </table>
 
 The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to the .NET MAUI [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
@@ -261,12 +265,16 @@ this.Content = chart;
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
+<td>-</td>
+<td>IsFloating</td>
+</tr>
+<tr>
 <td>OffsetX</td>
-<td><em>Upcoming</em></td>
+<td>OffsetX</td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td><em>Upcoming</em></td>
+<td>OffsetY</td>
 </tr>
 </table>
 
@@ -637,7 +645,6 @@ N> For more information about selection check [here](https://help.syncfusion.com
 
 **Series**
 
-* Listen to property change support for series.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 
@@ -645,7 +652,6 @@ N> For more information about selection check [here](https://help.syncfusion.com
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend floating support.
 * Event or method to notify when a legend item is clicked.
 
 ## Unsupported features from Xamarin.Forms

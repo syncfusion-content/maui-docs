@@ -10,7 +10,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # No Results Found in .NET MAUI ComboBox
 
-When no items match the text typed into the editor, the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control displays a message in the drop-down to inform the user that no results were found. Customize this message with the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) and [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) properties.
+When no items match the text typed into the editor, the [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control displays a message in the drop-down to inform the user that no results were found. Customize this message with the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) and [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) properties.
 
 N> The No Results Found view is shown only when `IsEditable` is `true` and `IsFilteringEnabled` is `true`. If either is `false`, the view is not shown even if the filter result is empty.
 
@@ -20,11 +20,11 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
-## Customize the No Results text
+## Customize the no results text
 
-Use the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) `string` property to customize the message shown when no items match the typed text. The default value is `"No results found"`.
+Use the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) `string` property to customize the message shown when no items match the typed text. The default value is `"No Results Found"`.
 
 To hide the message entirely, set `NoResultsFoundText` to an empty string (`""`).
 
@@ -97,9 +97,9 @@ public class SocialMedia
 
 ![Custom No Results text in the .NET MAUI ComboBox drop-down](images/NoResultsFound/NoResultsFoundText.png)
 
-## Customize the No Results view
+## Customize the no results view
 
-Use the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property to provide a custom `DataTemplate` for the no-results view. The template's `BindingContext` is not set; the content is rendered as-is.
+Use the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property to provide a custom `DataTemplate` for the no-results view.
 
 When `NoResultsFoundTemplate` is set, it takes precedence over `NoResultsFoundText`.
 
@@ -187,7 +187,7 @@ public class SocialMedia
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Editing in .NET MAUI ComboBox](Editing.md)
-* [Filtering in .NET MAUI ComboBox](Filtering.md)
-* [Selection in .NET MAUI ComboBox](Selection.md)
+* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Editing](https://help.syncfusion.com/maui/combobox/editing)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
+* [Selection](https://help.syncfusion.com/maui/combobox/selection)

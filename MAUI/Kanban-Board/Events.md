@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Kanban Board control | Syncfusion
-description: Learn here all about Events support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements and more.
+description: Learn about Events support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements, and more.
 platform: maui
 control: Kanban
 documentation: ug
@@ -11,29 +11,40 @@ documentation: ug
 
 ## CardTapped
 
-The [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTapped) event occurs when the card is tapped. We can get the following details from the `CardTapped` event.
+The [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTapped) event is raised when a card is tapped. The `CardTapped` event argument (`KanbanCardTappedEventArgs`) provides the following details:
 
-* [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Column) - Returns the instance of the column containing the tapped card.
-* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Index) - Returns the index position of the tapped card within its column.
-* [Data](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Data) - Returns the data of the card that was tapped.
+* [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Column) (`KanbanColumn`) - Returns the column that contains the tapped card.
+* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Index) (`int`) - Returns the index of the tapped card within its column.
+* [Data](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Data) (`object`) - Returns the data of the tapped card.
+
+The event is non-cancelable and is raised on a single tap of a card (not on long-press or double-tap).
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-<kanban:SfKanban x:Name="kanban"
-                 ItemsSource="{Binding Cards}"
-                 CardTapped="OnKanbanCardTapped">
-    <kanban:SfKanban.BindingContext>
-        <local:KanbanViewModel/>
-    </kanban:SfKanban.BindingContext>
-</kanban:SfKanban>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
+        <local:KanbanViewModel />
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     ItemsSource="{Binding Cards}"
+                     CardTapped="OnKanbanCardTapped" />
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# hl_lines="2" %}
 
-this.kanban.ItemsSource = new KanbanViewModel().Cards;
-this.kanban.CardTapped += this.OnKanbanCardTapped;
+var kanban = new SfKanban
+{
+    ItemsSource = new KanbanViewModel().Cards
+};
+kanban.CardTapped += OnKanbanCardTapped;
+this.Content = kanban;
 
 private void OnKanbanCardTapped(object sender, KanbanCardTappedEventArgs e)
 {
@@ -45,6 +56,10 @@ private void OnKanbanCardTapped(object sender, KanbanCardTappedEventArgs e)
 {% endhighlight %}
 
 {% highlight c# tabtitle="KanbanViewModel.cs" %}
+
+using System.Collections.ObjectModel;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Kanban;
 
 public class KanbanViewModel
 {
@@ -141,39 +156,53 @@ public class KanbanViewModel
 
 ## DragStart
 
-[`DragStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragStart) event is triggered when you start to drag a card. The argument contains the following information.
+The [`DragStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragStart) event is raised when a card starts to drag. The event argument provides the following properties:
 
-* [`Cancel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragStartEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragStartEventArgs_Cancel) - Used to cancel the drag action.
-* [`Data`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_Data) - Used to get the underlying model of the card.
-* [`SourceColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_SourceColumn) - Used to get the source column of card.
-* [`SourceIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_SourceIndex) - Used to get the index of the card in source column. 
-* [`KeepCard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragStartEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragStartEventArgs_KeepCard) - Determines whether the original card remains in the source column during a drag operation. When set to `true`, the card stays in its original column while being dragged, allowing repeated drag-and-drop actions without relocating the card. A preview of the card is generated during the drag.  
+* [`Cancel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragStartEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragStartEventArgs_Cancel) (`bool`, default `false`) - Set to `true` to cancel the drag operation.
+* [`Data`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_Data) (`object`) - Returns the underlying model of the card.
+* [`SourceColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_SourceColumn) (`KanbanColumn`) - Returns the source column of the card.
+* [`SourceIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_SourceIndex) (`int`) - Returns the index of the card in the source column.
+* [`KeepCard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragStartEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragStartEventArgs_KeepCard) (`bool`, default `false`) - When set to `true`, the original card remains in the source column while being dragged. A preview of the card is generated during the drag, allowing repeated drag-and-drop actions without relocating the card.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-<kanban:SfKanban x:Name="kanban"
-                 ItemsSource="{Binding TaskDetails}"
-                 DragStart="OnKanbanCardDragStart">
-    <kanban:SfKanban.BindingContext>
-        <local:ViewModel/>
-    </kanban:SfKanban.BindingContext>
-</kanban:SfKanban>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:YourAppNamespace;assembly=YourAppName"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     ItemsSource="{Binding TaskDetails}"
+                     DragStart="OnKanbanCardDragStart" />
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# hl_lines="2 6" %}
 
-this.kanban.ItemsSource = new ViewModel().TaskDetails;
-this.kanban.DragStart += OnKanbanCardDragStart;
+var kanban = new SfKanban
+{
+    ItemsSource = new ViewModel().TaskDetails
+};
+kanban.DragStart += OnKanbanCardDragStart;
+this.Content = kanban;
 
 private void OnKanbanCardDragStart(object sender, KanbanDragStartEventArgs e)
 {
+    // Keep the source card in place and show a drag preview.
     e.KeepCard = true;
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
- 
+
+using System.Collections.ObjectModel;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Kanban;
+
 public class ViewModel
 {
     #region Properties

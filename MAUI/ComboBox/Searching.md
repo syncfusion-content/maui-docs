@@ -10,7 +10,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Searching in .NET MAUI ComboBox
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides rich text searching functionality. Use the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property to control how the drop-down is filtered when the user types into the editor.
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides rich text searching functionality. Use the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property to control how the drop-down is filtered when the user types into the editor.
 
 N> Searching only applies when `IsFilteringEnabled` is `true` and `IsEditable` is `true`. The `TextSearchMode` setting has no effect if filtering is disabled.
 
@@ -20,7 +20,7 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Search based on member path
 
@@ -41,8 +41,8 @@ In edit mode, searching is performed against the [TextMemberPath](https://help.s
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    IsEditable="true"
-                    IsFilteringEnabled="true"
+                    IsEditable="True"
+                    IsFilteringEnabled="True"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="ID"
                     DisplayMemberPath="Name">
@@ -109,7 +109,7 @@ N> Auto-appending of text is supported only in `Editable` mode and when `TextSea
 
 ## Text search mode
 
-The [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) controls how the drop-down is filtered when the user types. The default value is `StartsWith`. Matching is case-insensitive and accent-insensitive. For a complete walkthrough of the available modes, see [Filtering in .NET MAUI ComboBox](Filtering.md#filter-mode).
+The [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) controls how the drop-down is filtered when the user types. The default value is `StartsWith`. Matching is case-insensitive and accent-insensitive. For a complete walkthrough of the available modes, see [Filtering in .NET MAUI ComboBox](https://help.syncfusion.com/maui/combobox/filtering).
 
 The available modes are:
 
@@ -124,8 +124,8 @@ Set [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    IsEditable="true"
-                    IsFilteringEnabled="true"
+                    IsEditable="True"
+                    IsFilteringEnabled="True"
                     TextSearchMode="StartsWith"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -198,8 +198,8 @@ Set [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    IsEditable="true"
-                    IsFilteringEnabled="true"
+                    IsEditable="True"
+                    IsFilteringEnabled="True"
                     TextSearchMode="Contains"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="Name"
@@ -266,7 +266,7 @@ The following image illustrates the result of the above code:
 
 ## Minimum prefix characters
 
-By default, the suggestion list is updated on every character entry. Use the [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MinimumPrefixCharacters) `int` property to defer the update until the user has typed the specified number of characters. The default value is `1` (filtering starts immediately).
+By default, the suggestion list is updated on every character entry. Use the [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MinimumPrefixCharacters) property to defer the update until the user has typed the specified number of characters. The default value is `1` (filtering starts immediately).
 
 {% tabs %}
 {% highlight xaml %}
@@ -340,7 +340,6 @@ The following image illustrates the result of the above code:
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Highlighting matched text in .NET MAUI ComboBox](Highlighting-matched-text.md)
-* [Editing in .NET MAUI ComboBox](Editing.md)
-* [Filtering in .NET MAUI ComboBox](Filtering.md)
+* [Highlighting matched text](https://help.syncfusion.com/maui/combobox/highlighting-matched-text)
+* [Editing](https://help.syncfusion.com/maui/combobox/editing)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)

@@ -15,11 +15,11 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Setting culture
 
-The MaskedEntry allows you to set any [Culture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Culture) support for currency symbols, date separators, time separators, group separators, and decimal separators by using the following special symbols.
+The Masked Entry allows you to set any [Culture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Culture) support for currency symbols, date separators, time separators, group separators, and decimal separators by using the following special symbols.
 
 <table>
 <tr>
@@ -89,6 +89,6 @@ Based on the France Culture, the '$' will be localized to '€'; '.' will be loc
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Validation](validation.md)
-* [Formatting](formatting.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)
+* [Formatting](https://help.syncfusion.com/maui/masked-entry/formatting-value)

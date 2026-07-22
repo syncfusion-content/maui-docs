@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Labels in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about how to configure the data labels and their features in Syncfusion® .NET MAUI Chart (SfPolarChart).
+title: Data Labels in .NET MAUI Polar Chart Control | Syncfusion
+description: Learn here all about how to configure the data labels and their features in Syncfusion® .NET MAUI Polar Chart (SfPolarChart).
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -15,6 +15,8 @@ Each data label can be represented by the following:
 
 * Label - displays the segment label content at the (X, Y) point.
 
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
+
 ## Enable Data Labels 
 
 The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of a series is used to enable the data labels.
@@ -24,9 +26,11 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}"  XBindingPath="Direction" YBindingPath="Tree" 
-                           ShowDataLabels="True"/>
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}"
+                           XBindingPath = "Direction"
+                           YBindingPath = "Tree" 
+                           ShowDataLabels = "True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -34,7 +38,7 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarLineSeries series = new PolarLineSeries()
 {
     ItemsSource = PlantViewModel.PlantDetails,
@@ -50,7 +54,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Data label in MAUI chart](DataLabel_images/MAUI_polar_line_datalabel.png)
+![Data label in .NET MAUI Polar Chart](DataLabel_images/MAUI_polar_line_datalabel.png)
 
 Data labels can be customized using the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_DataLabelSettings) property of chart series. To customize them, you need to create an instance of [PolarDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarDataLabelSettings.html) and set it to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_DataLabelSettings) property. The following properties available in [PolarDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarDataLabelSettings.html) can be used to customize the data labels.
 
@@ -66,10 +70,10 @@ The [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
-    <chart:PolarLineSeries ShowDataLabels="True">
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ShowDataLabels = "True">
         <chart:PolarLineSeries.DataLabelSettings>
-            <chart:PolarDataLabelSettings UseSeriesPalette="False"/>
+            <chart:PolarDataLabelSettings UseSeriesPalette = "False"/>
         </chart:PolarLineSeries.DataLabelSettings>
     </chart:PolarLineSeries>
 </chart:SfPolarChart>
@@ -81,7 +85,7 @@ The [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 SfPolarChart chart = new SfPolarChart();
 PolarLineSeries series = new PolarLineSeries();
 series.ShowDataLabels = true;
-. . .
+// code omitted for brevity
 series.DataLabelSettings = new PolarDataLabelSettings()
 {
     UseSeriesPalette = false
@@ -96,20 +100,23 @@ this.Content = chart;
 
 ## Formatting Label Context
 
-The content of the label can be customized using the [LabelContext](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html) property. Following are the two options that are supported now,
+Customize the label content by using the [LabelContext](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html) property. The following two options are supported:
 
-* [Percentage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html#Syncfusion_Maui_Charts_LabelContext_Percentage) - This will show the percentage value of corresponding data point Y value
+* [Percentage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html#Syncfusion_Maui_Charts_LabelContext_Percentage) - Displays the percentage value of the corresponding data point Y value
 
-* [YValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html#Syncfusion_Maui_Charts_LabelContext_YValue) - This will show the corresponding Y value.
+* [YValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html#Syncfusion_Maui_Charts_LabelContext_YValue) - Displays the corresponding Y value
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                           ShowDataLabels="True" LabelContext="Percentage"/>
+    <!-- code omitted for brevity -->
+    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}"
+                           XBindingPath = "Direction"
+                           YBindingPath = "Tree"
+                           ShowDataLabels = "True"
+                           LabelContext = "Percentage"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -117,7 +124,7 @@ The content of the label can be customized using the [LabelContext](https://help
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new PlantViewModel().PlantDetails,
@@ -134,7 +141,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Data label in MAUI chart](DataLabel_images/MAUI_polar_datalabel_context.png)
+![Data label in .NET MAUI Polar Chart](DataLabel_images/MAUI_polar_datalabel_context.png)
 
 ## LabelTemplate
 
@@ -146,16 +153,19 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 <chart:SfPolarChart >
     <chart:SfPolarChart.Resources>
-        <DataTemplate x:Key="labelTemplate">
-            <HorizontalStackLayout Spacing="5">
-                <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>
-                <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+        <DataTemplate x:Key = "labelTemplate">
+            <HorizontalStackLayout Spacing = "5">
+                <Label Text = "{Binding Item.Values}" VerticalOptions = "Center" FontSize = "15"/>
+                <Image Source = "arrow.png" WidthRequest = "15" HeightRequest = "15"/>
             </HorizontalStackLayout>
         </DataTemplate>
     </chart:SfPolarChart.Resources>
-    . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Category" YBindingPath="Values" 
-                           ShowDataLabels="True" LabelTemplate="{StaticResource labelTemplate}"/>
+    <!-- code omitted for brevity -->
+    <chart:PolarAreaSeries ItemsSource = "{Binding Data}"
+                           XBindingPath = "Category"
+                           YBindingPath = "Values"
+                           ShowDataLabels = "True"
+                           LabelTemplate = "{StaticResource labelTemplate}"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -163,7 +173,7 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 PolarAreaSeries series = new PolarAreaSeries();
 series.ItemsSource = new ViewModel().Data;
 series.XBindingPath = "Category";
@@ -189,4 +199,4 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
-![Data label in MAUI chart](DataLabel_images/MAUI_polar_datalabel_template.png)
+![Data label in .NET MAUI Polar Chart](DataLabel_images/MAUI_polar_datalabel_template.png)

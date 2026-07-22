@@ -15,7 +15,7 @@ The Liquid Glass Effect introduces a modern, translucent design with adaptive co
 
 Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 N>
 * The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
@@ -27,7 +27,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Masked
 
 ### Step 1: Wrap the control inside the glass effect view
 
-To apply the Liquid Glass Effect to the Syncfusion® .NET MAUI [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control, wrap it inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container.
+To apply the Liquid Glass Effect to `SfMaskedEntry` control, wrap it inside the `SfGlassEffectView` container.
 
 For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
@@ -43,7 +43,7 @@ The [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 - `CornerRadius`: The corner radius of the glass container.
 - `EnableShadowEffect`: Indicates whether a drop shadow is rendered behind the glass container. The default value is `false`.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the Masked Entry control:
 
 {% tabs %}
 {% highlight XAML tabtitle="MainPage.xaml" %}
@@ -64,9 +64,6 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 
 {% endhighlight %}
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Inputs;
 
 var grid = new Grid();
 
@@ -107,5 +104,5 @@ The following screenshot illustrates the `SfMaskedEntry` within an `SfGlassEffec
 
 ## See Also
 
-* [Basic Features](Basic-Features.md)
-* [Mask Types](Mask-Types.md)
+* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Mask Types](https://help.syncfusion.com/maui/masked-entry/mask-types)

@@ -7,9 +7,9 @@ control: SfNumericEntry
 documentation: ug
 ---
 
-# Value Formatting with .NET MAUI NumericEntry
+# Value Formatting with .NET MAUI Numeric Entry
 
-This section explains how to change the value format of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the `CustomFormat` property and the related formatting options (`Culture`, `PercentDisplayMode`, `MaximumNumberDecimalDigits`).
+This section explains how to change the value format of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property and the related formatting options (`Culture`, `PercentDisplayMode`, `MaximumNumberDecimalDigits`).
 
 ## Prerequisites
 
@@ -17,11 +17,11 @@ Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) documentation.
 
 ## Currency, percentage, and decimal formats
 
-Format the value of the `NumericEntry` control by using the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. By default, the value is formatted using the current culture's decimal format, and the default value of `CustomFormat` is `null`.
+Format the value of the `Numeric Entry` control by using the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. By default, the value is formatted using the current culture's decimal format, and the default value of `CustomFormat` is `null`.
 
 The following table lists the most common standard format specifiers that are supported for the `double` type:
 
@@ -165,7 +165,7 @@ var hoursWorked = new SfNumericEntry
 
 ## Apply custom format
 
-You can apply custom formats to the `NumericEntry` control by combining the **0** and **#** format specifiers in the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. Use these specifiers to set the minimum and maximum number of fractional digits.
+You can apply custom formats to the `Numeric Entry` control by combining the **0** and **#** format specifiers in the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property. Use these specifiers to set the minimum and maximum number of fractional digits.
 
 | Specifier | Description |
 | --- | --- |
@@ -222,9 +222,6 @@ The `Culture` property configures the [SfNumericEntry](https://help.syncfusion.c
 {% endhighlight %}
 {% highlight C# %}
 
-using System.Globalization;
-using Syncfusion.Maui.Inputs;
-
 var numericEntry = new SfNumericEntry
 {
     WidthRequest = 200,
@@ -241,7 +238,7 @@ this.Content = numericEntry;
 
 ## Customize percentage display
 
-When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) uses a percentage format (`CustomFormat` starts with `P` or `p`), the `PercentDisplayMode` property controls how the value is displayed:
+When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) uses a percentage format (`CustomFormat` starts with `P` or `p`), the [PercentDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_PercentDisplayMode) property controls how the value is displayed:
 
 * `Value` - Displays the actual value with percentage symbol.
 * `Compute` - Displays the value multiplied by 100, followed by the percentage symbol.
@@ -304,7 +301,7 @@ N> The default value of `PercentDisplayMode` is `Compute`.
 
 ## Manage maximum decimal digits
 
-Specify the maximum number of digits to display after the decimal point by setting the `MaximumNumberDecimalDigits` property.
+Specify the maximum number of digits to display after the decimal point by setting the [MaximumNumberDecimalDigits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_MaximumNumberDecimalDigits) property.
 
 > The `MaximumNumberDecimalDigits` property must be a positive integer and is ignored when a `CustomFormat` is provided. The default value of `MaximumNumberDecimalDigits` is `2`.
 
@@ -333,6 +330,6 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 
 ## See Also
 
-* [Basic Features](Basic-Features.md)
-* [Restriction](Restriction.md)
-* [UpDown-Button](UpDown-Button.md)
+* [Basic Features](https://help.syncfusion.com/maui/numericentry/basic-features)
+* [Restriction](https://help.syncfusion.com/maui/numericentry/restriction)
+* [UpDown-Button](https://help.syncfusion.com/maui/numericentry/updown-button)
