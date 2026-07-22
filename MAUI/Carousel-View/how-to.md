@@ -1,7 +1,7 @@
 ---
 layout : post
 title: Interaction in Syncfusion® Carousel Control in .NET MAUI.
-description: Learn how to perform an operation while changing the carouselItem or Collection in Carousel for .NET MAUI.
+description: Learn how to perform an operation while changing the CarouselItem or Collection in Carousel for .NET MAUI.
 platform : maui
 control : Carousel
 documentation : ug
@@ -9,43 +9,108 @@ documentation : ug
 
 # How to perform an operation while changing the CarouselItem?
 
-We can perform the operation while changing the CarouselItem using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event. The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event returns the OldItem and selected NewItem.
+We can perform an operation when the selected carousel item changes by handling the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event. The `SelectionChanged` event provides the previously selected item through `e.OldItem` and the currently selected item through `e.NewItem`.
+
+The following XAML sample binds `Carousel` to an `ImageCollection` and handles the `SelectionChanged` event.
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemHeight="170"
                      ItemWidth="270"
-                     SelectionChanged="Carousel_SelectionChanged"/>
+                     SelectionChanged="Carousel_SelectionChanged">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}"
+                   Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
     ItemHeight = 170,
     ItemWidth = 270,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
 };
-
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 carousel.SelectionChanged += Carousel_SelectionChanged;
 
-// Trigger when selection changed in the carousel item.
-private void Carousel_SelectionChanged(object sender, Syncfusion.Maui.Core.Carousel.SelectionChangedEventArgs e)
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class CarouselModel
 {
-    int count = (sender as SfCarousel).SelectedIndex + 1;
-    DisplayAlert("SelectionChanged", "Carousel item:" + count + " has Selected", "Ok");
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
+The `SelectionChanged` event can be handled in C# as follows:
 
+{% tabs %}
+{% highlight C# %}
+
+// Triggered when the selection changes in the carousel.
+private void Carousel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    if (sender is SfCarousel sfCarousel)
+    {
+        int count = sfCarousel.SelectedIndex + 1;
+        this.DisplayAlert("SelectionChanged", "Carousel item " + count + " has been selected.", "OK");
+    }
+}
+    
+{% endhighlight %}
+{% endtabs %}
+
+## See also
+
+- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [UI Virtualization in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
