@@ -127,23 +127,6 @@ using Syncfusion.Maui.Kanban;
 
 Initialize the .NET MAUI [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control and populate its `ItemsSource` by creating and binding task data models.
 
-### `KanbanModel` properties
-
-Each card in the Kanban Board is represented by a [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) instance. The commonly used properties are:
-
-| Property | Type | Description |
-| --- | --- | --- |
-| `ID` | `object` | Unique identifier for the card. |
-| `Title` | `string` | Title text shown on the card. |
-| `Category` | `object` | Value that maps the card to a column. |
-| `Description` | `string` | Detailed description shown on the card. |
-| `IndicatorFill` | `Color` | Color of the indicator stripe shown on the left edge of the card. |
-| `Tags` | `IList<string>` | Chip labels displayed on the card. |
-
-### Supported target platforms
-
-The [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control is supported on the following platforms: Android, iOS, macOS (Mac Catalyst), and Windows.
-
 ### Creating the default model tasks
 
 * **Define the View Model:** Create a view model class to set values for the properties listed in the [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) class as shown in the following example code. Each [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) instance represents a card in Kanban control.
@@ -290,4 +273,4 @@ public class KanbanViewModel
 
 ![defining-columns-using-default-modelin-maui-kanban](images/getting-started/defining-columns-using-default-modelin-maui-kanban.png)
 
-You can download the Kanban Board Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI). Clone the repository, run `dotnet restore`, and then run the sample on your desired platform (Android, iOS, macOS, or Windows).
+You can download the Kanban Board Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI).
