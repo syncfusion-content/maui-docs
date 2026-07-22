@@ -9,7 +9,7 @@ documentation: ug
 
 # Show Password Character in .NET MAUI Masked Entry
 
-The SfMaskedEntry control can be used as a password text box by setting a character for the [PasswordChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PasswordChar) property. To improve the user experience, the most-recently typed character can remain visible briefly before being masked by using the [PasswordDelayDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PasswordDelayDuration) property.
+The .NET MAUI Masked Entry control can be used as a password text box by setting a character for the [PasswordChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PasswordChar) property. To improve the user experience, the most-recently typed character can remain visible briefly before being masked by using the [PasswordDelayDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PasswordDelayDuration) property.
 
 ## Prerequisites
 
@@ -17,13 +17,11 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Password Char
 
 The [PasswordChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PasswordChar) property of type `char` defines the character that is displayed in place of each typed character. The default value is `'\0'`, which means the typed characters are shown normally. When set to any other value (for example, `*` or `•`), all typed characters are masked with that character, making the control behave like a password text box.
-
-> **Note:** The `PasswordChar` is purely visual. Screen readers and accessibility tools typically still read the underlying value, so do not rely on the password mask as a security control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -45,8 +43,6 @@ maskedEntry.PasswordChar = '*';
 
 {% endhighlight %}
 {% endtabs %}
-
-In the example above, typing `secret` is rendered as `******`. The `Value` property still contains the string `secret`.
 
 ![Password Character](MaskedEntry_Images/MaskedEntry_PasswordChar.png)
 
@@ -89,8 +85,7 @@ The following GIF demonstrates the password delay behavior: each typed character
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Basic Features](basic-features.md)
-* [Mask Types](Mask-Types.md)
-* [Formatting Value](formatting-value.md)
-* [Validation](validation.md)
+* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Mask Types](https://help.syncfusion.com/maui/masked-entry/mask-types)
+* [Formatting Value](https://help.syncfusion.com/maui/masked-entry/formatting-value)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)

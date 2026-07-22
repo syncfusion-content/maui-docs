@@ -178,17 +178,8 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 {% tabs %}
 
 {% highlight xaml %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="itemTemplate">
-            <Image Source="{Binding Image}" 
-                   Aspect="AspectFit"/>
-        </DataTemplate>
-    </ResourceDictionary>
-<ContentPage.Resources>
 
 <carousel:SfCarousel x:Name="carousel"
-                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemsSource="{Binding ImageCollection}"
                      ItemHeight="170"
                      ItemWidth="270"
@@ -196,7 +187,13 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
     <carousel:SfCarousel.BindingContext>
         <local:CarouselViewModel/>
     </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
 </carousel:SfCarousel>
+
 {% endhighlight %}
 
 {% highlight C# %}
@@ -235,9 +232,17 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
-                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemsSource="{Binding ImageCollection}"
-                     SelectedIndex="4"/>
+                     SelectedIndex="4">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 	
 {% endhighlight %}
 

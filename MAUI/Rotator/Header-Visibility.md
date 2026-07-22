@@ -2,81 +2,113 @@
 layout: post
 title: Header Visibility in .NET MAUI Rotator control | Syncfusion®
 description: Learn about the Header Visibility support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
-platform: maui 
+platform: maui
 control: Rotator
 documentation: ug
 ---
 
 # Header Visibility in .NET MAUI Rotator (SfRotator)
 
-The [`IsTextVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_IsTextVisible) property can be used to enable the text area visibility in the bottom area of the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) for providing additional information of items. The [`IsTextVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_IsTextVisible) property is used to change the visibility of the Text panel that is displayed when the [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) collection is set and will have no effect when setting the Item template.
+The [`IsTextVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_IsTextVisible) property enables the text area at the bottom of the [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control, which displays additional information about each item.
 
-N> By default, the property value is false.
+The text area is populated from the [`ItemText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_ItemText) property of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) when items are added through the `SfRotatorItem` collection. When items are populated through an `ItemTemplate`, the text area does not appear, even when `IsTextVisible` is `true`.
+
+> **Note:** By default, `IsTextVisible` is `false`.
+
+## Prerequisites
+
+Before using the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Rotator`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/rotator/getting-started) documentation.
+
+## Show the Header Text
+
+To display the header text, set `IsTextVisible` to `true` and populate the `ItemsSource` with `SfRotatorItem` objects that have their `ItemText` property set.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-            xmlns:local="clr-namespace:Rotator"
-            x:Class="Rotator.Rotator">
-    <ContentPage.BindingContext>
-    <local:RotatorViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-            <syncfusion:SfRotator x:Name="rotator" 
-                        BackgroundColor="#ececec"
-                        IsTextVisible="True"
-                        ItemsSource="{Binding ImageCollection}" 
-                        VerticalOptions="Start">
-                <syncfusion:SfRotator.ItemTemplate>
-                    <DataTemplate>
-                            <Image Source="{Binding Image}" />
-                    </DataTemplate>
-                </syncfusion:SfRotator.ItemTemplate>
-            </syncfusion:SfRotator>
-    </ContentPage.Content>
-</ContentPage>
+<rotator:SfRotator x:Name="rotator"
+                    ItemsSource="{Binding ImageCollection}"
+                    BackgroundColor="#ececec"
+                    IsTextVisible="True"
+                    VerticalOptions="Start">
+    <rotator:SfRotator.ItemTemplate>
+        <DataTemplate>
+            <Image Source="{Binding Image}" />
+        </DataTemplate>
+    </rotator:SfRotator.ItemTemplate>
+</rotator:SfRotator>
 
 {% endhighlight %}
 
 {% highlight C# %}
-
-using Syncfusion.Maui.Core.Rotator;
-using Syncfusion.Maui.Rotator;
-
-namespace Rotator
+    
+RotatorViewModel rotatorViewModel = new RotatorViewModel();
+SfRotator rotator = new SfRotator()
 {
-    public partial class Rotator : ContentPage
+    VerticalOptions = LayoutOptions.Start,
+    rotator.IsTextVisible = true,
+    BackgroundColor = Color.FromArgb("#ececec"),
+    ItemsSource = rotatorViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
     {
-        SfRotator rotator = new SfRotator();
-        StackLayout stackLayout = new StackLayout();
-        public Rotator()
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class RotatorModel
+{
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+// ViewModel
+public class RotatorViewModel
+{
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
         {
-            InitializeComponent();
-            stackLayout.HeightRequest = 300;
-            List<SfRotatorItem> collectionOfItems = new List<SfRotatorItem>();
-            collectionOfItems.Add(new SfRotatorItem() { Image = "image1.png", ItemText = "Bird 1" });
-            collectionOfItems.Add(new SfRotatorItem() { Image = "image2.png", ItemText = "Bird 2" });
-            collectionOfItems.Add(new SfRotatorItem() { Image = "image3.png", ItemText = "Bird 3" });
-            collectionOfItems.Add(new SfRotatorItem() { Image = "image4.png", ItemText = "Bird 4" });
-            collectionOfItems.Add(new SfRotatorItem() { Image = "image5.png", ItemText = "Bird 5" });
-            rotator.ItemsSource = collectionOfItems;
-            rotator.IsTextVisible = true;
-            rotator.DotPlacement = DotsPlacement.OutSide;
-            rotator.HeightRequest = 300;
-            rotator.WidthRequest = 300;
-            stackLayout.Children.Add(rotator);
-            this.Content = stackLayout;
-        }
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
     }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![IsTextVisible](images/IsTextVisible.png)
+![SfRotator with the header text area visible](images/IsTextVisible.png)
+
+## See also
+
+- [Navigation Customization in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-customization)
+- [Navigation Mode in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/navigation-modes)
+- [Populating data in .NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/populating-data)
+- [Placement Modes in.NET MAUI Rotator](https://help.syncfusion.com/maui/rotator/placement-modes)

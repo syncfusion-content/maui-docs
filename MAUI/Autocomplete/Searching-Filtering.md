@@ -15,7 +15,7 @@ Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Overview
 
@@ -27,7 +27,7 @@ The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 |----------|------|---------|-------------|
 | `DisplayMemberPath` | `string` | `string.Empty` | The property path whose value is displayed as text in the drop-down. |
 | `TextMemberPath` | `string` | `string.Empty` | The property path used to perform searching. When `null` or `string.Empty`, the `DisplayMemberPath` is used. |
-| `TextSearchMode` | `AutocompleteTextSearchMode` | `StartsWith` | Specifies how the input text is matched against the items. Values: `StartsWith`, `Contains`. The default is case- and accent-insensitive. |
+| `TextSearchMode` | `AutocompleteTextSearchMode` | `StartsWith` | Specifies how the input text is matched against the items. Values: `StartsWith`, `Contains`. |
 | `MinimumPrefixCharacters` | `int` | `1` | The minimum number of characters that must be entered before the drop-down opens. |
 | `FilterBehavior` | `IAutocompleteFilterBehavior` | `null` | Gets or sets a custom filter behavior for selecting the items to display. |
 | `SearchBehavior` | `IAutocompleteSearchBehavior` | `null` | Gets or sets a custom search behavior for selecting the default highlighted item. |
@@ -172,7 +172,7 @@ The [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 ### Filter with beginning text
 
-Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html) property to [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_StartsWith) to filter items whose text starts with the user input.
+Set the The [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TextSearchMode) property to [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_StartsWith) to filter items whose text starts with the user input.
 
 {% tabs %}
 {% highlight xaml %}
@@ -236,7 +236,7 @@ The following image illustrates the result of the above code:
 
 ### Filter with contains text
 
-Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html) property to [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains) to filter items whose text contains the user input anywhere.
+Set the The [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TextSearchMode) property to [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains) to filter items whose text contains the user input anywhere.
 
 {% tabs %}
 {% highlight xaml %}
@@ -601,15 +601,9 @@ The following image shows 100,000 items being loaded asynchronously in the drop-
 
 ![Asynchronous loading in the SfAutocomplete using a custom filter](Images/Searching_Filtering/Asynchronous_items.png)
 
-## Notes
-
-N> **Case and accent sensitivity**: The default `StartsWith` and `Contains` filtering modes are case- and accent-insensitive. To perform a case- or accent-sensitive search, provide a custom `FilterBehavior`.
-
-N> **Cancelled requests**: The `CustomAsyncFilter` example cancels any in-flight request when a new keystroke arrives, so the UI always shows the result of the latest filter. Keep a similar pattern when implementing your own asynchronous filter.
-
 ## See also
 
-- [Highlighting matched text](Highlighting-matched-text.md)
-- [Selection](Selection.md)
-- [UI Customization](UI-Customization.md)
-- [Getting Started](Getting-Started.md)
+- [Highlighting matched text](https://help.syncfusion.com/maui/autocomplete/highlighting-matched-text)
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)

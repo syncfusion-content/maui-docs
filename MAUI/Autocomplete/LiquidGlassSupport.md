@@ -13,7 +13,7 @@ documentation: ug
 
 Before using the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html), Install the [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 N>
 * The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
@@ -69,9 +69,6 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% endhighlight %}
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Inputs;
-
 var grid = new Grid
 {
     BackgroundColor = Colors.Transparent
@@ -117,18 +114,12 @@ The following screenshot illustrates the SfAutocomplete with the Liquid Glass Ef
 
 You can change the appearance of the glass effect by adjusting the `EffectType` and `CornerRadius` of the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html):
 
-- `EffectType` — choose `Clear`, `Regular` (default) to control the glass thickness.
-- `CornerRadius` — set a value in device-independent units to round the corners of the glass container.
+- `EffectType` - choose `Clear`, `Regular` (default) to control the glass thickness.
+- `CornerRadius` - set a value in device-independent units to round the corners of the glass container.
 - The `Background` and `DropDownBackground` of the SfAutocomplete can be set to any translucent `Color` (for example, `Colors.Transparent` or `Color.FromArgb("#80FFFFFF")`) to fine-tune the tint.
-
-## Notes
-
-N> **Platform support**: The Liquid Glass Effect is supported only on .NET 10 with iOS 26 and macOS 26. On other platforms the effect is a no-op.
-
-N> **Image not visible**: If the `Wallpaper.png` image is not displayed, verify that it is added to `Resources/Images` with the **MauiImage** build action and that the `Image.Source` matches the filename.
 
 ## See also
 
-- [UI Customization](UI-Customization.md)
-- [Selection](Selection.md)
-- [Getting Started](Getting-Started.md) 
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [UI Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)

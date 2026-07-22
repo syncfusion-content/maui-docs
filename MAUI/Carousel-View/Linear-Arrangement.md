@@ -9,32 +9,104 @@ documentation : ug
 
 # Linear Arrangement in .NET MAUI Carousel View (SfCarousel)
 
-The Carousel items can be populated in the view in a stacked linear layout by setting the [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ViewMode) property to [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear). The present option is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default).
+## Prerequisites
+
+Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Carousel`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
+
+## ViewMode
+
+Set [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ViewMode) to [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear) to display the carousel items in a stacked linear layout. When not set, the default value is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default), which places a single item in the center of the view.
+
+The following example shows how to configure `SfCarousel` in `Linear` view mode with a custom item template.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<carousel:SfCarousel x:Name="carousel"  
+<carousel:SfCarousel x:Name="carousel"
+                     ItemHeight="170"
+                     ItemWidth="270"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}" 
-                     ViewMode="Linear"/>
-	
-{% endhighlight %}
+                     ViewMode="Linear">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
+</carousel:SfCarousel>
 
+{% endhighlight %}
 {% highlight C# %}
 
-SfCarousel carousel = new SfCarousel();
-carousel.ViewMode = ViewMode.Linear;
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-
+CarouselViewModel carouselViewModel = new CarouselViewModel();
+SfCarousel carousel = new SfCarousel()
+{
+    ItemHeight = 170,
+    ItemWidth = 270,
+    ViewMode = ViewMode.Linear,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
+};
 
 {% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
 
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
+
+
+The following image shows the carousel items arranged in a stacked linear layout.
 
 ![Linear mode](images/linearview.png)
 
+## See also
 
-
+- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [UI Virtualization in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
