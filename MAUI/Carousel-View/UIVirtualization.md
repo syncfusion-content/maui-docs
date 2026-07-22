@@ -1,7 +1,7 @@
 ---
 layout : post
 title: UIVirtualization in .NET MAUI Carousel View control | Syncfusion®
-description: Learn here all about UIVirtualization support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
+description: Learn how to enable UI virtualization in the Syncfusion® .NET MAUI Carousel View (SfCarousel) control to improve performance with large data sets.
 platform : maui
 control : Carousel
 documentation : ug
@@ -9,17 +9,23 @@ documentation : ug
 
 # UIVirtualization in .NET MAUI Carousel View (SfCarousel)
 
-UI virtualization in the `SfCarousel` control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
+UI virtualization in the [.NET MAUI Carousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
 
-The following property has been used in UIVirtualization support:
+The following property is used to enable UI virtualization:
 
-* `EnableVirtualization`  
+* [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization)
 
-## EnableVirtualization
+## Prerequisites
 
-The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property in SfCarousel, supporting both Default and Linear view modes.
+Before using the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-N> The default value of the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property is false.
+- `Syncfusion.Maui.Carousel`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/carousel-view/getting-started) documentation.
+
+## Enable UI Virtualization
+
+The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property of `Carousel` control. The property applies to both the `Default` and `Linear` [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html) values. The default value of the `EnableVirtualization` property is `false`.
 
 ### Default Mode
 
@@ -30,73 +36,179 @@ N> The default value of the [EnableVirtualization](https://help.syncfusion.com/c
 <!-- Default View Mode -->
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemHeight="200"
-                     ItemWidth="200"
-                     ItemSpacing="2"
+                     ItemHeight="170"
+                     ItemWidth="270"
                      ViewMode="Default"
-                     EnableVirtualization="true">
+                     EnableVirtualization="True">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" 
+                   Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
 </carousel:SfCarousel>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-// Default Mode Configuration
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 200,
-    ItemWidth = 200,
-    ItemSpacing = 2,
+    ItemHeight = 170,
+    ItemWidth = 270,
     EnableVirtualization = true,
-    ViewMode = ViewMode.Default
+    ViewMode = ViewMode.Default,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
 };
-
-carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-### Linear Mode
+## Linear Mode
 
 {% tabs %}
 
 {% highlight xaml %}
-
 <!-- Linear View Mode -->
 <carousel:SfCarousel x:Name="linearCarousel"
                      ItemsSource="{Binding ImageCollection}"
-                     ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemHeight="200"
-                     ItemWidth="200"
-                     ItemSpacing="2"
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     ItemSpacing="60"
                      ViewMode="Linear"
-                     EnableVirtualization="true">
+                     EnableVirtualization="True">
+    <carousel:SfCarousel.BindingContext>
+        <local:CarouselViewModel/>
+    </carousel:SfCarousel.BindingContext>
+    <carousel:SfCarousel.ItemTemplate>
+        <DataTemplate >
+            <Image Source="{Binding Image}" 
+                   Aspect="AspectFit"/>
+        </DataTemplate>
+    </carousel:SfCarousel.ItemTemplate>
 </carousel:SfCarousel>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-// Linear Mode Configuration
-SfCarousel linearCarousel = new SfCarousel()
+CarouselViewModel carouselViewModel = new CarouselViewModel();
+SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 200,
-    ItemWidth = 200,
-    ItemSpacing = 2,
+    ItemHeight = 170,
+    ItemWidth = 270,
+    ItemSpacing = 60,
     EnableVirtualization = true,
-    ViewMode = ViewMode.Linear
+    ViewMode = ViewMode.Linear,
+    BindingContext = carouselViewModel,
+    ItemsSource = carouselViewModel.ImageCollection,
+    ItemTemplate = new DataTemplate(() =>
+    {
+        var image = new Image();
+        image.SetBinding(Image.SourceProperty, "Image");
+        return image;
+    }),
 };
-
-linearCarousel.ItemTemplate = itemTemplate;
-linearCarousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="ViewModel" %}
+
+// Model
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+public class CarouselViewModel
+{
+    public CarouselViewModel()
+    {
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![UIVirtualization](images/UIVirtualization.png)
 
 Find the complete UIVirtualization sample from this [link](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/UIVirtualization/VirtualizationSample).
+
+## See Also
+
+- [Getting Started with .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/getting-started)
+- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
+- [Transformation in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/transformation)
