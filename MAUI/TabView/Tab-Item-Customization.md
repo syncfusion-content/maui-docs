@@ -1,609 +1,680 @@
 ---
 layout: post
-title: Display Type in .NET MAUI Tab View (SfTabView) Control | Syncfusion®
+title: Configure the Appearance of Tab Item in Syncfusion® .NET MAUI Tab View
 description: Learn all about color and font customization in the Syncfusion® .NET MAUI Tab View (SfTabView) control.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Configure the Appearance of Tab Item in .NET MAUI Tab View (SfTabView)
+# Configure the Appearance of a Tab Item in .NET MAUI Tab View
 
-A tab item consists of various elements that can be customized in the .NET MAUI Tab View.
+## Prerequisites
 
-## Adding image in tab item
+Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.TabView`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
+
+## Tab item elements
+
+A tab item in the `SfTabView` control consists of three core elements (header text, image, and content area) and supports a wide range of appearance customizations including text color, font properties, image positioning, badges, scroll buttons, and animation duration. This page documents each customization property with a runnable example.
 
 ### Header
 
-The header holds the text of the tab item displayed in the tab bar.
+The [`Header`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) property holds the text of the tab item displayed in the tab bar. The property is of type `string`.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem Header="ITEM 1"/>
+    <tabView:SfTabItem Header="ITEM 1" />
+    <tabView:SfTabItem Header="ITEM 2" />
+    <tabView:SfTabItem Header="ITEM 3" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        Header = "ITEM 1",
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1" },
+        new SfTabItem { Header = "ITEM 2" },
+        new SfTabItem { Header = "ITEM 3" }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![Header](images/Tab-Width-Mode-Default.png) 
+![Tab item with a header label](images/Tab-Width-Mode-Default.png)
 
-### ImageSource 
+### ImageSource
 
-The image to be displayed in the tab bar representing the tab item.
+The [`ImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource) property holds the image displayed in the tab bar representing the tab item. The image file must be added to the `Resources/Images` folder of your MAUI project and registered as a `MauiImage` item in the `.csproj` file.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem Header="ITEM 1" ImageSource="alexandar"/>
+    <tabView:SfTabItem Header="ITEM 1" ImageSource="image1.png" />
+    <tabView:SfTabItem Header="ITEM 2" ImageSource="image2.png" />
+    <tabView:SfTabItem Header="ITEM 3" ImageSource="image3.png" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
+
+SfTabView tabView = new SfTabView
 {
-    new SfTabItem()
-    {
-        Header = "ITEM 1",
-        ImageSource = "alexandar",
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", ImageSource = "image1.png"  },
+        new SfTabItem { Header = "ITEM 2", ImageSource = "image2.png"  },
+        new SfTabItem { Header = "ITEM 3", ImageSource = "image3.png"  }
     }
-}
+};
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![ImageSource](images/Image-Position-Left.png) 
+![Tab item with an image source](images/Image-Position-Left.png)
 
-### Content 
+### Content
 
-The assigned view will get displayed in the main area of the Tab View.
+The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Content) property holds the view displayed in the main area of the Tab View when the tab is selected. The property is of type `View`.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
     <tabView:SfTabItem Header="ITEM 2">
         <tabView:SfTabItem.Content>
             <ListView>
-                ...
+                <!-- ListView content here -->
             </ListView>
         </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-</tabView>
-{% endhighlight %}
+    </tabView:SfTabItem>
+</tabView:SfTabView>
 
+{% endhighlight %}
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+
+SfTabView tabView = new SfTabView
+{
+    Items = new TabItemCollection
     {
         new SfTabItem()
         {
             Header = "ITEM 2",
             Content = new ListView()
             {
-                /// code
+                // ListView content here
             }
         }
     }
-{% endhighlight %}
+};
 
+{% endhighlight %}
 {% endtabs %}
 
-![Content](images/TabItem_Content.png) 
+![Tab item with custom content](images/TabItem_Content.png)
 
-## ImagePosition options 
+## ImagePosition options
 
-The .NET MAUI Tab View provides four options determining how the image of the tab aligns relative to the text. The options are left, top, right and bottom. These can be achieved using the [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html).
+The .NET MAUI Tab View provides four options for determining how the image of the tab aligns relative to the text. The options are `Left`, `Top`, `Right`, and `Bottom`. These can be achieved using the [`ImagePosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition) property of [`SfTabItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html). The property is of type `TabImagePosition` and the default value is `Left`.
 
-N> Each tab item can have different image positions. The Visual State Manager can be used to apply the same value to all tabs.
+> **Note** Each tab item can have a different image position. Use the Visual State Manager to apply the same value to all tabs.
 
 ### Top
 
-The image will be placed above the text vertically.
+Places the image above the text vertically.
 
 {% tabs %}
-
 {% highlight xaml %}
- <tabView:SfTabView>
-     <tabView:SfTabItem ImagePosition="Top"/>
- </tabView:SfTabView>
-{% endhighlight %}
 
+<tabView:SfTabView>
+    <tabView:SfTabItem Header="ITEM 1" ImageSource="image1.png" ImagePosition="Top" />
+    <tabView:SfTabItem Header="ITEM 2" ImageSource="image2.png" ImagePosition="Top" />
+    <tabView:SfTabItem Header="ITEM 3" ImageSource="image3.png" ImagePosition="Top" />
+</tabView:SfTabView>
+
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        ImagePosition = TabImagePosition.Top,
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", ImageSource = "image1.png", ImagePosition = TabImagePosition.Top  },
+        new SfTabItem { Header = "ITEM 2", ImageSource = "image2.png", ImagePosition = TabImagePosition.Top  },
+        new SfTabItem { Header = "ITEM 3", ImageSource = "image3.png", ImagePosition = TabImagePosition.Top  }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![ImagePosition top](images/Image-Position-Top.png) 
+![Image positioned at the top of the tab header](images/Image-Position-Top.png)
 
 ### Bottom
 
-The image will be placed below the text vertically.
+Places the image below the text vertically.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem ImagePosition="Bottom"/>
+    <tabView:SfTabItem Header="ITEM 1" ImageSource="image1.png" ImagePosition="Bottom" />
+    <tabView:SfTabItem Header="ITEM 2" ImageSource="image2.png" ImagePosition="Bottom" />
+    <tabView:SfTabItem Header="ITEM 3" ImageSource="image3.png" ImagePosition="Bottom" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        ImagePosition = TabImagePosition.Bottom,
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", ImageSource = "image1.png", ImagePosition = TabImagePosition.Bottom },
+        new SfTabItem { Header = "ITEM 2", ImageSource = "image2.png", ImagePosition = TabImagePosition.Bottom },
+        new SfTabItem { Header = "ITEM 3", ImageSource = "image3.png", ImagePosition = TabImagePosition.Bottom }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![ImagePosition bottom](images/Image-Position-Bottom.png) 
+![Image positioned at the bottom of the tab header](images/Image-Position-Bottom.png)
 
 ### Left
 
-The image will be placed before the text, horizontally.
+Places the image before the text, horizontally.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem ImagePosition="Left">
+    <tabView:SfTabItem Header="ITEM 1" ImageSource="image1.png" ImagePosition="Left" />
+    <tabView:SfTabItem Header="ITEM 2" ImageSource="image2.png" ImagePosition="Left" />
+    <tabView:SfTabItem Header="ITEM 3" ImageSource="image3.png" ImagePosition="Left" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        ImagePosition = TabImagePosition.Left,
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+     Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", ImageSource = "image1.png", ImagePosition = TabImagePosition.Left },
+        new SfTabItem { Header = "ITEM 2", ImageSource = "image2.png", ImagePosition = TabImagePosition.Left },
+        new SfTabItem { Header = "ITEM 3", ImageSource = "image3.png", ImagePosition = TabImagePosition.Left }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![ImagePosition left](images/Image-Position-Left.png) 
+![Image positioned to the left of the tab header text](images/Image-Position-Left.png)
 
 ### Right
 
-The image will be placed to the right side of the text, horizontally.
+Places the image to the right of the text, horizontally.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem ImagePosition="Right">
+    <tabView:SfTabItem ImagePosition="Right" />
+    <tabView:SfTabItem Header="ITEM 1" ImageSource="image1.png" ImagePosition="Right" />
+    <tabView:SfTabItem Header="ITEM 2" ImageSource="image2.png" ImagePosition="Right" />
+    <tabView:SfTabItem Header="ITEM 3" ImageSource="image3.png" ImagePosition="Right" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        ImagePosition = TabImagePosition.Right,
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", ImageSource = "image1.png", ImagePosition = TabImagePosition.Right },
+        new SfTabItem { Header = "ITEM 2", ImageSource = "image2.png", ImagePosition = TabImagePosition.Right },
+        new SfTabItem { Header = "ITEM 3", ImageSource = "image3.png", ImagePosition = TabImagePosition.Right }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![ImagePosition right](images/Image-Position-Right.png) 
+![Image positioned to the right of the tab header text](images/Image-Position-Right.png)
 
 ## ImageTextSpacing
 
-The [ImageTextSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageTextSpacing) property in SfTabItem allows spacing between the image and the text of the tab item.
+The [`ImageTextSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageTextSpacing) property in `SfTabItem` sets the spacing between the image and the text of the tab item. The property is of type `double`.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem ImageTextSpacing="20"/>
+    <tabView:SfTabItem  />
+    <tabView:SfTabItem Header="ITEM 1" ImageSource="image1.png" ImageTextSpacing="20"/>
+    <tabView:SfTabItem Header="ITEM 2" ImageSource="image2.png" ImageTextSpacing="20"/>
+    <tabView:SfTabItem Header="ITEM 3" ImageSource="image3.png" ImageTextSpacing="20"/>
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        ImageTextSpacing = "20",
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", ImageSource = "image1.png", ImagePosition = ImageTextSpacing=20 },
+        new SfTabItem { Header = "ITEM 2", ImageSource = "image2.png", ImagePosition = ImageTextSpacing=20 },
+        new SfTabItem { Header = "ITEM 3", ImageSource = "image3.png", ImagePosition = ImageTextSpacing=20 }
+    }
+};
+{% endhighlight %}
 {% endtabs %}
 
-![ImageTextSpacing](images/Image-Text-Spacing.png)
+![Spacing between the image and text set to 20](images/Image-Text-Spacing.png)
 
-## TextColor customization 
+## TextColor customization
 
-The text color of the tab item displayed in the tab bar.
+The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_TextColor) property sets the text color of the tab item displayed in the tab bar. The property is of type `Color`.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem TextColor="Blue"/>
+    <tabView:SfTabItem Header="ITEM 1" TextColor="Blue" />
+    <tabView:SfTabItem Header="ITEM 2" TextColor="Blue" />
+    <tabView:SfTabItem Header="ITEM 3" TextColor="Blue" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        TextColor = Color.Blue,
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", TextColor = Colors.Blue },
+        new SfTabItem { Header = "ITEM 2", TextColor = Colors.Blue },
+        new SfTabItem { Header = "ITEM 3", TextColor = Colors.Blue }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![TextColor](images/TextColor.png) 
+![Tab item text color set to blue](images/TextColor.png)
 
-## Font customization 
+## Font customization
 
-This type of customization involves changes to some font elements.
+This type of customization involves changes to font elements such as family, attributes, and size.
 
 ### FontFamily
 
-Font family of the tab item text displayed in the tab bar.
+The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontFamily) property sets the font family of the tab item text. To use a custom font, register it in `MauiProgram.cs` using `.ConfigureFonts(fonts => fonts.AddFont("OpenSansRegular.ttf", "OpenSansRegular"))` and include the font file in the `Resources/Fonts` folder of your project.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem FontFamily="OpenSansRegular"/>
+    <tabView:SfTabItem Header="ITEM 1" FontFamily="OpenSansRegular" />
+    <tabView:SfTabItem Header="ITEM 2" FontFamily="OpenSansRegular" />
+    <tabView:SfTabItem Header="ITEM 3" FontFamily="OpenSansRegular" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        FontFamily = "OpenSansRegular",
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", FontFamily = "OpenSansRegular" },
+        new SfTabItem { Header = "ITEM 2", FontFamily = "OpenSansRegular" },
+        new SfTabItem { Header = "ITEM 3", FontFamily = "OpenSansRegular" }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![FontFamily](images/FontFamily.png) 
+![Tab item font family set to OpenSansRegular](images/FontFamily.png)
 
-### FontAttribute
+### FontAttributes
 
-The font style of the text of each tab item in the tab bar.
+The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontAttributes) property sets the font style of the text of each tab item. Valid values are `None`, `Bold`, and `Italic`.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem FontAttributes="Bold"/>
+    <tabView:SfTabItem Header="ITEM 1" FontAttributes="Bold" />
+    <tabView:SfTabItem Header="ITEM 2" FontAttributes="Bold" />
+    <tabView:SfTabItem Header="ITEM 3" FontAttributes="Bold" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        FontAttributes = FontAttributes.Bold,
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", FontAttributes = FontAttributes.Bold },
+        new SfTabItem { Header = "ITEM 2", FontAttributes = FontAttributes.Bold },
+        new SfTabItem { Header = "ITEM 3", FontAttributes = FontAttributes.Bold }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![FontAttribute](images/FontAttributes.png) 
+![Tab item font attributes set to bold](images/FontAttributes.png)
 
 ### FontSize
 
-The size of the text of each tab item in the tab bar.
+The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontSize) property sets the size of the text of each tab item. The property is of type `double`.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem FontSize="32"/>
+    <tabView:SfTabItem Header="ITEM 1" FontSize="32" />
+    <tabView:SfTabItem Header="ITEM 2" FontSize="32" />
+    <tabView:SfTabItem Header="ITEM 3" FontSize="32" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        FontSize = 32,
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", FontSize="32" },
+        new SfTabItem { Header = "ITEM 2", FontSize="32" },
+        new SfTabItem { Header = "ITEM 3", FontSize="32" }
+    }
+};
+{% endhighlight %}
 {% endtabs %}
 
-![FontSize](images/FontSize.png)
+![Tab item font size set to 32](images/FontSize.png)
 
 ## LineBreakMode
 
-Line break mode of the tab item text displayed in the tab bar.
+The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_LineBreakMode) property sets the line break mode of the tab item text. The property is of type `LineBreakMode`. Valid values are `NoWrap`, `WordWrap`, `CharacterWrap`, `HeadTruncation`, `TailTruncation`, and `MiddleTruncation`.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem Header="Terms and Conditions and Privacy Policy" LineBreakMode="WordWrap"/>
-    <tabView:SfTabItem Header="Account Settings and Preferences" LineBreakMode="WordWrap"/>
-    <tabView:SfTabItem Header="Licenses and Copyrights Agreements" LineBreakMode="WordWrap"/>
+    <tabView:SfTabItem Header="Terms and Conditions and Privacy Policy" LineBreakMode="WordWrap" />
+    <tabView:SfTabItem Header="Account Settings and Preferences" LineBreakMode="WordWrap" />
+    <tabView:SfTabItem Header="Licenses and Copyrights Agreements" LineBreakMode="WordWrap" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
- var tabItem = new SfTabItem { Header = "Very long header text that may wrap or truncate" };
- tabItem.LineBreakMode = LineBreakMode.WordWrap;
- var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        Header = "Terms and Conditions and Privacy Policy",
-        LineBreakMode = LineBreakMode.WordWrap
-    },
-    new SfTabItem()
-    {
-        Header = "Account Settings and Preferences",
-        LineBreakMode = LineBreakMode.WordWrap
-    },
-    new SfTabItem()
-    {
-        Header = "Licenses and Copyrights Agreements",
-        LineBreakMode = LineBreakMode.WordWrap
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = new TabItemCollection
+    {
+        new SfTabItem()
+        {
+            Header = "Terms and Conditions and Privacy Policy",
+            LineBreakMode = LineBreakMode.WordWrap
+        },
+        new SfTabItem()
+        {
+            Header = "Account Settings and Preferences",
+            LineBreakMode = LineBreakMode.WordWrap
+        },
+        new SfTabItem()
+        {
+            Header = "Licenses and Copyrights Agreements",
+            LineBreakMode = LineBreakMode.WordWrap
+        }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![LineBreakMode](images/LineBreakMode.png)
+![Tab items with word-wrap line break mode](images/LineBreakMode.png)
 
 ## Badge support
 
-In SfTabItem, badges notify users of new or unread messages, notifications, or the status of something.
+In `SfTabItem`, badges notify users of new or unread messages, notifications, or the status of something.
 
 ### BadgeText
 
-By using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeText) property in the SfTabItem, you can add text to badge view.
+The [`BadgeText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeText) property sets the text shown inside the badge view.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView>
-    <tabView:SfTabItem BadgeText="20"/>
+    <tabView:SfTabItem  />
+    <tabView:SfTabItem Header="ITEM 1" BadgeText="20" />
+    <tabView:SfTabItem Header="ITEM 2" BadgeText="10" />
+    <tabView:SfTabItem Header="ITEM 3" BadgeText="25" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-var tabItems = new TabItemCollection
-{
-    new SfTabItem()
-    {
-        BadgeText = "20",
-    }
-}
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1", BadgeText = 20 },
+        new SfTabItem { Header = "ITEM 2", BadgeText = 10 },
+        new SfTabItem { Header = "ITEM 3", BadgeText = 25 }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
 ### BadgeSettings
 
-The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) property helps customize the basic look and feel of the badge view in the SfTabItem. 
+The [`BadgeSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) property customizes the appearance of the badge view. It exposes sub-properties such as badge type, position, background color, text color, border color, border thickness, offset, and font attributes.
 
-It contains the sub-elements such as badge types, positions, and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
-
-N> To customize the badge beyond predefined styles, set [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None) in the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties).
+> **Note** To customize the badge beyond predefined styles, set the [`Type`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property to [`None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None) in the `BadgeSettings`.
 
 {% tabs %}
-
 {% highlight xaml %}
-<ContentPage
-    . . .  
-    xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView  
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <tabView:SfTabView>
-        <tabView:SfTabItem Header="RECENTS" BadgeText="20">
-            <tabView:SfTabItem.BadgeSettings >
-                <core:BadgeSettings FontSize="15" 
-                                    FontAttributes="Bold" 
-                                    FontFamily="serif"/>
-            </tabView:SfTabItem.BadgeSettings>
-        </tabView:SfTabItem>
-    </tabView:SfTabView>    
-</ContentPage>
-{% endhighlight %}
 
+<tabView:SfTabView>
+    <tabView:SfTabItem Header="RECENTS" BadgeText="20">
+        <tabView:SfTabItem.BadgeSettings>
+            <core:BadgeSettings FontSize="15"
+                                FontAttributes="Bold"
+                                FontFamily="serif" />
+        </tabView:SfTabItem.BadgeSettings>
+    </tabView:SfTabItem>
+    <tabView:SfTabItem Header="FAVOURITS"/>
+    <tabView:SfTabItem Header="CONTACTS"/>
+</tabView:SfTabView>
+
+{% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.TabView;
-...
-
-var tabView = new SfTabView();
-BadgeSettings badgeSetting = new BadgeSettings();
-badgeSetting.FontAttributes = FontAttributes.Bold;
-badgeSetting.FontSize = 15;
-badgeSetting.FontFamily = "serif";
-
-var tabItems = new TabItemCollection()
+SfTabView tabView = new SfTabView
 {
-    new SfTabItem()
+    Items = new TabItemCollection
     {
-        Header="TabItem",
-        BadgeText = "Inbox",
-        BadgeSettings = badgeSetting,
+        new SfTabItem()
+        {
+            Header = "RECENTS",
+            BadgeText = "20",
+            BadgeSettings = new BadgeSettings()
+            {
+                FontSize = 15,
+                FontAttributes = FontAttributes.Bold,
+                FontFamily = "serif"
+            }
+        }
+        new SfTabItem { Header = "FAVOURITS" },
+        new SfTabItem { Header = "CONTACTS" }
     }
 };
 
-tabView.Items = tabItems;
-            
 {% endhighlight %}
-
 {% endtabs %}
 
-![BadgeSupport](images/TabItem_badge.png) 
+![Badge on a tab item with custom font settings](images/TabItem_badge.png)
 
-N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewCustomizationSample) in GitHub.
+> **Note** View the [TabViewCustomizationSample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewCustomizationSample) on GitHub.
 
 ## TabHeaderPadding
 
-The [TabHeaderPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabHeaderPadding) property in [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows for adding padding to the tab header.
+The [`TabHeaderPadding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabHeaderPadding) property on `SfTabView` adds padding around the tab header. The property is of type `Thickness`.
 
-N> The `TabHeaderPadding` property is only applicable when [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabWidthMode) is set to [SizeToContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_SizeToContent).
+> **Note** `TabHeaderPadding` is only applicable when [`TabWidthMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabWidthMode) is set to [`SizeToContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_SizeToContent).
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView TabWidthMode="SizeToContent" TabHeaderPadding="5,10,5,10">
-    <tabView:SfTabItem/>
+    <tabView:SfTabItem Header="ITEM 1"/>
+    <tabView:SfTabItem Header="ITEM 2"/>
+    <tabView:SfTabItem Header="ITEM 3"/>
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-tabView.TabWidthMode = TabWidthMode.SizeToContent;
-tabView.TabHeaderPadding = new Thickness(5, 10, 5, 10);
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    TabWidthMode = TabWidthMode.SizeToContent,
+    TabHeaderPadding = new Thickness(5, 10, 5, 10)
+    Items = 
+    { 
+        new SfTabItem { Header = "ITEM 1" },
+        new SfTabItem { Header = "ITEM 2" },
+        new SfTabItem { Header = "ITEM 3" }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![TabHeaderPadding](images/TabViewHeaderItem_Padding.png)
+![Tab header padding set to 5,10,5,10](images/TabViewHeaderItem_Padding.png)
 
-## Scroll buttons on header
+## Scroll buttons
 
-Scroll buttons are used to navigate through the items in the header of the Tab View by adjusting the [IsScrollButtonEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IsScrollButtonEnabled) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1). This additionally indicates the presence of tabs beyond the currently visible area.
+Scroll buttons are used to navigate through the items in the header of the Tab View by setting the [`IsScrollButtonEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IsScrollButtonEnabled) property of `SfTabView`. The property is of type `bool` and defaults to `false`. When enabled, scroll buttons are shown to indicate the presence of tabs beyond the currently visible area.
 
 {% tabs %}
-
 {% highlight xaml %}
-<tabView:SfTabView  IsScrollButtonEnabled="True">
-    <tabView:SfTabItem/>
+
+<tabView:SfTabView IsScrollButtonEnabled="true">
+    <tabView:SfTabItem />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-tabView.IsScrollButtonEnabled = true;
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    IsScrollButtonEnabled = true
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![Scroll mode](images/TabViewScroll.gif) 
+![Scroll buttons shown on the tab header](images/TabViewScroll.gif)
 
 ### Scroll button customization
 
-The [ScrollButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackground) and [ScrollButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonColor) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows customization of the background and foreground color of the scroll button.
+The [`ScrollButtonBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackground) and [`ScrollButtonColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonColor) properties of `SfTabView` customize the background and foreground color of the scroll button.
 
 {% tabs %}
-
 {% highlight xaml %}
+
 <tabView:SfTabView ScrollButtonBackground="Violet" ScrollButtonColor="Red">
+    <tabView:SfTabItem />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-StackLayout stackLayout = new StackLayout();
-var tabView = new SfTabView();
-tabView.ScrollButtonBackground = SolidColorBrush.Violet;
-tabView.ScrollButtonColor = Colors.Red;
-stackLayout.Children.Add(tabView);
-this.Content = stackLayout;
-{% endhighlight %}
 
+SfTabView tabView = new SfTabView
+{
+    ScrollButtonBackground = new SolidColorBrush(Colors.Violet),
+    ScrollButtonColor = Colors.Red
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![Scroll button customization](images\ScrollButtonCustomization.png)
+![Scroll buttons with custom background and foreground colors](images/ScrollButtonCustomization.png)
 
 ## FontAutoScalingEnabled
 
-The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontAutoScalingEnabled) property automatically scales the tab header's font size based on the operating system's text size. The default value is `false`.
+The [`FontAutoScalingEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontAutoScalingEnabled) property automatically scales the tab header's font size based on the operating system's text size. The property is of type `bool` and the default value is `false`.
 
 {% tabs %}
-
 {% highlight xaml %}
-<tabView:SfTabView FontAutoScalingEnabled="True">
-...
+
+<tabView:SfTabView FontAutoScalingEnabled="true">
+    <tabView:SfTabItem />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-tabView.FontAutoScalingEnabled = true;
-{% endhighlight %}
 
+var tabView = new SfTabView
+{
+    FontAutoScalingEnabled = true
+};
+
+{% endhighlight %}
 {% endtabs %}
 
 ## ContentTransitionDuration
 
-You can customize the animation duration when changing the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) of the Tab View by setting the [ContentTransitionDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ContentTransitionDuration) property.
+The [`ContentTransitionDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ContentTransitionDuration) property customizes the animation duration (in milliseconds) when changing the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) of the Tab View. The property is of type `int`.
 
 {% tabs %}
-
 {% highlight xaml %}
-<tabView:SfTabView  ContentTransitionDuration ="1000">
-    <tabView:SfTabItem/>
+
+<tabView:SfTabView ContentTransitionDuration="1000">
+    <tabView:SfTabItem />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-var tabView = new SfTabView();
-tabView.ContentTransitionDuration = 1000;
-{% endhighlight %}
 
+var tabView = new SfTabView
+{
+    ContentTransitionDuration = 1000
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![ContentTransitionDuration](images/ContentTransition.gif)
+![Content transition animation](images/ContentTransition.gif)
 
 ## ImageSize
 
 You can customize the image size in the .NET MAUI Tab View control by setting the [ImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSize) property.
 
 {% tabs %}
-
 {% highlight xaml %}
 <tabView:SfTabView>
     <tabView:SfTabItem ImageSize="50"/>
@@ -632,11 +703,12 @@ this.Content = stackLayout;
 The [EnableRippleAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableRippleAnimation) property of the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) allows you to enable or disable the ripple animation for tab headers. This animation provides visual feedback when a tab header is tapped. The default value of the `EnableRippleAnimation` property is `true`.
 
 {% tabs %}
-
 {% highlight xaml %}
 <!-- Define the SfTabView control with the ripple animation disabled -->
 <tabView:SfTabView EnableRippleAnimation="False">
-    <!-- Define tab items -->
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
 </tabView:SfTabView>
 {% endhighlight %}
 
@@ -658,21 +730,18 @@ tabView.EnableRippleAnimation = false;
 To disable the hover effect when the mouse pointer is over a [TabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) header, set color value `Transparent` to the built-in key `SfTabViewHoverBackground`.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 ... >
-	<ContentPage.Resources>
-		<Color x:Key="SfTabViewHoverBackground">Transparent</Color>
-	</ContentPage.Resources>
-	<ContentPage.Content>
-		<tabView:SfTabView x:Name="tabView" EnableRippleAnimation="False">
-			<!-- Define tab items -->
-		</tabView:SfTabView>
-	</ContentPage.Content>
-</ContentPage>
+<ContentPage.Resources>
+    <Color x:Key="SfTabViewHoverBackground">Transparent</Color>
+</ContentPage.Resources>
+<ContentPage.Content>
+    <tabView:SfTabView x:Name="tabView" EnableRippleAnimation="False">
+        <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
+    </tabView:SfTabView>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -683,7 +752,6 @@ To disable the hover effect when the mouse pointer is over a [TabItem](https://h
 To select the tab items programmatically, you can use the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property in SfTabView.
 
 {% tabs %}
-
 {% highlight xaml %}
 <tabView:SfTabView SelectedIndex="1">
      <tabView:SfTabItem />
@@ -699,3 +767,10 @@ tabView.SelectedIndex = 1;
 {% endhighlight %}
 
 {% endtabs %}
+
+## See also
+
+- [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
+- [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
+- [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
+- [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)

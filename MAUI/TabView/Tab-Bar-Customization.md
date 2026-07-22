@@ -9,513 +9,462 @@ documentation: UG
 
 # Customize the Tab Bar in .NET MAUI Tab View (SfTabView)
 
-## Tab width options
+## Prerequisites
 
-The .NET MAUI Tab View provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_Default) and [SizeToContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_SizeToContent). These can be achieved using the [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
+Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-### Fixed bar
+- `Syncfusion.Maui.TabView`
 
-The width of the tab is divided equally based on the available control width. This enables a fixed tab bar that will not allow tab scrolling, regardless of the number of tabs. This can be achieved by setting the `TabWidthMode` as `Default`.
-
-N> This mode is recommended when the tab count is not more than four. More tabs in this mode may appear with the text being trimmed.
-
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView TabWidthMode="Default">
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.TabWidthMode = TabWidthMode.Default;
-{% endhighlight %}
-
-{% endtabs %}
-
-![TabWidthMode default](images/Tab-Width-Mode-Default.png)
-
-### Based on the text size
-
-The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `SizeToContent`. Scroll is enabled in this mode to access the items outside the visible area.
-
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView TabWidthMode="SizeToContent">
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.TabWidthMode = TabWidthMode.SizeToContent;
-{% endhighlight %}
-
-{% endtabs %}
-
-![TabWidthMode size to fit](images/Tab-Width-Mode-SizeToFit.png) 
-
-## Customize the TabBarHeight
-
-The height of the tab bar can be customized by setting the [TabBarHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight) property. The default height is 48.
-
-N> It is recommended to set the `TabBarHeight` to 72 while displaying both the image and text with `ImagePosition` as either top or bottom.
-
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView TabBarHeight="100">
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.TabBarHeight = 100;
-{% endhighlight %}
-
-{% endtabs %}
-
-N> The `TabBarHeight` property is obsolete — use `TabBarSize` instead. When `TabBarPlacement` is `Top` or `Bottom`, `TabBarSize` controls the tab bar's height; when `TabBarPlacement` is `Left` or `Right`, `TabBarSize` controls the tab bar's width.
-
-## Customize the TabBarSize
-
-The size of the tab bar can be customized by setting the [TabBarSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarSize) property. The default size is 48.
-
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView TabBarSize="100" TabBarPlacement="Left" >
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.TabBarSize = 100;
-     tabView.TabBarPlacement = TabBarPlacement.Left
-{% endhighlight %}
-
-{% endtabs %}
-
-
-## Customize the tab header text alignment
-
-The horizontal text alignment of the tab header can be customized by setting the [HeaderHorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderHorizontalTextAlignment) property. The default value is `Center`. This property accepts the following values:
-
-*   **Start** - The text will be placed at the starting position in the header tab.
-*   **Center** - The text will be placed at the center of the header tab.
-*   **End** - The text will be placed at the end of the header tab.
-
-{% tabs %}
-
-{% highlight xaml %} 
-<tabView:SfTabView HeaderHorizontalTextAlignment="Center"> 
-{% endhighlight %}
-
-{% highlight C# %} 
-tabView.HeaderHorizontalTextAlignment = TextAlignment.Center; {% endhighlight %}
-
-{% endtabs %}
-
-![Tab header text alignment](images/HorizontalTextAlignmentCenter.png) 
-
-## Customize the HeaderItemSpacing
-
-The spacing between the tab items can be customized by setting the [HeaderItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight) property. The default spacing is 36.
-
-N> `HeaderItemSpacing` is effective only when the `TabWidthMode` is set as `SizeToContent`.
-
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView HeaderItemSpacing="100" TabWidthMode="SizeToContent">
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.HeaderItemSpacing = 100;
-     tabView.TabWidthMode = TabWidthMode.SizeToContent;
-{% endhighlight %}
-
-{% endtabs %}
-
-![HeaderItemSpacing](images/HeaderItemSpacing.png) 
-
-## AnimationEasing
-
-The animation of the tab item content and selection indicator can be customized by setting the [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight) property. The default value is `Easing.Linear`.
-
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView AnimationEasing="SpringOut">
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.AnimationEasing = Easing.SpringOut;
-{% endhighlight %}
-
-{% endtabs %}
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
 
 ## TabBarPlacement options
 
-The .NET MAUI Tab View provides four options for determining how the tab bar aligns relative to the tab content. The options are top, bottom, left and right. This can be achieved using the [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) property.
+The tab bar is the strip that displays the headers of each tab item in the `SfTabView` control. You can customize its placement, size, background, text alignment, spacing, animation, and border using the properties documented on this page.
+
+The .NET MAUI Tab View provides four options for determining how the tab bar aligns relative to the tab content. The options are `Top`, `Bottom`, `Left`, and `Right`. This can be achieved using the [`TabBarPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) property.
 
 ### Top
 
 The tab bar will be placed above the content region of the Tab View control.
 
 {% tabs %}
-
 {% highlight xaml %}
-    <tabView:SfTabView TabBarPlacement="Top" 
-                       TabBarHeight="60"
-                       IndicatorWidthMode="Stretch">
 
+<tabView:SfTabView TabBarPlacement="Top"
+                   TabBarSize="60"
+                   IndicatorWidthMode="Stretch">
     <tabView:SfTabView.Items>
         <tabView:SfTabItem Header="ITEM 1">
             <tabView:SfTabItem.Content>
-                    <Label Text="Tab item content" 
-                           HorizontalOptions="Center" 
-                           VerticalOptions="Center" />
+                <Label Text="Tab item content"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
-
         <tabView:SfTabItem Header="ITEM 2">
             <tabView:SfTabItem.Content>
-                        <Label Text="Tab item content" 
-                               HorizontalOptions="Center" 
-                               VerticalOptions="Center" />
+                <Label Text="Tab item content"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
-
         <tabView:SfTabItem Header="ITEM 3">
             <tabView:SfTabItem.Content>
-                        <Label Text="Tab item content" 
-                               HorizontalOptions="Center" 
-                               VerticalOptions="Center" />
+                <Label Text="Tab item content"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
     </tabView:SfTabView.Items>
 </tabView:SfTabView>
+
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    tabView.TabBarPlacement = TabBarPlacement.Top;
-    tabView.TabBarHeight = 60;
-    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
-    var item1 = new SfTabItem { Header = "ITEM 1" };
-    item1.Content = new Label
+
+SfTabView tabView = new SfTabView
+{
+    TabBarPlacement = TabBarPlacement.Top,
+    TabBarSize = 60,
+    IndicatorWidthMode = IndicatorWidthMode.Stretch,
+    Items = new TabItemCollection
     {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item1);
-    var item2 = new SfTabItem { Header = "ITEM 2" };
-    item2.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item2);
-    var item3 = new SfTabItem { Header = "ITEM 2" };
-    item3.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item3);
-    this.Content = tabView;
+        new SfTabItem()
+        {
+            Header = "ITEM 1",
+            Content = new Label
+            {
+                Text = "Tab item content",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            }
+        },
+        new SfTabItem()
+        {
+            Header = "ITEM 2",
+            Content = new Label
+            {
+                Text = "Tab item content",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            }
+        },
+        new SfTabItem()
+        {
+            Header = "ITEM 3",
+            Content = new Label
+            {
+                Text = "Tab item content",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            }
+        }
+    }
+};
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![TabBarPlacement top](images/Tab-bar-Placement-Top.png) 
+![Tab bar placed at the top of the Tab View](images/Tab-bar-Placement-Top.png)
 
 ### Bottom
 
-The tab bar will be placed below the content region of the Tab View control. 
+The tab bar will be placed below the content region of the Tab View control. The XAML and C# samples are identical to the [Top](#top) example, except that `TabBarPlacement` is set to `Bottom`.
 
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView TabBarPlacement="Bottom">
-{% endhighlight %}
-
-{% highlight C# %}
-    var tabView = new SfTabView();
-    tabView.TabBarPlacement = TabBarPlacement.Bottom;
-    tabView.TabBarHeight = 60;
-    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
-    var item1 = new SfTabItem { Header = "ITEM 1" };
-    item1.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item1);
-    var item2 = new SfTabItem { Header = "ITEM 2" };
-    item2.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item2);
-    var item3 = new SfTabItem { Header = "ITEM 2" };
-    item3.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item3);
-    this.Content = tabView;
-{% endhighlight %}
-
-{% endtabs %}
-
-![TabBarPlacement bottom](images/Tab-bar-Placement-Bottom.png) 
+![Tab bar placed at the bottom of the Tab View](images/Tab-bar-Placement-Bottom.png)
 
 ### Left
 
-The tab bar will be placed left to the content region of the Tab View control.
+The tab bar will be placed to the left of the content region of the Tab View control. The XAML and C# samples are identical to the [Top](#top) example, except that `TabBarPlacement` is set to `Left`.
 
-{% tabs %}
-
-{% highlight xaml %}
-  <tabView:SfTabView TabBarPlacement="Left" 
-                     TabBarWidth="60"
-                     IndicatorWidthMode="Stretch">
-
-    <tabView:SfTabView.Items>
-        <tabView:SfTabItem Header="ITEM 1">
-            <tabView:SfTabItem.Content>
-                    <Label Text="Tab item content" 
-                           HorizontalOptions="Center" 
-                           VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-
-        <tabView:SfTabItem Header="ITEM 2">
-            <tabView:SfTabItem.Content>
-                        <Label Text="Tab item content" 
-                               HorizontalOptions="Center" 
-                               VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-
-        <tabView:SfTabItem Header="ITEM 3">
-            <tabView:SfTabItem.Content>
-                        <Label Text="Tab item content" 
-                               HorizontalOptions="Center" 
-                               VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-    </tabView:SfTabView.Items>
-</tabView:SfTabView>
-{% endhighlight %}
-
-{% highlight C# %}
-    var tabView = new SfTabView();
-    tabView.TabBarPlacement = TabBarPlacement.Left;
-    tabView.TabBarWidth = 60;
-    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
-    var item1 = new SfTabItem { Header = "ITEM 1" };
-    item1.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item1);
-    var item2 = new SfTabItem { Header = "ITEM 2" };
-    item2.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item2);
-    var item3 = new SfTabItem { Header = "ITEM 2" };
-    item3.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item3);
-    this.Content = tabView;
-{% endhighlight %}
-
-{% endtabs %}
-
-![TabBarPlacement Left](images\TabBarPlacementLeft.png) 
+![Tab bar placed to the left of the Tab View](images/TabBarPlacementLeft.png)
 
 ### Right
 
-The tab bar will be placed right to the content region of the Tab View control.
+The tab bar will be placed to the right of the content region of the Tab View control. The XAML and C# samples are identical to the [Top](#top) example, except that `TabBarPlacement` is set to `Right`.
+
+![Tab bar placed to the right of the Tab View](images/TabBarPlacementRight.png)
+
+## Tab width options
+
+The .NET MAUI Tab View provides two modes that determine how the width of the tab is calculated on the tab bar while it gets populated. The options are [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_Default) and [`SizeToContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_SizeToContent). These can be achieved using the [`TabWidthMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
+
+### Fixed bar
+
+The width of the tab is divided equally based on the available control width. This enables a fixed tab bar that will not allow tab scrolling, regardless of the number of tabs. Set `TabWidthMode` to `Default` to enable this behavior.
+
+> **Note** This mode is recommended when the tab count is four or fewer. More tabs in this mode may appear with the text being trimmed.
 
 {% tabs %}
 
 {% highlight xaml %}
-  <tabView:SfTabView TabBarPlacement="Right" 
-                   TabBarWidth="60"
-                   IndicatorWidthMode="Stretch">
-
-    <tabView:SfTabView.Items>
-        <tabView:SfTabItem Header="ITEM 1">
-            <tabView:SfTabItem.Content>
-                    <Label Text="Tab item content" 
-                           HorizontalOptions="Center" 
-                           VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-
-        <tabView:SfTabItem Header="ITEM 2">
-            <tabView:SfTabItem.Content>
-                        <Label Text="Tab item content" 
-                               HorizontalOptions="Center" 
-                               VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-
-        <tabView:SfTabItem Header="ITEM 3">
-            <tabView:SfTabItem.Content>
-                        <Label Text="Tab item content" 
-                               HorizontalOptions="Center" 
-                               VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-    </tabView:SfTabView.Items>
+<tabView:SfTabView TabWidthMode="Default">
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-    var tabView = new SfTabView();
-    tabView.TabBarPlacement = TabBarPlacement.Right;
-    tabView.TabBarWidth = 60;
-    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
-    var item1 = new SfTabItem { Header = "ITEM 1" };
-    item1.Content = new Label
+
+SfTabView tabView = new SfTabView
+{
+    TabWidthMode = TabWidthMode.Default,
+    Items =
     {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item1);
-    var item2 = new SfTabItem { Header = "ITEM 2" };
-    item2.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item2);
-    var item3 = new SfTabItem { Header = "ITEM 2" };
-    item3.Content = new Label
-    {
-        Text = "Tab item content",
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center
-    };
-    tabView.Items.Add(item3);
-    this.Content = tabView;
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    }
+};
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![TabBarPlacement Right](images\TabBarPlacementRight.png) 
+![Tab width mode set to default with equal-width tabs](images/Tab-Width-Mode-Default.png)
+
+### Based on the text size
+
+The width of a tab is set to fit the text or image that it contains when `TabWidthMode` is `SizeToContent`. Scroll is enabled in this mode to access the items outside the visible area.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView TabWidthMode="SizeToContent">
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
+</tabView:SfTabView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView
+{
+    TabWidthMode = TabWidthMode.SizeToContent,
+    Items =
+    {
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Tab width mode set to size-to-content with scrolling enabled](images/Tab-Width-Mode-SizeToFit.png)
+
+## Customize the TabBarSize
+
+The size of the tab bar can be customized by setting the [`TabBarSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarSize) property. The property is of type `double` and the default size is `48`. The `TabBarSize` property controls the tab bar's height when `TabBarPlacement` is `Top` or `Bottom`, and its width when `TabBarPlacement` is `Left` or `Right`.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView TabBarSize="100" TabBarPlacement="Left">
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
+</tabView:SfTabView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView
+{
+    TabBarSize = 100,
+    TabBarPlacement = TabBarPlacement.Left,
+    Items =
+    {
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Customize the tab header text alignment
+
+The horizontal text alignment of the tab header can be customized by setting the [`HeaderHorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderHorizontalTextAlignment) property. The property is of type `TextAlignment` and the default value is `Center`. This property accepts the following values:
+
+- `Start` - Places the text at the starting position in the header tab.
+- `Center` - Places the text at the center of the header tab.
+- `End` - Places the text at the end of the header tab.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView HeaderHorizontalTextAlignment="Center">
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
+</tabView:SfTabView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView
+{
+    HeaderHorizontalTextAlignment = TextAlignment.Center,
+    Items =
+    {
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Tab header text aligned to the center](images/HorizontalTextAlignmentCenter.png)
+
+## Customize the HeaderItemSpacing
+
+Use the [`HeaderItemSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderItemSpacing) property to set the spacing between tab items. The property is of type `double` and the default spacing is `36`.
+
+> **Note** `HeaderItemSpacing` is effective only when `TabWidthMode` is set to `SizeToContent`.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView HeaderItemSpacing="100" TabWidthMode="SizeToContent">
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
+</tabView:SfTabView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView
+{
+    HeaderItemSpacing = 100,
+    TabWidthMode = TabWidthMode.SizeToContent,
+    Items =
+    {
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Header item spacing set to 100](images/HeaderItemSpacing.png)
+
+## AnimationEasing
+
+The animation of the tab item content and selection indicator can be customized by setting the [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_AnimationEasing) property. The property is of type `Easing` and the default value is `Easing.Linear`. Common values include `Easing.Linear`, `Easing.CubicInOut`, `Easing.SpringOut`, and `Easing.BounceIn`.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView AnimationEasing="SpringOut">
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
+</tabView:SfTabView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView
+{
+    AnimationEasing = Easing.SpringOut,
+    Items =
+    {
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## TabBarBackground customization
 
-The tab bar background can be customized using the [TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground) property, which is of type `Brush`.
+The tab bar background can be customized using the [`TabBarBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground) property, which is of type `Brush`. The XAML parser accepts a color name as a string, while the C# API requires an explicit `Color` or `Brush` value.
 
-### Solid color 
+### Solid color
 
-A solid color can be achieved by assigning the `SolidColorBrush` to the [TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground), which represents the color of the tab bar background.
+Use a `Color` or `SolidColorBrush` to set the tab bar's background color.
 
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView TabBarBackground="LightBlue">
-{% endhighlight %}
+<tabView:SfTabView TabBarBackground="LightBlue">
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
+</tabView:SfTabView>
 
+{% endhighlight %}
 {% highlight C# %}
-     tabView.TabBarBackground = Colors.LightBlue;
+
+SfTabView tabView = new SfTabView
+{
+    TabBarBackground = new SolidColorBrush(Colors.LightBlue),
+    Items =
+    {
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    }
+};
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![Solid color](images/TabBarSolidColor.png) 
+![Tab bar background set to a solid color](images/TabBarSolidColor.png)
 
-### Gradient color 
+### Gradient color
 
-The background can be customized with a linear gradient and radial gradient as like below example.
+The tab bar background can be customized with a linear gradient, as shown in the example below.
 
 {% tabs %}
+
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabView.TabBarBackground>
-            <LinearGradientBrush EndPoint="0,1">
-                <GradientStop Color="#009FFF" Offset="0.1" />
-                <GradientStop Color="#ec2F4B Offset="1.0" />
-            </LinearGradientBrush>
-        </tabView:SfTabView.TabBarBackground>
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabView.TabBarBackground>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#009FFF" Offset="0.1" />
+            <GradientStop Color="#ec2F4B" Offset="1.0" />
+        </LinearGradientBrush>
+    </tabView:SfTabView.TabBarBackground>
+</tabView:SfTabView>
+
 {% endhighlight %}
-
-
 {% highlight C# %}
-Microsoft.Maui.Controls.GradientStop gra1 = new Microsoft.Maui.Controls.GradientStop()
+
+SfTabView tabView = new SfTabView
 {
-    Color = Color.FromArgb("#009FFF"),
-    Offset = (float)0.1,
+    TabBarBackground = new LinearGradientBrush
+    {
+        EndPoint = new Point(0, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop
+            {
+                Color = Color.FromArgb("#009FFF"),
+                Offset = 0.1f
+            },
+            new GradientStop
+            {
+                Color = Color.FromArgb("#ec2F4B"),
+                Offset = 1.0f
+            }
+        }
+    }
 };
 
-Microsoft.Maui.Controls.GradientStop gra2 = new Microsoft.Maui.Controls.GradientStop()
-{
-    Color = Color.FromArgb("#ec2F4B"),
-    Offset = (float)1.0,
-};
-
-LinearGradientBrush graBrush = new LinearGradientBrush()
-{
-    EndPoint = new Point(0, 1),
-    GradientStops = new GradientStopCollection() { gra1, gra2 }
-};
-
-SfTabView tabView = new SfTabView();
-tabView.TabBarBackground = graBrush;
 {% endhighlight %}
+
 {% endtabs %}
 
-![Gradient color](images/TabBarGradientColor.png) 
+![Tab bar background set to a linear gradient](images/TabBarGradientColor.png)
 
-N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub.
+> **Note** View the [TabBarCustomization sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) on GitHub.
 
 ## Tab bar border customization
 
 You can customize the border of the tab header area in .NET MAUI Tab View using the following properties:
 
-- [TabBarBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBorderColor): Sets the border color.
-- [TabBarBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBorderThickness): Sets the border thickness.
-- [TabBarCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarCornerRadius): Sets the corner radius of the tab bar's border.
+- [`TabBarBorderColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBorderColor) - Sets the border color. Type: `Color`.
+- [`TabBarBorderThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBorderThickness) - Sets the border thickness. Type: `double`.
+- [`TabBarCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarCornerRadius) - Sets the corner radius of the tab bar's border. Type: `CornerRadius`.
 
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView
-    x:Name="tabView"
-    TabBarPlacement="Bottom"
-    TabBarBorderColor="#7C3AED"
-    TabBarBorderThickness="2"
-    TabBarCornerRadius="24">
+<tabView:SfTabView TabBarPlacement="Bottom"
+                   TabBarBorderColor="#7C3AED"
+                   TabBarBorderThickness="2"
+                   TabBarCornerRadius="24">
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-tabView.TabBarPlacement = TabBarPlacement.Bottom;
-tabView.TabBarBorderColor = Color.FromArgb("#7C3AED");
-tabView.TabBarBorderThickness = 2;
-tabView.TabBarCornerRadius = new CornerRadius(24);
+
+SfTabView tabView = new SfTabView
+{
+    TabBarPlacement = TabBarPlacement.Bottom,
+    TabBarBorderColor = Color.FromArgb("#7C3AED"),
+    TabBarBorderThickness = 2,
+    TabBarCornerRadius = new CornerRadius(24),
+    Items =
+    {
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    }
+};
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![Tab bar border](images/Tab-bar-border.png)
+![Tab bar with a custom border](images/Tab-bar-border.png)
+
+## See also
+
+* [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
+* [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
+* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+* [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)

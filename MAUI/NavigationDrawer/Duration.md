@@ -1,46 +1,68 @@
 ---
 layout: post
-title: Animation Duration in .NET MAUI Navigation Drawer Control | Syncfusion®
-description: Learn about Animation Duration support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+title: Animation Duration in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn about the Duration property in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and how to customize the animation speed.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
 ---
 # Animation Duration in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
+## Prerequisites
+
+Before using the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.NavigationDrawer`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/navigationdrawer/getting-started) documentation.
+
+## Duration
+
 The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) specifies the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
 
-{% tabs %}
+The following code example illustrates how to set the animation duration of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html).
 
+{% tabs %}
 {% highlight xaml %}
 
-<navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
-    <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings  Duration="200"/>
-    </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-</navigationdrawer:SfNavigationDrawer>
+<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings Duration="2000"/>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+</navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
-navigationDrawer.DrawerSettings = new DrawerSettings()
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 {
-    Duration = 200,
+    DrawerSettings = new DrawerSettings
+    {
+        Duration = 2000
+    }
 };
-this.Content = navigationDrawer;
-
 {% endhighlight %}
-
 {% endtabs %}
 
 N> The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property for the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) is measured in milliseconds.
 
 The following screenshot illustrates the result of the above code.
 
-![Duration](Images/animation-duration/navigation_duration.gif)
+![Animation Duration in .NET MAUI Navigation Drawer](Images/animation-duration/navigation_duration.gif)
 
-## See also 
+## Related Members
 
-[How to Customize the Animation Duration in .NET MAUI Navigation Drawer?](https://support.syncfusion.com/kb/article/15504/how-to-customize-the-animation-duration-in-net-maui-navigation-drawer)
+The `Duration` property works together with the following members to control the drawer's animation behavior:
+
+- [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_AnimationEasing) — defines the acceleration curve of the animation.
+- [Transition](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer) — controls the open/close animation style.
+- [SwipeGestureSettings](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) — configures the swipe interaction that triggers the animation.
+
+For more details on configuring the drawer behavior, see [Toggling the Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer) and [Swipe Gesture](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture).
+
+## See also
+
+- [How to Customize the Animation Duration in .NET MAUI Navigation Drawer?](https://support.syncfusion.com/kb/article/15504/how-to-customize-the-animation-duration-in-net-maui-navigation-drawer)
+- [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
+- [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
+- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
