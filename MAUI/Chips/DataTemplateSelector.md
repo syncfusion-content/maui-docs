@@ -222,7 +222,7 @@ public class ChipModel
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with two chip templates (selectable and non-selectable) chosen by DataTemplateSelector](images/customization-images/datatemplateselector.png)
+![SfChipGroup with two chip templates selectable and non selectable chosen by DataTemplateSelector](images/customization-images/datatemplateselector.png)
 
 ## Expected Behavior
 

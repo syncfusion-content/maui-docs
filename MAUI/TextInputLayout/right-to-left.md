@@ -32,7 +32,7 @@ N> When the layout direction changes, the hint label, helper text, error text, c
 
 ## Apply RTL to a single control
 
-Set the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.flowdirection) property directly on the `SfTextInputLayout` instance.
+Set the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-10.0) property directly on the `SfTextInputLayout` instance.
 
 {% tabs %}
 {% highlight xaml %}
@@ -67,7 +67,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with right-to-left flow direction; the hint, helper text, and inner Entry are mirrored](images/RightToLeft/RTL.png)
+![.NET MAUI TextInputLayout with right to left](images/RightToLeft/RTL.png)
 
 ## Apply RTL to the entire app
 

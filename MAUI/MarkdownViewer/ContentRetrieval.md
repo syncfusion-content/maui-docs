@@ -106,7 +106,6 @@ string text = markdownViewer.GetText();
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfMarkdownViewer](https://help.syncfusion.com/maui/markdownviewer/getting-started)
 - [Loading Markdown Content](https://help.syncfusion.com/maui/markdownviewer/databinding)
 - [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance)
 - [Apply CSS Style Rules](https://help.syncfusion.com/maui/markdownviewer/overridingdefaultstyles)

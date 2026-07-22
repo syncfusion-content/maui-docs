@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in .NET MAUI Chips (SfChip and SfChipGroup) control | Syncfusion®
+title: Customization in .NET MAUI Chip (SfChip & SfChipGroup) | Syncfusion®
 description: Learn how to customize the Syncfusion® .NET MAUI Chips controls, including SfChip and SfChipGroup, in code and XAML.
 platform: maui
 control: SfChip, SfChipGroup
@@ -20,7 +20,7 @@ Before using the [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/chips/getting-started) documentation.
 
 - For `SfChipGroup` samples that bind `ItemsSource` to `Employees`, set the page's `BindingContext` to a ViewModel that exposes an `ObservableCollection<Employee>` (see the [Populating Items](https://help.syncfusion.com/maui/chips/populating-items) page for a complete model and ViewModel).
-- For samples that reference an image (e.g., `ChipUserContact.png`, `lion.png`, `jhon.png`), add the image to the `Resources/Images` folder of your .NET MAUI project and register it as a `MauiImage` in the `.csproj` file.
+- For samples that reference an image (e.g., `ChipUserContact.png`, `lion.png`, `john.png`), add the image to the `Resources/Images` folder of your .NET MAUI project and register it as a `MauiImage` in the `.csproj` file.
 
 ## SfChip Customization
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI SfChipGroup and SfChip | Syncfusion®
-description: Learn about the events raised by the Syncfusion® .NET MAUI SfChipGroup and SfChip controls, including SelectionChanging, SelectionChanged, ChipClicked, ItemRemoved, and CloseButtonClicked.
+description: Learn about events in Syncfusion® .NET MAUI SfChipGroup and SfChip controls, including selection, click, remove, and close actions.
 platform: maui
 control: Chips
 documentation: ug

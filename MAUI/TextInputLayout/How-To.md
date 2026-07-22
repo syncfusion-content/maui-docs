@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Stroke Thickness in .NET MAUI SfTextInputLayout | Syncfusion®
+title: Customize Stroke Thickness in .NET MAUI TextInputLayout | Syncfusion®
 description: Learn how to customize the focused and unfocused stroke thickness of the Syncfusion® .NET MAUI SfTextInputLayout control for each container type.
 platform: maui
 control: SfTextInputLayout

@@ -90,7 +90,7 @@ var chip = new SfChip
 {% endhighlight %}
 {% endtabs %}
 
-![SfChip displaying a font icon (calendar glyph) alongside the text "Syncfusion"](images/AppIcon.png)
+![SfChip displaying a font icon calendar glyph alongside the text Syncfusion](images/AppIcon.png)
 
 ## Troubleshooting
 

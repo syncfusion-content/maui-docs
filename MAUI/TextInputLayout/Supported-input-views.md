@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported Input Views in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn which input views can be hosted inside the Syncfusion® .NET MAUI SfTextInputLayout control, including MAUI inputs (Entry, Editor, Picker, etc.) and Syncfusion inputs (Autocomplete, ComboBox, MaskedEntry, NumericEntry).
+description: Learn which MAUI and Syncfusion input views, including Entry, Editor, Picker, ComboBox, and NumericEntry, are supported in SfTextInputLayout.
 platform: maui
 control: SfTextInputLayout
 documentation: ug

@@ -21,7 +21,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Clicked Event
 
-The [`Clicked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Clicked) event is raised when the user taps or clicks the `SfButton`. The event handler receives an `EventArgs` argument and is invoked once per tap; it is not cancellable and runs synchronously on the UI thread.
+The [`Clicked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Clicked) event is raised when the user taps or clicks the `SfButton`. The event handler receives an `EventArgs` argument and is invoked once per tap; it is not cancelable and runs synchronously on the UI thread.
 
 The following code samples subscribe to the `Clicked` event and change the text color when the button is tapped.
 

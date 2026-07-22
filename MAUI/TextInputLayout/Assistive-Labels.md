@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Assistive Labels in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn how to use assistive labels (helper text, error text, character counter, password toggle, and reserved space) in the Syncfusion® .NET MAUI SfTextInputLayout control.
+description: Learn how to use assistive labels in Syncfusion® .NET MAUI SfTextInputLayout, including helper text, error text, counters, and toggles.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
@@ -102,7 +102,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with helper text "Enter your name" displayed below the input line](images/AssistiveLabels/Maui-TextInputLayout-HelperText.jpg)
+![maui textinputlayout helpertext label](images/AssistiveLabels/Maui-TextInputLayout-HelperText.jpg)
 
 N> Helper text and error text share the same area below the input line. When `HasError` is `true`, the error text replaces the helper text.
 
@@ -146,7 +146,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with the "Invalid email" error message displayed below the input line](images/AssistiveLabels/Maui-TextInputLayout-ErrorLabel.jpg)
+![maui-textinputlayout-error label](images/AssistiveLabels/Maui-TextInputLayout-ErrorLabel.jpg)
 
 N> Validations must be performed in your application logic. Toggle `HasError` based on the validation result and clear the error by setting `HasError = false`.
 
@@ -269,7 +269,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout without reserved space for assistive labels; the layout collapses to fit only the input line](images/AssistiveLabels/ReserveSpace.png)
+![Reserve space for assistive label image](images/AssistiveLabels/ReserveSpace.png)
 
 N> Set `ReserveSpaceForAssistiveLabels` to `false` only if the host page already provides a fixed area for assistive labels. Otherwise, controls below the input may shift when an error or counter appears.
 
