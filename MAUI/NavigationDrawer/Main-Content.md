@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Setting Main Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Setting Main Content in .NET MAUI Navigation Drawer
 
 ## Prerequisites
 
