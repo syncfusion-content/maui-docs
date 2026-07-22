@@ -17,8 +17,6 @@ Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
 
-## Overview
-
 This section provides information about the events available in the .NET MAUI Tab View control.
 
 Use the following events to respond to tab interactions in the `SfTabView` control:
@@ -57,6 +55,7 @@ SfTabView tabView = new SfTabView
         new SfTabItem { Header = "Item3" }
     }
 };
+
 tabView.TabItemTapped += TabView_TabItemTapped;
 private void TabView_TabItemTapped(object sender, TabItemTappedEventArgs e)
 {
@@ -160,21 +159,11 @@ private void TabView_SelectionChanged(object sender, TabSelectionChangedEventArg
 }
 
 {% endhighlight %}
-
 {% endtabs %}
-
-## Troubleshooting
-
-* If your event handler is not invoked, verify that the method signature matches the event's delegate (for example, `TabItemTappedEventArgs` for `TabItemTapped`).
-* Ensure that the `xmlns:tabView` namespace and the Syncfusion `SfTabView` handler are correctly registered in your MAUI project.
-* When using the C# subscription form (`+=`), confirm that the event name matches the one shown in the XAML example; mismatches (for example, subscribing to `SelectionChanged` instead of `TabItemTapped`) will silently fail to compile or run.
 
 ## See also 
 
-* [Getting Started with .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/getting-started)
-* [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
-* [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
-* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
-* [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
-* [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)
-* [How to convert events into commands in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16790/how-to-convert-events-into-commands-in-net-maui-tabview)
+- [How to convert events into commands in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16790/how-to-convert-events-into-commands-in-net-maui-tabview)
+- [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
+- [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+- [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)

@@ -17,7 +17,7 @@ Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) documentation.
 
-## Overview
+## Layout Type
 
 There are two layout types available for the Radial Menu:
 
@@ -25,8 +25,6 @@ There are two layout types available for the Radial Menu:
 *  [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Custom)
 
 Both layout types divide the available space equally among all children in the circular panel. Use `Default` when each hierarchical level should have a segment count that matches its child count, and use `Custom` when you want a fixed segment count across all levels with explicit item placement.
-
-N> The following examples reference the `Syncfusion.Maui.RadialMenu` NuGet package and assume the `xmlns:radialMenu="http://schemas.syncfusion.com/maui/radialmenu"` namespace is declared on the root page.
 
 ## Default
 
@@ -119,9 +117,7 @@ The [`SegmentIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialM
 The following example shows how to use `VisibleSegmentsCount` and `SegmentIndex` together in a [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html). The font-icon glyph codes assume the `MauiSampleFontIcon` font is registered in the `MauiProgram.cs` file.
 
 {% tabs %}
-
 {% highlight xaml %}
-
 
 <radialMenu:SfRadialMenu x:Name="radial_Menu"
                         CenterButtonFontFamily="MauiSampleFontIcon"
@@ -170,9 +166,7 @@ The following example shows how to use `VisibleSegmentsCount` and `SegmentIndex`
 </radialMenu:SfRadialMenu>
 
 {% endhighlight %}
-
 {% highlight C# %}
-
 
 SfRadialMenu radialMenu = new SfRadialMenu
 {
@@ -231,19 +225,14 @@ SfRadialMenu radialMenu = new SfRadialMenu
 };
             
 {% endhighlight %}
-
 {% endtabs %}
 
 ![Radial Menu with VisibleSegmentsCount and SegmentIndex applied](images/segmentation/maui-radialmenu-segmentation-segmentIndex.png)
 
-N> The `VisibleSegmentsCount` property applies only to the [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Custom) layout. All sizes in the example (`FontSize`, `RimRadius`, `ItemHeight`, and `ItemWidth`) are specified in device-independent units (DIPs).
-
-N> This feature is supported in .NET MAUI 7.0 and later, and requires the `Syncfusion.Maui.RadialMenu` NuGet package version 21.2.3 or higher.
+N> The [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property applies only to the [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Custom) layout.
 
 ## See also
 
-- [Getting Started with .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/getting-started)
 - [SfRadialMenuItem’s Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization)
 - [CenterButton Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
-- [Events in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/events)
 - [Placing and Dragging in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/place-and-drag-radialmenu)

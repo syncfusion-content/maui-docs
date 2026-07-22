@@ -803,44 +803,8 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 {% endtabs %}
 
-
-## Image Assets for `CenterButtonView`
-
-When you assign a custom view that contains an `Image` (such as `dotnet_bot.png` or `backicon.png` in the examples above), add the image to your MAUI project as a **MauiImage** build action and place it under `Resources/Images/`. Then register it in `MauiProgram.cs`:
-
-{% tabs %}
-
-{% highlight C# %}
-
-builder.Logging.AddDebug();
-builder.ConfigureFonts(fonts =>
-{
-    fonts.AddFont("MauiMaterialAssets.ttf", "Maui Material Assets");
-});
-
-{% endhighlight %}
-
-{% endtabs %}
-
-For fonts (for example, `Maui Material Assets`), copy the `.ttf` file to `Resources/Fonts/`, set the build action to **MauiFont**, and register the font in `ConfigureFonts` as shown above. Without registration, the center button text will appear as the literal glyph code (for example, `\ue710`) instead of the icon.
-
-## Troubleshooting
-
-| Issue | Likely cause | Fix |
-| --- | --- | --- |
-| Center button text is blank. | `CenterButtonText` is not set or `CenterButtonView` is overriding it. | Set `CenterButtonText` explicitly, or remove `CenterButtonView`. |
-| `CenterButtonView` image does not render. | The image is missing from `Resources/Images/`, the build action is wrong, or the file name is case-mismatched. | Add the image as a `MauiImage`, set the build action, and verify the `Source` matches the file name (case-sensitive on iOS/Android). |
-| Font icon shows the literal code (e.g., `\ue710`). | The font file is not registered in `MauiProgram.cs`. | Register the font in `ConfigureFonts` and confirm the `.ttf` file's build action is `MauiFont`. |
-| `RadialMenuItemsCollection` does not compile. | Missing `using Syncfusion.Maui.RadialMenu;`. | Add the `using` directive and rebuild. |
-| `Colors` / `Color.FromArgb` are unresolved. | Missing `using Microsoft.Maui.Graphics;`. | Add the `using` directive. |
-| `FontAttributes` is unresolved. | Missing `using Microsoft.Maui.Controls;`. | Add the `using` directive. |
-| `CenterButtonRadius` change has no visible effect. | The center button is clipped by the rim. | Increase `CenterButtonSize` so the radius can be applied within the visible area. |
-
 ## See also
 
-- [Getting Started with .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/getting-started)
 - [SfRadialMenuItem’s Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization)
 - [Segmenting and Placing Items in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/segmenting-placing-items)
-- [CenterButton Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
-- [Events in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/events)
 - [Placing and Dragging in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/place-and-drag-radialmenu)

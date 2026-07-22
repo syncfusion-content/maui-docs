@@ -17,7 +17,7 @@ Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) documentation.
 
-## Overview
+## Populating Items
 
 This section explains how to populate the menu in two ways: by adding [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) instances directly to the [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Items) collection, or by binding the menu to an [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemsSource) and rendering each item with an [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemTemplate). A second half of the document covers appearance and behavior properties such as `AnimationDuration`, `IsOpen`, `SeparatorColor`, `RimColor`, and `DisplayMemberPath`.
 
@@ -86,7 +86,6 @@ Using [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Radial
 The following sample displays a list of users with a shared image and a per-item name from the view model.
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu 
@@ -109,9 +108,7 @@ The following sample displays a list of users with a shared image and a per-item
     </radialMenu:SfRadialMenu.ItemTemplate>
 </radialMenu:SfRadialMenu>
 
-    
 {% endhighlight %}
-
 {% highlight C# %}
 
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
@@ -146,7 +143,6 @@ SfRadialMenu radial_Menu = new SfRadialMenu
 };
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="ViewModel" %}
 
 public class EmployeeModel
@@ -158,7 +154,6 @@ public class EmployeeModel
         get { return employeeName; }
         set { employeeName = value; }
     }
-
 }
 
 public class EmployeeViewModel
@@ -261,7 +256,6 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 {% endhighlight %}
 {% endtabs %}
 
-
 ## IsOpen
 
 The [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_IsOpen) property indicates (or sets) whether the menu is currently open. Setting `IsOpen="True"` in XAML opens the menu at startup; toggle it to `false` to close.
@@ -281,7 +275,6 @@ The [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.Sf
 </radialMenu:SfRadialMenu>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
 SfRadialMenu radialMenu = new SfRadialMenu()
@@ -305,7 +298,6 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 Use the [`SeparatorThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorThickness) property to set the thickness of the strip between two adjacent items (in device-independent units, DIUs), and the [`SeparatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorColor) property to set its color.
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu  SeparatorThickness="5" 
@@ -320,7 +312,6 @@ Use the [`SeparatorThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 </radialMenu:SfRadialMenu>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
 SfRadialMenu radialMenu = new SfRadialMenu()
@@ -481,23 +472,9 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 {% endhighlight %}
 {% endtabs %}
 
-## Troubleshooting
-
-| Issue | Likely cause | Fix |
-| --- | --- | --- |
-| Font icons appear as literal text (e.g. `&#xe710;`). | `Maui Material Assets` font is not registered. | Add the font's `.ttf` to `Resources/Fonts/`, set the build action to `MauiFont`, and register it in `MauiProgram.cs`. |
-| Images (`johns.png` etc.) do not render. | The image is missing from `Resources/Images/` or the build action is wrong. | Add the image as a `MauiImage` and verify the `Source` matches the file name (case-sensitive on iOS/Android). |
-| `ItemsSource` is empty in the menu. | The view-model property is `null` at startup, or the `BindingContext` is not set on the page. | Set `<ContentPage.BindingContext><local:EmployeeViewModel/></ContentPage.BindingContext>` in XAML, or assign the view model in code-behind before the menu is shown. |
-| `RadialMenuItemsCollection` does not compile. | Missing `using Syncfusion.Maui.RadialMenu;`. | Add the `using` directive. |
-| `Color.FromHex` is obsolete. | `FromHex` was deprecated in .NET 7 in favor of `FromArgb`. | Replace `Color.FromHex("#RRGGBB")` with `Color.FromArgb("#RRGGBB")`. |
-| `Items[4]` access is fragile. | Index-based access depends on the order of items in the outer rim. | Keep a named reference to the parent item, e.g. `var colorItem = radialMenu.Items[4]; colorItem.Items.Add(subItem);`. |
-| Menu is open at startup and blocks interaction. | `IsOpen="True"` was set in XAML. | Remove `IsOpen` or set it to `False` after construction. |
-
 ## See also
 
-- [Getting Started with .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/getting-started)
 - [SfRadialMenuItem’s Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization)
 - [Segmenting and Placing Items in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/segmenting-placing-items)
 - [CenterButton Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
-- [Events in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/events)
 - [Placing and Dragging in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/place-and-drag-radialmenu)

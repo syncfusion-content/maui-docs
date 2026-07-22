@@ -183,9 +183,10 @@ SfTabView tabView = new SfTabView
 
 ![NestedTab](images/Nested_Tab.png)
 
-> **Note** View the [Nested Tab View sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/NestedTabViewSample) on GitHub.
+N> View the [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/NestedTabViewSample) on GitHub.
 
-## Virtualization
+
+## Enable Virtualization
 
 The [`EnableVirtualization`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableVirtualization) property is a `bool` that defaults to `false`. Set it to `true` to improve the initial loading performance of the `SfTabView` by only creating the tab content when the corresponding tab is selected. This is especially useful when the Tab View contains many heavy or nested tab items.
 
@@ -215,18 +216,8 @@ SfTabView tabView = new SfTabView
 {% endhighlight %}
 {% endtabs %}
 
-## Troubleshooting
-
-* If the nested tab view does not render, verify that the inner `SfTabView` is assigned to the `Content` property of the outer `SfTabItem` and that both controls have the `xmlns:tabView` namespace declared.
-* If the C# sample does not compile, add the required `using` directives at the top of the file: `using Microsoft.Maui.Controls;`, `using Microsoft.Maui.Graphics;`, and `using Syncfusion.Maui.TabView;`.
-* If `tabView.Items = tabItems;` throws at runtime, check that you are using a `TabItemCollection` instance rather than a generic `List<SfTabItem>`, and that `InitializeComponent()` is called before assigning items in the constructor.
-* If `EnableVirtualization` has no effect, confirm that the property is supported in your installed Syncfusion package version and that it is set before the Tab View is added to the visual tree.
-
 ## See also
 
-* [Getting Started with .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/getting-started)
 * [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
-* [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
 * [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
-* [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)

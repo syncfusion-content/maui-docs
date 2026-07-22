@@ -17,13 +17,9 @@ Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
 
-## Overview
+## Enable swiping
 
 Set the [`EnableSwiping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableSwiping) property of `SfTabView` to allow users to switch between tab contents by swiping horizontally. The property is of type `bool` and defaults to `false`. When enabled, swiping left or right on the tab content moves to the adjacent tab; tapping a tab header or programmatically setting `SelectedIndex` also continues to work.
-
-> **Note** The minimum Syncfusion MAUI package version that supports `EnableSwiping` is 19.3.XX or later.
-
-## Enable swiping
 
 {% tabs %}
 
@@ -54,7 +50,6 @@ Set the [`EnableSwiping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ta
 </tabView:SfTabView>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
 SfTabView tabView = new SfTabView
@@ -96,29 +91,16 @@ SfTabView tabView = new SfTabView
 };
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ![Swiping between tabs in the .NET MAUI Tab View](images/tabview-swiping.gif)
 
-## Limitations
+### Limitations
 
-* **Interference between child controls and Tab View swiping:** When a child control within a Tab View supports horizontal swiping (for example, a horizontal `ScrollView`, `CollectionView`, or `CarouselView`), it can intercept the gesture and prevent the Tab View from receiving it.
-* **Workaround:** If you need both a horizontally scrolling child control and Tab View swiping, set `EnableSwiping` to `false` and provide tab navigation through tab-header taps, programmatic `SelectedIndex` changes, or custom gesture handling on the child control.
-* **Vertical tab bar placement:** When `TabBarPlacement` is `Left` or `Right`, swiping is disabled because the gesture direction conflicts with the vertical tab bar layout. Use tab-header taps or `SelectedIndex` to navigate in those layouts.
-* **RTL layouts:** In right-to-left layouts, the swipe direction is reversed (swipe right moves to the previous tab, swipe left moves to the next tab).
-
-## Troubleshooting
-
-* If swiping does not switch tabs, confirm that `EnableSwiping` is set to `true` and that no child control (such as a horizontal `ScrollView`) is intercepting the gesture.
-* If the swipe direction feels reversed, verify that your app is not in a right-to-left layout. In RTL layouts, swipe right moves to the previous tab.
-* If `EnableSwiping` has no effect, confirm that your installed Syncfusion MAUI package version supports the property (19.3.XX or later).
+* **Interference between child controls and Tab View swiping:** When a child control within a Tab View supports horizontal swiping or interaction (e.g., a horizontal ScrollView, a custom swipe-enabled control, or a carousel), it can interfere with the Tab View's touch gesture. This may result in unintended behavior, such as the Tab View swiping when the child control is meant to handle the gesture, or vice versa. The overlapping gestures can cause confusion and disrupt the expected user experience, leading to a less intuitive interface.
 
 ## See also
 
-* [Getting Started with .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/getting-started)
 * [Events in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/events)
-* [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
 * [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Nested Tabs in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/nested-tabs)
-* [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)

@@ -17,11 +17,9 @@ Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
 
-## Overview
+## Tab item elements
 
 A tab item in the `SfTabView` control consists of three core elements (header text, image, and content area) and supports a wide range of appearance customizations including text color, font properties, image positioning, badges, scroll buttons, and animation duration. This page documents each customization property with a runnable example.
-
-## Tab item elements
 
 ### Header
 
@@ -672,22 +670,6 @@ var tabView = new SfTabView
 
 ![Content transition animation](images/ContentTransition.gif)
 
-## Troubleshooting
-
-* If the `Header` text is not visible, confirm that `Header` is set to a non-empty string and that the `SfTabItem` is added to the `SfTabView.Items` collection.
-* If the `ImageSource` does not render, verify that the image file is added to `Resources/Images` and registered as a `MauiImage` in the `.csproj` file.
-* If a custom `FontFamily` does not apply, confirm that the font is registered in `MauiProgram.cs` using `.ConfigureFonts(...)` and that the font file is included in `Resources/Fonts`.
-* If `LineBreakMode` has no effect, verify that the property is set on the `SfTabItem` (not on the `Header` string itself) and that the `TabWidthMode` allows wrapping.
-* If `ContentTransitionDuration` has no effect, verify that the value is greater than `0` and that the tab view is in a state where transitions are applicable (for example, switching between tabs).
-* If the C# sample does not compile, add the required `using` directives at the top of the file: `using Microsoft.Maui.Controls;`, `using Microsoft.Maui.Graphics;`, and `using Syncfusion.Maui.TabView;`.
-
-## See also
-
-* [Getting Started with .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/getting-started)
-* [Tab Bar Customization in .NET MAUI Tab View](Tab-Bar-Customization.md)
-* [Header Display Mode in .NET MAUI Tab View](Header-Display-Mode.md)
-* [Selection Indicator Customization in .NET MAUI Tab View](Selection-Indicator-Customization.md)
-
 ## ImageSize
 
 You can customize the image size in the .NET MAUI Tab View control by setting the [ImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSize) property.
@@ -788,9 +770,7 @@ tabView.SelectedIndex = 1;
 
 ## See also
 
-* [Getting Started with .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/getting-started)
-* [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
-* [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
-* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
-* [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
-* [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)
+- [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
+- [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
+- [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
+- [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)

@@ -17,14 +17,14 @@ Before using the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfu
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/navigationdrawer/getting-started) documentation.
 
-## Overview
+## Multi Drawer
 
-The [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) supports opening drawers on multiple sides with different toggle methods. Use the [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) class to configure the drawers:
+The Navigation drawer allows users to open the drawer on multiple sides with different toggle methods. The [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) class and its properties need to be used when users need to provide multiple drawers. The multiple drawers can be implemented using the following drawer settings.
 
 - [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) - the primary drawer.
 - [SecondaryDrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_SecondaryDrawerSettings) - the secondary drawer.
 
-> NOTE: Only one drawer can be open at a time. Opening a drawer automatically closes the other.
+N> Users can open only one drawer at a time.
 
 ![Multi Drawer in .NET MAUI Navigation Drawer](Images/multi-drawer/multi-drawer.gif)
 
@@ -111,7 +111,7 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 {% endhighlight %}
 {% endtabs %}
 
-> NOTE: When the primary drawer and the secondary drawer are set to the same position, the primary drawer opens on swiping. See [Swipe Gesture](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) for details on configuring the swipe behavior.
+N> When the primary drawer and the secondary drawer are set to the same position, the primary drawer will open on swiping.
 
 ## Toggling the secondary drawer
 
@@ -211,27 +211,8 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 
 {% endtabs %}
 
-## Behavior
-
-- Only one drawer is open at a time; opening one automatically closes the other.
-- The primary and secondary drawers can be positioned independently on any of the four sides.
-- If both drawers are configured for the same position, the primary drawer takes precedence on swipe gestures.
-- `IsOpen` can be set in XAML or code to control the secondary drawer's visibility declaratively.
-
-## Troubleshooting
-
-| Issue | Possible cause | Resolution |
-|-------|----------------|------------|
-| Both drawers appear to open | The page contains two `SfNavigationDrawer` instances | Use a single `SfNavigationDrawer` with both `DrawerSettings` and `SecondaryDrawerSettings` |
-| Secondary drawer does not toggle | `ToggleSecondaryDrawer` is called before the control is added to the visual tree | Ensure `this.Content = navigationDrawer;` runs before any toggle call |
-| Swipe opens the primary drawer instead of the secondary | Both drawers are set to the same position | Set the secondary drawer to a different `Position` value, or trigger it programmatically |
-| `IsOpen` set in XAML has no effect | `IsOpen` was set on the `SfNavigationDrawer` instead of `SecondaryDrawerSettings` | Set `IsOpen` on the inner `DrawerSettings` element |
-
 ## See also
 
-- [Getting Started with .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/getting-started)
-- [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
 - [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
-- [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)

@@ -17,11 +17,9 @@ Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
 
-## Overview
+## TabBarPlacement options
 
 The tab bar is the strip that displays the headers of each tab item in the `SfTabView` control. You can customize its placement, size, background, text alignment, spacing, animation, and border using the properties documented on this page.
-
-## TabBarPlacement options
 
 The .NET MAUI Tab View provides four options for determining how the tab bar aligns relative to the tab content. The options are `Top`, `Bottom`, `Left`, and `Right`. This can be achieved using the [`TabBarPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) property.
 
@@ -232,15 +230,13 @@ SfTabView tabView = new SfTabView
 
 {% endtabs %}
 
-> **Note** The earlier `TabBarHeight` and `TabBarWidth` properties are obsolete as of Syncfusion MAUI 27.1.XX and have been replaced by `TabBarSize`. The newer property adapts to the tab bar's orientation automatically.
-
 ## Customize the tab header text alignment
 
 The horizontal text alignment of the tab header can be customized by setting the [`HeaderHorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderHorizontalTextAlignment) property. The property is of type `TextAlignment` and the default value is `Center`. This property accepts the following values:
 
-* `Start` - Places the text at the starting position in the header tab.
-* `Center` - Places the text at the center of the header tab.
-* `End` - Places the text at the end of the header tab.
+- `Start` - Places the text at the starting position in the header tab.
+- `Center` - Places the text at the center of the header tab.
+- `End` - Places the text at the end of the header tab.
 
 {% tabs %}
 
@@ -466,18 +462,9 @@ SfTabView tabView = new SfTabView
 
 ![Tab bar with a custom border](images/Tab-bar-border.png)
 
-## Troubleshooting
-
-* If the tab bar appears at the wrong size, confirm that you are using `TabBarSize` (not the obsolete `TabBarHeight`/`TabBarWidth`).
-* If a gradient does not render, confirm that the `LinearGradientBrush` is assigned to `TabBarBackground` and that each `GradientStop` has both a `Color` and an `Offset` set.
-* If `HeaderItemSpacing` has no effect, confirm that `TabWidthMode` is set to `SizeToContent`.
-* If `tabView.TabBarBackground = Colors.LightBlue;` fails to compile, wrap the color in a `SolidColorBrush`: `tabView.TabBarBackground = new SolidColorBrush(Colors.LightBlue);`.
-
 ## See also
 
-* [Getting Started with .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/getting-started)
 * [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
 * [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
 * [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
-* [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
 * [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)

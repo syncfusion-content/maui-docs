@@ -17,7 +17,7 @@ Before using the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfu
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/navigationdrawer/getting-started) documentation.
 
-## Overview
+## Sliding Panel Size
 
 The size of the side pane is controlled by the [DrawerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerWidth) and [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeight) properties of `DrawerSettings`. The property that takes effect depends on the drawer's [Position](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides).
 
@@ -28,23 +28,11 @@ The size of the side pane is controlled by the [DrawerWidth](https://help.syncfu
 | [DrawerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerWidth) | `double` | `250` | Width of the side pane. Applied when `Position` is `Left` or `Right`. |
 | [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeight) | `double` | `250` | Height of the side pane. Applied when `Position` is `Top` or `Bottom`. |
 
-## Position-dependent sizing
-
-The size property that takes effect depends on the drawer's position:
-
-| Position | Size property |
-|----------|---------------|
-| `Left`, `Right` | `DrawerWidth` |
-| `Top`, `Bottom` | `DrawerHeight` |
-
-For more details on the `Position` enum, see [Navigation Pane Sides](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides).
-
 ## DrawerHeight
 
 The [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeight) property changes the height of the side pane. It is primarily applied when [Position](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides) is set to [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Top) or [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Bottom).
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -62,7 +50,6 @@ The [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Navigatio
 </navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
 SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
@@ -82,7 +69,6 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 };
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ![Side pane height in .NET MAUI Navigation Drawer](Images/panel-size/navigation_drawer_pane_height.png)
@@ -132,28 +118,9 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 
 ![Side pane width in .NET MAUI Navigation Drawer](Images/panel-size/navigation_drawer_pane_width.png)
 
-> NOTE: The `DrawerHeaderHeight` and `DrawerFooterHeight` properties (used in the examples above) are documented in [Side Pane Content](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content). The header and footer regions stack inside the side pane; their heights do not affect `DrawerWidth` or `DrawerHeight`.
-
-## Behavior
-
-- The size property that takes effect depends on the drawer's `Position`. Setting `DrawerWidth` while `Position` is `Top` or `Bottom` has no visible effect, and vice versa.
-- The side pane's content area fills the remaining space between the header and footer when those regions are configured. See [Side Pane Content](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content) for details.
-- Size changes take effect immediately and animate with the next open/close transition. See [Animation Duration](https://help.syncfusion.com/maui/navigationdrawer/duration) to customize the transition.
-- When the drawer is configured for a `SecondaryDrawerSettings` (see [Multi Drawer](https://help.syncfusion.com/maui/navigationdrawer/multi-drawer)), each drawer can have an independent size.
-
-## Troubleshooting
-
-| Issue | Possible cause | Resolution |
-|-------|----------------|------------|
-| `DrawerWidth` has no effect | `Position` is `Top` or `Bottom` | Set `Position` to `Left` or `Right`, or use `DrawerHeight` instead |
-| `DrawerHeight` has no effect | `Position` is `Left` or `Right` | Set `Position` to `Top` or `Bottom`, or use `DrawerWidth` instead |
-| Side pane content is clipped | The inner view's width or height is fixed | Use `*` (star) sizing or remove explicit dimensions from the inner layout |
-| Side pane is hidden behind the navigation bar | Safe area insets are not respected on iOS/Android | Apply `SafeArea` margins to the drawer content or to `ContentBackground` |
-
 ## See also
 
-- [Getting Started with .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/getting-started)
-- [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
-- [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
+- [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)
+- [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)

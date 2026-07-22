@@ -106,7 +106,7 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 
 ![Header content in .NET MAUI Navigation Drawer](Images/panel-content/navigation_drawer_header.png)
 
-> NOTE: The [DrawerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderView) is hidden when [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) is set to `0`.
+N> The [DrawerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderView) can be removed by setting the [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) to zero.
 
 ## Footer content
 
@@ -166,7 +166,7 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 
 ![Footer content in .NET MAUI Navigation Drawer](Images/panel-content/navigation_drawer_footer.png)
 
-> NOTE: The [DrawerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterView) is hidden when [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) is set to `0`.
+N> The [DrawerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterView) can be removed by setting the [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) to zero.
 
 ## Drawer content
 
@@ -276,122 +276,10 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 };
             
 {% endhighlight %}
-
 {% endtabs %}
-
-## Combined example
-
-The following example shows a side pane that includes a header, content area, and footer all at once.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
-    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationDrawer:DrawerSettings DrawerHeaderHeight="120"
-                                            DrawerFooterHeight="60"
-                                            DrawerWidth="280"
-                                            ContentBackground="White">
-            <navigationDrawer:DrawerSettings.DrawerHeaderView>
-                <Grid BackgroundColor="#6750A4">
-                    <Label Text="Header"
-                            TextColor="White"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
-                </Grid>
-            </navigationDrawer:DrawerSettings.DrawerHeaderView>
-            <navigationDrawer:DrawerSettings.DrawerContentView>
-                <Label Text="Drawer Content"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center" />
-            </navigationDrawer:DrawerSettings.DrawerContentView>
-            <navigationDrawer:DrawerSettings.DrawerFooterView>
-                <Grid BackgroundColor="#6750A4">
-                    <Label Text="Footer"
-                            TextColor="White"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
-                </Grid>
-            </navigationDrawer:DrawerSettings.DrawerFooterView>
-        </navigationDrawer:DrawerSettings>
-    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
-</navigationDrawer:SfNavigationDrawer>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
-{
-    DrawerSettings = new DrawerSettings
-    {
-        DrawerHeaderHeight = 120,
-        DrawerFooterHeight = 60,
-        DrawerWidth = 280,
-        ContentBackground = Colors.White,
-        DrawerHeaderView = new Grid
-        {
-            BackgroundColor = Color.FromArgb("#6750A4"),
-            Children =
-            {
-                new Label
-                {
-                    Text = "Header",
-                    TextColor = Colors.White,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center
-                }
-            }
-        },
-        DrawerContentView = new Label
-        {
-            Text = "Drawer Content",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        },
-        DrawerFooterView = new Grid
-        {
-            BackgroundColor = Color.FromArgb("#6750A4"),
-            Children =
-            {
-                new Label
-                {
-                    Text = "Footer",
-                    TextColor = Colors.White,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center
-                }
-            }
-        }
-    }
-};     
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Behavior
-
-- The side pane is only visible when the drawer is open; it is hidden when the drawer is closed.
-- The header, content, and footer stack vertically inside the side pane.
-- Setting `DrawerHeaderHeight` or `DrawerFooterHeight` to `0` removes the corresponding region and lets the remaining regions expand to fill the space.
-- `ContentBackground` paints the background of the entire content area; individual header, content, and footer views can override it with their own `BackgroundColor`.
-
-## Troubleshooting
-
-| Issue | Possible cause | Resolution |
-|-------|----------------|------------|
-| Header or footer is not visible | The corresponding height is `0` | Set `DrawerHeaderHeight` or `DrawerFooterHeight` to a positive value |
-| Content area is empty | `DrawerContentView` is `null` | Assign a non-null `View` to `DrawerContentView` |
-| `ContentBackground` has no effect | The inner view has an opaque `BackgroundColor` that covers it | Set the inner view's background to `Transparent` or remove it |
-| Footer overlaps the content | `DrawerHeaderHeight` + `DrawerFooterHeight` exceeds the available height | Reduce one of the heights or set the other to `0` |
-| Side pane does not open at all | The drawer was never triggered | Call `ToggleDrawer()` or set `IsOpen = true` to display the drawer |
 
 ## See also
 
-- [Getting Started with .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/getting-started)
+- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
 - [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
-- [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
-- [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)

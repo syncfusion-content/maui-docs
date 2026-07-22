@@ -31,8 +31,6 @@ Create a `Model` class with a `Name` property and a `TabItemsSourceViewModel` cl
 
 {% highlight C# %}
 
-using System.ComponentModel;
-
 // Model
 public class Model : INotifyPropertyChanged
 {
@@ -44,7 +42,6 @@ public class Model : INotifyPropertyChanged
     }
 
     private string name;
-
     public string Name
     {
         get { return name; }
@@ -67,9 +64,6 @@ The `TabItemsSourceViewModel` exposes the collection of `Model` items as an `Obs
 {% highlight C# %}
 
 // ViewModels
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-
 public class TabItemsSourceViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
@@ -106,51 +100,28 @@ public class TabItemsSourceViewModel : INotifyPropertyChanged
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 The following code example binds the collection to the `ItemsSource` property of `SfTabView`.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="TabViewItemTemplateSample.MainPage"
-            xmlns:local="clr-namespace:TabViewItemTemplateSample"
-            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
-
-<ContentPage.BindingContext>
-    <local:TabItemsSourceViewModel />
-</ContentPage.BindingContext>
 <tabView:SfTabView ItemsSource="{Binding TabItems}" >
+    <tabView:SfTabView.BindingContext>
+        <local:TabItemsSourceViewModel />
+    </tabView:SfTabView.BindingContext>
 </tabView:SfTabView>
 
-</ContentPage>
-
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.TabView;
-
-namespace TabViewItemTemplateSample;
-
-public partial class MainPage : ContentPage
+TabItemsSourceViewModel model = new TabItemsSourceViewModel();
+this.BindingContext = model;
+SfTabView tabView = new SfTabView()
 {
-    TabItemsSourceViewModel model;
-    SfTabView tabView;
-    public MainPage()
-    {
-        InitializeComponent();
-        model = new TabItemsSourceViewModel();
-        this.BindingContext = model;
-        tabView = new SfTabView();
-        tabView.ItemsSource = model.TabItems;
-        this.Content = tabView;
-    } 
-}
+    ItemsSource = model.TabItems,
+};
 
 {% endhighlight %}
 
@@ -393,7 +364,6 @@ Similarly, you can derive a `DataTemplateSelector` and assign it to the `Content
 
 <tabView:SfTabView ItemsSource="{Binding Tabs}"
                     HeaderItemTemplate="{StaticResource TabHeaderTemplateSelector}" />
-</ContentPage>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -443,20 +413,9 @@ public class TabItemViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
 ![DataTemplateSelector in .NET MAUI Tab View.](images/DataTemplateSelector.png)
-
-## Troubleshooting
-
-* If the tab view does not display any items, confirm that the `BindingContext` of the page (or the `SfTabView`) is set to an instance of your view model, and that the `ItemsSource` binding path matches a public property on the view model.
-* If the header or content templates do not render as expected, verify that the `BindingContext` inside the `DataTemplate` is the bound data object and that the binding path matches a property on that object (for example, `Name` on `Model`).
-* If a `DataTemplateSelector` always returns the same template, confirm that the `OnSelectTemplate` method is being invoked and that the conditions you check (for example, `IsImportant`) are correctly set on the data objects.
-* If the C# sample does not compile, add the required `using` directives at the top of the file: `using System.ComponentModel;`, `using System.Collections.ObjectModel;`, and `using Syncfusion.Maui.TabView;`.
 
 ## See also
 
-* [Getting Started with .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/getting-started)
-* [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
 * [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
-* [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)
