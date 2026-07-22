@@ -259,6 +259,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Servers are designed wi
 
 The MCP Server acts purely as a knowledge bridge, connecting your AI model with Syncfusion-specific expertise while respecting your privacy and maintaining security.
 
-## See Also
+## See also
 
 - [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
