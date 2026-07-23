@@ -1,3 +1,7 @@
-﻿<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-</scheduler:SfScheduler>
+﻿<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <scheduler:SfScheduler  x:Name="Scheduler" 
+                            View="Week">
+    </scheduler:SfScheduler>
+</ContentPage>

@@ -17,14 +17,23 @@ The dialog mode is used to display the calendar in a pop-up by setting the [Mode
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 
-<calendar:SfCalendar x:Name="calendar"
-                     Mode="Dialog"/>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
+                         Mode="Dialog" />
+
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 SfCalendar calendar = new SfCalendar()
 {
@@ -45,22 +54,29 @@ N> This property is automatically changed to `false` when you close the dialog b
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <calendar:SfCalendar x:Name="calendar"
-                         Mode="Dialog"/>
-    <Button Text="Open Calendar" 
-            x:Name="calendarButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <calendar:SfCalendar x:Name="calendar"
+                             Mode="Dialog" />
+        <Button Text="Open Calendar" 
+                x:Name="calendarButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -76,7 +92,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ## Relative Dialog Mode
 
-The relative dialog mode displays the calendar in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_RelativeDialog). It is used to align the calendar in a specific position. You can set the position by using the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RelativePosition) property in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+The relative dialog mode displays the calendar in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_RelativeDialog). It is used to position the calendar relative to a host element. You can set the position by using the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RelativePosition) property in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 ### Relative position
 
@@ -90,24 +106,31 @@ N> This property is automatically changed to `false` when you close the dialog b
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <calendar:SfCalendar x:Name="calendar" 
-                         Mode="RelativeDialog"
-                         RelativePosition="AlignTopLeft">
-    </calendar:SfCalendar>
-    <Button Text="Open calendar" 
-            x:Name="calendarButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <Grid>
+        <calendar:SfCalendar x:Name="calendar" 
+                             Mode="RelativeDialog"
+                             RelativePosition="AlignTopLeft">
+        </calendar:SfCalendar>
+        <Button Text="Open calendar" 
+                x:Name="calendarButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -120,25 +143,34 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### Custom Popup Size
 
-SfCalendar allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupHeight) properties.
+SfCalendar allows the popup to be rendered at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupHeight) properties.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<calendar:SfCalendar x:Name="calendar" 
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
                          Mode="Dialog"
                          PopupWidth="300"
-                         PopupHeight=400/>
+                         PopupHeight="400" />
+
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Calendar;
+. . .
+
 this.calendar.PopupWidth = 300;
 this.calendar.PopupHeight = 400;
 
-{% endhighlight %} 
+{% endhighlight %}
 
 {% endtabs %}
 
