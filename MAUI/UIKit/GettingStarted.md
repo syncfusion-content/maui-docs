@@ -133,6 +133,11 @@ N> The **Essential<sup>®</sup> UI Kit for .NET MAUI** add-in will be shown when
 * **Templates don't appear:** Restart Rider after installing the plugin, or verify the plugin is enabled under **Settings > Plugins > Installed**.
 * **NuGet packages failing to restore:** Ensure your NuGet sources are available and the project targets a supported MAUI framework (.NET 8 and later).
 
+**References**
+
+* [Essential® UI Kit for .NET MAUI Plugin | Syncfusion]([https://help.syncfusion.com/maui/extension/getting-started](https://help.syncfusion.com/extension/netmaui-extension/jetbrains/essential-ui-kit))
+* [JetBrains Rider extension documentation](https://github.com/syncfusion-content/extension-docs/tree/master/Extension/NETMAUI-Extension/JetBrains)
+
 N> Syncfusion<sup>®</sup> licensing registration is required if you have installed the trial setup or NuGet packages, since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. When a page is added, a licensing message box will appear with a link to register the key. Refer to the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the license key in your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for details on the licensing changes introduced in Essential Studio<sup>®</sup>.
 
 {% endtabcontent %}
