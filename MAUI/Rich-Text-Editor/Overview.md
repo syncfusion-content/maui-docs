@@ -8,7 +8,7 @@ control: Rich Text Editor
 documentation: ug
 ---
 
-# .NET MAUI Rich Text Editor (SfRichTextEditor) Overview
+# Overview of .NET MAUI Rich Text Editor
 
 The Syncfusion® [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) provides a simple yet powerful editor interface to compose richly formatted text with all the common formatting options like bold and italics. The Rich Text Editor is used to create messaging applications, email composers, blog editors, forum post text boxes, feedback and review sections, notes sections, and more. It has a variety of tools to edit and format rich content and returns valid HTML markup content.
 
@@ -23,13 +23,14 @@ The Syncfusion® [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-co
 
 ## Key features
 
-- **WYSIWYG editing** allows editing content visually with real-time formatting feedback.  
-- **Comprehensive formatting tools** allow applying styles such as bold, italic, underline, font size, color, alignment, lists, and indentation.  
-- **Hyperlink support** allows inserting and editing links within the content.  
-- **Image and table insertion** allows embedding media and structured data within the editor.  
-- **Customizable toolbar** allows configuring toolbar actions and visibility based on application requirements.  
-- **Clipboard operation** allows copy, paste, and cut actions for efficient editing.  
-- **Undo and redo** allows managing editing history for better user control. 
+- **WYSIWYG editing** provides visual editing with real-time formatting feedback.
+- **Comprehensive formatting tools** lets users apply styles such as bold, italic, underline, font size, color, alignment, lists, and indentation.
+- **Hyperlink support** enables inserting and editing links within the content.
+- **Image insertion** supports embedding media within the editor.
+- **Table insertion** allows embedding structured data within the editor.
+- **Customizable toolbar** offers configuring toolbar actions and visibility based on application requirements.
+- **Clipboard operation** includes copy, paste, and cut actions for efficient editing.
+- **Undo and redo** help manage editing history for better user control.
 
 ## Globalization
 
