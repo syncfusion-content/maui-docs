@@ -17,7 +17,7 @@ N> The Syncfusion<sup>®</sup> Notification feature is available from Essential 
 
 The Syncfusion<sup>®</sup> Options page allows you to configure notification settings. Customize trial and newer version notifications with a simple true or false toggle.
 
-It can be accessed by clicking **Tools -> Options -> Syncfusion<sup>®</sup> -> .NET MAUI**
+It can be accessed by clicking **Tools > Options > Syncfusion<sup>®</sup> > .NET MAUI**.
 
    ![Option Page](images/maui_optionPage.png)
 
