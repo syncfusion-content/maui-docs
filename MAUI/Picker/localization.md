@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization with .NET MAUI Picker Control | Syncfusion
+title: Localization with .NET MAUI Picker Control | Syncfusion®
 description: Learn here all about localization with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
@@ -9,11 +9,11 @@ documentation: ug
 
 # Localization in .NET MAUI Picker (SfPicker)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The SfPicker can be localized by adding resource file.
+Localization translates application resources for specific cultures. The SfPicker can be localized by adding a resource file.
 
 ## Setting CurrentUICulture to the application
 
-Application culture can be changed by setting CurrentUICulture. in App.xaml.cs file.
+Set the application culture in `App.xaml.cs` by assigning `CurrentUICulture`.
 
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 14 15" %}
@@ -42,14 +42,13 @@ public partial class App : Application
 
    ![Picker localization in .NET MAUI Date Picker.](images/localization/maui-picker-localization.png)
 
-N>
-The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+N> The required `resx` files with `Build Action` as `EmbeddedResource` (file name should contain the culture code) must be added to the `Resources` folder.
 
-## Localize application level
+## Localize at the application level
 
-To localize the `Picker` based on `CurrentUICulture` using `resource` files, follow the below steps.
+To localize the `SfPicker` based on `CurrentUICulture` using resource files, follow these steps.
 
-   1. Create new folder, named as `Resources` in the application.
+   1. Create a new folder named `Resources` in the application.
 
    2. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
 
@@ -57,12 +56,12 @@ To localize the `Picker` based on `CurrentUICulture` using `resource` files, fol
 
    4. The culture name indicates the name of the language and country.
 
-        ![shows-the-name-of-resource-file-to-be-added-for-maui-picker](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-picker.png)
+        ![Resource file naming for the .NET MAUI Picker.](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-picker.png)
 
    5. Now, select `Add` option to add the resource file in **Resources** folder.
 
-        ![shows-the-added-resource-file-for-french-language-in-maui-picker](images/localization/shows-the-added-resource-file-for-french-language-in-maui-picker.png)
+        ![Resource file added for French in the .NET MAUI Picker.](images/localization/shows-the-added-resource-file-for-french-language-in-maui-picker.png)
 
    6. Add the Name/Value pair in Resource Designer of `SfPicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
 
-   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-picker](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-picker.png)
+   ![Name/Value pair in the Resource Designer for the .NET MAUI Picker.](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-picker.png)

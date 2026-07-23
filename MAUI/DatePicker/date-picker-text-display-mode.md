@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Dispaly Mode in .NET MAUI Date Picker Control | Syncfusion
+title: Text Display Mode in .NET MAUI Date Picker Control | Syncfusion®
 description: Learn about the date picker text display mode in Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -9,7 +9,11 @@ documentation: ug
 
 # Date Picker Text display mode in .NET MAUI Date Picker (SfDatePicker)
 
-The date picker text display mode is specified in the date picker property enumeration, which is used to display the date picker items based on the modes. It offers four modes: [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default), [Fade](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Fade), [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink) and [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink). The default date picker text display mode is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default) in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+Use the text display mode to control how the date picker items appear. It offers four modes: [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default), [Fade](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Fade), [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink), and [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink). The default text display mode is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default) in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+
+## Default Mode
+
+The default mode displays all time picker items at the same opacity and font size. This is the default value of the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) and requires no additional configuration.
 
 ## Fade Mode
 
@@ -17,15 +21,22 @@ The fade mode in the date picker gradually decreases the visibility of unselecte
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<datePicker:SfDatePicker x:Name="datePicker"
-                 TextDisplayMode="Fade"/>
+<ContentPage
+             . . .
+             xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <datePicker:SfDatePicker x:Name="datePicker"
+                             TextDisplayMode="Fade"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     TextDisplayMode = PickerTextDisplayMode.Fade
@@ -41,19 +52,26 @@ this.Content = datePicker;
 
 ## Shrink Mode
 
-The shrink mode is used to display the font size of date picker items decreased from the selected item by setting the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property to [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink) in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+The shrink mode reduces the font size of date picker items relative to the selected item by setting the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property to [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink) in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<datePicker:SfDatePicker x:Name="datePicker"
-                 TextDisplayMode="Shrink"/>
+<ContentPage
+             . . .
+             xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <datePicker:SfDatePicker x:Name="datePicker"
+                             TextDisplayMode="Shrink"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     TextDisplayMode = PickerTextDisplayMode.Shrink
@@ -67,21 +85,28 @@ this.Content = datePicker;
 
 ![Shrink mode in .NET MAUI Date picker.](images/text-display-mode/date-picker-shrink.png)
 
-## FadeAndShrink Mode
+## Fade and Shrink Mode
 
-The fade and shrink mode are used to decrease the opacity and font size of date picker items from the selected item by setting the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property to [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink) in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+The fade and shrink mode decreases both the opacity and font size of date picker items relative to the selected item by setting the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property to [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink) in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<datePicker:SfDatePicker x:Name="datePicker"
-                 TextDisplayMode="FadeAndShrink"/>
+<ContentPage
+             . . .
+             xmlns:datePicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <datePicker:SfDatePicker x:Name="datePicker"
+                             TextDisplayMode="FadeAndShrink"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     TextDisplayMode = PickerTextDisplayMode.FadeAndShrink
@@ -93,4 +118,4 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Fade and Shrink mode in .NET MAUI Date picker.](images/text-display-mode/date-picker-fade-shrink.png)
+![Fade and Shrink mode in .NET MAUI Date Picker.](images/text-display-mode/date-picker-fade-shrink.png)
