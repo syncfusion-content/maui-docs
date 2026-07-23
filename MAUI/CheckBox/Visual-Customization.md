@@ -19,12 +19,15 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Customizing a shape
 
-The shape of the CheckBox can be customized using the [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. Pass a single double to apply a uniform radius to every corner.
+The shape of the CheckBox can be customized using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. Pass a single double to apply a uniform radius to every corner.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="checkBox" Text="CheckBox" IsChecked="True" CornerRadius="5.0"/>
+<syncfusion:SfCheckBox x:Name="checkBox" 
+                       Text="CheckBox" 
+                       IsChecked="True" 
+                       CornerRadius="5.0"/>
     
 {% endhighlight %}
 {% highlight c# %}
@@ -42,15 +45,24 @@ The shape of the CheckBox can be customized using the [`CornerRadius`](https://h
 
 ## Customizing state colors
 
-You can customize the state colors using the [`CheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor) and [`UncheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor) properties. The `CheckedColor` property sets the color for both the checked and the indeterminate states; `UncheckedColor` sets the color for the unchecked state.
+You can customize the state colors using the [CheckedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor) and [UncheckedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor) properties. The `CheckedColor` property sets the color for both the checked and the indeterminate states; `UncheckedColor` sets the color for the unchecked state.
 
 {% tabs %}
 {% highlight xaml %}
 
     <StackLayout>
-        <syncfusion:SfCheckBox x:Name="check" Text="CheckBox" IsChecked="True" CheckedColor="Green"/>
-        <syncfusion:SfCheckBox x:Name="unCheck" Text="CheckBox" UncheckedColor="Violet"/>
-        <syncfusion:SfCheckBox x:Name="intermediate" Text="CheckBox" IsThreeState="True" IsChecked="{x:Null}" CheckedColor="Purple"/>
+        <syncfusion:SfCheckBox x:Name="check" 
+                               Text="CheckBox" 
+                               IsChecked="True" 
+                               CheckedColor="Green"/>
+        <syncfusion:SfCheckBox x:Name="unCheck" 
+                               Text="CheckBox" 
+                               UncheckedColor="Violet"/>
+        <syncfusion:SfCheckBox x:Name="intermediate" 
+                               Text="CheckBox" 
+                               IsThreeState="True" 
+                               IsChecked="{x:Null}" 
+                               CheckedColor="Purple"/>
     </StackLayout>
 
 {% endhighlight %}
@@ -61,14 +73,17 @@ You can customize the state colors using the [`CheckedColor`](https://help.syncf
     check.Text = "CheckBox";
     check.IsChecked = true;
     check.CheckedColor = Colors.Green;
+
     SfCheckBox uncheck = new SfCheckBox();
     uncheck.Text = "CheckBox";
     uncheck.UncheckedColor = Colors.Violet;
+
     SfCheckBox intermediate = new SfCheckBox();
     intermediate.Text = "CheckBox";
     intermediate.IsThreeState = true;
     intermediate.IsChecked = null;
     intermediate.CheckedColor = Colors.Purple;
+
     stackLayout.Children.Add(check);
     stackLayout.Children.Add(uncheck);
     stackLayout.Children.Add(intermediate);
@@ -81,16 +96,22 @@ You can customize the state colors using the [`CheckedColor`](https://help.syncf
 
 ## StrokeThickness
 
-The stroke thickness of the CheckBox can be customized using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness) property. The property accepts a `double` (in device-independent units); larger values produce a thicker border.
+The stroke thickness of the CheckBox can be customized using the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness) property. The property accepts a `double`; larger values produce a thicker border.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <StackLayout>
-        <syncfusion:SfCheckBox Text="Hello" StrokeThickness="2" UncheckedColor="Blue" FontSize="20"/>
-        <syncfusion:SfCheckBox Text="Hello" StrokeThickness="4" UncheckedColor="Blue" FontSize="25"/>
-        <syncfusion:SfCheckBox Text="Hello" StrokeThickness="6" UncheckedColor="Blue" FontSize="30"/>
-    </StackLayout>
+<StackLayout>
+    <syncfusion:SfCheckBox Text="Hello" 
+                           StrokeThickness="2" 
+                           UncheckedColor="Blue" FontSize="20"/>
+    <syncfusion:SfCheckBox Text="Hello" 
+                           StrokeThickness="4" 
+                           UncheckedColor="Blue" FontSize="25"/>
+    <syncfusion:SfCheckBox Text="Hello" 
+                           StrokeThickness="6" 
+                           UncheckedColor="Blue" FontSize="30"/>
+</StackLayout>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -101,16 +122,19 @@ The stroke thickness of the CheckBox can be customized using the [`StrokeThickne
     check1.StrokeThickness = 2;
     check1.FontSize = 20;
     check1.UncheckedColor = Colors.Blue;
+
     SfCheckBox check2 = new SfCheckBox();
     check2.Text = "Hello";
     check2.StrokeThickness = 4;
     check2.FontSize = 25;
     check2.UncheckedColor = Colors.Blue;
+
     SfCheckBox check3 = new SfCheckBox();
     check3.Text = "Hello";
     check3.StrokeThickness = 6;
     check3.FontSize = 30;
     check3.UncheckedColor = Colors.Blue;
+
     stackLayout.Children.Add(check1);
     stackLayout.Children.Add(check2);
     stackLayout.Children.Add(check3);
@@ -123,7 +147,7 @@ The stroke thickness of the CheckBox can be customized using the [`StrokeThickne
 
 ## Setting a caption text appearance
 
-You can customize the appearance of the text in the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control using the following properties:
+You can customize the appearance of the text in the [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control using the following properties:
 
 * [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_TextColor) : Changes the color of the text.
 * [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_HorizontalTextAlignment) : Changes the horizontal alignment of the caption text.
@@ -135,27 +159,27 @@ You can customize the appearance of the text in the [`SfCheckBox`](https://help.
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox  x:Name="caption" 
-                            Text="CheckBox" 
-                            IsChecked="True" 
-                            TextColor="Blue" 
-                            HorizontalTextAlignment="Center" 
-                            FontFamily="Arial" 
-                            FontAttributes="Bold" 
-                            FontSize="20"/>           
+<syncfusion:SfCheckBox  x:Name="caption" 
+                        Text="CheckBox" 
+                        IsChecked="True" 
+                        TextColor="Blue" 
+                        HorizontalTextAlignment="Center" 
+                        FontFamily="Arial" 
+                        FontAttributes="Bold" 
+                        FontSize="20"/>           
 
 {% endhighlight %}
 {% highlight c# %}
 
-    SfCheckBox caption = new SfCheckBox();
-    caption.IsChecked = true;
-    caption.Text = "CheckBox";
-    caption.TextColor = Colors.Blue;
-    caption.HorizontalTextAlignment = TextAlignment.Center;
-    caption.FontFamily = "Arial";
-    caption.FontAttributes = FontAttributes.Bold;
-    caption.FontSize = 20;
-    this.Content = caption;
+SfCheckBox caption = new SfCheckBox();
+caption.IsChecked = true;
+caption.Text = "CheckBox";
+caption.TextColor = Colors.Blue;
+caption.HorizontalTextAlignment = TextAlignment.Center;
+caption.FontFamily = "Arial";
+caption.FontAttributes = FontAttributes.Bold;
+caption.FontSize = 20;
+this.Content = caption;
 
 {% endhighlight %}
 {% endtabs %}
@@ -164,27 +188,26 @@ You can customize the appearance of the text in the [`SfCheckBox`](https://help.
 
 ## TickColor
 
-The [`TickColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_TickColor) property customizes the color of the check mark inside the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control.
+The [TickColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_TickColor) property customizes the color of the check mark inside the [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control.
 
 {% tabs %}
 {% highlight xaml %}
    
 <syncfusion:SfCheckBox x:Name="checkBox"        
-                       IsChecked="True"        CheckedColor="Aqua" 
+                       IsChecked="True" 
+                       CheckedColor="Aqua" 
                        TickColor="Fuchsia" 
                        Text="CheckBox" />
 
 {% endhighlight %}
 {% highlight c# %}
 
-StackLayout stackLayout = new StackLayout();
 SfCheckBox checkBox = new SfCheckBox();
 checkBox.IsChecked = true;
 checkBox.Text = "CheckBox";
 checkBox.CheckedColor = Colors.Aqua;
 checkBox.TickColor = Colors.Fuchsia;
-stackLayout.Children.Add(checkBox);
-this.Content = stackLayout;
+this.Content = checkBox;
 
 {% endhighlight %}
 {% endtabs %}
@@ -193,34 +216,32 @@ this.Content = stackLayout;
 
 ## LineBreakMode
 
-The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_LineBreakMode) property allows you to wrap or truncate the text. The default value is `NoWrap`, with other options available such as:
+The [LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_LineBreakMode) property allows you to wrap or truncate the text. The default value is `NoWrap`, with other options available such as:
 
-*   `NoWrap` — Does not wrap the text.
-*   `WordWrap` — Wraps the text at word boundaries.
-*   `CharacterWrap` — Wraps the text at character boundaries.
-*   `HeadTruncation` — Truncates the text at the start.
-*   `MiddleTruncation` — Truncates the text in the middle.
-*   `TailTruncation` — Truncates the text at the end.
+*   `NoWrap` - Does not wrap the text.
+*   `WordWrap` - Wraps the text at word boundaries.
+*   `CharacterWrap` - Wraps the text at character boundaries.
+*   `HeadTruncation` - Truncates the text at the start.
+*   `MiddleTruncation` - Truncates the text in the middle.
+*   `TailTruncation` - Truncates the text at the end.
 
 {% tabs %}
 {% highlight xaml %}
    
-        <syncfusion:SfCheckBox x:Name="checkBox" 
-                               IsChecked="True" 
-                               WidthRequest="200" 
-                               LineBreakMode="WordWrap" 
-                               Text="The LineBreakMode allows you to wrap or truncate the text."/>
+<syncfusion:SfCheckBox x:Name="checkBox" 
+                       IsChecked="True" 
+                       WidthRequest="200" 
+                       LineBreakMode="WordWrap" 
+                       Text="The LineBreakMode allows you to wrap or truncate the text."/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    StackLayout stackLayout = new StackLayout();
-    SfCheckBox  sfCheckBox  = new SfCheckBox();
-    sfCheckBox.Text = "The LineBreakMode allows you to wrap or truncate the text.";
-    sfCheckBox.LineBreakMode = LineBreakMode.WordWrap;
-    sfCheckBox.WidthRequest = 200;
-    stackLayout.Children.Add(sfCheckBox);
-    this.Content = stackLayout;
+SfCheckBox checkBox = new SfCheckBox();
+checkBox.Text = "The LineBreakMode allows you to wrap or truncate the text.";
+checkBox.LineBreakMode = LineBreakMode.WordWrap;
+checkBox.WidthRequest = 200;
+this.Content = checkBox;
 
 {% endhighlight %}
 {% endtabs %}
@@ -231,12 +252,13 @@ This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExam
 
 ## Size customization
 
-The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the size of the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. The property accepts a `double` (in device-independent units) and represents both the width and the height of the CheckBox indicator.
+The [ControlSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the size of the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. The property accepts a `double` (in device-independent units) and represents both the width and the height of the CheckBox indicator.
 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfCheckBox Text="CheckBox" ControlSize="40"/>
+<syncfusion:SfCheckBox Text="CheckBox" 
+                       ControlSize="40"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -251,12 +273,13 @@ this.Content = sfCheckBox;
 
 ## Font auto-scaling
 
-The [`FontAutoScalingEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAutoScalingEnabled) property automatically scales the CheckBox's font size based on the operating system's text size. The default value is `false`.
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAutoScalingEnabled) property automatically scales the CheckBox's font size based on the operating system's text size. The default value is `false`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfCheckBox Text="CheckBox" FontAutoScalingEnabled="True"/>
+<syncfusion:SfCheckBox Text="CheckBox"
+                       FontAutoScalingEnabled="True"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -271,12 +294,13 @@ this.Content = sfCheckBox;
 
 ## Enable animation
 
-The [`EnabledAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_EnabledAnimation) property enables or disables the state-change animation for the [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. The default value is `true`.
+The [EnabledAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_EnabledAnimation) property enables or disables the state-change animation for the [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. The default value is `true`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfCheckBox Text="CheckBox" EnabledAnimation="False"/>
+<syncfusion:SfCheckBox Text="CheckBox" 
+                       EnabledAnimation="False"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -292,12 +316,13 @@ SfCheckBox checkBox = new SfCheckBox
 
 ## Content spacing
 
-The [`ContentSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing) property adjusts the space between the CheckBox indicator and the caption text. The property accepts a `double` (in device-independent units); the default value is `4`.
+The [ContentSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing) property adjusts the space between the CheckBox indicator and the caption text.
 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfCheckBox Text="Check Box" ContentSpacing="25"/>
+<syncfusion:SfCheckBox Text="Check Box" 
+                       ContentSpacing="25"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -311,3 +336,8 @@ this.Content = sfCheckBox;
 {% endtabs %}
 
 ![.NET MAUI CheckBox with custom ContentSpacing between the box and the caption](Images/Visual-Customization/contentspacing.png)
+
+## See Also
+
+- [Visual states in .NET MAUI CheckBox](https://help.syncfusion.com/maui/checkbox/visual-states)
+- [Multiple choice with .NET MAUI CheckBox](https://help.syncfusion.com/maui/checkbox/multiple-choice)

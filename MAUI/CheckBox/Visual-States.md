@@ -9,6 +9,22 @@ documentation: UG
 
 # Visual States in .NET MAUI CheckBox (SfCheckBox)
 
+The visual appearance of the [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) can be customized using the **Visual State Manager** (VSM). The CheckBox control includes the following three visual states:
+
+* `Checked`
+* `Unchecked`
+* `Intermediate`
+
+You can change the state of the CheckBox by setting the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property on the CheckBox (or by user tap). In the checked state, a tick mark is displayed inside the CheckBox.
+
+| State | Property | Value |
+| --- | --- | --- |
+| Checked | `IsChecked` | `true` |
+| Unchecked | `IsChecked` | `false` |
+| Intermediate | `IsChecked` | `null` (requires `IsThreeState = true`) |
+
+N> The Intermediate state is only reported when the `IsThreeState` property is `true`. Without it, `IsChecked` is treated as `false` and the CheckBox never enters the `Intermediate` state.
+
 ## Prerequisites
 
 Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,22 +32,6 @@ Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 - `Syncfusion.Maui.Buttons`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) documentation.
-
-The visual appearance of the CheckBox can be customized using the **Visual State Manager** (VSM). The [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control includes the following three visual states:
-
-* `Checked`
-* `Unchecked`
-* `Intermediate`
-
-You can change the state of the CheckBox by setting the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property on the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) (or by user tap). In the checked state, a tick mark is displayed inside the CheckBox.
-
-| State | Property | Value |
-| --- | --- | --- |
-| Checked | [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) | `true` |
-| Unchecked | [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) | `false` |
-| Intermediate | [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) | `null` (requires [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) = `true`) |
-
-N> The indeterminate state is only reported when the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property is `true`. Without it, `IsChecked` is treated as `false` and the CheckBox never enters the `Intermediate` state.
 
 ## Defining visual states
 
@@ -113,3 +113,8 @@ this.Content = checkBox;
 ### Intermediate visual state
 
 ![.NET MAUI CheckBox in the Intermediate visual state with blue fill and Intermediate State caption](Images/VisualStates/intermediatevs.png)
+
+## See Also
+
+- [Visual customization in .NET MAUI CheckBox](https://help.syncfusion.com/maui/checkbox/visual-customization)
+- [Multiple choice with .NET MAUI CheckBox](https://help.syncfusion.com/maui/checkbox/multiple-choice)

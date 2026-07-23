@@ -9,20 +9,14 @@ documentation: UG
 
 # Multiple Choice with .NET MAUI CheckBox (SfCheckBox)
 
-## Prerequisites
-
-Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Buttons`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) documentation.
-
-## Single CheckBox
+The [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) can be used as a single or as a group. A single CheckBox is mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
 
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfCheckBox x:Name="checkBox" Text="I agree to the terms of services for this site" IsChecked="True"/>
+<buttons:SfCheckBox x:Name="checkBox"
+                    Text="I agree to the terms of services for this site" 
+                    IsChecked="True"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -37,9 +31,17 @@ this.Content = checkBox;
 
 ![.NET MAUI CheckBox used as a single terms-of-service confirmation](Images/Multiple-Choice/termsandconditions.png)
 
+## Prerequisites
+
+Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/checkbox/getting-started) documentation.
+
 ## Multi-select group
 
-Multiple CheckBoxes can be used as a group for multi-select scenarios where a user selects one or more of several non-mutually-exclusive options. `SfCheckBox` itself is a single-value control; group behavior is implemented by your code, by binding to a collection, or by hosting the CheckBoxes in a layout.
+Multiple CheckBoxes can be used as a group for multi-select scenarios where a user selects one or more of several non-mutually-exclusive options. `CheckBox` itself is a single-value control; group behavior is implemented by your code, by binding to a collection, or by hosting the CheckBoxes in a layout.
 
 {% tabs %}
 {% highlight xaml %}
@@ -83,11 +85,11 @@ this.Content = stackLayout;
 
 ## Intermediate state
 
-The [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) supports an indeterminate (intermediate) state in addition to checked and unchecked. The indeterminate state is enabled by setting the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to `true`. When `IsThreeState` is `true`, the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is treated as `bool?` so it can hold a third `null` value.
+The [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) supports an indeterminate (intermediate) state in addition to checked and unchecked. The indeterminate state is enabled by setting the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to `true`. When `IsThreeState` is `true`, the `IsChecked` property is treated as `bool?` so it can hold a third `null` value.
 
-N> When the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property is set to `false` and the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is set to `null`, the CheckBox displays in the unchecked state.
+N> When the `IsThreeState` property is set to `false` and the `IsChecked` property is set to `null`, the CheckBox displays in the unchecked state.
 
-The indeterminate state indicates that a group of sub-choices contains both checked and unchecked items. In the following example, the "Select all" CheckBox has the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property set to `true`. The "Select all" CheckBox is checked if all child items are checked, unchecked if all child items are unchecked, and indeterminate otherwise.
+The indeterminate state indicates that a group of sub-choices contains both checked and unchecked items. In the following example, the "Select all" CheckBox has the `IsThreeState` property set to `true`. The "Select all" CheckBox is checked if all child items are checked, unchecked if all child items are unchecked, and indeterminate otherwise.
 
 The example listens to the [`StateChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanged) event to keep the parent in sync. A shared `skip` flag is used to prevent the cascading `StateChanged` events raised by programmatic child updates from re-entering the handlers.
 
@@ -96,11 +98,19 @@ The example listens to the [`StateChanged`](https://help.syncfusion.com/cr/maui/
 
 <StackLayout Padding="20">
     <Label x:Name="label" Margin="10" Text="Pizza Toppings"/>
-    <buttons:SfCheckBox x:Name="selectAll" Text="Select All" IsThreeState="True" IsChecked="{x:Null}" StateChanged="SelectAll_StateChanged"/>
-    <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-    <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-    <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-    <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+    <buttons:SfCheckBox x:Name="selectAll" 
+                        Text="Select All" 
+                        IsThreeState="True" 
+                        IsChecked="{x:Null} 
+                        StateChanged="SelectAll_StateChanged"/>
+    <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni" 
+                        StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+    <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" 
+                        StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+    <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms" 
+                        StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+    <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" 
+                        StateChanged="CheckBox_StateChanged" Margin="30,0"/>
 </StackLayout>
 
 {% endhighlight %}
@@ -154,6 +164,8 @@ this.Content = stackLayout;
 {% endhighlight %}
 {% endtabs %}
 
+The `StateChanged` event can be handled in C# as follows:
+
 {% tabs %}
 {% highlight c# %}
 
@@ -194,3 +206,8 @@ private void CheckBox_StateChanged(object sender, Syncfusion.Maui.Buttons.StateC
 ![.NET MAUI CheckBox showing the Select all parent in the indeterminate state](Images/Multiple-Choice/selectalltoppings.png)
 
 You can download the multiple-choice checkbox project for this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-CheckBox).
+
+## See Also
+
+- [Visual customization in .NET MAUI CheckBox](https://help.syncfusion.com/maui/checkbox/visual-customization)
+- [Visual states in .NET MAUI CheckBox](https://help.syncfusion.com/maui/checkbox/visual-states)
