@@ -9,6 +9,8 @@ keywords : .net maui busy indicator animation type, maui busy indicator animatio
 ---
 # Animation Type in .NET MAUI Busy Indicator (SfBusyIndicator)
 
+The [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property for the [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) allows users to set one of the built-in animations. By default, the animation type is `CircularMaterial`. The different types of animations are [CircularMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial), [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino), [LinearMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial), [SingleCircle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_SingleCircle), [DoubleCircle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_DoubleCircle), [Globe](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Globe) and [HorizontalPulsingBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_HorizontalPulsingBox).
+
 ## Prerequisites
 
 Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,8 +18,6 @@ Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfus
 - `Syncfusion.Maui.Core`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/busy-indicator/getting-started) documentation.
-
-The [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property for the .NET MAUI Busy Indicator allows users to set one of the built-in animations. By default, the animation type is `CircularMaterial`. The different types of animations are [CircularMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial), [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino), [LinearMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial), [SingleCircle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_SingleCircle), [DoubleCircle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_DoubleCircle), [Globe](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Globe) and [HorizontalPulsingBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_HorizontalPulsingBox).
 
 ### CircularMaterial 
 
@@ -40,7 +40,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -71,7 +70,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.Cupertino,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -102,7 +100,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.LinearMaterial,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -133,7 +130,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.SingleCircle,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -164,7 +160,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.DoubleCircle,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -195,7 +190,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.Globe,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -226,7 +220,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.HorizontalPulsingBox,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -235,3 +228,9 @@ this.Content = busyIndicator;
 The following gif image illustrates the result of the above code.
 
 ![HorizontalPulsingBox](Images/AnimationType/HorizontalPulsingBox.gif)
+
+## See Also
+
+- [Sizing in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/sizing)
+- [Animation duration in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/duration)
+- [Header in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/set-header)

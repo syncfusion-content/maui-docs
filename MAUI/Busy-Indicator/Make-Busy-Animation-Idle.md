@@ -9,6 +9,8 @@ keywords : .net maui busy indicator idle, maui busy indicator idle, maui busy in
 ---
 # Make Busy Animation Idle in .NET MAUI Busy Indicator (SfBusyIndicator)
 
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) lets you control whether the animation is running. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to `false` stops the animation and hides the indicator.
+
 ## Prerequisites
 
 Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,8 +18,6 @@ Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfus
 - `Syncfusion.Maui.Core`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/busy-indicator/getting-started) documentation.
-
-The `.NET MAUI Busy Indicator` lets you control whether the animation is running. **Type:** `bool`. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to `false` stops the animation and hides the indicator.
 
 ## Stop the animation (idle)
 
@@ -40,7 +40,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     AnimationType = AnimationType.CircularMaterial,
     IsRunning = false,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -69,10 +68,12 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     AnimationType = AnimationType.CircularMaterial,
     IsRunning = true,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
 {% endtabs %}
 
+## See Also
 
+- [Animation types in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/animationtype)
+- [Animation duration in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/duration)

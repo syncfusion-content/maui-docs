@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Indicator Color and Background in .NET MAUI Busy Indicator | Syncfusion
+title: Indicator Color in .NET MAUI Busy Indicator | Syncfusion®
 description: Learn here about color support in Syncfusion® .NET MAUI Busy Indicator control (SfBusyIndicator) and more.
 platform: MAUI
 control: SfBusyIndicator
@@ -10,6 +10,8 @@ keywords : .net maui busy indicator color, maui busy indicator color, maui busy 
 
 # Indicator Color and Background in .NET MAUI Busy Indicator
 
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) allows you customize the indicator color and the overlay background. This section covers the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) and [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) properties.
+
 ## Prerequisites
 
 Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -18,11 +20,9 @@ Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfus
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/busy-indicator/getting-started) documentation.
 
-The .NET MAUI Busy Indicator lets you customize the indicator color and the overlay background. This section covers the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) and [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) properties.
-
 ## IndicatorColor
 
-The `.NET MAUI Busy Indicator` lets you customize the indicator's color using the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) property. **Type:** `Color`. The default value is the system accent color.
+The `.NET MAUI Busy Indicator` allows you customize the indicator's color using the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) property.
 
 {% tabs %}
 
@@ -44,7 +44,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     Title = "Searching...",
     IndicatorColor = Colors.Red,
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -56,7 +55,7 @@ The following gif image illustrates the result of the above code.
 
 ## Overlay background
 
-The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) also lets you customize the overlay background using the [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) property. **Type:** `Brush`. You can set it with a flat `Color` for a solid background or with a `Brush` (such as `RadialGradientBrush`) to apply gradients.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) also lets you customize the overlay background using the [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) property. You can set it with a flat `Color` for a solid background or with a `Brush` (such as `RadialGradientBrush`) to apply gradients.
 
 {% tabs %}
 
@@ -83,7 +82,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IndicatorColor = Colors.White,
     OverlayFill = new SolidColorBrush(Color.FromArgb("#512BD4")),
 };
-this.Content = busyIndicator;
  
 {% endhighlight %}
 
@@ -134,7 +132,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
         }
     },
 };
-this.Content = busyIndicator;
 
 {% endhighlight %}
 
@@ -144,3 +141,9 @@ The following gif image illustrates the result of the above code.
 
 ![OverlayFillBrush](Images/IndicatorColor/OverlayFillBrush.gif)
 
+## See Also
+
+- [Sizing in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/sizing)
+- [Animation duration in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/duration)
+- [Animation types in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/animationtype)
+- [Header in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/set-header)
