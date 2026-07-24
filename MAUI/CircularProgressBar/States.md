@@ -1,7 +1,7 @@
 ---
 layout: post
 title: States in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about States support in Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar (SfCircularProgressBar) control and more.
+description: Learn all about states support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar (SfCircularProgressBar) control.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
@@ -17,24 +17,26 @@ This is the default state. Use it when the progress estimation is known.
 
 ## Indeterminate
 
-By enabling the [`IsIndeterminate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IsIndeterminate) property, the state of the circular progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with a determinate mode to know that the application estimates progress before the actual progress starts.
+By enabling the [`IsIndeterminate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IsIndeterminate) property, the state of the circular progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with the determinate mode to indicate that the application estimates progress before the actual progress starts.
 
-{% tabs %} 
+{% tabs %}
 
-{% highlight xaml %} 
+{% highlight XAML %}
 
-<progressBar:SfCircularProgressBar IsIndeterminate="True"/>
+<progressBar:SfCircularProgressBar IsIndeterminate="true"/>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { IsIndeterminate = true };
 this.Content = circularProgressBar;
 
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
 ![.NET MAUI Circular ProgressBar in indeterminate state](images/states/circular-progressbar-indeterminate.gif)
 

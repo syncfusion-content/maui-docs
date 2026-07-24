@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Xamarin to .NET MAUI  Circular ProgressBar | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Circular ProgressBar to Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control and more.
+description: Learn all about migrating from the Syncfusion<sup>&reg;</sup> Xamarin Circular ProgressBar to the Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 To make the migration from the [Xamarin SfCircularProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to [.NET MAUI SfCircularProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) easier, most of the APIs from the Xamarin SfCircularProgressBar were kept in the .NET MAUI SfCircularProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfCircularProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
-## Initialize control
+## Initialize the control
 
 To initialize the control, import the ProgressBar namespace and initialize the SfCircularProgressBar as shown in the following code sample.
 
@@ -23,12 +23,12 @@ To initialize the control, import the ProgressBar namespace and initialize the S
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage
     xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
 
-    ...     
+    ...
     <progressBar:SfCircularProgressBar />
     ...
 </ContentPage>
@@ -51,9 +51,9 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 </td>
 <td>
-{% tabs %} 
+{% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage
     xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
@@ -116,7 +116,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <tr>
 <td>{{'[Content](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_Content)'| markdownify }}</td>
 <td>{{'[Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content)'| markdownify }}</td>
-<td>Gets or sets a any view to display in the center of circular progress bar.</td></tr>
+<td>Gets or sets any view to display in the center of the circular progress bar.</td></tr>
 <tr>
 <td>{{'[ProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressColor)'| markdownify }}</td>
 <td>{{'[*ProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill)'| markdownify }}</td>
@@ -132,7 +132,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <tr>
 <td>{{'[SegmentCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_SegmentCount)'| markdownify }}</td>
 <td>{{'[SegmentCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount)'| markdownify }}</td>
-<td>Gets or sets the value that determine the segments count of progress bar.</td></tr>
+<td>Gets or sets the value that determines the segment count of the progress bar.</td></tr>
 <tr>
 <td>{{'[GapWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_GapWidth)'| markdownify }}</td>
 <td>{{'[*SegmentGapWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth)'| markdownify }}</td>
@@ -193,11 +193,11 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <tr>
 <td>{{'[ValueChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ValueChanged)'| markdownify }}</td>
 <td>{{'[*ProgressChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressChanged)'| markdownify }}</td>
-<td>The value change event occurs when the Progress is changed.</td></tr>
+<td>The value changed event occurs when the Progress is changed.</td></tr>
 <tr>
 <td>{{'[ProgressCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressCompleted)'| markdownify }}</td>
 <td>{{'[ProgressCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressCompleted)'| markdownify }}</td>
-<td>The progress completed event occurs when Progress value attains Maximum value in ProgressBar.</td></tr>
+<td>The progress completed event occurs when the Progress value reaches the Maximum value in the ProgressBar.</td></tr>
 </table> 
 
 N> All the (*) marked APIs are renamed from Xamarin SfCircularProgressBar to maintain the consistency of API naming in the .NET MAUI SfCircularProgressBar.
@@ -210,13 +210,13 @@ The following code example explains how to use the properties in the Xamarin cir
 </tr>
 <tr>
 <td>
-{% tabs %} 
-{% highlight xaml %}
+{% tabs %}
+{% highlight XAML %}
 
 <ContentPage
     xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
 
-    ...     
+    ...
 <progressBar:SfCircularProgressBar x:Name="circularProgressBar"
                                    EasingEffect="CubicOut"
                                    GapWidth="5"
@@ -226,7 +226,7 @@ The following code example explains how to use the properties in the Xamarin cir
                                    ProgressColor="Red"
                                    TrackColor="Violet"
                                    Progress="100"
-                                   IsIndeterminate="False"
+                                   IsIndeterminate="false"
                                    Minimum="10"
                                    Maximum="90"
                                    AnimationDuration="1500"
@@ -237,13 +237,13 @@ The following code example explains how to use the properties in the Xamarin cir
                                    TrackOuterRadius="1"
                                    StartAngle="180"
                                    EndAngle="360"
-                                   ShowProgressValue="False"
+                                   ShowProgressValue="false"
                                    ValueChanged="SfCircularProgressBar_ValueChanged"
                                    ProgressCompleted="SfCircularProgressBar_ProgressCompleted">
     <progressBar:SfCircularProgressBar.RangeColors>
         <progressBar:RangeColorCollection>
-            <progressBar:RangeColor IsGradient="True" Color="#00bdaf" Start="0" End="25"/>
-            <progressBar:RangeColor IsGradient="True" Color="#2f7ecc" Start="25" End="50"/>
+            <progressBar:RangeColor IsGradient="true" Color="#00bdaf" Start="0" End="25"/>
+            <progressBar:RangeColor IsGradient="true" Color="#2f7ecc" Start="25" End="50"/>
         </progressBar:RangeColorCollection>
     </progressBar:SfCircularProgressBar.RangeColors>
     <progressBar:SfCircularProgressBar.Content>
@@ -287,9 +287,9 @@ private void SfCircularProgressBar_ProgressCompleted(object sender, ProgressValu
 </tr>
 <tr>
 <td>
-{% tabs %} 
+{% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage
     xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
@@ -306,7 +306,7 @@ private void SfCircularProgressBar_ProgressCompleted(object sender, ProgressValu
                                    ProgressChanged="CircularProgressBar_ProgressChanged"
                                    ProgressCompleted="CircularProgressBar_ProgressCompleted"
                                    Progress="100"
-                                   IsIndeterminate="False"
+                                   IsIndeterminate="false"
                                    Minimum="10"
                                    Maximum="90"
                                    AnimationDuration="1500"
@@ -368,4 +368,4 @@ private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueE
 
 ## Unsupported features from Xamarin.Forms
 
-* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property. Please visit the Custom Content page for more details about the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property.
+* The [ShowProgressValue](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) is not supported in the SfCircularProgressBar. Instead, you can achieve it using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property. For more details, refer to the [Custom Content](custom-content) page.

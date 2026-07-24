@@ -1,17 +1,17 @@
 ---
 layout: post
 title: About .NET MAUI Circular ProgressBar control | Syncfusion®
-description: Learn here all about the introduction of Syncfusion<sup>&reg;</sup>.NET MAUI Circular ProgressBar (SfCircularProgressBar) control, its elements and more.
+description: Learn all about the Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar (SfCircularProgressBar) control, its features, and elements.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Overview of .NET MAUI Circular ProgressBar
+# .NET MAUI Circular ProgressBar (SfCircularProgressBar) Overview
 
-The [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with customizable visuals. It displaying the progress of a process in circular shapes, determinate and indeterminate states, segments, smooth animation, and with customizable content. You can also define ranges with different colors.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with customizable visuals. It displays progress in a circular shape, supports determinate and indeterminate states, segments, smooth animation, and customizable content. You can also define ranges with different colors.
 
-  ![Circular ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+![Circular ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
 ## Business use cases
 
@@ -32,7 +32,7 @@ The [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/ma
 
 ## Related controls
 
-- [Linear Progress Bar](https://help.syncfusion.com/maui/linearprogressbar/overview) for visualize task progress in a horizontal bar format, ideal for simple linear workflows.
+- [Linear Progress Bar](https://help.syncfusion.com/maui/linearprogressbar/overview) for visualizing task progress in a horizontal bar format, ideal for simple linear workflows.
 - [Step Progress Bar](https://help.syncfusion.com/maui/stepprogressbar/overview) for displaying progress across multiple steps or stages, perfect for guided processes.
 - [Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/overview) for displaying indeterminate loading states during operations.   
 

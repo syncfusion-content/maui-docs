@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segments in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Segments support in Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements and more.
+description: Learn all about segments support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements, and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
@@ -11,16 +11,18 @@ documentation: ug
 
 To visualize the progress of multiple sequential tasks, split the circular progress bar into multiple segments by setting the [`SegmentCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount) property as demonstrated in the following code sample.
 
-{% tabs %} 
+{% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<progressBar:SfCircularProgressBar Progress="25" 
+<progressBar:SfCircularProgressBar Progress="25"
                                    SegmentCount="7" />
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 25;
@@ -29,7 +31,7 @@ this.Content = circularProgressBar;
 
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
 ![.NET MAUI Circular ProgressBar with segment](images/segment/segment.png)
 
@@ -37,16 +39,18 @@ this.Content = circularProgressBar;
 
 Customize the default spacing between the segments using the [`SegmentGapWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth) property as demonstrated in the following code sample.
 
-{% tabs %} 
-{% highlight xaml %}
+{% tabs %}
+{% highlight XAML %}
 
 <progressBar:SfCircularProgressBar Progress="25"
-                                   SegmentCount="7" 
+                                   SegmentCount="7"
                                    SegmentGapWidth="10" />
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 25;
@@ -56,7 +60,7 @@ this.Content = circularProgressBar;
 
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
 ![.NET MAUI Circular ProgressBar with segment gap width](images/segment/gap-width.png)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about animation support in Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements and more.
+description: Learn all about animation support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements, and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
@@ -18,20 +18,22 @@ The following properties are used to define the duration of animation for the sp
 
 ## Easing effects
 
-The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing) property allows you specify the transfer function that controls animation speed when they run. 
+The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing) property allows you to specify the transfer function that controls the animation speed when it runs.
 
 The following code sample demonstrates the `CubicInOut` easing function of the circular progress bar.
 
-{% tabs %} 
+{% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <progressBar:SfCircularProgressBar Progress="75"
                                    AnimationEasing="{x:Static Easing.CubicInOut}"/>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 75;
@@ -41,13 +43,13 @@ this.Content = circularProgressBar;
 
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
 ![.NET MAUI Circular ProgressBar with CubicInOut animation](images/animation/easing-animation.gif)
 
 The [`SetProgress()`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_) method in the progress bar is used to set progress value along with animation duration and easing effect applicable for the specific method call.
 
-{% highlight c# %}
+{% highlight C# %}
 
 void SetProgress(double progress, double? animationDuration = null, Easing? easing = null)
 
@@ -61,16 +63,18 @@ The [`IndeterminateAnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfus
 
 The following code sample demonstrates the `BounceIn` easing function of the circular progress bar.
 
-{% tabs %} 
+{% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<progressBar:SfCircularProgressBar IsIndeterminate="True" 
+<progressBar:SfCircularProgressBar IsIndeterminate="true"
                                    IndeterminateAnimationEasing="{x:Static Easing.BounceIn}" />
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.IsIndeterminate = true;
@@ -79,7 +83,7 @@ this.Content = circularProgressBar;
 
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
 ![.NET MAUI Circular ProgressBar with indeterminate animation](images/animation/indeterminate.gif)
  

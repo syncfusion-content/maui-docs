@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Content in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about customcontent support in Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements and more.
+description: Learn all about custom content support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements, and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
@@ -9,17 +9,17 @@ documentation: ug
 
 # Custom Content in .NET MAUI Circular ProgressBar
 
-In the circular progress bar, add any view to the center using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property. 
+In the circular progress bar, add any view to the center using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property.
 
-For example, include add, start, or pause button to control the progress. Also add an image that indicates the actual task in progress or add custom text that conveys how far the task is completed. 
+For example, include an add, start, or pause button to control the progress. You can also add an image that indicates the actual task in progress, or add custom text that conveys how far the task is completed.
 
 The following code sample demonstrates how to add custom text content.
 
-{% tabs %} 
+{% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<progressBar:SfCircularProgressBar x:Name="customContentCircularProgressBar" 
+<progressBar:SfCircularProgressBar x:Name="customContentCircularProgressBar"
                                    Progress="23">
     <progressBar:SfCircularProgressBar.Content>
         <Grid>
@@ -45,7 +45,9 @@ The following code sample demonstrates how to add custom text content.
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 23;
@@ -75,7 +77,7 @@ this.Content = circularProgressBar;
 
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
 ![.NET MAUI Circular ProgressBar with custom content](images/custom-content/content.png)
 
