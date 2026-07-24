@@ -1,106 +1,141 @@
 ---
 layout: post
-title: Fixed Hint Position in .NET MAUI TextInputLayout control | Syncfusion
-description: Learn here all about Fixed Hint Position support in Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: Fixed Hint Position in .NET MAUI SfTextInputLayout | Syncfusion®
+description: Learn how to keep the hint label always at the top (always-floated) position in the Syncfusion® .NET MAUI SfTextInputLayout control.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui, .net maui hint label.
+keywords: .net maui textinputlayout ishintalwaysfloated, syncfusion text input layout fixed hint maui, sftextinputlayout always floated hint maui, .net maui text input layout hint position, sftextinputlayout hint floating maui
 ---
 
-# Fixed Hint Position in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Fixed Hint Position in .NET MAUI SfTextInputLayout
 
-Hint label for the text input layout is always fixed at the top position. This helps users make the hint label float even when the input view is not focused. It can be enabled by setting the [IsHintAlwaysFloated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsHintAlwaysFloated) property.
+By default, the hint label in [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) floats to the top of the input line only when the input view is focused or contains a value. When the input is empty and unfocused, the hint sits in the input line as a placeholder. Set the [IsHintAlwaysFloated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsHintAlwaysFloated) property to `true` to keep the hint label permanently at the top, regardless of focus or value state.
 
->**NOTE**
-The default value of the `IsHintAlwaysFloated` is `false`.
+## Prerequisites
 
-## Filled
+Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-The hint label position of the input view will be set always at the top for the [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled) container type. 
+- `Syncfusion.Maui.Core`
 
-{% tabs %} 
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
 
-{% highlight xaml %} 
+N> The default value of `IsHintAlwaysFloated` is `false`.
+
+## Behavior Summary
+
+| `IsHintAlwaysFloated` | Hint Position When Empty and Unfocused | Hint Position When Focused or Has Value |
+|----------------------|----------------------------------------|----------------------------------------|
+| `false` (default) | Inside the input line as a placeholder. | Floated at the top. |
+| `true` | Floated at the top. | Floated at the top. |
+
+The floated-hint behavior applies to all three container types (Filled, Outlined, and None). The following examples show the same configuration applied to each.
+
+## Always-floated hint with Filled container
+
+{% tabs %}
+{% highlight xaml %}
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                               IsHintAlwaysFloated="true" 
-                               ContainerType="Filled">
-        <Entry />
+                                IsHintAlwaysFloated="True"
+                                ContainerType="Filled">
+    <Entry />
 </inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
+{% highlight C# %}
 
-{% highlight C# %} 
-
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Name";
-inputLayout.IsHintAlwaysFloated = true;
-inputLayout.ContainerType = ContainerType.Filled;
-inputLayout.Content = new Entry(); 
+SfTextInputLayout inputLayout = new SfTextInputLayout
+{
+    Hint = "Name",
+    IsHintAlwaysFloated = true,
+    ContainerType = ContainerType.Filled,
+    Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![Filled type](images/FixedHintPosition/HintPositionFilled.png)
+![Filled SfTextInputLayout with the hint label always floated at the top](images/FixedHintPosition/HintPositionFilled.png)
 
-## Outlined
+## Always-floated hint with Outlined container
 
-The hint label position of the input view will be set always at the top for the [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined) container type.
-
-{% tabs %} 
-
-{% highlight xaml %} 
+{% tabs %}
+{% highlight xaml %}
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                               IsHintAlwaysFloated="true" 
+                               IsHintAlwaysFloated="True"
                                ContainerType="Outlined">
-        <Entry />
+    <Entry />
 </inputLayout:SfTextInputLayout>
- 
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Name";
-inputLayout.IsHintAlwaysFloated = true;
-inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.Content = new Entry(); 
 
 {% endhighlight %}
+{% highlight C# %}
 
+SfTextInputLayout inputLayout = new SfTextInputLayout
+{
+    Hint = "Name",
+    IsHintAlwaysFloated = true,
+    ContainerType = ContainerType.Outlined,
+    Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![Outlined type](images/FixedHintPosition/HintPositionOutlined.png)
+![Outlined SfTextInputLayout with the hint label always floated at the top](images/FixedHintPosition/HintPositionOutlined.png)
 
-## None
+## Always-floated hint with None container
 
-The hint label position of the input view will be set always at the top for the [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_None) container type.
-
-{% tabs %} 
-
-{% highlight xaml %} 
+{% tabs %}
+{% highlight xaml %}
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                               IsHintAlwaysFloated="true" 
+                               IsHintAlwaysFloated="True"
                                ContainerType="None">
-        <Entry />
-</inputLayout:SfTextInputLayout> 
- 
-{% endhighlight %}
-
-{% highlight C# %} 
-
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Name";
-inputLayout.IsHintAlwaysFloated = true;
-inputLayout.ContainerType = ContainerType.None;
-inputLayout.Content = new Entry(); 
+    <Entry />
+</inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
+{% highlight C# %}
 
+SfTextInputLayout inputLayout = new SfTextInputLayout
+{
+    Hint = "Name",
+    IsHintAlwaysFloated = true,
+    ContainerType = ContainerType.None,
+    Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
-![None type](images/FixedHintPosition/HintPositionNone.png)
+![None-container SfTextInputLayout with the hint label always floated at the top](images/FixedHintPosition/HintPositionNone.png)
+
+## See Also
+
+- [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
+- [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)
+- [Custom Font](https://help.syncfusion.com/maui/textinputlayout/custom-font)
+- [IsHintAlwaysFloated API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsHintAlwaysFloated)

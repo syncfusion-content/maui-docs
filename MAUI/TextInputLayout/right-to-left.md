@@ -1,40 +1,120 @@
 ---
 layout: post
-title: Right-to-Left in .NET MAUI Text Input Layout control | Syncfusion®
-description: Learn about Right-to-Left support in Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: Right-to-Left Support in .NET MAUI SfTextInputLayout | Syncfusion®
+description: Learn how to enable right-to-left (RTL) text flow in the Syncfusion® .NET MAUI SfTextInputLayout control, including app-level setup and platform notes.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
+keywords: .net maui textinputlayout right to left, syncfusion text input layout rtl maui, sftextinputlayout flowdirection maui, .net maui rtl localization, .net maui text input layout arabic hebrew, sftextinputlayout bidi maui
 ---
 
-# Right-to-Left in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Right-to-Left Support in .NET MAUI SfTextInputLayout
 
-The TextInputLayout supports to changing the flow of text to the right-to-left direction by setting the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.device.flowdirection?view=net-maui-7.0) to `RightToLeft.`
+[SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) supports right-to-left (RTL) text flow for languages such as Arabic, Hebrew, and Persian. The control honors the MAUI [FlowDirection](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/localization#right-to-left-layout) property, which can be set on the control itself or on any parent visual element (page, window, or app).
+
+## Prerequisites
+
+Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
+
+## FlowDirection Values
+
+| Value | Description |
+|-------|-------------|
+| `LeftToRight` | LTR layout. The hint, helper text, and input view flow from left to right. This is the default. |
+| `RightToLeft` | RTL layout. The hint, helper text, and input view flow from right to left. Leading and trailing views are also mirrored. |
+| `MatchParent` | Inherits the `FlowDirection` from the visual parent. The default for most controls. |
+
+N> When the layout direction changes, the hint label, helper text, error text, character counter, password toggle, and leading/trailing views are mirrored automatically. The `Content` (e.g., `Entry`) is also mirrored, so the cursor and selection behave correctly.
+
+## Apply RTL to a single control
+
+Set the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-10.0) property directly on the `SfTextInputLayout` instance.
 
 {% tabs %}
 {% highlight xaml %}
 
-<inputLayout:SfTextInputLayout x:Name="inputLayout" 
-                                FlowDirection="RightToLeft"
-                                ContainerType="Outlined"
-                                Hint="نام"
-                                HelperText="نام درج کریں" >
-        <Entry />
+<inputLayout:SfTextInputLayout x:Name="inputLayout"
+                               FlowDirection="RightToLeft"
+                               ContainerType="Outlined"
+                               Hint="نام"
+                               HelperText="نام درج کریں">
+    <Entry />
 </inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
-SfTextInputLayout inputLayout = new SfTextInputLayout();
-inputLayout.FlowDirection = FlowDirection.RightToLeft;
-inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.Hint = "نام";
-inputLayout.HelperText = " نام درج کریں";
-inputLayout.Content = new Entry(); 
+SfTextInputLayout inputLayout = new SfTextInputLayout
+{
+    FlowDirection = FlowDirection.RightToLeft,
+    ContainerType = ContainerType.Outlined,
+    Hint = "نام",
+    HelperText = "نام درج کریں",
+    Content = new Entry()
+};
+Content = new VerticalStackLayout
+{
+    Children =
+    {
+        inputLayout
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI TextInputLayout with right to left](images/RightToLeft/RTL.png)
+
+## Apply RTL to the entire app
+
+To enable RTL for the entire application, set `FlowDirection` on the root page or in the `MauiAppBuilder` configuration. This is the recommended approach for fully-localized apps.
+
+{% tabs %}
+{% highlight C# %}
+
+var builder = MauiApp.CreateBuilder();
+builder.UseMauiApp<App>();
+builder.ConfigureLifecycleEvents(events =>
+{
+    // Force RTL for the entire app.
+});
+// Or set FlowDirection on the root page in App.xaml.cs.
+
+{% endhighlight %}
+{% endtabs %}
+
+You can also set `FlowDirection` on the root page in `App.xaml.cs`:
+
+{% tabs %}
+{% highlight C# %}
+
+public App()
+{
+    InitializeComponent();
+    MainPage = new MainPage { FlowDirection = FlowDirection.RightToLeft };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Platform notes
+
+| Platform | Required Configuration |
+|----------|------------------------|
+| Android | Add `android:supportsRtl="true"` to the `<application>` element in `Platforms/Android/AndroidManifest.xml`. |
+| iOS / Mac Catalyst | Set the `SemanticContentAttribute` to `Playback` or use a storyboard or Interface Builder file with `SemanticContentAttribute` configured to force a layout direction. |
+| Windows | The framework follows the system display language; no extra configuration is required. |
+
+## How to test RTL
+
+To verify the layout without changing the system language, set `FlowDirection="RightToLeft"` on a single page in your XAML and run the app. The hint, helper text, error text, character counter, password toggle, and leading/trailing views should all be mirrored.
+
+## See Also
+
+- [FlowDirection API reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-10.0)
+- [Custom Icons](https://help.syncfusion.com/maui/textinputlayout/custom-icons)
 

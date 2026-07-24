@@ -1,84 +1,103 @@
 ---
 layout: post
-title: Retrieve Content in .NET MAUI MarkdownViewer | Syncfusion
-description: Learn how to retrieve and transform Markdown content using built-in methods in the Syncfusion .NET MAUI MarkdownViewer control.
+title: Retrieve Content in .NET MAUI SfMarkdownViewer | Syncfusion
+description: Learn how to retrieve and transform markdown content using built-in methods in the Syncfusion .NET MAUI SfMarkdownViewer control.
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
+keywords: .net maui markdownviewer get text, syncfusion markdownviewer get html maui, sfmarkdownviewer get markdown text maui, .net maui markdown to html, .net maui markdown extract text, markdown viewer api maui
 ---
 
 # Retrieve Content Programmatically in .NET MAUI SfMarkdownViewer
 
-The [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control provides built-in methods to retrieve and transform Markdown content programmatically. These methods allow developers to access the raw Markdown, convert it to HTML, or extract plain text without formatting.
+The [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control provides built-in methods to retrieve and transform markdown content programmatically. These methods allow developers to access the raw markdown, convert it to HTML, or extract plain text without formatting.
 
-## GetMarkdownText
+## Prerequisites
 
-Retrieves the raw Markdown content currently assigned to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control. 
+Before using the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-{% tabs %}
-{% highlight C# hl_lines="12" %}
+- `Syncfusion.Maui.MarkdownViewer`
 
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();  
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-            Content = markdownViewer;       
-        }
-        . . .
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/markdownviewer/gettingstarted) documentation.
 
-        string markdown = markdownViewer.GetMarkdownText();
-    }
+## Supported Methods
 
-{% endhighlight %}
-{% endtabs %}
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| [GetMarkdownText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetMarkdownText) | `string` | Returns the raw markdown currently assigned to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property. |
+| [GetHtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetHtmlText) | `string` | Converts the rendered markdown to an HTML string. |
+| [GetText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetText) | `string` | Extracts the plain text from the markdown, stripping formatting such as headings, emphasis, links, and code blocks. |
 
-## GetHtmlText
+N> All three methods are synchronous and must be invoked on the UI thread after the control has been loaded and a [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) value has been set.
 
-Converts the Markdown content of the SfMarkdownViewer control into HTML format and provides the result as a string.
+The following example shows the shared setup used by the samples in this document:
 
-{% tabs %}
-{% highlight C# hl_lines="12" %}
+{% tabs %} 
+{% highlight C# %}
 
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();  
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-            Content = markdownViewer;       
-        }
-        . . .
+private readonly SfMarkdownViewer markdownViewer;
 
-        string html = markdownViewer.GetHtmlText();
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## GetText
-
-Extracts the plain text content from the Markdown assigned to the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control, removing all Markdown formatting such as headings, emphasis, links, and code blocks.
-
-{% tabs %}
-{% highlight C# hl_lines="12" %}
-
-public partial class MainPage : ContentPage
+public MainPage()
 {
-    public MainPage()
-    {
-        InitializeComponent();  
-        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-        markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-        Content = markdownViewer;       
-    }
-    . . .
+    InitializeComponent();
 
-    string text = markdownViewer.GetText();
+    markdownViewer = new SfMarkdownViewer
+    {
+        Source = "# Welcome\n\nThis is **Markdown Viewer** running on .NET MAUI."
+    };
+
+    Content = markdownViewer;
 }
 
 {% endhighlight %}
+{% endtabs %} 
+
+## GetMarkdownText
+
+The [GetMarkdownText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetMarkdownText) method returns the raw markdown content currently assigned to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the `SfMarkdownViewer` control.
+
+{% tabs %} 
+{% highlight C# %}
+
+string markdown = markdownViewer.GetMarkdownText();
+// Sample return value: "# Welcome\n\nThis is **Markdown Viewer** running on .NET MAUI."
+
+{% endhighlight %}
 {% endtabs %}
+
+N> If `Source` has not been set, the method returns an empty string.
+
+## GetHtmlText
+
+The [GetHtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetHtmlText) method converts the rendered markdown into an HTML string. The output is a self-contained HTML5 fragment containing the rendered elements (headings, paragraphs, lists, tables, and code blocks). It does not include `<html>`, `<head>`, or `<body>` tags, and does not embed any CSS or scripts.
+
+{% tabs %} 
+{% highlight C# %}
+
+string html = markdownViewer.GetHtmlText();
+// Sample return value:
+// "<h1>Welcome</h1><p>This is <strong>Markdown Viewer</strong> running on .NET MAUI.</p>"
+
+{% endhighlight %}
+{% endtabs %}
+
+N> `GetHtmlText` is useful for exporting the rendered content to web views, email bodies, or any consumer that accepts HTML markup.
+
+## GetText
+
+The [GetText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetText) method extracts the plain text from the markdown content, removing all formatting such as headings, emphasis, links, and code blocks. Links are flattened to their visible text, and image alt text is preserved when available.
+
+{% tabs %} 
+{% highlight C# %}
+
+string text = markdownViewer.GetText();
+// Sample return value: "Welcome\n\nThis is Markdown Viewer running on .NET MAUI."
+
+{% endhighlight %}
+{% endtabs %}
+
+## See Also
+
+- [Loading Markdown Content](https://help.syncfusion.com/maui/markdownviewer/databinding)
+- [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance)
+- [Apply CSS Style Rules](https://help.syncfusion.com/maui/markdownviewer/overridingdefaultstyles)
