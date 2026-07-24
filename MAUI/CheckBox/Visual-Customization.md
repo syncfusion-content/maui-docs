@@ -9,6 +9,8 @@ documentation: UG
 
 # Visual Customization in .NET MAUI CheckBox (SfCheckBox)
 
+This section covers the visual properties of [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) and how to customize them.
+
 ## Prerequisites
 
 Before using the [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -154,7 +156,6 @@ You can customize the appearance of the text in the [CheckBox](https://help.sync
 * [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontFamily) : Changes the font family of the caption text.
 * [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAttributes) : Sets font attributes(bold/italic/none) of the caption text.
 * [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontSize) : Sets font size of the caption text.
-
 
 {% tabs %}
 {% highlight xaml %}

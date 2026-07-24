@@ -9,6 +9,13 @@ documentation: UG
 
 # Visual States in .NET MAUI Radio Button (SfRadioButton)
 
+The visual appearance of the [.NET MAUI Radio Button] can be customized reactively using the `VisualStateManager` and `VisualState` types. The `SfRadioButton` control exposes the following two visual states:
+
+* Checked
+* Unchecked
+
+Visual states are applied automatically whenever the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property changes (whether by user interaction or programmatically), so no event handler is required.
+
 ## Prerequisites
 
 Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -17,16 +24,9 @@ Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusio
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radio-button/getting-started) documentation.
 
-The visual appearance of the .NET MAUI Radio Button can be customized reactively using the `VisualStateManager` and `VisualState` types. The `SfRadioButton` control exposes the following two visual states:
-
-* [Checked](#checked-state)
-* [Unchecked](#unchecked-state)
-
-Visual states are applied automatically whenever the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property changes (whether by user interaction or programmatically), so no event handler is required.
-
 ## Common Visual State Group
 
-Both states are defined inside a single `VisualStateGroup` named `CommonStates`. The group is attached to `SfRadioButton` through the `VisualStateManager.VisualStateGroups` attached property (XAML) or the `VisualStateManager.SetVisualStateGroups` static method (C#). Inside each `VisualState.Setters` block you can change any bindable property of `SfRadioButton` — common targets include `TextColor`, `BackgroundColor`, `CheckedColor`, `UncheckedColor`, `StrokeThickness`, `FontAttributes`, and `FontSize`.
+Both states are defined inside a single `VisualStateGroup` named `CommonStates`. The group is attached to `SfRadioButton` through the `VisualStateManager.VisualStateGroups` attached property (XAML) or the `VisualStateManager.SetVisualStateGroups` static method (C#). Inside each `VisualState.Setters` block you can change any bindable property of `SfRadioButton` - common targets include `TextColor`, `BackgroundColor`, `CheckedColor`, `UncheckedColor`, `StrokeThickness`, `FontAttributes`, and `FontSize`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -80,70 +80,23 @@ this.Content = radioButton;
 {% endhighlight %}
 {% endtabs %}
 
-## Checked State
+### Checked State
 
-The `Checked` state is applied when [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) is `true`. The setters in this state run whenever the button transitions into the checked state.
+The `Checked` state is applied when `IsChecked` is `true`. The setters in this state run whenever the button transitions into the checked state.
 
 **Checked visual state**
 
 ![Visual state of checked state](Images/VisualState/checkedvisualstate.png)
 
-## Unchecked State
+### Unchecked State
 
-The `Unchecked` state is applied when [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) is `false`. The setters in this state run whenever the button transitions into the unchecked state.
+The `Unchecked` state is applied when `IsChecked` is `false`. The setters in this state run whenever the button transitions into the unchecked state.
 
 **Unchecked visual state**
 
 ![Visual state of unchecked state](Images/VisualState/uncheckedvisualstate.png)
 
-## Visual States in an `SfRadioGroup`
+## See Also
 
-In a typical scenario multiple `SfRadioButton` instances are wrapped in an [`SfRadioGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html). The same `VisualStateManager` markup can be applied to every child button (or via a `Style` with a `BasedOn` resource) so the same visuals are reused across the group.
-
-{% tabs %}
-{% highlight xaml %}
-
-<syncfusion:SfRadioGroup>
-    <syncfusion:SfRadioButton Text="Net banking" IsChecked="True">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="Checked">
-                    <VisualState.Setters>
-                        <Setter Property="TextColor" Value="White"/>
-                        <Setter Property="BackgroundColor" Value="#2e7d32"/>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Unchecked">
-                    <VisualState.Setters>
-                        <Setter Property="TextColor" Value="#2e7d32"/>
-                        <Setter Property="BackgroundColor" Value="Transparent"/>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-    </syncfusion:SfRadioButton>
-    <syncfusion:SfRadioButton Text="Debit card">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="Checked">
-                    <VisualState.Setters>
-                        <Setter Property="TextColor" Value="White"/>
-                        <Setter Property="BackgroundColor" Value="#2e7d32"/>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Unchecked">
-                    <VisualState.Setters>
-                        <Setter Property="TextColor" Value="#2e7d32"/>
-                        <Setter Property="BackgroundColor" Value="Transparent"/>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-    </syncfusion:SfRadioButton>
-</syncfusion:SfRadioGroup>
-
-{% endhighlight %}
-{% endtabs %}
-
-> **Tip:** to avoid duplicating the `VisualStateManager` markup on every Radio Button, define it once in a `Style` (via `Style.Setters` plus `VisualStateManager.VisualStateGroups`) and apply the style to all children of the `SfRadioGroup`.
-
+- [Visual customization in .NET MAUI Radio Button](https://help.syncfusion.com/maui/radio-button/visual-customization)
+- [Grouping .NET MAUI Radio Button](https://help.syncfusion.com/maui/radio-button/grouping)

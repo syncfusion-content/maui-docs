@@ -10,6 +10,13 @@ keywords : .net maui radio button, maui radio button, maui radio button group, m
 
 # Grouping in .NET MAUI Radio Button (SfRadioButton)
 
+The [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control supports two approaches for grouping a set of Radio Buttons so that only one is selected at a time:
+
+* `GroupKey` - Share a single [SfRadioGroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroupKey.html) instance across Radio Buttons located in any layout.
+* `Radio Group` - Wrap the Radio Buttons in an [SfRadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) container for a richer set of features (`CheckedItem`, `SelectedValue`, `CheckedChanged`, `Orientation`).
+
+Use `GroupKey` when your Radio Buttons are scattered across different layouts or pages and must still be mutually exclusive. Use `SfRadioGroup` when the buttons are visually grouped and you need the additional properties and events.
+
 ## Prerequisites
 
 Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -18,39 +25,11 @@ Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusio
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radio-button/getting-started) documentation.
 
-The [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control supports two approaches for grouping a set of Radio Buttons so that only one is selected at a time:
-
-* [GroupKey](#groupkey) - Share a single [`SfRadioGroupKey`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroupKey.html) instance across buttons located in any layout.
-* [.NET MAUI Radio Group](#net-maui-radio-group) - Wrap the buttons in an [`SfRadioGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) container for a richer set of features (`CheckedItem`, `SelectedValue`, `CheckedChanged`, `Orientation`).
-
-Use `GroupKey` when your Radio Buttons are scattered across different layouts or pages and must still be mutually exclusive. Use `SfRadioGroup` when the buttons are visually grouped and you need the additional properties and events.
-
-## Setting the Caption
-
-The .NET MAUI Radio Button caption is defined using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the Radio Button and is displayed next to it.
-
-{% tabs %}
-{% highlight xaml %}
-
-<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button"/>
-
-{% endhighlight %}
-{% highlight c# %}
-
-SfRadioButton radioButton = new SfRadioButton();
-radioButton.Text = "Radio Button";
-this.Content = radioButton;
-
-{% endhighlight %}
-{% endtabs %}
-
-![.NET MAUI Radio Button](Images/Getting-Started/radiobutton.png)
-
 ## GroupKey
 
-The [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_GroupKey) property of [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) allows you to group a set of Radio Buttons located in any layout. When grouped, only one Radio Button per [`SfRadioGroupKey`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroupKey.html) can be selected at a time.
+The [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_GroupKey) property of Radio Button allows you to group a set of Radio Buttons located in any layout. When grouped, only one Radio Button per [`SfRadioGroupKey`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroupKey.html) can be selected at a time.
 
-A single `SfRadioGroupKey` instance can be shared across multiple Radio Buttons located in different layouts, pages, or even windows. Two different `SfRadioGroupKey` instances always represent different groups.
+Two different `SfRadioGroupKey` instances always represent different groups.
 
 {% tabs %}
 {% highlight xaml %}
@@ -60,11 +39,16 @@ A single `SfRadioGroupKey` instance can be shared across multiple Radio Buttons 
         <syncfusion:SfRadioGroupKey x:Key="carBrand"/>
         <syncfusion:SfRadioGroupKey x:Key="bikeBrand"/>
     </StackLayout.Resources>
-    <syncfusion:SfRadioButton Text="Honda" GroupKey="{StaticResource carBrand}"/>
-    <syncfusion:SfRadioButton Text="Hyundai" GroupKey="{StaticResource carBrand}"/>
-    <syncfusion:SfRadioButton Text="Volkswagen" GroupKey="{StaticResource carBrand}"/>
-    <syncfusion:SfRadioButton Text="Yamaha" GroupKey="{StaticResource bikeBrand}"/>
-    <syncfusion:SfRadioButton Text="Bajaj" GroupKey="{StaticResource bikeBrand}"/>
+    <syncfusion:SfRadioButton Text="Honda" 
+                              GroupKey="{StaticResource carBrand}"/>
+    <syncfusion:SfRadioButton Text="Hyundai" 
+                              GroupKey="{StaticResource carBrand}"/>
+    <syncfusion:SfRadioButton Text="Volkswagen" 
+                              GroupKey="{StaticResource carBrand}"/>
+    <syncfusion:SfRadioButton Text="Yamaha" 
+                              GroupKey="{StaticResource bikeBrand}"/>
+    <syncfusion:SfRadioButton Text="Bajaj" 
+                              GroupKey="{StaticResource bikeBrand}"/>
 </StackLayout>
 
 {% endhighlight %}
@@ -90,13 +74,11 @@ this.Content = stackLayout;
 {% endhighlight %}
 {% endtabs %}
 
-**GroupKey grouping - selecting one option per group**
-
 ![GroupKey](Images/Grouping/groupkey.png)
 
 ## .NET MAUI Radio Group
 
-[`SfRadioGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) is a container that holds a set of Radio Buttons. When you select a Radio Button in the group, all other items are automatically deselected. At any given time, only one Radio Button in the same group can be selected. The container also exposes the [`CheckedChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event, the [`CheckedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) property, the [`SelectedValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_SelectedValue) property.
+[SfRadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) is a container that holds a set of Radio Buttons. When you select a Radio Button in the group, all other items are automatically deselected. At any given time, only one Radio Button in the same group can be selected. The container also exposes the [CheckedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event, the [CheckedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) property, the [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_SelectedValue) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -127,23 +109,25 @@ this.Content = radioGroup;
 
 ### CheckedItem
 
-The [`CheckedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) property of `SfRadioGroup` returns the currently checked Radio Button in the group. **Type:** `SfRadioButton`. Returns `null` if no Radio Button in the group is currently checked.
+The [`CheckedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) property of `SfRadioGroup` returns the currently checked Radio Button in the group. 
 
 ### SelectedValue
 
-The [`SelectedValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_SelectedValue) property of `SfRadioGroup` is of type `object` and represents the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_Value) of the checked Radio Button in the group. **Type:** `object` (default `null`).
+The [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_SelectedValue) property of `SfRadioGroup` is represents the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_Value) of the checked Radio Button in the group.
 
 When any Radio Button in the group is checked, the `Value` of that Radio Button is assigned to the `SelectedValue` property of the group. The `SelectedValue` is updated whenever a different Radio Button in the group is checked.
-
-> If `SelectedValue` is set to a value that does not match the `Value` of any child Radio Button, no button in the group will be checked and `CheckedItem` returns `null`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRadioGroup x:Name="paymentGroup"            SelectedValue="DebitCard">
-    <syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
-    <syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
-    <syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
+<syncfusion:SfRadioGroup x:Name="paymentGroup" 
+                         SelectedValue="DebitCard">
+    <syncfusion:SfRadioButton Text="Net banking" 
+                              Value="NetBanking"/>
+    <syncfusion:SfRadioButton Text="Debit card" 
+                              Value="DebitCard"/>
+    <syncfusion:SfRadioButton Text="Credit card" 
+                              Value="CreditCard"/>
 </syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -180,84 +164,23 @@ this.Content = radioGroup;
 
 ![SelectedValue](Images/Grouping/selectedvalue.png)
 
-**Binding SelectedValue to a view-model property (MVVM)**
-
-{% tabs %}
-{% highlight xaml %}
-
-<syncfusion:SfRadioGroup SelectedValue="{Binding SelectedPayment}">
-    <syncfusion:SfRadioGroup.BindingContext>
-        <local:PaymentViewModel/>
-    </syncfusion:SfRadioGroup.BindingContext>
-    <syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
-    <syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
-    <syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
-</syncfusion:SfRadioGroup>
-
-{% endhighlight %}
-{% highlight c# %}
-
-var paymentViewModel = new PaymentViewModel();
-
-var radioGroup = new SfRadioGroup
-{
-    BindingContext = paymentViewModel
-};
-radioGroup.SetBinding(
-    SfRadioGroup.SelectedValueProperty,
-    nameof(PaymentViewModel.SelectedPayment));
-
-radioGroup.Children.Add(new SfRadioButton { Text = "Net banking", Value = "NetBanking" });
-radioGroup.Children.Add(new SfRadioButton { Text = "Debit card", Value = "DebitCard" });
-radioGroup.Children.Add(new SfRadioButton { Text = "Credit card", Value = "CreditCard" });
-
- // Apply the initial selection via the view-model
- paymentViewModel.SelectedPayment = "DebitCard";
- 
- this.Content = radioGroup;
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-// ViewModel
-public class PaymentViewModel : INotifyPropertyChanged
-{
-    private string selectedPayment = "DebitCard";
-    public string SelectedPayment
-    {
-        get => selectedPayment;
-        set
-        {
-            if (selectedPayment != value)
-            {
-                selectedPayment = value;
-                OnPropertyChanged();
-            }
-        }
-    }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-    private void OnPropertyChanged([CallerMemberName] string name = null)
-        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ### CheckedChanged Event
 
-The [`CheckedChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event of `SfRadioGroup` is raised when the checked item in the group changes. The event arguments are of type [`CheckedChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html) and expose the following properties:
+The [CheckedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event of `SfRadioGroup` is raised when the checked item in the group changes. The event arguments are of type [CheckedChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html) and expose the following properties:
 
-* [PreviousItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html#Syncfusion_Maui_Buttons_CheckedChangedEventArgs_PreviousItem) - The previously checked Radio Button in the group. **Type:** `SfRadioButton` (or `null` if none was checked).
-* [CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html#Syncfusion_Maui_Buttons_CheckedChangedEventArgs_CurrentItem) - The currently checked Radio Button in the group. **Type:** `SfRadioButton` (or `null` if no item is now checked).
+* [PreviousItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html#Syncfusion_Maui_Buttons_CheckedChangedEventArgs_PreviousItem) - The previously checked Radio Button in the group.
+* [CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html#Syncfusion_Maui_Buttons_CheckedChangedEventArgs_CurrentItem) - The currently checked Radio Button in the group.
 
 {% tabs %}
 {% highlight xaml %}
 
 <syncfusion:SfRadioGroup CheckedChanged="OnCheckedChanged">
-    <syncfusion:SfRadioButton x:Name="netBanking" Text="Net banking" />
-    <syncfusion:SfRadioButton x:Name="debitCard" Text="Debit card" />
-    <syncfusion:SfRadioButton x:Name="creditCard" Text="Credit card" />
+    <syncfusion:SfRadioButton x:Name="netBanking" 
+                              Text="Net banking" />
+    <syncfusion:SfRadioButton x:Name="debitCard" 
+                              Text="Debit card" />
+    <syncfusion:SfRadioButton x:Name="creditCard" 
+                              Text="Credit card" />
 </syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -274,6 +197,14 @@ radioGroup.Children.Add(debitCard);
 radioGroup.Children.Add(creditCard);
 this.Content = radioGroup;
 
+{% endhighlight %}
+{% endtabs %}
+
+The `CheckedChanged` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight c# %}
+
 private void OnCheckedChanged(object sender, Syncfusion.Maui.Buttons.CheckedChangedEventArgs e)
 {
     string previous = e.PreviousItem?.Text ?? "none";
@@ -286,7 +217,7 @@ private void OnCheckedChanged(object sender, Syncfusion.Maui.Buttons.CheckedChan
 
 ### Orientation in .NET MAUI Radio Group
 
-`SfRadioGroup` supports horizontal and vertical orientations. By default, `SfRadioGroup` uses vertical orientation. Use the `Orientation` property to change the layout direction. **Type:** `StackOrientation` (an enum with `Horizontal` and `Vertical` values).
+`SfRadioGroup` supports horizontal and vertical orientations. By default, `SfRadioGroup` uses vertical orientation. Use the `Orientation` property to change the layout direction.
 
 | Value | Description |
 |-------|-------------|
@@ -319,3 +250,8 @@ this.Content = radioGroup;
 {% endtabs %}
 
 ![.NET MAUI Radio Group horizontal orientation](Images/Grouping/radiogrouporientation.png)
+
+## See Also
+
+- [Visual customization in .NET MAUI Radio Button](https://help.syncfusion.com/maui/radio-button/visual-customization)
+- [Getting started with .NET MAUI Radio Button](https://help.syncfusion.com/maui/radio-button/getting-started)
