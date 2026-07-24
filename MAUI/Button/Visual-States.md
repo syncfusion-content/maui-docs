@@ -9,7 +9,7 @@ documentation: ug
 
 # Visual States in .NET MAUI Button (SfButton)
 
-Visual states let you change the appearance of [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) in response to user interaction. Use them to apply different colors, borders, or other properties for each state without writing code-behind handlers.
+Visual states let you change the appearance of [.NET MAUI Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) in response to user interaction. Use them to apply different colors, borders, or other properties for each state without writing code-behind handlers.
 
 `SfButton` supports the following visual states through the [`VisualStateManager`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/visual-states?view=net-maui-10.0):
 
@@ -17,7 +17,6 @@ Visual states let you change the appearance of [`SfButton`](https://help.syncfus
 * `Hovered` - The pointer is over the button (desktop platforms).
 * `Pressed` - The button is being tapped or clicked.
 * `Checked` - The button is in the checked state. Only applied when [`IsCheckable`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsCheckable) is `true`.
-* `Unchecked` - The button is in the unchecked state. Only applied when `IsCheckable` is `true`.
 * `Disabled` - The button is disabled (`IsEnabled` is `false`).
 
 N> The `Checked` and `Unchecked` states are only applied when the `IsCheckable` property is set to `true`. The [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked) property controls the current check state. Listen for the `CheckedChanged` event to react to state changes.
@@ -30,19 +29,9 @@ Before using the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/button/getting-started) documentation.
 
-## Commonly Customized Properties per State
+## Defining visual states
 
-The following `SfButton` properties are commonly set inside a `VisualState`'s `<Setter>`:
-
-* `Background` - the background color or brush of the button.
-* `TextColor` - the color of the button text.
-* `Stroke` and `StrokeThickness` - the border color and thickness.
-* `CornerRadius` - the rounded corners of the button.
-* `Opacity` and `Scale` - visual emphasis for pressed/hovered states.
-
-## Code Example
-
-The following XAML and C# samples set the `Background` of the button for each of the five core visual states. The `CommonStates` group is used; `Focused` is omitted because it shares the same visual treatment as `Normal` by default.
+`SfButton` exposes its states through a single `VisualStateGroup` named `CommonStates`. Each `VisualState` contains a list of `Setter` objects that target bindable properties on the Button. Common target properties are `Background`, `TextColor`, `Stroke`, `StrokeThickness`, and `CornerRadius`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -155,24 +144,9 @@ Content = button;
 {% endhighlight %}
 {% endtabs %}
 
-The following image shows the `SfButton` with the visual states applied:
+The following image shows the `Button` with the visual states applied:
 
 ![SfButton visual states](Images/visual-states/VisualStates.png)
-
-## Compatibility
-
-| Platform | Notes |
-|----------|-------|
-| .NET MAUI | Requires .NET MAUI 7.0 or later for `VisualStateManager` with `CommonStates`. |
-| iOS, macOS, Android, Windows | Visual states are supported on all .NET MAUI target platforms. |
-
-N> The `Hovered` state is only triggered on platforms that report a pointer (desktop platforms such as Windows and macOS Catalyst). On touch-only platforms the button transitions directly between `Normal` and `Pressed`.
-
-## Interaction with Other Features
-
-- **Liquid Glass Effect** - Visual state setters may be overridden by the [Liquid Glass Effect](https://help.syncfusion.com/maui/button/liquidglasssupport) when it is enabled. Place Liquid Glass and Visual States in mutually exclusive scenarios or test carefully.
-- **Right-to-Left** - Visual states work in both `LeftToRight` and `RightToLeft` flow directions. See [Right-to-Left](https://help.syncfusion.com/maui/button/right-to-left) for details.
-- **Command and Clicked event** - Visual states are pure visual effects; they do not change whether the `Command`/`Clicked` event fires. See [Events](https://help.syncfusion.com/maui/button/events) and [Customization > Command](https://help.syncfusion.com/maui/button/customization#command).
 
 ## See Also
 
