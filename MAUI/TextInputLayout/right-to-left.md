@@ -106,7 +106,7 @@ public App()
 | Platform | Required Configuration |
 |----------|------------------------|
 | Android | Add `android:supportsRtl="true"` to the `<application>` element in `Platforms/Android/AndroidManifest.xml`. |
-| iOS / Mac Catalyst | Set the `SemanticContentAttribute` to `Playback` or use a storyboard/xib with `SemanticContentAttribute` set to force a layout direction. |
+| iOS / Mac Catalyst | Set the `SemanticContentAttribute` to `Playback` or use a storyboard or Interface Builder file with `SemanticContentAttribute` configured to force a layout direction. |
 | Windows | The framework follows the system display language; no extra configuration is required. |
 
 ## How to test RTL

@@ -35,7 +35,7 @@ The following `LabelStyle` properties are available on `SfTextInputLayout`:
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
-| `FontFamily` | `string` | Platform default | Font family. For custom fonts, the value must match the font file name (without the `.ttf`/`.otf` extension). |
+| `FontFamily` | `string` | Platform default | Font family. For custom fonts, the value must match the font file name (without the TrueType or OpenType font extension). |
 | `FontSize` | `double` | Platform default | Font size in device-independent units. |
 | `FontAttributes` | [FontAttributes](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes) | `None` | One or more of `Bold` and `Italic` (combined with bitwise OR). |
 | `TextColor` | `Color` | Theme default | Text color (useful alongside the font properties). |

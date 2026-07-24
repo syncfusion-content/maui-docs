@@ -10,7 +10,7 @@ keywords: .net maui textinputlayout custom icons, syncfusion text input layout l
 
 # Custom Icons in .NET MAUI SfTextInputLayout
 
-Add a leading or trailing icon to the input view of [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by setting the [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_LeadingView) or [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingView) property. Any `View` can be used as the icon — a `Label` for Unicode characters or font icons, an `Image`, or even a `Button` for Tappable actions.
+Add a leading or trailing icon to the input view of [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by setting the [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_LeadingView) or [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingView) property. Any `View` can be used as the icon — a `Label` for Unicode characters or font icons, an `Image`, or even a `Button` for interactive actions.
 
 ## Prerequisites
 

@@ -294,7 +294,7 @@ this.Content = button;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Button with background image.](images/customization-images/Button_backgroundimage.png)
+![.NET MAUI Button with background image](images/customization-images/Button_backgroundimage.png)
 
 ### Stroke
 

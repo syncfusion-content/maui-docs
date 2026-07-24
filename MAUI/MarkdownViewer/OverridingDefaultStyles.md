@@ -25,10 +25,10 @@ This guide explains how to override the default styles using the [MarkdownStyleS
 ## What You Can Style with CSS
 
 - Headings (`h1`–`h6`), paragraphs (`p`), and inline text emphasis.
-- Images rendered from markdown (`img`).
+- Images displayed in markdown content.
 - Tables, including rows, headers, and striped rows.
 - Code blocks (`pre`, `code`) and blockquotes (`blockquote`).
-- Hyperlinks (`a`) and lists (`ul`, `ol`, `li`).
+- Hyperlinks and both unordered and ordered lists.
 - Scrollbar appearance (WebKit/Blink-based platforms only — Windows and Android).
 
 N> The supplied CSS rules take precedence over the individual style properties (such as `H1FontSize`, `H1Color`, `BodyTextColor`, `TableHeaderFontSize`) defined in the [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html) class. CSS `@import`, `@media`, animations, and most pseudo-classes other than `::-webkit-scrollbar*` and `:hover` are not supported.
