@@ -73,14 +73,6 @@ Content = new VerticalStackLayout
 
 ![Outlined SfTextInputLayout with a 4-unit focused stroke and a 2-unit unfocused stroke](images/HowTo/StrokeThickness.png)
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The stroke thickness has no effect. | The control is not in the expected container type, or the property is set to `0` and is being clamped to a minimum. | Verify `ContainerType` is `Outlined`, `Filled`, or `None`, and set a positive value. |
-| The focused stroke looks the same as the unfocused stroke. | `FocusedStrokeThickness` equals `UnfocusedStrokeThickness`, or the input view never receives focus. | Set distinct values (for example, `4` and `2`) and verify focus by tapping the input view. |
-| The stroke is too thick and overlaps the hint label. | `FocusedStrokeThickness` is set to a value larger than the container padding. | Reduce `FocusedStrokeThickness` or increase the container padding. |
-
 ## See Also
 
 - [Getting Started with .NET MAUI SfTextInputLayout](https://help.syncfusion.com/maui/textinputlayout/getting-started)

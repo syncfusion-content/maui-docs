@@ -49,8 +49,8 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 
 <VerticalStackLayout>
     <chip:SfChipGroup x:Name="chipGroup"
-                        ChipType="Choice"
-                        SelectionChanging="OnSelectionChanging">
+                      ChipType="Choice"
+                      SelectionChanging="OnSelectionChanging">
         <chip:SfChip Text="Apple" />
         <chip:SfChip Text="Banana" />
         <chip:SfChip Text="Cherry" />
@@ -108,8 +108,8 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 
 <VerticalStackLayout>
     <chip:SfChipGroup x:Name="chipGroup"
-                        ChipType="Filter"
-                        SelectionChanged="OnSelectionChanged">
+                      ChipType="Filter"
+                      SelectionChanged="OnSelectionChanged">
         <chip:SfChip Text="Red" />
         <chip:SfChip Text="Green" />
         <chip:SfChip Text="Blue" />
@@ -156,8 +156,8 @@ The [ChipClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 
 <VerticalStackLayout>
     <chip:SfChipGroup x:Name="chipGroup"
-                        ChipType="Choice"
-                        ChipClicked="OnChipClicked">
+                      ChipType="Choice"
+                      ChipClicked="OnChipClicked">
         <chip:SfChip Text="Red" />
         <chip:SfChip Text="Green" />
         <chip:SfChip Text="Blue" />
@@ -205,10 +205,10 @@ The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 
 <VerticalStackLayout>
     <chip:SfChipGroup x:Name="chipGroup"
-                        ChipType="Input"
-                        DisplayMemberPath="Name"
-                        ItemRemoved="OnChipItemRemoved"
-                        ItemsSource="{Binding Employees}"/>
+                      ChipType="Input"
+                      DisplayMemberPath="Name"
+                      ItemRemoved="OnChipItemRemoved"
+                      ItemsSource="{Binding Employees}"/>
 </VerticalStackLayout>
 
 {% endhighlight %}
@@ -293,9 +293,9 @@ The [CloseButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 
 <VerticalStackLayout>
     <chip:SfChip x:Name="chip"
-                Text="John"
-                ShowCloseButton="True"
-                CloseButtonClicked="OnCloseButtonClicked" />
+                 Text="John"
+                 ShowCloseButton="True"
+                 CloseButtonClicked="OnCloseButtonClicked" />
 </VerticalStackLayout>
 
 {% endhighlight %}
@@ -322,15 +322,6 @@ void OnCloseButtonClicked(object? sender, CloseButtonClickedEventArgs e)
 }
 
 {% endhighlight %}
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| `SelectionChanging` / `SelectionChanged` is never raised. | The `SfChipGroup.Type` is not `Choice` or `Filter`. | Set `Type="Choice"` or `Type="Filter"`. |
-| `ItemRemoved` is never raised. | The `SfChipGroup.Type` is not `Input`. | Set `Type="Input"`. |
-| The handler is not invoked from XAML. | The event handler name in the XAML attribute does not match the method name in the code-behind. | Verify the attribute name matches the method signature. |
-| The clicked chip is not available in the handler. | The `ChipClicked` event argument's `Chip` property was not used. | Read the chip from `e.Chip` (or `e.AddedItem` for the selection events). |
 
 ## See Also
 

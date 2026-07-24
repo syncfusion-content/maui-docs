@@ -176,7 +176,8 @@ Content = new VerticalStackLayout
 {% highlight xaml %}
 
 <VerticalStackLayout Spacing="10">
-    <inputLayout:SfTextInputLayout Hint="Delimiter" ContainerType="Outlined">
+    <inputLayout:SfTextInputLayout Hint="Delimiter" 
+                                   ContainerType="Outlined">
         <autocomplete:SfAutocomplete SelectionMode="Multiple"
                                      Placeholder="Enter"
                                      MultiSelectionDisplayMode="Delimiter">
@@ -191,8 +192,10 @@ Content = new VerticalStackLayout
         </autocomplete:SfAutocomplete>
     </inputLayout:SfTextInputLayout>
 
-    <inputLayout:SfTextInputLayout Hint="Token-None" ContainerType="Outlined">
-        <autocomplete:SfAutocomplete SelectionMode="Multiple" Placeholder="Enter">
+    <inputLayout:SfTextInputLayout Hint="Token-None" 
+                                   ContainerType="Outlined">
+        <autocomplete:SfAutocomplete SelectionMode="Multiple" 
+                                     Placeholder="Enter">
             <autocomplete:SfAutocomplete.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Uganda</x:String>
@@ -204,7 +207,8 @@ Content = new VerticalStackLayout
         </autocomplete:SfAutocomplete>
     </inputLayout:SfTextInputLayout>
 
-    <inputLayout:SfTextInputLayout Hint="Token-AutoSize" ContainerType="Outlined">
+    <inputLayout:SfTextInputLayout Hint="Token-AutoSize" 
+                                   ContainerType="Outlined">
         <autocomplete:SfAutocomplete SelectionMode="Multiple"
                                      Placeholder="Enter"
                                      TokensWrapMode="Wrap"
@@ -270,7 +274,8 @@ Host the Syncfusion [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight xaml %}
 
 <VerticalStackLayout Spacing="10">
-    <inputLayout:SfTextInputLayout Hint="Country" ContainerType="Outlined">
+    <inputLayout:SfTextInputLayout Hint="Country" 
+                                   ContainerType="Outlined">
         <combobox:SfComboBox>
             <combobox:SfComboBox.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -318,7 +323,8 @@ Content = new VerticalStackLayout
 
 
 <VerticalStackLayout Spacing="10">
-    <inputLayout:SfTextInputLayout Hint="Delimiter" ContainerType="Outlined">
+    <inputLayout:SfTextInputLayout Hint="Delimiter" 
+                                   ContainerType="Outlined">
         <combobox:SfComboBox SelectionMode="Multiple"
                              Placeholder="Enter"
                              MultiSelectionDisplayMode="Delimiter">
@@ -333,8 +339,10 @@ Content = new VerticalStackLayout
         </combobox:SfComboBox>
     </inputLayout:SfTextInputLayout>
 
-    <inputLayout:SfTextInputLayout Hint="Token-None" ContainerType="Outlined">
-        <combobox:SfComboBox SelectionMode="Multiple" Placeholder="Enter">
+    <inputLayout:SfTextInputLayout Hint="Token-None" 
+                                   ContainerType="Outlined">
+        <combobox:SfComboBox SelectionMode="Multiple" 
+                             Placeholder="Enter">
             <combobox:SfComboBox.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Uganda</x:String>
@@ -346,7 +354,8 @@ Content = new VerticalStackLayout
         </combobox:SfComboBox>
     </inputLayout:SfTextInputLayout>
 
-    <inputLayout:SfTextInputLayout Hint="Token-AutoSize" ContainerType="Outlined">
+    <inputLayout:SfTextInputLayout Hint="Token-AutoSize" 
+                                   ContainerType="Outlined">
         <combobox:SfComboBox SelectionMode="Multiple"
                              Placeholder="Enter"
                              TokensWrapMode="Wrap"
@@ -624,15 +633,6 @@ Content = new VerticalStackLayout
 ![SfTextInputLayout with a DatePicker for date selection](images/SupportedInputViews/DatePicker.jpg)
 
 N> The Windows platform does not support the MAUI `DatePicker` as an input view of `SfTextInputLayout`. Use a Syncfusion input view on Windows.
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The Syncfusion input view is not recognized. | The required Syncfusion NuGet package is not installed or the `xmlns` is missing. | Install the appropriate package (`Syncfusion.Maui.Inputs`, `Syncfusion.Maui.MaskedEntry`, or `Syncfusion.Maui.NumericEntry`) and add the `xmlns` declaration. |
-| The MAUI `Picker`, `TimePicker`, or `DatePicker` does not appear. | The control is not supported as an input view on Windows. | Use a Syncfusion input view (`SfComboBox`, `SfAutocomplete`, or `SfMaskedEntry`) on Windows. |
-| The hint or helper text does not reflect the input view's state. | The `HasError` state is not toggled in your validation logic. | Set `HasError = true` after validation fails and `HasError = false` after it succeeds. |
-| The inner `Entry` does not grow with content. | `Editor.AutoSize` is not set to `TextChanges`. | Set `Editor.AutoSize = EditorAutoSizeOption.TextChanges`. |
 
 ## See Also
 

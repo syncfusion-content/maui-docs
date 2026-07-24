@@ -80,14 +80,6 @@ void OnPasswordVisibilityToggled(object? sender, PasswordVisibilityToggledEventA
 {% endhighlight %}
 {% endtabs %}
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The `PasswordVisibilityToggled` event never fires. | `EnablePasswordVisibilityToggle` is `false`, or the inner control is not an `Entry`. | Set `EnablePasswordVisibilityToggle = true` and ensure the inner control is `Entry`. |
-| `e.IsPasswordVisible` always reports the same value. | The handler is caching the value, or the visibility state did not change. | Read the value from `e.IsPasswordVisible` inside the handler; do not store it across invocations. |
-| The handler is not invoked from XAML. | The event handler name in the XAML attribute does not match the method name in the code-behind. | Verify the `PasswordVisibilityToggled="OnPasswordVisibilityToggled"` attribute matches the method signature `void OnPasswordVisibilityToggled(object? sender, PasswordVisibilityToggledEventArgs e)`. |
-
 ## See Also
 
 - [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)

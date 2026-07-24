@@ -39,7 +39,7 @@ The password visibility toggle shows or hides the characters in the input view h
 
 <VerticalStackLayout>
     <inputLayout:SfTextInputLayout Hint="Password"
-                                    EnablePasswordVisibilityToggle="True">
+                                   EnablePasswordVisibilityToggle="True">
         <Entry Text="1234" />
     </inputLayout:SfTextInputLayout>
 </VerticalStackLayout>
@@ -77,7 +77,7 @@ Helper text conveys additional guidance about the input field, such as how the v
 
 <VerticalStackLayout>
     <inputLayout:SfTextInputLayout Hint="Name"
-                                    HelperText="Enter your name">
+                                   HelperText="Enter your name">
         <Entry />
     </inputLayout:SfTextInputLayout>
 </VerticalStackLayout>
@@ -115,10 +115,10 @@ When the entered text is not accepted, an error message can be displayed below t
 
 <VerticalStackLayout>
     <inputLayout:SfTextInputLayout Hint="Email"
-                                    ContainerType="Outlined"
-                                    HelperText="Enter your email address"
-                                    ErrorText="Invalid email"
-                                    HasError="True">
+                                   ContainerType="Outlined"
+                                   HelperText="Enter your email address"
+                                   ErrorText="Invalid email"
+                                   HasError="True">
         <Entry />
     </inputLayout:SfTextInputLayout>
 </VerticalStackLayout>
@@ -198,10 +198,10 @@ The character counter shows the number of characters entered and the configured 
 
 <VerticalStackLayout>
     <inputLayout:SfTextInputLayout Hint="Password"
-                                    ContainerType="Outlined"
-                                    ShowCharCount="True"
-                                    CharMaxLength="20"
-                                    HelperText="Enter 5 to 20 characters">
+                                   ContainerType="Outlined"
+                                   ShowCharCount="True"
+                                   CharMaxLength="20"
+                                   HelperText="Enter 5 to 20 characters">
         <Entry />
     </inputLayout:SfTextInputLayout>
 </VerticalStackLayout>
@@ -242,8 +242,8 @@ By default, the control reserves vertical space for assistive labels so that the
 
 <VerticalStackLayout>
     <inputLayout:SfTextInputLayout ContainerType="Outlined"
-                                    Hint="Name"
-                                    ReserveSpaceForAssistiveLabels="False">
+                                   Hint="Name"
+                                   ReserveSpaceForAssistiveLabels="False">
         <Entry />
     </inputLayout:SfTextInputLayout>
 </VerticalStackLayout>
@@ -272,16 +272,6 @@ Content = new VerticalStackLayout
 ![Reserve space for assistive label image](images/AssistiveLabels/ReserveSpace.png)
 
 N> Set `ReserveSpaceForAssistiveLabels` to `false` only if the host page already provides a fixed area for assistive labels. Otherwise, controls below the input may shift when an error or counter appears.
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| Password toggle icon does not appear. | The content is not an [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control, or `EnablePasswordVisibilityToggle` is `false`. | Ensure the inner control is `Entry` and set `EnablePasswordVisibilityToggle = true`. |
-| Helper text is not visible. | `ShowHelperText` is `false`, or the text is being replaced by `ErrorText` because `HasError` is `true`. | Set `ShowHelperText = true` and clear the error by setting `HasError = false`. |
-| Error text is not displayed. | `HasError` is `false`, so the control suppresses `ErrorText`. | Toggle `HasError = true` after your validation fails. |
-| Character counter does not appear. | `ShowCharCount` is `false` (default) or `CharMaxLength` is not set. | Set `ShowCharCount = true` and assign `CharMaxLength`. |
-| Counter shows error color before reaching the maximum. | The internal value reached `CharMaxLength`; the error state is automatic. | Reduce the input length or increase `CharMaxLength`. |
 
 ## See Also
 

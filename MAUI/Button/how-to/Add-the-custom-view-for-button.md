@@ -36,11 +36,13 @@ The following code samples show how to set the `Content` of `SfButton` to a hori
                       Background="#4125BC">
         <buttons:SfButton.Content>
             <DataTemplate>
-                <HorizontalStackLayout Spacing = "8" Padding="5">
-                    <ActivityIndicator Color = "White" IsRunning="True"/>
+                <HorizontalStackLayout Spacing = "8" 
+                                       Padding="5">
+                    <ActivityIndicator Color = "White"
+                                       IsRunning="True"/>
                     <Label Text = "Loading..." 
-                            VerticalOptions="Center" 
-                            TextColor="White"/>
+                           VerticalOptions="Center" 
+                           TextColor="White"/>
                 </HorizontalStackLayout>
             </DataTemplate>
         </buttons:SfButton.Content>
@@ -98,15 +100,6 @@ N> Setting `Content = null` restores the default behavior of the button (renderi
 |----------|-------|
 | .NET MAUI | Requires .NET MAUI 7.0 or later. |
 | iOS, macOS, Android, Windows | Custom views are supported on all .NET MAUI target platforms. |
-
-## Troubleshooting
-
-| Issue | Possible cause | Fix |
-|------|---------------|-----|
-| The custom view is not visible after setting `Content`. | The `Text` property is still set, which is rendered instead of the custom view. | Clear the `Text` property (or do not set it) when assigning `Content`. |
-| The `SfBusyIndicator` does not animate. | `IsRunning` is `false`, or the handler is not registered. | Set `IsRunning="True"` and ensure `Syncfusion.Maui.Core` is registered in `MauiProgram.CreateMauiApp`. |
-| The button is not clickable when the custom view is set. | The custom view consumed the tap gesture. | Wrap the content in a container that does not intercept input (such as a `HorizontalStackLayout` without a `TapGestureRecognizer`). |
-| `Content` assignment does not compile. | You assigned a `DataTemplate` to a `View`-typed property. | Assign a `View` (for example, a `Layout`) directly to `Content`, or use a `ControlTemplate` if you need template-based behavior. |
 
 ## See Also
 

@@ -267,23 +267,14 @@ N> When both individual style properties and `CssStyleRules` are specified, the 
 
 To revert all style settings to their default values, reassign a new `MarkdownStyleSettings` instance to the [Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Settings) property.
 
+{% tabs %}
 {% highlight C# %}
 
 markdownViewer.Settings = new MarkdownStyleSettings();
 
 {% endhighlight %}
+{% endtabs %}
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| Custom font size has no effect. | The value was supplied without a `px` unit. | Always specify the unit, e.g., `H1FontSize="32px"`. |
-| Headings do not pick up the configured color. | A CSS rule defined in `CssStyleRules` is overriding the property. | Move or adjust the conflicting CSS rule. |
-| Style changes are not visible at runtime. | `Settings` was assigned before `Source` was set, or the page was not reloaded. | Set `Source` first, then `Settings`, and re-render the view. |
-
-With [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html), you gain full control over how markdown content looks in your .NET MAUI app, whether you are building a documentation viewer, a note-taking app, or a styled content portal.
-
-N> Always specify the font size with the "px" unit (e.g., H1FontSize="32px") to ensure consistent rendering across all platforms.
 
 ## See Also
 

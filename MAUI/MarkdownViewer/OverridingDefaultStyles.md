@@ -239,15 +239,6 @@ Example CSS for a modern, visible scrollbar:
 
 You can further hide the scrollbar by setting `display: none;` in the `::-webkit-scrollbar` selector or by setting its width to 0, or match its color and thickness to seamlessly blend with your application's UI. Custom scrollbar styling is effective only on WebKit/Blink-based platforms (Windows and Android). On iOS and macOS the rule is ignored. Always verify cross-platform appearance for best results.
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| Custom CSS has no effect. | A duplicate `x:Key` exists in the page's `ResourceDictionary`. | Use a unique key for each CSS resource, or merge the strings as shown above. |
-| CSS works on Windows but not on iOS/macOS. | The selector is WebKit-specific (`::-webkit-scrollbar`) or platform-restricted. | Avoid WebKit-only selectors on iOS/macOS, or test with platform-conditional resources. |
-| `tr:nth-child(even)` does not produce striped rows. | The current platform does not support CSS3 pseudo-classes for tables. | Verify on Windows or Android; otherwise style rows manually using `MarkdownStyleSettings` properties. |
-| `Binding` errors on `Source`. | `BindingContext` is not set on the page or viewer. | Set the `BindingContext` to a view-model that exposes `MarkdownContent`. |
-
 ## See Also
 - [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance)
 - [Loading Markdown Content](https://help.syncfusion.com/maui/markdownviewer/databinding)

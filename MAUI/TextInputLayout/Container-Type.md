@@ -224,15 +224,6 @@ Content = new VerticalStackLayout
 
 ![SfTextInputLayout rendered with the None container type, showing no background or border](images/ContainerType/None_focused.jpg)
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| Switching `ContainerType` at runtime has no effect. | The property is set before the view is added to the visual tree, or the platform caches the container template. | Set `ContainerType` after the view is added, or recreate the view. |
-| `OutlineCornerRadius` is ignored. | `ContainerType` is not `Outlined`, so the property is not applied. | Set `ContainerType = ContainerType.Outlined` before adjusting the corner radius. |
-| `InputViewPadding` value is not honored. | The XAML string is malformed (missing comma or invalid number). | Verify the XAML uses `"left,top,right,bottom"` or assign a `new Thickness(left, top, right, bottom)` in C#. |
-| The "Filled" container color does not change on focus. | A custom theme is overriding the focused color. | Check your app's `ResourceDictionary` for any brushes that override `SfTextInputLayout` styles. |
-
 ## See Also
 
 - [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)

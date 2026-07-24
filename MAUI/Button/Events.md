@@ -29,8 +29,8 @@ The following code samples subscribe to the `Clicked` event and change the text 
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button"
-                Text="Button"
-                Clicked="OnButtonClicked" />
+                  Text="Button"
+                  Clicked="OnButtonClicked" />
 
 {% endhighlight %}
 {% highlight c# %}
@@ -62,14 +62,6 @@ private void OnButtonClicked(object sender, EventArgs e)
 {% endtabs %}
 
 N> In the XAML example above, the `button` instance is declared with `x:Name` so it is generated as a field on the page's partial class and is directly accessible from the code-behind.
-
-## Troubleshooting
-
-| Issue | Possible cause | Fix |
-|------|---------------|-----|
-| Handler is not invoked when the button is tapped. | The `Clicked` attribute value does not match the method name, or the method has the wrong signature. | Ensure the method is `private void`, takes `(object sender, EventArgs e)`, and the name matches exactly. |
-| Build error: `Clicked` does not exist. | The `Syncfusion.Maui.Buttons` handler is not registered in `MauiProgram.cs`. | Add `.ConfigureSyncfusionButton()` (or call `.UseSfButton()` depending on your version) in `MauiProgram.CreateMauiApp()`. |
-| Handler runs but UI does not update. | The `TextColor` change is applied from a non-UI thread. | Ensure the handler is invoked on the UI thread; the `Clicked` event already runs on the UI thread, so this is usually a symptom of a different threading issue. |
 
 ## See Also
 

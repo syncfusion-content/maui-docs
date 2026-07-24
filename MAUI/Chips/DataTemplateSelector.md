@@ -99,28 +99,28 @@ Assign the `ChipDataTemplateSelector` to the [`ItemTemplate`](https://help.syncf
     <ResourceDictionary>
         <DataTemplate x:Key="happyTemplate">
             <chip:SfChip HeightRequest="40"
-                            WidthRequest="120"
-                            Text="{Binding Text}"
-                            BackgroundColor="#00bdae"
-                            ShowIcon="True"
-                            ImageSource="{Binding ImageSource}"
-                            ShowCloseButton="True"
-                            ShowSelectionIndicator="False"
-                            ImageAlignment="Left"
-                            CloseButtonColor="White" />
+                         WidthRequest="120"
+                         Text="{Binding Text}"
+                         BackgroundColor="#00bdae"
+                         ShowIcon="True"
+                         ImageSource="{Binding ImageSource}"
+                         ShowCloseButton="True"
+                         ShowSelectionIndicator="False"
+                         ImageAlignment="Left"
+                         CloseButtonColor="White" />
         </DataTemplate>
 
         <DataTemplate x:Key="sadTemplate">
             <chip:SfChip HeightRequest="40"
-                            WidthRequest="120"
-                            Text="{Binding Text}"
-                            BackgroundColor="#e56590"
-                            ShowIcon="True"
-                            ImageSource="{Binding ImageSource}"
-                            ShowCloseButton="True"
-                            ShowSelectionIndicator="False"
-                            ImageAlignment="Left"
-                            CloseButtonColor="White" />
+                         WidthRequest="120"
+                         Text="{Binding Text}"
+                         BackgroundColor="#e56590"
+                         ShowIcon="True"
+                         ImageSource="{Binding ImageSource}"
+                         ShowCloseButton="True"
+                         ShowSelectionIndicator="False"
+                         ImageAlignment="Left"
+                         CloseButtonColor="White" />
         </DataTemplate>
 
         <local:ChipDataTemplateSelector x:Key="selector"
@@ -131,9 +131,9 @@ Assign the `ChipDataTemplateSelector` to the [`ItemTemplate`](https://help.syncf
 </ContentPage.Resources>
 
 <chip:SfChipGroup x:Name="chipGroup"
-                    ChipBackground="Transparent"
-                    ItemsSource="{Binding Data}"
-                    ItemTemplate="{StaticResource selector}" />
+                  ChipBackground="Transparent"
+                  ItemsSource="{Binding Data}"
+                  ItemTemplate="{StaticResource selector}" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -198,7 +198,7 @@ public class ChipViewModel
     public ChipViewModel()
     {
         Data = new ObservableCollection<ChipModel>()
-            {
+        {
             new ChipModel(){Text ="Happy", CanSelect = true, ImageSource="dotnet_bot.png"},
             new ChipModel(){Text ="Sad", CanSelect = false,ImageSource = "dotnet_bot.png"},
             new ChipModel(){Text ="Love", CanSelect = true,ImageSource = "dotnet_bot.png"},
@@ -207,7 +207,7 @@ public class ChipViewModel
             new ChipModel(){Text ="Think", CanSelect = true,ImageSource="dotnet_bot.png"},
             new ChipModel(){Text ="Wink", CanSelect = true,ImageSource="dotnet_bot.png"},
             new ChipModel(){Text ="Freeze", CanSelect = false,ImageSource="dotnet_bot.png"},
-            };
+        };
     }
 
 }
@@ -230,15 +230,6 @@ public class ChipModel
 |-----------------------|-------------------|
 | `true` | `HappyEmojiTemplate` (cyan) |
 | `false` | `SadEmojiTemplate` (pink) |
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The wrong template is selected for an item. | The selector's `OnSelectTemplate` returns the wrong template, or the property being tested has the wrong value. | Add a breakpoint or `Debug.WriteLine` in `OnSelectTemplate` to verify the values returned for each item. |
-| The chips render but contain no data. | The `DataTemplate` does not bind to the item's properties, or the `BindingContext` is not propagated. | Use `SetBinding(SfChip.TextProperty, nameof(ChipModel.Text))` in C#, or `{Binding Text}` in XAML inside the `DataTemplate`. |
-| `local:ChipDataTemplateSelector` cannot be resolved. | The `xmlns:local` namespace does not match the namespace that contains `ChipDataTemplateSelector`. | Match `xmlns:local="clr-namespace:YourNamespace"` to the C# namespace where the selector class is declared. |
-| `local:ChipViewModel` cannot be resolved. | The `xmlns:local` namespace does not match the namespace of the view model. | Place `ChipViewModel` and `ChipDataTemplateSelector` in the same namespace, or use a separate `xmlns:vm` declaration. |
 
 ## See Also
 

@@ -59,27 +59,32 @@ The following XAML and C# samples set the `Background` of the button for each of
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
                 <VisualState.Setters>
-                    <Setter Property="Background" Value="#6A4C9C" />
+                    <Setter Property="Background" 
+                            Value="#6A4C9C" />
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Checked">
                 <VisualState.Setters>
-                    <Setter Property="Background" Value="#008000" />
+                    <Setter Property="Background" 
+                            Value="#008000" />
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Hovered">
                 <VisualState.Setters>
-                    <Setter Property="Background" Value="DeepSkyBlue" />
+                    <Setter Property="Background" 
+                            Value="DeepSkyBlue" />
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Pressed">
                 <VisualState.Setters>
-                    <Setter Property="Background" Value="MediumVioletRed" />
+                    <Setter Property="Background" 
+                            Value="MediumVioletRed" />
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Disabled">
                 <VisualState.Setters>
-                    <Setter Property="Background" Value="#BFC3C7" />
+                    <Setter Property="Background" 
+                            Value="#BFC3C7" />
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
@@ -168,16 +173,6 @@ N> The `Hovered` state is only triggered on platforms that report a pointer (des
 - **Liquid Glass Effect** - Visual state setters may be overridden by the [Liquid Glass Effect](https://help.syncfusion.com/maui/button/liquidglasssupport) when it is enabled. Place Liquid Glass and Visual States in mutually exclusive scenarios or test carefully.
 - **Right-to-Left** - Visual states work in both `LeftToRight` and `RightToLeft` flow directions. See [Right-to-Left](https://help.syncfusion.com/maui/button/right-to-left) for details.
 - **Command and Clicked event** - Visual states are pure visual effects; they do not change whether the `Command`/`Clicked` event fires. See [Events](https://help.syncfusion.com/maui/button/events) and [Customization > Command](https://help.syncfusion.com/maui/button/customization#command).
-
-## Troubleshooting
-
-| Issue | Possible cause | Fix |
-|------|---------------|-----|
-| The `Checked` state is never applied. | `IsCheckable` is `false` (the default). | Set `IsCheckable="True"` on the button. |
-| The `Hovered` state never fires on Android or iOS. | The platform does not report a hover (touch-only). | This is expected. Add a `Pressed` style instead for emphasis. |
-| The `Disabled` state does not appear. | `IsEnabled` is not set to `false`; the visual state is only applied when the control is disabled. | Toggle `IsEnabled` to `false` (or use `IsEnabled="{Binding IsButtonEnabled}"` in MVVM). |
-| Build error: `Setter` cannot resolve `BackgroundProperty`. | Missing `using Syncfusion.Maui.Buttons;` directive. | Add the `using` directive at the top of the file. |
-| C# visual state setters apply but the button does not update at runtime. | The `VisualStateGroupList` was not attached via `VisualStateManager.SetVisualStateGroups`. | Call `VisualStateManager.SetVisualStateGroups(button, visualStateGroupList)` after building the groups. |
 
 ## See Also
 

@@ -40,9 +40,9 @@ The following example uses a simple `Employee` model and an `ObservableCollectio
 {% highlight xaml %}
 
 <chip:SfChipGroup x:Name="chipGroup"
-                    Type="Action"
-                    DisplayMemberPath="Name"
-                    ItemsSource="{Binding Employees}" />
+                  Type="Action"
+                  DisplayMemberPath="Name"
+                  ItemsSource="{Binding Employees}" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -88,13 +88,24 @@ Add [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.htm
 {% highlight xaml %}
 
 <VerticalStackLayout>
-    <chip:SfChipGroup x:Name="chipGroup" ChipType="Action">
+    <chip:SfChipGroup x:Name="chipGroup" 
+                      ChipType="Action">
         <chip:SfChipGroup.Items>
-            <chip:SfChip Text="Extra Small" TextColor="White" Background="Blue" />
-            <chip:SfChip Text="Small" TextColor="White" Background="Blue" />
-            <chip:SfChip Text="Medium" TextColor="White" Background="Blue" />
-            <chip:SfChip Text="Large" TextColor="White" Background="Blue" />
-            <chip:SfChip Text="Extra Large" TextColor="White" Background="Blue" />
+            <chip:SfChip Text="Extra Small" 
+                         TextColor="White" 
+                         Background="Blue" />
+            <chip:SfChip Text="Small" 
+                         TextColor="White" 
+                         Background="Blue" />
+            <chip:SfChip Text="Medium" 
+                         TextColor="White" 
+                         Background="Blue" />
+            <chip:SfChip Text="Large" 
+                         TextColor="White" 
+                         Background="Blue" />
+            <chip:SfChip Text="Extra Large" 
+                         TextColor="White" 
+                         Background="Blue" />
         </chip:SfChipGroup.Items>
     </chip:SfChipGroup>
 </VerticalStackLayout>
@@ -124,14 +135,6 @@ Content = new VerticalStackLayout
 {% endtabs %}
 
 ![SfChipGroup populated with five SfChip instances using the Action chip type](images/items/chips_items.png)
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The chips show the type name instead of the value. | `DisplayMemberPath` is not set, so the chip renders the object's `ToString()`. | Set `DisplayMemberPath` to a property of the business object (e.g., `Name`). |
-| The list does not update when items are added. | The `ItemsSource` collection does not implement `INotifyCollectionChanged`. | Use `ObservableCollection<T>` or another change-notifying collection. |
-| `Items.Add` throws a `NullReferenceException`. | The `Items` collection is initialized lazily and was never read. | Access `Items` once before adding (e.g., `var _ = chipGroup.Items;`) or set the `ItemsSource` instead. |
 
 ## See Also
 

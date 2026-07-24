@@ -189,8 +189,8 @@ Use `FontAttributes` to apply bold or italic styling. The flags can be combined 
                                ErrorText="Enter valid name">
     <inputLayout:SfTextInputLayout.ErrorLabelStyle>
         <inputLayout:LabelStyle FontFamily="Lobster-Regular"
-                        FontSize="14"
-                        FontAttributes="Italic" />
+                                FontSize="14"
+                                FontAttributes="Italic" />
     </inputLayout:SfTextInputLayout.ErrorLabelStyle>
     <Entry />
 </inputLayout:SfTextInputLayout>
@@ -234,13 +234,16 @@ The following example applies a single font family to all three label styles so 
                                ContainerType="Outlined"
                                HelperText="Enter your name">
     <inputLayout:SfTextInputLayout.HintLabelStyle>
-        <inputLayout:LabelStyle FontFamily="Lobster-Regular" FontSize="16" />
+        <inputLayout:LabelStyle FontFamily="Lobster-Regular" 
+                                FontSize="16" />
     </inputLayout:SfTextInputLayout.HintLabelStyle>
     <inputLayout:SfTextInputLayout.HelperLabelStyle>
-        <inputLayout:LabelStyle FontFamily="Lobster-Regular" FontSize="12" />
+        <inputLayout:LabelStyle FontFamily="Lobster-Regular" 
+                                FontSize="12" />
     </inputLayout:SfTextInputLayout.HelperLabelStyle>
     <inputLayout:SfTextInputLayout.ErrorLabelStyle>
-        <inputLayout:LabelStyle FontFamily="Lobster-Regular" FontSize="12" />
+        <inputLayout:LabelStyle FontFamily="Lobster-Regular" 
+                                FontSize="12" />
     </inputLayout:SfTextInputLayout.ErrorLabelStyle>
     <Entry />
 </inputLayout:SfTextInputLayout>
@@ -268,15 +271,6 @@ Content = new VerticalStackLayout
 
 {% endhighlight %}
 {% endtabs %}
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The custom font is not applied. | The font file is not registered in the `.csproj` or the family name does not match the file name. | Add the `MauiFont` item for the file and reference it by file name (without the extension). |
-| `LabelStyle` properties are ignored. | The `Content` property was not set, or the inner control is not the one expected. | Set the `Content` property to a valid input view (e.g., `Entry`). |
-| Helper text style has no visible effect. | `HasError` is `true`, so the helper text is replaced by the error text. | Style `ErrorLabelStyle` for error states, or set `HasError = false`. |
-| `FontAttributes` does not render bold/italic. | The `FontFamily` does not include a bold/italic variant, or the syntax is wrong. | Combine flags with bitwise OR in C# or use comma-separated values in XAML. |
 
 ## See Also
 

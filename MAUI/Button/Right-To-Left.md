@@ -27,11 +27,11 @@ You can set `FlowDirection` directly on the `SfButton` to enable RTL for that co
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button"
-                    FlowDirection="RightToLeft"
-                    ImageSource="add_to_card.png"
-                    ShowIcon="True"
-                    HeightRequest = "50"
-                    Text="Add to cart" />
+                  FlowDirection="RightToLeft"
+                  ImageSource="add_to_card.png"
+                  ShowIcon="True"
+                  HeightRequest = "50"
+                  Text="Add to cart" />
 
 {% endhighlight %}
 {% highlight c# %}
@@ -62,15 +62,6 @@ When `FlowDirection` is set to `RightToLeft`, the `ImageAlignment` values `Start
 ## Changing the Device Language
 
 Alternatively, you can let the system apply RTL automatically by setting the device language to an RTL language such as Arabic, Hebrew, Persian, or Urdu. No code change is required in your app, but the `SfButton` must have `FlowDirection` left at its default value of `MatchParent` (or `Device Settings` on platforms that support it) to inherit the system direction.
-
-## Troubleshooting
-
-| Issue | Possible cause | Fix |
-|------|---------------|-----|
-| The button still renders left-to-right after setting `FlowDirection="RightToLeft"`. | The parent layout has `FlowDirection="LeftToRight"` and overrides the child. | Set `FlowDirection` on the root `ContentPage` or `Application` instead of the child button. |
-| The icon is on the wrong side in RTL. | The icon uses `Start`/`End` alignment, which mirrors with the flow direction. | Change the `ImageAlignment` to `Left` or `Right` to keep the icon in a fixed position. |
-| RTL works on Android but not on iOS (or vice versa). | Platform-specific layout handling for RTL differs. | Verify the layout on each platform and consider setting `FlowDirection` on the page root to apply it consistently. |
-| `FlowDirection` is not recognized in XAML. | The property is set on a namespace element other than `http://schemas.microsoft.com/dotnet/2021/maui`. | Use the .NET MAUI default `xmlns` and the `FlowDirection` attribute on a MAUI element. |
 
 ## See Also
 
