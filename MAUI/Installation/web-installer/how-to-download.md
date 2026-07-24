@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Downloading Syncfusion .NET MAUI Web Installer | Syncfusion
+title: Downloading Syncfusion .NET MAUI web installer | Syncfusion
 description: Learn how to download the Syncfusion .NET MAUI web installer from the Syncfusion website with a license.
 platform: MAUI
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Downloading Syncfusion<sup>®</sup> .NET MAUI Web Installer
+# Downloading Syncfusion<sup>®</sup> .NET MAUI web installer
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Web Installer on Windows.
 
@@ -38,7 +38,7 @@ Our 30-day trial can be downloaded in two ways:
 
    ![Syncfusion Trials and Downloads page](images/trial-download.png)
 
-### Start trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+### Start trials if using components through [nuget.org](https://www.nuget.org/packages?q=syncfusion)
 
 If you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion):
 

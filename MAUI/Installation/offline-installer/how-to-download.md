@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Downloading Syncfusion .NET MAUI Offline Installer | Syncfusion
+title: Downloading Syncfusion .NET MAUI offline installer | Syncfusion
 description: Learn how to download the Syncfusion .NET MAUI offline installer from the Syncfusion website with a license.
 platform: MAUI
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Downloading Syncfusion<sup>®</sup> .NET MAUI Offline Installer
+# Downloading Syncfusion<sup>®</sup> .NET MAUI offline installer
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Offline Installer on Windows.
 
@@ -38,7 +38,7 @@ Our 30-day trial can be downloaded in two ways:
 
    ![Syncfusion offline trial installer download](images/start-trial-download-offline-installer.png)
 
-### Start trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+### Start trials if using components through [nuget.org](https://www.nuget.org/packages?q=syncfusion)
 
 If you have already accessed our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion):
 

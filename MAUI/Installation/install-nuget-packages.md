@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Install Syncfusion MAUI NuGet Packages | Syncfusion
+title: Install Syncfusion MAUI NuGet packages | Syncfusion
 description: Learn how to install Syncfusion MAUI NuGet packages using the Visual Studio Package Manager UI, the dotnet CLI, and the Package Manager Console.
 platform: MAUI
 component: Common
 documentation: UG
 ---
 
-# Install Syncfusion<sup>®</sup> MAUI NuGet Packages
+# Install Syncfusion<sup>®</sup> MAUI NuGet packages
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> MAUI NuGet packages on .NET MAUI.
 

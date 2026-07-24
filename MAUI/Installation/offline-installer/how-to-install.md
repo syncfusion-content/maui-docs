@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Syncfusion .NET MAUI Offline Installer | Syncfusion
+title: Installing Syncfusion .NET MAUI offline installer | Syncfusion
 description: Learn how to install the Syncfusion .NET MAUI offline installer after downloading it from the Syncfusion website.
 platform: MAUI
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Installing Syncfusion<sup>®</sup> .NET MAUI Offline Installer
+# Installing Syncfusion<sup>®</sup> .NET MAUI offline installer
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Offline Installer on Windows.
 
