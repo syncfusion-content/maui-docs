@@ -33,7 +33,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI AI-Powered Scheduler](https://www.sync
 
 ## Globalization
 
-The following table summarizes the globalization support available in this control.
+The SmartScheduler control supports comprehensive globalization features including localization, right-to-left (RTL) layouts, time zone handling, screen reader accessibility, and keyboard navigation. The following table summarizes these capabilities:
 
 <style>
 .img{

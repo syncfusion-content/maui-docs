@@ -1,15 +1,17 @@
 ---
 layout: post
-title: About .NET MAUI Date Picker control | Syncfusion
-description: Learn about the overview of Syncfusion .NET MAUI Date Picker (SfDatePicker) control, its basic features, and date picker functionalities.
+title: About .NET MAUI DatePicker control | Syncfusion®
+description: Learn about the overview of Syncfusion® .NET MAUI DatePicker (SfDatePicker) control, its basic features, and date picker functionalities.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
-# Overview of .NET MAUI Date Picker (SfDatePicker)
+# Overview of .NET MAUI Date Picker
 
-Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker ([SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker)) control allows you to select a date and visualize its items inside a popup or a drop-down UI element. The Date Picker also enables you to set date ranges and formats and customize its dialog appearance by configuring its header, footer, and more.
+The Syncfusion® .NET MAUI DatePicker ([SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker)) is a lightweight, fully customizable control that lets you select a date and visualize its items inside a popup or a drop-down UI element. Use it to set date ranges and formats, and to tailor the dialog appearance by configuring its header, footer, and more.
+
+![Picker interactions in .NET MAUI Date picker.](images/overview/maui-date-picker-interactions.gif)
 
 ## Business use cases
 
@@ -22,41 +24,21 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker ([SfDatePicker](https://www.syn
 
 - **Header view support** allows displaying and customizing header text to provide context in the date picker dialog.  
 
-   ![Header view in .NET MAUI Date picker.](images/overview/maui-header-view.png)
-
 - **Column header view support** allows showing predefined or custom column headers for better readability of date elements. 
-
-   ![Column header view in .NET MAUI Date picker.](images/overview/maui-column-header-view.png)
 
 - **Footer view support** provides OK and Cancel buttons with customizable text and appearance.  
 
-   ![Footer view in .NET MAUI Date picker.](images/overview/maui-date-picker-footer-view.png)
-
 - **Selection view support** allows displaying the currently selected date in a dedicated customizable section.
-
-   ![Selection view in .NET MAUI Date picker.](images/overview/maui-selection-view.png)
 
 - **Date format support** allows representing selected dates using predefined string formats.  
 
-   ![.NET MAUI Date Picker with format yyyy_MM_dd.](images/overview/maui-date-picker-format_yyyy_MM_dd.png)
-
 - **Picker mode options** allow displaying the picker in popup or dialog mode with flexible positioning. 
-
-   ![Dialog mode in .NET MAUI Date picker.](images/overview/maui-date-picker-dialog-mode.gif)
 
 - **Date restriction support** allows limiting selection within minimum and maximum date ranges.  
 
-   ![Minimum date in .NET MAUI Date picker.](images/overview/maui-date-picker-minimum-date.png)
-
-   ![Maximum date in .NET MAUI Date picker.](images/overview/maui-date-picker-maximum-date.png)
-
 - **Interval support** allows configuring values for days, months, and years using defined intervals.
 
-   ![Intervals in .NET MAUI Date picker.](images/overview/maui-date-picker-intervals.gif)
-
-- **User interaction support** allows selecting dates through intuitive tap and scroll gestures.
-
-   ![Picker interactions in .NET MAUI Date picker.](images/overview/maui-date-picker-interactions.gif)   
+- **User interaction support** allows selecting dates through intuitive tap and scroll gestures.   
 
 ## Globalization
 
@@ -96,14 +78,14 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
+</tr>
 </table>
 
 ## Related controls
 
-- [Date Time Picker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting both date and time values.  
-- [Calendar](https://help.syncfusion.com/maui/calendar/overview) for navigating and selecting dates using full calendar views.  
-- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating date picker inputs within forms.  
+- [DateTimePicker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting both date and time values.
+- [Calendar](https://help.syncfusion.com/maui/calendar/overview) for navigating and selecting dates using full calendar views.
+- [DataForm](https://help.syncfusion.com/maui/dataform/overview) for integrating date picker inputs within forms.
 
 ## See Also
 

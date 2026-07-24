@@ -7,7 +7,7 @@ control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# .NET MAUI DateTime Range Slider Overview
+# Overview of .NET MAUI DateTime Range Slider
 
 - The Syncfusion<sup>®</sup> .NET MAUI DateTime Range Slider ([SfDateTimeRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider)) is an interactive control that makes selecting a range of dates or times simple and intuitive.
 

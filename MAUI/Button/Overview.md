@@ -7,11 +7,11 @@ control: SfButton
 documentation: ug
 ---
 
-# .NET MAUI Button (SfButton) Overview
+# Overview of .NET MAUI Button
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Button](https://www.syncfusion.com/maui-controls/maui-button) is a custom button control with UI customization. Set icons, background images, and corner edge radii and customize the appearance for different visual states using the visual state manager.
 
-   ![Overview image of SfButton](Images/overview/Overview.png)
+![Overview image of SfButton](Images/overview/Overview.png)
 
 ## Business use cases
 

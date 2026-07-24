@@ -7,7 +7,7 @@ control: SfLinearProgressBar
 documentation: ug
 ---
 
-# .NET MAUI Linear ProgressBar (SfLinearProgressBar) Overview
+# Overview of .NET MAUI Linear ProgressBar
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with custom visuals. It displays the progress of a process in rectangular shapes, determinate and indeterminate states, segments, and smooth animation. You can also define ranges with different colors.
 

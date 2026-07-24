@@ -7,7 +7,7 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# .NET MAUI Effects View (SfEffectsView) Overview
+# Overview of .NET MAUI Effects View
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI EffectsView](https://www.syncfusion.com/maui-controls/maui-effects-view) is a container control that provides modern effects such as ripple, selection, scaling, and rotation. Users can render these effects through touch interactions like touch down, touch up, long press, and by utilizing the available APIs.
 

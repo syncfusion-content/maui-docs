@@ -7,7 +7,7 @@ control: ListView
 documentation: ug
 ---
 
-# Overview of .NET MAUI ListView (SfListView)
+# Overview of .NET MAUI ListView
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) renders set of data items using Maui views or custom templates. Data can easily be grouped, sorted, and filtered.
 
@@ -326,4 +326,6 @@ Read Blogs
     View Sample
   <span class="card-icon card-arrow"></span>
 </a>
+</div>
+</div>
 </div>
