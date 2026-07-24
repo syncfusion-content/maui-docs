@@ -206,7 +206,7 @@ The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 
 #{% tabs %} 
 
-{% highlight xaml % hl_lines="5 6"}
+{% highlight xaml hl_lines="5 6" %}
 
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
