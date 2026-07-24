@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Downloading Syncfusion .NET MAUI Offline Installer | Syncfusion
+title: Downloading Syncfusion .NET MAUI offline installer | Syncfusion
 description: Learn how to download the Syncfusion .NET MAUI offline installer from the Syncfusion website with a license.
 platform: MAUI
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Downloading Syncfusion<sup>®</sup> .NET MAUI Offline Installer
+# Downloading Syncfusion<sup>®</sup> .NET MAUI offline installer
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Offline Installer on Windows.
 
@@ -38,7 +38,7 @@ Our 30-day trial can be downloaded in two ways:
 
    ![Syncfusion offline trial installer download](images/start-trial-download-offline-installer.png)
 
-### Start trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+### Start trials if using components through [nuget.org](https://www.nuget.org/packages?q=syncfusion)
 
 If you have already accessed our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion):
 
@@ -49,7 +49,7 @@ If you have already accessed our components through [NuGet.org](https://www.nuge
 2. Sign up or sign in with your Syncfusion<sup>®</sup> account to access this page.
 3. Begin your trial by selecting the .NET MAUI product.
 
-    > **Note:** If you have previously used a trial for a product and it has not expired, you will not be able to start a new trial for the same product.
+    N> If you have previously used a trial for a product and it has not expired, you will not be able to start a new trial for the same product.
 
 4. After starting the trial, visit the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. Generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/maui/licensing/how-to-generate) at any time before the trial period expires (as shown in the screenshot below).
 

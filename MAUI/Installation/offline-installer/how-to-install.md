@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Syncfusion .NET MAUI Offline Installer | Syncfusion
+title: Installing Syncfusion .NET MAUI offline installer | Syncfusion
 description: Learn how to install the Syncfusion .NET MAUI offline installer after downloading it from the Syncfusion website.
 platform: MAUI
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Installing Syncfusion<sup>®</sup> .NET MAUI Offline Installer
+# Installing Syncfusion<sup>®</sup> .NET MAUI offline installer
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Offline Installer on Windows.
 
@@ -28,7 +28,7 @@ The steps below show how to install the Essential Studio<sup>®</sup> .NET MAUI 
 
    ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
-   >**Note:** The installer extracts the `syncfusionessentialmaui_(version).exe` dialog, displaying the package's unzip operation.
+   N> The installer extracts the `syncfusionessentialmaui_(version).exe` dialog, displaying the package's unzip operation.
 
 2. **Unlock the installer:** You have two options to unlock the Syncfusion<sup>®</sup> offline installer.
 
@@ -69,9 +69,9 @@ The steps below show how to install the Essential Studio<sup>®</sup> .NET MAUI 
 
    ![Uninstall previous versions wizard](images/Step-by-Step-Installation_img7.png)
 
-   > **Note:**From the 2021 Volume 1 release, Syncfusion<sup>®</sup> has added the option to uninstall previous versions from 18.1 while installing the new version.
+   N>From the 2021 Volume 1 release, Syncfusion<sup>®</sup> has added the option to uninstall previous versions from 18.1 while installing the new version.
 
-   > **Note:**If a version is selected to uninstall, a confirmation screen appears. If you click **Continue**, the **Progress** screen displays the uninstall and install progress. If none of the versions are chosen to be uninstalled, only the installation progress is displayed.
+   N>If a version is selected to uninstall, a confirmation screen appears. If you click **Continue**, the **Progress** screen displays the uninstall and install progress. If none of the versions are chosen to be uninstalled, only the installation progress is displayed.
 
    **Confirmation alert**
 
@@ -85,7 +85,7 @@ The steps below show how to install the Essential Studio<sup>®</sup> .NET MAUI 
 
    ![Install progress wizard](images/Step-by-Step-Installation_img5.png)
 
-   > **Note:**The **Completed** screen is displayed once the .NET MAUI product is installed. If a version is selected to uninstall, the **Completed** screen will display both install and uninstall status.
+   N>The **Completed** screen is displayed once the .NET MAUI product is installed. If a version is selected to uninstall, the **Completed** screen will display both install and uninstall status.
 
    ![Installation completed wizard](images/Step-by-Step-Installation_img10.png)
 
@@ -124,7 +124,7 @@ To install through the command line in silent mode, follow the steps below.
 
 7. Essential Studio<sup>®</sup> for .NET MAUI is installed.
 
-   >**Note:** `x.x.x.x` should be replaced with the Essential Studio<sup>®</sup> version, and the **Product Unlock Key** must be replaced with the unlock key for that version.
+   N> `x.x.x.x` should be replaced with the Essential Studio<sup>®</sup> version, and the **Product Unlock Key** must be replaced with the unlock key for that version.
 
 ### Command-line uninstallation
 

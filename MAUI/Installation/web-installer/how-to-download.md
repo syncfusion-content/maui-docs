@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Downloading Syncfusion .NET MAUI Web Installer | Syncfusion
+title: Downloading Syncfusion .NET MAUI web installer | Syncfusion
 description: Learn how to download the Syncfusion .NET MAUI web installer from the Syncfusion website with a license.
 platform: MAUI
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Downloading Syncfusion<sup>®</sup> .NET MAUI Web Installer
+# Downloading Syncfusion<sup>®</sup> .NET MAUI web installer
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Web Installer on Windows.
 
@@ -38,7 +38,7 @@ Our 30-day trial can be downloaded in two ways:
 
    ![Syncfusion Trials and Downloads page](images/trial-download.png)
 
-### Start trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+### Start trials if using components through [nuget.org](https://www.nuget.org/packages?q=syncfusion)
 
 If you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion):
 
@@ -49,7 +49,7 @@ If you have already obtained our components through [NuGet.org](https://www.nuge
 2. To access this page, you must sign up or sign in with your Syncfusion<sup>®</sup> account.
 3. Begin your trial by selecting the .NET MAUI product.
 
-   > **Note:** If you have already used a trial for a product and it has not expired, you will not be able to start a new trial for the same product.
+   N> If you have already used a trial for a product and it has not expired, you will not be able to start a new trial for the same product.
 
 4. After starting the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/maui/licensing/how-to-generate) at any time before the trial period expires (as shown in the screenshot below).
 
@@ -74,6 +74,6 @@ If you have already obtained our components through [NuGet.org](https://www.nuge
 
 8. After downloading, the Syncfusion<sup>®</sup> .NET MAUI web installer can be unlocked using your Syncfusion<sup>®</sup> registered login credentials.
 
-   >**Note:** For Syncfusion<sup>®</sup> trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion<sup>®</sup> trial or licensed products will be installed via the web installer.
+   N> For Syncfusion<sup>®</sup> trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion<sup>®</sup> trial or licensed products will be installed via the web installer.
 
 For step-by-step installation guidelines, see [Installing the .NET MAUI Web Installer](https://help.syncfusion.com/maui/installation/web-installer/how-to-install).	

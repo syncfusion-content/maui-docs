@@ -10,7 +10,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Selection in .NET MAUI ComboBox
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control allows users to select a single item or multiple items from the drop-down. Use the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property to choose between [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Single) and [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple) selection. The default value of `SelectionMode` is `Single`.
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control allows users to select a single item or multiple items from the drop-down. Use the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property to choose between [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Single) and [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple) selection. The default value of `SelectionMode` is `Single`.
 
 ## Prerequisites
 
@@ -18,11 +18,11 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## Single selection
 
-In single selection mode, the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to select a single item from the drop-down. This is the default mode when `SelectionMode` is `Single`.
+In single selection mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to select a single item from the drop-down. This is the default mode when `SelectionMode` is `Single`.
 
 ### UI selection
 
@@ -170,7 +170,7 @@ The following image illustrates the result of the above code:
 
 ## Multiple selection
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to select multiple values from the drop-down by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple). The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property, which supports two-way binding.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to select multiple values from the drop-down by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple). The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property, which supports two-way binding.
 
 There are two ways to display multi-selection items, controlled by the [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_MultiSelectionDisplayMode) property. The default value is `Token`.
 
@@ -244,7 +244,7 @@ N> Switching `SelectionMode` from `Multiple` to `Single` at runtime clears the c
 
 ### Delimiter
 
-Set [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html) to [Delimiter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_ComboBoxMultiSelectionDisplayMode_Delimiter) to display selected items as a single line separated by a custom character. Use the [DelimiterText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DelimiterText) `string` property to set the separator. The default value is `","`.
+Set [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html) to `Delimiter` to display selected items as a single line separated by a custom character. Use the [DelimiterText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DelimiterText) property to set the separator. The default value is `","`.
 
 {% tabs %}
 
@@ -319,14 +319,14 @@ public class SocialMedia
 
 ### Token
 
-Token mode supports two layouts for displaying selected items, controlled by the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) property. The default value is `None`.
+`Token` mode supports two layouts for displaying selected items, controlled by the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) property. The default value is `None`.
 
 * [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_Wrap) - Wraps tokens onto multiple lines.
 * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_None) - Displays all tokens on a single horizontal line that scrolls horizontally.
 
 #### Wrap mode
 
-When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_Wrap), the selected tokens wrap onto the next line when they exceed the editor width.
+When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) is set to `Wrap`, the selected tokens wrap onto the next line when they exceed the editor width.
 
 {% tabs %}
 
@@ -399,7 +399,7 @@ public class SocialMedia
 
 #### None mode
 
-When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_None), the selected tokens are displayed on a single horizontal line that scrolls horizontally when it overflows.
+When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) is set to `None`, the selected tokens are displayed on a single horizontal line that scrolls horizontally when it overflows.
 
 {% tabs %}
 
@@ -472,7 +472,7 @@ public class SocialMedia
 
 ## Selection events
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) raises events before and after the selection changes. The following sections describe each event and its arguments.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) raises events before and after the selection changes. The following sections describe each event and its arguments.
 
 ### SelectionChanging
 
@@ -505,8 +505,6 @@ The XAML below references an event handler defined in the page code-behind. The 
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Inputs;
-
 // Run this code in a ContentPage code-behind file (MainPage.xaml.cs).
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 
@@ -522,12 +520,6 @@ SfComboBox comboBox = new SfComboBox
 
 comboBox.SelectionChanging += OnSelectionChanging;
 Content = comboBox;
-
-private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
-{
-    // Set e.Cancel = true to cancel the selection change.
-    e.Cancel = false;
-}
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -558,6 +550,19 @@ public class SocialMedia
 {
     public string Name { get; set; }
     public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `SelectionChanging` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight c# %}
+
+private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
+{
+    await DisplayAlert("Alert", "Selecting Item has changing", "Ok");
 }
 
 {% endhighlight %}
@@ -604,12 +609,6 @@ SfComboBox comboBox = new SfComboBox
 comboBox.SelectionChanged += OnSelectionChanged;
 Content = comboBox;
 
-private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-{
-    // e.AddedItems contains the newly selected items.
-    // e.RemovedItems contains the items that were unselected.
-}
-
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
 
@@ -644,17 +643,34 @@ public class SocialMedia
 {% endhighlight %}
 {% endtabs %}
 
+The `SelectionChanged` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight c# %}
+
+private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    await DisplayAlert("Alert", $"Selected Item has changed", "Ok");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox SelectionChanged event](Images/Selection/net-maui-combobox-selection-changed-event.gif)
 
+N>
+SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
+
 ## Selected value
 
-The [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValue) property gets or sets a value based on the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem) or [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems), depending on the selection mode. The [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValuePath) `string` property specifies which property of the selected item is used to populate `SelectedValue`.
+The [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValue) property gets or sets a value based on the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem) or [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems), depending on the selection mode. The [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValuePath) property specifies which property of the selected item is used to populate `SelectedValue`.
 
 ### Single selection
 
-In single selection mode, [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValue) holds the value defined by `SelectedValuePath`, such as the `ID` property. When [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem) returns the entire object (for example, `SocialMedia`), `SelectedValue` contains the value of the `SocialMedia.ID` property.
+In single selection mode, `SelectedValue` holds the value defined by `SelectedValuePath`, such as the `ID` property. When `SelectedItem` returns the entire object (for example, `SocialMedia`), `SelectedValue` contains the value of the `SocialMedia.ID` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -679,51 +695,34 @@ In single selection mode, [SelectedValue](https://help.syncfusion.com/cr/maui/Sy
 {% endhighlight %}
 {% highlight c# %}
 
-public partial class MainPage : ContentPage
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
 {
-    private readonly Label selectedValue = new Label { Text = string.Empty };
-    private SfComboBox comboBox;
+    MaxDropDownHeight = 250,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    SelectedValuePath = "ID",
+    BindingContext = socialMediaViewModel,
+};
 
-    public MainPage()
+comboBox.SelectionChanged += OnSelectionChanged;
+
+Label selectedValue = new Label
+{
+	Text = string.Empty
+};
+
+Content = new StackLayout
+{
+    Children =
     {
-        InitializeComponent();
-
-        SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-
-        comboBox = new SfComboBox
-        {
-            MaxDropDownHeight = 250,
-            ItemsSource = socialMediaViewModel.SocialMedias,
-            DisplayMemberPath = "Name",
-            TextMemberPath = "Name",
-            SelectedValuePath = "ID",
-            BindingContext = socialMediaViewModel,
-        };
-
-        comboBox.SelectionChanged += OnSelectionChanged;
-		Label selectedValue = new Label
-		{
-		    Text = string.Empty
-		};
-        Content = new StackLayout
-        {
-            Children =
-            {
-                new Label { Text = "SelectedValue:" },
-                selectedValue,
-                comboBox,
-            },
-        };
-    }
-
-    private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        if (comboBox.SelectedValue is not null)
-        {
-            selectedValue.Text = comboBox.SelectedValue.ToString();
-        }
-    }
-}
+        new Label { Text = "SelectedValue:" },
+        selectedValue,
+        comboBox,
+    },
+};
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -759,13 +758,30 @@ public class SocialMedia
 {% endhighlight %}
 {% endtabs %}
 
+The `SelectionChanged` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight c# %}
+
+private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    if (comboBox.SelectedValue is not null)
+    {
+        selectedValue.Text = comboBox.SelectedValue.ToString();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox single selected value](Images/Selection/net-maui-combobox-single-selected-value.gif)
 
 ### Multiple selection
 
-In multiple selection mode, [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValue) is a collection of values derived from [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) based on [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValuePath) (for example, a list of `SocialMedia.ID` values for the selected items).
+In multiple selection mode, `SelectedValue` is a collection of values derived from `SelectedItems` based on `SelectedValuePath` (for example, a list of `SocialMedia.ID` values for the selected items).
 
 {% tabs %}
 {% highlight xaml %}
@@ -787,77 +803,39 @@ In multiple selection mode, [SelectedValue](https://help.syncfusion.com/cr/maui/
         </editors:SfComboBox.BindingContext>
     </editors:SfComboBox>
 </StackLayout>
+
 {% endhighlight %}
 {% highlight c# %}
 
-public class SocialMediaViewModel
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
 {
-    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
-    public ObservableCollection<object> SelectedValueList { get; set; }
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    SelectionMode = ComboBoxSelectionMode.Multiple,
+    SelectedValuePath = "ID",
+    BindingContext = socialMediaViewModel,
+};
 
-    public SocialMediaViewModel()
-    {
-        SocialMedias = new ObservableCollection<SocialMedia>
-        {
-            new SocialMedia { Name = "Facebook", ID = 0 },
-            new SocialMedia { Name = "Google Plus", ID = 1 },
-            new SocialMedia { Name = "Instagram", ID = 2 },
-            new SocialMedia { Name = "LinkedIn", ID = 3 },
-            new SocialMedia { Name = "Skype", ID = 4 },
-            new SocialMedia { Name = "Telegram", ID = 5 },
-            new SocialMedia { Name = "Televzr", ID = 6 },
-        };
+comboBox.SelectionChanged += OnSelectionChanged;
 
-        SelectedValueList = new ObservableCollection<object>
-        {
-            SocialMedias[4].ID,
-            SocialMedias[6].ID,
-        };
-    }
-}
-
-public partial class MainPage : ContentPage
+Label selectedValue = new Label
 {
-    private readonly Label selectedValue = new Label { Text = string.Empty };
-    private SfComboBox comboBox;
-
-    public MainPage()
+	Text = string.Empty
+};
+        
+        
+Content = new StackLayout
+{
+    Children =
     {
-        InitializeComponent();
-
-        SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-
-        comboBox = new SfComboBox
-        {
-            ItemsSource = socialMediaViewModel.SocialMedias,
-            TextMemberPath = "Name",
-            DisplayMemberPath = "Name",
-            SelectionMode = ComboBoxSelectionMode.Multiple,
-            SelectedValuePath = "ID",
-            BindingContext = socialMediaViewModel,
-        };
-
-        comboBox.SelectionChanged += OnSelectionChanged;
-
-        Content = new StackLayout
-        {
-            Children =
-            {
-                new Label { Text = "SelectedValue count:" },
-                selectedValue,
-                comboBox,
-            },
-        };
-    }
-
-    private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        if (comboBox.SelectedValue is IList<object> value)
-        {
-            selectedValue.Text = value.Count.ToString();
-        }
-    }
-}
+        new Label { Text = "SelectedValue count:" },
+        selectedValue,
+        comboBox,
+    },
+};
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -866,6 +844,7 @@ public partial class MainPage : ContentPage
 public class SocialMediaViewModel
 {
     public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+    public ObservableCollection<object> SelectedValueList { get; set; }
 
     public SocialMediaViewModel()
     {
@@ -881,6 +860,12 @@ public class SocialMediaViewModel
             new SocialMedia { Name = "WhatsApp", ID = 7 },
             new SocialMedia { Name = "YouTube", ID = 8 }
         };
+
+        SelectedValueList = new ObservableCollection<object>
+        {
+            SocialMedias[4].ID,
+            SocialMedias[6].ID,
+        };
     }
 }
 
@@ -888,6 +873,22 @@ public class SocialMedia
 {
     public string Name { get; set; }
     public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `SelectionChanged` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight c# %}
+
+private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    if(comboBox != null && comboBox.SelectedValue is IList<object> value)
+    {
+        selectedValue.Text = value.Count.ToString();
+    }
 }
 
 {% endhighlight %}
@@ -901,15 +902,15 @@ N> If `SelectedValuePath` is not specified, `SelectedValue` is the same as `Sele
 
 ## Open or close the drop-down programmatically
 
-The drop-down can be opened or closed programmatically by setting the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) `bool` property. The default value is `false`. Set it in code at runtime rather than in XAML, because the drop-down state is typically controlled by user interaction.
+The drop-down can be opened or closed programmatically by setting the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) `bool` property. The default value is `false`.
 
 {% tabs %}
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    IsEditable="true"
+                    IsEditable="True"
                     ItemsSource="{Binding SocialMedias}"
-                    IsDropDownOpen = true;
+                    IsDropDownOpen = "True";
                     DisplayMemberPath="Name"
                     TextMemberPath="Name">
 </editors:SfComboBox>
@@ -975,8 +976,7 @@ comboBox.Clear();
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Editing in .NET MAUI ComboBox](Editing.md)
-* [Filtering in .NET MAUI ComboBox](Filtering.md)
-* [Searching in .NET MAUI ComboBox](Searching.md)
-* [Highlighting matched text in .NET MAUI ComboBox](Highlighting-matched-text.md)
+* [Editing](https://help.syncfusion.com/maui/combobox/editing)
+* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
+* [Searching](https://help.syncfusion.com/maui/combobox/searching)
+* [Highlighting matched text](https://help.syncfusion.com/maui/combobox/highlighting-matched-text)

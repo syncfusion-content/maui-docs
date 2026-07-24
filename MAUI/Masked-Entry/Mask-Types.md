@@ -13,10 +13,10 @@ The [MaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMask
 
 The following table summarizes the differences between the available mask types:
 
-| Mask type | When to use | Format syntax | [ValueMaskFormat](formatting-value.md) |
-| --- | --- | --- | --- |
-| `Simple` | Fixed-format input such as phone numbers, dates, or product keys. | Mask elements (for example, `0`, `9`, `L`, `>`). | Supported. |
-| `RegEx` | Custom validation patterns such as email addresses, IP addresses, or custom rules. | Standard .NET regular expressions. | Not supported (the mask is treated as a regex). |
+| Mask type | When to use | Format syntax |
+| --- | --- | --- |
+| `Simple` | Fixed-format input such as phone numbers, dates, or product keys. | Mask elements (for example, `0`, `9`, `L`, `>`). | 
+| `RegEx` | Custom validation patterns such as email addresses, IP addresses, or custom rules. | Standard .NET regular expressions. |
 
 The available mask types are:
 
@@ -29,13 +29,11 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Simple
 
-Masks that use a combination of letters, digits, and special characters fall into the Simple group. Simple masks are mainly used for fixed-length inputs, such as phone numbers, dates, or product keys. The mask is built from the mask elements listed below.
-
-The [PromptChar](basic-features.md#setting-promptchar) and [ValueMaskFormat](formatting-value.md) properties are only supported by the `Simple` mask type.
+Masks that use a combination of letters, digits, and special characters fall into the simple group. `Simple` masks are mainly used for fixed-length inputs, such as phone numbers, dates, or product keys.
 
 ### Simple mask elements
 
@@ -90,9 +88,9 @@ The following example formats input as a U.S. phone number using the Simple mask
 {% highlight XAML %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          ClearButtonVisibility="WhileEditing"
-                          MaskType="Simple"
-                          Mask="(000) 000-0000"/>
+                       ClearButtonVisibility="WhileEditing"
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -108,27 +106,15 @@ maskedEntry.Mask = "(000) 000-0000";
 
 The mask renders the input as `(123) 456-7890` when the user types the digits `1234567890`.
 
-The following example uses the `>` shift modifier to convert input to uppercase:
-
-```XAML
-<editors:SfMaskedEntry WidthRequest="200"
-                       MaskType="Simple"
-                       Mask=">AAAA-AAAA"/>
-```
-
-Typing `abcd1234` is rendered as `ABCD-1234`.
-
 ![Mask type simple in MAUI MaskedEntry](MaskedEntry_Images/maui_mask_type_simple.gif)
 
 ## RegEx
 
-RegEx masks use standard regular-expression patterns to validate input, for example `[0-9A-Z]` for alphanumeric values or `[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}` for an email address.
-
-> **Note:** When `MaskType` is `RegEx`, the [ValueMaskFormat](formatting-value.md) property is not applied because the mask is treated as a regular expression.
+`RegEx` masks use standard regular-expression patterns to validate input, for example `[0-9A-Z]` for alphanumeric values or `[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}` for an email address.
 
 ### RegEx mask elements
 
-The following table lists the most common regular-expression elements supported by the RegEx mask type:
+The following table lists the most common regular-expression elements supported by the `RegEx` mask type:
 
 <table>
 <tr>
@@ -219,7 +205,7 @@ Accepts any character. It can be changed based on culture</td></tr>
 
 ### RegEx mask example
 
-The following example validates an email address using the RegEx mask `[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}`:
+The following example validates an email address using the `RegEx` mask `[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}`:
 
 {% tabs %}
 {% highlight XAML %}
@@ -247,7 +233,7 @@ The mask accepts strings such as `user@example.com` and rejects incomplete or ma
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Basic Features](basic-features.md)
-* [Formatting Value](formatting-value.md)
-* [Validation](validation.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Formatting Value](https://help.syncfusion.com/maui/masked-entry/formatting-value)
+* [Validation](https://help.syncfusion.com/maui/masked-entry/validation)

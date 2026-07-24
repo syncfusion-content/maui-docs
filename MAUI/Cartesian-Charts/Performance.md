@@ -58,7 +58,7 @@ this.Content = chart;
 
 ## ListenPropertyChange in .NET MAUI Cartesian Charts
 
-The `ListenPropertyChange` property allows the chart to update dynamically when the underlying data source properties change. This enables real-time data visualization with responsive updates. By leveraging `INotifyPropertyChanged`, the data points automatically reflect changes, ensuring the chart remains responsive to data updates.
+The [ListenPropertyChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ListenPropertyChange) property allows the chart to update dynamically when the underlying data source properties change. This enables real-time data visualization with responsive updates. By leveraging `INotifyPropertyChanged`, the data points automatically reflect changes, ensuring the chart remains responsive to data updates.
 
 Use `ListenPropertyChange` with your series when your data model implements `INotifyPropertyChanged`:
 
@@ -122,7 +122,7 @@ public class DataModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-* Enabling the `ListenPropertyChange` property registers the `PropertyChanged` event for every object in the data source.
+* Enabling the [ListenPropertyChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ListenPropertyChange) property registers the `PropertyChanged` event for every object in the data source.
 
 * When dealing with a large number of data points, registering these events can slow down the chart's loading time.
 
@@ -134,7 +134,7 @@ When performing bulk or real-time updates such as adding, removing, or modifying
 
 ### Series-Level Suspend and Resume
 
-Use `SuspendNotification` and `ResumeNotification` methods on a specific series instance when appending or updating data for that individual series. This suspends the series from updating until `ResumeNotification` is called.
+Use [SuspendNotification](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_SuspendNotification) and [ResumeNotification](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_ResumeNotification) methods on a specific series instance when appending or updating data for that individual series. This suspends the series from updating until `ResumeNotification` is called.
 
 {% tabs %}
 
@@ -173,7 +173,7 @@ series.ResumeNotification();
 
 ### Chart-Level Suspend and Resume
 
-Use `SuspendSeriesNotification` and `ResumeSeriesNotification` methods on the chart instance when updating data across multiple series simultaneously. This suspends all series in the chart from updating until `ResumeSeriesNotification` is called.
+Use [SuspendSeriesNotification](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SuspendSeriesNotification) and [ResumeSeriesNotification](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ResumeSeriesNotification) methods on the chart instance when updating data across multiple series simultaneously. This suspends all series in the chart from updating until `ResumeSeriesNotification` is called.
 
 {% tabs %}
 

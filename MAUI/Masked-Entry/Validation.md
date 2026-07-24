@@ -9,7 +9,7 @@ documentation: ug
 
 # Validation in .NET MAUI Masked Entry
 
-The SfMaskedEntry control validates user input against the configured `Mask` and exposes the result through the [HasError](#haserror) property. Use the [ValidationMode](#validation-mode) property to choose when validation is performed.
+The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control validates user input against the configured `Mask` and exposes the result through the [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HasError) property. Use the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValidationMode) property to choose when validation is performed.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Before using the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 ## Validation Mode
 
@@ -26,7 +26,7 @@ Use the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 - [`KeyPress`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_KeyPress): validation is triggered for each key press.
 - [`LostFocus`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_LostFocus): validation is performed only when the control loses focus.
 
-The default value is `KeyPress`. The selected mode works the same for both `Simple` and `RegEx` [MaskType](mask-types.md) values.
+The default value is `KeyPress`. The selected mode works the same for both `Simple` and `RegEx` [MaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_MaskType) values.
 
 {% tabs %}
 {% highlight XAML %}
@@ -51,16 +51,11 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
 {% endhighlight %}
 {% endtabs %}
 
-The following image illustrates the validation behavior: with `LostFocus`, the `HasError` flag becomes `true` only after the user leaves the control, while with `KeyPress` it is updated on every keystroke.
-
-
 ## HasError
 
 The [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HasError) property of type `bool` indicates the result of the most recent validation. It is a read-only property that returns `true` when validation **fails** and `false` when validation succeeds. The property is updated only after a `ValueChanged` event, so check it inside the event handler (or use a `Binding` to react to the change in MVVM scenarios).
 
-`HasError` is `true` while the input is incomplete for the configured `Simple` mask (for example, an unfinished date), or when the typed value does not match the `RegEx` pattern.
-
-The following example shows how to surface the validation result in the UI. Bind the `HasError` property to a `Label.IsVisible` (or a `Label.Text` for a custom error message) to avoid relying on `DisplayAlert` for inline validation feedback.
+The following example shows how to surface the validation result in the UI.
 
 {% tabs %}
 {% highlight XAML %}
@@ -69,6 +64,7 @@ The following example shows how to surface the validation result in the UI. Bind
                            WidthRequest="200"
                            MaskType="Simple"
                            Mask="00/00/0000"
+                           ValueChanged = "MaskedEntry_ValueChanged"
                            ValidationMode="LostFocus"/>
     <Label Text="Please enter a valid date."
            TextColor="Red"
@@ -84,7 +80,17 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
     Mask = "00/00/0000",
     ValidationMode = InputValidationMode.LostFocus
 };
+
 maskedEntry.ValueChanged += MaskedEntry_ValueChanged;
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+
+The ValueChanged event can be handled in C# as follows:
+
+{% highlight C# %}
 
 private void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChangedEventArgs e)
 {
@@ -104,7 +110,7 @@ The following image illustrates an invalid input that triggers `HasError = true`
 
 ## See Also
 
-* [Getting Started](getting-started.md)
-* [Basic Features](basic-features.md)
-* [Mask Types](Mask-Types.md)
-* [Formatting Value](formatting-value.md)
+* [Getting Started](https://help.syncfusion.com/maui/masked-entry/getting-started)
+* [Basic Features](https://help.syncfusion.com/maui/masked-entry/basic-features)
+* [Mask Types](https://help.syncfusion.com/maui/masked-entry/mask-types)
+* [Formatting Value](https://help.syncfusion.com/maui/masked-entry/formatting-value)

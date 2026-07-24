@@ -7,7 +7,7 @@ control: SfNumericEntry
 documentation: ug
 ---
 
-# Basic Features in .NET MAUI NumericEntry (SfNumericEntry)
+# Basic Features in .NET MAUI Numeric Entry (SfNumericEntry)
 
 ## Prerequisites
 
@@ -15,11 +15,11 @@ Before using the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started) documentation.
 
 ## Setting Placeholder Text
 
-Use the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Placeholder) property to display a hint when the control has no value. The placeholder text is shown only when the value of the [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull) property is **true** and the `Value` is **null**. The default value of the `Placeholder` property is `string.Empty` — no placeholder is displayed.
+Use the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Placeholder) property to display a hint when the control has no value. The placeholder text is shown only when the value of the [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull) property is **true** and the `Value` is **null**. The default value of the `Placeholder` property is `string.Empty` - no placeholder is displayed.
 
 {% tabs %}
 {% highlight XAML %}
@@ -45,7 +45,7 @@ sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 
 ## Clear button visibility
 
-The [ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ShowClearButton) property controls whether the clear button is displayed in the `NumericEntry`. By default, the clear button is visible.
+The [ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ShowClearButton) property controls whether the clear button is displayed in the `Numeric Entry`. By default, the clear button is visible.
 
 N> The clear button appears only when the text box is focused and the `IsEditable` property is set to **true**.
 
@@ -79,7 +79,7 @@ If `IsEditable` is **false**:
 
 ## Value changed notification
 
-The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ValueChanged) event is raised when the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Value) property of the `NumericEntry` control changes. The value is not updated while the user is typing. The value is updated after validation is performed on the Enter keypress or when the control loses focus. The `NumericEntryValueChangedEventArgs` passed to the handler exposes the following members:
+The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ValueChanged) event is raised when the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Value) property of the `Numeric Entry` control changes. The value is not updated while the user is typing. The value is updated after validation is performed on the Enter keypress or when the control loses focus. The `NumericEntryValueChangedEventArgs` passed to the handler exposes the following members:
 
 | Member | Type | Description |
 | --- | --- | --- |
@@ -124,8 +124,8 @@ private void sfNumericEntry_ValueChanged(object sender, NumericEntryValueChanged
 
 The [ValueChangeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ValueChangeMode) property determines when the value is updated. The supported modes are:
 
-* [OnLostFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ValueChangeMode.html#Syncfusion_Maui_Inputs_ValueChangeMode_OnLostFocus) — The value is updated when the editor loses focus or focus moves to the next control. This is the default mode.
-* [OnKeyFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ValueChangeMode.html#Syncfusion_Maui_Inputs_ValueChangeMode_OnKeyFocus) — The value is updated with each keypress.
+* [OnLostFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ValueChangeMode.html#Syncfusion_Maui_Inputs_ValueChangeMode_OnLostFocus) - The value is updated when the editor loses focus or focus moves to the next control. This is the default mode.
+* [OnKeyFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ValueChangeMode.html#Syncfusion_Maui_Inputs_ValueChangeMode_OnKeyFocus) - The value is updated with each keypress.
 
 {% tabs %}
 {% highlight XAML %}
@@ -150,52 +150,48 @@ The [ValueChangeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 {% endhighlight %}
 {% highlight C# %}
 
-public partial class MainPage : ContentPage
+public Label valueDisplay;
+var verticalStackLayout = new StackLayout
 {
-    public Label valueDisplay;
-    public MainPage()
-    {
-        InitializeComponent();
-        var verticalStackLayout = new StackLayout
-        {
-            Spacing = 10,
-            VerticalOptions = LayoutOptions.Center
-        };
-        var numericEntry = new SfNumericEntry
-        {
-            WidthRequest = 200,
-            HeightRequest = 40,
-            VerticalOptions = LayoutOptions.Center,
-            ValueChangeMode = ValueChangeMode.OnKeyFocus,
-            Value = 50
-        };
-        var horizontalStackLayout = new StackLayout
-        {
-            Spacing = 2,
-            HeightRequest = 40,
-            WidthRequest = 200
-        };
-        var labelDollar = new Label
-        {
-            Text = "Dollar:"
-        };
-        valueDisplay = new Label
-        {
-            Text="$50",
-            TextColor = Colors.Green
-        };
-        numericEntry.ValueChanged += NumericEntry_ValueChanged;
-        horizontalStackLayout.Children.Add(labelDollar);
-        horizontalStackLayout.Children.Add(valueDisplay);
-        verticalStackLayout.Children.Add(numericEntry);
-        verticalStackLayout.Children.Add(horizontalStackLayout);
-        Content = verticalStackLayout;
-    }
+    Spacing = 10,
+    VerticalOptions = LayoutOptions.Center
+};
+var numericEntry = new SfNumericEntry
+{
+     WidthRequest = 200,
+    HeightRequest = 40,
+    VerticalOptions = LayoutOptions.Center,
+    ValueChangeMode = ValueChangeMode.OnKeyFocus,
+    Value = 50
+};
+var horizontalStackLayout = new StackLayout
+{
+    Spacing = 2,
+    HeightRequest = 40,
+    WidthRequest = 200
+};
+var labelDollar = new Label
+{
+    Text = "Dollar:"
+};
+valueDisplay = new Label
+{
+    Text="$50",
+    TextColor = Colors.Green
+};
 
-    private void NumericEntry_ValueChanged(object sender, NumericEntryValueChangedEventArgs e)
-    {
-        valueDisplay.Text = "$"+e.NewValue.ToString();;
-    }
+numericEntry.ValueChanged += NumericEntry_ValueChanged;
+horizontalStackLayout.Children.Add(labelDollar);
+horizontalStackLayout.Children.Add(valueDisplay);
+verticalStackLayout.Children.Add(numericEntry);
+verticalStackLayout.Children.Add(horizontalStackLayout);
+Content = verticalStackLayout;
+
+You can handle the event as follows.
+
+private void NumericEntry_ValueChanged(object sender, NumericEntryValueChangedEventArgs e)
+{
+    valueDisplay.Text = "$"+e.NewValue.ToString();;
 }
 
 {% endhighlight %}
@@ -245,7 +241,7 @@ private async void numericEntry_Completed(object sender, EventArgs e)
 
 ## ClearButtonClicked Event
 
-The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ClearButtonClicked) event is raised when the user activates the clear button in the `SfNumericEntry` by tapping it. The handler is a generic event handler that takes the `sender` and `EventArgs`.
+The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ClearButtonClicked) event is raised when the user activates the clear button in the `Numeric Entry` by tapping it. The handler is a generic event handler that takes the `sender` and `EventArgs`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -284,7 +280,7 @@ private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
 
 ## Stroke
 
-Use the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property to change the border color of the NumericEntry. The default value is `LightGray`.
+Use the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property to change the border color of the Numeric Entry. The default value is `LightGray`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -364,7 +360,7 @@ The following image illustrates the result of the above code:
 
 ## Select text on focus
 
-The [`SelectAllOnFocus`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_SelectAllOnFocus) property automatically selects all the text in the NumericEntry when the control gains focus. This makes it easy to replace the entire content. The default value is `true`.
+The [`SelectAllOnFocus`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_SelectAllOnFocus) property automatically selects all the text in the Numeric Entry when the control gains focus. This makes it easy to replace the entire content. The default value is `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -510,9 +506,9 @@ public class CommandDemoViewModel
 
 ## Automation ID
 
-The [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control provides `AutomationId` support specifically for the `editable entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element’s `AutomationId` is derived from the control’s `AutomationId` to ensure uniqueness.
+The [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control provides `AutomationId` support specifically for the `editable entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element’s `AutomationId` is derived from the control's `AutomationId` to ensure uniqueness.
 
-For example, if the `SfNumericEntry`’s `AutomationId` is set to `EmployeeNumericEntry`, the editable entry can be targeted as `EmployeeNumericEntry Entry` and the clear button as `EmployeeNumericEntry Clear Button`. This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements.
+For example, if the `SfNumericEntry's` `AutomationId` is set to `EmployeeNumericEntry`, the editable entry can be targeted as `EmployeeNumericEntry Entry` and the clear button as `EmployeeNumericEntry Clear Button`. This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements.
 
 The following screenshot illustrates the `AutomationId`s of the inner elements:
 
@@ -520,10 +516,6 @@ The following screenshot illustrates the `AutomationId`s of the inner elements:
 
 ## See Also
 
-* [Formatting](formatting.md)
-* [Restriction](restriction.md)
-* [UpDown-Button](UpDown-Button.md)
-
-## Related resources
-
-* [Getting started sample for .NET MAUI NumericEntry on GitHub](https://github.com/SyncfusionExamples/maui-numericentry-samples)
+* [Formatting](https://help.syncfusion.com/maui/numericentry/formatting)
+* [Restriction](https://help.syncfusion.com/maui/numericentry/restriction)
+* [UpDown-Button](https://help.syncfusion.com/maui/numericentry/updown-button)

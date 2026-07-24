@@ -16,13 +16,13 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](Getting-Started.md) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 ## EnableAutoSize
 
-The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_EnableAutoSize) property in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control automatically adjusts the editor height to fit the selected tokens, so the control grows to display all wrapped tokens without scrolling. It is a `bool` property and the default value is `false`.
+The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_EnableAutoSize) property in the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control automatically adjusts the editor height to fit the selected tokens, so the control grows to display all wrapped tokens without scrolling. It is a `bool` property and the default value is `false`.
 
-To make AutoSizing take effect, configure the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) with the following:
+To make AutoSizing take effect, configure the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) with the following:
 
 * [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) set to `Multiple`.
 * [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_MultiSelectionDisplayMode) set to `Token` (default).
@@ -104,6 +104,6 @@ N> If `EnableAutoSize` is set to `true` without `SelectionMode` as `Multiple` or
 
 ## See Also
 
-* [Getting started with .NET MAUI ComboBox](getting-started.md)
-* [Editing in .NET MAUI ComboBox](Editing.md)
-* [Selection in .NET MAUI ComboBox](Selection.md)
+* [Getting started](https://help.syncfusion.com/maui/combobox/getting-started)
+* [Editing](https://help.syncfusion.com/maui/combobox/editing)
+* [Selection](https://help.syncfusion.com/maui/combobox/selection)
