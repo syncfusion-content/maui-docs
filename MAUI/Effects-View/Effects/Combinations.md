@@ -7,125 +7,344 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Combination of Effects 
+# Combining Effects in .NET MAUI Effects View
 
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination. Below are some valid combinations of [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html):
+## Prerequisites
 
-## Highlight and Ripple
+Before using the [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
+
+The `SfEffectsView` control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination on a single view.
+
+## Combination Rules
+
+The following rules govern which effects can be combined and where:
+
+- Each `SfEffect` value can be assigned to only one trigger property per view.
+- `SfEffects.Rotation` cannot be combined with other effects.
+- The other effects (`Highlight`, `Ripple`, `Scale`, and `Selection`) can be combined freely across the trigger properties, as shown in the examples below.
+
+## Examples
+
+The examples below use the XAML and C# tab pair to demonstrate each valid combination.
+
+## Highlight and Ripple on TouchDown
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml hl_lines="4" %} 
 
-<syncEffectsView:SfEffectsView TouchDownEffects="Highlight,Ripple">
+<syncEffectsView:SfEffectsView HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               TouchDownEffects="Highlight,Ripple">
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" 
+                              Offset="0.0" />
+                <GradientStop Color="#4ECDC4" 
+                              Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight c# hl_lines="25" %} 
 
-var effectsView = new SfEffectsView()
+var grid = new Grid
 {
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
+
+var effectsView = new SfEffectsView
+{
+    Content = grid,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
     TouchDownEffects = SfEffects.Highlight | SfEffects.Ripple
 };
+
+this.Content = effectsView;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Highlight and Selection
+## Highlight on TouchDown with Selection on LongPress
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml hl_lines="4 5" %} 
 
-<syncEffectsView:SfEffectsView
-    LongPressEffects="Selection"
-    TouchDownEffects="Highlight">
+<syncEffectsView:SfEffectsView HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               LongPressEffects="Selection"
+                               TouchDownEffects="Highlight">
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" 
+                              Offset="0.0" />
+                <GradientStop Color="#4ECDC4" 
+                              Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight c# hl_lines="25 26" %} 
 
-var effectsView = new SfEffectsView()
+var grid = new Grid
 {
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
+
+var effectsView = new SfEffectsView
+{
+    Content = grid,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
     LongPressEffects = SfEffects.Selection,
     TouchDownEffects = SfEffects.Highlight
 };
 
+this.Content = effectsView;
+
 {% endhighlight %}
 
 {% endtabs %}
 
-## Ripple and Selection
+## Ripple on TouchDown with Selection on TouchUp
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml hl_lines="4 5" %} 
 
-<syncEffectsView:SfEffectsView
-    TouchDownEffects="Ripple"
-    TouchUpEffects="Selection">
+<syncEffectsView:SfEffectsView HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               TouchDownEffects="Ripple"
+                               TouchUpEffects="Selection">
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" 
+                              Offset="0.0" />
+                <GradientStop Color="#4ECDC4" 
+                              Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight c# hl_lines="25 26" %} 
 
-var effectsView = new SfEffectsView()
+var grid = new Grid
 {
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
+
+var effectsView = new SfEffectsView
+{
+    Content = grid,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
     TouchDownEffects = SfEffects.Ripple,
     TouchUpEffects = SfEffects.Selection
 };
 
+this.Content = effectsView;
+
 {% endhighlight %}
 
 {% endtabs %}
 
-## Highlight, Ripple, and Selection
+## Highlight, Ripple on TouchDown with Selection on LongPress
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml hl_lines="4 5" %} 
 
-<syncEffectsView:SfEffectsView
-    LongPressEffects="Selection"
-    TouchDownEffects="Highlight,Ripple">
+<syncEffectsView:SfEffectsView HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               LongPressEffects="Selection"
+                               TouchDownEffects="Highlight,Ripple">
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" 
+                              Offset="0.0" />
+                <GradientStop Color="#4ECDC4" 
+                              Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight c# hl_lines="25 26" %} 
 
-var effectsView = new SfEffectsView()
+var grid = new Grid
 {
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
+
+var effectsView = new SfEffectsView
+{
+    Content = grid,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
     LongPressEffects = SfEffects.Selection,
     TouchDownEffects = SfEffects.Highlight | SfEffects.Ripple
 };
 
+this.Content = effectsView;
+
 {% endhighlight %}
 
 {% endtabs %}
 
-## Scale and Selection
+## Scale and Selection on LongPress
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml hl_lines="4" %} 
 
- <syncEffectsView:SfEffectsView LongPressEffects="Scale,Selection">
+<syncEffectsView:SfEffectsView HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               LongPressEffects="Scale,Selection">
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" 
+                              Offset="0.0" />
+                <GradientStop Color="#4ECDC4" 
+                              Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight c# hl_lines="25" %} 
 
-var effectsView = new SfEffectsView()
+var grid = new Grid
 {
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
+
+var effectsView = new SfEffectsView
+{
+    Content = grid,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
     LongPressEffects = SfEffects.Scale | SfEffects.Selection
 };
 
-{% endhighlight %}
+this.Content = effectsView;
 
+{% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [Effects Overview](https://help.syncfusion.com/maui/effects-view/effects/overview) lists every effect that you can combine on the SfEffectsView.  
+- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight) describes the transient background effect often paired with ripple or selection.  
+- [Ripple](https://help.syncfusion.com/maui/effects-view/effects/ripple) documents the expandable circle effect used in many combination examples.  
+- [Selection](https://help.syncfusion.com/maui/effects-view/effects/selection) explains the persistent background effect that pairs well with scale or highlight.  
+- [Scale](https://help.syncfusion.com/maui/effects-view/effects/scale) covers the size-change animation that can be combined with selection on long-press.
