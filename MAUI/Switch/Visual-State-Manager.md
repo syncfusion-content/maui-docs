@@ -10,24 +10,26 @@ keywords : .net maui switch, maui switch, .net maui switch visual states, maui s
 
 # Visual State Manager in .NET MAUI Switch (SfSwitch)
 
+Use the `Visual State Manager (VSM)` to change Switch properties in response to visual state changes. The `CommonStates` group is automatically maintained by .NET MAUI and contains the following states:
+
+* `On`, `Off`, `Indeterminate` - the resting states.
+* `OnHovered`, `OffHovered`, `IndeterminateHovered` - applied when the pointer is over the Switch.
+* `OnPressed`, `OffPressed`, `IndeterminatePressed` - applied while the Switch is being tapped or clicked.
+* `OnDisabled`, `OffDisabled`, `IndeterminateDisabled` - applied when `IsEnabled` is `false`.
+
 ## Prerequisites
 
-Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
+Before using the [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
 - `Syncfusion.Maui.Buttons`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
 
-Use the `Visual State Manager (VSM)` to change Switch properties in response to visual state changes. The `CommonStates` group is automatically maintained by .NET MAUI and contains the following states:
+## Common Visual State Group
 
-* `On`, `Off`, `Indeterminate` — the resting states.
-* `OnHovered`, `OffHovered`, `IndeterminateHovered` — applied when the pointer is over the Switch.
-* `OnPressed`, `OffPressed`, `IndeterminatePressed` — applied while the Switch is being tapped or clicked.
-* `OnDisabled`, `OffDisabled`, `IndeterminateDisabled` — applied when [`IsEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled) is `false`.
+The `VisualStateGroup` must be named `CommonStates` for the .NET MAUI VSM to apply the states automatically. The `Indeterminate` family of states is only active when [AllowIndeterminateState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) is set to `true`.
 
-N> The `VisualStateGroup` must be named `CommonStates` for the .NET MAUI VSM to apply the states automatically. The `Indeterminate` family of states is only active when [`AllowIndeterminateState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) is set to `true`.
-
-The following example shows how to apply a different [`SwitchSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html) object to each state. For the full list of properties available on `SwitchSettings`.
+The following example shows how to apply a different [SwitchSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html) object to each state. For the full list of properties available on `SwitchSettings`.
 
 {% tabs %}
 
@@ -268,8 +270,7 @@ The following GIF demonstrates the Visual State Manager applying different `Swit
 
 ![Visual state manager](Images/VSM/VSM.gif)
 
-## Behavior
+## See Also
 
-* Only one state is active at a time. The state priority is `Pressed` > `Disabled` > `Hovered` > the resting state (`On`, `Off`, or `Indeterminate`).
-* On touch-only devices, the `*Hovered` states are not raised.
-* A `Setter` that targets the `SwitchSettings` property replaces the entire `SwitchSettings` instance; partial updates are not supported. To inherit unchanged properties between states, copy them from a base instance.
+- [Customization in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/customization)
+- [States in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/states)

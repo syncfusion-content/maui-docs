@@ -10,19 +10,19 @@ keywords : .net maui switch, maui switch, .net maui switch customize, maui switc
 
 # Customization in .NET MAUI Switch (SfSwitch)
 
+The [.NET MAUI Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control provides options to customize its appearance, including color, sizing, and the thumb icon, across the `On`, `Off`, and `Indeterminate` states. This section describe how to customize the .NET MAUI Switch control.
+
 ## Prerequisites
 
-Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
+Before using the [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
 - `Syncfusion.Maui.Buttons`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
 
-The .NET MAUI Switch (SfSwitch) control provides options to customize its appearance, including color, sizing, and the thumb icon, across the `On`, `Off`, and `Indeterminate` states. The following sections describe how to customize the .NET MAUI Switch control.
-
 ## Colors
 
-Use the following properties to apply solid colors to the thumb, track, and border. The `On`, `Off`, and `Indeterminate` states are the three states supported by the control when [`AllowIndeterminateState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) is enabled; otherwise, only the `On` and `Off` states apply.
+Use the following properties to apply solid colors to the thumb, track, and border. The `On`, `Off`, and `Indeterminate` states are the three states supported by the control when [AllowIndeterminateState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) is enabled; otherwise, only the `On` and `Off` states apply.
 
 * [TrackBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackBackground): Represents the `Brush` value used to fill the track.
 * [ThumbBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbBackground): Represents the `Brush` value used to fill the thumb.
@@ -143,8 +143,6 @@ In the .NET MAUI Switch control, the sizing of the thumb and track can be contro
 * [ThumbWidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbWidthRequest): Represents a double value used to define the thumb width.
 * [ThumbHeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbHeightRequest): Represents a double value used to define the thumb height.
 
-N> The [`TrackCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackCornerRadius) and [`ThumbCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbCornerRadius) properties accept a `CornerRadius` structure and can also be set with a single value (for example, `4`) that applies to all four corners.
-
 The following code example demonstrates how to customize the size of the track and thumb in a .NET MAUI Switch.
 
 {% tabs %}
@@ -245,8 +243,6 @@ The .NET MAUI Switch control lets you customize the thumb's icon using the follo
 
 * [CustomPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath): Represents the SVG path data string used to define the thumb's icon.
 * [IconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_IconColor): Represents the `Color` value used for the thumb's icon.
-
-N> The [`CustomPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath) property accepts standard SVG path data, drawn within a 24x24 viewBox that is then scaled to fit the thumb.
 
 {% tabs %}
 
@@ -361,4 +357,10 @@ this.Content = sfSwitch;
 
 ![CustomPath](Images/Path/Path.gif)
 
-N> Keep the size of the [`CustomPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath) within the dimensions of the thumb.
+N> Keep the size of the [CustomPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath) within the dimensions of the thumb.
+
+## See Also
+
+- [How to customize the .NET MAUI Switch control visual?](https://support.syncfusion.com/kb/article/16855/how-to-customize-the-net-maui-switch-control-visual)
+- [States in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/states)
+- [Visual state manager in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/visual-state-manager)

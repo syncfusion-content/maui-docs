@@ -11,19 +11,23 @@ documentation: UG
 
 ## Prerequisites
 
-Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Buttons`
+Before using the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), Install the [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
 
-The [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control renders a glass (also called acrylic or glass morphism) effect on the track and thumb when the [`EnableLiquidGlassEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_EnableLiquidGlassEffect) property is set to `true`. The effect is visible against vibrant images or colorful backgrounds and updates on user interaction.
+N>
+* The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
+* It is not supported on Android or Windows.
 
-* [`EnableLiquidGlassEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_EnableLiquidGlassEffect): A `bool` property that enables the Liquid Glass effect on the Switch. The default value is `false`.
+## Overview
 
-N> This feature is supported only on `.NET 10` together with `iOS 26` and `macOS 26`. It is not supported on Android, Windows, or earlier versions of iOS and macOS.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains readable on top of any background. This section explains how to enable and customize the effect in the [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control.
 
-N> The `EnableLiquidGlassEffect` property is available in Syncfusion<sup>®</sup> .NET MAUI Buttons package version 30.2.4.x or later.
+## Apply the liquid glass effect
+
+The `SfSwitch` control renders a glass (also called acrylic or glass morphism) effect on the track and thumb when the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_EnableLiquidGlassEffect) property is set to `true`. The effect is visible against vibrant images or colorful backgrounds and updates on user interaction.
+
+* [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_EnableLiquidGlassEffect): A `bool` property that enables the Liquid Glass effect on the Switch. The default value is `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -31,7 +35,8 @@ N> The `EnableLiquidGlassEffect` property is available in Syncfusion<sup>®</sup
 <Grid>
     <!-- Background to make the glass effect visible while pressing the switch -->
     <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-    <syncfusion:SfSwitch x:Name="sfSwitch" EnableLiquidGlassEffect="True" />
+    <syncfusion:SfSwitch x:Name="sfSwitch" 
+                         EnableLiquidGlassEffect="True" />
 </Grid>
 
 {% endhighlight %}
@@ -50,7 +55,7 @@ this.Content = sfSwitch;
 
 - The glass effect is applied during rendering and on every user interaction.
 - The effect is most visible when the Switch is placed over visually rich content such as images, gradients, or color blocks.
-- The Liquid Glass effect can be combined with the [`SwitchSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html) properties, and the [`AllowIndeterminateState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) property.
+- The Liquid Glass effect can be combined with the [SwitchSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html) properties, and the [AllowIndeterminateState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) property.
 
 ## Tips
 
@@ -61,3 +66,9 @@ this.Content = sfSwitch;
 The following GIF demonstrates the Liquid Glass effect on the Switch.
 
 ![Liquid Glass](Images/LiquidGlass/liquid-glass.gif)
+
+## See Also
+
+- [Customization in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/customization)
+- [States in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/states)
+- [Visual state manager in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/visual-state-manager)
