@@ -45,15 +45,15 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
 <Grid>
-    <Image Source="Wallpaper.png" Aspect="AspectFill" />
-    <buttons:SfButton
-             x:Name="GlassButton"
-             Text="GlassButton"
-             EnableLiquidGlassEffect="True"
-             Background="Transparent"
-             WidthRequest="180"
-             HeightRequest="48"
-             CornerRadius="24" />
+    <Image Source="Wallpaper.png" 
+           Aspect="AspectFill" />
+    <buttons:SfButton x:Name="GlassButton"
+                      Text="GlassButton"
+                      EnableLiquidGlassEffect="True"
+                      Background="Transparent"
+                      WidthRequest="180"
+                      HeightRequest="48"
+                      CornerRadius="24" />
 </Grid>
 
 {% endhighlight %}
@@ -95,15 +95,6 @@ The following screenshot illustrates `SfButton` with the Liquid Glass effect ena
 | macOS (Mac Catalyst) | macOS 26+ | Requires Xcode 26. |
 | Android | Not supported | No current support. |
 | Windows | Not supported | No current support. |
-
-## Troubleshooting
-
-| Issue | Possible cause | Fix |
-|------|---------------|-----|
-| The button looks opaque (no translucency). | `EnableLiquidGlassEffect` is not set to `true`, or the project targets a framework earlier than .NET 10. | Set `EnableLiquidGlassEffect="True"` and confirm the project targets `net10.0-*`. |
-| The Liquid Glass effect is invisible. | There is no image or color behind the button to refract. | Place a colored view or image as a sibling of the button in the same `Grid` so the button has something to tint. |
-| Build error: `EnableLiquidGlassEffect` does not exist. | The `Syncfusion.Maui.Buttons` package version does not support Liquid Glass. | Update the NuGet package to the latest version that targets .NET 10. |
-| The effect does not appear on Android or Windows. | The Liquid Glass Effect is not supported on these platforms. | No fix available; use the standard `Background` customization on those platforms (see [Customization](https://help.syncfusion.com/maui/button/customization)). |
 
 ## See Also
 

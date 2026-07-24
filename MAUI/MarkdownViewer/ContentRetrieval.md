@@ -96,14 +96,6 @@ string text = markdownViewer.GetText();
 {% endhighlight %}
 {% endtabs %}
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The method returns an empty string. | The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property was never set, or the control has not been loaded yet. | Assign a value to `Source` and ensure the view is rendered before calling the method. |
-| The call throws an exception. | The method was invoked off the UI thread. | Dispatch the call back to the UI thread using `MainThread.BeginInvokeOnMainThread`. |
-| `GetHtmlText` output is missing styles. | CSS rules defined via `CssStyleRules` are not part of the returned HTML; they are applied internally by the viewer. | Wrap the returned HTML in a host page that supplies the required styles if you export it elsewhere. |
-
 ## See Also
 
 - [Loading Markdown Content](https://help.syncfusion.com/maui/markdownviewer/databinding)

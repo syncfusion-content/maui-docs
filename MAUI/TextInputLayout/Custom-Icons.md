@@ -152,11 +152,13 @@ The [ShowLeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
     <HorizontalStackLayout Spacing="10">
         <HorizontalStackLayout>
             <CheckBox IsChecked="{Binding IsLeadingViewVisible}" />
-            <Label Text="ShowLeadingView" VerticalOptions="Center" />
+            <Label Text="ShowLeadingView" 
+                   VerticalOptions="Center" />
         </HorizontalStackLayout>
         <HorizontalStackLayout>
             <CheckBox IsChecked="{Binding IsTrailingViewVisible}" />
-            <Label Text="ShowTrailingView" VerticalOptions="Center" />
+            <Label Text="ShowTrailingView" 
+                   VerticalOptions="Center" />
         </HorizontalStackLayout>
     </HorizontalStackLayout>
 </VerticalStackLayout>
@@ -278,7 +280,7 @@ Attach a `TapGestureRecognizer` to the leading or trailing view to make it inter
 
 <VerticalStackLayout>
     <inputLayout:SfTextInputLayout x:Name="PasswordLayout"
-                                    Hint="Password">
+                                   Hint="Password">
         <inputLayout:SfTextInputLayout.TrailingView>
             <Label x:Name="EyeIcon"
                 Text="&#x1F441;&#xFE0F;">
@@ -287,7 +289,8 @@ Attach a `TapGestureRecognizer` to the leading or trailing view to make it inter
                 </Label.GestureRecognizers>
             </Label>
         </inputLayout:SfTextInputLayout.TrailingView>
-        <Entry x:Name="PasswordEntry" IsPassword="True" />
+        <Entry x:Name="PasswordEntry" 
+               IsPassword="True" />
     </inputLayout:SfTextInputLayout>
 </VerticalStackLayout>
 
@@ -338,15 +341,6 @@ private void OnEyeTapped(object? sender, TappedEventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The icon does not appear. | `LeadingView`/`TrailingView` is `null`, or `ShowLeadingView`/`ShowTrailingView` is `false`. | Assign a `View` to the corresponding property and ensure the visibility property is `true`. |
-| The icon is too small or too large. | The inner view's `FontSize` or `WidthRequest`/`HeightRequest` is not set. | Set the size explicitly on the inner `Label`, `Image`, or `Button`. |
-| Tap on the icon does nothing. | No gesture recognizer is attached, or the view does not accept input. | Attach a `TapGestureRecognizer` or use a `Button` for the trailing view. |
-| The icon is clipped at the border. | `LeadingViewPosition` or `TrailingViewPosition` is `Inside` and the icon is too wide. | Switch the position to `Outside`, or reduce the icon's size/padding. |
 
 ## See Also
 

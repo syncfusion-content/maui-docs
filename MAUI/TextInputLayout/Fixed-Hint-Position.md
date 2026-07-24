@@ -133,14 +133,6 @@ Content = new VerticalStackLayout
 
 ![None-container SfTextInputLayout with the hint label always floated at the top](images/FixedHintPosition/HintPositionNone.png)
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The hint is not staying at the top. | `IsHintAlwaysFloated` is `false` (the default), so the hint returns to the input line when the input is empty and unfocused. | Set `IsHintAlwaysFloated = true`. |
-| The hint overlaps the input value. | The font size of the hint and the input value is too large for the container height. | Reduce the `FontSize` of the hint via `HintLabelStyle` or increase the container height. |
-| The floated hint is clipped. | The container type does not reserve space for the floated hint. | Switch to `Outlined` or `Filled`, or use a larger `ContainerBackground`. |
-
 ## See Also
 
 - [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)

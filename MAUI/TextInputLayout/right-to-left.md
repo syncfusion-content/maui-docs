@@ -38,10 +38,10 @@ Set the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.m
 {% highlight xaml %}
 
 <inputLayout:SfTextInputLayout x:Name="inputLayout"
-                                FlowDirection="RightToLeft"
-                                ContainerType="Outlined"
-                                Hint="نام"
-                                HelperText="نام درج کریں">
+                               FlowDirection="RightToLeft"
+                               ContainerType="Outlined"
+                               Hint="نام"
+                               HelperText="نام درج کریں">
     <Entry />
 </inputLayout:SfTextInputLayout>
 
@@ -112,15 +112,6 @@ public App()
 ## How to test RTL
 
 To verify the layout without changing the system language, set `FlowDirection="RightToLeft"` on a single page in your XAML and run the app. The hint, helper text, error text, character counter, password toggle, and leading/trailing views should all be mirrored.
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The layout does not mirror. | `FlowDirection` is not set, or the parent visual element overrides it. | Set `FlowDirection="RightToLeft"` on the `SfTextInputLayout` or its parent. |
-| The Android layout does not mirror. | `android:supportsRtl="true"` is missing in the manifest. | Add `android:supportsRtl="true"` to `Platforms/Android/AndroidManifest.xml`. |
-| The hint and helper text mirror but the inner `Entry` does not. | The `Entry` has an explicit `FlowDirection` that conflicts. | Set the `Entry.FlowDirection` to `MatchParent` or remove the explicit value. |
-| RTL is not applied to child controls. | The child control does not inherit the parent `FlowDirection`. | Set `FlowDirection` directly on each child, or wrap them in a container that has `FlowDirection="RightToLeft"`. |
 
 ## See Also
 

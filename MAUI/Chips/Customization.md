@@ -707,12 +707,14 @@ To customize the background color of the **selected** chip, set `ChipType="Choic
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
                 <VisualState.Setters>
-                    <Setter Property="ChipBackground" Value="White" />
+                    <Setter Property="ChipBackground" 
+                            Value="White" />
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Selected">
                 <VisualState.Setters>
-                    <Setter Property="ChipBackground" Value="#502cd5" />
+                    <Setter Property="ChipBackground" 
+                            Value="#502cd5" />
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
@@ -952,12 +954,14 @@ To customize the text color of the **selected** chip, set `ChipType="Choice"` or
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
                 <VisualState.Setters>
-                    <Setter Property="ChipTextColor" Value="Black" />
+                    <Setter Property="ChipTextColor" 
+                            Value="Black" />
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Selected">
                 <VisualState.Setters>
-                    <Setter Property="ChipTextColor" Value="Green" />
+                    <Setter Property="ChipTextColor" 
+                            Value="Green" />
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
@@ -1562,7 +1566,8 @@ The `SfChipGroup` creates a chip for each item and arranges the chips in a `Stac
 {% highlight xaml %}
 
 <Grid>
-    <chip:SfChipGroup DisplayMemberPath="Name" ItemsSource="{Binding Employees}">
+    <chip:SfChipGroup DisplayMemberPath="Name" 
+                      ItemsSource="{Binding Employees}">
         <chip:SfChipGroup.ChipLayout>
             <FlexLayout HorizontalOptions="Start"
                         VerticalOptions="Center" />
@@ -1993,24 +1998,6 @@ public class EmployeeViewModel : INotifyPropertyChanged
 ### IsSelected
 
 The [`IsSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_IsSelected) property of `SfChip` indicates whether a chip is selected in the `Choice` and `Filter` `ChipType` values. Set `IsSelected="True"` to mark a chip as selected by default.
-
-## Compatibility
-
-| Platform | Notes |
-|----------|-------|
-| .NET MAUI | Requires .NET MAUI 7.0 or later. |
-| iOS, macOS, Android, Windows | `SfChip` and `SfChipGroup` are supported on all .NET MAUI target platforms. |
-
-## Troubleshooting
-
-| Issue | Possible cause | Fix |
-|------|---------------|-----|
-| The chip group is empty on the page. | The `BindingContext` is not set, or `Employees` is empty. | Set `BindingContext` to the ViewModel and populate the collection. |
-| The image does not appear on the chip. | `ShowIcon` is `false`, or the image is not registered as a `MauiImage`. | Set `ShowIcon="True"` and add the image to `Resources/Images` with a `MauiImage` entry in the `.csproj`. |
-| The custom `ChipLayout` is not applied. | The `ChipLayout` property was assigned after the chips were generated. | Assign `ChipLayout` before adding the chip group to the visual tree, or call the appropriate reset method. |
-| The `Command` does not fire. | The binding path is wrong, or the `Command` is `null` on the ViewModel. | Verify the binding path and that the ViewModel exposes a public `ICommand` property. |
-| The selected-chip color does not change. | `ChipType` is not `Choice` or `Filter`, or the `VisualStateManager` is not attached. | Set `ChipType="Choice"` or `ChipType="Filter"`, and use either a `VisualState` or the `SelectedChipBackground`/`SelectedChipTextColor` properties. |
-| `Colors.X` errors out in C# with a string color. | `Colors.X` only accepts the named-color constants; use `Color.FromArgb("#...")` for custom colors. | Use `Color.FromArgb("#512dcd")` for the literal hex value, or `Colors.Red` for the named color. |
 
 ## See Also
 

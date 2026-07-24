@@ -50,10 +50,11 @@ The following example shows an `SfChipGroup` with the Liquid Glass Effect enable
 {% highlight xaml %}
 
 <Grid>
-    <Image Source="Wallpaper.png" Aspect="AspectFill" />
+    <Image Source="Wallpaper.png" 
+           Aspect="AspectFill" />
     <chip:SfChipGroup x:Name="filterChips"
-                        EnableLiquidGlassEffect="True"
-                        Background="Transparent">
+                      EnableLiquidGlassEffect="True"
+                      Background="Transparent">
         <chip:SfChip Text="Extra Small" />
         <chip:SfChip Text="Small" />
         <chip:SfChip Text="Medium" />
@@ -96,14 +97,6 @@ The following screenshot illustrates `SfChipGroup` with the Liquid Glass Effect 
 ![SfChipGroup with the Liquid Glass Effect enabled, displayed over a wallpaper background](images/customization-images/Chip_liquidglass.png)
 
 N> This feature is supported only on .NET 10 along with iOS 26 and macOS 26.
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The Liquid Glass Effect is not visible. | The platform does not support the effect, or `EnableLiquidGlassEffect` is `false`. | Confirm the target platform is .NET 10 with iOS 26 or macOS 26, and set `EnableLiquidGlassEffect = true`. |
-| The chips appear opaque, not translucent. | The `Background` is not `Transparent`, or the control is not placed over a colorful surface. | Set `Background="Transparent"` (XAML) or `Background = Colors.Transparent` (C#) and place the control over an image or gradient. |
-| The dependent controls (for example, the close button) are not glassy. | The effect was disabled at the platform level, or the dependent control is rendered with an explicit background. | Verify the platform support and remove any explicit background brushes on the dependent controls. |
 
 ## See Also
 

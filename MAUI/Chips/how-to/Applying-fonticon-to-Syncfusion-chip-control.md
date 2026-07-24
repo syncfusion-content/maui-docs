@@ -92,15 +92,6 @@ var chip = new SfChip
 
 ![SfChip displaying a font icon calendar glyph alongside the text Syncfusion](images/AppIcon.png)
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The icon does not appear. | `ShowIcon` is `false`, or `ImageSource` is `null`. | Set `ShowIcon = true` and assign a non-null `ImageSource`. |
-| The icon appears as a square or blank box on iOS/Android. | The font (for example, `Segoe MDL2 Assets`) is not registered or is not available on the platform. | Embed a cross-platform font (such as `Material Design Icons`) in `Resources/Fonts` and register it in the `.csproj`. |
-| The glyph is the wrong character. | The Unicode code point does not match the expected icon. | Verify the glyph against the font's character map. For the Segoe MDL2 Assets glyphs, see the [Microsoft documentation](https://learn.microsoft.com/en-us/windows/uwp/design/style/segoe-ui-symbol-font). |
-| The icon is too large or too small. | `ImageSize` (chip) or `Size` (FontImageSource) is set incorrectly. | Adjust `ImageSize` to reserve the right space in the chip, and `Size` to scale the glyph. |
-
 ## See Also
 
 - [Customization](https://help.syncfusion.com/maui/chips/customization)

@@ -48,24 +48,27 @@ N> The cursor color of the inner input view follows the `Accent` color of the ap
 
 <VerticalStackLayout>
     <inputLayout:SfTextInputLayout Hint="Name"
-                                Stroke="#00AFA0"
-                                HelperText="Enter the name">
+                                   Stroke="#00AFA0"
+                                   HelperText="Enter the name">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="Stroke" Value="#79747E" />
+                            <Setter Property="Stroke" 
+                                    Value="#79747E" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Focused">
                         <VisualState.Setters>
-                            <Setter Property="Stroke" Value="#6750A4" />
+                            <Setter Property="Stroke" 
+                                    Value="#6750A4" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Error">
                         <VisualState.Setters>
-                            <Setter Property="Stroke" Value="#B3261E" />
+                            <Setter Property="Stroke" 
+                                    Value="#B3261E" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -286,15 +289,6 @@ Content = new VerticalStackLayout
 {% endtabs %}
 
 ![SfTextInputLayout with the hint label in green, helper text in blue, and error text in maroon](images/StatesAndColors/AssistiveColors.png)
-
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| The visual state does not change when the input is focused. | The visual state group is not named `CommonStates`, or the `VisualStateGroupList` is not attached. | Verify the group name is `CommonStates` and that `VisualStateManager.SetVisualStateGroups` (C#) or `<inputLayout:SfTextInputLayout.VisualStateGroups>` (XAML) is used. |
-| The error state color is not applied. | `HasError` is `false`, or the `Error` visual state is not defined. | Set `HasError = true` and define an `Error` visual state. |
-| `ContainerBackground` has no effect. | `ContainerType` is `None`, or the color is being overridden by the theme. | Set `ContainerType` to `Filled` or `Outlined`, and use a `Color` literal (e.g., `Color.FromHex("#E6EEF9")`). |
-| The disabled colors cannot be customized. | Disabled colors are theme-defined and not exposed for customization. | Apply a custom opacity via the visual state manager, or use a `Grid` overlay to mimic the disabled appearance. |
 
 ## See Also
 

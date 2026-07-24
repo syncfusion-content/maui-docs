@@ -154,14 +154,18 @@ The `Choice` `ChipType` allows users to select a single chip from a group. Selec
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
                 <VisualState.Setters>
-                    <Setter Property="ChipTextColor" Value="Black" />
-                    <Setter Property="ChipBackground" Value="White" />
+                    <Setter Property="ChipTextColor" 
+                            Value="Black" />
+                    <Setter Property="ChipBackground" 
+                            Value="White" />
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Selected">
                 <VisualState.Setters>
-                    <Setter Property="ChipTextColor" Value="White" />
-                    <Setter Property="ChipBackground" Value="#512dcd" />
+                    <Setter Property="ChipTextColor" 
+                            Value="White" />
+                    <Setter Property="ChipBackground" 
+                            Value="#512dcd" />
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
@@ -257,7 +261,9 @@ The [`ChoiceMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfCh
 {% tabs %}
 {% highlight xaml %}
 
-<chip:SfChipGroup ChipType="Choice" HeightRequest="50" ChoiceMode="SingleOrNone">
+<chip:SfChipGroup ChipType="Choice" 
+                  HeightRequest="50" 
+                  ChoiceMode="SingleOrNone">
     <chip:SfChip Text="Extra Small" />
     <chip:SfChip Text="Small" />
     <chip:SfChip Text="Medium" />
@@ -292,23 +298,27 @@ The `Filter` `ChipType` allows users to select one or more chips in a group. Sel
 {% highlight xaml %}
 
 <chip:SfChipGroup x:Name="sfChipGroup"
-                 ItemsSource="{Binding Employees}"
-                 HeightRequest="50"
-                 SelectionIndicatorColor="White"
-                 ChipType="Filter"
-                 DisplayMemberPath="Name">
+                  ItemsSource="{Binding Employees}"
+                  HeightRequest="50"
+                  SelectionIndicatorColor="White"
+                  ChipType="Filter"
+                  DisplayMemberPath="Name">
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
                 <VisualState.Setters>
-                    <Setter Property="ChipTextColor" Value="Black" />
-                    <Setter Property="ChipBackground" Value="White" />
+                    <Setter Property="ChipTextColor" 
+                            Value="Black" />
+                    <Setter Property="ChipBackground" 
+                            Value="White" />
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Selected">
                 <VisualState.Setters>
-                    <Setter Property="ChipTextColor" Value="White" />
-                    <Setter Property="ChipBackground" Value="#512dcd" />
+                    <Setter Property="ChipTextColor" 
+                            Value="White" />
+                    <Setter Property="ChipBackground" 
+                            Value="#512dcd" />
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
@@ -403,7 +413,8 @@ The `Action` `ChipType` of [`SfChipGroup`](https://help.syncfusion.com/cr/maui/S
                       DisplayMemberPath="Name"
                       CloseButtonColor="Black"
                       ChipType="Action" />
-    <HorizontalStackLayout Margin="0,60,0,0" Spacing="10">
+    <HorizontalStackLayout Margin="0,60,0,0" 
+                           Spacing="10">
         <Label Text="Name:"
                FontAttributes="Bold"
                FontSize="14" />
@@ -525,23 +536,6 @@ public class ChipsViewModel : INotifyPropertyChanged
 The following image illustrates the `Action` `ChipType`:
 
 ![Action typed in .NET MAUI SfChipGroup](images/items/Action.png)
-
-## Compatibility
-
-| Platform | Notes |
-|----------|-------|
-| .NET MAUI | Requires .NET MAUI 7.0 or later. |
-| iOS, macOS, Android, Windows | `SfChipGroup` is supported on all .NET MAUI target platforms. |
-
-## Troubleshooting
-
-| Issue | Possible cause | Fix |
-|------|---------------|-----|
-| Chips do not appear on the page. | The `BindingContext` is not set, or the `ItemsSource` is empty. | Set `BindingContext` to the ViewModel and ensure the collection is populated. |
-| The `Command` does not fire when a chip is clicked. | `ChipType` is not set to `Action`, or the `Command` property is not bound. | Set `ChipType="Action"` and confirm the `Command` binding path matches a public `ICommand` on the ViewModel. |
-| Visual states do not change when a chip is selected. | The `VisualStateManager` groups were set on a different `SfChipGroup` instance than the one displayed. | Call `VisualStateManager.SetVisualStateGroups` on the same `SfChipGroup` you add to the visual tree. |
-| `ChoiceMode` has no effect. | The `ChoiceMode` property is set, but `ChipType` is not `Choice`. | Set `ChipType="Choice"` in addition to `ChoiceMode`. |
-| The `Completed` event of the input `Entry` does not add a new chip. | The `BindingContext` is not the ViewModel, or the `Entry` is replaced by another control. | Verify the page's `BindingContext` is the ViewModel and the `Entry` is the one declared in the `InputView`. |
 
 ## See Also
 

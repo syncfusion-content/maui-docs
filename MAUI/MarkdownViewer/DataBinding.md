@@ -166,15 +166,6 @@ private async Task LoadMarkdownFromUrlAsync()
 
 N> Only HTTPS URLs are guaranteed to work on all platforms because some platforms block plain HTTP by default. The fetched content is not cached automatically; cache the response in your own storage layer if you need to reduce repeated network calls.
 
-## Troubleshooting
-
-| Issue | Possible Cause | Recommended Action |
-|-------|----------------|--------------------|
-| "From Local File" throws `DirectoryNotFoundException`. | The file path is hard-coded to a platform-specific location (e.g., `D:\...`). | Use `FileSystem.AppDataDirectory` or `FileSystem.AppPackageDirectory` for a cross-platform path. |
-| "From Embedded Resource" throws `FileNotFoundException`. | The file is missing, the build action is not `MauiAsset`, or the file name passed to `OpenAppPackageFileAsync` does not match exactly. | Verify the file exists, the build action is `MauiAsset`, and the file name is case-sensitive. |
-| "From URL" throws `HttpRequestException`. | The device is offline, the URL is unreachable, or the endpoint returns a non-success status code. | Catch `HttpRequestException`, show a user-friendly message, and provide a retry option. |
-| Rendered content is empty. | The `Source` property was set before the viewer was added to the visual tree. | Ensure the `SfMarkdownViewer` is part of the page hierarchy before assigning `Source`, or reassign `Source` after the view is loaded. |
-
 ## See Also
 - [Retrieve Content Programmatically](https://help.syncfusion.com/maui/markdownviewer/contentretrieval)
 - [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance)

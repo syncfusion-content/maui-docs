@@ -24,8 +24,10 @@ The following code samples show how to set the `Content` of `Button` to a horizo
                       Background="#4125BC">
         <buttons:SfButton.Content>
             <DataTemplate>
-                <HorizontalStackLayout Spacing = "8" Padding="5">
-                    <ActivityIndicator Color = "White" IsRunning="True"/>
+                <HorizontalStackLayout Spacing = "8" 
+                                       Padding="5">
+                    <ActivityIndicator Color = "White"
+                                       IsRunning="True"/>
                     <Label Text = "Loading..." 
                            VerticalOptions="Center" 
                            TextColor="White"/>

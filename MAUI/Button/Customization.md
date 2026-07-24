@@ -304,10 +304,10 @@ The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Button"
-                    HeightRequest="50"
-                    Stroke="Red" 
-                    StrokeThickness="2"/>
+                  Text="Button"
+                  HeightRequest="50"
+                  Stroke="Red" 
+                  StrokeThickness="2"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -334,10 +334,10 @@ The [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.B
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Button"
-                    HeightRequest="50"
-                    Stroke="Red" 
-                    StrokeThickness="6"/>
+                  Text="Button"
+                  HeightRequest="50"
+                  Stroke="Red" 
+                  StrokeThickness="6"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -362,9 +362,9 @@ The [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Button"
-                    HeightRequest="50"
-                    CornerRadius="20"/>
+                  Text="Button"
+                  HeightRequest="50"
+                  CornerRadius="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -394,10 +394,10 @@ N> Enable the [ShowIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Button"
-                    HeightRequest="50"
-                    ImageSource="Heart.png"
-                    ShowIcon="True"/>
+                  Text="Button"
+                  HeightRequest="50"
+                  ImageSource="Heart.png"
+                  ShowIcon="True"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -422,10 +422,10 @@ Use the [ShowIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Button"
-                    HeightRequest="50"
-                    ImageSource="Heart.png"
-                    ShowIcon="True"/>
+                  Text="Button"
+                  HeightRequest="50"
+                  ImageSource="Heart.png"
+                  ShowIcon="True"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -450,11 +450,11 @@ N> Enable the `ShowIcon` property to enable the `ImageSize` property.
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Button"
-                    HeightRequest="50"
-                    ImageSource="Heart.png"
-                    ShowIcon="True"
-                    ImageSize="50"/>
+                  Text="Button"
+                  HeightRequest="50"
+                  ImageSource="Heart.png"
+                  ShowIcon="True"
+                  ImageSize="50"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -490,17 +490,17 @@ N> Enable the `ShowIcon` property to enable the `ImageAlignment` property.
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Shopping"
-                    TextColor="Black"
-                    HorizontalOptions="Center"
-                    ImageSource="add_to_card.png"
-                    ShowIcon="True"
-                    ImageSize="25"
-                    Stroke="Black"
-                    HeightRequest="50"
-                    StrokeThickness="4"
-                    Background="White"
-                    ImageAlignment="End"/>
+                  Text="Shopping"
+                  TextColor="Black"
+                  HorizontalOptions="Center"
+                  ImageSource="add_to_card.png"
+                  ShowIcon="True"
+                  ImageSize="25"
+                  Stroke="Black"
+                  HeightRequest="50"
+                  StrokeThickness="4"
+                  Background="White"
+                  ImageAlignment="End"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -532,17 +532,17 @@ this.Content = button;
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button"
-                    Text="Shopping"
-                    TextColor="Black"
-                    HorizontalOptions="Center"
-                    ImageSource="add_to_card.png"
-                    ShowIcon="True"
-                    ImageSize="25"
-                    Stroke="Black"
-                    HeightRequest="50"
-                    StrokeThickness="4"
-                    Background="White"
-                    ImageAlignment="Start"/>
+                  Text="Shopping"
+                  TextColor="Black"
+                  HorizontalOptions="Center"
+                  ImageSource="add_to_card.png"
+                  ShowIcon="True"
+                  ImageSize="25"
+                  Stroke="Black"
+                  HeightRequest="50"
+                  StrokeThickness="4"
+                  Background="White"
+                  ImageAlignment="Start"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -575,17 +575,17 @@ this.Content = button;
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Shopping"
-                    TextColor="Black"
-                    HorizontalOptions="Center"
-                    ImageSource="add_to_card.png"
-                    ShowIcon="True"
-                    ImageSize="25"
-                    Stroke="Black"
-                    HeightRequest="50"
-                    StrokeThickness="4"
-                    Background="White"
-                    ImageAlignment="Top"/>
+                  Text="Shopping"
+                  TextColor="Black"
+                  HorizontalOptions="Center"
+                  ImageSource="add_to_card.png"
+                  ShowIcon="True"
+                  ImageSize="25"
+                  Stroke="Black"
+                  HeightRequest="50"
+                  StrokeThickness="4"
+                  Background="White"
+                  ImageAlignment="Top"/>
 
 {% endhighlight %}
 
@@ -618,17 +618,17 @@ this.Content = button;
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Shopping"
-                    TextColor="Black"
-                    HorizontalOptions="Center"
-                    ImageSource="add_to_card.png"
-                    ShowIcon="True"
-                    ImageSize="25"
-                    Stroke="Black"
-                    HeightRequest="50"
-                    StrokeThickness="4"
-                    Background="White"
-                    ImageAlignment="Bottom"/>
+                  Text="Shopping"
+                  TextColor="Black"
+                  HorizontalOptions="Center"
+                  ImageSource="add_to_card.png"
+                  ShowIcon="True"
+                  ImageSize="25"
+                  Stroke="Black"
+                  HeightRequest="50"
+                  StrokeThickness="4"
+                  Background="White"
+                  ImageAlignment="Bottom"/>
 
 {% endhighlight %}
 
@@ -661,17 +661,17 @@ this.Content = button;
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Shopping"
-                    TextColor="Black"
-                    HorizontalOptions="Center"
-                    ImageSource="add_to_card.png"
-                    ShowIcon="True"
-                    ImageSize="25"
-                    Stroke="Black"
-                    HeightRequest="50"
-                    StrokeThickness="4"
-                    Background="White"
-                    ImageAlignment="Default"/>
+                  Text="Shopping"
+                  TextColor="Black"
+                  HorizontalOptions="Center"
+                  ImageSource="add_to_card.png"
+                  ShowIcon="True"
+                  ImageSize="25"
+                  Stroke="Black"
+                  HeightRequest="50"
+                  StrokeThickness="4"
+                  Background="White"
+                  ImageAlignment="Default"/>
 
 {% endhighlight %}
 
@@ -706,17 +706,17 @@ In RTL flow direction, image alignment with `Start` will change its direction of
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Shopping"
-                    TextColor="Black"
-                    HorizontalOptions="Center"
-                    ImageSource="add_to_card.png"
-                    ShowIcon="True"
-                    ImageSize="25"
-                    Stroke="Black"
-                    HeightRequest="50"
-                    StrokeThickness="4"
-                    Background="White"
-                    ImageAlignment="Left"/>
+                  Text="Shopping"
+                  TextColor="Black"
+                  HorizontalOptions="Center"
+                  ImageSource="add_to_card.png"
+                  ShowIcon="True"
+                  ImageSize="25"
+                  Stroke="Black"
+                  HeightRequest="50"
+                  StrokeThickness="4"
+                  Background="White"
+                  ImageAlignment="Left"/>
 
 {% endhighlight %}
 
@@ -751,17 +751,17 @@ In RTL flow direction, image alignment with `End` will change its direction of p
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button"
-                Text="Shopping"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                ImageSource="add_to_card.png"
-                ShowIcon="True"
-                ImageSize="25"
-                Stroke="Black"
-                HeightRequest="50"
-                StrokeThickness="4"
-                Background="White"
-                ImageAlignment="Right"/>
+                  Text="Shopping"
+                  TextColor="Black"
+                  HorizontalOptions="Center"
+                  ImageSource="add_to_card.png"
+                  ShowIcon="True"
+                  ImageSize="25"
+                  Stroke="Black"
+                  HeightRequest="50"
+                  StrokeThickness="4"
+                  Background="White"
+                  ImageAlignment="Right"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -795,9 +795,9 @@ The [EnableRippleEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                    Text="Button"
-                    HeightRequest="50" 
-                    EnableRippleEffect="True" />
+                  Text="Button"
+                  HeightRequest="50" 
+                  EnableRippleEffect="True" />
 
 {% endhighlight %}
 {% highlight c# %}
@@ -825,12 +825,16 @@ Refer to the [Microsoft gradient brush documentation](https://learn.microsoft.co
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton Text="Linear Gradient" HeightRequest="50" CornerRadius="20">
+<buttons:SfButton Text="Linear Gradient"
+                  HeightRequest="50" 
+                  CornerRadius="20">
     <buttons:SfButton.Background>
         <LinearGradientBrush>
             <LinearGradientBrush.GradientStops>
-                <GradientStop Color="#0D62D4" Offset="0"/>
-                <GradientStop Color="#9F3CDC" Offset="1"/>
+                <GradientStop Color="#0D62D4" 
+                              Offset="0"/>
+                <GradientStop Color="#9F3CDC" 
+                              Offset="1"/>
             </LinearGradientBrush.GradientStops>
         </LinearGradientBrush>
     </buttons:SfButton.Background>
@@ -858,12 +862,16 @@ this.Content = linearButton;
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton Text="Radial Gradient" HeightRequest="50" CornerRadius="20">
+<buttons:SfButton Text="Radial Gradient" 
+                  HeightRequest="50" 
+                  CornerRadius="20">
     <buttons:SfButton.Background>
         <RadialGradientBrush Radius="1.5">
             <RadialGradientBrush.GradientStops>
-                <GradientStop Color="#0D62D4" Offset="0"/>
-                <GradientStop Color="#9F3CDC" Offset="1"/>
+                <GradientStop Color="#0D62D4" 
+                              Offset="0"/>
+                <GradientStop Color="#9F3CDC" 
+                              Offset="1"/>
             </RadialGradientBrush.GradientStops>
         </RadialGradientBrush>
     </buttons:SfButton.Background>
@@ -900,9 +908,9 @@ N> The default value of the `Command` property is `null`.
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button"
-                Text="Button"
-                Background="{Binding Background}"
-                Command="{Binding ButtonCommand}">
+                  Text="Button"
+                  Background="{Binding Background}"
+                  Command="{Binding ButtonCommand}">
 </buttons:SfButton>
 
 {% endhighlight %}
