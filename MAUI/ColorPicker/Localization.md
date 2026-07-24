@@ -1,66 +1,120 @@
 ---
 layout: post
-title: Localization in .NET MAUI Color Picker control | Syncfusion®
-description: Learn here all about Localization support in Syncfusion® .NET MAUI Color Picker (SfColorPicker) control and more.
+title: Localization in the .NET MAUI Color Picker Control | Syncfusion®
+description: Learn about Localization support in the Syncfusion® .NET MAUI Color Picker (SfColorPicker) control and more.
 platform: MAUI
 control: SfColorPicker
 documentation: UG
 keywords : .net maui color picker, maui color picker, color picker, color palette, localization
 ---
 
-# Localization in .NET MAUI Color Picker (SfColorPicker)
+# Localization in .NET MAUI Color Picker
 
-Localization is the process of translating the application resources into different languages for specific cultures. The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) can be localized by adding `resource` file.
+Localization is the process of translating application resources into different languages for specific cultures. The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) ships with a default `SfColorPickerResources` resource manager that exposes a set of localizable strings. You can override those strings for any culture by adding a culture-specific `.resx` file and pointing the resource manager at it.
 
-## Setting CurrentUICulture to the application
+## Set the UI culture
 
-The application's culture can be changed by setting `CurrentUICulture` in the `App.xaml.cs` file.
+Set the application's UI culture in `App.xaml.cs` (or in `MauiProgram.CreateMauiApp` before any UI loads) so the resource manager resolves the right `.resx` at startup.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 13" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="10 11" %}
 
-using Syncfusion.Maui.Inputs;
-using System.Resources;
+using System.Globalization;
+using Microsoft.Maui.Controls;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
-		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-      // ResXPath => Full path of the resx file; For example : //SfColorPickerResources.ResourceManager = new ResourceManager
-      // ("ColorPickerLocalization.Resources.SfColorPicker", Application.Current.GetType().Assembly);
+    public App()
+    {
+        InitializeComponent();
 
-		SfColorPickerResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
-	}
+        // Set the UI culture that the resource manager will use to resolve strings.
+        CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+        // Also set the culture used for number/date formatting.
+        CultureInfo.CurrentCulture = new CultureInfo("fr-FR");
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Color Picker localization](images/localization/localization.png)
+N> Setting `CurrentUICulture` after the resource manager is initialized has no effect for the current process. Restart the app to switch cultures.
 
-N>
-Ensure that the required `resx` files are included with `Build Action` set as `EmbeddedResource`, and the file name contains the culture code, within the `Resources` folder.
+## Register a custom resource manager
 
-## Localize application level
+If you want to override the default `SfColorPickerResources` strings, register a custom `ResourceManager` that points at your own `.resx`. The `ResXPath` is the fully-qualified base name of the resource set (without the `.resources` extension and without the culture suffix).
 
-To localize the `Color Picker` based on `CurrentUICulture` using `resource` files, follow the steps below:
+{% tabs %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="14 15" %}
 
-   First we need to add the default resource file of `Color Picker` into `Resources` folder of the application.
+using System.Globalization;
+using System.Resources;
+using Syncfusion.Maui.Inputs;
+using Microsoft.Maui.Controls;
 
-   1. Right-click on the `Resources` folder, select `Add`, and then `NewItem`.
+public partial class App : Application
+{
+    public App()
+    {
+        InitializeComponent();
 
-   2. In the `Add New Item` wizard, select the `Resources File` option and name the file as `SfColorPicker.<culture name>.resx.` For example, name it `SfColorPicker.fr-FR.resx` for the French culture.
+        CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+        CultureInfo.CurrentCulture = new CultureInfo("fr-FR");
 
-   3. The culture name indicates the name of the language and country.
+        // Replace this with the base name of your resource set.
+        // For a .resx located at /Resources/SfColorPicker.fr-FR.resx in an assembly
+        // whose default namespace is "ColorPickerLocalization", the base name is:
+        //   "ColorPickerLocalization.Resources.SfColorPicker"
+        const string ResXPath = "ColorPickerLocalization.Resources.SfColorPicker";
 
-   ![resource-file-name](images/localization/resource-file-name.png)
+        SfColorPickerResources.ResourceManager = new ResourceManager(
+            ResXPath,
+            Application.Current.GetType().Assembly);
+    }
+}
 
-   5. Click the `Add` option to add the resource file to the **Resources** folder.
+{% endhighlight %}
+{% endtabs %}
 
-   ![resources-folder](images/localization/resource-file.png)
+![.NET MAUI Color Picker localization](Images/Localization/localization.png)
 
-   6. Add the Name/Value pair in the Resource Designer of the `SfColorPicker.fr-FR.resx` file and change its corresponding value to match the corresponding culture.
+N> Ensure the required `.resx` files are included with **Build Action** set to `EmbeddedResource`, the **Access Modifier** is set to `Public`, and the file name contains the culture code, inside the `Resources` folder.
 
-   ![resource-file-name-value-pair](images/localization/add-name-value-pair.png)
+## Add a culture-specific resource file
+
+To localize the color picker based on `CurrentUICulture` using `.resx` files, follow the steps below.
+
+1. **Create the neutral resource file first.** Add a default `SfColorPicker.resx` to the `Resources` folder. The picker falls back to this file when a culture-specific `.resx` is not present.
+
+2. **Add a culture-specific resource file.** Right-click the `Resources` folder, select **Add**, and then **New Item**.
+
+3. In the **Add New Item** wizard, select **Resources File** and name the file `SfColorPicker.<culture name>.resx`. For example, name it `SfColorPicker.fr-FR.resx` for the French (France) culture. The culture name combines the language and country codes (e.g., `de-DE`, `es-ES`, `ja-JP`).
+
+   ![resource-file-name](Images/Localization/resource-file-name.png)
+
+4. Click **Add** to include the resource file in the **Resources** folder.
+
+   ![resources-folder](Images/Localization/resource-file.png)
+
+5. Select the new `.resx` file in **Solution Explorer**, open the **Properties** window, and set:
+   - **Build Action** to `EmbeddedResource`
+   - **Custom Tool** to `PublicResXFileCodeGenerator`
+   - **Access Modifier** to `Public`
+
+6. Add Name/Value pairs in the resource designer. Use the same `Name` values that `SfColorPickerResources` exposes, and set the `Value` column to the translated string.
+
+   ![resource-file-name-value-pair](Images/Localization/add-name-value-pair.png)
+
+   Example for `SfColorPicker.fr-FR.resx`:
+
+   | Name | Value (en-US default) | Value (fr-FR) |
+   | --- | --- | --- |
+   | `Red` | Red | Rouge |
+   | `Green` | Green | Vert |
+   | `Blue` | Blue | Bleu |
+   | `OK` | OK | OK |
+   | `Cancel` | Cancel | Annuler |
+
+7. Rebuild the project so the resource generator emits the strongly-typed `SfColorPicker` (or your custom) resource class.
+
+8. Run the app. The color picker reads strings from the `.resx` that matches `CurrentUICulture`. If no match is found, the neutral `SfColorPicker.resx` is used.

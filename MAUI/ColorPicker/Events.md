@@ -8,23 +8,28 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, color palette, spectrum, palette.
 ---
 
-# Events and Commands in .NET MAUI Color Picker (SfColorPicker)
+# Events and Commands in .NET MAUI Color Picker
 
-The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control provides three built-in events to handle color selection changes:
+The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control provides three events and one command that let you respond to color selection changes from XAML, code-behind, or a view model:
 
-* [ColorChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanging)
-* [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged)
-* [ColorSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorSelected)
+* [ColorChanging](#colorchanging-event) — raised while the color is being changed (cancellable).
+* [ColorChanged](#colorchanged-event) — raised when the user commits a color.
+* [ColorSelected](#colorselected-event) — raised when the user clicks/taps the selected-color display area.
+* [ColorChangedCommand](#commands) — `ICommand` invoked when `SelectedColor` changes.
 
 ## ColorChanging event
 
-The [ColorChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanging) event is triggered while the color is being changed. The event arguments are of type [ColorChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html) and provide the following properties:
+The [ColorChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanging) event is raised continuously while the user is changing the color. The event arguments are of type [ColorChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html):
 
-* [CurrentColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_CurrentColor) : Gets the current color value before the change.
-* [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_NewColor) : Gets the newly selected color.
-* `Cancel:` Determines whether the color selection should be canceled.
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| [CurrentColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_CurrentColor) | `Color` | — | The color value before the change. |
+| [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_NewColor) | `Color` | — | The newly selected color. |
+| `Cancel` | `bool` | `false` | Set to `true` to veto the change and keep `CurrentColor`. |
 
- {% tabs %}
+### Cancel a color change
+
+{% tabs %}
 
 {% highlight xaml %}
 
@@ -36,7 +41,7 @@ The [ColorChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 
 private void OnColorChanging(object sender, ColorChangingEventArgs e)
 {
-    // To cancel the color picker change.
+    // Veto the new selection and keep the current color.
     e.Cancel = true;
 }
 
@@ -46,26 +51,30 @@ private void OnColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged) event is triggered when the user selects a color. Its behavior depends on the [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property:
+The [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged) event is raised when the user commits a color. Its exact timing depends on the [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property:
 
-* If [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) is set to false, the event is triggered immediately while selecting a color.
-* If [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) is set to true, the event is triggered only when the selected color is applied.
+* When `IsActionButtonsVisible` is `false`, the event is raised immediately while the user selects a color.
+* When `IsActionButtonsVisible` is `true`, the event is raised only after the user clicks **OK** (the picker shows OK/Cancel action buttons).
 
-The event arguments are of type [ColorChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html) and include the following properties:
+The event arguments are of type [ColorChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html):
 
-* [OldColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html#Syncfusion_Maui_Inputs_ColorChangedEventArgs_OldColor) : The previously selected color.
-* [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html#Syncfusion_Maui_Inputs_ColorChangedEventArgs_NewColor) : The newly selected color.
+| Property | Type | Description |
+| --- | --- | --- |
+| [OldColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html#Syncfusion_Maui_Inputs_ColorChangedEventArgs_OldColor) | `Color` | The previously selected color. |
+| [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html#Syncfusion_Maui_Inputs_ColorChangedEventArgs_NewColor) | `Color` | The newly selected color. |
+
+### Wire up a code-behind handler
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <Grid ColumnDefinitions="*,Auto">
-    
-    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                           ColorChanged="OnColorChanged"/>
 
-    <Label x:Name="label" Grid.Column="1" Text="Selected Color" 
+    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
+                              ColorChanged="OnColorChanged"/>
+
+    <Label x:Name="label" Grid.Column="1" Text="Selected Color"
            HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
            TextColor="Black" BackgroundColor="LightGray"/>
 
@@ -87,20 +96,24 @@ private void OnColorChanged(object sender, ColorChangedEventArgs e)
 
 ## ColorSelected event
 
-The [ColorSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorSelected) event is triggered when the user selects a color by clicking or tapping on the selected color view. The event arguments are of type [ColorSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html) and include the following property:
+The [ColorSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorSelected) event is raised when the user clicks or taps the selected-color display area in the header. The event arguments are of type [ColorSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html):
 
-* [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html#Syncfusion_Maui_Inputs_ColorSelectedEventArgs_SelectedColor) : The color currently selected by the user.
+| Property | Type | Description |
+| --- | --- | --- |
+| [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html#Syncfusion_Maui_Inputs_ColorSelectedEventArgs_SelectedColor) | `Color` | The color currently selected by the user. |
+
+### Wire up a code-behind handler
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <Grid ColumnDefinitions="*,Auto">
-    
-    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                           ColorSelected="OnColorSelected"/>
 
-    <Label x:Name="label" Grid.Column="1" Text="Selected Color"  
+    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
+                              ColorSelected="OnColorSelected"/>
+
+    <Label x:Name="label" Grid.Column="1" Text="Selected Color"
            HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
            TextColor="Black" BackgroundColor="LightGray"/>
 
@@ -122,28 +135,65 @@ private void OnColorSelected(object sender, ColorSelectedEventArgs e)
 
 ## Commands
 
-The [ColorChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChangedCommand) is executed when the SelectedColor property of the Color Picker changes.
+The [ColorChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChangedCommand) is an `ICommand` that is invoked when the `SelectedColor` property of the color picker changes. The command parameter is the new `Color`.
+
+N> Only `ColorChangedCommand` is exposed by the color picker. `ColorChanging` and `ColorSelected` are available only as events.
+
+### Assign a command in code
+
+Use this approach when the color picker lives in a page that has no view model.
 
 {% tabs %}
-
-{% highlight xaml %}
-
-<syncfusion:SfColorPicker ColorChangedCommand="{Binding ColorChangedCommand}" />
-
-{% endhighlight %}
 
 {% highlight c# %}
 
 SfColorPicker colorPicker = new SfColorPicker();
 
-// Set a command to execute when the color changes
+// Run an inline command when the color changes.
 colorPicker.ColorChangedCommand = new Command<Color>(color =>
 {
-    // Perform functions based on the selected color
+    // Perform actions based on the selected color, e.g., update other UI.
+    System.Diagnostics.Debug.WriteLine($"Selected: {color.ToHex()}");
 });
 
-// Bind to view model command
-colorPicker.SetBinding(SfColorPicker.ColorChangedCommandProperty, "ColorChangedCommand");
+Content = colorPicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Bind a command from a view model
+
+Use this approach to keep your page free of UI logic. The bound command property on the view model must expose `ICommand`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<inputs:SfColorPicker ColorChangedCommand="{Binding ColorChangedCommand}">
+    <inputs:SfColorPicker.BindingContext>
+        <local:ColorPickerViewModel/>
+    </inputs:SfColorPicker.BindingContext>
+</inputs:SfColorPicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="ViewModel" %}
+
+// View model
+public class ColorPickerViewModel
+{
+    public ICommand ColorChangedCommand { get; }
+
+    public ColorPickerViewModel()
+    {
+        // The command receives the new Color as its parameter.
+        ColorChangedCommand = new Command<Color>(color =>
+        {
+            // Apply business logic, save the value, etc.
+        });
+    }
+}
 
 {% endhighlight %}
 
