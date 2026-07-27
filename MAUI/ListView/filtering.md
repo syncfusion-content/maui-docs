@@ -124,7 +124,7 @@ private bool FilterContacts(object obj)
 
 N> The `Status` and `DueDate` properties must exist on the `TaskInfo` model class for the multi-criteria filter to compile.
 
-## Getting the filtered data
+### Getting the filtered data
 
 You can get filtered items from the view and modify it in the [SfListView.DataSource.FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_FilterChanged) event. When the filter is applied, the filtered items are available in [SfListView.DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_DisplayItems).
 
@@ -153,7 +153,7 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 {% endhighlight %}
 {% endtabs %}
 
-## Clear filtering
+### Clear filtering
 
 The SfListView allows clearing the filters by setting the [DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_Filter) to null, and call the [DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_RefreshFilter) method.
 
@@ -164,7 +164,7 @@ listView.DataSource.RefreshFilter();
 {% endhighlight %}
 {% endtabs %}
 
-## Sort the filtered items
+### Sort the filtered items
 
 Filtered items can be sorted by adding a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html) in the `FilterChanged` event. The following code example shows how to sort the filtered items:
 
@@ -187,11 +187,11 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 The following screenshot shows the output rendered when the filtered items are sorted:
 ![Syncfusion .NET MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sorting-filtered-items.png)
 
-## Custom Filter UI in .NET MAUI ListView (SfListView)
+## Custom Filter UI 
 
 This section explains how to enable and customize the filtering user interface (UI) in the `.NET MAUI ListView` (`SfListView`). You can customize the filter data using the `FilteringUITemplate` property. The filtering UI can be displayed by using the `ShowFilteringUICommand`, which displays the defined template inside a popup.
 
-## Filtering UI APIs
+###s Filtering UI APIs
 
 The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) provides the following APIs to configure and display the filtering UI:
 
@@ -253,7 +253,7 @@ listView.FilteringUITemplate = new DataTemplate(() =>
 
 The following screenshot shows the filtering UI popup displayed in the SfListView:
 
-![MAUI ListView Filtering UI](Images/filtering/maui-listview-filtering-ui.png)
+![MAUI ListView Filtering UI](Images/filtering/maui-listview-filtering-ui.gif)
 
 ## See also
 
