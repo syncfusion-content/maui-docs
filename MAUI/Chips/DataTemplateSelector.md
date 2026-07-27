@@ -1,16 +1,16 @@
 ---
 layout: post
-title: DataTemplateSelector in .NET MAUI SfChipGroup | Syncfusion®
-description: Learn how to display different chip templates based on data using DataTemplateSelector with the Syncfusion® .NET MAUI SfChipGroup control.
+title: DataTemplateSelector in .NET MAUI Chips | Syncfusion®
+description: Learn how to display different chip templates based on data using DataTemplateSelector with the Syncfusion® .NET MAUI Chips (SfChipGroup) control.
 platform: maui
-control: SfChipGroup
+control: Chips
 documentation: ug
 keywords: .net maui sfchipgroup datatemplateselector, syncfusion chips template selector maui, sfchipgroup itemtemplate maui, .net maui datatemplate selector, sfchipgroup template binding maui, .net maui chip data template
 ---
 
 # DataTemplateSelector in .NET MAUI SfChipGroup
 
-Use a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector) to choose a different [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) for each item rendered by [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html). This is useful when each chip needs to render different visuals based on the underlying data.
+Use a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector) to choose a different `DataTemplate` for each item rendered by [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html). This is useful when each chip needs to render different visuals based on the underlying data.
 
 ## Prerequisites
 
@@ -27,9 +27,6 @@ Define a `ChipModel` class with `Text`, `CanSelect`, and `ImageSource` propertie
 {% tabs %}
 {% highlight C# %}
 
-using System.Collections.ObjectModel;
-using Microsoft.Maui.Controls;
-
 public class ChipModel
 {
     public string Text { get; set; } = string.Empty;
@@ -39,8 +36,12 @@ public class ChipModel
 
 public class ChipViewModel
 {
-    public ObservableCollection<ChipModel> Data { get; set; } = new()
+    public ObservableCollection<ChipModel> Data { get; set; } 
+    
+    public ChipViewModel()
     {
+        Data = new ObservableCollection<ChipModel>()
+        {
         new ChipModel { Text = "Happy", CanSelect = true, ImageSource = "Happy.png" },
         new ChipModel { Text = "Sad", CanSelect = false, ImageSource = "Sad.png" },
         new ChipModel { Text = "Love", CanSelect = true, ImageSource = "Love.png" },
@@ -49,27 +50,18 @@ public class ChipViewModel
         new ChipModel { Text = "Think", CanSelect = true, ImageSource = "Thinking.png" },
         new ChipModel { Text = "Wink", CanSelect = true, ImageSource = "Wink.png" },
         new ChipModel { Text = "Freeze", CanSelect = false, ImageSource = "Freezing.png" }
-    };
+        };
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-N> The image file names used for `ImageSource` must be added to the `Resources/Images` folder of your .NET MAUI project and registered as `MauiImage` items in the `.csproj`. For example: `<MauiImage Include="Resources\Images\Happy.png" />`.
-
 ## Create a data template selector
 
-Subclass `DataTemplateSelector` and override the [OnSelectTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate) method to return a different `DataTemplate` based on the item.
+Create a custom class by inheriting `DataTemplateSelector` and override the [OnSelectTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate) method to return a different `DataTemplate` based on the item. At runtime, the SfChipGroup invokes the OnSelectTemplate method for each item and passes the data object as parameter.
 
-### Override Reference
-
-| Member | Type | Description |
-|--------|------|-------------|
-| `OnSelectTemplate(object item, BindableObject container)` | `DataTemplate` | Invoked once per item. The `item` parameter is the data object (e.g., a `ChipModel`). Return the `DataTemplate` to apply. |
-
-### Custom Selector Example
-
-The following selector exposes two templates — `HappyEmojiTemplate` for chips that can be selected, and `SadEmojiTemplate` for those that cannot.
+The following selector exposes two templates - `HappyEmojiTemplate` for chips that can be selected, and `SadEmojiTemplate` for those that cannot.
 
 {% highlight C# %}
 
@@ -86,11 +78,9 @@ public class ChipDataTemplateSelector : DataTemplateSelector
 
 {% endhighlight %}
 
-N> The properties on the selector (e.g., `HappyEmojiTemplate`) are populated from XAML using `StaticResource` references to the `DataTemplate` resources.
-
 ## Apply the selector
 
-Assign the `ChipDataTemplateSelector` to the [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemTemplate) property of `SfChipGroup`.
+The properties on the selector (e.g., `HappyEmojiTemplate`) are populated from XAML using `StaticResource` references to the `DataTemplate` resources.
 
 {% tabs %}
 {% highlight xaml %}
@@ -129,6 +119,14 @@ Assign the `ChipDataTemplateSelector` to the [`ItemTemplate`](https://help.syncf
                                         sadTemplate}" />
     </ResourceDictionary>
 </ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight C# %}
+
+Assign the `ChipDataTemplateSelector` to the [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemTemplate) property of `SfChipGroup`.
+
+{% tabs %}
+{% highlight xaml %}
 
 <chip:SfChipGroup x:Name="chipGroup"
                   ChipBackground="Transparent"
@@ -189,50 +187,11 @@ var chipGroup = new SfChipGroup
 Content = chipGroup;
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-public class ChipViewModel
-{
-    public ObservableCollection<ChipModel> Data { get; set; }
-
-    public ChipViewModel()
-    {
-        Data = new ObservableCollection<ChipModel>()
-        {
-            new ChipModel(){Text ="Happy", CanSelect = true, ImageSource="dotnet_bot.png"},
-            new ChipModel(){Text ="Sad", CanSelect = false,ImageSource = "dotnet_bot.png"},
-            new ChipModel(){Text ="Love", CanSelect = true,ImageSource = "dotnet_bot.png"},
-            new ChipModel(){Text ="Sick", CanSelect = false,ImageSource="dotnet_bot.png"},
-            new ChipModel(){Text ="Angry", CanSelect = false, ImageSource ="dotnet_bot.png"},
-            new ChipModel(){Text ="Think", CanSelect = true,ImageSource="dotnet_bot.png"},
-            new ChipModel(){Text ="Wink", CanSelect = true,ImageSource="dotnet_bot.png"},
-            new ChipModel(){Text ="Freeze", CanSelect = false,ImageSource="dotnet_bot.png"},
-        };
-    }
-
-}
-
-public class ChipModel
-{
-    public bool CanSelect { get; set; }
-    public string Text { get; set; }
-    public ImageSource ImageSource { get; set; }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![SfChipGroup with two chip templates selectable and non selectable chosen by DataTemplateSelector](images/customization-images/datatemplateselector.png)
 
-## Expected Behavior
-
-| `ChipModel.CanSelect` | Selected Template |
-|-----------------------|-------------------|
-| `true` | `HappyEmojiTemplate` (cyan) |
-| `false` | `SadEmojiTemplate` (pink) |
-
 ## See Also
 
 - [Customization](https://help.syncfusion.com/maui/chips/customization)
-- [MAUI DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector)
-- [MAUI DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate)
+- [Chip Types](https://help.syncfusion.com/maui/chips/chips-types)

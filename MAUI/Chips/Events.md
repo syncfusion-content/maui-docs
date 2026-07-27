@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI SfChipGroup and SfChip | Syncfusion®
+title: Events in .NET MAUI Chips control | Syncfusion®
 description: Learn about events in Syncfusion® .NET MAUI SfChipGroup and SfChip controls, including selection, click, remove, and close actions.
 platform: maui
 control: Chips
@@ -8,9 +8,9 @@ documentation: ug
 keywords: .net maui sfchipgroup events, syncfusion chips selection changed maui, sfchipgroup chipclicked maui, .net maui sfchip close button clicked, sfchipgroup itemremoved maui, sfchip selection changing maui
 ---
 
-# Events in .NET MAUI SfChipGroup and SfChip
+# Events in .NET MAUI Chips
 
-[SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) and [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) raise events to notify your application when the user interacts with the chips. This page documents the events exposed by both controls.
+[SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) and [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) raise events to notify users application when the user interacts with the chips. This page documents the events exposed by both controls.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 |----------|------|-------------|
 | `AddedItem` | `object` | The chip that is about to be selected. |
 | `RemovedItem` | `object` | The previously selected or deselected chip. |
-| `Cancel` | `bool` | Set to `true` to cancel the selection. Defaults to `false`. |
+| `Cancel` | `bool` | Set to `true` to cancel the selection. |
 
 {% tabs %}
 {% highlight xaml %}
@@ -60,8 +60,6 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 {% endhighlight %}
 {% highlight C# %}
 
-// Folowing code comes under the main page constructor inside.
-// Create ChipGroup
 var chipGroup = new SfChipGroup
 {
     ChipType = SfChipsType.Choice
@@ -80,7 +78,15 @@ var layout = new VerticalStackLayout();
 layout.Children.Add(chipGroup);
 Content = layout;
 
-void OnSelectionChanging(object? sender, SelectionChangingEventArgs e)
+{% endhighlight %}
+{% endtabs %}
+
+The `SelectionChanging` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight xaml %}
+
+private void OnSelectionChanging(object? sender, SelectionChangingEventArgs e)
 {
     // Block selection of the "Cherry" chip.
     if (e.AddedItem is SfChip chip && chip.Text == "Cherry")
@@ -101,7 +107,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 | Property | Type | Description |
 |----------|------|-------------|
 | `AddedItem` | `object` | The newly selected chip. |
-| `RemovedItem` | `object` | The previously selected chip (or `null` if there was no previous selection). |
+| `RemovedItem` | `object` | The previously selected chip. |
 
 {% tabs %}
 {% highlight xaml %}
@@ -120,7 +126,6 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 
 {% highlight C# %}
 
-// Folowing code comes under the main page constructor inside.
 var chipGroup = new SfChipGroup
 {
     ChipType = SfChipsType.Filter
@@ -135,6 +140,14 @@ chipGroup.Items.Add(new SfChip() { Text = "Cherry" });
 var layout = new VerticalStackLayout();
 layout.Children.Add(chipGroup);
 Content = layout;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `SelectionChanged` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight xaml %}
 
 void OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
 {
@@ -167,7 +180,6 @@ The [ChipClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 {% endhighlight %}
 {% highlight C# %}
 
-// Folowing code comes under the main page constructor inside.
 var chipGroup = new SfChipGroup
 {
     ChipType = SfChipsType.Choice
@@ -183,6 +195,14 @@ var layout = new VerticalStackLayout();
 layout.Children.Add(chipGroup);
 Content = layout;
 
+{% endhighlight %}
+{% endtabs %}
+
+The `ChipClicked` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight xaml %}
+
 void OnChipClicked(object? sender, EventArgs e)
 {
     if (sender is SfChip chip)
@@ -196,9 +216,14 @@ void OnChipClicked(object? sender, EventArgs e)
 
 ## Item removed event
 
-The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved) event is raised after a chip is removed from an `Input`-type `SfChipGroup`.
+The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved) event is raised after a chip is removed from the `SfChipGroup`. The argument contains the following information,
 
 ### Event Arguments
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `AddedItem` | `object` | The newly selected chip. |
+| `RemovedItem` | `object` | The previously selected chip. |
 
 {% tabs %}
 {% highlight xaml %}
@@ -233,14 +258,6 @@ Content = new VerticalStackLayout
         chipGroup
     }
 };
-
-void OnChipItemRemoved(object sender, SelectionChangedEventArgs e)
-{
-    if (e.RemovedItem is Employee employee)
-    {
-        System.Diagnostics.Debug.WriteLine($"Removed: {employee.Name}");
-    }
-}
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -285,10 +302,27 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
+The `ItemRemoved` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight xaml %}
+
+void OnChipItemRemoved(object sender, SelectionChangedEventArgs e)
+{
+    if (e.RemovedItem is Employee employee)
+    {
+        System.Diagnostics.Debug.WriteLine($"Removed: {employee.Name}");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Close button clicked event
 
 The [CloseButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_CloseButtonClicked) event is raised when the close button of an `SfChip` is clicked. The event argument is of type `EventArgs`.
 
+{% tabs %}
 {% highlight xaml %}
 
 <VerticalStackLayout>
@@ -316,18 +350,23 @@ Content = new VerticalStackLayout
     }
 };
 
+{% endhighlight %}
+{% endtabs %}
+
+The `CloseButtonClicked` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight xaml %}
+
 void OnCloseButtonClicked(object? sender, CloseButtonClickedEventArgs e)
 {
-    System.Diagnostics.Debug.WriteLine("Close button clicked");
+    // write your code.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## See Also
 
-- [Getting Started with .NET MAUI SfChipGroup/SfChip](https://help.syncfusion.com/maui/chips/getting-started)
-- [SfChipGroup API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html)
-- [SfChip API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html)
+- [Customization](https://help.syncfusion.com/maui/chips/customization)
 - [Chip Types](https://help.syncfusion.com/maui/chips/chips-types)
-
-

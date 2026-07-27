@@ -1,30 +1,26 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI SfChipGroup | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI SfChipGroup control.
+title: Liquid Glass Effect for .NET MAUI Chips | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Chips (SfChip) control.
 platform: MAUI
-control: SfChipGroup
+control: chips
 documentation: ug
 keywords: .net maui sfchipgroup liquid glass effect, syncfusion chips glass effect maui, sfchipgroup enableliquidglasseffect maui, .net maui sfchip translucent background, sfchipgroup ios 26 macos 26 maui
 ---
 
-# Liquid Glass Effect in .NET MAUI SfChipGroup
+# Liquid Glass Effect in .NET MAUI Chips (SfChip)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This page explains how to enable and customize the effect in the Syncfusion® .NET MAUI [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This page explains how to enable and customize the effect in the Syncfusion® .NET MAUI Chips (SfChip) control.
 
 ## Prerequisites
 
-Before using the [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Core`
+ Before using the [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) and [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html), Install the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/chips/getting-started) documentation.
 
-## Property Reference
-
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_EnableLiquidGlassEffect) | `bool` | `false` | When `true`, applies the Liquid Glass Effect to the `SfChipGroup` and its child chips. The dependent controls (for example, the close button on `Input` chips) also receive the effect. |
+N>
+* The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
+* It is not supported on Android or Windows.
 
 ## Apply the Liquid Glass Effect
 
@@ -32,7 +28,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the `SfChi
 
 ### Step 1: Enable the effect
 
-Set the `EnableLiquidGlassEffect` property to `true` on the [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html). When enabled, the effect is applied to the chips and to dependent controls (such as the close button on `Input`-type chips).
+Set the `EnableLiquidGlassEffect` property to `true` on the `SfChipGroup`. When enabled, the effect is applied to the chips and to dependent controls (such as the close button on `Input`-type chips).
 
 ### Step 2: Set a transparent background
 
@@ -96,10 +92,7 @@ The following screenshot illustrates `SfChipGroup` with the Liquid Glass Effect 
 
 ![SfChipGroup with the Liquid Glass Effect enabled, displayed over a wallpaper background](images/customization-images/Chip_liquidglass.png)
 
-N> This feature is supported only on .NET 10 along with iOS 26 and macOS 26.
-
 ## See Also
 
-- [Getting Started with .NET MAUI SfChipGroup](https://help.syncfusion.com/maui/chips/getting-started)
 - [Customization](https://help.syncfusion.com/maui/chips/customization)
 - [Chip Types](https://help.syncfusion.com/maui/chips/chips-types)

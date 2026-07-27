@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to apply a font icon to .NET MAUI SfChip | Syncfusion®
-description: Learn how to display a font icon inside the Syncfusion® .NET MAUI SfChip control by setting a FontImageSource on the ImageSource property.
+title: How to apply a font icon to .NET MAUI Chip | Syncfusion®
+description: Learn how to display a font icon inside the Syncfusion® .NET MAUI Chip control by setting a FontImageSource on the ImageSource property.
 platform: maui
 control: SfChip
 documentation: ug
@@ -26,16 +26,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 |----------|------|---------|-------------|
 | [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSource) | `ImageSource` | `null` | The image displayed inside the chip. Accepts any MAUI `ImageSource`, including `FontImageSource`. |
 | `ShowIcon` | `bool` | `false` | When `true`, the chip reserves space for and renders the icon defined by `ImageSource`. |
-| `ImageSize` | `double` | `16` | The size (in device-independent units) of the icon area inside the chip. |
-
-`FontImageSource` exposes the following properties:
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `Glyph` | `string` | The Unicode character (for example `"\uEB52"`) that represents the icon. |
-| `Size` | `double` | The font size used to render the glyph (affects the visual icon size). |
-| `Color` | `Color` | The tint color of the glyph. |
-| `FontFamily` | `string` | The font family that contains the glyph (for example `Segoe MDL2 Assets`, `Material Design Icons`). |
+| `ImageSize` | `double` | `18` | The size (in device-independent units) of the icon area inside the chip. |
 
 ### Set the FontImageSource
 
@@ -90,10 +81,9 @@ var chip = new SfChip
 {% endhighlight %}
 {% endtabs %}
 
-![SfChip displaying a font icon calendar glyph alongside the text Syncfusion](images/AppIcon.png)
+![.NET MAUI chip icon font support](images/AppIcon.png)
 
 ## See Also
 
 - [Customization](https://help.syncfusion.com/maui/chips/customization)
-- [MAUI FontImageSource](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontimagesource)
-- [MAUI fonts documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts)
+- [Chips Types](https://help.syncfusion.com/maui/chips/chips-types)

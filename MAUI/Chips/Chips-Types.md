@@ -3,20 +3,20 @@ layout: post
 title: Chips Types in .NET MAUI Chips (SfChipGroup) control | Syncfusion®
 description: Learn about the four ChipType values (Input, Choice, Filter, Action) supported by the Syncfusion® .NET MAUI Chips (SfChipGroup) control.
 platform: maui
-control: SfChipGroup
+control: Chips
 documentation: ug
 ---
 
 # Chips Types in .NET MAUI Chips (SfChipGroup)
 
-[`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) supports four `ChipType` values that determine how users interact with the chips. Use the table below to choose the type that matches your scenario.
+[SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) supports four `ChipType` values that determine how users interact with the Chips. Use the table below to choose the type that matches your scenario.
 
-| ChipType | Use when | Key properties |
-|----------|----------|----------------|
-| `Input` | Users add and remove chips at runtime; an embedded `InputView` (such as an `Entry`) lets users type a new chip's text. | `InputView`, `ItemsSource`, `DisplayMemberPath` |
-| `Choice` | Users select a single chip from a group; selecting another chip deselects the previous one. | `ChoiceMode` (`Single` or `SingleOrNone`) |
-| `Filter` | Users select one or more chips; a check mark (selection indicator) marks the selected chips. | `SelectionIndicatorColor`, `SelectedItem`, `SelectedItems` |
-| `Action` | Each chip acts like a button; the `Command` is invoked when a chip is clicked. | `Command`, `CommandParameter` |
+| ChipType | Use when | 
+|----------|----------|
+| `Input` | Users add and remove chips at runtime; an embedded `InputView` (such as an `Entry`) lets users type a new chip's text. |
+| `Choice` | Users select a single chip from a group; selecting another chip deselects the previous one. |
+| `Filter` | Users select one or more chips; a check mark (selection indicator) marks the selected chips. |
+| `Action` | Each chip acts like a button; the `Command` is invoked when a chip is clicked. | 
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Input
 
-The `Input` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) arranges the [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) in a layout, enables a close button for each chip, and provides an embedded `InputView` (an `Entry` in the example below) where users can type the text for a new chip.
+The `Input` [ChipType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) arranges the [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) in a layout, enables a close button for each chip, and provides an embedded `InputView` (an `Entry` in the example below) where users can type the text for a new chip.
 
 ### XAML
 
@@ -49,17 +49,8 @@ The `Input` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 </chip:SfChipGroup>
 
 {% endhighlight %}
-{% endtabs %}
+{% highlight C# %}
 
-### Code-behind
-
-The following C# code wires up the `Completed` event so a new chip is added when the user presses Enter on the `Entry`. Required `using` directives: `Microsoft.Maui.Controls`, `Syncfusion.Maui.Core`, and your project's `EmployeeViewModel` namespace.
-
-{% tabs %}
-{% highlight c# %}
-
-InitializeComponent();
-BindingContext = new EmployeeViewModel();
 var entry = new Entry
 {
     VerticalOptions = LayoutOptions.Center,
@@ -67,7 +58,9 @@ var entry = new Entry
     WidthRequest = 110,
     HeightRequest = 40
 };
+
 entry.Completed += OnEntryCompleted;
+
 SfChipGroup chipGroup = new SfChipGroup()
 {
     InputView = entry,
@@ -77,21 +70,8 @@ SfChipGroup chipGroup = new SfChipGroup()
 chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 this.Content = chipGroup;
 
-private void OnEntryCompleted(object sender, EventArgs e)
-{
-    if (sender is not Entry entry) return;
-    if (BindingContext is not EmployeeViewModel viewModel) return;
-
-    var name = entry.Text;
-    if (!string.IsNullOrWhiteSpace(name))
-    {
-        viewModel.Employees.Add(new Employee { Name = name });
-    }
-    entry.Text = string.Empty;
-}
-
-
 {% endhighlight %}
+
 {% highlight c# tabtitle="ViewModel" %}
 
 public class Employee
@@ -132,6 +112,28 @@ public class EmployeeViewModel : INotifyPropertyChanged
 }
 
 {% endhighlight %}
+
+{% endtabs %}
+
+The Entry's `Completed` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight xaml %}
+
+private void OnEntryCompleted(object sender, EventArgs e)
+{
+    if (sender is not Entry entry) return;
+    if (BindingContext is not EmployeeViewModel viewModel) return;
+
+    var name = entry.Text;
+    if (!string.IsNullOrWhiteSpace(name))
+    {
+        viewModel.Employees.Add(new Employee { Name = name });
+    }
+    entry.Text = string.Empty;
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the `Input` `ChipType`:
@@ -140,7 +142,7 @@ The following image illustrates the `Input` `ChipType`:
 
 ## Choice
 
-The `Choice` `ChipType` allows users to select a single chip from a group. Selecting a chip automatically deselects the previously selected chip. The visual treatment for the selected state is set via the `Selected` visual state in the `VisualStateManager`.
+The `Choice` [ChipType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) allows users to select a single chip from a group. Selecting a chip automatically deselects the previously selected chip. The visual treatment for the selected state is set via the `Selected` visual state in the `VisualStateManager`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -292,7 +294,7 @@ this.Content = chipGroup;
 
 ## Filter
 
-The `Filter` `ChipType` allows users to select one or more chips in a group. Selected chips are indicated by a check mark (the selection indicator). The indicator color can be customized using the [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionIndicatorColor) property. The currently selected chips are exposed through the [`SelectedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedItem) and `SelectedItems` properties, and selection changes are notified through the [`SelectionChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanging) and [`SelectionChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged) events.
+The `Filter` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) allows users to select one or more chips in a group. Selected chips are indicated by a check mark (the selection indicator). The indicator color can be customized using the [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionIndicatorColor) property. The currently selected chips are exposed through the [`SelectedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedItem) and `SelectedItems` properties, and selection changes are notified through the [`SelectionChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanging) and [`SelectionChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged) events.
 
 {% tabs %}
 {% highlight xaml %}
@@ -402,7 +404,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 ## Action
 
-The `Action` `ChipType` of [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) executes the [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Command) when the user clicks a chip. The command only fires for the `Action` `ChipType`. You can pass a `CommandParameter` to the `Command` to provide context to the handler (for example, the clicked `Person`).
+The `Action` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) of [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) executes the [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Command) when the user clicks a chip. The command only fires for the `Action` `ChipType`. You can pass a `CommandParameter` to the `Command` to provide context to the handler (for example, the clicked `Person`).
 
 {% tabs %}
 {% highlight xaml %}
