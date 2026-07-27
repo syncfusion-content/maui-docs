@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize Appearance in .NET MAUI MarkdownViewer | Syncfusion
-description: Learn how to style and customize the appearance of markdown content using the MarkdownStyleSettings class in the Syncfusion .NET MAUI SfMarkdownViewer control.
+title: Customize Appearance in .NET MAUI Markdown Viewer | Syncfusion®
+description: Learn how to style and customize the appearance of markdown content using the MarkdownStyleSettings class in the Syncfusion® .NET MAUI Markdown Viewer control.
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
 keywords: .net maui markdownviewer appearance, syncfusion markdownviewer styling maui, markdown viewer theme maui, sfmarkdownviewer style settings maui, .net maui markdown styling, markdownviewer css maui
 ---
 
-# Customize Appearance in .NET MAUI SfMarkdownViewer
+# Customize Appearance in .NET MAUI Markdown Viewer (SfMarkdownViewer)
 
-The [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control in .NET MAUI provides a powerful styling system through the [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html) class. This allows developers to customize the visual presentation of markdown content with precision and flexibility.
+The [.NET MAUI Markdown Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control in .NET MAUI provides a powerful styling system through the [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html) class. This allows developers to customize the visual presentation of markdown content with precision and flexibility.
 
 ## Prerequisites
 
@@ -34,9 +34,9 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 - Highlighting specific markdown elements like tables or code blocks.
 - Applying branding styles using custom CSS.
 
-## Properties of MarkdownStyleSettings
+## Customization with MarkdownStyleSettings
 
-The appearance of headings, body content, and tables in SfMarkdownViewer can be customized using the properties of the `MarkdownStyleSettings` class, which are listed below.
+The appearance of headings, body content, and tables in SfMarkdownViewer can be customized using the properties of the [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html) class, which are listed below.
 
 - [H1FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_H1FontSize), [H2FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_H2FontSize), [H3FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_H3FontSize) – Gets or sets the font size for H1, H2, and H3 heading elements respectively.  
 - [H1Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_H1Color), [H2Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_H2Color), [H3Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_H3Color) – Gets or sets the text color for H1, H2, and H3 heading elements respectively.  
@@ -47,28 +47,9 @@ The appearance of headings, body content, and tables in SfMarkdownViewer can be 
 - [TableBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_TableBackground) – Gets or sets the background color for the entire table area.
 - [CssStyleRules](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_CssStyleRules) – Gets or sets raw CSS styles to override or extend default markdown rendering behavior.
 
-### Default Values
+### Apply style settings
 
-| Property | Default Value | Description |
-|----------|---------------|-------------|
-| H1FontSize | 24px | Font size for H1 headings. |
-| H2FontSize | 20px | Font size for H2 headings. |
-| H3FontSize | 18px | Font size for H3 headings. |
-| H1Color | Platform default | Text color for H1 headings. |
-| H2Color | Platform default | Text color for H2 headings. |
-| H3Color | Platform default | Text color for H3 headings. |
-| BodyFontSize | 14px | Font size for paragraph text. |
-| BodyTextColor | Platform default | Text color for body content. |
-| TableHeaderFontSize | 14px | Font size for table header cells. |
-| TableDataFontSize | 14px | Font size for table data cells. |
-| TableHeaderTextColor | Platform default | Text color for table header cells. |
-| TableDataTextColor | Platform default | Text color for table data cells. |
-| TableBackground | Transparent | Background color applied to the entire table area, including header and data cells. |
-| CssStyleRules | Empty | Raw CSS rules to override or extend default rendering. |
-
-## Apply Styles in XAML
-
-The following example shows how to apply style settings declaratively in XAML. First, add the namespace to your page, then assign the settings to the [Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Settings) property of `SfMarkdownViewer`.
+The following example shows how to apply style settings to the [Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Settings) property of `SfMarkdownViewer`.
 
 The Source property of SfMarkdownViewer can be bound to a string property in the ViewModel using Source="{Binding MarkdownContent}", where MarkdownContent contains the markdown text to render.
 
@@ -113,18 +94,7 @@ Content = markdownViewer;
 
 public class MarkDownViewModel : INotifyPropertyChanged
 {
-
-    private string markdownContent;
-
-    public string MarkdownContent
-    {
-        get => markdownContent;
-        set
-        {
-            markdownContent = value;
-            OnPropertyChanged();
-        }
-    }
+    public string MarkdownContent{ get; set; }
 
     public MarkDownViewModel()
     {
@@ -152,14 +122,6 @@ public class MarkDownViewModel : INotifyPropertyChanged
         """;
 
     }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    void OnPropertyChanged([CallerMemberName] string name = null)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-    }
-
 }
 {% endhighlight %}
 {% endtabs %} 
@@ -168,113 +130,9 @@ The following output shows how these style settings enhance the appearance of re
 
 ![SfMarkdownViewer rendered with custom H1, H2, H3 colors, body text color, and a styled table](images/maui-markdown-viewer-appearance.png)
 
-## Apply Custom CSS Rules
+With [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html), you gain full control over how Markdown content looks in your .NET MAUI app, whether you're building a documentation viewer, a note-taking app, or a styled content portal.
 
-For more advanced styling, use the [CssStyleRules](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_CssStyleRules) property to define raw CSS rules. The value is a string that contains standard CSS and is applied on top of the property-based styles.
-
-{% tabs %}
-{% highlight xaml %}
-
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <x:String x:Key="CustomCss">
-            body { font-family: Segoe UI; } h1 { border-bottom: 2px solid #8352FB; } table { border-radius: 6px; }
-        </x:String>
-    </ResourceDictionary>
-</ContentPage.Resources>
-
-<markdown:SfMarkdownViewer Source="{Binding MarkdownContent}">
-    <markdown:SfMarkdownViewer.Settings>
-        <markdown:MarkdownStyleSettings CssStyleRules="{StaticResource CustomCss}" />
-    </markdown:SfMarkdownViewer.Settings>
-</markdown:SfMarkdownViewer>
-
-{% endhighlight %}
-{% highlight C# %}
-
-var markDownViewModel = new MarkDownViewModel();
-BindingContext = markDownViewModel;
-SfMarkdownViewer markdownViewer = new SfMarkdownViewer
-{
-    Source = markDownViewModel.MarkdownContent,
-    Settings = new MarkdownStyleSettings
-    {
-        CssStyleRules = "body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; } " +
-                        "h1 { border-bottom: 2px solid #8352FB; padding-bottom: 4px; } " +
-                        "table { border-radius: 6px; overflow: hidden; }"
-    }
-};
-Content = markdownViewer;
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel" %}
-
-public class MarkDownViewModel : INotifyPropertyChanged
-{
-    private string markdownContent;
-
-    public string MarkdownContent
-    {
-        get => markdownContent;
-        set
-        {
-            markdownContent = value;
-            OnPropertyChanged();
-        }
-    }
-
-    public MarkDownViewModel()
-    {
-
-        MarkdownContent = """
-        # What is the Markdown Viewer?
-
-        The Markdown Viewer is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support.
-
-        # Header 1
-
-        Used for the main title or top-level heading in a Markdown document.
-
-        ## Header 2
-
-        Used to define major sections within your Markdown content.
-
-        ### Table
-
-        |              | Column 1 | Column 2 | Column 3 |
-        |--------------|----------|----------|----------|
-        | Row 1        | Content  | Content  | Content  |
-        | Row 2        | Content  | Content  | Content  |
-        | Row 3        | Content  | Content  | Content  |
-        """;
-
-    }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    void OnPropertyChanged([CallerMemberName] string name = null)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-    }
-
-}
-{% endhighlight %}
-{% endtabs %}
-
-N> When both individual style properties and `CssStyleRules` are specified, the CSS rules take precedence. For more details and additional examples (tables, images, scrollbar), see [Apply CSS Style Rules](https://help.syncfusion.com/maui/markdownviewer/overridingdefaultstyles).
-
-## Reset Styles to Default
-
-To revert all style settings to their default values, reassign a new `MarkdownStyleSettings` instance to the [Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Settings) property.
-
-{% tabs %}
-{% highlight C# %}
-
-markdownViewer.Settings = new MarkdownStyleSettings();
-
-{% endhighlight %}
-{% endtabs %}
-
+N> Always specify the font size with the "px" unit (e.g., H1FontSize="32px") to ensure consistent rendering across all platforms.
 
 ## See Also
 
