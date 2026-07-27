@@ -10,8 +10,15 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Inline Rendering in .NET MAUI Color Picker
 
-The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) supports an inline rendering mode that embeds the color editor directly within the page layout, rather than opening it in a pop-up or flyout. By default, `IsInline` is `false`, so the picker is shown inside a pop-up triggered from the drop-down button.
+## Prerequisites
 
+Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
+
+The `.NET MAUI Color Picker` supports an inline rendering mode that embeds the color editor directly within the page layout, rather than opening it in a pop-up or flyout. By default, `IsInline` is `false`, so the picker is shown inside a pop-up triggered from the drop-down button.
 
 ## Behavior
 
@@ -56,15 +63,17 @@ The inline picker participates in the page layout like any other view, so you ca
 
 {% highlight xaml %}
 
-<Grid Padding="12" RowDefinitions="Auto,*" RowSpacing="8">
+<Grid Padding="12" 
+      RowDefinitions="Auto,*" 
+      RowSpacing="8">
 
     <Label Grid.Row="0"
            Text="Pick a background color"
            FontAttributes="Bold" />
 
     <inputs:SfColorPicker Grid.Row="1"
-                              IsInline="True"
-                              ColorChanged="OnColorChanged" />
+                          IsInline="True"
+                          ColorChanged="OnColorChanged" />
 
 </Grid>
 
@@ -76,10 +85,7 @@ SfColorPicker colorPicker = new SfColorPicker
 {
     IsInline = true
 };
-colorPicker.ColorChanged += (s, e) =>
-{
-    this.BackgroundColor = e.NewColor;
-};
+colorPicker.ColorChanged += OnColorChanged;
 
 Content = new Grid
 {
@@ -95,6 +101,21 @@ Content = new Grid
         colorPicker
     }
 };
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The `ColorChanged` event can be handled in C# as follows:
+
+{% tabs %} 
+
+{% highlight c# %}
+
+private void OnColorChanged(object sender, ColorChangedEventArgs e)
+{
+    this.BackgroundColor = e.NewColor;
+}
 
 {% endhighlight %}
 

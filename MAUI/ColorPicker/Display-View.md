@@ -10,6 +10,14 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Display View Customization
 
+## Prerequisites
+
+Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
+
 The display view of the .NET MAUI Color Picker (`SfColorPicker`) is the header area that shows the currently selected color, a drop-down button that opens the picker, and optional icons. This topic explains how to customize that header — its icon, template, dimensions, and border.
 
 ## Selected color customization
@@ -26,7 +34,9 @@ You can customize the selected color icon in the Color Picker using the [Selecte
 
 <inputs:SfColorPicker x:Name="colorPicker">
     <inputs:SfColorPicker.SelectedColorIcon>
-        <FontImageSource FontFamily="MauiMaterialAssets" Glyph="&#xe760;" Color="{Binding Source={x:Reference colorPicker},Path=SelectedColor}"/>
+        <FontImageSource FontFamily="MauiMaterialAssets" 
+                         Glyph="&#xe760;" 
+                         Color="{Binding Source={x:Reference colorPicker},Path=SelectedColor}"/>
     </inputs:SfColorPicker.SelectedColorIcon>
 </inputs:SfColorPicker>
 
@@ -56,7 +66,7 @@ this.Content = colorPicker;
 
 {% endtabs %}
 
-> Subscribe to the [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged) event when you update the icon color in code-behind, so the icon stays in sync with the user-selected color.
+N> Subscribe to the [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged) event when you update the icon color in code-behind, so the icon stays in sync with the user-selected color.
 
 ![SelectedColorIcon](Images/DisplayView/Icon.png)
 
@@ -68,15 +78,34 @@ You can customize the size of the selected color icon displayed in the Color Pic
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker SelectedColorIconSize="32" />
+<inputs:SfColorPicker x:Name="colorPicker"
+                      SelectedColorIconSize="32">
+    <inputs:SfColorPicker.SelectedColorIcon>
+        <FontImageSource FontFamily="MauiMaterialAssets" 
+                         Glyph="&#xe760;" 
+                         Color="{Binding Source={x:Reference colorPicker},Path=SelectedColor}"/>
+    </inputs:SfColorPicker.SelectedColorIcon>
+</inputs:SfColorPicker>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfColorPicker colorPicker = new SfColorPicker()
+SfColorPicker colorPicker = new SfColorPicker();
+
+var fontIcon = new FontImageSource
 {
-    SelectedColorIconSize = 32
+    FontFamily = "MauiMaterialAssets",
+    Glyph = "\ue760",
+    Color = colorPicker.SelectedColor
+};
+
+colorPicker.SelectedColorIcon = fontIcon;
+colorPicker.SelectedColorIconSize = 32;
+
+colorPicker.ColorChanged += (s, e) =>
+{
+    fontIcon.Color = e.NewColor;
 };
 
 this.Content = colorPicker;
@@ -152,8 +181,6 @@ this.Content = colorPicker;
 
 ![SelectedColorTemplate](Images/DisplayView/Template.png)
 
----
-
 ## Drop-down icon customization
 
 Use the properties in this section to customize the drop-down button that opens the color picker.
@@ -169,7 +196,11 @@ The drop-down icon of the Color Picker can be customized using the [DropDownButt
 <inputs:SfColorPicker x:Name="colorPicker">
     <inputs:SfColorPicker.DropDownButtonTemplate>
         <DataTemplate>
-            <Label Text="&#xe705;" FontFamily="MauiMaterialAssets" FontSize="14" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+            <Label Text="&#xe705;" 
+                   FontFamily="MauiMaterialAssets" 
+                   FontSize="14" 
+                   TextColor="Black" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
         </DataTemplate>
     </inputs:SfColorPicker.DropDownButtonTemplate>
 </inputs:SfColorPicker>
@@ -227,8 +258,6 @@ this.Content = colorPicker;
 {% endhighlight %}
 
 {% endtabs %}
-
----
 
 ## Display view appearance
 
@@ -308,3 +337,12 @@ this.Content = colorPicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+## See also
+
+* [Customization in .NET MAUI Color Picker](https://help.syncfusion.com/maui/colorpicker/customization)
+* [Mode and Value](https://help.syncfusion.com/maui/colorpicker/mode)
+* [Events and Commands](https://help.syncfusion.com/maui/colorpicker/events)
+* [Inline Rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering)
+* [Localization](https://help.syncfusion.com/maui/colorpicker/localization)
+* [Liquid Glass Support](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)

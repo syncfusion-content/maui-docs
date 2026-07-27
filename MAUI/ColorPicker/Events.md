@@ -10,7 +10,15 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Events and Commands in .NET MAUI Color Picker
 
-The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control provides three events and one command that let you respond to color selection changes from XAML, code-behind, or a view model:
+## Prerequisites
+
+Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
+
+The `SfColorPicker`control provides three events and one command that let you respond to color selection changes from XAML, code-behind, or a view model:
 
 * [ColorChanging](#colorchanging-event) — raised while the color is being changed (cancellable).
 * [ColorChanged](#colorchanged-event) — raised when the user commits a color.
@@ -33,9 +41,25 @@ The [ColorChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker x:Name="colorPicker" ColorChanging="OnColorChanging"/>
+<inputs:SfColorPicker x:Name="colorPicker" 
+                      ColorChanging="OnColorChanging"/>
 
 {% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker();
+colorPicker.ColorChanging += OnColorChanging;
+            
+this.Content = colorPicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The `ColorChanging` event can be handled in C# as follows:
+
+{% tabs %} 
 
 {% highlight c# %}
 
@@ -71,16 +95,72 @@ The event arguments are of type [ColorChangedEventArgs](https://help.syncfusion.
 
 <Grid ColumnDefinitions="*,Auto">
 
-    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                              ColorChanged="OnColorChanged"/>
+    <inputs:SfColorPicker x:Name="colorPicker" 
+                          Grid.Column="0"
+                          ColorChanged="OnColorChanged"/>
 
-    <Label x:Name="label" Grid.Column="1" Text="Selected Color"
-           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-           TextColor="Black" BackgroundColor="LightGray"/>
+    <Label x:Name="label" 
+           Grid.Column="1" 
+           Text="Selected Color"
+           HorizontalTextAlignment="Center" 
+           VerticalTextAlignment="Center"
+           TextColor="Black" 
+           BackgroundColor="LightGray"/>
 
 </Grid>
 
 {% endhighlight %}
+
+{% highlight c# %}
+
+private SfColorPicker colorPicker;
+private Label label;
+
+public MainPage()
+{
+    // Create Grid with ColumnDefinitions
+    var grid = new Grid
+    {
+        ColumnDefinitions = new ColumnDefinitionCollection
+        {
+            new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
+            new ColumnDefinition { Width = GridLength.Auto }
+        }
+    };
+
+    // Create SfColorPicker
+    colorPicker = new SfColorPicker();
+    Grid.SetColumn(colorPicker, 0);
+    colorPicker.ColorChanged += OnColorChanged;
+
+    // Create Label
+    label = new Label
+    {
+        Text = "Selected Color",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        TextColor = Colors.Black,
+        BackgroundColor = Colors.LightGray
+    };
+    Grid.SetColumn(label, 1);
+
+    // Add controls to grid
+    grid.Add(colorPicker);
+    grid.Add(label);
+
+    // Set content
+    Content = grid;
+
+    InitializeComponent();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The `ColorChanged` event can be handled in C# as follows:
+
+{% tabs %} 
 
 {% highlight c# %}
 
@@ -89,7 +169,6 @@ private void OnColorChanged(object sender, ColorChangedEventArgs e)
     label.BackgroundColor = e.NewColor;
     label.Text = e.NewColor.ToHex();
 }
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -110,16 +189,72 @@ The [ColorSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 
 <Grid ColumnDefinitions="*,Auto">
 
-    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                              ColorSelected="OnColorSelected"/>
+    <inputs:SfColorPicker x:Name="colorPicker" 
+                          Grid.Column="0"
+                          ColorSelected="OnColorSelected"/>
 
-    <Label x:Name="label" Grid.Column="1" Text="Selected Color"
-           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-           TextColor="Black" BackgroundColor="LightGray"/>
+    <Label x:Name="label" 
+           Grid.Column="1" 
+           Text="Selected Color"
+           HorizontalTextAlignment="Center" 
+           VerticalTextAlignment="Center"
+           TextColor="Black" 
+           BackgroundColor="LightGray"/>
 
 </Grid>
 
 {% endhighlight %}
+
+{% highlight c# %}
+
+private SfColorPicker colorPicker;
+private Label label;
+
+public MainPage()
+{
+    // Create Grid with ColumnDefinitions
+    var grid = new Grid
+    {
+        ColumnDefinitions = new ColumnDefinitionCollection
+        {
+            new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
+            new ColumnDefinition { Width = GridLength.Auto }
+        }
+    };
+
+    // Create SfColorPicker
+    colorPicker = new SfColorPicker();
+    Grid.SetColumn(colorPicker, 0);
+    colorPicker.ColorSelected += OnColorSelected;
+
+    // Create Label
+    label = new Label
+    {
+        Text = "Selected Color",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        TextColor = Colors.Black,
+        BackgroundColor = Colors.LightGray
+    };
+    Grid.SetColumn(label, 1);
+
+    // Add controls to grid
+    grid.Add(colorPicker);
+    grid.Add(label);
+
+    // Set content
+    Content = grid;
+
+    InitializeComponent();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The `ColorSelected` event can be handled in C# as follows:
+
+{% tabs %} 
 
 {% highlight c# %}
 
@@ -198,3 +333,12 @@ public class ColorPickerViewModel
 {% endhighlight %}
 
 {% endtabs %}
+
+## See also
+
+* [Customization in .NET MAUI Color Picker](https://help.syncfusion.com/maui/colorpicker/customization)
+* [Mode and Value](https://help.syncfusion.com/maui/colorpicker/mode)
+* [Display View Customization](https://help.syncfusion.com/maui/colorpicker/display-view)
+* [Inline Rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering)
+* [Localization](https://help.syncfusion.com/maui/colorpicker/localization)
+* [Liquid Glass Support](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)

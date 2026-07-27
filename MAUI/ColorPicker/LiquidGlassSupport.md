@@ -10,13 +10,21 @@ keywords : .net maui color picker, maui color picker, liquid glass, glass effect
 
 # Liquid Glass Support for the .NET MAUI ColorPicker
 
-The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) supports an optional **Liquid Glass** effect — a frosted, translucent style (analogous to acrylic on Windows or glass morphism on the web) that blends the picker with whatever is rendered behind it. When enabled, the picker picks up color from the background and shows subtle, smooth visual feedback during interaction. The effect is most visible over images, gradients, or colorful layouts.
+## Prerequisites
+
+Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
+
+The `SfColorPicker` supports an optional **Liquid Glass** effect — a frosted, translucent style (analogous to acrylic on Windows or glass morphism on the web) that blends the picker with whatever is rendered behind it. When enabled, the picker picks up color from the background and shows subtle, smooth visual feedback during interaction. The effect is most visible over images, gradients, or colorful layouts.
 
 N> **Platform support:** The Liquid Glass effect requires **.NET 10** and is supported on **iOS 26** and **macOS 26**. On other platforms, or when the minimum OS/SDK is not met, the property is ignored and the picker renders normally.
 
 ## Enable Liquid Glass
 
-Set the [`EnableLiquidGlassEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_EnableLiquidGlassEffect) property to `true` to apply the effect. Place the picker over visually rich content (an image, a gradient, or a color block) so the effect is visible.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_EnableLiquidGlassEffect) property to `true` to apply the effect. Place the picker over visually rich content (an image, a gradient, or a color block) so the effect is visible.
 
 {% tabs %}
 
@@ -24,7 +32,8 @@ Set the [`EnableLiquidGlassEffect`](https://help.syncfusion.com/cr/maui/Syncfusi
 
 <Grid>
     <!-- Background to make the glass effect visible while pressing the color picker. -->
-    <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+    <Image Source="wallpaper.jpg" 
+           Aspect="AspectFill" />
     <inputs:SfColorPicker EnableLiquidGlassEffect="True" />
 </Grid>
 
@@ -70,3 +79,12 @@ this.Content = grid;
 - Keep the picker at a reasonable size; the effect is more visible on larger surfaces.
 - For an enhanced UI, pair the effect with a subtle border and rounded corners on the host layout.
 - Test on a real device or simulator. Visual output and performance may vary by device and platform; keep backgrounds moderately detailed to maintain clarity during interaction.
+
+## See also
+
+* [Customization in .NET MAUI Color Picker](https://help.syncfusion.com/maui/colorpicker/customization)
+* [Mode and Value](https://help.syncfusion.com/maui/colorpicker/mode)
+* [Display View Customization](https://help.syncfusion.com/maui/colorpicker/display-view)
+* [Events and Commands](https://help.syncfusion.com/maui/colorpicker/events)
+* [Inline Rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering)
+* [Localization](https://help.syncfusion.com/maui/colorpicker/localization)

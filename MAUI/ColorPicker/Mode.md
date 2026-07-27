@@ -10,7 +10,15 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Mode and Value in .NET MAUI Color Picker
 
-The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control exposes its color editor in one of two visual modes — **Palette** or **Spectrum** — and lets you choose which mode the user sees first. You can also show or hide the mode switcher so that the user cannot change the mode at runtime.
+## Prerequisites
+
+Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
+
+The `SfColorPicker` control exposes its color editor in one of two visual modes — **Palette** or **Spectrum** — and lets you choose which mode the user sees first. You can also show or hide the mode switcher so that the user cannot change the mode at runtime.
 
 ## Color modes
 
@@ -81,7 +89,8 @@ The mode switcher is the in-picker UI (typically a tab strip) that lets the user
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker ColorMode="Palette" IsColorModeSwitcherVisible="False" />
+<inputs:SfColorPicker ColorMode="Palette" 
+                      IsColorModeSwitcherVisible="False" />
 
 {% endhighlight %}
 

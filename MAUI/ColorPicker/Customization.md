@@ -10,11 +10,19 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Customization in .NET MAUI Color Picker (SfColorPicker)
 
-This section explains how to customize the appearance and behavior of the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control, including the default selected color, the visibility of UI elements, action button appearance, palette layout, label styles, slider thumb, and popup placement. 
+## Prerequisites
+
+Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Inputs`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
+
+This section explains how to customize the appearance and behavior of the `SfColorPicker` control, including the default selected color, the visibility of UI elements, action button appearance, palette layout, label styles, slider thumb, and popup placement. 
 
 ## Selected color
 
-The [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColor) property is two-way bindable. Bind it to a `Color` property in your view model to react to user selections via the [`ColorChanged`](https://help.syncfusion.com/maui/colorpicker/events#colorchanged-event) event.
+The [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColor) property is two-way bindable. Bind it to a `Color` property in your view model to react to user selections via the [ColorChanged](https://help.syncfusion.com/maui/colorpicker/events#colorchanged-event) event.
 
 The `SelectedColor` property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
 
@@ -166,7 +174,7 @@ this.Content = colorPicker;
 
 You can remove the Apply and Cancel buttons to apply the selected color immediately on selection. To enable this, set the [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property to `False`. By default, this property is set to `True`.
 
-> **NOTE:** When hosted inside a popup container (for example, as the dropdown content of a [SfComboBox](https://help.syncfusion.com/maui/combobox/getting-started) or in a `SfPopup`), hiding the action buttons causes the popup to close automatically when a color is selected. For the standalone `SfColorPicker` control, the action buttons only affect the in-place Apply/Cancel behavior.
+N> When hosted inside a popup container (for example, as the dropdown content of a [SfComboBox](https://help.syncfusion.com/maui/combobox/getting-started) or in a `SfPopup`), hiding the action buttons causes the popup to close automatically when a color is selected. For the standalone `SfColorPicker` control, the action buttons only affect the in-place Apply/Cancel behavior.
 
 {% tabs %}
 
@@ -229,16 +237,14 @@ You can also customize the text appearance of the action buttons by defining a s
 
 <inputs:SfColorPicker>
     <inputs:SfColorPicker.ApplyButtonLabelStyle>
-        <core:LabelStyle
-            FontSize="16"
-            TextColor="White"
-            FontAttributes="Bold" />
+        <core:LabelStyle FontSize="16"
+                         TextColor="White"
+                         FontAttributes="Bold" />
     </inputs:SfColorPicker.ApplyButtonLabelStyle>
     <inputs:SfColorPicker.CancelButtonLabelStyle>
-        <core:LabelStyle
-            FontSize="14"
-            TextColor="Gray"
-            FontAttributes="None" />
+        <core:LabelStyle FontSize="14"
+                         TextColor="Gray"
+                         FontAttributes="None" />
     </inputs:SfColorPicker.CancelButtonLabelStyle>
 </inputs:SfColorPicker>
 
@@ -282,10 +288,9 @@ You can customize the text appearance of the recent colors label by defining a s
 
 <inputs:SfColorPicker>
     <inputs:SfColorPicker.RecentColorsLabelStyle>
-        <core:LabelStyle
-            FontSize="14"
-            TextColor="DarkGray"
-            FontAttributes="Italic" />
+        <core:LabelStyle FontSize="14"
+                         TextColor="DarkGray"
+                         FontAttributes="Italic" />
     </inputs:SfColorPicker.RecentColorsLabelStyle>
 </inputs:SfColorPicker>
 
@@ -319,10 +324,9 @@ You can customize the text appearance of the labels displayed in the spectrum in
 
 <inputs:SfColorPicker>
     <inputs:SfColorPicker.SpectrumInputViewLabelStyle>
-        <core:LabelStyle
-            FontSize="14"
-            TextColor="Black"
-            FontFamily="Arial" />
+        <core:LabelStyle FontSize="14"
+                         TextColor="Black"
+                         FontFamily="Arial" />
     </inputs:SfColorPicker.SpectrumInputViewLabelStyle>
 </inputs:SfColorPicker>
 
@@ -381,7 +385,8 @@ The [PaletteColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker PaletteColumnCount="6" PaletteRowCount="5"/>    
+<inputs:SfColorPicker PaletteColumnCount="6" 
+                      PaletteRowCount="5"/>    
 
 {% endhighlight %}
 
@@ -541,7 +546,7 @@ this.Content = colorPicker;
 
 {% endtabs %}
 
-> **NOTE:** The number of entries in `PaletteColors` should not exceed `PaletteColumnCount * PaletteRowCount`. Additional colors are ignored.
+N> The number of entries in `PaletteColors` should not exceed `PaletteColumnCount * PaletteRowCount`. Additional colors are ignored.
 
 ## Selection indicator customization
 
@@ -794,7 +799,8 @@ The [PopupBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 {% tabs %}
 {% highlight xaml %}
 
-<inputs:SfColorPicker x:Name="colorPicker" PopupBackground="Thistle"/>
+<inputs:SfColorPicker x:Name="colorPicker" 
+                      PopupBackground="Thistle"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -829,7 +835,8 @@ The default position is [AlignBottom](https://help.syncfusion.com/cr/maui/Syncfu
 {% tabs %}
 {% highlight xaml %}
 
-<inputs:SfColorPicker x:Name="colorPicker" PopupRelativePosition="AlignTop"/>
+<inputs:SfColorPicker x:Name="colorPicker" 
+                      PopupRelativePosition="AlignTop"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -845,3 +852,12 @@ this.Content = colorPicker;
 {% endtabs %}
 
 ![Align top](Images/Customization/AlignTop.png)
+
+## See also
+
+* [Mode and Value in .NET MAUI Color Picker](https://help.syncfusion.com/maui/colorpicker/mode)
+* [Display View Customization](https://help.syncfusion.com/maui/colorpicker/display-view)
+* [Events and Commands](https://help.syncfusion.com/maui/colorpicker/events)
+* [Inline Rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering)
+* [Localization](https://help.syncfusion.com/maui/colorpicker/localization)
+* [Liquid Glass Support](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)
