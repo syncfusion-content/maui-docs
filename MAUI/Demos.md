@@ -10,18 +10,19 @@ documentation: UG
 
 # How to Get and Install the .NET MAUI Sample Browser App
 
-The .NET MAUI Sample Browser App can be installed on Android, iOS, macOS, and Windows devices.
+## Prerequisites
 
-### .NET MAUI Demos for Android
-You can install the .NET MAUI Demos for Android from [Google play store](https://play.google.com/store/apps/details?id=com.syncfusion.sampleBrowser.maui).
+Before installing the .NET MAUI Sample Browser App, verify that your device meets the requirements specified in the following documentation:
 
-### .NET MAUI Demos for Windows
-You can install the .NET MAUI Demos for Windows from the [Microsoft Store](https://apps.microsoft.com/store/detail/syncfusion-maui-controls-gallery/9P2P4D2BK270).
+- https://help.syncfusion.com/maui/system-requirements
 
-### .NET MAUI Demos for iOS
-According to [Apple's App Store Review Guidelines (section 2.2 on beta testing)](https://developer.apple.com/app-store/review/guidelines/#performance), we are unable to upload our Syncfusion<sup>®</sup> .NET MAUI Sample Browser app to the App Store. While this may be disappointing, it ensures that all apps available on the App Store meet certain standards of quality and reliability. However, you can still experience the app. To explore the demos and see what our controls have to offer, you can install the .NET MAUI Demos for iOS using the link below. Please ensure you have the [TestFlight](https://apps.apple.com/in/app/testflight/id899247664) app installed on your device beforehand.
+The .NET MAUI Sample Browser App is available for Android, Windows, iOS, and macOS platforms.
 
-Link: [iOS Demo](https://testflight.apple.com/join/EEOtwVNN)
+<div class="table-responsive">
 
-### .NET MAUI Demos for macOS
-You can install the .NET MAUI Demos for macOS from [here](https://s3.amazonaws.com/files2.syncfusion.com/MAUI/SampleBrowser.Maui.zip).
+| Platform | Install From | Details | Notes |
+|----------|-------------|---------|-------|
+| **Android** | <a href="https://play.google.com/store/apps/details?id=com.syncfusion.sampleBrowser.maui" target="_blank"><img src="https://cdn.syncfusion.com/content/images/FTControl/google-play-store.png" alt="Google Play Store"  /></a> | .NET MAUI Demos for Android are available from the Google Play Store. | — |
+| **Windows** | <a href="https://apps.microsoft.com/detail/9p2p4d2bk270?hl=en-US&gl=IN" target="_blank" rel="noopener noreferrer"><img src="https://cdn.syncfusion.com/content/images/FTControl/windows-store.png" alt="Windows"  /></a>| .NET MAUI Demos for Windows are available from the Microsoft Store. | — |
+| **iOS** | <a href="https://testflight.apple.com/join/EEOtwVNN" target="_blank" rel="noopener noreferrer"><img src="https://cdn.syncfusion.com/content/images/FTControl/snap-store.png" alt="iOS"  /></a> | According to <a href="https://developer.apple.com/app-store/review/guidelines/#performance" target="_blank" rel="noopener noreferrer">Apple's App Store Review Guidelines</a> (section 2.2 on beta testing), we are unable to publish the Syncfusion<sup>®</sup> .NET MAUI Sample Browser App on the App Store. However, you can still explore the demos and evaluate the controls using the TestFlight build available through the provided invitation link. | Please ensure that you have the <a href="https://apps.apple.com/in/app/testflight/id899247664" target="_blank" rel="noopener noreferrer">TestFlight</a> app installed on your device before installing the Sample Browser App. |
+| **macOS** | <a href="https://s3.amazonaws.com/files2.syncfusion.com/MAUI/SampleBrowser.Maui.zip"><img src="https://img.shields.io/badge/Download-macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS"/></a> | .NET MAUI Demos for macOS are available here. | — |
