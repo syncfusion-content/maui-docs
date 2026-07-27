@@ -87,6 +87,60 @@ N> The **Essential<sup>®</sup> UI Kit for .NET MAUI** add-in will be shown when
    ![MAUI UI Kit Visual Studio Code](UI-Kit-images/visual-studio-code-maui-ui-kit.gif)
 
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites**
+
+* JetBrains Rider 2024.2 or later is required.
+* Ensure the .NET MAUI workload (.NET 8 and later) is installed before proceeding.
+* Ensure the **Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup>** plugin is installed in JetBrains Rider. To check, go to **Settings > Plugins > Installed**. If the plugin is not installed, follow the steps below:
+   1. Open JetBrains Rider.
+   2. Navigate to **File > Settings > Plugins**.
+   3. Select the **Marketplace** tab, type **Essential<sup>®</sup> UI Kit for .NET MAUI** in the search field, and click **Install**.
+   4. Restart JetBrains Rider if prompted.
+
+**Add UI Kit templates to a .NET MAUI project**
+
+1. Open JetBrains Rider and open an existing .NET MAUI project, or create a new MAUI app first.
+
+2. In the **Solution Explorer**, right-click the project and choose **Tools → Essential UI Kit for .NET MAUI - Syncfusion<sup>®</sup>** as shown in the following screenshot.
+
+   ![Syncfusion Essential UI Kit for .NET MAUI Context menu in MAUI](UI-Kit-images/Menu.png)
+
+3. The category dialog wizard will open with pre-defined templates.
+
+   ![Add new item dialog box](UI-Kit-images/Maui-Wizard.png)
+
+4. Choose one or more page templates (for example, `About Us Page With Cards`), and then click **Next**.
+
+5. Enter a name for the new page and click **Add** to scaffold the XAML page, View, ViewModel, Model classes, and resources.
+
+   ![Edit page Name in MAUI UI Kit Plugin](UI-Kit-images/Edit-Wizard.png)
+
+6. The selected pages will be added along with the **View, ViewModel, Model** classes, resource files, and the **Syncfusion<sup>®</sup> NuGet package** reference as shown in the following screenshots.
+
+   ![Added files in MAUI Project](UI-Kit-images/ViewFiles.png)
+
+   ![Added Resources in MAUI Project](UI-Kit-images/Resources.png)
+
+   ![Added NuGet in MAUI Project](UI-Kit-images/Packages.png)
+
+7. To set the new page as the startup page, see the [How to Render the Added Page?](#how-to-render-the-added-page) section below.
+
+**Troubleshooting**
+
+* **Templates don't appear:** Restart Rider after installing the plugin, or verify the plugin is enabled under **Settings > Plugins > Installed**.
+* **NuGet packages failing to restore:** Ensure your NuGet sources are available and the project targets a supported MAUI framework (.NET 8 and later).
+
+**References**
+
+* [Essential® UI Kit for .NET MAUI Plugin | Syncfusion]([https://help.syncfusion.com/maui/extension/getting-started](https://help.syncfusion.com/extension/netmaui-extension/jetbrains/essential-ui-kit))
+* [JetBrains Rider extension documentation](https://github.com/syncfusion-content/extension-docs/tree/master/Extension/NETMAUI-Extension/JetBrains)
+
+N> Syncfusion<sup>®</sup> licensing registration is required if you have installed the trial setup or NuGet packages, since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. When a page is added, a licensing message box will appear with a link to register the key. Refer to the [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the license key in your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for details on the licensing changes introduced in Essential Studio<sup>®</sup>.
+
+{% endtabcontent %}
 {% endtabcontents %}
 
 ## How to Render the Added Page?
