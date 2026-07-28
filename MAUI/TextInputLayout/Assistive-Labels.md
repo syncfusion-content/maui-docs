@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Assistive Labels in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn how to use assistive labels in Syncfusion® .NET MAUI SfTextInputLayout, including helper text, error text, counters, and toggles.
+title: Assistive Labels in .NET MAUI Text Input Layout control | Syncfusion®
+description: Learn how to use assistive labels in Syncfusion® .NET MAUI TextInputLayout, including helper text, error text, counters, and toggles.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout assistive labels, syncfusion text input layout helper text maui, sftextinputlayout error label maui, .net maui text input layout character counter, .net maui text input layout password toggle, sftextinputlayout reserve space maui
 ---
 
-# Assistive Labels in .NET MAUI SfTextInputLayout
+# Assistive Labels in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Assistive labels provide additional information about the text entered in the input view hosted by the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control.
+Assistive labels provide additional information about the text entered in the input view hosted by the [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control.
 
 ## Prerequisites
 
@@ -20,15 +20,15 @@ Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfus
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
 
-## Assistive Labels Overview
+## Overview
 
 The following assistive labels are available:
 
-- **Password visibility toggle** — show or hide the characters in an [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
-- **Helper text** — additional guidance shown below the input line.
-- **Error text** — error message shown below the input line when `HasError` is set to `true`.
-- **Character counter** — live count of characters against a maximum length.
-- **Reserved space** — placeholder space reserved for assistive labels so the layout does not shift when they appear.
+- **Password visibility toggle** - show or hide the characters in an [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
+- **Helper text** - additional guidance shown below the input line.
+- **Error text** - error message shown below the input line when `HasError` is set to `true`.
+- **Character counter** - live count of characters against a maximum length.
+- **Reserved space** - placeholder space reserved for assistive labels so the layout does not shift when they appear.
 
 ## Password visibility toggle
 
@@ -174,6 +174,14 @@ Content = new VerticalStackLayout
         inputLayout
     }
 };
+
+{% endhighlight %}
+{% endtabs %}
+
+The `TextChanged` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
 
 private void OnEmailTextChanged(object? sender, TextChangedEventArgs e)
 {

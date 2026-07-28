@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Events in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn about the events raised by the Syncfusion® .NET MAUI SfTextInputLayout control, including the PasswordVisibilityToggled event.
+title: Events in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn about the events raised by the Syncfusion® .NET MAUI Text Input Layout control, including the PasswordVisibilityToggled event.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout events, syncfusion text input layout password toggled maui, sftextinputlayout passwordvisibilitytoggled maui, .net maui text input layout eventargs, sftextinputlayout ispasswordvisible maui
 ---
 
-# Events in .NET MAUI SfTextInputLayout
+# Events in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-[SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) raises events to notify your application when the user interacts with the control. This page documents the events exposed directly by `SfTextInputLayout`. For events on the inner input view (such as `TextChanged`, `Focused`, and `Unfocused`), refer to the [MAUI Entry documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry).
+[.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) raises events to notify your application when the user interacts with the control. This page documents the events exposed directly by `Text Input Layout`. For events on the inner input view (such as `TextChanged`, `Focused`, and `Unfocused`), refer to the [.NET MAUI Entry documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry).
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ N> The `PasswordVisibilityToggled` event fires only when [EnablePasswordVisibili
 
 ## Password visibility toggled event
 
-The `PasswordVisibilityToggled` event fires when the user taps the password visibility toggle icon. The handler receives the `SfTextInputLayout` instance as the `sender` and a `PasswordVisibilityToggledEventArgs` instance.
+The `PasswordVisibilityToggled` event fires when the user taps the password visibility toggle icon. 
 
 ### Event Arguments
 
@@ -67,6 +67,14 @@ Content = new VerticalStackLayout
 };
 
 inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `PasswordVisibilityToggled` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight xaml %}
 
 void OnPasswordVisibilityToggled(object? sender, PasswordVisibilityToggledEventArgs e)
 {

@@ -1,26 +1,17 @@
 ---
 layout: post
-title: Supported Input Views in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn which MAUI and Syncfusion input views, including Entry, Editor, Picker, ComboBox, and NumericEntry, are supported in SfTextInputLayout.
+title: Supported Input Views in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn which MAUI and Syncfusion input views, including Entry, Editor, Picker, ComboBox, and NumericEntry, are supported in Text Input Layout.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout supported input views, syncfusion text input layout entry maui, sftextinputlayout editor maui, sftextinputlayout autocomplete combobox maui, .net maui text input layout picker timepicker datepicker, sftextinputlayout maskedentry numericentry maui
 ---
 
-# Supported Input Views in .NET MAUI SfTextInputLayout
+# Supported Input Views in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Host any `View` inside [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by assigning it to the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfContentView.html#Syncfusion_Maui_Core_SfContentView_Content) property. The most common input views are listed below.
+Host any `View` inside [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by assigning it to the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfContentView.html#Syncfusion_Maui_Core_SfContentView_Content) property. The most common input views are listed below.
 
-## Prerequisites
-
-Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Core`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
-
-## Supported Input Views
 
 | Input View | Source | Notes |
 |------------|--------|-------|
@@ -34,11 +25,17 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 | [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) | Syncfusion | Masked text input. Requires `Syncfusion.Maui.MaskedEntry`. |
 | [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) | Syncfusion | Numeric input with up/down. Requires `Syncfusion.Maui.NumericEntry`. |
 
-N> The label, hint, helper text, error text, and visual states are forwarded from `SfTextInputLayout` to the hosted input view. The forwarded `HasError` state is reflected on the inner control.
+## Prerequisites
+
+Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
 
 ## Entry
 
-For single-line text input, host the MAUI [`Entry`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control inside `SfTextInputLayout`.
+For single-line text input, host the .NET MAUI [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control inside `SfTextInputLayout`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -76,7 +73,7 @@ Content = new VerticalStackLayout
 
 ## Editor
 
-For multi-line text input, host the MAUI [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor) and set [AutoSize](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.editor.autosize) to `TextChanges` so the editor grows with the entered text.
+For multi-line text input, host the .NET MAUI [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor) and set [AutoSize](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.editor.autosize) to `TextChanges` so the editor grows with the entered text.
 
 {% tabs %}
 {% highlight xaml %}
@@ -406,12 +403,7 @@ For more information, see the [ComboBox Selection](https://help.syncfusion.com/m
 
 ## SfMaskedEntry
 
-Host the Syncfusion [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control for masked text input. Install the `Syncfusion.Maui.Inputs` NuGet package and refer to the [MaskedEntry getting started](https://help.syncfusion.com/maui/combobox/getting-started) page for platform setup.
-
-| Property | Description |
-|----------|-------------|
-| `MaskType` | Defines the masking behavior. Common values: `Simple`, `RegEx`, `DateTime`, `Time`, `PhoneNumber`. |
-| `Mask` | The mask pattern (e.g., `0000 0000 0000 0000` for a 16-digit card number). |
+Host the Syncfusion [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control for masked text input. Install the `Syncfusion.Maui.Inputs` NuGet package and refer to the [MaskedEntry getting started](https://help.syncfusion.com/maui/masked-entry/getting-started) page for platform setup.
 
 {% tabs %}
 {% highlight xaml %}
@@ -455,12 +447,6 @@ Content = new VerticalStackLayout
 ## SfNumericEntry
 
 Host the Syncfusion [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control for numeric input with optional up/down buttons. Install the `Syncfusion.Maui.Inputs` NuGet package and refer to the [NumericEntry getting started](https://help.syncfusion.com/maui/numericentry/getting-started) page for platform setup.
-
-| Property | Description |
-|----------|-------------|
-| `Value` | The numeric value displayed in the control. |
-| `ShowClearButton` | When `true`, shows a clear-text button. |
-| `UpDownPlacementMode` | Position of the up/down buttons (for example, `Inline`). |
 
 {% tabs %}
 {% highlight xaml %}
@@ -643,4 +629,3 @@ N> The Windows platform does not support the MAUI `DatePicker` as an input view 
 - [SfComboBox documentation](https://help.syncfusion.com/maui/combobox/overview)
 - [SfMaskedEntry documentation](https://help.syncfusion.com/maui/masked-entry/overview)
 - [SfNumericEntry documentation](https://help.syncfusion.com/maui/numeric-entry/overview)
-

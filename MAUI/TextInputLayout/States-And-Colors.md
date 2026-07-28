@@ -1,21 +1,23 @@
 ---
 layout: post
-title: States and Colors in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn how to customize stroke, background, label colors, and visual states such as Normal, Focused, Error, and Disabled in SfTextInputLayout.
+title: States and Colors in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn how to customize stroke, background, label colors, and visual states such as Normal, Focused, Error, and Disabled in Text Input Layout.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout states and colors, syncfusion text input layout stroke maui, sftextinputlayout visual state manager maui, .net maui textinputlayout container background, sftextinputlayout isenabled maui, sftextinputlayout labelstyle textcolor maui
 ---
 
-# States and Colors in .NET MAUI SfTextInputLayout
+# States and Colors in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Customize the appearance of [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by setting stroke and background colors, applying visual states, and styling the labels. This page covers the following customization points:
+Customize the appearance of [Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by setting stroke and background colors, applying visual states, and styling the labels. This page covers the following customization points:
 
 - The base [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) color and the per-state stroke values via the [Visual State Manager](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/visual-states?view=net-maui-10.0).
 - The [ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground) color for Filled and Outlined containers.
 - The text color of the hint, helper, and error labels via [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html).
 - The disabled appearance via [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsEnabled).
+
+N> The current stroke color is exposed through the read-only [CurrentActiveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CurrentActiveColor) property (type `Color`). The error color is **not** set to `CurrentActiveColor` when `HasError` is `true`; instead, the control uses the `Stroke` value from the `Error` visual state (or the default error color if no state is defined).
 
 ## Prerequisites
 
@@ -25,21 +27,9 @@ Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfus
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
 
-## Supported Visual States
-
-The control exposes three visual states through the `Visual State Manager`. Each state can override the `Stroke`, `StrokeThickness`, and other brush properties.
-
-| State | Trigger |
-|-------|---------|
-| `Normal` | Default state (no focus, no error). |
-| `Focused` | The inner input view has focus. |
-| `Error` | [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HasError) is `true`. |
-
-N> The current stroke color is exposed through the read-only [CurrentActiveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CurrentActiveColor) property (type `Color`). The error color is **not** set to `CurrentActiveColor` when `HasError` is `true`; instead, the control uses the `Stroke` value from the `Error` visual state (or the default error color if no state is defined).
-
 ## Stroke and visual states
 
-The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) property (`Color`, default: platform theme) is applied to the hint label and the border. Use the `Visual State Manager` to override `Stroke` per state.
+The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) property is applied to the hint label and the border. Use the `Visual State Manager` to override `Stroke` per state.
 
 N> The cursor color of the inner input view follows the `Accent` color of the application on each platform.
 
@@ -158,7 +148,7 @@ Content = new VerticalStackLayout
 
 ## Container background
 
-The [ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground) property (`Color`, default: `Transparent` for Outlined; platform theme for Filled) is honored only when [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) is [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled) or [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined).
+The [ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground) property is honored only when [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) is `Filled` or `Outlined`.
 
 ### Filled
 
@@ -238,7 +228,7 @@ Content = new VerticalStackLayout
 
 ## Customize the label text color
 
-Use the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_TextColor) property of the [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html) class to customize the color of the hint, helper, and error labels (type `Color`, default: platform theme).
+Use the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_TextColor) property of the [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html) class to customize the color of the hint, helper, and error labels.
 
 {% tabs %}
 {% highlight xaml %}
@@ -295,4 +285,3 @@ Content = new VerticalStackLayout
 - [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
 - [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)
 - [Custom Font](https://help.syncfusion.com/maui/textinputlayout/custom-font)
-- [MAUI Visual State Manager](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/visual-states?view=net-maui-10.0)

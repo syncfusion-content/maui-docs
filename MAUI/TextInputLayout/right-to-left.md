@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Right-to-Left Support in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn how to enable right-to-left (RTL) text flow in the Syncfusion® .NET MAUI SfTextInputLayout control, including app-level setup and platform notes.
+title: Right-to-Left Support in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn how to enable right-to-left (RTL) text flow in the Syncfusion® .NET MAUI Text Input Layout control, including app-level setup and platform notes.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout right to left, syncfusion text input layout rtl maui, sftextinputlayout flowdirection maui, .net maui rtl localization, .net maui text input layout arabic hebrew, sftextinputlayout bidi maui
 ---
 
-# Right-to-Left Support in .NET MAUI SfTextInputLayout
+# Right-to-Left Support in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-[SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) supports right-to-left (RTL) text flow for languages such as Arabic, Hebrew, and Persian. The control honors the MAUI [FlowDirection](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/localization#right-to-left-layout) property, which can be set on the control itself or on any parent visual element (page, window, or app).
+[.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) supports to changing the flow of text to the right-to-left direction by setting the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.device.flowdirection?view=net-maui-7.0) to `RightToLeft`.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 | `RightToLeft` | RTL layout. The hint, helper text, and input view flow from right to left. Leading and trailing views are also mirrored. |
 | `MatchParent` | Inherits the `FlowDirection` from the visual parent. The default for most controls. |
 
-N> When the layout direction changes, the hint label, helper text, error text, character counter, password toggle, and leading/trailing views are mirrored automatically. The `Content` (e.g., `Entry`) is also mirrored, so the cursor and selection behave correctly.
+N> When the layout direction changes, the hint label, helper text, error text, character counter, password toggle, and leading/trailing views are mirrored automatically.
 
 ## Apply RTL to a single control
 
@@ -69,52 +69,8 @@ Content = new VerticalStackLayout
 
 ![.NET MAUI TextInputLayout with right to left](images/RightToLeft/RTL.png)
 
-## Apply RTL to the entire app
-
-To enable RTL for the entire application, set `FlowDirection` on the root page or in the `MauiAppBuilder` configuration. This is the recommended approach for fully-localized apps.
-
-{% tabs %}
-{% highlight C# %}
-
-var builder = MauiApp.CreateBuilder();
-builder.UseMauiApp<App>();
-builder.ConfigureLifecycleEvents(events =>
-{
-    // Force RTL for the entire app.
-});
-// Or set FlowDirection on the root page in App.xaml.cs.
-
-{% endhighlight %}
-{% endtabs %}
-
-You can also set `FlowDirection` on the root page in `App.xaml.cs`:
-
-{% tabs %}
-{% highlight C# %}
-
-public App()
-{
-    InitializeComponent();
-    MainPage = new MainPage { FlowDirection = FlowDirection.RightToLeft };
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Platform notes
-
-| Platform | Required Configuration |
-|----------|------------------------|
-| Android | Add `android:supportsRtl="true"` to the `<application>` element in `Platforms/Android/AndroidManifest.xml`. |
-| iOS / Mac Catalyst | Set the `SemanticContentAttribute` to `Playback` or use a storyboard or Interface Builder file with `SemanticContentAttribute` configured to force a layout direction. |
-| Windows | The framework follows the system display language; no extra configuration is required. |
-
-## How to test RTL
-
-To verify the layout without changing the system language, set `FlowDirection="RightToLeft"` on a single page in your XAML and run the app. The hint, helper text, error text, character counter, password toggle, and leading/trailing views should all be mirrored.
-
 ## See Also
 
-- [FlowDirection API reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-10.0)
+- [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
 - [Custom Icons](https://help.syncfusion.com/maui/textinputlayout/custom-icons)
-
+- [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)

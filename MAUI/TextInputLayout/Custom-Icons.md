@@ -1,16 +1,23 @@
 ---
 layout: post
-title: Custom Icons in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn how to add leading and trailing icons (Unicode, font, or any view) to the Syncfusion® .NET MAUI SfTextInputLayout control.
+title: Custom Icons in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn how to add leading and trailing icons (Unicode, font, or any view) to the Syncfusion® .NET MAUI Text Input Layout control.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout custom icons, syncfusion text input layout leading icon maui, sftextinputlayout trailing icon maui, .net maui text input layout view position, sftextinputlayout showleadingview maui, sftextinputlayout showtrailingview maui
 ---
 
-# Custom Icons in .NET MAUI SfTextInputLayout
+# Custom Icons in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Add a leading or trailing icon to the input view of [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by setting the [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_LeadingView) or [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingView) property. Any `View` can be used as the icon — a `Label` for Unicode characters or font icons, an `Image`, or even a `Button` for interactive actions.
+Add a leading or trailing icon to the input view of [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by setting the [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_LeadingView) or [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingView) property. Any `View` can be used as the icon - a `Label` for Unicode characters or font icons, an `Image`, or even a `Button` for interactive actions.
+
+You can wire up gestures or commands on the leading/trailing view to make the icon interactive (for example, a clear-text button or a password show/hide toggle). 
+
+N> Refer to the following links to learn more about font icons:
+
+- [How to create font icons using Syncfusion Metro Studio and export them as TTF](https://help.syncfusion.com/metro-studio/export-icon-font)
+- [How to display font icons in MAUI labels](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts?view=net-maui-7.0#display-font-icons)
 
 ## Prerequisites
 
@@ -33,15 +40,6 @@ Default values:
 
 - `LeadingViewPosition` defaults to `Outside`.
 - `TrailingViewPosition` defaults to `Inside`.
-
-## Interactivity
-
-You can wire up gestures or commands on the leading/trailing view to make the icon interactive (for example, a clear-text button or a password show/hide toggle). 
-
-N> Refer to the following links to learn more about font icons:
-
-- [How to create font icons using Syncfusion Metro Studio and export them as TTF](https://help.syncfusion.com/metro-studio/export-icon-font)
-- [How to display font icons in MAUI labels](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts?view=net-maui-7.0#display-font-icons)
 
 ## Leading view
 
@@ -89,7 +87,7 @@ Content = new VerticalStackLayout
 
 Display any `View` as a trailing icon by setting the [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingView) property. Use the [TrailingViewPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingViewPosition) property to position the view inside or outside the container (default: `Inside`).
 
-The following example shows a Unicode eye emoji rendered as the trailing icon, positioned outside the container:
+The following example shows a Unicode calendar emoji rendered as the trailing icon, positioned outside the container:
 
 {% tabs %}
 {% highlight xaml %}
@@ -134,7 +132,6 @@ The [ShowLeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% tabs %}
 {% highlight xaml %}
-
 
 <VerticalStackLayout>
     <inputLayout:SfTextInputLayout Hint="Birth date"
@@ -271,79 +268,8 @@ public class TextInputLayoutViewModel : INotifyPropertyChanged
 
 ![SfTextInputLayout with both the leading and trailing views hidden using ShowLeadingView and ShowTrailingView](images/CustomIcons/LeadTrailCust.png)
 
-## Handle icon taps
-
-Attach a `TapGestureRecognizer` to the leading or trailing view to make it interactive. The following example uses a trailing eye icon to toggle the password visibility of the inner `Entry`.
-
-{% tabs %}
-{% highlight xaml %}
-
-<VerticalStackLayout>
-    <inputLayout:SfTextInputLayout x:Name="PasswordLayout"
-                                   Hint="Password">
-        <inputLayout:SfTextInputLayout.TrailingView>
-            <Label x:Name="EyeIcon"
-                Text="&#x1F441;&#xFE0F;">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnEyeTapped" />
-                </Label.GestureRecognizers>
-            </Label>
-        </inputLayout:SfTextInputLayout.TrailingView>
-        <Entry x:Name="PasswordEntry" 
-               IsPassword="True" />
-    </inputLayout:SfTextInputLayout>
-</VerticalStackLayout>
-
-{% endhighlight %}
-{% highlight C# %}
-
-private Entry passwordEntry;
-private Label eyeIcon;
-private bool isPasswordVisible;
-
-public MainPage()
-{
-    InitializeComponent();
-    var passwordLayout = new SfTextInputLayout
-    {
-        Hint = "Password"
-    };
-
-    eyeIcon = new Label
-    {
-        Text = "\U0001F441\uFE0F"
-    };
-
-    var tapGesture = new TapGestureRecognizer();
-    tapGesture.Tapped += OnEyeTapped;
-    eyeIcon.GestureRecognizers.Add(tapGesture);
-    passwordLayout.TrailingView = eyeIcon;
-    passwordEntry = new Entry
-    {
-        IsPassword = true
-    };
-    passwordLayout.Content = passwordEntry;
-    Content = new VerticalStackLayout
-    {
-        Padding = 20,
-        Children =
-        {
-            passwordLayout
-        }
-    };
-}
-
-private void OnEyeTapped(object? sender, TappedEventArgs e)
-{
-    passwordEntry.IsPassword = !passwordEntry.IsPassword;
-    eyeIcon.Text = passwordEntry.IsPassword ? "\U0001F441\uFE0F" : "\U0001F576";
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## See Also
 
 - [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
 - [Custom Font](https://help.syncfusion.com/maui/textinputlayout/custom-font)
-- [ViewPosition enum reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ViewPosition.html)
+- [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)

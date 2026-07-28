@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Font Customization in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn how to customize the font (size, family, and attributes) of the hint, helper, and error labels in the Syncfusion® .NET MAUI SfTextInputLayout control.
+title: Font Customization in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn how to customize the font (size, family, and attributes) of the hint, helper, and error labels in the Syncfusion® .NET MAUI Text Input Layout' control.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout font customization, syncfusion text input layout font maui, sftextinputlayout hintlabelstyle maui, sftextinputlayout helperlabelstyle maui, sftextinputlayout errorlabelstyle maui, .net maui labelstyle fontfamily
 ---
 
-# Font Customization in .NET MAUI SfTextInputLayout
+# Font Customization in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Use the [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html) class to customize the size, family, and attributes of the labels rendered by [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html). Each label type has its own style property on the control.
+The [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control allows to customize the appearance (size, attributes, and family) of the font by setting the [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_FontFamily), [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_FontSize), and [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_FontAttributes) properties of the [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html) class.
+
+Refer to this [documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts) to configure the custom fonts in the .NET MAUI.
 
 ## Prerequisites
 
@@ -19,9 +21,10 @@ Before using the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfus
 - `Syncfusion.Maui.Core`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/textinputlayout/getting-started) documentation.
-## Label Styles Overview
 
-The following `LabelStyle` properties are available on `SfTextInputLayout`:
+## Overview
+
+The following `LabelStyle` properties are available on `Text Input Layout`:
 
 | Property | Applies To | Notes |
 |----------|------------|-------|
@@ -31,18 +34,19 @@ The following `LabelStyle` properties are available on `SfTextInputLayout`:
 
 ### LabelStyle Properties
 
-`LabelStyle` exposes the following font-related properties. Values are in device-independent units (`FontSize` is `double`; the rest are strings or enums).
+[LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html) exposes the following font-related properties.
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | `FontFamily` | `string` | Platform default | Font family. For custom fonts, the value must match the font file name (without the TrueType or OpenType font extension). |
 | `FontSize` | `double` | Platform default | Font size in device-independent units. |
-| `FontAttributes` | [FontAttributes](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes) | `None` | One or more of `Bold` and `Italic` (combined with bitwise OR). |
+| `FontAttributes` | `FontAttributes` | `None` | One or more of `Bold` and `Italic`. |
 | `TextColor` | `Color` | Theme default | Text color (useful alongside the font properties). |
+| `FontAutoScalingEnabled` | `bool` | `false` | Enables automatic font size adjustment based on device settings. |
 
 ## Customize the Hint Label
 
-The floating hint label is rendered using [HintLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HintLabelStyle). The hint label is always visible.
+The floating hint label is customized using [HintLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HintLabelStyle) property. The hint label is always visible.
 
 {% tabs %}
 {% highlight xaml %}
@@ -72,13 +76,7 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     },
     Content = new Entry()
 };
-Content = new VerticalStackLayout
-{
-    Children =
-    {
-        inputLayout
-    }
-};
+Content = inputLayout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,10 +85,11 @@ Content = new VerticalStackLayout
 
 ## Customize the Helper Text Label
 
-The helper text below the input line is rendered using [HelperLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HelperLabelStyle). When `HasError` is `true`, the helper text is replaced by the error text, so `HelperLabelStyle` has no visible effect in that state.
+The helper text below the input line is customized using [HelperLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HelperLabelStyle) property. When `HasError` is `true`, the helper text is replaced by the error text, so `HelperLabelStyle` has no visible effect in that state.
 
 {% tabs %}
 {% highlight xaml %}
+
 <inputLayout:SfTextInputLayout Hint="Name"
                                ContainerType="Outlined"
                                HelperText="Enter your name">
@@ -116,13 +115,7 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     },
     Content = new Entry()
 };
-Content = new VerticalStackLayout
-{
-    Children =
-    {
-        inputLayout
-    }
-};
+Content = inputLayout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +124,7 @@ Content = new VerticalStackLayout
 
 ## Customize the Error Text Label
 
-The error text is rendered using [ErrorLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ErrorLabelStyle) and is visible only when `HasError` is set to `true`.
+The error text is customized using [ErrorLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ErrorLabelStyle) property and is visible only when `HasError` is set to `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -163,65 +156,12 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     },
     Content = new Entry()
 };
-Content = new VerticalStackLayout
-{
-    Children =
-    {
-        inputLayout
-    }
-};
+Content = inputLayout;
 
 {% endhighlight %}
 {% endtabs %}
 
 ![SfTextInputLayout with the error text rendered in the Lobster-Regular font at 12 units](images/CustomFont/ErrorLabelStyle.png)
-
-## Apply Bold and Italic
-
-Use `FontAttributes` to apply bold or italic styling. The flags can be combined with bitwise OR.
-
-{% tabs %}
-{% highlight xaml %}
-
-<inputLayout:SfTextInputLayout Hint="Name"
-                               ContainerType="Outlined"
-                               HasError="True"
-                               ErrorText="Enter valid name">
-    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
-        <inputLayout:LabelStyle FontFamily="Lobster-Regular"
-                                FontSize="14"
-                                FontAttributes="Italic" />
-    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
-    <Entry />
-</inputLayout:SfTextInputLayout>
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfTextInputLayout inputLayout = new SfTextInputLayout
-{
-    Hint = "Name",
-    ContainerType = ContainerType.Outlined,
-    HasError = true,
-    ErrorText = "Enter valid name",
-    ErrorLabelStyle = new LabelStyle
-    {
-        FontFamily = "Lobster-Regular",
-        FontSize = 14,
-        FontAttributes = FontAttributes.Italic,
-    },
-    Content = new Entry()
-};
-Content = new VerticalStackLayout
-{
-    Children =
-    {
-        inputLayout
-    }
-};
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Apply a Unified Brand Style
 
@@ -261,13 +201,7 @@ SfTextInputLayout inputLayout = new SfTextInputLayout
     ErrorLabelStyle = new LabelStyle { FontFamily = "Lobster-Regular", FontSize = 12 },
     Content = new Entry()
 };
-Content = new VerticalStackLayout
-{
-    Children =
-    {
-        inputLayout
-    }
-};
+Content = inputLayout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -276,5 +210,3 @@ Content = new VerticalStackLayout
 
 - [Assistive Labels](https://help.syncfusion.com/maui/textinputlayout/assistive-labels)
 - [Container Types](https://help.syncfusion.com/maui/textinputlayout/container-type)
-- [LabelStyle API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html)
-- [MAUI fonts documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts)
