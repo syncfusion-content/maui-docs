@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI StepProgressBar | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin step progressbar to Syncfusion<sup>&reg;</sup> .NET MAUI SfStepProgressBar control.
+title: Migrate from Xamarin to .NET MAUI StepProgressBar | Syncfusion®
+description: Learn all about migrating from the Syncfusion® Xamarin Step ProgressBar to the Syncfusion® .NET MAUI SfStepProgressBar control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
----  
+---
 
-# Migrate from Xamarin.Forms SfStepProgressBar to MAUI SfStepProgressBar
+# Migrate from Xamarin.Forms SfStepProgressBar to .NET MAUI SfStepProgressBar
 
-To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) easier, most of the APIs from the `Xamarin SfStepProgressBar` were kept in the `.NET MAUI SfStepProgressBar`. However, to maintain the consistency of API naming in the `.NET MAUI SfStepProgressBar`, some of the APIs have been renamed. Find the difference in the following topics.
+To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) easier, most of the APIs from the `Xamarin SfStepProgressBar` were retained in the `.NET MAUI SfStepProgressBar`. However, to maintain consistency in API naming, some of the APIs have been renamed. Find the differences in the following topics.
 
-## Namespaces 
+## Namespaces
 
 <table>
 <tr>
@@ -22,7 +22,7 @@ To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusio
 <td>Syncfusion.Maui.ProgressBar</td></tr>
 </table>
 
-## Initialize control
+## Initialize the control
 
 To initialize the control, import the step progressbar namespace and initialize `SfStepProgressBar` as shown in the following code sample.
 
@@ -34,7 +34,7 @@ To initialize the control, import the step progressbar namespace and initialize 
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage
 xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
@@ -50,8 +50,8 @@ xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusi
 using Syncfusion.XForms.ProgressBar;
 ...
 
-SfStepProgressBar sfStepProgressBar = new SfStepProgressBar ();
-this.Content = sfStepProgressBar ;
+SfStepProgressBar sfStepProgressBar = new SfStepProgressBar();
+this.Content = sfStepProgressBar;
 
 {% endhighlight %}
 
@@ -61,7 +61,7 @@ this.Content = sfStepProgressBar ;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage
 xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
@@ -78,7 +78,7 @@ using Syncfusion.Maui.ProgressBar;
 ...
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
-this.Content = stepProgressBar ;
+this.Content = stepProgressBar;
 
 {% endhighlight %}
 
@@ -86,7 +86,7 @@ this.Content = stepProgressBar ;
 </td></tr>
 </table>
 
-## Classes 
+## Classes
 
 <table>
 <tr>
@@ -135,17 +135,17 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[CompletedStepStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html#Syncfusion_XForms_ProgressBar_SfStepProgressBar_CompletedStepStyle)'| markdownify }}</td>
 <td>{{'[CompletedStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_CompletedStepSettings)'| markdownify }}</td>
-<td>Gets or sets the completed step settings for the step progressbar.</td>
+<td>Gets or sets the completed step settings for the step progress bar.</td>
 </tr>
 <tr>
 <td>{{'[InProgressStepStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html#Syncfusion_XForms_ProgressBar_SfStepProgressBar_InProgressStepStyle)'| markdownify }}</td>
 <td>{{'[InProgressStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_InProgressStepSettings)'| markdownify }}</td>
-<td>Gets or sets the in progress step settings for the step progressbar.</td>
+<td>Gets or sets the in-progress step settings for the step progress bar.</td>
 </tr>
 <tr>
 <td>{{'[NotStartedStepStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html#Syncfusion_XForms_ProgressBar_SfStepProgressBar_NotStartedStepStyle)'| markdownify }}</td>
 <td>{{'[NotStartedStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_NotStartedStepSettings)'| markdownify }}</td>
-<td>Gets or sets the not started step settings for the step progressbar.</td>
+<td>Gets or sets the not-started step settings for the step progress bar.</td>
 </tr>
 <tr>
 <td>{{'[Orientation](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html#Syncfusion_XForms_ProgressBar_SfStepProgressBar_Orientation)'| markdownify }}</td>
@@ -160,7 +160,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[TitleAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html#Syncfusion_XForms_ProgressBar_SfStepProgressBar_TitleAlignment)'| markdownify }}</td>
 <td>{{'[LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition)'| markdownify }}</td>
-<td> Gets or sets the label position for the step progress bar.</td>
+<td>Gets or sets the label position for the step progress bar.</td>
 </tr>
 <tr>
 <td>{{'[TitleSpace](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html#Syncfusion_XForms_ProgressBar_SfStepProgressBar_TitleSpace)'| markdownify }}</td>
@@ -300,7 +300,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[Status](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.StepView.html#Syncfusion_XForms_ProgressBar_StepView_Status)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using ActiveStepIndex and ActiveStepProgressValue property, we can achieve the desired step status.</td>
+<td>By using the `ActiveStepIndex` and `ActiveStepProgressValue` properties, the desired step status can be achieved.</td>
 </tr>
 </table>
 
@@ -324,8 +324,8 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[StepOrientation](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.StepOrientation.html)'| markdownify }}</td>
-<td>{{'[StepProgressBarOrientation ](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html)'| markdownify }}</td>
-<td>Defines the step progressbar layout orientation for the SfStepProgressBar.</td>
+<td>{{'[StepProgressBarOrientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html)'| markdownify }}</td>
+<td>Defines the step progress bar layout orientation for the SfStepProgressBar.</td>
 </tr>
 <tr>
 <td>{{'[StepShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.StepShapeType.html)'| markdownify }}</td>
@@ -355,7 +355,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[StepTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html#Syncfusion_XForms_ProgressBar_SfStepProgressBar_StepTapped)'| markdownify }}</td>
 <td>{{'[StepTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTapped)'| markdownify }}</td>
-<td>Occurs whenever the progressbar step is tapped.</td>
+<td>Occurs whenever the progress bar step is tapped.</td>
 </tr>
 <tr>
 <td>{{'[StatusChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html#Syncfusion_XForms_ProgressBar_SfStepProgressBar_StatusChanged)'| markdownify }}</td>

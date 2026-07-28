@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Customization with .NET MAUI Step ProgressBar control | Syncfusion
-description: Learn here all about Customization support with Syncfusion<sup>&reg;</sup> .NET MAUI Step ProgressBar (SfStepProgressBar).
+title: Customization with .NET MAUI Step ProgressBar control | Syncfusion®
+description: Learn all about customization support in the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Customizations in .NET MAUI StepProgressBar (SfStepProgressBar)
-You can highly customize the appearance of the Step progress bar background color, step size, content size, animations, and more.
+# Customization in .NET MAUI StepProgressBar (SfStepProgressBar)
+
+You can fully customize the appearance of the step progress bar, including the background color, step size, content size, animations, and more.
 
 ## ActiveStepIndex
-The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex) property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue) property is used to add the progress value of the currently active step within a sequence.
+
+The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex) property is used to represent the index of the currently active step within the sequence of steps. The [ActiveStepProgressValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue) property is used to add the progress value of the currently active step within a sequence.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
+{% highlight XAML tabtitle="XAML" hl_lines="3 4" %}
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"
@@ -23,7 +25,7 @@ The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Progre
 </stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+{% highlight C# tabtitle="C#" hl_lines="3 4" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
@@ -34,13 +36,14 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {% endhighlight %}
 {% endtabs %}
 
-N> If `ActiveStepIndex` value is less than 0, first step will be marked as `NotStarted` step status. If `ActiveStepIndex` value is greater than the step count, all the steps will be marked as `Completed` step status.
+N> If the `ActiveStepIndex` value is less than 0, the first step will be marked with the `NotStarted` status. If the `ActiveStepIndex` value is greater than the step count, all the steps will be marked with the `Completed` status.
 
 ## Customize step shape
-Customize the shape of the step by using the [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ShapeType) property from `StepSettings`. By default the value of `ShapeType` is `Circle`. 
+
+Customize the shape of the step by using the [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ShapeType) property from `StepSettings`. By default, the value of `ShapeType` is `Circle`.
 
 {% tabs %}
-{% highlight xaml hl_lines="4 7 10" %}
+{% highlight XAML hl_lines="4 7 10" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar" ItemsSource="{Binding ShipmentInfoCollection}"
                 ActiveStepIndex="2" ActiveStepProgressValue="50">
@@ -57,7 +60,7 @@ Customize the shape of the step by using the [ShapeType](https://help.syncfusion
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 public MainPage()
 {
@@ -65,9 +68,9 @@ public MainPage()
     SfStepProgressBar sfstepProgressbar = new SfStepProgressBar()
     {
         ActiveStepIndex = 2,
-        ActiveStepProgressValue=50,
+        ActiveStepProgressValue = 50,
     };
-          
+
     StepSettings inProgressStepSettings = new StepSettings();
     inProgressStepSettings.Background = Color.FromHex("#ff67579c");
     inProgressStepSettings.ContentType = StepContentType.Dot;
@@ -96,13 +99,14 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
- ![Step shape in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-stepshape.png){:width="286" height="351"}
+![Step shape in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-stepshape.png){:width="286" height="351"}
 
-## Customize step content 
-Customize the step content type by using the [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentType) property with [Numbering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepContentType.html#Syncfusion_Maui_ProgressBar_StepContentType_Numbering), [Tick](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepContentType.html#Syncfusion_Maui_ProgressBar_StepContentType_Tick), [Cross](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepContentType.html#Syncfusion_Maui_ProgressBar_StepContentType_Cross), [Dot](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepContentType.html#Syncfusion_Maui_ProgressBar_StepContentType_Dot) and [Images](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource). 
+## Customize step content
+
+Customize the step content type by using the [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentType) property with [Numbering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepContentType.html#Syncfusion_Maui_ProgressBar_StepContentType_Numbering), [Tick](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepContentType.html#Syncfusion_Maui_ProgressBar_StepContentType_Tick), [Cross](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepContentType.html#Syncfusion_Maui_ProgressBar_StepContentType_Cross), [Dot](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepContentType.html#Syncfusion_Maui_ProgressBar_StepContentType_Dot) and [Images](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource).
 
 {% tabs %}
-{% highlight xaml hl_lines="9 12 15" %}
+{% highlight XAML hl_lines="9 12 15" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar"
                         StepSize="40"
@@ -124,14 +128,14 @@ Customize the step content type by using the [ContentType](https://help.syncfusi
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 SfStepProgressBar sfstepProgressbar = new SfStepProgressBar()
 {
     StepContentSize = 25,
     StepSize = 40
 };
-          
+
 StepSettings inProgressStepSettings = new StepSettings();
 inProgressStepSettings.Background = Color.FromHex("#ff67579c");
 inProgressStepSettings.ContentType = StepContentType.Dot;
@@ -156,13 +160,14 @@ this.Content = sfstepProgressbar;
 {% endhighlight %}
 {% endtabs %}
 
- ![Step content in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-stepcontent.png){:width="286" height="351"}
+![Step content in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-stepcontent.png){:width="286" height="351"}
  
 ## Animation duration
-Customize the progress animation duration by using the [ProgressAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressAnimationDuration) property in `SfStepProgressBar`. By default the value of the animation duration is `1000`.
+
+Customize the progress animation duration by using the [ProgressAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressAnimationDuration) property in `SfStepProgressBar`. By default, the value of the animation duration is `1000`.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight XAML hl_lines="3" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar" 
                         ProgressBarBackground="LightBlue" 
@@ -173,7 +178,7 @@ Customize the progress animation duration by using the [ProgressAnimationDuratio
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 public MainPage()
 {
@@ -181,11 +186,11 @@ public MainPage()
     SfStepProgressBar sfstepProgressbar = new SfStepProgressBar()
     {
         ActiveStepIndex = 1,
-        ActiveStepProgressValue=50,
-        ProgressBarBackground=Colors.LightBlue,
-        ProgressAnimationDuration=2000
+        ActiveStepProgressValue = 50,
+        ProgressBarBackground = Colors.LightBlue,
+        ProgressAnimationDuration = 2000
     };
-          
+
     this.Content = sfstepProgressbar;
 }
 
@@ -193,10 +198,11 @@ public MainPage()
 {% endtabs %}
 
 ## Progress bar background
+
 You can customize the progress bar background of the step progress bar by using the [ProgressBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressBarBackground) property in `SfStepProgressBar`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight XAML hl_lines="2" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar" 
                         ProgressBarBackground="LightBlue">
@@ -204,16 +210,16 @@ You can customize the progress bar background of the step progress bar by using 
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 public MainPage()
 {
     InitializeComponent();
     SfStepProgressBar sfstepProgressbar = new SfStepProgressBar()
     {
-        ProgressBarBackground=Colors.LightBlue,
+        ProgressBarBackground = Colors.LightBlue,
     };
-          
+
     this.Content = sfstepProgressbar;
 }
 
@@ -221,6 +227,7 @@ public MainPage()
 {% endtabs %}
 
 ## Customize Progress Track Size for each step
+
 The `SfStepProgressBar` control provides customization of progress track size for each step. You can customize the height of each step progress bar using [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property in the `StepProgressBarItem`.
 
 *The default value of the `ProgressTrackSize` property is 50.
@@ -299,18 +306,18 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![Height request support for each step in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-height-request-support-for-each-step.png)
+![Height request support for each step in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-height-request-support-for-each-step.png)
 
- N> 
+N>
 * If the [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property value of the StepProgressBarItem is less than 1, the height of the progress bar will be rendered using the default value.
 * Providing the [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property value for the last step will have no effect because the last step doesn't have a progress bar.
- 
 
 ## Customize step appearance
-You can customize the appearance of the steps by using the [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ShapeType), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_Background), [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentType), [ContentFillColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentFillColor), [ProgressColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ProgressColor), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_Stroke), and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_TextStyle) properties from the [InProgressStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_InProgressStepSettings) for the in-progress state, [CompletedStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_CompletedStepSettings) for the completed state, and [NotStartedStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_NotStartedStepSettings) for the not-started state. 
+
+You can customize the appearance of the steps by using the [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ShapeType), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_Background), [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentType), [ContentFillColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentFillColor), [ProgressColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ProgressColor), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_Stroke), and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_TextStyle) properties from the [InProgressStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_InProgressStepSettings) for the in-progress state, [CompletedStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_CompletedStepSettings) for the completed state, and [NotStartedStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_NotStartedStepSettings) for the not-started state.
 
 {% tabs %}
-{% highlight xaml hl_lines="4 5 6 7 9 11 12 13 14 19 20 21 22" %}
+{% highlight XAML hl_lines="4 5 6 7 9 11 12 13 14 19 20 21 22" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar" ItemsSource="{Binding ShipmentInfoCollection}"
                 ActiveStepIndex="2" ActiveStepProgressValue="50">
@@ -339,15 +346,15 @@ You can customize the appearance of the steps by using the [ShapeType](https://h
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 public MainPage()
 {
     InitializeComponent();
-        SfStepProgressBar sfstepProgressbar = new SfStepProgressBar()
-        {
-            ActiveStepIndex = 2,
-            ActiveStepProgressValue = 50,
+    SfStepProgressBar sfstepProgressbar = new SfStepProgressBar()
+    {
+        ActiveStepIndex = 2,
+        ActiveStepProgressValue = 50,
     };
 
     StepTextStyle inprogressTextStyle = new StepTextStyle();
@@ -367,7 +374,7 @@ public MainPage()
     inProgressStepSettings.ContentType = StepContentType.Dot;
     inProgressStepSettings.ShapeType = StepShapeType.Square;
     inProgressStepSettings.ContentFillColor = Colors.White;
-    inProgressStepSettings.Stroke= Colors.DarkViolet;
+    inProgressStepSettings.Stroke = Colors.DarkViolet;
     inProgressStepSettings.TextStyle = inprogressTextStyle;
 
     StepSettings completedStepSettings = new StepSettings();
@@ -396,13 +403,14 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
- ![Step customization in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-customstepprogress.png){:width="286" height="351"}
+![Step customization in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-customstepprogress.png){:width="286" height="351"}
 
 ## Customize step appearance using DataTemplate
+
 You can customize the step appearance using the [StepTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTemplate) property in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5 6 7 8 9 10 11" %}
+{% highlight XAML tabtitle="XAML" hl_lines="5 6 7 8 9 10 11" %}
 
 <progressBar:SfStepProgressBar x:Name="stepProgress"
                                Orientation="Horizontal"
@@ -419,7 +427,7 @@ You can customize the step appearance using the [StepTemplate](https://help.sync
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="6 7 8 9 10 11 12 13" %}
+{% highlight C# tabtitle="C#" hl_lines="6 7 8 9 10 11 12 13" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
@@ -438,7 +446,7 @@ this.Content = stepProgressBar;
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
 public class ViewModel
 {
@@ -478,10 +486,11 @@ public class ViewModel
 ![customize-step-using-datatemplate](images/customization/customize-step-using-datatemplate.png)
 
 ## Customize step appearance using DataTemplateSelector
+
 You can customize the step appearance using the [StepTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTemplate) property in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). The DataTemplateSelector can be used to choose a different data template for each step in the step progress bar based on the step’s data. This allows you to customize the appearance of a particular step based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <Grid>
     <Grid.Resources>
@@ -522,7 +531,7 @@ You can customize the step appearance using the [StepTemplate](https://help.sync
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
 public class ViewModel
 {
@@ -558,7 +567,7 @@ public class ViewModel
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="StepTemplateSelector.cs" %}
+{% highlight C# tabtitle="StepTemplateSelector.cs" %}
 
  public class StepTemplateSelector : DataTemplateSelector
  {
@@ -587,17 +596,18 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> 
+N>
 * The [StepTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTemplate) will be rendered based on the [StepSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepSize) property in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html).
 * The `StepSettings` properties such as [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ShapeType), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_Background), [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentType), [ContentFillColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentFillColor), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_Stroke) are not applicable when [StepTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTemplate) is provided.
 
 ![customize-step-using-templateselector](images/customization/customize-step-using-templateselector.png)
 
 ## Customize primary and secondary text appearance using DataTemplate
+
 You can customize the appearance of the step descriptions by using the [PrimaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_PrimaryTextTemplate) and [SecondaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_SecondaryTextTemplate) properties in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5 6 7 8 9 10 11 12" %}
+{% highlight XAML tabtitle="XAML" hl_lines="5 6 7 8 9 10 11 12" %}
 
 <progressBar:SfStepProgressBar x:Name="stepProgress"
                            Orientation="Horizontal"
@@ -615,7 +625,7 @@ You can customize the appearance of the step descriptions by using the [PrimaryT
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight C# tabtitle="C#" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
@@ -654,7 +664,7 @@ this.Content = stepProgressBar;
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
 public class ViewModel
 {
@@ -694,10 +704,11 @@ public class ViewModel
 ![customize-description-using-datatemplate](images/customization/customize-description-using-datatemplate.png)
 
 ## Customize primary and secondary text appearance using DataTemplateSelector
+
 You can customize the appearance of the step descriptions using the [PrimaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_PrimaryTextTemplate) and [SecondaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_SecondaryTextTemplate) properties in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). The DataTemplateSelector can be used to choose a different data template for each step description in the step progress bar based on the step’s data. This allows you to customize the appearance of a particular step description based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="37" %}
+{% highlight XAML tabtitle="XAML" hl_lines="37" %}
 
 <Grid>
     <Grid.Resources>
@@ -741,7 +752,7 @@ You can customize the appearance of the step descriptions using the [PrimaryText
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
 public class ViewModel
 {
@@ -777,7 +788,7 @@ public class ViewModel
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="PrimaryTemplateSelector.cs" %}
+{% highlight C# tabtitle="PrimaryTemplateSelector.cs" %}
 
 public class PrimaryTemplateSelector : DataTemplateSelector
 {
