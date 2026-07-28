@@ -22,11 +22,11 @@ The `.NET MAUI Color Picker` supports an inline rendering mode that embeds the c
 
 ## Behavior
 
-When [`IsInline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsInline) is set to `true`, the color editor is rendered as part of the page layout. The following changes apply:
+When [IsInline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsInline) is set to `true`, the color editor is rendered as part of the page layout. The following changes apply:
 
 - The drop-down button and selected-color display view are **not** shown.
 - The color editor (palette, spectrum, sliders, and so on) takes up the space allocated to the picker in the layout.
-- The [`IsActionButtonsVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property has no effect in inline mode (OK/Cancel buttons are only meaningful in pop-up mode).
+- The [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property has no effect in inline mode (OK/Cancel buttons are only meaningful in pop-up mode).
 
 ## Enable inline rendering
 
