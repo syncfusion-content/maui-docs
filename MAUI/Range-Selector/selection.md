@@ -13,7 +13,7 @@ This section helps to learn about the range selection in the Range Selector.
 
 ## Discrete selection
 
-Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_StepSize) property in the Range Selector.
+Move the thumb in a discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_StepSize) property in the Range Selector.
 
 {% tabs %}
 
@@ -44,9 +44,11 @@ Move the thumb in discrete manner for numeric values using the [`StepSize`](http
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.StepSize = 2;
 rangeSelector.Minimum = 0;
 rangeSelector.Maximum = 10;
 rangeSelector.RangeStart = 2;
@@ -58,7 +60,7 @@ rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-         
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -97,18 +99,22 @@ Both the thumbs are moved to the selected interval if the [EnableIntervalSelecti
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 0;
-rangeSelector.RangeStart = 2; 
-rangeSelector.RangeEnd = 8;        
+rangeSelector.Maximum = 10;
+rangeSelector.RangeStart = 2;
+rangeSelector.RangeEnd = 8;
+rangeSelector.Interval = 2;
 rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;    
+rangeSelector.ShowTicks = true;
 rangeSelector.EnableIntervalSelection = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-         
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -150,15 +156,18 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
 rangeSelector.Maximum = 100;
 rangeSelector.RangeStart = 25;
 rangeSelector.RangeEnd = 75;
-rangeSelector.Interval = 25; 
+rangeSelector.Interval = 25;
 rangeSelector.ShowTicks = true;
-rangeSelector.ShowLabels = true;  
+rangeSelector.ShowLabels = true;
 rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.OnThumb;
 SfCartesianChart chart = new SfCartesianChart();
@@ -201,15 +210,18 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
 rangeSelector.Maximum = 100;
 rangeSelector.RangeStart = 25;
 rangeSelector.RangeEnd = 75;
-rangeSelector.Interval = 25; 
+rangeSelector.Interval = 25;
 rangeSelector.ShowTicks = true;
-rangeSelector.ShowLabels = true;   
+rangeSelector.ShowLabels = true;
 rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.BetweenThumbs;
 SfCartesianChart chart = new SfCartesianChart();
@@ -252,15 +264,18 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
 rangeSelector.Maximum = 100;
 rangeSelector.RangeStart = 25;
 rangeSelector.RangeEnd = 75;
-rangeSelector.Interval = 25; 
-rangeSelector.ShowTicks = true; 
-rangeSelector.ShowLabels = true;  
+rangeSelector.Interval = 25;
+rangeSelector.ShowTicks = true;
+rangeSelector.ShowLabels = true;
 rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.Both;
 SfCartesianChart chart = new SfCartesianChart();
@@ -307,19 +322,23 @@ It invokes the `ValueChanging` event when the thumb is dragged and held for the 
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 0;
-rangeSelector.RangeStart = 2; 
-rangeSelector.RangeEnd = 8;        
+rangeSelector.Maximum = 10;
+rangeSelector.RangeStart = 2;
+rangeSelector.RangeEnd = 8;
+rangeSelector.Interval = 2;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.EnableDeferredUpdate = true;
-rangeSelector.DeferredUpdateDelay = 1000;    
+rangeSelector.DeferredUpdateDelay = 1000;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-         
+
 {% endhighlight %}
 
 {% endtabs %}

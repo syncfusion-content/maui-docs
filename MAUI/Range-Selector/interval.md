@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interval in.NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about adding the Interval feature of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Interval in .NET MAUI Range Selector control | Syncfusion®
+description: Learn here all about the Interval feature of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Interval in .NET MAUI Range Selector (SfRangeSelector)
 
-This section explains how to add the interval for numeric Range Selector.
+This section explains how to add the interval for the numeric Range Selector.
 
 ## Numeric interval
 
@@ -45,6 +45,9 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
@@ -57,7 +60,7 @@ rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-         
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -97,6 +100,9 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
@@ -108,7 +114,7 @@ rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-         
+
 {% endhighlight %}
 
 {% endtabs %}
