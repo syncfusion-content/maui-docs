@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui markdownviewer load markdown, syncfusion markdownviewer source maui, sfmarkdownviewer load from url maui, .net maui markdown embedded resource, .net maui markdownviewer local file, markdown viewer binding maui
 ---
 
-# Loading Markdown Content in .NET MAUI Markdown Viewer (SfMarkdownViewer)
+# Load Markdown in .NET MAUI Markdown Viewer (SfMarkdownViewer)
 
 The [.NET MAUI Markdown Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control supports flexible input sources, allowing developers to load markdown content from strings, local files, embedded resources, and external URLs.
 

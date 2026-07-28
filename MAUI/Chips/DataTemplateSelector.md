@@ -63,6 +63,7 @@ Create a custom class by inheriting `DataTemplateSelector` and override the [OnS
 
 The following selector exposes two templates - `HappyEmojiTemplate` for chips that can be selected, and `SadEmojiTemplate` for those that cannot.
 
+{% tabs %}
 {% highlight C# %}
 
 public class ChipDataTemplateSelector : DataTemplateSelector
@@ -77,6 +78,7 @@ public class ChipDataTemplateSelector : DataTemplateSelector
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Apply the selector
 
@@ -121,7 +123,7 @@ The properties on the selector (e.g., `HappyEmojiTemplate`) are populated from X
 </ContentPage.Resources>
 
 {% endhighlight %}
-{% highlight C# %}
+{% endtabs %}
 
 Assign the `ChipDataTemplateSelector` to the [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemTemplate) property of `SfChipGroup`.
 
@@ -151,8 +153,8 @@ var selector = new ChipDataTemplateSelector
             ImageAlignment = Alignment.Start,
             CloseButtonColor = Colors.White
         };
-        chip.SetBinding(SfChip.TextProperty, nameof(ChipModel.Text));
-        chip.SetBinding(SfChip.ImageSourceProperty, nameof(ChipModel.ImageSource));
+        chip.SetBinding(SfChip.TextProperty, "Text");
+        chip.SetBinding(SfChip.ImageSourceProperty, "ImageSource");
         return chip;
     }),
     SadEmojiTemplate = new DataTemplate(() =>
@@ -168,8 +170,8 @@ var selector = new ChipDataTemplateSelector
             ImageAlignment = Alignment.Start,
             CloseButtonColor = Colors.White
         };
-        chip.SetBinding(SfChip.TextProperty, nameof(ChipModel.Text));
-        chip.SetBinding(SfChip.ImageSourceProperty, nameof(ChipModel.ImageSource));
+        chip.SetBinding(SfChip.TextProperty, "Text");
+        chip.SetBinding(SfChip.ImageSourceProperty, "ImageSource");
         return chip;
     })
 };

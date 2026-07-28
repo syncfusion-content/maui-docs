@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui markdownviewer css, syncfusion markdownviewer custom css maui, sfmarkdownviewer css style rules maui, .net maui markdown style override, markdownviewer webkit scrollbar maui, .net maui markdownviewer table css
 ---
 
-# How to Apply CSS Style Rules in .NET MAUI Markdown Viewer (SfMarkdownViewer)
+# Apply CSS Style in .NET MAUI Markdown Viewer (SfMarkdownViewer)
 
 The [.NET MAUI Markdown Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control comes with a set of built-in default styles that ensure markdown content is rendered cleanly and consistently across platforms. However, in many real-world applications, developers may need to override these defaults to match their app's branding, improve readability, or create a custom visual experience.
 
@@ -108,7 +108,7 @@ N> Apply CSS styles only when necessary as they will override the properties of 
 
 ## Define Styles for Images
 
-Images are a vital part of markdown content, providing visual context and detail. SfMarkdownViewer allows you to override the appearance of images through CSS, enabling custom sizing, borders, or even special effects. The `img` selector targets only images embedded in the markdown content.
+Images are a vital part of markdown content, providing visual context and detail. SfMarkdownViewer allows you to override the appearance of images through CSS, enabling custom sizing, borders, or even special effects. The image selector targets only images embedded in the markdown content.
 
 Add the following rule to your `CssStyleRules` string (XAML or C#) to apply a rounded border and subtle shadow to all rendered images:
 

@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui textinputlayout supported input views, syncfusion text input layout entry maui, sftextinputlayout editor maui, sftextinputlayout autocomplete combobox maui, .net maui text input layout picker timepicker datepicker, sftextinputlayout maskedentry numericentry maui
 ---
 
-# Supported Input Views in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Supported Input Views for .NET MAUI SfTextInputLayout
 
 Host any `View` inside [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by assigning it to the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfContentView.html#Syncfusion_Maui_Core_SfContentView_Content) property. The most common input views are listed below.
 

@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui markdownviewer get text, syncfusion markdownviewer get html maui, sfmarkdownviewer get markdown text maui, .net maui markdown to html, .net maui markdown extract text, markdown viewer api maui
 ---
 
-# Retrieve Content Programmatically in .NET MAUI Markdown Viewer (SfMarkdownViewer)
+# Content Retrieval in .NET MAUI Markdown Viewer (SfMarkdownViewer)
 
 The [.NET MAUI Markdown Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control provides built-in methods to retrieve and transform markdown content programmatically. These methods allow developers to access the raw markdown, convert it to HTML, or extract plain text without formatting.
 
