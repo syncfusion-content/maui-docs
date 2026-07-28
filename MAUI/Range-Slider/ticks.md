@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tick in .NET MAUI Range Slider control | Syncfusion®
-description: Learn all about the tick feature in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
+description: Learn all about the tick feature in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and its customization options.
 platform: maui
 control: SfRangeSlider
 documentation: ug
