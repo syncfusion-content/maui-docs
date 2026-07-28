@@ -1,19 +1,19 @@
 ---
 layout: post
 title: .NET MAUI DateTime Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control with key features and more.
+description: Learn here all about the introduction of the Syncfusion® .NET MAUI DateTime Slider (SfDateTimeSlider) control, its key features, and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Overview of .NET MAUI DateTime Slider
+# .NET MAUI DateTime Slider Overview
 
 - The Syncfusion<sup>®</sup> .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a lightweight, interactive control that makes choosing a date or time quickly.
 
 - Instead of typing values or navigating multiple pickers, users simply drag the slider thumb across a timeline to select the exact point they need.
 
-![.NET MAUI datetime slider overview ](images/overview/datetime_slider_overview.png)
+![.NET MAUI DateTime slider overview](images/overview/datetime_slider_overview.png)
 
 ## Business use cases
 
@@ -25,7 +25,7 @@ documentation: ug
 ## Key features
 
 - **Single DateTime value selection support** allows selecting a specific value within a defined range.  
-- **Orientation support** allows displaying the slider in horizontal or vertical layouts based on UI design.  
+- **Orientation support** allows displaying the slider in horizontal or vertical layouts based on the UI design.  
 - **Customizable labels support** allows rendering date values with formatting based on application requirements.  
 - **Ticks and dividers support** allows indicating intervals clearly using major and minor tick marks.  
 - **Discrete mode support** allows moving the slider thumb in fixed steps based on configured intervals.  
