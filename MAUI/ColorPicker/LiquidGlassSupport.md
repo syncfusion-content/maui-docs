@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for the .NET MAUI ColorPicker | Syncfusion®
+title: Liquid Glass Support for the .NET MAUI ColorPicker | Syncfusion®
 description: Learn about providing Liquid Glass support for the Syncfusion® .NET MAUI ColorPicker (SfColorPicker) control and more.
 platform: MAUI
 control: SfColorPicker

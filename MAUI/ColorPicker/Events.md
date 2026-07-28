@@ -20,7 +20,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 The `SfColorPicker`control provides three events and one command that let you respond to color selection changes from XAML, code-behind, or a view model:
 
-* [ColorChanging](#colorchanging-event) — raised while the color is being changed (cancellable).
+* [ColorChanging](#colorchanging-event) — raised while the color is being changed (cancelable).
 * [ColorChanged](#colorchanged-event) — raised when the user commits a color.
 * [ColorSelected](#colorselected-event) — raised when the user clicks/taps the selected-color display area.
 * [ColorChangedCommand](#commands) — `ICommand` invoked when `SelectedColor` changes.
