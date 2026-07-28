@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visual State Manager in .NET MAUI Switch (SfSwitch) | Syncfusion®
-description: Learn about handling the visual state manager in the Syncfusion® .NET MAUI Switch (SfSwitch) control, and more.
+description: Learn how to use the Visual State Manager to customize the appearance of the Syncfusion® .NET MAUI Switch (SfSwitch) control in different states.
 platform: MAUI
 control: SfSwitch
 documentation: UG
@@ -10,20 +10,26 @@ keywords : .net maui switch, maui switch, .net maui switch visual states, maui s
 
 # Visual State Manager in .NET MAUI Switch (SfSwitch)
 
-Use the visual state manager to change the .NET MAUI Switch properties based on the visual states, set from code. The applicable visual states are:
+Use the `Visual State Manager (VSM)` to change Switch properties in response to visual state changes. The `CommonStates` group is automatically maintained by .NET MAUI and contains the following states:
 
-* On
-* Off
-* Indeterminate
-* OnHovered
-* OffHovered
-* IndeterminateHovered
-* OnPressed
-* OffPressed
-* IndeterminatePressed
-* OnDisabled
-* OffDisabled
-* IndeterminateDisabled
+* `On`, `Off`, `Indeterminate` - the resting states.
+* `OnHovered`, `OffHovered`, `IndeterminateHovered` - applied when the pointer is over the Switch.
+* `OnPressed`, `OffPressed`, `IndeterminatePressed` - applied while the Switch is being tapped or clicked.
+* `OnDisabled`, `OffDisabled`, `IndeterminateDisabled` - applied when `IsEnabled` is `false`.
+
+## Prerequisites
+
+Before using the [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Buttons`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/switch/getting-started) documentation.
+
+## Common Visual State Group
+
+The `VisualStateGroup` must be named `CommonStates` for the .NET MAUI VSM to apply the states automatically. The `Indeterminate` family of states is only active when [AllowIndeterminateState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) is set to `true`.
+
+The following example shows how to apply a different [SwitchSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html) object to each state. For the full list of properties available on `SwitchSettings`.
 
 {% tabs %}
 
@@ -206,163 +212,65 @@ Use the visual state manager to change the .NET MAUI Switch properties based on 
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 SfSwitch sfSwitch = new SfSwitch();
-SwitchSettings onStyle = new SwitchSettings();
-onStyle.TrackWidthRequest = 90;
-onStyle.TrackHeightRequest = 50;
-onStyle.ThumbWidthRequest = 35;
-onStyle.ThumbHeightRequest = 35;
-onStyle.TrackStrokeThickness = 1;
-onStyle.ThumbStrokeThickness = 1;
-onStyle.TrackCornerRadius = 25;
-onStyle.ThumbCornerRadius = 20;
-onStyle.TrackBackground = new SolidColorBrush(Color.FromRgba("#F7D40D"));
-onStyle.ThumbBackground = new SolidColorBrush(Color.FromRgba("#F57B31"));
-onStyle.TrackStroke = Color.FromRgba("#DABA04");
-onStyle.ThumbStroke = Color.FromRgba("#F78F50");
+sfSwitch.IsEnabled = true;
+sfSwitch.IsOn = true;
 
-SwitchSettings onHoveredStyle = new SwitchSettings();
-onHoveredStyle.TrackWidthRequest = 90;
-onHoveredStyle.TrackHeightRequest = 50;
-onHoveredStyle.ThumbWidthRequest = 35;
-onHoveredStyle.ThumbHeightRequest = 35;
-onHoveredStyle.TrackStrokeThickness = 1;
-onHoveredStyle.ThumbStrokeThickness = 1;
-onHoveredStyle.TrackCornerRadius = 25;
-onHoveredStyle.ThumbCornerRadius = 20;
-onHoveredStyle.TrackBackground = new SolidColorBrush(Color.FromRgba("#F7D40D"));
-onHoveredStyle.ThumbBackground = new SolidColorBrush(Color.FromRgba("#F57B31"));
-onHoveredStyle.TrackStroke = Color.FromRgba("#DABA04");
-onHoveredStyle.ThumbStroke = Color.FromRgba("#E7600F");
+// Create a SwitchSettings instance for each visual state.
+SwitchSettings onStyle = CreateState("#F7D40D", "#F57B31", "#DABA04", "#F78F50", 35, 20);
+SwitchSettings onHoveredStyle = CreateState("#F7D40D", "#F57B31", "#DABA04", "#E7600F", 35, 20);
+SwitchSettings onPressedStyle = CreateState("#F7D40D", "#F57B31", "#DABA04", "#E7600F", 48, 24);
+SwitchSettings onDisabledStyle = CreateState("#FEF7FF", "#B0AFB2", "#B0AFB2", "#B0AFB2", 35, 20);
 
-SwitchSettings onPressedStyle = new SwitchSettings();
-onPressedStyle.TrackWidthRequest = 90;
-onPressedStyle.TrackHeightRequest = 50;
-onPressedStyle.ThumbWidthRequest = 48;
-onPressedStyle.ThumbHeightRequest = 48;
-onPressedStyle.TrackStrokeThickness = 1;
-onPressedStyle.ThumbStrokeThickness = 1;
-onPressedStyle.TrackCornerRadius = 25;
-onPressedStyle.ThumbCornerRadius = 24;
-onPressedStyle.TrackBackground = new SolidColorBrush(Color.FromRgba("#F7D40D"));
-onPressedStyle.ThumbBackground = new SolidColorBrush(Color.FromRgba("#F57B31"));
-onPressedStyle.TrackStroke = Color.FromRgba("#DABA04");
-onPressedStyle.ThumbStroke = Color.FromRgba("#E7600F");
+SwitchSettings offStyle = CreateState("#4FCFF7", "#F0F5F8", "#359EBF", "#C7C9C9", 35, 20);
+SwitchSettings offHoveredStyle = CreateState("#72D4F3", "#FFFFFF", "#359EBF", "#959595", 35, 20);
+SwitchSettings offPressedStyle = CreateState("#72D4F3", "#FFFFFF", "#359EBF", "#959595", 48, 24);
+SwitchSettings offDisabledStyle = CreateState("#FEF7FF", "#B0AFB2", "#B0AFB2", "#B0AFB2", 35, 20);
 
-SwitchSettings onDisabledStyle = new SwitchSettings();
-onDisabledStyle.TrackWidthRequest = 90;
-onDisabledStyle.TrackHeightRequest = 50;
-onDisabledStyle.ThumbWidthRequest = 35;
-onDisabledStyle.ThumbHeightRequest = 35;
-onDisabledStyle.TrackStrokeThickness = 1;
-onDisabledStyle.ThumbStrokeThickness = 1;
-onDisabledStyle.TrackCornerRadius = 25;
-onDisabledStyle.ThumbCornerRadius = 20;
-onDisabledStyle.TrackBackground = new SolidColorBrush(Color.FromRgba("#FEF7FF"));
-onDisabledStyle.ThumbBackground = new SolidColorBrush(Color.FromRgba("#B0AFB2"));
-onDisabledStyle.TrackStroke = Color.FromRgba("#B0AFB2");
-onDisabledStyle.ThumbStroke = Color.FromRgba("#B0AFB2");
-
-SwitchSettings offStyle = new SwitchSettings();
-offStyle.TrackWidthRequest = 90;
-offStyle.TrackHeightRequest = 50;
-offStyle.ThumbWidthRequest = 35;
-offStyle.ThumbHeightRequest = 35;
-offStyle.TrackStrokeThickness = 1;
-offStyle.ThumbStrokeThickness = 1;
-offStyle.TrackCornerRadius = 25;
-offStyle.ThumbCornerRadius = 20;
-offStyle.TrackBackground = new SolidColorBrush(Color.FromRgba("#4FCFF7"));
-offStyle.ThumbBackground = new SolidColorBrush(Color.FromRgba("#F0F5F8"));
-offStyle.TrackStroke = Color.FromRgba("#359EBF");
-offStyle.ThumbStroke = Color.FromRgba("#C7C9C9");
-
-SwitchSettings offHoveredStyle = new SwitchSettings();
-offHoveredStyle.TrackWidthRequest = 90;
-offHoveredStyle.TrackHeightRequest = 50;
-offHoveredStyle.ThumbWidthRequest = 35;
-offHoveredStyle.ThumbHeightRequest = 35;
-offHoveredStyle.TrackStrokeThickness = 1;
-offHoveredStyle.ThumbStrokeThickness = 1;
-offHoveredStyle.TrackCornerRadius = 25;
-offHoveredStyle.ThumbCornerRadius = 20;
-offHoveredStyle.TrackBackground = new SolidColorBrush(Color.FromRgba("#72D4F3"));
-offHoveredStyle.ThumbBackground = new SolidColorBrush(Color.FromRgba("#FFFFFF"));
-offHoveredStyle.TrackStroke = Color.FromRgba("#359EBF");
-offHoveredStyle.ThumbStroke = Color.FromRgba("#959595");
-
-SwitchSettings offPressedStyle = new SwitchSettings();
-offPressedStyle.TrackWidthRequest = 90;
-offPressedStyle.TrackHeightRequest = 50;
-offPressedStyle.ThumbWidthRequest = 48;
-offPressedStyle.ThumbHeightRequest = 48;
-offPressedStyle.TrackStrokeThickness = 1;
-offPressedStyle.ThumbStrokeThickness = 1;
-offPressedStyle.TrackCornerRadius = 25;
-offPressedStyle.ThumbCornerRadius = 24;
-offPressedStyle.TrackBackground = new SolidColorBrush(Color.FromRgba("#72D4F3"));
-offPressedStyle.ThumbBackground = new SolidColorBrush(Color.FromRgba("#FFFFFF"));
-offPressedStyle.TrackStroke = Color.FromRgba("#359EBF");
-offPressedStyle.ThumbStroke = Color.FromRgba("#959595");
-
-SwitchSettings offDisabledStyle = new SwitchSettings();
-offDisabledStyle.TrackWidthRequest = 90;
-offDisabledStyle.TrackHeightRequest = 50;
-offDisabledStyle.ThumbWidthRequest = 35;
-offDisabledStyle.ThumbHeightRequest = 35;
-offDisabledStyle.TrackStrokeThickness = 1;
-offDisabledStyle.ThumbStrokeThickness = 1;
-offDisabledStyle.TrackCornerRadius = 25;
-offDisabledStyle.ThumbCornerRadius = 20;
-offDisabledStyle.TrackBackground = new SolidColorBrush(Color.FromRgba("#FEF7FF"));
-offDisabledStyle.ThumbBackground = new SolidColorBrush(Color.FromRgba("#B0AFB2"));
-offDisabledStyle.TrackStroke = Color.FromRgba("#B0AFB2");
-offDisabledStyle.ThumbStroke = Color.FromRgba("#B0AFB2");
-
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+// Build the CommonStates VisualStateGroup and register it with the Switch.
 VisualStateGroup commonStateGroup = new VisualStateGroup();
+commonStateGroup.States.Add(new VisualState { Name = "On", Setters = { new Setter { Property = SfSwitch.SwitchSettingsProperty, Value = onStyle } } });
+commonStateGroup.States.Add(new VisualState { Name = "OnHovered", Setters = { new Setter { Property = SfSwitch.SwitchSettingsProperty, Value = onHoveredStyle } } });
+commonStateGroup.States.Add(new VisualState { Name = "OnPressed", Setters = { new Setter { Property = SfSwitch.SwitchSettingsProperty, Value = onPressedStyle } } });
+commonStateGroup.States.Add(new VisualState { Name = "OnDisabled", Setters = { new Setter { Property = SfSwitch.SwitchSettingsProperty, Value = onDisabledStyle } } });
+commonStateGroup.States.Add(new VisualState { Name = "Off", Setters = { new Setter { Property = SfSwitch.SwitchSettingsProperty, Value = offStyle } } });
+commonStateGroup.States.Add(new VisualState { Name = "OffHovered", Setters = { new Setter { Property = SfSwitch.SwitchSettingsProperty, Value = offHoveredStyle } } });
+commonStateGroup.States.Add(new VisualState { Name = "OffPressed", Setters = { new Setter { Property = SfSwitch.SwitchSettingsProperty, Value = offPressedStyle } } });
+commonStateGroup.States.Add(new VisualState { Name = "OffDisabled", Setters = { new Setter { Property = SfSwitch.SwitchSettingsProperty, Value = offDisabledStyle } } });
 
-VisualState onState = new VisualState { Name = "On" };
-onState.Setters.Add(new Setter { Property = SfSwitch.SwitchSettingsProperty, Value= onStyle});
-
-VisualState onHoveredState = new VisualState { Name = "OnHovered" };
-onHoveredState.Setters.Add(new Setter { Property = SfSwitch.SwitchSettingsProperty, Value= onHoveredStyle});
-
-VisualState onPressedState = new VisualState { Name = "OnPressed" };
-onPressedState.Setters.Add(new Setter { Property = SfSwitch.SwitchSettingsProperty, Value= onPressedStyle});
-
-VisualState onDisabledState = new VisualState { Name = "OnDisabled" };
-onDisabledState.Setters.Add(new Setter { Property = SfSwitch.SwitchSettingsProperty, Value= onDisabledStyle});
-
-VisualState offState = new VisualState { Name = "Off" };
-offState.Setters.Add(new Setter { Property = SfSwitch.SwitchSettingsProperty, Value= offStyle});
-
-VisualState offHoveredState = new VisualState { Name = "OffHovered" };
-offHoveredState.Setters.Add(new Setter { Property = SfSwitch.SwitchSettingsProperty, Value= offHoveredStyle});
-
-VisualState offPressedState = new VisualState { Name = "OffPressed" };
-offPressedState.Setters.Add(new Setter { Property = SfSwitch.SwitchSettingsProperty, Value= offPressedStyle});
-
-VisualState offDisabledState = new VisualState { Name = "OffDisabled" };
-offDisabledState.Setters.Add(new Setter { Property = SfSwitch.SwitchSettingsProperty, Value= offDisabledStyle});
-
-commonStateGroup.States.Add(onState);
-commonStateGroup.States.Add(onHoveredState);
-commonStateGroup.States.Add(onPressedState);
-commonStateGroup.States.Add(onDisabledState);
-commonStateGroup.States.Add(offState);
-commonStateGroup.States.Add(offHoveredState);
-commonStateGroup.States.Add(offPressedState);
-commonStateGroup.States.Add(offDisabledState);
-
-visualStateGroupList.Add(commonStateGroup);
-VisualStateManager.SetVisualStateGroups(sfSwitch, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(sfSwitch, new VisualStateGroupList { commonStateGroup });
 this.Content = sfSwitch;
+
+static SwitchSettings CreateState(string trackBg, string thumbBg, string trackStroke, string thumbStroke, double thumbSize, double thumbCorner)
+{
+    return new SwitchSettings
+    {
+        TrackWidthRequest = 90,
+        TrackHeightRequest = 50,
+        ThumbWidthRequest = thumbSize,
+        ThumbHeightRequest = thumbSize,
+        TrackStrokeThickness = 1,
+        ThumbStrokeThickness = 1,
+        TrackCornerRadius = 25,
+        ThumbCornerRadius = thumbCorner,
+        TrackBackground = new SolidColorBrush(Color.FromArgb(trackBg)),
+        ThumbBackground = new SolidColorBrush(Color.FromArgb(thumbBg)),
+        TrackStroke = Color.FromArgb(trackStroke),
+        ThumbStroke = Color.FromArgb(thumbStroke)
+    };
+}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Visual state manager](images/VSM/VSM.gif)
+The following GIF demonstrates the Visual State Manager applying different `SwitchSettings` to the Switch across the resting, hovered, pressed, and disabled states.
+
+![Visual state manager](Images/VSM/VSM.gif)
+
+## See Also
+
+- [Customization in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/customization)
+- [States in .NET MAUI Switch](https://help.syncfusion.com/maui/switch/states)

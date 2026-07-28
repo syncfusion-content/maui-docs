@@ -9,7 +9,19 @@ keywords : .net maui busy indicator idle, maui busy indicator idle, maui busy in
 ---
 # Make Busy Animation Idle in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) control provides support to determine if an animation needs to be executed. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to `false` will stop the animation and remove the control from view.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) lets you control whether the animation is running. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to `false` stops the animation and hides the indicator.
+
+## Prerequisites
+
+Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/busy-indicator/getting-started) documentation.
+
+## Stop the animation (idle)
+
+Use `IsRunning="False"` to stop the animation and hide the indicator.
 
 {% tabs %}
 
@@ -17,16 +29,16 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 <core:SfBusyIndicator x:Name="busyindicator"
                       AnimationType="CircularMaterial"
-                      IsRunning="false" />
+                      IsRunning="False" />
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
-    AnimationType = AnimationType.CircularMaterial,                    
-    IsRunning = "false"                    
+    AnimationType = AnimationType.CircularMaterial,
+    IsRunning = false,
 };
 
 {% endhighlight %}
@@ -35,4 +47,33 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 N>  The default value for the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property is `false`.
 
+## Start the animation (running)
 
+Set `IsRunning="True"` to display the indicator and start the animation.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<core:SfBusyIndicator x:Name="busyindicator"
+                      AnimationType="CircularMaterial"
+                      IsRunning="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    AnimationType = AnimationType.CircularMaterial,
+    IsRunning = true,
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## See Also
+
+- [Animation types in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/animationtype)
+- [Animation duration in .NET MAUI Busy Indicator](https://help.syncfusion.com/maui/busy-indicator/duration)
