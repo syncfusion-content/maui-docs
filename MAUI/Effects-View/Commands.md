@@ -7,7 +7,7 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Commands and CommandParameter in .NET MAUI Effects View (SfEffectsView)
+# Commands in .NET MAUI Effects View (SfEffectsView)
 
 The [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) exposes `ICommand` properties for each touch interaction, letting you bind view-model logic directly to the view. Each command is paired with an `object`-typed `CommandParameter` property so you can pass context to the bound logic.
 
