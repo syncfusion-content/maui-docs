@@ -7,7 +7,9 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Customization in .NET MAUI Effects View
+# Customization in .NET MAUI Effects View (SfEffectsView)
+
+The [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control exposes properties that customize the duration, size, color, and angle of each effect.
 
 ## Prerequisites
 
@@ -17,17 +19,15 @@ Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
 
-The `SfEffectsView` control exposes properties that customize the duration, size, color, and angle of each effect.
-
 ## Animation Durations
 
 The three animation-duration properties control how long each effect takes to complete, in milliseconds.
 
 ### RippleAnimationDuration
 
-The [RippleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RippleAnimationDuration) property sets the duration of the ripple animation. The default value is `400` milliseconds.
+The [RippleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RippleAnimationDuration) property sets the duration of the ripple animation.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml hl_lines="5" %}
 
@@ -89,11 +89,11 @@ this.Content = effectsView;
 
 ### ScaleAnimationDuration
 
-The [ScaleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleAnimationDuration) property sets the duration of the scale animation. The default value is `200` milliseconds.
+The [ScaleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleAnimationDuration) property sets the duration of the scale animation.
 
-#{% tabs %} 
+{% tabs %} 
 
-{% highlight xaml hl_lines="5 6 7" %}
+{% highlight xaml hl_lines="5" %}
 
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
@@ -119,7 +119,7 @@ The [ScaleAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="24 25 26" %}
+{% highlight c# hl_lines="24" %}
 
 var grid = new Grid
 {
@@ -157,9 +157,9 @@ this.Content = effectsView;
 
 ### RotationAnimationDuration
 
-The [RotationAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RotationAnimationDuration) property sets the duration of the rotation animation. The default value is `200` milliseconds.
+The [RotationAnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RotationAnimationDuration) property sets the duration of the rotation animation.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml hl_lines="5 6 7" %}
 
@@ -227,9 +227,9 @@ this.Content = effectsView;
 
 ### InitialRippleFactor
 
-The [InitialRippleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_InitialRippleFactor) property sets the starting size of the ripple as a fraction of the view's smaller dimension. The default value is `0.1`. Valid range is `0` to `1`.
+The [InitialRippleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_InitialRippleFactor) property is used to customize the radius of the ripple when the ripple animation starts. Valid range is `0` to `1`.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml hl_lines="15" %}
 
@@ -351,11 +351,11 @@ this.Content = border;
 
 ### ScaleFactor
 
-The [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleFactor) property sets the target scale applied during the `Scale` effect. The default value is `1.0`. Values below `1` shrink the view; values above `1` grow it. See [Scale Effect](Effects/Scale.md) for details on the effect itself.
+The [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleFactor) property sets the target scale applied during the `Scale` effect.
 
-#{% tabs %} 
+{% tabs %} 
 
-{% highlight xaml hl_lines="5 6 7 8 9 39 40 41 42 43 73 74 75 76 77" %}
+{% highlight xaml hl_lines="5 39 73" %}
 
 <HorizontalStackLayout HorizontalOptions="Center" 
                        Spacing="12">
@@ -466,33 +466,21 @@ The [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEff
 
 {% highlight c# %}
 
-/// <summary>
-/// Handle LongPressed event for EffectsView1
-/// </summary>
 private void OnEffectsView1LongPressed(object sender, EventArgs e)
 {
     SelectImage(EffectsView1, Tick1);
 }
 
-/// <summary>
-/// Handle LongPressed event for EffectsView2
-/// </summary>
 private void OnEffectsView2LongPressed(object sender, EventArgs e)
 {
     SelectImage(EffectsView2, Tick2);
 }
 
-/// <summary>
-/// Handle LongPressed event for EffectsView3
-/// </summary>
 private void OnEffectsView3LongPressed(object sender, EventArgs e)
 {
     SelectImage(EffectsView3, Tick3);
 }
 
-/// <summary>
-/// Select an image: apply scale effect and show tick mark.
-/// </summary>
 private async void SelectImage(SfEffectsView effectsView, Border tickFrame)
 {
     // Apply scale effect to the newly selected image
@@ -510,15 +498,13 @@ private async void SelectImage(SfEffectsView effectsView, Border tickFrame)
 
 ## Background Colors
 
-The three `*Background` properties accept any `Brush`. The XAML examples below use a hex color string, which the type converter accepts; the C# examples use `SolidColorBrush`. For a gradient, pass a `LinearGradientBrush` or `RadialGradientBrush` instead.
-
 ### HighlightBackground
 
-The [HighlightBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_HighlightBackground) property sets the brush applied during the `Highlight` effect. The default value is `SolidColorBrush(Color.FromArgb("#14000000"))`.
+The [HighlightBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_HighlightBackground) property is used to customize the color of the `Highlight` effect.
 
-#{% tabs %} 
+{% tabs %} 
 
-{% highlight xaml hl_lines="15 16" %}
+{% highlight xaml hl_lines="15" %}
 
 <Border HorizontalOptions="Center" 
         VerticalOptions="Center">
@@ -560,7 +546,7 @@ The [HighlightBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="45 46" %}
+{% highlight c# hl_lines="45" %}
 
 var grid = new Grid
 {
@@ -640,9 +626,9 @@ this.Content = border;
 
 ### RippleBackground
 
-The [RippleBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RippleBackground) property sets the brush applied during the `Ripple` effect. The default value is `SolidColorBrush(Color.FromArgb("#22FFFFFF"))`.
+The [RippleBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RippleBackground) property is used to customize the color of the `Ripple` effect.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml hl_lines="16" %}
 
@@ -765,11 +751,11 @@ this.Content = border;
 
 ### SelectionBackground
 
-The [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionBackground) property sets the brush applied during the `Selection` effect. The default value is `SolidColorBrush(Color.FromArgb("#14000000"))`.
+The [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionBackground)  property is used to customize the color of `Selection` effect.
 
-#{% tabs %} 
+{% tabs %} 
 
-{% highlight xaml hl_lines="16 17" %}
+{% highlight xaml hl_lines="17" %}
 
 <Border HorizontalOptions="Center" 
         VerticalOptions="Center">
@@ -812,7 +798,7 @@ The [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="45 46" %}
+{% highlight c# hl_lines="46" %}
 
 var grid = new Grid
 {
@@ -890,15 +876,13 @@ this.Content = border;
 
 ![Selection with a custom blue background](Customization_images/EffectsView_Selection.png)
 
-## Rotation
+## Angle
 
-### Angle
+The [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle) property sets the rotation angle in degrees.
 
-The [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle) property sets the rotation angle in degrees. The default value is `0`. Positive values rotate clockwise. See [Rotation Effect](Effects/Rotation.md) for details on the effect itself.
+{% tabs %} 
 
-#{% tabs %} 
-
-{% highlight xaml hl_lines="16 17 18" %}
+{% highlight xaml hl_lines="16" %}
 
 <VerticalStackLayout VerticalOptions="Center"
                      Spacing="8">
@@ -934,82 +918,85 @@ The [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsVi
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="45 46" %}
+{% highlight c# %}
 
-private Label tagText;
-
-public MainPage()
+Label tagText;
+    
+// Create the tag label
+tagText = new Label
 {
-    InitializeComponent();
+    Text = "Default",
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Start
+};
     
-    // Create the tag label
-    tagText = new Label
-    {
-        Text = "Default",
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Start
-    };
+// Create the up arrow label
+var upArrowLabel = new Label
+{
+    Text = "↑",
+    FontSize = 20,
+    FontAttributes = FontAttributes.Bold,
+    VerticalOptions = LayoutOptions.Start
+};
     
-    // Create the up arrow label
-    var upArrowLabel = new Label
-    {
-        Text = "↑",
-        FontSize = 20,
-        FontAttributes = FontAttributes.Bold,
-        VerticalOptions = LayoutOptions.Start
-    };
+// Create the down arrow label
+var downArrowLabel = new Label
+{
+    Text = "↓",
+    FontSize = 20,
+    FontAttributes = FontAttributes.Bold,
+    VerticalOptions = LayoutOptions.End,
+    Margin = new Thickness(0, 8, 0, 0)
+};
     
-    // Create the down arrow label
-    var downArrowLabel = new Label
-    {
-        Text = "↓",
-        FontSize = 20,
-        FontAttributes = FontAttributes.Bold,
-        VerticalOptions = LayoutOptions.End,
-        Margin = new Thickness(0, 8, 0, 0)
-    };
+// Create the horizontal stack layout with arrows
+var arrowStackLayout = new HorizontalStackLayout
+{
+    Spacing = -4,
+    Children = { upArrowLabel, downArrowLabel }
+};
     
-    // Create the horizontal stack layout with arrows
-    var arrowStackLayout = new HorizontalStackLayout
-    {
-        Spacing = -4,
-        Children = { upArrowLabel, downArrowLabel }
-    };
+// Create the effects view
+var effectsView = new SfEffectsView
+{
+    Angle = 90,
+    TouchDownEffects = SfEffects.Ripple | SfEffects.Rotation,
+    Content = arrowStackLayout
+};
     
-    // Create the effects view
-    var effectsView = new SfEffectsView
-    {
-        Angle = 90,
-        TouchDownEffects = SfEffects.Ripple | SfEffects.Rotation,
-        Content = arrowStackLayout
-    };
+// Attach the TouchDown event handler
+effectsView.TouchDown += SfEffectsView_TouchDown;
     
-    // Attach the TouchDown event handler
-    effectsView.TouchDown += SfEffectsView_TouchDown;
+// Create the border with rounded corners
+var border = new Border
+{
+    WidthRequest = 32,
+    HeightRequest = 32,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    StrokeThickness = 0,
+    StrokeShape = new RoundRectangle { CornerRadius = 10 },
+    Content = effectsView
+};
     
-    // Create the border with rounded corners
-    var border = new Border
-    {
-        WidthRequest = 32,
-        HeightRequest = 32,
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center,
-        StrokeThickness = 0,
-        StrokeShape = new RoundRectangle { CornerRadius = 10 },
-        Content = effectsView
-    };
+// Create the vertical stack layout container
+var verticalStackLayout = new VerticalStackLayout
+{
+    VerticalOptions = LayoutOptions.Center,
+    Spacing = 8,
+    Children = { tagText, border }
+};
     
-    // Create the vertical stack layout container
-    var verticalStackLayout = new VerticalStackLayout
-    {
-        VerticalOptions = LayoutOptions.Center,
-        Spacing = 8,
-        Children = { tagText, border }
-    };
-    
-    // Set it as the page content
-    this.Content = verticalStackLayout;
-}
+this.Content = verticalStackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The `TouchDown` event can be handled in C# as follows:
+
+{% tabs %} 
+{% highlight xaml  %}
 
 private void SfEffectsView_TouchDown(object sender, EventArgs e)
 {
@@ -1023,13 +1010,12 @@ private void SfEffectsView_TouchDown(object sender, EventArgs e)
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ![Rotation angle of 180 degrees](Customization_images/EffectsView_Rotation.png)
 
 ## See also
 
-- [Effects](https://help.syncfusion.com/maui/effects-view/effects/overview) documents the built-in highlight, ripple, scale, selection, and rotation effects that these properties customize.  
-- [Features](https://help.syncfusion.com/maui/effects-view/features) introduces complementary options such as `IsSelected`, `ShouldIgnoreTouches`, and `AutoResetEffects`.  
-- [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) walks through setting up the SfEffectsView before applying any customization.
+- [Effects](https://help.syncfusion.com/maui/effects-view/effects/overview)  
+- [Features](https://help.syncfusion.com/maui/effects-view/features) 
+- [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started)

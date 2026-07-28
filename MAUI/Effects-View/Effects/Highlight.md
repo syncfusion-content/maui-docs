@@ -7,21 +7,11 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Highlight Effect in .NET MAUI Effects View
+# Highlight Effect in .NET MAUI Effects View (SfEffectsView)
 
-## Prerequisites
+The [SfEffects.Highlight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Highlight) effect applies a smooth color transition to the background of the `Effects View` when the user touches the view. Use it to give users visual feedback for taps, long presses, and other interactions.
 
-Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Core`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
-
-The [SfEffects.Highlight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Highlight) effect applies a smooth color transition to the background of the `SfEffectsView` when the user touches the view. Use it to give users visual feedback for taps, long presses, and other interactions.
-
-## Setting the Highlight Background
-
-The example below applies a red background to the `SfEffectsView` while the user is touching it.
+The example below applies a red background to the `Effects View` while the user is touching it.
 
 {% tabs %} 
 
@@ -144,12 +134,10 @@ this.Content = border;
 
 {% endtabs %}
 
-The XAML example uses the string `"Red"` (a named color), and the C# example uses `SolidColorBrush(Colors.Aqua)`. Both forms are equivalent; pick whichever matches your styling preference.
-
 ![Highlight effect with a custom background](Effects_images/net_maui_highlight_effect.png)
 
 ## See also
 
-- [Ripple](https://help.syncfusion.com/maui/effects-view/effects/ripple) covers the expandable circle effect that often pairs with `Highlight` on touch down.  
-- [Selection](https://help.syncfusion.com/maui/effects-view/effects/selection) describes the persistent background effect that uses a similar `Brush` property for a different purpose.  
-- [Combining Effects](https://help.syncfusion.com/maui/effects-view/effects/combinations) shows how to assign `Highlight` together with other effects across the trigger properties.
+- [Ripple](https://help.syncfusion.com/maui/effects-view/effects/ripple)
+- [Selection](https://help.syncfusion.com/maui/effects-view/effects/selection)
+- [Combining Effects](https://help.syncfusion.com/maui/effects-view/effects/combinations)

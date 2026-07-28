@@ -7,7 +7,13 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Interactions in .NET MAUI Effects View
+# Interactions in .NET MAUI Effects View (SfEffectsView)
+
+The [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control supports various interactions through its properties. This page documents each trigger and shows how to assign effects to it.
+
+- TouchDownEffects
+- LongPressEffects
+- TouchUpEffects
 
 ## Prerequisites
 
@@ -16,8 +22,6 @@ Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.
 - `Syncfusion.Maui.Core`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
-
-The `SfEffectsView`exposes four trigger properties that decide when each effect runs. This page documents each trigger and shows how to assign effects to it.
 
 ## TouchDownEffects
 
@@ -277,6 +281,6 @@ this.Content = effectsView;
 
 ## See also
 
-- [Events](https://help.syncfusion.com/maui/effects-view/events) describes the code-behind events that fire when these triggers run.  
-- [Commands](https://help.syncfusion.com/maui/effects-view/commands) shows the `ICommand` properties that mirror the trigger properties for view-model bindings.  
-- [Effects](https://help.syncfusion.com/maui/effects-view/effects/overview) lists the available `SfEffects` values that you can assign to these trigger properties.
+- [Events](https://help.syncfusion.com/maui/effects-view/events)
+- [Commands](https://help.syncfusion.com/maui/effects-view/commands)  
+- [Effects](https://help.syncfusion.com/maui/effects-view/effects/overview)

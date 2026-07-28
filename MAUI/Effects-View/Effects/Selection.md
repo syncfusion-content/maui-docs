@@ -7,23 +7,15 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Selection Effect in .NET MAUI Effects View
+# Selection Effect in .NET MAUI Effects View (SfEffectsView)
 
-## Prerequisites
-
-Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Core`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
-
-The [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) effect applies a smooth color transition to the background of the `SfEffectsView` to indicate the selected or unselected state. Use it to give users clear visual feedback when an item is chosen, for example in a list or grid.
+The [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) effect applies a smooth color transition to the background of the `Effects View` to indicate the selected or unselected state. Use it to give users clear visual feedback when an item is chosen, for example in a list or grid.
 
 Unlike the `Highlight` effect, which is a transient response to a touch, the `Selection` effect reflects a persistent state that you set with the `IsSelected` property.
 
 ## Setting the Selection Background
 
-The example below applies a red background to the `SfEffectsView` when the user long-presses it (and `IsSelected` is set to `true`).
+The example below applies a red background to the `Effects View` when the user long-presses it (and `IsSelected` is set to `true`).
 
 {% tabs %} 
 
@@ -149,6 +141,6 @@ this.Content = border;
 
 ## See also
 
-- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight) describes the transient color-transition effect that uses a similar `Brush` property.  
-- [Ripple](https://help.syncfusion.com/maui/effects-view/effects/ripple) covers the expandable circle effect often paired with selection on different triggers.  
-- [Combining Effects](https://help.syncfusion.com/maui/effects-view/effects/combinations) shows how to assign `Selection` alongside other effects across the trigger properties.
+- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight)
+- [Ripple](https://help.syncfusion.com/maui/effects-view/effects/ripple)
+- [Combining Effects](https://help.syncfusion.com/maui/effects-view/effects/combinations)

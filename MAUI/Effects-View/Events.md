@@ -5,8 +5,21 @@ description: Learn about the events available in the Syncfusion® .NET MAUI Effe
 platform: MAUI
 control: SfEffectsView
 documentation: UG
+---
 
-# Events in .NET MAUI Effects View
+# Events in .NET MAUI Effects View (SfEffectsView)
+
+This section provides information about the events available in the [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control. Events are typically subscribed in the page constructor or in code-behind, and are raised on the UI thread.
+
+The following events are available in the Effects View control:
+
+- AnimationCompleted
+- SelectionChanged
+- LongPressed
+- TouchDown
+- TouchUp
+
+The `Effects View` exposes events that fire when the user interacts with the view or when an animation completes.
 
 ## Prerequisites
 
@@ -15,8 +28,6 @@ Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.
 - `Syncfusion.Maui.Core`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
-
-The `SfEffectsView` exposes events that fire when the user interacts with the view or when an animation completes. All events use the standard `EventHandler` signature with `sender` typed as `SfEffectsView`.
 
 ## AnimationCompleted event
 
@@ -105,9 +116,9 @@ void OnEffectsViewAnimationCompleted(object sender, EventArgs e)
 
 ## SelectionChanged event
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionChanged) event fires when the view's `IsSelected` state changes. It fires both when the `Selection` effect is triggered by user interaction and when the `IsSelected` property is changed in code.
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionChanged) event fires when the view's `IsSelected` state changes. 
 
-The `EventArgs` does not include the new selection state; read it from the `SfEffectsView` sender via the `IsSelected` property.
+It fires both when the `Selection` effect is triggered by user interaction and when the `IsSelected` property is changed in code.
 
 {% tabs %} 
 
@@ -433,26 +444,8 @@ void OnEffectsViewTouchUp(object sender, EventArgs e)
 
 {% endtabs %}
 
-## Unsubscribe
-
-Use the `-=` operator to remove an event handler when the subscription is no longer needed (for example, when the page is being torn down).
-
-{% tabs %} 
-
-{% highlight c# %}
-
-effectsView.AnimationCompleted -= OnEffectsViewAnimationCompleted;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Events vs. Commands
-
-Each event has a corresponding command (`TouchDownCommand`, `TouchUpCommand`, `LongPressedCommand`) for view-model scenarios. Choose events for code-behind handlers and commands when you want to bind to a view-model `ICommand`.
-
 ## See also
 
-- [Commands](https://help.syncfusion.com/maui/effects-view/commands) covers the `ICommand`-based counterpart of these events for view-model scenarios.  
-- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction) documents the trigger properties (`TouchDownEffects`, `TouchUpEffects`, `LongPressEffects`) that play effects in response to these events.  
-- [Methods](https://help.syncfusion.com/maui/effects-view/methods) shows how to start and stop effects programmatically, which also raises `AnimationCompleted`.
+- [Commands](https://help.syncfusion.com/maui/effects-view/commands)
+- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction)
+- [Methods](https://help.syncfusion.com/maui/effects-view/methods)

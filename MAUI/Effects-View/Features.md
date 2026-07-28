@@ -7,7 +7,9 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Features in .NET MAUI Effects View
+# Features in .NET MAUI Effects View (SfEffectsView)
+
+The [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides the following additional features that complement the built-in effects.
 
 ## Prerequisites
 
@@ -17,11 +19,9 @@ Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
 
-The `SfEffectsView` control provides the following additional features that complement the built-in effects.
-
 ## FadeOutRipple
 
-When `FadeOutRipple` is `true`, the ripple fades to opacity 0 as it grows, producing a softer animation. The optional `RippleAnimationDuration` property controls how long the ripple animation runs, in milliseconds. The default value is `400`.
+When `FadeOutRipple` is `true`, the ripple fades to opacity 0 as it grows, producing a softer animation. The optional `RippleAnimationDuration` property controls how long the ripple animation runs, in milliseconds.
 
 {% tabs %} 
 
@@ -147,7 +147,7 @@ this.Content = border;
 
 ## IsSelected
 
-Setting `IsSelected` to `true` marks the `SfEffectsView` as selected. The `Selection` effect reads this property and applies the `SelectionBackground` brush.
+Setting `IsSelected` to `true` marks the `Effects View` as selected. The `Selection` effect reads this property and applies the `SelectionBackground` brush.
 
 {% tabs %} 
 
@@ -211,7 +211,7 @@ this.Content = effectsView;
 
 ## ShouldIgnoreTouches
 
-When `ShouldIgnoreTouches` is `true`, the `SfEffectsView` does not handle touches itself. Use it when the view is hosted inside a scroll view, carousel, or other container that needs to receive the gesture, while still allowing the visual effects to fire.
+When `ShouldIgnoreTouches` is `true`, the `Effects View` does not handle touches itself. Use it when the view is hosted inside a scroll view, carousel, or other container that needs to receive the gesture, while still allowing the visual effects to fire.
 
 {% tabs %} 
 
@@ -279,8 +279,6 @@ this.Content = effectsView;
 
 `AutoResetEffects` is a flags enum that selects which effects automatically return to their rest state when the touch ends. By default, all supported effects auto-reset. Pass a combination of values to limit the auto-reset behavior to specific effects.
 
-Supported values include `Highlight`, `Ripple`, `Scale`, and `Selection`. Combine them with the bitwise `|` operator in C# or with a comma-separated list in XAML.
-
 {% tabs %} 
 
 {% highlight xaml hl_lines="5" %}
@@ -343,6 +341,6 @@ this.Content = effectsView;
 
 ## See also
 
-- [Customization](https://help.syncfusion.com/maui/effects-view/customization) describes the duration, size, and color properties that tune the built-in effects.  
-- [Effects](https://help.syncfusion.com/maui/effects-view/effects/overview) lists the highlight, ripple, scale, selection, and rotation effects that these features control.  
-- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction) explains the trigger properties that play an effect when the user touches the view.
+- [Customization](https://help.syncfusion.com/maui/effects-view/customization)
+- [Effects](https://help.syncfusion.com/maui/effects-view/effects/overview) 
+- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction)

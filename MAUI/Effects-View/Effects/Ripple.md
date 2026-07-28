@@ -7,23 +7,15 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Ripple Effect in .NET MAUI Effects View
+# Ripple Effect in .NET MAUI Effects View (SfEffectsView)
 
-## Prerequisites
+The [SfEffects.Ripple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Ripple) is an expandable circle that originates at the touch point and grows until the entire `Effects View` is filled. Use it to provide Material-style touch feedback on any view.
 
-Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Core`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
-
-The [SfEffects.Ripple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Ripple) is an expandable circle that originates at the touch point and grows until the entire `SfEffectsView` is filled. Use it to provide Material-style touch feedback on any view.
-
-The size of the ripple at the start of the animation is controlled by the [InitialRippleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_InitialRippleFactor) property. The ripple is drawn inside the bounds of the `SfEffectsView`, not the parent layout.
+The size of the ripple at the start of the animation is controlled by the [InitialRippleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_InitialRippleFactor) property. The ripple is drawn inside the bounds of the `Effects View`, not the parent layout.
 
 ## Adding a Basic Ripple
 
-The example below applies a ripple to the `SfEffectsView` while the user is touching it.
+The example below applies a ripple to the `Effects View` while the user is touching it.
 
 {% tabs %} 
 
@@ -274,6 +266,6 @@ this.Content = border;
 
 ## See also
 
-- [Selection](https://help.syncfusion.com/maui/effects-view/effects/selection) describes the persistent background effect often combined with `Scale` on long-press.   
-- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight) describes the color-transition effect that can be placed on a different trigger while rotation runs.  
-- [Combining Effects](https://help.syncfusion.com/maui/effects-view/effects/combinations) explains the rules for placing `Rotation` alongside other effects.
+- [Selection](https://help.syncfusion.com/maui/effects-view/effects/selection)
+- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight)  
+- [Combining Effects](https://help.syncfusion.com/maui/effects-view/effects/combinations)

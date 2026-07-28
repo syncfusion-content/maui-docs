@@ -7,7 +7,18 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Commands and CommandParameter
+# Commands and CommandParameter in .NET MAUI Effects View (SfEffectsView)
+
+The [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) exposes `ICommand` properties for each touch interaction, letting you bind view-model logic directly to the view. Each command is paired with an `object`-typed `CommandParameter` property so you can pass context to the bound logic.
+
+The Effects View control provides the following Commands and CommandParameter:
+
+- LongPressedCommand
+- LongPressedCommandParameter
+- TouchDownCommand
+- TouchDownCommandParameter
+- TouchUpCommand
+- TouchUpCommandParameter
 
 ## Prerequisites
 
@@ -17,48 +28,11 @@ Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
 
-The `SfEffectsView` exposes `ICommand` properties for each touch interaction, letting you bind view-model logic directly to the view. Each command is paired with an `object`-typed `CommandParameter` property so you can pass context to the bound logic.
-
-
-## Defining the ICommand
-
-The examples below use a simple `RelayCommand` helper. Add this class to your project or replace it with your preferred MVVM toolkit (for example, `CommunityToolkit.Mvvm.Input.RelayCommand`).
-
-{% tabs %} 
-
-{% highlight c# %}
-
-using System.Windows.Input;
-
-namespace MyApp;
-
-public class RelayCommand : ICommand
-{
-    private readonly Action<object?> execute;
-    private readonly Func<object?, bool>? canExecute;
-
-    public RelayCommand(Action<object?> execute, Func<object?, bool>? canExecute = null)
-    {
-        this.execute = execute;
-        this.canExecute = canExecute;
-    }
-
-    public bool CanExecute(object? parameter) => canExecute?.Invoke(parameter) ?? true;
-
-    public void Execute(object? parameter) => execute(parameter);
-
-    public event EventHandler? CanExecuteChanged;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## TouchDownCommand
 
 The [TouchDownCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDownCommand) property fires when the user presses the view.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml hl_lines="5 6" %}
 
@@ -131,7 +105,7 @@ this.Content = effectsView;
 
 The [TouchUpCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUpCommand) property fires when the user releases the press.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml hl_lines="5 6" %}
 
@@ -204,7 +178,7 @@ this.Content = effectsView;
 
 The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressedCommand) property fires when the user long-presses the view.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml hl_lines="5 6" %}
 
@@ -277,17 +251,9 @@ this.Content = effectsView;
 
 The example below wires a complete view model and a XAML page together so the commands fire when the user interacts with the `SfEffectsView`.
 
-### ViewModel
-
 {% tabs %} 
 
 {% highlight c# tabtitle="ViewModel" %}
-
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
-
-namespace MyApp;
 
 public class EffectsViewModel : INotifyPropertyChanged
 {
@@ -356,12 +322,8 @@ public class EffectsViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-## Commands vs. Trigger Properties
-
-The command properties and the trigger properties (`TouchDownEffects`, `TouchUpEffects`, `LongPressEffects`, `Effects`) are independent. Commands fire alongside any visual effect you have configured, so you can use a trigger property to play the visual feedback and a command to run your view-model logic at the same time.
-
 ## See also
 
-- [Events](https://help.syncfusion.com/maui/effects-view/events) describes the code-behind events that mirror the commands and explains when each one fires.  
-- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction) covers the trigger properties that decide when an effect plays.  
-- [Methods](https://help.syncfusion.com/maui/effects-view/methods) shows how to apply and reset effects programmatically from code-behind.
+- [Events](https://help.syncfusion.com/maui/effects-view/events)
+- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction)
+- [Methods](https://help.syncfusion.com/maui/effects-view/methods)

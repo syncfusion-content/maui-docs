@@ -7,27 +7,9 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Combining Effects in .NET MAUI Effects View
+# Combining Effects in .NET MAUI Effects View (SfEffectsView)
 
-## Prerequisites
-
-Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Core`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
-
-The `SfEffectsView` control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination on a single view.
-
-## Combination Rules
-
-The following rules govern which effects can be combined and where:
-
-- Each `SfEffect` value can be assigned to only one trigger property per view.
-- `SfEffects.Rotation` cannot be combined with other effects.
-- The other effects (`Highlight`, `Ripple`, `Scale`, and `Selection`) can be combined freely across the trigger properties, as shown in the examples below.
-
-## Examples
+The `.NET MAUI Effects View` control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination on a single view.
 
 The examples below use the XAML and C# tab pair to demonstrate each valid combination.
 
@@ -343,8 +325,7 @@ this.Content = effectsView;
 
 ## See also
 
-- [Effects Overview](https://help.syncfusion.com/maui/effects-view/effects/overview) lists every effect that you can combine on the SfEffectsView.  
-- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight) describes the transient background effect often paired with ripple or selection.  
-- [Ripple](https://help.syncfusion.com/maui/effects-view/effects/ripple) documents the expandable circle effect used in many combination examples.  
-- [Selection](https://help.syncfusion.com/maui/effects-view/effects/selection) explains the persistent background effect that pairs well with scale or highlight.  
-- [Scale](https://help.syncfusion.com/maui/effects-view/effects/scale) covers the size-change animation that can be combined with selection on long-press.
+- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight)
+- [Ripple](https://help.syncfusion.com/maui/effects-view/effects/ripple)
+- [Selection](https://help.syncfusion.com/maui/effects-view/effects/selection)
+- [Scale](https://help.syncfusion.com/maui/effects-view/effects/scale)

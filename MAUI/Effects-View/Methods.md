@@ -7,7 +7,9 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Methods in .NET MAUI Effects View
+# Methods in .NET MAUI Effects View (SfEffectsView)
+
+`Effects` can be applied and removed programmatically using the [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) and [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Reset) methods.
 
 ## Prerequisites
 
@@ -17,11 +19,9 @@ Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
 
-Effects can be applied and removed programmatically using the [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) and [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Reset) methods.
-
 ## ApplyEffects
 
-The [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) method starts an effect on the `SfEffectsView`, optionally repeating it. The method returns `void`.
+The [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) method starts an effect on the `Effects View`, optionally repeating it.
 
 ### Parameters
 
@@ -32,13 +32,13 @@ The [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEf
 | `rippleStartPoint` | `Microsoft.Maui.Graphics.Point?` | `null` | The point at which the ripple animation starts. When `null`, the ripple starts from the position determined by `rippleStartPosition`. |
 | `repeat` | `bool` | `false` | Indicates whether to repeat the effect. Only `SfEffects.Ripple` can be repeated; other effects ignore this value. |
 
-
+N> The `SfEffects` applied using the `ApplyEffects` method will not be removed automatically.
 
 ### Apply a Ripple from a Button
 
 The example below triggers a ripple from the top-left corner when the user clicks a button.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml %}
 
@@ -73,6 +73,11 @@ The example below triggers a ripple from the top-left corner when the user click
 
 {% endhighlight %}
 
+{% endtabs %}
+
+The `Clicked` event can be handled in C# as follows:
+
+{% tabs %} 
 {% highlight c# %}
 
 private void applyEffects_Button_Clicked(object sender, EventArgs e)
@@ -84,14 +89,13 @@ private void applyEffects_Button_Clicked(object sender, EventArgs e)
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ### Apply a Ripple at a Custom Point
 
 Use `rippleStartPoint` to start the ripple at specific coordinates inside the view.
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml %}
 
@@ -126,6 +130,11 @@ Use `rippleStartPoint` to start the ripple at specific coordinates inside the vi
 
 {% endhighlight %}
 
+{% endtabs %}
+
+The `Clicked` event can be handled in C# as follows:
+
+{% tabs %} 
 {% highlight c# %}
 
 private void applyEffects_Button_Clicked(object sender, EventArgs e)
@@ -137,124 +146,15 @@ private void applyEffects_Button_Clicked(object sender, EventArgs e)
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-### Repeat the Ripple
+## Reset
 
-Set `repeat: true` to keep the ripple animating until `ResetEffects` is called.
-
-#{% tabs %} 
-
-{% highlight xaml %}
-
-<VerticalStackLayout Padding="10" 
-                     Spacing="10">
-    <syncEffectsView:SfEffectsView x:Name="effectsView"
-                                   HorizontalOptions="Center" 
-                                   VerticalOptions="Center"
-                                   RippleBackground="Red">
-        <Grid Padding="12" 
-              WidthRequest="350" 
-              HeightRequest="150"
-              HorizontalOptions="Center" 
-              VerticalOptions="Center">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="1,1">
-                    <GradientStop Color="#FF6B6B" 
-                                  Offset="0.0" />
-                    <GradientStop Color="#4ECDC4" 
-                                  Offset="1.0" />
-                </LinearGradientBrush>
-            </Grid.Background>
-        </Grid>
-    </syncEffectsView:SfEffectsView>
-
-    <Button x:Name="applyEffects_Button"
-            Text="Apply Effect" 
-            WidthRequest="120"
-            HeightRequest="40"
-            Clicked="applyEffects_Button_Clicked"/>
-</VerticalStackLayout>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-private void applyEffects_Button_Clicked(object sender, EventArgs e)
-{
-    if (effectsView != null)
-    {
-        effectsView.ApplyEffects(effects: SfEffects.Ripple, repeat: true);
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Apply Multiple Effects
-
-You can pass a bitwise combination of effects to apply more than one at a time.
-
-#{% tabs %} 
-
-{% highlight xaml %}
-
-<VerticalStackLayout Padding="10" 
-                     Spacing="10">
-    <syncEffectsView:SfEffectsView x:Name="effectsView"
-                                   HorizontalOptions="Center" 
-                                   VerticalOptions="Center"
-                                   RippleBackground="Red">
-        <Grid Padding="12" 
-              WidthRequest="350" 
-              HeightRequest="150"
-              HorizontalOptions="Center" 
-              VerticalOptions="Center">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="1,1">
-                    <GradientStop Color="#FF6B6B" 
-                                  Offset="0.0" />
-                    <GradientStop Color="#4ECDC4" 
-                                  Offset="1.0" />
-                </LinearGradientBrush>
-            </Grid.Background>
-        </Grid>
-    </syncEffectsView:SfEffectsView>
-
-    <Button x:Name="applyEffects_Button"
-            Text="Apply Effect" 
-            WidthRequest="120"
-            HeightRequest="40"
-            Clicked="applyEffects_Button_Clicked"/>
-</VerticalStackLayout>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-private void applyEffects_Button_Clicked(object sender, EventArgs e)
-{
-    if (effectsView != null)
-    {
-        effectsView.ApplyEffects(effects: SfEffects.Highlight | SfEffects.Ripple);
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## ResetEffects
-
-The [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Reset) method clears any effect previously applied through `ApplyEffects`, returning the `SfEffectsView` to its rest state. The method takes no parameters and returns `void`.
-
-N> `Reset` only clears effects started by `ApplyEffects`. Effects started by the touch triggers (`TouchDownEffects`, `TouchUpEffects`, `LongPressEffects`, `Effects`) and the persistent `Selection` state are not affected.
+The [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Reset) method clears any effect previously applied through `ApplyEffects`, returning the `Effects View` to its rest state. The method takes no parameters and returns `void`.
 
 ### Apply and Reset
 
-#{% tabs %} 
+{% tabs %} 
 
 {% highlight xaml %}
 
@@ -320,6 +220,6 @@ private void applyEffects_Button_Clicked(object sender, EventArgs e)
 
 ## See also
 
-- [Events](https://help.syncfusion.com/maui/effects-view/events) covers the `AnimationCompleted` event that signals when a programmatically applied effect finishes.  
-- [Commands](https://help.syncfusion.com/maui/effects-view/commands) shows the `ICommand` properties that can also be used to react to user interactions.  
-- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction) explains the trigger properties that determine when an effect runs without calling `ApplyEffects` directly.
+- [Events](https://help.syncfusion.com/maui/effects-view/events) 
+- [Commands](https://help.syncfusion.com/maui/effects-view/commands)
+- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction)

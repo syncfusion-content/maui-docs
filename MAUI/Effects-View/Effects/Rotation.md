@@ -7,23 +7,13 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Rotation Effect in .NET MAUI Effects View
+# Rotation Effect in .NET MAUI Effects View (SfEffectsView)
 
-## Prerequisites
-
-Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.Core`
-
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
-
-The [SfEffects.Rotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Rotation) effect rotates the `SfEffectsView` around its center by the specified [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle). Positive angles rotate clockwise; negative angles rotate counter-clockwise.
-
-N> `Rotation` cannot be combined with other effects on the same trigger property. Place other effects on a different trigger property (for example, `LongPressEffects`) so both effects can play.
+The [SfEffects.Rotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Rotation) effect rotates the `Effects View` around its center by the specified [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle). Positive angles rotate clockwise; negative angles rotate counter-clockwise.
 
 ## Adding a Basic Rotation
 
-The example below rotates the `SfEffectsView` by 180 degrees when the user presses it.
+The example below rotates the `Effects View` by 180 degrees when the user presses it.
 
 {% tabs %} 
 
@@ -296,6 +286,6 @@ this.Content = border;
 
 ## See also
 
-- [Scale](https://help.syncfusion.com/maui/effects-view/effects/scale) covers the other transform-style effect that pairs with rotation on a different trigger property.  
-- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight) describes the color-transition effect that can be placed on a different trigger while rotation runs.  
-- [Combining Effects](https://help.syncfusion.com/maui/effects-view/effects/combinations) explains the rules for placing `Rotation` alongside other effects.
+- [Scale](https://help.syncfusion.com/maui/effects-view/effects/scale) 
+- [Highlight](https://help.syncfusion.com/maui/effects-view/effects/highlight) 
+- [Combining Effects](https://help.syncfusion.com/maui/effects-view/effects/combinations)
