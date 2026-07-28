@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Thumb and Overlay in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Thumb and Overlay in .NET MAUI DateTime Range Selector control | Syncfusion®
+description: Learn here all about the Thumb and Thumb Overlay features of the Syncfusion® .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
@@ -12,7 +12,7 @@ documentation: ug
 This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Selector.
 
 * Thumb - It is one of the slider elements that can be used to drag and change the selected value.
-* Thumb overlay - It is rendered around the thumb while interacting with them.
+* Thumb overlay - It is rendered around the thumb while interacting with it.
 
 ## Thumb size
 
@@ -46,6 +46,9 @@ Change the thumb size using the [`ThumbStyle`](https://help.syncfusion.com/cr/ma
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -73,7 +76,7 @@ Change the color of the thumb using the [`Fill`](https://help.syncfusion.com/cr/
 <ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
     <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
                                      Maximum="2018-01-01" 
@@ -142,6 +145,11 @@ Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfus
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -191,6 +199,11 @@ Change the thumb stroke color while two thumbs overlap using the [`OverlapStroke
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -239,6 +252,9 @@ Change the size of the thumb overlay using the [`Radius`](https://help.syncfusio
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -287,6 +303,11 @@ Change the color of the thumb overlay using the [`Fill`](https://help.syncfusion
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);

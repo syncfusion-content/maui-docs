@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interval in.NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about adding the Interval feature of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Interval in .NET MAUI DateTime Range Selector control | Syncfusion®
+description: Learn here all about the Interval feature of the Syncfusion® .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
@@ -17,7 +17,7 @@ The DateTime Range Selector has the elements like labels, ticks, and dividers. T
 
 Change the interval type using the [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType) property. Format or change the label text using the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) property.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is `DateTime(2000, 01, 01)`, [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is `DateTime(2005, 01, 01)`, [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is `1`, [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType) is [`SliderDateIntervalType.Years`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDateIntervalType.html#Syncfusion_Maui_Sliders_SliderDateIntervalType_Years), and the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) is `yyyy`, then the Range Slider will render the labels, major ticks, and dividers at 2000, 2001, 2002, and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is `DateTime(2000, 01, 01)`, [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is `DateTime(2005, 01, 01)`, [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is `1`, [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType) is [`SliderDateIntervalType.Years`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDateIntervalType.html#Syncfusion_Maui_Sliders_SliderDateIntervalType_Years), and the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) is `yyyy`, then the DateTime Range Selector will render the labels, major ticks, and dividers at 2000, 2001, 2002, and so on.
 
 {% tabs %}
 
@@ -49,6 +49,9 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);
@@ -103,6 +106,9 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);

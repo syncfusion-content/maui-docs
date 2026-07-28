@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range selection in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about range selection of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Range selection in .NET MAUI DateTime Range Selector control | Syncfusion®
+description: Learn here all about the range selection feature of the Syncfusion® .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
@@ -15,7 +15,7 @@ This section helps to learn about the range selection in the DateTime Range Sele
 
 Move the thumb in a discrete manner for date values using the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_StepDuration) property in the DateTime Range Selector.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is DateTime(2015, 01, 01), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is DateTime(2020, 01, 01), and the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_StepDuration) is `1`, the Range Selector will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 01, 01), DateTime(2017, 01, 01),and DateTime(2018, 01, 01).
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is DateTime(2000, 01, 01), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is DateTime(2005, 01, 01), and the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_StepDuration) is `1`, the DateTime Range Selector will move the thumbs at DateTime(2000, 01, 01), DateTime(2001, 01, 01), DateTime(2002, 01, 01), DateTime(2003, 01, 01), and DateTime(2004, 01, 01).
 
 {% tabs %}
 
@@ -48,6 +48,9 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);
@@ -102,6 +105,9 @@ Both the thumbs are moved to the selected interval if the [EnableIntervalSelecti
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -155,6 +161,9 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -206,6 +215,9 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -257,6 +269,9 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -279,7 +294,7 @@ rangeSelector.Content = chart;
 
 ## Deferred update
 
-You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
+You can control when the dependent components are updated while the thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
 
 It invokes the `ValueChanging` event when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`. However, the values are immediately updated in touch-up action.
 
@@ -312,6 +327,9 @@ It invokes the `ValueChanging` event when the thumb is dragged and held for the 
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
