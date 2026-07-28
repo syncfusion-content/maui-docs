@@ -189,4 +189,4 @@ this.Content = radialMenu;
 
 You can download the Radial Menu Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Radial-Menu).
 
-N> You can refer to our [.NET MAUI Radial Menu](https://www.syncfusion.com/maui-controls/maui-radial-menu) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Effects View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/RadialMenu) that shows you how to render the Effects View in .NET MAUI.
+N> You can refer to our [.NET MAUI Radial Menu](https://www.syncfusion.com/maui-controls/maui-radial-menu) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Effects View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Radialmenu) that shows you how to render the Effects View in .NET MAUI.

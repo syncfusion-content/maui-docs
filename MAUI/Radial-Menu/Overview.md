@@ -196,7 +196,7 @@ Explore Features
     <h3 class="form-title">Demos</h3>
 </div>
     <div class="form-description">Explore interactive demos that showcase key features and component capabilities.</div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/RadialMenu" class="explore-link">
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Radialmenu" class="explore-link">
     View Demos
   <span class="card-icon card-arrow"></span>
 </a>
