@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Range Slider control | Syncfusion®
+title: Dividers in .NET MAUI DataTime Range Slider | Syncfusion®
 description: Learn here all about the Dividers feature of the .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider

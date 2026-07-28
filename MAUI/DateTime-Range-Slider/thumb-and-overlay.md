@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thumb and Thumb Overlay in .NET MAUI DateTime Range Slider control | Syncfusion®
+title: Thumb and Thumb Overlay in .NET MAUI DateTime Range Slider | Syncfusion®
 description: Learn here all about the Thumb and Thumb Overlay features of the Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
