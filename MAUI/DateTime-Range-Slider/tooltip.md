@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Tooltip in .NET MAUI DateTime Range Slider control | Syncfusion®
+description: Learn here all about the Tooltip feature of the Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
@@ -13,7 +13,7 @@ This section helps to learn about how to add tooltip in the DateTime Range Slide
 
 ## Enable tooltip
 
-Enable the tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during the interaction. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`.  
+Enable the tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current value during interaction. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`.
 
 {% tabs %}
 
@@ -33,6 +33,8 @@ Enable the tooltip for the thumb by setting the [`Tooltip`](https://help.syncfus
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -49,7 +51,7 @@ rangeSlider.Tooltip = new SliderTooltip();
 
 ## Show always
 
-Always shows a tooltip with and without the thumb interaction by setting the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property. The default value of the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property is `False`.
+Always shows a tooltip with or without the thumb interaction by setting the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property. The default value of the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property is `False`.
 
 {% tabs %}
 
@@ -69,6 +71,8 @@ Always shows a tooltip with and without the thumb interaction by setting the [`S
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -84,7 +88,7 @@ rangeSlider.Tooltip.ShowAlways = true;
 
 ![RangeSlider show always tooltip](images/tooltip/show-always-tooltip.gif)
 
-N> Refer [here](https://help.syncfusion.com/maui/datetime-range-slider/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
+N> Refer to [this page](https://help.syncfusion.com/maui/datetime-range-slider/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
 ## Tooltip label style
 
@@ -114,6 +118,10 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);

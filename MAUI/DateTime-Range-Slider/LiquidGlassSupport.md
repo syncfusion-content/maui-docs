@@ -1,40 +1,44 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI DateTime RangeSlider | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DateTime RangeSlider (SfDateTimeRangeSlider) control.
+title: Liquid Glass Effect for .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control.
 platform: MAUI
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI DateTimeRangeSlider
+# Liquid Glass Effect in .NET MAUI DateTime Range Slider
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime RangeSlider (SfDateTimeRangeSlider) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control.
 
 ## Apply liquid glass effect
 
-Follow these steps to enable and configure the Liquid Glass Effect in the DateTime RangeSlider control:
+Follow these steps to enable and configure the Liquid Glass Effect in the DateTime Range Slider control:
 
-### Step 1: Enable the liquid glass effect on DateTime RangeSlider
+### Step 1: Enable the liquid glass effect on DateTime Range Slider
 
-Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect) property to `true` in the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control to apply the Liquid Glass Effect. When enabled,it provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect) property to `true` in the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control to apply the Liquid Glass Effect. When enabled, it provides responsive interaction for a smooth and engaging user experience.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDateTimeRangeSlider` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="10" %}
+<ContentPage xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <Grid>
-    <Image Source="Wallpaper.png" Aspect="AspectFill">
+        <Image Source="Wallpaper.png" Aspect="AspectFill" />
         <sliders:SfDateTimeRangeSlider
-            Minimum="2010-01-01" 
-            Maximum="2018-01-01" 
-            RangeStart="2012-01-01" 
+            Minimum="2010-01-01"
+            Maximum="2018-01-01"
+            RangeStart="2012-01-01"
             RangeEnd="2016-01-01"
             EnableLiquidGlassEffect="True" />
     </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="22" %}
+using Microsoft.Maui.Controls;
 using Syncfusion.Maui.Sliders;
 
 var grid = new Grid
@@ -51,7 +55,7 @@ grid.Children.Add(image);
 
 SfDateTimeRangeSlider dateTimeRangeSlider = new SfDateTimeRangeSlider
 {
-    Minimun = new DateTime(2010, 01, 01),
+    Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     RangeStart = new DateTime(2012, 01, 01),
     RangeEnd = new DateTime(2016, 01, 01),
@@ -64,9 +68,9 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates the `SfDateTimeRangeSlider` with the glass effect visible on the thumb while it is pressed.
 
 ![date time range slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N>
-This feature is supported only on .NET 10 along with iOS 26 and macOS 26 
+This feature is supported only on .NET 10 along with iOS 26 and macOS 26. 

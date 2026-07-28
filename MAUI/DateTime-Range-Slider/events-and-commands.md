@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Range Slider control | Syncfusion® 
+title: Events and Commands in .NET MAUI Range Slider control | Syncfusion®
 description: Learn here all about adding the events and commands of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
@@ -18,7 +18,7 @@ This section explains how to add the events and commands for the DateTime Range 
 * [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart) -  Called when the user selects a new value for the slider by tapping/mouse down on the thumb.
 * [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_ValueChanging) - Called when the user is selecting a new value for the slider by dragging the thumb.
 * [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_ValueChanged) - Called when the user completes selecting a new value.
-* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd) - Called when the user stops interacting with the slider by tapping/mouse up the thumb.
+* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd) - Called when the user stops interacting with the slider by tapping/mouse up on the thumb.
 
 {% tabs %}
 
@@ -37,6 +37,8 @@ This section explains how to add the events and commands for the DateTime Range 
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 {
     SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider()
@@ -49,7 +51,7 @@ This section explains how to add the events and commands for the DateTime Range 
     rangeSlider.ValueChangeStart += OnValueChangeStart;
     rangeSlider.ValueChanging += OnValueChanging;
     rangeSlider.ValueChanged += OnValueChanged;
-    rangeSelector.ValueChangeEnd += OnValueChangeEnd;
+    rangeSlider.ValueChangeEnd += OnValueChangeEnd;
 }
 
 private void OnValueChangeStart(object sender, EventArgs e)
@@ -76,7 +78,7 @@ private void OnValueChangeEnd(object sender, EventArgs e)
 
 Format or change the whole date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
 
-* Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Text) parameter.
+* Text – Customize the text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Text) parameter.
 * Style – Formats the text color, font size, font family, offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
 
 {% tabs %}
@@ -99,14 +101,15 @@ Format or change the whole date label text using the [`LabelCreated`](https://he
 {% endhighlight %}
 
 {% highlight C# %}
+using Syncfusion.Maui.Sliders;
 
 {
     SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider()
     {
         Minimum = new DateTime(2010, 01, 01),
-        Maximum = new DateTime(2018, 01, 01),
-        RangeStart = new DateTime(2012, 01, 01),
-        RangeEnd = new DateTime(2016, 01, 01),
+        Maximum = new DateTime(2011, 01, 01),
+        RangeStart = new DateTime(2010, 04, 01),
+        RangeEnd = new DateTime(2010, 10, 01),
         Interval = 3,
         DateFormat = "MMM",
         IntervalType = SliderDateIntervalType.Months,
@@ -176,6 +179,7 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
 {% endhighlight %}
 
 {% highlight C# %}
+using Syncfusion.Maui.Sliders;
 
 {
     SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider()
@@ -228,6 +232,8 @@ The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {% endhighlight %}
 
 {% highlight C# %}
+using System.Windows.Input;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider()
 {
@@ -280,6 +286,8 @@ The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusi
 {% endhighlight %}
 
 {% highlight C# %}
+using System.Windows.Input;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider()
 {
@@ -332,6 +340,8 @@ The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 
 {% highlight C# %}
+using System.Windows.Input;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider()
 {
@@ -384,6 +394,8 @@ The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfu
 {% endhighlight %}
 
 {% highlight C# %}
+using System.Windows.Input;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider()
 {

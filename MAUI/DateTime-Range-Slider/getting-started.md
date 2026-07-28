@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with DateTime Range Slider control | Syncfusion®
-description: This section explains about the getting started with Syncfusion® MAUI Range Slider (SfDateTimeRangeSlider) control.
+title: Getting started with .NET MAUI DateTime Range Slider control | Syncfusion®
+description: This section explains how to get started with the Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI DateTime Range Slider
 
-This section explains the steps required to add the [DateTime Range Slider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control and its elements track, ticks, labels, and tooltip. This section covers only the basic features needed to know to get started with Syncfusion<sup>®</sup> DateTime Range Slider.
+This section explains the steps required to add the [DateTime Range Slider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control along with its elements, such as track, ticks, labels, and tooltip. This section covers the basic features needed to get started with the Syncfusion<sup>®</sup> DateTime Range Slider.
 
 To quickly get started with the .NET MAUI DateTime Range Slider, watch this video.
 
@@ -76,13 +76,13 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution**, select **.NET (C#)**, and choose the **.NET MAUI App** template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
@@ -126,7 +126,7 @@ using Syncfusion.Maui.Sliders;
 
 ## Step 5: Create a DateTime Range Slider with Labels and Ticks
 
-Initialize the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html?tabs=tabid-2) and configure its visual elements using label and tick properties. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables labels to be displayed at specified intervals along the slider. The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+Initialize the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html?tabs=tabid-2) and configure its visual elements using label and tick properties. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables labels to be displayed at specified intervals along the slider. The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks. The example below uses the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) and [IntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType) properties to render years along the slider.
 
 {% tabs %}
 
@@ -145,6 +145,8 @@ Initialize the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncf
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);

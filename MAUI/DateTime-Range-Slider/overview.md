@@ -1,13 +1,13 @@
 ---
 layout: post
 title: .NET MAUI DateTime Range Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control with key features and more.
+description: Learn here all about the introduction of the Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control with its key features and more.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Overview of .NET MAUI DateTime Range Slider
+# .NET MAUI DateTime Range Slider Overview
 
 - The Syncfusion<sup>®</sup> .NET MAUI DateTime Range Slider ([SfDateTimeRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider)) is an interactive control that makes selecting a range of dates or times simple and intuitive.
 
@@ -25,12 +25,12 @@ documentation: ug
 
 ## Key features
 
-- **DateTime range selection support** allows selecting start and end values within a configurable range.  
-- **Orientation support** allows displaying the slider in horizontal or vertical layouts based on UI requirements.  
-- **Customizable labels support** allows rendering values with formatting based on application needs.  
-- **Ticks and dividers support** allows clearly indicating intervals using major and minor ticks.  
-- **Discrete mode support** allows moving slider thumbs in fixed steps based on defined interval values.  
-- **Tooltip support** allows displaying selected values clearly with customizable text formatting.  
+- **DateTime range selection support** allows selecting start and end values within a configurable range.
+- **Orientation support** allows displaying the slider in horizontal or vertical layouts based on UI requirements.
+- **Customizable labels support** allows rendering values with formatting based on application needs.
+- **Ticks and dividers support** allow clearly indicating intervals using major and minor ticks.
+- **Discrete mode support** allows moving slider thumbs in fixed steps based on defined interval values.
+- **Tooltip support** allows displaying selected values clearly with customizable text formatting.
 
 ## Globalization
 
@@ -79,9 +79,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Range Selector](https://help.syncfusion.com/maui/range-selector/overview) for selecting ranges with enhanced UI and content integration.   
-- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting single date values.  
-- [Date Time Slider](https://help.syncfusion.com/maui/datetime-slider/overview) for selecting date or time values interactively with a slider.
+- [Range Selector](https://help.syncfusion.com/maui/range-selector/overview) for selecting ranges with enhanced UI and content integration.
+- [DateTime Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting single date and time values.
+- [DateTime Slider](https://help.syncfusion.com/maui/datetime-slider/overview) for selecting date or time values interactively with a slider.
 
 ## See Also
 
@@ -227,7 +227,7 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<a href="https://www.syncfusion.com/maui-controls/maui-datepicker" class="explore-link">
+<a href="https://www.syncfusion.com/maui-controls/maui-range-slider" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
 </a>
@@ -261,7 +261,7 @@ Explore Features
     <div class="form-description">
       Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
-    <a href="https://www.syncfusion.com/tutorial-videos/maui/date-picker" class="explore-link">
+    <a href="https://www.syncfusion.com/tutorial-videos/maui/date-time-range-slider" class="explore-link">
     Watch now
   <span class="card-icon card-arrow"></span>
 </a>
