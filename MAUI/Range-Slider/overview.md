@@ -1,17 +1,17 @@
 ---
 layout: post
 title: .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control with key features and more.
+description: Learn about the introduction of the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control, its key features, and more.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Overview of .NET MAUI Range Slider
+# .NET MAUI Range Slider Overview
 
-The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider)) is a highly interactive UI control, allowing users to select a range values within a minimum and maximum limit. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
+The Syncfusion® .NET MAUI Range Slider ([SfRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider)) is a highly interactive UI control that allows users to select a range of values within a minimum and maximum limit. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
 
-![.NET MAUI range slider overview ](images/overview/range_slider_overview.png)
+![.NET MAUI range slider overview](images/overview/range_slider_overview.png)
 
 ## Business use cases
 

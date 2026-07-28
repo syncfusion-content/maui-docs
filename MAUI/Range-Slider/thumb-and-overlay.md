@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thumb and Thumb Overlay in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn all about the thumb and thumb overlay features in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,10 +9,10 @@ documentation: ug
 
 # Thumb and Overlay in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about how to customize the thumb and thumb overlay in the range slider.
+This section explains how to customize the thumb and thumb overlay in the Range Slider.
 
-* Thumb - It is one of the elements of slider which can be used to drag and change the selected value of the range slider.
-* Thumb overlay - It is rendered around the thumb while interacting with them.
+* Thumb - It is one of the elements of the slider that can be used to drag and change the selected value of the Range Slider.
+* Thumb overlay - It is rendered around the thumb while interacting with it.
 
 ## Thumb size
 
@@ -20,7 +20,7 @@ Change the size of the thumb in the range slider using the [`Radius`](https://he
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
     <sliders:SfRangeSlider.ThumbStyle>
@@ -47,7 +47,7 @@ Change the color of the thumb in the range slider using the [`Fill`](https://hel
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
    <sliders:SfRangeSlider.ThumbStyle>
@@ -74,7 +74,7 @@ Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfus
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
     <sliders:SfRangeSlider.ThumbStyle>
@@ -103,7 +103,7 @@ Change the thumb stroke color while two thumbs are overlapping in the range slid
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
   <sliders:SfRangeSlider.ThumbStyle>
@@ -130,7 +130,7 @@ Change the size of the thumb overlay in the range slider using the [`Radius`](ht
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
    <sliders:SfRangeSlider.ThumbOverlayStyle>
@@ -157,7 +157,7 @@ Change the color of the thumb overlay in the range slider using the [`Fill`](htt
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
    <sliders:SfRangeSlider.ThumbOverlayStyle>
@@ -180,11 +180,11 @@ rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD7
 
 ## Disabled thumb
 
-Change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider thumb properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the range slider to disabled by setting the `IsEnabled` property to `false`. Using the Visual State Manager (VSM), customize the range slider thumb properties based on the visual states. The applicable visual states are `Enabled` (default) and `Disabled`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
@@ -236,7 +236,7 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
         <sliders:SfRangeSlider />
         <Label Text="Disabled"
                Padding="24,10" />
-        <sliders:SfRangeSlider IsEnabled="False" />
+        <sliders:SfRangeSlider IsEnabled="false" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about adding the track feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn all about the track feature in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Track in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about how to customize the track in the range slider.
+This section explains how to customize the track in the Range Slider.
 
 ## Minimum
 
@@ -21,28 +21,28 @@ The maximum value that the user can select. The default value of the [`Maximum`]
 
 ## Range values
 
-It represents the values currently selected in the range slider. The range slider’s thumb is drawn corresponding to this [`RangeStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeStart) and [`RangeEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeEnd) values.
+It represents the values currently selected in the Range Slider. The Range Slider's thumb is drawn corresponding to the [`RangeStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeStart) and [`RangeEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeEnd) values.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        RangeStart="3"
                        RangeEnd="7"
-                       ShowLabels="True" />
- 
+                       ShowLabels="true" />
+
 {% endhighlight %}
 
 {% highlight C# %}
 
- SfRangeSlider rangeSlider = new SfRangeSlider();
- rangeSlider.Minimum = "0";
- rangeSlider.Maximum = "10";
- rangeSlider.RangeStart = "3";
- rangeSlider.RangeEnd = "7";
- rangeSlider.ShowLabels = true;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 3;
+rangeSlider.RangeEnd = 7;
+rangeSlider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -60,7 +60,7 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
     <sliders:SfRangeSlider.TrackStyle>
@@ -85,11 +85,11 @@ rangeSlider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1A
 
 ## Track height
 
-Change the active and inactive track height of the range slider using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle) class. The default value of the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize) and the [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize) properties are `8.0` and `6.0` respectively.
+Change the active and inactive track height of the range slider using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle) class. The default values of the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize) properties are `8.0` and `6.0`, respectively.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
     <sliders:SfRangeSlider.TrackStyle>
@@ -114,14 +114,14 @@ rangeSlider.TrackStyle.InactiveSize = 8;
 
 ## Track extent
 
-Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent) property. The default value is `0` and it should be in pixels.
+Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent) property. The default value is `0` and it is in pixels.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Interval="0.25"
-                       ShowTicks="True"
+                       ShowTicks="true"
                        TrackExtent="25" />
 
 {% endhighlight %}
@@ -149,11 +149,11 @@ SfRangeSlider rangeSlider = new SfRangeSlider()
 
 ## Disabled track
 
-Change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the range slider to disabled by setting the `IsEnabled` property to `false`. Using the Visual State Manager (VSM), customize the range slider track properties based on the visual states. The applicable visual states are `Enabled` (default) and `Disabled`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
@@ -202,7 +202,7 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
         <sliders:SfRangeSlider />
         <Label Text="Disabled"
                Padding="24,10" />
-        <sliders:SfRangeSlider IsEnabled="False" />
+        <sliders:SfRangeSlider IsEnabled="false" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

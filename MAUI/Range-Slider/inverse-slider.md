@@ -1,31 +1,31 @@
 ---
 layout: post
-title: Inverse in.NET MAUI Range Slider control | Syncfusion® 
-description: Learn here all about adding the Inverse Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Inverse in .NET MAUI Range Slider control | Syncfusion®
+description: Learn all about the inverse feature in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Inverse and Orientation
+# Inverse and Orientation in .NET MAUI Range Slider (SfRangeSlider)
 
 ## Inverse the slider
 
-Invert the range slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the IsInversed property is **False**.
+Invert the range slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the `IsInversed` property is `false`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        RangeStart="2"
                        RangeEnd="8"
                        Interval="2"
-                       ShowTicks="True"
-                       ShowLabels="True"
+                       ShowTicks="true"
+                       ShowLabels="true"
                        MinorTicksPerInterval="1"
-                       IsInversed="True" />
+                       IsInversed="true" />
 
 {% endhighlight %}
 
@@ -50,18 +50,18 @@ rangeSlider.IsInversed = true;
 
 ## Orientation
 
-The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property allows you to show the range slider in both horizontal and vertical directions. The default value of the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property is **Horizontal**.
+The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property allows you to show the range slider in both horizontal and vertical directions. The default value of the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property is `Horizontal`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        RangeStart="2"
                        RangeEnd="8"
-                       ShowTicks="True"
-                       ShowLabels="True"
+                       ShowTicks="true"
+                       ShowLabels="true"
                        Interval="2"
                        MinorTicksPerInterval="1"
                        Orientation="Vertical" />
