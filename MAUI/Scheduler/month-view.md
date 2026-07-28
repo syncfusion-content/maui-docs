@@ -14,9 +14,9 @@ By default, the Month view displays the entire days of a particular month and cu
 
 By default, when an appointment is created through the Month view, it is considered to be created for an entire day.
 
-N> The appointment views for each month cell will be updated depending on the month cell height. While resizing the layout, the following actions will be performed:
-* If the appointment views overlap with month cell dates or do not fit into the month cell height, then the appointment view is changed from [AppointmentDisplayMode.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text) to [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) view.
-* If the indicator views overlap with month cell dates, then the indicator view is changed from [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) to [AppointmentDisplayMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_None).
+N> The appointment views displayed within each month cell are updated dynamically based on the available cell height. During layout resizing:
+* If appointment views overlap with the month cell dates or do not fit within the available cell height, the display mode is automatically changed from [AppointmentDisplayMode.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text) to [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator).
+* If indicator views overlap with the month cell dates, the display mode is automatically changed from [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) to [AppointmentDisplayMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_None).
 
 ## Appointment display mode
 
@@ -156,7 +156,7 @@ public partial class MainPage : ContentPage
 
 ## Appointment indicator renderer mode
 
-The scheduler month view allows you to customize the appointment indicator rendering mode by using the [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) property supports three different types: [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_Fill), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_Stroke) and [FillAndStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_FillAndStroke). By default, the [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) is set to Fill.
+The scheduler month view allows you to customize the appointment indicator rendering mode by using the [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) property supports three different types: [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_Fill), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_Stroke) and [FillAndStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentIndicatorRenderMode.html#Syncfusion_Maui_Scheduler_AppointmentIndicatorRenderMode_FillAndStroke). By default, the [AppointmentIndicatorRenderMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorRenderMode) is set to `Fill`.
 
 {% tabs %}  
 {% highlight XAML hl_lines="8" %}
@@ -199,7 +199,7 @@ public partial class MainPage : ContentPage
 
 ## Appointment indicator stroke thickness
 
-The scheduler month view allows you to customize the appointment indicator stroke thickness by using the [AppointmentIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorStrokeThickness) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the [AppointmentIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorStrokeThickness) is set to 1d.
+The scheduler month view allows you to customize the appointment indicator stroke thickness by using the [AppointmentIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorStrokeThickness) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the [AppointmentIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorStrokeThickness) is set to `1d`.
 
 {% tabs %}  
 {% highlight XAML hl_lines="8" %}
@@ -559,7 +559,7 @@ public partial class MainPage : ContentPage
 
 ### Appointment time format in inline view
 
-The [TimeTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_TimeTextFormat) property in [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html) defines the string format used to display appointment time value in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, appointment time is shown in the "hh:mm tt" format (12‑hour clock with AM/PM). 
+The [TimeTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html#Syncfusion_Maui_Scheduler_MonthInlineViewStyle_TimeTextFormat) property in [MonthInlineViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineViewStyle.html) defines the string format used to display appointment time value in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. By default, appointment time is shown in the `hh:mm tt` format (12‑hour clock with AM/PM). 
 
 {% tabs %}  
 {% highlight XAML tabtitle="XAML" hl_lines="8 10" %}
@@ -811,7 +811,7 @@ public partial class MainPage : ContentPage
 
 ## View header
 
-You can customize the default appearance of view header in a month view by setting the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat), [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height), and [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+You can customize the default appearance of view header in a month view by setting the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat), [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height), and [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 ### Change day format of view header
 
@@ -906,7 +906,7 @@ public partial class MainPage : ContentPage
 
 ### Customize view header appearance
 
-The view header appearance customization can be achieved by using the `TextStyle` and `ViewHeaderTemplate` properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+The view header appearance customization can be achieved by using the `TextStyle` and `ViewHeaderTemplate` properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 #### Customize view header appearance using text style
 
@@ -958,7 +958,7 @@ public partial class MainPage : ContentPage
 
 #### Customize view header appearance using DataTemplate
 
-You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11" %}    
@@ -990,7 +990,7 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 
 #### Customize view header appearance using DataTemplateSelector
 
-You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
+You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1049,7 +1049,7 @@ N>
 
 ## Month Navigation direction
 
-The [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) can be navigated in both horizontal and vertical directions. You can change the direction of navigation through the [NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NavigationDirection) property of [MonthViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in `SfScheduler` . By default, the navigation direction is `Horizontal`.
+The [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) of [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) can be navigated in both horizontal and vertical directions. You can change the direction of navigation through the [NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NavigationDirection) property of [MonthViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in `SfScheduler` . By default, the navigation direction is `Horizontal`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1087,7 +1087,7 @@ public partial class MainPage : ContentPage
 
 ## Month cell appearance
 
-The month cell appearance can be customized by using the  [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellStyle), and [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+The month cell appearance can be customized by using the  [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellStyle), and [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 #### Customize month cell appearance using text style
 
@@ -1106,7 +1106,7 @@ By using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="32" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1157,7 +1157,7 @@ public partial class MainPage : ContentPage
 
 #### Customize month cell appearance using DataTemplate
 
-You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="9 10 11 12 13 14 15" %}
@@ -1192,7 +1192,7 @@ N>
 
 #### Customize month cell appearance using DataTemplateSelector
 
-You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It allows you to choose a different data template for each month cell, as well as customize the appearance of a particular month cell based on certain conditions.
+You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It allows you to choose a different data template for each month cell, as well as customize the appearance of a particular month cell based on certain conditions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="22" %}
