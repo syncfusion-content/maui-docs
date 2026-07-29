@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation Errors of Essential Studio .NET MAUI | Syncfusion
+title: Installation errors of Essential Studio .NET MAUI | Syncfusion
 description: Learn about common installation errors for Syncfusion Essential Studio .NET MAUI and the steps to resolve them.
 platform: MAUI
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Common Installation Errors
+# Common installation errors
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI installers (Online and Offline) on Windows.
 
@@ -41,7 +41,7 @@ Only a licensed unlock key can unlock a licensed installer. To unlock the licens
 
 ### Problem
 
-**Error Message:** Your license for Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI has been expired since &lt;date&gt;. Please renew your subscription and try again.
+**Error message:** Your license for Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI has been expired since &lt;date&gt;. Please renew your subscription and try again.
 
 > Note: `&lt;date&gt;` is replaced with the actual expiry date when the message is shown to the user.
 

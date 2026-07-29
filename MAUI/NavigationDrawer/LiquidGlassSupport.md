@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Liquid Glass Support for .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Liquid Glass Support for .NET MAUI Navigation Drawer
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible while maintaining readable contrast. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control.
 

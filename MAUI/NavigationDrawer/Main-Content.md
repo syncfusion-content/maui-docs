@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Setting Main Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Setting Main Content in .NET MAUI Navigation Drawer
 
 The main content of the [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) is the area that stays visible behind the side pane. It is configured through the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) property. When the user selects an item in the side pane (for example, a `ListView` item), update `ContentView` to switch the visible content within the same page.
 

@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Programmatically Toggling the Drawer in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Programmatically Toggling the Drawer in .NET MAUI Navigation Drawer
 
 You can toggle the drawer in the [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) in the following ways:
 
