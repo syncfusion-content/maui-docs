@@ -7,7 +7,7 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Dividers in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Dividers in SfDateTimeRangeSelector for .NET MAUI
 
 This section explains how to add the dividers in the DateTime Range Selector (SfDateTimeRangeSelector).
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI DateTime Range Selector | Syncfusion®
+title: Liquid Glass Effect in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DateTime RangeSelector (SfDateTimeRangeSelector) control.
 platform: MAUI
 control: SfDateTimeRangeSelector
