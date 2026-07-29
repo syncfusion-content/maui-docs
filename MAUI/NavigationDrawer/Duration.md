@@ -18,9 +18,9 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Duration
 
-The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) specifies the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
+The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property of the [Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) specifies the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
 
-The following code example illustrates how to set the animation duration of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html).
+The following code example illustrates how to set the animation duration of the Navigation Drawer.
 
 {% tabs %}
 {% highlight xaml %}
@@ -44,21 +44,11 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 {% endhighlight %}
 {% endtabs %}
 
-N> The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property for the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) is measured in milliseconds.
+N> The `Duration` property for the `Navigation Drawer` is measured in milliseconds.
 
 The following screenshot illustrates the result of the above code.
 
 ![Animation Duration in .NET MAUI Navigation Drawer](Images/animation-duration/navigation_duration.gif)
-
-## Related Members
-
-The `Duration` property works together with the following members to control the drawer's animation behavior:
-
-- [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_AnimationEasing) — defines the acceleration curve of the animation.
-- [Transition](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer) — controls the open/close animation style.
-- [SwipeGestureSettings](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) — configures the swipe interaction that triggers the animation.
-
-For more details on configuring the drawer behavior, see [Toggling the Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer) and [Swipe Gesture](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture).
 
 ## See also
 

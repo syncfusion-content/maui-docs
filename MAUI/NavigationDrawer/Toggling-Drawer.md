@@ -7,7 +7,14 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Programmatically Toggling the Drawer in .NET MAUI Navigation Drawer
+# Programmatically Toggling the Drawer in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+
+You can toggle the drawer in the [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) in the following ways:
+
+- [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_IsOpen) property
+- [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method
+- [Swipe gesture](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture)
+
 
 ## Prerequisites
 
@@ -17,17 +24,9 @@ Before using the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfu
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/navigationdrawer/getting-started) documentation.
 
-## Toggle Methods
-
-You can toggle the drawer in the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) in the following ways:
-
-- [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_IsOpen) property
-- [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method
-- [Swipe gesture](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture)
-
 ## Opening the Drawer Programmatically
 
-You can open the drawer using the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_IsOpen) property of [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html) or the [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method on [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html).
+You can open the drawer using the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_IsOpen) property of [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html) or the [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method on `Navigation Drawer`.
 
 ### Using the IsOpen property
 
@@ -62,42 +61,9 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 
 {% endtabs %}
 
-### Closing the Drawer Programmatically
-
-You can close the drawer by setting `IsOpen` to `false` or by calling `ToggleDrawer(false)`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
-    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationDrawer:DrawerSettings IsOpen="False">
-        </navigationDrawer:DrawerSettings>
-    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
-</navigationDrawer:SfNavigationDrawer>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
-{
-    DrawerSettings = new DrawerSettings
-    {
-        IsOpen = false
-    }
-};
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Toggling the drawer by swipe gesture is explained in the [Swipe Gesture and Sensitivity](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) section.
-
 ### Using the ToggleDrawer method
 
-[ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) is a method on `SfNavigationDrawer` that returns `Task`. It supports the following overloads:
+[ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) is a method on `Navigation Drawer` to open or close the drawer based on the existing state.
 
 {% tabs %}
 {% highlight xaml %}
@@ -137,6 +103,14 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
     ContentView = button,
 };
 
+{% endhighlight %}
+{% endtabs %}
+
+The Button's `Clicked` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight c# %}
+
 private void OnToggleDrawerClicked(object sender, EventArgs e)
 {
      navigationDrawer.ToggleDrawer();
@@ -145,9 +119,13 @@ private void OnToggleDrawerClicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+## Toggling drawer by swipe gesture
+
+Toggling drawer by swipe gesture is explained in the [Swipe Gesture and Sensitivity](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) section.
+
 ## See also
 
 - [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
-- [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
+- [Side Pane Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
 - [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)

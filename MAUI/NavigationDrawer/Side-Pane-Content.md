@@ -9,6 +9,14 @@ documentation: UG
 
 # Side Pane Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
+The side pane of the [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) is only visible when the drawer is open. The side pane is composed of three regions that stack vertically from top to bottom:
+
+1. Header content - displayed at the top of the side pane.
+2. Drawer content - displayed in the middle; occupies the space left by the header and footer.
+3. Footer content - displayed at the bottom of the side pane.
+
+N> The header and footer are optional; the drawer content is required to allocate space for the side pane.
+
 ## Prerequisites
 
 Before using the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -17,26 +25,16 @@ Before using the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfu
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/navigationdrawer/getting-started) documentation.
 
-## Overview
-
-The side pane of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) is only visible when the drawer is open. The side pane is composed of three regions that stack vertically from top to bottom:
-
-1. Header content - displayed at the top of the side pane.
-2. Drawer content - displayed in the middle; occupies the space left by the header and footer.
-3. Footer content - displayed at the bottom of the side pane.
-
-The header and footer are optional; the drawer content is required to allocate space for the side pane.
-
 ## Properties
 
 | Property | Type | Default Value | Description |
 |----------|------|---------------|-------------|
 | [DrawerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderView) | `View` | `null` | The view displayed at the top of the side pane. |
-| [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) | `double` | `0` | Height of the header area. Set to `0` to hide the header. |
+| [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) | `double` | `50` | Height of the header area. Set to `0` to hide the header. |
 | [DrawerContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView) | `View` | `null` | The view displayed in the middle of the side pane. Required to allocate space for the drawer. |
 | [DrawerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterView) | `View` | `null` | The view displayed at the bottom of the side pane. |
-| [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) | `double` | `0` | Height of the footer area. Set to `0` to hide the footer. |
-| [ContentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_ContentBackground) | `Color` | `null` | Background color of the side pane content area. |
+| [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) | `double` | `50` | Height of the footer area. Set to `0` to hide the footer. |
+| [ContentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_ContentBackground) | `Color` | ` Color.FromArgb("F7F2FB")` | Background color of the side pane content area. |
 
 ## Layout
 
@@ -58,11 +56,12 @@ The header is displayed at the top of the side pane. Use the [DrawerHeaderView](
 
 <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationDrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationDrawer:DrawerSettings DrawerHeaderHeight="150" DrawerWidth="250">
+        <navigationDrawer:DrawerSettings DrawerHeaderHeight="150" 
+                                         DrawerWidth="250">
             <navigationDrawer:DrawerSettings.DrawerHeaderView>
                 <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
-                                       HorizontalOptions="Center">
+                                         HorizontalOptions="Center">
                         <Label Text="Header View" TextColor="White" />
                     </VerticalStackLayout>
                 </Grid>
@@ -106,7 +105,11 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 
 ![Header content in .NET MAUI Navigation Drawer](Images/panel-content/navigation_drawer_header.png)
 
-N> The [DrawerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderView) can be removed by setting the [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) to zero.
+### Header height
+
+Adjust the height of the drawer header content using the [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) property.
+
+N> The `DrawerHeaderView` can be removed by setting the `DrawerHeaderHeight` to zero.
 
 ## Footer content
 
@@ -118,11 +121,12 @@ The footer is displayed at the bottom of the side pane. Use the [DrawerFooterVie
 
 <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationDrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationDrawer:DrawerSettings DrawerFooterHeight="150" DrawerWidth="250">
+        <navigationDrawer:DrawerSettings DrawerFooterHeight="150" 
+                                         DrawerWidth="250">
             <navigationDrawer:DrawerSettings.DrawerFooterView>
                 <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
-                                        HorizontalOptions="Center">
+                                         HorizontalOptions="Center">
                         <Label Text="Footer View" TextColor="White" />
                     </VerticalStackLayout>
                 </Grid>
@@ -166,7 +170,11 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 
 ![Footer content in .NET MAUI Navigation Drawer](Images/panel-content/navigation_drawer_footer.png)
 
-N> The [DrawerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterView) can be removed by setting the [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) to zero.
+### Footer height
+
+Adjust the height of the drawer footer content using the [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) property.
+
+N> The `DrawerFooterView` can be removed by setting the `DrawerFooterHeight` to zero.
 
 ## Drawer content
 
@@ -182,7 +190,7 @@ The drawer content is displayed between the header and footer. It is set using t
             <navigationDrawer:DrawerSettings.DrawerContentView>
                 <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
-                                            HorizontalOptions="Center">
+                                         HorizontalOptions="Center">
                         <Label Text="Drawer Content" TextColor="White" />
                     </VerticalStackLayout>
                 </Grid>
@@ -237,7 +245,7 @@ Customize the background color of the side pane content area by setting the [Con
             <navigationDrawer:DrawerSettings.DrawerContentView>
                 <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
-                                            HorizontalOptions="Center">
+                                         HorizontalOptions="Center">
                         <Label Text="Drawer Content" TextColor="White" />
                     </VerticalStackLayout>
                 </Grid>

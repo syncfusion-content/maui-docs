@@ -9,6 +9,8 @@ documentation: UG
 
 # Drawer Position in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
+The side pane of the [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) can be opened from any of the four sides of the screen. The side is controlled by the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Position) property of `DrawerSettings`.
+
 ## Prerequisites
 
 Before using the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,11 +18,6 @@ Before using the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfu
 - `Syncfusion.Maui.NavigationDrawer`
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/navigationdrawer/getting-started) documentation.
-
-## Position
-
-The side pane of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) can be opened from any of the four sides of the screen. The side is controlled by the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Position) property of `DrawerSettings`.
-
 
 ## Position values
 
@@ -151,6 +148,7 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 
 ## See also
 
+- [How to change the position of .NET MAUI Navigation Drawer?](https://support.syncfusion.com/kb/article/15515/how-to-change-the-position-of-net-maui-navigation-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
 - [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
