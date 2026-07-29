@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Merged Cells in .NET MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to merge the range of adjacent cells using the [QueryCoveredRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_QueryCoveredRange) event. Merged cells can be exported to Excel and PDF.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to merge a range of adjacent cells using the [QueryCoveredRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_QueryCoveredRange) event to span multiple rows and columns. Merged cells can be exported to Excel and PDF.
 
 The `QueryCoveredRange` event is fired when each cell is arranged, and the custom range is stored for visible rows and columns in [SfDataGrid.CoveredCells](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_CoveredCells). This event is not fired for cells that are not visible or for cells that are already present in `SfDataGrid.CoveredCells`. When scrolling, the merged range will be added for newly visible rows and columns through this event, and removed for rows and columns that go out of view.
 
@@ -18,7 +18,9 @@ The `QueryCoveredRange` event is fired when each cell is arranged, and the custo
 
 Cell merging works independently of the selection configuration. However, when [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) is not [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_None), set the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell) and the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Cell) to avoid conflicts between row selection and merged cell rendering.
 
-N> `SelectionUnit` and `NavigationMode` do not need to be set to `Cell` when `SelectionMode` is `None`, as selection is disabled and there is no conflict with merged cell behavior.
+> **Note:** `SelectionUnit` and `NavigationMode` do not need to be set to `Cell` when `SelectionMode` is `None`, as selection is disabled and there is no conflict with merged cell behavior.
+
+To enable cell merging, subscribe to the `QueryCoveredRange` event in your XAML or code-behind:
 
 {% tabs %}
 {% highlight xaml %}
@@ -39,27 +41,35 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 
 ## Merging cells
 
-You can span a cell across a row and column by merging a range of cells. Set a [CoveredCellInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CoveredCellInfo.html) (by defining Left, Right, Top, and Bottom) to the `DataGridQueryCoveredRangeEventArgs.Range` and handle the event.
+You can merge a range of adjacent cells by setting the `Range` property of [DataGridQueryCoveredRangeEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryCoveredRangeEventArgs.html) to a [CoveredCellInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CoveredCellInfo.html) object within the `QueryCoveredRange` event handler.
 
-### Merging cells horizontally by fixed range
+### CoveredCellInfo Parameters
 
-You can merge columns in a row by setting the column range using the [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CoveredCellInfo.html#Syncfusion_Maui_DataGrid_CoveredCellInfo_Left) and [Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CoveredCellInfo.html#Syncfusion_Maui_DataGrid_CoveredCellInfo_Right) properties of `CoveredCellInfo`.
+The `CoveredCellInfo` constructor takes four parameters in the following order:
+
+```csharp
+new CoveredCellInfo(left, right, top, bottom)
+```
+
+- **left**: Column index of the leftmost cell in the merge range
+- **right**: Column index of the rightmost cell in the merge range
+- **top**: Row index of the topmost cell in the merge range
+- **bottom**: Row index of the bottommost cell in the merge range
+
+### Merging cells horizontally
+
+You can merge columns in a single row by setting the left and right column indices using the `left` and `right` parameters of `CoveredCellInfo`:
 
 {% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       GridLinesVisibility="Both"
-                       HeaderGridLinesVisibility="Both"
-                       QueryCoveredRange="dataGrid_QueryCoveredRange" />
-{% endhighlight %}
 {% highlight c# %}
 private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRangeEventArgs e)
 {
+    // Merge columns 1-3 in row 1
     if (e.RowColumnIndex.RowIndex == 1)
     {
         if (e.RowColumnIndex.ColumnIndex >= 1 && e.RowColumnIndex.ColumnIndex <= 3)
         {
+            // Parameters: left=1, right=3, top=1, bottom=1
             e.Range = new CoveredCellInfo(1, 3, 1, 1);
             e.Handled = true;
         }
@@ -70,25 +80,20 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 
 <img alt="Horizontally merged cells in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-horizontal-merged-cells.png" width="404"/>
 
-### Merging cells vertically by fixed range
+### Merging cells vertically
 
-You can merge a range of rows for a particular column by setting the row range using the [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CoveredCellInfo.html#Syncfusion_Maui_DataGrid_CoveredCellInfo_Top) and [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CoveredCellInfo.html#Syncfusion_Maui_DataGrid_CoveredCellInfo_Bottom) properties of `CoveredCellInfo`.
+You can merge multiple rows in a single column by setting the top and bottom row indices using the `top` and `bottom` parameters of `CoveredCellInfo`:
 
 {% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       GridLinesVisibility="Both"
-                       HeaderGridLinesVisibility="Both"
-                       QueryCoveredRange="dataGrid_QueryCoveredRange" />
-{% endhighlight %}
 {% highlight c# %}
 private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRangeEventArgs e)
 {
+    // Merge rows 1-5 in column 1
     if (e.RowColumnIndex.ColumnIndex == 1)
     {
         if (e.RowColumnIndex.RowIndex >= 1 && e.RowColumnIndex.RowIndex <= 5)
         {
+            // Parameters: left=1, right=1, top=1, bottom=5
             e.Range = new CoveredCellInfo(1, 1, 1, 5);
             e.Handled = true;
         }
@@ -99,22 +104,18 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 
 <img alt="Vertically merged cells in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-vertical-merged-cells.png" width="404"/>
 
-### Merging a range of cells
+### Merging rows and columns
 
-You can merge a range of rows and columns by setting the range using the `Left`, `Right`, `Top`, and `Bottom` properties of `CoveredCellInfo`.
+You can merge multiple rows and columns simultaneously by setting all four parameters of `CoveredCellInfo`:
+
 {% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       GridLinesVisibility="Both"
-                       HeaderGridLinesVisibility="Both"
-                       QueryCoveredRange="dataGrid_QueryCoveredRange" />
-{% endhighlight %}
 {% highlight c# %}
 private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRangeEventArgs e)
 {
+    // Merge columns 1-2 and rows 1-5
     if (e.RowColumnIndex.ColumnIndex == 1 && e.RowColumnIndex.RowIndex == 1)
     {
+        // Parameters: left=1, right=2, top=1, bottom=5
         e.Range = new CoveredCellInfo(1, 2, 1, 5);
         e.Handled = true;
     }
@@ -126,9 +127,13 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 
 ## Merging cells based on content
 
-You can merge redundant data in adjacent cells in a row or column using the `QueryCoveredRange` event.
+You can automatically merge adjacent cells that contain identical data by implementing a content-based merge algorithm. This section demonstrates how to merge redundant data in both horizontal and vertical directions.
 
-In the following code, the `GetRange` method returns a range for a cell based on the adjacent cells' content. The `QueryCoveredRange` handler then sets the range if the calculated range does not already exist in `SfDataGrid.CoveredCells`, using the [CoveredCells.IsInRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CoveredCellInfoCollection.html#Syncfusion_Maui_DataGrid_CoveredCellInfoCollection_IsInRange_Syncfusion_Maui_DataGrid_CoveredCellInfo_) method.
+The following code implements a `GetRange` method that:
+1. Compares the current cell's content with adjacent cells (horizontally and vertically)
+2. Returns a merge range that spans all consecutive cells with identical content
+3. Uses [CoveredCells.IsInRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CoveredCellInfoCollection.html#Syncfusion_Maui_DataGrid_CoveredCellInfoCollection_IsInRange_Syncfusion_Maui_DataGrid_CoveredCellInfo_) to prevent redundant range calculations
+
 
 {% tabs %}
 {% highlight c# %}
@@ -164,6 +169,7 @@ public partial class MainPage : ContentPage
 
     private CoveredCellInfo GetRange(DataGridColumn column, int rowIndex, int columnIndex, object rowData)
     {
+        // Initial range (single cell)
         var range = new CoveredCellInfo(columnIndex, columnIndex, rowIndex, rowIndex);
 
         if (rowData == null || column == null)
@@ -178,7 +184,7 @@ public partial class MainPage : ContentPage
         int leftColumnIndex  = columnIndex;
         int rightColumnIndex = columnIndex;
 
-        // Compare right columns
+        // Compare right columns for identical content
         for (int i = dataGrid.Columns.IndexOf(column) + 1; i < dataGrid.Columns.Count; i++)
         {
             var nextColumn = dataGrid.Columns[i];
@@ -188,10 +194,11 @@ public partial class MainPage : ContentPage
             var compareData = nextPropertyInfo.GetValue(rowData);
             if (compareData == null || !compareData.Equals(data)) break;
 
+            // ResolveToScrollColumnIndex converts from collection index to visible column index
             rightColumnIndex = dataGrid.ResolveToScrollColumnIndex(i);
         }
 
-        // Compare left columns
+        // Compare left columns for identical content
         for (int i = dataGrid.Columns.IndexOf(column) - 1; i >= 0; i--)
         {
             var prevColumn = dataGrid.Columns[i];
@@ -204,18 +211,20 @@ public partial class MainPage : ContentPage
             leftColumnIndex = dataGrid.ResolveToScrollColumnIndex(i);
         }
 
+        // If horizontal merge is found, return it
         if (leftColumnIndex != columnIndex || rightColumnIndex != columnIndex)
         {
             return new CoveredCellInfo(leftColumnIndex, rightColumnIndex, rowIndex, rowIndex);
         }
 
-        // Merge vertically
+        // Otherwise, attempt vertical merge
         int topRowIndex    = rowIndex;
         int bottomRowIndex = rowIndex;
 
+        // Get total record count from the DataGrid's View
         var recordsCount = dataGrid.View?.Records?.Count ?? 0;
 
-        // Compare previous rows
+        // Compare previous rows for identical content (skip row 0 as it is the header)
         for (int i = rowIndex - 1; i >= 1; i--)
         {
             var prevData = dataGrid.GetRecordAtRowIndex(i);
@@ -230,8 +239,8 @@ public partial class MainPage : ContentPage
             topRowIndex = i;
         }
 
-        // Compare next rows
-        for (int i = rowIndex + 1; i <= recordsCount; i++)
+        // Compare next rows for identical content (row index < recordsCount ensures we don't exceed available records)
+        for (int i = rowIndex + 1; i < recordsCount; i++)
         {
             var nextData = dataGrid.GetRecordAtRowIndex(i);
             if (nextData == null) break;
@@ -245,6 +254,7 @@ public partial class MainPage : ContentPage
             bottomRowIndex = i;
         }
 
+        // Return vertical merge if rows span more than one row
         if (topRowIndex != rowIndex || bottomRowIndex != rowIndex)
         {
             return new CoveredCellInfo(columnIndex, columnIndex, topRowIndex, bottomRowIndex);
@@ -260,7 +270,9 @@ public partial class MainPage : ContentPage
 
 ## Merge cells in Master-Details view
 
-The master-details view allows you to merge the range of cells using the `QueryCoveredRange` event of the nested [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html).
+In a Master-Details view, you can merge cells in the nested details grid by handling the `QueryCoveredRange` event of the [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html). Each details grid instance maintains its own merged cell collection independently from the parent grid.
+
+The following example demonstrates how to merge cells in a details grid:
 
 {% tabs %}
 {% highlight xaml %}
@@ -281,8 +293,10 @@ The master-details view allows you to merge the range of cells using the `QueryC
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+// Handle the QueryCoveredRange event of the nested details grid
 private void FirstLevelNestedGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRangeEventArgs e)
 {
+    // Merge column 3, rows 2-3 in the details grid
     if (e.RowColumnIndex.ColumnIndex == 3)
     {
         e.Range = new CoveredCellInfo(3, 3, 2, 3);
@@ -292,50 +306,60 @@ private void FirstLevelNestedGrid_QueryCoveredRange(object sender, DataGridQuery
 {% endhighlight %}
 {% endtabs %}
 
+> **Note**: The `x:Name` attribute on the nested grid is required to reference the event handler in code-behind.
+
 <img alt="Merged cells in Master-Details view in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-merge-cells-master-details-view.png" width="404"/>
 
 ### Merging range of parent cells
 
-You cannot merge cells vertically for a parent row that has a details view expanded beneath it. Before defining the merged range inside the `QueryCoveredRange` event handler of the parent grid, use the `CanMergeNextRows` helper method to check whether the row has a details view, and skip the merge accordingly.
+When a parent row has an expanded details view beneath it, you cannot vertically merge that parent row with adjacent rows. Use the `CanMergeNextRows` helper method to check whether a row can be merged before defining the merge range:
 
 {% tabs %}
 {% highlight c# %}
 private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRangeEventArgs e)
 {
-    // Use the CanMergeNextRows helper method to check if the row has a details view
+    // Check if the row has an expanded details view
+    // CanMergeNextRows returns true only if the row can be safely merged vertically
     if (!dataGrid.CanMergeNextRows(e.Record))
-        return;
+        return; // Skip merging this row
+    
 }
 {% endhighlight %}
 {% endtabs %}
 
-N> Vertical cell merging is not supported for a parent row that has an expanded details view.
-
 ## Refreshing merged cells at runtime
 
-### Add covered range
+After programmatically modifying merged cells, you must call `GetVisualContainer().InvalidateMeasure()` to invalidate the layout and trigger a visual refresh. This forces the grid to recalculate and redraw the affected cells.
 
-You can add a range to `SfDataGrid.CoveredCells` at runtime using the `AddRange` helper method. After adding the range, call [GetVisualContainer().InvalidateMeasure()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.VisualContainer.html#Syncfusion_Maui_DataGrid_VisualContainer_InvalidateMeasure) to refresh the layout and reflect the merged cell changes in the UI.
+### Add a covered range
+
+Use the `AddRange` helper method to add a merge range at runtime:
 
 {% tabs %}
 {% highlight c# %}
 private void AddRange_Clicked(object sender, EventArgs e)
 {
+    // Add a new merged range
     dataGrid.AddRange(new CoveredCellInfo(2, 3, 3, 3));
+    
+    // Invalidate the layout to apply the change immediately
     dataGrid.GetVisualContainer().InvalidateMeasure();
 }
 {% endhighlight %}
 {% endtabs %}
 
-### Remove covered range
+### Remove a covered range
 
-You can remove a range from `SfDataGrid.CoveredCells` at runtime using the `RemoveRange` helper method. After removing the range, call [GetVisualContainer().InvalidateMeasure()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.VisualContainer.html#Syncfusion_Maui_DataGrid_VisualContainer_InvalidateMeasure) to refresh the layout and reflect the changes in the UI.
+Use the `RemoveRange` helper method to remove a merge range at runtime:
 
 {% tabs %}
 {% highlight c# %}
 private void RemoveRange_Clicked(object sender, EventArgs e)
 {
+    // Remove the merged range
     dataGrid.RemoveRange(new CoveredCellInfo(2, 3, 3, 3));
+    
+    // Invalidate the layout to apply the change immediately
     dataGrid.GetVisualContainer().InvalidateMeasure();
 }
 {% endhighlight %}
@@ -354,22 +378,26 @@ private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEd
     var rowIndex    = e.RowColumnIndex.RowIndex;
     var columnIndex = e.RowColumnIndex.ColumnIndex;
 
+    // Retrieve the current merged range for this cell
     var range = dataGrid.CoveredCells.GetCoveredCellInfo(rowIndex, columnIndex);
     if (range != null)
     {
+        // Remove the old range so QueryCoveredRange will be triggered for this cell
         dataGrid.RemoveRange(range);
+        
+        // Invalidate the layout to recalculate the range
         dataGrid.GetVisualContainer().InvalidateMeasure();
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Limitations
 
 The following limitations apply when using cell merging in the SfDataGrid:
 
-1. When `SelectionMode` is not `None`, `SelectionUnit` must be set to `Cell` and `NavigationMode` must be set to `Cell`. Row-level selection (`SelectionUnit` as `Row` or `Any`) is not supported alongside cell merging.
-2. Cells in heterogeneous rows cannot be merged.
-3. Frozen rows and columns do not support cell merging.
-4. Swiping will not be enabled when a merged cell is applied.
+1. **Selection mode**: When `SelectionMode` is not `None`, `SelectionUnit` must be set to `Cell` and `NavigationMode` must be set to `Cell`. Row-level selection (`SelectionUnit` as `Row` or `Any`) is not supported alongside cell merging.
+2. **Heterogeneous rows**: Cells in heterogeneous rows cannot be merged.
+3. **Frozen panes**: Frozen rows and columns do not support cell merging.
+4. **Swiping**: Swiping is not enabled when merged cells are applied.
+5. **Master-Details views**: Parent rows with expanded details views cannot have vertically merged cells.

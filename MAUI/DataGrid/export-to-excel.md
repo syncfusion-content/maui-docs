@@ -10,9 +10,13 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Export To Excel in MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) enables data export to Excel, offering several customization options such as personalized appearance, exclusion of specific columns or headers, adjustment of custom row height and column width, and more.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) enables data export to Excel, offering several customization options such as custom styling, exclusion of specific columns or headers, adjustment of custom row height and column width, and more.
 
 To export the SfDataGrid to an Excel file, the following NuGet package should be installed.
+
+## Installation
+
+To export the SfDataGrid to an Excel file, install the following NuGet package:
 
 <table>
 <tr>
@@ -25,8 +29,13 @@ To export the SfDataGrid to an Excel file, the following NuGet package should be
 </tr>
 </table>
 
-## Save Service class in portable project.
-Add the new class file with name as SaveService to the Project and add below code in it. This is the helper class used to save and view the excel file in Windows, Android, iOS and MAC devices.
+## Implement SaveService Class
+
+Create a platform-agnostic SaveService class in your portable project with partial methods that will be implemented for each platform (Windows, Android, iOS, MacCatalyst). This helper class handles saving and viewing Excel files across all platforms.
+
+### Step 1: Create the Base SaveService Class
+
+Add a new class file named `SaveService.cs` to your portable project root and add the following code:
 
 {% tabs %}
 {% highlight c# %}
@@ -41,8 +50,9 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the excel documents in windows.
-Add the new class file with name SaveWindows file under Platforms-> Windows directory to save and view the Excel document in the windows machine and use the below code in it.
+### Step 2: Implement Windows Platform
+
+Add a new partial class file named `SaveService.cs` under `Platforms/Windows/` directory to save and view Excel documents on Windows:
 
 {% tabs %}
 {% highlight c# %}
@@ -121,8 +131,9 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the Excel document in Android.
-Add the new class file with name SaveAndroid file under Platforms->Android directory to save and view the Excel document in the Android Device and use the below code in it.
+### Step 3: Implement Android Platform
+
+Add a new partial class file named `SaveService.cs` under `Platforms/Android/` directory to save and view Excel documents on Android:
 
 {% tabs %}
 {% highlight c# %}
@@ -193,7 +204,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-Create a new XML file with the name of provider_path.xml under the Resources-> xml folder of Android project and add the following code in it. Eg: Resources/xml/provider_path.xml
+Create a new XML file named `provider_path.xml` under `Platforms/Android/Resources/xml/` directory and add the following code:
 
 {% tabs %}
 {% highlight XAML %}
@@ -204,7 +215,7 @@ Create a new XML file with the name of provider_path.xml under the Resources-> x
 {% endhighlight %}
 {% endtabs %}
 
-Add the following code to the AndroidManifest.xml file located under Properties folder.
+Add the FileProvider configuration to the `AndroidManifest.xml` file located under `Platforms/Android/`:
 
 {% tabs %}
 {% highlight XAML %}
@@ -228,9 +239,9 @@ Add the following code to the AndroidManifest.xml file located under Properties 
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the Excel document in iOS
+### Step 4: Implement iOS Platform
 
-Add the new class file with name SaveIOS file under Platforms -> iOS directory to save and view the Excel document in the iOS device and use the below code in it.
+Add a new partial class file named `SaveService.cs` under `Platforms/iOS/` directory to save and view Excel documents on iOS:
 
 {% tabs %}
 {% highlight c# %}
@@ -354,9 +365,9 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the Excel document in MacCatalyst
+### Step 5: Implement MacCatalyst Platform
 
-Add the new class file with name SaveMAC file under Platforms -> MacCatalyst directory to save and view the Excel document in the MAC Device and use the below code in it.
+Add a new partial class file named `SaveService.cs` under `Platforms/MacCatalyst/` directory to save and view Excel documents on Mac:
 
 {% tabs %}
 {% highlight c# %}
@@ -529,7 +540,7 @@ private void ExportToExcel_Clicked(object sender, EventArgs e)
 
 <img alt="Export DataGrid to Excel format" src="Images\export-to-excel\maui-datagrid-datagrid-to-excel.png" width="689"/>
 
-N> The SfDataGrid is unable to export the DataGridTemplateColumn to PDF or Excel because it is not possible to access to the loaded views necessary for drawing them with specific range, values, and so on from the DataGridTemplateColumn.
+> **Note:** The SfDataGrid cannot export `DataGridTemplateColumn` to PDF or Excel because template columns contain custom views that cannot be serialized to Excel format. **Workaround:** Use standard column types (`DataGridTextColumn`, `DataGridNumericColumn`, etc.) for columns that need to be exported, or exclude template columns using `ExcludedColumns`.
 
 ## ExportToExcel
 
@@ -1034,13 +1045,14 @@ The `DataGridCellExcelExportingEventHandler` delegate allows customizing the sty
 * `Range`: Specifies the Excel range to be exported. It provides full access to the exporting cell in Excel.
 * `Record`: Gets the collection of the exported underlying data objects. 
 
-You can use these events to customize the properties of the grid cells exported to excel. The following code example illustrates how to customize the column style based on the row data
+You can use these events to customize the properties of the grid cells exported to Excel. The following code example illustrates how to customize the cell style based on the column name:
 
 {% tabs %}
 {% highlight c# %}
 DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
-excelExport.RowExporting += ExcelExport_RowExporting;
-private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEventArgs e)
+excelExport.CellExporting += ExcelExport_CellExporting;
+
+private void ExcelExport_CellExporting(object sender, DataGridCellExcelExportingEventArgs e)
 {
     if (!(e.Record.Data is OrderInfo))
         return;
@@ -1115,7 +1127,7 @@ Similar to the parent DataGrid, you can also customize the cells of the DetailsV
 
     private void ExcelExport_CellExporting(object? sender, DataGridCellExcelExportingEventArgs e)
     {
-        if (e.DetailsViewDefinition == null && e.DetailsViewDefinition?.RelationalColumn != "OrdersList")
+        if (e.DetailsViewDefinition == null || e.DetailsViewDefinition?.RelationalColumn != "OrdersList")
         {
             return;
         }
@@ -1133,7 +1145,7 @@ Similar to the parent DataGrid, you can also customize the cells of the DetailsV
 ## Exporting merged cells
 
 The `SfDataGrid` supports exporting merged cells when exporting to an Excel worksheet.
-To enable merged‑cell exporting, set the [ExportMergedCells](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExportMergedCells) property to true in the `DataGridExcelExportingOption` before calling `ExportToExcel`.
+Merged cells occur when two or more adjacent cells are combined into a single cell, typically used for headers spanning multiple columns. To enable exporting merged cells, set the [ExportMergedCells](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExportMergedCells) property to `true` in the `DataGridExcelExportingOption` before calling `ExportToExcel`.
 
 {% tabs %}
 {% highlight c# %}
