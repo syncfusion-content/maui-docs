@@ -9,25 +9,21 @@ documentation: UG
 
 # Liquid Glass Support in .NET MAUI Radial Menu (SfRadialMenu)
 
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible while maintaining readable contrast. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control.
+
 ## Prerequisites
 
-Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.RadialMenu`
+Before using the [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), Install the [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu) and [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet packages in your .NET MAUI project. The `Syncfusion.Maui.Core` package is required for the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) container used to host the Liquid Glass Effect.
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) documentation.
 
-## Liquid Glass Support
-
-The [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) supports a Liquid Glass visual effect that renders the menu as a translucent blur of the underlying content. Enable it by setting the [`EnableLiquidGlassEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_EnableLiquidGlassEffect) property to `true`. The effect is most visible when the menu overlays colorful content; on platforms or OS versions that do not support it, the menu falls back to its default appearance.
-
-For an overview of Liquid Glass across Syncfusion controls, see [Liquid glass integration with Syncfusion® .NET MAUI controls](https://help.syncfusion.com/maui/liquid-glass-ui/glassy-controls).
-
-N> This feature is supported only on `.NET 10` along with `iOS 26` and `macOS 26`.
+N>
+* The Liquid Glass Effect is supported only on **.NET 10** targeting **macOS 26 or higher** and **iOS 26 or higher**.
+* It is not supported on Android or Windows.
 
 ## Enable the Liquid Glass effect
 
-The following samples show the minimum code required to enable the Liquid Glass effect. Place the menu inside a layout that has colorful background content (an image, a gradient, or a colored block) so the blur is visible.
+The `Radial Menu` supports a `liquid glass` effect when you enable the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_EnableLiquidGlassEffect) property. The following samples show the minimum code required to enable the Liquid Glass effect. Place the menu inside a layout that has colorful background content (an image, a gradient, or a colored block) so the blur is visible.
 
 {% tabs %}
 {% highlight xaml %}
@@ -35,24 +31,20 @@ The following samples show the minimum code required to enable the Liquid Glass 
 <Grid>
     <!-- Place an image in Resources/Images with the MauiImage build action to act as the background. -->
     <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-    <radialMenu:SfRadialMenu EnableLiquidGlassEffect="true" />
+    <radialMenu:SfRadialMenu EnableLiquidGlassEffect="True" />
 </Grid>
 
 {% endhighlight %}
 {% highlight C# %}
 
-public MainPage()
+Content = new Grid
 {
-    InitializeComponent();
-    Content = new Grid
+    Children =
     {
-        Children =
-        {
-            new Image { Source = "wallpaper.jpg", Aspect = Aspect.AspectFill },
-            new SfRadialMenu { EnableLiquidGlassEffect = true }
-        }
-    };
-}
+        new Image { Source = "wallpaper.jpg", Aspect = Aspect.AspectFill },
+        new SfRadialMenu { EnableLiquidGlassEffect = true }
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +61,7 @@ The following image demonstrates the liquid glass effect of Radial Menu.
 
 ## See also
 
-- [SfRadialMenuItem’s Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization)
+- [Radial Menu Item's Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization)
 - [Segmenting and Placing Items in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/segmenting-placing-items)
-- [CenterButton Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
+- [Center Button Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
 - [Placing and Dragging in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/place-and-drag-radialmenu)

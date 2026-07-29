@@ -9,21 +9,19 @@ documentation: UG
 
 # SfRadialMenuItem Customization in .NET MAUI Radial Menu (SfRadialMenu)
 
+The [SfRadialMenuItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) class provides various options to customize items with `Custom Views`, `FontIcons`, and `Images`. You can add Radial Menu items by hierarchy. To add a `SfRadialMenuItem` to a `SfRadialMenu`, create an instance of `SfRadialMenuItem`, and add it to the `Items` property.
+
 ## Prerequisites
 
-Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), ensure the following NuGet package is installed in your .NET MAUI project:
+Before using the [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
 - `Syncfusion.Maui.RadialMenu`
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) documentation.
 
-## Overview
-
-The [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) class provides various options to customize items with `Custom Views`, `FontIcons`, and `Images`. You can add Radial Menu items by hierarchy. To add a [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) to a [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), create an instance of [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html), and add it to the [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Items) property.
-
 ## Items
 
-The [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Items) property of `SfRadialMenuItem` is of type [`RadialMenuItemsCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.RadialMenuItemsCollection.html). Items added to this collection are displayed on the inner rim when the user taps the parent outer-rim item, enabling hierarchical sub-menus.
+The [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Items) property of `SfRadialMenuItem` is of type [RadialMenuItemsCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.RadialMenuItemsCollection.html). Items added to this collection are displayed on the inner rim when the user taps the parent outer-rim item, enabling hierarchical sub-menus.
 
 {% tabs %}
 {% highlight xaml %}
@@ -77,7 +75,7 @@ for (int i = 0; i < colorItem.Length; i++)
 
 ## Text
 
-The [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Text) property is of type `string` and its default value is `null`. It provides the label displayed inside the `SfRadialMenuItem`.
+The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Text) property provides text to the `SfRadialMenuItem`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -113,14 +111,14 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 ## BackgroundColor
 
-The [`BackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_BackgroundColor) property is of type `Color` and its default value is `Colors.Transparent`. It changes the background color of the `SfRadialMenuItem`.
+The [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_BackgroundColor) property changes the background color of the `SfRadialMenuItem`.
 
 {% tabs %}
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu CenterButtonText="&#xe710;"
-                            CenterButtonFontFamily="Maui Material Assets"
-                            CenterButtonFontSize="28">
+                         CenterButtonFontFamily="Maui Material Assets"
+                         CenterButtonFontSize="28">
     <radialMenu:SfRadialMenu.Items>
         <radialMenu:SfRadialMenuItem BackgroundColor="#00cc1d" />
         <radialMenu:SfRadialMenuItem BackgroundColor="#c65619" />
@@ -155,7 +153,8 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 ## ItemHeight and ItemWidth
 
-The [`ItemHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_ItemHeight) and [`ItemWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_ItemWidth) properties are of type `double` and their default value is `-1`, which means the item uses the size defined by the parent `SfRadialMenu`. Set these properties to change the height and width of each `SfRadialMenuItem` in device-independent units (DIPs).
+The [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_ItemHeight) property changes the height, and the [ItemWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_ItemWidth) property changes the width of the `SfRadialMenuItem`.
+
 
 {% tabs %}
 {% highlight xaml %}
@@ -193,7 +192,7 @@ SfRadialMenu radialMenu = new SfRadialMenu
 
 ## Image
 
-The [`Image`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Image) property is of type `ImageSource` and its default value is `null`. It specifies an image for the `SfRadialMenuItem`. The `ImageSource` can be loaded from a file name, a URI, or a stream.
+The [`Image`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Image) property is used to specify an image for the `SfRadialMenuItem`. The `ImageSource` can be loaded from a file name, a URI, or a stream.
 
 {% tabs %}
 {% highlight xaml %}
@@ -228,7 +227,7 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 ## View
 
-The [`View`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_View) property is of type `View` and its default value is `null`. It allows you to place any .NET MAUI view (for example, a `Label`, `Image`, or a custom layout) inside the `SfRadialMenuItem`. The `View` is rendered instead of the default text-and-icon appearance. Use `ItemHeight` and `ItemWidth` to control the size of the rendered view.
+The [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_View) property allows you to add a custom view to the `SfRadialMenuItem`. The `View` is rendered instead of the default text-and-icon appearance. Use `ItemHeight` and `ItemWidth` to control the size of the rendered view.
 
 {% tabs %}
 {% highlight xaml %}
@@ -238,22 +237,22 @@ The [`View`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRa
         <radialMenu:SfRadialMenuItem>
             <radialMenu:SfRadialMenuItem.View>
                 <Label Text="Cut"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center" />
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
             </radialMenu:SfRadialMenuItem.View>
         </radialMenu:SfRadialMenuItem>
         <radialMenu:SfRadialMenuItem>
             <radialMenu:SfRadialMenuItem.View>
                 <Label Text="Copy"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center" />
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
             </radialMenu:SfRadialMenuItem.View>
         </radialMenu:SfRadialMenuItem>
         <radialMenu:SfRadialMenuItem>
             <radialMenu:SfRadialMenuItem.View>
                 <Label Text="Paste"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center" />
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
             </radialMenu:SfRadialMenuItem.View>
         </radialMenu:SfRadialMenuItem>
     </radialMenu:SfRadialMenu.Items>
@@ -301,7 +300,7 @@ SfRadialMenu radialMenu = new SfRadialMenu
 
 ## FontFamily
 
-The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontFamily) property is of type `string` and its default value is `null`, which uses the platform default font. It changes the font family of the `Text` in the `SfRadialMenuItem`. Custom fonts must be registered in `MauiProgram.cs` and shipped as `MauiFont` items.
+The  [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontFamily) property changes the font family of text in the `SfRadialMenuItem`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -336,7 +335,7 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 ## FontSize
 
-The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontSize) property is of type `double` and its default value is `12`. It adjusts the size of the `Text` in the `SfRadialMenuItem` in device-independent units (DIPs).
+The [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontSize) property is of type `double` and its default value is `14`. It adjusts the size of the `Text` in the `SfRadialMenuItem`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -371,7 +370,7 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 ## FontAttributes
 
-The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontAttributes) property is of type `FontAttributes` (an enum with values `None`, `Bold`, and `Italic`) and its default value is `FontAttributes.None`. It applies bold or italic styling to the `Text` in the `SfRadialMenuItem`.
+The [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontAttributes) property is of type `FontAttributes` (an enum with values `None`, `Bold`, and `Italic`) and its default value is `FontAttributes.None`. It applies bold or italic styling to the `Text` in the `SfRadialMenuItem`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -401,7 +400,7 @@ SfRadialMenu radialMenu = new SfRadialMenu
 
 ## FontAutoScalingEnabled
 
-The [`FontAutoScalingEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontAutoScalingEnabled) property is of type `bool` and its default value is `false`. When set to `true`, the `FontSize` is automatically scaled based on the device's operating-system text-size setting.
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontAutoScalingEnabled) property is of type `bool` and its default value is `false`. When set to `true`, the `FontSize` is automatically scaled based on the device's operating-system text-size setting.
 
 {% tabs %}
 {% highlight xaml %}
@@ -436,15 +435,15 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 ## Command and CommandParameter
 
-The [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Command) property is of type `ICommand` and its default value is `null`. It associates a command with an `SfRadialMenuItem`, which is typically used in the MVVM pattern to handle taps in a ViewModel.
+The [Command](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Command) property is used to associate a command with an instance of `SfRadialMenuItem`. This property is typically set using the MVVM pattern to bind callbacks back into the ViewModel.
 
-The [`CommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_CommandParameter) property is of type `object` and its default value is `null`. It is passed as the argument to the `Command` when the item is tapped.
+The [CommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_CommandParameter) property is passed as the argument to the `Command` when the item is tapped.
 
 When an `SfRadialMenuItem` is tapped, its `Command` is invoked with the `CommandParameter` as the argument.
 
 ### ViewModel
 
-The following ViewModel exposes one `ICommand` per item using the `CommunityToolkit.Mvvm` source generators. The handler displays a simple alert that identifies which item was tapped.
+Define the `Command` in the `RadialMenuItem`, then populate the action in the ViewModel. The handler displays a simple alert that identifies which item was tapped.
 
 {% tabs %}
 {% highlight C# %}
@@ -477,6 +476,7 @@ public partial class ViewModel : ObservableObject
         CropItemCommand = new RelayCommand<string>(OnItemTapped);
         PaintItemCommand = new RelayCommand<string>(OnItemTapped);
     }
+
     private async void OnItemTapped(string message)
     {
         if (string.IsNullOrEmpty(message))
@@ -491,45 +491,36 @@ public partial class ViewModel : ObservableObject
 {% endhighlight %}
 {% endtabs %}
 
-### XAML
-
 Bind each item to the corresponding command and command parameter, and set the `BindingContext` of the page to the ViewModel instance.
 
 {% tabs %}
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu CenterButtonText="Edit"
-                            CenterButtonFontSize="15">
+                         CenterButtonFontSize="15">
     <radialMenu:SfRadialMenu.BindingContext>
         <local:ViewModel />
     </radialMenu:SfRadialMenu.BindingContext>
     <radialMenu:SfRadialMenu.Items>
         <radialMenu:SfRadialMenuItem Text="Cut" FontSize="15"
-                                        Command="{Binding CutItemCommand}"
-                                        CommandParameter="Cut is tapped" />
+                                     Command="{Binding CutItemCommand}"
+                                     CommandParameter="Cut is tapped" />
         <radialMenu:SfRadialMenuItem Text="Copy" FontSize="15"
-                                        Command="{Binding CopyItemCommand}"
-                                        CommandParameter="Copy is tapped" />
+                                     Command="{Binding CopyItemCommand}"
+                                     CommandParameter="Copy is tapped" />
         <radialMenu:SfRadialMenuItem Text="Paste" FontSize="15"
-                                        Command="{Binding PasteItemCommand}"
-                                        CommandParameter="Paste is tapped" />
+                                     Command="{Binding PasteItemCommand}"
+                                     CommandParameter="Paste is tapped" />
         <radialMenu:SfRadialMenuItem Text="Crop" FontSize="15"
-                                        Command="{Binding CropItemCommand}"
-                                        CommandParameter="Crop is tapped" />
+                                     Command="{Binding CropItemCommand}"
+                                     CommandParameter="Crop is tapped" />
         <radialMenu:SfRadialMenuItem Text="Paint" FontSize="15"
-                                        Command="{Binding PaintItemCommand}"
-                                        CommandParameter="Paint is tapped" />
+                                     Command="{Binding PaintItemCommand}"
+                                     CommandParameter="Paint is tapped" />
     </radialMenu:SfRadialMenu.Items>
 </radialMenu:SfRadialMenu>
 
 {% endhighlight %}
-{% endtabs %}
-
-### C#
-
-The same bindings can be created in code. Ensure the `ViewModel` is instantiated and assigned to the `BindingContext` before the items are created, so that the commands are available.
-
-{% tabs %}
 {% highlight C# %}
 
 ViewModel viewModel = new ViewModel(this);
@@ -585,6 +576,6 @@ SfRadialMenu radialMenu = new SfRadialMenu
 ## See also
 
 - [Segmenting and Placing Items in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/segmenting-placing-items)
-- [CenterButton Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
+- [Center Button Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
 - [Events in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/events)
 - [Placing and Dragging in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/place-and-drag-radialmenu)
