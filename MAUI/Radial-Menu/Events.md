@@ -9,17 +9,7 @@ documentation: UG
 
 # Events in .NET MAUI Radial Menu (SfRadialMenu)
 
-## Prerequisites
-
-Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.RadialMenu`
-
-For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) documentation.
-
-## Events 
-
-`SfRadialMenu` raises a set of events that you can subscribe to in order to react to user interaction, navigation, and life cycle changes. This document describes each event, the arguments it provides, and shows how to wire it up in both XAML and C#.
+`.NET MAUI Radial Menu` raises a set of events that you can subscribe to in order to react to user interaction, navigation, and life cycle changes. This document describes each event, the arguments it provides, and shows how to wire it up in both XAML and C#.
 
 | Event | Raised when | Cancelable | `EventArgs` |
 | --- | --- | --- | --- |
@@ -36,15 +26,23 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 The two `ItemTapped`, `TouchDown`, and `TouchUp` events are raised by `SfRadialMenuItem`, not by `SfRadialMenu`. Subscribe to them on the item instance, not on the menu.
 
+## Prerequisites
+
+Before using the [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.RadialMenu`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/radial-menu/getting-started) documentation.
+
 ## Perform an action while navigating to the next level
 
-Use these events to react when the Radial Menu moves between levels. The [`Navigating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigating) event occurs when moving from one level to another (and is cancelable), and the [`Navigated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigated) event triggers after reaching the new level. Events fire in this order: `Navigating` → `Navigated`.
+Use these events to react when the Radial Menu moves between levels. The [Navigating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigating) event occurs when moving from one level to another (and is cancelable), and the [Navigated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigated) event triggers after reaching the new level. Events fire in this order: `Navigating` → `Navigated`.
 
 {% tabs %}
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu Navigating="SfRadialMenu_Navigating" 
-                            Navigated="SfRadialMenu_Navigated">
+                         Navigated="SfRadialMenu_Navigated">
     <radialMenu:SfRadialMenu.Items>
         <radialMenu:SfRadialMenuItem Text="Bold" FontSize="12"/>
         <radialMenu:SfRadialMenuItem Text="Copy" FontSize="12"/>
@@ -72,6 +70,14 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 radialMenu.Navigating += SfRadialMenu_Navigating;
 radialMenu.Navigated += SfRadialMenu_Navigated;
 
+{% endhighlight %}
+{% endtabs %}
+
+The `Navigating` and `Navigated` events can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
 private async void SfRadialMenu_Navigating(object sender, NavigatingEventArgs e)
 {
     await DisplayAlert("Alert", "ItemNavigating", "Ok");
@@ -89,13 +95,13 @@ N> You can cancel navigation using the `Cancel` event argument.
 
 ## Perform an action while opening the Radial Menu
 
-You can react when the Radial Menu opens. The [`Opening`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opening) event occurs when the Radial Menu begins to open, and the [`Opened`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opened) event occurs once it is fully open. Neither event is cancelable.
+You can react when the Radial Menu opens. The [Opening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opening) event occurs when the Radial Menu begins to open, and the [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opened) event occurs once it is fully open.
 
 {% tabs %}
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu Opening ="SfRadialMenu_Opening" 
-                            Opened="SfRadialMenu_Opened">
+                         Opened="SfRadialMenu_Opened">
     <radialMenu:SfRadialMenu.Items>
         <radialMenu:SfRadialMenuItem Text="Bold" FontSize="12"/>
         <radialMenu:SfRadialMenuItem Text="Copy" FontSize="12"/>
@@ -123,6 +129,14 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 radialMenu.Opening += SfRadialMenu_Opening;
 radialMenu.Opened += SfRadialMenu_Opened;
 
+{% endhighlight %}
+{% endtabs %}
+
+The `Opening` and `Opened` events can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
 private async void SfRadialMenu_Opening(object sender, OpeningEventArgs e)
 {
     await DisplayAlert("Alert", "ItemOpening", "Ok");
@@ -138,13 +152,13 @@ private async void SfRadialMenu_Opened(object sender, OpenedEventArgs e)
 
 ## Perform an action while closing the Radial Menu
 
-You can perform an action when closing the Radial Menu. The [`Closing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closing) event occurs when the Radial Menu begins to close, and the [`Closed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closed) event occurs once it is completely closed. Neither event is cancelable; to stop the menu from closing, intercept the `Closing` event in a subclass and skip the base call.
+You can perform an action when closing the Radial Menu. The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closing) event occurs when the Radial Menu begins to close, and the [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closed) event occurs once it is completely closed.
 
 {% tabs %}
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu Closing ="SfRadialMenu_Closing" 
-                            Closed="SfRadialMenu_Closed">
+                         Closed="SfRadialMenu_Closed">
     <radialMenu:SfRadialMenu.Items>
         <radialMenu:SfRadialMenuItem Text="Bold" FontSize="12"/>
         <radialMenu:SfRadialMenuItem Text="Copy" FontSize="12"/>
@@ -172,6 +186,14 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 radialMenu.Closing += SfRadialMenu_Closing;
 radialMenu.Closed += SfRadialMenu_Closed;
 
+{% endhighlight %}
+{% endtabs %}
+
+The `Closing` and `Closed` events can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
 private async void SfRadialMenu_Closing(object sender, ClosingEventArgs e)
 {
     await DisplayAlert("Alert", "ItemClosing", "Ok");
@@ -187,7 +209,7 @@ private async void SfRadialMenu_Closed(object sender, ClosedEventArgs e)
 
 ## Perform an action while tapping the center back button
 
-You can react when the user taps the center back button of the Radial Menu. The [`CenterButtonBackTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackTapped) event occurs when the center back button is tapped. The event is raised only when the back button is visible (i.e. when the menu is on a sub-level).
+You can react when the user taps the center back button of the Radial Menu. The [CenterButtonBackTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackTapped) event occurs when the center back button is tapped. The event is raised only when the back button is visible (i.e. when the menu is on a sub-level).
 
 {% tabs %}
 {% highlight xaml %}
@@ -219,6 +241,14 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 radialMenu.CenterButtonBackTapped += SfRadialMenu_CenterButtonBackTapped;
 
+{% endhighlight %}
+{% endtabs %}
+
+The `CenterButtonBackTapped` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
 private async void SfRadialMenu_CenterButtonBackTapped(object sender, CenterButtonBackTappedEventArgs e)
 {
     await DisplayAlert("Alert", "CenterButtonTapped", "Ok");
@@ -229,14 +259,15 @@ private async void SfRadialMenu_CenterButtonBackTapped(object sender, CenterButt
 
 ## Perform an action while tapping the Radial Menu item
 
-You can react when the user taps an item in the Radial Menu. The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_ItemTapped) event is an item-level event on `SfRadialMenuItem` and is triggered when any item in the Radial Menu is tapped. The `ItemTappedEventArgs` payload exposes the tapped item and its level.
+You can react when the user taps an item in the Radial Menu. The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_ItemTapped) event is an item-level event on `SfRadialMenuItem` and is triggered when any item in the Radial Menu is tapped. The `ItemTappedEventArgs` payload exposes the tapped item and its level.
 
 {% tabs %}
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu>
     <radialMenu:SfRadialMenu.Items>
-        <radialMenu:SfRadialMenuItem Text="Bold" FontSize="12" ItemTapped="SfRadialMenuItem_ItemTapped"/>
+        <radialMenu:SfRadialMenuItem Text="Bold" FontSize="12" 
+                                     ItemTapped="SfRadialMenuItem_ItemTapped"/>
         <radialMenu:SfRadialMenuItem Text="Copy" FontSize="12"/>
         <radialMenu:SfRadialMenuItem Text="Undo" FontSize="12"/>
         <radialMenu:SfRadialMenuItem Text="Paste" FontSize="12"/>
@@ -261,6 +292,14 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 
 radialMenu.Items[0].ItemTapped += SfRadialMenuItem_ItemTapped;
 
+{% endhighlight %}
+{% endtabs %}
+
+The `ItemTapped` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
 private async void SfRadialMenuItem_ItemTapped(object sender, Syncfusion.Maui.RadialMenu.ItemTappedEventArgs e)
 {
     await DisplayAlert("Alert", "ItemTapped", "Ok");
@@ -271,14 +310,16 @@ private async void SfRadialMenuItem_ItemTapped(object sender, Syncfusion.Maui.Ra
 
 ## Perform an action while pressing and releasing the Radial Menu item
 
-You can react to the user pressing and releasing an item. The [`TouchDown`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html?tabs=tabid-1#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_TouchDown) event occurs when the user presses the item, and the [`TouchUp`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html?tabs=tabid-1#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_TouchUp) event occurs when the user releases the press. Both events are item-level and are only raised while the menu is open.
+You can react to the user pressing and releasing an item. The [TouchDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html?tabs=tabid-1#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_TouchDown) event occurs when the user presses the item, and the [TouchUp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html?tabs=tabid-1#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_TouchUp) event occurs when the user releases the press. Both events are item-level and are only raised while the menu is open.
 
 {% tabs %}
 {% highlight xaml %}
 
 <radialMenu:SfRadialMenu>
     <radialMenu:SfRadialMenu.Items>
-        <radialMenu:SfRadialMenuItem Text="Bold" FontSize="12" TouchDown="SfRadialMenuItemTouchDown" TouchUp="SfRadialMenuItemTouchUp" />
+        <radialMenu:SfRadialMenuItem Text="Bold" FontSize="12" 
+                                     TouchDown="SfRadialMenuItemTouchDown" 
+                                     TouchUp="SfRadialMenuItemTouchUp" />
         <radialMenu:SfRadialMenuItem Text="Copy" FontSize="12"/>
         <radialMenu:SfRadialMenuItem Text="Undo" FontSize="12"/>
         <radialMenu:SfRadialMenuItem Text="Paste" FontSize="12"/>
@@ -304,6 +345,14 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 radialMenu.Items[0].TouchDown += SfRadialMenuItemTouchDown;
 radialMenu.Items[0].TouchUp += SfRadialMenuItemTouchUp;
 
+{% endhighlight %}
+{% endtabs %}
+
+The `TouchDown` and `TouchUp` events can be handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
 private async void SfRadialMenuItemTouchDown(object? sender, RadialMenuItemEventArgs e)
 {
     await DisplayAlert("Alert", "The RadialMenuItem is pressed.", "Ok");
@@ -319,6 +368,6 @@ private async void SfRadialMenuItemTouchUp(object? sender, RadialMenuItemEventAr
 
 ## See also
 
-- [SfRadialMenuItem’s Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization)
+- [Radial Menu Item's Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/sfradialmenuitem-customization)
 - [Segmenting and Placing Items in .NET MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/segmenting-placing-items)
-- [CenterButton Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
+- [Center Button Customization in MAUI Radial Menu](https://help.syncfusion.com/maui/radial-menu/centerbutton-customization)
