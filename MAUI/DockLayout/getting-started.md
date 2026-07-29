@@ -54,7 +54,7 @@ Before proceeding, ensure the following are set up:
 1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press Enter.
-4. Then choose **Create project**
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet package
 
@@ -84,7 +84,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% endtabcontents %}
@@ -126,16 +126,16 @@ using Syncfusion.Maui.Core;
 
 ## Step 5: Create a DockLayout with Dock Position for Child Views
 
-Initialize the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control and arrange the child views using [Dock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_DockProperty) property. This property allows to dock elements to specific edges- `Top`, `Bottom`, `Left`, `Right`, or set to `None` to remain non-docked and fill the remaining space.
+Initialize the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control and arrange the child views using [Dock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_DockProperty) property. This property allows to dock elements to specific edges- `Top`, `Bottom`, `Left`, `Right`, or set to `None` to leave the element non-docked and allowing it to fill the remaining space.
 
 {% tabs %}
 
 {% highlight xaml %}
     <syncfusion:SfDockLayout >
-        <Label Text="Left" WidthRequest="80" sf:SfDockLayout.Dock="Left" Background="#E57373" />
-        <Label Text="Right" WidthRequest="80" sf:SfDockLayout.Dock="Right" Background="#BA68C8" />
-        <Label Text="Top" HeightRequest="80" sf:SfDockLayout.Dock="Top" Background="#F06292" />
-        <Label Text="Bottom" HeightRequest="80"  sf:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
+        <Label Text="Left" WidthRequest="80" syncfusion:SfDockLayout.Dock="Left" Background="#E57373" />
+        <Label Text="Right" WidthRequest="80" syncfusion:SfDockLayout.Dock="Right" Background="#BA68C8" />
+        <Label Text="Top" HeightRequest="80" syncfusion:SfDockLayout.Dock="Top" Background="#F06292" />
+        <Label Text="Bottom" HeightRequest="80"  syncfusion:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
         <Label Text="None" BackgroundColor="#64B5F6" />
     </syncfusion:SfDockLayout>
 {% endhighlight %}

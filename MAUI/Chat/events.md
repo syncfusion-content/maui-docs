@@ -136,7 +136,7 @@ private void sfChat_MessageDoubleTapped(object? sender, MessageDoubleTappedEvent
         MessageDoubleTappedCommand="{Binding DoubleTappedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="17" %}
 
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -227,7 +227,7 @@ private void sfChat_MessageLongPressed(object sender, MessageLongPressedEventArg
         MessageLongPressedCommand="{Binding LongPressedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 using System.ComponentModel;
 using System.Runtime.CompilerServices;

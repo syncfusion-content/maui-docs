@@ -2,12 +2,12 @@
 layout: post
 title: Localization in .NET MAUI Image Editor Control | Syncfusion
 description: Learn about the localization feature in the Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor(SfImageEditor) control and more.
-platform: maui
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# The Localization in .NET MAUI Image Editor (SfImageEditor)
+# Localization in .NET MAUI Image Editor (SfImageEditor)
 
 Localization is translating the application resources into different languages for specific cultures. The Image Editor can be localized by adding a `resource` file.
 

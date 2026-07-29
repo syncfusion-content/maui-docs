@@ -14,7 +14,7 @@ The `SfTreeView` enables loading child items only upon request through Lazy load
 N> Load on-demand is applicable for bound mode only.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 <ContentPage>
     <ContentPage.BindingContext>
         <local:ViewModel/>
@@ -251,9 +251,13 @@ private bool CanExecuteOnDemandLoading(object sender)
 {
     var hasChildNodes = ((sender as TreeViewNode)!.Content as Model)!.HasChildNodes;
     if (hasChildNodes)
+    {
         return true;
+    }
     else
+    {
         return false;
+    }
 }
 {% endhighlight %}
 {% endtabs %}

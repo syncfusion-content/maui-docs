@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right To Left in .NET MAUI ListView control | Syncfusion®
-description: Learn here all about Right To Left support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
+description: Learn about Right To Left support in Syncfusion® .NET MAUI ListView (SfListView) control, including layout behavior and item alignment.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -9,11 +9,12 @@ documentation: ug
 
 # Right To Left in .NET MAUI ListView (SfListView)
 
-`SfListView` supports changing the flow of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft` in both `Vertical` and `Horizontal` orientations. ListView supports RTL when the flow direction of the device is changed.
+`Syncfusion® SfListView` supports changing the flow of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft` in both `Vertical` and `Horizontal` orientations. RTL can be applied explicitly on the `SfListView` by setting the `FlowDirection` property, or inherited from a parent visual element or the device's system flow direction.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
-<ContentPage  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Content>
        <syncfusion:SfListView x:Name="listView" FlowDirection="RightToLeft"/>
@@ -21,13 +22,25 @@ documentation: ug
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-listView.FlowDirection = FlowDirection.RightToLeft;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.ListView;
+
+namespace RtlSample;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        listView.FlowDirection = FlowDirection.RightToLeft;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI ListView with right to left](Images/right-to-left/maui-listview-right-to-left.png)
+![Syncfusion .NET MAUI ListView with Right To Left](Images/right-to-left/maui-listview-right-to-left.png)
 
 ## Limitation
 
-* ListView item does not arrange from right to left direction in `Horizontal` orientation, when the [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) is `Height` or `DynamicHeight`.
+* Items are not arranged right-to-left when `SfListView.Orientation` is set to `Horizontal` and the [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) is `Height` or `DynamicHeight`.
 
