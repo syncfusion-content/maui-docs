@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion MAUI MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate .NET MAUI application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) integration enables quick access to  documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate .NET MAUI application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to  documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for Syncfusion component integration.
 
@@ -148,6 +148,9 @@ You can install the Syncfusion MAUI MCP server as a local tool without a global 
     ````bash
     dotnet tool install Syncfusion.MAUI.MCP
     ````
+    
+    > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.    
+    
 
 2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
 
@@ -261,4 +264,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)

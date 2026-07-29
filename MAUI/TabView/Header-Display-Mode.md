@@ -1,26 +1,39 @@
 ---
 layout: post
-title: Header Display Mode in .NET MAUI Tab View control | Syncfusion®
+title: Header Display Mode in .NET MAUI Tab View (SfTabView) | Syncfusion®
 description: Learn all about header display mode support in the Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Header Display Mode in .NET MAUI Tab View control (SfTabView)
+# Header Display Mode in .NET MAUI Tab View (SfTabView)
 
-By default, the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) control displays the title of each Tab Item. It can be customized to display in any of the following modes:
+## Prerequisites
 
-* Default
-* Image
-* Text
+Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
-![HeaderDisplayMode](images/Header-Display-Mode.png)
+- `Syncfusion.Maui.TabView`
 
-The Tab View can be modified by setting the [HeaderDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderDisplayMode) property of the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.html).
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
+
+## Overview
+
+By default, the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) control displays the title of each Tab Item. The header can be customized to display in any of the following modes defined by the [`TabBarDisplayMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabBarDisplayMode.html) enum:
+
+* `Default` - Displays the title of each Tab Item. The tab header is rendered using the standard styling.
+* `Image` - Displays the `ImageSource` of each Tab Item instead of the header text.
+* `Text` - Displays only the header text of each Tab Item, even if an `ImageSource` is set.
+
+![HeaderDisplayMode in Default mode showing the title of each Tab Item](images/Header-Display-Mode.png)
+
+You can configure the Tab View by setting the [`HeaderDisplayMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderDisplayMode) property of type `TabBarDisplayMode` on the `SfTabView` control. The XAML string value (for example, `"Default"`) maps to the corresponding `TabBarDisplayMode` enum member.
+
+## Default
+
+The `Default` mode renders the header title for each Tab Item. If both a `Header` and an `ImageSource` are provided, the default styling is applied.
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <tabView:SfTabView HeaderDisplayMode="Default">
@@ -30,34 +43,88 @@ The Tab View can be modified by setting the [HeaderDisplayMode](https://help.syn
 </tabView:SfTabView>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-SfTabView tabView = new SfTabView
+SfTabView tabView = new SfTabView()
 {
-    HeaderDisplayMode = TabBarDisplayMode.Default
+    HeaderDisplayMode = TabBarDisplayMode.Default,
+    Items =
+    {
+        new SfTabItem { Header = "Item1", ImageSource = "avatar1.png" },
+        new SfTabItem { Header = "Item2", ImageSource = "avatar2.png" },
+        new SfTabItem { Header = "Item3", ImageSource = "avatar3.png" }
+    }
 };
-SfTabItem tabItem1 = new SfTabItem
-{
-    Header = "Item1",
-    ImageSource = "avatar1.png"
-};
-SfTabItem tabItem2 = new SfTabItem
-{
-    Header = "Item2",
-    ImageSource = "avatar2.png"
-};
-SfTabItem tabItem3 = new SfTabItem
-{
-    Header = "Item3",
-    ImageSource = "avatar3.png"
-};
-tabView.Items.Add(tabItem1);
-tabView.Items.Add(tabItem2);
-tabView.Items.Add(tabItem3);
 
 {% endhighlight %}
-
 {% endtabs %}
 
+## Image
+
+The `Image` mode displays the `ImageSource` of each Tab Item. You must set an `ImageSource` on every Tab Item; otherwise the header will not render.
+
+{% tabs %}
+{% highlight xaml %}
+
+<tabView:SfTabView HeaderDisplayMode="Image">
+    <tabView:SfTabItem Header="Item1" ImageSource="avatar1.png" />
+    <tabView:SfTabItem Header="Item2" ImageSource="avatar2.png" />
+    <tabView:SfTabItem Header="Item3" ImageSource="avatar3.png" />
+</tabView:SfTabView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView()
+{
+    HeaderDisplayMode = TabBarDisplayMode.Image,
+    Items =
+    {
+        new SfTabItem { Header = "Item1", ImageSource = "avatar1.png" },
+        new SfTabItem { Header = "Item2", ImageSource = "avatar2.png" },
+        new SfTabItem { Header = "Item3", ImageSource = "avatar3.png" }
+    }
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+## Text
+
+The `Text` mode displays only the header text of each Tab Item, even if an `ImageSource` is set.
+
+{% tabs %}
+{% highlight xaml %}
+
+<tabView:SfTabView HeaderDisplayMode="Text">
+    <tabView:SfTabItem Header="Item1" ImageSource="avatar1.png" />
+    <tabView:SfTabItem Header="Item2" ImageSource="avatar2.png" />
+    <tabView:SfTabItem Header="Item3" ImageSource="avatar3.png" />
+</tabView:SfTabView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView()
+{
+    HeaderDisplayMode = TabBarDisplayMode.Text,
+    Items =
+    {
+        new SfTabItem { Header = "Item1", ImageSource = "avatar1.png" },
+        new SfTabItem { Header = "Item2", ImageSource = "avatar2.png" },
+        new SfTabItem { Header = "Item3", ImageSource = "avatar3.png" }
+    }
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+## Behavior notes
+
 N> The [HeaderDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderDisplayMode) will only apply if both a [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) and an [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource) are provided for the Tab Item. If either is missing, the Tab Item will automatically apply the Default mode.
+
+## See also
+
+* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+* [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
+* [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)
