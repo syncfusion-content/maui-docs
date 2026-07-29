@@ -7,7 +7,7 @@ control: SfBackdropPage
 documentation: ug
 ---
 
-# .NET MAUI Backdrop Page (SfBackdropPage) Overview
+# Overview of .NET MAUI Backdrop Page
 
 The Syncfusion<sup>&reg;</sup> **[.NET MAUI Backdrop](https://www.syncfusion.com/maui-controls/maui-backdrop)** page comprises two surfaces: a back layer and a front layer. The back layer holds actionable content (like navigation or filtration), which is relevant to the front layer.
 

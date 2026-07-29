@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfAccordion to .NET MAUI SfAccordion
 
-To migrate easier from Xamarin.Forms SfAccordion to .NET MAUI SfAccordion, we kept most of the APIs from Xamarin SfAccordion in MAUI SfAccordion. However, to maintain the consistency of API naming in MAUI SfAccordion, we renamed some of the APIs. The APIs that have been changed in MAUI SfAccordion from Xamarin SfAccordion are detailed as follows.
+To make migration easier from Xamarin.Forms SfAccordion to .NET MAUI SfAccordion, we kept most of the APIs from Xamarin SfAccordion in MAUI SfAccordion. However, to maintain the consistency of API naming in MAUI SfAccordion, we renamed some of the APIs. This guide applies to migrating from Xamarin SfAccordion v5.0+ to MAUI SfAccordion v1.0+. The APIs that have been changed in MAUI SfAccordion from Xamarin SfAccordion are detailed as follows.
 
 ## Namespaces
 

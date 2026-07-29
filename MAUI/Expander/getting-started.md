@@ -52,7 +52,7 @@ Before proceeding, ensure the following are set up:
 1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press Enter.
-4. Then choose **Create project**
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Expander NuGet package
 
@@ -82,7 +82,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`.
 
 {% endtabcontent %}
 {% endtabcontents %}
@@ -122,13 +122,13 @@ using Syncfusion.Maui.Expander;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Create a Expander component
+## Step 5: Create a SfExpander
 
 Initialize the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html), which is a layout control that contains a Header and Content section. Load any View in the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Header) and [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Content). Content visibility of the expander can be set by using the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_IsExpanded) property of the `Expander`. Users can expand or collapse the Content view by tapping the Header.
 
 Here, the Grid with Labels is loaded in the Header and Content of the expander. 
 
-N> Loading the `Label` as direct children of the `Header` or `Content` of the Expander will lead to an exception. So, load the Label inside the Grid to overcome the crash.
+N> For better layout organization and future extensibility, it is recommended to place controls inside a layout container such as Grid or StackLayout before assigning them to the Header or Content properties. Although individual controls can be assigned directly, container layouts provide more predictable sizing, alignment, and customization options.
 
 {% tabs %}
 {% highlight xaml %}
@@ -154,7 +154,8 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
                     <Label Text="&#xe703;"
                            FontSize="16"
                            Margin="14,2,2,2"
-                           VerticalOptions="Center" />
+                           VerticalOptions="Center" 
+                           FontFamily="{StaticResource AccordionFontIcons}" />
                     <Label Text="Invoice Date"
                            FontSize="14"
                            Grid.Column="1"
@@ -188,7 +189,7 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
                     <Label Text="&#xe702;"
                            FontSize="16"
                            Margin="14,2,2,2"
-                           FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                           FontFamily="{StaticResource AccordionFontIcons}"
                            VerticalOptions="Center"
                            VerticalTextAlignment="Center" />
                     <Label CharacterSpacing="0.25"
@@ -369,14 +370,14 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
         grid.Add(new Label
         {
             Text = "Total Amount Paid",
-            TextColor = Colors.Blue,
+            TextColor = Color.FromArgb("#FF6200EE"), // Primary color
             FontAttributes = FontAttributes.Bold
         }, 0, 2);
 
         grid.Add(new Label
         {
             Text = "$36,200.00",
-            TextColor = Colors.Blue,
+            TextColor = Color.FromArgb("#FF6200EE"), // Primary color
             HorizontalOptions = LayoutOptions.End
         }, 1, 2);
 
@@ -389,7 +390,7 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
         {
             Stroke = Color.FromArgb("#CAC4D0"),
             StrokeThickness = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 2 : 1,
-            StrokeShape = new RoundRectangle { CornerRadius = 8 },
+            StrokeShape = new RoundRectangle { CornerRadius = new CornerRadius(8) },
             WidthRequest = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 : DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
             Margin = new Thickness(8, 0, 8, 8),
             Content = content
@@ -398,12 +399,22 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
 {% endhighlight %}
 {% endtabs %}
 
+## Additional Configuration
+
+For platform-specific configurations and advanced usage, refer to the following resources:
+
+1. [Android Platform Configuration](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code#android)
+2. [iOS Platform Configuration](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code#ios)
+3. [macOS Platform Configuration](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code#macos)
+4. [Windows Platform Configuration](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code#windows)
+
+For more information on customizing the Expander control, refer to the [Expander customization documentation](https://help.syncfusion.com/maui/expander/customization).
+
 The following screenshot illustrates the result of the above code.
 
-<img alt="Syncfusion .NET MAUI Expander Defining the Header and Content" src="Images/maui-expander-getting_started.png" width="404" /> 
+![Syncfusion .NET MAUI Expander Defining the Header and Content](Images/maui-expander-getting_started.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
-
-You can download the Expander Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
+N> You can download the Expander Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 
 N> You can refer to our [.NET MAUI Expander](https://www.syncfusion.com/maui-controls/maui-expander) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Expander Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Expander) that shows you how to render and configure the Expander in .NET MAUI.
+

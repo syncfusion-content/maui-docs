@@ -7,7 +7,7 @@ control: SfExpander
 documentation: ug
 ---
 
-# Overview of Expander (SfExpander)
+# Overview of .NET MAUI Expander
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Expander](https://www.syncfusion.com/maui-controls/maui-expander) (SfExpander) is a layout control capable of loading any UI view in both header and content sections. By simply tapping the header, users can effortlessly expand or collapse the control.
 
@@ -15,16 +15,16 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Expander](https://www.syncfusion.com/m
 
 ## Business use cases
 
-- Mobile and desktop applications that require collapsible sections to manage large amounts of content efficiently.  
-- Settings and configuration screens that organize options using expandable groups for better usability.  
-- Frequently asked questions (FAQ) pages that display questions and answers using expandable layouts.  
-- Data-driven applications that need space optimization by showing details only when required.  
+- Mobile and desktop applications that require collapsible sections to manage large amounts of content efficiently.
+- Settings and configuration screens that organize options using expandable groups for better usability.
+- Frequently asked questions (FAQ) pages that display questions and answers using expandable layouts.
+- Data-driven applications that need space optimization by showing details only when required.
 
 ## Key features
 
-- **Expand and collapse support** allows users to toggle content visibility easily through header interaction.  
-- **Header and content customization support** allows adding text, icons, images, or custom UI elements to create rich expandable sections.  
-- **Animation support** allows applying smooth expand and collapse transitions to enhance user experience and interactivity.  
+- **Expand and collapse support** allows users to toggle content visibility easily through header interaction.
+- **Header and content customization support** allows adding text, icons, images, or custom UI elements to create rich expandable sections.
+- **Animation support** allows applying smooth expand and collapse transitions to enhance user experience and interactivity.
 
 ## Globalization
 

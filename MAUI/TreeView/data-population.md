@@ -53,9 +53,12 @@ public class MainPage : ContentPage
    public MainPage()
    {
       InitializeComponent();
-
+      SfTreeView treeView = new SfTreeView();
+      treeView.ChildPropertyName = "SubFiles",
       treeView.NotificationSubscriptionMode = Syncfusion.TreeView.Engine.NotificationSubscriptionMode.CollectionChange;
       treeView.NodePopulationMode = Syncfusion.TreeView.Engine.NodePopulationMode.OnDemand;
+      treeView.SetBinding(SfTreeView.ItemsSourceProperty, "ImageNodeInfo");
+      this.Content = treeView;
    }
 }
 {% endhighlight %}
@@ -63,21 +66,13 @@ public class MainPage : ContentPage
 
 ### Create data model for treeview
 
-Add the following `using` directives at the top of the file to bring in the required namespaces for `INotifyPropertyChanged`, `ObservableCollection`, and `ImageSource`:
-
-{% tabs %}
-{% highlight c# tabtitle="Usings" %}
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using Microsoft.Maui.Controls; // For ImageSource
-{% endhighlight %}
-{% endtabs %}
-
-
 Create a simple data source as shown in the following code example in a new class file, and save it as `FileManager.cs` file: 
 
 {% tabs %}
 {% highlight c# tabtitle="FileManager.cs" %}
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Microsoft.Maui.Controls;
 
 public class FileManager : INotifyPropertyChanged
 {
@@ -234,7 +229,7 @@ public class FileManagerViewModel
 To create a tree view using data binding, set a hierarchical data collection to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) property. And set the child object name to the [ChildPropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ChildPropertyName) property.
 
 {% tabs %}
-{% highlight xaml hl_lines="11 12" %}
+{% highlight xaml hl_lines="12 13" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -252,7 +247,7 @@ To create a tree view using data binding, set a hierarchical data collection to 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="3 4" %}
+{% highlight c# hl_lines="15 16  " %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
