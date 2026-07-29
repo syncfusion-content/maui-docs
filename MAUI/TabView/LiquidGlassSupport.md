@@ -1,34 +1,70 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI TabView | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI TabView (SfTabView) control and more.
+title: Provide Liquid Glass Support for .NET MAUI Tab View | Syncfusion®
+description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
-documentation: ug
+documentation: UG
 ---
 
 # Liquid Glass Support for .NET MAUI TabView
 
-The [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) supports a liquid glass effect (also called acrylic or glass morphism) when you enable [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableLiquidGlassEffect). This feature applies a frosted, translucent style that blends seamlessly with the background, giving the Tab View a modern and elegant look. The effect is rendered dynamically during loading and user interaction, creating a subtle, responsive visual without changing the Tab View’s default structure. It works best over vibrant images or colorful layouts, enhancing depth and providing a stylish appearance to your application.
+## Prerequisites
 
-N>
-* This feature is supported only on `.NET 10` along with `iOS 26` and `macOS 26` .
+Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.TabView`
+
+For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
+
+## Liquid Glass Support
+
+The [`SfTabView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) supports a liquid glass effect (also called glass morphism) when you enable the [`EnableLiquidGlassEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableLiquidGlassEffect) property.
+
+For an overview of Liquid Glass across Syncfusion controls, see [Liquid glass integration with Syncfusion® .NET MAUI controls](https://help.syncfusion.com/maui/liquid-glass-ui/glassy-controls).
+
+N> This feature is supported only on `.NET 10` along with `iOS 26` and `macOS 26`.
+
+## Enable the Liquid Glass effect
+
+The following code example illustrates how to enable the liquid glass effect on the [`SfTabView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html). Place the drawer over a visually rich background (image, gradient, or color block) so the translucent effect is visible.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <Grid>
-        <!-- Background to make the glass effect visible while pressing the Tab View  -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-        <tabview:SfTabView EnableLiquidGlassEffect="True" />
-    </Grid>
+<Grid>
+    <!-- Background to make the glass effect visible while pressing the Tab View. -->
+    <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+    <tabView:SfTabView EnableLiquidGlassEffect="true">
+        <tabView:SfTabItem Header="Item1" />
+        <tabView:SfTabItem Header="Item2" />
+        <tabView:SfTabItem Header="Item3" />
+    </tabView:SfTabView>
+</Grid>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfTabView tabView = new SfTabView
+Grid grid = new Grid
 {
-    EnableLiquidGlassEffect = true
+    Children =
+    {
+        new Image
+        {
+            Source = "wallpaper.jpg",
+            Aspect = Aspect.AspectFill
+        },
+        new SfTabView
+        {
+            EnableLiquidGlassEffect = true
+            Items =
+            {
+                new SfTabItem { Header = "Item1" },
+                new SfTabItem { Header = "Item2" },
+                new SfTabItem { Header = "Item3" }
+            }
+        }
+    }
 };
 
 {% endhighlight %}
@@ -40,6 +76,13 @@ SfTabView tabView = new SfTabView
 - Place the Tab View  over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
-The following GIF demonstrates the liquid glass effect of Tab View.
+The following GIF demonstrates the liquid glass effect of the Tab View.
 
-![Liquid Glass](images/liquid-glass.gif)
+![Liquid glass effect on the Tab View during interaction](images/liquid-glass.gif)
+
+## See also
+
+- [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
+- [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+- [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
+- [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)
