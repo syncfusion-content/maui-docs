@@ -18,7 +18,7 @@ Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
 
 
-# Visual State Manager
+## Visual State Manager
 
 Use the `Visual State Manager (VSM)` to change `SfTabItem` properties declaratively in XAML or programmatically in code-behind, based on the tab's visual state. The applicable visual states are `Selected`, `Normal`, and `Disabled`.
 
