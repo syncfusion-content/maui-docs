@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Circular ProgressBar | Syncfusion®
-description: Learn about getting started with the Syncfusion® .NET MAUI Circular ProgressBar (SfCircularProgressBar) control, its elements, and more.
+title: Getting started with .NET MAUI Circular Progress Bar | Syncfusion®
+description: Learn about getting started with the Syncfusion® .NET MAUI Circular Progress Bar (SfCircularProgressBar) control, its elements, and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting started with .NET MAUI Circular ProgressBar
 
-This section explains the steps required to add the Circular ProgressBar control and customize its elements, such as indeterminate state, segments, progress fill, and track fill. It covers the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Circular ProgressBar. Follow the steps below to add a .NET MAUI Circular ProgressBar control to your project.
+This section explains the steps required to add the Circular Progress Bar control and customize its elements, such as indeterminate state, segments, progress fill, and track fill. It covers the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Circular Progress Bar. Follow the steps below to add a .NET MAUI Circular Progress Bar control to your project.
 
-To get started quickly with our .NET MAUI Circular ProgressBar, check the following video.
+To get started quickly with our .NET MAUI Circular Progress Bar, check the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=lH_0-2JEKcM"%}
@@ -124,7 +124,7 @@ using Syncfusion.Maui.ProgressBar;
 
 ## Step 5: Add the Circular ProgressBar component
 
-Initialize the SfCircularProgressBar and set the `Progress` property to display the filling level of the bar.
+Initialize the `SfCircularProgressBar` and set the `Progress` property to display the filling level of the bar.
 
 {% tabs %}
 
@@ -147,7 +147,7 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Circular ProgressBar](images/getting-started/progress-bar.png)
 
-You can download the Circular ProgressBar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-ProgressBar-control.-)
+You can download the Circular Progress Bar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-ProgressBar-control.-)
 
 N> 
 * By default, the value of progress should be specified between 0 and 100. To determine the progress value between 0 and 1, set the Minimum property to 0 and the Maximum property to 1.

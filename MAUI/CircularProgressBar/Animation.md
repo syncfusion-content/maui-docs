@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
-description: Learn all about animation support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements, and more.
+title: Animation in .NET MAUI Circular Progress Bar control | Syncfusion<sup>&reg;</sup>
+description: Learn all about animation support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular Progress Bar control, its elements, and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug

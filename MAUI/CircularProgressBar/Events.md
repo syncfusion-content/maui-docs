@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
-description: Learn all about the events supported in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements, and more.
+title: Events in .NET MAUI Circular Progress Bar | Syncfusion<sup>&reg;</sup>
+description: Learn all about the events supported in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular Progress Bar control, its elements, and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
@@ -22,7 +22,7 @@ The following code sample demonstrates how to customize the color of a progress 
 {% highlight XAML %}
 
 <progressBar:SfCircularProgressBar x:Name="circularProgressBar"
-                                   ProgressChanged="CircularProgressBar_ProgressChanged"
+                                   ProgressChanged="OnCircularProgressBarProgressChanged"
                                    Progress="100" />
 
 {% endhighlight %}
@@ -31,7 +31,7 @@ The following code sample demonstrates how to customize the color of a progress 
 
 using Syncfusion.Maui.ProgressBar;
 
-private void CircularProgressBar_ProgressChanged(object sender, ProgressValueEventArgs e)
+private void OnCircularProgressBarProgressChanged(object sender, ProgressValueEventArgs e)
 {
     if (e.Progress < 50)
     {
@@ -61,7 +61,7 @@ The following code sample demonstrates how to customize the progress bar when th
 
 <progressBar:SfCircularProgressBar Minimum="100"
                                    Maximum="500"
-                                   ProgressCompleted="CircularProgressBar_ProgressCompleted"
+                                   ProgressCompleted="OnCircularProgressBarProgressCompleted"
                                    Progress="500">
     <progressBar:SfCircularProgressBar.Content>
         <Grid WidthRequest="150">
@@ -80,7 +80,7 @@ The following code sample demonstrates how to customize the progress bar when th
 
 using Syncfusion.Maui.ProgressBar;
 
-private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+private void OnCircularProgressBarProgressCompleted(object sender, ProgressValueEventArgs e)
 {
     this.Label.Text = "Completed";
 }
