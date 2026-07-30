@@ -22,8 +22,8 @@ Host any `View` inside [.NET MAUI Text Input Layout](https://help.syncfusion.com
 | [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker) | MAUI | Date selection. Not supported on Windows. |
 | [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview) | Syncfusion | Single or multiple selection. Requires `Syncfusion.Maui.Inputs`. |
 | [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) | Syncfusion | Single or multiple selection. Requires `Syncfusion.Maui.Inputs`. |
-| [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) | Syncfusion | Masked text input. Requires `Syncfusion.Maui.MaskedEntry`. |
-| [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) | Syncfusion | Numeric input with up/down. Requires `Syncfusion.Maui.NumericEntry`. |
+| [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) | Syncfusion | Masked text input. Requires `Syncfusion.Maui.Inputs`. |
+| [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) | Syncfusion | Numeric input with up/down. Requires `Syncfusion.Maui.Inputs`. |
 
 ## Prerequisites
 
