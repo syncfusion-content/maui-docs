@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Indicator in .NET MAUI Tab View (SfTabView) | Syncfusion®
+title: Customize Indicator in .NET MAUI TabView (SfTabView) | Syncfusion®
 description: Learn all about selection indicator customization support in the Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
@@ -9,362 +9,317 @@ documentation: UG
 
 # Customize the Selection Indicator in .NET MAUI Tab View (SfTabView)
 
-The selection indicator in the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) highlights the currently selected tab header. It supports customizing the tab header selection indicator through properties such as [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement), [IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground), [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorWidthMode), [IndicatorCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorCornerRadius), and [IndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorStrokeThickness).
-
-## Prerequisites
-
-Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.TabView`
-
-For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
-
 ## Placement options
 
-The .NET MAUI Tab View provides five options for determining how the selection indicator aligns relative to the tab header item. These options are `Top`, `Bottom`, `Left`, `Right`, and `Fill`. This can be configured by setting the [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement) property of `SfTabView`. The indicator's available placements are constrained by the [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) of the tab bar.
+The .NET MAUI Tab View provides five options for determining how the selection indicator aligns relative to the tab header item. These options are top, bottom, left, right and fill. This can be configured by setting the [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement) property of SfTabView.
 
 ### Top
 
-The indicator will be placed at the top of the selected tab. Use this with `TabBarPlacement="Top"` or `TabBarPlacement="Bottom"`.
+The indicator will be placed at the top of the selected tab.
 
 {% tabs %}
-{% highlight xaml %}
 
-<tabView:SfTabView TabBarPlacement="Top"
+{% highlight xaml %}
+    <tabView:SfTabView TabBarPlacement="Top"  
                    IndicatorPlacement="Top"
-                   TabBarSize="60"
+                   TabBarWidth="60"
                    IndicatorWidthMode="Stretch">
+
     <tabView:SfTabView.Items>
         <tabView:SfTabItem Header="ITEM 1">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
+
         <tabView:SfTabItem Header="ITEM 2">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
+
         <tabView:SfTabItem Header="ITEM 3">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
     </tabView:SfTabView.Items>
 </tabView:SfTabView>
-
 {% endhighlight %}
+
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    TabBarPlacement = TabBarPlacement.Top,
-    IndicatorPlacement = TabIndicatorPlacement.Top,
-    TabBarSize = 60,
-    IndicatorWidthMode = IndicatorWidthMode.Stretch,
-    Items = new TabItemCollection
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Top;
+    tabView.IndicatorPlacement = TabIndicatorPlacement.Top;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
     {
-        new SfTabItem()
-        {
-            Header = "ITEM 1",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 2",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 3",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        }
-    }
-};
-
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
 {% endhighlight %}
+
 {% endtabs %}
 
-![Selection indicator placed at the top of the tab](images/Selection-Indicator-placement-Top.png)
+![Top](images/Selection-Indicator-placement-Top.png) 
 
 ### Bottom
 
 The indicator will be placed at the bottom of the selected tab.
 
 {% tabs %}
-{% highlight xaml %}
 
-<tabView:SfTabView TabBarPlacement="Top"
+{% highlight xaml %}
+    <tabView:SfTabView TabBarPlacement="Top"  
                    IndicatorPlacement="Bottom"
-                   TabBarSize="60"
+                   TabBarWidth="60"
                    IndicatorWidthMode="Stretch">
+
     <tabView:SfTabView.Items>
         <tabView:SfTabItem Header="ITEM 1">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
+
         <tabView:SfTabItem Header="ITEM 2">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
+
         <tabView:SfTabItem Header="ITEM 3">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
     </tabView:SfTabView.Items>
 </tabView:SfTabView>
-
 {% endhighlight %}
+
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    TabBarPlacement = TabBarPlacement.Top,
-    IndicatorPlacement = TabIndicatorPlacement.Bottom,
-    TabBarSize = 60,
-    IndicatorWidthMode = IndicatorWidthMode.Stretch,
-    Items = new TabItemCollection
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Top;
+    tabView.IndicatorPlacement = TabIndicatorPlacement.Bottom;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
     {
-        new SfTabItem()
-        {
-            Header = "ITEM 1",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 2",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 3",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        }
-    }
-};
-
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
 {% endhighlight %}
+
 {% endtabs %}
 
-![Selection indicator placed at the bottom of the tab](images/Selection-Indicator-placement-Bottom.png)
+![Bottom](images/Selection-Indicator-placement-Bottom.png) 
 
 ### Left
 
 The indicator will be placed at the left of the selected tab.
 
 {% tabs %}
-{% highlight xaml %}
 
-<tabView:SfTabView TabBarPlacement="Right"
+{% highlight xaml %}
+    <tabView:SfTabView TabBarPlacement="Right"  
                    IndicatorPlacement="Left"
-                   TabBarSize="60"
+                   TabBarWidth="60"
                    IndicatorWidthMode="Stretch">
+
     <tabView:SfTabView.Items>
         <tabView:SfTabItem Header="ITEM 1">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
+
         <tabView:SfTabItem Header="ITEM 2">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
+
         <tabView:SfTabItem Header="ITEM 3">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
     </tabView:SfTabView.Items>
 </tabView:SfTabView>
-
 {% endhighlight %}
 
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    TabBarPlacement = TabBarPlacement.Right,
-    IndicatorPlacement = TabIndicatorPlacement.Left,
-    TabBarSize = 60,
-    IndicatorWidthMode = IndicatorWidthMode.Stretch,
-    Items = new TabItemCollection
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Right;
+    tabView.IndicatorPlacement = TabIndicatorPlacement.Left;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
     {
-        new SfTabItem()
-        {
-            Header = "ITEM 1",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 2",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 3",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        }
-    }
-};
-
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
 {% endhighlight %}
+
 {% endtabs %}
 
-
-![Selection indicator placed at the left of the tab](images/TabIndicatorPlacementLeft.png)
+![Left](images\TabIndicatorPlacementLeft.png) 
 
 ### Right
 
 The indicator will be placed at the right of the selected tab.
 
 {% tabs %}
-{% highlight xaml %}
 
-<tabView:SfTabView TabBarPlacement="Right"
+{% highlight xaml %}
+    <tabView:SfTabView TabBarPlacement="Right"  
                    IndicatorPlacement="Right"
-                   TabBarSize="60"
+                   TabBarWidth="60"
                    IndicatorWidthMode="Stretch">
+
     <tabView:SfTabView.Items>
         <tabView:SfTabItem Header="ITEM 1">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
+
         <tabView:SfTabItem Header="ITEM 2">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
+
         <tabView:SfTabItem Header="ITEM 3">
             <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
             </tabView:SfTabItem.Content>
         </tabView:SfTabItem>
     </tabView:SfTabView.Items>
 </tabView:SfTabView>
-
 {% endhighlight %}
 
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    TabBarPlacement = TabBarPlacement.Right,
-    IndicatorPlacement = TabIndicatorPlacement.Right,
-    TabBarSize = 60,
-    IndicatorWidthMode = IndicatorWidthMode.Stretch,
-    Items = new TabItemCollection
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Right;
+    tabView.IndicatorPlacement = TabIndicatorPlacement.Right;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
     {
-        new SfTabItem()
-        {
-            Header = "ITEM 1",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 2",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 3",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        }
-    }
-};
-
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
 {% endhighlight %}
+
 {% endtabs %}
 
-![Selection indicator placed at the right of the tab](images/TabIndicatorPlacementRight.png)
+![Right](images\TabIndicatorPlacementRight.png) 
 
 ### Fill
 
@@ -373,79 +328,16 @@ The indicator will fill the selected tab.
 {% tabs %}
 
 {% highlight xaml %}
-
-<tabView:SfTabView IndicatorPlacement="Fill">
-    <tabView:SfTabView.Items>
-        <tabView:SfTabItem Header="ITEM 1">
-            <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-        <tabView:SfTabItem Header="ITEM 2">
-            <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-        <tabView:SfTabItem Header="ITEM 3">
-            <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-    </tabView:SfTabView.Items>
-</tabView:SfTabView>
-
+    <tabView:SfTabView IndicatorPlacement="Fill">
 {% endhighlight %}
 
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    IndicatorPlacement = TabIndicatorPlacement.Fill,
-    Items = new TabItemCollection
-    {
-        new SfTabItem()
-        {
-            Header = "ITEM 1",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 2",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 3",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        }
-    }
-};
-
+     tabView.IndicatorPlacement = IndicatorPlacement.Fill;
 {% endhighlight %}
+
 {% endtabs %}
 
-![Selection indicator filling the selected tab](images/Selection-Indicator-placement-Fill.png)
+![Fill](images/Selection-Indicator-placement-Fill.png)
 
 ### Limitations
 
@@ -453,226 +345,119 @@ SfTabView tabView = new SfTabView
 
 ## Background customization
 
-The background of the indicator can be customized using the [IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground) property of `Tab View`. This property accepts a `Color` or `Brush` value (for example, `SolidColorBrush` or `LinearGradientBrush`).
+The background of the indicator can be customized using the [IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground) property of SfTabView.
 
-### Solid color
+### Solid color 
 
-Use a `Color` or `SolidColorBrush` to set the selection indicator's color.
+The SolidColorBrush class defines the color property of [IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground), representing the selection indicator background's color.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView IndicatorBackground="LightBlue">
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.TabBarBackground = Color.LightBlue;
+{% endhighlight %}
+
+{% endtabs %}
+
+![IndicatorBackground.](images/Selection-Indicator-background.png) 
+
+### Gradient color 
+
+The background can be customized with a linear gradient and radial gradient as like below example.
 
 {% tabs %}
 {% highlight xaml %}
-
-<tabView:SfTabView IndicatorBackground="LightBlue">
-    <tabView:SfTabView.Items>
-        <tabView:SfTabItem Header="ITEM 1">
-            <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-        <tabView:SfTabItem Header="ITEM 2">
-            <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-        <tabView:SfTabItem Header="ITEM 3">
-            <tabView:SfTabItem.Content>
-                <Label Text="Tab item content"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
-            </tabView:SfTabItem.Content>
-        </tabView:SfTabItem>
-    </tabView:SfTabView.Items>
-</tabView:SfTabView>
-
+    <tabView:SfTabView>
+        <tabView:SfTabView.IndicatorBackground>
+            <LinearGradientBrush EndPoint="0,1">
+                <GradientStop Color="#009FFF" Offset="0.1" />
+                <GradientStop Color="#ec2F4B Offset="1.0" />
+            </LinearGradientBrush>
+        </tabView:SfTabView.IndicatorBackground>
+    </tabView:SfTabView>
 {% endhighlight %}
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
+Microsoft.Maui.Controls.GradientStop gra1 = new Microsoft.Maui.Controls.GradientStop()
 {
-    IndicatorBackground = Colors.LightBlue,
-    Items = new TabItemCollection
-    {
-        new SfTabItem()
-        {
-            Header = "ITEM 1",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 2",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem()
-        {
-            Header = "ITEM 3",
-            Content = new Label
-            {
-                Text = "Tab item content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        }
-    }
+    Color = Color.FromArgb("#009FFF"),
+    Offset = (float)0.1,
 };
+
+Microsoft.Maui.Controls.GradientStop gra2 = new Microsoft.Maui.Controls.GradientStop()
+{
+    Color = Color.FromArgb("#ec2F4B"),
+    Offset = (float)1.0,
+};
+
+LinearGradientBrush graBrush = new LinearGradientBrush()
+{
+    EndPoint = new Point(0, 1),
+    GradientStops = new GradientStopCollection() { gra1, gra2 }
+};
+
+SfTabView tabView = new SfTabView();
+tabView.IndicatorBackground = graBrush;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Indicator background set to a solid color](images/Selection-Indicator-background.png)
-
-### Gradient color
-
-The indicator background can be customized with a linear gradient, as shown in the example below.
-
-{% tabs %}
-{% highlight xaml %}
-
-<tabView:SfTabView>
-    <tabView:SfTabView.IndicatorBackground>
-        <LinearGradientBrush EndPoint="0,1">
-            <GradientStop Color="#009FFF" Offset="0.1" />
-            <GradientStop Color="#ec2F4B" Offset="1.0" />
-        </LinearGradientBrush>
-    </tabView:SfTabView.IndicatorBackground>
-</tabView:SfTabView>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    IndicatorBackground = new LinearGradientBrush
-    {
-        EndPoint = new Point(0, 1),
-        GradientStops = new GradientStopCollection
-        {
-            new GradientStop
-            {
-                Color = Color.FromArgb("#009FFF"),
-                Offset = 0.1f
-            },
-            new GradientStop
-            {
-                Color = Color.FromArgb("#ec2F4B"),
-                Offset = 1.0f
-            }
-        }
-    }
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-![Indicator background set to a linear gradient](images/Selection-Indicator-gradient-background.png)
+![Gradient](images/Selection-Indicator-gradient-background.png) 
 
 N> View the complete [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) on GitHub.
 
 ## IndicatorWidthMode
 
-The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorWidthMode) property allows customization of the width of the indicator. By default, `IndicatorWidthMode` is [Fit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Fit), which sizes the indicator to match the width of the header item's content. You can stretch the indicator to fill the tab header by setting `IndicatorWidthMode` to [Stretch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Stretch).
+The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorWidthMode) property allows customization of the width of the indicator. By default, the `IndicatorWidthMode` property is set to [Fit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Fit), which adjusts the indicator width to fit the content of the header item. You can change the width size based on the header item by setting the `IndicatorWidthMode` property to [Stretch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Stretch).
 
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView IndicatorWidthMode="Fit">
-    <tabView:SfTabItem Header="Item1" />
-    <tabView:SfTabItem Header="Item2" />
-    <tabView:SfTabItem Header="Item3" />
-</tabView:SfTabView>
-
+    <tabView:SfTabView IndicatorWidthMode="Fit">
 {% endhighlight %}
+
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    IndicatorWidthMode = IndicatorWidthMode.Fit,
-    Items = new TabItemCollection
-    {
-        new SfTabItem { Header = "Item1" },
-        new SfTabItem { Header = "Item2" },
-        new SfTabItem { Header = "Item3" }
-    }
-};
-
+     tabView.IndicatorWidthMode = IndicatorWidthMode.Fit;
 {% endhighlight %}
+
 {% endtabs %}
 
-![Indicator width mode set to fit](images/IndicatorWidthMode_Fit.png)
+![IndicatorWidthMode fit](images/IndicatorWidthMode_Fit.png) 
 
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView IndicatorWidthMode="Stretch">
-    <tabView:SfTabItem Header="Item1" />
-    <tabView:SfTabItem Header="Item2" />
-    <tabView:SfTabItem Header="Item3" />
-</tabView:SfTabView>
-
+    <tabView:SfTabView IndicatorWidthMode="Stretch">
 {% endhighlight %}
+
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    IndicatorWidthMode = IndicatorWidthMode.Stretch,
-    Items = new TabItemCollection
-    {
-        new SfTabItem { Header = "Item1" },
-        new SfTabItem { Header = "Item2" },
-        new SfTabItem { Header = "Item3" }
-    }
-};
-
+     tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
 {% endhighlight %}
+
 {% endtabs %}
 
-![Indicator width mode set to stretch](images/IndicatorWidthMode_Stretch.png)
+![IndicatorWidthMode stretch](images/IndicatorWidthMode_Stretch.png) 
 
 ## IndicatorCornerRadius
 
 You can customize the corner radius of the selection indicator using the [IndicatorCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorCornerRadius) property in the Tab View.
 
 {% tabs %}
+
 {% highlight xaml %}
-
-<tabView:SfTabView IndicatorCornerRadius="5">
-    <tabView:SfTabItem Header="Item1" />
-    <tabView:SfTabItem Header="Item2" />
-    <tabView:SfTabItem Header="Item3" />
-</tabView:SfTabView>
-
+    <tabView:SfTabView IndicatorCornerRadius ="5">
 {% endhighlight %}
+
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    IndicatorCornerRadius = 5,
-    Items = new TabItemCollection
-    {
-        new SfTabItem { Header = "Item1" },
-        new SfTabItem { Header = "Item2" },
-        new SfTabItem { Header = "Item3" }
-    }
-};
-
+     tabView.IndicatorCornerRadius  = 5;
 {% endhighlight %}
-{% endtabs %}
 
-![Indicator corner radius set to 5](images/IndicatorCornerRadius.png)
+{% endtabs %} 
+
+![IndicatorCornerRadius](images/IndicatorCornerRadius.png) 
 
 ## IndicatorStrokeThickness
 
@@ -681,33 +466,14 @@ You can customize the stroke thickness of the selection indicator using the [Ind
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView IndicatorStrokeThickness="7">
-    <tabView:SfTabItem Header="Item1" />
-    <tabView:SfTabItem Header="Item2" />
-    <tabView:SfTabItem Header="Item3" />
-</tabView:SfTabView>
-
+    <tabView:SfTabView IndicatorStrokeThickness ="7">
+    </tabView:SfTabView>
 {% endhighlight %}
+
 {% highlight C# %}
-
-SfTabView tabView = new SfTabView
-{
-    IndicatorStrokeThickness = 7,
-    Items = new TabItemCollection
-    {
-        new SfTabItem { Header = "Item1" },
-        new SfTabItem { Header = "Item2" },
-        new SfTabItem { Header = "Item3" }
-    }
-};
-
+     tabView.IndicatorStrokeThickness  = 7;
 {% endhighlight %}
-{% endtabs %}
 
-![Indicator stroke thickness set to 7](images/IndicatorStrokeThickness.png)
+{% endtabs %} 
 
-## See also
-
-- [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
-- [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
-- [Tab Bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
+![IndicatorStrokeThickness](images\IndicatorStrokeThickness.png) 
