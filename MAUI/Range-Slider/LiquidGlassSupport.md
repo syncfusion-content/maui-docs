@@ -22,7 +22,7 @@ Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfRangeSlider` control:
 
 {% tabs %}
-{% highlight XAML tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6" %}
     <Grid>
         <Image Source="Wallpaper.png" Aspect="AspectFill" />
         <sliders:SfRangeSlider
@@ -32,7 +32,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     </Grid>
 
 {% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+{% highlight C# tabtitle="C#" hl_lines="18" %}
 
 using Syncfusion.Maui.Sliders;
 
@@ -66,4 +66,5 @@ The following screenshot illustrates SfRangeSlider with the glass effect visible
 ![range slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N>
-This feature is supported only on .NET 10 along with iOS 26 and macOS 26. 
+Supported on macOS 26 or higher and iOS 26 or higher.This feature is available only in .NET 10.
+
