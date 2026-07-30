@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI StepProgressBar Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about how to customize the appearance of tooltip in Syncfusion<sup>&reg;</sup> .NET MAUI StepProgressBar control and more.
+title: Tooltip in .NET MAUI Step Progress Bar Control | Syncfusion®
+description: Learn all about how to customize the appearance of the tooltip in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -9,16 +9,15 @@ documentation: ug
 
 # Tooltip in .NET MAUI Step ProgressBar (SfStepProgressBar)
 
-The tooltip provides information when hovering over or tapping the steps in the step progress bar, displaying details about the each steps.
+The tooltip provides information when hovering over or tapping the steps in the step progress bar, displaying details about each step.
 
 ## Enable tooltip
 
-To enable the tooltip for the step progress bar control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) property of [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip)  is set to `false`. To provide users with additional information or context about specific step, simply set this property to `true`.
+To enable the tooltip for the step progress bar control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) property of [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is set to `false`. To provide users with additional information or context about a specific step, simply set this property to `true`.
 
-## ToolTipText
+## Tooltip text
 
 The tooltip text for a step view can be set using the [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ToolTipText) property from the [StepProgressBarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html) collection, which is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property.
-
 
 N> The tooltip is shown only when the [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ToolTipText) is provided.
 
@@ -28,9 +27,9 @@ N> The tooltip is shown only when the [ToolTipText](https://help.syncfusion.com/
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"
                     Orientation="Horizontal"
-                    ShowToolTip="True"
+                    ShowToolTip="true"
                     ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                             
+</stepProgressBar:SfStepProgressBar>
 <ContentPage.BindingContext>
     <local:ViewModel />
 </ContentPage.BindingContext>
@@ -104,24 +103,24 @@ To customize the appearance of the tooltip in the [SfStepProgressBar](https://he
 {% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12 13 14 15" %}
 
 <stepProgressBar:SfStepProgressBar x:Name="stepProgressBar"
-                    ItemsSource="{Binding StepProgressItem}"
-                    Orientation="Horizontal"
-                    ShowToolTip="True">
+                                   ItemsSource="{Binding StepProgressItem}"
+                                   Orientation="Horizontal"
+                                   ShowToolTip="true">
     <stepProgressBar:SfStepProgressBar.ToolTipSettings>
         <stepProgressBar:StepProgressBarToolTipSettings Background="Blue"
-                            Stroke="Red"
-                            Duration="0:0:10">
+                                                        Stroke="Red"
+                                                        Duration="0:0:10">
             <stepProgressBar:StepProgressBarToolTipSettings.TextStyle>
                 <stepProgressBar:StepTextStyle TextColor="White"
-                              FontSize="14"
-                              FontAttributes="Italic"/>
+                                               FontSize="14"
+                                               FontAttributes="Italic"/>
             </stepProgressBar:StepProgressBarToolTipSettings.TextStyle>
         </stepProgressBar:StepProgressBarToolTipSettings>
     </stepProgressBar:SfStepProgressBar.ToolTipSettings>
     <stepProgressBar:SfStepProgressBar.BindingContext>
         <local:ViewModel />
     </stepProgressBar:SfStepProgressBar.BindingContext>
- </stepProgressBar:SfStepProgressBar>
+</stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
 {% highlight C# hl_lines="5 6 7" %}
@@ -129,9 +128,9 @@ To customize the appearance of the tooltip in the [SfStepProgressBar](https://he
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
 stepProgressBar.ItemsSource = viewModel.StepProgressItem;
-stepprogressBar.Orientation = StepProgressBarOrientation.Horizontal;
+stepProgressBar.Orientation = StepProgressBarOrientation.Horizontal;
 stepProgressBar.ShowToolTip = true;
-stepProgressBar.ToolTipSettings = new StepProgressBarToolTipSettings() { Background = Brush.Blue, Stroke = Brush.Red, Duration = new TimeSpan(0, 0, 10), TextStyle = new stepProgressBarTextStyle() { TextColor = Colors.White, FontSize = 14, FontAttributes = FontAttributes.Italic } };
+stepProgressBar.ToolTipSettings = new StepProgressBarToolTipSettings() { Background = Colors.Blue, Stroke = Colors.Red, Duration = new TimeSpan(0, 0, 10), TextStyle = new StepTextStyle() { TextColor = Colors.White, FontSize = 14, FontAttributes = FontAttributes.Italic } };
 this.Content = stepProgressBar;
 
 {% endhighlight %}
@@ -172,7 +171,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is enabled.
+N> This property is only applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is enabled.
 
 ![tooltip-customization-in-maui-stepprogressbar](images/tooltip/tooltip-customization-in-maui-stepprogressbar.png)
 
@@ -186,18 +185,18 @@ The following code example shows the usage of DataTemplate.
 {% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12 13 14 15 16 17" %}
 
 <stepProgressBar:SfStepProgressBar x:Name="stepProgressBar"
-                    ItemsSource="{Binding StepProgressItem}"
-                    Orientation="Horizontal"
-                    ShowToolTip="True">
+                                   ItemsSource="{Binding StepProgressItem}"
+                                   Orientation="Horizontal"
+                                   ShowToolTip="true">
     <progressBar:SfStepProgressBar.ToolTipTemplate>
         <DataTemplate>
             <StackLayout Orientation="Horizontal">
                 <Image Source="info.png" WidthRequest="20" HeightRequest="20"/>
                 <Label Text="{Binding ToolTipText}" 
-                    TextColor="White"
-                    FontSize="Caption"
-                    Padding="5,0,0,0"
-                    VerticalOptions="Center"/>
+                       TextColor="White"
+                       FontSize="Caption"
+                       Padding="5,0,0,0"
+                       VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
     </progressBar:SfStepProgressBar.ToolTipTemplate>
@@ -277,6 +276,6 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is enabled.
+N> This property is only applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is enabled.
 
 ![tooltip-template-in-maui-stepprogressbar](images/tooltip/tooltip-template-in-maui-stepprogressbar.png)
