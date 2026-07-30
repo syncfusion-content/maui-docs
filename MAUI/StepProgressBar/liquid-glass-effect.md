@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI Step Progress Bar (SfStepProgressBar)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 
 ## Apply liquid glass effect
 
@@ -23,12 +23,12 @@ For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 ### Step 2: Customize the background
 
-To achieve a glass like background in the Step Progress Bar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass-like background in the Step Progress Bar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the control.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control:
 
 {% tabs %}
-{% highlight xaml hl_lines="28 29 30 31 44" %}
+{% highlight XAML hl_lines="28 29 30 31 44" %}
 
 <Grid>
     <Grid.Background>
@@ -81,9 +81,10 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="18 20 21 22 23 47 48" %}
+{% highlight C# hl_lines="18 20 21 22 23 47 48" %}
 
 ViewModel viewModel = new ViewModel();
+Grid grid = new Grid();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
     VerticalOptions = LayoutOptions.Center,
@@ -98,9 +99,9 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 
 var stepTemplate = new DataTemplate(() =>
 {
-    var grid = new Grid();
+    var templateGrid = new Grid();
 
-    var glassVeiew = new SfGlassEffectView
+    var glassView = new SfGlassEffectView
     {
         WidthRequest = 32,
         HeightRequest = 32,
@@ -129,10 +130,10 @@ var stepTemplate = new DataTemplate(() =>
     };
 
     border.Content = iconLabel;
-    glassVeiew.Content = border;
-    grid.Add(glassVeiew);
+    glassView.Content = border;
+    templateGrid.Add(glassView);
 
-    return grid;
+    return templateGrid;
 });
 
 stepProgressBar.StepTemplate = stepTemplate;
@@ -140,7 +141,7 @@ grid.Children.Add(stepProgressBar);
 this.Content = grid;
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
 public class ViewModel
 {
@@ -179,4 +180,4 @@ public class ViewModel
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
+* This feature is available only in `.NET 10`.
