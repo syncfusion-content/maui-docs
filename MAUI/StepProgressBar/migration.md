@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI StepProgressBar | Syncfusion®
-description: Learn all about migrating from the Syncfusion® Xamarin Step ProgressBar to the Syncfusion® .NET MAUI SfStepProgressBar control.
+title: Migrate from Xamarin to .NET MAUI Step Progress Bar | Syncfusion®
+description: Learn all about migrating from the Syncfusion® Xamarin Step Progress Bar to the Syncfusion® .NET MAUI SfStepProgressBar control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfStepProgressBar to .NET MAUI SfStepProgressBar
+# Migrate Xamarin.Forms SfStepProgressBar to .NET MAUI
 
 To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) easier, most of the APIs from the `Xamarin SfStepProgressBar` were retained in the `.NET MAUI SfStepProgressBar`. However, to maintain consistency in API naming, some of the APIs have been renamed. Find the differences in the following topics.
 
@@ -24,7 +24,7 @@ To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusio
 
 ## Initialize the control
 
-To initialize the control, import the step progressbar namespace and initialize `SfStepProgressBar` as shown in the following code sample.
+To initialize the control, import the step progress bar namespace and initialize `SfStepProgressBar` as shown in the following code sample.
 
 <table>
 <tr>
@@ -96,7 +96,7 @@ this.Content = stepProgressBar;
 <tr>
 <td>{{'[SfStepProgressBar](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html)'| markdownify }}</td>
 <td>{{'[SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html)'| markdownify }}</td>
-<td>Represents a class which holds the step progressbar common properties in SfStepProgressBar.</td>
+<td>Represents a class which holds the step progress bar common properties in SfStepProgressBar.</td>
 </tr> 
 <tr>
 <td>{{'[StepView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.StepView.html)' | markdownify }}</td>

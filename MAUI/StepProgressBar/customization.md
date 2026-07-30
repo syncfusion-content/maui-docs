@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization with .NET MAUI Step ProgressBar control | Syncfusion®
-description: Learn all about customization support in the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
+title: Customization with .NET MAUI Step Progress Bar control | Syncfusion®
+description: Learn all about customization support in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -18,10 +18,9 @@ The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Progre
 {% tabs %}
 {% highlight XAML tabtitle="XAML" hl_lines="3 4" %}
 
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    ActiveStepIndex="3"
-                    ActiveStepProgressValue="40">
+<stepProgressBar:SfStepProgressBar  x:Name="stepProgress"
+                                    ActiveStepIndex="3"
+                                    ActiveStepProgressValue="40">
 </stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
@@ -108,12 +107,12 @@ Customize the step content type by using the [ContentType](https://help.syncfusi
 {% tabs %}
 {% highlight XAML hl_lines="9 12 15" %}
 
-<progressBar:SfStepProgressBar x:Name = "stepProgressBar"
-                        StepSize="40"
-                        StepContentSize="25"
-						ActiveStepIndex="1"
-						StepStrokeWidth="10"    
-                        ActiveStepProgressValue="60">
+<progressBar:SfStepProgressBar  x:Name = "stepProgressBar"
+                                StepSize="40"
+                                StepContentSize="25"
+                                ActiveStepIndex="1"
+                                StepStrokeWidth="10"    
+                                ActiveStepProgressValue="60">
 
     <progressBar:SfStepProgressBar.InProgressStepSettings>
         <progressBar:StepSettings Background="#ff67579c" ContentType="Dot" ContentFillColor="White"/>
@@ -169,11 +168,11 @@ Customize the progress animation duration by using the [ProgressAnimationDuratio
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-<progressBar:SfStepProgressBar x:Name = "stepProgressBar" 
-                        ProgressBarBackground="LightBlue" 
-						ProgressAnimationDuration="2000"
-						ActiveStepIndex="1" 
-						ActiveStepProgressValue="40">
+<progressBar:SfStepProgressBar  x:Name = "stepProgressBar" 
+                                ProgressBarBackground="LightBlue" 
+                                ProgressAnimationDuration="2000"
+                                ActiveStepIndex="1" 
+                                ActiveStepProgressValue="40">
 </progressBar:SfStepProgressBar>
 
 {% endhighlight %}
@@ -205,7 +204,7 @@ You can customize the progress bar background of the step progress bar by using 
 {% highlight XAML hl_lines="2" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar" 
-                        ProgressBarBackground="LightBlue">
+                               ProgressBarBackground="LightBlue">
 </progressBar:SfStepProgressBar>
 
 {% endhighlight %}
@@ -235,15 +234,14 @@ The `SfStepProgressBar` control provides customization of progress track size fo
 {% tabs %}
 {% highlight XAML hl_lines="9" %}
 
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"                                        
-                    Orientation="Vertical"                                                                                       
-                    LabelSpacing="12"
-                    ActiveStepIndex="3"
-                    ActiveStepProgressValue="50"
-                    ItemsSource="{Binding StepProgressItem}">
+<stepProgressBar:SfStepProgressBar  x:Name="stepProgress"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    Orientation="Vertical"
+                                    LabelSpacing="12"
+                                    ActiveStepIndex="3"
+                                    ActiveStepProgressValue="50"
+                                    ItemsSource="{Binding StepProgressItem}">
 </stepProgressBar:SfStepProgressBar>
 
 <ContentPage.BindingContext>
@@ -742,11 +740,11 @@ You can customize the appearance of the step descriptions using the [PrimaryText
                                        PrimaryTemplate3="{StaticResource primaryTemplate3}"
                                        PrimaryTemplate4="{StaticResource primaryTemplate4}"/>
     </Grid.Resources>
-    <progressBar:SfStepProgressBar x:Name="stepProgress"
-                       Orientation="Horizontal"
-                       ActiveStepIndex="3"
-                       ItemsSource="{Binding StepProgressItem}"
-                       PrimaryTextTemplate="{StaticResource primaryTemplateSelector}">
+    <progressBar:SfStepProgressBar  x:Name="stepProgress"
+                                    Orientation="Horizontal"
+                                    ActiveStepIndex="3"
+                                    ItemsSource="{Binding StepProgressItem}"
+                                    PrimaryTextTemplate="{StaticResource primaryTemplateSelector}">
     </progressBar:SfStepProgressBar>
 </Grid>
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI StepProgressBar Control | Syncfusion®
-description: Learn all about how to customize the appearance of the tooltip in the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
+title: Tooltip in .NET MAUI Step Progress Bar Control | Syncfusion®
+description: Learn all about how to customize the appearance of the tooltip in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -103,21 +103,24 @@ To customize the appearance of the tooltip in the [SfStepProgressBar](https://he
 {% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12 13 14 15" %}
 
 <stepProgressBar:SfStepProgressBar x:Name="stepProgressBar"
-                    ItemsSource="{Binding StepProgressItem}"
-                    Orientation="Horizontal"
-                    ShowToolTip="true">
-                            Duration="0:0:10">
+                                   ItemsSource="{Binding StepProgressItem}"
+                                   Orientation="Horizontal"
+                                   ShowToolTip="true">
+    <stepProgressBar:SfStepProgressBar.ToolTipSettings>
+        <stepProgressBar:StepProgressBarToolTipSettings Background="Blue"
+                                                        Stroke="Red"
+                                                        Duration="0:0:10">
             <stepProgressBar:StepProgressBarToolTipSettings.TextStyle>
                 <stepProgressBar:StepTextStyle TextColor="White"
-                              FontSize="14"
-                              FontAttributes="Italic"/>
+                                               FontSize="14"
+                                               FontAttributes="Italic"/>
             </stepProgressBar:StepProgressBarToolTipSettings.TextStyle>
         </stepProgressBar:StepProgressBarToolTipSettings>
     </stepProgressBar:SfStepProgressBar.ToolTipSettings>
     <stepProgressBar:SfStepProgressBar.BindingContext>
         <local:ViewModel />
     </stepProgressBar:SfStepProgressBar.BindingContext>
- </stepProgressBar:SfStepProgressBar>
+</stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
 {% highlight C# hl_lines="5 6 7" %}
@@ -182,18 +185,18 @@ The following code example shows the usage of DataTemplate.
 {% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12 13 14 15 16 17" %}
 
 <stepProgressBar:SfStepProgressBar x:Name="stepProgressBar"
-                    ItemsSource="{Binding StepProgressItem}"
-                    Orientation="Horizontal"
-                    ShowToolTip="true">
+                                   ItemsSource="{Binding StepProgressItem}"
+                                   Orientation="Horizontal"
+                                   ShowToolTip="true">
     <progressBar:SfStepProgressBar.ToolTipTemplate>
         <DataTemplate>
             <StackLayout Orientation="Horizontal">
                 <Image Source="info.png" WidthRequest="20" HeightRequest="20"/>
                 <Label Text="{Binding ToolTipText}" 
-                    TextColor="White"
-                    FontSize="Caption"
-                    Padding="5,0,0,0"
-                    VerticalOptions="Center"/>
+                       TextColor="White"
+                       FontSize="Caption"
+                       Padding="5,0,0,0"
+                       VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
     </progressBar:SfStepProgressBar.ToolTipTemplate>

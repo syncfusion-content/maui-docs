@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events with .NET MAUI Step ProgressBar control | Syncfusion®
-description: Learn all about events support in the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
+title: Events with .NET MAUI Step Progress Bar control | Syncfusion®
+description: Learn all about events support in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -45,8 +45,8 @@ The [`StepStatusChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pr
 {% highlight XAML hl_lines="2" %}
 
 <progressBar:SfStepProgressBar ItemsSource="{Binding StepProgressItem}"
-                                ActiveStepIndex="1"
-                                StepStatusChanged="SfStepProgressBar_StepStatusChanged">
+                               ActiveStepIndex="1"
+                               StepStatusChanged="SfStepProgressBar_StepStatusChanged">
 </progressBar:SfStepProgressBar>
 
 {% endhighlight %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Orientation in .NET MAUI Step ProgressBar Control | Syncfusion®
-description: Learn all about orientation support in the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
+title: Orientation in .NET MAUI Step Progress Bar Control | Syncfusion®
+description: Learn all about orientation support in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -13,13 +13,12 @@ The StepProgressBar control provides options to change the default orientation, 
 
 ## Horizontal
 
-By default, StepProgressBar step views are displayed in [Horizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html#Syncfusion_Maui_ProgressBar_StepProgressBarOrientation_Horizontal) orientation. You can also define the orientation as demonstrated in the following code example.
+By default, StepProgressBar step views are displayed in [Horizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html#Syncfusion_Maui_ProgressBar_StepProgressBarOrientation_Horizontal) orientation.
 
 {% tabs %}
 {% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
-<stepProgressBar:SfStepProgressBar
-                    Orientation="Horizontal">
+<stepProgressBar:SfStepProgressBar  Orientation="Horizontal">
 </stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
@@ -40,8 +39,7 @@ To view the step progress bar control in [Vertical](https://help.syncfusion.com/
 {% tabs %}
 {% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
-<stepProgressBar:SfStepProgressBar
-                    Orientation="Vertical">
+<stepProgressBar:SfStepProgressBar  Orientation="Vertical">
 </stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}

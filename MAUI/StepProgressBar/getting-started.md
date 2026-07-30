@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Step ProgressBar Control | Syncfusion®
-description: Learn all about getting started with the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control and its basic features.
+title: Getting Started with .NET MAUI Step Progress Bar Control | Syncfusion®
+description: Learn all about getting started with the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control and its basic features.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting started with .NET MAUI Step ProgressBar
 
-This section explains how to add the [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) control. This section covers only the basic features needed to get started with the Syncfusion® Step ProgressBar. Follow the steps below to add the .NET MAUI Step ProgressBar control to your project.
+This section explains how to add the [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) control. This section covers only the basic features needed to get started with the Syncfusion® Step Progress Bar. Follow the steps below to add the .NET MAUI Step Progress Bar control to your project.
 
-To get started quickly with the .NET MAUI Step ProgressBar, you can check the below video.
+To get started quickly with the .NET MAUI Step Progress Bar, you can check the below video.
 
 {% youtube "https://youtu.be/KQFPBITPTM4?si=qbCQnMl1urV0DeLB" %}
 
@@ -166,13 +166,12 @@ The Step ProgressBar control allows you to bind an item collection by setting th
 {% tabs %}
 {% highlight XAML %}
 
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    LabelSpacing="12"
-                    ActiveStepIndex="2"
-                    ActiveStepProgressValue="60"
-                    ProgressAnimationDuration="2500"
-                    ItemsSource="{Binding StepProgressItem}">
+<stepProgressBar:SfStepProgressBar  x:Name="stepProgress"
+                                    LabelSpacing="12"
+                                    ActiveStepIndex="2"
+                                    ActiveStepProgressValue="60"
+                                    ProgressAnimationDuration="2500"
+                                    ItemsSource="{Binding StepProgressItem}">
 </stepProgressBar:SfStepProgressBar>
 
 <ContentPage.BindingContext>
@@ -199,4 +198,4 @@ this.Content = stepProgressBar;
 
 ![Getting started of .NET MAUI StepProgressBar](images/getting-started/maui-stepprogressbar-getting-started.gif)
 
-You can download the Step ProgressBar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-step-progressbar-sample).
+You can download the Step Progress Bar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/dotnet-maui-step-progressbar-sample).
