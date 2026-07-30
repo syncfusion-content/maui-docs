@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Define Range in .NET MAUI Circular Progress Bar | Syncfusion<sup>&reg;</sup>
+title: Define Range in .NET MAUI Circular Progress Bar | Syncfusion®
 description: Learn all about range support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular Progress Bar control, its elements, and more.
 platform: MAUI
 control: SfCircularProgressBar

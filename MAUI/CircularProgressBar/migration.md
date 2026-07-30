@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI Circular Progress Bar | Syncfusion<sup>&reg;</sup>
+title: Migrate from Xamarin to .NET MAUI Circular Progress Bar | Syncfusion®
 description: Learn how to migrate from the Syncfusion® Xamarin Circular ProgressBar to the Syncfusion® .NET MAUI Circular ProgressBar.
 platform: MAUI
 control: SfCircularProgressBar
