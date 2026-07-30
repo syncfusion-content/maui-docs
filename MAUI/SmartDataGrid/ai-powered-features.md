@@ -10,7 +10,7 @@ keywords : maui datagrid, ai assist, natural language commands, sorting, groupin
 
 # AI-Powered Features in MAUI SmartDataGrid (SfSmartDataGrid)
 
-The [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) provides AI-powered capabilities that enable grid operations through natural language prompts, removing the need for manual configuration. Actions such as sorting, grouping, filtering, highlighting, and clearing can be applied using simple text commands. Multi-column operations are supported in a single prompt for efficient interaction with the grid.
+The [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) provides AI-powered capabilities that enable grid operations through natural language prompts. Instead of manually configuring sort criteria, filter conditions, or grouping levels through UI controls, you can type natural language commands to perform these actions instantly. Actions such as sorting, grouping, filtering, highlighting, and clearing can be applied using simple text commands. Multi-column operations are supported in a single prompt for efficient interaction with the grid.
 
 ## Sorting
 
@@ -71,7 +71,13 @@ clear filters
 
 ## Highlight
 
-Highlighting applies styles to rows or cells that meet specified conditions. A color can be included in the command (for example, Red, LightPink, hex, or RGB); if no color is specified, the default highlight color is used. Multiple highlight rules can be combined, and highlights can be cleared individually or all at once.
+Highlighting applies styles to rows or cells that meet specified conditions. A color can be included in the command; if no color is specified, the default highlight color is used. Multiple highlight rules can be combined, and highlights can be cleared individually or all at once.
+
+### Supported Color Formats
+
+- **Named colors**: Red, LightPink, Yellow, Green, Blue, etc. (standard .NET color names)
+- **Hex format**: #FF0000 or FF0000 (6-digit hexadecimal)
+- **RGB format**: RGB(255, 0, 0) or (255, 0, 0)
 
 ### Example Prompts
 

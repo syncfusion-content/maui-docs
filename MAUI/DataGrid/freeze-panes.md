@@ -10,24 +10,33 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Freeze panes in MAUI DataGrid (SfDataGrid)
 
-In the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)(SfDataGrid) control, you can freeze rows and columns in view, similar to Excel. You can freeze rows and columns by setting the following properties:
+## Overview
 
-| Property name | Description |
-|---------------|-------------|
-| [FrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount) | Sets the number of rows to freeze at the top of the DataGrid |
-| [FooterFrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenRowCount) | Sets the number of rows to freeze at the bottom (footer) of the DataGrid |
-| [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount) | Sets the number of columns to freeze at the left side of the DataGrid |
-| [FooterFrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenColumnCount) | Sets the number of columns to freeze at the right side of the DataGrid |
+Freezing panes allows you to keep specific rows and columns visible while scrolling through large datasets, similar to Excel. This is useful when you have headers or identifier columns that should remain visible during navigation. The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) control supports freezing rows and columns independently at the top/bottom and left/right edges of the grid.
 
-To get start quickly with freeze rows and columns in .NET MAUI DataGrid, you can check on this video:
+
+## Freeze Panes Properties
+
+You can freeze rows and columns by setting the following properties:
+
+| Property name | Type | Default | Description |
+|---------------|------|---------|-------------|
+| [FrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount) | int | 0 | Sets the number of rows to freeze at the top of the DataGrid |
+| [FooterFrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenRowCount) | int | 0 | Sets the number of rows to freeze at the bottom of the DataGrid |
+| [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount) | int | 0 | Sets the number of columns to freeze at the left side of the DataGrid |
+| [FooterFrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenColumnCount) | int | 0 | Sets the number of columns to freeze at the right side of the DataGrid |
+
+To get started quickly with freeze rows and columns in .NET MAUI DataGrid, watch this video tutorial (starts at the freeze panes section):
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/vtMmQIWyipU?start=550"></iframe>
 
 ## Freeze columns
 
-You can freeze columns in view, similar to Excel, by setting the `SfDataGrid.FrozenColumnCount` property to a non-negative value.
+You can freeze columns by setting the `FrozenColumnCount` property to a non-negative value. Frozen columns remain visible when scrolling horizontally and are useful for identifier columns that should always be visible.
 
-The following code snippet shows how to freeze columns in the DataGrid:
+> **Note:** `OrderInfoViewModel` is a sample ViewModel class that provides an `Orders` collection. Replace it with your own data source ViewModel.
+
+The following example shows how to freeze columns in the DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
@@ -49,11 +58,15 @@ this.Content = dataGrid;
 
 <img alt="maui-datagrid-freeze-panes-columns" src="Images\freeze-panes\maui-datagrid-freeze-columns.gif" width="404" Height = "396"/>
 
+### Limitations
+* The `FrozenColumnCount` value must be less than the total number of columns in the DataGrid
+* Frozen columns cannot exceed the available grid width on the current platform
+
 ## Freeze footer columns
 
-You can freeze footer columns in view, similar to Excel, by setting the `SfDataGrid.FooterFrozenColumnCount` property to a non‑negative value.
+You can freeze footer (rightmost) columns by setting the `FooterFrozenColumnCount` property to a non‑negative value. Footer frozen columns remain visible when scrolling horizontally and are useful for summary or action columns.
 
-The following code snippet shows how to freeze footer columns in the DataGrid:
+The following example shows how to freeze footer columns in the DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
@@ -75,15 +88,11 @@ this.Content = dataGrid;
 
 <img alt="maui-datagrid-freeze-footer-rows" src="Images\freeze-panes\maui-datagrid-freeze-footer-columns.gif" width="404" Height = "396"/>
 
-### Limitations
-
-* The `FrozenColumnCount` and `FooterFrozenColumnCount` value should be less than the number of columns displayed in the view. For example, if you have 5 columns in the view, you can set the `FrozenColumnCount` and `FooterFrozenColumnCount` value to a maximum of 4.
-
 ## Freeze rows
 
-You can freeze rows in view, similar to Excel, by setting the `SfDataGrid.FrozenRowCount` property to a non-negative value.
+You can freeze rows by setting the `FrozenRowCount` property to a non-negative value. Frozen rows remain visible when scrolling vertically and are useful for header rows that should always be visible.
 
-The following code snippet shows how to freeze rows in the DataGrid:
+The following example shows how to freeze rows in the DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
@@ -105,11 +114,15 @@ this.Content = dataGrid;
 
 <img alt="maui-datagrid-freeze-panes-rows" src="Images\freeze-panes\maui-datagrid-freeze-rows.gif" width="404" Height = "396"/>
 
+### Limitations
+* The `FrozenRowCount` value must be less than the total number of rows in the DataGrid
+* Frozen rows cannot exceed the available grid height on the current platform
+
 ## Freeze footer rows
 
-You can freeze footer rows in view, similar to Excel, by setting the `SfDataGrid.FooterFrozenRowCount` property to a non‑negative value.
+You can freeze footer (bottom) rows by setting the `FooterFrozenRowCount` property to a non‑negative value. Footer frozen rows remain visible when scrolling vertically and are useful for summary or total rows.
 
-The following code snippet shows how to freeze footer rows in the DataGrid:
+The following example shows how to freeze footer rows in the DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
@@ -131,15 +144,13 @@ this.Content = dataGrid;
 
 <img alt="maui-datagrid-freeze-footer-rows" src="Images\freeze-panes\maui-datagrid-freeze-footer-rows.gif" width="404" Height = "396"/>
 
-### Limitations
-
-* The `FrozenRowCount` and `FooterFrozenRowCount` value should be less than the number of rows displayed in the view. For example, if you have 10 rows in the view, you can set the `FrozenRowCount` and `FooterFrozenRowCount` value to a maximum of 9.
-
 ## Appearance
+
+You can customize the visual appearance of freeze panes using `DataGridStyle`. Apply this style through the `SfDataGrid.DefaultStyle` property.
 
 ### Freeze pane line color
 
-The DataGrid allows you to customize the color of the freeze pane line using the [DataGridStyle.FreezePaneLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FreezePaneLineColor) property.
+Customize the color of the line that divides frozen and non-frozen regions using the [DataGridStyle.FreezePaneLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FreezePaneLineColor) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -172,9 +183,9 @@ this.Content = dataGrid;
 
 ### Freeze pane line thickness
 
-The DataGrid provides an option to customize the thickness of the freeze pane line using the `DataGridStyle.FreezePaneLineStrokeThickness` property. This property defines the stroke width for all frozen rows and columns in both the body and footer regions
+Customize the thickness of the freeze pane line using the [DataGridStyle.FreezePaneLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FreezePaneLineStrokeThickness) property. This affects all frozen rows and columns in both body and footer regions.
 
-N> The default value of `FreezePaneLineStrokeThickness` is 1.
+**Default value:** 1.0
 
 {% tabs %}
 {% highlight xaml %}
@@ -204,3 +215,13 @@ this.Content = dataGrid;
 {% endtabs %}
 
 <img alt="maui-datagrid-freeze-panes-strokethickness" src="Images\freeze-panes\maui-datagrid-freeze-panes-strokethickness.png" width="404" Height = "396"/>
+
+## Platform Considerations
+
+- **Responsive Design:** Frozen pane counts should be adjusted based on available screen space for different device sizes
+- **Cross-platform Behavior:** Freeze pane functionality works consistently across Android, iOS, macOS, and Windows platforms
+
+## Interaction with Other Features
+
+- Frozen rows and columns work with sorting, filtering, and selection
+- Frozen content scrolls independently from non-frozen content
