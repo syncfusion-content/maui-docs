@@ -9,23 +9,13 @@ documentation: UG
 
 # Swiping in .NET MAUI Tab View (SfTabView)
 
-## Prerequisites
-
-Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.TabView`
-
-For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
-
-## Enable swiping
-
-Set the [`EnableSwiping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableSwiping) property of `SfTabView` to allow users to switch between tab contents by swiping horizontally. The property is of type `bool` and defaults to `false`. When enabled, swiping left or right on the tab content moves to the adjacent tab; tapping a tab header or programmatically setting `SelectedIndex` also continues to work.
+Set the [EnableSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableSwiping) property of `Tab View` to allow users to switch between tab contents by swiping horizontally. The property is of type `bool` and defaults to `false`. When enabled, swiping left or right on the tab content moves to the adjacent tab; tapping a tab header or programmatically setting `SelectedIndex` also continues to work.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<tabView:SfTabView EnableSwiping="true">
+<tabView:SfTabView EnableSwiping="True">
     <tabView:SfTabItem Header="ITEM 1">
         <tabView:SfTabItem.Content>
             <Label Text="Tab item content"
