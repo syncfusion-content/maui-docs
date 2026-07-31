@@ -9,6 +9,12 @@ documentation: UG
 
 # Nested Tab in .NET MAUI Tab View (SfTabView)
 
+A nested tab is a tab item whose `Content` is itself another `Tab View`. Use this pattern when you need to group related sub-categories under a parent tab-for example, a "Photos" tab that contains a nested tab view with "Camera", "Video", "Screenshots", and "Wallpaper" sub-tabs.
+
+You can configure nested tab items in the Tab View using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html). This property holds a collection of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) instances of type `TabItemCollection`.
+
+> **Note** The minimum Syncfusion MAUI package version that supports nested tabs is 21.2.XX or later. Verify the version in your project before applying the samples below.
+
 ## Prerequisites
 
 Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -16,14 +22,6 @@ Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 - `Syncfusion.Maui.TabView`
 
 For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
-
-## Overview
-
-A nested tab is a tab item whose `Content` is itself another `SfTabView`. Use this pattern when you need to group related sub-categories under a parent tab—for example, a "Photos" tab that contains a nested tab view with "Camera", "Video", "Screenshots", and "Wallpaper" sub-tabs.
-
-You can configure nested tab items in the Tab View using the [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [`SfTabView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html). This property holds a collection of [`SfTabItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) instances of type [`TabItemCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabItemCollection.html).
-
-> **Note** The minimum Syncfusion MAUI package version that supports nested tabs is 21.2.XX or later. Verify the version in your project before applying the samples below.
 
 ## Walkthrough video
 
@@ -36,23 +34,23 @@ To get started quickly with nested tabs in the .NET MAUI Tab View, watch this vi
 {% highlight xaml %}
 <Grid>
     <tabView:SfTabView x:Name="tabView"
-                        TabBarBackground="#FDF8F6"
-                        TabWidthMode="SizeToContent"
-                        TabBarPlacement="Top"
-                        BackgroundColor="Transparent"
-                        IndicatorBackground="#6200EE"
-                        IndicatorPlacement="Top">
+                       TabBarBackground="#FDF8F6"
+                       TabWidthMode="SizeToContent"
+                       TabBarPlacement="Top"
+                       BackgroundColor="Transparent"
+                       IndicatorBackground="#6200EE"
+                       IndicatorPlacement="Top">
         <tabView:SfTabView.Items>
             <tabView:SfTabItem Header="Photos">
                 <tabView:SfTabItem.Content>
                     <Grid BackgroundColor="Blue">
                         <tabView:SfTabView x:Name="nestedTabView"
-                                            TabBarBackground="#FDF8F6"
-                                            TabWidthMode="Default"
-                                            TabBarPlacement="Bottom"
-                                            BackgroundColor="Transparent"
-                                            IndicatorBackground="#6200EE"
-                                            IndicatorPlacement="Top">
+                                           TabBarBackground="#FDF8F6"
+                                           TabWidthMode="Default"
+                                           TabBarPlacement="Bottom"
+                                           BackgroundColor="Transparent"
+                                           IndicatorBackground="#6200EE"
+                                           IndicatorPlacement="Top">
                             <tabView:SfTabView.Items>
                                 <tabView:SfTabItem Header="Camera">
                                     <tabView:SfTabItem.Content>
@@ -188,12 +186,13 @@ N> View the [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/
 
 ## Enable Virtualization
 
-The [`EnableVirtualization`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableVirtualization) property is a `bool` that defaults to `false`. Set it to `true` to improve the initial loading performance of the `SfTabView` by only creating the tab content when the corresponding tab is selected. This is especially useful when the Tab View contains many heavy or nested tab items.
+The [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableVirtualization) property is a `bool` that defaults to `false`. Set it to `true` to improve the initial loading performance of the `Tab View` by only creating the tab content when the corresponding tab is selected. This is especially useful when the Tab View contains many heavy or nested tab items.
 
 {% tabs %}
 {% highlight xaml %}
 
-<tabView:SfTabView x:Name="tabView" EnableVirtualization="true">
+<tabView:SfTabView x:Name="tabView" 
+                   EnableVirtualization="true">
     <tabView:SfTabItem Header="Item1" />
     <tabView:SfTabItem Header="Item2" />
     <tabView:SfTabItem Header="Item3" />
@@ -205,7 +204,7 @@ The [`EnableVirtualization`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 SfTabView tabView = new SfTabView
 {
     EnableVirtualization = true,
-    Items =
+    Items = new TabItemCollection
     {
         new SfTabItem { Header = "Item1" },
         new SfTabItem { Header = "Item2" },
@@ -220,4 +219,4 @@ SfTabView tabView = new SfTabView
 
 * [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
 * [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
-* [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
+* [Tab Bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
