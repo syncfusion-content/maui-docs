@@ -459,4 +459,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main)
+N> [View sample in GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Scheduler/SampleBrowser.Maui.Scheduler/Samples/Scheduler/DragAndDrop)
